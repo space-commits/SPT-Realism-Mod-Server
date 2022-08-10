@@ -54,6 +54,7 @@ import { _Items } from "./items";
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
+const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const commonStats = require("../db/bots/common.json");
@@ -307,15 +308,16 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const configServer = container.resolve<ConfigServer>("ConfigServer");
         const tables = databaseServer.getTables();
         const AKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
-        const array = new Arrays(tables);
+        const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
 
+        const array = new Arrays(tables);
         const helper = new Helper(tables, array, logger);
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
         const attatchBase = new AttatchmentBase(logger, tables, array, modConfig);
         const attatchStats = new AttatchmentStats(logger, tables, modConfig);
         const bots = new Bots(logger, tables, configServer, modConfig, array);
-        const items = new _Items(logger, tables, modConfig);
+        const items = new _Items(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, commonStats);
         const weapons_globals = new WeaponsGlobals(logger, tables, modConfig);
@@ -323,8 +325,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper);
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
-
-   
 
         // codegen.codeGen();
         codegen.pushModsToServer();
@@ -341,6 +341,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         }
 
         if (modConfig.med_changes == true) {
+            items.createCustomMedItems();
             meds.loadMeds();
         }
 
@@ -461,7 +462,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
     public updateBots(pmcData: IPmcData, logger: ILogger, config, bots: Bots) {
 
         var property = pmcData?.Info?.Level;
-        if (config.bot_changes == true) { 
+        if (config.bot_changes == true) {
             if (property === undefined) {
                 bots.botConfig1();
                 logger.info("Realism Mod: Bots Have Been Set To Default (Tier 1)");
@@ -492,7 +493,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                     }
                 }
             }
-        }     
+        }
     }
 }
 

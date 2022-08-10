@@ -47,7 +47,6 @@ export class Helper{
                     for (var j = 0; j < this.medItems.length; j++) {
                         if (profileData.Inventory.items[i]._tpl === this.medItems[j]) {
                             profileData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
-                            this.logger.info("I have reverted");
                         }
                     }
                 }

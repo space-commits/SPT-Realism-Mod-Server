@@ -2,10 +2,12 @@
     " //A NOTE ON CONFIGURATION: I encourage you try this mod as it is intended and leave everything set to true.//": 
     "All these settings are balanced with each other, the mod is supposed to be hardcore and unforgivng like EFT is supposed to be. Either way, enjoy :)//",
 
-    "//Enables changes to movement speed, inertia, weight limits, stamina and fall damage. These changes are no longer seperated as they have been overhauled and carefully balanced together and no longer work well if disabled individually.//": "",
+    "//Enables changes to movement speed, inertia, weight limits, stamina and fall damage. These changes are no longer seperated as they have been overhauled and carefully balanced together and no longer work well if disabled individually.//": 
+    "",
     "movement_changes": true,
 
-    "//All items examined if set to true.//": "",
+    "//All items examined if set to true.//": 
+    "",
     "all_examined": true,
 
     "//Bots will no longer have tiered loadouts and will use vanilla loadouts, if set to false.//": 
@@ -16,47 +18,50 @@
     "//For now, recoil changes are applied globally, weapon stat tweaking will come later.//",
     "recoil_changes": true,
 
-    "//Basic recoil changes from previous versions. It lowers recoil a little bit and makes firing more snappy.//": "",
+    "//Basic recoil changes from previous versions. It lowers recoil a little bit and makes firing more snappy.//": 
+    "",
     "legacy_recoil_changes": false,
 
-    "//Still WIP. Enables changes to malfunctions and over-heating if set to true. No malfunctions will occur between 98-100 durability.//":
-     "//See mod page description for details.//",
+    "//Still WIP. Enables changes to malfunctions and over-heating if set to true. No malfunctions will occur between 98-100 durability.//": 
+    "//See mod page description for details.//",
     "malf_changes": true,
 
-    "//If set to true, the fleamarket will unlock progressivly by category of item based on the player's level//": 
-    "There are 7 tiers in total, the final one being a 'full unlock'.",
-    "tiered_flea": true,
+    "//If set to true, the fleamarket will unlock progressivly by category of item based on the player's level.//": 
+    "//There are 7 tiers in total, the final one being a 'full unlock'.//",
+    "tiered_flea": false,
 
     "//Enables a hardcore fleamarket config. There are very few offers per item, if any at all. Item condition and stack amount vary a lot, high prices, and so on.//": 
-    "Recommended to use with Tiered flea and Fin's Reallistcally Equippred Traders mod",
-    "flea_changes": true,
+    "//Recommended to use with Tiered flea and Fin's Reallistcally Equippred Traders mod.//",
+    "flea_changes": false,
 
     "//Disables Armour and Ammo changes if set to false, the core of Realism Mod. Player and bot health will also no longer be adjusted and starting profiles no longer changed.//": 
     "//If disabled, current armour durablity and player health will not be corrected but max durability/health will be.//",
     "realism": true,
 
-    "Changes bot names to actual names from a huge list. Bear names can use Latin or Cyrillic alphabet": 
-    "Names come courtesy of user Computica",
+    "//Changes bot names to actual names from a huge list. Bear names can use Latin or Cyrillic alphabet//": 
+    "//Names come courtesy of user Computica//",
     "bot_names": true,
     "cyrillic_bear_names": true,
 
-    "//Enables changes to medical items if set to true.//": "",
+    "//Enables changes to medical items if set to true.//": 
+    "",
     "med_changes": true,
 
-    "//If set to true **AND** med_changes is set to false, the meds in your inventory will be restored back to their full HP resource.//":
+    "//If set to true **AND** med_changes is set to false, the meds in your inventory will be restored back to their full HP resource.//": 
     "//This config option will turn itself back to false once this is done. You are able to repeat this process 5 times.//",
     "revert_med_changes": false,
 
-    "//Removes all in-raid item count restrictions if set to true. For example, you can carry as much cash, BTC, LEDX etc. as you like in raid.//": "",
+    "//Removes all in-raid item count restrictions if set to true. For example, you can carry as much cash, BTC, LEDX etc. as you like in raid.//": 
+    "",
     "remove_inraid_restrictions": true,
 
-    "//Enable dev logging if set to true. Will flood console with logs, for my personal use.//": "",
+    "//Enable dev logging if set to true. Will flood console with logs, for my personal use. Might be useful for finding bugs or compatibility issues//": 
+    "",
     "logEverything": true,
-    
-    "//Bot Testing Paramters//": 
-    "Set to true to enable. Set the tier to spawn a sepcific tier of bot (1-3). Disabling weapons will deactivate the AI, they will spawn but not move or react",
-    "bot_testing": false,
-    "bot_test_tier": 2,
-    "bot_test_weps_enabled": true
 
+    "//Bot testing parameters. For testing purposes only.//": 
+    "Set to true to enable. Set the tier to spawn a sepcific tier of bot (1-3). Disabling weapons will deactivate the AI, they will spawn but not move or react",
+    "bot_testing": true,
+    "bot_test_tier": 3,
+    "bot_test_weps_enabled": false
 }

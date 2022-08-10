@@ -20,6 +20,7 @@ const items_1 = require("./items");
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
+const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const commonStats = require("../db/bots/common.json");
@@ -233,6 +234,7 @@ class Mod {
         const configServer = container.resolve("ConfigServer");
         const tables = databaseServer.getTables();
         const AKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
+        const jsonUtil = container.resolve("JsonUtil");
         const array = new arrays_1.Arrays(tables);
         const helper = new helper_1.Helper(tables, array, logger);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
@@ -240,7 +242,7 @@ class Mod {
         const attatchBase = new attatchment_base_1.AttatchmentBase(logger, tables, array, modConfig);
         const attatchStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig);
         const bots = new bots_1.Bots(logger, tables, configServer, modConfig, array);
-        const items = new items_1._Items(logger, tables, modConfig);
+        const items = new items_1._Items(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, commonStats);
         const weapons_globals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
@@ -260,6 +262,7 @@ class Mod {
             bots.setBotHealth();
         }
         if (modConfig.med_changes == true) {
+            items.createCustomItems();
             meds.loadMeds();
         }
         if (modConfig.flea_changes == true || modConfig.tiered_flea == true) {

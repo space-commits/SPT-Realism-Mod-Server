@@ -48,7 +48,7 @@ class FleamarketConfig {
             this.fleaConf.dynamic.presetPrice.min = 2;
             this.fleaConf.dynamic.presetPrice.max = 3;
             this.fleaConf.runIntervalSeconds = 1;
-            this.fleaConf.dynamic.endTimeSeconds.min = 540;
+            this.fleaConf.dynamic.endTimeSeconds.min = 3600;
             this.fleaConf.dynamic.endTimeSeconds.max = 86400;
             this.fleaConf.dynamic.condition.conditionChance = 0.99;
             this.fleaConf.dynamic.condition.min = 0.45;

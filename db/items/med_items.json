@@ -1,4 +1,46 @@
 {
+    "TIER1MEDKIT": {
+        "effects_health": {},
+        "effects_damage": {
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 50
+            }
+        },
+        "MaxHpResource": 100,
+        "medUseTime": 1200,
+        "hpResourceRate": 0.001
+    },
+    "TIER2MEDKIT": {
+        "effects_health": {},
+        "effects_damage": {
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 50
+            }
+        },
+        "MaxHpResource": 150,
+        "medUseTime": 1200,
+        "hpResourceRate": 0.001
+    },
+    "TIER3MEDKIT": {
+        "effects_health": {},
+        "effects_damage": {
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 50
+            }
+        },
+        "MaxHpResource": 350,
+        "medUseTime": 1200,
+        "hpResourceRate": 0.001
+    },
     "analgin": {
         "effects_health": {},
         "effects_damage": {
