@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CodeGen = void 0;
 const testFile = require("../db/test.json");
+const magazineJSON = require("../db/bots/loadouts/magazines.json");
 class CodeGen {
     constructor(logger, tables, modConf, helper) {
         this.logger = logger;
@@ -10,6 +11,17 @@ class CodeGen {
         this.helper = helper;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
+    }
+    magsToJSON() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === "5448bc234bdc2d3c308b4569" || serverItem._parent === "610720f290b75a49ff2e5e25") {
+                this.logger.info("Found Parent");
+                let fileItem = magazineJSON[i];
+                magazineJSON[i] = this.doAssignJSONMagazine(fileItem);
+                this.helper.saveToJSONFile(magazineJSON, '/db/bots/loadouts/magazines.json');
+            }
+        }
     }
     codeGen() {
         for (let i in this.itemDB) {
@@ -78,6 +90,16 @@ class CodeGen {
         let ca = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
         let sa = serverItem._props.ConflictingItems;
         return ca.concat(sa);
+    }
+    doAssignJSONMagazine(fileItem) {
+        if (fileItem) {
+            fileItem;
+            return fileItem;
+        }
+        let item = {
+            "cartridges": []
+        };
+        return item;
     }
     doAssignJsonItemMod(serverItem, fileItem) {
         if (fileItem) {

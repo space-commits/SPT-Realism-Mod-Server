@@ -46,9 +46,9 @@ import { WeaponsGlobals } from "./weapons_globals"
 import { WeaponsStats } from "./weapons_stats"
 import { Bots } from "./bots";
 import { BotModGen, BotWepGen } from "./bot_wep_gen";
-import { CodeGen } from "./code_gen";
 import { BotLootServer } from "./bot_loot_serv";
 import { _Items } from "./items";
+import { CodeGen } from "./code_gen";
 
 
 const medRevertCount = require("../db/saved/info.json");
@@ -327,6 +327,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
 
         // codegen.codeGen();
+        // codegen.magsToJSON();
         codegen.pushModsToServer();
         codegen.pushWepsToServer();
 
@@ -414,14 +415,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         var property = pmcData?.Info?.Level;
 
         if (config.tiered_flea == true) {
-            this.fleaHelper(flea.flea1(), ragfairOfferGen, container);
             if (property === undefined) {
-                flea.flea1();
+                this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
             }
             if (property !== undefined) {
-                // flea.flea1();
-                // ragfairOfferGen.generateDynamicOffers();
                 if (pmcData.Info.Level >= 0) {
                     this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
                     logger.info("Realism mod: Fleamarket Locked At Tier 0");

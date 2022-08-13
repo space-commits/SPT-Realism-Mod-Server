@@ -86,30 +86,18 @@
             },
             {
                 "templateId": "5d1b3a5d86f774252167ba22",
-                "count": 1,
+                "count": 2,
                 "isFunctional": false,
                 "type": "Item"
             },
             {
                 "templateId": "59e361e886f774176c10a2a5",
-                "count": 1,
+                "count": 2,
                 "isFunctional": false,
                 "type": "Item"
             },
             {
                 "templateId": "5b4335ba86f7744d2837a264",
-                "count": 1,
-                "isFunctional": false,
-                "type": "Item"
-            },
-            {
-                "templateId": "5d1b3f2d86f774253763b735",
-                "count": 1,
-                "isFunctional": false,
-                "type": "Item"
-            },
-            {
-                "templateId": "5d1b39a386f774252339976f",
                 "count": 1,
                 "isFunctional": false,
                 "type": "Item"

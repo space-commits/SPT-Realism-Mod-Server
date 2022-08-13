@@ -14,9 +14,9 @@ const weapons_globals_1 = require("./weapons_globals");
 const weapons_stats_1 = require("./weapons_stats");
 const bots_1 = require("./bots");
 const bot_wep_gen_1 = require("./bot_wep_gen");
-const code_gen_1 = require("./code_gen");
 const bot_loot_serv_1 = require("./bot_loot_serv");
 const items_1 = require("./items");
+const code_gen_1 = require("./code_gen");
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -251,6 +251,7 @@ class Mod {
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         // codegen.codeGen();
+        // codegen.magsToJSON();
         codegen.pushModsToServer();
         codegen.pushWepsToServer();
         if (modConfig.bot_changes == true) {
@@ -262,7 +263,7 @@ class Mod {
             bots.setBotHealth();
         }
         if (modConfig.med_changes == true) {
-            items.createCustomItems();
+            items.createCustomMedItems();
             meds.loadMeds();
         }
         if (modConfig.flea_changes == true || modConfig.tiered_flea == true) {
@@ -323,14 +324,11 @@ class Mod {
     updateFlea(pmcData, logger, config, flea, ragfairOfferGen, container) {
         var property = pmcData?.Info?.Level;
         if (config.tiered_flea == true) {
-            this.fleaHelper(flea.flea1(), ragfairOfferGen, container);
             if (property === undefined) {
-                flea.flea1();
+                this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
             }
             if (property !== undefined) {
-                // flea.flea1();
-                // ragfairOfferGen.generateDynamicOffers();
                 if (pmcData.Info.Level >= 0) {
                     this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
                     logger.info("Realism mod: Fleamarket Locked At Tier 0");

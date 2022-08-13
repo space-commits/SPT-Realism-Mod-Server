@@ -179,7 +179,6 @@ export class TieredFlea {
         this.canSellDMR(true);
         this.canSellBarters(true);
         this.canSellKeys(true);
-        this.canSellFood(true);
         this.canSellAR(true);
         this.canSellMods(true);
         this.canSellGear(true);

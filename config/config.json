@@ -61,7 +61,11 @@
 
     "//Bot testing parameters. For testing purposes only.//": 
     "Set to true to enable. Set the tier to spawn a sepcific tier of bot (1-3). Disabling weapons will deactivate the AI, they will spawn but not move or react",
-    "bot_testing": true,
-    "bot_test_tier": 3,
-    "bot_test_weps_enabled": false
+    "bot_testing": false,
+    "bot_test_tier": 2,
+    "bot_test_weps_enabled": true,
+    "all_scavs": false,
+    "all_PMCs": false,
+    "all_USEC": false,
+    "all_bear": true
 }

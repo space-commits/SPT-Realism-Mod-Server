@@ -34,7 +34,7 @@ class _Items {
             this.logger.info("Items Loaded");
         }
     }
-    createCustomItems() {
+    createCustomMedItems() {
         //Tier 1 Medkit
         this.cloneMedicalItem("5755356824597772cb798962", "TIER1MEDKIT", this.medItems.TIER1MEDKIT.MaxHpResource, this.medItems.TIER1MEDKIT.medUseTime, this.medItems.TIER1MEDKIT.hpResourceRate, "assets/content/items/barter/item_barter_meds_tools/item_barter_meds_tools.bundle", "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle", "yellow ", this.medItems.TIER1MEDKIT.effects_damage);
         this.addToHandbook("TIER1MEDKIT", "5b47574386f77428ca22b338", 10000);

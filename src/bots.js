@@ -7,11 +7,11 @@ const bearLO = require("../db/bots/loadouts/bearLO.json");
 const usecLO = require("../db/bots/loadouts/usecLO.json");
 const scavLootLimitCat = require("../db/bots/loadouts/scavLootLimitCat.json");
 const PMCLootLimitCat = require("../db/bots/loadouts/PMCLootLimitCat.json");
-const emptyArray = require("../db/emptyarray.json");
 const commonStats = require("../db/bots/common.json");
 const rmBotConfig = require("../db/bots/botconfig.json");
 const USECNames = require("../db/bots/names/USECNames.json");
 const bearNames = require("../db/bots/names/bearNames.json");
+const magazineJSON = require("../db/bots/loadouts/magazines.json");
 class Bots {
     constructor(logger, tables, configServ, modConf, array) {
         this.logger = logger;
@@ -105,12 +105,25 @@ class Bots {
         if (this.modConf.bot_test_weps_enabled == false) {
             this.botArr.forEach(removeWeps);
             function removeWeps(bot) {
-                bot.inventory.equipment.FirstPrimaryWeapon = emptyArray.empty;
-                bot.inventory.equipment.Holster = emptyArray.empty;
+                bot.inventory.equipment.FirstPrimaryWeapon = [];
+                bot.inventory.equipment.Holster = [];
             }
         }
-        if (this.modConf.bot_testing == true) {
-            this.logger.warning("/////////////////////////botTest loaded////////////////////////////////");
+        if (this.modConf.all_scavs == true && this.modConf.all_PMCs == false) {
+            this.botConf.pmc.convertIntoPmcChance = rmBotConfig.scavTest.convertIntoPmcChance;
+            this.logger.info("All Scavs");
+        }
+        if (this.modConf.all_scavs == false && this.modConf.all_PMCs == true) {
+            this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
+            this.logger.info("All PMCs");
+        }
+        if (this.modConf.all_bear == true) {
+            this.botConfPMC.isUsec = 0;
+            this.logger.info("All Bear");
+        }
+        if (this.modConf.all_USEC == true) {
+            this.botConfPMC.isUsec = 100;
+            this.logger.info("All USEC");
         }
     }
     botConfig1() {
@@ -210,6 +223,7 @@ class Bots {
         this.scavBase.inventory.Ammo = scavLO.scavLO1.inventory.Ammo;
         this.scavBase.inventory.equipment = scavLO.scavLO1.inventory.equipment;
         this.scavBase.inventory.items = scavLO.scavLO1.inventory.items;
+        [scavLO.scavLO1.inventory.mods].push(magazineJSON);
         this.scavBase.inventory.mods = scavLO.scavLO1.inventory.mods;
         this.scavBase.chances = scavLO.scavLO1.chances;
         this.scavBase.generation = scavLO.scavLO1.generation;
@@ -222,6 +236,7 @@ class Bots {
         this.scavBase.inventory.Ammo = scavLO.scavLO2.inventory.Ammo;
         this.scavBase.inventory.equipment = scavLO.scavLO2.inventory.equipment;
         this.scavBase.inventory.items = scavLO.scavLO2.inventory.items;
+        [scavLO.scavLO2.inventory.mods].push(magazineJSON);
         this.scavBase.inventory.mods = scavLO.scavLO2.inventory.mods;
         this.scavBase.chances = scavLO.scavLO2.chances;
         this.scavBase.generation = scavLO.scavLO2.generation;
@@ -234,6 +249,7 @@ class Bots {
         this.scavBase.inventory.Ammo = scavLO.scavLO3.inventory.Ammo;
         this.scavBase.inventory.equipment = scavLO.scavLO3.inventory.equipment;
         this.scavBase.inventory.items = scavLO.scavLO3.inventory.items;
+        [scavLO.scavLO3.inventory.mods].push(magazineJSON);
         this.scavBase.inventory.mods = scavLO.scavLO3.inventory.mods;
         this.scavBase.chances = scavLO.scavLO3.chances;
         this.scavBase.generation = scavLO.scavLO3.generation;
@@ -246,6 +262,7 @@ class Bots {
         this.usecBase.inventory.Ammo = usecLO.usecLO1.inventory.Ammo;
         this.usecBase.inventory.equipment = usecLO.usecLO1.inventory.equipment;
         this.usecBase.inventory.items = usecLO.usecLO1.inventory.items;
+        [usecLO.usecLO1.inventory.mods].push(magazineJSON);
         this.usecBase.inventory.mods = usecLO.usecLO1.inventory.mods;
         this.usecBase.chances = usecLO.usecLO1.chances;
         this.usecBase.generation = usecLO.usecLO1.generation;
@@ -261,6 +278,7 @@ class Bots {
         this.usecBase.inventory.Ammo = usecLO.usecLO2.inventory.Ammo;
         this.usecBase.inventory.equipment = usecLO.usecLO2.inventory.equipment;
         this.usecBase.inventory.items = usecLO.usecLO2.inventory.items;
+        [usecLO.usecLO2.inventory.mods].push(magazineJSON);
         this.usecBase.inventory.mods = usecLO.usecLO2.inventory.mods;
         this.usecBase.chances = usecLO.usecLO2.chances;
         this.usecBase.generation = usecLO.usecLO2.generation;
@@ -276,6 +294,7 @@ class Bots {
         this.usecBase.inventory.Ammo = usecLO.usecLO3.inventory.Ammo;
         this.usecBase.inventory.equipment = usecLO.usecLO3.inventory.equipment;
         this.usecBase.inventory.items = usecLO.usecLO3.inventory.items;
+        [usecLO.usecLO3.inventory.mods].push(magazineJSON);
         this.usecBase.inventory.mods = usecLO.usecLO3.inventory.mods;
         this.usecBase.chances = usecLO.usecLO3.chances;
         this.usecBase.generation = usecLO.usecLO3.generation;
@@ -291,6 +310,7 @@ class Bots {
         this.bearBase.inventory.Ammo = bearLO.bearLO1.inventory.Ammo;
         this.bearBase.inventory.equipment = bearLO.bearLO1.inventory.equipment;
         this.bearBase.inventory.items = bearLO.bearLO1.inventory.items;
+        [bearLO.bearLO1.inventory.mods].push(magazineJSON);
         this.bearBase.inventory.mods = bearLO.bearLO1.inventory.mods;
         this.bearBase.chances = bearLO.bearLO1.chances;
         this.bearBase.generation = bearLO.bearLO1.generation;
@@ -306,6 +326,7 @@ class Bots {
         this.bearBase.inventory.Ammo = bearLO.bearLO2.inventory.Ammo;
         this.bearBase.inventory.equipment = bearLO.bearLO2.inventory.equipment;
         this.bearBase.inventory.items = bearLO.bearLO2.inventory.items;
+        [bearLO.bearLO2.inventory.mods].push(magazineJSON);
         this.bearBase.inventory.mods = bearLO.bearLO2.inventory.mods;
         this.bearBase.chances = bearLO.bearLO2.chances;
         this.bearBase.generation = bearLO.bearLO2.generation;
@@ -321,6 +342,7 @@ class Bots {
         this.bearBase.inventory.Ammo = bearLO.bearLO3.inventory.Ammo;
         this.bearBase.inventory.equipment = bearLO.bearLO3.inventory.equipment;
         this.bearBase.inventory.items = bearLO.bearLO3.inventory.items;
+        [bearLO.bearLO3.inventory.mods].push(magazineJSON);
         this.bearBase.inventory.mods = bearLO.bearLO3.inventory.mods;
         this.bearBase.chances = bearLO.bearLO3.chances;
         this.bearBase.generation = bearLO.bearLO3.generation;

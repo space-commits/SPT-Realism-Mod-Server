@@ -4,6 +4,7 @@ import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Helper } from "./helper";
 
 const testFile = require("../db/test.json");
+const magazineJSON = require("../db/bots/loadouts/magazines.json");
 
 
 export class CodeGen {
@@ -12,6 +13,18 @@ export class CodeGen {
 
     public globalDB = this.tables.globals.config;
     public itemDB = this.tables.templates.items;
+
+    public magsToJSON(){
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === "5448bc234bdc2d3c308b4569"|| serverItem._parent === "610720f290b75a49ff2e5e25"){
+               this.logger.info("Found Parent");
+               let fileItem = magazineJSON[i];
+               magazineJSON[i] = this.doAssignJSONMagazine(fileItem);
+               this.helper.saveToJSONFile(magazineJSON, '/db/bots/loadouts/magazines.json');
+            }
+        }
+    }
 
     public codeGen() {
 
@@ -104,6 +117,19 @@ export class CodeGen {
         let sa = serverItem._props.ConflictingItems;
         return ca.concat(sa);
         
+    }
+
+    private doAssignJSONMagazine(fileItem : any){
+        if (fileItem) {
+            fileItem
+            return fileItem;
+        }
+
+        let item = {
+            "cartridges": []
+        }
+
+        return item;
     }
 
     private doAssignJsonItemMod(serverItem : ITemplateItem, fileItem : any) {

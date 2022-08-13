@@ -3,7 +3,7 @@
     "experience": {
       "aggressorBonus": 0.02,
       "level": {
-        "max": 10,
+        "max": 12,
         "min": 1
       }
     },
@@ -1521,8 +1521,8 @@
     "experience": {
       "aggressorBonus": 0.02,
       "level": {
-        "max": 20,
-        "min": 10
+        "max": 25,
+        "min": 12
       }
     },
     "appearance": {
@@ -2705,7 +2705,6 @@
             "5926c32286f774616e42de99"
           ],
           "mod_magazine": [
-            "5d2f213448f0355009199284",
             "5926c3b286f774640d189b6b",
             "5926c3b286f774640d189b6b",
             "5926c3b286f774640d189b6b",
@@ -3489,8 +3488,8 @@
     "experience": {
       "aggressorBonus": 0.02,
       "level": {
-        "max": 35,
-        "min": 20
+        "max": 50,
+        "min": 25
       }
     },
     "appearance": {
