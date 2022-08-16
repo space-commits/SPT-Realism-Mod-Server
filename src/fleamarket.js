@@ -199,6 +199,7 @@ class TieredFlea {
         this.canSellContainer(bool);
         this.canSellPouch(bool);
         this.canSellRepairKit(bool);
+        this.canSellCustomMeds(bool);
     }
     canSellContainer(bool) {
         for (let i in this.itemDB) {
@@ -452,6 +453,16 @@ class TieredFlea {
     canSellMaps(bool) {
         for (let i in this.itemDB) {
             if (this.itemDB[i]._parent === "567849dd4bdc2d150f8b456e") {
+                this.itemDB[i]._props.CanSellOnRagfair = bool;
+            }
+        }
+    }
+    canSellCustomMeds(bool) {
+        for (let i in this.itemDB) {
+            if (this.itemDB[i]._parent === "TIER1MEDKIT"
+                || this.itemDB[i]._parent === "TIER2MEDKIT"
+                || this.itemDB[i]._parent === "TIER3MEDKIT"
+                || this.itemDB[i]._parent === "SUPERBOTMEDKIT") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }

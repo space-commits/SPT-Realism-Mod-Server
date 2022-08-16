@@ -7,6 +7,16 @@ class Arrays {
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
         this.botDB = this.tables.bots.types;
+        this.traderIDs = [
+            "54cb50c76803fa8b248b4571",
+            "54cb57776803fa99248b456e",
+            "579dc571d53a0658a154fbec",
+            "58330581ace78e27b8b10cee",
+            "5935c25fb3acc3127c3d8cd9",
+            "5a7c2eca46aef81a7ca2145d",
+            "5ac3b934156ae10c4430e83c",
+            "5c0647fdd443bc2504c2d371"
+        ];
         this.stash_meds = [
             "544fb37f4bdc2dee738b4567",
             "5af0548586f7743a532b7e99",
@@ -39,6 +49,26 @@ class Arrays {
             Holster: "Holster",
             Scabbard: "Scabbard"
         };
+        this.boss_bot_list = [
+            this.botDB["bosssanitar"],
+            this.botDB["bosskojaniy"],
+            this.botDB["bosskilla"],
+            this.botDB["bossgluhar"],
+            this.botDB["bossbully"],
+            this.botDB["bossknight"],
+            this.botDB["bosstagilla"],
+            this.botDB["followerbigpipe"],
+            this.botDB["followerbirdeye"]
+        ];
+        this.scav_bot_list = [
+            this.botDB["cursedassault"],
+            this.botDB["assault"],
+            this.botDB["marksman"]
+        ];
+        this.scav_bot_health_list = [
+            this.botDB["cursedassault"],
+            this.botDB["assault"],
+        ];
         this.non_scav_bot_list = [
             this.botDB["followerbully"],
             this.botDB["followergluharassault"],
@@ -53,7 +83,6 @@ class Arrays {
             this.botDB["sectantwarrior"],
             this.botDB["sectantpriest"],
             this.botDB["marksman"],
-            this.botDB["cursedassault"],
             this.botDB["bosstagilla"],
             this.botDB["bosssanitar"],
             this.botDB["bosskojaniy"],
@@ -61,7 +90,10 @@ class Arrays {
             this.botDB["bossgluhar"],
             this.botDB["bossbully"],
             this.botDB["pmcbot"],
-            this.botDB["exusec"]
+            this.botDB["exusec"],
+            this.botDB["bossknight"],
+            this.botDB["followerbigpipe"],
+            this.botDB["followerbirdeye"]
         ];
         this.bot_list = [
             this.botDB["followerbully"],
@@ -86,7 +118,10 @@ class Arrays {
             this.botDB["bossgluhar"],
             this.botDB["bossbully"],
             this.botDB["pmcbot"],
-            this.botDB["exusec"]
+            this.botDB["exusec"],
+            this.botDB["bossknight"],
+            this.botDB["followerbigpipe"],
+            this.botDB["followerbirdeye"]
         ];
         this.mod_slot_names = {
             "barrel": ["mod_barrel"],

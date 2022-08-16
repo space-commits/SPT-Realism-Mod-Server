@@ -161,6 +161,8 @@ export class Player {
             this.tables.templates.profiles["Edge Of Darkness"].usec.character.Inventory = this.custProfile["Edge Of Darkness"].usec.Inventory;
         }
 
+        this.tables.templates.profiles["Realism Mod"] = this.custProfile["Realism Mod"];
+
         if (this.modConf.logEverything == true) {
             this.logger.info("Player Loaded");
         }

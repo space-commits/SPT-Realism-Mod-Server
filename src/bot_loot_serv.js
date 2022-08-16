@@ -11,23 +11,23 @@ class BotLootServer extends BotLootCacheService_1.BotLootCacheService {
             this.myAddLootToCache(botRole, isPmc, lootPool);
         }
         switch (lootType) {
-            case BotLootCache_1.LootCacheType.Special:
+            case BotLootCache_1.LootCacheType.SPECIAL:
                 return this.lootCache[botRole].specialItems;
-            case BotLootCache_1.LootCacheType.Backpack:
+            case BotLootCache_1.LootCacheType.BACKPACK:
                 return this.lootCache[botRole].backpackLoot;
-            case BotLootCache_1.LootCacheType.Pocket:
+            case BotLootCache_1.LootCacheType.POCKET:
                 return this.lootCache[botRole].pocketLoot;
-            case BotLootCache_1.LootCacheType.Vest:
+            case BotLootCache_1.LootCacheType.VEST:
                 return this.lootCache[botRole].vestLoot;
-            case BotLootCache_1.LootCacheType.Combined:
+            case BotLootCache_1.LootCacheType.COMBINED:
                 return this.lootCache[botRole].combinedPoolLoot;
-            case BotLootCache_1.LootCacheType.HealingItems:
+            case BotLootCache_1.LootCacheType.HEALING_ITEMS:
                 return this.lootCache[botRole].healingItems;
-            case BotLootCache_1.LootCacheType.GrenadeItems:
+            case BotLootCache_1.LootCacheType.GRENADE_ITEMS:
                 return this.lootCache[botRole].grenadeItems;
-            case BotLootCache_1.LootCacheType.DrugItems:
+            case BotLootCache_1.LootCacheType.DRUG_ITEMS:
                 return this.lootCache[botRole].drugItems;
-            case BotLootCache_1.LootCacheType.StimItems:
+            case BotLootCache_1.LootCacheType.STIM_ITEMS:
                 return this.lootCache[botRole].stimItems;
             default:
                 this.logger.error(`loot cache failed for loot: ${lootType} on bot: ${botRole}, was a pmc: ${isPmc}`);

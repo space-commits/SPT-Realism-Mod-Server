@@ -7,6 +7,17 @@ export class Arrays{
     public globalDB = this.tables.globals.config;
     public itemDB = this.tables.templates.items;
     public botDB = this.tables.bots.types;
+    
+    public traderIDs = [
+        "54cb50c76803fa8b248b4571",
+        "54cb57776803fa99248b456e",
+        "579dc571d53a0658a154fbec",
+        "58330581ace78e27b8b10cee",
+        "5935c25fb3acc3127c3d8cd9",
+        "5a7c2eca46aef81a7ca2145d",
+        "5ac3b934156ae10c4430e83c",
+        "5c0647fdd443bc2504c2d371"
+    ]
 
     public stash_meds = [
         "544fb37f4bdc2dee738b4567",
@@ -42,6 +53,29 @@ export class Arrays{
         Scabbard: "Scabbard"
     }
 
+    public boss_bot_list = [
+        this.botDB["bosssanitar"],
+        this.botDB["bosskojaniy"],
+        this.botDB["bosskilla"],
+        this.botDB["bossgluhar"],
+        this.botDB["bossbully"],
+        this.botDB["bossknight"],
+        this.botDB["bosstagilla"],
+        this.botDB["followerbigpipe"],
+        this.botDB["followerbirdeye"]
+    ]
+
+    public scav_bot_list = [
+        this.botDB["cursedassault"],
+        this.botDB["assault"],
+        this.botDB["marksman"]
+    ]
+
+    public scav_bot_health_list = [
+        this.botDB["cursedassault"],
+        this.botDB["assault"],
+    ]
+
     public non_scav_bot_list = [
         this.botDB["followerbully"],
         this.botDB["followergluharassault"],
@@ -56,7 +90,6 @@ export class Arrays{
         this.botDB["sectantwarrior"],
         this.botDB["sectantpriest"],
         this.botDB["marksman"],
-        this.botDB["cursedassault"],
         this.botDB["bosstagilla"],
         this.botDB["bosssanitar"],
         this.botDB["bosskojaniy"],
@@ -64,7 +97,10 @@ export class Arrays{
         this.botDB["bossgluhar"],
         this.botDB["bossbully"],
         this.botDB["pmcbot"],
-        this.botDB["exusec"]
+        this.botDB["exusec"],
+        this.botDB["bossknight"],
+        this.botDB["followerbigpipe"],
+        this.botDB["followerbirdeye"]
     ];
 
     public bot_list = [
@@ -90,7 +126,10 @@ export class Arrays{
         this.botDB["bossgluhar"],
         this.botDB["bossbully"],
         this.botDB["pmcbot"],
-        this.botDB["exusec"]
+        this.botDB["exusec"],
+        this.botDB["bossknight"],
+        this.botDB["followerbigpipe"],
+        this.botDB["followerbirdeye"]
     ]
 
     public mod_slot_names = {

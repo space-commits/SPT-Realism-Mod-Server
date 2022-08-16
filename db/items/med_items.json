@@ -1,4 +1,24 @@
 {
+    "SUPERBOTMEDKIT": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            },
+            "HeavyBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            }
+        },
+        "MaxHpResource": 90000,
+        "medUseTime": 3,
+        "hpResourceRate": 200
+    },
     "TIER1MEDKIT": {
         "effects_health": {},
         "effects_damage": {

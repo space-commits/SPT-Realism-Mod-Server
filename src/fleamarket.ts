@@ -6,14 +6,14 @@ export class FleamarketGlobal {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig) { }
 
     public globalDB = this.tables.globals.config;
-    
+
     public loadFleaGlobal() {
         if (this.modConfig.flea_changes == true && this.modConfig.tiered_flea != true) {
             this.globalDB.RagFair.minUserLevel = 20;
         }
-    
+
         if (this.modConfig.tiered_flea == true) {
-              this.globalDB.RagFair.minUserLevel = 1;
+            this.globalDB.RagFair.minUserLevel = 1;
         }
     }
 }
@@ -81,10 +81,10 @@ export class FleamarketConfig {
 export class TieredFlea {
 
     constructor(private tables: IDatabaseTables) { }
-   
+
     public globalDB = this.tables.globals.config;
     public itemDB = this.tables.templates.items;
-      
+
     public flea0() {
         this.canSellAll(false);
 
@@ -214,6 +214,7 @@ export class TieredFlea {
         this.canSellContainer(bool);
         this.canSellPouch(bool);
         this.canSellRepairKit(bool);
+        this.canSellCustomMeds(bool);
     }
     public canSellContainer(bool) {
         for (let i in this.itemDB) {
@@ -262,7 +263,7 @@ export class TieredFlea {
         for (let i in this.itemDB) {
             if (this.itemDB[i]._parent === "5448e54d4bdc2dcc718b4568"
                 || this.itemDB[i]._parent === "5448e5284bdc2dcb718b4567") {
-                    this.itemDB[i]._props.CanSellOnRagfair = bool
+                this.itemDB[i]._props.CanSellOnRagfair = bool
             }
         }
     }
@@ -309,7 +310,7 @@ export class TieredFlea {
             if (this.itemDB[i]._parent === "5a2c3a9486f774688b05e574"
                 || this.itemDB[i]._parent === "57bef4c42459772e8d35a53b"
                 || this.itemDB[i]._parent === "57bef4c42459772e8d35a53b") {
-                    this.itemDB[i]._props.CanSellOnRagfair = bool
+                this.itemDB[i]._props.CanSellOnRagfair = bool
             }
         }
     }
@@ -319,7 +320,7 @@ export class TieredFlea {
         for (let i in this.itemDB) {
             if (this.itemDB[i]._parent === "5c99f98d86f7745c314214b3"
                 || this.itemDB[i]._parent === "5c164d2286f774194c5e69fa") {
-                    this.itemDB[i]._props.CanSellOnRagfair = bool
+                this.itemDB[i]._props.CanSellOnRagfair = bool
             }
         }
     }
@@ -449,7 +450,7 @@ export class TieredFlea {
 
     public canSellPistol(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" ||  this.itemDB[i]._parent === "617f1ef5e8b54b0998387733" ) {
+            if (this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB[i]._parent === "617f1ef5e8b54b0998387733") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool
             }
         }
@@ -499,6 +500,17 @@ export class TieredFlea {
     public canSellMaps(bool) {
         for (let i in this.itemDB) {
             if (this.itemDB[i]._parent === "567849dd4bdc2d150f8b456e") {
+                this.itemDB[i]._props.CanSellOnRagfair = bool
+            }
+        }
+    }
+    public canSellCustomMeds(bool) {
+        for (let i in this.itemDB) {
+            if (this.itemDB[i]._parent === "TIER1MEDKIT"
+                || this.itemDB[i]._parent === "TIER2MEDKIT"
+                || this.itemDB[i]._parent === "TIER3MEDKIT"
+                || this.itemDB[i]._parent === "SUPERBOTMEDKIT"
+            ) {
                 this.itemDB[i]._props.CanSellOnRagfair = bool
             }
         }

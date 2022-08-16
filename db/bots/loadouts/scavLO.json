@@ -393,7 +393,7 @@
           "5b432b2f5acfc4771e1c6622": 1
         },
         "ArmorVest": {
-          "59e7635f86f7742cbf2c1095": 1,
+          "59e7635f86f7742cbf2c1095": 2,
           "5648a7494bdc2d9d488b4583": 2,
           "5df8a2ca86f7740bfe6df777": 1,
           "5c0e5edb86f77461f55ed1f7": 1
@@ -407,12 +407,12 @@
         },
         "ArmBand": {},
         "TacticalVest": {
-          "572b7adb24597762ae139821": 10,
-          "5fd4c5477a8d854fa0105061": 8,
-          "5fd4c4fa16cac650092f6771": 1,
-          "6034d0230ca681766b6a0fb5": 6,
-          "5e4abfed86f77406a2713cf7": 4,
-          "6034cf5fffd42c541047f72e": 4,
+          "572b7adb24597762ae139821": 12,
+          "5fd4c5477a8d854fa0105061": 10,
+          "5fd4c4fa16cac650092f6771": 2,
+          "6034d0230ca681766b6a0fb5": 7,
+          "5e4abfed86f77406a2713cf7": 5,
+          "6034cf5fffd42c541047f72e": 5,
           "5c0e3eb886f7742015526062": 1,
           "5d5d646386f7742797261fd9": 1,
           "5c0e446786f7742013381639": 1
@@ -1732,7 +1732,7 @@
         "Headwear": 80,
         "Earpiece": 10,
         "FaceCover": 40,
-        "ArmorVest": 30,
+        "ArmorVest": 25,
         "Eyewear": 25,
         "ArmBand": 0,
         "TacticalVest": 100,

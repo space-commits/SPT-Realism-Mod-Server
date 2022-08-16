@@ -79,11 +79,11 @@ class Mod {
                     const databaseServer2 = container.resolve("DatabaseServer");
                     const profileHelper = container.resolve("ProfileHelper");
                     const tables = databaseServer2.getTables();
-                    const array = new arrays_1.Arrays(tables);
-                    const bots = new bots_1.Bots(logger, tables, configServer, modConfig, array);
+                    const arrays = new arrays_1.Arrays(tables);
+                    const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(tables);
                     const player = new player_1.Player(logger, tables, modConfig, custProfile, commonStats);
-                    const helper = new helper_1.Helper(tables, array, logger);
+                    const helper = new helper_1.Helper(tables, arrays, logger);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     let scavData = profileHelper.getScavProfile(sessionID);
                     try {
@@ -161,7 +161,11 @@ class Mod {
                                 }
                             }
                         }
-                        this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container);
+                        if (modConfig.dev_mode == true && pmcData.Info) {
+                            pmcData.Info.AccountType = 1;
+                            pmcData.Info.MemberCategory = 1;
+                        }
+                        this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
                         this.updateBots(pmcData, logger, modConfig, bots);
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
@@ -183,8 +187,8 @@ class Mod {
                     const databaseServer3 = container.resolve("DatabaseServer");
                     const tables = databaseServer3.getTables();
                     const player = new player_1.Player(logger, tables, modConfig, custProfile, commonStats);
-                    const array = new arrays_1.Arrays(tables);
-                    const helper = new helper_1.Helper(tables, array, logger);
+                    const arrays = new arrays_1.Arrays(tables);
+                    const helper = new helper_1.Helper(tables, arrays, logger);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     try {
                         this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
@@ -208,13 +212,13 @@ class Mod {
                     const tables = databaseServer4.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
-                    const array = new arrays_1.Arrays(tables);
-                    const bots = new bots_1.Bots(logger, tables, configServer, modConfig, array);
+                    const arrays = new arrays_1.Arrays(tables);
+                    const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(tables);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     try {
                         this.updateBots(pmcData, logger, modConfig, bots);
-                        this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container);
+                        this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
                         }
@@ -235,13 +239,13 @@ class Mod {
         const tables = databaseServer.getTables();
         const AKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const jsonUtil = container.resolve("JsonUtil");
-        const array = new arrays_1.Arrays(tables);
-        const helper = new helper_1.Helper(tables, array, logger);
+        const arrays = new arrays_1.Arrays(tables);
+        const helper = new helper_1.Helper(tables, arrays, logger);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
-        const attatchBase = new attatchment_base_1.AttatchmentBase(logger, tables, array, modConfig);
+        const attatchBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
         const attatchStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig);
-        const bots = new bots_1.Bots(logger, tables, configServer, modConfig, array);
+        const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays);
         const items = new items_1._Items(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, commonStats);
@@ -313,58 +317,77 @@ class Mod {
             pmcData.Health.BodyParts["RightLeg"].Health.Current = player.legHealth;
             pmcData.Health.Temperature.Current = player.tempCurr;
             pmcData.Health.Temperature.Maximum = player.tempMax;
-            logger.info("Realism Mod: New Profile Hhealth Has Been Adjusted");
+            logger.info("Realism Mod: New Profile Health Has Been Adjusted");
         }
     }
-    fleaHelper(tier, ragfairOfferGen, container) {
+    fleaHelper(tier, ragfairOfferGen, container, arrays) {
         container.resolve("RagfairOfferService").offers = [];
         tier;
         ragfairOfferGen.generateDynamicOffers();
+        for (let i in arrays.traderIDs) {
+            ragfairOfferGen.generateFleaOffersForTrader(arrays.traderIDs[i]);
+        }
     }
-    updateFlea(pmcData, logger, config, flea, ragfairOfferGen, container) {
+    updateFlea(pmcData, logger, config, flea, ragfairOfferGen, container, arrays) {
         var property = pmcData?.Info?.Level;
         if (config.tiered_flea == true) {
             if (property === undefined) {
-                this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
+                this.fleaHelper(flea.flea0(), ragfairOfferGen, container, arrays);
                 logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
             }
             if (property !== undefined) {
                 if (pmcData.Info.Level >= 0) {
-                    this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
+                    this.fleaHelper(flea.flea0(), ragfairOfferGen, container, arrays);
                     logger.info("Realism mod: Fleamarket Locked At Tier 0");
                 }
                 if (pmcData.Info.Level >= 5) {
-                    this.fleaHelper(flea.flea1(), ragfairOfferGen, container);
+                    this.fleaHelper(flea.flea1(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
                 }
                 if (pmcData.Info.Level >= 10) {
-                    this.fleaHelper(flea.flea2(), ragfairOfferGen, container);
+                    this.fleaHelper(flea.flea2(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
                 }
                 if (pmcData.Info.Level >= 15) {
-                    this.fleaHelper(flea.flea3(), ragfairOfferGen, container);
+                    this.fleaHelper(flea.flea3(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
                 }
                 if (pmcData.Info.Level >= 20) {
-                    this.fleaHelper(flea.flea4(), ragfairOfferGen, container);
+                    this.fleaHelper(flea.flea4(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
                 }
                 if (pmcData.Info.Level >= 25) {
-                    this.fleaHelper(flea.flea5(), ragfairOfferGen, container);
+                    this.fleaHelper(flea.flea5(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
                 }
                 if (pmcData.Info.Level >= 30) {
-                    this.fleaHelper(flea.flea6(), ragfairOfferGen, container);
+                    this.fleaHelper(flea.flea6(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
                 }
                 if (pmcData.Info.Level >= 35) {
-                    this.fleaHelper(flea.fleaFullUnlock(), ragfairOfferGen, container);
+                    this.fleaHelper(flea.fleaFullUnlock(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Unlocked");
                 }
             }
         }
     }
+    botTierWeighter(weight1, weight2, weight3, bots) {
+        function add(a, b) { return a + b; }
+        var botTiers = ["Tier1", "Tier2", "Tier3"];
+        var weights = [weight1, weight2, weight3];
+        var totalWeight = weights.reduce(add, 0);
+        var weighedElems = [];
+        var currentElem = 0;
+        while (currentElem < botTiers.length) {
+            for (let i = 0; i < weights[currentElem]; i++)
+                weighedElems[weighedElems.length] = botTiers[currentElem];
+            currentElem++;
+        }
+        var randomTier = Math.floor(Math.random() * totalWeight);
+        return weighedElems[randomTier];
+    }
     updateBots(pmcData, logger, config, bots) {
+        var tier = "Tier1";
         var property = pmcData?.Info?.Level;
         if (config.bot_changes == true) {
             if (property === undefined) {
@@ -381,18 +404,43 @@ class Mod {
                 }
                 if (config.bot_testing == false) {
                     if (pmcData.Info.Level >= 0) {
-                        bots.botConfig1();
+                        tier = this.botTierWeighter(1, 0, 0, bots);
                         logger.info("Realism Mod: Bots Have Been Set To Tier 1");
                     }
-                    if (pmcData.Info.Level >= 12) {
-                        bots.botConfig2();
+                    if (pmcData.Info.Level >= 5) {
+                        tier = this.botTierWeighter(5, 1, 0, bots);
+                    }
+                    if (pmcData.Info.Level >= 10) {
+                        tier = this.botTierWeighter(5, 2, 0, bots);
+                    }
+                    if (pmcData.Info.Level >= 15) {
+                        tier = this.botTierWeighter(0, 10, 1, bots);
                         logger.info("Realism Mod: Bots Have Been Adjusted To Tier 2");
                     }
+                    if (pmcData.Info.Level >= 20) {
+                        tier = this.botTierWeighter(0, 10, 2, bots);
+                    }
                     if (pmcData.Info.Level >= 25) {
-                        bots.botConfig3();
+                        tier = this.botTierWeighter(0, 10, 4, bots);
+                    }
+                    if (pmcData.Info.Level >= 30) {
+                        tier = this.botTierWeighter(0, 10, 8, bots);
+                    }
+                    if (pmcData.Info.Level >= 35) {
+                        tier = this.botTierWeighter(0, 0, 1, bots);
                         logger.info("Realism Mod: Bots Have Been Adjusted To Tier 3");
                     }
+                    if (tier === "Tier1") {
+                        bots.botConfig1();
+                    }
+                    if (tier === "Tier2") {
+                        bots.botConfig2();
+                    }
+                    if (tier === "Tier3") {
+                        bots.botConfig3();
+                    }
                     if (config.logEverything == true) {
+                        logger.info("Tier = " + tier);
                         logger.info("Realism Mod: Bots Have Been Reconfigured");
                     }
                 }

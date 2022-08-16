@@ -27,41 +27,22 @@ export class Bots {
     public usecBase = this.botDB["usec"];
     public bearBase = this.botDB["bear"];
 
-    public botArrNoScav = this.array.non_scav_bot_list;
-    public botArr = this.array.bot_list;
-
     public botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
     public botConfPMC = this.botConf.pmc;
 
     public loadBots() {
 
-        //need to make this only apply to bosses and such
-        // for (const id in this.botDB) {
-        //     if (this.botDB[id].skills != null && this.botDB[id].skills !== undefined) {
-        //         if (this.botDB[id].skills.Common != null && this.botDB[id].skills.Common !== undefined) {
-        //             if (this.botDB[id].skills.Common["Vitality"] != null && this.botDB[id].skills.Common["Vitality"] !== undefined) {
-        //                 this.botDB[id].skills.Common["Vitality"].max = 5100;
-        //                 this.botDB[id].skills.Common["Vitality"].min = 5100;
-        //                 this.logger.info(`${id} - ${this.botDB[id].skills.Common["Vitality"].min}`);
-        //             } else {
-        //                 this.botDB[id].skills.Common["Vitality"] = [];
-        //                 this.botDB[id].skills.Common["Vitality"].max = 5100;
-        //                 this.botDB[id].skills.Common["Vitality"].min = 5100;
-        //                 this.logger.info(`${id} - ${this.botDB[id].skills.Common["Vitality"].min}`);
-        //             }
-        //         } else {
-        //             this.botDB[id].skills.Common = [];
-        //             this.botDB[id].skills.Common["Vitality"] = [];
-        //             this.botDB[id].skills.Common["Vitality"].max = 5100;
-        //             this.botDB[id].skills.Common["Vitality"].min = 5100;
-        //             this.logger.info(`${id} - ${this.botDB[id].skills.Common["Vitality"].min}`);
-        //         }
-        //     }
-        // }
 
-        //Set bot loudouts to tier 1 as default
+        if(this.modConf.med_changes == true){
+            this.array.non_scav_bot_list.forEach(setScavHealth);
+            function setScavHealth(bot) {
+                if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
+                    bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
+                }
+            }
+        }
+
         this.botConfig1();
-
 
         if (this.modConf.bot_names == true) {
             this.usecBase.firstName = USECNames.firstName;
@@ -87,17 +68,42 @@ export class Bots {
     }
 
     public setBotHealth() {
-        //Set bot health
-        this.scavBase.health.BodyParts = commonStats.scavHealth.BodyParts
-        this.scavBase.health.Temperature = commonStats.health.Temperature;
 
-        this.botArrNoScav.forEach(setHealth);
+        this.array.boss_bot_list.forEach(increaseVitality);
+        function increaseVitality(bot) {
+            if (bot.skills.Common) {
+                if (bot.skills.Common["Vitality"]) {
+                    bot.skills.Common["Vitality"].max = 5100;
+                    bot.skills.Common["Vitality"].min = 5100;
+                } 
+                else {
+                    bot.skills.Common["Vitality"] = [];
+                    bot.skills.Common["Vitality"].max = 5100;
+                    bot.skills.Common["Vitality"].min = 5100;
+                }
+            }
+            else {
+                bot.skills.Common = [];
+                bot.skills.Common["Vitality"] = [];
+                bot.skills.Common["Vitality"].max = 5100;
+                bot.skills.Common["Vitality"].min = 5100;
+            }
+        }
+
+        this.array.scav_bot_health_list.forEach(setScavHealth);
+        function setScavHealth(bot) {
+            bot.health.BodyParts = commonStats.scavHealth.BodyParts
+            bot.health.Temperature = commonStats.health.Temperature;
+        }
+
+        this.array.non_scav_bot_list.forEach(setHealth);
         function setHealth(bot) {
             bot.health.BodyParts = commonStats.health.BodyParts;
             bot.health.Temperature = commonStats.health.Temperature;
         }
         if (this.modConf.logEverything == true) {
-            this.logger.info("USEC chest health = " + this.usecBase.health.BodyParts[0].Chest.min);
+            this.logger.info("Killa chest health = " + this.botDB["bosskilla"].health.BodyParts[0].Chest.min);
+            this.logger.info("Killa Vitality = " + this.botDB["bosskilla"].skills.Common["Vitality"].max);
             this.logger.info("Bot Health Set");
         }
     }
@@ -119,7 +125,7 @@ export class Bots {
         }
 
         if (this.modConf.bot_test_weps_enabled == false) {
-            this.botArr.forEach(removeWeps);
+            this.array.bot_list.forEach(removeWeps);
             function removeWeps(bot) {
                 bot.inventory.equipment.FirstPrimaryWeapon = [];
                 bot.inventory.equipment.Holster = [];
@@ -131,17 +137,17 @@ export class Bots {
             this.logger.info("All Scavs");
         }
 
-        if (this.modConf.all_scavs == false  && this.modConf.all_PMCs == true) {
+        if (this.modConf.all_scavs == false && this.modConf.all_PMCs == true) {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance
             this.logger.info("All PMCs");
         }
 
-        if (this.modConf.all_bear == true) {
+        if (this.modConf.all_USEC != true && this.modConf.all_bear == true) {
             this.botConfPMC.isUsec = 0;
             this.logger.info("All Bear");
         }
 
-        if (this.modConf.all_USEC == true) {
+        if (this.modConf.all_bear != true && this.modConf.all_USEC == true) {
             this.botConfPMC.isUsec = 100;
             this.logger.info("All USEC");
         }
@@ -273,7 +279,6 @@ export class Bots {
         this.scavBase.inventory.Ammo = scavLO.scavLO1.inventory.Ammo;
         this.scavBase.inventory.equipment = scavLO.scavLO1.inventory.equipment;
         this.scavBase.inventory.items = scavLO.scavLO1.inventory.items;
-        [scavLO.scavLO1.inventory.mods].push(magazineJSON);
         this.scavBase.inventory.mods = scavLO.scavLO1.inventory.mods;
         this.scavBase.chances = scavLO.scavLO1.chances;
         this.scavBase.generation = scavLO.scavLO1.generation;
@@ -287,7 +292,6 @@ export class Bots {
         this.scavBase.inventory.Ammo = scavLO.scavLO2.inventory.Ammo;
         this.scavBase.inventory.equipment = scavLO.scavLO2.inventory.equipment;
         this.scavBase.inventory.items = scavLO.scavLO2.inventory.items;
-        [scavLO.scavLO2.inventory.mods].push(magazineJSON);
         this.scavBase.inventory.mods = scavLO.scavLO2.inventory.mods;
         this.scavBase.chances = scavLO.scavLO2.chances;
         this.scavBase.generation = scavLO.scavLO2.generation;
@@ -301,7 +305,6 @@ export class Bots {
         this.scavBase.inventory.Ammo = scavLO.scavLO3.inventory.Ammo;
         this.scavBase.inventory.equipment = scavLO.scavLO3.inventory.equipment;
         this.scavBase.inventory.items = scavLO.scavLO3.inventory.items;
-        [scavLO.scavLO3.inventory.mods].push(magazineJSON);
         this.scavBase.inventory.mods = scavLO.scavLO3.inventory.mods;
         this.scavBase.chances = scavLO.scavLO3.chances;
         this.scavBase.generation = scavLO.scavLO3.generation;
@@ -315,7 +318,6 @@ export class Bots {
         this.usecBase.inventory.Ammo = usecLO.usecLO1.inventory.Ammo;
         this.usecBase.inventory.equipment = usecLO.usecLO1.inventory.equipment;
         this.usecBase.inventory.items = usecLO.usecLO1.inventory.items;
-        [usecLO.usecLO1.inventory.mods].push(magazineJSON);
         this.usecBase.inventory.mods = usecLO.usecLO1.inventory.mods;
         this.usecBase.chances = usecLO.usecLO1.chances;
         this.usecBase.generation = usecLO.usecLO1.generation;
@@ -332,7 +334,6 @@ export class Bots {
         this.usecBase.inventory.Ammo = usecLO.usecLO2.inventory.Ammo;
         this.usecBase.inventory.equipment = usecLO.usecLO2.inventory.equipment;
         this.usecBase.inventory.items = usecLO.usecLO2.inventory.items;
-        [usecLO.usecLO2.inventory.mods].push(magazineJSON);
         this.usecBase.inventory.mods = usecLO.usecLO2.inventory.mods;
         this.usecBase.chances = usecLO.usecLO2.chances;
         this.usecBase.generation = usecLO.usecLO2.generation;
@@ -349,7 +350,6 @@ export class Bots {
         this.usecBase.inventory.Ammo = usecLO.usecLO3.inventory.Ammo;
         this.usecBase.inventory.equipment = usecLO.usecLO3.inventory.equipment;
         this.usecBase.inventory.items = usecLO.usecLO3.inventory.items;
-        [usecLO.usecLO3.inventory.mods].push(magazineJSON);
         this.usecBase.inventory.mods = usecLO.usecLO3.inventory.mods;
         this.usecBase.chances = usecLO.usecLO3.chances;
         this.usecBase.generation = usecLO.usecLO3.generation;
@@ -367,7 +367,6 @@ export class Bots {
         this.bearBase.inventory.Ammo = bearLO.bearLO1.inventory.Ammo;
         this.bearBase.inventory.equipment = bearLO.bearLO1.inventory.equipment;
         this.bearBase.inventory.items = bearLO.bearLO1.inventory.items;
-        [bearLO.bearLO1.inventory.mods].push(magazineJSON);
         this.bearBase.inventory.mods = bearLO.bearLO1.inventory.mods;
         this.bearBase.chances = bearLO.bearLO1.chances;
         this.bearBase.generation = bearLO.bearLO1.generation;
@@ -384,7 +383,6 @@ export class Bots {
         this.bearBase.inventory.Ammo = bearLO.bearLO2.inventory.Ammo;
         this.bearBase.inventory.equipment = bearLO.bearLO2.inventory.equipment;
         this.bearBase.inventory.items = bearLO.bearLO2.inventory.items;
-        [bearLO.bearLO2.inventory.mods].push(magazineJSON);
         this.bearBase.inventory.mods = bearLO.bearLO2.inventory.mods;
         this.bearBase.chances = bearLO.bearLO2.chances;
         this.bearBase.generation = bearLO.bearLO2.generation;
@@ -401,7 +399,6 @@ export class Bots {
         this.bearBase.inventory.Ammo = bearLO.bearLO3.inventory.Ammo;
         this.bearBase.inventory.equipment = bearLO.bearLO3.inventory.equipment;
         this.bearBase.inventory.items = bearLO.bearLO3.inventory.items;
-        [bearLO.bearLO3.inventory.mods].push(magazineJSON);
         this.bearBase.inventory.mods = bearLO.bearLO3.inventory.mods;
         this.bearBase.chances = bearLO.bearLO3.chances;
         this.bearBase.generation = bearLO.bearLO3.generation;

@@ -84,6 +84,20 @@ export class _Items {
         this.addToHandbook("TIER3MEDKIT", "5b47574386f77428ca22b338", 30000);
         this.addToLocale("TIER3MEDKIT", "High-Grade Makeshift Medical Kit", "TIER3", "A high-grade makeshift medical kit used for healing more severe wounds that have been already stabilized in the field. Not suitable for use in the field.");
         this.addToHideout(this.crafts.Tier3Medkit);
+        //SuperMedkit (for bots)
+        this.cloneMedicalItem(
+            "590c678286f77426c9660122",
+            "SUPERBOTMEDKIT",
+            this.medItems.SUPERBOTMEDKIT.MaxHpResource,
+            this.medItems.SUPERBOTMEDKIT.medUseTime,
+            this.medItems.SUPERBOTMEDKIT.hpResourceRate,
+            "assets/content/weapons/usable_items/item_ifak/item_ifak_loot.bundle",
+            "assets/content/weapons/usable_items/item_ifak/item_ifak_container.bundle",
+            "yellow",
+            this.medItems.SUPERBOTMEDKIT.effects_damage
+        );
+        this.addToHandbook("SUPERBOTMEDKIT", "5b47574386f77428ca22b338", 1);
+        this.addToLocale("SUPERBOTMEDKIT","Super Bot Medkit", "SUPERBOTMEDKIT", "Super medkit for bots, will only appear in their Secure Container.");
     }
 
 
@@ -97,6 +111,7 @@ export class _Items {
         itemID._props.UsePrefab.path = usePrefabPath;
         itemID._props.BackgroundColor = color;
         itemID._props.effects_damage = effectsDamage;
+        itemID._props.CanSellOnRagfair = false;
         if(this.modConfig.logEverything == true)
         {
             this.logger.warning("Item " + itemID._id + " Added");
