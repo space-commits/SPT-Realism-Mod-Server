@@ -1,13 +1,13 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 
-export class Arrays{
+export class Arrays {
 
     constructor(private tables: IDatabaseTables) { }
 
     public globalDB = this.tables.globals.config;
     public itemDB = this.tables.templates.items;
     public botDB = this.tables.bots.types;
-    
+
     public traderIDs = [
         "54cb50c76803fa8b248b4571",
         "54cb57776803fa99248b456e",
@@ -346,6 +346,48 @@ export class Arrays{
         "5447b6254bdc2dc3278b4568",
         "5447b6194bdc2d67278b4567",
         "5447b5e04bdc2d62278b4567"
+    ]
+
+    public conflicting_hats = [
+        "60bf74184a63fc79b60c57f6",
+        "5df8a58286f77412631087ed",
+        "5d96141523f0ea1b7f2aacab",
+        "572b7fa124597762b472f9d2",
+        "59e770f986f7742cbe3164ef",
+        "60361b5a9a15b10d96792291",
+        "603618feffd42c541047f771",
+        "60361a7497633951dc245eb4",
+        "6040de02647ad86262233012",
+        "60361b0b5a45383c122086a1",
+        "603619720ca681766b6a0fc4",
+        "572b7d8524597762b472f9d1",
+        "5aa2b8d7e5b5b00014028f4a",
+        "5aa2ba19e5b5b00014028f4e",
+        "5b40e5e25acfc4001a599bea",
+        "5aa2b87de5b5b00016327c25",
+        "5b40e61f5acfc4001a599bec",
+        "5aa2a7e8e5b5b00016327c16",
+        "5aa2b89be5b5b0001569311f",
+        "5b4329075acfc400153b78ff",
+        "5f60e7788adaa7100c3adb49",
+        "5f60e6403b85f6263c14558c",
+        "5f60e784f2bcbb675b00dac7",
+        "5b43271c5acfc432ff4dce65",
+        "61c18db6dfd64163ea78fbb4"
+    ]
+
+    public conflicting_masks = [
+        "5b432c305acfc40019478128",
+        "60363c0c92ec1c31037959f5",
+        "5b432b6c5acfc4001a599bf0",
+        "572b7f1624597762ae139822",
+        "5ab8f4ff86f77431c60d91ba",
+        "5b432f3d5acfc4704b4a1dfb",
+        "5fd8d28367cb5e077335170f",
+        "5b4325355acfc40019478126",
+        "5ab8f85d86f7745cd93a1cf5",
+        "5ab8f39486f7745cd93a1cca",
+        "5b4326435acfc433000ed01d"
     ]
 
 

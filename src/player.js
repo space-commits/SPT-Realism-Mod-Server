@@ -130,11 +130,11 @@ class Player {
         }
     }
     debuffMul(buff, mult) {
-        if (buff.Threshold !== undefined) {
+        if (buff?.Threshold !== undefined) {
             buff.Threshold /= mult;
             buff.K *= mult;
         }
-        else if (buff.Threshold == undefined) {
+        else if (buff?.Threshold == undefined) {
             buff *= mult;
         }
     }

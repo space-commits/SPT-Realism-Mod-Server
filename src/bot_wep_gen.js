@@ -73,7 +73,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
 exports.BotWepGen = BotWepGen;
 class CheckRequired {
     checkRequired(slot) {
-        if (slot._botRequired != undefined) {
+        if (slot?._botRequired != undefined) {
             if (slot._botRequired == true)
                 return true;
         }

@@ -22,6 +22,7 @@ class Bots {
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
         this.botDB = this.tables.bots.types;
+        this.map = this.tables.locations;
         this.scavBase = this.botDB["assault"];
         this.usecBase = this.botDB["usec"];
         this.bearBase = this.botDB["bear"];
@@ -29,11 +30,37 @@ class Bots {
         this.botConfPMC = this.botConf.pmc;
     }
     loadBots() {
+        for (let item in this.itemDB) {
+            for (let hat in this.array.conflicting_hats) {
+                if (this.itemDB[item]._id === this.array.conflicting_hats[hat]) {
+                    let ca = this.array.conflicting_masks;
+                    let sa = this.itemDB[item]._props.ConflictingItems;
+                    this.itemDB[item]._props.ConflictingItems = ca.concat(sa);
+                }
+            }
+        }
         if (this.modConf.med_changes == true) {
-            this.array.non_scav_bot_list.forEach(setScavHealth);
-            function setScavHealth(bot) {
+            this.array.non_scav_bot_list.forEach(addBotMedkit);
+            function addBotMedkit(bot) {
                 if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
                     bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
+                }
+            }
+        }
+        if (this.modConf.difficulty == true) {
+            this.botConfPMC.bearType = "pmcbot";
+            this.botConfPMC.usecType = "pmcbot";
+            for (let i in this.map) {
+                if (this.map[i].base?.BossLocationSpawn !== undefined) {
+                    for (let k in this.map[i].base.BossLocationSpawn) {
+                        this.map[i].base.BossLocationSpawn[k].BossDifficult = "impossible";
+                        if (this.map[i].base.BossLocationSpawn[k].BossName === "bossKnight") {
+                            this.map[i].base.BossLocationSpawn[k].BossEscortDifficult = "impossible";
+                        }
+                        else {
+                            this.map[i].base.BossLocationSpawn[k].BossEscortDifficult = "hard";
+                        }
+                    }
                 }
             }
         }
@@ -60,8 +87,8 @@ class Bots {
     setBotHealth() {
         this.array.boss_bot_list.forEach(increaseVitality);
         function increaseVitality(bot) {
-            if (bot.skills.Common) {
-                if (bot.skills.Common["Vitality"]) {
+            if (bot.skills?.Common !== undefined) {
+                if (bot.skills.Common["Vitality"] !== undefined) {
                     bot.skills.Common["Vitality"].max = 5100;
                     bot.skills.Common["Vitality"].min = 5100;
                 }
@@ -96,16 +123,16 @@ class Bots {
     }
     botTest(tier) {
         if (tier == 1) {
-            this.logger.warning("Tier 1 Test Selected");
             this.botConfig1();
+            this.logger.warning("Tier 1 Test Selected");
         }
         if (tier == 2) {
-            this.logger.warning("Tier 2 Test Selected");
             this.botConfig2();
+            this.logger.warning("Tier 2 Test Selected");
         }
         if (tier == 3) {
-            this.logger.warning("Tier 3 Test Selected");
             this.botConfig3();
+            this.logger.warning("Tier 3 Test Selected");
         }
         if (this.modConf.bot_test_weps_enabled == false) {
             this.array.bot_list.forEach(removeWeps);
@@ -153,8 +180,12 @@ class Bots {
         this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc1.chanceSameSideIsHostilePercent;
         this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc1.looseWeaponInBackpackChancePercent;
         this.botConfPMC.isUsec = rmBotConfig.pmc1.isUsec;
+        this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue1;
+        if (this.modConf.difficulty == true) {
+            this.botConfPMC.difficulty = "Hard";
+        }
         this.scavLoad1();
         this.usecLoad1();
         this.bearLoad1();
@@ -184,8 +215,12 @@ class Bots {
         this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc2.chanceSameSideIsHostilePercent;
         this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc2.looseWeaponInBackpackChancePercent;
         this.botConfPMC.isUsec = rmBotConfig.pmc2.isUsec;
+        this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue2;
+        if (this.modConf.difficulty == true) {
+            this.botConfPMC.difficulty = "Hard";
+        }
         this.scavLoad2();
         this.usecLoad2();
         this.bearLoad2();
@@ -215,8 +250,12 @@ class Bots {
         this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc3.chanceSameSideIsHostilePercent;
         this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc3.looseWeaponInBackpackChancePercent;
         this.botConfPMC.isUsec = rmBotConfig.pmc3.isUsec;
+        this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
+        if (this.modConf.difficulty == true) {
+            this.botConfPMC.difficulty = "Impossible";
+        }
         this.scavLoad3();
         this.usecLoad3();
         this.bearLoad3();

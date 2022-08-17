@@ -404,7 +404,25 @@
         "maxPocketLootTotalRub": 25000,
         "maxVestLootTotalRub": 25000,
         "looseWeaponInBackpackChancePercent": 0,
-        "chanceSameSideIsHostilePercent": 80
+        "chanceSameSideIsHostilePercent": 87,
+        "convertIntoPmcChance": {
+            "assault": {
+                "min": 25,
+                "max": 45
+            },
+            "cursedassault": {
+                "min": 15,
+                "max": 40
+            },
+            "pmcbot": {
+                "min": 5,
+                "max": 10
+            },
+            "exusec": {
+                "min": 0,
+                "max": 0
+            }
+        }
     },
     "pmc2": {
         "dynamicLoot": {
@@ -419,7 +437,25 @@
         "maxPocketLootTotalRub": 35000,
         "maxVestLootTotalRub": 35000,
         "looseWeaponInBackpackChancePercent": 0,
-        "chanceSameSideIsHostilePercent": 99
+        "chanceSameSideIsHostilePercent": 99,
+        "convertIntoPmcChance": {
+            "assault": {
+                "min": 20,
+                "max": 40
+            },
+            "cursedassault": {
+                "min": 15,
+                "max": 40
+            },
+            "pmcbot": {
+                "min": 5,
+                "max": 10
+            },
+            "exusec": {
+                "min": 0,
+                "max": 0
+            }
+        }
     },
     "pmc3": {
         "dynamicLoot": {
@@ -434,7 +470,25 @@
         "maxPocketLootTotalRub": 50000,
         "maxVestLootTotalRub": 50000,
         "looseWeaponInBackpackChancePercent": 0,
-        "chanceSameSideIsHostilePercent": 100
+        "chanceSameSideIsHostilePercent": 100,
+        "convertIntoPmcChance": {
+            "assault": {
+                "min": 15,
+                "max": 40
+            },
+            "cursedassault": {
+                "min": 15,
+                "max": 40
+            },
+            "pmcbot": {
+                "min": 5,
+                "max": 10
+            },
+            "exusec": {
+                "min": 0,
+                "max": 0
+            }
+        }
     },
     "pmcTest": {
         "convertIntoPmcChance": {

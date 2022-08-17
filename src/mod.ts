@@ -216,9 +216,13 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                                     }
                                 }
                             }
-                            if(modConfig.dev_mode == true && pmcData.Info){
+                            if(modConfig.dev_mode == true && pmcData?.Info !== undefined){
                                 pmcData.Info.AccountType = 1;
                                 pmcData.Info.MemberCategory = 1;                             
+                            }
+                            if(modConfig.dev_mode == false && pmcData?.Info !== undefined){
+                                pmcData.Info.AccountType = 0;
+                                pmcData.Info.MemberCategory = 2;                             
                             }
                             this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
                             this.updateBots(pmcData, logger, modConfig, bots);
@@ -382,7 +386,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
             logger.info("Realism Mod: New Profile Meds And Hydration/Energy Adjusted");
         }
         if (modConfig.logEverything == true) {
-            logger.info("Realism Mod: Meds Adjusted");
+            logger.info("Realism Mod: Meds Checked");
         }
     }
 
