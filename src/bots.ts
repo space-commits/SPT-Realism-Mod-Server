@@ -54,8 +54,8 @@ export class Bots {
         }
 
         if(this.modConf.difficulty == true){
-            this.botConfPMC.bearType = "pmcbot";
-            this.botConfPMC.usecType = "pmcbot";
+            this.botConfPMC.bearType = "assault";
+            this.botConfPMC.usecType = "assault";
 
             for(let i in this.map){
                 if(this.map[i].base?.BossLocationSpawn !== undefined){

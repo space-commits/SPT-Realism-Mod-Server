@@ -36,6 +36,13 @@ export class _Items {
         if (this.config.logEverything == true) {
             this.logger.info("Items Loaded");
         }
+        
+        for(let item in this.itemDB){
+            if(this.itemDB[item]?._props?.DiscardLimit !== undefined){
+                this.itemDB[item]._props.DiscardLimit = -1;
+            }
+        }
+
     }
 
     public createCustomMedItems() {
