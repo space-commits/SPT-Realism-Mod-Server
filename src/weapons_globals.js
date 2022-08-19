@@ -52,7 +52,7 @@ class WeaponsGlobals {
             this.globalDB.Aiming.RecoilConvergenceMult = 1;
             this.globalDB.Aiming.RecoilVertBonus = 0;
             this.globalDB.Aiming.RecoilBackBonus = 0;
-            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.7;
+            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
             this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.7;
             this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
             this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.65;

@@ -1408,7 +1408,7 @@ export class WeaponsStats {
 
 
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.7;
+                    fileData._props.DurabilityBurnRatio = 0.15;
                     fileData._props.HeatFactorGun = 0.2;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1426,7 +1426,7 @@ export class WeaponsStats {
 
 
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.7;
+                    fileData._props.DurabilityBurnRatio = 0.15;
                     fileData._props.HeatFactorGun = 0.2;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1442,7 +1442,7 @@ export class WeaponsStats {
             //Klin
             if (fileData._id === "57f4c844245977379d5c14d1") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.007;
+                    fileData._props.DurabilityBurnRatio = 0.025;
                     fileData._props.HeatFactorGun = 0.2;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.5;
@@ -1736,7 +1736,7 @@ export class WeaponsStats {
 
 
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.9;
+                    fileData._props.DurabilityBurnRatio = 0.1;
                     fileData._props.HeatFactorGun = 0.25;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1755,7 +1755,7 @@ export class WeaponsStats {
 
 
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.9;
+                    fileData._props.DurabilityBurnRatio = 0.1;
                     fileData._props.HeatFactorGun = 0.25;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1774,7 +1774,7 @@ export class WeaponsStats {
 
 
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 1;
+                    fileData._props.DurabilityBurnRatio = 0.25;
                     fileData._props.HeatFactorGun = 0.4;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1793,7 +1793,7 @@ export class WeaponsStats {
 
 
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.85;
+                    fileData._props.DurabilityBurnRatio = 0.3;
                     fileData._props.HeatFactorGun = 0.2;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1811,7 +1811,7 @@ export class WeaponsStats {
 
 
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.85;
+                    fileData._props.DurabilityBurnRatio = 0.3;
                     fileData._props.HeatFactorGun = 0.2;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;

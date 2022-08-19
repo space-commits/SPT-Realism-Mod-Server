@@ -164,8 +164,6 @@ class CodeGen {
                 for (let j in testFile) {
                     if (fileData._id === testFile[j].ID) {
                         fileData._props.ConflictingItems = testFile[j].ConflictingItems;
-                        fileData._props.Recoil = testFile[j].Recoil;
-                        fileData._props.Ergonomics = testFile[j].Ergonomics;
                     }
                 }
             }

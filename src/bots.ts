@@ -171,12 +171,12 @@ export class Bots {
             this.logger.info("All PMCs");
         }
 
-        if (this.modConf.all_USEC != true && this.modConf.all_bear == true) {
+        if (this.modConf.all_USEC == false && this.modConf.all_bear == true) {
             this.botConfPMC.isUsec = 0;
             this.logger.info("All Bear");
         }
 
-        if (this.modConf.all_bear != true && this.modConf.all_USEC == true) {
+        if (this.modConf.all_bear == false && this.modConf.all_USEC == true) {
             this.botConfPMC.isUsec = 100;
             this.logger.info("All USEC");
         }

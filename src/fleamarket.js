@@ -78,13 +78,12 @@ class TieredFlea {
     }
     flea1() {
         this.canSellAll(false);
-        this.canSellMaps(true);
+        this.canSellShotgun(true);
     }
     flea2() {
         this.canSellAll(false);
         this.canSellPistol(true);
         this.canSellShotgun(true);
-        this.canSellMaps(true);
     }
     flea3() {
         this.canSellAll(false);
@@ -92,12 +91,10 @@ class TieredFlea {
         this.canSellPistol(true);
         this.canSellSMG(true);
         this.canSellShotgun(true);
-        this.canSellSpecial(true);
         this.canSellHelmet(true);
     }
     flea4() {
         this.canSellAll(false);
-        this.canSellMaps(true);
         this.canSellPistol(true);
         this.canSellShotgun(true);
         this.canSellSpecial(true);
@@ -110,7 +107,6 @@ class TieredFlea {
     }
     flea5() {
         this.canSellAll(false);
-        this.canSellMaps(true);
         this.canSellPistol(true);
         this.canSellShotgun(true);
         this.canSellSpecial(true);
@@ -127,7 +123,6 @@ class TieredFlea {
     }
     flea6() {
         this.canSellAll(false);
-        this.canSellMaps(true);
         this.canSellPistol(true);
         this.canSellShotgun(true);
         this.canSellSpecial(true);
@@ -168,6 +163,7 @@ class TieredFlea {
         this.canSellMods(true);
         this.canSellGear(true);
         this.canSellRepairKit(true);
+        this.canSellMaps(true);
     }
     canSellAll(bool) {
         this.canSellMeds(bool);

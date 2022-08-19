@@ -38,11 +38,44 @@ class Player {
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 35;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 75;
+            //vector3
+            //stam consumption when in red overweight. 10 = no different, -10 = increase stam drain when moving, -100 = stam drain when not moving
+            //there's nothing consistent about it, with everything set to -40 there's no stam drain at all...
+            // this.globalDB.Stamina.OverweightConsumptionByPose["x"] = -40; //stand
+            // this.globalDB.Stamina.OverweightConsumptionByPose["y"] = -40; //prone, reduced arm stamina?
+            // this.globalDB.Stamina.OverweightConsumptionByPose["z"] = -40;
+            //vector2
+            // this.globalDB.Stamina.PoseLevelConsumptionPerNotch["x"] = 2; 
+            // this.globalDB.Stamina.PoseLevelConsumptionPerNotch["y"] = 6; 
+            // this.globalDB.Stamina.PoseLevelConsumptionPerNotch["z"] = 0;
+            // this.globalDB.Stamina.RestorationMultiplierByPose["x"] = 2;
+            // this.globalDB.Stamina.RestorationMultiplierByPose["y"] = 1.5;
+            // this.globalDB.Stamina.RestorationMultiplierByPose["z"] = 1; 
+            // this.globalDB.Stamina.CrouchConsumption["x"] = ;
+            // this.globalDB.Stamina.CrouchConsumption["y"] = ;
+            // this.globalDB.Stamina.CrouchConsumption["z"] = ;
+            // this.globalDB.Stamina.StandupConsumption["x"] = ;
+            // this.globalDB.Stamina.StandupConsumption["y"] = ;
+            // this.globalDB.Stamina.StandupConsumption["z"] = ;
+            // this.globalDB.Stamina.WalkConsumption["x"] = ;
+            // this.globalDB.Stamina.WalkConsumption["y"] = ;
+            // this.globalDB.Stamina.WalkConsumption["z"] = ;
+            // this.globalDB.Stamina.TransitionSpeed["x"] = ;
+            // this.globalDB.Stamina.TransitionSpeed["y"] = ;
+            // this.globalDB.Stamina.TransitionSpeed["z"] = ;
             this.globalDB.WalkSpeed["x"] = 0.6;
-            this.globalDB.WalkSpeed["y"] = 0.8;
-            this.globalDB.SprintSpeed["x"] = 0.05;
-            this.globalDB.SprintSpeed["y"] = 0.4;
-            this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] = 0.525;
+            this.globalDB.WalkSpeed["y"] = 0.82;
+            this.globalDB.SprintSpeed["x"] = 0.02;
+            this.globalDB.SprintSpeed["y"] = 0.42;
+            this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] *= 2.25; //up lightweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] *= 3.5; // down lightweight
+            this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] *= 0.9; // up heavyweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] *= 2.75; //down heavyweight
+            this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
+            this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
+            //test speedlimitafterfall, duration, after jump
+            //////////////////////////////////////////////////////////
+            this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] = 0.53;
             this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] = 0.75;
             this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] = 2.6;
             this.globalDB.Inertia.SpeedLimitDurationMin["x"] = 0.15;
@@ -51,13 +84,14 @@ class Player {
             this.globalDB.Inertia.SpeedLimitDurationMax["y"] = 0.3;
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
-            this.globalDB.Inertia.BaseJumpPenalty = 0.5;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 0.6;
-            this.globalDB.Inertia.SprintBrakeInertia["y"] = 73.15;
+            //////////////////////////////////////////////////////////
+            this.globalDB.Inertia.BaseJumpPenalty = 0.8;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1;
+            this.globalDB.Inertia.SprintBrakeInertia["y"] = 73;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["x"] = 0.812;
-            this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.044;
-            this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.79;
-            this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 1.581;
+            this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
+            this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.8;
+            this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.58;
             this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.3;
             this.globalDB.Health.Falling.DamagePerMeter = 11;
             this.globalDB.Health.Falling.SafeHeight = 2.1;
@@ -65,9 +99,9 @@ class Player {
             this.globalDB.Stamina.Capacity = 120;
             this.globalDB.Stamina.BaseRestorationRate = 10;
             this.globalDB.Stamina.AimDrainRate = 0.385;
-            this.globalDB.Stamina.AimConsumptionByPose["x"] = 0;
-            this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.25;
-            this.globalDB.Stamina.AimConsumptionByPose["z"] = 1;
+            this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.1;
+            this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.2;
+            this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing
             this.globalDB.Inertia.SideTime["x"] = 0.76;
             this.globalDB.Inertia.SideTime["y"] = 0.38;
             this.globalDB.Inertia.MinDirectionBlendTime = 0.19;
@@ -106,7 +140,7 @@ class Player {
             this.globalDB.StomachOverdamage *= 2;
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.Threshold /= mult;
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult);
-            this.debuffMul(health.Fracture.FallingProbability, 1.1);
+            this.debuffMul(health.Fracture.FallingProbability, 1);
             this.debuffMul(health.HeavyBleeding.Probability, 1.55);
             this.debuffMul(health.LightBleeding.Probability, 2.05);
             this.debuffMul(health.Wound.ThresholdMax, mult);

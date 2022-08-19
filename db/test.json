@@ -20,10 +20,10 @@
         "H recoil Delta": "2",
         "Balance Value": "3",
         "Base Torque": "4",
-        "IsRecoilCrank": "5",
-        "Reload Speed": "6",
-        "Aim Speed": "7",
-        "Draw Speed": "8",
+        "": "5",
+        "": "6",
+        "": "7",
+        "": "8",
         "Has Shoulder Contact": "9"
     },
     "Ammo": {
@@ -41929,7 +41929,7 @@
         "RecoilBack": 242,
         "Ergonomics": 72,
         "ConflictingItems": [
-            "0",
+            "bullpup",
             "0",
             "0",
             "0",
@@ -41955,7 +41955,7 @@
         "RecoilBack": 315,
         "Ergonomics": 72,
         "ConflictingItems": [
-            "0",
+            "bullpup",
             "0",
             "0",
             "0",

@@ -72,5 +72,5 @@
     "all_PMCs": false,
     "all_USEC": false,
     "all_bear": false,
-    "dev_mode": false
+    "dev_mode": true
 }
