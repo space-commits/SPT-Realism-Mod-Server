@@ -143,19 +143,19 @@ class Bots {
         }
         if (this.modConf.all_scavs == true && this.modConf.all_PMCs == false) {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.scavTest.convertIntoPmcChance;
-            this.logger.info("All Scavs");
+            this.logger.warning("All Scavs");
         }
         if (this.modConf.all_scavs == false && this.modConf.all_PMCs == true) {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
-            this.logger.info("All PMCs");
+            this.logger.warning("All PMCs");
         }
         if (this.modConf.all_USEC == false && this.modConf.all_bear == true) {
             this.botConfPMC.isUsec = 0;
-            this.logger.info("All Bear");
+            this.logger.warning("All Bear");
         }
         if (this.modConf.all_bear == false && this.modConf.all_USEC == true) {
             this.botConfPMC.isUsec = 100;
-            this.logger.info("All USEC");
+            this.logger.warning("All USEC");
         }
     }
     botConfig1() {

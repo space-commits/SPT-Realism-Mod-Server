@@ -1314,7 +1314,7 @@ class WeaponsStats {
             //Klin
             if (fileData._id === "57f4c844245977379d5c14d1") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.002;
+                    fileData._props.DurabilityBurnRatio = 0.025;
                     fileData._props.HeatFactorGun = 0.2;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.5;

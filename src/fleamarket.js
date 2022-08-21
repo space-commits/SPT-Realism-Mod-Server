@@ -31,6 +31,10 @@ class FleamarketConfig {
         //     this.fleaConf.dynamic.blacklist.enableBsgList = false;
         //     this.fleaConf.dynamic.blacklist.custom = this.custFleaConf.blacklist.custom;
         // }
+        if (this.modConfig.disable_flea_blacklist == true) {
+            this.fleaConf.dynamic.blacklist.enableBsgList = false;
+            this.fleaConf.dynamic.blacklist.custom = [];
+        }
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.sell.chance.base = 35;
             this.fleaConf.sell.time.base = 240;

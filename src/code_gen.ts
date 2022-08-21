@@ -102,7 +102,7 @@ export class CodeGen {
         //let arr = serverItem._props.ConflictingItems;
         // var ca = ["a","b", serverItem._props.Caliber.toString()]; 
         // let recoil = (serverItem._props.Recoil).toString();
-        let ca = ["0", "0" , "0", "0", "0" , "0", "0", "0" , "0", "0", "0" , "0", "0", "0" , "0"]; 
+        let ca = ["1", "1" , "1", "1", "1" , "1", "0", "0" , "0", "0", "0" , "0", "0", "0" , "0"]; 
         let sa = serverItem._props.ConflictingItems;
         return ca.concat(sa);
         
