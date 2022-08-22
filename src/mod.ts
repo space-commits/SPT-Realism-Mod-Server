@@ -32,6 +32,7 @@ import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator
 import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponResult";
 import { BotLootCacheService } from "@spt-aki/services/BotLootCacheService";
 import { LootCacheType } from "@spt-aki/models/spt/bots/BotLootCache";
+import { DynamicRouterModService } from "@spt-aki/services/mod/dynamicRouter/DynamicRouterModService"
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -61,6 +62,7 @@ const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const commonStats = require("../db/bots/common.json");
 const modConfig = require("../config/config.json");
+const path = require("path");
 
 class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
 
@@ -273,7 +275,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
             "RealismMod"
         );
 
-
         staticRouterModService.registerStaticRouter(
             "runAtRaidEnd",
             [
@@ -337,9 +338,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
 
         // codegen.codeGen();
-        // codegen.magsToJSON();
-        codegen.pushModsToServer();
-        codegen.pushWepsToServer();
 
         if (modConfig.bot_changes == true) {
             bots.loadBots();

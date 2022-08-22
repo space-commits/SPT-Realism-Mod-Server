@@ -1,0 +1,25 @@
+{
+    "Weapon Mod Stats": {
+        "Mod Type": "0",
+        "V recoil": "1",
+        "H recoil": "2",
+        "Camera recoil": "3",
+        "Dispersion": "4",
+        "FA ROF": "5",
+        "Semi ROF": "6",
+        "Malfunction Chance": "7",
+        "Reload Speed": "8",
+        "Aim Speed": "9",
+        "Draw Speed": "10",
+        "Length in mm or inch(for handguards and barrels)": "11",
+        "Can Cylce Subsonic": "12"
+    },
+    "Weapon Stats": {
+        "Weapon Type": "0",
+        "Base Torque": "4"
+    },
+    "Ammo": {
+        "Is Subsonic": "",
+        "": ""
+    }
+}

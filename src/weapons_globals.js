@@ -15,9 +15,29 @@ class WeaponsGlobals {
             this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
             this.globalDB.Overheat.MaxCOIIncreaseMult = 4;
             this.globalDB.Overheat.FirerateReduceMinMult = 1;
-            this.globalDB.Overheat.FirerateOverheatBorder = 130;
+            this.globalDB.Overheat.FirerateOverheatBorder = 120;
             this.globalDB.Overheat.AutoshotChance = 0.4;
-            this.globalDB.Overheat.OverheatProblemsStart = 80;
+            this.globalDB.Overheat.OverheatProblemsStart = 70;
+            this.globalDB.Overheat.MinWearOnOverheat = 0.2;
+            this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
+            for (let i in this.itemDB) {
+                let fileData = this.itemDB[i];
+                if (fileData._props.weapClass === "smg"
+                    || fileData._props.weapClass === "shotgun"
+                    || fileData._props.weapClass === "assaultCarbine"
+                    || fileData._props.weapClass === "sniperRifle"
+                    || fileData._props.weapClass === "assaultRifle"
+                    || fileData._props.weapClass === "machinegun"
+                    || fileData._props.weapClass === "marksmanRifle"
+                    || fileData._props.weapClass === "assaultRifle"
+                    || fileData._props.weapClass === "pistol") {
+                    fileData._props.MinRepairDegradation = 0;
+                    fileData._props.MaxRepairDegradation = 0.02;
+                    fileData._props.MinRepairKitDegradation = 0;
+                    fileData._props.MaxRepairKitDegradation = 0;
+                    fileData._props.RepairComplexity = 0;
+                }
+            }
         }
         if (this.modConf.recoil_changes == true && this.modConf.legacy_recoil_changes != true) {
             for (let i in this.itemDB) {

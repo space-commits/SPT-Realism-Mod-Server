@@ -25,6 +25,7 @@ const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const commonStats = require("../db/bots/common.json");
 const modConfig = require("../config/config.json");
+const path = require("path");
 class Mod {
     preAkiLoad(container) {
         const logger = container.resolve("WinstonLogger");
@@ -259,9 +260,6 @@ class Mod {
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         // codegen.codeGen();
-        // codegen.magsToJSON();
-        codegen.pushModsToServer();
-        codegen.pushWepsToServer();
         if (modConfig.bot_changes == true) {
             bots.loadBots();
         }

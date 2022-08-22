@@ -67,10 +67,11 @@ class Player {
             this.globalDB.WalkSpeed["y"] = 0.82;
             this.globalDB.SprintSpeed["x"] = 0.02;
             this.globalDB.SprintSpeed["y"] = 0.42;
-            this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] *= 2.25; //up lightweight
-            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] *= 3.5; // down lightweight
-            this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] *= 0.9; // up heavyweight
-            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] *= 2.75; //down heavyweight
+            this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] *= 2.1; //up lightweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] *= 3.3; // down lightweight
+            this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] *= 0.8; // up heavyweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] *= 2.5; //down heavyweight
+            this.globalDB.Stamina.CrouchConsumption["x"] *= 10;
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
             //test speedlimitafterfall, duration, after jump
@@ -85,8 +86,8 @@ class Player {
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
             //////////////////////////////////////////////////////////
-            this.globalDB.Inertia.BaseJumpPenalty = 0.8;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1;
+            this.globalDB.Inertia.BaseJumpPenalty = 2;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1.5;
             this.globalDB.Inertia.SprintBrakeInertia["y"] = 73;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["x"] = 0.812;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
@@ -98,6 +99,8 @@ class Player {
             this.globalDB.Stamina.SafeHeightOverweight = 1.7;
             this.globalDB.Stamina.Capacity = 120;
             this.globalDB.Stamina.BaseRestorationRate = 10;
+            this.globalDB.Stamina.OxygenCapacity *= 1.2;
+            this.globalDB.Stamina.OxygenRestoration *= 2;
             this.globalDB.Stamina.AimDrainRate = 0.385;
             this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.1;
             this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.2;
