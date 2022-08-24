@@ -1,0 +1,50 @@
+{
+    "5888961624597754281f93f3": {
+        "ID": "5888961624597754281f93f3",
+        "ModType": "",
+        "VerticalRecoil": -2.5,
+        "HorizontalRecoil": -2.5,
+        "Dispersion": 0,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "MalfunctionChance": 0,
+        "ReloadSpeed": 0,
+        "AimSpeed": 0,
+        "DrawSpeed": 0,
+        "Length": 0,
+        "CanCylceSubs": false
+    },
+    "622b397c9a3d4327e41843b6": {
+        "ID": "622b397c9a3d4327e41843b6",
+        "ModType": "",
+        "VerticalRecoil": -1,
+        "HorizontalRecoil": -1,
+        "Dispersion": 0,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "MalfunctionChance": 0,
+        "ReloadSpeed": 0,
+        "AimSpeed": 0,
+        "DrawSpeed": 0,
+        "Length": 0,
+        "CanCylceSubs": false
+    },
+    "56ea8222d2720b69698b4567": {
+        "ID": "56ea8222d2720b69698b4567",
+        "ModType": "",
+        "VerticalRecoil": -1,
+        "HorizontalRecoil": -1,
+        "Dispersion": 0,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "MalfunctionChance": 0,
+        "ReloadSpeed": 0,
+        "AimSpeed": 0,
+        "DrawSpeed": 0,
+        "Length": 0,
+        "CanCylceSubs": false
+    }
+}

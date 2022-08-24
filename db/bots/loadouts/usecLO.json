@@ -1513,14 +1513,16 @@
         "5d1f56ff86f7743f8362bcd7",
         "5d4da0cb86f77450fe0a6629",
         "6033a35f80ae5e2f970ba6bb",
-        "5d1f56c686f7744bcd13459c"
+        "5d1f56c686f7744bcd13459c",
+        "5cde95d97d6c8b647a3769b0"
       ],
       "feet": [
         "5d1f592286f7743f8362bcdb",
         "5e4bb3b586f77406812bd579",
         "6033a3fee29c9f6c9b14e74e",
         "5e9dcadd86f7743e20652f23",
-        "5cde95ef7d6c8b04713c4f2d"
+        "5cde95ef7d6c8b04713c4f2d",
+        "629613ad1f798f3be7479951"
       ]
     },
     "inventory": {
@@ -2612,6 +2614,9 @@
         "5de8f237bbaf010b10528a70": {
           "mod_muzzle": [
             "5de8f2d5b74cd90030650c72"
+          ],
+          "mod_tactical": [
+            "5a7b483fe899ef0016170d15"
           ]
         },
         "5de8fbf2b74cd90030650c79": {
@@ -3680,8 +3685,8 @@
         },
         "FirstPrimaryWeapon": {
           "5df8ce05b11454561e39243b": 1,
-          "5c488a752e221602b412af63": 5,
-          "5447a9cd4bdc2dbd208b4567": 7,
+          "5c488a752e221602b412af63": 3,
+          "5447a9cd4bdc2dbd208b4567": 8,
           "5aafa857e5b5b00018480968": 1,
           "5f2a9575926fd9352339381f": 1,
           "5b0bbe4e5acfc40dc528a72d": 1,
@@ -4830,6 +4835,9 @@
         "5de8f237bbaf010b10528a70": {
           "mod_muzzle": [
             "5de8f2d5b74cd90030650c72"
+          ],
+          "mod_tactical": [
+            "5a7b483fe899ef0016170d15"
           ]
         },
         "5a0abb6e1526d8000a025282": {

@@ -257,9 +257,9 @@ class Mod {
         const weapons_globals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const weapons_stats = new weapons_stats_1.WeaponsStats(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
-        const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper);
+        const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
-        // codegen.codeGen();
+        // codegen.attTemplatesCodeGen();
         if (modConfig.bot_changes == true) {
             bots.loadBots();
         }

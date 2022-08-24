@@ -7141,7 +7141,7 @@ class AttatchmentStats {
             }
             //AKM 10 ribbed
             if (fileData._id === "59e5d83b86f7745aed03d262") {
-                fileData._props.Ergonomics += 0;
+                fileData._props.Ergonomics = 0;
                 fileData._props.MalfunctionChance = 0;
                 fileData._props.LoadUnloadModifier += 0;
                 fileData._props.CheckTimeModifier += 0;

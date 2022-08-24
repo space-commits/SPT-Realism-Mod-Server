@@ -86,8 +86,8 @@ class Player {
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
             //////////////////////////////////////////////////////////
-            this.globalDB.Inertia.BaseJumpPenalty = 2;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1.5;
+            this.globalDB.Inertia.BaseJumpPenalty = 1.2;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1.1;
             this.globalDB.Inertia.SprintBrakeInertia["y"] = 73;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["x"] = 0.812;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;

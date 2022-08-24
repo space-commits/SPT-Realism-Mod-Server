@@ -334,10 +334,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const weapons_globals = new WeaponsGlobals(logger, tables, modConfig);
         const weapons_stats = new WeaponsStats(logger, tables, modConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
-        const codegen = new CodeGen(logger, tables, modConfig, helper);
+        const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
 
-        // codegen.codeGen();
+        // codegen.attTemplatesCodeGen();
 
         if (modConfig.bot_changes == true) {
             bots.loadBots();

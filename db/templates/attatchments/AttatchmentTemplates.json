@@ -23617,9 +23617,9 @@
     },
     "55d355e64bdc2d962f8b4569": {
         "ID": "55d355e64bdc2d962f8b4569",
-        "ModType": "",
-        "VerticalRecoil": -0.5,
-        "HorizontalRecoil": -0.5,
+        "ModType": "MOD_TEST",
+        "VerticalRecoil": -100,
+        "HorizontalRecoil": -15,
         "Dispersion": 0,
         "CameraRecoil": 0,
         "AutoROF": 0,

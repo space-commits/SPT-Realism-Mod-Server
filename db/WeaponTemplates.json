@@ -593,5 +593,6113 @@
         "ID": "5bfea6e90db834001b7347f3",
         "WeaponType": "sniperRifle",
         "BaseToque": 0
+    },
+    "5e81c539cb2b95385c177553": {
+        "ID": "5e81c539cb2b95385c177553",
+        "BaseTorque": 0
+    },
+    "5f3e777688ca2d00ad199d25": {
+        "ID": "5f3e777688ca2d00ad199d25",
+        "BaseTorque": 0
+    },
+    "5ef3553c43cb350a955a7ccb": {
+        "ID": "5ef3553c43cb350a955a7ccb",
+        "BaseTorque": 0
+    },
+    "6193d5d4f8ee7e52e4210a1b": {
+        "ID": "6193d5d4f8ee7e52e4210a1b",
+        "BaseTorque": 0
+    },
+    "5e81c550763d9f754677befd": {
+        "ID": "5e81c550763d9f754677befd",
+        "BaseTorque": 0
+    },
+    "5f3e76d86cda304dcc634054": {
+        "ID": "5f3e76d86cda304dcc634054",
+        "BaseTorque": 0
+    },
+    "5ef35f46382a846010715a96": {
+        "ID": "5ef35f46382a846010715a96",
+        "BaseTorque": 0
+    },
+    "5ef35d2ac64c5d0dfc0571b0": {
+        "ID": "5ef35d2ac64c5d0dfc0571b0",
+        "BaseTorque": 0
+    },
+    "5ef35bc243cb350a955a7ccd": {
+        "ID": "5ef35bc243cb350a955a7ccd",
+        "BaseTorque": 0
+    },
+    "6193d3be7c6c7b169525f0da": {
+        "ID": "6193d3be7c6c7b169525f0da",
+        "BaseTorque": 0
+    },
+    "5cf639aad7f00c065703d455": {
+        "ID": "5cf639aad7f00c065703d455",
+        "BaseTorque": 0
+    },
+    "5d0b5cd3d7ad1a3fe32ad263": {
+        "ID": "5d0b5cd3d7ad1a3fe32ad263",
+        "BaseTorque": 0
+    },
+    "618a760e526131765025aae3": {
+        "ID": "618a760e526131765025aae3",
+        "BaseTorque": 0
+    },
+    "5bfe86bd0db83400232fe959": {
+        "ID": "5bfe86bd0db83400232fe959",
+        "BaseTorque": 0
+    },
+    "591c4e1186f77410354b316e": {
+        "ID": "591c4e1186f77410354b316e",
+        "BaseTorque": 0
+    },
+    "622f16a1a5958f63c67f1737": {
+        "ID": "622f16a1a5958f63c67f1737",
+        "BaseTorque": 0
+    },
+    "5a71e1868dc32e00094b97f3": {
+        "ID": "5a71e1868dc32e00094b97f3",
+        "BaseTorque": 0
+    },
+    "606f26752535c57a13424d22": {
+        "ID": "606f26752535c57a13424d22",
+        "BaseTorque": 0
+    },
+    "60785c0d232e5a31c233d51c": {
+        "ID": "60785c0d232e5a31c233d51c",
+        "BaseTorque": 0
+    },
+    "5ba36f85d4351e0085325c81": {
+        "ID": "5ba36f85d4351e0085325c81",
+        "BaseTorque": 0
+    },
+    "57f3a5ae2459772b0e0bf19e": {
+        "ID": "57f3a5ae2459772b0e0bf19e",
+        "BaseTorque": 0
+    },
+    "5a1eacb3fcdbcb09800872be": {
+        "ID": "5a1eacb3fcdbcb09800872be",
+        "BaseTorque": 0
+    },
+    "602f85fd9b513876d4338d9c": {
+        "ID": "602f85fd9b513876d4338d9c",
+        "BaseTorque": 0
+    },
+    "60338ff388382f4fab3fd2c8": {
+        "ID": "60338ff388382f4fab3fd2c8",
+        "BaseTorque": 0
+    },
+    "56083eab4bdc2d26448b456a": {
+        "ID": "56083eab4bdc2d26448b456a",
+        "BaseTorque": 0
+    },
+    "5c4eecde2e221602b3140418": {
+        "ID": "5c4eecde2e221602b3140418",
+        "BaseTorque": 0
+    },
+    "5d123b7dd7ad1a004f01b262": {
+        "ID": "5d123b7dd7ad1a004f01b262",
+        "BaseTorque": 0
+    },
+    "5d124c1ad7ad1a12227c53a7": {
+        "ID": "5d124c1ad7ad1a12227c53a7",
+        "BaseTorque": 0
+    },
+    "5d123b70d7ad1a0ee35e0754": {
+        "ID": "5d123b70d7ad1a0ee35e0754",
+        "BaseTorque": 0
+    },
+    "5d124c0ed7ad1a10d168dd9b": {
+        "ID": "5d124c0ed7ad1a10d168dd9b",
+        "BaseTorque": 0
+    },
+    "5d123a3cd7ad1a004e476058": {
+        "ID": "5d123a3cd7ad1a004e476058",
+        "BaseTorque": 0
+    },
+    "5d124c01d7ad1a115c7d59fb": {
+        "ID": "5d124c01d7ad1a115c7d59fb",
+        "BaseTorque": 0
+    },
+    "5b3cbc235acfc4001863ac44": {
+        "ID": "5b3cbc235acfc4001863ac44",
+        "BaseTorque": 0
+    },
+    "5ae089fb5acfc408fb13989b": {
+        "ID": "5ae089fb5acfc408fb13989b",
+        "BaseTorque": 0
+    },
+    "5ef32e4d1c1fd62aea6a150d": {
+        "ID": "5ef32e4d1c1fd62aea6a150d",
+        "BaseTorque": 0
+    },
+    "5e81c6a2ac2bb513793cdc7f": {
+        "ID": "5e81c6a2ac2bb513793cdc7f",
+        "BaseTorque": 0
+    },
+    "5f3e772a670e2a7b01739a52": {
+        "ID": "5f3e772a670e2a7b01739a52",
+        "BaseTorque": 0
+    },
+    "6193d3cded0429009f543e6a": {
+        "ID": "6193d3cded0429009f543e6a",
+        "BaseTorque": 0
+    },
+    "5888961624597754281f93f3": {
+        "ID": "5888961624597754281f93f3",
+        "BaseTorque": 0
+    },
+    "622b397c9a3d4327e41843b6": {
+        "ID": "622b397c9a3d4327e41843b6",
+        "BaseTorque": 0
+    },
+    "56ea8222d2720b69698b4567": {
+        "ID": "56ea8222d2720b69698b4567",
+        "BaseTorque": 0
+    },
+    "59d790f486f77403cb06aec6": {
+        "ID": "59d790f486f77403cb06aec6",
+        "BaseTorque": 0
+    },
+    "57d17c5e2459775a5c57d17d": {
+        "ID": "57d17c5e2459775a5c57d17d",
+        "BaseTorque": 0
+    },
+    "5c7fc87d2e221644f31c0298": {
+        "ID": "5c7fc87d2e221644f31c0298",
+        "BaseTorque": 0
+    },
+    "5cda9bcfd7f00c0c0b53e900": {
+        "ID": "5cda9bcfd7f00c0c0b53e900",
+        "BaseTorque": 0
+    },
+    "59f8a37386f7747af3328f06": {
+        "ID": "59f8a37386f7747af3328f06",
+        "BaseTorque": 0
+    },
+    "5a7dbfc1159bd40016548fde": {
+        "ID": "5a7dbfc1159bd40016548fde",
+        "BaseTorque": 0
+    },
+    "619386379fb0c665d5490dbe": {
+        "ID": "619386379fb0c665d5490dbe",
+        "BaseTorque": 0
+    },
+    "5c87ca002e221600114cb150": {
+        "ID": "5c87ca002e221600114cb150",
+        "BaseTorque": 0
+    },
+    "588226d124597767ad33f787": {
+        "ID": "588226d124597767ad33f787",
+        "BaseTorque": 0
+    },
+    "588226dd24597767ad33f789": {
+        "ID": "588226dd24597767ad33f789",
+        "BaseTorque": 0
+    },
+    "588226e62459776e3e094af7": {
+        "ID": "588226e62459776e3e094af7",
+        "BaseTorque": 0
+    },
+    "588226ef24597767af46e39c": {
+        "ID": "588226ef24597767af46e39c",
+        "BaseTorque": 0
+    },
+    "59fc48e086f77463b1118392": {
+        "ID": "59fc48e086f77463b1118392",
+        "BaseTorque": 0
+    },
+    "5fce0cf655375d18a253eff0": {
+        "ID": "5fce0cf655375d18a253eff0",
+        "BaseTorque": 0
+    },
+    "5cf4fb76d7f00c065703d3ac": {
+        "ID": "5cf4fb76d7f00c065703d3ac",
+        "BaseTorque": 0
+    },
+    "5b057b4f5acfc4771e1bd3e9": {
+        "ID": "5b057b4f5acfc4771e1bd3e9",
+        "BaseTorque": 0
+    },
+    "5c791e872e2216001219c40a": {
+        "ID": "5c791e872e2216001219c40a",
+        "BaseTorque": 0
+    },
+    "558032614bdc2de7118b4585": {
+        "ID": "558032614bdc2de7118b4585",
+        "BaseTorque": 0
+    },
+    "58c157be86f77403c74b2bb6": {
+        "ID": "58c157be86f77403c74b2bb6",
+        "BaseTorque": 0
+    },
+    "58c157c886f774032749fb06": {
+        "ID": "58c157c886f774032749fb06",
+        "BaseTorque": 0
+    },
+    "5f6340d3ca442212f4047eb2": {
+        "ID": "5f6340d3ca442212f4047eb2",
+        "BaseTorque": 0
+    },
+    "591af28e86f77414a27a9e1d": {
+        "ID": "591af28e86f77414a27a9e1d",
+        "BaseTorque": 0
+    },
+    "5c1cd46f2e22164bef5cfedb": {
+        "ID": "5c1cd46f2e22164bef5cfedb",
+        "BaseTorque": 0
+    },
+    "5c1bc4812e22164bef5cfde7": {
+        "ID": "5c1bc4812e22164bef5cfde7",
+        "BaseTorque": 0
+    },
+    "5c1bc5612e221602b5429350": {
+        "ID": "5c1bc5612e221602b5429350",
+        "BaseTorque": 0
+    },
+    "5c1bc5af2e221602b412949b": {
+        "ID": "5c1bc5af2e221602b412949b",
+        "BaseTorque": 0
+    },
+    "5c1bc5fb2e221602b1779b32": {
+        "ID": "5c1bc5fb2e221602b1779b32",
+        "BaseTorque": 0
+    },
+    "5c1bc7432e221602b412949d": {
+        "ID": "5c1bc7432e221602b412949d",
+        "BaseTorque": 0
+    },
+    "5c1bc7752e221602b1779b34": {
+        "ID": "5c1bc7752e221602b1779b34",
+        "BaseTorque": 0
+    },
+    "6281212a09427b40ab14e770": {
+        "ID": "6281212a09427b40ab14e770",
+        "BaseTorque": 0
+    },
+    "615d8fd3290d254f5e6b2edc": {
+        "ID": "615d8fd3290d254f5e6b2edc",
+        "BaseTorque": 0
+    },
+    "5fc0f9b5d724d907e2077d82": {
+        "ID": "5fc0f9b5d724d907e2077d82",
+        "BaseTorque": 0
+    },
+    "5fc0f9cbd6fa9c00c571bb90": {
+        "ID": "5fc0f9cbd6fa9c00c571bb90",
+        "BaseTorque": 0
+    },
+    "57cffb66245977632f391a99": {
+        "ID": "57cffb66245977632f391a99",
+        "BaseTorque": 0
+    },
+    "57cffcd624597763133760c5": {
+        "ID": "57cffcd624597763133760c5",
+        "BaseTorque": 0
+    },
+    "57cffcdd24597763f5110006": {
+        "ID": "57cffcdd24597763f5110006",
+        "BaseTorque": 0
+    },
+    "57cffce524597763b31685d8": {
+        "ID": "57cffce524597763b31685d8",
+        "BaseTorque": 0
+    },
+    "5de8fbad2fbe23140d3ee9c4": {
+        "ID": "5de8fbad2fbe23140d3ee9c4",
+        "BaseTorque": 0
+    },
+    "5df36948bb49d91fb446d5ad": {
+        "ID": "5df36948bb49d91fb446d5ad",
+        "BaseTorque": 0
+    },
+    "5bb20dcad4351e3bac1212da": {
+        "ID": "5bb20dcad4351e3bac1212da",
+        "BaseTorque": 0
+    },
+    "61702f1b67085e45ef140b26": {
+        "ID": "61702f1b67085e45ef140b26",
+        "BaseTorque": 0
+    },
+    "5a01ad4786f77450561fda02": {
+        "ID": "5a01ad4786f77450561fda02",
+        "BaseTorque": 0
+    },
+    "59c6633186f7740cf0493bb9": {
+        "ID": "59c6633186f7740cf0493bb9",
+        "BaseTorque": 0
+    },
+    "59d64ec286f774171d1e0a42": {
+        "ID": "59d64ec286f774171d1e0a42",
+        "BaseTorque": 0
+    },
+    "59ccd11386f77428f24a488f": {
+        "ID": "59ccd11386f77428f24a488f",
+        "BaseTorque": 0
+    },
+    "59e649f986f77411d949b246": {
+        "ID": "59e649f986f77411d949b246",
+        "BaseTorque": 0
+    },
+    "628b8d83717774443b15e248": {
+        "ID": "628b8d83717774443b15e248",
+        "BaseTorque": 0
+    },
+    "5b237e425acfc4771e1be0b6": {
+        "ID": "5b237e425acfc4771e1be0b6",
+        "BaseTorque": 0
+    },
+    "59ccfdba86f7747f2109a587": {
+        "ID": "59ccfdba86f7747f2109a587",
+        "BaseTorque": 0
+    },
+    "5cf656f2d7f00c06585fb6eb": {
+        "ID": "5cf656f2d7f00c06585fb6eb",
+        "BaseTorque": 0
+    },
+    "5d4aab30a4b9365435358c55": {
+        "ID": "5d4aab30a4b9365435358c55",
+        "BaseTorque": 0
+    },
+    "628a83c29179c324ed269508": {
+        "ID": "628a83c29179c324ed269508",
+        "BaseTorque": 0
+    },
+    "59d36a0086f7747e673f3946": {
+        "ID": "59d36a0086f7747e673f3946",
+        "BaseTorque": 0
+    },
+    "6065dc8a132d4d12c81fd8e3": {
+        "ID": "6065dc8a132d4d12c81fd8e3",
+        "BaseTorque": 0
+    },
+    "5a34fbadc4a28200741e230a": {
+        "ID": "5a34fbadc4a28200741e230a",
+        "BaseTorque": 0
+    },
+    "5dfa3d45dfc58d14537c20b0": {
+        "ID": "5dfa3d45dfc58d14537c20b0",
+        "BaseTorque": 0
+    },
+    "5ae30e795acfc408fb139a0b": {
+        "ID": "5ae30e795acfc408fb139a0b",
+        "BaseTorque": 0
+    },
+    "56eabcd4d2720b66698b4574": {
+        "ID": "56eabcd4d2720b66698b4574",
+        "BaseTorque": 0
+    },
+    "5d00ec68d7ad1a04a067e5be": {
+        "ID": "5d00ec68d7ad1a04a067e5be",
+        "BaseTorque": 0
+    },
+    "56ea8d2fd2720b7c698b4570": {
+        "ID": "56ea8d2fd2720b7c698b4570",
+        "BaseTorque": 0
+    },
+    "622b327b267a1b13a44abea3": {
+        "ID": "622b327b267a1b13a44abea3",
+        "BaseTorque": 0
+    },
+    "5fbc210bf24b94483f726481": {
+        "ID": "5fbc210bf24b94483f726481",
+        "BaseTorque": 0
+    },
+    "5fc2360f900b1d5091531e19": {
+        "ID": "5fc2360f900b1d5091531e19",
+        "BaseTorque": 0
+    },
+    "5c471c842e221615214259b5": {
+        "ID": "5c471c842e221615214259b5",
+        "BaseTorque": 0
+    },
+    "5c5039be2e221602b177c9ff": {
+        "ID": "5c5039be2e221602b177c9ff",
+        "BaseTorque": 0
+    },
+    "5ac72e725acfc400180ae701": {
+        "ID": "5ac72e725acfc400180ae701",
+        "BaseTorque": 0
+    },
+    "612e0d81290d254f5e6b291a": {
+        "ID": "612e0d81290d254f5e6b291a",
+        "BaseTorque": 0
+    },
+    "5fbcbd02900b1d5091531dd3": {
+        "ID": "5fbcbd02900b1d5091531dd3",
+        "BaseTorque": 0
+    },
+    "612e0e3c290d254f5e6b291d": {
+        "ID": "612e0e3c290d254f5e6b291d",
+        "BaseTorque": 0
+    },
+    "612e0cfc8004cc50514c2d9e": {
+        "ID": "612e0cfc8004cc50514c2d9e",
+        "BaseTorque": 0
+    },
+    "5c7951452e221644f31bfd5c": {
+        "ID": "5c7951452e221644f31bfd5c",
+        "BaseTorque": 0
+    },
+    "5c6beec32e221601da3578f2": {
+        "ID": "5c6beec32e221601da3578f2",
+        "BaseTorque": 0
+    },
+    "5b7d693d5acfc43bca706a3d": {
+        "ID": "5b7d693d5acfc43bca706a3d",
+        "BaseTorque": 0
+    },
+    "5c878e9d2e2216000f201903": {
+        "ID": "5c878e9d2e2216000f201903",
+        "BaseTorque": 0
+    },
+    "57dc324a24597759501edc20": {
+        "ID": "57dc324a24597759501edc20",
+        "BaseTorque": 0
+    },
+    "5bbdb8bdd4351e4502011460": {
+        "ID": "5bbdb8bdd4351e4502011460",
+        "BaseTorque": 0
+    },
+    "5cff9e5ed7ad1a09407397d4": {
+        "ID": "5cff9e5ed7ad1a09407397d4",
+        "BaseTorque": 0
+    },
+    "5c6d710d2e22165df16b81e7": {
+        "ID": "5c6d710d2e22165df16b81e7",
+        "BaseTorque": 0
+    },
+    "5a0d716f1526d8000d26b1e2": {
+        "ID": "5a0d716f1526d8000d26b1e2",
+        "BaseTorque": 0
+    },
+    "5943ee5a86f77413872d25ec": {
+        "ID": "5943ee5a86f77413872d25ec",
+        "BaseTorque": 0
+    },
+    "59e61eb386f77440d64f5daf": {
+        "ID": "59e61eb386f77440d64f5daf",
+        "BaseTorque": 0
+    },
+    "5888996c24597754281f9419": {
+        "ID": "5888996c24597754281f9419",
+        "BaseTorque": 0
+    },
+    "615d8df08004cc50514c3236": {
+        "ID": "615d8df08004cc50514c3236",
+        "BaseTorque": 0
+    },
+    "5ac72e945acfc43f3b691116": {
+        "ID": "5ac72e945acfc43f3b691116",
+        "BaseTorque": 0
+    },
+    "5c48a2a42e221602b66d1e07": {
+        "ID": "5c48a2a42e221602b66d1e07",
+        "BaseTorque": 0
+    },
+    "5ba26acdd4351e003562908e": {
+        "ID": "5ba26acdd4351e003562908e",
+        "BaseTorque": 0
+    },
+    "5cc9ad73d7f00c000e2579d4": {
+        "ID": "5cc9ad73d7f00c000e2579d4",
+        "BaseTorque": 0
+    },
+    "5f2aa4559b44de6b1b4e68d1": {
+        "ID": "5f2aa4559b44de6b1b4e68d1",
+        "BaseTorque": 0
+    },
+    "5649ab884bdc2ded0b8b457f": {
+        "ID": "5649ab884bdc2ded0b8b457f",
+        "BaseTorque": 0
+    },
+    "59d64fc686f774171b243fe2": {
+        "ID": "59d64fc686f774171b243fe2",
+        "BaseTorque": 0
+    },
+    "5998597786f77414ea6da093": {
+        "ID": "5998597786f77414ea6da093",
+        "BaseTorque": 0
+    },
+    "5d026791d7ad1a04a067ea63": {
+        "ID": "5d026791d7ad1a04a067ea63",
+        "BaseTorque": 0
+    },
+    "58949dea86f77409483e16a8": {
+        "ID": "58949dea86f77409483e16a8",
+        "BaseTorque": 0
+    },
+    "5c07c5ed0db834001b73571c": {
+        "ID": "5c07c5ed0db834001b73571c",
+        "BaseTorque": 0
+    },
+    "5943eeeb86f77412d6384f6b": {
+        "ID": "5943eeeb86f77412d6384f6b",
+        "BaseTorque": 0
+    },
+    "5c0fafb6d174af02a96260ba": {
+        "ID": "5c0fafb6d174af02a96260ba",
+        "BaseTorque": 0
+    },
+    "5cdd7685d7f00c000f260ed2": {
+        "ID": "5cdd7685d7f00c000f260ed2",
+        "BaseTorque": 0
+    },
+    "59e8a00d86f7742ad93b569c": {
+        "ID": "59e8a00d86f7742ad93b569c",
+        "BaseTorque": 0
+    },
+    "544a38634bdc2d58388b4568": {
+        "ID": "544a38634bdc2d58388b4568",
+        "BaseTorque": 0
+    },
+    "5cc9a96cd7f00c011c04e04a": {
+        "ID": "5cc9a96cd7f00c011c04e04a",
+        "BaseTorque": 0
+    },
+    "612e0d3767085e45ef14057f": {
+        "ID": "612e0d3767085e45ef14057f",
+        "BaseTorque": 0
+    },
+    "5beec3420db834001b095429": {
+        "ID": "5beec3420db834001b095429",
+        "BaseTorque": 0
+    },
+    "5d1f819086f7744b355c219b": {
+        "ID": "5d1f819086f7744b355c219b",
+        "BaseTorque": 0
+    },
+    "5f633f791b231926f2329f13": {
+        "ID": "5f633f791b231926f2329f13",
+        "BaseTorque": 0
+    },
+    "56ea6fafd2720b844b8b4593": {
+        "ID": "56ea6fafd2720b844b8b4593",
+        "BaseTorque": 0
+    },
+    "5649aa744bdc2ded0b8b457e": {
+        "ID": "5649aa744bdc2ded0b8b457e",
+        "BaseTorque": 0
+    },
+    "5f633f68f5750b524b45f112": {
+        "ID": "5f633f68f5750b524b45f112",
+        "BaseTorque": 0
+    },
+    "5a70366c8dc32e001207fb06": {
+        "ID": "5a70366c8dc32e001207fb06",
+        "BaseTorque": 0
+    },
+    "5dcbe965e4ed22586443a79d": {
+        "ID": "5dcbe965e4ed22586443a79d",
+        "BaseTorque": 0
+    },
+    "5bffd7ed0db834001d23ebf9": {
+        "ID": "5bffd7ed0db834001d23ebf9",
+        "BaseTorque": 0
+    },
+    "5c878ebb2e2216001219d48a": {
+        "ID": "5c878ebb2e2216001219d48a",
+        "BaseTorque": 0
+    },
+    "5ac72e615acfc43f67248aa0": {
+        "ID": "5ac72e615acfc43f67248aa0",
+        "BaseTorque": 0
+    },
+    "5a9ea27ca2750c00137fa672": {
+        "ID": "5a9ea27ca2750c00137fa672",
+        "BaseTorque": 0
+    },
+    "5ac7655e5acfc40016339a19": {
+        "ID": "5ac7655e5acfc40016339a19",
+        "BaseTorque": 0
+    },
+    "5cc82796e24e8d000f5859a8": {
+        "ID": "5cc82796e24e8d000f5859a8",
+        "BaseTorque": 0
+    },
+    "5cf6935bd7f00c06585fb791": {
+        "ID": "5cf6935bd7f00c06585fb791",
+        "BaseTorque": 0
+    },
+    "5f6339d53ada5942720e2dc3": {
+        "ID": "5f6339d53ada5942720e2dc3",
+        "BaseTorque": 0
+    },
+    "5c4ee3d62e2216152006f302": {
+        "ID": "5c4ee3d62e2216152006f302",
+        "BaseTorque": 0
+    },
+    "5ac72e895acfc43b321d4bd5": {
+        "ID": "5ac72e895acfc43b321d4bd5",
+        "BaseTorque": 0
+    },
+    "5ac72e7d5acfc40016339a02": {
+        "ID": "5ac72e7d5acfc40016339a02",
+        "BaseTorque": 0
+    },
+    "5fbcbd10ab884124df0cd563": {
+        "ID": "5fbcbd10ab884124df0cd563",
+        "BaseTorque": 0
+    },
+    "618407a850224f204c1da549": {
+        "ID": "618407a850224f204c1da549",
+        "BaseTorque": 0
+    },
+    "5aafa1c2e5b5b00015042a56": {
+        "ID": "5aafa1c2e5b5b00015042a56",
+        "BaseTorque": 0
+    },
+    "5998598e86f7740b3f498a86": {
+        "ID": "5998598e86f7740b3f498a86",
+        "BaseTorque": 0
+    },
+    "5c7e5f112e221600106f4ede": {
+        "ID": "5c7e5f112e221600106f4ede",
+        "BaseTorque": 0
+    },
+    "615d8e2f1cb55961fa0fd9a4": {
+        "ID": "615d8e2f1cb55961fa0fd9a4",
+        "BaseTorque": 0
+    },
+    "5cf6937cd7f00c056c53fb39": {
+        "ID": "5cf6937cd7f00c056c53fb39",
+        "BaseTorque": 0
+    },
+    "5d02676dd7ad1a049e54f6dc": {
+        "ID": "5d02676dd7ad1a049e54f6dc",
+        "BaseTorque": 0
+    },
+    "5f6372e2865db925d54f3869": {
+        "ID": "5f6372e2865db925d54f3869",
+        "BaseTorque": 0
+    },
+    "6130c43c67085e45ef1405a1": {
+        "ID": "6130c43c67085e45ef1405a1",
+        "BaseTorque": 0
+    },
+    "5a7ad1fb51dfba0013379715": {
+        "ID": "5a7ad1fb51dfba0013379715",
+        "BaseTorque": 0
+    },
+    "58889c7324597754281f9439": {
+        "ID": "58889c7324597754281f9439",
+        "BaseTorque": 0
+    },
+    "5a7ad0c451dfba0013379712": {
+        "ID": "5a7ad0c451dfba0013379712",
+        "BaseTorque": 0
+    },
+    "622f128cec80d870d349b4e8": {
+        "ID": "622f128cec80d870d349b4e8",
+        "BaseTorque": 0
+    },
+    "609269c3b0e443224b421cc1": {
+        "ID": "609269c3b0e443224b421cc1",
+        "BaseTorque": 0
+    },
+    "5a7c147ce899ef00150bd8b8": {
+        "ID": "5a7c147ce899ef00150bd8b8",
+        "BaseTorque": 0
+    },
+    "5caf17c9ae92150b30006be1": {
+        "ID": "5caf17c9ae92150b30006be1",
+        "BaseTorque": 0
+    },
+    "60337f5dce399e10262255d1": {
+        "ID": "60337f5dce399e10262255d1",
+        "BaseTorque": 0
+    },
+    "5d02677ad7ad1a04a15c0f95": {
+        "ID": "5d02677ad7ad1a04a15c0f95",
+        "BaseTorque": 0
+    },
+    "626a74340be03179a165e30c": {
+        "ID": "626a74340be03179a165e30c",
+        "BaseTorque": 0
+    },
+    "5d443f8fa4b93678dd4a01aa": {
+        "ID": "5d443f8fa4b93678dd4a01aa",
+        "BaseTorque": 0
+    },
+    "5c78f2882e22165df16b832e": {
+        "ID": "5c78f2882e22165df16b832e",
+        "BaseTorque": 0
+    },
+    "6065c6e7132d4d12c81fd8e1": {
+        "ID": "6065c6e7132d4d12c81fd8e1",
+        "BaseTorque": 0
+    },
+    "607ffb988900dc2d9a55b6e4": {
+        "ID": "607ffb988900dc2d9a55b6e4",
+        "BaseTorque": 0
+    },
+    "5c471bfc2e221602b21d4e17": {
+        "ID": "5c471bfc2e221602b21d4e17",
+        "BaseTorque": 0
+    },
+    "5df35e7f2a78646d96665dd4": {
+        "ID": "5df35e7f2a78646d96665dd4",
+        "BaseTorque": 0
+    },
+    "5dfa3cd1b33c0951220c079b": {
+        "ID": "5dfa3cd1b33c0951220c079b",
+        "BaseTorque": 0
+    },
+    "628a66b41d5e41750e314f34": {
+        "ID": "628a66b41d5e41750e314f34",
+        "BaseTorque": 0
+    },
+    "622f07cfae33bc505b2c4dd5": {
+        "ID": "622f07cfae33bc505b2c4dd5",
+        "BaseTorque": 0
+    },
+    "5d440625a4b9361eec4ae6c5": {
+        "ID": "5d440625a4b9361eec4ae6c5",
+        "BaseTorque": 0
+    },
+    "622f0ee47762f55aaa68ac87": {
+        "ID": "622f0ee47762f55aaa68ac87",
+        "BaseTorque": 0
+    },
+    "5cc9b815d7f00c000e2579d6": {
+        "ID": "5cc9b815d7f00c000e2579d6",
+        "BaseTorque": 0
+    },
+    "560e620e4bdc2d724b8b456b": {
+        "ID": "560e620e4bdc2d724b8b456b",
+        "BaseTorque": 0
+    },
+    "615d8f5dd92c473c770212ef": {
+        "ID": "615d8f5dd92c473c770212ef",
+        "BaseTorque": 0
+    },
+    "5c7fb51d2e2216001219ce11": {
+        "ID": "5c7fb51d2e2216001219ce11",
+        "BaseTorque": 0
+    },
+    "612e0e55a112697a4b3a66e7": {
+        "ID": "612e0e55a112697a4b3a66e7",
+        "BaseTorque": 0
+    },
+    "5a705e128dc32e000d46d258": {
+        "ID": "5a705e128dc32e000d46d258",
+        "BaseTorque": 0
+    },
+    "5b3a16655acfc40016387a2a": {
+        "ID": "5b3a16655acfc40016387a2a",
+        "BaseTorque": 0
+    },
+    "5fbcbcf593164a5b6278efb2": {
+        "ID": "5fbcbcf593164a5b6278efb2",
+        "BaseTorque": 0
+    },
+    "5a34fd2bc4a282329a73b4c5": {
+        "ID": "5a34fd2bc4a282329a73b4c5",
+        "BaseTorque": 0
+    },
+    "56ea8180d2720bf2698b456a": {
+        "ID": "56ea8180d2720bf2698b456a",
+        "BaseTorque": 0
+    },
+    "62812081d23f207deb0ab216": {
+        "ID": "62812081d23f207deb0ab216",
+        "BaseTorque": 0
+    },
+    "61713308d92c473c770214a0": {
+        "ID": "61713308d92c473c770214a0",
+        "BaseTorque": 0
+    },
+    "5ea172e498dacb342978818e": {
+        "ID": "5ea172e498dacb342978818e",
+        "BaseTorque": 0
+    },
+    "5b7d68af5acfc400170e30c3": {
+        "ID": "5b7d68af5acfc400170e30c3",
+        "BaseTorque": 0
+    },
+    "618178aa1cb55961fa0fdc80": {
+        "ID": "618178aa1cb55961fa0fdc80",
+        "BaseTorque": 0
+    },
+    "5cf78720d7f00c06595bc93e": {
+        "ID": "5cf78720d7f00c06595bc93e",
+        "BaseTorque": 0
+    },
+    "5addbb825acfc408fb139400": {
+        "ID": "5addbb825acfc408fb139400",
+        "BaseTorque": 0
+    },
+    "5fc23636016cce60e8341b05": {
+        "ID": "5fc23636016cce60e8341b05",
+        "BaseTorque": 0
+    },
+    "615d8eb350224f204c1da1cf": {
+        "ID": "615d8eb350224f204c1da1cf",
+        "BaseTorque": 0
+    },
+    "5cdd7693d7f00c0010373aa5": {
+        "ID": "5cdd7693d7f00c0010373aa5",
+        "BaseTorque": 0
+    },
+    "62669bccdb9ebb4daa44cd14": {
+        "ID": "62669bccdb9ebb4daa44cd14",
+        "BaseTorque": 0
+    },
+    "626667e87379c44d557b7550": {
+        "ID": "626667e87379c44d557b7550",
+        "BaseTorque": 0
+    },
+    "5a7037338dc32e000d46d257": {
+        "ID": "5a7037338dc32e000d46d257",
+        "BaseTorque": 0
+    },
+    "5a7b32a2e899ef00135e345a": {
+        "ID": "5a7b32a2e899ef00135e345a",
+        "BaseTorque": 0
+    },
+    "5addbb945acfc4001a5fc44e": {
+        "ID": "5addbb945acfc4001a5fc44e",
+        "BaseTorque": 0
+    },
+    "5addbba15acfc400185c2854": {
+        "ID": "5addbba15acfc400185c2854",
+        "BaseTorque": 0
+    },
+    "5addbbb25acfc40015621bd9": {
+        "ID": "5addbbb25acfc40015621bd9",
+        "BaseTorque": 0
+    },
+    "5ef61964ec7f42238c31e0c1": {
+        "ID": "5ef61964ec7f42238c31e0c1",
+        "BaseTorque": 0
+    },
+    "5ab3afb2d8ce87001660304d": {
+        "ID": "5ab3afb2d8ce87001660304d",
+        "BaseTorque": 0
+    },
+    "5addbb6e5acfc408fb1393fd": {
+        "ID": "5addbb6e5acfc408fb1393fd",
+        "BaseTorque": 0
+    },
+    "5bbdb83fd4351e44f824c44b": {
+        "ID": "5bbdb83fd4351e44f824c44b",
+        "BaseTorque": 0
+    },
+    "5bc5a351d4351e003477a414": {
+        "ID": "5bc5a351d4351e003477a414",
+        "BaseTorque": 0
+    },
+    "5bc5a35cd4351e450201232f": {
+        "ID": "5bc5a35cd4351e450201232f",
+        "BaseTorque": 0
+    },
+    "5b099b7d5acfc400186331e4": {
+        "ID": "5b099b7d5acfc400186331e4",
+        "BaseTorque": 0
+    },
+    "5c4eec9b2e2216398b5aaba2": {
+        "ID": "5c4eec9b2e2216398b5aaba2",
+        "BaseTorque": 0
+    },
+    "5fb65424956329274326f316": {
+        "ID": "5fb65424956329274326f316",
+        "BaseTorque": 0
+    },
+    "5fbbc3324e8a554c40648348": {
+        "ID": "5fbbc3324e8a554c40648348",
+        "BaseTorque": 0
+    },
+    "57f3c7e024597738ea4ba286": {
+        "ID": "57f3c7e024597738ea4ba286",
+        "BaseTorque": 0
+    },
+    "628120621d5df4475f46a335": {
+        "ID": "628120621d5df4475f46a335",
+        "BaseTorque": 0
+    },
+    "619d36da53b4d42ee724fae4": {
+        "ID": "619d36da53b4d42ee724fae4",
+        "BaseTorque": 0
+    },
+    "5fbc22ccf24b94483f726483": {
+        "ID": "5fbc22ccf24b94483f726483",
+        "BaseTorque": 0
+    },
+    "576167ab2459773cad038c43": {
+        "ID": "576167ab2459773cad038c43",
+        "BaseTorque": 0
+    },
+    "5cf79389d7f00c10941a0c4d": {
+        "ID": "5cf79389d7f00c10941a0c4d",
+        "BaseTorque": 0
+    },
+    "5cf78496d7f00c065703d6ca": {
+        "ID": "5cf78496d7f00c065703d6ca",
+        "BaseTorque": 0
+    },
+    "5580239d4bdc2de7118b4583": {
+        "ID": "5580239d4bdc2de7118b4583",
+        "BaseTorque": 0
+    },
+    "560838c94bdc2d77798b4569": {
+        "ID": "560838c94bdc2d77798b4569",
+        "BaseTorque": 0
+    },
+    "58272d7f2459774f6311ddfd": {
+        "ID": "58272d7f2459774f6311ddfd",
+        "BaseTorque": 0
+    },
+    "5cf67cadd7f00c065a5abab7": {
+        "ID": "5cf67cadd7f00c065a5abab7",
+        "BaseTorque": 0
+    },
+    "615d8e9867085e45ef1409c6": {
+        "ID": "615d8e9867085e45ef1409c6",
+        "BaseTorque": 0
+    },
+    "5a6b585a8dc32e5a9c28b4f1": {
+        "ID": "5a6b585a8dc32e5a9c28b4f1",
+        "BaseTorque": 0
+    },
+    "612e0e04568c120fdd294258": {
+        "ID": "612e0e04568c120fdd294258",
+        "BaseTorque": 0
+    },
+    "59fb137a86f7740adb646af1": {
+        "ID": "59fb137a86f7740adb646af1",
+        "BaseTorque": 0
+    },
+    "5b363e1b5acfc4771e1c5e80": {
+        "ID": "5b363e1b5acfc4771e1c5e80",
+        "BaseTorque": 0
+    },
+    "5cf67a1bd7f00c06585fb6f3": {
+        "ID": "5cf67a1bd7f00c06585fb6f3",
+        "BaseTorque": 0
+    },
+    "5fbbc34106bde7524f03cbe9": {
+        "ID": "5fbbc34106bde7524f03cbe9",
+        "BaseTorque": 0
+    },
+    "587de5ba2459771c0f1e8a58": {
+        "ID": "587de5ba2459771c0f1e8a58",
+        "BaseTorque": 0
+    },
+    "5a6b59a08dc32e000b452fb7": {
+        "ID": "5a6b59a08dc32e000b452fb7",
+        "BaseTorque": 0
+    },
+    "5de8f237bbaf010b10528a70": {
+        "ID": "5de8f237bbaf010b10528a70",
+        "BaseTorque": 0
+    },
+    "5c7954d52e221600106f4cc7": {
+        "ID": "5c7954d52e221600106f4cc7",
+        "BaseTorque": 0
+    },
+    "6194f1f918a3974e5e7421e4": {
+        "ID": "6194f1f918a3974e5e7421e4",
+        "BaseTorque": 0
+    },
+    "5e01e9e273d8eb11426f5bc3": {
+        "ID": "5e01e9e273d8eb11426f5bc3",
+        "BaseTorque": 0
+    },
+    "5cadc390ae921500126a77f1": {
+        "ID": "5cadc390ae921500126a77f1",
+        "BaseTorque": 0
+    },
+    "5f2aa4464b50c14bcf07acdb": {
+        "ID": "5f2aa4464b50c14bcf07acdb",
+        "BaseTorque": 0
+    },
+    "5d270b3c8abbc3105335cfb8": {
+        "ID": "5d270b3c8abbc3105335cfb8",
+        "BaseTorque": 0
+    },
+    "5a0abb6e1526d8000a025282": {
+        "ID": "5a0abb6e1526d8000a025282",
+        "BaseTorque": 0
+    },
+    "5b363dea5acfc4771e1c5e7e": {
+        "ID": "5b363dea5acfc4771e1c5e7e",
+        "BaseTorque": 0
+    },
+    "5f2aa43ba9b91d26f20ae6d2": {
+        "ID": "5f2aa43ba9b91d26f20ae6d2",
+        "BaseTorque": 0
+    },
+    "5c0111ab0db834001966914d": {
+        "ID": "5c0111ab0db834001966914d",
+        "BaseTorque": 0
+    },
+    "5926e16e86f7742f5a0f7ecb": {
+        "ID": "5926e16e86f7742f5a0f7ecb",
+        "BaseTorque": 0
+    },
+    "5fc4b97bab884124df0cd5e3": {
+        "ID": "5fc4b97bab884124df0cd5e3",
+        "BaseTorque": 0
+    },
+    "5a6b592c8dc32e00094b97bf": {
+        "ID": "5a6b592c8dc32e00094b97bf",
+        "BaseTorque": 0
+    },
+    "5d270ca28abbc31ee25ee821": {
+        "ID": "5d270ca28abbc31ee25ee821",
+        "BaseTorque": 0
+    },
+    "59bffc1f86f77435b128b872": {
+        "ID": "59bffc1f86f77435b128b872",
+        "BaseTorque": 0
+    },
+    "5e21ca18e4d47f0da15e77dd": {
+        "ID": "5e21ca18e4d47f0da15e77dd",
+        "BaseTorque": 0
+    },
+    "5fc4b992187fea44d52edaa9": {
+        "ID": "5fc4b992187fea44d52edaa9",
+        "BaseTorque": 0
+    },
+    "5cf79599d7f00c10875d9212": {
+        "ID": "5cf79599d7f00c10875d9212",
+        "BaseTorque": 0
+    },
+    "5c0000c00db834001a6697fc": {
+        "ID": "5c0000c00db834001a6697fc",
+        "BaseTorque": 0
+    },
+    "5fb6548dd1409e5ca04b54f9": {
+        "ID": "5fb6548dd1409e5ca04b54f9",
+        "BaseTorque": 0
+    },
+    "5de6556a205ddc616a6bc4f7": {
+        "ID": "5de6556a205ddc616a6bc4f7",
+        "BaseTorque": 0
+    },
+    "57da93632459771cb65bf83f": {
+        "ID": "57da93632459771cb65bf83f",
+        "BaseTorque": 0
+    },
+    "5a34fe59c4a282000b1521a2": {
+        "ID": "5a34fe59c4a282000b1521a2",
+        "BaseTorque": 0
+    },
+    "5cebec00d7f00c065c53522a": {
+        "ID": "5cebec00d7f00c065c53522a",
+        "BaseTorque": 0
+    },
+    "5de8f2d5b74cd90030650c72": {
+        "ID": "5de8f2d5b74cd90030650c72",
+        "BaseTorque": 0
+    },
+    "5a32a064c4a28200741e22de": {
+        "ID": "5a32a064c4a28200741e22de",
+        "BaseTorque": 0
+    },
+    "5ba26ae8d4351e00367f9bdb": {
+        "ID": "5ba26ae8d4351e00367f9bdb",
+        "BaseTorque": 0
+    },
+    "593d490386f7745ee97a1555": {
+        "ID": "593d490386f7745ee97a1555",
+        "BaseTorque": 0
+    },
+    "57f3c8cc2459773ec4480328": {
+        "ID": "57f3c8cc2459773ec4480328",
+        "BaseTorque": 0
+    },
+    "5a9fbb74a2750c0032157181": {
+        "ID": "5a9fbb74a2750c0032157181",
+        "BaseTorque": 0
+    },
+    "593d489686f7745c6255d58a": {
+        "ID": "593d489686f7745c6255d58a",
+        "BaseTorque": 0
+    },
+    "55d6190f4bdc2d87028b4567": {
+        "ID": "55d6190f4bdc2d87028b4567",
+        "BaseTorque": 0
+    },
+    "5a0d63621526d8dba31fe3bf": {
+        "ID": "5a0d63621526d8dba31fe3bf",
+        "BaseTorque": 0
+    },
+    "593d493f86f7745e6b2ceb22": {
+        "ID": "593d493f86f7745e6b2ceb22",
+        "BaseTorque": 0
+    },
+    "57c44dd02459772d2e0ae249": {
+        "ID": "57c44dd02459772d2e0ae249",
+        "BaseTorque": 0
+    },
+    "5abcc328d8ce8700194394f3": {
+        "ID": "5abcc328d8ce8700194394f3",
+        "BaseTorque": 0
+    },
+    "5caf187cae92157c28402e43": {
+        "ID": "5caf187cae92157c28402e43",
+        "BaseTorque": 0
+    },
+    "59bffbb386f77435b379b9c2": {
+        "ID": "59bffbb386f77435b379b9c2",
+        "BaseTorque": 0
+    },
+    "60926df0132d4d12c81fd9df": {
+        "ID": "60926df0132d4d12c81fd9df",
+        "BaseTorque": 0
+    },
+    "615d8f8567085e45ef1409ca": {
+        "ID": "615d8f8567085e45ef1409ca",
+        "BaseTorque": 0
+    },
+    "62811fa609427b40ab14e765": {
+        "ID": "62811fa609427b40ab14e765",
+        "BaseTorque": 0
+    },
+    "5e01ea19e9dc277128008c0b": {
+        "ID": "5e01ea19e9dc277128008c0b",
+        "BaseTorque": 0
+    },
+    "5926d33d86f77410de68ebc0": {
+        "ID": "5926d33d86f77410de68ebc0",
+        "BaseTorque": 0
+    },
+    "5a7ad74e51dfba0015068f45": {
+        "ID": "5a7ad74e51dfba0015068f45",
+        "BaseTorque": 0
+    },
+    "5cff9e84d7ad1a049e54ed55": {
+        "ID": "5cff9e84d7ad1a049e54ed55",
+        "BaseTorque": 0
+    },
+    "58aeac1b86f77457c419f475": {
+        "ID": "58aeac1b86f77457c419f475",
+        "BaseTorque": 0
+    },
+    "5fbe7618d6fa9c00c571bb6c": {
+        "ID": "5fbe7618d6fa9c00c571bb6c",
+        "BaseTorque": 0
+    },
+    "57ffb0e42459777d047111c5": {
+        "ID": "57ffb0e42459777d047111c5",
+        "BaseTorque": 0
+    },
+    "5fbe760793164a5b6278efc8": {
+        "ID": "5fbe760793164a5b6278efc8",
+        "BaseTorque": 0
+    },
+    "57dbb57e2459774673234890": {
+        "ID": "57dbb57e2459774673234890",
+        "BaseTorque": 0
+    },
+    "5a27b6bec4a282000e496f78": {
+        "ID": "5a27b6bec4a282000e496f78",
+        "BaseTorque": 0
+    },
+    "5c7e8fab2e22165df16b889b": {
+        "ID": "5c7e8fab2e22165df16b889b",
+        "BaseTorque": 0
+    },
+    "571a28e524597720b4066567": {
+        "ID": "571a28e524597720b4066567",
+        "BaseTorque": 0
+    },
+    "5a33a8ebc4a282000c5a950d": {
+        "ID": "5a33a8ebc4a282000c5a950d",
+        "BaseTorque": 0
+    },
+    "59bfc5c886f7743bf6794e62": {
+        "ID": "59bfc5c886f7743bf6794e62",
+        "BaseTorque": 0
+    },
+    "626673016f1edc06f30cf6d5": {
+        "ID": "626673016f1edc06f30cf6d5",
+        "BaseTorque": 0
+    },
+    "59fb257e86f7742981561852": {
+        "ID": "59fb257e86f7742981561852",
+        "BaseTorque": 0
+    },
+    "5ea17bbc09aa976f2e7a51cd": {
+        "ID": "5ea17bbc09aa976f2e7a51cd",
+        "BaseTorque": 0
+    },
+    "5c4eecc32e221602b412b440": {
+        "ID": "5c4eecc32e221602b412b440",
+        "BaseTorque": 0
+    },
+    "56e05b06d2720bb2668b4586": {
+        "ID": "56e05b06d2720bb2668b4586",
+        "BaseTorque": 0
+    },
+    "5d44064fa4b9361e4f6eb8b5": {
+        "ID": "5d44064fa4b9361e4f6eb8b5",
+        "BaseTorque": 0
+    },
+    "564caa3d4bdc2d17108b458e": {
+        "ID": "564caa3d4bdc2d17108b458e",
+        "BaseTorque": 0
+    },
+    "5fc4b9b17283c4046c5814d7": {
+        "ID": "5fc4b9b17283c4046c5814d7",
+        "BaseTorque": 0
+    },
+    "6171367e1cb55961fa0fdb36": {
+        "ID": "6171367e1cb55961fa0fdb36",
+        "BaseTorque": 0
+    },
+    "55d617094bdc2d89028b4568": {
+        "ID": "55d617094bdc2d89028b4568",
+        "BaseTorque": 0
+    },
+    "5a9fbb84a2750c00137fa685": {
+        "ID": "5a9fbb84a2750c00137fa685",
+        "BaseTorque": 0
+    },
+    "5c7955c22e221644f31bfd5e": {
+        "ID": "5c7955c22e221644f31bfd5e",
+        "BaseTorque": 0
+    },
+    "5dfa3d2b0dee1b22f862eade": {
+        "ID": "5dfa3d2b0dee1b22f862eade",
+        "BaseTorque": 0
+    },
+    "5a9fb739a2750c003215717f": {
+        "ID": "5a9fb739a2750c003215717f",
+        "BaseTorque": 0
+    },
+    "5e208b9842457a4a7a33d074": {
+        "ID": "5e208b9842457a4a7a33d074",
+        "BaseTorque": 0
+    },
+    "5a9fbacda2750c00141e080f": {
+        "ID": "5a9fbacda2750c00141e080f",
+        "BaseTorque": 0
+    },
+    "59c0ec5b86f77435b128bfca": {
+        "ID": "59c0ec5b86f77435b128bfca",
+        "BaseTorque": 0
+    },
+    "5f63407e1b231926f2329f15": {
+        "ID": "5f63407e1b231926f2329f15",
+        "BaseTorque": 0
+    },
+    "54490a4d4bdc2dbc018b4573": {
+        "ID": "54490a4d4bdc2dbc018b4573",
+        "BaseTorque": 0
+    },
+    "5d3ef698a4b9361182109872": {
+        "ID": "5d3ef698a4b9361182109872",
+        "BaseTorque": 0
+    },
+    "57838c962459774a1651ec63": {
+        "ID": "57838c962459774a1651ec63",
+        "BaseTorque": 0
+    },
+    "6130c4d51cb55961fa0fd49f": {
+        "ID": "6130c4d51cb55961fa0fd49f",
+        "BaseTorque": 0
+    },
+    "55d614004bdc2d86028b4568": {
+        "ID": "55d614004bdc2d86028b4568",
+        "BaseTorque": 0
+    },
+    "602a97060ddce744014caf6f": {
+        "ID": "602a97060ddce744014caf6f",
+        "BaseTorque": 0
+    },
+    "5b363dd25acfc4001a598fd2": {
+        "ID": "5b363dd25acfc4001a598fd2",
+        "BaseTorque": 0
+    },
+    "5b86a0e586f7745b600ccb23": {
+        "ID": "5b86a0e586f7745b600ccb23",
+        "BaseTorque": 0
+    },
+    "5c6165902e22160010261b28": {
+        "ID": "5c6165902e22160010261b28",
+        "BaseTorque": 0
+    },
+    "57ac965c24597706be5f975c": {
+        "ID": "57ac965c24597706be5f975c",
+        "BaseTorque": 0
+    },
+    "57aca93d2459771f2c7e26db": {
+        "ID": "57aca93d2459771f2c7e26db",
+        "BaseTorque": 0
+    },
+    "544a3f024bdc2d1d388b4568": {
+        "ID": "544a3f024bdc2d1d388b4568",
+        "BaseTorque": 0
+    },
+    "544a3a774bdc2d3a388b4567": {
+        "ID": "544a3a774bdc2d3a388b4567",
+        "BaseTorque": 0
+    },
+    "5d2dc3e548f035404a1a4798": {
+        "ID": "5d2dc3e548f035404a1a4798",
+        "BaseTorque": 0
+    },
+    "57adff4f24597737f373b6e6": {
+        "ID": "57adff4f24597737f373b6e6",
+        "BaseTorque": 0
+    },
+    "626bb8532c923541184624b4": {
+        "ID": "626bb8532c923541184624b4",
+        "BaseTorque": 0
+    },
+    "5c0517910db83400232ffee5": {
+        "ID": "5c0517910db83400232ffee5",
+        "BaseTorque": 0
+    },
+    "5c1cdd512e22161b267d91ae": {
+        "ID": "5c1cdd512e22161b267d91ae",
+        "BaseTorque": 0
+    },
+    "5c05293e0db83400232fff80": {
+        "ID": "5c05293e0db83400232fff80",
+        "BaseTorque": 0
+    },
+    "5c052a900db834001a66acbd": {
+        "ID": "5c052a900db834001a66acbd",
+        "BaseTorque": 0
+    },
+    "59db7e1086f77448be30ddf3": {
+        "ID": "59db7e1086f77448be30ddf3",
+        "BaseTorque": 0
+    },
+    "622b4d7df9cfc87d675d2ded": {
+        "ID": "622b4d7df9cfc87d675d2ded",
+        "BaseTorque": 0
+    },
+    "622b4f54dc8dcc0ba8742f85": {
+        "ID": "622b4f54dc8dcc0ba8742f85",
+        "BaseTorque": 0
+    },
+    "609b9e31506cf869cf3eaf41": {
+        "ID": "609b9e31506cf869cf3eaf41",
+        "BaseTorque": 0
+    },
+    "591c4efa86f7741030027726": {
+        "ID": "591c4efa86f7741030027726",
+        "BaseTorque": 0
+    },
+    "570fd79bd2720bc7458b4583": {
+        "ID": "570fd79bd2720bc7458b4583",
+        "BaseTorque": 0
+    },
+    "570fd6c2d2720bc6458b457f": {
+        "ID": "570fd6c2d2720bc6458b457f",
+        "BaseTorque": 0
+    },
+    "558022b54bdc2dac148b458d": {
+        "ID": "558022b54bdc2dac148b458d",
+        "BaseTorque": 0
+    },
+    "5c07dd120db834001c39092d": {
+        "ID": "5c07dd120db834001c39092d",
+        "BaseTorque": 0
+    },
+    "5c0a2cec0db834001b7ce47d": {
+        "ID": "5c0a2cec0db834001b7ce47d",
+        "BaseTorque": 0
+    },
+    "58491f3324597764bc48fa02": {
+        "ID": "58491f3324597764bc48fa02",
+        "BaseTorque": 0
+    },
+    "584924ec24597768f12ae244": {
+        "ID": "584924ec24597768f12ae244",
+        "BaseTorque": 0
+    },
+    "5b30b0dc5acfc400153b7124": {
+        "ID": "5b30b0dc5acfc400153b7124",
+        "BaseTorque": 0
+    },
+    "6165ac8c290d254f5e6b2f6c": {
+        "ID": "6165ac8c290d254f5e6b2f6c",
+        "BaseTorque": 0
+    },
+    "6284bd5f95250a29bc628a30": {
+        "ID": "6284bd5f95250a29bc628a30",
+        "BaseTorque": 0
+    },
+    "60a23797a37c940de7062d02": {
+        "ID": "60a23797a37c940de7062d02",
+        "BaseTorque": 0
+    },
+    "5d2da1e948f035477b1ce2ba": {
+        "ID": "5d2da1e948f035477b1ce2ba",
+        "BaseTorque": 0
+    },
+    "5c0505e00db834001b735073": {
+        "ID": "5c0505e00db834001b735073",
+        "BaseTorque": 0
+    },
+    "609a63b6e2ff132951242d09": {
+        "ID": "609a63b6e2ff132951242d09",
+        "BaseTorque": 0
+    },
+    "584984812459776a704a82a6": {
+        "ID": "584984812459776a704a82a6",
+        "BaseTorque": 0
+    },
+    "59f9d81586f7744c7506ee62": {
+        "ID": "59f9d81586f7744c7506ee62",
+        "BaseTorque": 0
+    },
+    "570fd721d2720bc5458b4596": {
+        "ID": "570fd721d2720bc5458b4596",
+        "BaseTorque": 0
+    },
+    "61659f79d92c473c770213ee": {
+        "ID": "61659f79d92c473c770213ee",
+        "BaseTorque": 0
+    },
+    "5c7d55de2e221644f31bff68": {
+        "ID": "5c7d55de2e221644f31bff68",
+        "BaseTorque": 0
+    },
+    "622efbcb99f4ea1a4d6c9a15": {
+        "ID": "622efbcb99f4ea1a4d6c9a15",
+        "BaseTorque": 0
+    },
+    "5947db3f86f77447880cf76f": {
+        "ID": "5947db3f86f77447880cf76f",
+        "BaseTorque": 0
+    },
+    "6113d6c3290d254f5e6b27db": {
+        "ID": "6113d6c3290d254f5e6b27db",
+        "BaseTorque": 0
+    },
+    "57486e672459770abd687134": {
+        "ID": "57486e672459770abd687134",
+        "BaseTorque": 0
+    },
+    "618a5d5852ecee1505530b2a": {
+        "ID": "618a5d5852ecee1505530b2a",
+        "BaseTorque": 0
+    },
+    "5cebec38d7f00c00110a652a": {
+        "ID": "5cebec38d7f00c00110a652a",
+        "BaseTorque": 0
+    },
+    "57ae0171245977343c27bfcf": {
+        "ID": "57ae0171245977343c27bfcf",
+        "BaseTorque": 0
+    },
+    "616442e4faa1272e43152193": {
+        "ID": "616442e4faa1272e43152193",
+        "BaseTorque": 0
+    },
+    "61657230d92c473c770213d7": {
+        "ID": "61657230d92c473c770213d7",
+        "BaseTorque": 0
+    },
+    "58d399e486f77442e0016fe7": {
+        "ID": "58d399e486f77442e0016fe7",
+        "BaseTorque": 0
+    },
+    "577d141e24597739c5255e01": {
+        "ID": "577d141e24597739c5255e01",
+        "BaseTorque": 0
+    },
+    "58d268fc86f774111273f8c2": {
+        "ID": "58d268fc86f774111273f8c2",
+        "BaseTorque": 0
+    },
+    "5b3116595acfc40019476364": {
+        "ID": "5b3116595acfc40019476364",
+        "BaseTorque": 0
+    },
+    "5a32aa8bc4a2826c6e06d737": {
+        "ID": "5a32aa8bc4a2826c6e06d737",
+        "BaseTorque": 0
+    },
+    "5d3eb536a4b9363b1f22f8e2": {
+        "ID": "5d3eb536a4b9363b1f22f8e2",
+        "BaseTorque": 0
+    },
+    "5e8708d4ae379e67d22e0102": {
+        "ID": "5e8708d4ae379e67d22e0102",
+        "BaseTorque": 0
+    },
+    "5a0f096dfcdbcb0176308b15": {
+        "ID": "5a0f096dfcdbcb0176308b15",
+        "BaseTorque": 0
+    },
+    "5caf16a2ae92152ac412efbc": {
+        "ID": "5caf16a2ae92152ac412efbc",
+        "BaseTorque": 0
+    },
+    "5ba26b01d4351e0085325a51": {
+        "ID": "5ba26b01d4351e0085325a51",
+        "BaseTorque": 0
+    },
+    "5dfa3d950dee1b22f862eae0": {
+        "ID": "5dfa3d950dee1b22f862eae0",
+        "BaseTorque": 0
+    },
+    "5c17804b2e2216152006c02f": {
+        "ID": "5c17804b2e2216152006c02f",
+        "BaseTorque": 0
+    },
+    "5fb6567747ce63734e3fa1dc": {
+        "ID": "5fb6567747ce63734e3fa1dc",
+        "BaseTorque": 0
+    },
+    "5bc09a30d4351e00367fb7c8": {
+        "ID": "5bc09a30d4351e00367fb7c8",
+        "BaseTorque": 0
+    },
+    "5c18b90d2e2216152142466b": {
+        "ID": "5c18b90d2e2216152142466b",
+        "BaseTorque": 0
+    },
+    "5fc0fa362770a0045c59c677": {
+        "ID": "5fc0fa362770a0045c59c677",
+        "BaseTorque": 0
+    },
+    "5894a73486f77426d259076c": {
+        "ID": "5894a73486f77426d259076c",
+        "BaseTorque": 0
+    },
+    "5aba62f8d8ce87001943946b": {
+        "ID": "5aba62f8d8ce87001943946b",
+        "BaseTorque": 0
+    },
+    "55d4af3a4bdc2d972f8b456f": {
+        "ID": "55d4af3a4bdc2d972f8b456f",
+        "BaseTorque": 0
+    },
+    "623166e08c43374ca1567195": {
+        "ID": "623166e08c43374ca1567195",
+        "BaseTorque": 0
+    },
+    "5a7d90eb159bd400165484f1": {
+        "ID": "5a7d90eb159bd400165484f1",
+        "BaseTorque": 0
+    },
+    "5a6f58f68dc32e000a311390": {
+        "ID": "5a6f58f68dc32e000a311390",
+        "BaseTorque": 0
+    },
+    "5a7d9104159bd400134c8c21": {
+        "ID": "5a7d9104159bd400134c8c21",
+        "BaseTorque": 0
+    },
+    "5a71e0048dc32e000c52ecc8": {
+        "ID": "5a71e0048dc32e000c52ecc8",
+        "BaseTorque": 0
+    },
+    "5e81ee213397a21db957f6a6": {
+        "ID": "5e81ee213397a21db957f6a6",
+        "BaseTorque": 0
+    },
+    "5f3e78a7fbf956000b716b8e": {
+        "ID": "5f3e78a7fbf956000b716b8e",
+        "BaseTorque": 0
+    },
+    "5addba3e5acfc4001669f0ab": {
+        "ID": "5addba3e5acfc4001669f0ab",
+        "BaseTorque": 0
+    },
+    "5aafa49ae5b5b00015042a58": {
+        "ID": "5aafa49ae5b5b00015042a58",
+        "BaseTorque": 0
+    },
+    "5cadd919ae921500126a77f3": {
+        "ID": "5cadd919ae921500126a77f3",
+        "BaseTorque": 0
+    },
+    "61816fcad92c473c770215cc": {
+        "ID": "61816fcad92c473c770215cc",
+        "BaseTorque": 0
+    },
+    "5ae099875acfc4001714e593": {
+        "ID": "5ae099875acfc4001714e593",
+        "BaseTorque": 0
+    },
+    "5c07b36c0db834002a1259e9": {
+        "ID": "5c07b36c0db834002a1259e9",
+        "BaseTorque": 0
+    },
+    "56d5a661d2720bd8418b456b": {
+        "ID": "56d5a661d2720bd8418b456b",
+        "BaseTorque": 0
+    },
+    "60228a76d62c9b14ed777a66": {
+        "ID": "60228a76d62c9b14ed777a66",
+        "BaseTorque": 0
+    },
+    "5bb20e49d4351e3bac1212de": {
+        "ID": "5bb20e49d4351e3bac1212de",
+        "BaseTorque": 0
+    },
+    "5de8fb539f98ac2bc659513a": {
+        "ID": "5de8fb539f98ac2bc659513a",
+        "BaseTorque": 0
+    },
+    "5aba639ed8ce8700182ece67": {
+        "ID": "5aba639ed8ce8700182ece67",
+        "BaseTorque": 0
+    },
+    "5cadd954ae921500103bb3c2": {
+        "ID": "5cadd954ae921500103bb3c2",
+        "BaseTorque": 0
+    },
+    "5a0ed824fcdbcb0176308b0d": {
+        "ID": "5a0ed824fcdbcb0176308b0d",
+        "BaseTorque": 0
+    },
+    "5bc09a18d4351e003562b68e": {
+        "ID": "5bc09a18d4351e003562b68e",
+        "BaseTorque": 0
+    },
+    "56d5a77ed2720b90418b4568": {
+        "ID": "56d5a77ed2720b90418b4568",
+        "BaseTorque": 0
+    },
+    "619f4d304c58466fe1228437": {
+        "ID": "619f4d304c58466fe1228437",
+        "BaseTorque": 0
+    },
+    "5c471ba12e221602b3137d76": {
+        "ID": "5c471ba12e221602b3137d76",
+        "BaseTorque": 0
+    },
+    "5a71e0fb8dc32e00094b97f2": {
+        "ID": "5a71e0fb8dc32e00094b97f2",
+        "BaseTorque": 0
+    },
+    "5a6f5d528dc32e00094b97d9": {
+        "ID": "5a6f5d528dc32e00094b97d9",
+        "BaseTorque": 0
+    },
+    "5cadd940ae9215051e1c2316": {
+        "ID": "5cadd940ae9215051e1c2316",
+        "BaseTorque": 0
+    },
+    "5ac72e475acfc400180ae6fe": {
+        "ID": "5ac72e475acfc400180ae6fe",
+        "BaseTorque": 0
+    },
+    "574db213245977459a2f3f5d": {
+        "ID": "574db213245977459a2f3f5d",
+        "BaseTorque": 0
+    },
+    "59e8977386f77415a553c453": {
+        "ID": "59e8977386f77415a553c453",
+        "BaseTorque": 0
+    },
+    "619f4cee4c58466fe1228435": {
+        "ID": "619f4cee4c58466fe1228435",
+        "BaseTorque": 0
+    },
+    "61963a852d2c397d660036ad": {
+        "ID": "61963a852d2c397d660036ad",
+        "BaseTorque": 0
+    },
+    "5aba637ad8ce87001773e17f": {
+        "ID": "5aba637ad8ce87001773e17f",
+        "BaseTorque": 0
+    },
+    "628a7b23b0f75035732dd565": {
+        "ID": "628a7b23b0f75035732dd565",
+        "BaseTorque": 0
+    },
+    "5d3eb4aba4b93650d64e497d": {
+        "ID": "5d3eb4aba4b93650d64e497d",
+        "BaseTorque": 0
+    },
+    "5ba26b17d4351e00367f9bdd": {
+        "ID": "5ba26b17d4351e00367f9bdd",
+        "BaseTorque": 0
+    },
+    "56083e1b4bdc2dc8488b4572": {
+        "ID": "56083e1b4bdc2dc8488b4572",
+        "BaseTorque": 0
+    },
+    "60228a850ddce744014caf69": {
+        "ID": "60228a850ddce744014caf69",
+        "BaseTorque": 0
+    },
+    "6194f3286db0f2477964e67d": {
+        "ID": "6194f3286db0f2477964e67d",
+        "BaseTorque": 0
+    },
+    "5c18b9192e2216398b5a8104": {
+        "ID": "5c18b9192e2216398b5a8104",
+        "BaseTorque": 0
+    },
+    "5beec9450db83400970084fd": {
+        "ID": "5beec9450db83400970084fd",
+        "BaseTorque": 0
+    },
+    "6231670f0b8aa5472d060095": {
+        "ID": "6231670f0b8aa5472d060095",
+        "BaseTorque": 0
+    },
+    "5926d2be86f774134d668e4e": {
+        "ID": "5926d2be86f774134d668e4e",
+        "BaseTorque": 0
+    },
+    "5a0eb980fcdbcb001a3b00a6": {
+        "ID": "5a0eb980fcdbcb001a3b00a6",
+        "BaseTorque": 0
+    },
+    "5649b0544bdc2d1b2b8b458a": {
+        "ID": "5649b0544bdc2d1b2b8b458a",
+        "BaseTorque": 0
+    },
+    "5fc0fa957283c4046c58147e": {
+        "ID": "5fc0fa957283c4046c58147e",
+        "BaseTorque": 0
+    },
+    "5ac733a45acfc400192630e2": {
+        "ID": "5ac733a45acfc400192630e2",
+        "BaseTorque": 0
+    },
+    "55d5f46a4bdc2d1b198b4567": {
+        "ID": "55d5f46a4bdc2d1b198b4567",
+        "BaseTorque": 0
+    },
+    "5894a81786f77427140b8347": {
+        "ID": "5894a81786f77427140b8347",
+        "BaseTorque": 0
+    },
+    "5caf1691ae92152ac412efb9": {
+        "ID": "5caf1691ae92152ac412efb9",
+        "BaseTorque": 0
+    },
+    "5649d9a14bdc2d79388b4580": {
+        "ID": "5649d9a14bdc2d79388b4580",
+        "BaseTorque": 0
+    },
+    "59d650cf86f7741b846413a4": {
+        "ID": "59d650cf86f7741b846413a4",
+        "BaseTorque": 0
+    },
+    "5e87114fe2db31558c75a120": {
+        "ID": "5e87114fe2db31558c75a120",
+        "BaseTorque": 0
+    },
+    "628b9471078f94059a4b9bfb": {
+        "ID": "628b9471078f94059a4b9bfb",
+        "BaseTorque": 0
+    },
+    "5c1780312e221602b66cc189": {
+        "ID": "5c1780312e221602b66cc189",
+        "BaseTorque": 0
+    },
+    "61817865d3a39d50044c13a4": {
+        "ID": "61817865d3a39d50044c13a4",
+        "BaseTorque": 0
+    },
+    "619f52454c58466fe122843b": {
+        "ID": "619f52454c58466fe122843b",
+        "BaseTorque": 0
+    },
+    "5fb6564947ce63734e3fa1da": {
+        "ID": "5fb6564947ce63734e3fa1da",
+        "BaseTorque": 0
+    },
+    "5bf3f59f0db834001a6fa060": {
+        "ID": "5bf3f59f0db834001a6fa060",
+        "BaseTorque": 0
+    },
+    "6194f35c18a3974e5e7421e6": {
+        "ID": "6194f35c18a3974e5e7421e6",
+        "BaseTorque": 0
+    },
+    "5c05295e0db834001a66acbb": {
+        "ID": "5c05295e0db834001a66acbb",
+        "BaseTorque": 0
+    },
+    "5dfa3d7ac41b2312ea33362a": {
+        "ID": "5dfa3d7ac41b2312ea33362a",
+        "BaseTorque": 0
+    },
+    "5ae30bad5acfc400185c2dc4": {
+        "ID": "5ae30bad5acfc400185c2dc4",
+        "BaseTorque": 0
+    },
+    "5a7d9122159bd4001438dbf4": {
+        "ID": "5a7d9122159bd4001438dbf4",
+        "BaseTorque": 0
+    },
+    "5a7d912f159bd400165484f3": {
+        "ID": "5a7d912f159bd400165484f3",
+        "BaseTorque": 0
+    },
+    "5abcbb20d8ce87001773e258": {
+        "ID": "5abcbb20d8ce87001773e258",
+        "BaseTorque": 0
+    },
+    "5e81ee4dcb2b95385c177582": {
+        "ID": "5e81ee4dcb2b95385c177582",
+        "BaseTorque": 0
+    },
+    "5f3e7897ddc4f03b010e204a": {
+        "ID": "5f3e7897ddc4f03b010e204a",
+        "BaseTorque": 0
+    },
+    "625ebcef6f53af4aa66b44dc": {
+        "ID": "625ebcef6f53af4aa66b44dc",
+        "BaseTorque": 0
+    },
+    "5bfd4c980db834001b73449d": {
+        "ID": "5bfd4c980db834001b73449d",
+        "BaseTorque": 0
+    },
+    "5ae099925acfc4001a5fc7b3": {
+        "ID": "5ae099925acfc4001a5fc7b3",
+        "BaseTorque": 0
+    },
+    "5c07b3850db834002330045b": {
+        "ID": "5c07b3850db834002330045b",
+        "BaseTorque": 0
+    },
+    "56ea7293d2720b8d4b8b45ba": {
+        "ID": "56ea7293d2720b8d4b8b45ba",
+        "BaseTorque": 0
+    },
+    "60229948cacb6b0506369e27": {
+        "ID": "60229948cacb6b0506369e27",
+        "BaseTorque": 0
+    },
+    "602293f023506e50807090cb": {
+        "ID": "602293f023506e50807090cb",
+        "BaseTorque": 0
+    },
+    "599860e986f7743bb57573a6": {
+        "ID": "599860e986f7743bb57573a6",
+        "BaseTorque": 0
+    },
+    "619f4f8c4c58466fe1228439": {
+        "ID": "619f4f8c4c58466fe1228439",
+        "BaseTorque": 0
+    },
+    "5b0bc22d5acfc47a8607f085": {
+        "ID": "5b0bc22d5acfc47a8607f085",
+        "BaseTorque": 0
+    },
+    "58272b842459774abc128d50": {
+        "ID": "58272b842459774abc128d50",
+        "BaseTorque": 0
+    },
+    "57a9b9ce2459770ee926038d": {
+        "ID": "57a9b9ce2459770ee926038d",
+        "BaseTorque": 0
+    },
+    "5c471b7e2e2216152006e46c": {
+        "ID": "5c471b7e2e2216152006e46c",
+        "BaseTorque": 0
+    },
+    "6194f2912d2c397d6600348d": {
+        "ID": "6194f2912d2c397d6600348d",
+        "BaseTorque": 0
+    },
+    "6194f2df645b5d229654ad77": {
+        "ID": "6194f2df645b5d229654ad77",
+        "BaseTorque": 0
+    },
+    "57c44e7b2459772d28133248": {
+        "ID": "57c44e7b2459772d28133248",
+        "BaseTorque": 0
+    },
+    "5c503b1c2e221602b21d6e9d": {
+        "ID": "5c503b1c2e221602b21d6e9d",
+        "BaseTorque": 0
+    },
+    "57838e1b2459774a256959b1": {
+        "ID": "57838e1b2459774a256959b1",
+        "BaseTorque": 0
+    },
+    "5dff772da3651922b360bf91": {
+        "ID": "5dff772da3651922b360bf91",
+        "BaseTorque": 0
+    },
+    "5b2388675acfc4771e1be0be": {
+        "ID": "5b2388675acfc4771e1be0be",
+        "BaseTorque": 0
+    },
+    "5b3b99475acfc432ff4dcbee": {
+        "ID": "5b3b99475acfc432ff4dcbee",
+        "BaseTorque": 0
+    },
+    "5a37cb10c4a282329a73b4e7": {
+        "ID": "5a37cb10c4a282329a73b4e7",
+        "BaseTorque": 0
+    },
+    "57c5ac0824597754771e88a9": {
+        "ID": "57c5ac0824597754771e88a9",
+        "BaseTorque": 0
+    },
+    "618ba27d9008e4636a67f61d": {
+        "ID": "618ba27d9008e4636a67f61d",
+        "BaseTorque": 0
+    },
+    "617151c1d92c473c770214ab": {
+        "ID": "617151c1d92c473c770214ab",
+        "BaseTorque": 0
+    },
+    "56ea70acd2720b844b8b4594": {
+        "ID": "56ea70acd2720b844b8b4594",
+        "BaseTorque": 0
+    },
+    "5aa66be6e5b5b0214e506e97": {
+        "ID": "5aa66be6e5b5b0214e506e97",
+        "BaseTorque": 0
+    },
+    "61714eec290d254f5e6b2ffc": {
+        "ID": "61714eec290d254f5e6b2ffc",
+        "BaseTorque": 0
+    },
+    "62850c28da09541f43158cca": {
+        "ID": "62850c28da09541f43158cca",
+        "BaseTorque": 0
+    },
+    "5d53f4b7a4b936793d58c780": {
+        "ID": "5d53f4b7a4b936793d58c780",
+        "BaseTorque": 0
+    },
+    "5dfe6104585a0c3e995c7b82": {
+        "ID": "5dfe6104585a0c3e995c7b82",
+        "BaseTorque": 0
+    },
+    "544a3d0a4bdc2d1b388b4567": {
+        "ID": "544a3d0a4bdc2d1b388b4567",
+        "BaseTorque": 0
+    },
+    "5d0a3a58d7ad1a669c15ca14": {
+        "ID": "5d0a3a58d7ad1a669c15ca14",
+        "BaseTorque": 0
+    },
+    "5d0a3e8cd7ad1a6f6a3d35bd": {
+        "ID": "5d0a3e8cd7ad1a6f6a3d35bd",
+        "BaseTorque": 0
+    },
+    "618a75f0bd321d49084cd399": {
+        "ID": "618a75f0bd321d49084cd399",
+        "BaseTorque": 0
+    },
+    "5b3f7c1c5acfc40dc5296b1d": {
+        "ID": "5b3f7c1c5acfc40dc5296b1d",
+        "BaseTorque": 0
+    },
+    "5c82342f2e221644f31c060e": {
+        "ID": "5c82342f2e221644f31c060e",
+        "BaseTorque": 0
+    },
+    "576fd4ec2459777f0b518431": {
+        "ID": "576fd4ec2459777f0b518431",
+        "BaseTorque": 0
+    },
+    "5c82343a2e221644f31c0611": {
+        "ID": "5c82343a2e221644f31c0611",
+        "BaseTorque": 0
+    },
+    "5cf638cbd7f00c06595bc936": {
+        "ID": "5cf638cbd7f00c06595bc936",
+        "BaseTorque": 0
+    },
+    "5d1b5e94d7ad1a2b865a96b0": {
+        "ID": "5d1b5e94d7ad1a2b865a96b0",
+        "BaseTorque": 0
+    },
+    "609bab8b455afd752b2e6138": {
+        "ID": "609bab8b455afd752b2e6138",
+        "BaseTorque": 0
+    },
+    "5b3b6e495acfc4330140bd88": {
+        "ID": "5b3b6e495acfc4330140bd88",
+        "BaseTorque": 0
+    },
+    "5a1eaa87fcdbcb001865f75e": {
+        "ID": "5a1eaa87fcdbcb001865f75e",
+        "BaseTorque": 0
+    },
+    "5a7c74b3e899ef0014332c29": {
+        "ID": "5a7c74b3e899ef0014332c29",
+        "BaseTorque": 0
+    },
+    "606f2696f2cb2e02a42aceb1": {
+        "ID": "606f2696f2cb2e02a42aceb1",
+        "BaseTorque": 0
+    },
+    "5a800961159bd4315e3a1657": {
+        "ID": "5a800961159bd4315e3a1657",
+        "BaseTorque": 0
+    },
+    "57fd23e32459772d0805bcf1": {
+        "ID": "57fd23e32459772d0805bcf1",
+        "BaseTorque": 0
+    },
+    "544909bb4bdc2d6f028b4577": {
+        "ID": "544909bb4bdc2d6f028b4577",
+        "BaseTorque": 0
+    },
+    "5d10b49bd7ad1a1a560708b0": {
+        "ID": "5d10b49bd7ad1a1a560708b0",
+        "BaseTorque": 0
+    },
+    "5c06595c0db834001a66af6c": {
+        "ID": "5c06595c0db834001a66af6c",
+        "BaseTorque": 0
+    },
+    "626becf9582c3e319310b837": {
+        "ID": "626becf9582c3e319310b837",
+        "BaseTorque": 0
+    },
+    "5cc9c20cd7f00c001336c65d": {
+        "ID": "5cc9c20cd7f00c001336c65d",
+        "BaseTorque": 0
+    },
+    "6272370ee4013c5d7e31f418": {
+        "ID": "6272370ee4013c5d7e31f418",
+        "BaseTorque": 0
+    },
+    "6272379924e29f06af4d5ecb": {
+        "ID": "6272379924e29f06af4d5ecb",
+        "BaseTorque": 0
+    },
+    "5d2369418abbc306c62e0c80": {
+        "ID": "5d2369418abbc306c62e0c80",
+        "BaseTorque": 0
+    },
+    "5b07dd285acfc4001754240d": {
+        "ID": "5b07dd285acfc4001754240d",
+        "BaseTorque": 0
+    },
+    "56def37dd2720bec348b456a": {
+        "ID": "56def37dd2720bec348b456a",
+        "BaseTorque": 0
+    },
+    "5a7b483fe899ef0016170d15": {
+        "ID": "5a7b483fe899ef0016170d15",
+        "BaseTorque": 0
+    },
+    "61605d88ffa6e502ac5e7eeb": {
+        "ID": "61605d88ffa6e502ac5e7eeb",
+        "BaseTorque": 0
+    },
+    "5a5f1ce64f39f90b401987bc": {
+        "ID": "5a5f1ce64f39f90b401987bc",
+        "BaseTorque": 0
+    },
+    "560d657b4bdc2da74d8b4572": {
+        "ID": "560d657b4bdc2da74d8b4572",
+        "BaseTorque": 0
+    },
+    "5b3a337e5acfc4704b4a19a0": {
+        "ID": "5b3a337e5acfc4704b4a19a0",
+        "BaseTorque": 0
+    },
+    "5c5952732e2216398b5abda2": {
+        "ID": "5c5952732e2216398b5abda2",
+        "BaseTorque": 0
+    },
+    "5c079ed60db834001a66b372": {
+        "ID": "5c079ed60db834001a66b372",
+        "BaseTorque": 0
+    },
+    "61702d8a67085e45ef140b24": {
+        "ID": "61702d8a67085e45ef140b24",
+        "BaseTorque": 0
+    },
+    "6130ca3fd92c473c77020dbd": {
+        "ID": "6130ca3fd92c473c77020dbd",
+        "BaseTorque": 0
+    },
+    "5648ac824bdc2ded0b8b457d": {
+        "ID": "5648ac824bdc2ded0b8b457d",
+        "BaseTorque": 0
+    },
+    "5df8e085bb49d91fb446d6a8": {
+        "ID": "5df8e085bb49d91fb446d6a8",
+        "BaseTorque": 0
+    },
+    "5df8e053bb49d91fb446d6a6": {
+        "ID": "5df8e053bb49d91fb446d6a6",
+        "BaseTorque": 0
+    },
+    "5c0faf68d174af02a96260b8": {
+        "ID": "5c0faf68d174af02a96260b8",
+        "BaseTorque": 0
+    },
+    "56ea7165d2720b6e518b4583": {
+        "ID": "56ea7165d2720b6e518b4583",
+        "BaseTorque": 0
+    },
+    "55d44fd14bdc2d962f8b456e": {
+        "ID": "55d44fd14bdc2d962f8b456e",
+        "BaseTorque": 0
+    },
+    "5ea16d4d5aad6446a939753d": {
+        "ID": "5ea16d4d5aad6446a939753d",
+        "BaseTorque": 0
+    },
+    "5bb20dbcd4351e44f824c04e": {
+        "ID": "5bb20dbcd4351e44f824c04e",
+        "BaseTorque": 0
+    },
+    "6033749e88382f4fab3fd2c5": {
+        "ID": "6033749e88382f4fab3fd2c5",
+        "BaseTorque": 0
+    },
+    "5b2240bf5acfc40dc528af69": {
+        "ID": "5b2240bf5acfc40dc528af69",
+        "BaseTorque": 0
+    },
+    "5d44334ba4b9362b346d1948": {
+        "ID": "5d44334ba4b9362b346d1948",
+        "BaseTorque": 0
+    },
+    "5f633ff5c444ce7e3c30a006": {
+        "ID": "5f633ff5c444ce7e3c30a006",
+        "BaseTorque": 0
+    },
+    "62811d61578c54356d6d67ea": {
+        "ID": "62811d61578c54356d6d67ea",
+        "BaseTorque": 0
+    },
+    "62811cd7308cb521f87a8f99": {
+        "ID": "62811cd7308cb521f87a8f99",
+        "BaseTorque": 0
+    },
+    "625ec45bb14d7326ac20f572": {
+        "ID": "625ec45bb14d7326ac20f572",
+        "BaseTorque": 0
+    },
+    "5fbcc640016cce60e8341acc": {
+        "ID": "5fbcc640016cce60e8341acc",
+        "BaseTorque": 0
+    },
+    "6181688c6c780c1e710c9b04": {
+        "ID": "6181688c6c780c1e710c9b04",
+        "BaseTorque": 0
+    },
+    "606587bd6d0bd7580617bacc": {
+        "ID": "606587bd6d0bd7580617bacc",
+        "BaseTorque": 0
+    },
+    "5926c32286f774616e42de99": {
+        "ID": "5926c32286f774616e42de99",
+        "BaseTorque": 0
+    },
+    "5d2f2d5748f03572ec0c0139": {
+        "ID": "5d2f2d5748f03572ec0c0139",
+        "BaseTorque": 0
+    },
+    "5de922d4b11454561e39239f": {
+        "ID": "5de922d4b11454561e39239f",
+        "BaseTorque": 0
+    },
+    "5c5db6b32e221600102611a0": {
+        "ID": "5c5db6b32e221600102611a0",
+        "BaseTorque": 0
+    },
+    "58949edd86f77409483e16a9": {
+        "ID": "58949edd86f77409483e16a9",
+        "BaseTorque": 0
+    },
+    "58949fac86f77409483e16aa": {
+        "ID": "58949fac86f77409483e16aa",
+        "BaseTorque": 0
+    },
+    "5cc6ea78e4a949000e1ea3c1": {
+        "ID": "5cc6ea78e4a949000e1ea3c1",
+        "BaseTorque": 0
+    },
+    "5cc6ea85e4a949000e1ea3c3": {
+        "ID": "5cc6ea85e4a949000e1ea3c3",
+        "BaseTorque": 0
+    },
+    "55d485be4bdc2d962f8b456f": {
+        "ID": "55d485be4bdc2d962f8b456f",
+        "BaseTorque": 0
+    },
+    "617131a4568c120fdd29482d": {
+        "ID": "617131a4568c120fdd29482d",
+        "BaseTorque": 0
+    },
+    "55d484b44bdc2d1d4e8b456d": {
+        "ID": "55d484b44bdc2d1d4e8b456d",
+        "BaseTorque": 0
+    },
+    "55d481904bdc2d8c2f8b456a": {
+        "ID": "55d481904bdc2d8c2f8b456a",
+        "BaseTorque": 0
+    },
+    "564ca9df4bdc2d35148b4569": {
+        "ID": "564ca9df4bdc2d35148b4569",
+        "BaseTorque": 0
+    },
+    "5d25a6a48abbc306c62e6310": {
+        "ID": "5d25a6a48abbc306c62e6310",
+        "BaseTorque": 0
+    },
+    "5d2f213448f0355009199284": {
+        "ID": "5d2f213448f0355009199284",
+        "BaseTorque": 0
+    },
+    "6259bdcabd28e4721447a2aa": {
+        "ID": "6259bdcabd28e4721447a2aa",
+        "BaseTorque": 0
+    },
+    "5df8f535bb49d91fb446d6b0": {
+        "ID": "5df8f535bb49d91fb446d6b0",
+        "BaseTorque": 0
+    },
+    "5d25a6538abbc306c62e630d": {
+        "ID": "5d25a6538abbc306c62e630d",
+        "BaseTorque": 0
+    },
+    "5888988e24597752fe43a6fa": {
+        "ID": "5888988e24597752fe43a6fa",
+        "BaseTorque": 0
+    },
+    "5a718b548dc32e000d46d262": {
+        "ID": "5a718b548dc32e000d46d262",
+        "BaseTorque": 0
+    },
+    "5bfeaa0f0db834001b734927": {
+        "ID": "5bfeaa0f0db834001b734927",
+        "BaseTorque": 0
+    },
+    "55d480c04bdc2d1d4e8b456a": {
+        "ID": "55d480c04bdc2d1d4e8b456a",
+        "BaseTorque": 0
+    },
+    "618168dc8004cc50514c34fc": {
+        "ID": "618168dc8004cc50514c34fc",
+        "BaseTorque": 0
+    },
+    "5cbdc23eae9215001136a407": {
+        "ID": "5cbdc23eae9215001136a407",
+        "BaseTorque": 0
+    },
+    "62307b7b10d2321fa8741921": {
+        "ID": "62307b7b10d2321fa8741921",
+        "BaseTorque": 0
+    },
+    "5ac66c5d5acfc4001718d314": {
+        "ID": "5ac66c5d5acfc4001718d314",
+        "BaseTorque": 0
+    },
+    "5bfea7ad0db834001c38f1ee": {
+        "ID": "5bfea7ad0db834001c38f1ee",
+        "BaseTorque": 0
+    },
+    "576a5ed62459771e9c2096cb": {
+        "ID": "576a5ed62459771e9c2096cb",
+        "BaseTorque": 0
+    },
+    "59fafc5086f7740dbe19f6c3": {
+        "ID": "59fafc5086f7740dbe19f6c3",
+        "BaseTorque": 0
+    },
+    "5b7c2d1d5acfc43d1028532a": {
+        "ID": "5b7c2d1d5acfc43d1028532a",
+        "BaseTorque": 0
+    },
+    "5f647d9f8499b57dc40ddb93": {
+        "ID": "5f647d9f8499b57dc40ddb93",
+        "BaseTorque": 0
+    },
+    "5cf12a15d7f00c05464b293f": {
+        "ID": "5cf12a15d7f00c05464b293f",
+        "BaseTorque": 0
+    },
+    "5cadc2e0ae9215051e1c21e7": {
+        "ID": "5cadc2e0ae9215051e1c21e7",
+        "BaseTorque": 0
+    },
+    "5de8eac42a78646d96665d91": {
+        "ID": "5de8eac42a78646d96665d91",
+        "BaseTorque": 0
+    },
+    "55d482194bdc2d1d4e8b456b": {
+        "ID": "55d482194bdc2d1d4e8b456b",
+        "BaseTorque": 0
+    },
+    "59fafc9386f774067d462453": {
+        "ID": "59fafc9386f774067d462453",
+        "BaseTorque": 0
+    },
+    "564ca99c4bdc2d16268b4589": {
+        "ID": "564ca99c4bdc2d16268b4589",
+        "BaseTorque": 0
+    },
+    "5df8f541c41b2312ea3335e3": {
+        "ID": "5df8f541c41b2312ea3335e3",
+        "BaseTorque": 0
+    },
+    "5ba264f6d4351e0034777d52": {
+        "ID": "5ba264f6d4351e0034777d52",
+        "BaseTorque": 0
+    },
+    "5882163e24597758206fee8c": {
+        "ID": "5882163e24597758206fee8c",
+        "BaseTorque": 0
+    },
+    "5d25a4a98abbc30b917421a4": {
+        "ID": "5d25a4a98abbc30b917421a4",
+        "BaseTorque": 0
+    },
+    "617130016c780c1e710c9a24": {
+        "ID": "617130016c780c1e710c9a24",
+        "BaseTorque": 0
+    },
+    "5a01c29586f77474660c694c": {
+        "ID": "5a01c29586f77474660c694c",
+        "BaseTorque": 0
+    },
+    "5d25af8f8abbc3055079fec5": {
+        "ID": "5d25af8f8abbc3055079fec5",
+        "BaseTorque": 0
+    },
+    "56deeefcd2720bc8328b4568": {
+        "ID": "56deeefcd2720bc8328b4568",
+        "BaseTorque": 0
+    },
+    "5448c12b4bdc2d02308b456f": {
+        "ID": "5448c12b4bdc2d02308b456f",
+        "BaseTorque": 0
+    },
+    "57838f9f2459774a150289a0": {
+        "ID": "57838f9f2459774a150289a0",
+        "BaseTorque": 0
+    },
+    "5a351711c4a282000b1521a4": {
+        "ID": "5a351711c4a282000b1521a4",
+        "BaseTorque": 0
+    },
+    "5926c3b286f774640d189b6b": {
+        "ID": "5926c3b286f774640d189b6b",
+        "BaseTorque": 0
+    },
+    "5c5db6742e2216000f1b2852": {
+        "ID": "5c5db6742e2216000f1b2852",
+        "BaseTorque": 0
+    },
+    "587df583245977373c4f1129": {
+        "ID": "587df583245977373c4f1129",
+        "BaseTorque": 0
+    },
+    "5de8e8dafd6b4e6e2276dc32": {
+        "ID": "5de8e8dafd6b4e6e2276dc32",
+        "BaseTorque": 0
+    },
+    "56d59948d2720bb7418b4582": {
+        "ID": "56d59948d2720bb7418b4582",
+        "BaseTorque": 0
+    },
+    "5fc3e466187fea44d52eda90": {
+        "ID": "5fc3e466187fea44d52eda90",
+        "BaseTorque": 0
+    },
+    "6193d338de3cdf1d2614a6fc": {
+        "ID": "6193d338de3cdf1d2614a6fc",
+        "BaseTorque": 0
+    },
+    "5cc70093e4a949033c734312": {
+        "ID": "5cc70093e4a949033c734312",
+        "BaseTorque": 0
+    },
+    "5c5db6552e2216001026119d": {
+        "ID": "5c5db6552e2216001026119d",
+        "BaseTorque": 0
+    },
+    "5ea034f65aad6446a939737e": {
+        "ID": "5ea034f65aad6446a939737e",
+        "BaseTorque": 0
+    },
+    "59f99a7d86f7745b134aa97b": {
+        "ID": "59f99a7d86f7745b134aa97b",
+        "BaseTorque": 0
+    },
+    "56deee15d2720bee328b4567": {
+        "ID": "56deee15d2720bee328b4567",
+        "BaseTorque": 0
+    },
+    "5ba2657ed4351e0035628ff2": {
+        "ID": "5ba2657ed4351e0035628ff2",
+        "BaseTorque": 0
+    },
+    "5cfe8010d7ad1a59283b14c6": {
+        "ID": "5cfe8010d7ad1a59283b14c6",
+        "BaseTorque": 0
+    },
+    "5ea034eb5aad6446a939737b": {
+        "ID": "5ea034eb5aad6446a939737b",
+        "BaseTorque": 0
+    },
+    "57616a9e2459773c7a400234": {
+        "ID": "57616a9e2459773c7a400234",
+        "BaseTorque": 0
+    },
+    "5de8eaadbbaf010b10528a6d": {
+        "ID": "5de8eaadbbaf010b10528a6d",
+        "BaseTorque": 0
+    },
+    "61695095d92c473c7702147a": {
+        "ID": "61695095d92c473c7702147a",
+        "BaseTorque": 0
+    },
+    "5882163824597757561aa922": {
+        "ID": "5882163824597757561aa922",
+        "BaseTorque": 0
+    },
+    "5a17fb03fcdbcbcae668728f": {
+        "ID": "5a17fb03fcdbcbcae668728f",
+        "BaseTorque": 0
+    },
+    "6076c87f232e5a31c233d50e": {
+        "ID": "6076c87f232e5a31c233d50e",
+        "BaseTorque": 0
+    },
+    "5cbdaf89ae9215000e5b9c94": {
+        "ID": "5cbdaf89ae9215000e5b9c94",
+        "BaseTorque": 0
+    },
+    "5de8ea8ffd6b4e6e2276dc35": {
+        "ID": "5de8ea8ffd6b4e6e2276dc35",
+        "BaseTorque": 0
+    },
+    "5ba26586d4351e44f824b340": {
+        "ID": "5ba26586d4351e44f824b340",
+        "BaseTorque": 0
+    },
+    "57838f0b2459774a256959b2": {
+        "ID": "57838f0b2459774a256959b2",
+        "BaseTorque": 0
+    },
+    "5a3501acc4a282000d72293a": {
+        "ID": "5a3501acc4a282000d72293a",
+        "BaseTorque": 0
+    },
+    "571a29dc2459771fb2755a6a": {
+        "ID": "571a29dc2459771fb2755a6a",
+        "BaseTorque": 0
+    },
+    "55d485804bdc2d8c2f8b456b": {
+        "ID": "55d485804bdc2d8c2f8b456b",
+        "BaseTorque": 0
+    },
+    "59e5d83b86f7745aed03d262": {
+        "ID": "59e5d83b86f7745aed03d262",
+        "BaseTorque": 0
+    },
+    "5894a05586f774094708ef75": {
+        "ID": "5894a05586f774094708ef75",
+        "BaseTorque": 0
+    },
+    "5882163224597757561aa920": {
+        "ID": "5882163224597757561aa920",
+        "BaseTorque": 0
+    },
+    "59d625f086f774661516605d": {
+        "ID": "59d625f086f774661516605d",
+        "BaseTorque": 0
+    },
+    "5bed61680db834001d2c45ab": {
+        "ID": "5bed61680db834001d2c45ab",
+        "BaseTorque": 0
+    },
+    "5b7bef9c5acfc43d102852ec": {
+        "ID": "5b7bef9c5acfc43d102852ec",
+        "BaseTorque": 0
+    },
+    "5bed625c0db834001c062946": {
+        "ID": "5bed625c0db834001c062946",
+        "BaseTorque": 0
+    },
+    "5b1fd4e35acfc40018633c39": {
+        "ID": "5b1fd4e35acfc40018633c39",
+        "BaseTorque": 0
+    },
+    "5fb651dc85f90547f674b6f4": {
+        "ID": "5fb651dc85f90547f674b6f4",
+        "BaseTorque": 0
+    },
+    "5d52d479a4b936793d58c76b": {
+        "ID": "5d52d479a4b936793d58c76b",
+        "BaseTorque": 0
+    },
+    "5e87080c81c4ed43e83cefda": {
+        "ID": "5e87080c81c4ed43e83cefda",
+        "BaseTorque": 0
+    },
+    "5caf1109ae9215753c44119f": {
+        "ID": "5caf1109ae9215753c44119f",
+        "BaseTorque": 0
+    },
+    "5a7882dcc5856700177af662": {
+        "ID": "5a7882dcc5856700177af662",
+        "BaseTorque": 0
+    },
+    "5caf1041ae92157c28402e3f": {
+        "ID": "5caf1041ae92157c28402e3f",
+        "BaseTorque": 0
+    },
+    "5b7bef1e5acfc43d82528402": {
+        "ID": "5b7bef1e5acfc43d82528402",
+        "BaseTorque": 0
+    },
+    "5fb651b52b1b027b1f50bcff": {
+        "ID": "5fb651b52b1b027b1f50bcff",
+        "BaseTorque": 0
+    },
+    "5c0548ae0db834001966a3c2": {
+        "ID": "5c0548ae0db834001966a3c2",
+        "BaseTorque": 0
+    },
+    "625ff2ccb8c587128c1a01dd": {
+        "ID": "625ff2ccb8c587128c1a01dd",
+        "BaseTorque": 0
+    },
+    "5c5970672e221602b21d7855": {
+        "ID": "5c5970672e221602b21d7855",
+        "BaseTorque": 0
+    },
+    "5ef3448ab37dfd6af863525c": {
+        "ID": "5ef3448ab37dfd6af863525c",
+        "BaseTorque": 0
+    },
+    "5fc23426900b1d5091531e15": {
+        "ID": "5fc23426900b1d5091531e15",
+        "BaseTorque": 0
+    },
+    "5b7d37845acfc400170e2f87": {
+        "ID": "5b7d37845acfc400170e2f87",
+        "BaseTorque": 0
+    },
+    "5ce69cbad7f00c00b61c5098": {
+        "ID": "5ce69cbad7f00c00b61c5098",
+        "BaseTorque": 0
+    },
+    "5b7bef5d5acfc43bca7067a3": {
+        "ID": "5b7bef5d5acfc43bca7067a3",
+        "BaseTorque": 0
+    },
+    "587df3a12459772c28142567": {
+        "ID": "587df3a12459772c28142567",
+        "BaseTorque": 0
+    },
+    "55d4887d4bdc2d962f8b4570": {
+        "ID": "55d4887d4bdc2d962f8b4570",
+        "BaseTorque": 0
+    },
+    "5a7ad2e851dfba0016153692": {
+        "ID": "5a7ad2e851dfba0016153692",
+        "BaseTorque": 0
+    },
+    "5c5db6652e221600113fba51": {
+        "ID": "5c5db6652e221600113fba51",
+        "BaseTorque": 0
+    },
+    "5e81c4ca763d9f754677befa": {
+        "ID": "5e81c4ca763d9f754677befa",
+        "BaseTorque": 0
+    },
+    "599860ac86f77436b225ed1a": {
+        "ID": "599860ac86f77436b225ed1a",
+        "BaseTorque": 0
+    },
+    "57d1519e24597714373db79d": {
+        "ID": "57d1519e24597714373db79d",
+        "BaseTorque": 0
+    },
+    "5a0060fc86f7745793204432": {
+        "ID": "5a0060fc86f7745793204432",
+        "BaseTorque": 0
+    },
+    "5d3eb5eca4b9363b1f22f8e4": {
+        "ID": "5d3eb5eca4b9363b1f22f8e4",
+        "BaseTorque": 0
+    },
+    "5a966f51a2750c00156aacf6": {
+        "ID": "5a966f51a2750c00156aacf6",
+        "BaseTorque": 0
+    },
+    "5ac66bea5acfc43b321d4aec": {
+        "ID": "5ac66bea5acfc43b321d4aec",
+        "BaseTorque": 0
+    },
+    "5aaf8a0be5b5b00015693243": {
+        "ID": "5aaf8a0be5b5b00015693243",
+        "BaseTorque": 0
+    },
+    "57d14e1724597714010c3f4b": {
+        "ID": "57d14e1724597714010c3f4b",
+        "BaseTorque": 0
+    },
+    "5b099ac65acfc400186331e1": {
+        "ID": "5b099ac65acfc400186331e1",
+        "BaseTorque": 0
+    },
+    "602286df23506e50807090c6": {
+        "ID": "602286df23506e50807090c6",
+        "BaseTorque": 0
+    },
+    "5d25a7b88abbc3054f3e60bc": {
+        "ID": "5d25a7b88abbc3054f3e60bc",
+        "BaseTorque": 0
+    },
+    "5c6175362e221600133e3b94": {
+        "ID": "5c6175362e221600133e3b94",
+        "BaseTorque": 0
+    },
+    "5a718f958dc32e00094b97e7": {
+        "ID": "5a718f958dc32e00094b97e7",
+        "BaseTorque": 0
+    },
+    "5addcce35acfc4001a5fc635": {
+        "ID": "5addcce35acfc4001a5fc635",
+        "BaseTorque": 0
+    },
+    "5c920e902e221644f31c3c99": {
+        "ID": "5c920e902e221644f31c3c99",
+        "BaseTorque": 0
+    },
+    "625ff2eb9f5537057932257d": {
+        "ID": "625ff2eb9f5537057932257d",
+        "BaseTorque": 0
+    },
+    "5a718da68dc32e000d46d264": {
+        "ID": "5a718da68dc32e000d46d264",
+        "BaseTorque": 0
+    },
+    "5c503ac82e221602b21d6e9a": {
+        "ID": "5c503ac82e221602b21d6e9a",
+        "BaseTorque": 0
+    },
+    "5de653abf76fdc1ce94a5a2a": {
+        "ID": "5de653abf76fdc1ce94a5a2a",
+        "BaseTorque": 0
+    },
+    "5a9e81fba2750c00164f6b11": {
+        "ID": "5a9e81fba2750c00164f6b11",
+        "BaseTorque": 0
+    },
+    "5f3e77b26cda304dcc634057": {
+        "ID": "5f3e77b26cda304dcc634057",
+        "BaseTorque": 0
+    },
+    "5ae0973a5acfc4001562206c": {
+        "ID": "5ae0973a5acfc4001562206c",
+        "BaseTorque": 0
+    },
+    "61840bedd92c473c77021635": {
+        "ID": "61840bedd92c473c77021635",
+        "BaseTorque": 0
+    },
+    "6183d53f1cb55961fa0fdcda": {
+        "ID": "6183d53f1cb55961fa0fdcda",
+        "BaseTorque": 0
+    },
+    "5bae13ded4351e44f824bf38": {
+        "ID": "5bae13ded4351e44f824bf38",
+        "BaseTorque": 0
+    },
+    "61840d85568c120fdd2962a5": {
+        "ID": "61840d85568c120fdd2962a5",
+        "BaseTorque": 0
+    },
+    "5c6d450c2e221600114c997d": {
+        "ID": "5c6d450c2e221600114c997d",
+        "BaseTorque": 0
+    },
+    "5c6d42cb2e2216000e69d7d1": {
+        "ID": "5c6d42cb2e2216000e69d7d1",
+        "BaseTorque": 0
+    },
+    "5a78832ec5856700155a6ca3": {
+        "ID": "5a78832ec5856700155a6ca3",
+        "BaseTorque": 0
+    },
+    "59c1383d86f774290a37e0ca": {
+        "ID": "59c1383d86f774290a37e0ca",
+        "BaseTorque": 0
+    },
+    "5aaa5e60e5b5b000140293d6": {
+        "ID": "5aaa5e60e5b5b000140293d6",
+        "BaseTorque": 0
+    },
+    "5448c1d04bdc2dff2f8b4569": {
+        "ID": "5448c1d04bdc2dff2f8b4569",
+        "BaseTorque": 0
+    },
+    "5aaa5dfee5b5b000140293d3": {
+        "ID": "5aaa5dfee5b5b000140293d3",
+        "BaseTorque": 0
+    },
+    "55d4837c4bdc2d1d4e8b456c": {
+        "ID": "55d4837c4bdc2d1d4e8b456c",
+        "BaseTorque": 0
+    },
+    "5aaa4194e5b5b055d06310a5": {
+        "ID": "5aaa4194e5b5b055d06310a5",
+        "BaseTorque": 0
+    },
+    "5a78830bc5856700137e4c90": {
+        "ID": "5a78830bc5856700137e4c90",
+        "BaseTorque": 0
+    },
+    "544a378f4bdc2d30388b4567": {
+        "ID": "544a378f4bdc2d30388b4567",
+        "BaseTorque": 0
+    },
+    "6241c2c2117ad530666a5108": {
+        "ID": "6241c2c2117ad530666a5108",
+        "BaseTorque": 0
+    },
+    "5c6592372e221600133e47d7": {
+        "ID": "5c6592372e221600133e47d7",
+        "BaseTorque": 0
+    },
+    "544a37c44bdc2d25388b4567": {
+        "ID": "544a37c44bdc2d25388b4567",
+        "BaseTorque": 0
+    },
+    "6272874a6c47bd74f92e2087": {
+        "ID": "6272874a6c47bd74f92e2087",
+        "BaseTorque": 0
+    },
+    "5b1fb3e15acfc4001637f068": {
+        "ID": "5b1fb3e15acfc4001637f068",
+        "BaseTorque": 0
+    },
+    "59d6272486f77466146386ff": {
+        "ID": "59d6272486f77466146386ff",
+        "BaseTorque": 0
+    },
+    "59e5f5a486f7746c530b3ce2": {
+        "ID": "59e5f5a486f7746c530b3ce2",
+        "BaseTorque": 0
+    },
+    "628120f210e26c1f344e6558": {
+        "ID": "628120f210e26c1f344e6558",
+        "BaseTorque": 0
+    },
+    "628120fd5631d45211793c9f": {
+        "ID": "628120fd5631d45211793c9f",
+        "BaseTorque": 0
+    },
+    "5addccf45acfc400185c2989": {
+        "ID": "5addccf45acfc400185c2989",
+        "BaseTorque": 0
+    },
+    "625ff3046d721f05d93bf2ee": {
+        "ID": "625ff3046d721f05d93bf2ee",
+        "BaseTorque": 0
+    },
+    "625ff31daaaa8c1130599f64": {
+        "ID": "625ff31daaaa8c1130599f64",
+        "BaseTorque": 0
+    },
+    "5e21a3c67e40bd02257a008a": {
+        "ID": "5e21a3c67e40bd02257a008a",
+        "BaseTorque": 0
+    },
+    "5998529a86f774647f44f421": {
+        "ID": "5998529a86f774647f44f421",
+        "BaseTorque": 0
+    },
+    "5c0673fb0db8340023300271": {
+        "ID": "5c0673fb0db8340023300271",
+        "BaseTorque": 0
+    },
+    "5c0672ed0db834001b7353f3": {
+        "ID": "5c0672ed0db834001b7353f3",
+        "BaseTorque": 0
+    },
+    "5cf8f3b0d7f00c00217872ef": {
+        "ID": "5cf8f3b0d7f00c00217872ef",
+        "BaseTorque": 0
+    },
+    "5c05413a0db834001c390617": {
+        "ID": "5c05413a0db834001c390617",
+        "BaseTorque": 0
+    },
+    "5d1340b3d7ad1a0b52682ed7": {
+        "ID": "5d1340b3d7ad1a0b52682ed7",
+        "BaseTorque": 0
+    },
+    "5d1340bdd7ad1a0e8d245aab": {
+        "ID": "5d1340bdd7ad1a0e8d245aab",
+        "BaseTorque": 0
+    },
+    "55802d5f4bdc2dac148b458e": {
+        "ID": "55802d5f4bdc2dac148b458e",
+        "BaseTorque": 0
+    },
+    "5d1340cad7ad1a0b0b249869": {
+        "ID": "5d1340cad7ad1a0b0b249869",
+        "BaseTorque": 0
+    },
+    "5c6d46132e221601da357d56": {
+        "ID": "5c6d46132e221601da357d56",
+        "BaseTorque": 0
+    },
+    "559ba5b34bdc2d1f1a8b4582": {
+        "ID": "559ba5b34bdc2d1f1a8b4582",
+        "BaseTorque": 0
+    },
+    "5c471c442e221602b542a6f8": {
+        "ID": "5c471c442e221602b542a6f8",
+        "BaseTorque": 0
+    },
+    "5c88f24b2e22160bc12c69a6": {
+        "ID": "5c88f24b2e22160bc12c69a6",
+        "BaseTorque": 0
+    },
+    "5df25b6c0b92095fd441e4cf": {
+        "ID": "5df25b6c0b92095fd441e4cf",
+        "BaseTorque": 0
+    },
+    "5a38ee51c4a282000c5a955c": {
+        "ID": "5a38ee51c4a282000c5a955c",
+        "BaseTorque": 0
+    },
+    "5a38ed75c4a28232996e40c6": {
+        "ID": "5a38ed75c4a28232996e40c6",
+        "BaseTorque": 0
+    },
+    "5c6161fb2e221600113fbde5": {
+        "ID": "5c6161fb2e221600113fbde5",
+        "BaseTorque": 0
+    },
+    "6193d3149fb0c665d5490e32": {
+        "ID": "6193d3149fb0c665d5490e32",
+        "BaseTorque": 0
+    },
+    "5cffa483d7ad1a049e54ef1c": {
+        "ID": "5cffa483d7ad1a049e54ef1c",
+        "BaseTorque": 0
+    },
+    "5c503ad32e2216398b5aada2": {
+        "ID": "5c503ad32e2216398b5aada2",
+        "BaseTorque": 0
+    },
+    "57ffaea724597779f52b3a4d": {
+        "ID": "57ffaea724597779f52b3a4d",
+        "BaseTorque": 0
+    },
+    "59db7eed86f77461f8380365": {
+        "ID": "59db7eed86f77461f8380365",
+        "BaseTorque": 0
+    },
+    "5dff77c759400025ea5150cf": {
+        "ID": "5dff77c759400025ea5150cf",
+        "BaseTorque": 0
+    },
+    "616584766ef05c2ce828ef57": {
+        "ID": "616584766ef05c2ce828ef57",
+        "BaseTorque": 0
+    },
+    "58a56f8d86f774651579314c": {
+        "ID": "58a56f8d86f774651579314c",
+        "BaseTorque": 0
+    },
+    "61f804acfcba9556ea304cb8": {
+        "ID": "61f804acfcba9556ea304cb8",
+        "BaseTorque": 0
+    },
+    "61965d9058ef8c428c287e0d": {
+        "ID": "61965d9058ef8c428c287e0d",
+        "BaseTorque": 0
+    },
+    "58d39d3d86f77445bb794ae7": {
+        "ID": "58d39d3d86f77445bb794ae7",
+        "BaseTorque": 0
+    },
+    "5dfe14f30b92095fd441edaf": {
+        "ID": "5dfe14f30b92095fd441edaf",
+        "BaseTorque": 0
+    },
+    "5c11046cd174af02a012e42b": {
+        "ID": "5c11046cd174af02a012e42b",
+        "BaseTorque": 0
+    },
+    "5e569a132642e66b0b68015c": {
+        "ID": "5e569a132642e66b0b68015c",
+        "BaseTorque": 0
+    },
+    "622b3c081b89c677a33bcda6": {
+        "ID": "622b3c081b89c677a33bcda6",
+        "BaseTorque": 0
+    },
+    "5a1ead28fcdbcb001912fa9f": {
+        "ID": "5a1ead28fcdbcb001912fa9f",
+        "BaseTorque": 0
+    },
+    "5649a2464bdc2d91118b45a8": {
+        "ID": "5649a2464bdc2d91118b45a8",
+        "BaseTorque": 0
+    },
+    "57d17e212459775a1179a0f5": {
+        "ID": "57d17e212459775a1179a0f5",
+        "BaseTorque": 0
+    },
+    "5a7893c1c585673f2b5c374d": {
+        "ID": "5a7893c1c585673f2b5c374d",
+        "BaseTorque": 0
+    },
+    "576a7c512459771e796e0e17": {
+        "ID": "576a7c512459771e796e0e17",
+        "BaseTorque": 0
+    },
+    "57c69dd424597774c03b7bbc": {
+        "ID": "57c69dd424597774c03b7bbc",
+        "BaseTorque": 0
+    },
+    "58a5c12e86f7745d585a2b9e": {
+        "ID": "58a5c12e86f7745d585a2b9e",
+        "BaseTorque": 0
+    },
+    "5a33b652c4a28232996e407c": {
+        "ID": "5a33b652c4a28232996e407c",
+        "BaseTorque": 0
+    },
+    "5926dad986f7741f82604363": {
+        "ID": "5926dad986f7741f82604363",
+        "BaseTorque": 0
+    },
+    "57ffb0062459777a045af529": {
+        "ID": "57ffb0062459777a045af529",
+        "BaseTorque": 0
+    },
+    "5a37ca54c4a282000d72296a": {
+        "ID": "5a37ca54c4a282000d72296a",
+        "BaseTorque": 0
+    },
+    "59eb7ebe86f7740b373438ce": {
+        "ID": "59eb7ebe86f7740b373438ce",
+        "BaseTorque": 0
+    },
+    "5a33b2c9c4a282000c5a9511": {
+        "ID": "5a33b2c9c4a282000c5a9511",
+        "BaseTorque": 0
+    },
+    "5c86592b2e2216000e69e77c": {
+        "ID": "5c86592b2e2216000e69e77c",
+        "BaseTorque": 0
+    },
+    "616554fe50224f204c1da2aa": {
+        "ID": "616554fe50224f204c1da2aa",
+        "BaseTorque": 0
+    },
+    "5d0a29fed7ad1a002769ad08": {
+        "ID": "5d0a29fed7ad1a002769ad08",
+        "BaseTorque": 0
+    },
+    "5c7d55f52e221644f31bff6a": {
+        "ID": "5c7d55f52e221644f31bff6a",
+        "BaseTorque": 0
+    },
+    "5eeb2ff5ea4f8b73c827350b": {
+        "ID": "5eeb2ff5ea4f8b73c827350b",
+        "BaseTorque": 0
+    },
+    "55d48a634bdc2d8b2f8b456a": {
+        "ID": "55d48a634bdc2d8b2f8b456a",
+        "BaseTorque": 0
+    },
+    "5b800ed086f7747baf6e2f9e": {
+        "ID": "5b800ed086f7747baf6e2f9e",
+        "BaseTorque": 0
+    },
+    "5a33bab6c4a28200741e22f8": {
+        "ID": "5a33bab6c4a28200741e22f8",
+        "BaseTorque": 0
+    },
+    "57a3459f245977764a01f703": {
+        "ID": "57a3459f245977764a01f703",
+        "BaseTorque": 0
+    },
+    "625ed7c64d9b6612df732146": {
+        "ID": "625ed7c64d9b6612df732146",
+        "BaseTorque": 0
+    },
+    "5a27b281c4a28200741e1e52": {
+        "ID": "5a27b281c4a28200741e1e52",
+        "BaseTorque": 0
+    },
+    "62444cb99f47004c781903eb": {
+        "ID": "62444cb99f47004c781903eb",
+        "BaseTorque": 0
+    },
+    "5bfe7fb30db8340018089fed": {
+        "ID": "5bfe7fb30db8340018089fed",
+        "BaseTorque": 0
+    },
+    "5a7ad4af51dfba0013379717": {
+        "ID": "5a7ad4af51dfba0013379717",
+        "BaseTorque": 0
+    },
+    "62444cd3674028188b052799": {
+        "ID": "62444cd3674028188b052799",
+        "BaseTorque": 0
+    },
+    "5fc53954f8b6a877a729eaeb": {
+        "ID": "5fc53954f8b6a877a729eaeb",
+        "BaseTorque": 0
+    },
+    "5bbdb811d4351e45020113c7": {
+        "ID": "5bbdb811d4351e45020113c7",
+        "BaseTorque": 0
+    },
+    "5c61a40d2e2216001403158d": {
+        "ID": "5c61a40d2e2216001403158d",
+        "BaseTorque": 0
+    },
+    "593d1fa786f7746da62d61ac": {
+        "ID": "593d1fa786f7746da62d61ac",
+        "BaseTorque": 0
+    },
+    "622efdf8ec80d870d349b4e5": {
+        "ID": "622efdf8ec80d870d349b4e5",
+        "BaseTorque": 0
+    },
+    "5d0a29ead7ad1a0026013f27": {
+        "ID": "5d0a29ead7ad1a0026013f27",
+        "BaseTorque": 0
+    },
+    "5de8fbf2b74cd90030650c79": {
+        "ID": "5de8fbf2b74cd90030650c79",
+        "BaseTorque": 0
+    },
+    "5b3f7bf05acfc433000ecf6b": {
+        "ID": "5b3f7bf05acfc433000ecf6b",
+        "BaseTorque": 0
+    },
+    "622f02437762f55aaa68ac85": {
+        "ID": "622f02437762f55aaa68ac85",
+        "BaseTorque": 0
+    },
+    "59c63b4486f7747afb151c1c": {
+        "ID": "59c63b4486f7747afb151c1c",
+        "BaseTorque": 0
+    },
+    "5de8fc0b205ddc616a6bc51b": {
+        "ID": "5de8fc0b205ddc616a6bc51b",
+        "BaseTorque": 0
+    },
+    "5a27bad7c4a282000b15184b": {
+        "ID": "5a27bad7c4a282000b15184b",
+        "BaseTorque": 0
+    },
+    "55d48ebc4bdc2d8c2f8b456c": {
+        "ID": "55d48ebc4bdc2d8c2f8b456c",
+        "BaseTorque": 0
+    },
+    "5addbffe5acfc4001714dfac": {
+        "ID": "5addbffe5acfc4001714dfac",
+        "BaseTorque": 0
+    },
+    "619624b26db0f2477964e6b0": {
+        "ID": "619624b26db0f2477964e6b0",
+        "BaseTorque": 0
+    },
+    "5b3f7c005acfc4704b4a1de8": {
+        "ID": "5b3f7c005acfc4704b4a1de8",
+        "BaseTorque": 0
+    },
+    "619621a4de3cdf1d2614a7a7": {
+        "ID": "619621a4de3cdf1d2614a7a7",
+        "BaseTorque": 0
+    },
+    "5addc00b5acfc4001669f144": {
+        "ID": "5addc00b5acfc4001669f144",
+        "BaseTorque": 0
+    },
+    "609a4b4fe2ff132951242d04": {
+        "ID": "609a4b4fe2ff132951242d04",
+        "BaseTorque": 0
+    },
+    "57ee59b42459771c7b045da5": {
+        "ID": "57ee59b42459771c7b045da5",
+        "BaseTorque": 0
+    },
+    "5a9fc7e6a2750c0032157184": {
+        "ID": "5a9fc7e6a2750c0032157184",
+        "BaseTorque": 0
+    },
+    "591ee00d86f774592f7b841e": {
+        "ID": "591ee00d86f774592f7b841e",
+        "BaseTorque": 0
+    },
+    "57acb6222459771ec34b5cb0": {
+        "ID": "57acb6222459771ec34b5cb0",
+        "BaseTorque": 0
+    },
+    "5b800ebc86f774394e230a90": {
+        "ID": "5b800ebc86f774394e230a90",
+        "BaseTorque": 0
+    },
+    "5bc5a372d4351e44f824d17f": {
+        "ID": "5bc5a372d4351e44f824d17f",
+        "BaseTorque": 0
+    },
+    "5e569a2e56edd02abe09f280": {
+        "ID": "5e569a2e56edd02abe09f280",
+        "BaseTorque": 0
+    },
+    "5c90c3622e221601da359851": {
+        "ID": "5c90c3622e221601da359851",
+        "BaseTorque": 0
+    },
+    "5b84038986f774774913b0c1": {
+        "ID": "5b84038986f774774913b0c1",
+        "BaseTorque": 0
+    },
+    "5b8403a086f7747ff856f4e2": {
+        "ID": "5b8403a086f7747ff856f4e2",
+        "BaseTorque": 0
+    },
+    "5a16b8a9fcdbcb00165aa6ca": {
+        "ID": "5a16b8a9fcdbcb00165aa6ca",
+        "BaseTorque": 0
+    },
+    "587e08ee245977446b4410cf": {
+        "ID": "587e08ee245977446b4410cf",
+        "BaseTorque": 0
+    },
+    "5b7be4575acfc400161d0832": {
+        "ID": "5b7be4575acfc400161d0832",
+        "BaseTorque": 0
+    },
+    "5b31163c5acfc400153b71cb": {
+        "ID": "5b31163c5acfc400153b71cb",
+        "BaseTorque": 0
+    },
+    "5addbfd15acfc40015621bde": {
+        "ID": "5addbfd15acfc40015621bde",
+        "BaseTorque": 0
+    },
+    "5cc7012ae4a949001252b43e": {
+        "ID": "5cc7012ae4a949001252b43e",
+        "BaseTorque": 0
+    },
+    "6196255558ef8c428c287d1c": {
+        "ID": "6196255558ef8c428c287d1c",
+        "BaseTorque": 0
+    },
+    "5a32aa0cc4a28232996e405f": {
+        "ID": "5a32aa0cc4a28232996e405f",
+        "BaseTorque": 0
+    },
+    "577d128124597739d65d0e56": {
+        "ID": "577d128124597739d65d0e56",
+        "BaseTorque": 0
+    },
+    "6267c6396b642f77f56f5c1c": {
+        "ID": "6267c6396b642f77f56f5c1c",
+        "BaseTorque": 0
+    },
+    "58d2664f86f7747fec5834f6": {
+        "ID": "58d2664f86f7747fec5834f6",
+        "BaseTorque": 0
+    },
+    "5fc5396e900b1d5091531e72": {
+        "ID": "5fc5396e900b1d5091531e72",
+        "BaseTorque": 0
+    },
+    "622b3d5cf9cfc87d675d2de9": {
+        "ID": "622b3d5cf9cfc87d675d2de9",
+        "BaseTorque": 0
+    },
+    "618b9643526131765025ab35": {
+        "ID": "618b9643526131765025ab35",
+        "BaseTorque": 0
+    },
+    "5a16b93dfcdbcbcae6687261": {
+        "ID": "5a16b93dfcdbcbcae6687261",
+        "BaseTorque": 0
+    },
+    "5fce0f9b55375d18a253eff2": {
+        "ID": "5fce0f9b55375d18a253eff2",
+        "BaseTorque": 0
+    },
+    "5a789261c5856700186c65d3": {
+        "ID": "5a789261c5856700186c65d3",
+        "BaseTorque": 0
+    },
+    "615d8d878004cc50514c3233": {
+        "ID": "615d8d878004cc50514c3233",
+        "BaseTorque": 0
+    },
+    "5fbb976df9986c4cff3fe5f2": {
+        "ID": "5fbb976df9986c4cff3fe5f2",
+        "BaseTorque": 0
+    },
+    "5d7b6bafa4b93652786f4c76": {
+        "ID": "5d7b6bafa4b93652786f4c76",
+        "BaseTorque": 0
+    },
+    "60785ce5132d4d12c81fd918": {
+        "ID": "60785ce5132d4d12c81fd918",
+        "BaseTorque": 0
+    },
+    "5a7ad55551dfba0015068f42": {
+        "ID": "5a7ad55551dfba0015068f42",
+        "BaseTorque": 0
+    },
+    "5a78948ec5856700177b1124": {
+        "ID": "5a78948ec5856700177b1124",
+        "BaseTorque": 0
+    },
+    "5a398b75c4a282000a51a266": {
+        "ID": "5a398b75c4a282000a51a266",
+        "BaseTorque": 0
+    },
+    "618a75c9a3884f56c957ca1b": {
+        "ID": "618a75c9a3884f56c957ca1b",
+        "BaseTorque": 0
+    },
+    "58d39b0386f77443380bf13c": {
+        "ID": "58d39b0386f77443380bf13c",
+        "BaseTorque": 0
+    },
+    "5b2389515acfc4771e1be0c0": {
+        "ID": "5b2389515acfc4771e1be0c0",
+        "BaseTorque": 0
+    },
+    "622f039199f4ea1a4d6c9a17": {
+        "ID": "622f039199f4ea1a4d6c9a17",
+        "BaseTorque": 0
+    },
+    "5b3b6dc75acfc47a8773fb1e": {
+        "ID": "5b3b6dc75acfc47a8773fb1e",
+        "BaseTorque": 0
+    },
+    "5a398ab9c4a282000c5a9842": {
+        "ID": "5a398ab9c4a282000c5a9842",
+        "BaseTorque": 0
+    },
+    "5d024f5cd7ad1a04a067e91a": {
+        "ID": "5d024f5cd7ad1a04a067e91a",
+        "BaseTorque": 0
+    },
+    "5dff8db859400025ea5150d4": {
+        "ID": "5dff8db859400025ea5150d4",
+        "BaseTorque": 0
+    },
+    "61816dfa6ef05c2ce828f1ad": {
+        "ID": "61816dfa6ef05c2ce828f1ad",
+        "BaseTorque": 0
+    },
+    "5b3a08b25acfc4001754880c": {
+        "ID": "5b3a08b25acfc4001754880c",
+        "BaseTorque": 0
+    },
+    "5cc70146e4a949000d73bf6b": {
+        "ID": "5cc70146e4a949000d73bf6b",
+        "BaseTorque": 0
+    },
+    "619666f4af1f5202c57a952d": {
+        "ID": "619666f4af1f5202c57a952d",
+        "BaseTorque": 0
+    },
+    "5df35ea9c41b2312ea3334d8": {
+        "ID": "5df35ea9c41b2312ea3334d8",
+        "BaseTorque": 0
+    },
+    "5c471c2d2e22164bef5d077f": {
+        "ID": "5c471c2d2e22164bef5d077f",
+        "BaseTorque": 0
+    },
+    "5a7b4900e899ef197b331a2a": {
+        "ID": "5a7b4900e899ef197b331a2a",
+        "BaseTorque": 0
+    },
+    "5df35e970b92095fd441e4d2": {
+        "ID": "5df35e970b92095fd441e4d2",
+        "BaseTorque": 0
+    },
+    "5c6162682e22160010261a2b": {
+        "ID": "5c6162682e22160010261a2b",
+        "BaseTorque": 0
+    },
+    "61816df1d3a39d50044c139e": {
+        "ID": "61816df1d3a39d50044c139e",
+        "BaseTorque": 0
+    },
+    "5cdeaca5d7f00c00b61c4b70": {
+        "ID": "5cdeaca5d7f00c00b61c4b70",
+        "BaseTorque": 0
+    },
+    "5d133067d7ad1a33013f95b4": {
+        "ID": "5d133067d7ad1a33013f95b4",
+        "BaseTorque": 0
+    },
+    "5fbb978207e8a97d1f0902d3": {
+        "ID": "5fbb978207e8a97d1f0902d3",
+        "BaseTorque": 0
+    },
+    "5de6558e9f98ac2bc65950fc": {
+        "ID": "5de6558e9f98ac2bc65950fc",
+        "BaseTorque": 0
+    },
+    "5df35eb2b11454561e3923e2": {
+        "ID": "5df35eb2b11454561e3923e2",
+        "BaseTorque": 0
+    },
+    "5f2aa493cd375f14e15eea72": {
+        "ID": "5f2aa493cd375f14e15eea72",
+        "BaseTorque": 0
+    },
+    "5cc7015ae4a949001152b4c6": {
+        "ID": "5cc7015ae4a949001152b4c6",
+        "BaseTorque": 0
+    },
+    "5c7d560b2e22160bc12c6139": {
+        "ID": "5c7d560b2e22160bc12c6139",
+        "BaseTorque": 0
+    },
+    "5a27b3d0c4a282000d721ec1": {
+        "ID": "5a27b3d0c4a282000d721ec1",
+        "BaseTorque": 0
+    },
+    "5cde7b43d7f00c000d36b93e": {
+        "ID": "5cde7b43d7f00c000d36b93e",
+        "BaseTorque": 0
+    },
+    "5addbfbb5acfc400194dbcf7": {
+        "ID": "5addbfbb5acfc400194dbcf7",
+        "BaseTorque": 0
+    },
+    "5bfebc530db834001d23eb65": {
+        "ID": "5bfebc530db834001d23eb65",
+        "BaseTorque": 0
+    },
+    "5ab24ef9e5b5b00fe93c9209": {
+        "ID": "5ab24ef9e5b5b00fe93c9209",
+        "BaseTorque": 0
+    },
+    "5a966ec8a2750c00171b3f36": {
+        "ID": "5a966ec8a2750c00171b3f36",
+        "BaseTorque": 0
+    },
+    "5bfebc5e0db834001a6694e5": {
+        "ID": "5bfebc5e0db834001a6694e5",
+        "BaseTorque": 0
+    },
+    "623c2f4242aee3103f1c44b7": {
+        "ID": "623c2f4242aee3103f1c44b7",
+        "BaseTorque": 0
+    },
+    "623c2f652febb22c2777d8d7": {
+        "ID": "623c2f652febb22c2777d8d7",
+        "BaseTorque": 0
+    },
+    "5c61627a2e22160012542c55": {
+        "ID": "5c61627a2e22160012542c55",
+        "BaseTorque": 0
+    },
+    "5c064c400db834001d23f468": {
+        "ID": "5c064c400db834001d23f468",
+        "BaseTorque": 0
+    },
+    "6269220d70b6c02e665f2635": {
+        "ID": "6269220d70b6c02e665f2635",
+        "BaseTorque": 0
+    },
+    "5beecbb80db834001d2c465e": {
+        "ID": "5beecbb80db834001d2c465e",
+        "BaseTorque": 0
+    },
+    "618ba92152ecee1505530bd3": {
+        "ID": "618ba92152ecee1505530bd3",
+        "BaseTorque": 0
+    },
+    "59e0bdb186f774156f04ce82": {
+        "ID": "59e0bdb186f774156f04ce82",
+        "BaseTorque": 0
+    },
+    "5b7be46e5acfc400170e2dcf": {
+        "ID": "5b7be46e5acfc400170e2dcf",
+        "BaseTorque": 0
+    },
+    "618bab21526131765025ab3f": {
+        "ID": "618bab21526131765025ab3f",
+        "BaseTorque": 0
+    },
+    "5c1cdd302e221602b3137250": {
+        "ID": "5c1cdd302e221602b3137250",
+        "BaseTorque": 0
+    },
+    "607ea812232e5a31c233d53c": {
+        "ID": "607ea812232e5a31c233d53c",
+        "BaseTorque": 0
+    },
+    "5c0695860db834001b735461": {
+        "ID": "5c0695860db834001b735461",
+        "BaseTorque": 0
+    },
+    "5f2aa49f9b44de6b1b4e68d4": {
+        "ID": "5f2aa49f9b44de6b1b4e68d4",
+        "BaseTorque": 0
+    },
+    "59e0be5d86f7742d48765bd2": {
+        "ID": "59e0be5d86f7742d48765bd2",
+        "BaseTorque": 0
+    },
+    "6086b5392535c57a13424d70": {
+        "ID": "6086b5392535c57a13424d70",
+        "BaseTorque": 0
+    },
+    "5b7be4645acfc400170e2dcc": {
+        "ID": "5b7be4645acfc400170e2dcc",
+        "BaseTorque": 0
+    },
+    "615d8da4d3a39d50044c10e8": {
+        "ID": "615d8da4d3a39d50044c10e8",
+        "BaseTorque": 0
+    },
+    "59e0bed186f774156f04ce84": {
+        "ID": "59e0bed186f774156f04ce84",
+        "BaseTorque": 0
+    },
+    "618b9682a3884f56c957ca78": {
+        "ID": "618b9682a3884f56c957ca78",
+        "BaseTorque": 0
+    },
+    "5addbfe15acfc4001a5fc58b": {
+        "ID": "5addbfe15acfc4001a5fc58b",
+        "BaseTorque": 0
+    },
+    "5b4736a986f774040571e998": {
+        "ID": "5b4736a986f774040571e998",
+        "BaseTorque": 0
+    },
+    "618b9671d14d6d5ab879c5ea": {
+        "ID": "618b9671d14d6d5ab879c5ea",
+        "BaseTorque": 0
+    },
+    "61714b2467085e45ef140b2c": {
+        "ID": "61714b2467085e45ef140b2c",
+        "BaseTorque": 0
+    },
+    "5b3b99265acfc4704b4a1afb": {
+        "ID": "5b3b99265acfc4704b4a1afb",
+        "BaseTorque": 0
+    },
+    "5ef369b08cef260c0642acaf": {
+        "ID": "5ef369b08cef260c0642acaf",
+        "BaseTorque": 0
+    },
+    "5b7be47f5acfc400170e2dd2": {
+        "ID": "5b7be47f5acfc400170e2dd2",
+        "BaseTorque": 0
+    },
+    "62811f461d5df4475f46a332": {
+        "ID": "62811f461d5df4475f46a332",
+        "BaseTorque": 0
+    },
+    "6171407e50224f204c1da3c5": {
+        "ID": "6171407e50224f204c1da3c5",
+        "BaseTorque": 0
+    },
+    "61713cc4d8e3106d9806c109": {
+        "ID": "61713cc4d8e3106d9806c109",
+        "BaseTorque": 0
+    },
+    "6269545d0e57f218e4548ca2": {
+        "ID": "6269545d0e57f218e4548ca2",
+        "BaseTorque": 0
+    },
+    "5b30bc285acfc47a8608615d": {
+        "ID": "5b30bc285acfc47a8608615d",
+        "BaseTorque": 0
+    },
+    "5b30bc165acfc40016387293": {
+        "ID": "5b30bc165acfc40016387293",
+        "BaseTorque": 0
+    },
+    "5aa66a9be5b5b0214e506e89": {
+        "ID": "5aa66a9be5b5b0214e506e89",
+        "BaseTorque": 0
+    },
+    "5aa66c72e5b5b00016327c93": {
+        "ID": "5aa66c72e5b5b00016327c93",
+        "BaseTorque": 0
+    },
+    "618ba91477b82356f91ae0e8": {
+        "ID": "618ba91477b82356f91ae0e8",
+        "BaseTorque": 0
+    },
+    "5a9d6d00a2750c5c985b5305": {
+        "ID": "5a9d6d00a2750c5c985b5305",
+        "BaseTorque": 0
+    },
+    "5a9d6d13a2750c00164f6b03": {
+        "ID": "5a9d6d13a2750c00164f6b03",
+        "BaseTorque": 0
+    },
+    "5a9d6d21a2750c00137fa649": {
+        "ID": "5a9d6d21a2750c00137fa649",
+        "BaseTorque": 0
+    },
+    "628120dd308cb521f87a8fa1": {
+        "ID": "628120dd308cb521f87a8fa1",
+        "BaseTorque": 0
+    },
+    "628120d309427b40ab14e76d": {
+        "ID": "628120d309427b40ab14e76d",
+        "BaseTorque": 0
+    },
+    "628120c21d5df4475f46a337": {
+        "ID": "628120c21d5df4475f46a337",
+        "BaseTorque": 0
+    },
+    "5addbfef5acfc400185c2857": {
+        "ID": "5addbfef5acfc400185c2857",
+        "BaseTorque": 0
+    },
+    "5ef5d994dfbc9f3c660ded95": {
+        "ID": "5ef5d994dfbc9f3c660ded95",
+        "BaseTorque": 0
+    },
+    "5b7be4895acfc400170e2dd5": {
+        "ID": "5b7be4895acfc400170e2dd5",
+        "BaseTorque": 0
+    },
+    "5b4736b986f77405cb415c10": {
+        "ID": "5b4736b986f77405cb415c10",
+        "BaseTorque": 0
+    },
+    "5c0102aa0db834001b734ba1": {
+        "ID": "5c0102aa0db834001b734ba1",
+        "BaseTorque": 0
+    },
+    "5c0102b20db834001d23eebc": {
+        "ID": "5c0102b20db834001d23eebc",
+        "BaseTorque": 0
+    },
+    "5e569a0156edd02abe09f27d": {
+        "ID": "5e569a0156edd02abe09f27d",
+        "BaseTorque": 0
+    },
+    "5b04473a5acfc40018632f70": {
+        "ID": "5b04473a5acfc40018632f70",
+        "BaseTorque": 0
+    },
+    "5b7d63b75acfc400170e2f8a": {
+        "ID": "5b7d63b75acfc400170e2f8a",
+        "BaseTorque": 0
+    },
+    "5c87a07c2e2216001219d4a2": {
+        "ID": "5c87a07c2e2216001219d4a2",
+        "BaseTorque": 0
+    },
+    "59e89d0986f77427600d226e": {
+        "ID": "59e89d0986f77427600d226e",
+        "BaseTorque": 0
+    },
+    "5fc3e4ee7283c4046c5814af": {
+        "ID": "5fc3e4ee7283c4046c5814af",
+        "BaseTorque": 0
+    },
+    "5cf518cfd7f00c065b422214": {
+        "ID": "5cf518cfd7f00c065b422214",
+        "BaseTorque": 0
+    },
+    "57dc347d245977596754e7a1": {
+        "ID": "57dc347d245977596754e7a1",
+        "BaseTorque": 0
+    },
+    "5c0e2ff6d174af02a1659d4a": {
+        "ID": "5c0e2ff6d174af02a1659d4a",
+        "BaseTorque": 0
+    },
+    "5a7880d0c5856700142fdd9d": {
+        "ID": "5a7880d0c5856700142fdd9d",
+        "BaseTorque": 0
+    },
+    "5a0c59791526d8dba737bba7": {
+        "ID": "5a0c59791526d8dba737bba7",
+        "BaseTorque": 0
+    },
+    "617154aa1cb55961fa0fdb3b": {
+        "ID": "617154aa1cb55961fa0fdb3b",
+        "BaseTorque": 0
+    },
+    "5947c73886f7747701588af5": {
+        "ID": "5947c73886f7747701588af5",
+        "BaseTorque": 0
+    },
+    "5e217ba4c1434648c13568cd": {
+        "ID": "5e217ba4c1434648c13568cd",
+        "BaseTorque": 0
+    },
+    "5926d40686f7740f152b6b7e": {
+        "ID": "5926d40686f7740f152b6b7e",
+        "BaseTorque": 0
+    },
+    "5b222d405acfc400153af4fe": {
+        "ID": "5b222d405acfc400153af4fe",
+        "BaseTorque": 0
+    },
+    "5649b2314bdc2d79388b4576": {
+        "ID": "5649b2314bdc2d79388b4576",
+        "BaseTorque": 0
+    },
+    "5cebec10d7f00c065703d185": {
+        "ID": "5cebec10d7f00c065703d185",
+        "BaseTorque": 0
+    },
+    "5fc2369685fd526b824a5713": {
+        "ID": "5fc2369685fd526b824a5713",
+        "BaseTorque": 0
+    },
+    "5b0e794b5acfc47a877359b2": {
+        "ID": "5b0e794b5acfc47a877359b2",
+        "BaseTorque": 0
+    },
+    "5e87116b81c4ed43e83cefdd": {
+        "ID": "5e87116b81c4ed43e83cefdd",
+        "BaseTorque": 0
+    },
+    "5e848db4681bea2ada00daa9": {
+        "ID": "5e848db4681bea2ada00daa9",
+        "BaseTorque": 0
+    },
+    "5ac78eaf5acfc4001926317a": {
+        "ID": "5ac78eaf5acfc4001926317a",
+        "BaseTorque": 0
+    },
+    "59ecc3dd86f7746dc827481c": {
+        "ID": "59ecc3dd86f7746dc827481c",
+        "BaseTorque": 0
+    },
+    "5926d3c686f77410de68ebc8": {
+        "ID": "5926d3c686f77410de68ebc8",
+        "BaseTorque": 0
+    },
+    "5bcf0213d4351e0085327c17": {
+        "ID": "5bcf0213d4351e0085327c17",
+        "BaseTorque": 0
+    },
+    "5ae30c9a5acfc408fb139a03": {
+        "ID": "5ae30c9a5acfc408fb139a03",
+        "BaseTorque": 0
+    },
+    "5abcd472d8ce8700166032ae": {
+        "ID": "5abcd472d8ce8700166032ae",
+        "BaseTorque": 0
+    },
+    "5bd704e7209c4d00d7167c31": {
+        "ID": "5bd704e7209c4d00d7167c31",
+        "BaseTorque": 0
+    },
+    "5eea217fc64c5d0dfc05712a": {
+        "ID": "5eea217fc64c5d0dfc05712a",
+        "BaseTorque": 0
+    },
+    "619b69037b9de8162902673e": {
+        "ID": "619b69037b9de8162902673e",
+        "BaseTorque": 0
+    },
+    "5a78813bc5856700186c4abe": {
+        "ID": "5a78813bc5856700186c4abe",
+        "BaseTorque": 0
+    },
+    "61f7b234ea4ab34f2f59c3ec": {
+        "ID": "61f7b234ea4ab34f2f59c3ec",
+        "BaseTorque": 0
+    },
+    "5cc700b9e4a949000f0f0f25": {
+        "ID": "5cc700b9e4a949000f0f0f25",
+        "BaseTorque": 0
+    },
+    "5cf50fc5d7f00c056c53f83c": {
+        "ID": "5cf50fc5d7f00c056c53f83c",
+        "BaseTorque": 0
+    },
+    "5b39f8db5acfc40016387a1b": {
+        "ID": "5b39f8db5acfc40016387a1b",
+        "BaseTorque": 0
+    },
+    "5fbcc429900b1d5091531dd7": {
+        "ID": "5fbcc429900b1d5091531dd7",
+        "BaseTorque": 0
+    },
+    "5b222d335acfc4771e1be099": {
+        "ID": "5b222d335acfc4771e1be099",
+        "BaseTorque": 0
+    },
+    "617153016c780c1e710c9a2f": {
+        "ID": "617153016c780c1e710c9a2f",
+        "BaseTorque": 0
+    },
+    "624c29ce09cd027dff2f8cd7": {
+        "ID": "624c29ce09cd027dff2f8cd7",
+        "BaseTorque": 0
+    },
+    "5a17fb9dfcdbcbcae6687291": {
+        "ID": "5a17fb9dfcdbcbcae6687291",
+        "BaseTorque": 0
+    },
+    "59ecc28286f7746d7a68aa8c": {
+        "ID": "59ecc28286f7746d7a68aa8c",
+        "BaseTorque": 0
+    },
+    "56083cba4bdc2de22e8b456f": {
+        "ID": "56083cba4bdc2de22e8b456f",
+        "BaseTorque": 0
+    },
+    "628b9a40717774443b15e9f2": {
+        "ID": "628b9a40717774443b15e9f2",
+        "BaseTorque": 0
+    },
+    "5bb20e70d4351e0035629f8f": {
+        "ID": "5bb20e70d4351e0035629f8f",
+        "BaseTorque": 0
+    },
+    "58ac1bf086f77420ed183f9f": {
+        "ID": "58ac1bf086f77420ed183f9f",
+        "BaseTorque": 0
+    },
+    "5ab626e4d8ce87272e4c6e43": {
+        "ID": "5ab626e4d8ce87272e4c6e43",
+        "BaseTorque": 0
+    },
+    "59d6514b86f774171a068a08": {
+        "ID": "59d6514b86f774171a068a08",
+        "BaseTorque": 0
+    },
+    "5c5db6f82e2216003a0fe914": {
+        "ID": "5c5db6f82e2216003a0fe914",
+        "BaseTorque": 0
+    },
+    "59e6227d86f77440d64f5dc2": {
+        "ID": "59e6227d86f77440d64f5dc2",
+        "BaseTorque": 0
+    },
+    "59ff3b6a86f77477562ff5ed": {
+        "ID": "59ff3b6a86f77477562ff5ed",
+        "BaseTorque": 0
+    },
+    "5d1c702ad7ad1a632267f429": {
+        "ID": "5d1c702ad7ad1a632267f429",
+        "BaseTorque": 0
+    },
+    "5bfe86df0db834001b734685": {
+        "ID": "5bfe86df0db834001b734685",
+        "BaseTorque": 0
+    },
+    "5d135e83d7ad1a21b83f42d8": {
+        "ID": "5d135e83d7ad1a21b83f42d8",
+        "BaseTorque": 0
+    },
+    "5b0800175acfc400153aebd4": {
+        "ID": "5b0800175acfc400153aebd4",
+        "BaseTorque": 0
+    },
+    "5addbf175acfc408fb13965b": {
+        "ID": "5addbf175acfc408fb13965b",
+        "BaseTorque": 0
+    },
+    "591af10186f774139d495f0e": {
+        "ID": "591af10186f774139d495f0e",
+        "BaseTorque": 0
+    },
+    "6087e2a5232e5a31c233d552": {
+        "ID": "6087e2a5232e5a31c233d552",
+        "BaseTorque": 0
+    },
+    "5fce16961f152d4312622bc9": {
+        "ID": "5fce16961f152d4312622bc9",
+        "BaseTorque": 0
+    },
+    "5a9eb32da2750c00171b3f9c": {
+        "ID": "5a9eb32da2750c00171b3f9c",
+        "BaseTorque": 0
+    },
+    "5fbbaa86f9986c4cff3fe5f6": {
+        "ID": "5fbbaa86f9986c4cff3fe5f6",
+        "BaseTorque": 0
+    },
+    "5fbcc437d724d907e2077d5c": {
+        "ID": "5fbcc437d724d907e2077d5c",
+        "BaseTorque": 0
+    },
+    "57ade1442459771557167e15": {
+        "ID": "57ade1442459771557167e15",
+        "BaseTorque": 0
+    },
+    "5d25d0ac8abbc3054f3e61f7": {
+        "ID": "5d25d0ac8abbc3054f3e61f7",
+        "BaseTorque": 0
+    },
+    "5a33e75ac4a2826c6e06d759": {
+        "ID": "5a33e75ac4a2826c6e06d759",
+        "BaseTorque": 0
+    },
+    "587e0531245977466077a0f7": {
+        "ID": "587e0531245977466077a0f7",
+        "BaseTorque": 0
+    },
+    "5bb20e58d4351e00320205d7": {
+        "ID": "5bb20e58d4351e00320205d7",
+        "BaseTorque": 0
+    },
+    "5894a13e86f7742405482982": {
+        "ID": "5894a13e86f7742405482982",
+        "BaseTorque": 0
+    },
+    "58d2946386f774496974c37e": {
+        "ID": "58d2946386f774496974c37e",
+        "BaseTorque": 0
+    },
+    "58d2912286f7744e27117493": {
+        "ID": "58d2912286f7744e27117493",
+        "BaseTorque": 0
+    },
+    "602e3f1254072b51b239f713": {
+        "ID": "602e3f1254072b51b239f713",
+        "BaseTorque": 0
+    },
+    "5c0faeddd174af02a962601f": {
+        "ID": "5c0faeddd174af02a962601f",
+        "BaseTorque": 0
+    },
+    "612781056f3d944a17348d60": {
+        "ID": "612781056f3d944a17348d60",
+        "BaseTorque": 0
+    },
+    "5a33cae9c4a28232980eb086": {
+        "ID": "5a33cae9c4a28232980eb086",
+        "BaseTorque": 0
+    },
+    "5ae35b315acfc4001714e8b0": {
+        "ID": "5ae35b315acfc4001714e8b0",
+        "BaseTorque": 0
+    },
+    "606587d11246154cad35d635": {
+        "ID": "606587d11246154cad35d635",
+        "BaseTorque": 0
+    },
+    "56083a334bdc2dc8488b4571": {
+        "ID": "56083a334bdc2dc8488b4571",
+        "BaseTorque": 0
+    },
+    "628a85ee6b1d481ff772e9d5": {
+        "ID": "628a85ee6b1d481ff772e9d5",
+        "BaseTorque": 0
+    },
+    "56eabf3bd2720b75698b4569": {
+        "ID": "56eabf3bd2720b75698b4569",
+        "BaseTorque": 0
+    },
+    "5e848dc4e4dbc5266a4ec63d": {
+        "ID": "5e848dc4e4dbc5266a4ec63d",
+        "BaseTorque": 0
+    },
+    "58d2946c86f7744e271174b5": {
+        "ID": "58d2946c86f7744e271174b5",
+        "BaseTorque": 0
+    },
+    "622f14e899892a7f9e08f6c5": {
+        "ID": "622f14e899892a7f9e08f6c5",
+        "BaseTorque": 0
+    },
+    "5649be884bdc2d79388b4577": {
+        "ID": "5649be884bdc2d79388b4577",
+        "BaseTorque": 0
+    },
+    "5649b0fc4bdc2d17108b4588": {
+        "ID": "5649b0fc4bdc2d17108b4588",
+        "BaseTorque": 0
+    },
+    "5947e98b86f774778f1448bc": {
+        "ID": "5947e98b86f774778f1448bc",
+        "BaseTorque": 0
+    },
+    "617155ee50224f204c1da3cd": {
+        "ID": "617155ee50224f204c1da3cd",
+        "BaseTorque": 0
+    },
+    "5d135ecbd7ad1a21c176542e": {
+        "ID": "5d135ecbd7ad1a21c176542e",
+        "BaseTorque": 0
+    },
+    "5ab372a310e891001717f0d8": {
+        "ID": "5ab372a310e891001717f0d8",
+        "BaseTorque": 0
+    },
+    "5d44069ca4b9361ebd26fc37": {
+        "ID": "5d44069ca4b9361ebd26fc37",
+        "BaseTorque": 0
+    },
+    "5649b1c04bdc2d16268b457c": {
+        "ID": "5649b1c04bdc2d16268b457c",
+        "BaseTorque": 0
+    },
+    "58d2947e86f77447aa070d53": {
+        "ID": "58d2947e86f77447aa070d53",
+        "BaseTorque": 0
+    },
+    "55d4ae6c4bdc2d8b2f8b456e": {
+        "ID": "55d4ae6c4bdc2d8b2f8b456e",
+        "BaseTorque": 0
+    },
+    "5a33ca0fc4a282000d72292f": {
+        "ID": "5a33ca0fc4a282000d72292f",
+        "BaseTorque": 0
+    },
+    "5d120a10d7ad1a4e1026ba85": {
+        "ID": "5d120a10d7ad1a4e1026ba85",
+        "BaseTorque": 0
+    },
+    "58889d0c2459775bc215d981": {
+        "ID": "58889d0c2459775bc215d981",
+        "BaseTorque": 0
+    },
+    "5d4406a8a4b9361e4f6eb8b7": {
+        "ID": "5d4406a8a4b9361e4f6eb8b7",
+        "BaseTorque": 0
+    },
+    "602e620f9b513876d4338d9a": {
+        "ID": "602e620f9b513876d4338d9a",
+        "BaseTorque": 0
+    },
+    "5ac50c185acfc400163398d4": {
+        "ID": "5ac50c185acfc400163398d4",
+        "BaseTorque": 0
+    },
+    "5addc7005acfc4001669f275": {
+        "ID": "5addc7005acfc4001669f275",
+        "BaseTorque": 0
+    },
+    "61faa91878830f069b6b7967": {
+        "ID": "61faa91878830f069b6b7967",
+        "BaseTorque": 0
+    },
+    "5c471b5d2e221602b21d4e14": {
+        "ID": "5c471b5d2e221602b21d4e14",
+        "BaseTorque": 0
+    },
+    "5ef1b9f0c64c5d0dfc0571a1": {
+        "ID": "5ef1b9f0c64c5d0dfc0571a1",
+        "BaseTorque": 0
+    },
+    "622f140da5958f63c67f1735": {
+        "ID": "622f140da5958f63c67f1735",
+        "BaseTorque": 0
+    },
+    "5c07c9660db834001a66b588": {
+        "ID": "5c07c9660db834001a66b588",
+        "BaseTorque": 0
+    },
+    "591aef7986f774139d495f03": {
+        "ID": "591aef7986f774139d495f03",
+        "BaseTorque": 0
+    },
+    "5beec8c20db834001d2c465c": {
+        "ID": "5beec8c20db834001d2c465c",
+        "BaseTorque": 0
+    },
+    "5d2f25bc48f03502573e5d85": {
+        "ID": "5d2f25bc48f03502573e5d85",
+        "BaseTorque": 0
+    },
+    "5adf23995acfc400185c2aeb": {
+        "ID": "5adf23995acfc400185c2aeb",
+        "BaseTorque": 0
+    },
+    "61f803b8ced75b2e852e35f8": {
+        "ID": "61f803b8ced75b2e852e35f8",
+        "BaseTorque": 0
+    },
+    "5cbdb1b0ae9215000d50e105": {
+        "ID": "5cbdb1b0ae9215000d50e105",
+        "BaseTorque": 0
+    },
+    "5ae096d95acfc400185c2c81": {
+        "ID": "5ae096d95acfc400185c2c81",
+        "BaseTorque": 0
+    },
+    "5cdeac22d7f00c000f26168f": {
+        "ID": "5cdeac22d7f00c000f26168f",
+        "BaseTorque": 0
+    },
+    "574dad8024597745964bf05c": {
+        "ID": "574dad8024597745964bf05c",
+        "BaseTorque": 0
+    },
+    "5c793fde2e221601da358614": {
+        "ID": "5c793fde2e221601da358614",
+        "BaseTorque": 0
+    },
+    "5d120a28d7ad1a1c8962e295": {
+        "ID": "5d120a28d7ad1a1c8962e295",
+        "BaseTorque": 0
+    },
+    "5ea03e9400685063ec28bfa4": {
+        "ID": "5ea03e9400685063ec28bfa4",
+        "BaseTorque": 0
+    },
+    "62811e2510e26c1f344e6554": {
+        "ID": "62811e2510e26c1f344e6554",
+        "BaseTorque": 0
+    },
+    "5b7d645e5acfc400170e2f90": {
+        "ID": "5b7d645e5acfc400170e2f90",
+        "BaseTorque": 0
+    },
+    "5bbdb870d4351e00367fb67d": {
+        "ID": "5bbdb870d4351e00367fb67d",
+        "BaseTorque": 0
+    },
+    "5beec8b20db834001961942a": {
+        "ID": "5beec8b20db834001961942a",
+        "BaseTorque": 0
+    },
+    "606eef756d0bd7580617baf8": {
+        "ID": "606eef756d0bd7580617baf8",
+        "BaseTorque": 0
+    },
+    "618167616ef05c2ce828f1a8": {
+        "ID": "618167616ef05c2ce828f1a8",
+        "BaseTorque": 0
+    },
+    "5bfd35380db83400232fe5cc": {
+        "ID": "5bfd35380db83400232fe5cc",
+        "BaseTorque": 0
+    },
+    "5de910da8b6c4240ba2651b5": {
+        "ID": "5de910da8b6c4240ba2651b5",
+        "BaseTorque": 0
+    },
+    "5cdeac42d7f00c000d36ba73": {
+        "ID": "5cdeac42d7f00c000d36ba73",
+        "BaseTorque": 0
+    },
+    "5bae13bad4351e00320204af": {
+        "ID": "5bae13bad4351e00320204af",
+        "BaseTorque": 0
+    },
+    "625eb0faa6e3a82193267ad9": {
+        "ID": "625eb0faa6e3a82193267ad9",
+        "BaseTorque": 0
+    },
+    "6197b229af1f5202c57a9bea": {
+        "ID": "6197b229af1f5202c57a9bea",
+        "BaseTorque": 0
+    },
+    "611a31ce5b7ffe001b4649d1": {
+        "ID": "611a31ce5b7ffe001b4649d1",
+        "BaseTorque": 0
+    },
+    "61816734d8e3106d9806c1f3": {
+        "ID": "61816734d8e3106d9806c1f3",
+        "BaseTorque": 0
+    },
+    "5bbde409d4351e003562b036": {
+        "ID": "5bbde409d4351e003562b036",
+        "BaseTorque": 0
+    },
+    "5c793fb92e221644f31bfb64": {
+        "ID": "5c793fb92e221644f31bfb64",
+        "BaseTorque": 0
+    },
+    "58d2947686f774485c6a1ee5": {
+        "ID": "58d2947686f774485c6a1ee5",
+        "BaseTorque": 0
+    },
+    "5c793fc42e221600114ca25d": {
+        "ID": "5c793fc42e221600114ca25d",
+        "BaseTorque": 0
+    },
+    "623b2e9d11c3296b440d1638": {
+        "ID": "623b2e9d11c3296b440d1638",
+        "BaseTorque": 0
+    },
+    "599851db86f77467372f0a18": {
+        "ID": "599851db86f77467372f0a18",
+        "BaseTorque": 0
+    },
+    "5bfe89510db834001808a127": {
+        "ID": "5bfe89510db834001808a127",
+        "BaseTorque": 0
+    },
+    "5c5db6ee2e221600113fba54": {
+        "ID": "5c5db6ee2e221600113fba54",
+        "BaseTorque": 0
+    },
+    "5cc700cae4a949035e43ba72": {
+        "ID": "5cc700cae4a949035e43ba72",
+        "BaseTorque": 0
+    },
+    "5cc700d4e4a949000f0f0f28": {
+        "ID": "5cc700d4e4a949000f0f0f28",
+        "BaseTorque": 0
+    },
+    "5bfd384c0db834001a6691d3": {
+        "ID": "5bfd384c0db834001a6691d3",
+        "BaseTorque": 0
+    },
+    "627254cc9c563e6e442c398f": {
+        "ID": "627254cc9c563e6e442c398f",
+        "BaseTorque": 0
+    },
+    "57c450252459772d28133253": {
+        "ID": "57c450252459772d28133253",
+        "BaseTorque": 0
+    },
+    "606587e18900dc2d9a55b65f": {
+        "ID": "606587e18900dc2d9a55b65f",
+        "BaseTorque": 0
+    },
+    "5d0236dad7ad1a0940739d29": {
+        "ID": "5d0236dad7ad1a0940739d29",
+        "BaseTorque": 0
+    },
+    "618167441cb55961fa0fdc71": {
+        "ID": "618167441cb55961fa0fdc71",
+        "BaseTorque": 0
+    },
+    "56083be64bdc2d20478b456f": {
+        "ID": "56083be64bdc2d20478b456f",
+        "BaseTorque": 0
+    },
+    "5addc7ac5acfc400194dbd90": {
+        "ID": "5addc7ac5acfc400194dbd90",
+        "BaseTorque": 0
+    },
+    "607d5a891246154cad35d6aa": {
+        "ID": "607d5a891246154cad35d6aa",
+        "BaseTorque": 0
+    },
+    "5b7d64555acfc4001876c8e2": {
+        "ID": "5b7d64555acfc4001876c8e2",
+        "BaseTorque": 0
+    },
+    "578395e82459774a0e553c7b": {
+        "ID": "578395e82459774a0e553c7b",
+        "BaseTorque": 0
+    },
+    "5947eab886f77475961d96c5": {
+        "ID": "5947eab886f77475961d96c5",
+        "BaseTorque": 0
+    },
+    "5a788169c5856700142fdd9e": {
+        "ID": "5a788169c5856700142fdd9e",
+        "BaseTorque": 0
+    },
+    "5cde739cd7f00c0010373bd3": {
+        "ID": "5cde739cd7f00c0010373bd3",
+        "BaseTorque": 0
+    },
+    "5cde77a9d7f00c000f261009": {
+        "ID": "5cde77a9d7f00c000f261009",
+        "BaseTorque": 0
+    },
+    "61825d06d92c473c770215de": {
+        "ID": "61825d06d92c473c770215de",
+        "BaseTorque": 0
+    },
+    "5aaf8e43e5b5b00015693246": {
+        "ID": "5aaf8e43e5b5b00015693246",
+        "BaseTorque": 0
+    },
+    "62811e335631d45211793c95": {
+        "ID": "62811e335631d45211793c95",
+        "BaseTorque": 0
+    },
+    "628a6678ccaab13006640e49": {
+        "ID": "628a6678ccaab13006640e49",
+        "BaseTorque": 0
+    },
+    "5ef1ba28c64c5d0dfc0571a5": {
+        "ID": "5ef1ba28c64c5d0dfc0571a5",
+        "BaseTorque": 0
+    },
+    "61715e7e67085e45ef140b33": {
+        "ID": "61715e7e67085e45ef140b33",
+        "BaseTorque": 0
+    },
+    "606f262c6d0bd7580617bafa": {
+        "ID": "606f262c6d0bd7580617bafa",
+        "BaseTorque": 0
+    },
+    "606f263a8900dc2d9a55b68d": {
+        "ID": "606f263a8900dc2d9a55b68d",
+        "BaseTorque": 0
+    },
+    "5cf13123d7f00c1085616a50": {
+        "ID": "5cf13123d7f00c1085616a50",
+        "BaseTorque": 0
+    },
+    "61825d24d3a39d50044c13af": {
+        "ID": "61825d24d3a39d50044c13af",
+        "BaseTorque": 0
+    },
+    "6259c3387d6aab70bc23a18d": {
+        "ID": "6259c3387d6aab70bc23a18d",
+        "BaseTorque": 0
+    },
+    "5bfd36290db834001966869a": {
+        "ID": "5bfd36290db834001966869a",
+        "BaseTorque": 0
+    },
+    "62811f828193841aca4a45c3": {
+        "ID": "62811f828193841aca4a45c3",
+        "BaseTorque": 0
+    },
+    "5bfd36ad0db834001c38ef66": {
+        "ID": "5bfd36ad0db834001c38ef66",
+        "BaseTorque": 0
+    },
+    "5bfeb32b0db834001a6694d9": {
+        "ID": "5bfeb32b0db834001a6694d9",
+        "BaseTorque": 0
+    },
+    "618167528004cc50514c34f9": {
+        "ID": "618167528004cc50514c34f9",
+        "BaseTorque": 0
+    },
+    "5bfd37c80db834001d23e842": {
+        "ID": "5bfd37c80db834001d23e842",
+        "BaseTorque": 0
+    },
+    "61825d136ef05c2ce828f1cc": {
+        "ID": "61825d136ef05c2ce828f1cc",
+        "BaseTorque": 0
+    },
+    "606ef0812535c57a13424d20": {
+        "ID": "606ef0812535c57a13424d20",
+        "BaseTorque": 0
+    },
+    "5b099bf25acfc4001637e683": {
+        "ID": "5b099bf25acfc4001637e683",
+        "BaseTorque": 0
+    },
+    "5b7d63cf5acfc4001876c8df": {
+        "ID": "5b7d63cf5acfc4001876c8df",
+        "BaseTorque": 0
+    },
+    "5b7d63de5acfc400170e2f8d": {
+        "ID": "5b7d63de5acfc400170e2f8d",
+        "BaseTorque": 0
+    },
+    "57616ca52459773c69055192": {
+        "ID": "57616ca52459773c69055192",
+        "BaseTorque": 0
+    },
+    "5afd7e095acfc40017541f61": {
+        "ID": "5afd7e095acfc40017541f61",
+        "BaseTorque": 0
+    },
+    "5afd7ded5acfc40017541f5e": {
+        "ID": "5afd7ded5acfc40017541f5e",
+        "BaseTorque": 0
+    },
+    "5df35e59c41b2312ea3334d5": {
+        "ID": "5df35e59c41b2312ea3334d5",
+        "BaseTorque": 0
+    },
+    "5df35ddddfc58d14537c2036": {
+        "ID": "5df35ddddfc58d14537c2036",
+        "BaseTorque": 0
+    },
+    "626a8ae89e664a2e2a75f409": {
+        "ID": "626a8ae89e664a2e2a75f409",
+        "BaseTorque": 0
+    },
+    "5c99f3592e221644fc633070": {
+        "ID": "5c99f3592e221644fc633070",
+        "BaseTorque": 0
+    },
+    "5a38ef1fc4a282000b1521f6": {
+        "ID": "5a38ef1fc4a282000b1521f6",
+        "BaseTorque": 0
+    },
+    "5fb6558ad6f0b2136f2d7eb7": {
+        "ID": "5fb6558ad6f0b2136f2d7eb7",
+        "BaseTorque": 0
+    },
+    "5fb655b748c711690e3a8d5a": {
+        "ID": "5fb655b748c711690e3a8d5a",
+        "BaseTorque": 0
+    },
+    "5fb655a72b1b027b1f50bd06": {
+        "ID": "5fb655a72b1b027b1f50bd06",
+        "BaseTorque": 0
+    },
+    "5c503af12e221602b177ca02": {
+        "ID": "5c503af12e221602b177ca02",
+        "BaseTorque": 0
+    },
+    "5f63405df5750b524b45f114": {
+        "ID": "5f63405df5750b524b45f114",
+        "BaseTorque": 0
+    },
+    "5de655be4a9f347bc92edb88": {
+        "ID": "5de655be4a9f347bc92edb88",
+        "BaseTorque": 0
+    },
+    "5c5db5b82e2216003a0fe71d": {
+        "ID": "5c5db5b82e2216003a0fe71d",
+        "BaseTorque": 0
+    },
+    "5cc701aae4a949000e1ea45c": {
+        "ID": "5cc701aae4a949000e1ea45c",
+        "BaseTorque": 0
+    },
+    "560836fb4bdc2d773f8b4569": {
+        "ID": "560836fb4bdc2d773f8b4569",
+        "BaseTorque": 0
+    },
+    "5d440b9fa4b93601354d480c": {
+        "ID": "5d440b9fa4b93601354d480c",
+        "BaseTorque": 0
+    },
+    "622b3858034a3e17ad0b81f5": {
+        "ID": "622b3858034a3e17ad0b81f5",
+        "BaseTorque": 0
+    },
+    "55d35ee94bdc2d61338b4568": {
+        "ID": "55d35ee94bdc2d61338b4568",
+        "BaseTorque": 0
+    },
+    "5e848d2eea0a7c419c2f9bfd": {
+        "ID": "5e848d2eea0a7c419c2f9bfd",
+        "BaseTorque": 0
+    },
+    "5c0e2f94d174af029f650d56": {
+        "ID": "5c0e2f94d174af029f650d56",
+        "BaseTorque": 0
+    },
+    "5fc23678ab884124df0cd590": {
+        "ID": "5fc23678ab884124df0cd590",
+        "BaseTorque": 0
+    },
+    "55d3632e4bdc2d972f8b4569": {
+        "ID": "55d3632e4bdc2d972f8b4569",
+        "BaseTorque": 0
+    },
+    "5a34f7f1c4a2826c6e06d75d": {
+        "ID": "5a34f7f1c4a2826c6e06d75d",
+        "BaseTorque": 0
+    },
+    "5fbbfabed5cb881a7363194e": {
+        "ID": "5fbbfabed5cb881a7363194e",
+        "BaseTorque": 0
+    },
+    "55d4491a4bdc2d882f8b456e": {
+        "ID": "55d4491a4bdc2d882f8b456e",
+        "BaseTorque": 0
+    },
+    "55d447bb4bdc2d892f8b456f": {
+        "ID": "55d447bb4bdc2d892f8b456f",
+        "BaseTorque": 0
+    },
+    "58aeaaa886f7744fc1560f81": {
+        "ID": "58aeaaa886f7744fc1560f81",
+        "BaseTorque": 0
+    },
+    "5580169d4bdc2d9d138b4585": {
+        "ID": "5580169d4bdc2d9d138b4585",
+        "BaseTorque": 0
+    },
+    "612368f58b401f4f51239b33": {
+        "ID": "612368f58b401f4f51239b33",
+        "BaseTorque": 0
+    },
+    "5c6d85e02e22165df16b81f4": {
+        "ID": "5c6d85e02e22165df16b81f4",
+        "BaseTorque": 0
+    },
+    "611a30addbdd8440277441dc": {
+        "ID": "611a30addbdd8440277441dc",
+        "BaseTorque": 0
+    },
+    "588200c224597743990da9ed": {
+        "ID": "588200c224597743990da9ed",
+        "BaseTorque": 0
+    },
+    "5c5db5c62e22160012542255": {
+        "ID": "5c5db5c62e22160012542255",
+        "BaseTorque": 0
+    },
+    "5e87071478f43e51ca2de5e1": {
+        "ID": "5e87071478f43e51ca2de5e1",
+        "BaseTorque": 0
+    },
+    "5bb20dadd4351e00367faeff": {
+        "ID": "5bb20dadd4351e00367faeff",
+        "BaseTorque": 0
+    },
+    "5d440b93a4b9364276578d4b": {
+        "ID": "5d440b93a4b9364276578d4b",
+        "BaseTorque": 0
+    },
+    "588200af24597742fa221dfb": {
+        "ID": "588200af24597742fa221dfb",
+        "BaseTorque": 0
+    },
+    "5894a2c386f77427140b8342": {
+        "ID": "5894a2c386f77427140b8342",
+        "BaseTorque": 0
+    },
+    "5fbbfacda56d053a3543f799": {
+        "ID": "5fbbfacda56d053a3543f799",
+        "BaseTorque": 0
+    },
+    "588200cf2459774414733d55": {
+        "ID": "588200cf2459774414733d55",
+        "BaseTorque": 0
+    },
+    "5c5db5852e2216003a0fe71a": {
+        "ID": "5c5db5852e2216003a0fe71a",
+        "BaseTorque": 0
+    },
+    "5f2aa46b878ef416f538b567": {
+        "ID": "5f2aa46b878ef416f538b567",
+        "BaseTorque": 0
+    },
+    "5888945a2459774bf43ba385": {
+        "ID": "5888945a2459774bf43ba385",
+        "BaseTorque": 0
+    },
+    "55d448594bdc2d8c2f8b4569": {
+        "ID": "55d448594bdc2d8c2f8b4569",
+        "BaseTorque": 0
+    },
+    "56deec93d2720bec348b4568": {
+        "ID": "56deec93d2720bec348b4568",
+        "BaseTorque": 0
+    },
+    "5608373c4bdc2dc8488b4570": {
+        "ID": "5608373c4bdc2dc8488b4570",
+        "BaseTorque": 0
+    },
+    "6076c1b9f2cb2e02a42acedc": {
+        "ID": "6076c1b9f2cb2e02a42acedc",
+        "BaseTorque": 0
+    },
+    "5888956924597752983e182d": {
+        "ID": "5888956924597752983e182d",
+        "BaseTorque": 0
+    },
+    "560836484bdc2d20478b456e": {
+        "ID": "560836484bdc2d20478b456e",
+        "BaseTorque": 0
+    },
+    "5a34fae7c4a2826c6e06d760": {
+        "ID": "5a34fae7c4a2826c6e06d760",
+        "BaseTorque": 0
+    },
+    "5cadc1c6ae9215000f2775a4": {
+        "ID": "5cadc1c6ae9215000f2775a4",
+        "BaseTorque": 0
+    },
+    "560837824bdc2d57468b4568": {
+        "ID": "560837824bdc2d57468b4568",
+        "BaseTorque": 0
+    },
+    "5e848d1c264f7c180b5e35a9": {
+        "ID": "5e848d1c264f7c180b5e35a9",
+        "BaseTorque": 0
+    },
+    "5c5db5962e2216000e5e46eb": {
+        "ID": "5c5db5962e2216000e5e46eb",
+        "BaseTorque": 0
+    },
+    "5cc701d7e4a94900100ac4e7": {
+        "ID": "5cc701d7e4a94900100ac4e7",
+        "BaseTorque": 0
+    },
+    "6194ef39de3cdf1d2614a768": {
+        "ID": "6194ef39de3cdf1d2614a768",
+        "BaseTorque": 0
+    },
+    "622b38c56762c718e457e246": {
+        "ID": "622b38c56762c718e457e246",
+        "BaseTorque": 0
+    },
+    "622b379bf9cfc87d675d2de5": {
+        "ID": "622b379bf9cfc87d675d2de5",
+        "BaseTorque": 0
+    },
+    "5bb20da5d4351e0035629dbf": {
+        "ID": "5bb20da5d4351e0035629dbf",
+        "BaseTorque": 0
+    },
+    "618168b350224f204c1da4d8": {
+        "ID": "618168b350224f204c1da4d8",
+        "BaseTorque": 0
+    },
+    "6183b084a112697a4b3a6e6c": {
+        "ID": "6183b084a112697a4b3a6e6c",
+        "BaseTorque": 0
+    },
+    "5e81c519cb2b95385c177551": {
+        "ID": "5e81c519cb2b95385c177551",
+        "BaseTorque": 0
+    },
+    "5df917564a9f347bc92edca3": {
+        "ID": "5df917564a9f347bc92edca3",
+        "BaseTorque": 0
+    },
+    "560836b64bdc2d57468b4567": {
+        "ID": "560836b64bdc2d57468b4567",
+        "BaseTorque": 0
+    },
+    "5dfa397fb11454561e39246c": {
+        "ID": "5dfa397fb11454561e39246c",
+        "BaseTorque": 0
+    },
+    "61f4012adfc9f01a816adda1": {
+        "ID": "61f4012adfc9f01a816adda1",
+        "BaseTorque": 0
+    },
+    "61702be9faa1272e431522c3": {
+        "ID": "61702be9faa1272e431522c3",
+        "BaseTorque": 0
+    },
+    "6065878ac9cf8012264142fd": {
+        "ID": "6065878ac9cf8012264142fd",
+        "BaseTorque": 0
+    },
+    "6183fd9e8004cc50514c358f": {
+        "ID": "6183fd9e8004cc50514c358f",
+        "BaseTorque": 0
+    },
+    "5d3eb5b6a4b9361eab311902": {
+        "ID": "5d3eb5b6a4b9361eab311902",
+        "BaseTorque": 0
+    },
+    "6183fc15d3a39d50044c13e9": {
+        "ID": "6183fc15d3a39d50044c13e9",
+        "BaseTorque": 0
+    },
+    "6259c2c1d714855d182bad85": {
+        "ID": "6259c2c1d714855d182bad85",
+        "BaseTorque": 0
+    },
+    "5dcbe9431e1f4616d354987e": {
+        "ID": "5dcbe9431e1f4616d354987e",
+        "BaseTorque": 0
+    },
+    "5a787f25c5856700186c4ab9": {
+        "ID": "5a787f25c5856700186c4ab9",
+        "BaseTorque": 0
+    },
+    "60658776f2cb2e02a42ace2b": {
+        "ID": "60658776f2cb2e02a42ace2b",
+        "BaseTorque": 0
+    },
+    "5bb20d9cd4351e00334c9d8a": {
+        "ID": "5bb20d9cd4351e00334c9d8a",
+        "BaseTorque": 0
+    },
+    "5bb20d92d4351e00853263eb": {
+        "ID": "5bb20d92d4351e00853263eb",
+        "BaseTorque": 0
+    },
+    "560835c74bdc2dc8488b456f": {
+        "ID": "560835c74bdc2dc8488b456f",
+        "BaseTorque": 0
+    },
+    "6183b0711cb55961fa0fdcad": {
+        "ID": "6183b0711cb55961fa0fdcad",
+        "BaseTorque": 0
+    },
+    "6183fd911cb55961fa0fdce9": {
+        "ID": "6183fd911cb55961fa0fdce9",
+        "BaseTorque": 0
+    },
+    "5c48a2852e221602b21d5923": {
+        "ID": "5c48a2852e221602b21d5923",
+        "BaseTorque": 0
+    },
+    "55d449444bdc2d962f8b456d": {
+        "ID": "55d449444bdc2d962f8b456d",
+        "BaseTorque": 0
+    },
+    "603372d154072b51b239f9e1": {
+        "ID": "603372d154072b51b239f9e1",
+        "BaseTorque": 0
+    },
+    "5fbbc366ca32ed67276c1557": {
+        "ID": "5fbbc366ca32ed67276c1557",
+        "BaseTorque": 0
+    },
+    "603373004e02ce1eaa358814": {
+        "ID": "603373004e02ce1eaa358814",
+        "BaseTorque": 0
+    },
+    "560837154bdc2da74d8b4568": {
+        "ID": "560837154bdc2da74d8b4568",
+        "BaseTorque": 0
+    },
+    "5a6b5f868dc32e000a311389": {
+        "ID": "5a6b5f868dc32e000a311389",
+        "BaseTorque": 0
+    },
+    "5fbbc383d5cb881a7363194a": {
+        "ID": "5fbbc383d5cb881a7363194a",
+        "BaseTorque": 0
+    },
+    "5de65547883dde217541644b": {
+        "ID": "5de65547883dde217541644b",
+        "BaseTorque": 0
+    },
+    "603372b4da11d6478d5a07ff": {
+        "ID": "603372b4da11d6478d5a07ff",
+        "BaseTorque": 0
+    },
+    "5c471cb32e221602b177afaa": {
+        "ID": "5c471cb32e221602b177afaa",
+        "BaseTorque": 0
+    },
+    "5fb653962b1b027b1f50bd03": {
+        "ID": "5fb653962b1b027b1f50bd03",
+        "BaseTorque": 0
+    },
+    "5fb65363d1409e5ca04b54f5": {
+        "ID": "5fb65363d1409e5ca04b54f5",
+        "BaseTorque": 0
+    },
+    "5ea02bb600685063ec28bfa1": {
+        "ID": "5ea02bb600685063ec28bfa1",
+        "BaseTorque": 0
+    },
+    "5fc3e4a27283c4046c5814ab": {
+        "ID": "5fc3e4a27283c4046c5814ab",
+        "BaseTorque": 0
+    },
+    "5608379a4bdc2d26448b4569": {
+        "ID": "5608379a4bdc2d26448b4569",
+        "BaseTorque": 0
+    },
+    "571a26d524597720680fbe8a": {
+        "ID": "571a26d524597720680fbe8a",
+        "BaseTorque": 0
+    },
+    "628121434fa03b6b6c35dc6a": {
+        "ID": "628121434fa03b6b6c35dc6a",
+        "BaseTorque": 0
+    },
+    "587de4282459771bca0ec90b": {
+        "ID": "587de4282459771bca0ec90b",
+        "BaseTorque": 0
+    },
+    "5a787fadc5856700155a6ca1": {
+        "ID": "5a787fadc5856700155a6ca1",
+        "BaseTorque": 0
+    },
+    "603372f153a60014f970616d": {
+        "ID": "603372f153a60014f970616d",
+        "BaseTorque": 0
+    },
+    "628121651d5df4475f46a33c": {
+        "ID": "628121651d5df4475f46a33c",
+        "BaseTorque": 0
+    },
+    "5d3eb59ea4b9361c284bb4b2": {
+        "ID": "5d3eb59ea4b9361c284bb4b2",
+        "BaseTorque": 0
+    },
+    "5beec1bd0db834001e6006f3": {
+        "ID": "5beec1bd0db834001e6006f3",
+        "BaseTorque": 0
+    },
+    "560837544bdc2de22e8b456e": {
+        "ID": "560837544bdc2de22e8b456e",
+        "BaseTorque": 0
+    },
+    "602a95fe4e02ce1eaa358729": {
+        "ID": "602a95fe4e02ce1eaa358729",
+        "BaseTorque": 0
+    },
+    "5a6b5ed88dc32e000c52ec86": {
+        "ID": "5a6b5ed88dc32e000c52ec86",
+        "BaseTorque": 0
+    },
+    "5b1fa9ea5acfc40018633c0a": {
+        "ID": "5b1fa9ea5acfc40018633c0a",
+        "BaseTorque": 0
+    },
+    "56d5a1f7d2720bb3418b456a": {
+        "ID": "56d5a1f7d2720bb3418b456a",
+        "BaseTorque": 0
+    },
+    "5df256570dee1b22f862e9c4": {
+        "ID": "5df256570dee1b22f862e9c4",
+        "BaseTorque": 0
+    },
+    "5a787ebcc5856700142fdd98": {
+        "ID": "5a787ebcc5856700142fdd98",
+        "BaseTorque": 0
+    },
+    "5a787fdfc5856700142fdd9a": {
+        "ID": "5a787fdfc5856700142fdd9a",
+        "BaseTorque": 0
+    },
+    "5beec2820db834001b095426": {
+        "ID": "5beec2820db834001b095426",
+        "BaseTorque": 0
+    },
+    "602a95edda11d6478d5a06da": {
+        "ID": "602a95edda11d6478d5a06da",
+        "BaseTorque": 0
+    },
+    "5a787f7ac5856700177af660": {
+        "ID": "5a787f7ac5856700177af660",
+        "BaseTorque": 0
+    },
+    "5a6b5b8a8dc32e001207faf3": {
+        "ID": "5a6b5b8a8dc32e001207faf3",
+        "BaseTorque": 0
+    },
+    "6281214c1d5df4475f46a33a": {
+        "ID": "6281214c1d5df4475f46a33a",
+        "BaseTorque": 0
+    },
+    "5a6b60158dc32e000a31138b": {
+        "ID": "5a6b60158dc32e000a31138b",
+        "BaseTorque": 0
+    },
+    "6281215b4fa03b6b6c35dc6c": {
+        "ID": "6281215b4fa03b6b6c35dc6c",
+        "BaseTorque": 0
+    },
+    "5bfd4cc90db834001d23e846": {
+        "ID": "5bfd4cc90db834001d23e846",
+        "BaseTorque": 0
+    },
+    "5a6b5e468dc32e001207faf5": {
+        "ID": "5a6b5e468dc32e001207faf5",
+        "BaseTorque": 0
+    },
+    "5d2702e88abbc31ed91efc44": {
+        "ID": "5d2702e88abbc31ed91efc44",
+        "BaseTorque": 0
+    },
+    "5bfd4cd60db834001c38f095": {
+        "ID": "5bfd4cd60db834001c38f095",
+        "BaseTorque": 0
+    },
+    "6194efe07c6c7b169525f11b": {
+        "ID": "6194efe07c6c7b169525f11b",
+        "BaseTorque": 0
+    },
+    "6194eff92d2c397d6600348b": {
+        "ID": "6194eff92d2c397d6600348b",
+        "BaseTorque": 0
+    },
+    "6194f017ed0429009f543eaa": {
+        "ID": "6194f017ed0429009f543eaa",
+        "BaseTorque": 0
+    },
+    "6194f02d9bb3d20b0946d2f0": {
+        "ID": "6194f02d9bb3d20b0946d2f0",
+        "BaseTorque": 0
+    },
+    "5f3e7801153b8571434a924c": {
+        "ID": "5f3e7801153b8571434a924c",
+        "BaseTorque": 0
+    },
+    "5f3e77f59103d430b93f94c1": {
+        "ID": "5f3e77f59103d430b93f94c1",
+        "BaseTorque": 0
+    },
+    "5aaf9d53e5b5b00015042a52": {
+        "ID": "5aaf9d53e5b5b00015042a52",
+        "BaseTorque": 0
+    },
+    "5addbac75acfc400194dbc56": {
+        "ID": "5addbac75acfc400194dbc56",
+        "BaseTorque": 0
+    },
+    "5d2703038abbc3105103d94c": {
+        "ID": "5d2703038abbc3105103d94c",
+        "BaseTorque": 0
+    },
+    "5bfebc250db834001a6694e1": {
+        "ID": "5bfebc250db834001a6694e1",
+        "BaseTorque": 0
+    },
+    "5bfebc320db8340019668d79": {
+        "ID": "5bfebc320db8340019668d79",
+        "BaseTorque": 0
+    },
+    "5bfd4cbe0db834001b73449f": {
+        "ID": "5bfd4cbe0db834001b73449f",
+        "BaseTorque": 0
+    },
+    "5ae09bff5acfc4001562219d": {
+        "ID": "5ae09bff5acfc4001562219d",
+        "BaseTorque": 0
+    },
+    "5b099a765acfc47a8607efe3": {
+        "ID": "5b099a765acfc47a8607efe3",
+        "BaseTorque": 0
+    },
+    "5b7be1125acfc4001876c0e5": {
+        "ID": "5b7be1125acfc4001876c0e5",
+        "BaseTorque": 0
+    },
+    "5b7be1265acfc400161d0798": {
+        "ID": "5b7be1265acfc400161d0798",
+        "BaseTorque": 0
+    },
+    "571a279b24597720b4066566": {
+        "ID": "571a279b24597720b4066566",
+        "BaseTorque": 0
+    },
+    "5b3baf8f5acfc40dc5296692": {
+        "ID": "5b3baf8f5acfc40dc5296692",
+        "BaseTorque": 0
+    },
+    "6130c3dffaa1272e43151c7d": {
+        "ID": "6130c3dffaa1272e43151c7d",
+        "BaseTorque": 0
+    },
+    "5d123102d7ad1a004e475fe5": {
+        "ID": "5d123102d7ad1a004e475fe5",
+        "BaseTorque": 0
+    },
+    "5c471c6c2e221602b66cd9ae": {
+        "ID": "5c471c6c2e221602b66cd9ae",
+        "BaseTorque": 0
+    },
+    "5d4aaa73a4b9365392071175": {
+        "ID": "5d4aaa73a4b9365392071175",
+        "BaseTorque": 0
+    },
+    "5b80242286f77429445e0b47": {
+        "ID": "5b80242286f77429445e0b47",
+        "BaseTorque": 0
+    },
+    "5efaf417aeb21837e749c7f2": {
+        "ID": "5efaf417aeb21837e749c7f2",
+        "BaseTorque": 0
+    },
+    "5648b0744bdc2d363b8b4578": {
+        "ID": "5648b0744bdc2d363b8b4578",
+        "BaseTorque": 0
+    },
+    "5c617a5f2e2216000f1e81b3": {
+        "ID": "5c617a5f2e2216000f1e81b3",
+        "BaseTorque": 0
+    },
+    "5c0e2f5cd174af02a012cfc9": {
+        "ID": "5c0e2f5cd174af02a012cfc9",
+        "BaseTorque": 0
+    },
+    "5a788031c585673f2b5c1c79": {
+        "ID": "5a788031c585673f2b5c1c79",
+        "BaseTorque": 0
+    },
+    "57ffa9f4245977728561e844": {
+        "ID": "57ffa9f4245977728561e844",
+        "BaseTorque": 0
+    },
+    "57cff947245977638e6f2a19": {
+        "ID": "57cff947245977638e6f2a19",
+        "BaseTorque": 0
+    },
+    "5cdaa99dd7f00c002412d0b2": {
+        "ID": "5cdaa99dd7f00c002412d0b2",
+        "BaseTorque": 0
+    },
+    "55d45d3f4bdc2d972f8b456c": {
+        "ID": "55d45d3f4bdc2d972f8b456c",
+        "BaseTorque": 0
+    },
+    "5f6331e097199b7db2128dc2": {
+        "ID": "5f6331e097199b7db2128dc2",
+        "BaseTorque": 0
+    },
+    "5648ae314bdc2d3d1c8b457f": {
+        "ID": "5648ae314bdc2d3d1c8b457f",
+        "BaseTorque": 0
+    },
+    "62386b2adf47d66e835094b2": {
+        "ID": "62386b2adf47d66e835094b2",
+        "BaseTorque": 0
+    },
+    "5c17664f2e2216398b5a7e3c": {
+        "ID": "5c17664f2e2216398b5a7e3c",
+        "BaseTorque": 0
+    },
+    "5d1b198cd7ad1a604869ad72": {
+        "ID": "5d1b198cd7ad1a604869ad72",
+        "BaseTorque": 0
+    },
+    "55d459824bdc2d892f8b4573": {
+        "ID": "55d459824bdc2d892f8b4573",
+        "BaseTorque": 0
+    },
+    "57cffddc24597763133760c6": {
+        "ID": "57cffddc24597763133760c6",
+        "BaseTorque": 0
+    },
+    "5648b4534bdc2d3d1c8b4580": {
+        "ID": "5648b4534bdc2d3d1c8b4580",
+        "BaseTorque": 0
+    },
+    "59fb375986f7741b681b81a6": {
+        "ID": "59fb375986f7741b681b81a6",
+        "BaseTorque": 0
+    },
+    "5c48a14f2e2216152006edd7": {
+        "ID": "5c48a14f2e2216152006edd7",
+        "BaseTorque": 0
+    },
+    "62386b7153757417e93a4e9f": {
+        "ID": "62386b7153757417e93a4e9f",
+        "BaseTorque": 0
+    },
+    "57cffe20245977632f391a9d": {
+        "ID": "57cffe20245977632f391a9d",
+        "BaseTorque": 0
+    },
+    "5eea21647547d6330471b3c9": {
+        "ID": "5eea21647547d6330471b3c9",
+        "BaseTorque": 0
+    },
+    "5a788068c5856700137e4c8f": {
+        "ID": "5a788068c5856700137e4c8f",
+        "BaseTorque": 0
+    },
+    "5bb20de5d4351e0035629e59": {
+        "ID": "5bb20de5d4351e0035629e59",
+        "BaseTorque": 0
+    },
+    "5d010d1cd7ad1a59283b1ce7": {
+        "ID": "5d010d1cd7ad1a59283b1ce7",
+        "BaseTorque": 0
+    },
+    "5a957c3fa2750c00137fa5f7": {
+        "ID": "5a957c3fa2750c00137fa5f7",
+        "BaseTorque": 0
+    },
+    "55d45f484bdc2d972f8b456d": {
+        "ID": "55d45f484bdc2d972f8b456d",
+        "BaseTorque": 0
+    },
+    "5d4aaa54a4b9365392071170": {
+        "ID": "5d4aaa54a4b9365392071170",
+        "BaseTorque": 0
+    },
+    "57cffd8224597763b03fc609": {
+        "ID": "57cffd8224597763b03fc609",
+        "BaseTorque": 0
+    },
+    "5c78f2492e221600114c9f04": {
+        "ID": "5c78f2492e221600114c9f04",
+        "BaseTorque": 0
+    },
+    "5b800e9286f7747a8b04f3ff": {
+        "ID": "5b800e9286f7747a8b04f3ff",
+        "BaseTorque": 0
+    },
+    "57cffe0024597763b03fc60b": {
+        "ID": "57cffe0024597763b03fc60b",
+        "BaseTorque": 0
+    },
+    "5926f34786f77469195bfe92": {
+        "ID": "5926f34786f77469195bfe92",
+        "BaseTorque": 0
+    },
+    "6231654c71b5bc3baa1078e5": {
+        "ID": "6231654c71b5bc3baa1078e5",
+        "BaseTorque": 0
+    },
+    "5dcbd6b46ec07c0c4347a564": {
+        "ID": "5dcbd6b46ec07c0c4347a564",
+        "BaseTorque": 0
+    },
+    "55f84c3c4bdc2d5f408b4576": {
+        "ID": "55f84c3c4bdc2d5f408b4576",
+        "BaseTorque": 0
+    },
+    "61f7b85367ddd414173fdb36": {
+        "ID": "61f7b85367ddd414173fdb36",
+        "BaseTorque": 0
+    },
+    "61f8024263dc1250e26eb029": {
+        "ID": "61f8024263dc1250e26eb029",
+        "BaseTorque": 0
+    },
+    "5a9548c9159bd400133e97b3": {
+        "ID": "5a9548c9159bd400133e97b3",
+        "BaseTorque": 0
+    },
+    "6065880c132d4d12c81fd8da": {
+        "ID": "6065880c132d4d12c81fd8da",
+        "BaseTorque": 0
+    },
+    "5bb20df1d4351e00347787d5": {
+        "ID": "5bb20df1d4351e00347787d5",
+        "BaseTorque": 0
+    },
+    "56deed6ed2720b4c698b4583": {
+        "ID": "56deed6ed2720b4c698b4583",
+        "BaseTorque": 0
+    },
+    "59e898ee86f77427614bd225": {
+        "ID": "59e898ee86f77427614bd225",
+        "BaseTorque": 0
+    },
+    "5926c36d86f77467a92a8629": {
+        "ID": "5926c36d86f77467a92a8629",
+        "BaseTorque": 0
+    },
+    "5ae30db85acfc408fb139a05": {
+        "ID": "5ae30db85acfc408fb139a05",
+        "BaseTorque": 0
+    },
+    "5c9a1c3a2e2216000e69fb6a": {
+        "ID": "5c9a1c3a2e2216000e69fb6a",
+        "BaseTorque": 0
+    },
+    "5c9a07572e221644f31c4b32": {
+        "ID": "5c9a07572e221644f31c4b32",
+        "BaseTorque": 0
+    },
+    "5cbda392ae92155f3c17c39f": {
+        "ID": "5cbda392ae92155f3c17c39f",
+        "BaseTorque": 0
+    },
+    "5a329052c4a28200741e22d3": {
+        "ID": "5a329052c4a28200741e22d3",
+        "BaseTorque": 0
+    },
+    "5b7bedd75acfc43d825283f9": {
+        "ID": "5b7bedd75acfc43d825283f9",
+        "BaseTorque": 0
+    },
+    "5df916dfbb49d91fb446d6b9": {
+        "ID": "5df916dfbb49d91fb446d6b9",
+        "BaseTorque": 0
+    },
+    "6259c4347d6aab70bc23a190": {
+        "ID": "6259c4347d6aab70bc23a190",
+        "BaseTorque": 0
+    },
+    "5e5699df2161e06ac158df6f": {
+        "ID": "5e5699df2161e06ac158df6f",
+        "BaseTorque": 0
+    },
+    "5f2aa47a200e2c0ee46efa71": {
+        "ID": "5f2aa47a200e2c0ee46efa71",
+        "BaseTorque": 0
+    },
+    "5a9d56c8a2750c0032157146": {
+        "ID": "5a9d56c8a2750c0032157146",
+        "BaseTorque": 0
+    },
+    "5e848d51e4dbc5266a4ec63b": {
+        "ID": "5e848d51e4dbc5266a4ec63b",
+        "BaseTorque": 0
+    },
+    "5a9d6d34a2750c00141e07da": {
+        "ID": "5a9d6d34a2750c00141e07da",
+        "BaseTorque": 0
+    },
+    "59e6284f86f77440d569536f": {
+        "ID": "59e6284f86f77440d569536f",
+        "BaseTorque": 0
+    },
+    "5648b1504bdc2d9d488b4584": {
+        "ID": "5648b1504bdc2d9d488b4584",
+        "BaseTorque": 0
+    },
+    "5dfcd0e547101c39625f66f9": {
+        "ID": "5dfcd0e547101c39625f66f9",
+        "BaseTorque": 0
+    },
+    "5c9a25172e2216000f20314e": {
+        "ID": "5c9a25172e2216000f20314e",
+        "BaseTorque": 0
+    },
+    "5c6d10fa2e221600106f3f23": {
+        "ID": "5c6d10fa2e221600106f3f23",
+        "BaseTorque": 0
+    },
+    "619b5db699fb192e7430664f": {
+        "ID": "619b5db699fb192e7430664f",
+        "BaseTorque": 0
+    },
+    "61712eae6c780c1e710c9a1d": {
+        "ID": "61712eae6c780c1e710c9a1d",
+        "BaseTorque": 0
+    },
+    "5b7bee755acfc400196d5383": {
+        "ID": "5b7bee755acfc400196d5383",
+        "BaseTorque": 0
+    },
+    "5c6d10e82e221601da357b07": {
+        "ID": "5c6d10e82e221601da357b07",
+        "BaseTorque": 0
+    },
+    "5cbda9f4ae9215000e5b9bfc": {
+        "ID": "5cbda9f4ae9215000e5b9bfc",
+        "BaseTorque": 0
+    },
+    "5e87076ce2db31558c75a11d": {
+        "ID": "5e87076ce2db31558c75a11d",
+        "BaseTorque": 0
+    },
+    "5c6d11072e2216000e69d2e4": {
+        "ID": "5c6d11072e2216000e69d2e4",
+        "BaseTorque": 0
+    },
+    "595cf16b86f77427440c32e2": {
+        "ID": "595cf16b86f77427440c32e2",
+        "BaseTorque": 0
+    },
+    "5d00e0cbd7ad1a6c6566a42d": {
+        "ID": "5d00e0cbd7ad1a6c6566a42d",
+        "BaseTorque": 0
+    },
+    "6123649463849f3d843da7c4": {
+        "ID": "6123649463849f3d843da7c4",
+        "BaseTorque": 0
+    },
+    "5fbc227aa56d053a3543f79e": {
+        "ID": "5fbc227aa56d053a3543f79e",
+        "BaseTorque": 0
+    },
+    "5d122e7bd7ad1a07102d6d7f": {
+        "ID": "5d122e7bd7ad1a07102d6d7f",
+        "BaseTorque": 0
+    },
+    "588b56d02459771481110ae2": {
+        "ID": "588b56d02459771481110ae2",
+        "BaseTorque": 0
+    },
+    "5fbc226eca32ed67276c155d": {
+        "ID": "5fbc226eca32ed67276c155d",
+        "BaseTorque": 0
+    },
+    "628b916469015a4e1711ed8d": {
+        "ID": "628b916469015a4e1711ed8d",
+        "BaseTorque": 0
+    },
+    "5fc235db2770a0045c59c683": {
+        "ID": "5fc235db2770a0045c59c683",
+        "BaseTorque": 0
+    },
+    "6034e3cb0ddce744014cb870": {
+        "ID": "6034e3cb0ddce744014cb870",
+        "BaseTorque": 0
+    },
+    "595cfa8b86f77427437e845b": {
+        "ID": "595cfa8b86f77427437e845b",
+        "BaseTorque": 0
+    },
+    "5bb20dfcd4351e00334c9e24": {
+        "ID": "5bb20dfcd4351e00334c9e24",
+        "BaseTorque": 0
+    },
+    "5b7bed205acfc400161d08cc": {
+        "ID": "5b7bed205acfc400161d08cc",
+        "BaseTorque": 0
+    },
+    "5c9a1c422e221600106f69f0": {
+        "ID": "5c9a1c422e221600106f69f0",
+        "BaseTorque": 0
+    },
+    "59d64f2f86f77417193ef8b3": {
+        "ID": "59d64f2f86f77417193ef8b3",
+        "BaseTorque": 0
+    },
+    "5888976c24597754281f93f5": {
+        "ID": "5888976c24597754281f93f5",
+        "BaseTorque": 0
+    },
+    "6034e3e20ddce744014cb878": {
+        "ID": "6034e3e20ddce744014cb878",
+        "BaseTorque": 0
+    },
+    "5c9a26332e2216001219ea70": {
+        "ID": "5c9a26332e2216001219ea70",
+        "BaseTorque": 0
+    },
+    "5b7bebc85acfc43bca706666": {
+        "ID": "5b7bebc85acfc43bca706666",
+        "BaseTorque": 0
+    },
+    "6034e3d953a60014f970617b": {
+        "ID": "6034e3d953a60014f970617b",
+        "BaseTorque": 0
+    },
+    "5c5db6302e2216000e5e47f0": {
+        "ID": "5c5db6302e2216000e5e47f0",
+        "BaseTorque": 0
+    },
+    "6065881d1246154cad35d637": {
+        "ID": "6065881d1246154cad35d637",
+        "BaseTorque": 0
+    },
+    "5d19cd96d7ad1a4a992c9f52": {
+        "ID": "5d19cd96d7ad1a4a992c9f52",
+        "BaseTorque": 0
+    },
+    "5c78f26f2e221601da3581d1": {
+        "ID": "5c78f26f2e221601da3581d1",
+        "BaseTorque": 0
+    },
+    "5c6d5d8b2e221644fc630b39": {
+        "ID": "5c6d5d8b2e221644fc630b39",
+        "BaseTorque": 0
+    },
+    "5d15ce51d7ad1a1eff619092": {
+        "ID": "5d15ce51d7ad1a1eff619092",
+        "BaseTorque": 0
+    },
+    "5cde7afdd7f00c000d36b89d": {
+        "ID": "5cde7afdd7f00c000d36b89d",
+        "BaseTorque": 0
+    },
+    "5c59529a2e221602b177d160": {
+        "ID": "5c59529a2e221602b177d160",
+        "BaseTorque": 0
+    },
+    "5c78f2612e221600114c9f0d": {
+        "ID": "5c78f2612e221600114c9f0d",
+        "BaseTorque": 0
+    },
+    "5c6c2c9c2e2216000f2002e4": {
+        "ID": "5c6c2c9c2e2216000f2002e4",
+        "BaseTorque": 0
+    },
+    "5d2f259b48f0355a844acd74": {
+        "ID": "5d2f259b48f0355a844acd74",
+        "BaseTorque": 0
+    },
+    "5c6d11152e2216000f2003e7": {
+        "ID": "5c6d11152e2216000f2003e7",
+        "BaseTorque": 0
+    },
+    "57dc32dc245977596d4ef3d3": {
+        "ID": "57dc32dc245977596d4ef3d3",
+        "BaseTorque": 0
+    },
+    "5a788089c5856700142fdd9c": {
+        "ID": "5a788089c5856700142fdd9c",
+        "BaseTorque": 0
+    },
+    "5d2c829448f0353a5c7d6674": {
+        "ID": "5d2c829448f0353a5c7d6674",
+        "BaseTorque": 0
+    },
+    "61703001d92c473c77021497": {
+        "ID": "61703001d92c473c77021497",
+        "BaseTorque": 0
+    },
+    "5cf4e3f3d7f00c06595bc7f0": {
+        "ID": "5cf4e3f3d7f00c06595bc7f0",
+        "BaseTorque": 0
+    },
+    "5d4405f0a4b9361e6a4e6bd9": {
+        "ID": "5d4405f0a4b9361e6a4e6bd9",
+        "BaseTorque": 0
+    },
+    "5f6336bbda967c74a42e9932": {
+        "ID": "5f6336bbda967c74a42e9932",
+        "BaseTorque": 0
+    },
+    "5d00ede1d7ad1a0940739a76": {
+        "ID": "5d00ede1d7ad1a0940739a76",
+        "BaseTorque": 0
+    },
+    "5ea16acdfadf1d18c87b0784": {
+        "ID": "5ea16acdfadf1d18c87b0784",
+        "BaseTorque": 0
+    },
+    "5d00ef6dd7ad1a0940739b16": {
+        "ID": "5d00ef6dd7ad1a0940739b16",
+        "BaseTorque": 0
+    },
+    "5b2cfa535acfc432ff4db7a0": {
+        "ID": "5b2cfa535acfc432ff4db7a0",
+        "BaseTorque": 0
+    },
+    "5c78f2792e221600106f4683": {
+        "ID": "5c78f2792e221600106f4683",
+        "BaseTorque": 0
+    },
+    "5ea16ada09aa976f2e7a51be": {
+        "ID": "5ea16ada09aa976f2e7a51be",
+        "BaseTorque": 0
+    },
+    "5d00f63bd7ad1a59283b1c1e": {
+        "ID": "5d00f63bd7ad1a59283b1c1e",
+        "BaseTorque": 0
+    },
+    "6087e0336d0bd7580617bb7a": {
+        "ID": "6087e0336d0bd7580617bb7a",
+        "BaseTorque": 0
+    },
+    "6281209662cba23f6c4d7a19": {
+        "ID": "6281209662cba23f6c4d7a19",
+        "BaseTorque": 0
+    },
+    "5b7be2345acfc400196d524a": {
+        "ID": "5b7be2345acfc400196d524a",
+        "BaseTorque": 0
+    },
+    "5b7d671b5acfc43d82528ddd": {
+        "ID": "5b7d671b5acfc43d82528ddd",
+        "BaseTorque": 0
+    },
+    "607d5aa50494a626335e12ed": {
+        "ID": "607d5aa50494a626335e12ed",
+        "BaseTorque": 0
+    },
+    "606ee5c81246154cad35d65e": {
+        "ID": "606ee5c81246154cad35d65e",
+        "BaseTorque": 0
+    },
+    "5c5db63a2e2216000f1b284a": {
+        "ID": "5c5db63a2e2216000f1b284a",
+        "BaseTorque": 0
+    },
+    "5c5db5f22e2216000e5e47e8": {
+        "ID": "5c5db5f22e2216000e5e47e8",
+        "BaseTorque": 0
+    },
+    "5c5db5fc2e2216000f1b2842": {
+        "ID": "5c5db5fc2e2216000f1b2842",
+        "BaseTorque": 0
+    },
+    "5894a42086f77426d2590762": {
+        "ID": "5894a42086f77426d2590762",
+        "BaseTorque": 0
+    },
+    "5beec3e30db8340019619424": {
+        "ID": "5beec3e30db8340019619424",
+        "BaseTorque": 0
+    },
+    "5b7be1ca5acfc400170e2d2f": {
+        "ID": "5b7be1ca5acfc400170e2d2f",
+        "BaseTorque": 0
+    },
+    "5b099a9d5acfc47a8607efe7": {
+        "ID": "5b099a9d5acfc47a8607efe7",
+        "BaseTorque": 0
+    },
+    "5f63418ef5750b524b45f116": {
+        "ID": "5f63418ef5750b524b45f116",
+        "BaseTorque": 0
+    },
+    "6086b5731246154cad35d6c7": {
+        "ID": "6086b5731246154cad35d6c7",
+        "BaseTorque": 0
+    },
+    "576169e62459773c69055191": {
+        "ID": "576169e62459773c69055191",
+        "BaseTorque": 0
+    },
+    "5827272a24597748c74bdeea": {
+        "ID": "5827272a24597748c74bdeea",
+        "BaseTorque": 0
+    },
+    "58272b392459774b4c7b3ccd": {
+        "ID": "58272b392459774b4c7b3ccd",
+        "BaseTorque": 0
+    },
+    "623c3c1f37b4b31470357737": {
+        "ID": "623c3c1f37b4b31470357737",
+        "BaseTorque": 0
+    },
+    "5e56991336989c75ab4f03f6": {
+        "ID": "5e56991336989c75ab4f03f6",
+        "BaseTorque": 0
+    },
+    "5df25d3bfd6b4e6e2276dc9a": {
+        "ID": "5df25d3bfd6b4e6e2276dc9a",
+        "BaseTorque": 0
+    },
+    "5c48a2c22e221602b313fb6c": {
+        "ID": "5c48a2c22e221602b313fb6c",
+        "BaseTorque": 0
+    },
+    "5f3e778efcd9b651187d7201": {
+        "ID": "5f3e778efcd9b651187d7201",
+        "BaseTorque": 0
+    },
+    "59db3b0886f77429d72fb895": {
+        "ID": "59db3b0886f77429d72fb895",
+        "BaseTorque": 0
+    },
+    "57c9a89124597704ee6faec1": {
+        "ID": "57c9a89124597704ee6faec1",
+        "BaseTorque": 0
+    },
+    "576a63cd2459771e796e0e11": {
+        "ID": "576a63cd2459771e796e0e11",
+        "BaseTorque": 0
+    },
+    "5cadc431ae921500113bb8d5": {
+        "ID": "5cadc431ae921500113bb8d5",
+        "BaseTorque": 0
+    },
+    "5bbde41ed4351e003562b038": {
+        "ID": "5bbde41ed4351e003562b038",
+        "BaseTorque": 0
+    },
+    "5bffec120db834001c38f5fa": {
+        "ID": "5bffec120db834001c38f5fa",
+        "BaseTorque": 0
+    },
+    "5bfe86a20db834001d23e8f7": {
+        "ID": "5bfe86a20db834001d23e8f7",
+        "BaseTorque": 0
+    },
+    "5f6341043ada5942720e2dc5": {
+        "ID": "5f6341043ada5942720e2dc5",
+        "BaseTorque": 0
+    },
+    "6087e663132d4d12c81fd96b": {
+        "ID": "6087e663132d4d12c81fd96b",
+        "BaseTorque": 0
+    },
+    "623c3be0484b5003161840dc": {
+        "ID": "623c3be0484b5003161840dc",
+        "BaseTorque": 0
+    },
+    "5beec8ea0db834001a6f9dbf": {
+        "ID": "5beec8ea0db834001a6f9dbf",
+        "BaseTorque": 0
+    },
+    "5649ad3f4bdc2df8348b4585": {
+        "ID": "5649ad3f4bdc2df8348b4585",
+        "BaseTorque": 0
+    },
+    "5649ade84bdc2d1b2b8b4587": {
+        "ID": "5649ade84bdc2d1b2b8b4587",
+        "BaseTorque": 0
+    },
+    "59e62cc886f77440d40b52a1": {
+        "ID": "59e62cc886f77440d40b52a1",
+        "BaseTorque": 0
+    },
+    "5a0071d486f77404e23a12b2": {
+        "ID": "5a0071d486f77404e23a12b2",
+        "BaseTorque": 0
+    },
+    "57e3dba62459770f0c32322b": {
+        "ID": "57e3dba62459770f0c32322b",
+        "BaseTorque": 0
+    },
+    "5cf54404d7f00c108840b2ef": {
+        "ID": "5cf54404d7f00c108840b2ef",
+        "BaseTorque": 0
+    },
+    "5e2192a498a36665e8337386": {
+        "ID": "5e2192a498a36665e8337386",
+        "BaseTorque": 0
+    },
+    "5b30ac585acfc433000eb79c": {
+        "ID": "5b30ac585acfc433000eb79c",
+        "BaseTorque": 0
+    },
+    "59e6318286f77444dd62c4cc": {
+        "ID": "59e6318286f77444dd62c4cc",
+        "BaseTorque": 0
+    },
+    "5cf50850d7f00c056e24104c": {
+        "ID": "5cf50850d7f00c056e24104c",
+        "BaseTorque": 0
+    },
+    "5cf508bfd7f00c056e24104e": {
+        "ID": "5cf508bfd7f00c056e24104e",
+        "BaseTorque": 0
+    },
+    "628a664bccaab13006640e47": {
+        "ID": "628a664bccaab13006640e47",
+        "BaseTorque": 0
+    },
+    "628c9ab845c59e5b80768a81": {
+        "ID": "628c9ab845c59e5b80768a81",
+        "BaseTorque": 0
+    },
+    "5947f92f86f77427344a76b1": {
+        "ID": "5947f92f86f77427344a76b1",
+        "BaseTorque": 0
+    },
+    "5947fa2486f77425b47c1a9b": {
+        "ID": "5947fa2486f77425b47c1a9b",
+        "BaseTorque": 0
+    },
+    "5c6bf4aa2e2216001219b0ae": {
+        "ID": "5c6bf4aa2e2216001219b0ae",
+        "BaseTorque": 0
+    },
+    "5649ae4a4bdc2d1b2b8b4588": {
+        "ID": "5649ae4a4bdc2d1b2b8b4588",
+        "BaseTorque": 0
+    },
+    "5a17fc70fcdbcb0176308b3d": {
+        "ID": "5a17fc70fcdbcb0176308b3d",
+        "BaseTorque": 0
+    },
+    "55d4b9964bdc2d1d4e8b456e": {
+        "ID": "55d4b9964bdc2d1d4e8b456e",
+        "BaseTorque": 0
+    },
+    "571659bb2459771fb2755a12": {
+        "ID": "571659bb2459771fb2755a12",
+        "BaseTorque": 0
+    },
+    "602e71bd53a60014f9705bfa": {
+        "ID": "602e71bd53a60014f9705bfa",
+        "BaseTorque": 0
+    },
+    "6113c3586c780c1e710c90bc": {
+        "ID": "6113c3586c780c1e710c90bc",
+        "BaseTorque": 0
+    },
+    "6113cc78d3a39d50044c065a": {
+        "ID": "6113cc78d3a39d50044c065a",
+        "BaseTorque": 0
+    },
+    "6113cce3d92c473c770200c7": {
+        "ID": "6113cce3d92c473c770200c7",
+        "BaseTorque": 0
+    },
+    "5cc9bcaed7f00c011c04e179": {
+        "ID": "5cc9bcaed7f00c011c04e179",
+        "BaseTorque": 0
+    },
+    "5bb20e18d4351e00320205d5": {
+        "ID": "5bb20e18d4351e00320205d5",
+        "BaseTorque": 0
+    },
+    "5bb20e0ed4351e3bac1212dc": {
+        "ID": "5bb20e0ed4351e3bac1212dc",
+        "BaseTorque": 0
+    },
+    "6193dcd0f8ee7e52e4210a28": {
+        "ID": "6193dcd0f8ee7e52e4210a28",
+        "BaseTorque": 0
+    },
+    "55802f5d4bdc2dac148b458f": {
+        "ID": "55802f5d4bdc2dac148b458f",
+        "BaseTorque": 0
+    },
+    "615d8faecabb9b7ad90f4d5d": {
+        "ID": "615d8faecabb9b7ad90f4d5d",
+        "BaseTorque": 0
+    },
+    "5cdeac5cd7f00c000f261694": {
+        "ID": "5cdeac5cd7f00c000f261694",
+        "BaseTorque": 0
+    },
+    "5addc7db5acfc4001669f279": {
+        "ID": "5addc7db5acfc4001669f279",
+        "BaseTorque": 0
+    },
+    "5fbcbd6c187fea44d52eda14": {
+        "ID": "5fbcbd6c187fea44d52eda14",
+        "BaseTorque": 0
+    },
+    "5c0006470db834001a6697fe": {
+        "ID": "5c0006470db834001a6697fe",
+        "BaseTorque": 0
+    },
+    "5b07db875acfc40dc528a5f6": {
+        "ID": "5b07db875acfc40dc528a5f6",
+        "BaseTorque": 0
+    },
+    "5e848d99865c0f329958c83b": {
+        "ID": "5e848d99865c0f329958c83b",
+        "BaseTorque": 0
+    },
+    "57c55f092459772d291a8463": {
+        "ID": "57c55f092459772d291a8463",
+        "BaseTorque": 0
+    },
+    "5b7d679f5acfc4001a5c4024": {
+        "ID": "5b7d679f5acfc4001a5c4024",
+        "BaseTorque": 0
+    },
+    "5894a51286f77426d13baf02": {
+        "ID": "5894a51286f77426d13baf02",
+        "BaseTorque": 0
+    },
+    "5d025cc1d7ad1a53845279ef": {
+        "ID": "5d025cc1d7ad1a53845279ef",
+        "BaseTorque": 0
+    },
+    "57c55f172459772d27602381": {
+        "ID": "57c55f172459772d27602381",
+        "BaseTorque": 0
+    },
+    "59db3a1d86f77429e05b4e92": {
+        "ID": "59db3a1d86f77429e05b4e92",
+        "BaseTorque": 0
+    },
+    "5d15cf3bd7ad1a67e71518b2": {
+        "ID": "5d15cf3bd7ad1a67e71518b2",
+        "BaseTorque": 0
+    },
+    "5a7b4960e899ef197b331a2d": {
+        "ID": "5a7b4960e899ef197b331a2d",
+        "BaseTorque": 0
+    },
+    "56d5a2bbd2720bb8418b456a": {
+        "ID": "56d5a2bbd2720bb8418b456a",
+        "BaseTorque": 0
+    },
+    "5c6d7b3d2e221600114c9b7d": {
+        "ID": "5c6d7b3d2e221600114c9b7d",
+        "BaseTorque": 0
+    },
+    "5a339805c4a2826c6e06d73d": {
+        "ID": "5a339805c4a2826c6e06d73d",
+        "BaseTorque": 0
+    },
+    "626a9cb151cb5849f6002890": {
+        "ID": "626a9cb151cb5849f6002890",
+        "BaseTorque": 0
+    },
+    "57af48872459771f0b2ebf11": {
+        "ID": "57af48872459771f0b2ebf11",
+        "BaseTorque": 0
+    },
+    "59db3acc86f7742a2c4ab912": {
+        "ID": "59db3acc86f7742a2c4ab912",
+        "BaseTorque": 0
+    },
+    "5e81c6bf763d9f754677beff": {
+        "ID": "5e81c6bf763d9f754677beff",
+        "BaseTorque": 0
+    },
+    "606eef46232e5a31c233d500": {
+        "ID": "606eef46232e5a31c233d500",
+        "BaseTorque": 0
+    },
+    "57c55efc2459772d2c6271e7": {
+        "ID": "57c55efc2459772d2c6271e7",
+        "BaseTorque": 0
+    },
+    "5ef366938cef260c0642acad": {
+        "ID": "5ef366938cef260c0642acad",
+        "BaseTorque": 0
+    },
+    "5dcbd6dddbd3d91b3e5468de": {
+        "ID": "5dcbd6dddbd3d91b3e5468de",
+        "BaseTorque": 0
+    },
+    "57c55f112459772d28133310": {
+        "ID": "57c55f112459772d28133310",
+        "BaseTorque": 0
+    },
+    "6259c3d8012d6678ec38eeb8": {
+        "ID": "6259c3d8012d6678ec38eeb8",
+        "BaseTorque": 0
+    },
+    "5bffef760db8340019668fe4": {
+        "ID": "5bffef760db8340019668fe4",
+        "BaseTorque": 0
+    },
+    "5b39ffbd5acfc47a8773fb06": {
+        "ID": "5b39ffbd5acfc47a8773fb06",
+        "BaseTorque": 0
+    },
+    "5c00076d0db834001d23ee1f": {
+        "ID": "5c00076d0db834001d23ee1f",
+        "BaseTorque": 0
+    },
+    "56e05a6ed2720bd0748b4567": {
+        "ID": "56e05a6ed2720bd0748b4567",
+        "BaseTorque": 0
+    },
+    "5998517986f7746017232f7e": {
+        "ID": "5998517986f7746017232f7e",
+        "BaseTorque": 0
+    },
+    "57d152ec245977144076ccdf": {
+        "ID": "57d152ec245977144076ccdf",
+        "BaseTorque": 0
+    },
+    "619f4ab2d25cbd424731fb95": {
+        "ID": "619f4ab2d25cbd424731fb95",
+        "BaseTorque": 0
+    },
+    "619f4bffd25cbd424731fb97": {
+        "ID": "619f4bffd25cbd424731fb97",
+        "BaseTorque": 0
+    },
+    "5b7d678a5acfc4001a5c4022": {
+        "ID": "5b7d678a5acfc4001a5c4022",
+        "BaseTorque": 0
+    },
+    "5b099b965acfc400186331e6": {
+        "ID": "5b099b965acfc400186331e6",
+        "BaseTorque": 0
+    },
+    "5afd7e445acfc4001637e35a": {
+        "ID": "5afd7e445acfc4001637e35a",
+        "BaseTorque": 0
+    },
+    "5c471be12e221602b66cd9ac": {
+        "ID": "5c471be12e221602b66cd9ac",
+        "BaseTorque": 0
+    },
+    "5df38a5fb74cd90030650cb6": {
+        "ID": "5df38a5fb74cd90030650cb6",
+        "BaseTorque": 0
+    },
+    "5a38eecdc4a282329a73b512": {
+        "ID": "5a38eecdc4a282329a73b512",
+        "BaseTorque": 0
+    },
+    "5c0684e50db834002a12585a": {
+        "ID": "5c0684e50db834002a12585a",
+        "BaseTorque": 0
+    },
+    "5bffcf7a0db83400232fea79": {
+        "ID": "5bffcf7a0db83400232fea79",
+        "BaseTorque": 0
+    },
+    "5c079ec50db834001966a706": {
+        "ID": "5c079ec50db834001966a706",
+        "BaseTorque": 0
+    },
+    "5b3cadf35acfc400194776a0": {
+        "ID": "5b3cadf35acfc400194776a0",
+        "BaseTorque": 0
+    },
+    "571a282c2459771fb2755a69": {
+        "ID": "571a282c2459771fb2755a69",
+        "BaseTorque": 0
+    },
+    "5a69a2ed8dc32e000d46d1f1": {
+        "ID": "5a69a2ed8dc32e000d46d1f1",
+        "BaseTorque": 0
+    },
+    "57c44fa82459772d2d75e415": {
+        "ID": "57c44fa82459772d2d75e415",
+        "BaseTorque": 0
+    },
+    "5d023784d7ad1a049d4aa7f2": {
+        "ID": "5d023784d7ad1a049d4aa7f2",
+        "BaseTorque": 0
+    },
+    "59d6507c86f7741b846413a2": {
+        "ID": "59d6507c86f7741b846413a2",
+        "BaseTorque": 0
+    },
+    "5d2c76ed48f03532f2136169": {
+        "ID": "5d2c76ed48f03532f2136169",
+        "BaseTorque": 0
+    },
+    "59e6449086f7746c9f75e822": {
+        "ID": "59e6449086f7746c9f75e822",
+        "BaseTorque": 0
+    },
+    "618405198004cc50514c3594": {
+        "ID": "618405198004cc50514c3594",
+        "BaseTorque": 0
+    },
+    "6165aeedfaa1272e431521e3": {
+        "ID": "6165aeedfaa1272e431521e3",
+        "BaseTorque": 0
+    },
+    "5ac50da15acfc4001718d287": {
+        "ID": "5ac50da15acfc4001718d287",
+        "BaseTorque": 0
+    },
+    "6194f5d418a3974e5e7421ef": {
+        "ID": "6194f5d418a3974e5e7421ef",
+        "BaseTorque": 0
+    },
+    "628b9be6cff66b70c002b14c": {
+        "ID": "628b9be6cff66b70c002b14c",
+        "BaseTorque": 0
+    },
+    "6194f5722d2c397d6600348f": {
+        "ID": "6194f5722d2c397d6600348f",
+        "BaseTorque": 0
+    },
+    "5649af094bdc2df8348b4586": {
+        "ID": "5649af094bdc2df8348b4586",
+        "BaseTorque": 0
+    },
+    "5e81edc13397a21db957f6a1": {
+        "ID": "5e81edc13397a21db957f6a1",
+        "BaseTorque": 0
+    },
+    "618426d96c780c1e710c9b9f": {
+        "ID": "618426d96c780c1e710c9b9f",
+        "BaseTorque": 0
+    },
+    "61713a8fd92c473c770214a4": {
+        "ID": "61713a8fd92c473c770214a4",
+        "BaseTorque": 0
+    },
+    "6194f5a318a3974e5e7421eb": {
+        "ID": "6194f5a318a3974e5e7421eb",
+        "BaseTorque": 0
+    },
+    "6193d382ed0429009f543e65": {
+        "ID": "6193d382ed0429009f543e65",
+        "BaseTorque": 0
+    },
+    "55d355e64bdc2d962f8b4569": {
+        "ID": "55d355e64bdc2d962f8b4569",
+        "BaseTorque": 0
+    },
+    "5c07a8770db8340023300450": {
+        "ID": "5c07a8770db8340023300450",
+        "BaseTorque": 0
+    },
+    "5cc70102e4a949035e43ba74": {
+        "ID": "5cc70102e4a949035e43ba74",
+        "BaseTorque": 0
+    },
+    "606587a88900dc2d9a55b659": {
+        "ID": "606587a88900dc2d9a55b659",
+        "BaseTorque": 0
+    },
+    "5f3e7823ddc4f03b010e2045": {
+        "ID": "5f3e7823ddc4f03b010e2045",
+        "BaseTorque": 0
+    },
+    "5bb20d53d4351e4502010a69": {
+        "ID": "5bb20d53d4351e4502010a69",
+        "BaseTorque": 0
+    },
+    "5c0e2f26d174af02a9625114": {
+        "ID": "5c0e2f26d174af02a9625114",
+        "BaseTorque": 0
+    },
+    "5a7afa25e899ef00135e31b0": {
+        "ID": "5a7afa25e899ef00135e31b0",
+        "BaseTorque": 0
+    },
+    "5a6f5e048dc32e00094b97da": {
+        "ID": "5a6f5e048dc32e00094b97da",
+        "BaseTorque": 0
+    },
+    "5b1faa0f5acfc40dc528aeb5": {
+        "ID": "5b1faa0f5acfc40dc528aeb5",
+        "BaseTorque": 0
+    },
+    "6165adcdd3a39d50044c120f": {
+        "ID": "6165adcdd3a39d50044c120f",
+        "BaseTorque": 0
+    },
+    "5926f2e086f7745aae644231": {
+        "ID": "5926f2e086f7745aae644231",
+        "BaseTorque": 0
+    },
+    "5fc278107283c4046c581489": {
+        "ID": "5fc278107283c4046c581489",
+        "BaseTorque": 0
+    },
+    "59bfe68886f7746004266202": {
+        "ID": "59bfe68886f7746004266202",
+        "BaseTorque": 0
+    },
+    "5649af884bdc2d1b2b8b4589": {
+        "ID": "5649af884bdc2d1b2b8b4589",
+        "BaseTorque": 0
+    },
+    "5d2c770c48f0354b4a07c100": {
+        "ID": "5d2c770c48f0354b4a07c100",
+        "BaseTorque": 0
+    },
+    "5fbcc3e4d6fa9c00c571bb58": {
+        "ID": "5fbcc3e4d6fa9c00c571bb58",
+        "BaseTorque": 0
+    },
+    "5926c0df86f77462f647f764": {
+        "ID": "5926c0df86f77462f647f764",
+        "BaseTorque": 0
+    },
+    "5d3eb44aa4b93650d64e4979": {
+        "ID": "5d3eb44aa4b93650d64e4979",
+        "BaseTorque": 0
+    },
+    "5cadc55cae921500103bb3be": {
+        "ID": "5cadc55cae921500103bb3be",
+        "BaseTorque": 0
+    },
+    "5d2f261548f03576f500e7b7": {
+        "ID": "5d2f261548f03576f500e7b7",
+        "BaseTorque": 0
+    },
+    "5de8e67c4a9f347bc92edbd7": {
+        "ID": "5de8e67c4a9f347bc92edbd7",
+        "BaseTorque": 0
+    },
+    "5894a5b586f77426d2590767": {
+        "ID": "5894a5b586f77426d2590767",
+        "BaseTorque": 0
+    },
+    "56d5a407d2720bb3418b456b": {
+        "ID": "56d5a407d2720bb3418b456b",
+        "BaseTorque": 0
+    },
+    "5cc700ede4a949033c734315": {
+        "ID": "5cc700ede4a949033c734315",
+        "BaseTorque": 0
+    },
+    "57c44f4f2459772d2c627113": {
+        "ID": "57c44f4f2459772d2c627113",
+        "BaseTorque": 0
+    },
+    "5c0009510db834001966907f": {
+        "ID": "5c0009510db834001966907f",
+        "BaseTorque": 0
+    },
+    "5839a7742459773cf9693481": {
+        "ID": "5839a7742459773cf9693481",
+        "BaseTorque": 0
+    },
+    "5bffe7c50db834001d23ece1": {
+        "ID": "5bffe7c50db834001d23ece1",
+        "BaseTorque": 0
+    },
+    "60228924961b8d75ee233c32": {
+        "ID": "60228924961b8d75ee233c32",
+        "BaseTorque": 0
+    },
+    "5b099bb25acfc400186331e8": {
+        "ID": "5b099bb25acfc400186331e8",
+        "BaseTorque": 0
+    },
+    "5a9685b1a2750c0032157104": {
+        "ID": "5a9685b1a2750c0032157104",
+        "BaseTorque": 0
+    },
+    "628a665a86cbd9750d2ff5e5": {
+        "ID": "628a665a86cbd9750d2ff5e5",
+        "BaseTorque": 0
+    },
+    "5cf7acfcd7f00c1084477cf2": {
+        "ID": "5cf7acfcd7f00c1084477cf2",
+        "BaseTorque": 0
+    },
+    "5c471bd12e221602b4129c3a": {
+        "ID": "5c471bd12e221602b4129c3a",
+        "BaseTorque": 0
+    },
+    "5dfce88fe9dc277128008b2e": {
+        "ID": "5dfce88fe9dc277128008b2e",
+        "BaseTorque": 0
+    },
+    "57dc334d245977597164366f": {
+        "ID": "57dc334d245977597164366f",
+        "BaseTorque": 0
+    },
+    "5c503d0a2e221602b542b7ef": {
+        "ID": "5c503d0a2e221602b542b7ef",
+        "BaseTorque": 0
+    },
+    "5a702d198dc32e000b452fc3": {
+        "ID": "5a702d198dc32e000b452fc3",
+        "BaseTorque": 0
+    },
+    "5e0090f7e9dc277128008b93": {
+        "ID": "5e0090f7e9dc277128008b93",
+        "BaseTorque": 0
+    },
+    "628120415631d45211793c99": {
+        "ID": "628120415631d45211793c99",
+        "BaseTorque": 0
+    },
+    "59985a6c86f77414ec448d17": {
+        "ID": "59985a6c86f77414ec448d17",
+        "BaseTorque": 0
+    },
+    "59985a8086f77414ec448d1a": {
+        "ID": "59985a8086f77414ec448d1a",
+        "BaseTorque": 0
+    },
+    "5c010a700db834001d23ef5d": {
+        "ID": "5c010a700db834001d23ef5d",
+        "BaseTorque": 0
+    },
+    "5a6f5f078dc32e00094b97dd": {
+        "ID": "5a6f5f078dc32e00094b97dd",
+        "BaseTorque": 0
+    },
+    "5ea03e5009aa976f2e7a514b": {
+        "ID": "5ea03e5009aa976f2e7a514b",
+        "BaseTorque": 0
+    },
+    "578395402459774a256959b5": {
+        "ID": "578395402459774a256959b5",
+        "BaseTorque": 0
+    },
+    "5df8e4080b92095fd441e594": {
+        "ID": "5df8e4080b92095fd441e594",
+        "BaseTorque": 0
+    },
+    "6194f41f9fb0c665d5490e75": {
+        "ID": "6194f41f9fb0c665d5490e75",
+        "BaseTorque": 0
+    },
+    "5b7d6c105acfc40015109a5f": {
+        "ID": "5b7d6c105acfc40015109a5f",
+        "BaseTorque": 0
+    },
+    "615d8dbd290d254f5e6b2ed6": {
+        "ID": "615d8dbd290d254f5e6b2ed6",
+        "BaseTorque": 0
+    },
+    "5beec91a0db834001961942d": {
+        "ID": "5beec91a0db834001961942d",
+        "BaseTorque": 0
+    },
+    "5c0125fc0db834001a669aa3": {
+        "ID": "5c0125fc0db834001a669aa3",
+        "BaseTorque": 0
+    },
+    "62811fbf09427b40ab14e767": {
+        "ID": "62811fbf09427b40ab14e767",
+        "BaseTorque": 0
+    },
+    "57616c112459773cce774d66": {
+        "ID": "57616c112459773cce774d66",
+        "BaseTorque": 0
+    },
+    "6281204f308cb521f87a8f9b": {
+        "ID": "6281204f308cb521f87a8f9b",
+        "BaseTorque": 0
+    },
+    "5d2c772c48f0355d95672c25": {
+        "ID": "5d2c772c48f0355d95672c25",
+        "BaseTorque": 0
+    },
+    "5d4405aaa4b9361e6a4e6bd3": {
+        "ID": "5d4405aaa4b9361e6a4e6bd3",
+        "BaseTorque": 0
+    },
+    "5a7033908dc32e000a311392": {
+        "ID": "5a7033908dc32e000a311392",
+        "BaseTorque": 0
+    },
+    "5a71e22f8dc32e00094b97f4": {
+        "ID": "5a71e22f8dc32e00094b97f4",
+        "BaseTorque": 0
+    },
+    "5a71e4f48dc32e001207fb26": {
+        "ID": "5a71e4f48dc32e001207fb26",
+        "BaseTorque": 0
+    },
+    "602e63fb6335467b0c5ac94d": {
+        "ID": "602e63fb6335467b0c5ac94d",
+        "BaseTorque": 0
     }
 }

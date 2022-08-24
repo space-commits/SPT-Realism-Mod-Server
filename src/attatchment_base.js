@@ -10,12 +10,10 @@ class AttatchmentBase {
         this.modConf = modConf;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
-        this.array = this.arrays;
-        this.config = this.modConf;
     }
     // public array = new Arrays(this.tables);
     loadAttRestrict() {
-        if (this.config.bot_changes == true) {
+        if (this.modConf.bot_changes == true) {
             for (let i in this.itemDB) {
                 let fileData = this.itemDB[i];
                 if (fileData._id === "5b31163c5acfc400153b71cb"
@@ -133,7 +131,7 @@ class AttatchmentBase {
                 }
             }
         }
-        if (this.config.logEverything == true) {
+        if (this.modConf.logEverything == true) {
             this.logger.info("Attatchment Base Loaded");
         }
     }

@@ -180,6 +180,16 @@ export class Bots {
             this.botConfPMC.isUsec = 100;
             this.logger.warning("All USEC");
         }
+        
+        if (this.modConf.guarantee_boss_spawn == true) {
+            for(let i in this.map){
+                if(this.map[i].base?.BossLocationSpawn !== undefined){
+                    for (let k in this.map[i].base.BossLocationSpawn){
+                        this.map[i].base.BossLocationSpawn[k].BossChance = 100; 
+                    }
+                }
+            }
+        }
     }
 
     public botConfig1() {
