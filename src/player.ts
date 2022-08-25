@@ -40,51 +40,25 @@ export class Player {
             this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 35;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 75;
 
-            //vector3
-            //stam consumption when in red overweight. 10 = no different, -10 = increase stam drain when moving, -100 = stam drain when not moving
-            //there's nothing consistent about it, with everything set to -40 there's no stam drain at all...
-            // this.globalDB.Stamina.OverweightConsumptionByPose["x"] = -40; //stand
-            // this.globalDB.Stamina.OverweightConsumptionByPose["y"] = -40; //prone, reduced arm stamina?
-            // this.globalDB.Stamina.OverweightConsumptionByPose["z"] = -40;
-
-            //vector2
-            // this.globalDB.Stamina.PoseLevelConsumptionPerNotch["x"] = 2; 
-            // this.globalDB.Stamina.PoseLevelConsumptionPerNotch["y"] = 6; 
-            // this.globalDB.Stamina.PoseLevelConsumptionPerNotch["z"] = 0;
-
-            // this.globalDB.Stamina.RestorationMultiplierByPose["x"] = 2;
-            // this.globalDB.Stamina.RestorationMultiplierByPose["y"] = 1.5;
-            // this.globalDB.Stamina.RestorationMultiplierByPose["z"] = 1; 
-
-            // this.globalDB.Stamina.CrouchConsumption["x"] = ;
-            // this.globalDB.Stamina.CrouchConsumption["y"] = ;
-            // this.globalDB.Stamina.CrouchConsumption["z"] = ;
-
-            // this.globalDB.Stamina.StandupConsumption["x"] = ;
-            // this.globalDB.Stamina.StandupConsumption["y"] = ;
-            // this.globalDB.Stamina.StandupConsumption["z"] = ;
-
-            // this.globalDB.Stamina.WalkConsumption["x"] = ;
-            // this.globalDB.Stamina.WalkConsumption["y"] = ;
-            // this.globalDB.Stamina.WalkConsumption["z"] = ;
-
-            // this.globalDB.Stamina.TransitionSpeed["x"] = ;
-            // this.globalDB.Stamina.TransitionSpeed["y"] = ;
-            // this.globalDB.Stamina.TransitionSpeed["z"] = ;
-
-
             this.globalDB.WalkSpeed["x"] = 0.6;
             this.globalDB.WalkSpeed["y"] = 0.82;
             this.globalDB.SprintSpeed["x"] = 0.02;
             this.globalDB.SprintSpeed["y"] = 0.42;
 
-            this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] *= 2.1; //up lightweight
-            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] *= 3.3; // down lightweight
+            this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.8; // down lightweight
 
-            this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] *= 0.8; // up heavyweight
-            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] *= 2.5;  //down heavyweight
+            this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] = 1.5;  //down heavyweight
 
-            this.globalDB.Stamina.CrouchConsumption["x"] *= 10;
+            this.globalDB.Stamina.CrouchConsumption["x"] = 3.5;
+            this.globalDB.Stamina.CrouchConsumption["y"] = 5;
+
+            this.globalDB.Stamina.WalkConsumption["x"] = 0.1;
+            this.globalDB.Stamina.WalkConsumption["y"] = 0.1;
+
+            // this.globalDB.Stamina.OverweightConsumptionByPose["x"] = -4;
+            // this.globalDB.Stamina.OverweightConsumptionByPose["y"] = 0;
 
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
@@ -170,6 +144,9 @@ export class Player {
             let mult = 1.136
 
             health.Wound.WorkingTime = 3600;
+            this.debuffMul(health.Wound.ThresholdMin, mult);
+            this.debuffMul(health.Wound.ThresholdMax, mult);
+
             health.LightBleeding.HealthLoopTime = 10;
             health.LightBleeding.DamageHealth = 0.6;
 
@@ -200,6 +177,30 @@ export class Player {
 
             this.tables.templates.profiles["Edge Of Darkness"].bear.character.Inventory = this.custProfile["Edge Of Darkness"].bear.Inventory;
             this.tables.templates.profiles["Edge Of Darkness"].usec.character.Inventory = this.custProfile["Edge Of Darkness"].usec.Inventory;
+        }
+
+  
+        if(this.modConf.med_changes == false){
+            let bearInventory = this.custProfile["Realism Mod"].bear.character.Inventory.items;
+            let usecInventory = this.custProfile["Realism Mod"].usec.character.Inventory.items;
+            for (let i = 0; i < bearInventory.length; i++) {
+
+                if (bearInventory[i]._tpl === "TIER1MEDKIT" ||
+                    bearInventory[i]._tpl === "TIER1MEDKI2" ||
+                    bearInventory[i]._tpl === "TIER1MEDKI3") {
+                    bearInventory[i]._tpl = "5755356824597772cb798962"
+                    bearInventory[i].upd.MedKit.HpResource = 100;
+                }
+            }
+            for (let i = 0; i < usecInventory.length; i++) {
+    
+                if (usecInventory[i]._tpl === "TIER1MEDKIT" ||
+                    usecInventory[i]._tpl === "TIER1MEDKI2" ||
+                    usecInventory[i]._tpl === "TIER1MEDKI3") {
+                    usecInventory[i]._tpl = "5755356824597772cb798962"
+                    usecInventory
+                }
+            }
         }
 
         this.tables.templates.profiles["Realism Mod"] = this.custProfile["Realism Mod"];

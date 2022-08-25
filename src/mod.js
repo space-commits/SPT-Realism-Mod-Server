@@ -49,8 +49,8 @@ class Mod {
                 const botGeneratorHelper = container.resolve("BotGeneratorHelper");
                 const itemHelper = container.resolve("ItemHelper");
                 const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer1, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer);
-                result.generateWeaponByTpl = (weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) => {
-                    return _botWepGen.botWepGen(weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
+                result.generateWeaponByTpl = (sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) => {
+                    return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 };
             }, { frequency: "Always" });
             container.afterResolution("BotGeneratorHelper", (_t, result) => {
@@ -59,9 +59,12 @@ class Mod {
                 const itemHelper = container.resolve("ItemHelper");
                 const inventoryHelper = container.resolve("InventoryHelper");
                 const containerHelper = container.resolve("ContainerHelper");
-                const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, configServer);
-                result.generateModsForItem = (items, modPool, parentId, parentTemplate, modSpawnChances) => {
-                    return _botModGen.botModGen(items, modPool, parentId, parentTemplate, modSpawnChances);
+                const botEquipFilterServ = container.resolve("BotEquipmentFilterService");
+                const itemFilterServ = container.resolve("ItemFilterService");
+                const profileHelper = container.resolve("ProfileHelper");
+                const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, configServer);
+                result.generateModsForWeapon = (sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole) => {
+                    return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
                 };
             }, { frequency: "Always" });
             container.afterResolution("BotLootCacheService", (_t, result) => {
@@ -153,6 +156,7 @@ class Mod {
                                     this.checkMeds(scavData, pmcData.Info.Experience, helper, player, logger);
                                 }
                                 if (modConfig.med_changes == false) {
+                                    helper.removeCustomItems(pmcData);
                                     pmcData.Health.Hydration.Maximum = player.defaultHydration;
                                     pmcData.Health.Energy.Maximum = player.defaultEnergy;
                                     if (pmcData.Health.Energy.Current > pmcData.Health.Energy.Maximum) {

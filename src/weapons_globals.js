@@ -32,7 +32,7 @@ class WeaponsGlobals {
                     || fileData._props.weapClass === "assaultRifle"
                     || fileData._props.weapClass === "pistol") {
                     fileData._props.MinRepairDegradation = 0;
-                    fileData._props.MaxRepairDegradation = 0.02;
+                    fileData._props.MaxRepairDegradation = 0.01;
                     fileData._props.MinRepairKitDegradation = 0;
                     fileData._props.MaxRepairKitDegradation = 0;
                     fileData._props.RepairComplexity = 0;

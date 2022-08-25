@@ -27,12 +27,10 @@ import { InventoryHelper } from "@spt-aki/helpers/InventoryHelper";
 import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
 import { ProbabilityHelper } from "@spt-aki/helpers/ProbabilityHelper";
 import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
-import { CustomItemService } from "../types/services/mod/CustomItemService";
 import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
 import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponResult";
 import { BotLootCacheService } from "@spt-aki/services/BotLootCacheService";
 import { LootCacheType } from "@spt-aki/models/spt/bots/BotLootCache";
-import { DynamicRouterModService } from "@spt-aki/services/mod/dynamicRouter/DynamicRouterModService"
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -50,9 +48,8 @@ import { BotModGen, BotWepGen } from "./bot_wep_gen";
 import { BotLootServer } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
-import internal from "stream";
-import { off } from "process";
-
+import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
+import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
 
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
@@ -94,8 +91,8 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                 const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
                 const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                 const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer1, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer);
-                result.generateWeaponByTpl = (weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult => {
-                    return _botWepGen.botWepGen(weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
+                result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult => {
+                    return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 }
             }, { frequency: "Always" });
 
@@ -105,9 +102,12 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                 const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                 const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
                 const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
-                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, configServer);
-                result.generateModsForItem = (items: Item[], modPool: Mods, parentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances): Item[] => {
-                    return _botModGen.botModGen(items, modPool, parentId, parentTemplate, modSpawnChances);
+                const botEquipFilterServ = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
+                const itemFilterServ = container.resolve<ItemFilterService>("ItemFilterService");
+                const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, configServer);
+                result.generateModsForWeapon = (sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string): Item[] => {
+                    return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
                 }
             }, { frequency: "Always" });
 
@@ -209,6 +209,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                                         this.checkMeds(scavData, pmcData.Info.Experience, helper, player, logger);
                                     }
                                     if (modConfig.med_changes == false) {
+                                        helper.removeCustomItems(pmcData);
                                         pmcData.Health.Hydration.Maximum = player.defaultHydration
                                         pmcData.Health.Energy.Maximum = player.defaultEnergy;
                                         if (pmcData.Health.Energy.Current > pmcData.Health.Energy.Maximum) {

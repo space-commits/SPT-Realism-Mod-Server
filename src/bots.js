@@ -30,6 +30,31 @@ class Bots {
         this.botConfPMC = this.botConf.pmc;
     }
     loadBots() {
+        this.botConf.equipment["pmc"] = {
+            "weaponModLimits": {
+                "scopeLimit": 10,
+                "lightLaserLimit": 1
+            },
+            "randomisedWeaponModSlots": [],
+            "blacklist": [{
+                    "levelRange": {
+                        "min": 1,
+                        "max": 100
+                    },
+                    "equipment": {},
+                    "cartridge": {}
+                }
+            ],
+            "whitelist": [{
+                    "levelRange": {
+                        "min": 101,
+                        "max": 101
+                    },
+                    "equipment": {},
+                    "cartridge": {}
+                }
+            ]
+        };
         for (let item in this.itemDB) {
             for (let hat in this.array.conflicting_hats) {
                 if (this.itemDB[item]._id === this.array.conflicting_hats[hat]) {
