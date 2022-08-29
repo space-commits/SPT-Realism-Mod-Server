@@ -219,13 +219,13 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                                     }
                                 }
                             }
-                            if(modConfig.dev_mode == true && pmcData?.Info !== undefined){
+                            if (modConfig.dev_mode == true && pmcData?.Info !== undefined) {
                                 pmcData.Info.AccountType = 1;
-                                pmcData.Info.MemberCategory = 1;                             
+                                pmcData.Info.MemberCategory = 1;
                             }
-                            if(modConfig.dev_mode == false && pmcData?.Info !== undefined){
+                            if (modConfig.dev_mode == false && pmcData?.Info !== undefined) {
                                 pmcData.Info.AccountType = 0;
-                                pmcData.Info.MemberCategory = 2;                             
+                                pmcData.Info.MemberCategory = 2;
                             }
                             this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
                             this.updateBots(pmcData, logger, modConfig, bots);
@@ -339,6 +339,32 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
 
         // codegen.attTemplatesCodeGen();
+        // codegen.weapTempaltesCodeGen();
+
+        codegen.pushToAllMods();
+        codegen.pushModsToServer();
+        codegen.pushWeaponsToServer();
+
+        for (let i in tables.templates.items) {
+            let serverItem = tables.templates.items[i];
+            if (serverItem._id === "5a0c59791526d8dba737bba7") {
+                logger.info("Match ID = " + serverItem._id)
+                for (let k in serverItem._props.ConflictingItems) {
+                    logger.info("Conf Item = " + serverItem._props.ConflictingItems[k])
+                }
+            }
+        }
+
+        for (let i in tables.templates.items) {
+            let serverItem = tables.templates.items[i];
+            if (serverItem._id === "5447a9cd4bdc2dbd208b4567") {
+                logger.info("Match ID = " + serverItem._id)
+                for (let k in serverItem._props.ConflictingItems) {
+                    logger.info("Conf Item = " + serverItem._props.ConflictingItems[k])
+                }
+            }
+        }
+
 
         if (modConfig.bot_changes == true) {
             bots.loadBots();
@@ -469,7 +495,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
 
     }
 
-    public botTierWeighter(weight1: number, weight2: number, weight3: number, bots: Bots){
+    public botTierWeighter(weight1: number, weight2: number, weight3: number, bots: Bots) {
 
         function add(a, b) { return a + b; }
 
@@ -488,7 +514,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
 
         var randomTier = Math.floor(Math.random() * totalWeight);
         return weighedElems[randomTier];
- 
+
     }
 
     public updateBots(pmcData: IPmcData, logger: ILogger, config, bots: Bots) {
@@ -538,13 +564,13 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                         logger.info("Realism Mod: Bots Have Been Adjusted To Tier 3");
                     }
 
-                    if(tier === "Tier1"){
+                    if (tier === "Tier1") {
                         bots.botConfig1();
                     }
-                    if(tier === "Tier2"){
+                    if (tier === "Tier2") {
                         bots.botConfig2();
                     }
-                    if(tier === "Tier3"){
+                    if (tier === "Tier3") {
                         bots.botConfig3();
                     }
                     if (config.logEverything == true) {

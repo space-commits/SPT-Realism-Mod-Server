@@ -400,6 +400,9 @@
             }
         },
         "isUsec": 50,
+        "bearType" : "assault",
+        "usecType" : "assault",
+        "difficulty" : "Hard",
         "maxBackpackLootTotalRub": 50000,
         "maxPocketLootTotalRub": 25000,
         "maxVestLootTotalRub": 25000,
@@ -433,6 +436,9 @@
             }
         },
         "isUsec": 58,
+        "bearType" : "pmcbot",
+        "usecType" : "pmcbot",
+        "difficulty" : "Hard",
         "maxBackpackLootTotalRub": 75000,
         "maxPocketLootTotalRub": 35000,
         "maxVestLootTotalRub": 35000,
@@ -466,6 +472,9 @@
             }
         },
         "isUsec": 50,
+        "bearType" : "followerBigPipe",
+        "usecType" : "bossknight",
+        "difficulty" : "Impossible",
         "maxBackpackLootTotalRub": 125000,
         "maxPocketLootTotalRub": 50000,
         "maxVestLootTotalRub": 50000,

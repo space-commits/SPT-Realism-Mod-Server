@@ -264,6 +264,28 @@ class Mod {
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         // codegen.attTemplatesCodeGen();
+        // codegen.weapTempaltesCodeGen();
+        codegen.pushToAllMods();
+        codegen.pushModsToServer();
+        codegen.pushWeaponsToServer();
+        for (let i in tables.templates.items) {
+            let serverItem = tables.templates.items[i];
+            if (serverItem._id === "5a0c59791526d8dba737bba7") {
+                logger.info("Match ID = " + serverItem._id);
+                for (let k in serverItem._props.ConflictingItems) {
+                    logger.info("Conf Item = " + serverItem._props.ConflictingItems[k]);
+                }
+            }
+        }
+        for (let i in tables.templates.items) {
+            let serverItem = tables.templates.items[i];
+            if (serverItem._id === "5447a9cd4bdc2dbd208b4567") {
+                logger.info("Match ID = " + serverItem._id);
+                for (let k in serverItem._props.ConflictingItems) {
+                    logger.info("Conf Item = " + serverItem._props.ConflictingItems[k]);
+                }
+            }
+        }
         if (modConfig.bot_changes == true) {
             bots.loadBots();
         }

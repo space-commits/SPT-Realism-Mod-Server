@@ -146,7 +146,9 @@ class Arrays {
             "Handguard": "55818a104bdc2db9688b4569",
             "Bipod": "55818afb4bdc2dde698b456d",
             "Flashlight": "55818b084bdc2d5b648b4571",
-            "TacticalCombo": "55818b164bdc2ddc698b456c"
+            "TacticalCombo": "55818b164bdc2ddc698b456c",
+            "CylinderMagazine": "610720f290b75a49ff2e5e25",
+            "GrenadeLauncherMagazine": "627a137bf21bc425b06ab944"
         };
         this.required_slots = [
             "mod_scope",

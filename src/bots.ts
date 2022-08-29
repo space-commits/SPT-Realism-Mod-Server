@@ -86,9 +86,6 @@ export class Bots {
         }
 
         if (this.modConf.difficulty == true) {
-            this.botConfPMC.bearType = "assault";
-            this.botConfPMC.usecType = "assault";
-
             for (let i in this.map) {
                 if (this.map[i].base?.BossLocationSpawn !== undefined) {
                     for (let k in this.map[i].base.BossLocationSpawn) {
@@ -258,7 +255,9 @@ export class Bots {
         this.botConf.lootNValue = rmBotConfig.lootNValue1;
 
         if (this.modConf.difficulty == true) {
-            this.botConfPMC.difficulty = "Hard";
+            this.botConfPMC.bearType = rmBotConfig.pmc1.bearType;
+            this.botConfPMC.usecType = rmBotConfig.pmc1.usecType;;
+            this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;;
         }
 
         this.scavLoad1();
@@ -305,7 +304,9 @@ export class Bots {
         this.botConf.lootNValue = rmBotConfig.lootNValue2;
 
         if (this.modConf.difficulty == true) {
-            this.botConfPMC.difficulty = "Hard";
+            this.botConfPMC.bearType = rmBotConfig.pmc2.bearType;
+            this.botConfPMC.usecType = rmBotConfig.pmc2.usecType;;
+            this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
         }
 
         this.scavLoad2();
@@ -352,7 +353,9 @@ export class Bots {
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
 
         if (this.modConf.difficulty == true) {
-            this.botConfPMC.difficulty = "Impossible";
+            this.botConfPMC.bearType = rmBotConfig.pmc3.bearType;
+            this.botConfPMC.usecType = rmBotConfig.pmc3.usecType;;
+            this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;;
         }
 
         this.scavLoad3();
