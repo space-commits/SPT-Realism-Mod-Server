@@ -48,8 +48,8 @@ class Player {
             this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] = 1.5; //down heavyweight
             this.globalDB.Stamina.CrouchConsumption["x"] = 3.5;
             this.globalDB.Stamina.CrouchConsumption["y"] = 5;
-            this.globalDB.Stamina.WalkConsumption["x"] = 0.1;
-            this.globalDB.Stamina.WalkConsumption["y"] = 0.1;
+            // this.globalDB.Stamina.WalkConsumption["x"] = 0.1;
+            // this.globalDB.Stamina.WalkConsumption["y"] = 0.1;
             // this.globalDB.Stamina.OverweightConsumptionByPose["x"] = -4;
             // this.globalDB.Stamina.OverweightConsumptionByPose["y"] = 0;
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
@@ -66,8 +66,8 @@ class Player {
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
             //////////////////////////////////////////////////////////
-            this.globalDB.Inertia.BaseJumpPenalty = 1.2;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1.1;
+            this.globalDB.Inertia.BaseJumpPenalty = 1;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1;
             this.globalDB.Inertia.SprintBrakeInertia["y"] = 73;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["x"] = 0.812;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;

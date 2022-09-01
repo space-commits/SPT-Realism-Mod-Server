@@ -1316,7 +1316,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 2,
         "Accuracy": 0,
-        "HasShoulderContact": false,
+        "HasShoulderContact": true,
         "BlocksFolding": false
     },
     "5a33cae9c4a28232980eb086": {

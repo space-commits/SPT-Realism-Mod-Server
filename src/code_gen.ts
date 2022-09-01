@@ -684,22 +684,6 @@ export class CodeGen {
         }
     }
 
-
-    // public replaceToAllMods() {
-    //     for (let i in this.itemDB) {
-    //         let serverItem = this.itemDB[i];
-    //         if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
-    //             var serverConfItems = serverItem._props.ConflictingItems;
-    //             var array = ["undefined", "5", "10", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false"]
-    //             for (let j in array) {
-    //                 serverConfItems[j] = array[j];
-    //             }
-    //         }
-    //     }
-    // }
-
-
-
     public modPusherHelper(serverItem: any, fileItem: any) {
         if (serverItem._id === fileItem.ItemID) {
             serverItem._props.Ergonomics = fileItem.Ergonomics;

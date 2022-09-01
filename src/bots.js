@@ -73,6 +73,7 @@ class Bots {
             }
         }
         if (this.modConf.difficulty == true) {
+            this.botConfPMC.useDifficultyOverride = true;
             for (let i in this.map) {
                 if (this.map[i].base?.BossLocationSpawn !== undefined) {
                     for (let k in this.map[i].base.BossLocationSpawn) {

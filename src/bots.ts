@@ -64,7 +64,6 @@ export class Bots {
             ]
         }
 
-
         for (let item in this.itemDB) {
             for (let hat in this.array.conflicting_hats) {
                 if (this.itemDB[item]._id === this.array.conflicting_hats[hat]) {
@@ -86,6 +85,9 @@ export class Bots {
         }
 
         if (this.modConf.difficulty == true) {
+
+            this.botConfPMC.useDifficultyOverride = true;
+
             for (let i in this.map) {
                 if (this.map[i].base?.BossLocationSpawn !== undefined) {
                     for (let k in this.map[i].base.BossLocationSpawn) {

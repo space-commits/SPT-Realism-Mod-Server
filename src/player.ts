@@ -54,8 +54,8 @@ export class Player {
             this.globalDB.Stamina.CrouchConsumption["x"] = 3.5;
             this.globalDB.Stamina.CrouchConsumption["y"] = 5;
 
-            this.globalDB.Stamina.WalkConsumption["x"] = 0.1;
-            this.globalDB.Stamina.WalkConsumption["y"] = 0.1;
+            // this.globalDB.Stamina.WalkConsumption["x"] = 0.1;
+            // this.globalDB.Stamina.WalkConsumption["y"] = 0.1;
 
             // this.globalDB.Stamina.OverweightConsumptionByPose["x"] = -4;
             // this.globalDB.Stamina.OverweightConsumptionByPose["y"] = 0;
@@ -79,8 +79,8 @@ export class Player {
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
             //////////////////////////////////////////////////////////
-            this.globalDB.Inertia.BaseJumpPenalty = 1.2;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1.1;
+            this.globalDB.Inertia.BaseJumpPenalty = 1;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1;
 
             this.globalDB.Inertia.SprintBrakeInertia["y"] = 73;
 
