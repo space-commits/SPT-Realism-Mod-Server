@@ -63,18 +63,18 @@ export class Player {
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
 
-            //test speedlimitafterfall, duration, after jump
+            //test speedlimitafterfall, duration, after jump. Speed limit duration might actually have to do with speeding up into sprint??
             //////////////////////////////////////////////////////////
-            this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] = 0.53;
-            this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] = 0.75;
+            // this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] = 0.53;
+            // this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] = 0.75;
 
-            this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] = 2.6;
+            // this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] = 2.6;
 
-            this.globalDB.Inertia.SpeedLimitDurationMin["x"] = 0.15;
-            this.globalDB.Inertia.SpeedLimitDurationMin["y"] = 0.25;
+            // this.globalDB.Inertia.SpeedLimitDurationMin["x"] = 0.15;
+            // this.globalDB.Inertia.SpeedLimitDurationMin["y"] = 0.25;
 
-            this.globalDB.Inertia.SpeedLimitDurationMax["x"] = 0.5;
-            this.globalDB.Inertia.SpeedLimitDurationMax["y"] = 0.3;
+            // this.globalDB.Inertia.SpeedLimitDurationMax["x"] = 0.5;
+            // this.globalDB.Inertia.SpeedLimitDurationMax["y"] = 0.3;
 
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
@@ -131,7 +131,6 @@ export class Player {
                 this.logger.info("Movement Changes Enabled");
             }
         }
-
 
         if (this.modConf.med_changes == true) {
             this.globalDB.Health.Effects.Existence.EnergyDamage = 1;

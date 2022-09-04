@@ -41,7 +41,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "58ac1bf086f77420ed183f9f": {
@@ -386,7 +386,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "5947c73886f7747701588af5": {
@@ -836,7 +836,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "5649b0fc4bdc2d17108b4588": {
@@ -881,7 +881,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "617155ee50224f204c1da3cd": {
@@ -1166,7 +1166,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "5addbf175acfc408fb13965b": {
@@ -1541,7 +1541,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "58d2946c86f7744e271174b5": {
@@ -1736,7 +1736,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "5947eab886f77475961d96c5": {
@@ -1961,7 +1961,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "5bae13bad4351e00320204af": {
@@ -2246,7 +2246,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "5ae096d95acfc400185c2c81": {
@@ -2456,7 +2456,7 @@
         "DrawSpeed": 0,
         "Ergonomics": -3,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "61715e7e67085e45ef140b33": {
@@ -2741,7 +2741,7 @@
         "DrawSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
-        "HasShoulderContact": true,
+        "HasShoulderContact": false,
         "BlocksFolding": false
     },
     "5afd7ded5acfc40017541f5e": {

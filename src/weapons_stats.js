@@ -1057,7 +1057,7 @@ class WeaponsStats {
             //MP5
             if (fileData._id === "5926bb2186f7744b1c6c6e60") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.2;
+                    fileData._props.DurabilityBurnRatio = 0.18;
                     fileData._props.HeatFactorGun = 0.15;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1072,7 +1072,7 @@ class WeaponsStats {
             //MP5K
             if (fileData._id === "5d2f0d8048f0356c925bc3b0") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.2;
+                    fileData._props.DurabilityBurnRatio = 0.18;
                     fileData._props.HeatFactorGun = 0.15;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1087,7 +1087,7 @@ class WeaponsStats {
             //MPX
             if (fileData._id === "58948c8e86f77409493f7266") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.15;
+                    fileData._props.DurabilityBurnRatio = 0.14;
                     fileData._props.HeatFactorGun = 0.2;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1102,7 +1102,7 @@ class WeaponsStats {
             //MP9
             if (fileData._id === "5e00903ae9dc277128008b87") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.3;
+                    fileData._props.DurabilityBurnRatio = 0.25;
                     fileData._props.HeatFactorGun = 0.3;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1117,7 +1117,7 @@ class WeaponsStats {
             //MP9-N
             if (fileData._id === "5de7bd7bfd6b4e6e2276dc25") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.3;
+                    fileData._props.DurabilityBurnRatio = 0.25;
                     fileData._props.HeatFactorGun = 0.3;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1132,7 +1132,7 @@ class WeaponsStats {
             //Vityaz PPs
             if (fileData._id === "59984ab886f7743e98271174") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.1;
+                    fileData._props.DurabilityBurnRatio = 0.08;
                     fileData._props.HeatFactorGun = 0.1;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1147,7 +1147,7 @@ class WeaponsStats {
             //Saiga 9
             if (fileData._id === "59f9cabd86f7743a10721f46") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.2;
+                    fileData._props.DurabilityBurnRatio = 0.15;
                     fileData._props.HeatFactorGun = 0.1;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1162,7 +1162,7 @@ class WeaponsStats {
             //STM 9
             if (fileData._id === "60339954d62c9b14ed777c06") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.4;
+                    fileData._props.DurabilityBurnRatio = 0.35;
                     fileData._props.HeatFactorGun = 0.35;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1177,7 +1177,7 @@ class WeaponsStats {
             //UMP .45
             if (fileData._id === "5fc3e272f8b6a877a729eac5") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.3;
+                    fileData._props.DurabilityBurnRatio = 0.25;
                     fileData._props.HeatFactorGun = 0.3;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1192,7 +1192,7 @@ class WeaponsStats {
             //Vector .45
             if (fileData._id === "5fb64bc92b1b027b1f50bcf2") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 1;
+                    fileData._props.DurabilityBurnRatio = 0.85;
                     fileData._props.HeatFactorGun = 0.3;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1207,7 +1207,7 @@ class WeaponsStats {
             //Vector 9x19
             if (fileData._id === "5fc3f2d5900b1d5091531e57") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 1;
+                    fileData._props.DurabilityBurnRatio = 0.85;
                     fileData._props.HeatFactorGun = 0.3;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1377,7 +1377,7 @@ class WeaponsStats {
             //PL-15
             if (fileData._id === "602a9740da11d6478d5a06dc") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.35;
+                    fileData._props.DurabilityBurnRatio = 0.3;
                     fileData._props.HeatFactorGun = 0.20;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1392,7 +1392,7 @@ class WeaponsStats {
             //G17
             if (fileData._id === "5a7ae0c351dfba0017554310") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.2;
+                    fileData._props.DurabilityBurnRatio = 0.18;
                     fileData._props.HeatFactorGun = 0.20;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1407,7 +1407,7 @@ class WeaponsStats {
             //G18C
             if (fileData._id === "5b1fa9b25acfc40018633c01") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.65;
+                    fileData._props.DurabilityBurnRatio = 0.6;
                     fileData._props.HeatFactorGun = 0.3;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.17;
@@ -1422,7 +1422,7 @@ class WeaponsStats {
             //P226R
             if (fileData._id === "56d59856d2720bd8418b456a") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.08;
+                    fileData._props.DurabilityBurnRatio = 0.07;
                     fileData._props.HeatFactorGun = 0.25;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1437,7 +1437,7 @@ class WeaponsStats {
             //M9A3
             if (fileData._id === "5cadc190ae921500103bb3b6") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.15;
+                    fileData._props.DurabilityBurnRatio = 0.12;
                     fileData._props.HeatFactorGun = 0.23;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1452,7 +1452,7 @@ class WeaponsStats {
             //USP
             if (fileData._id === "6193a720f8ee7e52e42109ed") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.05;
+                    fileData._props.DurabilityBurnRatio = 0.04;
                     fileData._props.HeatFactorGun = 0.2;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1467,7 +1467,7 @@ class WeaponsStats {
             //1911 
             if (fileData._id === "5e81c3cbac2bb513793cdc75") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.3;
+                    fileData._props.DurabilityBurnRatio = 0.25;
                     fileData._props.HeatFactorGun = 0.25;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;
@@ -1482,7 +1482,7 @@ class WeaponsStats {
             //M45
             if (fileData._id === "5f36a0e5fbf956000b716b65") {
                 if (this.modConf.malf_changes == true) {
-                    fileData._props.DurabilityBurnRatio = 0.3;
+                    fileData._props.DurabilityBurnRatio = 0.25;
                     fileData._props.HeatFactorGun = 0.25;
                     fileData._props.HeatFactorByShot = 1;
                     fileData._props.CoolFactorGun = 0.1;

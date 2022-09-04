@@ -68,23 +68,23 @@ export class CodeGen {
                     this.weapWriteToFile(AssaultRifleTemplates, "AssaultRifleTemplates", i, serverItem)
                 }
                 if (serverItem._props.weapClass === "smg") {
-                    this.weapWriteToFile(MachinegunTemplates, "MachinegunTemplates", i, serverItem)
+                    this.weapWriteToFile(SMGTemplates, "SMGTemplates", i, serverItem)
                 }
                 if (serverItem._props.weapClass === "machinegun") {
-                    this.weapWriteToFile(MarksmanRifleTemplates, "MarksmanRifleTemplates", i, serverItem)
+                    this.weapWriteToFile(MachinegunTemplates, "MachinegunTemplates", i, serverItem)
                 }
                 if (serverItem._props.weapClass === "marksmanRifle") {
 
-                    this.weapWriteToFile(PistolTemplates, "PistolTemplates", i, serverItem)
+                    this.weapWriteToFile(MarksmanRifleTemplates, "MarksmanRifleTemplates", i, serverItem)
                 }
                 if (serverItem._props.weapClass === "sniperRifle") {
-                    this.weapWriteToFile(ShotgunTemplates, "ShotgunTemplates", i, serverItem)
+                    this.weapWriteToFile(SniperRifleTemplates, "SniperRifleTemplates", i, serverItem)
                 }
                 if (serverItem._props.weapClass === "pistol") {
-                    this.weapWriteToFile(SMGTemplates, "SMGTemplates", i, serverItem)
+                    this.weapWriteToFile(PistolTemplates, "PistolTemplates", i, serverItem)
                 }
                 if (serverItem._props.weapClass === "shotgun") {
-                    this.weapWriteToFile(SniperRifleTemplates, "SniperRifleTemplates", i, serverItem)
+                    this.weapWriteToFile(ShotgunTemplates, "ShotgunTemplates", i, serverItem)
                 }
                 if (serverItem._props.weapClass === "specialWeapon") {
                     this.weapWriteToFile(SpecialWeaponTemplates, "SpecialWeaponTemplates", i, serverItem)
