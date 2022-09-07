@@ -67,8 +67,8 @@ class WeaponsGlobals {
                 }
             }
             this.globalDB.Aiming.RecoilCrank = true;
-            this.globalDB.Aiming.RecoilHandDamping = 0.65;
             this.globalDB.Aiming.RecoilDamping = 0.7;
+            this.globalDB.Aiming.RecoilHandDamping = 0.65;
             this.globalDB.Aiming.RecoilConvergenceMult = 1;
             this.globalDB.Aiming.RecoilVertBonus = 0;
             this.globalDB.Aiming.RecoilBackBonus = 0;

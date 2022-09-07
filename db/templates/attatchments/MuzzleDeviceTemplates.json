@@ -553,7 +553,7 @@
     "5c6d710d2e22165df16b81e7": {
         "ItemID": "5c6d710d2e22165df16b81e7",
         "Name": "muzzle_ar15_surefire_warcomp_556_556x45",
-        "ModType": "",
+        "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": -7,
         "HorizontalRecoil": -7,
         "Dispersion": 0,

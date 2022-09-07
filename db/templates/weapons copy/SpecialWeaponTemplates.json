@@ -26,9 +26,7 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 6,
-        "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "Velocity": 0
     },
     "620109578d82e67e7911abf2": {
         "ItemID": "620109578d82e67e7911abf2",
@@ -57,9 +55,7 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
-        "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "Velocity": 0
     },
     "6217726288ed9f0845317459": {
         "ItemID": "6217726288ed9f0845317459",
@@ -88,9 +84,7 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
-        "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "Velocity": 0
     },
     "62178c4d4ecf221597654e3d": {
         "ItemID": "62178c4d4ecf221597654e3d",
@@ -119,9 +113,7 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
-        "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "Velocity": 0
     },
     "62178be9d0050232da3485d9": {
         "ItemID": "62178be9d0050232da3485d9",
@@ -150,9 +142,7 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
-        "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "Velocity": 0
     },
     "624c0b3340357b5f566e8766": {
         "ItemID": "624c0b3340357b5f566e8766",
@@ -181,8 +171,6 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
-        "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "Velocity": 0
     }
 }

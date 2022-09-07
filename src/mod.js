@@ -268,6 +268,16 @@ class Mod {
         codegen.pushToAllMods();
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
+        // for (let i in tables.templates.items)
+        // {
+        //     if(tables.templates.items[i]._id === "5c82342f2e221644f31c060e")
+        //     {
+        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
+        //         {
+        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+        //         }
+        //     }
+        // }
         if (modConfig.bot_changes == true) {
             bots.loadBots();
         }

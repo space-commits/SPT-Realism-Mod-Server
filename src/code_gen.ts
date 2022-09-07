@@ -201,17 +201,23 @@ export class CodeGen {
 
     private assignJSONToWeap(serverItem: ITemplateItem, fileItem: any) {
 
-        //new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
+        // new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
             // fileItem.HeatFactor = serverItem._props.HeatFactor; You need to give it a value. If you set it to the server item's propety value, the new property will only appear if the server mod has that property
             fileItem;
+            fileItem.RecoilDamping = 0;
+            fileItem.RecoilHandDamping = 0;
             return fileItem;
         }
 
         let ItemID = serverItem._id;
         let Name = serverItem._name;
         let WeapType = "";
+        let OperationType = "";
+        let WeapAccuracy = 0;
         let BaseTorque = 0;
+        let RecoilDamping = 0;
+        let RecoilHandDamping = 0;
         let HasShoulderContact = false;
         let Ergonomics = serverItem._props.Ergonomics
         let VerticalRecoil = serverItem._props.RecoilForceUp;
@@ -234,11 +240,16 @@ export class CodeGen {
         let ShotgunDispersion = serverItem._props.shotgunDispersion;
         let Velocity = serverItem._props.Velocity;
 
+
         let item = {
             ItemID,
             Name,
             WeapType,
+            OperationType,
+            WeapAccuracy,
             BaseTorque,
+            RecoilDamping,
+            RecoilHandDamping,
             HasShoulderContact,
             Ergonomics,
             VerticalRecoil,
@@ -272,10 +283,10 @@ export class CodeGen {
         //new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
             // fileItem.HeatFactor = serverItem._props.HeatFactor; You need to give it a value. If you set it to the server item's propety value, the new property will only appear if the server mod has that property
-        //    if(serverItem._props?.Recoil !== undefined){
-        //     fileItem.VerticalRecoil = serverItem._props.Recoil;
-        //     fileItem.HorizontalRecoil = serverItem._props.Recoil;
-        //    }
+            //    if(serverItem._props?.Recoil !== undefined){
+            //     fileItem.VerticalRecoil = serverItem._props.Recoil;
+            //     fileItem.HorizontalRecoil = serverItem._props.Recoil;
+            //    }
             fileItem;
             return fileItem;
         }
@@ -447,6 +458,9 @@ export class CodeGen {
                 VerticalRecoil,
                 HorizontalRecoil,
                 Dispersion,
+                AutoROF,
+                SemiROF,
+                ModMalfunctionChance,
                 CameraRecoil,
                 AimSpeed,
                 DrawSpeed,
@@ -701,7 +715,7 @@ export class CodeGen {
 
             var serverConfItems = serverItem._props.ConflictingItems;
             var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
-            fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0", 
+            fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
             fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0"];
 
             for (let j in modPropertyValues) {
@@ -736,8 +750,9 @@ export class CodeGen {
             serverItem._props.Velocity = fileItem.Velocity;
 
             var serverConfItems = serverItem._props.ConflictingItems;
-            var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", ""];
-         
+            var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "undefined", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
+            fileItem?.RecoilDamping?.toString() || "0", fileItem?.RecoilHandDamping?.toString() || "0"];
+
             for (let j in weapPropertyValues) {
                 serverConfItems[j] = weapPropertyValues[j];
             }

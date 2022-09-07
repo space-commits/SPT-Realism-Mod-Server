@@ -12,7 +12,7 @@ export class Ammo {
             //// 12ga ////
             //Flechette
             if (fileData._id === "5d6e6911a4b9361bd5780d52") {
-                fileData._props.PenetrationPower = 5;
+                fileData._props.PenetrationPower = 15;
                 fileData._props.ArmorDamage = 0;
                 fileData._props.buckshotBullets = 9;
                 fileData._props.Damage = 15;
@@ -22,7 +22,7 @@ export class Ammo {
                 fileData._props.FragmentationChance = 0.6;
                 fileData._props.BulletMassGram = 0.47;
                 fileData._props.HeavyBleedingDelta = 0.35;
-                fileData._props.LightBleedingDelta = 0.55;
+                fileData._props.LightBleedingDelta = 0.70;
                 fileData._props.ammoAccr = -200;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -71;
