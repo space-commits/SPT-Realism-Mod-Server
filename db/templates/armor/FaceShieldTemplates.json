@@ -1,0 +1,87 @@
+{
+    "5e00cdd986f7747473332240": {
+        "ItemID": "5e00cdd986f7747473332240",
+        "Name": "item_equipment_helmet_team_wendy_exfil_face_shield",
+        "AllowADS": false
+    },
+    "5ac4c50d5acfc40019262e87": {
+        "ItemID": "5ac4c50d5acfc40019262e87",
+        "Name": "item_equipment_helmet_k1c_shield",
+        "AllowADS": false
+    },
+    "5b46238386f7741a693bcf9c": {
+        "ItemID": "5b46238386f7741a693bcf9c",
+        "Name": "item_equipment_helmet_kiverm_shield",
+        "AllowADS": false
+    },
+    "5f60c85b58eff926626a60f7": {
+        "ItemID": "5f60c85b58eff926626a60f7",
+        "Name": "item_equipment_helmet_rys_t_shield",
+        "AllowADS": false
+    },
+    "5aa7e3abe5b5b000171d064d": {
+        "ItemID": "5aa7e3abe5b5b000171d064d",
+        "Name": "helmet_zsh_1-2m_v1_face_shield",
+        "AllowADS": true
+    },
+    "5ca2113f86f7740b2547e1d2": {
+        "ItemID": "5ca2113f86f7740b2547e1d2",
+        "Name": "item_equipment_helmet_vulkan_shield",
+        "AllowADS": false
+    },
+    "5d6d3829a4b9361bc8618943": {
+        "ItemID": "5d6d3829a4b9361bc8618943",
+        "Name": "item_equipment_helmet_lshz2dtm_shield",
+        "AllowADS": true
+    },
+    "5c0e842486f77443a74d2976": {
+        "ItemID": "5c0e842486f77443a74d2976",
+        "Name": "item_equipment_helmet_maska_1sh_shield_killa",
+        "AllowADS": false
+    },
+    "5aa7e373e5b5b000137b76f0": {
+        "ItemID": "5aa7e373e5b5b000137b76f0",
+        "Name": "helmet_altyn_face_shield",
+        "AllowADS": false
+    },
+    "5a16b7e1fcdbcb00165aa6c9": {
+        "ItemID": "5a16b7e1fcdbcb00165aa6c9",
+        "Name": "helmet_ops_core_handgun_face_shield",
+        "AllowADS": false
+    },
+    "5a16b672fcdbcb001912fa83": {
+        "ItemID": "5a16b672fcdbcb001912fa83",
+        "Name": "helmet_ops_core_fast_visor",
+        "AllowADS": true
+    },
+    "5c0919b50db834001b7ce3b9": {
+        "ItemID": "5c0919b50db834001b7ce3b9",
+        "Name": "item_equipment_helmet_maska_1sh_shield",
+        "AllowADS": false
+    },
+    "5e01f37686f774773c6f6c15": {
+        "ItemID": "5e01f37686f774773c6f6c15",
+        "Name": "item_equipment_helmet_team_wendy_exfil_face_shield_coyote",
+        "AllowADS": false
+    },
+    "5ea058e01dbce517f324b3e2": {
+        "ItemID": "5ea058e01dbce517f324b3e2",
+        "Name": "item_equipment_helmet_tk_heavy_trooper",
+        "AllowADS": true
+    },
+    "5f60c076f2bcbb675b00dac2": {
+        "ItemID": "5f60c076f2bcbb675b00dac2",
+        "Name": "item_equipment_helmet_galvion_mandible",
+        "AllowADS": true
+    },
+    "5a16ba61fcdbcb098008728a": {
+        "ItemID": "5a16ba61fcdbcb098008728a",
+        "Name": "helmet_ops_core_fast_gunsight_mandible",
+        "AllowADS": true
+    },
+    "5f60bf4558eff926626a60f2": {
+        "ItemID": "5f60bf4558eff926626a60f2",
+        "Name": "item_equipment_helmet_galvion_fixed_arm_visor",
+        "AllowADS": true
+    }
+}

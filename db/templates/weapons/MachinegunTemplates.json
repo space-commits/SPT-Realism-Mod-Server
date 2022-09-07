@@ -28,7 +28,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5beed0f50db834001c062b12": {
         "ItemID": "5beed0f50db834001c062b12",
@@ -59,6 +60,7 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     }
 }

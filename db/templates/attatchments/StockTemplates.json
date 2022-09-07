@@ -15,7 +15,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b39f8db5acfc40016387a1b": {
         "ItemID": "5b39f8db5acfc40016387a1b",
@@ -33,7 +34,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "617153016c780c1e710c9a2f": {
         "ItemID": "617153016c780c1e710c9a2f",
@@ -51,7 +53,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "58ac1bf086f77420ed183f9f": {
         "ItemID": "58ac1bf086f77420ed183f9f",
@@ -69,7 +72,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "61f7b234ea4ab34f2f59c3ec": {
         "ItemID": "61f7b234ea4ab34f2f59c3ec",
@@ -87,7 +91,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5926d3c686f77410de68ebc8": {
         "ItemID": "5926d3c686f77410de68ebc8",
@@ -105,7 +110,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "619b69037b9de8162902673e": {
         "ItemID": "619b69037b9de8162902673e",
@@ -123,7 +129,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fc3e4ee7283c4046c5814af": {
         "ItemID": "5fc3e4ee7283c4046c5814af",
@@ -141,7 +148,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bd704e7209c4d00d7167c31": {
         "ItemID": "5bd704e7209c4d00d7167c31",
@@ -159,7 +167,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b222d335acfc4771e1be099": {
         "ItemID": "5b222d335acfc4771e1be099",
@@ -177,7 +186,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bb20e70d4351e0035629f8f": {
         "ItemID": "5bb20e70d4351e0035629f8f",
@@ -195,7 +205,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c0e2ff6d174af02a1659d4a": {
         "ItemID": "5c0e2ff6d174af02a1659d4a",
@@ -213,7 +224,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5ab626e4d8ce87272e4c6e43": {
         "ItemID": "5ab626e4d8ce87272e4c6e43",
@@ -231,7 +243,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fc2369685fd526b824a5713": {
         "ItemID": "5fc2369685fd526b824a5713",
@@ -249,7 +262,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b0e794b5acfc47a877359b2": {
         "ItemID": "5b0e794b5acfc47a877359b2",
@@ -267,7 +281,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a0c59791526d8dba737bba7": {
         "ItemID": "5a0c59791526d8dba737bba7",
@@ -285,7 +300,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5eea217fc64c5d0dfc05712a": {
         "ItemID": "5eea217fc64c5d0dfc05712a",
@@ -303,7 +319,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d1c702ad7ad1a632267f429": {
         "ItemID": "5d1c702ad7ad1a632267f429",
@@ -321,7 +338,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "59d6514b86f774171a068a08": {
         "ItemID": "59d6514b86f774171a068a08",
@@ -339,7 +357,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c5db6f82e2216003a0fe914": {
         "ItemID": "5c5db6f82e2216003a0fe914",
@@ -357,7 +376,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b04473a5acfc40018632f70": {
         "ItemID": "5b04473a5acfc40018632f70",
@@ -375,7 +395,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cf50fc5d7f00c056c53f83c": {
         "ItemID": "5cf50fc5d7f00c056c53f83c",
@@ -393,7 +414,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a78813bc5856700186c4abe": {
         "ItemID": "5a78813bc5856700186c4abe",
@@ -411,7 +433,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "59ecc3dd86f7746dc827481c": {
         "ItemID": "59ecc3dd86f7746dc827481c",
@@ -429,7 +452,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fbcc429900b1d5091531dd7": {
         "ItemID": "5fbcc429900b1d5091531dd7",
@@ -447,7 +471,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "628b9a40717774443b15e9f2": {
         "ItemID": "628b9a40717774443b15e9f2",
@@ -465,7 +490,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5947c73886f7747701588af5": {
         "ItemID": "5947c73886f7747701588af5",
@@ -483,7 +509,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "59e6227d86f77440d64f5dc2": {
         "ItemID": "59e6227d86f77440d64f5dc2",
@@ -501,7 +528,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b222d405acfc400153af4fe": {
         "ItemID": "5b222d405acfc400153af4fe",
@@ -519,7 +547,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bcf0213d4351e0085327c17": {
         "ItemID": "5bcf0213d4351e0085327c17",
@@ -537,7 +566,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b7d63b75acfc400170e2f8a": {
         "ItemID": "5b7d63b75acfc400170e2f8a",
@@ -555,7 +585,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c87a07c2e2216001219d4a2": {
         "ItemID": "5c87a07c2e2216001219d4a2",
@@ -573,7 +604,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "59e89d0986f77427600d226e": {
         "ItemID": "59e89d0986f77427600d226e",
@@ -591,7 +623,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "624c29ce09cd027dff2f8cd7": {
         "ItemID": "624c29ce09cd027dff2f8cd7",
@@ -609,7 +642,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "57dc347d245977596754e7a1": {
         "ItemID": "57dc347d245977596754e7a1",
@@ -627,7 +661,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5e217ba4c1434648c13568cd": {
         "ItemID": "5e217ba4c1434648c13568cd",
@@ -645,7 +680,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5649b2314bdc2d79388b4576": {
         "ItemID": "5649b2314bdc2d79388b4576",
@@ -663,7 +699,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5e87116b81c4ed43e83cefdd": {
         "ItemID": "5e87116b81c4ed43e83cefdd",
@@ -681,7 +718,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cc700b9e4a949000f0f0f25": {
         "ItemID": "5cc700b9e4a949000f0f0f25",
@@ -699,7 +737,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5ae30c9a5acfc408fb139a03": {
         "ItemID": "5ae30c9a5acfc408fb139a03",
@@ -717,7 +756,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a17fb9dfcdbcbcae6687291": {
         "ItemID": "5a17fb9dfcdbcbcae6687291",
@@ -735,7 +775,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bfe86df0db834001b734685": {
         "ItemID": "5bfe86df0db834001b734685",
@@ -753,7 +794,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a7880d0c5856700142fdd9d": {
         "ItemID": "5a7880d0c5856700142fdd9d",
@@ -771,7 +813,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5926d40686f7740f152b6b7e": {
         "ItemID": "5926d40686f7740f152b6b7e",
@@ -789,7 +832,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5e848db4681bea2ada00daa9": {
         "ItemID": "5e848db4681bea2ada00daa9",
@@ -807,7 +851,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "617154aa1cb55961fa0fdb3b": {
         "ItemID": "617154aa1cb55961fa0fdb3b",
@@ -825,7 +870,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "59ecc28286f7746d7a68aa8c": {
         "ItemID": "59ecc28286f7746d7a68aa8c",
@@ -843,7 +889,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cf518cfd7f00c065b422214": {
         "ItemID": "5cf518cfd7f00c065b422214",
@@ -861,7 +908,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "56083cba4bdc2de22e8b456f": {
         "ItemID": "56083cba4bdc2de22e8b456f",
@@ -879,7 +927,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5abcd472d8ce8700166032ae": {
         "ItemID": "5abcd472d8ce8700166032ae",
@@ -897,7 +946,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cebec10d7f00c065703d185": {
         "ItemID": "5cebec10d7f00c065703d185",
@@ -915,7 +965,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "59ff3b6a86f77477562ff5ed": {
         "ItemID": "59ff3b6a86f77477562ff5ed",
@@ -933,7 +984,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c07c9660db834001a66b588": {
         "ItemID": "5c07c9660db834001a66b588",
@@ -951,7 +1003,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": true
     },
     "5ab372a310e891001717f0d8": {
         "ItemID": "5ab372a310e891001717f0d8",
@@ -969,7 +1022,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d135ecbd7ad1a21c176542e": {
         "ItemID": "5d135ecbd7ad1a21c176542e",
@@ -987,7 +1041,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bb20e58d4351e00320205d7": {
         "ItemID": "5bb20e58d4351e00320205d7",
@@ -1005,7 +1060,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5649b0fc4bdc2d17108b4588": {
         "ItemID": "5649b0fc4bdc2d17108b4588",
@@ -1023,7 +1079,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5addc7005acfc4001669f275": {
         "ItemID": "5addc7005acfc4001669f275",
@@ -1041,7 +1098,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c0faeddd174af02a962601f": {
         "ItemID": "5c0faeddd174af02a962601f",
@@ -1059,7 +1117,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "617155ee50224f204c1da3cd": {
         "ItemID": "617155ee50224f204c1da3cd",
@@ -1077,7 +1136,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d135e83d7ad1a21b83f42d8": {
         "ItemID": "5d135e83d7ad1a21b83f42d8",
@@ -1095,7 +1155,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "58d2946386f774496974c37e": {
         "ItemID": "58d2946386f774496974c37e",
@@ -1113,7 +1174,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fbcc437d724d907e2077d5c": {
         "ItemID": "5fbcc437d724d907e2077d5c",
@@ -1131,7 +1193,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "56eabf3bd2720b75698b4569": {
         "ItemID": "56eabf3bd2720b75698b4569",
@@ -1149,7 +1212,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5ac50c185acfc400163398d4": {
         "ItemID": "5ac50c185acfc400163398d4",
@@ -1167,7 +1231,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5894a13e86f7742405482982": {
         "ItemID": "5894a13e86f7742405482982",
@@ -1185,7 +1250,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c471b5d2e221602b21d4e14": {
         "ItemID": "5c471b5d2e221602b21d4e14",
@@ -1203,7 +1269,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "55d4ae6c4bdc2d8b2f8b456e": {
         "ItemID": "55d4ae6c4bdc2d8b2f8b456e",
@@ -1221,7 +1288,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fce16961f152d4312622bc9": {
         "ItemID": "5fce16961f152d4312622bc9",
@@ -1239,7 +1307,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5ef1b9f0c64c5d0dfc0571a1": {
         "ItemID": "5ef1b9f0c64c5d0dfc0571a1",
@@ -1257,7 +1326,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "591aef7986f774139d495f03": {
         "ItemID": "591aef7986f774139d495f03",
@@ -1275,7 +1345,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5beec8c20db834001d2c465c": {
         "ItemID": "5beec8c20db834001d2c465c",
@@ -1293,7 +1364,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "622f140da5958f63c67f1735": {
         "ItemID": "622f140da5958f63c67f1735",
@@ -1311,7 +1383,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "602e3f1254072b51b239f713": {
         "ItemID": "602e3f1254072b51b239f713",
@@ -1329,7 +1402,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d120a10d7ad1a4e1026ba85": {
         "ItemID": "5d120a10d7ad1a4e1026ba85",
@@ -1347,7 +1421,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "61faa91878830f069b6b7967": {
         "ItemID": "61faa91878830f069b6b7967",
@@ -1365,7 +1440,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "606587d11246154cad35d635": {
         "ItemID": "606587d11246154cad35d635",
@@ -1383,7 +1459,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5649be884bdc2d79388b4577": {
         "ItemID": "5649be884bdc2d79388b4577",
@@ -1401,7 +1478,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5addbf175acfc408fb13965b": {
         "ItemID": "5addbf175acfc408fb13965b",
@@ -1419,7 +1497,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "56083a334bdc2dc8488b4571": {
         "ItemID": "56083a334bdc2dc8488b4571",
@@ -1437,7 +1516,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "58d2947e86f77447aa070d53": {
         "ItemID": "58d2947e86f77447aa070d53",
@@ -1455,7 +1535,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a9eb32da2750c00171b3f9c": {
         "ItemID": "5a9eb32da2750c00171b3f9c",
@@ -1473,7 +1554,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fbbaa86f9986c4cff3fe5f6": {
         "ItemID": "5fbbaa86f9986c4cff3fe5f6",
@@ -1491,7 +1573,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a33e75ac4a2826c6e06d759": {
         "ItemID": "5a33e75ac4a2826c6e06d759",
@@ -1509,7 +1592,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d4406a8a4b9361e4f6eb8b7": {
         "ItemID": "5d4406a8a4b9361e4f6eb8b7",
@@ -1527,7 +1611,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "57ade1442459771557167e15": {
         "ItemID": "57ade1442459771557167e15",
@@ -1545,7 +1630,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "587e0531245977466077a0f7": {
         "ItemID": "587e0531245977466077a0f7",
@@ -1563,7 +1649,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "58d2912286f7744e27117493": {
         "ItemID": "58d2912286f7744e27117493",
@@ -1581,7 +1668,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a33cae9c4a28232980eb086": {
         "ItemID": "5a33cae9c4a28232980eb086",
@@ -1599,7 +1687,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "628a85ee6b1d481ff772e9d5": {
         "ItemID": "628a85ee6b1d481ff772e9d5",
@@ -1617,7 +1706,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "622f14e899892a7f9e08f6c5": {
         "ItemID": "622f14e899892a7f9e08f6c5",
@@ -1635,7 +1725,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d44069ca4b9361ebd26fc37": {
         "ItemID": "5d44069ca4b9361ebd26fc37",
@@ -1653,7 +1744,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5ae35b315acfc4001714e8b0": {
         "ItemID": "5ae35b315acfc4001714e8b0",
@@ -1671,7 +1763,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "602e620f9b513876d4338d9a": {
         "ItemID": "602e620f9b513876d4338d9a",
@@ -1689,7 +1782,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d25d0ac8abbc3054f3e61f7": {
         "ItemID": "5d25d0ac8abbc3054f3e61f7",
@@ -1707,7 +1801,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5e848dc4e4dbc5266a4ec63d": {
         "ItemID": "5e848dc4e4dbc5266a4ec63d",
@@ -1725,7 +1820,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5649b1c04bdc2d16268b457c": {
         "ItemID": "5649b1c04bdc2d16268b457c",
@@ -1743,7 +1839,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "591af10186f774139d495f0e": {
         "ItemID": "591af10186f774139d495f0e",
@@ -1761,7 +1858,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "58889d0c2459775bc215d981": {
         "ItemID": "58889d0c2459775bc215d981",
@@ -1779,7 +1877,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5947e98b86f774778f1448bc": {
         "ItemID": "5947e98b86f774778f1448bc",
@@ -1797,7 +1896,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d2f25bc48f03502573e5d85": {
         "ItemID": "5d2f25bc48f03502573e5d85",
@@ -1815,7 +1915,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cc700cae4a949035e43ba72": {
         "ItemID": "5cc700cae4a949035e43ba72",
@@ -1833,7 +1934,8 @@
         "BlocksFolding": true,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a33ca0fc4a282000d72292f": {
         "ItemID": "5a33ca0fc4a282000d72292f",
@@ -1851,7 +1953,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "58d2946c86f7744e271174b5": {
         "ItemID": "58d2946c86f7744e271174b5",
@@ -1869,7 +1972,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b0800175acfc400153aebd4": {
         "ItemID": "5b0800175acfc400153aebd4",
@@ -1887,7 +1991,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "612781056f3d944a17348d60": {
         "ItemID": "612781056f3d944a17348d60",
@@ -1905,7 +2010,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "6087e2a5232e5a31c233d552": {
         "ItemID": "6087e2a5232e5a31c233d552",
@@ -1923,7 +2029,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "611a31ce5b7ffe001b4649d1": {
         "ItemID": "611a31ce5b7ffe001b4649d1",
@@ -1941,7 +2048,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "623b2e9d11c3296b440d1638": {
         "ItemID": "623b2e9d11c3296b440d1638",
@@ -1959,7 +2067,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bbde409d4351e003562b036": {
         "ItemID": "5bbde409d4351e003562b036",
@@ -1977,7 +2086,8 @@
         "BlocksFolding": true,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "578395e82459774a0e553c7b": {
         "ItemID": "578395e82459774a0e553c7b",
@@ -1995,7 +2105,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cdeac22d7f00c000f26168f": {
         "ItemID": "5cdeac22d7f00c000f26168f",
@@ -2013,7 +2124,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "6197b229af1f5202c57a9bea": {
         "ItemID": "6197b229af1f5202c57a9bea",
@@ -2031,7 +2143,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "607d5a891246154cad35d6aa": {
         "ItemID": "607d5a891246154cad35d6aa",
@@ -2049,7 +2162,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "61f803b8ced75b2e852e35f8": {
         "ItemID": "61f803b8ced75b2e852e35f8",
@@ -2067,7 +2181,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bfe89510db834001808a127": {
         "ItemID": "5bfe89510db834001808a127",
@@ -2085,7 +2200,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5947eab886f77475961d96c5": {
         "ItemID": "5947eab886f77475961d96c5",
@@ -2103,7 +2219,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d0236dad7ad1a0940739d29": {
         "ItemID": "5d0236dad7ad1a0940739d29",
@@ -2121,7 +2238,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5de910da8b6c4240ba2651b5": {
         "ItemID": "5de910da8b6c4240ba2651b5",
@@ -2139,7 +2257,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b7d64555acfc4001876c8e2": {
         "ItemID": "5b7d64555acfc4001876c8e2",
@@ -2157,7 +2276,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cbdb1b0ae9215000d50e105": {
         "ItemID": "5cbdb1b0ae9215000d50e105",
@@ -2175,7 +2295,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5ea03e9400685063ec28bfa4": {
         "ItemID": "5ea03e9400685063ec28bfa4",
@@ -2193,7 +2314,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b7d645e5acfc400170e2f90": {
         "ItemID": "5b7d645e5acfc400170e2f90",
@@ -2211,7 +2333,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c503af12e221602b177ca02": {
         "ItemID": "5c503af12e221602b177ca02",
@@ -2229,7 +2352,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fb655a72b1b027b1f50bd06": {
         "ItemID": "5fb655a72b1b027b1f50bd06",
@@ -2247,7 +2371,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c5db6ee2e221600113fba54": {
         "ItemID": "5c5db6ee2e221600113fba54",
@@ -2265,7 +2390,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5de655be4a9f347bc92edb88": {
         "ItemID": "5de655be4a9f347bc92edb88",
@@ -2283,7 +2409,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "625eb0faa6e3a82193267ad9": {
         "ItemID": "625eb0faa6e3a82193267ad9",
@@ -2301,7 +2428,8 @@
         "BlocksFolding": true,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5d120a28d7ad1a1c8962e295": {
         "ItemID": "5d120a28d7ad1a1c8962e295",
@@ -2319,7 +2447,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "618167441cb55961fa0fdc71": {
         "ItemID": "618167441cb55961fa0fdc71",
@@ -2337,7 +2466,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5beec8b20db834001961942a": {
         "ItemID": "5beec8b20db834001961942a",
@@ -2355,7 +2485,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bae13bad4351e00320204af": {
         "ItemID": "5bae13bad4351e00320204af",
@@ -2373,7 +2504,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "58d2947686f774485c6a1ee5": {
         "ItemID": "58d2947686f774485c6a1ee5",
@@ -2391,7 +2523,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "56083be64bdc2d20478b456f": {
         "ItemID": "56083be64bdc2d20478b456f",
@@ -2409,7 +2542,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bfd35380db83400232fe5cc": {
         "ItemID": "5bfd35380db83400232fe5cc",
@@ -2427,7 +2561,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "61816734d8e3106d9806c1f3": {
         "ItemID": "61816734d8e3106d9806c1f3",
@@ -2445,7 +2580,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cc700d4e4a949000f0f0f28": {
         "ItemID": "5cc700d4e4a949000f0f0f28",
@@ -2463,7 +2599,8 @@
         "BlocksFolding": true,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5addc7ac5acfc400194dbd90": {
         "ItemID": "5addc7ac5acfc400194dbd90",
@@ -2481,7 +2618,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "627254cc9c563e6e442c398f": {
         "ItemID": "627254cc9c563e6e442c398f",
@@ -2499,7 +2637,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5adf23995acfc400185c2aeb": {
         "ItemID": "5adf23995acfc400185c2aeb",
@@ -2517,7 +2656,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "62811e2510e26c1f344e6554": {
         "ItemID": "62811e2510e26c1f344e6554",
@@ -2535,7 +2675,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "57c450252459772d28133253": {
         "ItemID": "57c450252459772d28133253",
@@ -2553,7 +2694,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bbdb870d4351e00367fb67d": {
         "ItemID": "5bbdb870d4351e00367fb67d",
@@ -2571,7 +2713,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bfd384c0db834001a6691d3": {
         "ItemID": "5bfd384c0db834001a6691d3",
@@ -2589,7 +2732,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "599851db86f77467372f0a18": {
         "ItemID": "599851db86f77467372f0a18",
@@ -2607,7 +2751,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "574dad8024597745964bf05c": {
         "ItemID": "574dad8024597745964bf05c",
@@ -2625,7 +2770,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cdeac42d7f00c000d36ba73": {
         "ItemID": "5cdeac42d7f00c000d36ba73",
@@ -2643,7 +2789,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cde739cd7f00c0010373bd3": {
         "ItemID": "5cde739cd7f00c0010373bd3",
@@ -2661,7 +2808,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "618167616ef05c2ce828f1a8": {
         "ItemID": "618167616ef05c2ce828f1a8",
@@ -2679,7 +2827,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "606587e18900dc2d9a55b65f": {
         "ItemID": "606587e18900dc2d9a55b65f",
@@ -2697,7 +2846,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5ae096d95acfc400185c2c81": {
         "ItemID": "5ae096d95acfc400185c2c81",
@@ -2715,7 +2865,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "606eef756d0bd7580617baf8": {
         "ItemID": "606eef756d0bd7580617baf8",
@@ -2733,7 +2884,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c793fde2e221601da358614": {
         "ItemID": "5c793fde2e221601da358614",
@@ -2751,7 +2903,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5f63405df5750b524b45f114": {
         "ItemID": "5f63405df5750b524b45f114",
@@ -2769,7 +2922,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fb6558ad6f0b2136f2d7eb7": {
         "ItemID": "5fb6558ad6f0b2136f2d7eb7",
@@ -2787,7 +2941,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c793fc42e221600114ca25d": {
         "ItemID": "5c793fc42e221600114ca25d",
@@ -2805,7 +2960,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c793fb92e221644f31bfb64": {
         "ItemID": "5c793fb92e221644f31bfb64",
@@ -2823,7 +2979,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a788169c5856700142fdd9e": {
         "ItemID": "5a788169c5856700142fdd9e",
@@ -2841,7 +2998,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cde77a9d7f00c000f261009": {
         "ItemID": "5cde77a9d7f00c000f261009",
@@ -2859,7 +3017,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "61825d06d92c473c770215de": {
         "ItemID": "61825d06d92c473c770215de",
@@ -2877,7 +3036,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5aaf8e43e5b5b00015693246": {
         "ItemID": "5aaf8e43e5b5b00015693246",
@@ -2895,7 +3055,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "62811e335631d45211793c95": {
         "ItemID": "62811e335631d45211793c95",
@@ -2913,7 +3074,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "628a6678ccaab13006640e49": {
         "ItemID": "628a6678ccaab13006640e49",
@@ -2931,7 +3093,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5ef1ba28c64c5d0dfc0571a5": {
         "ItemID": "5ef1ba28c64c5d0dfc0571a5",
@@ -2949,7 +3112,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "61715e7e67085e45ef140b33": {
         "ItemID": "61715e7e67085e45ef140b33",
@@ -2967,7 +3131,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "606f262c6d0bd7580617bafa": {
         "ItemID": "606f262c6d0bd7580617bafa",
@@ -2985,7 +3150,8 @@
         "BlocksFolding": true,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "606f263a8900dc2d9a55b68d": {
         "ItemID": "606f263a8900dc2d9a55b68d",
@@ -3003,7 +3169,8 @@
         "BlocksFolding": true,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5cf13123d7f00c1085616a50": {
         "ItemID": "5cf13123d7f00c1085616a50",
@@ -3021,7 +3188,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "61825d24d3a39d50044c13af": {
         "ItemID": "61825d24d3a39d50044c13af",
@@ -3039,7 +3207,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "6259c3387d6aab70bc23a18d": {
         "ItemID": "6259c3387d6aab70bc23a18d",
@@ -3057,7 +3226,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bfd36290db834001966869a": {
         "ItemID": "5bfd36290db834001966869a",
@@ -3075,7 +3245,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "62811f828193841aca4a45c3": {
         "ItemID": "62811f828193841aca4a45c3",
@@ -3093,7 +3264,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bfd36ad0db834001c38ef66": {
         "ItemID": "5bfd36ad0db834001c38ef66",
@@ -3111,7 +3283,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bfeb32b0db834001a6694d9": {
         "ItemID": "5bfeb32b0db834001a6694d9",
@@ -3129,7 +3302,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "618167528004cc50514c34f9": {
         "ItemID": "618167528004cc50514c34f9",
@@ -3147,7 +3321,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5bfd37c80db834001d23e842": {
         "ItemID": "5bfd37c80db834001d23e842",
@@ -3165,7 +3340,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "61825d136ef05c2ce828f1cc": {
         "ItemID": "61825d136ef05c2ce828f1cc",
@@ -3183,7 +3359,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "606ef0812535c57a13424d20": {
         "ItemID": "606ef0812535c57a13424d20",
@@ -3201,7 +3378,8 @@
         "BlocksFolding": true,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b099bf25acfc4001637e683": {
         "ItemID": "5b099bf25acfc4001637e683",
@@ -3219,7 +3397,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b7d63cf5acfc4001876c8df": {
         "ItemID": "5b7d63cf5acfc4001876c8df",
@@ -3237,7 +3416,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5b7d63de5acfc400170e2f8d": {
         "ItemID": "5b7d63de5acfc400170e2f8d",
@@ -3255,7 +3435,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "57616ca52459773c69055192": {
         "ItemID": "57616ca52459773c69055192",
@@ -3273,7 +3454,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5afd7e095acfc40017541f61": {
         "ItemID": "5afd7e095acfc40017541f61",
@@ -3291,7 +3473,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5afd7ded5acfc40017541f5e": {
         "ItemID": "5afd7ded5acfc40017541f5e",
@@ -3309,7 +3492,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5df35e59c41b2312ea3334d5": {
         "ItemID": "5df35e59c41b2312ea3334d5",
@@ -3327,7 +3511,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5df35ddddfc58d14537c2036": {
         "ItemID": "5df35ddddfc58d14537c2036",
@@ -3345,7 +3530,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "626a8ae89e664a2e2a75f409": {
         "ItemID": "626a8ae89e664a2e2a75f409",
@@ -3363,7 +3549,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5c99f3592e221644fc633070": {
         "ItemID": "5c99f3592e221644fc633070",
@@ -3381,7 +3568,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5a38ef1fc4a282000b1521f6": {
         "ItemID": "5a38ef1fc4a282000b1521f6",
@@ -3399,7 +3587,8 @@
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false
     },
     "5fb655b748c711690e3a8d5a": {
         "ItemID": "5fb655b748c711690e3a8d5a",
@@ -3417,6 +3606,7 @@
         "BlocksFolding": true,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": true
     }
 }

@@ -264,10 +264,12 @@ class Mod {
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         // codegen.attTemplatesCodeGen();
-        // codegen.weapTempaltesCodeGen();
+        // codegen.weapTemplatesCodeGen();
+        // codegen.armorTemplatesCodeGen();
         codegen.pushToAllMods();
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
+        codegen.pushArmorToServer();
         // for (let i in tables.templates.items)
         // {
         //     if(tables.templates.items[i]._id === "5c82342f2e221644f31c060e")

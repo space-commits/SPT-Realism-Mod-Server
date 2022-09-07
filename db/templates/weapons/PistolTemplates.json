@@ -2,7 +2,7 @@
     "5cadc190ae921500103bb3b6": {
         "ItemID": "5cadc190ae921500103bb3b6",
         "Name": "weapon_beretta_m9a3_9x19",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -28,12 +28,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5e81c3cbac2bb513793cdc75": {
         "ItemID": "5e81c3cbac2bb513793cdc75",
         "Name": "weapon_colt_m1911a1_1143x23",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -59,12 +60,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5f36a0e5fbf956000b716b65": {
         "ItemID": "5f36a0e5fbf956000b716b65",
         "Name": "weapon_colt_m45a1_1143x23",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -90,12 +92,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5d3eb3b0a4b93615055e84d2": {
         "ItemID": "5d3eb3b0a4b93615055e84d2",
         "Name": "weapon_fn_five_seven_57x28",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -121,12 +124,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5d67abc1a4b93614ec50137f": {
         "ItemID": "5d67abc1a4b93614ec50137f",
         "Name": "weapon_fn_five_seven_57x28_fde",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -152,12 +156,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5a7ae0c351dfba0017554310": {
         "ItemID": "5a7ae0c351dfba0017554310",
         "Name": "weapon_glock_glock_17_gen3_9x19",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -183,12 +188,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5b1fa9b25acfc40018633c01": {
         "ItemID": "5b1fa9b25acfc40018633c01",
         "Name": "weapon_glock_glock_18c_gen3_9x19",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -214,12 +220,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "6193a720f8ee7e52e42109ed": {
         "ItemID": "6193a720f8ee7e52e42109ed",
         "Name": "weapon_hk_usp_45",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -245,12 +252,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "602a9740da11d6478d5a06dc": {
         "ItemID": "602a9740da11d6478d5a06dc",
         "Name": "weapon_izhmash_pl15_9x19",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -276,12 +284,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "576a581d2459771e7b1bc4f1": {
         "ItemID": "576a581d2459771e7b1bc4f1",
         "Name": "weapon_izhmeh_mp443_9x19",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -307,12 +316,13 @@
         "ShotgunDispersion": 10,
         "Velocity": -1.74,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5448bd6b4bdc2dfc2f8b4569": {
         "ItemID": "5448bd6b4bdc2dfc2f8b4569",
         "Name": "weapon_izhmeh_pm_9x18pm",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -338,12 +348,13 @@
         "ShotgunDispersion": 10,
         "Velocity": -4.54,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "579204f224597773d619e051": {
         "ItemID": "579204f224597773d619e051",
         "Name": "weapon_izhmeh_pm_treaded_9x18pm",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -369,12 +380,13 @@
         "ShotgunDispersion": 10,
         "Velocity": -4.54,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5a17f98cfcdbcb0980087290": {
         "ItemID": "5a17f98cfcdbcb0980087290",
         "Name": "weapon_molot_aps_9x18pm",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -400,12 +412,13 @@
         "ShotgunDispersion": 0,
         "Velocity": -4.54,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "56d59856d2720bd8418b456a": {
         "ItemID": "56d59856d2720bd8418b456a",
         "Name": "weapon_sig_p226r_9x19",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -431,12 +444,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "56e0598dd2720bb5668b45a6": {
         "ItemID": "56e0598dd2720bb5668b45a6",
         "Name": "weapon_tochmash_pb_9x18pm",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -462,12 +476,13 @@
         "ShotgunDispersion": 10,
         "Velocity": -13.12,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "59f98b4986f7746f546d2cef": {
         "ItemID": "59f98b4986f7746f546d2cef",
         "Name": "weapon_tochmash_sr1mp_9x21",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -493,12 +508,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0.1,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5abccb7dd8ce87001773e277": {
         "ItemID": "5abccb7dd8ce87001773e277",
         "Name": "weapon_toz_apb_9x18pm",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -524,12 +540,13 @@
         "ShotgunDispersion": 0,
         "Velocity": -4.54,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "571a12c42459771f627b58a0": {
         "ItemID": "571a12c42459771f627b58a0",
         "Name": "weapon_toz_tt_762x25tt",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -555,12 +572,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5b3b713c5acfc4330140bd8d": {
         "ItemID": "5b3b713c5acfc4330140bd8d",
         "Name": "weapon_toz_tt_762x25tt_gold",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -586,12 +604,13 @@
         "ShotgunDispersion": 10,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "624c2e8614da335f1e034d8c": {
         "ItemID": "624c2e8614da335f1e034d8c",
         "Name": "weapon_chiappa_rhino_200ds_9x19",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -617,12 +636,13 @@
         "ShotgunDispersion": 20,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "61a4c8884f95bc3b2c5dc96f": {
         "ItemID": "61a4c8884f95bc3b2c5dc96f",
         "Name": "weapon_chiappa_rhino_50ds_9x33R",
-        "WeapType": "",
+        "WeapType": "pistol",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -648,6 +668,7 @@
         "ShotgunDispersion": 20,
         "Velocity": 20,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     }
 }

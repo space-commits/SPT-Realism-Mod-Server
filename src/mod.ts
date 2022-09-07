@@ -339,11 +339,13 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
 
         // codegen.attTemplatesCodeGen();
-        // codegen.weapTempaltesCodeGen();
+        // codegen.weapTemplatesCodeGen();
+        // codegen.armorTemplatesCodeGen();
 
         codegen.pushToAllMods();
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
+        codegen.pushArmorToServer();
 
         // for (let i in tables.templates.items)
         // {

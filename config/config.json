@@ -65,6 +65,6 @@
     "all_bear": false,
     "dev_mode": false,
     "guarantee_boss_spawn": false,
-    "disable_flea_blacklist": false,
+    "disable_flea_blacklist": true,
     "logEverything": false
 }

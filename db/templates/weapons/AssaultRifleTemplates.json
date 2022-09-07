@@ -28,7 +28,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "606587252535c57a13424cfd": {
         "ItemID": "606587252535c57a13424cfd",
@@ -59,7 +60,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "628b5638ad252a16da6dd245": {
         "ItemID": "628b5638ad252a16da6dd245",
@@ -90,7 +92,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5a0ec13bfcdbcb00165aa685": {
         "ItemID": "5a0ec13bfcdbcb00165aa685",
@@ -121,7 +124,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5abcbc27d8ce8700182eceeb": {
         "ItemID": "5abcbc27d8ce8700182eceeb",
@@ -152,7 +156,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5bf3e0490db83400196199af": {
         "ItemID": "5bf3e0490db83400196199af",
@@ -183,7 +188,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5ab8e9fcd8ce870019439434": {
         "ItemID": "5ab8e9fcd8ce870019439434",
@@ -214,7 +220,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5bf3e03b0db834001d2c4a9c": {
         "ItemID": "5bf3e03b0db834001d2c4a9c",
@@ -245,7 +252,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5ac66cb05acfc40198510a10": {
         "ItemID": "5ac66cb05acfc40198510a10",
@@ -276,7 +284,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5b0bbe4e5acfc40dc528a72d": {
         "ItemID": "5b0bbe4e5acfc40dc528a72d",
@@ -307,7 +316,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "6184055050224f204c1da540": {
         "ItemID": "6184055050224f204c1da540",
@@ -338,7 +348,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "618428466ef05c2ce828f218": {
         "ItemID": "618428466ef05c2ce828f218",
@@ -369,7 +380,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "583990e32459771419544dd2": {
         "ItemID": "583990e32459771419544dd2",
@@ -400,7 +412,8 @@
         "ShotgunDispersion": 0,
         "Velocity": -17.9,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5c488a752e221602b412af63": {
         "ItemID": "5c488a752e221602b412af63",
@@ -431,7 +444,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0.7,
-        "RecoilHandDamping": 0.65
+        "RecoilHandDamping": 0.65,
+        "WeaponAllowADS": false
     },
     "5dcbd56fdbd3d91b3e5468d5": {
         "ItemID": "5dcbd56fdbd3d91b3e5468d5",
@@ -462,7 +476,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "57dc2fa62459775949412633": {
         "ItemID": "57dc2fa62459775949412633",
@@ -493,7 +508,8 @@
         "ShotgunDispersion": 0,
         "Velocity": -17.9,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5839a40f24597726f856b511": {
         "ItemID": "5839a40f24597726f856b511",
@@ -524,7 +540,8 @@
         "ShotgunDispersion": 0,
         "Velocity": -17.9,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5ac4cd105acfc40016339859": {
         "ItemID": "5ac4cd105acfc40016339859",
@@ -555,7 +572,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "6165ac306ef05c2ce828ef74": {
         "ItemID": "6165ac306ef05c2ce828ef74",
@@ -586,7 +604,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "623063e994fc3f7b302a9696": {
         "ItemID": "623063e994fc3f7b302a9696",
@@ -617,7 +636,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5c07c60e0db834002330051f": {
         "ItemID": "5c07c60e0db834002330051f",
@@ -648,7 +668,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5cadfbf7ae92152ac412eeef": {
         "ItemID": "5cadfbf7ae92152ac412eeef",
@@ -679,7 +700,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.1,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "59d6088586f774275f37482f": {
         "ItemID": "59d6088586f774275f37482f",
@@ -710,7 +732,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5447a9cd4bdc2dbd208b4567": {
         "ItemID": "5447a9cd4bdc2dbd208b4567",
@@ -741,7 +764,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0.7,
-        "RecoilHandDamping": 0.65
+        "RecoilHandDamping": 0.65,
+        "WeaponAllowADS": false
     },
     "6183afd850224f204c1da514": {
         "ItemID": "6183afd850224f204c1da514",
@@ -772,7 +796,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5ac66d725acfc43b321d4b60": {
         "ItemID": "5ac66d725acfc43b321d4b60",
@@ -803,7 +828,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "628b9c37a733087d0d7fe84b": {
         "ItemID": "628b9c37a733087d0d7fe84b",
@@ -834,7 +860,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "59ff346386f77477562ff5e2": {
         "ItemID": "59ff346386f77477562ff5e2",
@@ -865,7 +892,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5fbcc1d9016cce60e8341ab3": {
         "ItemID": "5fbcc1d9016cce60e8341ab3",
@@ -896,7 +924,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5ae083b25acfc4001a5fc702": {
         "ItemID": "5ae083b25acfc4001a5fc702",
@@ -927,7 +956,8 @@
         "ShotgunDispersion": 10,
         "Velocity": -4.54,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5ac66d9b5acfc4001633997a": {
         "ItemID": "5ac66d9b5acfc4001633997a",
@@ -958,7 +988,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5ac66d015acfc400180ae6e4": {
         "ItemID": "5ac66d015acfc400180ae6e4",
@@ -989,7 +1020,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5ac66d2e5acfc43b321d4b53": {
         "ItemID": "5ac66d2e5acfc43b321d4b53",
@@ -1020,7 +1052,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5bb2475ed4351e00853264e3": {
         "ItemID": "5bb2475ed4351e00853264e3",
@@ -1051,7 +1084,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5644bd2b4bdc2d3b4c8b4572": {
         "ItemID": "5644bd2b4bdc2d3b4c8b4572",
@@ -1082,7 +1116,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5d43021ca4b9362eab4b5e25": {
         "ItemID": "5d43021ca4b9362eab4b5e25",
@@ -1113,7 +1148,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "59e6152586f77473dc057aa1": {
         "ItemID": "59e6152586f77473dc057aa1",
@@ -1144,7 +1180,8 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "628a60ae6b1d481ff772e9c8": {
         "ItemID": "628a60ae6b1d481ff772e9c8",
@@ -1175,6 +1212,7 @@
         "ShotgunDispersion": 0,
         "Velocity": 1.8,
         "RecoilDamping": 0,
-        "RecoilHandDamping": 0
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     }
 }

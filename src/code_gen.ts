@@ -7,7 +7,8 @@ import { Helper } from "./helper";
 
 const magazineJSON = require("../db/bots/loadouts/magazines.json");
 
-
+const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
+const HeadArmorTemplates = require("../db/templates/armor/HeadArmorTemplates.json");
 
 const MuzzleDeviceTemplates = require("../db/templates/attatchments/MuzzleDeviceTemplates.json");
 const BarrelTemplates = require("../db/templates/attatchments/BarrelTemplates.json");
@@ -24,7 +25,6 @@ const PistolGripTemplates = require("../db/templates/attatchments/PistolGripTemp
 const GasblockTemplates = require("../db/templates/attatchments/GasblockTemplates.json");
 const HandguardTemplates = require("../db/templates/attatchments/HandguardTemplates.json");
 const FlashlightLaserTemplates = require("../db/templates/attatchments/FlashlightLaserTemplates.json");
-const UncategorizedModTemplates = require("../db/templates/attatchments/UncategorizedModTemplates.json");
 
 const AssaultRifleTemplates = require("../db/templates/weapons/AssaultRifleTemplates.json");
 const AssaultCarbineTemplates = require("../db/templates/weapons/AssaultCarbineTemplates.json");
@@ -36,7 +36,7 @@ const SMGTemplates = require("../db/templates/weapons/SMGTemplates.json");
 const SniperRifleTemplates = require("../db/templates/weapons/SniperRifleTemplates.json");
 const SpecialWeaponTemplates = require("../db/templates/weapons/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../db/templates/weapons/GrenadeLauncherTemplates.json");
-const UncategorizedWeaponTemplates = require("../db/templates/weapons/UncategorizedWeaponTemplates.json");
+
 
 
 export class CodeGen {
@@ -57,7 +57,26 @@ export class CodeGen {
         }
     }
 
-    public weapTempaltesCodeGen() {
+    public armorTemplatesCodeGen() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === "57bef4c42459772e8d35a53b") {
+                if(serverItem._props.HasHinge == true)
+                {
+                    this.armorWriteToFile(FaceShieldTemplates, "FaceShieldTemplates", i, serverItem);
+                }
+                if(serverItem._props.armorZone !== undefined)
+                {
+                    if(serverItem._props.armorZone[0] === "Head")
+                    {
+                        this.armorWriteToFile(HeadArmorTemplates, "HeadArmorTemplates", i, serverItem);
+                    }
+                }
+            }
+        }
+    }
+
+    public weapTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._props.RecolDispersion) {
@@ -199,14 +218,40 @@ export class CodeGen {
         this.helper.saveToJSONFile(filePathObj, `db/templates/weapons/${filePathStr}.json`);
     }
 
+    private armorWriteToFile(filePathObj: object, filePathStr: string, index: string, serverItem: ITemplateItem) {
+        let fileItem = filePathObj[index];
+
+        filePathObj[index] = this.assignJSONToArmor(serverItem, fileItem)
+
+        this.helper.saveToJSONFile(filePathObj, `db/templates/armor/${filePathStr}.json`);
+    }
+
+    private assignJSONToArmor(serverItem: ITemplateItem, fileItem: any) {
+
+        // new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
+        if (fileItem) {
+            fileItem;
+            return fileItem;
+        }
+
+        let ItemID = serverItem._id;
+        let Name = serverItem._name;
+        let AllowADS = true;
+
+        let item = {
+            ItemID,
+            Name,
+            AllowADS
+        };
+        return item;
+    }
+
     private assignJSONToWeap(serverItem: ITemplateItem, fileItem: any) {
 
         // new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
             // fileItem.HeatFactor = serverItem._props.HeatFactor; You need to give it a value. If you set it to the server item's propety value, the new property will only appear if the server mod has that property
             fileItem;
-            fileItem.RecoilDamping = 0;
-            fileItem.RecoilHandDamping = 0;
             return fileItem;
         }
 
@@ -219,6 +264,7 @@ export class CodeGen {
         let RecoilDamping = 0;
         let RecoilHandDamping = 0;
         let HasShoulderContact = false;
+        let WeaponAllowADS = false;
         let Ergonomics = serverItem._props.Ergonomics
         let VerticalRecoil = serverItem._props.RecoilForceUp;
         let HorizontalRecoil = serverItem._props.RecoilForceBack;
@@ -240,7 +286,6 @@ export class CodeGen {
         let ShotgunDispersion = serverItem._props.shotgunDispersion;
         let Velocity = serverItem._props.Velocity;
 
-
         let item = {
             ItemID,
             Name,
@@ -251,6 +296,7 @@ export class CodeGen {
             RecoilDamping,
             RecoilHandDamping,
             HasShoulderContact,
+            WeaponAllowADS,
             Ergonomics,
             VerticalRecoil,
             HorizontalRecoil,
@@ -287,6 +333,7 @@ export class CodeGen {
             //     fileItem.VerticalRecoil = serverItem._props.Recoil;
             //     fileItem.HorizontalRecoil = serverItem._props.Recoil;
             //    }
+           
             fileItem;
             return fileItem;
         }
@@ -307,6 +354,7 @@ export class CodeGen {
         let Length = 0;
         let CanCylceSubs = false;
         let RecoilAngle = 0;
+        let StockAllowADS = false;
         let Ergonomics = serverItem._props.Ergonomics
         let Accuracy = serverItem._props.Accuracy
         let CenterOfImpact = serverItem._props.CenterOfImpact
@@ -467,7 +515,8 @@ export class CodeGen {
                 Ergonomics,
                 Accuracy,
                 HasShoulderContact,
-                BlocksFolding
+                BlocksFolding,
+                StockAllowADS
             };
             return item;
         }
@@ -686,11 +735,36 @@ export class CodeGen {
         this.logger.info("Pushed Weapon Stats to server");
     }
 
+    public pushArmorToServer() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === "57bef4c42459772e8d35a53b") {
+                for (let i in FaceShieldTemplates) {
+                    let fileItem = FaceShieldTemplates[i];
+                    this.armorPusherHelper(serverItem, fileItem);
+                }
+            }
+        }
+        this.logger.info("Pushed Armor Stats to server");
+    }
+
+    public armorPusherHelper(serverItem: any, fileItem: any) {
+        if (serverItem._id === fileItem.ItemID) {
+
+            var serverConfItems = serverItem._props.ConflictingItems;
+            var armorPropertyValues = [fileItem?.AllowADS?.toString() || "true"];
+
+            for (let j in armorPropertyValues) {
+                serverConfItems[j] = armorPropertyValues[j];
+            }
+        }
+    }
+
     public pushToAllMods() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
-                var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0"]
+                var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0", "0"]
                 var serverConfItems = serverItem._props.ConflictingItems;
                 var combinedArr = array.concat(serverConfItems)
                 serverItem._props.ConflictingItems = combinedArr;
@@ -716,7 +790,7 @@ export class CodeGen {
             var serverConfItems = serverItem._props.ConflictingItems;
             var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
             fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
-            fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0"];
+            fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", "false", fileItem?.StockAllowADS?.toString() || "false"];
 
             for (let j in modPropertyValues) {
                 serverConfItems[j] = modPropertyValues[j];
@@ -751,7 +825,7 @@ export class CodeGen {
 
             var serverConfItems = serverItem._props.ConflictingItems;
             var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "undefined", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
-            fileItem?.RecoilDamping?.toString() || "0", fileItem?.RecoilHandDamping?.toString() || "0"];
+            fileItem?.RecoilDamping?.toString() || "0", fileItem?.RecoilHandDamping?.toString() || "0", fileItem?.WeaponAllowADS?.toString() || "false"];
 
             for (let j in weapPropertyValues) {
                 serverConfItems[j] = weapPropertyValues[j];
