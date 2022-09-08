@@ -12,7 +12,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.038,
-        "CoolFactor": 0.968
+        "CoolFactor": 0.968,
+        "ConflictingItems": []
     },
     "5dcbd6b46ec07c0c4347a564": {
         "ItemID": "5dcbd6b46ec07c0c4347a564",
@@ -27,7 +28,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.038,
-        "CoolFactor": 0.968
+        "CoolFactor": 0.968,
+        "ConflictingItems": []
     },
     "5a788031c585673f2b5c1c79": {
         "ItemID": "5a788031c585673f2b5c1c79",
@@ -42,7 +44,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.022,
-        "CoolFactor": 0.989
+        "CoolFactor": 0.989,
+        "ConflictingItems": []
     },
     "62386b7153757417e93a4e9f": {
         "ItemID": "62386b7153757417e93a4e9f",
@@ -57,7 +60,11 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.05,
-        "CoolFactor": 1.056
+        "CoolFactor": 1.056,
+        "ConflictingItems": [
+            "622b379bf9cfc87d675d2de5",
+            "622b38c56762c718e457e246"
+        ]
     },
     "5c78f2492e221600114c9f04": {
         "ItemID": "5c78f2492e221600114c9f04",
@@ -72,7 +79,13 @@
         "Ergonomics": 12,
         "Accuracy": 0,
         "HeatFactor": 0.968,
-        "CoolFactor": 1.069
+        "CoolFactor": 1.069,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "57cffe20245977632f391a9d": {
         "ItemID": "57cffe20245977632f391a9d",
@@ -87,7 +100,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.053,
-        "CoolFactor": 1.018
+        "CoolFactor": 1.018,
+        "ConflictingItems": []
     },
     "59fb375986f7741b681b81a6": {
         "ItemID": "59fb375986f7741b681b81a6",
@@ -102,7 +116,8 @@
         "Ergonomics": 11,
         "Accuracy": 0,
         "HeatFactor": 0.943,
-        "CoolFactor": 1.04
+        "CoolFactor": 1.04,
+        "ConflictingItems": []
     },
     "57cffd8224597763b03fc609": {
         "ItemID": "57cffd8224597763b03fc609",
@@ -117,7 +132,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.053,
-        "CoolFactor": 1.018
+        "CoolFactor": 1.018,
+        "ConflictingItems": []
     },
     "5efaf417aeb21837e749c7f2": {
         "ItemID": "5efaf417aeb21837e749c7f2",
@@ -132,7 +148,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.906,
-        "CoolFactor": 1.082
+        "CoolFactor": 1.082,
+        "ConflictingItems": []
     },
     "5d123102d7ad1a004e475fe5": {
         "ItemID": "5d123102d7ad1a004e475fe5",
@@ -147,7 +164,12 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 1.023,
-        "CoolFactor": 1.067
+        "CoolFactor": 1.067,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570"
+        ]
     },
     "5eea21647547d6330471b3c9": {
         "ItemID": "5eea21647547d6330471b3c9",
@@ -162,7 +184,8 @@
         "Ergonomics": 13,
         "Accuracy": 0,
         "HeatFactor": 1.019,
-        "CoolFactor": 0.988
+        "CoolFactor": 0.988,
+        "ConflictingItems": []
     },
     "5f6331e097199b7db2128dc2": {
         "ItemID": "5f6331e097199b7db2128dc2",
@@ -177,7 +200,26 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.96,
-        "CoolFactor": 1.022
+        "CoolFactor": 1.022,
+        "ConflictingItems": [
+            "5947db3f86f77447880cf76f",
+            "57486e672459770abd687134",
+            "5649d9a14bdc2d79388b4580",
+            "5c82342f2e221644f31c060e",
+            "576fd4ec2459777f0b518431",
+            "5c82343a2e221644f31c0611",
+            "5cf638cbd7f00c06595bc936",
+            "5a7c74b3e899ef0014332c29",
+            "591ee00d86f774592f7b841e",
+            "5e569a2e56edd02abe09f280",
+            "5d0a29ead7ad1a0026013f27",
+            "57acb6222459771ec34b5cb0",
+            "5c61a40d2e2216001403158d",
+            "5c90c3622e221601da359851",
+            "5d2c76ed48f03532f2136169",
+            "5d2c770c48f0354b4a07c100",
+            "5d2c772c48f0355d95672c25"
+        ]
     },
     "57ffa9f4245977728561e844": {
         "ItemID": "57ffa9f4245977728561e844",
@@ -192,7 +234,8 @@
         "Ergonomics": 3,
         "Accuracy": 0,
         "HeatFactor": 0.994,
-        "CoolFactor": 0.97
+        "CoolFactor": 0.97,
+        "ConflictingItems": []
     },
     "5a788068c5856700137e4c8f": {
         "ItemID": "5a788068c5856700137e4c8f",
@@ -207,7 +250,8 @@
         "Ergonomics": 13,
         "Accuracy": 0,
         "HeatFactor": 1.025,
-        "CoolFactor": 0.981
+        "CoolFactor": 0.981,
+        "ConflictingItems": []
     },
     "57cffddc24597763133760c6": {
         "ItemID": "57cffddc24597763133760c6",
@@ -222,7 +266,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.053,
-        "CoolFactor": 1.018
+        "CoolFactor": 1.018,
+        "ConflictingItems": []
     },
     "5d4aaa54a4b9365392071170": {
         "ItemID": "5d4aaa54a4b9365392071170",
@@ -237,7 +282,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.986,
-        "CoolFactor": 1.032
+        "CoolFactor": 1.032,
+        "ConflictingItems": []
     },
     "5c471c6c2e221602b66cd9ae": {
         "ItemID": "5c471c6c2e221602b66cd9ae",
@@ -252,7 +298,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.994,
-        "CoolFactor": 1.008
+        "CoolFactor": 1.008,
+        "ConflictingItems": []
     },
     "5648ae314bdc2d3d1c8b457f": {
         "ItemID": "5648ae314bdc2d3d1c8b457f",
@@ -267,7 +314,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 1.032,
-        "CoolFactor": 1.035
+        "CoolFactor": 1.035,
+        "ConflictingItems": []
     },
     "5bb20de5d4351e0035629e59": {
         "ItemID": "5bb20de5d4351e0035629e59",
@@ -282,7 +330,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 0.976,
-        "CoolFactor": 1.01
+        "CoolFactor": 1.01,
+        "ConflictingItems": []
     },
     "5b80242286f77429445e0b47": {
         "ItemID": "5b80242286f77429445e0b47",
@@ -297,7 +346,13 @@
         "Ergonomics": 15,
         "Accuracy": 0,
         "HeatFactor": 0.952,
-        "CoolFactor": 1.092
+        "CoolFactor": 1.092,
+        "ConflictingItems": [
+            "615d8f8567085e45ef1409ca",
+            "5ac66d015acfc400180ae6e4",
+            "5ac66d725acfc43b321d4b60",
+            "5ac66d9b5acfc4001633997a"
+        ]
     },
     "5d4aaa73a4b9365392071175": {
         "ItemID": "5d4aaa73a4b9365392071175",
@@ -312,7 +367,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.986,
-        "CoolFactor": 1.032
+        "CoolFactor": 1.032,
+        "ConflictingItems": []
     },
     "62386b2adf47d66e835094b2": {
         "ItemID": "62386b2adf47d66e835094b2",
@@ -327,7 +383,12 @@
         "Ergonomics": 12,
         "Accuracy": 0,
         "HeatFactor": 1.07,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "ConflictingItems": [
+            "5a7dbfc1159bd40016548fde",
+            "622b3858034a3e17ad0b81f5",
+            "622b38c56762c718e457e246"
+        ]
     },
     "55d45f484bdc2d972f8b456d": {
         "ItemID": "55d45f484bdc2d972f8b456d",
@@ -342,7 +403,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 1.027,
-        "CoolFactor": 0.97
+        "CoolFactor": 0.97,
+        "ConflictingItems": []
     },
     "5c17664f2e2216398b5a7e3c": {
         "ItemID": "5c17664f2e2216398b5a7e3c",
@@ -357,7 +419,12 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.93,
-        "CoolFactor": 1.02
+        "CoolFactor": 1.02,
+        "ConflictingItems": [
+            "5ac66d015acfc400180ae6e4",
+            "5ac66d725acfc43b321d4b60",
+            "5ac66d9b5acfc4001633997a"
+        ]
     },
     "55d459824bdc2d892f8b4573": {
         "ItemID": "55d459824bdc2d892f8b4573",
@@ -372,7 +439,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.032,
-        "CoolFactor": 1.012
+        "CoolFactor": 1.012,
+        "ConflictingItems": []
     },
     "5648b4534bdc2d3d1c8b4580": {
         "ItemID": "5648b4534bdc2d3d1c8b4580",
@@ -387,7 +455,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 0.968,
-        "CoolFactor": 1.051
+        "CoolFactor": 1.051,
+        "ConflictingItems": []
     },
     "5648b0744bdc2d363b8b4578": {
         "ItemID": "5648b0744bdc2d363b8b4578",
@@ -402,7 +471,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 1.054,
-        "CoolFactor": 0.95
+        "CoolFactor": 0.95,
+        "ConflictingItems": []
     },
     "5c617a5f2e2216000f1e81b3": {
         "ItemID": "5c617a5f2e2216000f1e81b3",
@@ -417,7 +487,8 @@
         "Ergonomics": 3,
         "Accuracy": 0,
         "HeatFactor": 1.023,
-        "CoolFactor": 1.006
+        "CoolFactor": 1.006,
+        "ConflictingItems": []
     },
     "57cff947245977638e6f2a19": {
         "ItemID": "57cff947245977638e6f2a19",
@@ -432,7 +503,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.053,
-        "CoolFactor": 1.018
+        "CoolFactor": 1.018,
+        "ConflictingItems": []
     },
     "5d010d1cd7ad1a59283b1ce7": {
         "ItemID": "5d010d1cd7ad1a59283b1ce7",
@@ -447,7 +519,8 @@
         "Ergonomics": 13,
         "Accuracy": 0,
         "HeatFactor": 0.98,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "ConflictingItems": []
     },
     "5a957c3fa2750c00137fa5f7": {
         "ItemID": "5a957c3fa2750c00137fa5f7",
@@ -462,7 +535,22 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.931,
-        "CoolFactor": 1.088
+        "CoolFactor": 1.088,
+        "ConflictingItems": [
+            "5947db3f86f77447880cf76f",
+            "6113d6c3290d254f5e6b27db",
+            "57486e672459770abd687134",
+            "5c82342f2e221644f31c060e",
+            "576fd4ec2459777f0b518431",
+            "5c82343a2e221644f31c0611",
+            "5cf638cbd7f00c06595bc936",
+            "5a7c74b3e899ef0014332c29",
+            "591ee00d86f774592f7b841e",
+            "5d0a29ead7ad1a0026013f27",
+            "57acb6222459771ec34b5cb0",
+            "5c61a40d2e2216001403158d",
+            "5c90c3622e221601da359851"
+        ]
     },
     "55f84c3c4bdc2d5f408b4576": {
         "ItemID": "55f84c3c4bdc2d5f408b4576",
@@ -477,7 +565,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.98,
-        "CoolFactor": 1.033
+        "CoolFactor": 1.033,
+        "ConflictingItems": []
     },
     "55d45d3f4bdc2d972f8b456c": {
         "ItemID": "55d45d3f4bdc2d972f8b456c",
@@ -492,7 +581,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.029,
-        "CoolFactor": 0.97
+        "CoolFactor": 0.97,
+        "ConflictingItems": []
     },
     "5b800e9286f7747a8b04f3ff": {
         "ItemID": "5b800e9286f7747a8b04f3ff",
@@ -507,7 +597,13 @@
         "Ergonomics": 14,
         "Accuracy": 0,
         "HeatFactor": 0.952,
-        "CoolFactor": 1.092
+        "CoolFactor": 1.092,
+        "ConflictingItems": [
+            "615d8f8567085e45ef1409ca",
+            "5ac66d015acfc400180ae6e4",
+            "5ac66d725acfc43b321d4b60",
+            "5ac66d9b5acfc4001633997a"
+        ]
     },
     "57cffe0024597763b03fc60b": {
         "ItemID": "57cffe0024597763b03fc60b",
@@ -522,7 +618,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.053,
-        "CoolFactor": 1.018
+        "CoolFactor": 1.018,
+        "ConflictingItems": []
     },
     "5d1b198cd7ad1a604869ad72": {
         "ItemID": "5d1b198cd7ad1a604869ad72",
@@ -537,7 +634,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.986,
-        "CoolFactor": 1.032
+        "CoolFactor": 1.032,
+        "ConflictingItems": []
     },
     "5cdaa99dd7f00c002412d0b2": {
         "ItemID": "5cdaa99dd7f00c002412d0b2",
@@ -552,7 +650,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.034,
-        "CoolFactor": 0.972
+        "CoolFactor": 0.972,
+        "ConflictingItems": []
     },
     "5c0e2f5cd174af02a012cfc9": {
         "ItemID": "5c0e2f5cd174af02a012cfc9",
@@ -567,7 +666,11 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 1.074,
-        "CoolFactor": 0.968
+        "CoolFactor": 0.968,
+        "ConflictingItems": [
+            "55d35ee94bdc2d61338b4568",
+            "55d3632e4bdc2d972f8b4569"
+        ]
     },
     "5926f34786f77469195bfe92": {
         "ItemID": "5926f34786f77469195bfe92",
@@ -582,7 +685,8 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 1.038,
-        "CoolFactor": 0.978
+        "CoolFactor": 0.978,
+        "ConflictingItems": []
     },
     "6231654c71b5bc3baa1078e5": {
         "ItemID": "6231654c71b5bc3baa1078e5",
@@ -597,7 +701,11 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.975,
-        "CoolFactor": 1.12
+        "CoolFactor": 1.12,
+        "ConflictingItems": [
+            "622b379bf9cfc87d675d2de5",
+            "622b3858034a3e17ad0b81f5"
+        ]
     },
     "61f7b85367ddd414173fdb36": {
         "ItemID": "61f7b85367ddd414173fdb36",
@@ -612,7 +720,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.075,
-        "CoolFactor": 0.924
+        "CoolFactor": 0.924,
+        "ConflictingItems": []
     },
     "61f8024263dc1250e26eb029": {
         "ItemID": "61f8024263dc1250e26eb029",
@@ -627,7 +736,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 1.044,
-        "CoolFactor": 0.942
+        "CoolFactor": 0.942,
+        "ConflictingItems": []
     },
     "5e5699df2161e06ac158df6f": {
         "ItemID": "5e5699df2161e06ac158df6f",
@@ -642,7 +752,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.99,
-        "CoolFactor": 1.107
+        "CoolFactor": 1.107,
+        "ConflictingItems": []
     },
     "5a329052c4a28200741e22d3": {
         "ItemID": "5a329052c4a28200741e22d3",
@@ -657,7 +768,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 0.975,
-        "CoolFactor": 1.038
+        "CoolFactor": 1.038,
+        "ConflictingItems": []
     },
     "5f2aa47a200e2c0ee46efa71": {
         "ItemID": "5f2aa47a200e2c0ee46efa71",
@@ -672,7 +784,8 @@
         "Ergonomics": 16,
         "Accuracy": 0,
         "HeatFactor": 1.018,
-        "CoolFactor": 1.053
+        "CoolFactor": 1.053,
+        "ConflictingItems": []
     },
     "5926c36d86f77467a92a8629": {
         "ItemID": "5926c36d86f77467a92a8629",
@@ -687,7 +800,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.03,
-        "CoolFactor": 0.982
+        "CoolFactor": 0.982,
+        "ConflictingItems": []
     },
     "5c9a25172e2216000f20314e": {
         "ItemID": "5c9a25172e2216000f20314e",
@@ -702,7 +816,13 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.944,
-        "CoolFactor": 1.079
+        "CoolFactor": 1.079,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "5b7bedd75acfc43d825283f9": {
         "ItemID": "5b7bedd75acfc43d825283f9",
@@ -717,7 +837,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.994,
-        "CoolFactor": 1.02
+        "CoolFactor": 1.02,
+        "ConflictingItems": []
     },
     "5df916dfbb49d91fb446d6b9": {
         "ItemID": "5df916dfbb49d91fb446d6b9",
@@ -732,7 +853,15 @@
         "Ergonomics": 7,
         "Accuracy": 1,
         "HeatFactor": 0.965,
-        "CoolFactor": 1.03
+        "CoolFactor": 1.03,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568",
+            "55d3632e4bdc2d972f8b4569",
+            "5c0e2f94d174af029f650d56"
+        ]
     },
     "5c9a1c3a2e2216000e69fb6a": {
         "ItemID": "5c9a1c3a2e2216000e69fb6a",
@@ -747,7 +876,10 @@
         "Ergonomics": 14,
         "Accuracy": 0,
         "HeatFactor": 1.072,
-        "CoolFactor": 1.027
+        "CoolFactor": 1.027,
+        "ConflictingItems": [
+            "59984ab886f7743e98271174"
+        ]
     },
     "5ae30db85acfc408fb139a05": {
         "ItemID": "5ae30db85acfc408fb139a05",
@@ -762,7 +894,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.062,
-        "CoolFactor": 0.978
+        "CoolFactor": 0.978,
+        "ConflictingItems": []
     },
     "5bb20df1d4351e00347787d5": {
         "ItemID": "5bb20df1d4351e00347787d5",
@@ -777,7 +910,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 0.976,
-        "CoolFactor": 1.01
+        "CoolFactor": 1.01,
+        "ConflictingItems": []
     },
     "5a9d56c8a2750c0032157146": {
         "ItemID": "5a9d56c8a2750c0032157146",
@@ -792,7 +926,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.966,
-        "CoolFactor": 1.02
+        "CoolFactor": 1.02,
+        "ConflictingItems": []
     },
     "5c9a07572e221644f31c4b32": {
         "ItemID": "5c9a07572e221644f31c4b32",
@@ -807,7 +942,10 @@
         "Ergonomics": 14,
         "Accuracy": 0,
         "HeatFactor": 1.072,
-        "CoolFactor": 1.027
+        "CoolFactor": 1.027,
+        "ConflictingItems": [
+            "59984ab886f7743e98271174"
+        ]
     },
     "5e848d51e4dbc5266a4ec63b": {
         "ItemID": "5e848d51e4dbc5266a4ec63b",
@@ -822,7 +960,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.018,
-        "CoolFactor": 0.981
+        "CoolFactor": 0.981,
+        "ConflictingItems": []
     },
     "5c6d10fa2e221600106f3f23": {
         "ItemID": "5c6d10fa2e221600106f3f23",
@@ -837,7 +976,8 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 0.986,
-        "CoolFactor": 1.07
+        "CoolFactor": 1.07,
+        "ConflictingItems": []
     },
     "619b5db699fb192e7430664f": {
         "ItemID": "619b5db699fb192e7430664f",
@@ -852,7 +992,13 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 0.953,
-        "CoolFactor": 1.072
+        "CoolFactor": 1.072,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "61712eae6c780c1e710c9a1d": {
         "ItemID": "61712eae6c780c1e710c9a1d",
@@ -867,7 +1013,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 1,
-        "CoolFactor": 1.056
+        "CoolFactor": 1.056,
+        "ConflictingItems": []
     },
     "56deed6ed2720b4c698b4583": {
         "ItemID": "56deed6ed2720b4c698b4583",
@@ -882,7 +1029,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.022,
-        "CoolFactor": 0.981
+        "CoolFactor": 0.981,
+        "ConflictingItems": []
     },
     "59e6284f86f77440d569536f": {
         "ItemID": "59e6284f86f77440d569536f",
@@ -897,7 +1045,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 1.054,
-        "CoolFactor": 0.95
+        "CoolFactor": 0.95,
+        "ConflictingItems": []
     },
     "5b7bee755acfc400196d5383": {
         "ItemID": "5b7bee755acfc400196d5383",
@@ -912,7 +1061,8 @@
         "Ergonomics": 14,
         "Accuracy": 0,
         "HeatFactor": 0.99,
-        "CoolFactor": 1.012
+        "CoolFactor": 1.012,
+        "ConflictingItems": []
     },
     "5648b1504bdc2d9d488b4584": {
         "ItemID": "5648b1504bdc2d9d488b4584",
@@ -927,7 +1077,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.045,
-        "CoolFactor": 0.962
+        "CoolFactor": 0.962,
+        "ConflictingItems": []
     },
     "5dfcd0e547101c39625f66f9": {
         "ItemID": "5dfcd0e547101c39625f66f9",
@@ -942,7 +1093,24 @@
         "Ergonomics": 11,
         "Accuracy": 0,
         "HeatFactor": 0.949,
-        "CoolFactor": 1.072
+        "CoolFactor": 1.072,
+        "ConflictingItems": [
+            "5947db3f86f77447880cf76f",
+            "57486e672459770abd687134",
+            "5c82342f2e221644f31c060e",
+            "576fd4ec2459777f0b518431",
+            "5c82343a2e221644f31c0611",
+            "5cf638cbd7f00c06595bc936",
+            "5a7c74b3e899ef0014332c29",
+            "591ee00d86f774592f7b841e",
+            "5e569a2e56edd02abe09f280",
+            "5d0a29ead7ad1a0026013f27",
+            "57acb6222459771ec34b5cb0",
+            "5dff8db859400025ea5150d4",
+            "5c61a40d2e2216001403158d",
+            "5c90c3622e221601da359851",
+            "5c471bd12e221602b4129c3a"
+        ]
     },
     "5c6d10e82e221601da357b07": {
         "ItemID": "5c6d10e82e221601da357b07",
@@ -957,7 +1125,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.977,
-        "CoolFactor": 1.008
+        "CoolFactor": 1.008,
+        "ConflictingItems": []
     },
     "5cbda9f4ae9215000e5b9bfc": {
         "ItemID": "5cbda9f4ae9215000e5b9bfc",
@@ -972,7 +1141,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.045,
-        "CoolFactor": 0.962
+        "CoolFactor": 0.962,
+        "ConflictingItems": []
     },
     "5e87076ce2db31558c75a11d": {
         "ItemID": "5e87076ce2db31558c75a11d",
@@ -987,7 +1157,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 1.024,
-        "CoolFactor": 0.982
+        "CoolFactor": 0.982,
+        "ConflictingItems": []
     },
     "6259c4347d6aab70bc23a190": {
         "ItemID": "6259c4347d6aab70bc23a190",
@@ -1002,7 +1173,8 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 1.02,
-        "CoolFactor": 0.99
+        "CoolFactor": 0.99,
+        "ConflictingItems": []
     },
     "5a9548c9159bd400133e97b3": {
         "ItemID": "5a9548c9159bd400133e97b3",
@@ -1017,7 +1189,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 1.02,
-        "CoolFactor": 0.994
+        "CoolFactor": 0.994,
+        "ConflictingItems": []
     },
     "59e898ee86f77427614bd225": {
         "ItemID": "59e898ee86f77427614bd225",
@@ -1032,7 +1205,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 1.054,
-        "CoolFactor": 0.95
+        "CoolFactor": 0.95,
+        "ConflictingItems": []
     },
     "5c9a26332e2216001219ea70": {
         "ItemID": "5c9a26332e2216001219ea70",
@@ -1047,7 +1221,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.988,
-        "CoolFactor": 1.039
+        "CoolFactor": 1.039,
+        "ConflictingItems": []
     },
     "5cbda392ae92155f3c17c39f": {
         "ItemID": "5cbda392ae92155f3c17c39f",
@@ -1062,7 +1237,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.045,
-        "CoolFactor": 0.962
+        "CoolFactor": 0.962,
+        "ConflictingItems": []
     },
     "6065880c132d4d12c81fd8da": {
         "ItemID": "6065880c132d4d12c81fd8da",
@@ -1077,7 +1253,11 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.975,
-        "CoolFactor": 1.08
+        "CoolFactor": 1.08,
+        "ConflictingItems": [
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570"
+        ]
     },
     "5a9d6d34a2750c00141e07da": {
         "ItemID": "5a9d6d34a2750c00141e07da",
@@ -1092,7 +1272,14 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 0.966,
-        "CoolFactor": 1.02
+        "CoolFactor": 1.02,
+        "ConflictingItems": [
+            "5ac66d015acfc400180ae6e4",
+            "5ac66d725acfc43b321d4b60",
+            "5ac66d9b5acfc4001633997a",
+            "59984ab886f7743e98271174",
+            "59f9cabd86f7743a10721f46"
+        ]
     },
     "5bb20dfcd4351e00334c9e24": {
         "ItemID": "5bb20dfcd4351e00334c9e24",
@@ -1107,7 +1294,12 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 0.985,
-        "CoolFactor": 1.006
+        "CoolFactor": 1.006,
+        "ConflictingItems": [
+            "5bb20d92d4351e00853263eb",
+            "5bb20d9cd4351e00334c9d8a",
+            "5bb20da5d4351e0035629dbf"
+        ]
     },
     "6065881d1246154cad35d637": {
         "ItemID": "6065881d1246154cad35d637",
@@ -1122,7 +1314,16 @@
         "Ergonomics": 5.5,
         "Accuracy": 0,
         "HeatFactor": 0.962,
-        "CoolFactor": 1.108
+        "CoolFactor": 1.108,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568",
+            "55d3632e4bdc2d972f8b4569",
+            "603372b4da11d6478d5a07ff",
+            "603372d154072b51b239f9e1"
+        ]
     },
     "628b916469015a4e1711ed8d": {
         "ItemID": "628b916469015a4e1711ed8d",
@@ -1137,7 +1338,8 @@
         "Ergonomics": 16,
         "Accuracy": 2,
         "HeatFactor": 1.08,
-        "CoolFactor": 1.06
+        "CoolFactor": 1.06,
+        "ConflictingItems": []
     },
     "595cfa8b86f77427437e845b": {
         "ItemID": "595cfa8b86f77427437e845b",
@@ -1152,7 +1354,11 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.942,
-        "CoolFactor": 1.06
+        "CoolFactor": 1.06,
+        "ConflictingItems": [
+            "5a9fbb84a2750c00137fa685",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "5c6d5d8b2e221644fc630b39": {
         "ItemID": "5c6d5d8b2e221644fc630b39",
@@ -1167,7 +1373,12 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 0.985,
-        "CoolFactor": 1.055
+        "CoolFactor": 1.055,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570"
+        ]
     },
     "6034e3cb0ddce744014cb870": {
         "ItemID": "6034e3cb0ddce744014cb870",
@@ -1182,7 +1393,12 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.978,
-        "CoolFactor": 1.076
+        "CoolFactor": 1.076,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570"
+        ]
     },
     "5c5db6302e2216000e5e47f0": {
         "ItemID": "5c5db6302e2216000e5e47f0",
@@ -1197,7 +1413,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 0.964,
-        "CoolFactor": 1.044
+        "CoolFactor": 1.044,
+        "ConflictingItems": []
     },
     "5d15ce51d7ad1a1eff619092": {
         "ItemID": "5d15ce51d7ad1a1eff619092",
@@ -1212,7 +1429,20 @@
         "Ergonomics": 3,
         "Accuracy": 0,
         "HeatFactor": 1.01,
-        "CoolFactor": 1.064
+        "CoolFactor": 1.064,
+        "ConflictingItems": [
+            "5ac72e945acfc43f3b691116",
+            "5ac7655e5acfc40016339a19",
+            "5649aa744bdc2ded0b8b457e",
+            "5f633f791b231926f2329f13",
+            "5943eeeb86f77412d6384f6b",
+            "5cc9a96cd7f00c011c04e04a",
+            "615d8f5dd92c473c770212ef",
+            "5649ab884bdc2ded0b8b457f",
+            "593d493f86f7745e6b2ceb22",
+            "57ffb0e42459777d047111c5",
+            "615d8f8567085e45ef1409ca"
+        ]
     },
     "5b7bebc85acfc43bca706666": {
         "ItemID": "5b7bebc85acfc43bca706666",
@@ -1227,7 +1457,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.028,
-        "CoolFactor": 1.024
+        "CoolFactor": 1.024,
+        "ConflictingItems": []
     },
     "5fbc226eca32ed67276c155d": {
         "ItemID": "5fbc226eca32ed67276c155d",
@@ -1242,7 +1473,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 0.973,
-        "CoolFactor": 1.022
+        "CoolFactor": 1.022,
+        "ConflictingItems": []
     },
     "595cf16b86f77427440c32e2": {
         "ItemID": "595cf16b86f77427440c32e2",
@@ -1257,7 +1489,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 0.95,
-        "CoolFactor": 1.02
+        "CoolFactor": 1.02,
+        "ConflictingItems": []
     },
     "5cde7afdd7f00c000d36b89d": {
         "ItemID": "5cde7afdd7f00c000d36b89d",
@@ -1272,7 +1505,10 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.965,
-        "CoolFactor": 1.008
+        "CoolFactor": 1.008,
+        "ConflictingItems": [
+            "5bfebc530db834001d23eb65"
+        ]
     },
     "5c59529a2e221602b177d160": {
         "ItemID": "5c59529a2e221602b177d160",
@@ -1287,7 +1523,8 @@
         "Ergonomics": 12,
         "Accuracy": 0,
         "HeatFactor": 1.025,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "ConflictingItems": []
     },
     "5c78f2612e221600114c9f0d": {
         "ItemID": "5c78f2612e221600114c9f0d",
@@ -1302,7 +1539,16 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.965,
-        "CoolFactor": 1.044
+        "CoolFactor": 1.044,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d3632e4bdc2d972f8b4569",
+            "5d440b93a4b9364276578d4b",
+            "5d440b9fa4b93601354d480c",
+            "5c0e2f94d174af029f650d56"
+        ]
     },
     "588b56d02459771481110ae2": {
         "ItemID": "588b56d02459771481110ae2",
@@ -1317,7 +1563,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.98,
-        "CoolFactor": 1.033
+        "CoolFactor": 1.033,
+        "ConflictingItems": []
     },
     "5c9a1c422e221600106f69f0": {
         "ItemID": "5c9a1c422e221600106f69f0",
@@ -1332,7 +1579,10 @@
         "Ergonomics": 14,
         "Accuracy": 0,
         "HeatFactor": 1.072,
-        "CoolFactor": 1.027
+        "CoolFactor": 1.027,
+        "ConflictingItems": [
+            "59984ab886f7743e98271174"
+        ]
     },
     "5888976c24597754281f93f5": {
         "ItemID": "5888976c24597754281f93f5",
@@ -1347,7 +1597,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 0.992,
-        "CoolFactor": 1.041
+        "CoolFactor": 1.041,
+        "ConflictingItems": []
     },
     "5d19cd96d7ad1a4a992c9f52": {
         "ItemID": "5d19cd96d7ad1a4a992c9f52",
@@ -1362,7 +1613,8 @@
         "Ergonomics": 11,
         "Accuracy": 0,
         "HeatFactor": 0.975,
-        "CoolFactor": 1.069
+        "CoolFactor": 1.069,
+        "ConflictingItems": []
     },
     "6034e3d953a60014f970617b": {
         "ItemID": "6034e3d953a60014f970617b",
@@ -1377,7 +1629,16 @@
         "Ergonomics": 5.5,
         "Accuracy": 0,
         "HeatFactor": 0.986,
-        "CoolFactor": 1.135
+        "CoolFactor": 1.135,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568",
+            "55d3632e4bdc2d972f8b4569",
+            "603372b4da11d6478d5a07ff",
+            "603372d154072b51b239f9e1"
+        ]
     },
     "5c78f26f2e221601da3581d1": {
         "ItemID": "5c78f26f2e221601da3581d1",
@@ -1392,7 +1653,12 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.064,
-        "CoolFactor": 1.021
+        "CoolFactor": 1.021,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "55d35ee94bdc2d61338b4568",
+            "55d3632e4bdc2d972f8b4569"
+        ]
     },
     "5fc235db2770a0045c59c683": {
         "ItemID": "5fc235db2770a0045c59c683",
@@ -1407,7 +1673,15 @@
         "Ergonomics": 7,
         "Accuracy": 1,
         "HeatFactor": 0.908,
-        "CoolFactor": 1.097
+        "CoolFactor": 1.097,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568",
+            "55d3632e4bdc2d972f8b4569",
+            "5c0e2f94d174af029f650d56"
+        ]
     },
     "5d2f259b48f0355a844acd74": {
         "ItemID": "5d2f259b48f0355a844acd74",
@@ -1422,7 +1696,8 @@
         "Ergonomics": 12,
         "Accuracy": 0,
         "HeatFactor": 1.042,
-        "CoolFactor": 0.961
+        "CoolFactor": 0.961,
+        "ConflictingItems": []
     },
     "5fbc227aa56d053a3543f79e": {
         "ItemID": "5fbc227aa56d053a3543f79e",
@@ -1437,7 +1712,21 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.962,
-        "CoolFactor": 1.031
+        "CoolFactor": 1.031,
+        "ConflictingItems": [
+            "5b7d693d5acfc43bca706a3d",
+            "5a34fd2bc4a282329a73b4c5",
+            "5d1f819086f7744b355c219b",
+            "5dcbe965e4ed22586443a79d",
+            "5dfa3cd1b33c0951220c079b",
+            "5cdd7685d7f00c000f260ed2",
+            "5c878e9d2e2216000f201903",
+            "5d02677ad7ad1a04a15c0f95",
+            "5bbdb8bdd4351e4502011460",
+            "5cdd7693d7f00c0010373aa5",
+            "5d443f8fa4b93678dd4a01aa",
+            "5cf78496d7f00c065703d6ca"
+        ]
     },
     "5b7bed205acfc400161d08cc": {
         "ItemID": "5b7bed205acfc400161d08cc",
@@ -1452,7 +1741,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 1.038,
-        "CoolFactor": 0.975
+        "CoolFactor": 0.975,
+        "ConflictingItems": []
     },
     "5c5db63a2e2216000f1b284a": {
         "ItemID": "5c5db63a2e2216000f1b284a",
@@ -1467,7 +1757,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.952,
-        "CoolFactor": 1.032
+        "CoolFactor": 1.032,
+        "ConflictingItems": []
     },
     "59d64f2f86f77417193ef8b3": {
         "ItemID": "59d64f2f86f77417193ef8b3",
@@ -1482,7 +1773,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 1.054,
-        "CoolFactor": 0.95
+        "CoolFactor": 0.95,
+        "ConflictingItems": []
     },
     "6034e3e20ddce744014cb878": {
         "ItemID": "6034e3e20ddce744014cb878",
@@ -1497,7 +1789,14 @@
         "Ergonomics": 6.5,
         "Accuracy": 0,
         "HeatFactor": 0.982,
-        "CoolFactor": 1.115
+        "CoolFactor": 1.115,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568",
+            "603372b4da11d6478d5a07ff"
+        ]
     },
     "5c6d11072e2216000e69d2e4": {
         "ItemID": "5c6d11072e2216000e69d2e4",
@@ -1512,7 +1811,12 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.969,
-        "CoolFactor": 1.103
+        "CoolFactor": 1.103,
+        "ConflictingItems": [
+            "5c6d85e02e22165df16b81f4",
+            "5bb20d92d4351e00853263eb",
+            "5bb20d9cd4351e00334c9d8a"
+        ]
     },
     "5d122e7bd7ad1a07102d6d7f": {
         "ItemID": "5d122e7bd7ad1a07102d6d7f",
@@ -1527,7 +1831,13 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.942,
-        "CoolFactor": 1.084
+        "CoolFactor": 1.084,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "5c5db5f22e2216000e5e47e8": {
         "ItemID": "5c5db5f22e2216000e5e47e8",
@@ -1542,7 +1852,8 @@
         "Ergonomics": 15,
         "Accuracy": 0,
         "HeatFactor": 0.991,
-        "CoolFactor": 1.004
+        "CoolFactor": 1.004,
+        "ConflictingItems": []
     },
     "5d00e0cbd7ad1a6c6566a42d": {
         "ItemID": "5d00e0cbd7ad1a6c6566a42d",
@@ -1557,7 +1868,10 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.027,
-        "CoolFactor": 1.041
+        "CoolFactor": 1.041,
+        "ConflictingItems": [
+            "5c0e2f94d174af029f650d56"
+        ]
     },
     "6123649463849f3d843da7c4": {
         "ItemID": "6123649463849f3d843da7c4",
@@ -1572,7 +1886,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.026,
-        "CoolFactor": 0.964
+        "CoolFactor": 0.964,
+        "ConflictingItems": []
     },
     "5c6c2c9c2e2216000f2002e4": {
         "ItemID": "5c6c2c9c2e2216000f2002e4",
@@ -1587,7 +1902,8 @@
         "Ergonomics": 14,
         "Accuracy": 0,
         "HeatFactor": 1.017,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "ConflictingItems": []
     },
     "5c6d11152e2216000f2003e7": {
         "ItemID": "5c6d11152e2216000f2003e7",
@@ -1602,7 +1918,8 @@
         "Ergonomics": 11,
         "Accuracy": 0,
         "HeatFactor": 0.958,
-        "CoolFactor": 1.025
+        "CoolFactor": 1.025,
+        "ConflictingItems": []
     },
     "57dc32dc245977596d4ef3d3": {
         "ItemID": "57dc32dc245977596d4ef3d3",
@@ -1617,7 +1934,8 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 1.052,
-        "CoolFactor": 0.953
+        "CoolFactor": 0.953,
+        "ConflictingItems": []
     },
     "5a788089c5856700142fdd9c": {
         "ItemID": "5a788089c5856700142fdd9c",
@@ -1632,7 +1950,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 1.02,
-        "CoolFactor": 0.99
+        "CoolFactor": 0.99,
+        "ConflictingItems": []
     },
     "5d2c829448f0353a5c7d6674": {
         "ItemID": "5d2c829448f0353a5c7d6674",
@@ -1647,7 +1966,8 @@
         "Ergonomics": 3,
         "Accuracy": 0,
         "HeatFactor": 1.05,
-        "CoolFactor": 0.967
+        "CoolFactor": 0.967,
+        "ConflictingItems": []
     },
     "61703001d92c473c77021497": {
         "ItemID": "61703001d92c473c77021497",
@@ -1662,7 +1982,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.041,
-        "CoolFactor": 1.033
+        "CoolFactor": 1.033,
+        "ConflictingItems": []
     },
     "5cf4e3f3d7f00c06595bc7f0": {
         "ItemID": "5cf4e3f3d7f00c06595bc7f0",
@@ -1677,7 +1998,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 0.92,
-        "CoolFactor": 1.086
+        "CoolFactor": 1.086,
+        "ConflictingItems": []
     },
     "5d4405f0a4b9361e6a4e6bd9": {
         "ItemID": "5d4405f0a4b9361e6a4e6bd9",
@@ -1692,7 +2014,15 @@
         "Ergonomics": 11,
         "Accuracy": 1,
         "HeatFactor": 0.961,
-        "CoolFactor": 1.12
+        "CoolFactor": 1.12,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568",
+            "55d3632e4bdc2d972f8b4569",
+            "5c0e2f94d174af029f650d56"
+        ]
     },
     "5f6336bbda967c74a42e9932": {
         "ItemID": "5f6336bbda967c74a42e9932",
@@ -1707,7 +2037,12 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.018,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570"
+        ]
     },
     "5d00ede1d7ad1a0940739a76": {
         "ItemID": "5d00ede1d7ad1a0940739a76",
@@ -1722,7 +2057,13 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 0.955,
-        "CoolFactor": 1.05
+        "CoolFactor": 1.05,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "5ea16acdfadf1d18c87b0784": {
         "ItemID": "5ea16acdfadf1d18c87b0784",
@@ -1737,7 +2078,12 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 0.996,
-        "CoolFactor": 1.054
+        "CoolFactor": 1.054,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570"
+        ]
     },
     "5d00ef6dd7ad1a0940739b16": {
         "ItemID": "5d00ef6dd7ad1a0940739b16",
@@ -1752,7 +2098,13 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 0.94,
-        "CoolFactor": 1.046
+        "CoolFactor": 1.046,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "5b2cfa535acfc432ff4db7a0": {
         "ItemID": "5b2cfa535acfc432ff4db7a0",
@@ -1767,7 +2119,11 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 0.996,
-        "CoolFactor": 1.046
+        "CoolFactor": 1.046,
+        "ConflictingItems": [
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570"
+        ]
     },
     "5c78f2792e221600106f4683": {
         "ItemID": "5c78f2792e221600106f4683",
@@ -1782,7 +2138,10 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.058,
-        "CoolFactor": 1.0042
+        "CoolFactor": 1.0042,
+        "ConflictingItems": [
+            "5c0e2f94d174af029f650d56"
+        ]
     },
     "5ea16ada09aa976f2e7a51be": {
         "ItemID": "5ea16ada09aa976f2e7a51be",
@@ -1797,7 +2156,13 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.965,
-        "CoolFactor": 1.092
+        "CoolFactor": 1.092,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "5d00f63bd7ad1a59283b1c1e": {
         "ItemID": "5d00f63bd7ad1a59283b1c1e",
@@ -1812,7 +2177,10 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.027,
-        "CoolFactor": 1.041
+        "CoolFactor": 1.041,
+        "ConflictingItems": [
+            "5c0e2f94d174af029f650d56"
+        ]
     },
     "6087e0336d0bd7580617bb7a": {
         "ItemID": "6087e0336d0bd7580617bb7a",
@@ -1827,7 +2195,14 @@
         "Ergonomics": 15,
         "Accuracy": 0,
         "HeatFactor": 0.964,
-        "CoolFactor": 1.046
+        "CoolFactor": 1.046,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "5d00ec68d7ad1a04a067e5be",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568"
+        ]
     },
     "6281209662cba23f6c4d7a19": {
         "ItemID": "6281209662cba23f6c4d7a19",
@@ -1842,7 +2217,8 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "HeatFactor": 0.92,
-        "CoolFactor": 1.077
+        "CoolFactor": 1.077,
+        "ConflictingItems": []
     },
     "5b7be2345acfc400196d524a": {
         "ItemID": "5b7be2345acfc400196d524a",
@@ -1857,7 +2233,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.02,
-        "CoolFactor": 1.032
+        "CoolFactor": 1.032,
+        "ConflictingItems": []
     },
     "5b7d671b5acfc43d82528ddd": {
         "ItemID": "5b7d671b5acfc43d82528ddd",
@@ -1872,7 +2249,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1,
-        "CoolFactor": 0.951
+        "CoolFactor": 0.951,
+        "ConflictingItems": []
     },
     "607d5aa50494a626335e12ed": {
         "ItemID": "607d5aa50494a626335e12ed",
@@ -1887,7 +2265,8 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.041,
-        "CoolFactor": 0.992
+        "CoolFactor": 0.992,
+        "ConflictingItems": []
     },
     "606ee5c81246154cad35d65e": {
         "ItemID": "606ee5c81246154cad35d65e",
@@ -1902,7 +2281,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.026,
-        "CoolFactor": 0.977
+        "CoolFactor": 0.977,
+        "ConflictingItems": []
     },
     "5c5db5fc2e2216000f1b2842": {
         "ItemID": "5c5db5fc2e2216000f1b2842",
@@ -1917,7 +2297,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 0.98,
-        "CoolFactor": 1.03
+        "CoolFactor": 1.03,
+        "ConflictingItems": []
     },
     "5894a42086f77426d2590762": {
         "ItemID": "5894a42086f77426d2590762",
@@ -1932,7 +2313,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.976,
-        "CoolFactor": 1.016
+        "CoolFactor": 1.016,
+        "ConflictingItems": []
     },
     "5beec3e30db8340019619424": {
         "ItemID": "5beec3e30db8340019619424",
@@ -1947,7 +2329,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 1.038,
-        "CoolFactor": 0.963
+        "CoolFactor": 0.963,
+        "ConflictingItems": []
     },
     "5b7be1ca5acfc400170e2d2f": {
         "ItemID": "5b7be1ca5acfc400170e2d2f",
@@ -1962,7 +2345,8 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.94,
-        "CoolFactor": 1.016
+        "CoolFactor": 1.016,
+        "ConflictingItems": []
     },
     "5b099a9d5acfc47a8607efe7": {
         "ItemID": "5b099a9d5acfc47a8607efe7",
@@ -1977,7 +2361,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.931,
-        "CoolFactor": 1.01
+        "CoolFactor": 1.01,
+        "ConflictingItems": []
     },
     "5f63418ef5750b524b45f116": {
         "ItemID": "5f63418ef5750b524b45f116",
@@ -1992,7 +2377,15 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1.049,
-        "CoolFactor": 1.082
+        "CoolFactor": 1.082,
+        "ConflictingItems": [
+            "5c82342f2e221644f31c060e",
+            "576fd4ec2459777f0b518431",
+            "5c82343a2e221644f31c0611",
+            "5d0a29ead7ad1a0026013f27",
+            "5c61a40d2e2216001403158d",
+            "5c90c3622e221601da359851"
+        ]
     },
     "6086b5731246154cad35d6c7": {
         "ItemID": "6086b5731246154cad35d6c7",
@@ -2007,7 +2400,8 @@
         "Ergonomics": 10,
         "Accuracy": 0,
         "HeatFactor": 1.021,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "ConflictingItems": []
     },
     "576169e62459773c69055191": {
         "ItemID": "576169e62459773c69055191",
@@ -2022,7 +2416,8 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 1.026,
-        "CoolFactor": 0.978
+        "CoolFactor": 0.978,
+        "ConflictingItems": []
     },
     "5827272a24597748c74bdeea": {
         "ItemID": "5827272a24597748c74bdeea",
@@ -2037,7 +2432,14 @@
         "Ergonomics": 2,
         "Accuracy": 0,
         "HeatFactor": 1.036,
-        "CoolFactor": 1.042
+        "CoolFactor": 1.042,
+        "ConflictingItems": [
+            "57486e672459770abd687134",
+            "591ee00d86f774592f7b841e",
+            "57acb6222459771ec34b5cb0",
+            "5c61a40d2e2216001403158d",
+            "5c90c3622e221601da359851"
+        ]
     },
     "58272b392459774b4c7b3ccd": {
         "ItemID": "58272b392459774b4c7b3ccd",
@@ -2052,7 +2454,10 @@
         "Ergonomics": 2,
         "Accuracy": 0,
         "HeatFactor": 1.017,
-        "CoolFactor": 1.008
+        "CoolFactor": 1.008,
+        "ConflictingItems": [
+            "5c61a40d2e2216001403158d"
+        ]
     },
     "623c3c1f37b4b31470357737": {
         "ItemID": "623c3c1f37b4b31470357737",
@@ -2067,7 +2472,10 @@
         "Ergonomics": 9,
         "Accuracy": 0,
         "HeatFactor": 0.96,
-        "CoolFactor": 1.05
+        "CoolFactor": 1.05,
+        "ConflictingItems": [
+            "56083eab4bdc2d26448b456a"
+        ]
     },
     "5e56991336989c75ab4f03f6": {
         "ItemID": "5e56991336989c75ab4f03f6",
@@ -2082,7 +2490,8 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "HeatFactor": 0.986,
-        "CoolFactor": 1.058
+        "CoolFactor": 1.058,
+        "ConflictingItems": []
     },
     "5df25d3bfd6b4e6e2276dc9a": {
         "ItemID": "5df25d3bfd6b4e6e2276dc9a",
@@ -2097,6 +2506,7 @@
         "Ergonomics": 11,
         "Accuracy": 0,
         "HeatFactor": 1,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "ConflictingItems": []
     }
 }

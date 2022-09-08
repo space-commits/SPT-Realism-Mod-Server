@@ -9,7 +9,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5dcbd6dddbd3d91b3e5468de": {
         "ItemID": "5dcbd6dddbd3d91b3e5468de",
@@ -21,7 +22,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c48a2c22e221602b313fb6c": {
         "ItemID": "5c48a2c22e221602b313fb6c",
@@ -33,7 +35,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5f3e778efcd9b651187d7201": {
         "ItemID": "5f3e778efcd9b651187d7201",
@@ -45,7 +48,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "59db3b0886f77429d72fb895": {
         "ItemID": "59db3b0886f77429d72fb895",
@@ -57,7 +61,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 11,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57c9a89124597704ee6faec1": {
         "ItemID": "57c9a89124597704ee6faec1",
@@ -69,7 +74,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "576a63cd2459771e796e0e11": {
         "ItemID": "576a63cd2459771e796e0e11",
@@ -81,7 +87,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cadc431ae921500113bb8d5": {
         "ItemID": "5cadc431ae921500113bb8d5",
@@ -93,7 +100,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 4,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bbde41ed4351e003562b038": {
         "ItemID": "5bbde41ed4351e003562b038",
@@ -105,7 +113,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bffec120db834001c38f5fa": {
         "ItemID": "5bffec120db834001c38f5fa",
@@ -117,7 +126,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 7,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bfe86a20db834001d23e8f7": {
         "ItemID": "5bfe86a20db834001d23e8f7",
@@ -129,7 +139,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 9,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5f6341043ada5942720e2dc5": {
         "ItemID": "5f6341043ada5942720e2dc5",
@@ -141,7 +152,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6087e663132d4d12c81fd96b": {
         "ItemID": "6087e663132d4d12c81fd96b",
@@ -153,7 +165,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 14,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "623c3be0484b5003161840dc": {
         "ItemID": "623c3be0484b5003161840dc",
@@ -165,7 +178,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 7,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5beec8ea0db834001a6f9dbf": {
         "ItemID": "5beec8ea0db834001a6f9dbf",
@@ -177,7 +191,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6.5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5649ad3f4bdc2df8348b4585": {
         "ItemID": "5649ad3f4bdc2df8348b4585",
@@ -189,7 +204,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5649ade84bdc2d1b2b8b4587": {
         "ItemID": "5649ade84bdc2d1b2b8b4587",
@@ -201,7 +217,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "59e62cc886f77440d40b52a1": {
         "ItemID": "59e62cc886f77440d40b52a1",
@@ -213,7 +230,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a0071d486f77404e23a12b2": {
         "ItemID": "5a0071d486f77404e23a12b2",
@@ -225,7 +243,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57e3dba62459770f0c32322b": {
         "ItemID": "57e3dba62459770f0c32322b",
@@ -237,7 +256,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cf54404d7f00c108840b2ef": {
         "ItemID": "5cf54404d7f00c108840b2ef",
@@ -249,7 +269,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 9,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5e2192a498a36665e8337386": {
         "ItemID": "5e2192a498a36665e8337386",
@@ -261,7 +282,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5b30ac585acfc433000eb79c": {
         "ItemID": "5b30ac585acfc433000eb79c",
@@ -273,7 +295,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "59e6318286f77444dd62c4cc": {
         "ItemID": "59e6318286f77444dd62c4cc",
@@ -285,7 +308,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cf50850d7f00c056e24104c": {
         "ItemID": "5cf50850d7f00c056e24104c",
@@ -297,7 +321,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cf508bfd7f00c056e24104e": {
         "ItemID": "5cf508bfd7f00c056e24104e",
@@ -309,7 +334,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "628a664bccaab13006640e47": {
         "ItemID": "628a664bccaab13006640e47",
@@ -321,7 +347,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "628c9ab845c59e5b80768a81": {
         "ItemID": "628c9ab845c59e5b80768a81",
@@ -333,7 +360,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5947f92f86f77427344a76b1": {
         "ItemID": "5947f92f86f77427344a76b1",
@@ -345,7 +373,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 11,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5947fa2486f77425b47c1a9b": {
         "ItemID": "5947fa2486f77425b47c1a9b",
@@ -357,7 +386,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 11,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c6bf4aa2e2216001219b0ae": {
         "ItemID": "5c6bf4aa2e2216001219b0ae",
@@ -369,7 +399,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5649ae4a4bdc2d1b2b8b4588": {
         "ItemID": "5649ae4a4bdc2d1b2b8b4588",
@@ -381,7 +412,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a17fc70fcdbcb0176308b3d": {
         "ItemID": "5a17fc70fcdbcb0176308b3d",
@@ -393,7 +425,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "55d4b9964bdc2d1d4e8b456e": {
         "ItemID": "55d4b9964bdc2d1d4e8b456e",
@@ -405,7 +438,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "571659bb2459771fb2755a12": {
         "ItemID": "571659bb2459771fb2755a12",
@@ -417,7 +451,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5.5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "602e71bd53a60014f9705bfa": {
         "ItemID": "602e71bd53a60014f9705bfa",
@@ -429,7 +464,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5.5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6113c3586c780c1e710c90bc": {
         "ItemID": "6113c3586c780c1e710c90bc",
@@ -441,7 +477,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 11,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6113cc78d3a39d50044c065a": {
         "ItemID": "6113cc78d3a39d50044c065a",
@@ -453,7 +490,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 13,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6113cce3d92c473c770200c7": {
         "ItemID": "6113cce3d92c473c770200c7",
@@ -465,7 +503,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cc9bcaed7f00c011c04e179": {
         "ItemID": "5cc9bcaed7f00c011c04e179",
@@ -477,7 +516,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bb20e18d4351e00320205d5": {
         "ItemID": "5bb20e18d4351e00320205d5",
@@ -489,7 +529,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "55802f5d4bdc2dac148b458f": {
         "ItemID": "55802f5d4bdc2dac148b458f",
@@ -501,7 +542,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cdeac5cd7f00c000f261694": {
         "ItemID": "5cdeac5cd7f00c000f261694",
@@ -513,7 +555,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c0006470db834001a6697fe": {
         "ItemID": "5c0006470db834001a6697fe",
@@ -525,7 +568,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5b7d679f5acfc4001a5c4024": {
         "ItemID": "5b7d679f5acfc4001a5c4024",
@@ -537,7 +581,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 13,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5d15cf3bd7ad1a67e71518b2": {
         "ItemID": "5d15cf3bd7ad1a67e71518b2",
@@ -549,7 +594,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57af48872459771f0b2ebf11": {
         "ItemID": "57af48872459771f0b2ebf11",
@@ -561,7 +607,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 9,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57c55f112459772d28133310": {
         "ItemID": "57c55f112459772d28133310",
@@ -573,7 +620,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 9,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "615d8faecabb9b7ad90f4d5d": {
         "ItemID": "615d8faecabb9b7ad90f4d5d",
@@ -585,7 +633,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 7,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5894a51286f77426d13baf02": {
         "ItemID": "5894a51286f77426d13baf02",
@@ -597,7 +646,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a339805c4a2826c6e06d73d": {
         "ItemID": "5a339805c4a2826c6e06d73d",
@@ -609,7 +659,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57c55efc2459772d2c6271e7": {
         "ItemID": "57c55efc2459772d2c6271e7",
@@ -621,7 +672,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 9,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "626a9cb151cb5849f6002890": {
         "ItemID": "626a9cb151cb5849f6002890",
@@ -633,7 +685,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 4,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bb20e0ed4351e3bac1212dc": {
         "ItemID": "5bb20e0ed4351e3bac1212dc",
@@ -645,7 +698,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 7,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5addc7db5acfc4001669f279": {
         "ItemID": "5addc7db5acfc4001669f279",
@@ -657,7 +711,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5e848d99865c0f329958c83b": {
         "ItemID": "5e848d99865c0f329958c83b",
@@ -669,7 +724,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5d025cc1d7ad1a53845279ef": {
         "ItemID": "5d025cc1d7ad1a53845279ef",
@@ -681,7 +737,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 15,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c6d7b3d2e221600114c9b7d": {
         "ItemID": "5c6d7b3d2e221600114c9b7d",
@@ -693,7 +750,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 7,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "606eef46232e5a31c233d500": {
         "ItemID": "606eef46232e5a31c233d500",
@@ -705,7 +763,11 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 9,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "55d48a634bdc2d8b2f8b456a",
+            "607d5aa50494a626335e12ed"
+        ]
     },
     "6193dcd0f8ee7e52e4210a28": {
         "ItemID": "6193dcd0f8ee7e52e4210a28",
@@ -717,7 +779,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 7,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5b07db875acfc40dc528a5f6": {
         "ItemID": "5b07db875acfc40dc528a5f6",
@@ -729,7 +792,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57c55f172459772d27602381": {
         "ItemID": "57c55f172459772d27602381",
@@ -741,7 +805,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 9,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "59db3acc86f7742a2c4ab912": {
         "ItemID": "59db3acc86f7742a2c4ab912",
@@ -753,7 +818,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 11,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "56d5a2bbd2720bb8418b456a": {
         "ItemID": "56d5a2bbd2720bb8418b456a",
@@ -765,7 +831,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5fbcbd6c187fea44d52eda14": {
         "ItemID": "5fbcbd6c187fea44d52eda14",
@@ -777,7 +844,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57c55f092459772d291a8463": {
         "ItemID": "57c55f092459772d291a8463",
@@ -789,7 +857,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 9,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a7b4960e899ef197b331a2d": {
         "ItemID": "5a7b4960e899ef197b331a2d",
@@ -801,7 +870,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 7,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "59db3a1d86f77429e05b4e92": {
         "ItemID": "59db3a1d86f77429e05b4e92",
@@ -813,7 +883,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 15,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5e81c6bf763d9f754677beff": {
         "ItemID": "5e81c6bf763d9f754677beff",
@@ -825,7 +896,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 4,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5ef366938cef260c0642acad": {
         "ItemID": "5ef366938cef260c0642acad",
@@ -837,7 +909,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6259c3d8012d6678ec38eeb8": {
         "ItemID": "6259c3d8012d6678ec38eeb8",
@@ -849,7 +922,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bffef760db8340019668fe4": {
         "ItemID": "5bffef760db8340019668fe4",
@@ -861,7 +935,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5b39ffbd5acfc47a8773fb06": {
         "ItemID": "5b39ffbd5acfc47a8773fb06",
@@ -873,7 +948,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "56e05a6ed2720bd0748b4567": {
         "ItemID": "56e05a6ed2720bd0748b4567",
@@ -885,7 +961,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5998517986f7746017232f7e": {
         "ItemID": "5998517986f7746017232f7e",
@@ -897,7 +974,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 7,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57d152ec245977144076ccdf": {
         "ItemID": "57d152ec245977144076ccdf",
@@ -909,7 +987,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "619f4ab2d25cbd424731fb95": {
         "ItemID": "619f4ab2d25cbd424731fb95",
@@ -921,7 +1000,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "619f4bffd25cbd424731fb97": {
         "ItemID": "619f4bffd25cbd424731fb97",
@@ -933,7 +1013,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 3,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5b7d678a5acfc4001a5c4022": {
         "ItemID": "5b7d678a5acfc4001a5c4022",
@@ -945,7 +1026,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5b099b965acfc400186331e6": {
         "ItemID": "5b099b965acfc400186331e6",
@@ -957,7 +1039,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5afd7e445acfc4001637e35a": {
         "ItemID": "5afd7e445acfc4001637e35a",
@@ -969,7 +1052,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c471be12e221602b66cd9ac": {
         "ItemID": "5c471be12e221602b66cd9ac",
@@ -981,7 +1065,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5df38a5fb74cd90030650cb6": {
         "ItemID": "5df38a5fb74cd90030650cb6",
@@ -993,7 +1078,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a38eecdc4a282329a73b512": {
         "ItemID": "5a38eecdc4a282329a73b512",
@@ -1005,7 +1091,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 3,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c0684e50db834002a12585a": {
         "ItemID": "5c0684e50db834002a12585a",
@@ -1017,7 +1104,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bffcf7a0db83400232fea79": {
         "ItemID": "5bffcf7a0db83400232fea79",
@@ -1029,7 +1117,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 2,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c079ec50db834001966a706": {
         "ItemID": "5c079ec50db834001966a706",
@@ -1041,7 +1130,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 13,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5b3cadf35acfc400194776a0": {
         "ItemID": "5b3cadf35acfc400194776a0",
@@ -1053,7 +1143,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "571a282c2459771fb2755a69": {
         "ItemID": "571a282c2459771fb2755a69",
@@ -1065,7 +1156,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a69a2ed8dc32e000d46d1f1": {
         "ItemID": "5a69a2ed8dc32e000d46d1f1",
@@ -1077,7 +1169,10 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "57c450252459772d28133253"
+        ]
     },
     "57c44fa82459772d2d75e415": {
         "ItemID": "57c44fa82459772d2d75e415",
@@ -1089,7 +1184,8 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5d023784d7ad1a049d4aa7f2": {
         "ItemID": "5d023784d7ad1a049d4aa7f2",
@@ -1101,6 +1197,7 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 12,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     }
 }

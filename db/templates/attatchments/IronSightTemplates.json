@@ -4,699 +4,970 @@
         "Name": "sight_front_57_fn_five_seven_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5e8708d4ae379e67d22e0102": {
         "ItemID": "5e8708d4ae379e67d22e0102",
         "Name": "sight_front_590_mossberg_ghost_ring_sight_kit",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a0f096dfcdbcb0176308b15": {
         "ItemID": "5a0f096dfcdbcb0176308b15",
         "Name": "sight_front_ak_izhmash_akmp",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5caf16a2ae92152ac412efbc": {
         "ItemID": "5caf16a2ae92152ac412efbc",
         "Name": "sight_front_all_ckib_ash12_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5ba26b01d4351e0085325a51": {
         "ItemID": "5ba26b01d4351e0085325a51",
         "Name": "sight_front_all_hk_mp7_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5dfa3d950dee1b22f862eae0": {
         "ItemID": "5dfa3d950dee1b22f862eae0",
         "Name": "sight_front_all_kac_folding_micro_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c17804b2e2216152006c02f": {
         "ItemID": "5c17804b2e2216152006c02f",
         "Name": "sight_front_all_kac_folding_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5fb6567747ce63734e3fa1dc": {
         "ItemID": "5fb6567747ce63734e3fa1dc",
         "Name": "sight_front_all_kriss_defiance_low_profile_flip_up",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bc09a30d4351e00367fb7c8": {
         "ItemID": "5bc09a30d4351e00367fb7c8",
         "Name": "sight_front_all_magpul_mbus_gen2",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c18b90d2e2216152142466b": {
         "ItemID": "5c18b90d2e2216152142466b",
         "Name": "sight_front_all_magpul_mbus_gen2_fde",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5fc0fa362770a0045c59c677": {
         "ItemID": "5fc0fa362770a0045c59c677",
         "Name": "sight_front_all_sig_flip_up",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5894a73486f77426d259076c": {
         "ItemID": "5894a73486f77426d259076c",
         "Name": "sight_front_all_sig_mpx_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5aba62f8d8ce87001943946b": {
         "ItemID": "5aba62f8d8ce87001943946b",
         "Name": "sight_front_aps_molot_aps_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "55d4af3a4bdc2d972f8b456f": {
         "ItemID": "55d4af3a4bdc2d972f8b456f",
         "Name": "sight_front_ar15_utg_low_gas_block_a2",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "623166e08c43374ca1567195": {
         "ItemID": "623166e08c43374ca1567195",
         "Name": "sight_front_g36_hk_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5b2389515acfc4771e1be0c0",
+            "618b9643526131765025ab35",
+            "618bab21526131765025ab3f",
+            "5c86592b2e2216000e69e77c",
+            "5a37ca54c4a282000d72296a",
+            "57c69dd424597774c03b7bbc",
+            "5b3b99265acfc4704b4a1afb",
+            "5aa66a9be5b5b0214e506e89",
+            "5aa66c72e5b5b00016327c93",
+            "6171407e50224f204c1da3c5",
+            "61713cc4d8e3106d9806c109"
+        ]
     },
     "5a7d90eb159bd400165484f1": {
         "ItemID": "5a7d90eb159bd400165484f1",
         "Name": "sight_front_glock_dead_ringer_snake_eyes_glock_sights",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a6f58f68dc32e000a311390": {
         "ItemID": "5a6f58f68dc32e000a311390",
         "Name": "sight_front_glock_glock_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a7d9104159bd400134c8c21": {
         "ItemID": "5a7d9104159bd400134c8c21",
         "Name": "sight_front_glock_truglo_tfx_glock_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a71e0048dc32e000c52ecc8": {
         "ItemID": "5a71e0048dc32e000c52ecc8",
         "Name": "sight_front_glock_zev_tech",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5e81ee213397a21db957f6a6": {
         "ItemID": "5e81ee213397a21db957f6a6",
         "Name": "sight_front_m1911_colt_m1911a1_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5f3e78a7fbf956000b716b8e": {
         "ItemID": "5f3e78a7fbf956000b716b8e",
         "Name": "sight_front_m1911_novak_lomount_front_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5addba3e5acfc4001669f0ab": {
         "ItemID": "5addba3e5acfc4001669f0ab",
         "Name": "sight_front_m1a_springfield_armory_national_match_062_blade",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5aafa49ae5b5b00015042a58": {
         "ItemID": "5aafa49ae5b5b00015042a58",
         "Name": "sight_front_m1a_springfield_armory_xs_post_125_blade",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cadd919ae921500126a77f3": {
         "ItemID": "5cadd919ae921500126a77f3",
         "Name": "sight_front_m9_beretta_m9a3_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "61816fcad92c473c770215cc": {
         "ItemID": "61816fcad92c473c770215cc",
         "Name": "sight_front_mk16_scar_front_sight_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5ae099875acfc4001714e593": {
         "ItemID": "5ae099875acfc4001714e593",
         "Name": "sight_front_mosin_izhmash_mosin_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c07b36c0db834002a1259e9": {
         "ItemID": "5c07b36c0db834002a1259e9",
         "Name": "sight_front_p226_meprolight_tru_dot_night_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "56d5a661d2720bd8418b456b": {
         "ItemID": "56d5a661d2720bd8418b456b",
         "Name": "sight_front_p226_sig_p226r_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "60228a76d62c9b14ed777a66": {
         "ItemID": "60228a76d62c9b14ed777a66",
         "Name": "sight_front_pl15_izhmash_pl15_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cadd954ae921500103bb3c2": {
         "ItemID": "5cadd954ae921500103bb3c2",
         "Name": "sight_rear_m9_sight_mount_m9",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "619f4d304c58466fe1228437": {
         "ItemID": "619f4d304c58466fe1228437",
         "Name": "sight_front_rhino_chiappa_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5cadd940ae9215051e1c2316": {
         "ItemID": "5cadd940ae9215051e1c2316",
         "Name": "sight_rear_m9_beretta_m9a3_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "619f4cee4c58466fe1228435": {
         "ItemID": "619f4cee4c58466fe1228435",
         "Name": "sight_rear_rhino_chiappa_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c18b9192e2216398b5a8104": {
         "ItemID": "5c18b9192e2216398b5a8104",
         "Name": "sight_rear_all_magpul_mbus_gen2_fde",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5894a81786f77427140b8347": {
         "ItemID": "5894a81786f77427140b8347",
         "Name": "sight_rear_all_sig_mpx_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5649d9a14bdc2d79388b4580": {
         "ItemID": "5649d9a14bdc2d79388b4580",
         "Name": "sight_rear_ak_tactica_tula_tt01",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5947db3f86f77447880cf76f",
+            "57486e672459770abd687134",
+            "576fd4ec2459777f0b518431",
+            "5a7c74b3e899ef0014332c29",
+            "5c61a40d2e2216001403158d",
+            "5c90c3622e221601da359851",
+            "5649af884bdc2d1b2b8b4589"
+        ]
     },
     "56083e1b4bdc2dc8488b4572": {
         "ItemID": "56083e1b4bdc2dc8488b4572",
         "Name": "sight_rear_sv-98_izhmash_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5b2389515acfc4771e1be0c0",
+            "618b9643526131765025ab35",
+            "618bab21526131765025ab3f",
+            "5a37ca54c4a282000d72296a",
+            "5c064c400db834001d23f468",
+            "5b3b99265acfc4704b4a1afb",
+            "5aa66a9be5b5b0214e506e89",
+            "5aa66c72e5b5b00016327c93",
+            "5dff77c759400025ea5150cf"
+        ]
     },
     "59d650cf86f7741b846413a4": {
         "ItemID": "59d650cf86f7741b846413a4",
         "Name": "sight_rear_ak_izhmash_akm_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bb20e49d4351e3bac1212de": {
         "ItemID": "5bb20e49d4351e3bac1212de",
         "Name": "sight_rear_all_hk_416_flip_up",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a6f5d528dc32e00094b97d9": {
         "ItemID": "5a6f5d528dc32e00094b97d9",
         "Name": "sight_rear_glock_glock_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "59e8977386f77415a553c453": {
         "ItemID": "59e8977386f77415a553c453",
         "Name": "sight_rear_ak_molot_vpo_209",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5ac733a45acfc400192630e2": {
         "ItemID": "5ac733a45acfc400192630e2",
         "Name": "sight_rear_ak_izhmash_ak105_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6194f2df645b5d229654ad77": {
         "ItemID": "6194f2df645b5d229654ad77",
         "Name": "sight_rear_usp_hk_usp_tactical",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6231670f0b8aa5472d060095": {
         "ItemID": "6231670f0b8aa5472d060095",
         "Name": "sight_rear_g36_hk_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5d2dc3e548f035404a1a4798",
+            "57adff4f24597737f373b6e6",
+            "570fd79bd2720bc7458b4583",
+            "544a3d0a4bdc2d1b388b4567",
+            "5b3b6dc75acfc47a8773fb1e",
+            "5d0a29fed7ad1a002769ad08",
+            "5b3b99265acfc4704b4a1afb",
+            "5c1cdd302e221602b3137250",
+            "59db7eed86f77461f8380365"
+        ]
     },
     "5a0eb980fcdbcb001a3b00a6": {
         "ItemID": "5a0eb980fcdbcb001a3b00a6",
         "Name": "sight_rear_ak_izhmash_akmb",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "55d5f46a4bdc2d1b198b4567": {
         "ItemID": "55d5f46a4bdc2d1b198b4567",
         "Name": "sight_rear_ar15_colt_a2",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "57ac965c24597706be5f975c",
+            "57aca93d2459771f2c7e26db",
+            "544a3f024bdc2d1d388b4568",
+            "544a3a774bdc2d3a388b4567",
+            "57adff4f24597737f373b6e6",
+            "5c0517910db83400232ffee5",
+            "591c4efa86f7741030027726",
+            "570fd79bd2720bc7458b4583",
+            "5c07dd120db834001c39092d",
+            "5c0a2cec0db834001b7ce47d",
+            "5dff772da3651922b360bf91",
+            "56ea70acd2720b844b8b4594",
+            "5aa66be6e5b5b0214e506e97",
+            "5dfe6104585a0c3e995c7b82",
+            "5d1b5e94d7ad1a2b865a96b0",
+            "5b3b6dc75acfc47a8773fb1e",
+            "5b2389515acfc4771e1be0c0",
+            "5a37ca54c4a282000d72296a",
+            "5d0a29fed7ad1a002769ad08",
+            "57c69dd424597774c03b7bbc",
+            "5b3b99265acfc4704b4a1afb",
+            "5aa66a9be5b5b0214e506e89",
+            "5aa66c72e5b5b00016327c93",
+            "5c1cdd302e221602b3137250",
+            "5b31163c5acfc400153b71cb",
+            "5a33b652c4a28232996e407c",
+            "59db7eed86f77461f8380365",
+            "5a1ead28fcdbcb001912fa9f",
+            "5dff77c759400025ea5150cf"
+        ]
     },
     "56d5a77ed2720b90418b4568": {
         "ItemID": "56d5a77ed2720b90418b4568",
         "Name": "sight_rear_p226_sig_p226r_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6194f3286db0f2477964e67d": {
         "ItemID": "6194f3286db0f2477964e67d",
         "Name": "sight_front_usp_hk_usp_tactical",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5926d2be86f774134d668e4e": {
         "ItemID": "5926d2be86f774134d668e4e",
         "Name": "sight_rear_mp5_hk_drum",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5b3b99265acfc4704b4a1afb"
+        ]
     },
     "5a0ed824fcdbcb0176308b0d": {
         "ItemID": "5a0ed824fcdbcb0176308b0d",
         "Name": "sight_rear_ak_izhmash_akmp",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57c44e7b2459772d28133248": {
         "ItemID": "57c44e7b2459772d28133248",
         "Name": "sight_rear_val_tochmash_val_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5649b0544bdc2d1b2b8b458a": {
         "ItemID": "5649b0544bdc2d1b2b8b458a",
         "Name": "sight_rear_ak_izhmash_ak74_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5aba637ad8ce87001773e17f": {
         "ItemID": "5aba637ad8ce87001773e17f",
         "Name": "sight_rear_aps_molot_aps_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5aba639ed8ce8700182ece67": {
         "ItemID": "5aba639ed8ce8700182ece67",
         "Name": "sight_rear_aps_molot_apb_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5ac72e475acfc400180ae6fe": {
         "ItemID": "5ac72e475acfc400180ae6fe",
         "Name": "sight_rear_ak_izhmash_ak74m_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5de8fb539f98ac2bc659513a": {
         "ItemID": "5de8fb539f98ac2bc659513a",
         "Name": "sight_rear_mp9_bt_mp9_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bc09a18d4351e003562b68e": {
         "ItemID": "5bc09a18d4351e003562b68e",
         "Name": "sight_rear_all_magpul_mbus_gen2",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a71e0fb8dc32e00094b97f2": {
         "ItemID": "5a71e0fb8dc32e00094b97f2",
         "Name": "sight_rear_glock_zev_tech",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "574db213245977459a2f3f5d": {
         "ItemID": "574db213245977459a2f3f5d",
         "Name": "sight_rear_sks_toz_sks_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5ba26b17d4351e00367f9bdd": {
         "ItemID": "5ba26b17d4351e00367f9bdd",
         "Name": "sight_rear_all_hk_mp7_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5fc0fa957283c4046c58147e": {
         "ItemID": "5fc0fa957283c4046c58147e",
         "Name": "sight_rear_all_sig_flip_up",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5caf1691ae92152ac412efb9": {
         "ItemID": "5caf1691ae92152ac412efb9",
         "Name": "sight_rear_all_ckib_ash12_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5bb20e49d4351e3bac1212de",
+            "5ba26b17d4351e00367f9bdd",
+            "5dfa3d7ac41b2312ea33362a",
+            "5c1780312e221602b66cc189",
+            "5fb6564947ce63734e3fa1da",
+            "5bc09a18d4351e003562b68e",
+            "5c18b9192e2216398b5a8104",
+            "5fc0fa957283c4046c58147e",
+            "5894a81786f77427140b8347"
+        ]
     },
     "61963a852d2c397d660036ad": {
         "ItemID": "61963a852d2c397d660036ad",
         "Name": "sight_rear_hk_red_dot_mount",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "6194f5d418a3974e5e7421ef",
+            "6194f5722d2c397d6600348f"
+        ]
     },
     "5d3eb4aba4b93650d64e497d": {
         "ItemID": "5d3eb4aba4b93650d64e497d",
         "Name": "sight_rear_57_fn_five_seven_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "60228a850ddce744014caf69": {
         "ItemID": "60228a850ddce744014caf69",
         "Name": "sight_front_pl15_izhmash_pl15_supressor_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c471ba12e221602b3137d76": {
         "ItemID": "5c471ba12e221602b3137d76",
         "Name": "sight_front_svd_izhmash_svd_s_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "57838e1b2459774a256959b1": {
         "ItemID": "57838e1b2459774a256959b1",
         "Name": "sight_rear_vss_tochmash_vss_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "628a7b23b0f75035732dd565": {
         "ItemID": "628a7b23b0f75035732dd565",
         "Name": "sight_rear_ak_rifle_dynamics_enhanced_v2",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5beec9450db83400970084fd": {
         "ItemID": "5beec9450db83400970084fd",
         "Name": "sight_rear_all_izhmash_rpk16_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5b3b99265acfc4704b4a1afb"
+        ]
     },
     "5e87114fe2db31558c75a120": {
         "ItemID": "5e87114fe2db31558c75a120",
         "Name": "sight_rear_590_mossberg_ghost_ring_sight_kit",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "628b9471078f94059a4b9bfb": {
         "ItemID": "628b9471078f94059a4b9bfb",
         "Name": "sight_rear_ak_sag_mk3_chassis_rear_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c1780312e221602b66cc189": {
         "ItemID": "5c1780312e221602b66cc189",
         "Name": "sight_rear_all_kac_folding_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "61817865d3a39d50044c13a4": {
         "ItemID": "61817865d3a39d50044c13a4",
         "Name": "sight_rear_all_fn_scar_rear_sight_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "619f52454c58466fe122843b": {
         "ItemID": "619f52454c58466fe122843b",
         "Name": "sight_front_rhino_chiappa_night_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5fb6564947ce63734e3fa1da": {
         "ItemID": "5fb6564947ce63734e3fa1da",
         "Name": "sight_rear_all_kriss_defiance_low_profile_flip_up",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bf3f59f0db834001a6fa060": {
         "ItemID": "5bf3f59f0db834001a6fa060",
         "Name": "sight_rear_ak_izhmash_rpk16_rear_sight_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6194f35c18a3974e5e7421e6": {
         "ItemID": "6194f35c18a3974e5e7421e6",
         "Name": "sight_front_usp_hk_usp_std_front_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c05295e0db834001a66acbb": {
         "ItemID": "5c05295e0db834001a66acbb",
         "Name": "sight_rear_acog_trijicon_acog_backup_rear_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5dfa3d7ac41b2312ea33362a": {
         "ItemID": "5dfa3d7ac41b2312ea33362a",
         "Name": "sight_rear_all_kac_folding_micro_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5ae30bad5acfc400185c2dc4": {
         "ItemID": "5ae30bad5acfc400185c2dc4",
         "Name": "sight_rear_ar15_colt_carry_hande_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "57ac965c24597706be5f975c",
+            "57aca93d2459771f2c7e26db",
+            "544a3f024bdc2d1d388b4568",
+            "544a3a774bdc2d3a388b4567",
+            "5d2dc3e548f035404a1a4798",
+            "57adff4f24597737f373b6e6",
+            "5c0517910db83400232ffee5",
+            "591c4efa86f7741030027726",
+            "570fd79bd2720bc7458b4583",
+            "570fd6c2d2720bc6458b457f",
+            "558022b54bdc2dac148b458d",
+            "5c07dd120db834001c39092d",
+            "5c0a2cec0db834001b7ce47d",
+            "58491f3324597764bc48fa02",
+            "584924ec24597768f12ae244",
+            "5b30b0dc5acfc400153b7124",
+            "6165ac8c290d254f5e6b2f6c",
+            "60a23797a37c940de7062d02",
+            "5d2da1e948f035477b1ce2ba",
+            "5c0505e00db834001b735073",
+            "609a63b6e2ff132951242d09",
+            "584984812459776a704a82a6",
+            "59f9d81586f7744c7506ee62",
+            "570fd721d2720bc5458b4596",
+            "5dff772da3651922b360bf91",
+            "56ea70acd2720b844b8b4594",
+            "5aa66be6e5b5b0214e506e97",
+            "5dfe6104585a0c3e995c7b82",
+            "5d1b5e94d7ad1a2b865a96b0",
+            "5c7d55f52e221644f31bff6a",
+            "616584766ef05c2ce828ef57",
+            "5b3b6dc75acfc47a8773fb1e",
+            "5b2389515acfc4771e1be0c0",
+            "618b9643526131765025ab35",
+            "618bab21526131765025ab3f",
+            "5c86592b2e2216000e69e77c",
+            "5a37ca54c4a282000d72296a",
+            "5d0a29fed7ad1a002769ad08",
+            "5c064c400db834001d23f468",
+            "57c69dd424597774c03b7bbc",
+            "5b3b99265acfc4704b4a1afb",
+            "5aa66a9be5b5b0214e506e89",
+            "5aa66c72e5b5b00016327c93",
+            "5c1cdd302e221602b3137250",
+            "6171407e50224f204c1da3c5",
+            "61713cc4d8e3106d9806c109",
+            "5b31163c5acfc400153b71cb",
+            "5a33b652c4a28232996e407c",
+            "59db7eed86f77461f8380365",
+            "5a1ead28fcdbcb001912fa9f",
+            "5dff77c759400025ea5150cf",
+            "626bb8532c923541184624b4",
+            "61714b2467085e45ef140b2c"
+        ]
     },
     "5a7d9122159bd4001438dbf4": {
         "ItemID": "5a7d9122159bd4001438dbf4",
         "Name": "sight_rear_glock_dead_ringer_snake_eyes_glock_sights",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5a7d912f159bd400165484f3": {
         "ItemID": "5a7d912f159bd400165484f3",
         "Name": "sight_rear_glock_truglo_tfx_glock_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5abcbb20d8ce87001773e258": {
         "ItemID": "5abcbb20d8ce87001773e258",
         "Name": "sight_rear_m14_springfield_armory_enlarged_military_aperture_135",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5e81ee4dcb2b95385c177582": {
         "ItemID": "5e81ee4dcb2b95385c177582",
         "Name": "sight_rear_m1911_colt_m1911a1_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5f3e7897ddc4f03b010e204a": {
         "ItemID": "5f3e7897ddc4f03b010e204a",
         "Name": "sight_rear_m1911_novak_lomount_rear_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "625ebcef6f53af4aa66b44dc": {
         "ItemID": "625ebcef6f53af4aa66b44dc",
         "Name": "sight_rear_m3_benelli_ghost_ring_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5bfd4c980db834001b73449d": {
         "ItemID": "5bfd4c980db834001b73449d",
         "Name": "sight_rear_mosin_izhmash_mosin_carabine",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "57ac965c24597706be5f975c",
+            "57aca93d2459771f2c7e26db",
+            "544a3f024bdc2d1d388b4568",
+            "544a3a774bdc2d3a388b4567",
+            "57adff4f24597737f373b6e6",
+            "591c4efa86f7741030027726",
+            "570fd79bd2720bc7458b4583",
+            "570fd6c2d2720bc6458b457f",
+            "558022b54bdc2dac148b458d",
+            "58491f3324597764bc48fa02",
+            "584924ec24597768f12ae244",
+            "584984812459776a704a82a6",
+            "59f9d81586f7744c7506ee62",
+            "570fd721d2720bc5458b4596",
+            "56ea70acd2720b844b8b4594",
+            "5aa66be6e5b5b0214e506e97",
+            "5a37ca54c4a282000d72296a",
+            "57c69dd424597774c03b7bbc",
+            "5aa66a9be5b5b0214e506e89",
+            "59db7eed86f77461f8380365",
+            "5a1ead28fcdbcb001912fa9f"
+        ]
     },
     "5ae099925acfc4001a5fc7b3": {
         "ItemID": "5ae099925acfc4001a5fc7b3",
         "Name": "sight_rear_mosin_izhmash_mosin_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c07b3850db834002330045b": {
         "ItemID": "5c07b3850db834002330045b",
         "Name": "sight_rear_p226_meprolight_tru_dot_night_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "56ea7293d2720b8d4b8b45ba": {
         "ItemID": "56ea7293d2720b8d4b8b45ba",
         "Name": "sight_rear_p226_sight_mount_220-239",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "60229948cacb6b0506369e27": {
         "ItemID": "60229948cacb6b0506369e27",
         "Name": "sight_rear_pl15_izhmash_pl15_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "60228a850ddce744014caf69"
+        ]
     },
     "602293f023506e50807090cb": {
         "ItemID": "602293f023506e50807090cb",
         "Name": "sight_rear_pl15_izhmash_pl15_supressor_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "60228a76d62c9b14ed777a66"
+        ]
     },
     "599860e986f7743bb57573a6": {
         "ItemID": "599860e986f7743bb57573a6",
         "Name": "sight_rear_pp-19-01_izhmash_vityaz_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "619f4f8c4c58466fe1228439": {
         "ItemID": "619f4f8c4c58466fe1228439",
         "Name": "sight_rear_rhino_chiappa_night_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5b0bc22d5acfc47a8607f085": {
         "ItemID": "5b0bc22d5acfc47a8607f085",
         "Name": "sight_rear_sa58_ds_arms_metric_holand_type_rear_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "58272b842459774abc128d50": {
         "ItemID": "58272b842459774abc128d50",
         "Name": "sight_rear_saiga_css_sight_rail_mount",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5f63418ef5750b524b45f116",
+            "5827272a24597748c74bdeea",
+            "58272b392459774b4c7b3ccd"
+        ]
     },
     "57a9b9ce2459770ee926038d": {
         "ItemID": "57a9b9ce2459770ee926038d",
         "Name": "sight_rear_saiga_izhmash_saiga_fixed",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c471b7e2e2216152006e46c": {
         "ItemID": "5c471b7e2e2216152006e46c",
         "Name": "sight_rear_svd_izhmash_svd_s_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "6194f2912d2c397d6600348d": {
         "ItemID": "6194f2912d2c397d6600348d",
         "Name": "sight_rear_usp_hk_std_rear_sight",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     },
     "5c503b1c2e221602b21d6e9d": {
         "ItemID": "5c503b1c2e221602b21d6e9d",
         "Name": "sight_rear_vepr_molot_vpo-101_std",
         "ModType": "",
         "AimSpeed": 0,
-        "Accuracy": 0
+        "Accuracy": 0,
+        "ConflictingItems": []
     }
 }

@@ -324,6 +324,7 @@ class CodeGen {
         let HasShoulderContact = serverItem._props.HasShoulderContact;
         let BlocksFolding = serverItem._props.BlocksFolding;
         let Velocity = serverItem._props.Velocity;
+        let ConflictingItems = serverItem._props.ConflictingItems;
         if (ID === "muzzle") {
             let item = {
                 ItemID,
@@ -342,7 +343,8 @@ class CodeGen {
                 CoolFactor,
                 DurabilityBurnModificator,
                 Velocity,
-                RecoilAngle
+                RecoilAngle,
+                ConflictingItems
             };
             return item;
         }
@@ -362,7 +364,8 @@ class CodeGen {
                 HeatFactor,
                 CoolFactor,
                 DurabilityBurnModificator,
-                Velocity
+                Velocity,
+                ConflictingItems
             };
             return item;
         }
@@ -372,7 +375,8 @@ class CodeGen {
                 Name,
                 ModType,
                 Ergonomics,
-                Accuracy
+                Accuracy,
+                ConflictingItems
             };
             return item;
         }
@@ -385,7 +389,8 @@ class CodeGen {
                 Accuracy,
                 HeatFactor,
                 CoolFactor,
-                DurabilityBurnModificator
+                DurabilityBurnModificator,
+                ConflictingItems
             };
             return item;
         }
@@ -394,7 +399,8 @@ class CodeGen {
                 ItemID,
                 Name,
                 ModType,
-                ReloadSpeed
+                ReloadSpeed,
+                ConflictingItems
             };
             return item;
         }
@@ -404,7 +410,8 @@ class CodeGen {
                 Name,
                 ModType,
                 AimSpeed,
-                Accuracy
+                Accuracy,
+                ConflictingItems
             };
             return item;
         }
@@ -417,7 +424,8 @@ class CodeGen {
                 Ergonomics,
                 MagMalfunctionChance,
                 LoadUnloadModifier,
-                CheckTimeModifier
+                CheckTimeModifier,
+                ConflictingItems
             };
             return item;
         }
@@ -434,7 +442,8 @@ class CodeGen {
                 AimSpeed,
                 ReloadSpeed,
                 Ergonomics,
-                Accuracy
+                Accuracy,
+                ConflictingItems
             };
             return item;
         }
@@ -449,7 +458,8 @@ class CodeGen {
                 AimSpeed,
                 DrawSpeed,
                 Ergonomics,
-                Accuracy
+                Accuracy,
+                ConflictingItems
             };
             return item;
         }
@@ -471,7 +481,8 @@ class CodeGen {
                 Accuracy,
                 HasShoulderContact,
                 BlocksFolding,
-                StockAllowADS
+                StockAllowADS,
+                ConflictingItems
             };
             return item;
         }
@@ -490,7 +501,8 @@ class CodeGen {
                 Accuracy,
                 HeatFactor,
                 CoolFactor,
-                DurabilityBurnModificator
+                DurabilityBurnModificator,
+                ConflictingItems
             };
             return item;
         }
@@ -508,7 +520,8 @@ class CodeGen {
                 Ergonomics,
                 Accuracy,
                 HeatFactor,
-                CoolFactor
+                CoolFactor,
+                ConflictingItems
             };
             return item;
         }
@@ -516,7 +529,8 @@ class CodeGen {
             let item = {
                 ItemID,
                 Name,
-                ModType
+                ModType,
+                ConflictingItems
             };
             return item;
         }
@@ -549,7 +563,8 @@ class CodeGen {
                 HasShoulderContact,
                 BlocksFolding,
                 Velocity,
-                RecoilAngle
+                RecoilAngle,
+                ConflictingItems
             };
             return item;
         }
@@ -700,20 +715,8 @@ class CodeGen {
         if (serverItem._id === fileItem.ItemID) {
             var serverConfItems = serverItem._props.ConflictingItems;
             var armorPropertyValues = [fileItem?.AllowADS?.toString() || "true"];
-            for (let j in armorPropertyValues) {
-                serverConfItems[j] = armorPropertyValues[j];
-            }
-        }
-    }
-    pushToAllMods() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-            if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
-                var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0", "0"];
-                var serverConfItems = serverItem._props.ConflictingItems;
-                var combinedArr = array.concat(serverConfItems);
-                serverItem._props.ConflictingItems = combinedArr;
-            }
+            var combinedArr = armorPropertyValues.concat(serverConfItems);
+            serverItem._props.ConflictingItems = combinedArr;
         }
     }
     modPusherHelper(serverItem, fileItem) {
@@ -731,12 +734,15 @@ class CodeGen {
             serverItem._props.BlocksFolding = fileItem.BlocksFolding;
             serverItem._props.Velocity = fileItem.Velocity;
             var serverConfItems = serverItem._props.ConflictingItems;
+            var modConfItems = fileItem.ConflictingItems;
             var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
                 fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
                 fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", "false", fileItem?.StockAllowADS?.toString() || "false"];
             for (let j in modPropertyValues) {
                 serverConfItems[j] = modPropertyValues[j];
             }
+            var combinedArr = serverConfItems.concat(modConfItems);
+            serverItem._props.ConflictingItems = combinedArr;
         }
     }
     weapPusherHelper(serverItem, fileItem) {
@@ -766,8 +772,18 @@ class CodeGen {
             var serverConfItems = serverItem._props.ConflictingItems;
             var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "undefined", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
                 fileItem?.RecoilDamping?.toString() || "0", fileItem?.RecoilHandDamping?.toString() || "0", fileItem?.WeaponAllowADS?.toString() || "false"];
-            for (let j in weapPropertyValues) {
-                serverConfItems[j] = weapPropertyValues[j];
+            var combinedArr = weapPropertyValues.concat(serverConfItems);
+            serverItem._props.ConflictingItems = combinedArr;
+        }
+    }
+    pushToAllMods() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
+                var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0", "fa;"];
+                var serverConfItems = serverItem._props.ConflictingItems;
+                var combinedArr = array.concat(serverConfItems);
+                serverItem._props.ConflictingItems = combinedArr;
             }
         }
     }

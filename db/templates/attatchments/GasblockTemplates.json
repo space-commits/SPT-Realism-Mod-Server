@@ -13,7 +13,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "61702f1b67085e45ef140b26": {
         "ItemID": "61702f1b67085e45ef140b26",
@@ -29,7 +30,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5a01ad4786f77450561fda02": {
         "ItemID": "5a01ad4786f77450561fda02",
@@ -45,7 +47,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "59c6633186f7740cf0493bb9": {
         "ItemID": "59c6633186f7740cf0493bb9",
@@ -61,7 +64,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "59d64ec286f774171d1e0a42": {
         "ItemID": "59d64ec286f774171d1e0a42",
@@ -77,7 +81,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "59ccd11386f77428f24a488f": {
         "ItemID": "59ccd11386f77428f24a488f",
@@ -93,7 +98,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.985,
         "CoolFactor": 1.013,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "59e649f986f77411d949b246": {
         "ItemID": "59e649f986f77411d949b246",
@@ -109,7 +115,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "628b8d83717774443b15e248": {
         "ItemID": "628b8d83717774443b15e248",
@@ -125,7 +132,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.95,
         "CoolFactor": 1.05,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5b237e425acfc4771e1be0b6": {
         "ItemID": "5b237e425acfc4771e1be0b6",
@@ -141,7 +149,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.93,
         "CoolFactor": 1.022,
-        "DurabilityBurnModificator": 0.98
+        "DurabilityBurnModificator": 0.98,
+        "ConflictingItems": []
     },
     "59ccfdba86f7747f2109a587": {
         "ItemID": "59ccfdba86f7747f2109a587",
@@ -157,7 +166,8 @@
         "Accuracy": 0,
         "HeatFactor": 1.03,
         "CoolFactor": 0.984,
-        "DurabilityBurnModificator": 0.96
+        "DurabilityBurnModificator": 0.96,
+        "ConflictingItems": []
     },
     "5cf656f2d7f00c06585fb6eb": {
         "ItemID": "5cf656f2d7f00c06585fb6eb",
@@ -173,7 +183,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.956,
         "CoolFactor": 1.042,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5d4aab30a4b9365435358c55": {
         "ItemID": "5d4aab30a4b9365435358c55",
@@ -189,7 +200,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.956,
         "CoolFactor": 1.042,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "628a83c29179c324ed269508": {
         "ItemID": "628a83c29179c324ed269508",
@@ -205,7 +217,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.945,
         "CoolFactor": 1.082,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "59d36a0086f7747e673f3946": {
         "ItemID": "59d36a0086f7747e673f3946",
@@ -221,7 +234,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "6065dc8a132d4d12c81fd8e3": {
         "ItemID": "6065dc8a132d4d12c81fd8e3",
@@ -237,7 +251,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5a34fbadc4a28200741e230a": {
         "ItemID": "5a34fbadc4a28200741e230a",
@@ -253,7 +268,12 @@
         "Accuracy": 0,
         "HeatFactor": 0.99,
         "CoolFactor": 1.008,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": [
+            "5b2cfa535acfc432ff4db7a0",
+            "595cfa8b86f77427437e845b",
+            "595cf16b86f77427440c32e2"
+        ]
     },
     "5dfa3d45dfc58d14537c20b0": {
         "ItemID": "5dfa3d45dfc58d14537c20b0",
@@ -269,7 +289,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5ae30e795acfc408fb139a0b": {
         "ItemID": "5ae30e795acfc408fb139a0b",
@@ -285,7 +306,14 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": [
+            "55f84c3c4bdc2d5f408b4576",
+            "588b56d02459771481110ae2",
+            "5a329052c4a28200741e22d3",
+            "595cfa8b86f77427437e845b",
+            "595cf16b86f77427440c32e2"
+        ]
     },
     "56eabcd4d2720b66698b4574": {
         "ItemID": "56eabcd4d2720b66698b4574",
@@ -301,7 +329,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5d00ec68d7ad1a04a067e5be": {
         "ItemID": "5d00ec68d7ad1a04a067e5be",
@@ -317,7 +346,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.99,
         "CoolFactor": 1.008,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "56ea8d2fd2720b7c698b4570": {
         "ItemID": "56ea8d2fd2720b7c698b4570",
@@ -333,7 +363,14 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 0.98
+        "DurabilityBurnModificator": 0.98,
+        "ConflictingItems": [
+            "55f84c3c4bdc2d5f408b4576",
+            "588b56d02459771481110ae2",
+            "5a329052c4a28200741e22d3",
+            "595cfa8b86f77427437e845b",
+            "595cf16b86f77427440c32e2"
+        ]
     },
     "622b327b267a1b13a44abea3": {
         "ItemID": "622b327b267a1b13a44abea3",
@@ -349,7 +386,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5fbc210bf24b94483f726481": {
         "ItemID": "5fbc210bf24b94483f726481",
@@ -365,7 +403,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5fc2360f900b1d5091531e19": {
         "ItemID": "5fc2360f900b1d5091531e19",
@@ -381,7 +420,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5c471c842e221615214259b5": {
         "ItemID": "5c471c842e221615214259b5",
@@ -397,7 +437,8 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     },
     "5c5039be2e221602b177c9ff": {
         "ItemID": "5c5039be2e221602b177c9ff",
@@ -413,6 +454,7 @@
         "Accuracy": 0,
         "HeatFactor": 0.995,
         "CoolFactor": 1.004,
-        "DurabilityBurnModificator": 1
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": []
     }
 }
