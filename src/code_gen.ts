@@ -165,12 +165,12 @@ export class CodeGen {
                             let id = "magazine"
                             this.modWriteToFile(MagazineTemplates, "MagazineTemplates", i, serverItem, id);
                         }
-                        if (this.arrays.mod_types[key] === "5a74651486f7744e73386dd1" ||
-                            this.arrays.mod_types[key] === "55818afb4bdc2dde698b456d"
-                        ) {
-                            let id = "aux"
-                            this.modWriteToFile(AuxiliaryModTemplates, "AuxiliaryModTemplates", i, serverItem, id);
-                        }
+                        // if (this.arrays.mod_types[key] === "5a74651486f7744e73386dd1" ||
+                        //     this.arrays.mod_types[key] === "55818afb4bdc2dde698b456d"
+                        // ) {
+                        //     let id = "aux"
+                        //     this.modWriteToFile(AuxiliaryModTemplates, "AuxiliaryModTemplates", i, serverItem, id);
+                        // }
                         if (this.arrays.mod_types[key] === "55818af64bdc2d5b648b4570") {
                             let id = "foregrip"
                             this.modWriteToFile(ForegripTemplates, "ForegripTemplates", i, serverItem, id);
@@ -330,7 +330,6 @@ export class CodeGen {
             //     fileItem.VerticalRecoil = serverItem._props.Recoil;
             //     fileItem.HorizontalRecoil = serverItem._props.Recoil;
             //    }
-            fileItem;
             return fileItem;
         }
 
@@ -351,6 +350,7 @@ export class CodeGen {
         let CanCylceSubs = false;
         let RecoilAngle = 0;
         let StockAllowADS = false;
+        let FixSpeed = 0;
         let Ergonomics = serverItem._props.Ergonomics
         let Accuracy = serverItem._props.Accuracy
         let CenterOfImpact = serverItem._props.CenterOfImpact
@@ -384,7 +384,8 @@ export class CodeGen {
                 DurabilityBurnModificator,
                 Velocity,
                 RecoilAngle,
-                ConflictingItems
+                ConflictingItems,
+                Ergonomics
             };
             return item;
         }
@@ -406,7 +407,8 @@ export class CodeGen {
                 CoolFactor,
                 DurabilityBurnModificator,
                 Velocity,
-                ConflictingItems
+                ConflictingItems,
+                Ergonomics
             };
             return item;
         }
@@ -431,7 +433,8 @@ export class CodeGen {
                 HeatFactor,
                 CoolFactor,
                 DurabilityBurnModificator,
-                ConflictingItems
+                ConflictingItems,
+                Ergonomics
             };
             return item;
         }
@@ -441,7 +444,9 @@ export class CodeGen {
                 Name,
                 ModType,
                 ReloadSpeed,
-                ConflictingItems
+                ConflictingItems,
+                FixSpeed,
+                Ergonomics
             };
             return item;
         }
@@ -452,7 +457,8 @@ export class CodeGen {
                 ModType,
                 AimSpeed,
                 Accuracy,
-                ConflictingItems
+                ConflictingItems,
+                Ergonomics
             };
             return item;
         }
@@ -466,7 +472,7 @@ export class CodeGen {
                 MagMalfunctionChance,
                 LoadUnloadModifier,
                 CheckTimeModifier,
-                ConflictingItems
+                ConflictingItems,
             };
             return item;
         }
@@ -484,7 +490,12 @@ export class CodeGen {
                 ReloadSpeed,
                 Ergonomics,
                 Accuracy,
-                ConflictingItems
+                ConflictingItems,
+                FixSpeed,
+                HeatFactor,
+                CoolFactor,
+                DurabilityBurnModificator,
+                
             };
             return item;
         }
@@ -543,7 +554,8 @@ export class CodeGen {
                 HeatFactor,
                 CoolFactor,
                 DurabilityBurnModificator,
-                ConflictingItems
+                ConflictingItems,
+                Ergonomics
             };
             return item;
         }
@@ -571,7 +583,8 @@ export class CodeGen {
                 ItemID,
                 Name,
                 ModType,
-                ConflictingItems
+                ConflictingItems,
+                Ergonomics
             };
             return item;
         }
@@ -605,7 +618,9 @@ export class CodeGen {
                 BlocksFolding,
                 Velocity,
                 RecoilAngle,
-                ConflictingItems
+                ConflictingItems,
+                FixSpeed,
+                StockAllowADS
             };
             return item;
         }
@@ -789,7 +804,7 @@ export class CodeGen {
             var modConfItems = fileItem.ConflictingItems;
             var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
             fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
-            fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", "false", fileItem?.StockAllowADS?.toString() || "false"];
+            fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", "false", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0"];
 
             for (let j in modPropertyValues) {
                 serverConfItems[j] = modPropertyValues[j];
@@ -839,7 +854,7 @@ export class CodeGen {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
-                var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0", "fa;"]
+                var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0", "false", "0"]
                 var serverConfItems = serverItem._props.ConflictingItems;
                 var combinedArr = array.concat(serverConfItems)
                 serverItem._props.ConflictingItems = combinedArr;

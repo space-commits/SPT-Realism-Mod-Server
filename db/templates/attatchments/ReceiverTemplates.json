@@ -8,7 +8,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.99,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "6165aeedfaa1272e431521e3": {
         "ItemID": "6165aeedfaa1272e431521e3",
@@ -19,7 +20,8 @@
         "HeatFactor": 0.984,
         "CoolFactor": 1.017,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "5ac50da15acfc4001718d287": {
         "ItemID": "5ac50da15acfc4001718d287",
@@ -30,7 +32,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "6194f5d418a3974e5e7421ef": {
         "ItemID": "6194f5d418a3974e5e7421ef",
@@ -47,7 +50,8 @@
             "6194efe07c6c7b169525f11b",
             "6194eff92d2c397d6600348b",
             "6194f02d9bb3d20b0946d2f0"
-        ]
+        ],
+        "Ergonomics": 2
     },
     "59e6449086f7746c9f75e822": {
         "ItemID": "59e6449086f7746c9f75e822",
@@ -58,7 +62,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5d2c770c48f0354b4a07c100": {
         "ItemID": "5d2c770c48f0354b4a07c100",
@@ -83,7 +88,8 @@
             "57acb6222459771ec34b5cb0",
             "5c61a40d2e2216001403158d",
             "5c90c3622e221601da359851"
-        ]
+        ],
+        "Ergonomics": 4
     },
     "55d355e64bdc2d962f8b4569": {
         "ItemID": "55d355e64bdc2d962f8b4569",
@@ -94,7 +100,8 @@
         "HeatFactor": 0.989,
         "CoolFactor": 1.01,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5f3e7823ddc4f03b010e2045": {
         "ItemID": "5f3e7823ddc4f03b010e2045",
@@ -105,7 +112,8 @@
         "HeatFactor": 0.954,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "6165adcdd3a39d50044c120f": {
         "ItemID": "6165adcdd3a39d50044c120f",
@@ -116,7 +124,8 @@
         "HeatFactor": 0.984,
         "CoolFactor": 1.017,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "5c0e2f26d174af02a9625114": {
         "ItemID": "5c0e2f26d174af02a9625114",
@@ -127,7 +136,8 @@
         "HeatFactor": 0.991,
         "CoolFactor": 1.008,
         "DurabilityBurnModificator": 1.01,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "5926f2e086f7745aae644231": {
         "ItemID": "5926f2e086f7745aae644231",
@@ -138,7 +148,8 @@
         "HeatFactor": 0.987,
         "CoolFactor": 1.1232,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "61713a8fd92c473c770214a4": {
         "ItemID": "61713a8fd92c473c770214a4",
@@ -149,7 +160,8 @@
         "HeatFactor": 0.929,
         "CoolFactor": 1.072,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5a7afa25e899ef00135e31b0": {
         "ItemID": "5a7afa25e899ef00135e31b0",
@@ -160,7 +172,8 @@
         "HeatFactor": 1.048,
         "CoolFactor": 0.986,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5fbcc3e4d6fa9c00c571bb58": {
         "ItemID": "5fbcc3e4d6fa9c00c571bb58",
@@ -171,7 +184,8 @@
         "HeatFactor": 0.989,
         "CoolFactor": 1.01,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5926c0df86f77462f647f764": {
         "ItemID": "5926c0df86f77462f647f764",
@@ -182,7 +196,8 @@
         "HeatFactor": 0.969,
         "CoolFactor": 1.0815,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5c07a8770db8340023300450": {
         "ItemID": "5c07a8770db8340023300450",
@@ -193,7 +208,8 @@
         "HeatFactor": 0.979,
         "CoolFactor": 1.017,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 13
     },
     "6194f5a318a3974e5e7421eb": {
         "ItemID": "6194f5a318a3974e5e7421eb",
@@ -204,7 +220,8 @@
         "HeatFactor": 0.958,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.98,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5cc70102e4a949035e43ba74": {
         "ItemID": "5cc70102e4a949035e43ba74",
@@ -215,7 +232,8 @@
         "HeatFactor": 0.951,
         "CoolFactor": 1.052,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": -5
     },
     "606587a88900dc2d9a55b659": {
         "ItemID": "606587a88900dc2d9a55b659",
@@ -226,7 +244,8 @@
         "HeatFactor": 0.987,
         "CoolFactor": 1.012,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "5a6f5e048dc32e00094b97da": {
         "ItemID": "5a6f5e048dc32e00094b97da",
@@ -237,7 +256,8 @@
         "HeatFactor": 1.058,
         "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5b1faa0f5acfc40dc528aeb5": {
         "ItemID": "5b1faa0f5acfc40dc528aeb5",
@@ -248,7 +268,8 @@
         "HeatFactor": 1.022,
         "CoolFactor": 1.024,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5d2c76ed48f03532f2136169": {
         "ItemID": "5d2c76ed48f03532f2136169",
@@ -280,7 +301,8 @@
             "5c61a40d2e2216001403158d",
             "5c90c3622e221601da359851",
             "628a7b23b0f75035732dd565"
-        ]
+        ],
+        "Ergonomics": 5
     },
     "5bb20d53d4351e4502010a69": {
         "ItemID": "5bb20d53d4351e4502010a69",
@@ -291,7 +313,8 @@
         "HeatFactor": 0.986,
         "CoolFactor": 1.014,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 6
     },
     "5649af094bdc2df8348b4586": {
         "ItemID": "5649af094bdc2df8348b4586",
@@ -302,7 +325,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5fc278107283c4046c581489": {
         "ItemID": "5fc278107283c4046c581489",
@@ -313,7 +337,8 @@
         "HeatFactor": 0.9246,
         "CoolFactor": 1.075,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 6
     },
     "5cadc55cae921500103bb3be": {
         "ItemID": "5cadc55cae921500103bb3be",
@@ -324,7 +349,8 @@
         "HeatFactor": 0.98,
         "CoolFactor": 1.081,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 1
     },
     "5e81edc13397a21db957f6a1": {
         "ItemID": "5e81edc13397a21db957f6a1",
@@ -335,7 +361,8 @@
         "HeatFactor": 0.958,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "6194f5722d2c397d6600348f": {
         "ItemID": "6194f5722d2c397d6600348f",
@@ -350,7 +377,8 @@
             "619624b26db0f2477964e6b0",
             "6194ef39de3cdf1d2614a768",
             "6194efe07c6c7b169525f11b"
-        ]
+        ],
+        "Ergonomics": 3
     },
     "59bfe68886f7746004266202": {
         "ItemID": "59bfe68886f7746004266202",
@@ -361,7 +389,8 @@
         "HeatFactor": 0.975,
         "CoolFactor": 1.02,
         "DurabilityBurnModificator": 0.96,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 8
     },
     "5649af884bdc2d1b2b8b4589": {
         "ItemID": "5649af884bdc2d1b2b8b4589",
@@ -417,7 +446,8 @@
             "5f6331e097199b7db2128dc2",
             "5c17664f2e2216398b5a7e3c",
             "5c617a5f2e2216000f1e81b3"
-        ]
+        ],
+        "Ergonomics": 7
     },
     "618405198004cc50514c3594": {
         "ItemID": "618405198004cc50514c3594",
@@ -428,7 +458,8 @@
         "HeatFactor": 0.984,
         "CoolFactor": 1.017,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "618426d96c780c1e710c9b9f": {
         "ItemID": "618426d96c780c1e710c9b9f",
@@ -439,7 +470,8 @@
         "HeatFactor": 0.984,
         "CoolFactor": 1.017,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "6193d382ed0429009f543e65": {
         "ItemID": "6193d382ed0429009f543e65",
@@ -450,7 +482,8 @@
         "HeatFactor": 0.96,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "59d6507c86f7741b846413a2": {
         "ItemID": "59d6507c86f7741b846413a2",
@@ -461,7 +494,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5d2f261548f03576f500e7b7": {
         "ItemID": "5d2f261548f03576f500e7b7",
@@ -472,7 +506,8 @@
         "HeatFactor": 1.0176,
         "CoolFactor": 1.1227,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 6
     },
     "5de8e67c4a9f347bc92edbd7": {
         "ItemID": "5de8e67c4a9f347bc92edbd7",
@@ -483,7 +518,8 @@
         "HeatFactor": 1.042,
         "CoolFactor": 0.963,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5894a5b586f77426d2590767": {
         "ItemID": "5894a5b586f77426d2590767",
@@ -494,7 +530,8 @@
         "HeatFactor": 0.951,
         "CoolFactor": 1.053,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "56d5a407d2720bb3418b456b": {
         "ItemID": "56d5a407d2720bb3418b456b",
@@ -505,7 +542,8 @@
         "HeatFactor": 0.962,
         "CoolFactor": 1.059,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5cc700ede4a949033c734315": {
         "ItemID": "5cc700ede4a949033c734315",
@@ -516,7 +554,8 @@
         "HeatFactor": 0.96,
         "CoolFactor": 1.048,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": -1
     },
     "57c44f4f2459772d2c627113": {
         "ItemID": "57c44f4f2459772d2c627113",
@@ -527,7 +566,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "615d8dbd290d254f5e6b2ed6": {
         "ItemID": "615d8dbd290d254f5e6b2ed6",
@@ -538,7 +578,8 @@
         "HeatFactor": 1.058,
         "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "5dfce88fe9dc277128008b2e": {
         "ItemID": "5dfce88fe9dc277128008b2e",
@@ -551,7 +592,8 @@
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [
             "5c471c2d2e22164bef5d077f"
-        ]
+        ],
+        "Ergonomics": 2
     },
     "5e0090f7e9dc277128008b93": {
         "ItemID": "5e0090f7e9dc277128008b93",
@@ -562,7 +604,8 @@
         "HeatFactor": 1.042,
         "CoolFactor": 0.963,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 8
     },
     "59985a8086f77414ec448d1a": {
         "ItemID": "59985a8086f77414ec448d1a",
@@ -573,7 +616,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5a702d198dc32e000b452fc3": {
         "ItemID": "5a702d198dc32e000b452fc3",
@@ -584,7 +628,8 @@
         "HeatFactor": 0.962,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.99,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "578395402459774a256959b5": {
         "ItemID": "578395402459774a256959b5",
@@ -595,7 +640,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "5c503d0a2e221602b542b7ef": {
         "ItemID": "5c503d0a2e221602b542b7ef",
@@ -606,7 +652,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "628120415631d45211793c99": {
         "ItemID": "628120415631d45211793c99",
@@ -617,7 +664,8 @@
         "HeatFactor": 0.989,
         "CoolFactor": 1.01,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5c0125fc0db834001a669aa3": {
         "ItemID": "5c0125fc0db834001a669aa3",
@@ -628,7 +676,8 @@
         "HeatFactor": 0.96,
         "CoolFactor": 1.062,
         "DurabilityBurnModificator": 0.99,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "5c010a700db834001d23ef5d": {
         "ItemID": "5c010a700db834001d23ef5d",
@@ -639,7 +688,8 @@
         "HeatFactor": 0.954,
         "CoolFactor": 1.065,
         "DurabilityBurnModificator": 0.98,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "5df8e4080b92095fd441e594": {
         "ItemID": "5df8e4080b92095fd441e594",
@@ -650,7 +700,8 @@
         "HeatFactor": 0.9347,
         "CoolFactor": 1.067,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5beec91a0db834001961942d": {
         "ItemID": "5beec91a0db834001961942d",
@@ -661,7 +712,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "5ea03e5009aa976f2e7a514b": {
         "ItemID": "5ea03e5009aa976f2e7a514b",
@@ -672,7 +724,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5b7d6c105acfc40015109a5f": {
         "ItemID": "5b7d6c105acfc40015109a5f",
@@ -683,7 +736,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "5a6f5f078dc32e00094b97dd": {
         "ItemID": "5a6f5f078dc32e00094b97dd",
@@ -694,7 +748,8 @@
         "HeatFactor": 0.975,
         "CoolFactor": 1.083,
         "DurabilityBurnModificator": 0.98,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 6
     },
     "6194f41f9fb0c665d5490e75": {
         "ItemID": "6194f41f9fb0c665d5490e75",
@@ -705,7 +760,8 @@
         "HeatFactor": 0.956,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.99,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5d3eb44aa4b93650d64e4979": {
         "ItemID": "5d3eb44aa4b93650d64e4979",
@@ -716,7 +772,8 @@
         "HeatFactor": 1.057,
         "CoolFactor": 0.981,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5c0009510db834001966907f": {
         "ItemID": "5c0009510db834001966907f",
@@ -727,7 +784,8 @@
         "HeatFactor": 0.957,
         "CoolFactor": 1.065,
         "DurabilityBurnModificator": 0.98,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "5839a7742459773cf9693481": {
         "ItemID": "5839a7742459773cf9693481",
@@ -745,7 +803,8 @@
             "5c82343a2e221644f31c0611",
             "5c61a40d2e2216001403158d",
             "5c90c3622e221601da359851"
-        ]
+        ],
+        "Ergonomics": 5
     },
     "5bffe7c50db834001d23ece1": {
         "ItemID": "5bffe7c50db834001d23ece1",
@@ -756,7 +815,8 @@
         "HeatFactor": 0.95,
         "CoolFactor": 1.065,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "60228924961b8d75ee233c32": {
         "ItemID": "60228924961b8d75ee233c32",
@@ -767,7 +827,8 @@
         "HeatFactor": 0.955,
         "CoolFactor": 1.063,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "5b099bb25acfc400186331e8": {
         "ItemID": "5b099bb25acfc400186331e8",
@@ -778,7 +839,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "5a9685b1a2750c0032157104": {
         "ItemID": "5a9685b1a2750c0032157104",
@@ -789,7 +851,8 @@
         "HeatFactor": 0.978,
         "CoolFactor": 1.078,
         "DurabilityBurnModificator": 0.98,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "628a665a86cbd9750d2ff5e5": {
         "ItemID": "628a665a86cbd9750d2ff5e5",
@@ -800,7 +863,8 @@
         "HeatFactor": 0.998,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 5
     },
     "5cf7acfcd7f00c1084477cf2": {
         "ItemID": "5cf7acfcd7f00c1084477cf2",
@@ -811,7 +875,8 @@
         "HeatFactor": 0.951,
         "CoolFactor": 1.052,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": -5
     },
     "5c471bd12e221602b4129c3a": {
         "ItemID": "5c471bd12e221602b4129c3a",
@@ -822,7 +887,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "57dc334d245977597164366f": {
         "ItemID": "57dc334d245977597164366f",
@@ -840,7 +906,8 @@
             "5c82343a2e221644f31c0611",
             "5c61a40d2e2216001403158d",
             "5c90c3622e221601da359851"
-        ]
+        ],
+        "Ergonomics": 5
     },
     "59985a6c86f77414ec448d17": {
         "ItemID": "59985a6c86f77414ec448d17",
@@ -862,7 +929,8 @@
             "591ee00d86f774592f7b841e",
             "57acb6222459771ec34b5cb0",
             "618a5d5852ecee1505530b2a"
-        ]
+        ],
+        "Ergonomics": 5
     },
     "62811fbf09427b40ab14e767": {
         "ItemID": "62811fbf09427b40ab14e767",
@@ -873,7 +941,8 @@
         "HeatFactor": 0.989,
         "CoolFactor": 1.01,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 3
     },
     "57616c112459773cce774d66": {
         "ItemID": "57616c112459773cce774d66",
@@ -884,7 +953,8 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 2
     },
     "6281204f308cb521f87a8f9b": {
         "ItemID": "6281204f308cb521f87a8f9b",
@@ -895,7 +965,8 @@
         "HeatFactor": 0.989,
         "CoolFactor": 1.01,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "5d2c772c48f0355d95672c25": {
         "ItemID": "5d2c772c48f0355d95672c25",
@@ -927,7 +998,8 @@
             "5c61a40d2e2216001403158d",
             "5c90c3622e221601da359851",
             "628a7b23b0f75035732dd565"
-        ]
+        ],
+        "Ergonomics": 7
     },
     "5d4405aaa4b9361e6a4e6bd3": {
         "ItemID": "5d4405aaa4b9361e6a4e6bd3",
@@ -938,7 +1010,8 @@
         "HeatFactor": 0.983,
         "CoolFactor": 1.013,
         "DurabilityBurnModificator": 0.98,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 6
     },
     "5a7033908dc32e000a311392": {
         "ItemID": "5a7033908dc32e000a311392",
@@ -949,7 +1022,8 @@
         "HeatFactor": 0.948,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.98,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     },
     "5a71e22f8dc32e00094b97f4": {
         "ItemID": "5a71e22f8dc32e00094b97f4",
@@ -960,7 +1034,8 @@
         "HeatFactor": 0.944,
         "CoolFactor": 1.063,
         "DurabilityBurnModificator": 0.96,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 9
     },
     "5a71e4f48dc32e001207fb26": {
         "ItemID": "5a71e4f48dc32e001207fb26",
@@ -971,7 +1046,8 @@
         "HeatFactor": 0.983,
         "CoolFactor": 1.074,
         "DurabilityBurnModificator": 0.95,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 10
     },
     "602e63fb6335467b0c5ac94d": {
         "ItemID": "602e63fb6335467b0c5ac94d",
@@ -982,6 +1058,7 @@
         "HeatFactor": 0.954,
         "CoolFactor": 1.052,
         "DurabilityBurnModificator": 1,
-        "ConflictingItems": []
+        "ConflictingItems": [],
+        "Ergonomics": 4
     }
 }
