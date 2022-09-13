@@ -35,7 +35,6 @@ class BotLootServer extends BotLootCacheService_1.BotLootCacheService {
         }
     }
     myAddLootToCache(botRole, isPmc, lootPool) {
-        // Flatten all individual slot loot pools into one big pool, while filtering out potentially missing templates
         const specialLootTemplates = [];
         const backpackLootTemplates = [];
         const pocketLootTemplates = [];
@@ -46,36 +45,38 @@ class BotLootServer extends BotLootCacheService_1.BotLootCacheService {
                 continue;
             }
             let poolItems = [];
+            const items = this.databaseServer.getTables().templates.items;
             switch (slot.toLowerCase()) {
                 case "specialloot":
-                    poolItems = pool.map(lootTpl => this.databaseServer.getTables().templates.items[lootTpl]);
-                    specialLootTemplates.push(...poolItems.filter(x => !!x));
+                    poolItems = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(specialLootTemplates, poolItems);
                     break;
                 case "pockets":
-                    poolItems = pool.map(lootTpl => this.databaseServer.getTables().templates.items[lootTpl]);
-                    pocketLootTemplates.push(...poolItems.filter(x => !!x));
+                    poolItems = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(pocketLootTemplates, poolItems);
                     break;
                 case "tacticalvest":
-                    poolItems = pool.map(lootTpl => this.databaseServer.getTables().templates.items[lootTpl]);
-                    vestLootTemplates.push(...poolItems.filter(x => !!x));
+                    poolItems = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(vestLootTemplates, poolItems);
                     break;
                 case "securedcontainer":
                     // Don't add these items to loot pool
                     break;
                 default:
-                    poolItems = pool.map(lootTpl => this.databaseServer.getTables().templates.items[lootTpl]);
-                    backpackLootTemplates.push(...poolItems.filter(x => !!x));
+                    poolItems = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(backpackLootTemplates, poolItems);
             }
+            // Add items to combined pool if any exist
             if (Object.keys(poolItems).length > 0) {
-                combinedPoolTemplates.push(...poolItems.filter(x => !!x));
+                this.addUniqueItemsToPool(combinedPoolTemplates, poolItems);
             }
         }
         // Sort all items by their worth
-        specialLootTemplates.sort((a, b) => this.compareByValue(this.ragfairPriceService.getFleaPriceForItem(a._id), this.ragfairPriceService.getFleaPriceForItem(b._id)));
-        backpackLootTemplates.sort((a, b) => this.compareByValue(this.ragfairPriceService.getFleaPriceForItem(a._id), this.ragfairPriceService.getFleaPriceForItem(b._id)));
-        pocketLootTemplates.sort((a, b) => this.compareByValue(this.ragfairPriceService.getFleaPriceForItem(a._id), this.ragfairPriceService.getFleaPriceForItem(b._id)));
-        vestLootTemplates.sort((a, b) => this.compareByValue(this.ragfairPriceService.getFleaPriceForItem(a._id), this.ragfairPriceService.getFleaPriceForItem(b._id)));
-        combinedPoolTemplates.sort((a, b) => this.compareByValue(this.ragfairPriceService.getFleaPriceForItem(a._id), this.ragfairPriceService.getFleaPriceForItem(b._id)));
+        this.sortPoolByRagfairPrice(specialLootTemplates);
+        this.sortPoolByRagfairPrice(backpackLootTemplates);
+        this.sortPoolByRagfairPrice(pocketLootTemplates);
+        this.sortPoolByRagfairPrice(vestLootTemplates);
+        this.sortPoolByRagfairPrice(combinedPoolTemplates);
         const specialLootItems = specialLootTemplates.filter(template => !this.isBulletOrGrenade(template._props)
             && !this.isMagazine(template._props));
         const healingItems = combinedPoolTemplates.filter(template => this.isMedicalItem(template._props)

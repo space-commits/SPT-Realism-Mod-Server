@@ -41,7 +41,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 4,
+        "FixSpeed": 8,
         "Ergonomics": 0
     },
     "5c0faf68d174af02a96260b8": {
@@ -59,7 +59,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 6,
+        "FixSpeed": 12,
         "Ergonomics": 0
     },
     "55d44fd14bdc2d962f8b456e": {
@@ -77,7 +77,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 12,
+        "FixSpeed": 24,
         "Ergonomics": 0
     },
     "5bb20dbcd4351e44f824c04e": {
@@ -86,7 +86,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 4,
+        "FixSpeed": 8,
         "Ergonomics": 0
     },
     "6033749e88382f4fab3fd2c5": {
@@ -95,7 +95,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 11,
+        "FixSpeed": 22,
         "Ergonomics": 0
     },
     "5b2240bf5acfc40dc528af69": {
@@ -104,7 +104,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 12,
+        "FixSpeed": 24,
         "Ergonomics": 0
     },
     "5d44334ba4b9362b346d1948": {
@@ -113,7 +113,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 12,
+        "FixSpeed": 24,
         "Ergonomics": 0
     },
     "5f633ff5c444ce7e3c30a006": {
@@ -122,7 +122,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 11,
+        "FixSpeed": 22,
         "Ergonomics": 0
     },
     "62811d61578c54356d6d67ea": {
@@ -197,7 +197,7 @@
         "ModType": "",
         "ReloadSpeed": 7,
         "ConflictingItems": [],
-        "FixSpeed": 7,
+        "FixSpeed": 14,
         "Ergonomics": 0
     },
     "5926c32286f774616e42de99": {
@@ -233,7 +233,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 12,
+        "FixSpeed": 24,
         "Ergonomics": 0
     },
     "58949edd86f77409483e16a9": {
@@ -242,7 +242,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 6,
+        "FixSpeed": 12,
         "Ergonomics": 0
     },
     "58949fac86f77409483e16aa": {
@@ -251,7 +251,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 4,
+        "FixSpeed": 8,
         "Ergonomics": 0
     },
     "5cc6ea78e4a949000e1ea3c1": {
@@ -269,7 +269,7 @@
         "ModType": "",
         "ReloadSpeed": 5,
         "ConflictingItems": [],
-        "FixSpeed": 10,
+        "FixSpeed": 20,
         "Ergonomics": 0
     }
 }

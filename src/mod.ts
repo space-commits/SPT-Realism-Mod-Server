@@ -31,6 +31,11 @@ import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator
 import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponResult";
 import { BotLootCacheService } from "@spt-aki/services/BotLootCacheService";
 import { LootCacheType } from "@spt-aki/models/spt/bots/BotLootCache";
+import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
+import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
+import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
+import { InventoryMagGen } from "@spt-aki/generators/weapongen/InventoryMagGen";
+import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -48,8 +53,7 @@ import { BotModGen, BotWepGen } from "./bot_wep_gen";
 import { BotLootServer } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
-import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
-import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
+
 
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
@@ -90,7 +94,9 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
             container.afterResolution("BotWeaponGenerator", (_t, result: BotWeaponGenerator) => {
                 const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
                 const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-                const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer1, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer);
+                const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
+                const inventoryMagGenComponents = container.resolveAll<IInventoryMagGen>("InventoryMagGen");
+                const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer1, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, inventoryMagGenComponents);
                 result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult => {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 }
@@ -105,7 +111,8 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                 const botEquipFilterServ = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
                 const itemFilterServ = container.resolve<ItemFilterService>("ItemFilterService");
                 const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, configServer);
+                const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
+                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
                 result.generateModsForWeapon = (sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string): Item[] => {
                     return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
                 }

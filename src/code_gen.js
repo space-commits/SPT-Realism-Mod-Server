@@ -752,7 +752,7 @@ class CodeGen {
             var modConfItems = fileItem.ConflictingItems;
             var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
                 fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
-                fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", "false", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0"];
+                fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0"];
             for (let j in modPropertyValues) {
                 serverConfItems[j] = modPropertyValues[j];
             }

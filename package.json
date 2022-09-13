@@ -1,10 +1,10 @@
 {
     "name": "SPT Realism Mod",
-    "version": "0.4.11",
+    "version": "0.4.12",
     "main": "src/mod.js",
     "license": "CC BY-NC-SA",
     "author": "Fontaine",
-    "akiVersion": "3.2.2",
+    "akiVersion": "3.2.3",
     "scripts": {
         "setup:environment": "npm i",
         "build:unzipped": "copyfiles -e \"./node_modules/**/*.*\" -e \"./dist/**/*.*\" -e \"./package-lock.json\" -e \"./tsconfig.json\" -e \"./README.txt\" -e \"./mod.code-workspace\" ./**/*.* ./dist",

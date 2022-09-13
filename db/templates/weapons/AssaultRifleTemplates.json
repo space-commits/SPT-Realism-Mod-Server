@@ -421,7 +421,7 @@
         "WeapType": "bullpup",
         "OperationType": "",
         "WeapAccuracy": 0,
-        "BaseTorque": 14,
+        "BaseTorque": 28,
         "HasShoulderContact": true,
         "Ergonomics": 72,
         "VerticalRecoil": 87,

@@ -46,35 +46,30 @@ export class Player {
             this.globalDB.SprintSpeed["y"] = 0.42;
 
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
-            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.8; // down lightweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.7; // down lightweight
 
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight
-            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] = 1.5;  //down heavyweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] = 1.35;  //down heavyweight
 
             this.globalDB.Stamina.CrouchConsumption["x"] = 3.5;
             this.globalDB.Stamina.CrouchConsumption["y"] = 5;
 
-            // this.globalDB.Stamina.WalkConsumption["x"] = 0.1;
-            // this.globalDB.Stamina.WalkConsumption["y"] = 0.1;
-
-            // this.globalDB.Stamina.OverweightConsumptionByPose["x"] = -4;
-            // this.globalDB.Stamina.OverweightConsumptionByPose["y"] = 0;
 
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
 
             //test speedlimitafterfall, duration, after jump. Speed limit duration might actually have to do with speeding up into sprint??
             //////////////////////////////////////////////////////////
-            // this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] = 0.53;
-            // this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] = 0.75;
+            this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] *= 0.35;
+            this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] *= 0.35;
 
-            // this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] = 2.6;
+            this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] *= 0.35;
 
-            // this.globalDB.Inertia.SpeedLimitDurationMin["x"] = 0.15;
-            // this.globalDB.Inertia.SpeedLimitDurationMin["y"] = 0.25;
+            this.globalDB.Inertia.SpeedLimitDurationMin["x"] *= 8;
+            this.globalDB.Inertia.SpeedLimitDurationMin["y"] *= 8;
 
-            // this.globalDB.Inertia.SpeedLimitDurationMax["x"] = 0.5;
-            // this.globalDB.Inertia.SpeedLimitDurationMax["y"] = 0.3;
+            this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 8;
+            this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 8;
 
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
@@ -82,7 +77,7 @@ export class Player {
             this.globalDB.Inertia.BaseJumpPenalty = 1;
             this.globalDB.Inertia.BaseJumpPenaltyDuration = 1;
 
-            this.globalDB.Inertia.SprintBrakeInertia["y"] = 73;
+            this.globalDB.Inertia.SprintBrakeInertia["y"] = 75;
 
             this.globalDB.Inertia.SprintTransitionMotionPreservation["x"] = 0.812;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
@@ -93,8 +88,8 @@ export class Player {
             this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.3;
 
             this.globalDB.Health.Falling.DamagePerMeter = 11;
-            this.globalDB.Health.Falling.SafeHeight = 2.1;
-            this.globalDB.Stamina.SafeHeightOverweight = 1.7;
+            this.globalDB.Health.Falling.SafeHeight = 2;
+            this.globalDB.Stamina.SafeHeightOverweight = 1.67;
 
             this.globalDB.Stamina.Capacity = 120;
             this.globalDB.Stamina.BaseRestorationRate = 10;

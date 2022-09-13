@@ -48,7 +48,9 @@ class Mod {
             container.afterResolution("BotWeaponGenerator", (_t, result) => {
                 const botGeneratorHelper = container.resolve("BotGeneratorHelper");
                 const itemHelper = container.resolve("ItemHelper");
-                const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer1, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer);
+                const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
+                const inventoryMagGenComponents = container.resolveAll("InventoryMagGen");
+                const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer1, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, inventoryMagGenComponents);
                 result.generateWeaponByTpl = (sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) => {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 };
@@ -62,7 +64,8 @@ class Mod {
                 const botEquipFilterServ = container.resolve("BotEquipmentFilterService");
                 const itemFilterServ = container.resolve("ItemFilterService");
                 const profileHelper = container.resolve("ProfileHelper");
-                const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, configServer);
+                const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
+                const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
                 result.generateModsForWeapon = (sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole) => {
                     return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
                 };

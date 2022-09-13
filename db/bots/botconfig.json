@@ -8,16 +8,16 @@
     ],
     "maxBotCap": 25,
     "lootNValue1": {
-        "scav": 2.8,
-        "pmc": 4.2
+        "scav": 3.2,
+        "pmc": 3.15
     },
     "lootNValue2": {
-        "scav": 3.4,
-        "pmc": 3.4
+        "scav": 3.3,
+        "pmc": 2.5
     },
     "lootNValue3": {
-        "scav": 4.4,
-        "pmc": 2.7
+        "scav": 3.5,
+        "pmc": 2.4
     },
     "durability1": {
         "pmc": {
@@ -400,10 +400,8 @@
             }
         },
         "isUsec": 50,
-        "bearType" : "assault",
-        "usecType" : "assault",
         "difficulty" : "Hard",
-        "maxBackpackLootTotalRub": 50000,
+        "maxBackpackLootTotalRub": 75000,
         "maxPocketLootTotalRub": 25000,
         "maxVestLootTotalRub": 25000,
         "looseWeaponInBackpackChancePercent": 0,
@@ -436,10 +434,8 @@
             }
         },
         "isUsec": 58,
-        "bearType" : "pmcbot",
-        "usecType" : "pmcbot",
         "difficulty" : "Hard",
-        "maxBackpackLootTotalRub": 75000,
+        "maxBackpackLootTotalRub": 90000,
         "maxPocketLootTotalRub": 35000,
         "maxVestLootTotalRub": 35000,
         "looseWeaponInBackpackChancePercent": 0,
@@ -472,10 +468,8 @@
             }
         },
         "isUsec": 50,
-        "bearType" : "followerBigPipe",
-        "usecType" : "bossknight",
         "difficulty" : "Impossible",
-        "maxBackpackLootTotalRub": 125000,
+        "maxBackpackLootTotalRub": 150000,
         "maxPocketLootTotalRub": 50000,
         "maxVestLootTotalRub": 50000,
         "looseWeaponInBackpackChancePercent": 0,
@@ -497,6 +491,120 @@
                 "min": 0,
                 "max": 0
             }
+        }
+    },
+    "pmcType1": {
+        "Factory": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Customs": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Woods": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Interchange": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Laboratory": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Lighthouse": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "ReserveBase": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Shoreline": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "default": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        }
+    },
+    "pmcType2": {
+        "Factory": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Customs": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Woods": {
+            "usec": "followerBirdEye",
+            "bear": "followerBigPipe"
+        },
+        "Interchange": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Laboratory": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Lighthouse": {
+            "usec": "followerBirdEye",
+            "bear": "followerBigPipe"
+        },
+        "ReserveBase": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Shoreline": {
+            "usec": "followerBirdEye",
+            "bear": "followerBigPipe"
+        },
+        "default": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        }
+    },
+    "pmcType3": {
+        "Factory": {
+            "usec": "followerBigPipe",
+            "bear": "bossKnight"
+        },
+        "Customs": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
+        },
+        "Woods": {
+            "usec": "followerBirdEye",
+            "bear": "followerBigPipe"
+        },
+        "Interchange": {
+            "usec": "followerBigPipe",
+            "bear": "bossKnight"
+        },
+        "Laboratory": {
+            "usec": "followerBigPipe",
+            "bear": "bossKnight"
+        },
+        "Lighthouse": {
+            "usec": "followerBirdEye",
+            "bear": "followerBigPipe"
+        },
+        "ReserveBase": {
+            "usec": "followerBigPipe",
+            "bear": "bossKnight"
+        },
+        "Shoreline": {
+            "usec": "followerBirdEye",
+            "bear": "followerBigPipe"
+        },
+        "default": {
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         }
     },
     "pmcTest": {

@@ -39,18 +39,15 @@ export class Bots {
                 "scopeLimit": 10,
                 "lightLaserLimit": 1
             },
+            "randomisedArmorSlots": [],
             "randomisedWeaponModSlots": [],
             "blacklist": [{
                 "levelRange": {
                     "min": 1,
                     "max": 100
                 },
-                "equipment": {
-
-                },
-                "cartridge": {
-
-                }
+                "equipment": {},
+                "cartridge": {}
             }
             ],
             "whitelist": [{
@@ -257,8 +254,7 @@ export class Bots {
         this.botConf.lootNValue = rmBotConfig.lootNValue1;
 
         if (this.modConf.difficulty == true) {
-            this.botConfPMC.bearType = rmBotConfig.pmc1.bearType;
-            this.botConfPMC.usecType = rmBotConfig.pmc1.usecType;;
+            this.botConfPMC.pmcType = rmBotConfig.pmcType1;
             this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;;
         }
 
@@ -306,8 +302,7 @@ export class Bots {
         this.botConf.lootNValue = rmBotConfig.lootNValue2;
 
         if (this.modConf.difficulty == true) {
-            this.botConfPMC.bearType = rmBotConfig.pmc2.bearType;
-            this.botConfPMC.usecType = rmBotConfig.pmc2.usecType;;
+            this.botConfPMC.pmcType = rmBotConfig.pmcType2;
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
         }
 
@@ -355,8 +350,7 @@ export class Bots {
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
 
         if (this.modConf.difficulty == true) {
-            this.botConfPMC.bearType = rmBotConfig.pmc3.bearType;
-            this.botConfPMC.usecType = rmBotConfig.pmc3.usecType;;
+            this.botConfPMC.pmcType = rmBotConfig.pmcType3;
             this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;;
         }
 
