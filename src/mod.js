@@ -316,7 +316,7 @@ class Mod {
         items.loadItems();
         player.loadPlayer();
         weapons_globals.loadGlobalWeps();
-        weapons_stats.loadWepStats();
+        // weapons_stats.loadWepStats();
     }
     revertMeds(pmcData, helper) {
         helper.revertMedItems(pmcData);
@@ -446,7 +446,7 @@ class Mod {
                         tier = this.botTierWeighter(5, 1, 0, bots);
                     }
                     if (pmcData.Info.Level >= 10) {
-                        tier = this.botTierWeighter(5, 2, 0, bots);
+                        tier = this.botTierWeighter(8, 2, 0, bots);
                     }
                     if (pmcData.Info.Level >= 15) {
                         tier = this.botTierWeighter(0, 10, 1, bots);

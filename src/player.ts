@@ -65,11 +65,11 @@ export class Player {
 
             this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] *= 0.35;
 
-            this.globalDB.Inertia.SpeedLimitDurationMin["x"] *= 8;
-            this.globalDB.Inertia.SpeedLimitDurationMin["y"] *= 8;
+            this.globalDB.Inertia.SpeedLimitDurationMin["x"] *= 1.5;
+            this.globalDB.Inertia.SpeedLimitDurationMin["y"] *= 1.5;
 
-            this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 8;
-            this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 8;
+            this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 2;
+            this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 2;
 
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;

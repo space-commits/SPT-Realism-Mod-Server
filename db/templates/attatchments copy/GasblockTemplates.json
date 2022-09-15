@@ -34,7 +34,7 @@
         "CoolFactor": 1.004,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.12
     },
     "5a01ad4786f77450561fda02": {
@@ -167,7 +167,7 @@
         "CoolFactor": 1.022,
         "DurabilityBurnModificator": 0.98,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 10,
         "Weight": 0.55
     },
     "59ccfdba86f7747f2109a587": {
@@ -186,7 +186,7 @@
         "CoolFactor": 0.984,
         "DurabilityBurnModificator": 0.96,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 6,
         "Weight": 0.12
     },
     "5cf656f2d7f00c06585fb6eb": {
@@ -205,7 +205,7 @@
         "CoolFactor": 1.042,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 14,
         "Weight": 0.385
     },
     "5d4aab30a4b9365435358c55": {
@@ -224,7 +224,7 @@
         "CoolFactor": 1.042,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 14,
         "Weight": 0.385
     },
     "628a83c29179c324ed269508": {
@@ -243,7 +243,7 @@
         "CoolFactor": 1.082,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 9,
         "Weight": 0.48
     },
     "59d36a0086f7747e673f3946": {
@@ -281,7 +281,7 @@
         "CoolFactor": 1.004,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.095
     },
     "5a34fbadc4a28200741e230a": {
@@ -304,7 +304,7 @@
             "595cfa8b86f77427437e845b",
             "595cf16b86f77427440c32e2"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.218
     },
     "5dfa3d45dfc58d14537c20b0": {
@@ -323,7 +323,7 @@
         "CoolFactor": 1.004,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.049
     },
     "5ae30e795acfc408fb139a0b": {
@@ -367,7 +367,7 @@
         "CoolFactor": 1.004,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.053
     },
     "5d00ec68d7ad1a04a067e5be": {
@@ -386,7 +386,7 @@
         "CoolFactor": 1.008,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "56ea8d2fd2720b7c698b4570": {
@@ -430,7 +430,7 @@
         "CoolFactor": 1.004,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.06
     },
     "5fbc210bf24b94483f726481": {
@@ -449,7 +449,7 @@
         "CoolFactor": 1.004,
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.049
     },
     "5fc2360f900b1d5091531e19": {

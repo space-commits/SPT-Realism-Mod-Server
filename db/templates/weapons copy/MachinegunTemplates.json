@@ -26,7 +26,10 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
-        "Velocity": 1.8
+        "Velocity": 1.8,
+        "RecoilDamping": 0,
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     },
     "5beed0f50db834001c062b12": {
         "ItemID": "5beed0f50db834001c062b12",
@@ -55,6 +58,9 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
-        "Velocity": 1.8
+        "Velocity": 1.8,
+        "RecoilDamping": 0,
+        "RecoilHandDamping": 0,
+        "WeaponAllowADS": false
     }
 }

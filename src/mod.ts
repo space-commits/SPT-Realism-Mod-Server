@@ -345,6 +345,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
 
+
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
@@ -407,7 +408,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         items.loadItems();
         player.loadPlayer();
         weapons_globals.loadGlobalWeps();
-        weapons_stats.loadWepStats();
+        // weapons_stats.loadWepStats();
     }
 
     public revertMeds(pmcData: IPmcData, helper: Helper) {
@@ -557,7 +558,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                         tier = this.botTierWeighter(5, 1, 0, bots);
                     }
                     if (pmcData.Info.Level >= 10) {
-                        tier = this.botTierWeighter(5, 2, 0, bots);
+                        tier = this.botTierWeighter(8, 2, 0, bots);
                     }
                     if (pmcData.Info.Level >= 15) {
                         tier = this.botTierWeighter(0, 10, 1, bots);

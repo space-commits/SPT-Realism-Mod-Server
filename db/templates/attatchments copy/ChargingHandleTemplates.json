@@ -7,9 +7,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.041,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.041
     },
     "6130ca3fd92c473c77020dbd": {
         "ItemID": "6130ca3fd92c473c77020dbd",
@@ -19,9 +17,7 @@
         "ConflictingItems": [],
         "FixSpeed": 10,
         "Ergonomics": 0,
-        "Weight": 0.015,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.015
     },
     "5648ac824bdc2ded0b8b457d": {
         "ItemID": "5648ac824bdc2ded0b8b457d",
@@ -31,9 +27,7 @@
         "ConflictingItems": [],
         "FixSpeed": 8,
         "Ergonomics": 0,
-        "Weight": 0.017,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.017
     },
     "5df8e085bb49d91fb446d6a8": {
         "ItemID": "5df8e085bb49d91fb446d6a8",
@@ -43,9 +37,7 @@
         "ConflictingItems": [],
         "FixSpeed": 6,
         "Ergonomics": 0,
-        "Weight": 0.046,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.046
     },
     "5df8e053bb49d91fb446d6a6": {
         "ItemID": "5df8e053bb49d91fb446d6a6",
@@ -55,9 +47,7 @@
         "ConflictingItems": [],
         "FixSpeed": 8,
         "Ergonomics": 0,
-        "Weight": 0.041,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.041
     },
     "5c0faf68d174af02a96260b8": {
         "ItemID": "5c0faf68d174af02a96260b8",
@@ -67,9 +57,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.113,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.113
     },
     "56ea7165d2720b6e518b4583": {
         "ItemID": "56ea7165d2720b6e518b4583",
@@ -79,9 +67,7 @@
         "ConflictingItems": [],
         "FixSpeed": 12,
         "Ergonomics": 0,
-        "Weight": 0.064,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.064
     },
     "55d44fd14bdc2d962f8b456e": {
         "ItemID": "55d44fd14bdc2d962f8b456e",
@@ -91,9 +77,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.113,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.113
     },
     "5ea16d4d5aad6446a939753d": {
         "ItemID": "5ea16d4d5aad6446a939753d",
@@ -103,9 +87,7 @@
         "ConflictingItems": [],
         "FixSpeed": 24,
         "Ergonomics": 0,
-        "Weight": 0.03,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.03
     },
     "5bb20dbcd4351e44f824c04e": {
         "ItemID": "5bb20dbcd4351e44f824c04e",
@@ -115,9 +97,7 @@
         "ConflictingItems": [],
         "FixSpeed": 8,
         "Ergonomics": 0,
-        "Weight": 0.064,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.064
     },
     "6033749e88382f4fab3fd2c5": {
         "ItemID": "6033749e88382f4fab3fd2c5",
@@ -127,9 +107,7 @@
         "ConflictingItems": [],
         "FixSpeed": 22,
         "Ergonomics": 0,
-        "Weight": 0.035,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.035
     },
     "5b2240bf5acfc40dc528af69": {
         "ItemID": "5b2240bf5acfc40dc528af69",
@@ -139,9 +117,7 @@
         "ConflictingItems": [],
         "FixSpeed": 24,
         "Ergonomics": 0,
-        "Weight": 0.04,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.04
     },
     "5d44334ba4b9362b346d1948": {
         "ItemID": "5d44334ba4b9362b346d1948",
@@ -151,9 +127,7 @@
         "ConflictingItems": [],
         "FixSpeed": 24,
         "Ergonomics": 0,
-        "Weight": 0.04,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.04
     },
     "5f633ff5c444ce7e3c30a006": {
         "ItemID": "5f633ff5c444ce7e3c30a006",
@@ -163,9 +137,7 @@
         "ConflictingItems": [],
         "FixSpeed": 22,
         "Ergonomics": 0,
-        "Weight": 0.028,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.028
     },
     "62811d61578c54356d6d67ea": {
         "ItemID": "62811d61578c54356d6d67ea",
@@ -216,9 +188,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.013,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.013
     },
     "5fbcc640016cce60e8341acc": {
         "ItemID": "5fbcc640016cce60e8341acc",
@@ -228,9 +198,7 @@
         "ConflictingItems": [],
         "FixSpeed": 12,
         "Ergonomics": 0,
-        "Weight": 0.035,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.035
     },
     "6181688c6c780c1e710c9b04": {
         "ItemID": "6181688c6c780c1e710c9b04",
@@ -240,9 +208,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.017,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.017
     },
     "606587bd6d0bd7580617bacc": {
         "ItemID": "606587bd6d0bd7580617bacc",
@@ -252,9 +218,7 @@
         "ConflictingItems": [],
         "FixSpeed": 14,
         "Ergonomics": 0,
-        "Weight": 0.03,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.03
     },
     "5926c32286f774616e42de99": {
         "ItemID": "5926c32286f774616e42de99",
@@ -264,9 +228,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.126,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.126
     },
     "5d2f2d5748f03572ec0c0139": {
         "ItemID": "5d2f2d5748f03572ec0c0139",
@@ -276,9 +238,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.11,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.11
     },
     "5de922d4b11454561e39239f": {
         "ItemID": "5de922d4b11454561e39239f",
@@ -288,9 +248,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.02,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.02
     },
     "5c5db6b32e221600102611a0": {
         "ItemID": "5c5db6b32e221600102611a0",
@@ -300,9 +258,7 @@
         "ConflictingItems": [],
         "FixSpeed": 24,
         "Ergonomics": 0,
-        "Weight": 0.03,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.03
     },
     "58949edd86f77409483e16a9": {
         "ItemID": "58949edd86f77409483e16a9",
@@ -312,9 +268,7 @@
         "ConflictingItems": [],
         "FixSpeed": 12,
         "Ergonomics": 0,
-        "Weight": 0.033,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.033
     },
     "58949fac86f77409483e16aa": {
         "ItemID": "58949fac86f77409483e16aa",
@@ -324,9 +278,7 @@
         "ConflictingItems": [],
         "FixSpeed": 8,
         "Ergonomics": 0,
-        "Weight": 0.032,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.032
     },
     "5cc6ea78e4a949000e1ea3c1": {
         "ItemID": "5cc6ea78e4a949000e1ea3c1",
@@ -336,9 +288,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "Ergonomics": 0,
-        "Weight": 0.017,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.017
     },
     "5cc6ea85e4a949000e1ea3c3": {
         "ItemID": "5cc6ea85e4a949000e1ea3c3",
@@ -348,8 +298,6 @@
         "ConflictingItems": [],
         "FixSpeed": 20,
         "Ergonomics": 0,
-        "Weight": 0.019,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.019
     }
 }

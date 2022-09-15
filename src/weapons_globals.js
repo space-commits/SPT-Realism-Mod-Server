@@ -40,32 +40,33 @@ class WeaponsGlobals {
             }
         }
         if (this.modConf.recoil_changes == true && this.modConf.legacy_recoil_changes != true) {
-            for (let i in this.itemDB) {
-                let fileData = this.itemDB[i];
-                if (fileData._props.weapClass === "smg"
-                    || fileData._props.weapClass === "shotgun"
-                    || fileData._props.weapClass === "assaultCarbine"
-                    || fileData._props.weapClass === "sniperRifle"
-                    || fileData._props.weapClass === "assaultRifle"
-                    || fileData._props.weapClass === "machinegun"
-                    || fileData._props.weapClass === "marksmanRifle"
-                    || fileData._props.weapClass === "assaultRifle") {
-                    fileData._props.RecoilForceUp *= 1;
-                    fileData._props.RecoilForceBack *= 0.5;
-                    fileData._props.Convergence *= 2.7;
-                    fileData._props.RecolDispersion *= 1.15;
-                    fileData._props.CameraRecoil *= 0.65;
-                    fileData._props.CameraSnap *= 0.5;
-                }
-                if (fileData._props.weapClass === "pistol") {
-                    fileData._props.RecoilForceUp *= 0.4;
-                    fileData._props.RecoilForceBack *= 2.85;
-                    fileData._props.Convergence *= 1;
-                    fileData._props.RecolDispersion *= 0.9;
-                    fileData._props.CameraRecoil *= 1;
-                    fileData._props.CameraSnap *= 1.7;
-                }
-            }
+            // for (let i in this.itemDB) {
+            //     let fileData = this.itemDB[i];
+            //     if (fileData._props.weapClass === "smg"
+            //         || fileData._props.weapClass === "shotgun"
+            //         || fileData._props.weapClass === "assaultCarbine"
+            //         || fileData._props.weapClass === "sniperRifle"
+            //         || fileData._props.weapClass === "assaultRifle"
+            //         || fileData._props.weapClass === "machinegun"
+            //         || fileData._props.weapClass === "marksmanRifle"
+            //         || fileData._props.weapClass === "assaultRifle"
+            //     ) {
+            //         fileData._props.RecoilForceUp *= 0.9
+            //         fileData._props.RecoilForceBack *= 0.5;
+            //         fileData._props.Convergence *= 5.5;
+            //         fileData._props.RecolDispersion *= 0.7;
+            //         fileData._props.CameraRecoil *= 0.65;
+            //         fileData._props.CameraSnap *= 0.5;
+            //     }
+            //     if (fileData._props.weapClass === "pistol") {
+            //         fileData._props.RecoilForceUp *= 0.5;
+            //         fileData._props.RecoilForceBack *= 2.5;
+            //         fileData._props.Convergence *= 2;
+            //         fileData._props.RecolDispersion *= 0.8;
+            //         fileData._props.CameraRecoil *= 1;
+            //         fileData._props.CameraSnap *= 1.7;
+            //     }
+            // }
             this.globalDB.Aiming.RecoilCrank = true;
             this.globalDB.Aiming.RecoilDamping = 0.7;
             this.globalDB.Aiming.RecoilHandDamping = 0.65;

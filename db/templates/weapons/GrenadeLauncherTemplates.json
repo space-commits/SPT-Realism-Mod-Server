@@ -29,7 +29,9 @@
         "Velocity": 0,
         "RecoilDamping": 0,
         "RecoilHandDamping": 0,
-        "WeaponAllowADS": false
+        "WeaponAllowADS": false,
+        "Weight": 0.1,
+        "DurabilityBurnRatio": 1.15
     },
     "6275303a9f372d6ea97f9ec7": {
         "ItemID": "6275303a9f372d6ea97f9ec7",
@@ -61,6 +63,8 @@
         "Velocity": 0,
         "RecoilDamping": 0,
         "RecoilHandDamping": 0,
-        "WeaponAllowADS": false
+        "WeaponAllowADS": false,
+        "Weight": 3.3,
+        "DurabilityBurnRatio": 1
     }
 }

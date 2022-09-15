@@ -18,7 +18,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -3,
         "Weight": 0.2
     },
     "58949dea86f77409483e16a8": {
@@ -40,7 +40,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.063
     },
     "56ea6fafd2720b844b8b4593": {
@@ -62,7 +62,7 @@
         "Velocity": 0.4,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.204
     },
     "5fbcbd02900b1d5091531dd3": {
@@ -84,7 +84,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "59e61eb386f77440d64f5daf": {
@@ -128,7 +128,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.059
     },
     "5ac72e895acfc43b321d4bd5": {
@@ -150,7 +150,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.1
     },
     "5ba26acdd4351e003562908e": {
@@ -172,7 +172,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.08
     },
     "5f633f791b231926f2329f13": {
@@ -194,7 +194,7 @@
         "Velocity": 0.45,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.085
     },
     "5d026791d7ad1a04a067ea63": {
@@ -216,7 +216,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.108
     },
     "5c6beec32e221601da3578f2": {
@@ -246,7 +246,7 @@
             "5a71e22f8dc32e00094b97f4",
             "5a71e4f48dc32e001207fb26"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.036
     },
     "612e0e3c290d254f5e6b291d": {
@@ -290,7 +290,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.12
     },
     "5f2aa4559b44de6b1b4e68d1": {
@@ -312,7 +312,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "5ac72e615acfc43f67248aa0": {
@@ -334,7 +334,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.1
     },
     "5c7951452e221644f31bfd5c": {
@@ -356,7 +356,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.096
     },
     "5c48a2a42e221602b66d1e07": {
@@ -378,7 +378,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.2
     },
     "5d1f819086f7744b355c219b": {
@@ -400,7 +400,7 @@
         "Velocity": -0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.109
     },
     "5cc82796e24e8d000f5859a8": {
@@ -422,7 +422,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.1
     },
     "5943eeeb86f77412d6384f6b": {
@@ -444,7 +444,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -4,
         "Weight": 0.19
     },
     "5a9ea27ca2750c00137fa672": {
@@ -466,7 +466,7 @@
         "Velocity": 0.4,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -3,
         "Weight": 0.076
     },
     "5dcbe965e4ed22586443a79d": {
@@ -488,7 +488,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.2
     },
     "5a0d716f1526d8000d26b1e2": {
@@ -510,7 +510,7 @@
         "Velocity": 1.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.05
     },
     "5f6339d53ada5942720e2dc3": {
@@ -532,7 +532,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -3,
         "Weight": 0.14
     },
     "5c4ee3d62e2216152006f302": {
@@ -554,7 +554,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.46
     },
     "5998597786f77414ea6da093": {
@@ -576,7 +576,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.07
     },
     "5c878e9d2e2216000f201903": {
@@ -598,7 +598,7 @@
         "Velocity": -1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.09
     },
     "5649ab884bdc2ded0b8b457f": {
@@ -620,7 +620,7 @@
         "Velocity": 0.4,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.128
     },
     "5bffd7ed0db834001d23ebf9": {
@@ -644,7 +644,7 @@
         "ConflictingItems": [
             "571a28e524597720b4066567"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.036
     },
     "5c6d710d2e22165df16b81e7": {
@@ -666,7 +666,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "5cc9a96cd7f00c011c04e04a": {
@@ -688,7 +688,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.11
     },
     "5ac7655e5acfc40016339a19": {
@@ -710,7 +710,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.1
     },
     "612e0d81290d254f5e6b291a": {
@@ -732,7 +732,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.177
     },
     "5a70366c8dc32e001207fb06": {
@@ -754,7 +754,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.063
     },
     "615d8df08004cc50514c3236": {
@@ -776,7 +776,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.128
     },
     "5cf6935bd7f00c06585fb791": {
@@ -798,7 +798,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.079
     },
     "5c0fafb6d174af02a96260ba": {
@@ -820,7 +820,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "5888996c24597754281f9419": {
@@ -842,7 +842,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.098
     },
     "5c878ebb2e2216001219d48a": {
@@ -864,7 +864,7 @@
         "Velocity": 0.4,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.09
     },
     "5beec3420db834001b095429": {
@@ -886,7 +886,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.09
     },
     "5cc9ad73d7f00c000e2579d4": {
@@ -908,7 +908,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.11
     },
     "612e0d3767085e45ef14057f": {
@@ -930,7 +930,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.165
     },
     "5b7d693d5acfc43bca706a3d": {
@@ -952,7 +952,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.06
     },
     "5ac72e945acfc43f3b691116": {
@@ -974,7 +974,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.1
     },
     "5cdd7685d7f00c000f260ed2": {
@@ -996,7 +996,7 @@
         "Velocity": 4,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.12
     },
     "5ac72e725acfc400180ae701": {
@@ -1018,7 +1018,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.1
     },
     "5cff9e5ed7ad1a09407397d4": {
@@ -1040,7 +1040,7 @@
         "Velocity": -0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.109
     },
     "5c07c5ed0db834001b73571c": {
@@ -1062,7 +1062,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -3,
         "Weight": 0.38
     },
     "5ac72e7d5acfc40016339a02": {
@@ -1084,7 +1084,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.1
     },
     "59d64fc686f774171b243fe2": {
@@ -1128,7 +1128,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.1
     },
     "59e8a00d86f7742ad93b569c": {
@@ -1150,7 +1150,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "57dc324a24597759501edc20": {
@@ -1172,7 +1172,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.1
     },
     "5f633f68f5750b524b45f112": {
@@ -1194,7 +1194,7 @@
         "Velocity": 0.45,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.08
     },
     "612e0cfc8004cc50514c2d9e": {
@@ -1216,7 +1216,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.141
     },
     "5fbcbd10ab884124df0cd563": {
@@ -1238,7 +1238,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.095
     },
     "5f6372e2865db925d54f3869": {
@@ -1260,7 +1260,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.15
     },
     "5a7c147ce899ef00150bd8b8": {
@@ -1282,7 +1282,7 @@
         "Velocity": 1.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.2
     },
     "5caf17c9ae92150b30006be1": {
@@ -1304,7 +1304,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.15
     },
     "5d02676dd7ad1a049e54f6dc": {
@@ -1326,7 +1326,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.125
     },
     "609269c3b0e443224b421cc1": {
@@ -1348,7 +1348,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.14
     },
     "622f07cfae33bc505b2c4dd5": {
@@ -1370,7 +1370,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.063
     },
     "5a705e128dc32e000d46d258": {
@@ -1400,7 +1400,7 @@
             "5a71e22f8dc32e00094b97f4",
             "5a71e4f48dc32e001207fb26"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.036
     },
     "5998598e86f7740b3f498a86": {
@@ -1422,7 +1422,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.07
     },
     "615d8e2f1cb55961fa0fd9a4": {
@@ -1444,7 +1444,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.085
     },
     "6130c43c67085e45ef1405a1": {
@@ -1466,7 +1466,7 @@
         "Velocity": 2,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.145
     },
     "60337f5dce399e10262255d1": {
@@ -1488,7 +1488,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.084
     },
     "612e0e55a112697a4b3a66e7": {
@@ -1532,7 +1532,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.122
     },
     "5cf6937cd7f00c056c53fb39": {
@@ -1554,7 +1554,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.125
     },
     "58889c7324597754281f9439": {
@@ -1576,7 +1576,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -3,
         "Weight": 0.105
     },
     "626a74340be03179a165e30c": {
@@ -1620,7 +1620,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.098
     },
     "560e620e4bdc2d724b8b456b": {
@@ -1642,7 +1642,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.105
     },
     "5bbdb83fd4351e44f824c44b": {
@@ -1664,7 +1664,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -3,
         "Weight": 0.25
     },
     "615d8f5dd92c473c770212ef": {
@@ -1686,7 +1686,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.095
     },
     "5c471bfc2e221602b21d4e17": {
@@ -1708,7 +1708,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.08
     },
     "622f0ee47762f55aaa68ac87": {
@@ -1752,7 +1752,7 @@
         "Velocity": 0.4,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.128
     },
     "5fbcbcf593164a5b6278efb2": {
@@ -1774,7 +1774,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.07
     },
     "5d443f8fa4b93678dd4a01aa": {
@@ -1796,7 +1796,7 @@
         "Velocity": -1.7,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.109
     },
     "6065c6e7132d4d12c81fd8e1": {
@@ -1818,7 +1818,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.08
     },
     "5d440625a4b9361eec4ae6c5": {
@@ -1840,7 +1840,7 @@
         "Velocity": -1.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.109
     },
     "5a34fd2bc4a282329a73b4c5": {
@@ -1862,7 +1862,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.122
     },
     "5bc5a351d4351e003477a414": {
@@ -1884,7 +1884,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.19
     },
     "56ea8180d2720bf2698b456a": {
@@ -1906,7 +1906,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.063
     },
     "5c78f2882e22165df16b832e": {
@@ -1933,7 +1933,7 @@
             "peeeee",
             "peeeee"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.064
     },
     "5dfa3cd1b33c0951220c079b": {
@@ -1955,7 +1955,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.11
     },
     "5c7fb51d2e2216001219ce11": {
@@ -1977,7 +1977,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "618407a850224f204c1da549": {
@@ -1999,7 +1999,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.15
     },
     "5aafa1c2e5b5b00015042a56": {
@@ -2021,7 +2021,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.13
     },
     "5c7e5f112e221600106f4ede": {
@@ -2043,7 +2043,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.122
     },
     "5a7ad1fb51dfba0013379715": {
@@ -2065,7 +2065,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.036
     },
     "5d02677ad7ad1a04a15c0f95": {
@@ -2087,7 +2087,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.125
     },
     "5fb65424956329274326f316": {
@@ -2109,7 +2109,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "5a7ad0c451dfba0013379712": {
@@ -2131,7 +2131,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.036
     },
     "607ffb988900dc2d9a55b6e4": {
@@ -2153,7 +2153,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1.5,
         "Weight": 0.097
     },
     "622f128cec80d870d349b4e8": {
@@ -2175,7 +2175,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.06
     },
     "5cc9b815d7f00c000e2579d6": {
@@ -2197,7 +2197,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.064
     },
     "628a66b41d5e41750e314f34": {
@@ -2219,7 +2219,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1.5,
         "Weight": 0.11
     },
     "62812081d23f207deb0ab216": {
@@ -2241,7 +2241,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.23
     },
     "5ea172e498dacb342978818e": {
@@ -2263,7 +2263,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.06
     },
     "5b7d68af5acfc400170e30c3": {
@@ -2285,7 +2285,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.11
     },
     "618178aa1cb55961fa0fdc80": {
@@ -2307,7 +2307,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.16
     },
     "5cf78720d7f00c06595bc93e": {
@@ -2329,7 +2329,7 @@
         "Velocity": 0.4,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -3,
         "Weight": 0.176
     },
     "5addbb825acfc408fb139400": {
@@ -2351,7 +2351,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.13
     },
     "5fc23636016cce60e8341b05": {
@@ -2373,7 +2373,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.11
     },
     "615d8eb350224f204c1da1cf": {
@@ -2395,7 +2395,7 @@
         "Velocity": 2,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.21
     },
     "5cdd7693d7f00c0010373aa5": {
@@ -2417,7 +2417,7 @@
         "Velocity": 1.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.12
     },
     "62669bccdb9ebb4daa44cd14": {
@@ -2439,7 +2439,7 @@
         "Velocity": 2,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.221
     },
     "626667e87379c44d557b7550": {
@@ -2461,7 +2461,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.065
     },
     "5a7037338dc32e000d46d257": {
@@ -2483,7 +2483,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.063
     },
     "5a7b32a2e899ef00135e345a": {
@@ -2519,7 +2519,7 @@
             "5a32a064c4a28200741e22de",
             "5a7ad74e51dfba0015068f45"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.105
     },
     "5addbb945acfc4001a5fc44e": {
@@ -2541,7 +2541,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.14
     },
     "5addbba15acfc400185c2854": {
@@ -2563,7 +2563,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.06
     },
     "5addbbb25acfc40015621bd9": {
@@ -2585,7 +2585,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.07
     },
     "5ef61964ec7f42238c31e0c1": {
@@ -2609,7 +2609,7 @@
         "ConflictingItems": [
             "5f3e77f59103d430b93f94c1"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.105
     },
     "5ab3afb2d8ce87001660304d": {
@@ -2631,7 +2631,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.11
     },
     "5addbb6e5acfc408fb1393fd": {
@@ -2653,7 +2653,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.14
     },
     "5bc5a35cd4351e450201232f": {
@@ -2675,7 +2675,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.17
     },
     "5b099b7d5acfc400186331e4": {
@@ -2697,7 +2697,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "5c4eec9b2e2216398b5aaba2": {
@@ -2719,7 +2719,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.06
     },
     "5fbbc3324e8a554c40648348": {
@@ -2741,7 +2741,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.064
     },
     "5580239d4bdc2de7118b4583": {
@@ -2785,7 +2785,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5fbc22ccf24b94483f726483": {
@@ -2829,7 +2829,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5cf78496d7f00c065703d6ca": {
@@ -2851,7 +2851,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.03
     },
     "615d8e9867085e45ef1409c6": {
@@ -2873,7 +2873,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.11
     },
     "57f3c7e024597738ea4ba286": {
@@ -2917,7 +2917,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -5,
         "Weight": 0.34
     },
     "5c7954d52e221600106f4cc7": {
@@ -2983,7 +2983,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "587de5ba2459771c0f1e8a58": {
@@ -3005,7 +3005,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5e01e9e273d8eb11426f5bc3": {
@@ -3027,7 +3027,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.18
     },
     "58272d7f2459774f6311ddfd": {
@@ -3049,7 +3049,7 @@
         "Velocity": 0.25,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.233
     },
     "612e0e04568c120fdd294258": {
@@ -3071,7 +3071,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 2,
         "Weight": 0.01
     },
     "5cf67cadd7f00c065a5abab7": {
@@ -3137,7 +3137,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5de8f237bbaf010b10528a70": {
@@ -3159,7 +3159,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.14
     },
     "576167ab2459773cad038c43": {
@@ -3181,7 +3181,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.07
     },
     "5b363e1b5acfc4771e1c5e80": {
@@ -3269,7 +3269,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5a6b59a08dc32e000b452fb7": {
@@ -3291,7 +3291,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "628120621d5df4475f46a335": {
@@ -3313,7 +3313,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5d270b3c8abbc3105335cfb8": {
@@ -3335,7 +3335,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5a0abb6e1526d8000a025282": {
@@ -3423,7 +3423,7 @@
         "Velocity": 0.25,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.12
     },
     "5926e16e86f7742f5a0f7ecb": {
@@ -3445,7 +3445,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.08
     },
     "5fc4b97bab884124df0cd5e3": {
@@ -3491,7 +3491,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5d270ca28abbc31ee25ee821": {
@@ -3513,7 +3513,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "59bffc1f86f77435b128b872": {
@@ -3623,7 +3623,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Weight": 0.091
     },
     "5fb6548dd1409e5ca04b54f9": {
@@ -3645,7 +3645,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5de6556a205ddc616a6bc4f7": {
@@ -3667,7 +3667,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 1,
         "Weight": 0.01
     },
     "5abcc328d8ce8700194394f3": {
@@ -3689,7 +3689,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -21,
         "Weight": 0.49
     },
     "58aeac1b86f77457c419f475": {
@@ -3711,7 +3711,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -5,
         "Weight": 0.6
     },
     "5c7e8fab2e22165df16b889b": {
@@ -3733,7 +3733,7 @@
         "Velocity": 1.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -15,
         "Weight": 0.294
     },
     "6171367e1cb55961fa0fdb36": {
@@ -3755,7 +3755,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -18,
         "Weight": 0.46
     },
     "5f63407e1b231926f2329f15": {
@@ -3777,7 +3777,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -28,
         "Weight": 0.9
     },
     "5a34fe59c4a282000b1521a2": {
@@ -3799,7 +3799,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -26,
         "Weight": 0.567
     },
     "5ba26ae8d4351e00367f9bdb": {
@@ -3821,7 +3821,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -20,
         "Weight": 0.607
     },
     "57c44dd02459772d2e0ae249": {
@@ -3843,7 +3843,7 @@
         "Velocity": 2,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -5,
         "Weight": 0.496
     },
     "5cff9e84d7ad1a049e54ed55": {
@@ -3865,7 +3865,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -17,
         "Weight": 0.488
     },
     "59fb257e86f7742981561852": {
@@ -3887,7 +3887,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -21,
         "Weight": 0.354
     },
     "5c7955c22e221644f31bfd5e": {
@@ -3909,7 +3909,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -20,
         "Weight": 0.46
     },
     "56e05b06d2720bb2668b4586": {
@@ -3931,7 +3931,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -21,
         "Weight": 0.131
     },
     "57dbb57e2459774673234890": {
@@ -3953,7 +3953,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -21,
         "Weight": 0.68
     },
     "626673016f1edc06f30cf6d5": {
@@ -3977,7 +3977,7 @@
         "ConflictingItems": [
             "5c6d85e02e22165df16b81f4"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -20,
         "Weight": 0.453
     },
     "55d617094bdc2d89028b4568": {
@@ -3999,7 +3999,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.51
     },
     "5e208b9842457a4a7a33d074": {
@@ -4021,7 +4021,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -21,
         "Weight": 0.412
     },
     "5c6165902e22160010261b28": {
@@ -4043,7 +4043,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -15,
         "Weight": 0.255
     },
     "593d490386f7745ee97a1555": {
@@ -4065,7 +4065,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -21,
         "Weight": 0.462
     },
     "55d6190f4bdc2d87028b4567": {
@@ -4087,7 +4087,7 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -7,
         "Weight": 0.413
     },
     "59bffbb386f77435b379b9c2": {
@@ -4109,7 +4109,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -17,
         "Weight": 0.49
     },
     "5fbe760793164a5b6278efc8": {
@@ -4131,7 +4131,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -24,
         "Weight": 0.46
     },
     "5ea17bbc09aa976f2e7a51cd": {
@@ -4153,7 +4153,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -17,
         "Weight": 0.482
     },
     "602a97060ddce744014caf6f": {
@@ -4175,7 +4175,7 @@
         "Velocity": 2,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -16,
         "Weight": 0.293
     },
     "5cebec00d7f00c065c53522a": {
@@ -4197,7 +4197,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -17,
         "Weight": 0.677
     },
     "57f3c8cc2459773ec4480328": {
@@ -4219,7 +4219,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -16,
         "Weight": 0.13
     },
     "5caf187cae92157c28402e43": {
@@ -4241,7 +4241,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -21,
         "Weight": 0.7
     },
     "57ffb0e42459777d047111c5": {
@@ -4263,7 +4263,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -25,
         "Weight": 0.7
     },
     "5a9fbb84a2750c00137fa685": {
@@ -4285,7 +4285,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -22,
         "Weight": 0.57
     },
     "55d614004bdc2d86028b4568": {
@@ -4307,7 +4307,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -16,
         "Weight": 0.496
     },
     "5b86a0e586f7745b600ccb23": {
@@ -4329,7 +4329,7 @@
         "Velocity": -1.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -20,
         "Weight": 1.1
     },
     "5c4eecc32e221602b412b440": {
@@ -4351,7 +4351,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -22,
         "Weight": 0.27
     },
     "5e01ea19e9dc277128008c0b": {
@@ -4373,7 +4373,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -22,
         "Weight": 0.81
     },
     "5a7ad74e51dfba0015068f45": {
@@ -4408,7 +4408,7 @@
             "5c6165902e22160010261b28",
             "5a32a064c4a28200741e22de"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -22,
         "Weight": 0.35
     },
     "5fbe7618d6fa9c00c571bb6c": {
@@ -4430,7 +4430,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -23,
         "Weight": 0.46
     },
     "571a28e524597720b4066567": {
@@ -4452,7 +4452,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -12,
         "Weight": 0.332
     },
     "5d44064fa4b9361e4f6eb8b5": {
@@ -4474,7 +4474,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -23,
         "Weight": 0.21
     },
     "5d3ef698a4b9361182109872": {
@@ -4496,7 +4496,7 @@
         "Velocity": 1.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -15,
         "Weight": 0.15
     },
     "5a32a064c4a28200741e22de": {
@@ -4518,7 +4518,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -17,
         "Weight": 0.27
     },
     "5a9fbb74a2750c0032157181": {
@@ -4540,7 +4540,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -22,
         "Weight": 0.57
     },
     "593d493f86f7745e6b2ceb22": {
@@ -4562,7 +4562,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -22,
         "Weight": 0.462
     },
     "62811fa609427b40ab14e765": {
@@ -4584,7 +4584,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -30,
         "Weight": 0.665
     },
     "59bfc5c886f7743bf6794e62": {
@@ -4606,7 +4606,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -16,
         "Weight": 0.53
     },
     "5dfa3d2b0dee1b22f862eade": {
@@ -4628,7 +4628,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -23,
         "Weight": 0.59
     },
     "57838c962459774a1651ec63": {
@@ -4650,7 +4650,7 @@
         "Velocity": 2,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -5,
         "Weight": 0.496
     },
     "5de8f2d5b74cd90030650c72": {
@@ -4672,7 +4672,7 @@
         "Velocity": 1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -16,
         "Weight": 0.29
     },
     "593d489686f7745c6255d58a": {
@@ -4694,7 +4694,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -23,
         "Weight": 0.462
     },
     "615d8f8567085e45ef1409ca": {
@@ -4720,7 +4720,7 @@
             "5b80242286f77429445e0b47",
             "5d15ce51d7ad1a1eff619092"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -19,
         "Weight": 0.29
     },
     "5a33a8ebc4a282000c5a950d": {
@@ -4742,7 +4742,7 @@
         "Velocity": 2,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -13,
         "Weight": 0.29
     },
     "6130c4d51cb55961fa0fd49f": {
@@ -4764,7 +4764,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -16,
         "Weight": 0.453
     },
     "57da93632459771cb65bf83f": {
@@ -4786,7 +4786,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -21,
         "Weight": 0.68
     },
     "564caa3d4bdc2d17108b458e": {
@@ -4808,7 +4808,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -25,
         "Weight": 0.7
     },
     "59c0ec5b86f77435b128bfca": {
@@ -4830,7 +4830,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -27,
         "Weight": 0.493
     },
     "5fc4b9b17283c4046c5814d7": {
@@ -4852,7 +4852,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -20,
         "Weight": 0.27
     },
     "5a9fb739a2750c003215717f": {
@@ -4874,7 +4874,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -17,
         "Weight": 0.49
     },
     "60926df0132d4d12c81fd9df": {
@@ -4896,7 +4896,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -22,
         "Weight": 0.51
     },
     "5a0d63621526d8dba31fe3bf": {
@@ -4918,7 +4918,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -25,
         "Weight": 0.435
     },
     "5926d33d86f77410de68ebc0": {
@@ -4940,7 +4940,7 @@
         "Velocity": 2,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -5,
         "Weight": 0.496
     },
     "5a27b6bec4a282000e496f78": {
@@ -4962,7 +4962,7 @@
         "Velocity": 0.5,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -15,
         "Weight": 0.49
     },
     "5a9fbacda2750c00141e080f": {
@@ -4984,7 +4984,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -20,
         "Weight": 0.57
     },
     "5b363dd25acfc4001a598fd2": {
@@ -5010,7 +5010,7 @@
             "5882163224597757561aa920",
             "56deeefcd2720bc8328b4568"
         ],
-        "Ergonomics": 0,
+        "Ergonomics": -28,
         "Weight": 0.97
     },
     "54490a4d4bdc2dbc018b4573": {
@@ -5032,7 +5032,7 @@
         "Velocity": 0.75,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Weight": 0.184
     }
 }

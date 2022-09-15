@@ -165,12 +165,12 @@ export class CodeGen {
                             let id = "magazine"
                             this.modWriteToFile(MagazineTemplates, "MagazineTemplates", i, serverItem, id);
                         }
-                        // if (this.arrays.mod_types[key] === "5a74651486f7744e73386dd1" ||
-                        //     this.arrays.mod_types[key] === "55818afb4bdc2dde698b456d"
-                        // ) {
-                        //     let id = "aux"
-                        //     this.modWriteToFile(AuxiliaryModTemplates, "AuxiliaryModTemplates", i, serverItem, id);
-                        // }
+                        if (this.arrays.mod_types[key] === "5a74651486f7744e73386dd1" ||
+                            this.arrays.mod_types[key] === "55818afb4bdc2dde698b456d"
+                        ) {
+                            let id = "aux"
+                            this.modWriteToFile(AuxiliaryModTemplates, "AuxiliaryModTemplates", i, serverItem, id);
+                        }
                         if (this.arrays.mod_types[key] === "55818af64bdc2d5b648b4570") {
                             let id = "foregrip"
                             this.modWriteToFile(ForegripTemplates, "ForegripTemplates", i, serverItem, id);
@@ -258,8 +258,8 @@ export class CodeGen {
         let OperationType = "";
         let WeapAccuracy = 0;
         let BaseTorque = 0;
-        let RecoilDamping = 0;
-        let RecoilHandDamping = 0;
+        let RecoilDamping = 75;
+        let RecoilHandDamping = 60;
         let HasShoulderContact = false;
         let WeaponAllowADS = false;
         let Ergonomics = serverItem._props.Ergonomics
@@ -270,6 +270,7 @@ export class CodeGen {
         let CameraSnap = serverItem._props.CameraSnap;
         let Convergence = serverItem._props.Convergence;
         let RecoilAngle = serverItem._props.RecoilAngle;
+        let DurabilityBurnRatio =  serverItem._props.DurabilityBurnRatio;
         let BaseMalfunctionChance = serverItem._props.BaseMalfunctionChance;
         let HeatFactorGun = serverItem._props.HeatFactorGun;
         let HeatFactorByShot = serverItem._props.HeatFactorByShot;
@@ -282,6 +283,7 @@ export class CodeGen {
         let HipInnaccuracyGain = serverItem._props.HipInnaccuracyGain;
         let ShotgunDispersion = serverItem._props.shotgunDispersion;
         let Velocity = serverItem._props.Velocity;
+        let Weight = serverItem._props.Weight
 
         let item = {
             ItemID,
@@ -302,6 +304,7 @@ export class CodeGen {
             CameraSnap,
             Convergence,
             RecoilAngle,
+            DurabilityBurnRatio,
             BaseMalfunctionChance,
             HeatFactorGun,
             HeatFactorByShot,
@@ -313,7 +316,8 @@ export class CodeGen {
             HipAccuracyRestorationSpeed,
             HipInnaccuracyGain,
             ShotgunDispersion,
-            Velocity
+            Velocity,
+            Weight
         };
         return item;
 
@@ -364,6 +368,7 @@ export class CodeGen {
         let BlocksFolding = serverItem._props.BlocksFolding;
         let Velocity = serverItem._props.Velocity;
         let ConflictingItems = serverItem._props.ConflictingItems;
+        let Weight = serverItem._props.Weight;
 
         if (ID === "muzzle") {
             let item = {
@@ -385,7 +390,8 @@ export class CodeGen {
                 Velocity,
                 RecoilAngle,
                 ConflictingItems,
-                Ergonomics
+                Ergonomics,
+                Weight
             };
             return item;
         }
@@ -408,7 +414,8 @@ export class CodeGen {
                 DurabilityBurnModificator,
                 Velocity,
                 ConflictingItems,
-                Ergonomics
+                Ergonomics,
+                Weight
             };
             return item;
         }
@@ -419,7 +426,8 @@ export class CodeGen {
                 ModType,
                 Ergonomics,
                 Accuracy,
-                ConflictingItems
+                ConflictingItems,
+                Weight
             };
             return item;
         }
@@ -434,7 +442,8 @@ export class CodeGen {
                 CoolFactor,
                 DurabilityBurnModificator,
                 ConflictingItems,
-                Ergonomics
+                Ergonomics,
+                Weight
             };
             return item;
         }
@@ -446,7 +455,8 @@ export class CodeGen {
                 ReloadSpeed,
                 ConflictingItems,
                 FixSpeed,
-                Ergonomics
+                Ergonomics,
+                Weight
             };
             return item;
         }
@@ -458,7 +468,8 @@ export class CodeGen {
                 AimSpeed,
                 Accuracy,
                 ConflictingItems,
-                Ergonomics
+                Ergonomics,
+                Weight
             };
             return item;
         }
@@ -473,6 +484,7 @@ export class CodeGen {
                 LoadUnloadModifier,
                 CheckTimeModifier,
                 ConflictingItems,
+                Weight
             };
             return item;
         }
@@ -495,6 +507,7 @@ export class CodeGen {
                 HeatFactor,
                 CoolFactor,
                 DurabilityBurnModificator,
+                Weight
                 
             };
             return item;
@@ -511,7 +524,8 @@ export class CodeGen {
                 DrawSpeed,
                 Ergonomics,
                 Accuracy,
-                ConflictingItems
+                ConflictingItems,
+                Weight
             };
             return item;
         }
@@ -534,7 +548,8 @@ export class CodeGen {
                 HasShoulderContact,
                 BlocksFolding,
                 StockAllowADS,
-                ConflictingItems
+                ConflictingItems,
+                Weight
             };
             return item;
         }
@@ -555,7 +570,8 @@ export class CodeGen {
                 CoolFactor,
                 DurabilityBurnModificator,
                 ConflictingItems,
-                Ergonomics
+                Ergonomics,
+                Weight
             };
             return item;
         }
@@ -574,7 +590,8 @@ export class CodeGen {
                 Accuracy,
                 HeatFactor,
                 CoolFactor,
-                ConflictingItems
+                ConflictingItems,
+                Weight
             };
             return item;
         }
@@ -584,7 +601,8 @@ export class CodeGen {
                 Name,
                 ModType,
                 ConflictingItems,
-                Ergonomics
+                Ergonomics,
+                Weight
             };
             return item;
         }
@@ -620,7 +638,8 @@ export class CodeGen {
                 RecoilAngle,
                 ConflictingItems,
                 FixSpeed,
-                StockAllowADS
+                StockAllowADS,
+                Weight
             };
             return item;
         }
@@ -799,6 +818,7 @@ export class CodeGen {
             serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
             serverItem._props.BlocksFolding = fileItem.BlocksFolding;
             serverItem._props.Velocity = fileItem.Velocity;
+            serverItem._props.Weight = fileItem.Weight;
 
             var serverConfItems = serverItem._props.ConflictingItems;
             var modConfItems = fileItem.ConflictingItems;
@@ -818,14 +838,15 @@ export class CodeGen {
     public weapPusherHelper(serverItem: any, fileItem: any) {
         if (serverItem._id === fileItem.ItemID) {
             serverItem._props.Ergonomics = fileItem.Ergonomics;
-            serverItem._props.VerticalRecoil = fileItem.VerticalRecoil;
+            serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
             serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
             serverItem._props.HeatFactor = fileItem.HeatFactor;
-            serverItem._props.HorizontalRecoil = fileItem.HorizontalRecoil;
-            serverItem._props.Dispersion = fileItem.Dispersion;
+            serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;
+            serverItem._props.RecolDispersion = fileItem.Dispersion;
             serverItem._props.CameraRecoil = fileItem.CameraRecoil;
             serverItem._props.CameraSnap = fileItem.CameraSnap;
             serverItem._props.Convergence = fileItem.Convergence;
+            serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
             serverItem._props.RecoilAngle = fileItem.RecoilAngle;
             serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
             serverItem._props.HeatFactorGun = fileItem.HeatFactorGun;
@@ -839,6 +860,7 @@ export class CodeGen {
             serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
             serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
             serverItem._props.Velocity = fileItem.Velocity;
+            serverItem._props.Weight = fileItem.Weight;
 
             var serverConfItems = serverItem._props.ConflictingItems;
             var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "undefined", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",

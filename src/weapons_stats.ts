@@ -449,7 +449,6 @@ export class WeaponsStats {
             //M4A1
             if (fileData._id === "5447a9cd4bdc2dbd208b4567") {
 
-
                 if (this.modConf.malf_changes == true) {
                     fileData._props.DurabilityBurnRatio = 0.35;
                     fileData._props.HeatFactorGun = 0.27;
