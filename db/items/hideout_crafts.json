@@ -40,7 +40,7 @@
         "requirements": [
             {
                 "areaType": 7,
-                "requiredLevel": 1,
+                "requiredLevel": 2,
                 "type": "Area"
             },
             {
@@ -75,7 +75,7 @@
         "requirements": [
             {
                 "areaType": 7,
-                "requiredLevel": 1,
+                "requiredLevel": 3,
                 "type": "Area"
             },
             {

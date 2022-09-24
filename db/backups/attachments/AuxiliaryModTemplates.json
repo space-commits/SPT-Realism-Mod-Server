@@ -494,8 +494,8 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "FixSpeed": 0,
-        "HeatFactor": 0.8,
-        "CoolFactor": 1.2,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
         "Weight": 0.053
     },
@@ -514,8 +514,8 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "FixSpeed": 0,
-        "HeatFactor": 0.98,
-        "CoolFactor": 1.05,
+        "HeatFactor": 0.95,
+        "CoolFactor": 0.95,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005
     },
@@ -536,7 +536,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "HeatFactor": 0.98,
-        "CoolFactor": 1.02,
+        "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005
     },
@@ -557,7 +557,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "HeatFactor": 0.98,
-        "CoolFactor": 1.02,
+        "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005
     },
@@ -577,7 +577,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "HeatFactor": 0.98,
-        "CoolFactor": 1.02,
+        "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005
     },
@@ -597,7 +597,7 @@
         "ConflictingItems": [],
         "FixSpeed": 0,
         "HeatFactor": 0.98,
-        "CoolFactor": 1.02,
+        "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005
     },
@@ -616,8 +616,8 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "FixSpeed": 0,
-        "HeatFactor": 0.99,
-        "CoolFactor": 1.01,
+        "HeatFactor": 0.98,
+        "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005
     },
@@ -636,8 +636,8 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "FixSpeed": 0,
-        "HeatFactor": 0.99,
-        "CoolFactor": 1.01,
+        "HeatFactor": 0.98,
+        "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005
     },

@@ -27,8 +27,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0,
+        "RecoilDamping": 0.7,
+        "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 0.51,
         "DurabilityBurnRatio": 0.3
@@ -61,8 +61,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0,
+        "RecoilDamping": 0.7,
+        "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 1.72,
         "DurabilityBurnRatio": 0.25
@@ -95,8 +95,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0,
+        "RecoilDamping": 0.7,
+        "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 0.51,
         "DurabilityBurnRatio": 0.45
@@ -129,8 +129,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0,
+        "RecoilDamping": 0.7,
+        "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 1.95,
         "DurabilityBurnRatio": 0.55
@@ -163,8 +163,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0,
+        "RecoilDamping": 0.7,
+        "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 1.72,
         "DurabilityBurnRatio": 0.45
@@ -197,8 +197,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0,
+        "RecoilDamping": 0.7,
+        "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 1.426,
         "DurabilityBurnRatio": 0.45
@@ -231,8 +231,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0,
+        "RecoilDamping": 0.7,
+        "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 2.9,
         "DurabilityBurnRatio": 0.45
@@ -265,8 +265,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0,
-        "RecoilHandDamping": 0,
+        "RecoilDamping": 0.7,
+        "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 0.76
     }

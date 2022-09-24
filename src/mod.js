@@ -316,7 +316,7 @@ class Mod {
         items.loadItems();
         player.loadPlayer();
         weapons_globals.loadGlobalWeps();
-        // weapons_stats.loadWepStats();
+        weapons_stats.loadWepStats();
     }
     revertMeds(pmcData, helper) {
         helper.revertMedItems(pmcData);

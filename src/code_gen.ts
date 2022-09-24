@@ -864,7 +864,7 @@ export class CodeGen {
 
             var serverConfItems = serverItem._props.ConflictingItems;
             var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "undefined", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
-            fileItem?.RecoilDamping?.toString() || "0", fileItem?.RecoilHandDamping?.toString() || "0", fileItem?.WeaponAllowADS?.toString() || "false"];
+            fileItem?.RecoilDamping?.toString() || "70", fileItem?.RecoilHandDamping?.toString() || "65", fileItem?.WeaponAllowADS?.toString() || "false"];
 
 
             var combinedArr = weapPropertyValues.concat(serverConfItems)

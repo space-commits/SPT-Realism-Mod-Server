@@ -23,7 +23,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 0.47;
                 fileData._props.HeavyBleedingDelta = 0.35;
                 fileData._props.LightBleedingDelta = 0.70;
-                fileData._props.ammoAccr = -200;
+                fileData._props.ammoAccr = -50;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -71;
                 if (this.modConf.malf_changes == true) {
@@ -36,7 +36,7 @@ export class Ammo {
             }
             //5.25mm Buckshot
             if (fileData._id === "5d6e6772a4b936088465b17c") {
-                fileData._props.PenetrationPower = 7;
+                fileData._props.PenetrationPower = 8;
                 fileData._props.ArmorDamage = 50;
                 fileData._props.buckshotBullets = 9;
                 fileData._props.Damage = 16;
@@ -46,7 +46,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 0.9;
                 fileData._props.HeavyBleedingDelta = 0.1; 5.2
                 fileData._props.LightBleedingDelta = 0.35;
-                fileData._props.ammoAccr = -30;
+                fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -50;
                 if (this.modConf.malf_changes == true) {
@@ -69,7 +69,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 1.9;
                 fileData._props.HeavyBleedingDelta = 0.15;
                 fileData._props.LightBleedingDelta = 0.45;
-                fileData._props.ammoAccr = 0;
+                fileData._props.ammoAccr = 30;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
@@ -92,7 +92,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 3.38;
                 fileData._props.HeavyBleedingDelta = 0.23;
                 fileData._props.LightBleedingDelta = 0.55;
-                fileData._props.ammoAccr = -20;
+                fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 21;
                 if (this.modConf.malf_changes == true) {
@@ -115,7 +115,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 2.1;
                 fileData._props.HeavyBleedingDelta = 0.2;
                 fileData._props.LightBleedingDelta = 0.5;
-                fileData._props.ammoAccr = 40;
+                fileData._props.ammoAccr = 70;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 14;
                 if (this.modConf.malf_changes == true) {
@@ -382,7 +382,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 1;
                 fileData._props.HeavyBleedingDelta = 0.1;
                 fileData._props.LightBleedingDelta = 0.25;
-                fileData._props.ammoAccr = -30;
+                fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -45;
                 if (this.modConf.malf_changes == true) {
@@ -405,7 +405,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 1.26;
                 fileData._props.HeavyBleedingDelta = 0.15;
                 fileData._props.LightBleedingDelta = 0.35;
-                fileData._props.ammoAccr = -10;
+                fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
@@ -428,7 +428,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 3.5;
                 fileData._props.HeavyBleedingDelta = 0.22;
                 fileData._props.LightBleedingDelta = 0.5;
-                fileData._props.ammoAccr = 0;
+                fileData._props.ammoAccr = 30;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 28;
                 if (this.modConf.malf_changes == true) {
@@ -451,7 +451,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 2;
                 fileData._props.HeavyBleedingDelta = 0.2;
                 fileData._props.LightBleedingDelta = 0.45;
-                fileData._props.ammoAccr = 10;
+                fileData._props.ammoAccr = 40;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
@@ -3252,42 +3252,44 @@ export class Ammo {
             ///40mm////
             //M576 (MP-APERS) grenade
             if (fileData._id === "5ede475339ee016e8c534742") {
-                fileData._props.PenetrationPower = 5;
-                fileData._props.ArmorDamage = 95;
+                fileData._props.PenetrationPower = 20;
+                fileData._props.ArmorDamage = 0;
                 fileData._props.Damage = 40;
-                fileData._props.InitialSpeed = 269;
+                // fileData._props.InitialSpeed = 269;
                 fileData._props.RicochetChance = 0.1;
-                fileData._props.BulletMassGram = 230;
+                fileData._props.BulletMassGram = 24;
                 fileData._props.HeavyBleedingDelta = 0.5;
                 fileData._props.LightBleedingDelta = 1;
+                fileData._props.buckshotBullets = 20;
+                fileData._props.ammoAccr = 50;
             }
             //M381(HE) grenade
             if (fileData._id === "5ede474b0c226a66f5402622") {
-                fileData._props.InitialSpeed = 78;
+                // fileData._props.InitialSpeed = 78;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.BulletMassGram = 230;
             }
             //M386 (HE) grenade
             if (fileData._id === "5ede475b549eed7c6d5c18fb") {
-                fileData._props.InitialSpeed = 78;
+                // fileData._props.InitialSpeed = 78;
                 fileData._props.RicochetChance = 0.25;
                 fileData._props.BulletMassGram = 230;
             }
             //M406 (HE) grenade
             if (fileData._id === "5ede4739e0350d05467f73e8") {
-                fileData._props.InitialSpeed = 78;
+                // fileData._props.InitialSpeed = 78;
                 fileData._props.RicochetChance = 0.33;
                 fileData._props.BulletMassGram = 230;
             }
             //M433 (HEDP) grenade
             if (fileData._id === "5f0c892565703e5c461894e9") {
-                fileData._props.InitialSpeed = 78;
+                // fileData._props.InitialSpeed = 78;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.BulletMassGram = 230;
             }
             //M441(HE) grenade
             if (fileData._id === "5ede47405b097655935d7d16") {
-                fileData._props.InitialSpeed = 78;
+                // fileData._props.InitialSpeed = 78;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.BulletMassGram = 230;
             }
