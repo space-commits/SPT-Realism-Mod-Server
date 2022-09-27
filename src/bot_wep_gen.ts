@@ -1,10 +1,10 @@
 
 import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
-import { BotGeneratorHelper, ExhaustableArray } from "@spt-aki/helpers/BotGeneratorHelper";
+import { BotGeneratorHelper} from "@spt-aki/helpers/BotGeneratorHelper";
 import { container, DependencyContainer } from "tsyringe";
 import { ITemplateItem, Slot } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { Inventory, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { Item, Upd } from "@spt-aki/models/eft/common/tables/IItem";
 import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { ProbabilityHelper } from "@spt-aki/helpers/ProbabilityHelper";
@@ -15,10 +15,8 @@ import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponRes
 import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
 import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
 import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
-import { RandomUtil } from "@spt-aki/utils/RandomUtil";
 import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
-
-const BaseClasses = require("@spt-aki/models/enums/BaseClasses");
+import {BaseClasses} from "@spt-aki/models/enums/BaseClasses";
 
 export class BotWepGen extends BotWeaponGenerator {
 
@@ -37,7 +35,7 @@ export class BotWepGen extends BotWeaponGenerator {
         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
         const _botModGen = new BotModGen(this.logger, jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, durabilityLimitsHelper, this.itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
-    
+
         const modPool = botTemplateInventory.mods;
         const weaponItemTemplate = this.itemHelper.getItem(weaponTpl)[1];
 
@@ -120,7 +118,6 @@ export class CheckRequired {
     }
 }
 
-
 export class BotModGen extends BotGeneratorHelper {
 
     private static container: DependencyContainer;
@@ -129,36 +126,31 @@ export class BotModGen extends BotGeneratorHelper {
         const _checkRequired = new CheckRequired();
         const modSpawnChance = _checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot) ? 100 : modSpawnChances[modSlot];
 
-        if (modSpawnChance === 100)
-        {
+        if (modSpawnChance === 100) {
             return true;
         }
 
         return this.probabilityHelper.rollChance(modSpawnChance)
     }
 
-    myIsModValidForSlot(modToAdd: [boolean, ITemplateItem], itemSlot: Slot, modSlot: string, parentTemplate: ITemplateItem) : boolean {
+    myIsModValidForSlot(modToAdd: [boolean, ITemplateItem], itemSlot: Slot, modSlot: string, parentTemplate: ITemplateItem): boolean {
         const _checkRequired = new CheckRequired();
 
-        if (!modToAdd[0])
-        {
-            if (_checkRequired.checkRequired(itemSlot))
-            {
+        if (!modToAdd[0]) {
+            if (_checkRequired.checkRequired(itemSlot)) {
                 this.logger.error(`Could not locate any compatible mods to fill slot: '${modSlot}' for item: ${parentTemplate._name}`);
             }
 
             return false;
         }
 
-        if (!itemSlot._props.filters[0].Filter.includes(modToAdd[1]._id))
-        {
+        if (!itemSlot._props.filters[0].Filter.includes(modToAdd[1]._id)) {
             this.logger.error(`Mod ${modToAdd[1]._id} is not compatible with slot: '${modSlot}' for item: ${parentTemplate._name}`);
 
             return false;
         }
 
-        if (!modToAdd[1])
-        {
+        if (!modToAdd[1]) {
             {
                 this.logger.error(`Could not find mod item template with tpl ${modToAdd[1]._id}`);
                 this.logger.info(`Item -> ${parentTemplate._id}; Slot -> ${modSlot}`);
@@ -185,18 +177,16 @@ export class BotModGen extends BotGeneratorHelper {
 
         if (!parentWeaponTemplate._props.Slots.length
             && !parentWeaponTemplate._props.Cartridges.length
-            && !parentWeaponTemplate._props.Chambers.length)
-        {
+            && !parentWeaponTemplate._props.Chambers.length) {
             this.logger.error(`Unable to add mods to weapon ${parentWeaponTemplate._name} ${parentWeaponTemplate._id} but lacks slots/cartridges/chambers`);
             return weapon;
-        }       
+        }
 
         // Iterate over mod pool and choose mods to add to item
         for (const modSlot in compatibleModsPool) {
             const modsParent = this.getModItemSlot(modSlot, parentWeaponTemplate);
 
-            if (!modsParent)
-            {
+            if (!modsParent) {
                 this.logger.error(`'${modSlot}' does not exist for weapon ${parentWeaponTemplate._id} ${parentWeaponTemplate._name}`);
                 continue;
             }
@@ -208,23 +198,19 @@ export class BotModGen extends BotGeneratorHelper {
             const modToAdd = this.chooseModToPutIntoSlot(modSlot, isRandomisableSlot, modsParent, botEquipBlacklist, compatibleModsPool, weapon, ammoTpl, parentWeaponTemplate);
             const modToAddTemplate = modToAdd[1];
 
-            if (!this.isModValidForSlot(modToAdd, modsParent, modSlot, parentWeaponTemplate))
-            {
+            if (!this.isModValidForSlot(modToAdd, modsParent, modSlot, parentWeaponTemplate)) {
                 continue;
             }
 
-            if (this.modHasReachedItemLimit(botEquipmentRole, modToAddTemplate, modLimits))
-            {
+            if (this.modHasReachedItemLimit(botEquipmentRole, modToAddTemplate, modLimits)) {
                 continue;
             }
 
             // if mod_scope/mod_mount is randomly generated, check and add any sub mod_scope objects into the pool of mods
             // This helps fix empty mounts appearing on weapons
-            if (isRandomisableSlot && ["mod_scope", "mod_mount"].includes(modSlot.toLowerCase()))
-            {
+            if (isRandomisableSlot && ["mod_scope", "mod_mount"].includes(modSlot.toLowerCase())) {
                 // mod_mount was picked to be added to weapon, force scope chance to ensure its filled
-                if (modToAddTemplate._parent == BaseClasses.MOUNT)
-                {
+                if (modToAddTemplate._parent == BaseClasses.MOUNT) {
                     modSpawnChances.mod_scope = 100;
                     modSpawnChances["mod_scope_000"] = 100;
                     modSpawnChances["mod_scope_001"] = 100;
@@ -235,22 +221,20 @@ export class BotModGen extends BotGeneratorHelper {
             }
 
             // If front/rear sight are to be added, set opposite to 100% chance
-            if (["mod_sight_front", "mod_sight_rear"].includes(modSlot))
-            {
+            if (["mod_sight_front", "mod_sight_rear"].includes(modSlot)) {
                 modSpawnChances.mod_sight_front = 100;
                 modSpawnChances.mod_sight_rear = 100;
             }
 
             const modId = this.hashUtil.generate();
             weapon.push(this.createModItem(modId, modToAddTemplate._id, weaponParentId, modSlot, modToAddTemplate));
-            
+
             // I first thought we could use the recursive generateModsForItems as previously for cylinder magazines.
             // However, the recurse doesnt go over the slots of the parent mod but over the modPool which is given by the bot config
             // where we decided to keep cartridges instead of camoras. And since a CylinderMagazine only has one cartridge entry and
             // this entry is not to be filled, we need a special handling for the CylinderMagazine
             const modParentItem = this.databaseServer.getTables().templates.items[modToAddTemplate._parent];
-            if (this.botWeaponGeneratorHelper.magazineIsCylinderRelated(modParentItem._name))
-            {
+            if (this.botWeaponGeneratorHelper.magazineIsCylinderRelated(modParentItem._name)) {
                 // we don't have child mods, we need to create the camoras for the magazines instead
                 this.fillCamora(weapon, modPool, modId, modToAddTemplate);
             }
@@ -262,6 +246,58 @@ export class BotModGen extends BotGeneratorHelper {
             }
         }
         return weapon;
+    }
+
+    public genExtraItemProps(itemTemplate: ITemplateItem, botRole = null): { upd?: Upd } {
+        const properties: Upd = {};
+
+        if (itemTemplate._props.MaxDurability) {
+            if (itemTemplate._props.weapClass) // Is weapon
+            {
+                properties.Repairable = this.generateWeaponRepairableProperties(itemTemplate, botRole);
+            }
+            else if (itemTemplate._props.armorClass) // Is armor
+            {
+                properties.Repairable = this.generateArmorRepairableProperties(itemTemplate, botRole)
+            }
+        }
+
+        if (itemTemplate._props.HasHinge) {
+            properties.Togglable = { "On": true };
+        }
+
+        if (itemTemplate._props.Foldable) {
+            properties.Foldable = { "Folded": false };
+        }
+
+        if (itemTemplate._props.weapFireType && itemTemplate._props.weapFireType.length) {
+            properties.FireMode = { "FireMode": this.randomUtil.getArrayValue(itemTemplate._props.weapFireType) };
+        }
+
+        if (itemTemplate._props.MaxHpResource) {
+            properties.MedKit = { "HpResource": itemTemplate._props.MaxHpResource };
+        }
+
+        if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
+            properties.FoodDrink = { "HpPercent": itemTemplate._props.MaxResource };
+        }
+
+        if ([BaseClasses.FLASHLIGHT, BaseClasses.LIGHT_LASER].includes(<BaseClasses>itemTemplate._parent)) {
+            properties.Light = { "IsActive": this.randomUtil.getBool(), "SelectedMode": 0 }
+        }
+
+        if (itemTemplate._parent === BaseClasses.NIGHTVISION) {
+            properties.Togglable = { "On": true }
+        }
+
+        // Togglable face shield
+        if (itemTemplate._props.HasHinge && itemTemplate._props.FaceShieldComponent) {
+            properties.Togglable = { "On": true }
+        }
+
+        return Object.keys(properties).length
+            ? { upd: properties }
+            : {};
     }
 }
 

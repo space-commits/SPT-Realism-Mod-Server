@@ -18,7 +18,7 @@ import { WeightedRandomHelper } from "@spt-aki/helpers/WeightedRandomHelper";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
 import { Inventory, Items, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { Item, Upd } from "@spt-aki/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
 import { ContainerHelper } from "@spt-aki/helpers/ContainerHelper";
@@ -101,7 +101,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 }
             }, { frequency: "Always" });
-
+            
             container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
                 const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
                 const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
@@ -113,10 +113,14 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                 const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                 const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
                 const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
+                result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole = null): { upd?: Upd } => {
+                    return _botModGen.genExtraItemProps(itemTemplate, botRole);
+                }
                 result.generateModsForWeapon = (sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string): Item[] => {
                     return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
                 }
             }, { frequency: "Always" });
+
 
             container.afterResolution("BotLootCacheService", (_t, result: BotLootCacheService) => {
                 const ragfairPriceServ = container.resolve<RagfairPriceService>("RagfairPriceService");
@@ -125,6 +129,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                     return botLootServ.getLootCache(botRole, isPmc, lootType, lootPool);
                 }
             }, { frequency: "Always" });
+
 
         }
 
@@ -367,7 +372,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
             //     logger.info("====================================");
             // }
 
-            // if(tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567")
+            // if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
             // {
             //     logger.info("==================ConflictingItems Server===============");
             //     for(let j in tables.templates.items[i]._props.ConflictingItems)
@@ -557,7 +562,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                         tier = this.botTierWeighter(5, 1, 0, bots);
                     }
                     if (pmcData.Info.Level >= 10) {
-                        tier = this.botTierWeighter(8, 2, 0, bots);
+                        tier = this.botTierWeighter(5, 2, 0, bots);
                     }
                     if (pmcData.Info.Level >= 15) {
                         tier = this.botTierWeighter(0, 10, 1, bots);

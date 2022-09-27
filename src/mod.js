@@ -55,6 +55,21 @@ class Mod {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 };
             }, { frequency: "Always" });
+            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
+            //     const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
+            //     const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
+            //     const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+            //     const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
+            //     const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
+            //     const botEquipFilterServ = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
+            //     const itemFilterServ = container.resolve<ItemFilterService>("ItemFilterService");
+            //     const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+            //     const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
+            //     const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
+            //     result.generateModsForWeapon = (sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string): Item[] => {
+            //         return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
+            //     }
+            // }, { frequency: "Always" });
             container.afterResolution("BotGeneratorHelper", (_t, result) => {
                 const probabilityHelper = container.resolve("ProbabilityHelper");
                 const durabilityLimitsHelper = container.resolve("DurabilityLimitsHelper");
@@ -66,6 +81,9 @@ class Mod {
                 const profileHelper = container.resolve("ProfileHelper");
                 const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
                 const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
+                result.generateExtraPropertiesForItem = (itemTemplate, botRole = null) => {
+                    return _botModGen.genExtraItemProps(itemTemplate, botRole);
+                };
                 result.generateModsForWeapon = (sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole) => {
                     return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
                 };
@@ -283,7 +301,7 @@ class Mod {
             //     }
             //     logger.info("====================================");
             // }
-            // if(tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567")
+            // if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
             // {
             //     logger.info("==================ConflictingItems Server===============");
             //     for(let j in tables.templates.items[i]._props.ConflictingItems)
@@ -446,7 +464,7 @@ class Mod {
                         tier = this.botTierWeighter(5, 1, 0, bots);
                     }
                     if (pmcData.Info.Level >= 10) {
-                        tier = this.botTierWeighter(8, 2, 0, bots);
+                        tier = this.botTierWeighter(5, 2, 0, bots);
                     }
                     if (pmcData.Info.Level >= 15) {
                         tier = this.botTierWeighter(0, 10, 1, bots);

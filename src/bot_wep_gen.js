@@ -4,7 +4,7 @@ exports.BotModGen = exports.CheckRequired = exports.BotWepGen = void 0;
 const BotWeaponGenerator_1 = require("../../../../Aki_data/Server/lib/generators/BotWeaponGenerator");
 const BotGeneratorHelper_1 = require("../../../../Aki_data/Server/lib/helpers/BotGeneratorHelper");
 const tsyringe_1 = require("../../../../node_modules/tsyringe");
-const BaseClasses = require("../../../../Aki_data/Server/lib/models/enums/BaseClasses");
+const BaseClasses_1 = require("../../../../Aki_data/Server/lib/models/enums/BaseClasses");
 class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) {
         const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
@@ -161,7 +161,7 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             // This helps fix empty mounts appearing on weapons
             if (isRandomisableSlot && ["mod_scope", "mod_mount"].includes(modSlot.toLowerCase())) {
                 // mod_mount was picked to be added to weapon, force scope chance to ensure its filled
-                if (modToAddTemplate._parent == BaseClasses.MOUNT) {
+                if (modToAddTemplate._parent == BaseClasses_1.BaseClasses.MOUNT) {
                     modSpawnChances.mod_scope = 100;
                     modSpawnChances["mod_scope_000"] = 100;
                     modSpawnChances["mod_scope_001"] = 100;
@@ -193,6 +193,47 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             }
         }
         return weapon;
+    }
+    genExtraItemProps(itemTemplate, botRole = null) {
+        const properties = {};
+        if (itemTemplate._props.MaxDurability) {
+            if (itemTemplate._props.weapClass) // Is weapon
+             {
+                properties.Repairable = this.generateWeaponRepairableProperties(itemTemplate, botRole);
+            }
+            else if (itemTemplate._props.armorClass) // Is armor
+             {
+                properties.Repairable = this.generateArmorRepairableProperties(itemTemplate, botRole);
+            }
+        }
+        if (itemTemplate._props.HasHinge) {
+            properties.Togglable = { "On": true };
+        }
+        if (itemTemplate._props.Foldable) {
+            properties.Foldable = { "Folded": false };
+        }
+        if (itemTemplate._props.weapFireType && itemTemplate._props.weapFireType.length) {
+            properties.FireMode = { "FireMode": this.randomUtil.getArrayValue(itemTemplate._props.weapFireType) };
+        }
+        if (itemTemplate._props.MaxHpResource) {
+            properties.MedKit = { "HpResource": itemTemplate._props.MaxHpResource };
+        }
+        if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
+            properties.FoodDrink = { "HpPercent": itemTemplate._props.MaxResource };
+        }
+        if ([BaseClasses_1.BaseClasses.FLASHLIGHT, BaseClasses_1.BaseClasses.LIGHT_LASER].includes(itemTemplate._parent)) {
+            properties.Light = { "IsActive": this.randomUtil.getBool(), "SelectedMode": 0 };
+        }
+        if (itemTemplate._parent === BaseClasses_1.BaseClasses.NIGHTVISION) {
+            properties.Togglable = { "On": true };
+        }
+        // Togglable face shield
+        if (itemTemplate._props.HasHinge && itemTemplate._props.FaceShieldComponent) {
+            properties.Togglable = { "On": true };
+        }
+        return Object.keys(properties).length
+            ? { upd: properties }
+            : {};
     }
 }
 exports.BotModGen = BotModGen;

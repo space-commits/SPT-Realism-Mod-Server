@@ -43,41 +43,38 @@ class Player {
             this.globalDB.SprintSpeed["x"] = 0.02;
             this.globalDB.SprintSpeed["y"] = 0.42;
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
-            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.7; // down lightweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight
-            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] = 1.35; //down heavyweight
+            this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] = 1.3; //down heavyweight
             this.globalDB.Stamina.CrouchConsumption["x"] = 3.5;
             this.globalDB.Stamina.CrouchConsumption["y"] = 5;
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
-            //test speedlimitafterfall, duration, after jump. Speed limit duration might actually have to do with speeding up into sprint??
-            //////////////////////////////////////////////////////////
-            this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] *= 0.35;
-            this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] *= 0.35;
-            this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] *= 0.35;
+            this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] *= 0.4;
+            this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] *= 0.4;
+            this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] *= 0.4;
             this.globalDB.Inertia.SpeedLimitDurationMin["x"] *= 1.5;
             this.globalDB.Inertia.SpeedLimitDurationMin["y"] *= 1.5;
             this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 2;
             this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 2;
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
-            //////////////////////////////////////////////////////////
-            this.globalDB.Inertia.BaseJumpPenalty = 1;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1;
+            this.globalDB.Inertia.BaseJumpPenalty = 0.6;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 0.8;
             this.globalDB.Inertia.SprintBrakeInertia["y"] = 75;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["x"] = 0.812;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
             this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.8;
             this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.58;
-            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.3;
+            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.31;
             this.globalDB.Health.Falling.DamagePerMeter = 11;
             this.globalDB.Health.Falling.SafeHeight = 2;
             this.globalDB.Stamina.SafeHeightOverweight = 1.67;
-            this.globalDB.Stamina.Capacity = 120;
+            this.globalDB.Stamina.Capacity = 130;
             this.globalDB.Stamina.BaseRestorationRate = 10;
             this.globalDB.Stamina.OxygenCapacity *= 1.2;
             this.globalDB.Stamina.OxygenRestoration *= 2;
-            this.globalDB.Stamina.AimDrainRate = 0.385;
+            this.globalDB.Stamina.AimDrainRate = 0.38;
             this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.1;
             this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.2;
             this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing
@@ -115,7 +112,6 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMax, mult);
             health.LightBleeding.HealthLoopTime = 10;
             health.LightBleeding.DamageHealth = 0.6;
-            //reduce blacked limb overdamage
             this.globalDB.LegsOverdamage *= 1.95;
             this.globalDB.HandsOverdamage *= 1.1;
             this.globalDB.StomachOverdamage *= 2;
@@ -127,7 +123,6 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMax, mult);
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);
-            //Custom starter kits to be more balanced with the changes
             this.tables.templates.profiles.Standard.bear.character.Inventory = this.custProfile.Standard.bear.Inventory;
             this.tables.templates.profiles.Standard.usec.character.Inventory = this.custProfile.Standard.usec.Inventory;
             this.tables.templates.profiles["Left Behind"].bear.character.Inventory = this.custProfile["Left Behind"].bear.Inventory;

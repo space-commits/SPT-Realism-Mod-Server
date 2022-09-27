@@ -1512,6 +1512,7 @@
           "5448ba0b4bdc2d02308b456c"
         ],
         "Backpack": [
+          "5780d0532459777a5108b9a2",
           "59e7715586f7742ee5789605",
           "590a3c0a86f774385a33c450",
           "590a3c0a86f774385a33c450",
@@ -1732,10 +1733,10 @@
         "Headwear": 80,
         "Earpiece": 10,
         "FaceCover": 40,
-        "ArmorVest": 25,
+        "ArmorVest": 15,
         "Eyewear": 25,
         "ArmBand": 0,
-        "TacticalVest": 100,
+        "TacticalVest": 45,
         "Backpack": 30,
         "FirstPrimaryWeapon": 70,
         "SecondPrimaryWeapon": 0,
@@ -3447,6 +3448,7 @@
           "5448ba0b4bdc2d02308b456c"
         ],
         "Backpack": [
+          "5780d0532459777a5108b9a2",
           "59e7715586f7742ee5789605",
           "544fb3f34bdc2d03748b456a",
           "590c695186f7741e566b64a2",
@@ -3692,10 +3694,10 @@
         "Headwear": 80,
         "Earpiece": 15,
         "FaceCover": 45,
-        "ArmorVest": 35,
+        "ArmorVest": 25,
         "Eyewear": 30,
         "ArmBand": 0,
-        "TacticalVest": 100,
+        "TacticalVest": 60,
         "Backpack": 40,
         "FirstPrimaryWeapon": 80,
         "SecondPrimaryWeapon": 0,
@@ -5770,6 +5772,7 @@
           "5448ba0b4bdc2d02308b456c"
         ],
         "Backpack": [
+          "5780d0532459777a5108b9a2",
           "59e7715586f7742ee5789605",
           "5887431f2459777e1612938f",
           "59e655cb86f77411dc52a77b",
@@ -6035,10 +6038,10 @@
         "Headwear": 99,
         "Earpiece": 30,
         "FaceCover": 45,
-        "ArmorVest": 35,
+        "ArmorVest": 30,
         "Eyewear": 30,
         "ArmBand": 0,
-        "TacticalVest": 100,
+        "TacticalVest": 90,
         "Backpack": 45,
         "FirstPrimaryWeapon": 100,
         "SecondPrimaryWeapon": 0,

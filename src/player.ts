@@ -58,24 +58,22 @@ export class Player {
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
 
-            //test speedlimitafterfall, duration, after jump. Speed limit duration might actually have to do with speeding up into sprint??
-            //////////////////////////////////////////////////////////
             this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] *= 0.4;
             this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] *= 0.4;
 
-            this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] *= 0.35;
+            this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] *= 0.4;
 
-            this.globalDB.Inertia.SpeedLimitDurationMin["x"] *= 1.4;
-            this.globalDB.Inertia.SpeedLimitDurationMin["y"] *= 1.4;
+            this.globalDB.Inertia.SpeedLimitDurationMin["x"] *= 1.5;
+            this.globalDB.Inertia.SpeedLimitDurationMin["y"] *= 1.5;
 
-            this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 1.9;
-            this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 1.9;
+            this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 2;
+            this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 2;
 
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
-            //////////////////////////////////////////////////////////
-            this.globalDB.Inertia.BaseJumpPenalty = 1;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 1;
+
+            this.globalDB.Inertia.BaseJumpPenalty = 0.6;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 0.8;
 
             this.globalDB.Inertia.SprintBrakeInertia["y"] = 75;
 
@@ -91,7 +89,7 @@ export class Player {
             this.globalDB.Health.Falling.SafeHeight = 2;
             this.globalDB.Stamina.SafeHeightOverweight = 1.67;
 
-            this.globalDB.Stamina.Capacity = 120;
+            this.globalDB.Stamina.Capacity = 130;
             this.globalDB.Stamina.BaseRestorationRate = 10;
             this.globalDB.Stamina.OxygenCapacity *= 1.2;
             this.globalDB.Stamina.OxygenRestoration *= 2;
@@ -144,7 +142,6 @@ export class Player {
             health.LightBleeding.HealthLoopTime = 10;
             health.LightBleeding.DamageHealth = 0.6;
 
-            //reduce blacked limb overdamage
             this.globalDB.LegsOverdamage *= 1.95;
             this.globalDB.HandsOverdamage *= 1.1;
             this.globalDB.StomachOverdamage *= 2;
@@ -159,7 +156,6 @@ export class Player {
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);
 
-            //Custom starter kits to be more balanced with the changes
             this.tables.templates.profiles.Standard.bear.character.Inventory = this.custProfile.Standard.bear.Inventory;
             this.tables.templates.profiles.Standard.usec.character.Inventory = this.custProfile.Standard.usec.Inventory;
 
