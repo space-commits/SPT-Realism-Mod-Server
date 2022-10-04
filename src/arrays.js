@@ -58,7 +58,30 @@ class Arrays {
             this.botDB["bossknight"],
             this.botDB["bosstagilla"],
             this.botDB["followerbigpipe"],
-            this.botDB["followerbirdeye"]
+            this.botDB["followerbirdeye"],
+            this.botDB["sectantpriest"]
+        ];
+        this.boss_follower_list = [
+            this.botDB["followerbully"],
+            this.botDB["followergluharassault"],
+            this.botDB["followergluharscout"],
+            this.botDB["followergluharsecurity"],
+            this.botDB["followergluharsnipe"],
+            this.botDB["followerkojaniy"],
+            this.botDB["followersanitar"],
+            this.botDB["followertagilla"],
+        ];
+        this.PMC_list = [
+            this.botDB["usec"],
+            this.botDB["bear"],
+        ];
+        this.rogue_raider_list = [
+            this.botDB["pmcbot"],
+            this.botDB["exusec"],
+        ];
+        this.cultist_list = [
+            this.botDB["sectantwarrior"],
+            this.botDB["sectantpriest"],
         ];
         this.scav_bot_list = [
             this.botDB["cursedassault"],

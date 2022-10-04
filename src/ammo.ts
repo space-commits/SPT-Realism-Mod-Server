@@ -15,17 +15,17 @@ export class Ammo {
                 fileData._props.PenetrationPower = 15;
                 fileData._props.ArmorDamage = 0;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 15;
+                fileData._props.Damage = 17;
                 fileData._props.InitialSpeed = 320;
                 fileData._props.BallisticCoeficient = 0.02;
                 fileData._props.RicochetChance = 0.45;
                 fileData._props.FragmentationChance = 0.6;
                 fileData._props.BulletMassGram = 0.47;
-                fileData._props.HeavyBleedingDelta = 0.35;
-                fileData._props.LightBleedingDelta = 0.70;
-                fileData._props.ammoAccr = -50;
+                fileData._props.HeavyBleedingDelta = 0.6;
+                fileData._props.LightBleedingDelta = 0.9;
+                fileData._props.ammoAccr = -150;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -71;
+                fileData._props.ammoRec = -30;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 1;
                     fileData._props.MisfireChance = 0;
@@ -39,16 +39,16 @@ export class Ammo {
                 fileData._props.PenetrationPower = 8;
                 fileData._props.ArmorDamage = 50;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 16;
+                fileData._props.Damage = 19;
                 fileData._props.InitialSpeed = 330;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.25;
                 fileData._props.BulletMassGram = 0.9;
-                fileData._props.HeavyBleedingDelta = 0.1; 5.2
-                fileData._props.LightBleedingDelta = 0.35;
+                fileData._props.HeavyBleedingDelta = 0.2; 
+                fileData._props.LightBleedingDelta = 0.7;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -50;
+                fileData._props.ammoRec = -15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -62,13 +62,13 @@ export class Ammo {
                 fileData._props.PenetrationPower = 18;
                 fileData._props.ArmorDamage = 20;
                 fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 19;
+                fileData._props.Damage = 22;
                 fileData._props.InitialSpeed = 415;
                 fileData._props.RicochetChance = 0.28;
                 fileData._props.FragmentationChance = 0.22;
                 fileData._props.BulletMassGram = 1.9;
-                fileData._props.HeavyBleedingDelta = 0.15;
-                fileData._props.LightBleedingDelta = 0.45;
+                fileData._props.HeavyBleedingDelta = 0.3;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 30;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 0;
@@ -85,13 +85,13 @@ export class Ammo {
                 fileData._props.PenetrationPower = 17;
                 fileData._props.ArmorDamage = 31;
                 fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 22;
+                fileData._props.Damage = 26;
                 fileData._props.InitialSpeed = 385;
                 fileData._props.RicochetChance = 0.24;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 3.38;
-                fileData._props.HeavyBleedingDelta = 0.23;
-                fileData._props.LightBleedingDelta = 0.55;
+                fileData._props.HeavyBleedingDelta = 0.4;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 21;
@@ -108,13 +108,13 @@ export class Ammo {
                 fileData._props.PenetrationPower = 25;
                 fileData._props.ArmorDamage = 15;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 18;
+                fileData._props.Damage = 24;
                 fileData._props.InitialSpeed = 430;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 2.1;
-                fileData._props.HeavyBleedingDelta = 0.2;
-                fileData._props.LightBleedingDelta = 0.5;
+                fileData._props.HeavyBleedingDelta = 0.4;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 70;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 14;
@@ -130,13 +130,13 @@ export class Ammo {
             if (fileData._id === "5d6e68c4a4b9361b93413f79") {
                 fileData._props.PenetrationPower = 20;
                 fileData._props.ArmorDamage = 88;
-                fileData._props.Damage = 109;
+                fileData._props.Damage = 115;
                 fileData._props.InitialSpeed = 410;
                 fileData._props.RicochetChance = 0.17;
                 fileData._props.FragmentationChance = 0.3;
                 fileData._props.BulletMassGram = 20;
-                fileData._props.HeavyBleedingDelta = 0.35;
-                fileData._props.LightBleedingDelta = 0.75;
+                fileData._props.HeavyBleedingDelta = 0.7;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = -30;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 12;
@@ -152,13 +152,13 @@ export class Ammo {
             if (fileData._id === "58820d1224597753c90aeb13") {
                 fileData._props.PenetrationPower = 19;
                 fileData._props.ArmorDamage = 151;
-                fileData._props.Damage = 138;
+                fileData._props.Damage = 140;
                 fileData._props.InitialSpeed = 380;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 36.6;
-                fileData._props.HeavyBleedingDelta = 0.4;
-                fileData._props.LightBleedingDelta = 0.85;
+                fileData._props.HeavyBleedingDelta = 0.7;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 33;
@@ -175,13 +175,13 @@ export class Ammo {
                 fileData._props.PenetrationPower = 20;
                 fileData._props.ArmorDamage = 70;
                 fileData._props.buckshotBullets = 2;
-                fileData._props.Damage = 60;
+                fileData._props.Damage = 65;
                 fileData._props.InitialSpeed = 415;
                 fileData._props.RicochetChance = 0.25;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 22.5;
-                fileData._props.HeavyBleedingDelta = 0.3;
-                fileData._props.LightBleedingDelta = 0.65;
+                fileData._props.HeavyBleedingDelta = 0.6;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = -30;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 50;
@@ -197,12 +197,12 @@ export class Ammo {
             if (fileData._id === "5d6e6891a4b9361bd473feea") {
                 fileData._props.PenetrationPower = 21;
                 fileData._props.ArmorDamage = 150;
-                fileData._props.Damage = 176;
+                fileData._props.Damage = 165;
                 fileData._props.InitialSpeed = 410;
                 fileData._props.RicochetChance = 0.14;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 28;
-                fileData._props.HeavyBleedingDelta = 0.45;
+                fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.95;
                 fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
@@ -219,12 +219,12 @@ export class Ammo {
             if (fileData._id === "5d6e6869a4b9361c140bcfde") {
                 fileData._props.PenetrationPower = 22;
                 fileData._props.ArmorDamage = 168;
-                fileData._props.Damage = 234;
+                fileData._props.Damage = 175;
                 fileData._props.InitialSpeed = 395;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 40;
-                fileData._props.HeavyBleedingDelta = 0.5;
+                fileData._props.HeavyBleedingDelta = 0.9;
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
@@ -241,12 +241,12 @@ export class Ammo {
             if (fileData._id === "5c0d591486f7744c505b416f") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 107;
-                fileData._props.Damage = 139;
+                fileData._props.Damage = 160;
                 fileData._props.InitialSpeed = 435;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 19.6;
-                fileData._props.HeavyBleedingDelta = 0.5;
+                fileData._props.HeavyBleedingDelta = 0.9;
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -14;
                 fileData._props.ammoHear = 0;
@@ -263,12 +263,12 @@ export class Ammo {
             if (fileData._id === "5d6e689ca4b9361bc8618956") {
                 fileData._props.PenetrationPower = 33;
                 fileData._props.ArmorDamage = 88;
-                fileData._props.Damage = 154;
+                fileData._props.Damage = 140;
                 fileData._props.InitialSpeed = 430;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 33.5;
-                fileData._props.HeavyBleedingDelta = 0.4;
+                fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.85;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
@@ -285,12 +285,12 @@ export class Ammo {
             if (fileData._id === "5d6e68b3a4b9361bca7e50b5") {
                 fileData._props.PenetrationPower = 43;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 138;
+                fileData._props.Damage = 155;
                 fileData._props.InitialSpeed = 442;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 28.35;
-                fileData._props.HeavyBleedingDelta = 0.5;
+                fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
@@ -307,12 +307,12 @@ export class Ammo {
             if (fileData._id === "5d6e68e6a4b9361c140bcfe0") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 50;
-                fileData._props.Damage = 111;
+                fileData._props.Damage = 130;
                 fileData._props.InitialSpeed = 480;
                 fileData._props.RicochetChance = 0.25;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 19.4;
-                fileData._props.HeavyBleedingDelta = 0.45;
+                fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.95;
                 fileData._props.ammoAccr = 15;
                 fileData._props.ammoHear = 0;
@@ -329,12 +329,12 @@ export class Ammo {
             if (fileData._id === "5d6e68d1a4b93622fe60e845") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 70;
-                fileData._props.Damage = 206;
+                fileData._props.Damage = 155;
                 fileData._props.InitialSpeed = 594;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 19.5;
-                fileData._props.HeavyBleedingDelta = 0.45;
+                fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.95;
                 fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
@@ -351,12 +351,12 @@ export class Ammo {
             if (fileData._id === "5d6e68a8a4b9360b6c0d54e2") {
                 fileData._props.PenetrationPower = 62;
                 fileData._props.ArmorDamage = 70;
-                fileData._props.Damage = 184
+                fileData._props.Damage = 155;
                 fileData._props.InitialSpeed = 510;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 28.3;
-                fileData._props.HeavyBleedingDelta = 0.45;
+                fileData._props.HeavyBleedingDelta = 0.7;
                 fileData._props.LightBleedingDelta = 0.95;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
@@ -375,13 +375,13 @@ export class Ammo {
                 fileData._props.PenetrationPower = 8;
                 fileData._props.ArmorDamage = 0;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 16;
+                fileData._props.Damage = 19;
                 fileData._props.InitialSpeed = 340;
                 fileData._props.RicochetChance = 0.33;
                 fileData._props.FragmentationChance = 0.12;
                 fileData._props.BulletMassGram = 1;
-                fileData._props.HeavyBleedingDelta = 0.1;
-                fileData._props.LightBleedingDelta = 0.25;
+                fileData._props.HeavyBleedingDelta = 0.2;
+                fileData._props.LightBleedingDelta = 0.5;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -45;
@@ -398,13 +398,13 @@ export class Ammo {
                 fileData._props.PenetrationPower = 12;
                 fileData._props.ArmorDamage = 0;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 18;
+                fileData._props.Damage = 21;
                 fileData._props.InitialSpeed = 410;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.15;
                 fileData._props.BulletMassGram = 1.26;
-                fileData._props.HeavyBleedingDelta = 0.15;
-                fileData._props.LightBleedingDelta = 0.35;
+                fileData._props.HeavyBleedingDelta = 0.3;
+                fileData._props.LightBleedingDelta = 0.7;
                 fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -20;
@@ -421,13 +421,13 @@ export class Ammo {
                 fileData._props.PenetrationPower = 9;
                 fileData._props.ArmorDamage = 27;
                 fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 20;
+                fileData._props.Damage = 23;
                 fileData._props.InitialSpeed = 430;
                 fileData._props.RicochetChance = 0.24;
                 fileData._props.FragmentationChance = 0.17;
                 fileData._props.BulletMassGram = 3.5;
-                fileData._props.HeavyBleedingDelta = 0.22;
-                fileData._props.LightBleedingDelta = 0.5;
+                fileData._props.HeavyBleedingDelta = 0.4;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 30;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 28;
@@ -444,13 +444,13 @@ export class Ammo {
                 fileData._props.PenetrationPower = 14;
                 fileData._props.ArmorDamage = 22;
                 fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 19;
+                fileData._props.Damage = 24;
                 fileData._props.InitialSpeed = 475;
                 fileData._props.RicochetChance = 0.26;
                 fileData._props.FragmentationChance = 0.2;
                 fileData._props.BulletMassGram = 2;
-                fileData._props.HeavyBleedingDelta = 0.2;
-                fileData._props.LightBleedingDelta = 0.45;
+                fileData._props.HeavyBleedingDelta = 0.4;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 40;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 10;
@@ -466,12 +466,12 @@ export class Ammo {
             if (fileData._id === "5d6e6a05a4b93618084f58d0") {
                 fileData._props.PenetrationPower = 12;
                 fileData._props.ArmorDamage = 200;
-                fileData._props.Damage = 201;
+                fileData._props.Damage = 160;
                 fileData._props.InitialSpeed = 415;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 31.2;
-                fileData._props.HeavyBleedingDelta = 0.5;
+                fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
@@ -488,12 +488,12 @@ export class Ammo {
             if (fileData._id === "5d6e6a5fa4b93614ec501745") {
                 fileData._props.PenetrationPower = 17;
                 fileData._props.ArmorDamage = 130;
-                fileData._props.Damage = 159;
+                fileData._props.Damage = 150;
                 fileData._props.InitialSpeed = 405;
                 fileData._props.RicochetChance = 0.18;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 19.4;
-                fileData._props.HeavyBleedingDelta = 0.5;
+                fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -12;
                 fileData._props.ammoHear = 0;
@@ -510,12 +510,12 @@ export class Ammo {
             if (fileData._id === "5d6e6a53a4b9361bd473feec") {
                 fileData._props.PenetrationPower = 20;
                 fileData._props.ArmorDamage = 130;
-                fileData._props.Damage = 135;
+                fileData._props.Damage = 147;
                 fileData._props.InitialSpeed = 425;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 20;
-                fileData._props.HeavyBleedingDelta = 0.45;
+                fileData._props.HeavyBleedingDelta = 0.9;
                 fileData._props.LightBleedingDelta = 0.95;
                 fileData._props.ammoAccr = -8;
                 fileData._props.ammoHear = 0;
@@ -532,12 +532,12 @@ export class Ammo {
             if (fileData._id === "5d6e6a42a4b9364f07165f52") {
                 fileData._props.PenetrationPower = 32;
                 fileData._props.ArmorDamage = 85;
-                fileData._props.Damage = 142;
+                fileData._props.Damage = 140;
                 fileData._props.InitialSpeed = 445;
                 fileData._props.RicochetChance = 0.25;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 28.7;
-                fileData._props.HeavyBleedingDelta = 0.4;
+                fileData._props.HeavyBleedingDelta = 0.7;
                 fileData._props.LightBleedingDelta = 0.85;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
@@ -555,16 +555,17 @@ export class Ammo {
             if (fileData._id === "5e85a9a6eacf8c039e4e2ac1") {
                 fileData._props.PenetrationPower = 22;
                 fileData._props.ArmorDamage = 22;
-                fileData._props.Damage = 17;
+                fileData._props.Damage = 23;
                 fileData._props.InitialSpeed = 270;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.05;
                 fileData._props.BulletMassGram = 3.38;
-                fileData._props.HeavyBleedingDelta = 0.25;
-                fileData._props.LightBleedingDelta = 0.55;
+                fileData._props.HeavyBleedingDelta = 0.6;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -32;
+                fileData._props.BallisticCoeficient = 0.013;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -577,16 +578,17 @@ export class Ammo {
             if (fileData._id === "5f647f31b6238e5dd066e196") {
                 fileData._props.PenetrationPower = 35;
                 fileData._props.ArmorDamage = 25;
-                fileData._props.Damage = 33;
+                fileData._props.Damage = 27;
                 fileData._props.InitialSpeed = 375;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 3.38;
-                fileData._props.HeavyBleedingDelta = 0.25;
-                fileData._props.LightBleedingDelta = 0.55;
+                fileData._props.HeavyBleedingDelta = 0.5;
+                fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 0;
+                fileData._props.BallisticCoeficient = 0.018;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -597,9 +599,9 @@ export class Ammo {
             }
             //Barrikada
             if (fileData._id === "5e85aa1a988a8701445df1f5") {
-                fileData._props.PenetrationPower = 55;
+                fileData._props.PenetrationPower = 60;
                 fileData._props.ArmorDamage = 300;
-                fileData._props.Damage = 352;
+                fileData._props.Damage = 300;
                 fileData._props.InitialSpeed = 420;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
@@ -608,7 +610,7 @@ export class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 58;
+                fileData._props.ammoRec = 70;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -622,7 +624,7 @@ export class Ammo {
             if (fileData._id === "5737218f245977612125ba51") {
                 fileData._props.PenetrationPower = 7;
                 fileData._props.ArmorDamage = 195;
-                fileData._props.Damage = 37;
+                fileData._props.Damage = 39;
                 fileData._props.InitialSpeed = 250;
                 fileData._props.RicochetChance = 0.08;
                 fileData._props.FragmentationChance = 0.55;
@@ -644,7 +646,7 @@ export class Ammo {
             if (fileData._id === "57372140245977611f70ee91") {
                 fileData._props.PenetrationPower = 17;
                 fileData._props.ArmorDamage = 69;
-                fileData._props.Damage = 38;
+                fileData._props.Damage = 40;
                 fileData._props.InitialSpeed = 420;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0.38;
@@ -666,7 +668,7 @@ export class Ammo {
             if (fileData._id === "5737207f24597760ff7b25f2") {
                 fileData._props.PenetrationPower = 7;
                 fileData._props.ArmorDamage = 170;
-                fileData._props.Damage = 34;
+                fileData._props.Damage = 32;
                 fileData._props.InitialSpeed = 280;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.3;
@@ -688,7 +690,7 @@ export class Ammo {
             if (fileData._id === "573719762459775a626ccbc1") {
                 fileData._props.PenetrationPower = 12;
                 fileData._props.ArmorDamage = 97;
-                fileData._props.Damage = 24;
+                fileData._props.Damage = 26;
                 fileData._props.InitialSpeed = 302;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.23;
@@ -710,7 +712,7 @@ export class Ammo {
             if (fileData._id === "57371f8d24597761006c6a81") {
                 fileData._props.PenetrationPower = 13;
                 fileData._props.ArmorDamage = 85;
-                fileData._props.Damage = 30;
+                fileData._props.Damage = 32;
                 fileData._props.InitialSpeed = 315;
                 fileData._props.RicochetChance = 0.42;
                 fileData._props.FragmentationChance = 0.24;
@@ -732,7 +734,7 @@ export class Ammo {
             if (fileData._id === "57371f2b24597761224311f1") {
                 fileData._props.PenetrationPower = 15;
                 fileData._props.ArmorDamage = 79;
-                fileData._props.Damage = 37;
+                fileData._props.Damage = 39;
                 fileData._props.InitialSpeed = 330;
                 fileData._props.RicochetChance = 0.21;
                 fileData._props.FragmentationChance = 0.35;
@@ -754,7 +756,7 @@ export class Ammo {
             if (fileData._id === "57371eb62459776125652ac1") {
                 fileData._props.PenetrationPower = 6;
                 fileData._props.ArmorDamage = 190;
-                fileData._props.Damage = 23;
+                fileData._props.Damage = 25;
                 fileData._props.InitialSpeed = 301;
                 fileData._props.RicochetChance = 0.0;
                 fileData._props.FragmentationChance = 0.5;
@@ -776,7 +778,7 @@ export class Ammo {
             if (fileData._id === "57371b192459775a9f58a5e0") {
                 fileData._props.PenetrationPower = 8;
                 fileData._props.ArmorDamage = 155;
-                fileData._props.Damage = 41;
+                fileData._props.Damage = 43;
                 fileData._props.InitialSpeed = 297;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.35;
@@ -798,7 +800,7 @@ export class Ammo {
             if (fileData._id === "57371e4124597760ff7b25f1") {
                 fileData._props.PenetrationPower = 12;
                 fileData._props.ArmorDamage = 95;
-                fileData._props.Damage = 24;
+                fileData._props.Damage = 26;
                 fileData._props.InitialSpeed = 301;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.42;
@@ -820,7 +822,7 @@ export class Ammo {
             if (fileData._id === "5737201124597760fc4431f1") {
                 fileData._props.PenetrationPower = 22;
                 fileData._props.ArmorDamage = 65;
-                fileData._props.Damage = 26;
+                fileData._props.Damage = 28;
                 fileData._props.InitialSpeed = 298;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.31;
@@ -842,7 +844,7 @@ export class Ammo {
             if (fileData._id === "573720e02459776143012541") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 65;
-                fileData._props.Damage = 34;
+                fileData._props.Damage = 36;
                 fileData._props.InitialSpeed = 325;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.42;
@@ -864,7 +866,7 @@ export class Ammo {
             if (fileData._id === "573718ba2459775a75491131") {
                 fileData._props.PenetrationPower = 27;
                 fileData._props.ArmorDamage = 52;
-                fileData._props.Damage = 30;
+                fileData._props.Damage = 32;
                 fileData._props.InitialSpeed = 325;
                 fileData._props.RicochetChance = 0.45;
                 fileData._props.FragmentationChance = 0.33;
@@ -886,7 +888,7 @@ export class Ammo {
             if (fileData._id === "57371aab2459775a77142f22") {
                 fileData._props.PenetrationPower = 40;
                 fileData._props.ArmorDamage = 40;
-                fileData._props.Damage = 31;
+                fileData._props.Damage = 33;
                 fileData._props.InitialSpeed = 420;
                 fileData._props.RicochetChance = 0.45;
                 fileData._props.FragmentationChance = 0.31;
@@ -909,7 +911,7 @@ export class Ammo {
                 fileData._props.PenetrationPower = 35;
                 fileData._props.ArmorDamage = 45;
                 fileData._props.buckshotBullets = 0;
-                fileData._props.Damage = 26;
+                fileData._props.Damage = 28;
                 fileData._props.InitialSpeed = 480;
                 fileData._props.RicochetChance = 0.44;
                 fileData._props.FragmentationChance = 0.38;
@@ -932,7 +934,7 @@ export class Ammo {
             if (fileData._id === "5c0d56a986f774449d5de529") {
                 fileData._props.PenetrationPower = 35;
                 fileData._props.ArmorDamage = 35;
-                fileData._props.Damage = 53;
+                fileData._props.Damage = 55;
                 fileData._props.InitialSpeed = 385;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0.35;
@@ -954,7 +956,7 @@ export class Ammo {
             if (fileData._id === "5efb0e16aeb21837e749c7ff") {
                 fileData._props.PenetrationPower = 21;
                 fileData._props.ArmorDamage = 65;
-                fileData._props.Damage = 70;
+                fileData._props.Damage = 62;
                 fileData._props.InitialSpeed = 304;
                 fileData._props.RicochetChance = 0.19;
                 fileData._props.FragmentationChance = 0.15;
@@ -976,7 +978,7 @@ export class Ammo {
             if (fileData._id === "58864a4f2459770fcc257101") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 38;
+                fileData._props.Damage = 42;
                 fileData._props.InitialSpeed = 340;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.31;
@@ -998,7 +1000,7 @@ export class Ammo {
             if (fileData._id === "5a3c16fe86f77452b62de32a") {
                 fileData._props.PenetrationPower = 23;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 55;
+                fileData._props.Damage = 57;
                 fileData._props.InitialSpeed = 457;
                 fileData._props.RicochetChance = 0.16;
                 fileData._props.FragmentationChance = 0.37;
@@ -1020,7 +1022,7 @@ export class Ammo {
             if (fileData._id === "5c3df7d588a4501f290594e5") {
                 fileData._props.PenetrationPower = 23;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 35;
+                fileData._props.Damage = 39;
                 fileData._props.InitialSpeed = 365;
                 fileData._props.RicochetChance = 0.42;
                 fileData._props.FragmentationChance = 0.29;
@@ -1042,7 +1044,7 @@ export class Ammo {
             if (fileData._id === "56d59d3ad2720bdb418b4577") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 26;
-                fileData._props.Damage = 36;
+                fileData._props.Damage = 38;
                 fileData._props.InitialSpeed = 460;
                 fileData._props.RicochetChance = 0.5;
                 fileData._props.FragmentationChance = 0.22;
@@ -1064,7 +1066,7 @@ export class Ammo {
             if (fileData._id === "5efb0da7a29a85116f6ea05f") {
                 fileData._props.PenetrationPower = 63;
                 fileData._props.ArmorDamage = 15;
-                fileData._props.Damage = 34;
+                fileData._props.Damage = 36;
                 fileData._props.InitialSpeed = 550;
                 fileData._props.RicochetChance = 0.58;
                 fileData._props.FragmentationChance = 0.26;
@@ -1086,7 +1088,7 @@ export class Ammo {
             if (fileData._id === "5c925fa22e221601da359b7b") {
                 fileData._props.PenetrationPower = 58;
                 fileData._props.ArmorDamage = 22;
-                fileData._props.Damage = 35;
+                fileData._props.Damage = 37;
                 fileData._props.InitialSpeed = 450;
                 fileData._props.RicochetChance = 0.55;
                 fileData._props.FragmentationChance = 0.24;
@@ -1109,7 +1111,7 @@ export class Ammo {
             if (fileData._id === "5a26ac06c4a282000c5a90a8") {
                 fileData._props.PenetrationPower = 39;
                 fileData._props.ArmorDamage = 34;
-                fileData._props.Damage = 60;
+                fileData._props.Damage = 62;
                 fileData._props.InitialSpeed = 415;
                 fileData._props.RicochetChance = 0.1;
                 fileData._props.FragmentationChance = 0.5;
@@ -1131,7 +1133,7 @@ export class Ammo {
             if (fileData._id === "5a26abfac4a28232980eabff") {
                 fileData._props.PenetrationPower = 47;
                 fileData._props.ArmorDamage = 26;
-                fileData._props.Damage = 54;
+                fileData._props.Damage = 56;
                 fileData._props.InitialSpeed = 400;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.3;
@@ -1153,7 +1155,7 @@ export class Ammo {
             if (fileData._id === "5a269f97c4a282000b151807") {
                 fileData._props.PenetrationPower = 52;
                 fileData._props.ArmorDamage = 26;
-                fileData._props.Damage = 50;
+                fileData._props.Damage = 52;
                 fileData._props.InitialSpeed = 420;
                 fileData._props.RicochetChance = 0.45;
                 fileData._props.FragmentationChance = 0.27;
@@ -1175,7 +1177,7 @@ export class Ammo {
             if (fileData._id === "5a26ac0ec4a28200741e1e18") {
                 fileData._props.PenetrationPower = 58;
                 fileData._props.ArmorDamage = 21;
-                fileData._props.Damage = 45;
+                fileData._props.Damage = 47;
                 fileData._props.InitialSpeed = 400;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.21;
@@ -1198,7 +1200,7 @@ export class Ammo {
             if (fileData._id === "5ea2a8e200685063ec28c05a") {
                 fileData._props.PenetrationPower = 25;
                 fileData._props.ArmorDamage = 52;
-                fileData._props.Damage = 57;
+                fileData._props.Damage = 59;
                 fileData._props.InitialSpeed = 292;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0.3;
@@ -1220,7 +1222,7 @@ export class Ammo {
             if (fileData._id === "5efb0fc6aeb21837e749c801") {
                 fileData._props.PenetrationPower = 21;
                 fileData._props.ArmorDamage = 80;
-                fileData._props.Damage = 67;
+                fileData._props.Damage = 69;
                 fileData._props.InitialSpeed = 274;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.27;
@@ -1242,7 +1244,7 @@ export class Ammo {
             if (fileData._id === "5efb0d4f4bc50b58e81710f3") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 40;
+                fileData._props.Damage = 42;
                 fileData._props.InitialSpeed = 254;
                 fileData._props.RicochetChance = 0.25;
                 fileData._props.FragmentationChance = 0.23;
@@ -1264,7 +1266,7 @@ export class Ammo {
             if (fileData._id === "5e81f423763d9f754677bf2e") {
                 fileData._props.PenetrationPower = 25;
                 fileData._props.ArmorDamage = 55;
-                fileData._props.Damage = 45;
+                fileData._props.Damage = 47;
                 fileData._props.InitialSpeed = 290;
                 fileData._props.RicochetChance = 0.18;
                 fileData._props.FragmentationChance = 0.24;
@@ -1286,7 +1288,7 @@ export class Ammo {
             if (fileData._id === "5efb0cabfb3e451d70735af5") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 30;
-                fileData._props.Damage = 45;
+                fileData._props.Damage = 47;
                 fileData._props.InitialSpeed = 365;
                 fileData._props.RicochetChance = 0.32;
                 fileData._props.FragmentationChance = 0.27;
@@ -1309,7 +1311,7 @@ export class Ammo {
             if (fileData._id === "62330bfadc5883093563729b") {
                 fileData._props.PenetrationPower = 38;
                 fileData._props.ArmorDamage = 75;
-                fileData._props.Damage = 77;
+                fileData._props.Damage = 79;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.05;
                 fileData._props.HeavyBleedingDelta = 0.25;
@@ -1329,7 +1331,7 @@ export class Ammo {
             if (fileData._id === "62330c18744e5e31df12f516") {
                 fileData._props.PenetrationPower = 40;
                 fileData._props.ArmorDamage = 53;
-                fileData._props.Damage = 65;
+                fileData._props.Damage = 67;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.25;
                 fileData._props.HeavyBleedingDelta = 0.35;
@@ -1349,7 +1351,7 @@ export class Ammo {
             if (fileData._id === "62330c40bdd19b369e1e53d1") {
                 fileData._props.PenetrationPower = 41;
                 fileData._props.ArmorDamage = 47;
-                fileData._props.Damage = 58;
+                fileData._props.Damage = 60;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.1;
                 fileData._props.HeavyBleedingDelta = 0.27;
@@ -1369,7 +1371,7 @@ export class Ammo {
             if (fileData._id === "62330b3ed4dc74626d570b95") {
                 fileData._props.PenetrationPower = 42;
                 fileData._props.ArmorDamage = 40;
-                fileData._props.Damage = 44;
+                fileData._props.Damage = 50;
                 fileData._props.RicochetChance = 0.5;
                 fileData._props.FragmentationChance = 0.05;
                 fileData._props.HeavyBleedingDelta = 0.22;
@@ -1390,7 +1392,7 @@ export class Ammo {
             if (fileData._id === "5ba26812d4351e003201fef1") {
                 fileData._props.PenetrationPower = 40;
                 fileData._props.ArmorDamage = 17;
-                fileData._props.Damage = 32;
+                fileData._props.Damage = 34;
                 fileData._props.InitialSpeed = 690;
                 fileData._props.RicochetChance = 0.27;
                 fileData._props.FragmentationChance = 0.5;
@@ -1412,7 +1414,7 @@ export class Ammo {
             if (fileData._id === "5ba26844d4351e00334c9475") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 5;
-                fileData._props.Damage = 22;
+                fileData._props.Damage = 24;
                 fileData._props.InitialSpeed = 290;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.4;
@@ -1434,7 +1436,7 @@ export class Ammo {
             if (fileData._id === "5ba2678ad4351e44f824b344") {
                 fileData._props.PenetrationPower = 42;
                 fileData._props.ArmorDamage = 10;
-                fileData._props.Damage = 25;
+                fileData._props.Damage = 27;
                 fileData._props.InitialSpeed = 620;
                 fileData._props.RicochetChance = 0.39;
                 fileData._props.FragmentationChance = 0.38;
@@ -1456,7 +1458,7 @@ export class Ammo {
             if (fileData._id === "5ba26835d4351e0035628ff5") {
                 fileData._props.PenetrationPower = 52;
                 fileData._props.ArmorDamage = 10;
-                fileData._props.Damage = 24;
+                fileData._props.Damage = 26;
                 fileData._props.InitialSpeed = 680;
                 fileData._props.RicochetChance = 0.45;
                 fileData._props.FragmentationChance = 0.38;
@@ -1479,7 +1481,7 @@ export class Ammo {
             if (fileData._id === "5cc86832d7f00c000d3a6e6c") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 10;
-                fileData._props.Damage = 33;
+                fileData._props.Damage = 35;
                 fileData._props.InitialSpeed = 729;
                 fileData._props.RicochetChance = 0.45;
                 fileData._props.FragmentationChance = 0.39;
@@ -1501,7 +1503,7 @@ export class Ammo {
             if (fileData._id === "5cc80f79e4a949033c7343b2") {
                 fileData._props.PenetrationPower = 40;
                 fileData._props.ArmorDamage = 13;
-                fileData._props.Damage = 27;
+                fileData._props.Damage = 29;
                 fileData._props.InitialSpeed = 792;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.38;
@@ -1523,7 +1525,7 @@ export class Ammo {
             if (fileData._id === "5cc86840d7f00c002412c56c") {
                 fileData._props.PenetrationPower = 48;
                 fileData._props.ArmorDamage = 11;
-                fileData._props.Damage = 35;
+                fileData._props.Damage = 37;
                 fileData._props.InitialSpeed = 724;
                 fileData._props.RicochetChance = 0.5;
                 fileData._props.FragmentationChance = 0.37;
@@ -1545,7 +1547,7 @@ export class Ammo {
             if (fileData._id === "5cc80f8fe4a949033b0224a2") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 69;
-                fileData._props.Damage = 37;
+                fileData._props.Damage = 39;
                 fileData._props.InitialSpeed = 594;
                 fileData._props.RicochetChance = 0.12;
                 fileData._props.FragmentationChance = 0.43;
@@ -1567,7 +1569,7 @@ export class Ammo {
             if (fileData._id === "5cc80f53e4a949000e1ea4f8") {
                 fileData._props.PenetrationPower = 49;
                 fileData._props.ArmorDamage = 10;
-                fileData._props.Damage = 28;
+                fileData._props.Damage = 30;
                 fileData._props.InitialSpeed = 716;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.25;
@@ -1589,7 +1591,7 @@ export class Ammo {
             if (fileData._id === "5cc80f67e4a949035e43bbba") {
                 fileData._props.PenetrationPower = 51;
                 fileData._props.ArmorDamage = 5;
-                fileData._props.Damage = 22;
+                fileData._props.Damage = 24;
                 fileData._props.InitialSpeed = 305;
                 fileData._props.RicochetChance = 0.1;
                 fileData._props.FragmentationChance = 0.45;
@@ -1611,7 +1613,7 @@ export class Ammo {
             if (fileData._id === "5cc80f38e4a949001152b560") {
                 fileData._props.PenetrationPower = 52;
                 fileData._props.ArmorDamage = 10;
-                fileData._props.Damage = 27;
+                fileData._props.Damage = 29;
                 fileData._props.InitialSpeed = 716;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.28;
@@ -1634,7 +1636,7 @@ export class Ammo {
             if (fileData._id === "573602322459776445391df1") {
                 fileData._props.PenetrationPower = 45;
                 fileData._props.ArmorDamage = 70;
-                fileData._props.Damage = 47;
+                fileData._props.Damage = 49;
                 fileData._props.InitialSpeed = 385;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.42;
@@ -1656,7 +1658,7 @@ export class Ammo {
             if (fileData._id === "573601b42459776410737435") {
                 fileData._props.PenetrationPower = 37;
                 fileData._props.ArmorDamage = 72;
-                fileData._props.Damage = 41;
+                fileData._props.Damage = 43;
                 fileData._props.InitialSpeed = 375;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.44;
@@ -1678,7 +1680,7 @@ export class Ammo {
             if (fileData._id === "5735ff5c245977640e39ba7e") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 50;
-                fileData._props.Damage = 51;
+                fileData._props.Damage = 53;
                 fileData._props.InitialSpeed = 427;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.4;
@@ -1700,7 +1702,7 @@ export class Ammo {
             if (fileData._id === "5735fdcd2459776445391d61") {
                 fileData._props.PenetrationPower = 26;
                 fileData._props.ArmorDamage = 49;
-                fileData._props.Damage = 48;
+                fileData._props.Damage = 50;
                 fileData._props.InitialSpeed = 425;
                 fileData._props.RicochetChance = 0.19;
                 fileData._props.FragmentationChance = 0.47;
@@ -1722,7 +1724,7 @@ export class Ammo {
             if (fileData._id === "5736026a245977644601dc61") {
                 fileData._props.PenetrationPower = 34;
                 fileData._props.ArmorDamage = 40;
-                fileData._props.Damage = 38;
+                fileData._props.Damage = 40;
                 fileData._props.InitialSpeed = 430;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.35;
@@ -1744,7 +1746,7 @@ export class Ammo {
             if (fileData._id === "573603c924597764442bd9cb") {
                 fileData._props.PenetrationPower = 25;
                 fileData._props.ArmorDamage = 48;
-                fileData._props.Damage = 39;
+                fileData._props.Damage = 41;
                 fileData._props.InitialSpeed = 415;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.34;
@@ -1789,7 +1791,7 @@ export class Ammo {
             if (fileData._id === "57a0dfb82459774d3078b56c") {
                 fileData._props.PenetrationPower = 40;
                 fileData._props.ArmorDamage = 62;
-                fileData._props.Damage = 79;
+                fileData._props.Damage = 84;
                 fileData._props.InitialSpeed = 308;
                 fileData._props.RicochetChance = 0.18;
                 fileData._props.FragmentationChance = 0.35;
@@ -1833,7 +1835,7 @@ export class Ammo {
             if (fileData._id === "57a0e5022459774d1673f889") {
                 fileData._props.PenetrationPower = 56;
                 fileData._props.ArmorDamage = 43;
-                fileData._props.Damage = 73;
+                fileData._props.Damage = 78;
                 fileData._props.InitialSpeed = 315;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.3;
@@ -1855,7 +1857,7 @@ export class Ammo {
             if (fileData._id === "5c0d668f86f7747ccb7f13b2") {
                 fileData._props.PenetrationPower = 60;
                 fileData._props.ArmorDamage = 40;
-                fileData._props.Damage = 69;
+                fileData._props.Damage = 74;
                 fileData._props.InitialSpeed = 295;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.27;
@@ -1877,7 +1879,7 @@ export class Ammo {
             if (fileData._id === "5c0d688c86f77413ae3407b2") {
                 fileData._props.PenetrationPower = 65;
                 fileData._props.ArmorDamage = 45;
-                fileData._props.Damage = 67;
+                fileData._props.Damage = 72;
                 fileData._props.InitialSpeed = 310;
                 fileData._props.RicochetChance = 0.34;
                 fileData._props.FragmentationChance = 0.2;
@@ -1900,7 +1902,7 @@ export class Ammo {
             if (fileData._id === "5fc382b6d6fa9c00c571bbc3") {
                 fileData._props.PenetrationPower = 75;
                 fileData._props.ArmorDamage = 120;
-                fileData._props.Damage = 358;
+                fileData._props.Damage = 198;
                 fileData._props.InitialSpeed = 880;
                 fileData._props.RicochetChance = 0.1;
                 fileData._props.FragmentationChance = 0;
@@ -1922,7 +1924,7 @@ export class Ammo {
             if (fileData._id === "5fc382c1016cce60e8341b20") {
                 fileData._props.PenetrationPower = 70;
                 fileData._props.ArmorDamage = 140;
-                fileData._props.Damage = 291;
+                fileData._props.Damage = 171;
                 fileData._props.InitialSpeed = 849;
                 fileData._props.RicochetChance = 0.12;
                 fileData._props.FragmentationChance = 0;
@@ -1944,7 +1946,7 @@ export class Ammo {
             if (fileData._id === "5fc275cf85fd526b824a571a") {
                 fileData._props.PenetrationPower = 85;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 295;
+                fileData._props.Damage = 175;
                 fileData._props.InitialSpeed = 900;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
@@ -1966,7 +1968,7 @@ export class Ammo {
             if (fileData._id === "5fc382a9d724d907e2077dab") {
                 fileData._props.PenetrationPower = 115;
                 fileData._props.ArmorDamage = 100;
-                fileData._props.Damage = 282;
+                fileData._props.Damage = 152;
                 fileData._props.InitialSpeed = 910;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0;
@@ -1989,7 +1991,7 @@ export class Ammo {
             if (fileData._id === "619636be6db0f2477964e710") {
                 fileData._props.PenetrationPower = 48;
                 fileData._props.ArmorDamage = 53;
-                fileData._props.Damage = 103;
+                fileData._props.Damage = 93;
                 fileData._props.InitialSpeed = 625;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.15;
@@ -2011,7 +2013,7 @@ export class Ammo {
             if (fileData._id === "6196364158ef8c428c287d9f") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 55;
-                fileData._props.Damage = 125;
+                fileData._props.Damage = 115;
                 fileData._props.InitialSpeed = 724;
                 fileData._props.RicochetChance = 0.25;
                 fileData._props.FragmentationChance = 0;
@@ -2100,7 +2102,7 @@ export class Ammo {
             if (fileData._id === "59e6658b86f77411d949b250") {
                 fileData._props.PenetrationPower = 47;
                 fileData._props.ArmorDamage = 55;
-                fileData._props.Damage = 140;
+                fileData._props.Damage = 120;
                 fileData._props.InitialSpeed = 550;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
@@ -2122,7 +2124,7 @@ export class Ammo {
             if (fileData._id === "59e6542b86f77411dc52a77a") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 50;
-                fileData._props.Damage = 117;
+                fileData._props.Damage = 107;
                 fileData._props.InitialSpeed = 580;
                 fileData._props.RicochetChance = 0.27;
                 fileData._props.FragmentationChance = 0;
@@ -2144,7 +2146,7 @@ export class Ammo {
             if (fileData._id === "59e655cb86f77411dc52a77b") {
                 fileData._props.PenetrationPower = 48;
                 fileData._props.ArmorDamage = 65;
-                fileData._props.Damage = 115;
+                fileData._props.Damage = 105;
                 fileData._props.InitialSpeed = 770;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
@@ -2166,7 +2168,7 @@ export class Ammo {
             if (fileData._id === "5f0596629e22f464da6bbdd9") {
                 fileData._props.PenetrationPower = 55;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 112;
+                fileData._props.Damage = 90;
                 fileData._props.InitialSpeed = 567;
                 fileData._props.RicochetChance = 0.54;
                 fileData._props.FragmentationChance = 0;
@@ -2189,10 +2191,10 @@ export class Ammo {
             if (fileData._id === "5cadf6e5ae921500113bb973") {
                 fileData._props.PenetrationPower = 51;
                 fileData._props.ArmorDamage = 53;
-                fileData._props.Damage = 135;
+                fileData._props.Damage = 150;
                 fileData._props.InitialSpeed = 870;
                 fileData._props.RicochetChance = 0.15;
-                fileData._props.FragmentationChance = 0;
+                fileData._props.FragmentationChance = 0.03;
                 fileData._props.BulletMassGram = 7;
                 fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 1;
@@ -2211,10 +2213,10 @@ export class Ammo {
             if (fileData._id === "5cadf6ddae9215051e1c23b2") {
                 fileData._props.PenetrationPower = 57;
                 fileData._props.ArmorDamage = 57;
-                fileData._props.Damage = 147;
+                fileData._props.Damage = 145;
                 fileData._props.InitialSpeed = 300;
                 fileData._props.RicochetChance = 0.05;
-                fileData._props.FragmentationChance = 0;
+                fileData._props.FragmentationChance = 0.02;
                 fileData._props.BulletMassGram = 32.9;
                 fileData._props.HeavyBleedingDelta = 0.75;
                 fileData._props.LightBleedingDelta = 1;
@@ -2233,10 +2235,10 @@ export class Ammo {
             if (fileData._id === "5cadf6eeae921500134b2799") {
                 fileData._props.PenetrationPower = 62;
                 fileData._props.ArmorDamage = 94;
-                fileData._props.Damage = 157;
+                fileData._props.Damage = 135;
                 fileData._props.InitialSpeed = 570;
                 fileData._props.RicochetChance = 0.1;
-                fileData._props.FragmentationChance = 0;
+                fileData._props.FragmentationChance = 0.01;
                 fileData._props.BulletMassGram = 17.95;
                 fileData._props.HeavyBleedingDelta = 0.7;
                 fileData._props.LightBleedingDelta = 1;
@@ -2256,7 +2258,7 @@ export class Ammo {
             if (fileData._id === "5e023cf8186a883be655e54f") {
                 fileData._props.PenetrationPower = 53;
                 fileData._props.ArmorDamage = 71;
-                fileData._props.Damage = 165;
+                fileData._props.Damage = 152;
                 fileData._props.InitialSpeed = 800;
                 fileData._props.RicochetChance = 0.12;
                 fileData._props.FragmentationChance = 0;
@@ -2322,7 +2324,7 @@ export class Ammo {
             if (fileData._id === "5e023d34e8a400319a28ed44") {
                 fileData._props.PenetrationPower = 72;
                 fileData._props.ArmorDamage = 70;
-                fileData._props.Damage = 140;
+                fileData._props.Damage = 147;
                 fileData._props.InitialSpeed = 824;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0;
@@ -2344,7 +2346,7 @@ export class Ammo {
             if (fileData._id === "560d61e84bdc2da74d8b4571") {
                 fileData._props.PenetrationPower = 85;
                 fileData._props.ArmorDamage = 50;
-                fileData._props.Damage = 151;
+                fileData._props.Damage = 150;
                 fileData._props.InitialSpeed = 830;
                 fileData._props.RicochetChance = 0.27;
                 fileData._props.FragmentationChance = 0;
@@ -2366,7 +2368,7 @@ export class Ammo {
             if (fileData._id === "5e023d48186a883be655e551") {
                 fileData._props.PenetrationPower = 87;
                 fileData._props.ArmorDamage = 77;
-                fileData._props.Damage = 184;
+                fileData._props.Damage = 145;
                 fileData._props.InitialSpeed = 820;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
@@ -2389,7 +2391,7 @@ export class Ammo {
             if (fileData._id === "5e023e88277cce2b522ff2b1") {
                 fileData._props.PenetrationPower = 53;
                 fileData._props.ArmorDamage = 85;
-                fileData._props.Damage = 214;
+                fileData._props.Damage = 173;
                 fileData._props.InitialSpeed = 822;
                 fileData._props.RicochetChance = 0.1;
                 fileData._props.FragmentationChance = 0;
@@ -2411,8 +2413,8 @@ export class Ammo {
             if (fileData._id === "5e023e53d4353e3302577c4c") {
                 fileData._props.PenetrationPower = 53;
                 fileData._props.ArmorDamage = 91;
-                fileData._props.Damage = 163;
-                fileData._props.InitialSpeed = 800;
+                fileData._props.Damage = 147;
+                fileData._props.InitialSpeed = 800; 
                 fileData._props.RicochetChance = 0.13;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 11.34;
@@ -2433,7 +2435,7 @@ export class Ammo {
             if (fileData._id === "5e023e6e34d52a55c3304f71") {
                 fileData._props.PenetrationPower = 54;
                 fileData._props.ArmorDamage = 83;
-                fileData._props.Damage = 200;
+                fileData._props.Damage = 160;
                 fileData._props.InitialSpeed = 808;
                 fileData._props.RicochetChance = 0.07;
                 fileData._props.FragmentationChance = 0;
@@ -2455,7 +2457,7 @@ export class Ammo {
             if (fileData._id === "58dd3ad986f77403051cba8f") {
                 fileData._props.PenetrationPower = 61;
                 fileData._props.ArmorDamage = 61;
-                fileData._props.Damage = 153;
+                fileData._props.Damage = 145;
                 fileData._props.InitialSpeed = 860;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0;
@@ -2477,7 +2479,7 @@ export class Ammo {
             if (fileData._id === "5a608bf24f39f98ffc77720e") {
                 fileData._props.PenetrationPower = 60;
                 fileData._props.ArmorDamage = 68;
-                fileData._props.Damage = 156;
+                fileData._props.Damage = 147;
                 fileData._props.InitialSpeed = 856;
                 fileData._props.RicochetChance = 0.14;
                 fileData._props.FragmentationChance = 0;
@@ -2499,7 +2501,7 @@ export class Ammo {
             if (fileData._id === "5a6086ea4f39f99cd479502f") {
                 fileData._props.PenetrationPower = 80;
                 fileData._props.ArmorDamage = 55;
-                fileData._props.Damage = 143;
+                fileData._props.Damage = 138;
                 fileData._props.InitialSpeed = 854;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
@@ -2521,7 +2523,7 @@ export class Ammo {
             if (fileData._id === "5efb0c1bd79ff02a1f5e68d9") {
                 fileData._props.PenetrationPower = 94;
                 fileData._props.ArmorDamage = 35;
-                fileData._props.Damage = 138;
+                fileData._props.Damage = 136;
                 fileData._props.InitialSpeed = 915;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0;
@@ -2544,10 +2546,10 @@ export class Ammo {
             if (fileData._id === "59e4d3d286f774176a36250a") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 61;
-                fileData._props.Damage = 131;
+                fileData._props.Damage = 130;
                 fileData._props.InitialSpeed = 754;
                 fileData._props.RicochetChance = 0.1;
-                fileData._props.FragmentationChance = 0;
+                fileData._props.FragmentationChance = 0.1;
                 fileData._props.BulletMassGram = 8;
                 fileData._props.HeavyBleedingDelta = 0.37;
                 fileData._props.LightBleedingDelta = 0.79;
@@ -2589,7 +2591,7 @@ export class Ammo {
             if (fileData._id === "59e4cf5286f7741778269d8a") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 59;
-                fileData._props.Damage = 112;
+                fileData._props.Damage = 100;
                 fileData._props.InitialSpeed = 725;
                 fileData._props.RicochetChance = 0.12;
                 fileData._props.FragmentationChance = 0;
@@ -2611,7 +2613,7 @@ export class Ammo {
             if (fileData._id === "5656d7c34bdc2d9d198b4587") {
                 fileData._props.PenetrationPower = 55;
                 fileData._props.ArmorDamage = 65;
-                fileData._props.Damage = 113;
+                fileData._props.Damage = 90;
                 fileData._props.InitialSpeed = 725;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0;
@@ -2633,7 +2635,7 @@ export class Ammo {
             if (fileData._id === "59e0d99486f7744a32234762") {
                 fileData._props.PenetrationPower = 62;
                 fileData._props.ArmorDamage = 50;
-                fileData._props.Damage = 115;
+                fileData._props.Damage = 95;
                 fileData._props.InitialSpeed = 740;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0;
@@ -2655,7 +2657,7 @@ export class Ammo {
             if (fileData._id === "601aa3d2b2bcb34913271e6d") {
                 fileData._props.PenetrationPower = 69;
                 fileData._props.ArmorDamage = 42;
-                fileData._props.Damage = 116;
+                fileData._props.Damage = 85;
                 fileData._props.InitialSpeed = 800;
                 fileData._props.RicochetChance = 0.47;
                 fileData._props.FragmentationChance = 0;
@@ -2678,7 +2680,7 @@ export class Ammo {
             if (fileData._id === "56dff421d2720b5f5a8b4567") {
                 fileData._props.PenetrationPower = 49;
                 fileData._props.ArmorDamage = 33;
-                fileData._props.Damage = 116;
+                fileData._props.Damage = 120;
                 fileData._props.InitialSpeed = 895;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0;
@@ -2700,7 +2702,7 @@ export class Ammo {
             if (fileData._id === "56dff216d2720bbd668b4568") {
                 fileData._props.PenetrationPower = 51;
                 fileData._props.ArmorDamage = 35;
-                fileData._props.Damage = 114;
+                fileData._props.Damage = 115;
                 fileData._props.InitialSpeed = 905;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0;
@@ -2855,7 +2857,7 @@ export class Ammo {
             if (fileData._id === "56dfef82d2720bbd668b4567") {
                 fileData._props.PenetrationPower = 69;
                 fileData._props.ArmorDamage = 29;
-                fileData._props.Damage = 64;
+                fileData._props.Damage = 61;
                 fileData._props.InitialSpeed = 910;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.24;
@@ -2877,7 +2879,7 @@ export class Ammo {
             if (fileData._id === "56dff061d2720bb5668b4567") {
                 fileData._props.PenetrationPower = 67;
                 fileData._props.ArmorDamage = 32;
-                fileData._props.Damage = 62;
+                fileData._props.Damage = 60;
                 fileData._props.InitialSpeed = 905;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.27;
@@ -2899,7 +2901,7 @@ export class Ammo {
             if (fileData._id === "56dff026d2720bb8668b4567") {
                 fileData._props.PenetrationPower = 75;
                 fileData._props.ArmorDamage = 20;
-                fileData._props.Damage = 60;
+                fileData._props.Damage = 58;
                 fileData._props.InitialSpeed = 840;
                 fileData._props.RicochetChance = 0.34;
                 fileData._props.FragmentationChance = 0.2;
@@ -2921,7 +2923,7 @@ export class Ammo {
             if (fileData._id === "61962b617c6c7b169525f168") {
                 fileData._props.PenetrationPower = 70;
                 fileData._props.ArmorDamage = 29;
-                fileData._props.Damage = 57;
+                fileData._props.Damage = 55;
                 fileData._props.InitialSpeed = 830;
                 fileData._props.RicochetChance = 0.29;
                 fileData._props.FragmentationChance = 0.4;
@@ -2943,7 +2945,7 @@ export class Ammo {
             if (fileData._id === "5c0d5e4486f77478390952fe") {
                 fileData._props.PenetrationPower = 80;
                 fileData._props.ArmorDamage = 25;
-                fileData._props.Damage = 59;
+                fileData._props.Damage = 57;
                 fileData._props.InitialSpeed = 850;
                 fileData._props.RicochetChance = 0.37;
                 fileData._props.FragmentationChance = 0.18;
@@ -2966,10 +2968,10 @@ export class Ammo {
             if (fileData._id === "5c0d5ae286f7741e46554302") {
                 fileData._props.PenetrationPower = 60;
                 fileData._props.ArmorDamage = 23;
-                fileData._props.Damage = 127;
+                fileData._props.Damage = 135;
                 fileData._props.InitialSpeed = 947;
                 fileData._props.RicochetChance = 0.3;
-                fileData._props.FragmentationChance = 0;
+                fileData._props.FragmentationChance = 0.15;
                 fileData._props.BulletMassGram = 3.43;
                 fileData._props.HeavyBleedingDelta = 0.5;
                 fileData._props.LightBleedingDelta = 1;
@@ -2988,10 +2990,10 @@ export class Ammo {
             if (fileData._id === "59e6927d86f77411da468256") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 32;
-                fileData._props.Damage = 118;
+                fileData._props.Damage = 115;
                 fileData._props.InitialSpeed = 910;
                 fileData._props.RicochetChance = 0.2;
-                fileData._props.FragmentationChance = 0;
+                fileData._props.FragmentationChance = 0.1;
                 fileData._props.BulletMassGram = 3.63;
                 fileData._props.HeavyBleedingDelta = 0.42;
                 fileData._props.LightBleedingDelta = 0.89;
@@ -3010,10 +3012,10 @@ export class Ammo {
             if (fileData._id === "59e6918f86f7746c9f75e849") {
                 fileData._props.PenetrationPower = 48;
                 fileData._props.ArmorDamage = 20;
-                fileData._props.Damage = 57;
+                fileData._props.Damage = 55;
                 fileData._props.InitialSpeed = 936;
                 fileData._props.RicochetChance = 0.0;
-                fileData._props.FragmentationChance = 0.31;
+                fileData._props.FragmentationChance = 0.3;
                 fileData._props.BulletMassGram = 4;
                 fileData._props.HeavyBleedingDelta = 0.25;
                 fileData._props.LightBleedingDelta = 0.55;
@@ -3032,10 +3034,10 @@ export class Ammo {
             if (fileData._id === "60194943740c5d77f6705eea") {
                 fileData._props.PenetrationPower = 65;
                 fileData._props.ArmorDamage = 26;
-                fileData._props.Damage = 115;
+                fileData._props.Damage = 110;
                 fileData._props.InitialSpeed = 902;
                 fileData._props.RicochetChance = 0.15;
-                fileData._props.FragmentationChance = 0;
+                fileData._props.FragmentationChance = 0.2;
                 fileData._props.BulletMassGram = 4;
                 fileData._props.HeavyBleedingDelta = 0.35;
                 fileData._props.LightBleedingDelta = 0.75;
@@ -3098,7 +3100,7 @@ export class Ammo {
             if (fileData._id === "54527a984bdc2d4e668b4567") {
                 fileData._props.PenetrationPower = 63;
                 fileData._props.ArmorDamage = 37;
-                fileData._props.Damage = 57;
+                fileData._props.Damage = 55;
                 fileData._props.InitialSpeed = 878;
                 fileData._props.RicochetChance = 0.5;
                 fileData._props.FragmentationChance = 0.06;
@@ -3120,7 +3122,7 @@ export class Ammo {
             if (fileData._id === "59e6906286f7746c9f75e847") {
                 fileData._props.PenetrationPower = 63;
                 fileData._props.ArmorDamage = 27;
-                fileData._props.Damage = 67;
+                fileData._props.Damage = 65;
                 fileData._props.InitialSpeed = 910;
                 fileData._props.RicochetChance = 0.23;
                 fileData._props.FragmentationChance = 0.24;
@@ -3142,7 +3144,7 @@ export class Ammo {
             if (fileData._id === "54527ac44bdc2d36668b4567") {
                 fileData._props.PenetrationPower = 75;
                 fileData._props.ArmorDamage = 18;
-                fileData._props.Damage = 61;
+                fileData._props.Damage = 59;
                 fileData._props.InitialSpeed = 915;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.15;
@@ -3164,7 +3166,7 @@ export class Ammo {
             if (fileData._id === "59e690b686f7746c9f75e848") {
                 fileData._props.PenetrationPower = 84;
                 fileData._props.ArmorDamage = 22;
-                fileData._props.Damage = 59;
+                fileData._props.Damage = 57;
                 fileData._props.InitialSpeed = 998;
                 fileData._props.RicochetChance = 0.37;
                 fileData._props.FragmentationChance = 0.11;
@@ -3186,7 +3188,7 @@ export class Ammo {
             if (fileData._id === "601949593ae8f707c4608daa") {
                 fileData._props.PenetrationPower = 95;
                 fileData._props.ArmorDamage = 15;
-                fileData._props.Damage = 61;
+                fileData._props.Damage = 54;
                 fileData._props.InitialSpeed = 1050;
                 fileData._props.RicochetChance = 0.29;
                 fileData._props.FragmentationChance = 0.1;
@@ -3209,7 +3211,7 @@ export class Ammo {
             if (fileData._id === "5cde8864d7f00c0010373be1") {
                 fileData._props.PenetrationPower = 85;
                 fileData._props.ArmorDamage = 200;
-                fileData._props.Damage = 807;
+                fileData._props.Damage = 250;
                 fileData._props.InitialSpeed = 818;
                 fileData._props.RicochetChance = 0.37;
                 fileData._props.FragmentationChance = 0.0;
@@ -3231,7 +3233,7 @@ export class Ammo {
             if (fileData._id === "5d2f2ab648f03550091993ca") {
                 fileData._props.PenetrationPower = 85;
                 fileData._props.ArmorDamage = 200;
-                fileData._props.Damage = 807;
+                fileData._props.Damage = 250;
                 fileData._props.InitialSpeed = 818;
                 fileData._props.RicochetChance = 0.37;
                 fileData._props.FragmentationChance = 0.0;
@@ -3299,7 +3301,7 @@ export class Ammo {
                 fileData._props.HeavyBleedingDelta = 0.27;
                 fileData._props.LightBleedingDelta = 0.47;
                 fileData._props.Damage = 40;
-                fileData._props.PenetrationPower = 20;
+                fileData._props.PenetrationPower = 25;
                 fileData._props.buckshotBullets = 0;
             }
             //m67
@@ -3314,7 +3316,7 @@ export class Ammo {
             if (fileData._id === "5996f6d686f77467977ba6cc") {
                 fileData._props.HeavyBleedingDelta = 0.37;
                 fileData._props.LightBleedingDelta = 0.77;
-                fileData._props.Damage = 25;
+                fileData._props.Damage = 30;
                 fileData._props.PenetrationPower = 25;
                 fileData._props.buckshotBullets = 2;
             }
@@ -3326,8 +3328,8 @@ export class Ammo {
                 fileData._props.PenetrationPower = 30;
                 fileData._props.buckshotBullets = 0;
             }
-            if(fileData._parent === "5485a8684bdc2da71d8b4567" && fileData._props?.DurabilityBurnModificator !== undefined ){
-                var duraBurn = Math.max(1, fileData._props.DurabilityBurnModificator * 0.8 );
+            if(fileData._parent === "5485a8684bdc2da71d8b4567" && fileData._props?.DurabilityBurnModificator !== undefined && this.modConf.malf_changes == true){
+                var duraBurn = Math.max(1, fileData._props.DurabilityBurnModificator * 0.6);
                 var misfireChance = Math.max(0, fileData._props.MalfMisfireChance *= 0.9);
                 fileData._props.DurabilityBurnModificator = duraBurn;
                 fileData._props.MalfMisfireChance = misfireChance;

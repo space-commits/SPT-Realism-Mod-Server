@@ -153,14 +153,50 @@ export class Bots {
             bot.health.Temperature = commonStats.health.Temperature;
         }
 
-        this.array.non_scav_bot_list.forEach(setHealth);
+        this.array.PMC_list.forEach(setHealth);
         function setHealth(bot) {
             bot.health.BodyParts = commonStats.health.BodyParts;
             bot.health.Temperature = commonStats.health.Temperature;
         }
+
+        if(this.modConf.realistic_boss_health == true){
+            this.array.boss_bot_list.forEach(setHealth);
+            function setHealth(bot) {
+                bot.health.BodyParts = commonStats.health.BodyParts;
+                bot.health.Temperature = commonStats.health.Temperature;
+            }
+        }
+
+        if(this.modConf.realistic_boss_follower_health == true){
+            this.array.boss_follower_list.forEach(setHealth);
+            function setHealth(bot) {
+                bot.health.BodyParts = commonStats.health.BodyParts;
+                bot.health.Temperature = commonStats.health.Temperature;
+            }
+        }
+
+        if(this.modConf.realistic_raider_rogue_health == true){
+            this.array.rogue_raider_list.forEach(setHealth);
+            function setHealth(bot) {
+                bot.health.BodyParts = commonStats.health.BodyParts;
+                bot.health.Temperature = commonStats.health.Temperature;
+            }
+        }
+
+        if(this.modConf.realistic_cultist_health == true){
+            this.array.cultist_list.forEach(setHealth);
+            function setHealth(bot) {
+                bot.health.BodyParts = commonStats.health.BodyParts;
+                bot.health.Temperature = commonStats.health.Temperature;
+            }
+        }
+
         if (this.modConf.logEverything == true) {
             this.logger.info("Killa chest health = " + this.botDB["bosskilla"].health.BodyParts[0].Chest.min);
             this.logger.info("Killa Vitality = " + this.botDB["bosskilla"].skills.Common["Vitality"].max);
+            this.logger.info("PMC chest health = " + this.botDB["usec"].health.BodyParts[0].Chest.min);
+            this.logger.info("Scav chest health = " + this.botDB["assault"].health.BodyParts[0].Chest.min);
+            this.logger.info("Cultist chest health = " + this.botDB["sectantwarrior"].health.BodyParts[0].Chest.min);
             this.logger.info("Bot Health Set");
         }
     }

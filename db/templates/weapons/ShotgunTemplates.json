@@ -139,7 +139,7 @@
         "ItemID": "5580223e4bdc2d1c128b457f",
         "Name": "weapon_izhmeh_mr43e-1c_12g",
         "WeapType": "",
-        "OperationType": "tubefed",
+        "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
         "HasShoulderContact": false,

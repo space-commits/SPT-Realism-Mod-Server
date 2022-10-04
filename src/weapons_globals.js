@@ -32,7 +32,7 @@ class WeaponsGlobals {
                     || fileData._props.weapClass === "assaultRifle"
                     || fileData._props.weapClass === "pistol") {
                     fileData._props.MinRepairDegradation = 0;
-                    fileData._props.MaxRepairDegradation = 0.01;
+                    fileData._props.MaxRepairDegradation = 0.005;
                     fileData._props.MinRepairKitDegradation = 0;
                     fileData._props.MaxRepairKitDegradation = 0;
                     fileData._props.RepairComplexity = 0;
@@ -50,22 +50,22 @@ class WeaponsGlobals {
                     || fileData._props.weapClass === "machinegun"
                     || fileData._props.weapClass === "marksmanRifle"
                     || fileData._props.weapClass === "assaultRifle") {
-                    fileData._props.RecoilForceUp *= 0.7;
-                    fileData._props.RecoilForceBack *= 0.5;
-                    fileData._props.Convergence *= 5.5;
-                    fileData._props.RecolDispersion *= 0.5;
-                    fileData._props.CameraRecoil *= 0.5;
-                    fileData._props.CameraSnap *= 0.5;
-                    fileData._props.Ergonomics = 60;
+                    // fileData._props.RecoilForceUp *= 0.7;
+                    // fileData._props.RecoilForceBack *= 0.5;
+                    // fileData._props.Convergence *= 5.5;
+                    // fileData._props.RecolDispersion *= 0.5;
+                    // fileData._props.CameraRecoil *= 0.5; 
+                    // fileData._props.CameraSnap *= 0.5;
+                    // fileData._props.Ergonomics = 60;
                 }
                 if (fileData._props.weapClass === "pistol") {
-                    fileData._props.RecoilForceUp *= 0.3;
-                    fileData._props.RecoilForceBack *= 2;
-                    fileData._props.Convergence *= 4;
-                    fileData._props.RecolDispersion *= 0.5;
-                    fileData._props.CameraRecoil *= 1;
-                    fileData._props.CameraSnap *= 1.7;
-                    fileData._props.Ergonomics = 60;
+                    // fileData._props.RecoilForceUp *= 0.3;
+                    // fileData._props.RecoilForceBack *= 2;
+                    // fileData._props.Convergence *= 4;
+                    // fileData._props.RecolDispersion *= 0.5;
+                    // fileData._props.CameraRecoil *= 1;
+                    // fileData._props.CameraSnap *= 1.7;
+                    // fileData._props.Ergonomics = 60;
                 }
             }
             this.globalDB.Aiming.RecoilCrank = true;

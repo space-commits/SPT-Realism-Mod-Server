@@ -20,8 +20,8 @@
     "58a5c12e86f7745d585a2b9e": {
         "ItemID": "58a5c12e86f7745d585a2b9e",
         "Name": "mount_mpx_4_inch_rail",
-        "ModType": "",
-        "Ergonomics": 0,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -39,10 +39,10 @@
         "ItemID": "61965d9058ef8c428c287e0d",
         "Name": "mount_mk16_pws_srx",
         "ModType": "",
-        "VerticalRecoil": -5,
-        "HorizontalRecoil": -2.5,
+        "VerticalRecoil": -1,
+        "HorizontalRecoil": -2,
         "Dispersion": -2,
-        "Ergonomics": 10,
+        "Ergonomics": 8,
         "Accuracy": 5,
         "ConflictingItems": [
             "6183fc15d3a39d50044c13e9",
@@ -107,11 +107,13 @@
     "59eb7ebe86f7740b373438ce": {
         "ItemID": "59eb7ebe86f7740b373438ce",
         "Name": "mount_vss_toz_6p29m",
-        "ModType": "",
-        "Ergonomics": 0,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -3,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.095
+        "Weight": 0.095,
+        "HeatFactor": 0.98,
+        "CoolFactor": 1.02
     },
     "5dfe14f30b92095fd441edaf": {
         "ItemID": "5dfe14f30b92095fd441edaf",
@@ -145,7 +147,7 @@
         "Name": "mount_all_zenit_b18",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.053
     },
@@ -329,8 +331,8 @@
     "5b800ebc86f774394e230a90": {
         "ItemID": "5b800ebc86f774394e230a90",
         "Name": "mount_hex_hexagon_medium",
-        "ModType": "",
-        "Ergonomics": 0,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.075
@@ -338,8 +340,8 @@
     "62444cb99f47004c781903eb": {
         "ItemID": "62444cb99f47004c781903eb",
         "Name": "mount_g36_hk_bottom_rail_std",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -357,7 +359,7 @@
         "ItemID": "5de8fc0b205ddc616a6bc51b",
         "Name": "mount_mp9_bt_mp9_side_rail",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -365,8 +367,8 @@
     "5de8fbf2b74cd90030650c79": {
         "ItemID": "5de8fbf2b74cd90030650c79",
         "Name": "mount_mp9_bt_mp9_bottom_rail",
-        "ModType": "",
-        "Ergonomics": 0,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09
@@ -403,7 +405,7 @@
         "Name": "mount_sks_utg_socom_rail",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Weight": 0.07
     },
@@ -476,8 +478,8 @@
     "5fc53954f8b6a877a729eaeb": {
         "ItemID": "5fc53954f8b6a877a729eaeb",
         "Name": "mount_ump_hk_bottom_rail_std",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -525,7 +527,7 @@
         "ItemID": "5b8403a086f7747ff856f4e2",
         "Name": "mount_hex_hexagon_medium_red",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.075
@@ -645,7 +647,7 @@
         "ItemID": "62444cd3674028188b052799",
         "Name": "mount_g36_hk_side_rail_std",
         "ModType": "",
-        "Ergonomics": -2.5,
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -775,7 +777,7 @@
         "ItemID": "5fce0f9b55375d18a253eff2",
         "Name": "mount_vector_kriss_side_rail",
         "ModType": "",
-        "Ergonomics": -2.5,
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -844,7 +846,7 @@
         "ItemID": "5fc5396e900b1d5091531e72",
         "Name": "mount_ump_hk_side_rail_std",
         "ModType": "",
-        "Ergonomics": -2.5,
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -875,8 +877,8 @@
     "5fbb976df9986c4cff3fe5f2": {
         "ItemID": "5fbb976df9986c4cff3fe5f2",
         "Name": "mount_vector_kriss_bottom_rail",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -971,7 +973,7 @@
         "ItemID": "5b7be4575acfc400161d0832",
         "Name": "mount_casv_vltor_2_inch_picatinny_rail_section",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -1043,8 +1045,8 @@
     "5d133067d7ad1a33013f95b4": {
         "ItemID": "5d133067d7ad1a33013f95b4",
         "Name": "mount_urx_kac_3_inch_rail_section",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -1053,10 +1055,10 @@
         "ItemID": "5fbb978207e8a97d1f0902d3",
         "Name": "mount_vector_kriss_mk5_modular_rail",
         "ModType": "",
-        "VerticalRecoil": -4,
-        "HorizontalRecoil": -2,
-        "Dispersion": -4,
-        "Ergonomics": 15,
+        "VerticalRecoil": -3,
+        "HorizontalRecoil": -1.5,
+        "Dispersion": -2,
+        "Ergonomics": 12,
         "Accuracy": 0,
         "ConflictingItems": [
             "5fce0f9b55375d18a253eff2",
@@ -1085,7 +1087,7 @@
         "ItemID": "5df35eb2b11454561e3923e2",
         "Name": "mount_orsis_orsis_rail_section_med",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -1103,7 +1105,7 @@
         "ItemID": "61816dfa6ef05c2ce828f1ad",
         "Name": "mount_mk16_fn_scar_side_rail_std",
         "ModType": "",
-        "Ergonomics": -2.5,
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -1130,10 +1132,10 @@
         "ItemID": "619666f4af1f5202c57a952d",
         "Name": "mount_mk16_kinetic_mrex_6_5_m_lok",
         "ModType": "",
-        "VerticalRecoil": -6,
-        "HorizontalRecoil": -3,
+        "VerticalRecoil": -2,
+        "HorizontalRecoil": -2,
         "Dispersion": -3,
-        "Ergonomics": 12,
+        "Ergonomics": 14,
         "Accuracy": 0,
         "ConflictingItems": [
             "61816dfa6ef05c2ce828f1ad",
@@ -1145,8 +1147,8 @@
     "5f2aa493cd375f14e15eea72": {
         "ItemID": "5f2aa493cd375f14e15eea72",
         "Name": "mount_rfb_kel_tec_bottom_rail_std",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.075
@@ -1188,8 +1190,8 @@
     "61816df1d3a39d50044c139e": {
         "ItemID": "61816df1d3a39d50044c139e",
         "Name": "mount_mk16_fn_scar_bottom_rail_std",
-        "ModType": "",
-        "Ergonomics": 0,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.075
@@ -1225,7 +1227,7 @@
         "ItemID": "5df35ea9c41b2312ea3334d8",
         "Name": "mount_orsis_orsis_rail_section_long",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -1266,7 +1268,7 @@
         "ItemID": "5b4736a986f774040571e998",
         "Name": "mount_qars_troy_qars_3,2_inch_rail_section",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.045
@@ -1312,7 +1314,7 @@
         "Name": "mount_m14_ultimak_m8_forward_optic_mount",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.19
     },
@@ -1337,7 +1339,7 @@
         "Name": "mount_m1a_springfield_armory_socom_16_upper",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -10,
         "ConflictingItems": [],
         "Weight": 0.096
     },
@@ -1364,8 +1366,8 @@
     "623c2f4242aee3103f1c44b7": {
         "ItemID": "623c2f4242aee3103f1c44b7",
         "Name": "mount_keymod_cnc_guns_medium_rail_section",
-        "ModType": "",
-        "Ergonomics": 0,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -1374,7 +1376,7 @@
         "ItemID": "623c2f652febb22c2777d8d7",
         "Name": "mount_keymod_cnc_guns_short_rail_section",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -1435,7 +1437,7 @@
         "ItemID": "59e0bdb186f774156f04ce82",
         "Name": "mount_keymod_vltor_2_inch_casv_rail_section",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.065
@@ -1443,8 +1445,8 @@
     "5b7be46e5acfc400170e2dcf": {
         "ItemID": "5b7be46e5acfc400170e2dcf",
         "Name": "mount_casv_vltor_5_inch_picatinny_rail_section",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -1506,8 +1508,8 @@
     "59e0be5d86f7742d48765bd2": {
         "ItemID": "59e0be5d86f7742d48765bd2",
         "Name": "mount_keymod_vltor_4_inch_casv_rail_section",
-        "ModType": "",
-        "Ergonomics": 0,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -1524,8 +1526,8 @@
     "5b7be4645acfc400170e2dcc": {
         "ItemID": "5b7be4645acfc400170e2dcc",
         "Name": "mount_casv_vltor_4_inch_picatinny_rail_section",
-        "ModType": "",
-        "Ergonomics": 0,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.06
@@ -1542,8 +1544,8 @@
     "59e0bed186f774156f04ce84": {
         "ItemID": "59e0bed186f774156f04ce84",
         "Name": "mount_keymod_vltor_6_inch_casv_rail_section",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.075
@@ -1592,7 +1594,7 @@
         "ItemID": "5b7be47f5acfc400170e2dd2",
         "Name": "mount_m_lok_magpul_2,5_inch_picatinny_rail_section",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05
@@ -1627,8 +1629,8 @@
     "5b30bc285acfc47a8608615d": {
         "ItemID": "5b30bc285acfc47a8608615d",
         "Name": "mount_mk10_alexander_arms_10_inch_rail_section",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09
@@ -1637,7 +1639,7 @@
         "ItemID": "5b30bc165acfc40016387293",
         "Name": "mount_mk10_alexander_arms_3_inch_rail_section",
         "ModType": "",
-        "Ergonomics": 0,
+        "Ergonomics": -1,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.022
@@ -1755,8 +1757,8 @@
     "5b7be4895acfc400170e2dd5": {
         "ItemID": "5b7be4895acfc400170e2dd5",
         "Name": "mount_m_lok_magpul_4,1_inch_picatinny_rail_section",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
@@ -1764,8 +1766,8 @@
     "5b4736b986f77405cb415c10": {
         "ItemID": "5b4736b986f77405cb415c10",
         "Name": "mount_qars_troy_qars_4,2_inch_rail_section",
-        "ModType": "",
-        "Ergonomics": -2.5,
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.065

@@ -41,62 +41,62 @@
     "BodyParts": [
       {
         "Head": {
-          "min": 20,
-          "max": 21
+          "min": 17,
+          "max": 20
         },
         "Chest": {
-          "min": 108,
-          "max": 112
+          "min": 107,
+          "max": 110
         },
         "Stomach": {
           "min": 117,
-          "max": 123
+          "max": 120
         },
         "LeftArm": {
-          "min": 63,
-          "max": 67
+          "min": 62,
+          "max": 65
         },
         "RightArm": {
-          "min": 63,
-          "max": 67
+          "min": 62,
+          "max": 65
         },
         "LeftLeg": {
-          "min": 57,
-          "max": 63
+          "min": 62,
+          "max": 65
         },
         "RightLeg": {
-          "min": 57,
-          "max": 63
+          "min": 62,
+          "max": 65
         }
       },
       {
         "Head": {
           "min": 18,
-          "max": 23
+          "max": 20
         },
         "Chest": {
-          "min": 105,
-          "max": 115
+          "min": 108,
+          "max": 110
         },
         "Stomach": {
-          "min": 117,
-          "max": 125
+          "min": 118,
+          "max": 120
         },
         "LeftArm": {
-          "min": 61,
-          "max": 69
+          "min": 63,
+          "max": 65
         },
         "RightArm": {
-          "min": 51,
-          "max": 69
+          "min": 63,
+          "max": 65
         },
         "LeftLeg": {
-          "min": 55,
-          "max": 67
+          "min": 63,
+          "max": 65
         },
         "RightLeg": {
-          "min": 55,
-          "max": 67
+          "min": 63,
+          "max": 65
         }
       }
     ]

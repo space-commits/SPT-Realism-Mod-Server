@@ -360,28 +360,28 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         codegen.pushArmorToServer();
 
         
-        for (let i in tables.templates.items)
-        {
-            // if(tables.templates.items[i]._id === "5c78f2882e22165df16b832e")
-            // {
-            //     logger.info("==================ConflictingItems Server===============");
-            //     for(let j in tables.templates.items[i]._props.ConflictingItems)
-            //     {
-            //         logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
-            //     }
-            //     logger.info("====================================");
-            // }
+        // for (let i in tables.templates.items)
+        // {
+        //     if(tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567")
+        //     {
+        //         logger.info("==================ConflictingItems Server===============");
+        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
+        //         {
+        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+        //         }
+        //         logger.info("====================================");
+        //     }
 
-            // if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
-            // {
-            //     logger.info("==================ConflictingItems Server===============");
-            //     for(let j in tables.templates.items[i]._props.ConflictingItems)
-            //     {
-            //         logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
-            //     }
-            //     logger.info("====================================");
-            // }
-        }
+        //     if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
+        //     {
+        //         logger.info("==================ConflictingItems Server===============");
+        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
+        //         {
+        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+        //         }
+        //         logger.info("====================================");
+        //     }
+        // }
 
 
         if (modConfig.bot_changes == true) {
@@ -498,7 +498,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                 }
                 if (pmcData.Info.Level >= 25) {
                     this.fleaHelper(flea.flea5(), ragfairOfferGen, container, arrays);
-                    logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
+                    logger.info("Realism Mod: Fleamarket Tier 5 Unlocked"); 
                 }
                 if (pmcData.Info.Level >= 30) {
                     this.fleaHelper(flea.flea6(), ragfairOfferGen, container, arrays);

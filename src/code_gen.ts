@@ -60,14 +60,9 @@ export class CodeGen {
     public armorTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === "57bef4c42459772e8d35a53b") {
+            if (serverItem._parent === "57bef4c42459772e8d35a53b" || serverItem._parent === "5a341c4086f77401f2541505") {
                 if (serverItem._props.HasHinge == true) {
                     this.armorWriteToFile(FaceShieldTemplates, "FaceShieldTemplates", i, serverItem);
-                }
-                if (serverItem._props.armorZone !== undefined) {
-                    if (serverItem._props.armorZone[0] === "Head") {
-                        this.armorWriteToFile(HeadArmorTemplates, "HeadArmorTemplates", i, serverItem);
-                    }
                 }
             }
         }
@@ -283,7 +278,7 @@ export class CodeGen {
         let HipInnaccuracyGain = serverItem._props.HipInnaccuracyGain;
         let ShotgunDispersion = serverItem._props.shotgunDispersion;
         let Velocity = serverItem._props.Velocity;
-        let Weight = serverItem._props.Weight
+        let Weight = serverItem._props.Weight;
 
         let item = {
             ItemID,
@@ -369,6 +364,7 @@ export class CodeGen {
         let Velocity = serverItem._props.Velocity;
         let ConflictingItems = serverItem._props.ConflictingItems;
         let Weight = serverItem._props.Weight;
+        let ShotgunDispersion = serverItem._props.ShotgunDispersion;
 
         if (ID === "muzzle") {
             let item = {
@@ -391,7 +387,8 @@ export class CodeGen {
                 RecoilAngle,
                 ConflictingItems,
                 Ergonomics,
-                Weight
+                Weight,
+                ShotgunDispersion
             };
             return item;
         }
@@ -415,7 +412,8 @@ export class CodeGen {
                 Velocity,
                 ConflictingItems,
                 Ergonomics,
-                Weight
+                Weight,
+                ShotgunDispersion
             };
             return item;
         }
@@ -728,7 +726,6 @@ export class CodeGen {
                 }
             }
         }
-        this.logger.info("Pushed Mod Stats to server");
     }
 
     public pushWeaponsToServer() {
@@ -777,20 +774,18 @@ export class CodeGen {
                 }
             }
         }
-        this.logger.info("Pushed Weapon Stats to server");
     }
 
     public pushArmorToServer() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === "57bef4c42459772e8d35a53b") {
+            if (serverItem._parent === "57bef4c42459772e8d35a53b" || serverItem._parent === "5a341c4086f77401f2541505") {
                 for (let i in FaceShieldTemplates) {
                     let fileItem = FaceShieldTemplates[i];
                     this.armorPusherHelper(serverItem, fileItem);
                 }
             }
         }
-        this.logger.info("Pushed Armor Stats to server");
     }
 
     public armorPusherHelper(serverItem: any, fileItem: any) {
@@ -819,6 +814,7 @@ export class CodeGen {
             serverItem._props.BlocksFolding = fileItem.BlocksFolding;
             serverItem._props.Velocity = fileItem.Velocity;
             serverItem._props.Weight = fileItem.Weight;
+            serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
 
             var serverConfItems = serverItem._props.ConflictingItems;
             var modConfItems = fileItem.ConflictingItems;
@@ -826,7 +822,7 @@ export class CodeGen {
             fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
             fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0"];
 
-            for (let j in modPropertyValues) {
+            for (let j in modPropertyValues) { 
                 serverConfItems[j] = modPropertyValues[j];
             }
 
@@ -854,7 +850,6 @@ export class CodeGen {
             serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
             serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
             serverItem._props.AllowOverheat = fileItem.AllowOverheat;
-            serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
             serverItem._props.HipAccuracyRestorationDelay = fileItem.HipAccuracyRestorationDelay;
             serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
             serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
