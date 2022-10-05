@@ -168,7 +168,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.5,
-        "ReloadSpeed": 10
+        "ReloadSpeed": -5
     },
     "5e87076ce2db31558c75a11d": {
         "ItemID": "5e87076ce2db31558c75a11d",
@@ -186,7 +186,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.65,
-        "ReloadSpeed": 7
+        "ReloadSpeed": 0
     },
     "5eea21647547d6330471b3c9": {
         "ItemID": "5eea21647547d6330471b3c9",
@@ -204,7 +204,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.6,
-        "ReloadSpeed": 10
+        "ReloadSpeed": 0
     },
     "5a788089c5856700142fdd9c": {
         "ItemID": "5a788089c5856700142fdd9c",
@@ -222,7 +222,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.5,
-        "ReloadSpeed": 8
+        "ReloadSpeed": 0
     },
     "5a788068c5856700137e4c8f": {
         "ItemID": "5a788068c5856700137e4c8f",
@@ -240,7 +240,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.6,
-        "ReloadSpeed": 10
+        "ReloadSpeed": 0
     },
     "5a788031c585673f2b5c1c79": {
         "ItemID": "5a788031c585673f2b5c1c79",
@@ -258,7 +258,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.8,
-        "ReloadSpeed": 8
+        "ReloadSpeed": 0
     },
     "5f2aa47a200e2c0ee46efa71": {
         "ItemID": "5f2aa47a200e2c0ee46efa71",

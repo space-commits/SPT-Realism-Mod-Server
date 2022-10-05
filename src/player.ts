@@ -58,16 +58,16 @@ export class Player {
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
 
-            this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] *= 0.5;
-            this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] *= 0.5;
+            this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] *= 0.45;
+            this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] *= 0.45;
 
-            this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] *= 0.5;
+            this.globalDB.Inertia.SpeedLimitAfterFallMax["x"] *= 0.45;
 
-            this.globalDB.Inertia.SpeedLimitDurationMin["x"] *= 1.4;
-            this.globalDB.Inertia.SpeedLimitDurationMin["y"] *= 1.4;
+            this.globalDB.Inertia.SpeedLimitDurationMin["x"] *= 1.5;
+            this.globalDB.Inertia.SpeedLimitDurationMin["y"] *= 1.5;
 
-            this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 1.9;
-            this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 1.9;
+            this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 2;
+            this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 2;
 
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;

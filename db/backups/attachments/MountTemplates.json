@@ -13,7 +13,7 @@
         "Name": "mount_all_iea_kh_f_34mm",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -15,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.199
     },
@@ -147,7 +147,7 @@
         "Name": "mount_all_zenit_b18",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -5,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.053
     },
@@ -207,7 +207,7 @@
         "Name": "mount_svd_caa_drg_l_1",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -10,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.075
     },
@@ -324,7 +324,7 @@
         "Name": "mount_all_utg_rings_25_4mm",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -25,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.19
     },
@@ -405,7 +405,7 @@
         "Name": "mount_sks_utg_socom_rail",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -8,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
     },
@@ -489,7 +489,7 @@
         "Name": "mount_dovetail_aksion_kobra",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -15,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.043
     },
@@ -507,7 +507,7 @@
         "Name": "mount_mosin_aim_sports_tri_rail",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -20,
+        "Accuracy": 0,
         "ConflictingItems": [
             "5d024f5cd7ad1a04a067e91a",
             "5b3f7c005acfc4704b4a1de8"
@@ -555,7 +555,7 @@
         "Name": "mount_dovetail_caa_xd_rgl",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -5,
+        "Accuracy": 0,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "57486e672459770abd687134",
@@ -579,7 +579,7 @@
         "Name": "mount_dovetail_arbalet_vpo_102",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -10,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12
     },
@@ -742,7 +742,7 @@
         "Name": "mount_m14_amega_mounts_mini_scout_mount",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -5,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.18
     },
@@ -1019,7 +1019,7 @@
         "Name": "mount_kochetov_arbalet_patriot_k_w",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -7,
+        "Accuracy": 0,
         "ConflictingItems": [
             "5bc5a372d4351e44f824d17f",
             "5bbdb811d4351e45020113c7"
@@ -1237,7 +1237,7 @@
         "Name": "mount_dovetail_sag_svd_low_sidemount",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -4,
+        "Accuracy": 0,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "6113d6c3290d254f5e6b27db",
@@ -1314,7 +1314,7 @@
         "Name": "mount_m14_ultimak_m8_forward_optic_mount",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -5,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.19
     },
@@ -1323,7 +1323,7 @@
         "Name": "mount_m700_weaver_extended_multi_slot_base",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -5,
+        "Accuracy": 0,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "57486e672459770abd687134",
@@ -1348,7 +1348,7 @@
         "Name": "mount_mp5_bt_mounting_rail_nar_low_profile_long",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -5,
+        "Accuracy": 0,
         "ConflictingItems": [
             "5926d2be86f774134d668e4e"
         ],
@@ -1402,7 +1402,7 @@
         "Name": "mount_all_larue_picatinny_raiser_qd_lt101",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -5,
+        "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11
     },
@@ -1564,7 +1564,7 @@
         "Name": "mount_m14_arms_18_low_profile_scope_mount",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -7,
+        "Accuracy": 0,
         "ConflictingItems": [
             "5addbffe5acfc4001714dfac",
             "5addc00b5acfc4001669f144",
@@ -1734,7 +1734,7 @@
         "Name": "mount_m14_leapers_utg_4_point_locking_deluxe_scope_mount",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": -15,
+        "Accuracy": 0,
         "ConflictingItems": [
             "5addbffe5acfc4001714dfac",
             "5addc00b5acfc4001669f144",

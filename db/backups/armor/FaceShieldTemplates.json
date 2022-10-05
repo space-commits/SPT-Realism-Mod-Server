@@ -83,5 +83,15 @@
         "ItemID": "5f60bf4558eff926626a60f2",
         "Name": "item_equipment_helmet_galvion_fixed_arm_visor",
         "AllowADS": true
+    },
+    "5c08f87c0db8340019124324": {
+        "ItemID": "5c08f87c0db8340019124324",
+        "Name": "item_equipment_helmet_shpm",
+        "AllowADS": false
+    },
+    "5c0d2727d174af02a012cf58": {
+        "ItemID": "5c0d2727d174af02a012cf58",
+        "Name": "item_equipment_helmet_psh97_jeta",
+        "AllowADS": false
     }
 }

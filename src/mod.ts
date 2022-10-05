@@ -360,28 +360,28 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         codegen.pushArmorToServer();
 
         
-        // for (let i in tables.templates.items)
-        // {
-        //     if(tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567")
-        //     {
-        //         logger.info("==================ConflictingItems Server===============");
-        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
-        //         {
-        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
-        //         }
-        //         logger.info("====================================");
-        //     }
+        for (let i in tables.templates.items)
+        {
+            if(tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567")
+            {
+                logger.info("==================ConflictingItems Server===============");
+                for(let j in tables.templates.items[i]._props.ConflictingItems)
+                {
+                    logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+                }
+                logger.info("====================================");
+            }
 
-        //     if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
-        //     {
-        //         logger.info("==================ConflictingItems Server===============");
-        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
-        //         {
-        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
-        //         }
-        //         logger.info("====================================");
-        //     }
-        // }
+            if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
+            {
+                logger.info("==================ConflictingItems Server===============");
+                for(let j in tables.templates.items[i]._props.ConflictingItems)
+                {
+                    logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+                }
+                logger.info("====================================");
+            }
+        }
 
 
         if (modConfig.bot_changes == true) {

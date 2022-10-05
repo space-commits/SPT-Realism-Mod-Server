@@ -410,7 +410,7 @@
     "583990e32459771419544dd2": {
         "ItemID": "583990e32459771419544dd2",
         "Name": "weapon_izhmash_aks74un_545x39",
-        "WeapType": "",
+        "WeapType": "short_AK",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -512,7 +512,7 @@
     "57dc2fa62459775949412633": {
         "ItemID": "57dc2fa62459775949412633",
         "Name": "weapon_izhmash_aks74u_545x39",
-        "WeapType": "",
+        "WeapType": "short_AK",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -546,7 +546,7 @@
     "5839a40f24597726f856b511": {
         "ItemID": "5839a40f24597726f856b511",
         "Name": "weapon_izhmash_aks74ub_545x39",
-        "WeapType": "",
+        "WeapType": "short_AK",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -852,7 +852,7 @@
     "5ac66d725acfc43b321d4b60": {
         "ItemID": "5ac66d725acfc43b321d4b60",
         "Name": "weapon_izhmash_ak104_762x39",
-        "WeapType": "",
+        "WeapType": "short_AK",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -1022,7 +1022,7 @@
     "5ac66d9b5acfc4001633997a": {
         "ItemID": "5ac66d9b5acfc4001633997a",
         "Name": "weapon_izhmash_ak105_545x39",
-        "WeapType": "",
+        "WeapType": "short_AK",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,
@@ -1056,7 +1056,7 @@
     "5ac66d015acfc400180ae6e4": {
         "ItemID": "5ac66d015acfc400180ae6e4",
         "Name": "weapon_izhmash_ak102_556x45",
-        "WeapType": "",
+        "WeapType": "short_AK",
         "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": 0,

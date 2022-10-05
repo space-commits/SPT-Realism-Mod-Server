@@ -244,7 +244,7 @@ class CodeGen {
         let HipAccuracyRestorationDelay = serverItem._props.HipAccuracyRestorationDelay;
         let HipAccuracyRestorationSpeed = serverItem._props.HipAccuracyRestorationSpeed;
         let HipInnaccuracyGain = serverItem._props.HipInnaccuracyGain;
-        let ShotgunDispersion = serverItem._props.shotgunDispersion;
+        let ShotgunDispersion = serverItem._props.ShotgunDispersion;
         let Velocity = serverItem._props.Velocity;
         let Weight = serverItem._props.Weight;
         let item = {
@@ -311,6 +311,7 @@ class CodeGen {
         let RecoilAngle = 0;
         let StockAllowADS = false;
         let FixSpeed = 0;
+        let ModShotDispersion = 0;
         let Ergonomics = serverItem._props.Ergonomics;
         let Accuracy = serverItem._props.Accuracy;
         let CenterOfImpact = serverItem._props.CenterOfImpact;
@@ -348,7 +349,7 @@ class CodeGen {
                 ConflictingItems,
                 Ergonomics,
                 Weight,
-                ShotgunDispersion
+                ModShotDispersion
             };
             return item;
         }
@@ -767,7 +768,7 @@ class CodeGen {
             var modConfItems = fileItem.ConflictingItems;
             var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
                 fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
-                fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0"];
+                fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0"];
             for (let j in modPropertyValues) {
                 serverConfItems[j] = modPropertyValues[j];
             }

@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotLootServer = void 0;
-const BaseClasses_1 = require("../../../../Aki_data/Server/lib/models/enums/BaseClasses");
-const BotLootCacheService_1 = require("../../../../Aki_data/Server/lib/services/BotLootCacheService");
-const BotLootCache_1 = require("../../../../Aki_data/Server/lib/models/spt/bots/BotLootCache");
+const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
+const BotLootCacheService_1 = require("C:/snapshot/project/obj/services/BotLootCacheService");
+const BotLootCache_1 = require("C:/snapshot/project/obj/models/spt/bots/BotLootCache");
 class BotLootServer extends BotLootCacheService_1.BotLootCacheService {
     getLootCache(botRole, isPmc, lootType, lootPool) {
         if (!this.botRoleExistsInCache(botRole)) {

@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotModGen = exports.CheckRequired = exports.BotWepGen = void 0;
-const BotWeaponGenerator_1 = require("../../../../Aki_data/Server/lib/generators/BotWeaponGenerator");
-const BotGeneratorHelper_1 = require("../../../../Aki_data/Server/lib/helpers/BotGeneratorHelper");
-const tsyringe_1 = require("../../../../node_modules/tsyringe");
-const BaseClasses_1 = require("../../../../Aki_data/Server/lib/models/enums/BaseClasses");
+const BotWeaponGenerator_1 = require("C:/snapshot/project/obj/generators/BotWeaponGenerator");
+const BotGeneratorHelper_1 = require("C:/snapshot/project/obj/helpers/BotGeneratorHelper");
+const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
+const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
 class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) {
         const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
