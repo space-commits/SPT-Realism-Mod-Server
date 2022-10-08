@@ -33,7 +33,6 @@ export class Bots {
 
     public loadBots() {
 
-
         this.botConf.equipment["pmc"] = {
             "weaponModLimits": {
                 "scopeLimit": 10,
@@ -70,7 +69,6 @@ export class Bots {
                 }
             }
         }
-
 
         if (this.modConf.med_changes == true) {
             this.array.non_scav_bot_list.forEach(addBotMedkit);

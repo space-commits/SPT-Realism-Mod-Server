@@ -339,13 +339,13 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
         const attatchBase = new AttatchmentBase(logger, tables, arrays, modConfig);
-        const attatchStats = new AttatchmentStats(logger, tables, modConfig);
+        const attatchStats = new AttatchmentStats(logger, tables, modConfig, arrays);
         const bots = new Bots(logger, tables, configServer, modConfig, arrays);
         const items = new _Items(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, commonStats);
-        const weapons_globals = new WeaponsGlobals(logger, tables, modConfig);
-        const weapons_stats = new WeaponsStats(logger, tables, modConfig);
+        const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
+        const weaponsStats = new WeaponsStats(logger, tables, modConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
@@ -360,28 +360,28 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         codegen.pushArmorToServer();
 
         
-        for (let i in tables.templates.items)
-        {
-            if(tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567")
-            {
-                logger.info("==================ConflictingItems Server===============");
-                for(let j in tables.templates.items[i]._props.ConflictingItems)
-                {
-                    logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
-                }
-                logger.info("====================================");
-            }
+        // for (let i in tables.templates.items)
+        // {
+        //     if(tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567")
+        //     {
+        //         logger.info("==================ConflictingItems Server===============");
+        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
+        //         {
+        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+        //         }
+        //         logger.info("====================================");
+        //     }
 
-            if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
-            {
-                logger.info("==================ConflictingItems Server===============");
-                for(let j in tables.templates.items[i]._props.ConflictingItems)
-                {
-                    logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
-                }
-                logger.info("====================================");
-            }
-        }
+        //     if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
+        //     {
+        //         logger.info("==================ConflictingItems Server===============");
+        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
+        //         {
+        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+        //         }
+        //         logger.info("====================================");
+        //     }
+        // }
 
 
         if (modConfig.bot_changes == true) {
@@ -411,8 +411,9 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         attatchStats.loadAttStats();
         items.loadItems();
         player.loadPlayer();
-        weapons_globals.loadGlobalWeps();
-        weapons_stats.loadWepStats();
+        weaponsGlobals.loadGlobalWeps();
+        weaponsStats.loadWepStats();
+
     }
 
     public revertMeds(pmcData: IPmcData, helper: Helper) {

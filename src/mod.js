@@ -259,13 +259,13 @@ class Mod {
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attatchBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
-        const attatchStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig);
+        const attatchStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig, arrays);
         const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays);
         const items = new items_1._Items(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, commonStats);
-        const weapons_globals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
-        const weapons_stats = new weapons_stats_1.WeaponsStats(logger, tables, modConfig);
+        const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
+        const weaponsStats = new weapons_stats_1.WeaponsStats(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
@@ -276,22 +276,27 @@ class Mod {
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
-        for (let i in tables.templates.items) {
-            if (tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567") {
-                logger.info("==================ConflictingItems Server===============");
-                for (let j in tables.templates.items[i]._props.ConflictingItems) {
-                    logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
-                }
-                logger.info("====================================");
-            }
-            if (tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f") {
-                logger.info("==================ConflictingItems Server===============");
-                for (let j in tables.templates.items[i]._props.ConflictingItems) {
-                    logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
-                }
-                logger.info("====================================");
-            }
-        }
+        // for (let i in tables.templates.items)
+        // {
+        //     if(tables.templates.items[i]._id === "5447a9cd4bdc2dbd208b4567")
+        //     {
+        //         logger.info("==================ConflictingItems Server===============");
+        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
+        //         {
+        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+        //         }
+        //         logger.info("====================================");
+        //     }
+        //     if(tables.templates.items[i]._id === "5a33ca0fc4a282000d72292f")
+        //     {
+        //         logger.info("==================ConflictingItems Server===============");
+        //         for(let j in tables.templates.items[i]._props.ConflictingItems)
+        //         {
+        //             logger.info("ITEM = " + tables.templates.items[i]._props.ConflictingItems[j]);
+        //         }
+        //         logger.info("====================================");
+        //     }
+        // }
         if (modConfig.bot_changes == true) {
             bots.loadBots();
         }
@@ -314,8 +319,8 @@ class Mod {
         attatchStats.loadAttStats();
         items.loadItems();
         player.loadPlayer();
-        weapons_globals.loadGlobalWeps();
-        weapons_stats.loadWepStats();
+        weaponsGlobals.loadGlobalWeps();
+        weaponsStats.loadWepStats();
     }
     revertMeds(pmcData, helper) {
         helper.revertMedItems(pmcData);

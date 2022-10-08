@@ -1236,7 +1236,7 @@
     "5bfe86a20db834001d23e8f7": {
         "ItemID": "5bfe86a20db834001d23e8f7",
         "Name": "pistolgrip_870_fab_defense_agr_870_grip",
-        "ModType": "buffer_adapter",
+        "ModType": "grip_buffer_adapter",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -7,
         "Dispersion": -2,
