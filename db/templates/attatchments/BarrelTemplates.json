@@ -491,7 +491,9 @@
         "Name": "barrel_dvl-10_m2_660mm",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
+        "HorizontalRecoil": -10,
+        "Dispersion": -10,
+        "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2800,7 +2802,7 @@
             "5b7be1ca5acfc400170e2d2f"
         ],
         "Ergonomics": 0,
-        "Weight": 0.409,
+        "Weight": 0.83,
         "ShotgunDispersion": 1
     },
     "5b7be1125acfc4001876c0e5": {
@@ -2828,7 +2830,7 @@
             "5b7be1ca5acfc400170e2d2f"
         ],
         "Ergonomics": 0,
-        "Weight": 0.609,
+        "Weight": 0.96,
         "ShotgunDispersion": 1
     },
     "5b7be1265acfc400161d0798": {
@@ -2852,7 +2854,7 @@
             "5b099a9d5acfc47a8607efe7"
         ],
         "Ergonomics": 0,
-        "Weight": 0.784,
+        "Weight": 1.2,
         "ShotgunDispersion": 1
     },
     "571a279b24597720b4066566": {

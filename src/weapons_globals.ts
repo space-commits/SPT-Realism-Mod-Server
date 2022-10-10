@@ -19,6 +19,7 @@ export class WeaponsGlobals {
             this.globalDB.Overheat.OverheatProblemsStart = 70;
             this.globalDB.Overheat.MinWearOnOverheat = 0.2;
             this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
+            this.globalDB.RepairKitSettings.durabilityPointCostGuns = 0;
 
             for (let i in this.itemDB) {
                 let fileData = this.itemDB[i];
@@ -31,15 +32,16 @@ export class WeaponsGlobals {
                     || fileData._props.weapClass === "marksmanRifle"
                     || fileData._props.weapClass === "assaultRifle"
                     || fileData._props.weapClass === "pistol"
+                    || fileData._parent === "616eb7aea207f41933308f46"
                 ) {
                     fileData._props.MinRepairDegradation = 0;
                     fileData._props.MaxRepairDegradation = 0.005;
                     fileData._props.MinRepairKitDegradation = 0;
-                    fileData._props.MaxRepairKitDegradation =  0;
+                    fileData._props.MaxRepairKitDegradation = 0;
                     fileData._props.RepairComplexity = 0;
+                    fileData._props.RepairQuality = 0.1;
                 }
             }
-
         }
 
         if (this.modConf.recoil_changes == true && this.modConf.legacy_recoil_changes != true) {

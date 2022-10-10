@@ -53,6 +53,7 @@ import { BotModGen, BotWepGen } from "./bot_wep_gen";
 import { BotLootServer } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
+import { RepairKitSettings } from "@spt-aki/models/eft/common/IGlobals";
 
 
 const medRevertCount = require("../db/saved/info.json");
@@ -413,7 +414,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
         weaponsStats.loadWepStats();
-
     }
 
     public revertMeds(pmcData: IPmcData, helper: Helper) {

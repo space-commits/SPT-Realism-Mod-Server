@@ -585,7 +585,8 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.114
+        "Weight": 0.114,
+        "DurabilityBurnModificator": 1
     },
     "5bb20e58d4351e00320205d7": {
         "ItemID": "5bb20e58d4351e00320205d7",
@@ -606,7 +607,8 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.188
+        "Weight": 0.188,
+        "DurabilityBurnModificator": 1
     },
     "5a33ca0fc4a282000d72292f": {
         "ItemID": "5a33ca0fc4a282000d72292f",
@@ -628,7 +630,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.109,
-        "DurabilityBurnModificator": 0.9
+        "DurabilityBurnModificator": 1
     },
     "5c793fc42e221600114ca25d": {
         "ItemID": "5c793fc42e221600114ca25d",
@@ -650,7 +652,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "DurabilityBurnModificator": 1.1
+        "DurabilityBurnModificator": 1
     },
     "5c793fb92e221644f31bfb64": {
         "ItemID": "5c793fb92e221644f31bfb64",
@@ -672,7 +674,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "DurabilityBurnModificator": 1.1
+        "DurabilityBurnModificator": 1
     },
     "606587e18900dc2d9a55b65f": {
         "ItemID": "606587e18900dc2d9a55b65f",
@@ -694,7 +696,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.136,
-        "DurabilityBurnModificator": 0.95
+        "DurabilityBurnModificator": 1
     },
     "5c0faeddd174af02a962601f": {
         "ItemID": "5c0faeddd174af02a962601f",
@@ -716,7 +718,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.086,
-        "DurabilityBurnModificator": 0.93
+        "DurabilityBurnModificator": 1
     },
     "5649be884bdc2d79388b4577": {
         "ItemID": "5649be884bdc2d79388b4577",
@@ -759,7 +761,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.086,
-        "DurabilityBurnModificator": 1.05
+        "DurabilityBurnModificator": 1
     },
     "5ef1ba28c64c5d0dfc0571a5": {
         "ItemID": "5ef1ba28c64c5d0dfc0571a5",
@@ -785,7 +787,7 @@
     "5bfe89510db834001808a127": {
         "ItemID": "5bfe89510db834001808a127",
         "Name": "stock_870_fab_defense_agr_870_stock_tube",
-        "ModType": "buffer",
+        "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -1874,11 +1876,11 @@
         "ModType": "stock",
         "VerticalRecoil": -7,
         "HorizontalRecoil": -6,
-        "Dispersion": -2,
+        "Dispersion": -3,
         "CameraRecoil": -3,
         "AimSpeed": 0,
         "DrawSpeed": 0,
-        "Ergonomics": 10,
+        "Ergonomics": 12,
         "Accuracy": 5,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -1893,13 +1895,13 @@
         "ItemID": "59ecc3dd86f7746dc827481c",
         "Name": "stock_ak_zenit_pt-3",
         "ModType": "stock",
-        "VerticalRecoil": 7,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -4,
-        "CameraRecoil": -6,
+        "CameraRecoil": -5,
         "AimSpeed": 0,
         "DrawSpeed": 0,
-        "Ergonomics": 13,
+        "Ergonomics": 14,
         "Accuracy": 5,
         "HasShoulderContact": true,
         "BlocksFolding": false,
