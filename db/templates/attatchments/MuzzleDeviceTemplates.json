@@ -4492,7 +4492,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -15,
-        "CameraRecoil": -15,
+        "CameraRecoil": -20,
         "AutoROF": 3,
         "SemiROF": 3,
         "ModMalfunctionChance": 0,

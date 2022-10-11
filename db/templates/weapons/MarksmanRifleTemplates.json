@@ -211,7 +211,7 @@
         "WeapAccuracy": 0,
         "BaseTorque": 1,
         "HasShoulderContact": false,
-        "Ergonomics": 14,
+        "Ergonomics": 80,
         "VerticalRecoil": 630,
         "HorizontalRecoil": 1125,
         "Dispersion": 25,
@@ -234,7 +234,7 @@
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 2.9,
+        "Weight": 2,
         "DurabilityBurnRatio": 0.45
     },
     "61f7c9e189e6fb1a5e3ea78d": {
