@@ -382,24 +382,6 @@
         "ConflictingItems": [],
         "Weight": 0.04
     },
-    "619624b26db0f2477964e6b0": {
-        "ItemID": "619624b26db0f2477964e6b0",
-        "Name": "mount_usp_hk_match_compensator",
-        "ModType": "",
-        "VerticalRecoil": -17,
-        "HorizontalRecoil": -8.5,
-        "Dispersion": -4.25,
-        "AimSpeed": -5,
-        "Ergonomics": 0,
-        "Accuracy": 0,
-        "ConflictingItems": [
-            "5fc4b97bab884124df0cd5e3",
-            "6194ef39de3cdf1d2614a768",
-            "6194efe07c6c7b169525f11b",
-            "6194eff92d2c397d6600348b"
-        ],
-        "Weight": 0.34
-    },
     "593d1fa786f7746da62d61ac": {
         "ItemID": "593d1fa786f7746da62d61ac",
         "Name": "mount_sks_utg_socom_rail",
@@ -674,24 +656,6 @@
         ],
         "Weight": 0.175
     },
-    "619621a4de3cdf1d2614a7a7": {
-        "ItemID": "619621a4de3cdf1d2614a7a7",
-        "Name": "mount_usp_hk_elite_compensator",
-        "ModType": "",
-        "VerticalRecoil": -15.5,
-        "HorizontalRecoil": -7.75,
-        "Dispersion": -3.88,
-        "AimSpeed": -5,
-        "Ergonomics": 0,
-        "Accuracy": 0,
-        "ConflictingItems": [
-            "5fc4b97bab884124df0cd5e3",
-            "6194ef39de3cdf1d2614a768",
-            "6194efe07c6c7b169525f11b",
-            "6194eff92d2c397d6600348b"
-        ],
-        "Weight": 0.31
-    },
     "5b84038986f774774913b0c1": {
         "ItemID": "5b84038986f774774913b0c1",
         "Name": "mount_hex_hexagon_short_red",
@@ -832,6 +796,42 @@
             "5ae30bad5acfc400185c2dc4"
         ],
         "Weight": 0.194
+    },
+    "619624b26db0f2477964e6b0": {
+        "ItemID": "619624b26db0f2477964e6b0",
+        "Name": "mount_usp_hk_match_compensator",
+        "ModType": "",
+        "VerticalRecoil": -17,
+        "HorizontalRecoil": -8,
+        "Dispersion": -4,
+        "AimSpeed": -25,
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5fc4b97bab884124df0cd5e3",
+            "6194ef39de3cdf1d2614a768",
+            "6194efe07c6c7b169525f11b",
+            "6194eff92d2c397d6600348b"
+        ],
+        "Weight": 0.34
+    },
+    "619621a4de3cdf1d2614a7a7": {
+        "ItemID": "619621a4de3cdf1d2614a7a7",
+        "Name": "mount_usp_hk_elite_compensator",
+        "ModType": "",
+        "VerticalRecoil": -15,
+        "HorizontalRecoil": -7,
+        "Dispersion": -3,
+        "AimSpeed": -20,
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5fc4b97bab884124df0cd5e3",
+            "6194ef39de3cdf1d2614a768",
+            "6194efe07c6c7b169525f11b",
+            "6194eff92d2c397d6600348b"
+        ],
+        "Weight": 0.31
     },
     "6196255558ef8c428c287d1c": {
         "ItemID": "6196255558ef8c428c287d1c",

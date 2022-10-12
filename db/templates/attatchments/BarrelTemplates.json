@@ -46,7 +46,7 @@
             "5d00f63bd7ad1a59283b1c1e"
         ],
         "Ergonomics": 0,
-        "Weight": 0.78,
+        "Weight": 1.4,
         "ShotgunDispersion": 1
     },
     "560836fb4bdc2d773f8b4569": {
@@ -645,7 +645,7 @@
             "5c6c2c9c2e2216000f2002e4"
         ],
         "Ergonomics": 0,
-        "Weight": 0.572,
+        "Weight": 0.765,
         "ShotgunDispersion": 1
     },
     "5e87071478f43e51ca2de5e1": {
@@ -800,7 +800,7 @@
             "5d00f63bd7ad1a59283b1c1e"
         ],
         "Ergonomics": 0,
-        "Weight": 1.5,
+        "Weight": 1.2,
         "ShotgunDispersion": 1
     },
     "560836484bdc2d20478b456e": {
@@ -1026,7 +1026,7 @@
             "5c6c2c9c2e2216000f2002e4"
         ],
         "Ergonomics": 0,
-        "Weight": 1.05,
+        "Weight": 1.13,
         "ShotgunDispersion": 1
     },
     "6183fd9e8004cc50514c358f": {
@@ -1402,7 +1402,7 @@
         "Velocity": -6.58,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.572,
+        "Weight": 1.24,
         "ShotgunDispersion": 1
     },
     "5c48a2852e221602b21d5923": {
@@ -1911,7 +1911,7 @@
         "Velocity": -8,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.54,
+        "Weight": 0.94,
         "ShotgunDispersion": 1
     },
     "5fb65363d1409e5ca04b54f5": {
@@ -2070,7 +2070,7 @@
         "ItemID": "5b1fa9ea5acfc40018633c0a",
         "Name": "barrel_glock_glock_18c_114mm_9x19_std",
         "ModType": "",
-        "VerticalRecoil": 0,
+        "VerticalRecoil": -20,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2147,7 +2147,7 @@
         "Velocity": -5,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.65,
+        "Weight": 1.45,
         "ShotgunDispersion": 1
     },
     "602a95edda11d6478d5a06da": {

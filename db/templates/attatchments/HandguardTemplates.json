@@ -538,7 +538,7 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Length": 0,
-        "Ergonomics": 12,
+        "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 0.985,
         "CoolFactor": 1.006,
@@ -559,7 +559,7 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Length": 0,
-        "Ergonomics": 12,
+        "Ergonomics": 6,
         "Accuracy": 0,
         "HeatFactor": 1.041,
         "CoolFactor": 1.033,
@@ -2580,7 +2580,7 @@
             "55d3632e4bdc2d972f8b4569",
             "5c0e2f94d174af029f650d56"
         ],
-        "Weight": 0.42
+        "Weight": 0.4
     },
     "6281209662cba23f6c4d7a19": {
         "ItemID": "6281209662cba23f6c4d7a19",
