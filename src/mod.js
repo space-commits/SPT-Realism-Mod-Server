@@ -320,7 +320,9 @@ class Mod {
         items.loadItems();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
-        weaponsStats.loadWepStats();
+        if (modConfig.malf_changes == true) {
+            weaponsStats.loadWepStats();
+        }
     }
     revertMeds(pmcData, helper) {
         helper.revertMedItems(pmcData);

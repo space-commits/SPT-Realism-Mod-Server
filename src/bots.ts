@@ -15,6 +15,7 @@ const rmBotConfig = require("../db/bots/botconfig.json");
 const USECNames = require("../db/bots/names/USECNames.json");
 const bearNames = require("../db/bots/names/bearNames.json");
 const magazineJSON = require("../db/bots/loadouts/magazines.json");
+const botZones = require("../db/bots/spawnZones.json");
 
 export class Bots {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private configServ: ConfigServer, private modConf, private array) { }
@@ -32,6 +33,13 @@ export class Bots {
     public botConfPMC = this.botConf.pmc;
 
     public loadBots() {
+
+
+        if (this.modConf.openZonesFix == true) {
+            for (const location in botZones.zones) {
+                this.tables.locations[location].base.OpenZones = botZones.zones[location];
+            }
+        }
 
         this.botConf.equipment["pmc"] = {
             "weaponModLimits": {
@@ -157,7 +165,7 @@ export class Bots {
             bot.health.Temperature = commonStats.health.Temperature;
         }
 
-        if(this.modConf.realistic_boss_health == true){
+        if (this.modConf.realistic_boss_health == true) {
             this.array.boss_bot_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = commonStats.health.BodyParts;
@@ -165,7 +173,7 @@ export class Bots {
             }
         }
 
-        if(this.modConf.realistic_boss_follower_health == true){
+        if (this.modConf.realistic_boss_follower_health == true) {
             this.array.boss_follower_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = commonStats.health.BodyParts;
@@ -173,7 +181,7 @@ export class Bots {
             }
         }
 
-        if(this.modConf.realistic_raider_rogue_health == true){
+        if (this.modConf.realistic_raider_rogue_health == true) {
             this.array.rogue_raider_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = commonStats.health.BodyParts;
@@ -181,7 +189,7 @@ export class Bots {
             }
         }
 
-        if(this.modConf.realistic_cultist_health == true){
+        if (this.modConf.realistic_cultist_health == true) {
             this.array.cultist_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = commonStats.health.BodyParts;

@@ -2811,7 +2811,7 @@
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
-        "StockAllowADS": false,
+        "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.15
     },
@@ -4208,7 +4208,7 @@
         "HorizontalRecoil": 20,
         "Dispersion": 10,
         "CameraRecoil": 10,
-        "AimSpeed": 20,
+        "AimSpeed": 10,
         "DrawSpeed": 0,
         "Ergonomics": -10,
         "Accuracy": 0,

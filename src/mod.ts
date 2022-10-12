@@ -413,7 +413,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         items.loadItems();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
-        weaponsStats.loadWepStats();
+
+        if(modConfig.malf_changes == true){
+            weaponsStats.loadWepStats();
+        }
+
     }
 
     public revertMeds(pmcData: IPmcData, helper: Helper) {
@@ -464,8 +468,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
             ragfairOfferGen.generateFleaOffersForTrader(arrays.traderIDs[i]);
         }
     }
-
-
 
     public updateFlea(pmcData: IPmcData, logger: ILogger, config, flea: TieredFlea, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays) {
 

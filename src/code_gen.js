@@ -741,71 +741,87 @@ class CodeGen {
         }
     }
     armorPusherHelper(serverItem, fileItem) {
-        if (serverItem._id === fileItem.ItemID) {
-            var serverConfItems = serverItem._props.ConflictingItems;
-            var armorPropertyValues = [fileItem?.AllowADS?.toString() || "true"];
-            var combinedArr = armorPropertyValues.concat(serverConfItems);
-            serverItem._props.ConflictingItems = combinedArr;
+        if (this.modConf.realistic_faceshields == true) {
+            if (serverItem._id === fileItem.ItemID) {
+                var serverConfItems = serverItem._props.ConflictingItems;
+                var armorPropertyValues = [fileItem?.AllowADS?.toString() || "true"];
+                var combinedArr = armorPropertyValues.concat(serverConfItems);
+                serverItem._props.ConflictingItems = combinedArr;
+            }
+        }
+        if (this.modConf.realistic_faceshields == false) {
+            if (serverItem._id === fileItem.ItemID) {
+                var serverConfItems = serverItem._props.ConflictingItems;
+                let armorPropertyValues = ["true"];
+                let combinedArr = armorPropertyValues.concat(serverConfItems);
+                serverItem._props.ConflictingItems = combinedArr;
+            }
         }
     }
     modPusherHelper(serverItem, fileItem) {
-        if (serverItem._id === fileItem.ItemID) {
-            serverItem._props.Ergonomics = fileItem.Ergonomics;
-            serverItem._props.Accuracy = fileItem.Accuracy;
-            serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-            serverItem._props.HeatFactor = fileItem.HeatFactor;
-            serverItem._props.CoolFactor = fileItem.CoolFactor;
-            serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
-            serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
-            serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
-            serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
-            serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
-            serverItem._props.BlocksFolding = fileItem.BlocksFolding;
-            serverItem._props.Velocity = fileItem.Velocity;
-            serverItem._props.Weight = fileItem.Weight;
-            serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
-            var serverConfItems = serverItem._props.ConflictingItems;
-            var modConfItems = fileItem.ConflictingItems;
-            var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
-                fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
-                fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0"];
-            for (let j in modPropertyValues) {
-                serverConfItems[j] = modPropertyValues[j];
+        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+            if (serverItem._id === fileItem.ItemID) {
+                serverItem._props.Ergonomics = fileItem.Ergonomics;
+                serverItem._props.Accuracy = fileItem.Accuracy;
+                serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
+                serverItem._props.HeatFactor = fileItem.HeatFactor;
+                serverItem._props.CoolFactor = fileItem.CoolFactor;
+                serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
+                serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
+                serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
+                serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
+                serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
+                serverItem._props.BlocksFolding = fileItem.BlocksFolding;
+                serverItem._props.Velocity = fileItem.Velocity;
+                serverItem._props.Weight = fileItem.Weight;
+                serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
+                var serverConfItems = serverItem._props.ConflictingItems;
+                var modConfItems = fileItem.ConflictingItems;
+                var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
+                    fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
+                    fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0"];
+                for (let j in modPropertyValues) {
+                    serverConfItems[j] = modPropertyValues[j];
+                }
+                var combinedArr = serverConfItems.concat(modConfItems);
+                serverItem._props.ConflictingItems = combinedArr;
             }
-            var combinedArr = serverConfItems.concat(modConfItems);
-            serverItem._props.ConflictingItems = combinedArr;
         }
     }
     weapPusherHelper(serverItem, fileItem) {
         if (serverItem._id === fileItem.ItemID) {
-            serverItem._props.Ergonomics = fileItem.Ergonomics;
-            serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
-            serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-            serverItem._props.HeatFactor = fileItem.HeatFactor;
-            serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;
-            serverItem._props.RecolDispersion = fileItem.Dispersion;
-            serverItem._props.CameraRecoil = fileItem.CameraRecoil;
-            serverItem._props.CameraSnap = fileItem.CameraSnap;
-            serverItem._props.Convergence = fileItem.Convergence;
-            serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
-            serverItem._props.RecoilAngle = fileItem.RecoilAngle;
-            serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
-            serverItem._props.HeatFactorGun = fileItem.HeatFactorGun;
-            serverItem._props.HeatFactorByShot = fileItem.HeatFactorByShot;
-            serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
-            serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
-            serverItem._props.AllowOverheat = fileItem.AllowOverheat;
-            serverItem._props.HipAccuracyRestorationDelay = fileItem.HipAccuracyRestorationDelay;
-            serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
-            serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
-            serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
-            serverItem._props.Velocity = fileItem.Velocity;
-            serverItem._props.Weight = fileItem.Weight;
-            var serverConfItems = serverItem._props.ConflictingItems;
-            var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "undefined", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
-                fileItem?.RecoilDamping?.toString() || "70", fileItem?.RecoilHandDamping?.toString() || "65", fileItem?.WeaponAllowADS?.toString() || "false"];
-            var combinedArr = weapPropertyValues.concat(serverConfItems);
-            serverItem._props.ConflictingItems = combinedArr;
+            if (this.modConf.malf_changes == true) {
+                serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
+                serverItem._props.HeatFactorGun = fileItem.HeatFactorGun;
+                serverItem._props.HeatFactorByShot = fileItem.HeatFactorByShot;
+                serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
+                serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
+            }
+            if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+                serverItem._props.Ergonomics = fileItem.Ergonomics;
+                serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
+                serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
+                serverItem._props.HeatFactor = fileItem.HeatFactor;
+                serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;
+                serverItem._props.RecolDispersion = fileItem.Dispersion;
+                serverItem._props.CameraRecoil = fileItem.CameraRecoil;
+                serverItem._props.CameraSnap = fileItem.CameraSnap;
+                serverItem._props.Convergence = fileItem.Convergence;
+                serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
+                serverItem._props.RecoilAngle = fileItem.RecoilAngle;
+                serverItem._props.AllowOverheat = fileItem.AllowOverheat;
+                serverItem._props.HipAccuracyRestorationDelay = fileItem.HipAccuracyRestorationDelay;
+                serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
+                serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
+                serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
+                serverItem._props.Velocity = fileItem.Velocity;
+                serverItem._props.Weight = fileItem.Weight;
+                var serverConfItems = serverItem._props.ConflictingItems;
+                var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "undefined", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
+                    fileItem?.RecoilDamping?.toString() || "70", fileItem?.RecoilHandDamping?.toString() || "65", fileItem?.WeaponAllowADS?.toString() || "false"];
+                var combinedArr = weapPropertyValues.concat(serverConfItems);
+                serverItem._props.ConflictingItems = combinedArr;
+            }
         }
     }
     pushToAllMods() {

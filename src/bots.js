@@ -12,6 +12,7 @@ const rmBotConfig = require("../db/bots/botconfig.json");
 const USECNames = require("../db/bots/names/USECNames.json");
 const bearNames = require("../db/bots/names/bearNames.json");
 const magazineJSON = require("../db/bots/loadouts/magazines.json");
+const botZones = require("../db/bots/spawnZones.json");
 class Bots {
     constructor(logger, tables, configServ, modConf, array) {
         this.logger = logger;
@@ -30,6 +31,11 @@ class Bots {
         this.botConfPMC = this.botConf.pmc;
     }
     loadBots() {
+        if (this.modConf.openZonesFix == true) {
+            for (const location in botZones.zones) {
+                this.tables.locations[location].base.OpenZones = botZones.zones[location];
+            }
+        }
         this.botConf.equipment["pmc"] = {
             "weaponModLimits": {
                 "scopeLimit": 10,
