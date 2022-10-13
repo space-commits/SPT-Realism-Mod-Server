@@ -39,6 +39,7 @@ export interface AvailableForConditions {
     dynamicLocale: boolean;
 }
 export interface AvailableForProps {
+    [x: string]: any;
     id: string;
     index: number;
     parentId: string;

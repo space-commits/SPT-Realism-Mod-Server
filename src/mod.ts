@@ -36,6 +36,7 @@ import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
 import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
 import { InventoryMagGen } from "@spt-aki/generators/weapongen/InventoryMagGen";
 import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen";
+import { RepairKitSettings } from "@spt-aki/models/eft/common/IGlobals";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -53,7 +54,7 @@ import { BotModGen, BotWepGen } from "./bot_wep_gen";
 import { BotLootServer } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
-import { RepairKitSettings } from "@spt-aki/models/eft/common/IGlobals";
+import { Quests } from "./quests";
 
 
 const medRevertCount = require("../db/saved/info.json");
@@ -350,6 +351,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
+        const quests = new Quests(logger, tables, modConfig);
 
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
@@ -384,6 +386,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         //     }
         // }
 
+                
 
         if (modConfig.bot_changes == true) {
             bots.loadBots();
@@ -408,15 +411,19 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
             custFleaConf.loadFleaConfig();
         }
 
+        if(modConfig.malf_changes == true){
+            weaponsStats.loadWepStats();
+        }
+
+        if(modConfig.recoil_attachment_overhaul){
+            quests.fixMechancicQuests();
+        }
+
         attatchBase.loadAttRestrict();
         attatchStats.loadAttStats();
         items.loadItems();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
-
-        if(modConfig.malf_changes == true){
-            weaponsStats.loadWepStats();
-        }
 
     }
 

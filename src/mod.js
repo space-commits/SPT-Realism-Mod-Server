@@ -17,6 +17,7 @@ const bot_wep_gen_1 = require("./bot_wep_gen");
 const bot_loot_serv_1 = require("./bot_loot_serv");
 const items_1 = require("./items");
 const code_gen_1 = require("./code_gen");
+const quests_1 = require("./quests");
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -269,6 +270,7 @@ class Mod {
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
+        const quests = new quests_1.Quests(logger, tables, modConfig);
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
@@ -315,14 +317,17 @@ class Mod {
         if (modConfig.flea_changes == true) {
             custFleaConf.loadFleaConfig();
         }
+        if (modConfig.malf_changes == true) {
+            weaponsStats.loadWepStats();
+        }
+        if (modConfig.recoil_attachment_overhaul) {
+            quests.fixMechancicQuests();
+        }
         attatchBase.loadAttRestrict();
         attatchStats.loadAttStats();
         items.loadItems();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
-        if (modConfig.malf_changes == true) {
-            weaponsStats.loadWepStats();
-        }
     }
     revertMeds(pmcData, helper) {
         helper.revertMedItems(pmcData);

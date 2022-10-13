@@ -2551,12 +2551,12 @@
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Length": 0,
-        "Ergonomics": 11,
+        "Ergonomics": 15,
         "Accuracy": 0,
         "HeatFactor": 0.992,
         "CoolFactor": 1.041,
         "ConflictingItems": [],
-        "Weight": 0.223
+        "Weight": 0.323
     },
     "5fc235db2770a0045c59c683": {
         "ItemID": "5fc235db2770a0045c59c683",

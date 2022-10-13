@@ -3588,7 +3588,7 @@
         "CameraRecoil": -5,
         "AimSpeed": 0,
         "DrawSpeed": 0,
-        "Ergonomics": 15,
+        "Ergonomics": 20,
         "Accuracy": 15,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -3597,7 +3597,7 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.167,
+        "Weight": 0.467,
         "HeatFactor": 1,
         "CoolFactor": 1
     },
@@ -3625,7 +3625,7 @@
             "5bfeaa0f0db834001b734927",
             "5bfea7ad0db834001c38f1ee"
         ],
-        "Weight": 0.64,
+        "Weight": 0.74,
         "HeatFactor": 1,
         "CoolFactor": 1
     },

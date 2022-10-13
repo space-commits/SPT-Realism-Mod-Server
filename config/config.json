@@ -11,7 +11,7 @@
 
     "//If enabled, faceshields won't allow ADS unless the weapon does not have a stock, or the specific weapon/stock/faceshield allows it//":
     "//You can disable this and still use the recoil and attachment overhaul//",
-    "realistic_faceshields": false,
+    "realistic_faceshields": true,
 
     "//Still WIP. Enables changes to malfunctions and over-heating if set to true. No malfunctions will occur between 98-100 durability.//": 
     "//See mod page description for details.//",
@@ -72,10 +72,10 @@
     "//Testing parameters. For testing purposes only. No support given if these are enabled//": 
     "Set to true to enable bot testing parameters. Set the tier to 1-3 to spawn a sepcific tier of bot (1-3). Disabling weapons will deactivate the AI, they will spawn but not move or react",
     "bot_testing": false,
-    "bot_test_tier": 2,
+    "bot_test_tier": 1,
     "bot_test_weps_enabled": false,
     "all_scavs": false,
-    "all_PMCs": true,
+    "all_PMCs": false,
     "all_USEC": false,
     "all_bear": false,
     "dev_mode": false,
