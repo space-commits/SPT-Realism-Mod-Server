@@ -20,7 +20,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 15;
                 fileData._props.ArmorDamage = 0;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 17;
+                fileData._props.Damage = 18;
                 fileData._props.InitialSpeed = 320;
                 fileData._props.BallisticCoeficient = 0.02;
                 fileData._props.RicochetChance = 0.45;
@@ -44,7 +44,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 8;
                 fileData._props.ArmorDamage = 50;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 19;
+                fileData._props.Damage = 20;
                 fileData._props.InitialSpeed = 330;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.25;
@@ -67,7 +67,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 18;
                 fileData._props.ArmorDamage = 20;
                 fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 22;
+                fileData._props.Damage = 23;
                 fileData._props.InitialSpeed = 415;
                 fileData._props.RicochetChance = 0.28;
                 fileData._props.FragmentationChance = 0.22;
@@ -90,7 +90,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 17;
                 fileData._props.ArmorDamage = 31;
                 fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 26;
+                fileData._props.Damage = 27;
                 fileData._props.InitialSpeed = 385;
                 fileData._props.RicochetChance = 0.24;
                 fileData._props.FragmentationChance = 0;
@@ -113,7 +113,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 25;
                 fileData._props.ArmorDamage = 15;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 24;
+                fileData._props.Damage = 25;
                 fileData._props.InitialSpeed = 430;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0;
@@ -380,7 +380,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 8;
                 fileData._props.ArmorDamage = 0;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 19;
+                fileData._props.Damage = 20;
                 fileData._props.InitialSpeed = 340;
                 fileData._props.RicochetChance = 0.33;
                 fileData._props.FragmentationChance = 0.12;
@@ -403,7 +403,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 12;
                 fileData._props.ArmorDamage = 0;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 21;
+                fileData._props.Damage = 22;
                 fileData._props.InitialSpeed = 410;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.15;
@@ -426,7 +426,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 9;
                 fileData._props.ArmorDamage = 27;
                 fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 23;
+                fileData._props.Damage = 24;
                 fileData._props.InitialSpeed = 430;
                 fileData._props.RicochetChance = 0.24;
                 fileData._props.FragmentationChance = 0.17;
@@ -449,7 +449,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 14;
                 fileData._props.ArmorDamage = 22;
                 fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 24;
+                fileData._props.Damage = 25;
                 fileData._props.InitialSpeed = 475;
                 fileData._props.RicochetChance = 0.26;
                 fileData._props.FragmentationChance = 0.2;
@@ -560,7 +560,7 @@ class Ammo {
             if (fileData._id === "5e85a9a6eacf8c039e4e2ac1") {
                 fileData._props.PenetrationPower = 22;
                 fileData._props.ArmorDamage = 22;
-                fileData._props.Damage = 23;
+                fileData._props.Damage = 35;
                 fileData._props.InitialSpeed = 270;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.05;
@@ -583,7 +583,7 @@ class Ammo {
             if (fileData._id === "5f647f31b6238e5dd066e196") {
                 fileData._props.PenetrationPower = 35;
                 fileData._props.ArmorDamage = 25;
-                fileData._props.Damage = 27;
+                fileData._props.Damage = 30;
                 fileData._props.InitialSpeed = 375;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0;
@@ -593,7 +593,7 @@ class Ammo {
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 0;
-                fileData._props.BallisticCoeficient = 0.018;
+                fileData._props.BallisticCoeficient = 0.017;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;

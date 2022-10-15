@@ -3,11 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Quests = void 0;
 const mechGunsmith = require("../db/traders/quests/mechanic/gunsmith.json");
 class Quests {
-    constructor(logger, tables, modConf, arrays) {
+    constructor(logger, tables, modConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.arrays = arrays;
         this.questFile = this.tables.templates.quests;
         this.questObj = this.tables.locales.global["en"].quest;
         this.questDesc = this.tables.locales.global["en"].mail;
@@ -23,7 +22,6 @@ class Quests {
                     ergo = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.ergonomics.value;
                     recoil = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.recoil.value;
                     weight = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.weight.value;
-                    this.logger.info(this.questFile[quest].QuestName);
                     var questDescArr = {
                         "5ac242f286f774138762ee03": "Hello, mercenary. Yes, I am Mechanic. Let's get to the point, did you want to help? I have a lot of work to do today. There’s so little time, and the programmer unit for PLC100 is out of order. And those weapon orders... Anyway, here's why I'm telling you this. I build various weapons with modifications for my clients, and I'll need some help with it. I need you to assemble an MP-133, I won’t have time to build it myself, and I don't have parts for it either anyway. This gun should have more than " + ergo + " ergonomics, a laser designator, an extended mag, and less than " + recoil + " recoil sum. And compact, too, not more than 4 slots. Build one for me, and then we can talk about more work.",
                         "5ac2430486f77412450b42c4": "You have not failed me with the shotgun, so you may know your way around tools. That didn’t save me much time though. All exchanges are on fire, hope it won’t start a panic. Nevertheless, I think it's not for long, so the plan remains the same. Okay, I need to work. And you, try to get hold of an AKS-74U. With a Zenit B-11 handguard, 60-round extended mag, and make it compact, 6 slots max. Ergonomics over " + ergo + ", recoil sum less than " + recoil + ", sighting range 100 or more. And, of course, as light as possible, " + weight + "kg or less. Yes, indexes here have nothing to do with that. I hope you've remembered everything. See you soon.",
@@ -49,7 +47,6 @@ class Quests {
                                     for (let key in questDescArr) {
                                         if (mail === key) {
                                             this.questDesc[mail] = questDescArr[key];
-                                            this.logger.info(this.questDesc[mail]);
                                         }
                                     }
                                 }
@@ -59,20 +56,6 @@ class Quests {
                 }
             }
         }
-        // for (let locale in this.questObj) {
-        //     for (let myQuest in mechGunsmith) {
-        //         if (locale === myQuest) {
-        //             this.logger.info(this.questObj[locale].name);
-        //             for (let mail in this.questDesc) {
-        //                 if (mail === this.questObj[locale].description) {
-        //                     this.logger.info(this.questObj[locale].description);
-        //                     this.questDesc[mail] = gsPart1;
-        //                     this.logger.info(this.questDesc[mail]);
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
         if (this.modConf.logEverything == true) {
             this.logger.info("Mechanic Quests Fixed");
         }

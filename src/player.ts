@@ -89,12 +89,12 @@ export class Player {
             this.globalDB.Health.Falling.SafeHeight = 2;
             this.globalDB.Stamina.SafeHeightOverweight = 1.67;
 
-            this.globalDB.Stamina.Capacity = 130;
-            this.globalDB.Stamina.BaseRestorationRate = 10;
-            this.globalDB.Stamina.OxygenCapacity *= 1.2;
-            this.globalDB.Stamina.OxygenRestoration *= 2;
+            this.globalDB.Stamina.Capacity = 135;
+            this.globalDB.Stamina.BaseRestorationRate = 11;
+            this.globalDB.Stamina.OxygenCapacity *= 1.3;
+            this.globalDB.Stamina.OxygenRestoration *= 2.1;
 
-            this.globalDB.Stamina.AimDrainRate = 0.38;
+            this.globalDB.Stamina.AimDrainRate = 0.3;
             this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.1;
             this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.2;
             this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing
@@ -142,8 +142,8 @@ export class Player {
             health.LightBleeding.HealthLoopTime = 10;
             health.LightBleeding.DamageHealth = 0.6;
 
-            this.globalDB.LegsOverdamage *= 1.95;
-            this.globalDB.HandsOverdamage *= 1.08;
+            this.globalDB.LegsOverdamage *= 1.9;
+            this.globalDB.HandsOverdamage *= 1.05;
             this.globalDB.StomachOverdamage *= 1.95;
 
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.Threshold /= mult

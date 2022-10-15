@@ -220,7 +220,6 @@ export class CodeGen {
 
     private assignJSONToArmor(serverItem: ITemplateItem, fileItem: any) {
 
-        // new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
             fileItem;
             return fileItem;
@@ -792,18 +791,18 @@ export class CodeGen {
     public armorPusherHelper(serverItem: any, fileItem: any) {
 
 
-        if(this.modConf.realistic_faceshields == true){
+        if (this.modConf.realistic_faceshields == true) {
             if (serverItem._id === fileItem.ItemID) {
 
                 var serverConfItems = serverItem._props.ConflictingItems;
-                var armorPropertyValues = [fileItem?.AllowADS?.toString() || "true"];
-    
+                var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true"];
+
                 var combinedArr = armorPropertyValues.concat(serverConfItems)
                 serverItem._props.ConflictingItems = combinedArr;
             }
         }
 
-        if(this.modConf.realistic_faceshields == false){
+        if (this.modConf.realistic_faceshields == false) {
             if (serverItem._id === fileItem.ItemID) {
                 var serverConfItems = serverItem._props.ConflictingItems;
                 let armorPropertyValues: string[] = ["true"];
@@ -835,16 +834,16 @@ export class CodeGen {
                 serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
 
                 var serverConfItems = serverItem._props.ConflictingItems;
-                var modConfItems = fileItem.ConflictingItems;
-                var modPropertyValues = [fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
+                // var modConfItems = fileItem.ConflictingItems;
+                var modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
                 fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
                 fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0"];
 
-                for (let j in modPropertyValues) {
-                    serverConfItems[j] = modPropertyValues[j];
-                }
+                // for (let j in modPropertyValues) {
+                //     serverConfItems[j] = modPropertyValues[j];
+                // }
 
-                var combinedArr = serverConfItems.concat(modConfItems)
+                var combinedArr = modPropertyValues.concat(serverConfItems)
                 serverItem._props.ConflictingItems = combinedArr;
             }
         }
@@ -882,7 +881,7 @@ export class CodeGen {
                 serverItem._props.Weight = fileItem.Weight;
 
                 var serverConfItems = serverItem._props.ConflictingItems;
-                var weapPropertyValues = [fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "undefined", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
+                var weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "unused", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
                 fileItem?.RecoilDamping?.toString() || "70", fileItem?.RecoilHandDamping?.toString() || "65", fileItem?.WeaponAllowADS?.toString() || "false"];
 
 
@@ -892,15 +891,15 @@ export class CodeGen {
         }
     }
 
-    public pushToAllMods() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-            if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
-                var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0", "false", "0"]
-                var serverConfItems = serverItem._props.ConflictingItems;
-                var combinedArr = array.concat(serverConfItems)
-                serverItem._props.ConflictingItems = combinedArr;
-            }
-        }
-    }
+    // public pushToAllMods() {
+    //     for (let i in this.itemDB) {
+    //         let serverItem = this.itemDB[i];
+    //         if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
+    //             var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0", "false", "0"]
+    //             var serverConfItems = serverItem._props.ConflictingItems;
+    //             var combinedArr = array.concat(serverConfItems)
+    //             serverItem._props.ConflictingItems = combinedArr;
+    //         }
+    //     }
+    // }
 }

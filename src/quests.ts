@@ -5,7 +5,7 @@ const mechGunsmith = require("../db/traders/quests/mechanic/gunsmith.json");
 
 
 export class Quests {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private arrays) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
     public questFile = this.tables.templates.quests;
     public questObj = this.tables.locales.global["en"].quest;
@@ -25,7 +25,6 @@ export class Quests {
                     ergo = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.ergonomics.value;
                     recoil = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.recoil.value;
                     weight = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.weight.value;
-                    this.logger.info(this.questFile[quest].QuestName);
 
                     var questDescArr = {
                         "5ac242f286f774138762ee03": "Hello, mercenary. Yes, I am Mechanic. Let's get to the point, did you want to help? I have a lot of work to do today. There’s so little time, and the programmer unit for PLC100 is out of order. And those weapon orders... Anyway, here's why I'm telling you this. I build various weapons with modifications for my clients, and I'll need some help with it. I need you to assemble an MP-133, I won’t have time to build it myself, and I don't have parts for it either anyway. This gun should have more than " + ergo + " ergonomics, a laser designator, an extended mag, and less than " + recoil + " recoil sum. And compact, too, not more than 4 slots. Build one for me, and then we can talk about more work.",
@@ -53,7 +52,6 @@ export class Quests {
                                     for (let key in questDescArr) {
                                         if (mail === key) {
                                             this.questDesc[mail] = questDescArr[key];
-                                            this.logger.info(this.questDesc[mail]);
                                         }
                                     }
                                 }                    
