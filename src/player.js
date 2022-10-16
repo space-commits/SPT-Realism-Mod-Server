@@ -31,12 +31,12 @@ class Player {
     loadPlayer() {
         if (this.modConf.movement_changes == true) {
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
-            this.globalDB.Stamina.WalkOverweightLimits["y"] = 70;
-            this.globalDB.Stamina.BaseOverweightLimits["x"] = 30;
+            this.globalDB.Stamina.WalkOverweightLimits["y"] = 75;
+            this.globalDB.Stamina.BaseOverweightLimits["x"] = 28;
             this.globalDB.Stamina.BaseOverweightLimits["y"] = 50;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
-            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 35;
+            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 34;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 80;
             this.globalDB.WalkSpeed["x"] = 0.6;
             this.globalDB.WalkSpeed["y"] = 0.82;

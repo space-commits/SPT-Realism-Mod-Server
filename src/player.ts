@@ -32,12 +32,12 @@ export class Player {
         if (this.modConf.movement_changes == true) {
 
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
-            this.globalDB.Stamina.WalkOverweightLimits["y"] = 70;
-            this.globalDB.Stamina.BaseOverweightLimits["x"] = 30;
+            this.globalDB.Stamina.WalkOverweightLimits["y"] = 75;
+            this.globalDB.Stamina.BaseOverweightLimits["x"] = 28;
             this.globalDB.Stamina.BaseOverweightLimits["y"] = 50;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
-            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 35;
+            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 34;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 80;
 
             this.globalDB.WalkSpeed["x"] = 0.6;
@@ -89,7 +89,7 @@ export class Player {
             this.globalDB.Health.Falling.SafeHeight = 2;
             this.globalDB.Stamina.SafeHeightOverweight = 1.67;
 
-            this.globalDB.Stamina.Capacity = 135;
+            this.globalDB.Stamina.Capacity = 140;
             this.globalDB.Stamina.BaseRestorationRate = 11;
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
             this.globalDB.Stamina.OxygenRestoration *= 2.1;

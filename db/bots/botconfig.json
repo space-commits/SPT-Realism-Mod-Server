@@ -405,7 +405,7 @@
         "maxPocketLootTotalRub": 25000,
         "maxVestLootTotalRub": 25000,
         "looseWeaponInBackpackChancePercent": 0,
-        "chanceSameSideIsHostilePercent": 87,
+        "chanceSameSideIsHostilePercent": 95,
         "convertIntoPmcChance": {
             "assault": {
                 "min": 25,

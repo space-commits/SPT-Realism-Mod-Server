@@ -132,7 +132,7 @@
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 1.992,
+        "Weight": 2.05,
         "DurabilityBurnRatio": 0.22
     },
     "5a0ec13bfcdbcb00165aa685": {
@@ -200,7 +200,7 @@
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 2.267,
+        "Weight": 2.317,
         "DurabilityBurnRatio": 0.18
     },
     "5bf3e0490db83400196199af": {
@@ -234,7 +234,7 @@
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 1.992,
+        "Weight": 2.043,
         "DurabilityBurnRatio": 0.18
     },
     "5ab8e9fcd8ce870019439434": {
@@ -268,7 +268,7 @@
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 2.092,
+        "Weight": 2.093,
         "DurabilityBurnRatio": 0.18
     },
     "5bf3e03b0db834001d2c4a9c": {
@@ -302,7 +302,7 @@
         "RecoilDamping": 0.71,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 1.992,
+        "Weight": 1.957,
         "DurabilityBurnRatio": 0.18
     },
     "5ac66cb05acfc40198510a10": {
@@ -336,7 +336,7 @@
         "RecoilDamping": 0.71,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 2.392,
+        "Weight": 2.399,
         "DurabilityBurnRatio": 0.18
     },
     "583990e32459771419544dd2": {
@@ -438,7 +438,7 @@
         "RecoilDamping": 0.71,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 2.392,
+        "Weight": 2.402,
         "DurabilityBurnRatio": 0.15
     },
     "59e6687d86f77411d949b251": {
@@ -540,7 +540,7 @@
         "RecoilDamping": 0.71,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 1.992,
+        "Weight": 2.042,
         "DurabilityBurnRatio": 0.22
     },
     "5ac66d015acfc400180ae6e4": {
@@ -574,7 +574,7 @@
         "RecoilDamping": 0.71,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 1.992,
+        "Weight": 2.038,
         "DurabilityBurnRatio": 0.27
     },
     "5644bd2b4bdc2d3b4c8b4572": {
@@ -608,7 +608,7 @@
         "RecoilDamping": 0.71,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 2.092,
+        "Weight": 2.007,
         "DurabilityBurnRatio": 0.18
     },
     "5ac66d2e5acfc43b321d4b53": {
@@ -642,7 +642,7 @@
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
-        "Weight": 2.392,
+        "Weight": 2.45,
         "DurabilityBurnRatio": 0.15
     },
     "59ff346386f77477562ff5e2": {
