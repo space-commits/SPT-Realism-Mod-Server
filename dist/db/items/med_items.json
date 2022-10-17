@@ -1,0 +1,452 @@
+{
+    "SUPERBOTMEDKIT": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            },
+            "HeavyBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            }
+        },
+        "MaxHpResource": 90000,
+        "medUseTime": 3,
+        "hpResourceRate": 200
+    },
+    "TIER1MEDKIT": {
+        "effects_health": {},
+        "effects_damage": {
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 50
+            }
+        },
+        "MaxHpResource": 100,
+        "medUseTime": 1200,
+        "hpResourceRate": 0.001
+    },
+    "TIER2MEDKIT": {
+        "effects_health": {},
+        "effects_damage": {
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 50
+            }
+        },
+        "MaxHpResource": 150,
+        "medUseTime": 1200,
+        "hpResourceRate": 0.001
+    },
+    "TIER3MEDKIT": {
+        "effects_health": {},
+        "effects_damage": {
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 50
+            }
+        },
+        "MaxHpResource": 350,
+        "medUseTime": 1200,
+        "hpResourceRate": 0.001
+    },
+    "analgin": {
+        "effects_health": {},
+        "effects_damage": {
+            "Pain": {
+                "delay": 60,
+                "duration": 300
+            }
+        },
+        "StimulatorBuffs": "Buffs_analgin",
+        "MaxHpResource": 10,
+        "medUseTime": 4,
+        "hpResourceRate": 0
+    },
+    "ibuprofen": {
+        "effects_health": {},
+        "effects_damage": {
+            "Pain": {
+                "delay": 45,
+                "duration": 220
+            }
+        },
+        "StimulatorBuffs": "Buffs_ibuprofen",
+        "MaxHpResource": 15,
+        "medUseTime": 6,
+        "hpResourceRate": 0
+    },
+    "morphine": {
+        "effects_health": {},
+        "effects_damage": {
+            "Pain": {
+                "delay": 10,
+                "duration": 720
+            },
+            "Contusion": {
+                "delay": 10,
+                "duration": 720,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "Buffs_morphine",
+        "MaxHpResource": 1,
+        "medUseTime": 3,
+        "hpResourceRate": 0
+    },
+    "augmentin": {
+        "effects_health": {},
+        "effects_damage": {},
+        "StimulatorBuffs": "Buffs_augmentin",
+        "MaxHpResource": 10,
+        "medUseTime": 6,
+        "hpResourceRate": 0
+    },
+    "aeseptic": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 15,
+                "duration": 0,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "",
+        "MaxHpResource": 1,
+        "medUseTime": 6,
+        "hpResourceRate": 0
+    },
+    "army": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "",
+        "MaxHpResource": 2,
+        "medUseTime": 5,
+        "hpResourceRate": 0
+    },
+    "CAT": {
+        "effects_health": {},
+        "effects_damage": {
+            "HeavyBleeding": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0
+            },
+            "LightBleeding": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "Buffs_CAT",
+        "MaxHpResource": 1,
+        "medUseTime": 2,
+        "hpResourceRate": 0
+    },
+    "esmarch": {
+        "effects_health": {},
+        "effects_damage": {
+            "HeavyBleeding": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0
+            },
+            "LightBleeding": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "Buffs_esmarch",
+        "MaxHpResource": 1,
+        "medUseTime": 3,
+        "hpResourceRate": 0
+    },
+    "calok": {
+        "effects_health": {},
+        "effects_damage": {
+            "HeavyBleeding": {
+                "delay": 5,
+                "duration": 0,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "Buffs_calok",
+        "MaxHpResource": 1,
+        "medUseTime": 3.5,
+        "hpResourceRate": 0
+    },
+    "immobi": {
+        "effects_health": {},
+        "effects_damage": {
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "Buffs_immobi",
+        "MaxHpResource": 1,
+        "medUseTime": 5,
+        "hpResourceRate": 0
+    },
+    "alu": {
+        "effects_health": {},
+        "effects_damage": {
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "Buffs_alu",
+        "MaxHpResource": 2,
+        "medUseTime": 3,
+        "hpResourceRate": 0
+    },
+    "AI-2": {
+        "effects_health": {},
+        "effects_damage": {
+            "RadExposure": {
+                "delay": 10,
+                "duration": 600,
+                "fadeOut": 0
+            },
+            "Pain": {
+                "delay": 10,
+                "duration": 400
+            },
+            "Contusion": {
+                "delay": 10,
+                "duration": 400,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "Buffs_AI-2",
+        "MaxHpResource": 3,
+        "medUseTime": 6.5,
+        "hpResourceRate": 0
+    },
+    "CAR": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "",
+        "MaxHpResource": 4,
+        "medUseTime": 12,
+        "hpResourceRate": 0
+    },
+    "salewa": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 0
+            },
+            "HeavyBleeding": {
+                "delay": 5,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 3
+            }
+        },
+        "StimulatorBuffs": "Buffs_salewa",
+        "MaxHpResource": 7,
+        "medUseTime": 12,
+        "hpResourceRate": 0
+    },
+    "IFAK": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 0
+            },
+            "HeavyBleeding": {
+                "delay": 5,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 2
+            }
+        },
+        "StimulatorBuffs": "Buffs_IFAK",
+        "MaxHpResource": 6,
+        "medUseTime": 8,
+        "hpResourceRate": 0
+    },
+    "AFAK": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 0
+            },
+            "HeavyBleeding": {
+                "delay": 5,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 3
+            },
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 3
+            }
+        },
+        "StimulatorBuffs": "Buffs_AFAK",
+        "MaxHpResource": 7,
+        "medUseTime": 9.5,
+        "hpResourceRate": 0
+    },
+    "grizzly": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            },
+            "HeavyBleeding": {
+                "delay": 5,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 4
+            },
+            "Fracture": {
+                "delay": 10,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 4
+            }
+        },
+        "StimulatorBuffs": "Buffs_grizzly",
+        "MaxHpResource": 12,
+        "medUseTime": 15,
+        "hpResourceRate": 0
+    },
+    "vaseline": {
+        "effects_health": {},
+        "effects_damage": {
+            "LightBleeding": {
+                "delay": 30,
+                "duration": 1,
+                "fadeOut": 0,
+                "cost": 3
+            }
+        },
+        "StimulatorBuffs": "Buffs_vaseline",
+        "MaxHpResource": 5,
+        "medUseTime": 6.5,
+        "hpResourceRate": 0
+    },
+    "golden": {
+        "effects_health": {
+            "Energy": {
+                "value": 1
+            }
+        },
+        "effects_damage": {},
+        "StimulatorBuffs": "Buffs_golden",
+        "MaxHpResource": 5,
+        "medUseTime": 7,
+        "hpResourceRate": 0
+    },
+    "cms": {
+        "Energy": {
+            "value": -35
+        },
+        "Hydration": {
+            "value": -35
+        },
+        "effects_damage": {
+            "DestroyedPart": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0,
+                "healthPenaltyMin": 7,
+                "healthPenaltyMax": 20
+            },
+            "LightBleeding": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            },
+            "HeavyBleeding": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            }
+        },
+        "StimulatorBuffs": "Buffs_cms",
+        "MaxHpResource": 2,
+        "medUseTime": 16,
+        "hpResourceRate": 0
+    },
+    "surv12": {
+        "effects_health": {
+            "Energy": {
+                "value": -30
+            },
+            "Hydration": {
+                "value": -30
+            }
+        },
+        "effects_damage": {
+            "DestroyedPart": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0,
+                "healthPenaltyMin": 5,
+                "healthPenaltyMax": 25
+            },
+            "LightBleeding": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            },
+            "HeavyBleeding": {
+                "delay": 0,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 1
+            }
+        },
+        "StimulatorBuffs": "Buffs_surv12",
+        "MaxHpResource": 4,
+        "medUseTime": 20,
+        "hpResourceRate": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "SPT Realism Mod",
+    "version": "0.4.13",
+    "main": "src/mod.js",
+    "license": "CC BY-NC-SA",
+    "author": "Fontaine",
+    "akiVersion": "3.2.4",
+    "scripts": {
+        "setup:environment": "npm i",
+        "build:unzipped": "copyfiles -e \"./node_modules/**/*.*\" -e \"./dist/**/*.*\" -e \"./package-lock.json\" -e \"./tsconfig.json\" -e \"./README.txt\" -e \"./mod.code-workspace\" ./**/*.* ./dist",
+        "zip:files": "cd dist/ && bestzip ../mod.zip *",
+        "build:zip": "npm run clean:environment && npm run build:unzipped && npm run zip:files",
+        "clean:environment": "node -e \"require('fs').rm('mod.zip', ()=>{})\" && node -e \"require('fs').rmdir('./dist/',{recursive:true},()=>{})\""
+    },
+    "devDependencies": {
+        "@types/node": "16.11.62",
+        "@typescript-eslint/eslint-plugin": "5.38.1",
+        "@typescript-eslint/parser": "5.38.1",
+        "bestzip": "2.2.1",
+        "eslint": "8.24.0",
+        "fs-extra": "10.1.0",
+        "glob": "8.0.3",
+        "tsyringe": "4.7.0",
+        "typescript": "4.8.4"
+    }
+}

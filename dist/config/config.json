@@ -1,0 +1,85 @@
+{
+    " //A NOTE ON CONFIGURATION: I encourage you try this mod as it is intended and leave everything set to true.//":"All these settings are balanced with each other, the mod is supposed to be hardcore and unforgivng like EFT is supposed to be. Either way, enjoy :)//",
+   
+    "//Disables Armour and Ammo changes if set to false, the core of Realism Mod. Player and bot health will also no longer be adjusted and starting profiles no longer changed.//": 
+    "//If disabled, current armour durablity and player health will not be corrected but max durability/health will be.//",
+    "realism": true,
+
+    "//WIP. Enables complete overhaul of recoil and attachments. See mod overview page on the hub for details//": 
+    "//YOU MUST DELETE THE REALISMMOD.DLL FROM YOUR BEPINEX/PLUGINS FOLDER IF YOU WANT TO DISABLE THIS FEATURE. OTHERWISE YOUR GAME WILL CRASH//",
+    "recoil_attachment_overhaul": true,
+
+    "//If enabled, faceshields won't allow ADS unless the weapon does not have a stock, or the specific weapon/stock/faceshield allows it//":
+    "//You can disable this and still use the recoil and attachment overhaul. This feature will only work if the overhaul is enabled.//",
+    "realistic_faceshields": true,
+
+    "//Still WIP. Enables changes to malfunctions and over-heating if set to true. No malfunctions will occur between 98-100 durability.//": 
+    "//See mod page description for details.//",
+    "malf_changes": true,
+
+    "//Enables changes to movement speed, inertia, weight limits, stamina and fall damage.//": "",
+    "movement_changes": true,
+    
+    "//Enables changes to medical items if set to true.//": "",
+    "med_changes": true,
+
+    "//If set to true **AND** med_changes is set to false, the meds in your inventory will be restored back to their full HP resource.//": 
+    "//This config option will turn itself back to false once this is done. You are able to repeat this process 5 times.//",
+    "revert_med_changes": true,
+
+    "//Bots will no longer have tiered loadouts and will use vanilla loadouts, if set to false.//": 
+    "//This also disables changes made to botconfig (durability, bot ratios, loot limits) and custom loot generation functions that override AKI-SPT's.//",
+    "bot_changes": true,
+
+    "//Bot health settings. If set to true, these bot types will have the same health as the player. If false, they will have default EFT health pools.//": 
+    "//realism option must be true for this to take effect. If realism is false, all bots will have defualt health.//",
+    "realistic_boss_health" : true,
+    "realistic_boss_follower_health": true,
+    "realistic_raider_rogue_health": true,
+    "realistic_cultist_health" : true,
+
+    "//OpenZones fix. Adds more zones that bots can spawn in. Credit to JustNU//": 
+    "//This will most likely interfere with Lua's Spawn Rework, leave disabled if you're using that.//",
+    "open_zones_fix": false,
+
+    "//WIP. PMC AI type will be changed, and PMC and Boss difficulty will be raised, if set to true//":
+    "//Only use if not using FAIL or other AI mods. Will just simply set bosses and PMC from 'AsOnline' to higher difficulty settings (Hard or Impossible). Not compatible with FAIL, use that instead if you need to choose one or the other.//",
+    "difficulty": true,
+
+    "//Changes bot names to actual names from a huge list. Bear names can use Latin or Cyrillic alphabet//": 
+    "//Names come courtesy of user Computica//",
+    "bot_names": true,
+    "cyrillic_bear_names": true,
+
+    "//If set to true, the fleamarket will unlock progressivly by category of item based on the player's level.//": 
+    "//There are 7 tiers in total, the final one being a 'full unlock'.//",
+    "tiered_flea": true,
+   
+    "//Enables a hardcore fleamarket config. There are very few offers per item, if any at all. Item condition and stack amount vary a lot, high prices, and so on.//": 
+    "",
+    "flea_changes": true,
+
+    "//All items examined if set to true.//": "",
+    "all_examined": true,
+
+    "//Removes all in-raid item count restrictions and discard limits if set to true. For example, you can carry as much cash, BTC, LEDX etc. as you like in raid.//": "",
+    "remove_inraid_restrictions": true,
+
+    "//The standard recoil settings from previous versions. DO NOT USE THIS IF THE RECOIL AND ATTACHMENT OVERHAUL IS INSTALLED AND ENABLED.//": 
+    "//FOR USE IF THE OVERHAUL IS DISABLED ONLY//",
+    "legacy_recoil_changes": false,
+
+    "//Testing parameters. For testing purposes only. No support given if these are enabled//": 
+    "Set to true to enable bot testing parameters. Set the tier to 1-3 to spawn a sepcific tier of bot (1-3). Disabling weapons will deactivate the AI, they will spawn but not move or react",
+    "bot_testing": false,
+    "bot_test_tier": 1,
+    "bot_test_weps_enabled": false,
+    "all_scavs": false,
+    "all_PMCs": false,
+    "all_USEC": false,
+    "all_bear": false,
+    "dev_mode": false,
+    "guarantee_boss_spawn": false,
+    "disable_flea_blacklist": false,
+    "logEverything": false
+}

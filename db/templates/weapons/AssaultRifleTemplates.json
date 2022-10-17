@@ -1198,7 +1198,7 @@
         "BaseTorque": 1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 52,
+        "VerticalRecoil": 50,
         "HorizontalRecoil": 180,
         "Dispersion": 10,
         "CameraRecoil": 0.052,
@@ -1232,7 +1232,7 @@
         "BaseTorque": 1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 52,
+        "VerticalRecoil": 50,
         "HorizontalRecoil": 180,
         "Dispersion": 10,
         "CameraRecoil": 0.052,
@@ -1266,7 +1266,7 @@
         "BaseTorque": 1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 52,
+        "VerticalRecoil": 50,
         "HorizontalRecoil": 180,
         "Dispersion": 10,
         "CameraRecoil": 0.052,
@@ -1288,7 +1288,7 @@
         "RecoilDamping": 0.72,
         "RecoilHandDamping": 0.68,
         "WeaponAllowADS": false,
-        "Weight": 0.31,
+        "Weight": 1,
         "DurabilityBurnRatio": 0.32
     }
 }

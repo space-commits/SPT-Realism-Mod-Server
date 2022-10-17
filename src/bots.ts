@@ -132,7 +132,7 @@ export class Bots {
 
     public setBotHealth() {
 
-        this.array.boss_bot_list.forEach(increaseVitality);
+        this.array.bot_list.forEach(increaseVitality);
         function increaseVitality(bot) {
             if (bot.skills?.Common !== undefined) {
                 if (bot.skills.Common["Vitality"] !== undefined) {

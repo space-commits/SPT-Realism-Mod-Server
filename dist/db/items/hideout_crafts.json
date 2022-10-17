@@ -1,0 +1,113 @@
+{
+    "Tier1Medkit": {
+        "_id": "5e13301cc7049d4d9738e420",
+        "areaType": 7,
+        "requirements": [
+            {
+                "areaType": 7,
+                "requiredLevel": 1,
+                "type": "Area"
+            },
+            {
+                "templateId": "61bf83814088ec1a363d7097",
+                "count": 1,
+                "isFunctional": false,
+                "type": "Tool"
+            },
+            {
+                "templateId": "5d1b3a5d86f774252167ba22",
+                "count": 1,
+                "isFunctional": false,
+                "type": "Item"
+            },
+            {
+                "templateId": "59e361e886f774176c10a2a5",
+                "count": 1,
+                "isFunctional": false,
+                "type": "Item"
+            }
+        ],
+        "productionTime": 900,
+        "boosters": null,
+        "endProduct": "TIER1MEDKIT",
+        "continuous": false,
+        "count": 1,
+        "productionLimitCount": 0
+    },
+    "Tier2Medkit": {
+        "_id": "5e13301cc7049d4d97369420",
+        "areaType": 7,
+        "requirements": [
+            {
+                "areaType": 7,
+                "requiredLevel": 2,
+                "type": "Area"
+            },
+            {
+                "templateId": "619cc01e0a7c3a1a2731940c",
+                "count": 1,
+                "isFunctional": false,
+                "type": "Tool"
+            },
+            {
+                "templateId": "5d1b3a5d86f774252167ba22",
+                "count": 2,
+                "isFunctional": false,
+                "type": "Item"
+            },
+            {
+                "templateId": "59e361e886f774176c10a2a5",
+                "count": 1,
+                "isFunctional": false,
+                "type": "Item"
+            }
+        ],
+        "productionTime": 1500,
+        "boosters": null,
+        "endProduct": "TIER2MEDKIT",
+        "continuous": false,
+        "count": 1,
+        "productionLimitCount": 0
+    },
+    "Tier3Medkit": {
+        "_id": "5e13301cc7049d4d97420420",
+        "areaType": 7,
+        "requirements": [
+            {
+                "areaType": 7,
+                "requiredLevel": 3,
+                "type": "Area"
+            },
+            {
+                "templateId": "619cc01e0a7c3a1a2731940c",
+                "count": 1,
+                "isFunctional": false,
+                "type": "Tool"
+            },
+            {
+                "templateId": "5d1b3a5d86f774252167ba22",
+                "count": 2,
+                "isFunctional": false,
+                "type": "Item"
+            },
+            {
+                "templateId": "59e361e886f774176c10a2a5",
+                "count": 2,
+                "isFunctional": false,
+                "type": "Item"
+            },
+            {
+                "templateId": "5b4335ba86f7744d2837a264",
+                "count": 1,
+                "isFunctional": false,
+                "type": "Item"
+            }
+        ],
+        "productionTime": 2100,
+        "boosters": null,
+        "endProduct": "TIER3MEDKIT",
+        "continuous": false,
+        "count": 1,
+        "productionLimitCount": 0
+    }
+}

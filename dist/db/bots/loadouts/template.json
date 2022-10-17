@@ -1,0 +1,43 @@
+{
+    "templateLO1": {
+        "inventory": {
+            "equipment": {
+                "Headwear": [],
+                "Earpiece": [],
+                "FaceCover": [],
+                "ArmorVest": [],
+                "Eyewear": [],
+                "ArmBand": [],
+                "TacticalVest": [],
+                "FirstPrimaryWeapon": [],
+                "SecondPrimaryWeapon": [],
+                "Backpack": [],
+                "Holster": [],
+                "Scabbard": [],
+                "Pockets": [],
+                "SecuredContainer": []
+            },
+            "mods": {
+                "Helmet Mods":{},
+                "Helmets": {},
+                "Magazines": {},
+                "Handguards": {},
+                "Receivers": {},
+                "Barrels": {},
+                "Muzzle Devices": {},
+                "Scope Mounts": {},
+                "Mounts":{},
+                "Stocks": {},
+                "Guns":{}
+            },
+            "items": {
+                "TacticalVest": [],
+                "Pockets": [],
+                "Backpack": [],
+                "SpecialLoot": []
+            }
+        },
+        "chances": {},
+        "generation": {}
+    }
+}

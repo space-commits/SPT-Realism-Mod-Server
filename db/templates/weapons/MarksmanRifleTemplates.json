@@ -14,7 +14,7 @@
         "CameraRecoil": 0.067,
         "CameraSnap": 3.5,
         "Convergence": 8,
-        "RecoilAngle": 60,
+        "RecoilAngle": 65,
         "BaseMalfunctionChance": 0.15,
         "HeatFactorGun": 0.4,
         "HeatFactorByShot": 1,
@@ -31,7 +31,7 @@
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 0.92,
-        "DurabilityBurnRatio": 0.35
+        "DurabilityBurnRatio": 0.4
     },
     "57838ad32459774a17445cd2": {
         "ItemID": "57838ad32459774a17445cd2",
@@ -48,7 +48,7 @@
         "CameraRecoil": 0.067,
         "CameraSnap": 3.5,
         "Convergence": 8,
-        "RecoilAngle": 60,
+        "RecoilAngle": 65,
         "BaseMalfunctionChance": 0.15,
         "HeatFactorGun": 0.4,
         "HeatFactorByShot": 1,
@@ -65,7 +65,7 @@
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 0.92,
-        "DurabilityBurnRatio": 0.35
+        "DurabilityBurnRatio": 0.4
     },
     "5c46fbd72e2216398b5a8c9c": {
         "ItemID": "5c46fbd72e2216398b5a8c9c",
@@ -185,7 +185,7 @@
         "CameraSnap": 3.5,
         "Convergence": 6.4,
         "RecoilAngle": 71,
-        "BaseMalfunctionChance": 0.12,
+        "BaseMalfunctionChance": 0.1,
         "HeatFactorGun": 0.6,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,
@@ -219,7 +219,7 @@
         "CameraSnap": 3.5,
         "Convergence": 2,
         "RecoilAngle": 60,
-        "BaseMalfunctionChance": 0.2024,
+        "BaseMalfunctionChance": 0.1,
         "HeatFactorGun": 1,
         "HeatFactorByShot": 4.25,
         "CoolFactorGun": 2.592,
@@ -235,7 +235,7 @@
         "RecoilHandDamping": 0.69,
         "WeaponAllowADS": false,
         "Weight": 2.32,
-        "DurabilityBurnRatio": 0.45
+        "DurabilityBurnRatio": 0.55
     },
     "5f2a9575926fd9352339381f": {
         "ItemID": "5f2a9575926fd9352339381f",
@@ -253,7 +253,7 @@
         "CameraSnap": 3.5,
         "Convergence": 6.25,
         "RecoilAngle": 60,
-        "BaseMalfunctionChance": 0.65,
+        "BaseMalfunctionChance": 0.7,
         "HeatFactorGun": 0.4,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,
@@ -287,7 +287,7 @@
         "CameraSnap": 3.5,
         "Convergence": 6.8,
         "RecoilAngle": 60,
-        "BaseMalfunctionChance": 0.75,
+        "BaseMalfunctionChance": 0.65,
         "HeatFactorGun": 0.35,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,
@@ -303,6 +303,6 @@
         "RecoilHandDamping": 0.7,
         "WeaponAllowADS": false,
         "Weight": 1.426,
-        "DurabilityBurnRatio": 0.45
+        "DurabilityBurnRatio": 0.55
     }
 }

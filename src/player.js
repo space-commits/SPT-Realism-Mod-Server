@@ -33,7 +33,7 @@ class Player {
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 75;
             this.globalDB.Stamina.BaseOverweightLimits["x"] = 28;
-            this.globalDB.Stamina.BaseOverweightLimits["y"] = 50;
+            this.globalDB.Stamina.BaseOverweightLimits["y"] = 52;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 34;
@@ -70,7 +70,7 @@ class Player {
             this.globalDB.Health.Falling.DamagePerMeter = 11;
             this.globalDB.Health.Falling.SafeHeight = 2;
             this.globalDB.Stamina.SafeHeightOverweight = 1.67;
-            this.globalDB.Stamina.Capacity = 135;
+            this.globalDB.Stamina.Capacity = 140;
             this.globalDB.Stamina.BaseRestorationRate = 11;
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
             this.globalDB.Stamina.OxygenRestoration *= 2.1;

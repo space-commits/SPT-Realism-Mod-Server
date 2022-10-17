@@ -103,7 +103,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 }
             }, { frequency: "Always" });
-            
+
             container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
                 const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
                 const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
@@ -275,8 +275,13 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                         let pmcData = profileHelper.getPmcProfile(sessionID);
 
                         try {
-                            this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
-                            this.correctNewHealth(pmcData, player, logger);
+                            if(modConfig.med_changes == true){
+                                this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
+                            }
+
+                            if (modConfig.realism == true) {
+                                this.correctNewHealth(pmcData, player, logger);
+                            }
                             logger.info("Realism Mod: New Profile Modified");
                             return HttpResponse.nullResponse();
                         }
@@ -359,7 +364,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
 
         // codegen.pushToAllMods();
 
- 
+
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
@@ -387,11 +392,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
             custFleaConf.loadFleaConfig();
         }
 
-        if(modConfig.malf_changes == true){
+        if (modConfig.malf_changes == true) {
             weaponsStats.loadWepStats();
         }
 
-        if(modConfig.recoil_attachment_overhaul){
+        if (modConfig.recoil_attachment_overhaul) {
             quests.fixMechancicQuests();
         }
 
@@ -413,7 +418,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         pmcData.Health.Energy.Maximum = player.energy;
         if (pmcData.Info.Experience == 0) {
             pmcData.Health.Hydration.Current = player.hydration;
-            pmcData.Health.Energy.Current = player.energy;
+            pmcData.Health.Energy.Current = player.energy
             logger.info("Realism Mod: New Profile Meds And Hydration/Energy Adjusted");
         }
         if (modConfig.logEverything == true) {
@@ -422,25 +427,24 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
     }
 
     public correctNewHealth(pmcData: IPmcData, player: Player, logger: ILogger) {
-        if (modConfig.realism == true) {
-            pmcData.Health.BodyParts["Head"].Health.Maximum = player.headHealth;
-            pmcData.Health.BodyParts["Chest"].Health.Maximum = player.chestHealth;
-            pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.stomaHealth;
-            pmcData.Health.BodyParts["LeftArm"].Health.Maximum = player.armHealth;
-            pmcData.Health.BodyParts["RightArm"].Health.Maximum = player.armHealth;
-            pmcData.Health.BodyParts["LeftLeg"].Health.Maximum = player.legHealth;
-            pmcData.Health.BodyParts["RightLeg"].Health.Maximum = player.legHealth;
-            pmcData.Health.BodyParts["Head"].Health.Current = player.headHealth;
-            pmcData.Health.BodyParts["Chest"].Health.Current = player.chestHealth;
-            pmcData.Health.BodyParts["Stomach"].Health.Current = player.stomaHealth;
-            pmcData.Health.BodyParts["LeftArm"].Health.Current = player.armHealth;
-            pmcData.Health.BodyParts["RightArm"].Health.Current = player.armHealth;
-            pmcData.Health.BodyParts["LeftLeg"].Health.Current = player.legHealth;
-            pmcData.Health.BodyParts["RightLeg"].Health.Current = player.legHealth;
-            pmcData.Health.Temperature.Current = player.tempCurr;
-            pmcData.Health.Temperature.Maximum = player.tempMax;
-            logger.info("Realism Mod: New Profile Health Has Been Adjusted");
-        }
+        pmcData.Health.BodyParts["Head"].Health.Maximum = player.headHealth;
+        pmcData.Health.BodyParts["Chest"].Health.Maximum = player.chestHealth;
+        pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.stomaHealth;
+        pmcData.Health.BodyParts["LeftArm"].Health.Maximum = player.armHealth;
+        pmcData.Health.BodyParts["RightArm"].Health.Maximum = player.armHealth;
+        pmcData.Health.BodyParts["LeftLeg"].Health.Maximum = player.legHealth;
+        pmcData.Health.BodyParts["RightLeg"].Health.Maximum = player.legHealth;
+        pmcData.Health.BodyParts["Head"].Health.Current = player.headHealth;
+        pmcData.Health.BodyParts["Chest"].Health.Current = player.chestHealth;
+        pmcData.Health.BodyParts["Stomach"].Health.Current = player.stomaHealth;
+        pmcData.Health.BodyParts["LeftArm"].Health.Current = player.armHealth;
+        pmcData.Health.BodyParts["RightArm"].Health.Current = player.armHealth;
+        pmcData.Health.BodyParts["LeftLeg"].Health.Current = player.legHealth;
+        pmcData.Health.BodyParts["RightLeg"].Health.Current = player.legHealth;
+        pmcData.Health.Temperature.Current = player.tempCurr;
+        pmcData.Health.Temperature.Maximum = player.tempMax;
+        logger.info("Realism Mod: New Profile Health Has Been Adjusted");
+
     }
 
     public fleaHelper(tier, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays) {
@@ -484,7 +488,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                 }
                 if (pmcData.Info.Level >= 25) {
                     this.fleaHelper(flea.flea5(), ragfairOfferGen, container, arrays);
-                    logger.info("Realism Mod: Fleamarket Tier 5 Unlocked"); 
+                    logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
                 }
                 if (pmcData.Info.Level >= 30) {
                     this.fleaHelper(flea.flea6(), ragfairOfferGen, container, arrays);

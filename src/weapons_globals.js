@@ -43,6 +43,8 @@ class WeaponsGlobals {
             }
         }
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+            this.globalDB.Aiming.RecoilVertBonus = 20;
+            this.globalDB.Aiming.RecoilBackBonus = 20;
             this.globalDB.Aiming.AimProceduralIntensity = 1;
             this.globalDB.Aiming.RecoilCrank = true;
             this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
@@ -54,8 +56,8 @@ class WeaponsGlobals {
             this.globalDB.Aiming.RecoilZIntensityByPose["x"] = 0.5;
             this.globalDB.Aiming.RecoilZIntensityByPose["y"] = 1.35;
             this.globalDB.Aiming.RecoilZIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.1;
-            this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.6;
+            this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.05;
+            this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.4;
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }

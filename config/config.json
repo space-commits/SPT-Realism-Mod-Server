@@ -25,7 +25,7 @@
 
     "//If set to true **AND** med_changes is set to false, the meds in your inventory will be restored back to their full HP resource.//": 
     "//This config option will turn itself back to false once this is done. You are able to repeat this process 5 times.//",
-    "revert_med_changes": true,
+    "revert_med_changes": false,
 
     "//Bots will no longer have tiered loadouts and will use vanilla loadouts, if set to false.//": 
     "//This also disables changes made to botconfig (durability, bot ratios, loot limits) and custom loot generation functions that override AKI-SPT's.//",
@@ -81,5 +81,5 @@
     "dev_mode": false,
     "guarantee_boss_spawn": false,
     "disable_flea_blacklist": false,
-    "logEverything": false
+    "logEverything": true
 }
