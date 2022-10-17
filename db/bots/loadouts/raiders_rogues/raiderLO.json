@@ -1,0 +1,346 @@
+{
+  "raiderLO1": {
+    "appearance": {
+      "body": [
+        "5fd3e9f71b735718c25cd9f8",
+        "5fcf63da5c287f01f22bf245",
+        "618109c96d7ca35d076b3363",
+        "5e4bb35286f77406a511c9bc",
+        "5d1f566d86f7744bcd13459a",
+        "5e9d9fa986f774054d6b89f2",
+        "5f5e401747344c2e4f6c42c5",
+        "5df89f1f86f77412631087ea"
+      ],
+      "feet": [
+        "5d1f591186f7744bcc048755",
+        "617c02e24013b06b0b78df80",
+        "5d1f593286f7743014162044",
+        "5df8a08886f7740bfe6df775",
+        "5f5e40a06760b4138443b341",
+        "5f5e40400bc58666c37e7819",
+        "5d1f58ab86f7743014162042",
+        "5d1f58cb86f7744bca3f0b9a",
+        "5fce42bc187e6a2b994b8247",
+        "5e9dcc8a86f77434375990e2",
+        "5e4bb6d786f77406975c9364"
+      ],
+      "head": [
+        "5cde96047d6c8b20b577f016",
+        "5fdb5950f5264a66150d1c6e",
+        "5fdb4139e4ed5b5ea251e4ed",
+        "5cc084dd14c02e000b0550a3",
+        "5fdb50bb2b730a787b3f78cf",
+        "5fdb7571e4ed5b5ea251e529"
+      ],
+      "voice": [
+        "Usec_1",
+        "Usec_2",
+        "Usec_3",
+        "Usec_4",
+        "Usec_5",
+        "Bear_1_Eng",
+        "Bear_2_Eng"
+      ]
+    },
+    "inventory": {
+      "Ammo": {
+        "Caliber12g": {
+          "5d6e6806a4b936088465b17e": 0,
+          "5d6e67fba4b9361bc73bc779": 0,
+          "5d6e6869a4b9361c140bcfde": 0,
+          "5d6e68e6a4b9361c140bcfe0": 0,
+          "5d6e68d1a4b93622fe60e845": 0
+        },
+        "Caliber545x39": {
+          "5c0d5e4486f77478390952fe": 2,
+          "56dff026d2720bb8668b4567": 2,
+          "56dff061d2720bb5668b4567": 4,
+          "56dfef82d2720bbd668b4567": 0,
+          "56dff421d2720b5f5a8b4567": 0,
+          "56dff216d2720bbd668b4568": 0
+        },
+        "Caliber556x45NATO": {
+          "59e6927d86f77411da468256": 4,
+          "54527ac44bdc2d36668b4567": 2,
+          "59e6906286f7746c9f75e847": 7,
+          "601949593ae8f707c4608daa": 0,
+          "5c0d5ae286f7741e46554302": 2
+        },
+        "Caliber762x39": {
+          "5656d7c34bdc2d9d198b4587": 1,
+          "59e4d3d286f774176a36250a": 3,
+          "59e0d99486f7744a32234762": 0,
+          "601aa3d2b2bcb34913271e6d": 0
+        },
+        "Caliber762x51": {
+          "58dd3ad986f77403051cba8f": 5,
+          "5a6086ea4f39f99cd479502f": 1,
+          "5a608bf24f39f98ffc77720e": 2,
+          "5e023e88277cce2b522ff2b1": 3
+        },
+        "Caliber9x19PARA": {
+          "5c925fa22e221601da359b7b": 2,
+          "5efb0da7a29a85116f6ea05f": 0,
+          "56d59d3ad2720bdb418b4577": 1,
+          "5efb0e16aeb21837e749c7ff": 3,
+          "5c0d56a986f774449d5de529": 3,
+          "5a3c16fe86f77452b62de32a": 3
+        },
+        "Caliber9x21": {
+          "5a269f97c4a282000b151807": 0,
+          "5a26abfac4a28232980eabff": 1,
+          "5a26ac06c4a282000c5a90a8": 0,
+          "5a26ac0ec4a28200741e1e18": 0
+        },
+        "Caliber9x39": {
+          "57a0dfb82459774d3078b56c": 1,
+          "57a0e5022459774d1673f889": 0,
+          "5c0d688c86f77413ae3407b2": 0
+        },
+        "Caliber1143x23ACP": {
+          "5efb0cabfb3e451d70735af5": 3,
+          "5efb0fc6aeb21837e749c801": 3,
+          "5ea2a8e200685063ec28c05a": 3
+        },
+        "Caliber57x28": {
+          "5cc80f53e4a949000e1ea4f8": 1,
+          "5cc86832d7f00c000d3a6e6c": 1,
+          "5cc86840d7f00c002412c56c": 1,
+          "5cc80f67e4a949035e43bbba": 1,
+          "5cc80f38e4a949001152b560": 1,
+          "5cc80f8fe4a949033b0224a2": 1,
+          "5cc80f79e4a949033c7343b2": 1
+        },
+        "Caliber46x30": {
+          "5ba26812d4351e003201fef1": 1,
+          "5ba26835d4351e0035628ff5": 1,
+          "5ba2678ad4351e44f824b344": 1,
+          "5ba26844d4351e00334c9475": 1
+        },
+        "Caliber9x33R": {
+          "62330c40bdd19b369e1e53d1": 1,
+          "62330c18744e5e31df12f516": 1,
+          "62330bfadc5883093563729b": 1
+        }
+      },
+      "equipment": {
+        "Headwear": {
+          "61bca7cda0eae612383adf57": 1,
+          "5f60b34a41e30a4ab12a6947": 1,
+          "5e00c1ad86f774747333222c": 1,
+          "5a154d5cfcdbcb001a3b00da": 4,
+          "5e4bfc1586f774264f7582d3": 4,
+          "5b40e3f35acfc40016388218": 4
+        },
+        "Earpiece": {
+          "6033fa48ffd42c541047f728": 20,
+          "5645bcc04bdc2d363b8b4572": 15,
+          "628e4e576d783146b124c64d": 1
+        },
+        "FaceCover": {
+          "5ab8f39486f7745cd93a1cca": 10,
+          "5ab8f4ff86f77431c60d91ba": 5,
+          "5b432f3d5acfc4704b4a1dfb": 10,
+          "60363c0c92ec1c31037959f5": 2
+        },
+        "ArmorVest": {
+          "609e8540d5c319764c2bc2e9": 4,
+          "5fd4c474dd870108a754b241": 3,
+          "5e4abb5086f77406975c9342": 1
+        },
+        "Eyewear": {
+          "603409c80ca681766b6a0fb2": 5,
+          "62a61c988ec41a51b34758d5": 5,
+          "557ff21e4bdc2d89578b4586": 10,
+          "5c1a1cc52e221602b3136e3d": 10,
+          "5d5fca1ea4b93635fd598c07": 10,
+          "5d6d2e22a4b9361bd5780d05": 10
+        },
+        "ArmBand": {
+          "619bde7fc9546643a67df6f4": 1,
+          "619bdef8c9546643a67df6f6": 1
+        },
+        "TacticalVest": {
+          "61bc85697113f767765c7fe7": 2,
+          "628dc750b910320f4c27a732": 3,
+          "628cd624459354321c4b7fa2": 4,
+          "5df8a42886f77412640e2e75": 3,
+          "603648ff5a45383c122086ac": 3,
+          "5648a69d4bdc2ded0b8b457b": 2,
+          "60a6220e953894617404b00a": 2,
+          "60a621c49c197e4e8c4455e6": 2,
+          "5f5f41f56760b4138443b352": 2,
+          "5c0e9f2c86f77432297fe0a3": 2,
+          "5ca20abf86f77418567a43f2": 2,
+          "5e4abc1f86f774069619fbaa": 2,
+          "5d5d85c586f774279a21cbdb": 2
+
+        },
+        "Backpack": {
+          "5e4abc6786f77406812bd572": 4,
+          "5d5d940f86f7742797262046": 6,
+          "628e1ffc83ec92260c0f437f": 4,
+          "545cdae64bdc2d39198b4568": 1,
+          "6034d103ca006d2dca39b3f0": 1,
+          "60a2828e8689911a226117f9": 1,
+          "5e9dcf5986f7746c417435b3": 1
+        },
+        "FirstPrimaryWeapon": {
+          "5ac66d015acfc400180ae6e4": 1,
+          "5ac66d9b5acfc4001633997a": 1,
+          "5ac66d725acfc43b321d4b60": 1,
+          "5dcbd56fdbd3d91b3e5468d5": 1,
+          "623063e994fc3f7b302a9696": 1,
+          "5bb2475ed4351e00853264e3": 1,
+          "5fbcc1d9016cce60e8341ab3": 1,
+          "606587252535c57a13424cfd": 1,
+          "628a60ae6b1d481ff772e9c8": 1,
+          "628b9c37a733087d0d7fe84b": 1,
+          "5447a9cd4bdc2dbd208b4567": 1,
+          "6184055050224f204c1da540": 1,
+          "5d43021ca4b9362eab4b5e25": 1,
+          "5926bb2186f7744b1c6c6e60": 1,
+          "5ba26383d4351e00334c93d9": 1,
+          "5de7bd7bfd6b4e6e2276dc25": 1,
+          "58948c8e86f77409493f7266": 1,
+          "5cc82d76e24e8d00134b4b83": 1,
+          "5fc3e272f8b6a877a729eac5": 1,
+          "5fb64bc92b1b027b1f50bcf2": 1,
+          "6259b864ebedf17603599e88": 1,
+          "576165642459773c7a400233": 1,
+          "57c44b372459772d2b39b8ce": 1,
+          "61a4c8884f95bc3b2c5dc96f": 1
+        },
+        "SecondPrimaryWeapon": {
+          "5a7828548dc32e5a9c28b516": 1
+        },
+        "Holster": {
+          "5d3eb3b0a4b93615055e84d2": 1,
+          "5a7ae0c351dfba0017554310": 1,
+          "5b1fa9b25acfc40018633c01": 1,
+          "56d59856d2720bd8418b456a": 1,
+          "602a9740da11d6478d5a06dc": 1,
+          "59f98b4986f7746f546d2cef": 1,
+          "6193a720f8ee7e52e42109ed": 1
+        },
+        "Scabbard": {
+          "5bffdc370db834001d23eca8": 20,
+          "54491bb74bdc2d09088b4567": 20,
+          "57cd379a24597778e7682ecf": 5,
+          "5c07df7f0db834001b73588a": 1,
+          "5bffe7930db834001b734a39": 5
+        },
+        "Pockets": {
+          "557ffd194bdc2d28148b457f": 1
+        },
+        "SecuredContainer": {
+          "5c0a794586f77461c458f892": 1
+        }
+      },
+      "mods": {},
+      "items": {
+        "TacticalVest": [],
+        "Pockets": [],
+        "Backpack": [],
+        "SecuredContainer": [],
+        "SpecialLoot": []
+      }
+    },
+    "chances": {
+      "equipment": {
+        "Headwear": 100,
+        "Earpiece": 70,
+        "FaceCover": 100,
+        "ArmorVest": 100,
+        "Eyewear": 70,
+        "ArmBand": 100,
+        "TacticalVest": 100,
+        "Backpack": 100,
+        "FirstPrimaryWeapon": 100,
+        "SecondPrimaryWeapon": 15,
+        "Holster": 50,
+        "Scabbard": 100,
+        "Pockets": 100,
+        "SecuredContainer": 100
+      },
+      "mods": {
+        "mod_mount": 100,
+        "mod_mount_000": 100,
+        "mod_mount_001": 100,
+        "mod_mount_002": 100,
+        "mod_mount_003": 100,
+        "mod_mount_004": 100,
+        "mod_mount_005": 100,
+        "mod_mount_006": 100,
+        "mod_muzzle": 100,
+        "mod_muzzle_000": 100,
+        "mod_muzzle_001": 100,
+        "mod_tactical": 100,
+        "mod_tactical_000": 100,
+        "mod_tactical_001": 100,
+        "mod_tactical_002": 100,
+        "mod_tactical_003": 100,
+        "mod_tactical_2": 100,
+        "mod_flashlight": 100,
+        "mod_scope": 100,
+        "mod_stock": 100,
+        "mod_charge": 100,
+        "mod_handguard": 100,
+        "mod_magazine": 100,
+        "mod_reciever": 100,
+        "mod_nvg": 20,
+        "mod_foregrip": 100,
+        "mod_launcher": 0,
+        "mod_sight_rear": 100,
+        "mod_sight_front": 100,
+        "mod_stock_000": 100,
+        "mod_stock_001": 100,
+        "mod_stock_akms": 100,
+        "mod_equipment": 100,
+        "mod_equipment_000": 100,
+        "mod_equipment_001": 100,
+        "mod_equipment_002": 100,
+        "mod_pistol_grip_akms": 100,
+        "mod_pistol_grip": 100,
+        "mod_gas_block": 100,
+        "mod_trigger": 100,
+        "mod_hammer": 100,
+        "mod_catch": 100,
+        "mod_bipod": 100,
+        "mod_barrel": 100
+      }
+    },
+    "generation": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 1,
+          "max": 2
+        },
+        "drugs": {
+          "min": 1,
+          "max": 2
+        },
+        "stims": {
+          "min": 0,
+          "max": 2
+        },
+        "looseLoot": {
+          "min": 2,
+          "max": 5
+        },
+        "magazines": {
+          "min": 4,
+          "max": 6
+        },
+        "grenades": {
+          "min": 0,
+          "max": 3
+        }
+      }
+    }
+  }
+}

@@ -43,8 +43,6 @@ class WeaponsGlobals {
             }
         }
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
-            this.globalDB.Aiming.RecoilVertBonus = 20;
-            this.globalDB.Aiming.RecoilBackBonus = 20;
             this.globalDB.Aiming.AimProceduralIntensity = 1;
             this.globalDB.Aiming.RecoilCrank = true;
             this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;

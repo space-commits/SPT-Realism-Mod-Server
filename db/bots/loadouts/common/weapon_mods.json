@@ -1,0 +1,51 @@
+{
+    "Assault Rifles": {
+        "m4a1": {
+            "5447a9cd4bdc2dbd208b4567": {
+                "mod_pistol_grip": [
+                    "55d4b9964bdc2d1d4e8b456e"
+                ],
+                "mod_stock": [
+                    "5649be884bdc2d79388b4577"
+                ],
+                "mod_charge": [
+                    "55d44fd14bdc2d962f8b456e"
+                ],
+                "mod_reciever": [
+                    "55d355e64bdc2d962f8b4569"
+                ],
+                "mod_magazine": [
+                    "55d4887d4bdc2d962f8b4570"
+                ],
+                "patron_in_weapon": [
+                    "59e6920f86f77411d82aa167"
+                ]
+            },
+            "55d355e64bdc2d962f8b4569": {
+                "mod_barrel": [
+                    "55d3632e4bdc2d972f8b4569"
+                ],
+                "mod_handguard": [
+                    "5ae30db85acfc408fb139a05"
+                ],
+                "mod_scope": [],
+                "mod_sight_rear": [
+                    "5c1780312e221602b66cc189"
+                ]
+            },
+            "55d3632e4bdc2d972f8b4569": {
+                "mod_gas_block": [
+                    "5ae30e795acfc408fb139a0b"
+                ],
+                "mod_muzzle": [
+                    "544a38634bdc2d58388b4568"
+                ]
+            },
+            "5649be884bdc2d79388b4577": {
+                "mod_stock_000": [
+                    "55d4ae6c4bdc2d8b2f8b456e"
+                ]
+            }
+        }
+    }
+}

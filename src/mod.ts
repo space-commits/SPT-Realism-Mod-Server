@@ -55,6 +55,7 @@ import { BotLootServer } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
+import { Traders } from "./traders";
 
 
 const medRevertCount = require("../db/saved/info.json");
@@ -357,6 +358,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         const quests = new Quests(logger, tables, modConfig);
+        const traders = new Traders(logger, tables, modConfig);
 
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
@@ -368,6 +370,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
+
+        if(modConfig.trader_changes == true){
+            traders.loadTraders();
+        }
 
         if (modConfig.bot_changes == true) {
             bots.loadBots();
@@ -503,12 +509,12 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
 
     }
 
-    public botTierWeighter(weight1: number, weight2: number, weight3: number, bots: Bots) {
+    public botTierWeighter(weight1: number, weight2: number, weight3: number, weight4: number, bots: Bots) {
 
         function add(a, b) { return a + b; }
 
-        var botTiers = ["Tier1", "Tier2", "Tier3"];
-        var weights = [weight1, weight2, weight3]
+        var botTiers = ["Tier1", "Tier2", "Tier3", "Tier4"];
+        var weights = [weight1, weight2, weight3, weight4]
         var totalWeight = weights.reduce(add, 0);
 
         var weighedElems = [];
@@ -545,33 +551,42 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                 }
                 if (config.bot_testing == false) {
                     if (pmcData.Info.Level >= 0) {
-                        tier = this.botTierWeighter(1, 0, 0, bots);
+                        tier = this.botTierWeighter(1, 0, 0, 0, bots);
                         logger.info("Realism Mod: Bots Have Been Set To Tier 1");
                     }
                     if (pmcData.Info.Level >= 5) {
-                        tier = this.botTierWeighter(5, 1, 0, bots);
+                        tier = this.botTierWeighter(5, 1, 0, 0, bots);
                     }
                     if (pmcData.Info.Level >= 10) {
-                        tier = this.botTierWeighter(5, 2, 0, bots);
+                        tier = this.botTierWeighter(5, 2, 0, 0, bots);
                     }
                     if (pmcData.Info.Level >= 15) {
-                        tier = this.botTierWeighter(0, 10, 0, bots);
+                        tier = this.botTierWeighter(0, 10, 2, 0, bots);
                         logger.info("Realism Mod: Bots Have Been Adjusted To Tier 2");
                     }
                     if (pmcData.Info.Level >= 20) {
-                        tier = this.botTierWeighter(0, 10, 1, bots);
+                        tier = this.botTierWeighter(0, 10, 3, 0, bots);
                     }
                     if (pmcData.Info.Level >= 25) {
-                        tier = this.botTierWeighter(0, 10, 2, bots);
+                        tier = this.botTierWeighter(0, 10, 5, 1, bots);
                     }
                     if (pmcData.Info.Level >= 30) {
-                        tier = this.botTierWeighter(0, 10, 5, bots);
-                    }
-                    if (pmcData.Info.Level >= 35) {
-                        tier = this.botTierWeighter(0, 0, 1, bots);
+                        tier = this.botTierWeighter(0, 0, 10, 2, bots);
                         logger.info("Realism Mod: Bots Have Been Adjusted To Tier 3");
                     }
-
+                    if (pmcData.Info.Level >= 35) {
+                        tier = this.botTierWeighter(0, 0, 10, 3, bots);
+                    }
+                    if (pmcData.Info.Level >= 40) {
+                        tier = this.botTierWeighter(0, 0, 10, 4, bots);
+                    }
+                    if (pmcData.Info.Level >= 45) {
+                        tier = this.botTierWeighter(0, 0, 10, 5, bots);
+                    }
+                    if (pmcData.Info.Level >= 50) {
+                        tier = this.botTierWeighter(0, 0, 0, 10, bots);
+                        logger.info("Realism Mod: Bots Have Been Adjusted To Tier 4");
+                    }
                     if (tier === "Tier1") {
                         bots.botConfig1();
                     }
@@ -580,6 +595,9 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
                     }
                     if (tier === "Tier3") {
                         bots.botConfig3();
+                    }
+                    if (tier === "Tier4") {
+                        bots.botConfig4();
                     }
                     if (config.logEverything == true) {
                         logger.info("Tier = " + tier);

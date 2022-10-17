@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CodeGen = void 0;
-const magazineJSON = require("../db/bots/loadouts/magazines.json");
+const magazineJSON = require("../db/bots/loadouts/common/magazines.json");
 const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
 const HeadArmorTemplates = require("../db/templates/armor/HeadArmorTemplates.json");
 const MuzzleDeviceTemplates = require("../db/templates/attatchments/MuzzleDeviceTemplates.json");
@@ -45,7 +45,7 @@ class CodeGen {
             if (serverItem._parent === "5448bc234bdc2d3c308b4569" || serverItem._parent === "610720f290b75a49ff2e5e25") {
                 let fileItem = magazineJSON[i];
                 magazineJSON[i] = this.doAssignJSONMagazine(fileItem);
-                this.helper.saveToJSONFile(magazineJSON, '/db/bots/loadouts/magazines.json');
+                this.helper.saveToJSONFile(magazineJSON, '/db/bots/loadouts/common/magazines.json');
             }
         }
     }
