@@ -533,36 +533,36 @@
     },
     "pmcType2": {
         "Factory": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
+            "usec": "followerBigPipe",
+            "bear": "bossKnight"
         },
         "Customs": {
             "usec": "pmcBot",
             "bear": "pmcBot"
         },
         "Woods": {
-            "usec": "followerBirdEye",
-            "bear": "followerBigPipe"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Interchange": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
+            "usec": "followerBigPipe",
+            "bear": "bossKnight"
         },
         "Laboratory": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
+            "usec": "followerBigPipe",
+            "bear": "bossKnight"
         },
         "Lighthouse": {
-            "usec": "followerBirdEye",
-            "bear": "followerBigPipe"
-        },
-        "ReserveBase": {
             "usec": "pmcBot",
             "bear": "pmcBot"
         },
+        "ReserveBase": {
+            "usec": "followerBigPipe",
+            "bear": "bossKnight"
+        },
         "Shoreline": {
-            "usec": "followerBirdEye",
-            "bear": "followerBigPipe"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "default": {
             "usec": "pmcBot",
@@ -579,8 +579,8 @@
             "bear": "pmcBot"
         },
         "Woods": {
-            "usec": "followerBirdEye",
-            "bear": "followerBigPipe"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Interchange": {
             "usec": "followerBigPipe",
@@ -591,16 +591,16 @@
             "bear": "bossKnight"
         },
         "Lighthouse": {
-            "usec": "followerBirdEye",
-            "bear": "followerBigPipe"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "ReserveBase": {
             "usec": "followerBigPipe",
             "bear": "bossKnight"
         },
         "Shoreline": {
-            "usec": "followerBirdEye",
-            "bear": "followerBigPipe"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "default": {
             "usec": "pmcBot",

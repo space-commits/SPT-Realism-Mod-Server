@@ -5,6 +5,7 @@ const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes"
 const scavLO = require("../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../db/bots/loadouts/PMCs/usecLO.json");
+const raiderLO = require("../db/bots/loadouts/raiders_rogues/raiderLO.json");
 const scavLootLimitCat = require("../db/bots/loadouts/scavs/scavLootLimitCat.json");
 const PMCLootLimitCat = require("../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
 const commonStats = require("../db/bots/common.json");
@@ -26,6 +27,7 @@ class Bots {
         this.scavBase = this.botDB["assault"];
         this.usecBase = this.botDB["usec"];
         this.bearBase = this.botDB["bear"];
+        this.raiderBase = this.botDB["pmcbot"];
         this.botConf = this.configServ.getConfig(ConfigTypes_1.ConfigTypes.BOT);
         this.botConfPMC = this.botConf.pmc;
     }
@@ -266,6 +268,7 @@ class Bots {
         this.scavLoad1();
         this.usecLoad1();
         this.bearLoad1();
+        this.raiderLoad1();
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig1 loaded");
         }
@@ -303,6 +306,7 @@ class Bots {
         this.scavLoad2();
         this.usecLoad2();
         this.bearLoad2();
+        this.raiderLoad1();
         if (this.modConf.logEverything == true) {
             this.logger.info("boatConfig2 loaded");
         }
@@ -340,6 +344,7 @@ class Bots {
         this.scavLoad3();
         this.usecLoad3();
         this.bearLoad3();
+        this.raiderLoad1();
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
         }
@@ -377,6 +382,7 @@ class Bots {
         this.scavLoad3();
         this.usecLoad4();
         this.bearLoad4();
+        this.raiderLoad1();
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
         }
@@ -535,6 +541,27 @@ class Bots {
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
+        }
+    }
+    raiderLoad1() {
+        this.raiderBase.inventory.Ammo = raiderLO.raiderLO1.inventory.Ammo;
+        this.raiderBase.chances = raiderLO.raiderLO1.chances;
+        this.raiderBase.generation = raiderLO.raiderLO1.generation;
+        this.raiderBase.appearance.body = raiderLO.raiderLO1.appearance.body;
+        this.raiderBase.appearance.feet = raiderLO.raiderLO1.appearance.feet;
+        this.raiderBase.appearance.head = raiderLO.raiderLO1.appearance.head;
+        this.raiderBase.appearance.voice = raiderLO.raiderLO1.appearance.voice;
+        this.raiderBase.inventory.equipment.ArmBand = raiderLO.raiderLO1.inventory.equipment.ArmBand;
+        this.raiderBase.inventory.equipment.Headwear = raiderLO.raiderLO1.inventory.equipment.Headwear;
+        this.raiderBase.inventory.equipment.Earpiece = raiderLO.raiderLO1.inventory.equipment.Earpiece;
+        this.raiderBase.inventory.equipment.FaceCover = raiderLO.raiderLO1.inventory.equipment.FaceCover;
+        this.raiderBase.inventory.equipment.ArmorVest = raiderLO.raiderLO1.inventory.equipment.ArmorVest;
+        this.raiderBase.inventory.equipment.Eyewear = raiderLO.raiderLO1.inventory.equipment.Eyewear;
+        this.raiderBase.inventory.equipment.TacticalVest = raiderLO.raiderLO1.inventory.equipment.TacticalVest;
+        this.raiderBase.inventory.equipment.Backpack = raiderLO.raiderLO1.inventory.equipment.Backpack;
+        this.raiderBase.inventory.equipment.Scabbard = raiderLO.raiderLO1.inventory.equipment.Scabbard;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("raiderLoad1 loaded");
         }
     }
 }
