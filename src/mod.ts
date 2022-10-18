@@ -34,9 +34,10 @@ import { LootCacheType } from "@spt-aki/models/spt/bots/BotLootCache";
 import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
 import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
 import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
-import { InventoryMagGen } from "@spt-aki/generators/weapongen/InventoryMagGen";
 import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen";
-import { RepairKitSettings } from "@spt-aki/models/eft/common/IGlobals";
+import { DynamicRouterModService } from "@spt-aki/services/mod/dynamicRouter/DynamicRouterModService"
+import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
+import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -66,11 +67,11 @@ const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const commonStats = require("../db/bots/common.json");
 const modConfig = require("../config/config.json");
-const path = require("path");
 
-class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
+class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
-    private static container: DependencyContainer;
+    private path: { resolve: (arg0: string) => any; };
+    private modLoader: PreAkiModLoader;
 
     public preAkiLoad(container: DependencyContainer): void {
 
@@ -88,10 +89,27 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         const fleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const tables = databaseServer1.getTables();
 
+        const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
+        this.path = require("path");
+
         const flea = new FleamarketConfig(logger, tables, fleaConf, modConfig, customFleaConfig);
         if (modConfig.flea_changes == true) {
             flea.loadFleaConfig();
         }
+
+        router.registerDynamicRouter(
+            "loadResources",
+            [
+                {
+                    url: "/RealismMod/GetInfo",
+                    action: (url, info, sessionId, output) =>
+                    {
+                        return jsonUtil.serialize(this.path.resolve(this.modLoader.getModPath("SPT-Realism-Mod")));
+                    }
+                }
+            ],
+            "RealismMod"
+        )
 
         if (modConfig.bot_changes == true) {
             container.afterResolution("BotWeaponGenerator", (_t, result: BotWeaponGenerator) => {
@@ -412,6 +430,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod {
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
 
+    }
+
+    public postAkiLoad(container: DependencyContainer)
+    {
+        this.modLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
     }
 
     public revertMeds(pmcData: IPmcData, helper: Helper) {

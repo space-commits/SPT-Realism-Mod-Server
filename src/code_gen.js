@@ -246,6 +246,8 @@ class CodeGen {
         let ShotgunDispersion = serverItem._props.ShotgunDispersion;
         let Velocity = serverItem._props.Velocity;
         let Weight = serverItem._props.Weight;
+        let AutoROF = serverItem._props.bFirerate;
+        let SemiROF = serverItem._props.SingleFireRate;
         let item = {
             ItemID,
             Name,
@@ -278,7 +280,9 @@ class CodeGen {
             HipInnaccuracyGain,
             ShotgunDispersion,
             Velocity,
-            Weight
+            Weight,
+            AutoROF,
+            SemiROF
         };
         return item;
     }
@@ -815,6 +819,7 @@ class CodeGen {
                 serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
                 serverItem._props.Velocity = fileItem.Velocity;
                 serverItem._props.Weight = fileItem.Weight;
+                serverItem._props.bFirerate = fileItem.AutoROF;
                 var serverConfItems = serverItem._props.ConflictingItems;
                 var weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "unused", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
                     fileItem?.RecoilDamping?.toString() || "70", fileItem?.RecoilHandDamping?.toString() || "65", fileItem?.WeaponAllowADS?.toString() || "false"];

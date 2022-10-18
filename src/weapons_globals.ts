@@ -19,7 +19,6 @@ export class WeaponsGlobals {
             this.globalDB.Overheat.OverheatProblemsStart = 70;
             this.globalDB.Overheat.MinWearOnOverheat = 0.2;
             this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
-            this.globalDB.RepairKitSettings.durabilityPointCostGuns = 0;
 
             for (let i in this.itemDB) {
                 let fileData = this.itemDB[i];

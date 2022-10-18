@@ -27,7 +27,6 @@ const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const commonStats = require("../db/bots/common.json");
 const modConfig = require("../config/config.json");
-const path = require("path");
 class Mod {
     preAkiLoad(container) {
         const logger = container.resolve("WinstonLogger");
@@ -42,10 +41,20 @@ class Mod {
         const databaseServer1 = container.resolve("DatabaseServer");
         const fleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const tables = databaseServer1.getTables();
+        const router = container.resolve("DynamicRouterModService");
+        this.path = require("path");
         const flea = new fleamarket_1.FleamarketConfig(logger, tables, fleaConf, modConfig, customFleaConfig);
         if (modConfig.flea_changes == true) {
             flea.loadFleaConfig();
         }
+        router.registerDynamicRouter("loadResources", [
+            {
+                url: "/RealismMod/GetInfo",
+                action: (url, info, sessionId, output) => {
+                    return jsonUtil.serialize(this.path.resolve(this.modLoader.getModPath("SPT-Realism-Mod")));
+                }
+            }
+        ], "RealismMod");
         if (modConfig.bot_changes == true) {
             container.afterResolution("BotWeaponGenerator", (_t, result) => {
                 const botGeneratorHelper = container.resolve("BotGeneratorHelper");
@@ -316,6 +325,9 @@ class Mod {
         items.loadItems();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
+    }
+    postAkiLoad(container) {
+        this.modLoader = container.resolve("PreAkiModLoader");
     }
     revertMeds(pmcData, helper) {
         helper.revertMedItems(pmcData);

@@ -2071,7 +2071,7 @@
         "ItemID": "5b1fa9ea5acfc40018633c0a",
         "Name": "barrel_glock_glock_18c_114mm_9x19_std",
         "ModType": "",
-        "VerticalRecoil": -20,
+        "VerticalRecoil": -50,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,

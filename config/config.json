@@ -85,5 +85,5 @@
     "dev_mode": false,
     "guarantee_boss_spawn": false,
     "disable_flea_blacklist": false,
-    "logEverything": false
+    "logEverything": true
 }

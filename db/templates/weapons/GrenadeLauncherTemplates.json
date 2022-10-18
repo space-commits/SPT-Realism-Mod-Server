@@ -31,7 +31,9 @@
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 0.1,
-        "DurabilityBurnRatio": 1.15
+        "DurabilityBurnRatio": 1.15,
+        "AutoROF": 425,
+        "SemiROF": 425
     },
     "6275303a9f372d6ea97f9ec7": {
         "ItemID": "6275303a9f372d6ea97f9ec7",
@@ -65,7 +67,9 @@
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 3.3,
-        "DurabilityBurnRatio": 1
+        "DurabilityBurnRatio": 1,
+        "AutoROF": 30,
+        "SemiROF": 450
     },
     "5e81ebcd8e146c7080625e15": {
         "ItemID": "5e81ebcd8e146c7080625e15",
