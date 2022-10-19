@@ -46,6 +46,37 @@
                     "55d4ae6c4bdc2d8b2f8b456e"
                 ]
             }
+        },
+        "Ak 102": {
+            "5ac66d015acfc400180ae6e4": {
+                "mod_pistol_grip": [
+                    "5649ade84bdc2d1b2b8b4587"
+                ],
+                "mod_gas_block": [
+                    "59c6633186f7740cf0493bb9"
+                ],
+                "mod_stock": [
+                    "5ac50c185acfc400163398d4"
+                ],
+                "mod_reciever": [
+                    "5ac50da15acfc4001718d287"
+                ],
+                "mod_magazine": [
+                    "5ac66c5d5acfc4001718d314"
+                ],
+                "patron_in_weapon": [
+                    "59e6920f86f77411d82aa167"
+                ],
+                "mod_muzzle": [
+                    "5ac72e725acfc400180ae701"
+                ],
+                "mod_charge": []
+            },
+            "59c6633186f7740cf0493bb9": {
+                "mod_handguard": [
+                  "5cbda392ae92155f3c17c39f"
+                ]
+              }
         }
     }
 }

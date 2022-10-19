@@ -145,7 +145,7 @@
         "Name": "weapon_izhmash_sv-98_762x54r",
         "WeapType": "",
         "OperationType": "",
-        "WeapAccuracy": 0,
+        "WeapAccuracy": -8,
         "BaseTorque": 0,
         "HasShoulderContact": false,
         "Ergonomics": 80,

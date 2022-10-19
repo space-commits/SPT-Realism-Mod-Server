@@ -32,8 +32,8 @@
         "Name": "foregrip_all_fortis_shift",
         "ModType": "",
         "VerticalRecoil": -1,
-        "HorizontalRecoil": -1,
-        "Dispersion": 0,
+        "HorizontalRecoil": -1.5,
+        "Dispersion": -1.5,
         "AimSpeed": 0,
         "DrawSpeed": 0,
         "Ergonomics": 8,
@@ -336,7 +336,7 @@
         "Ergonomics": 8,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.127
+        "Weight": 0.122
     },
     "5c1bc7432e221602b412949d": {
         "ItemID": "5c1bc7432e221602b412949d",
@@ -350,7 +350,7 @@
         "Ergonomics": 7,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.127
+        "Weight": 0.105
     },
     "5c1bc4812e22164bef5cfde7": {
         "ItemID": "5c1bc4812e22164bef5cfde7",
@@ -364,7 +364,7 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.138
+        "Weight": 0.133
     },
     "5c1cd46f2e22164bef5cfedb": {
         "ItemID": "5c1cd46f2e22164bef5cfedb",
@@ -378,7 +378,7 @@
         "Ergonomics": 12,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.18
+        "Weight": 0.185
     },
     "5c1bc5612e221602b5429350": {
         "ItemID": "5c1bc5612e221602b5429350",
@@ -392,7 +392,7 @@
         "Ergonomics": 5,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.17
+        "Weight": 0.155
     },
     "5c1bc5af2e221602b412949b": {
         "ItemID": "5c1bc5af2e221602b412949b",
@@ -406,7 +406,7 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.2
+        "Weight": 0.175
     },
     "6281212a09427b40ab14e770": {
         "ItemID": "6281212a09427b40ab14e770",

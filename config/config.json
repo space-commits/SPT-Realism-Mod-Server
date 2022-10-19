@@ -53,11 +53,11 @@
 
     "//If set to true, the fleamarket will unlock progressivly by category of item based on the player's level.//": 
     "//There are 7 tiers in total, the final one being a 'full unlock'.//",
-    "tiered_flea": false,
+    "tiered_flea": true,
    
     "//Enables a hardcore fleamarket config. There are very few offers per item, if any at all. Item condition and stack amount vary a lot, high prices, and so on.//": 
     "",
-    "flea_changes": false,
+    "flea_changes": true,
 
     "//Enables changes to trader sell categories to be more unique and makre more sense.//": 
     "For now just changes what Therapist, Skier and Mechanic will buy. Many more changes to traders will come in the future.//",

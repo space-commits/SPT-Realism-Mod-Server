@@ -1521,7 +1521,7 @@
         "HeatFactor": 0.994,
         "CoolFactor": 0.97,
         "ConflictingItems": [],
-        "Weight": 0.15
+        "Weight": 0.155
     },
     "5d15ce51d7ad1a1eff619092": {
         "ItemID": "5d15ce51d7ad1a1eff619092",
@@ -1870,7 +1870,7 @@
         "HeatFactor": 1.023,
         "CoolFactor": 1.006,
         "ConflictingItems": [],
-        "Weight": 0.15
+        "Weight": 0.190
     },
     "5648b4534bdc2d3d1c8b4580": {
         "ItemID": "5648b4534bdc2d3d1c8b4580",
@@ -1887,7 +1887,7 @@
         "HeatFactor": 0.968,
         "CoolFactor": 1.051,
         "ConflictingItems": [],
-        "Weight": 0.26
+        "Weight": 0.27
     },
     "5648ae314bdc2d3d1c8b457f": {
         "ItemID": "5648ae314bdc2d3d1c8b457f",
@@ -2070,7 +2070,7 @@
         "HeatFactor": 0.906,
         "CoolFactor": 1.082,
         "ConflictingItems": [],
-        "Weight": 0.39
+        "Weight": 0.371
     },
     "59fb375986f7741b681b81a6": {
         "ItemID": "59fb375986f7741b681b81a6",

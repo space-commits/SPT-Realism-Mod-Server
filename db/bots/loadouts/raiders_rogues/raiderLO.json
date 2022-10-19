@@ -284,7 +284,7 @@
           "5bffe7930db834001b734a39": 5
         },
         "Pockets": {
-          "557ffd194bdc2d28148b457f": 1
+          "5af99e9186f7747c447120b8": 1
         },
         "SecuredContainer": {
           "5c0a794586f77461c458f892": 1
@@ -294,7 +294,11 @@
       "items": {
         "TacticalVest": [],
         "Pockets": [],
-        "Backpack": [],
+        "Backpack": [
+          "TIER1MEDKIT",
+          "TIER2MEDKIT",
+          "TIER3MEDKIT"
+        ],
         "SecuredContainer": [],
         "SpecialLoot": []
       }
