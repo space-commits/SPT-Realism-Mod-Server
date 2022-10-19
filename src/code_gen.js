@@ -820,6 +820,7 @@ class CodeGen {
                 serverItem._props.Velocity = fileItem.Velocity;
                 serverItem._props.Weight = fileItem.Weight;
                 serverItem._props.bFirerate = fileItem.AutoROF;
+                serverItem._props.SingleFireRate = fileItem.SemiROF;
                 var serverConfItems = serverItem._props.ConflictingItems;
                 var weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "unused", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
                     fileItem?.RecoilDamping?.toString() || "70", fileItem?.RecoilHandDamping?.toString() || "65", fileItem?.WeaponAllowADS?.toString() || "false"];

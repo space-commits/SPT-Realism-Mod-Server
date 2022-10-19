@@ -588,10 +588,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         logger.info("Realism Mod: Bots Have Been Adjusted To Tier 2");
                     }
                     if (pmcData.Info.Level >= 20) {
-                        tier = this.botTierWeighter(0, 10, 3, 0, bots);
+                        tier = this.botTierWeighter(0, 10, 4, 0, bots);
                     }
                     if (pmcData.Info.Level >= 25) {
-                        tier = this.botTierWeighter(0, 10, 5, 1, bots);
+                        tier = this.botTierWeighter(0, 10, 7, 1, bots);
                     }
                     if (pmcData.Info.Level >= 30) {
                         tier = this.botTierWeighter(0, 0, 10, 2, bots);
