@@ -12,9 +12,9 @@ class WeaponsStats {
         const _9x18AmmoArr = this.itemDB["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._id === "5c07a8770db8340023300450") {
-                serverItem._props.Slots[2]._props.filters[0].Filter = this.itemDB["55d355e64bdc2d962f8b4569"]._props.Slots[2]._props.filters[0].Filter;
-            }
+            // if (serverItem._id === "5c07a8770db8340023300450") {
+            //     serverItem._props.Slots[2]._props.filters[0].Filter = this.itemDB["55d355e64bdc2d962f8b4569"]._props.Slots[2]._props.filters[0].Filter
+            // }
             //Kedr-B
             if (serverItem._id === "57f3c6bd24597738e730fa2f") {
                 if (this.modConf.malf_changes == true) {

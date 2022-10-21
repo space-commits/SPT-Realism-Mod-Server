@@ -226,15 +226,15 @@
           "618cfae774bb2d036a049e7c": 1
         },
         "FirstPrimaryWeapon": {
-          "618428466ef05c2ce828f218": 0,
-          "628a60ae6b1d481ff772e9c8": 0,
-          "5bb2475ed4351e00853264e3": 0,
+          "618428466ef05c2ce828f218": 1,
+          "628a60ae6b1d481ff772e9c8": 1,
+          "5bb2475ed4351e00853264e3": 1,
           "5447a9cd4bdc2dbd208b4567": 1,
-          "6165ac306ef05c2ce828ef74": 0,
-          "6176aca650224f204c1da3fb": 0,
-          "5a367e5dc4a282000e49738f": 0,
-          "5df8ce05b11454561e39243b": 0,
-          "5aafa857e5b5b00018480968": 0
+          "6165ac306ef05c2ce828ef74": 1,
+          "6176aca650224f204c1da3fb": 1,
+          "5a367e5dc4a282000e49738f": 1,
+          "5df8ce05b11454561e39243b": 1,
+          "5aafa857e5b5b00018480968": 1
         },
         "SecondPrimaryWeapon": {
           "5e870397991fd70db46995c8": 1,
@@ -411,16 +411,16 @@
     "chances": {
       "equipment": {
         "Headwear": 100,
-        "Earpiece": 70,
+        "Earpiece": 80,
         "FaceCover": 50,
         "ArmorVest": 100,
         "Eyewear": 70,
         "ArmBand": 0,
         "TacticalVest": 100,
-        "Backpack": 100,
+        "Backpack": 15,
         "FirstPrimaryWeapon": 100,
-        "SecondPrimaryWeapon": 10,
-        "Holster": 10,
+        "SecondPrimaryWeapon": 5,
+        "Holster": 15,
         "Scabbard": 100,
         "Pockets": 100,
         "SecuredContainer": 100
