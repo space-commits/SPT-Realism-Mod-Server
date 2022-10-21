@@ -462,7 +462,7 @@ class Mod {
                         logger.info("Realism Mod: Bots Have Been Adjusted To Tier 2");
                     }
                     if (pmcData.Info.Level >= 20) {
-                        tier = this.botTierWeighter(0, 10, 5, 0, bots);
+                        tier = this.botTierWeighter(0, 10, 5, 1, bots);
                     }
                     if (pmcData.Info.Level >= 25) {
                         tier = this.botTierWeighter(0, 0, 10, 2, bots);
@@ -472,7 +472,7 @@ class Mod {
                         tier = this.botTierWeighter(0, 0, 10, 5, bots);
                     }
                     if (pmcData.Info.Level >= 35) {
-                        tier = this.botTierWeighter(0, 0, 2, 10, bots);
+                        tier = this.botTierWeighter(0, 0, 0, 10, bots);
                         logger.info("Realism Mod: Bots Have Been Adjusted To Tier 4");
                     }
                     if (tier === "Tier1") {

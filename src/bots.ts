@@ -9,6 +9,7 @@ const scavLO = require("../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../db/bots/loadouts/PMCs/usecLO.json");
 const raiderLO = require("../db/bots/loadouts/raiders_rogues/raiderLO.json");
+const rogueLO = require("../db/bots/loadouts/raiders_rogues/rogueLO.json");
 const scavLootLimitCat = require("../db/bots/loadouts/scavs/scavLootLimitCat.json");
 const PMCLootLimitCat = require("../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
 const commonStats = require("../db/bots/common.json");
@@ -29,6 +30,7 @@ export class Bots {
     public usecBase = this.botDB["usec"];
     public bearBase = this.botDB["bear"];
     public raiderBase = this.botDB["pmcbot"];
+    public rogueBase = this.botDB["exusec"];
 
     public botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
     public botConfPMC = this.botConf.pmc;
@@ -311,6 +313,7 @@ export class Bots {
         this.usecLoad1();
         this.bearLoad1();
         this.raiderLoad1();
+        this.rogueLoad1();
 
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig1 loaded");
@@ -360,6 +363,7 @@ export class Bots {
         this.usecLoad2();
         this.bearLoad2();
         this.raiderLoad1();
+        this.rogueLoad2();
 
         if (this.modConf.logEverything == true) {
             this.logger.info("boatConfig2 loaded");
@@ -409,6 +413,7 @@ export class Bots {
         this.usecLoad3();
         this.bearLoad3();
         this.raiderLoad1();
+        this.rogueLoad3();
 
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
@@ -458,6 +463,7 @@ export class Bots {
         this.usecLoad4();
         this.bearLoad4();
         this.raiderLoad1();
+        this.rogueLoad3();
 
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
@@ -556,7 +562,7 @@ export class Bots {
         this.usecBase.inventory.equipment = usecLO.usecLO4.inventory.equipment;
         this.usecBase.inventory.items = usecLO.usecLO4.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO4.inventory.mods;
-        this.usecBase.chances = usecLO.usecLO44.chances;
+        this.usecBase.chances = usecLO.usecLO4.chances;
         this.usecBase.generation = usecLO.usecLO4.generation;
         this.usecBase.appearance.body = usecLO.usecLO4.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO4.appearance.feet;
@@ -634,24 +640,65 @@ export class Bots {
 
     public raiderLoad1() {
         this.raiderBase.inventory.Ammo = raiderLO.raiderLO1.inventory.Ammo;
+        this.raiderBase.inventory.equipment = raiderLO.raiderLO1.inventory.equipment;
         this.raiderBase.chances = raiderLO.raiderLO1.chances;
         this.raiderBase.generation = raiderLO.raiderLO1.generation;
-        this.raiderBase.appearance.body = raiderLO.raiderLO1.appearance.body;
-        this.raiderBase.appearance.feet = raiderLO.raiderLO1.appearance.feet;
-        this.raiderBase.appearance.head = raiderLO.raiderLO1.appearance.head;
-        this.raiderBase.appearance.voice = raiderLO.raiderLO1.appearance.voice;
-        this.raiderBase.inventory.equipment.ArmBand = raiderLO.raiderLO1.inventory.equipment.ArmBand;
-        this.raiderBase.inventory.equipment.Headwear = raiderLO.raiderLO1.inventory.equipment.Headwear;
-        this.raiderBase.inventory.equipment.Earpiece = raiderLO.raiderLO1.inventory.equipment.Earpiece;
-        this.raiderBase.inventory.equipment.FaceCover = raiderLO.raiderLO1.inventory.equipment.FaceCover;
-        this.raiderBase.inventory.equipment.ArmorVest = raiderLO.raiderLO1.inventory.equipment.ArmorVest;
-        this.raiderBase.inventory.equipment.Eyewear = raiderLO.raiderLO1.inventory.equipment.Eyewear;
-        this.raiderBase.inventory.equipment.TacticalVest = raiderLO.raiderLO1.inventory.equipment.TacticalVest;
-        this.raiderBase.inventory.equipment.Backpack = raiderLO.raiderLO1.inventory.equipment.Backpack;
-        this.raiderBase.inventory.equipment.Scabbard = raiderLO.raiderLO1.inventory.equipment.Scabbard;
+        this.raiderBase.appearance.body = raiderLO.appearance.body;
+        this.raiderBase.appearance.feet = raiderLO.appearance.feet;
+        this.raiderBase.appearance.head = raiderLO.appearance.head;
+        this.raiderBase.appearance.voice = raiderLO.appearance.voice;
 
         if (this.modConf.logEverything == true) {
             this.logger.info("raiderLoad1 loaded");
+        }
+    }
+
+    public rogueLoad1() {
+        this.rogueBase.inventory.Ammo = rogueLO.rogueLO1.inventory.Ammo;
+        this.rogueBase.inventory.equipment = rogueLO.rogueLO1.inventory.equipment;
+        this.rogueBase.inventory.mods = rogueLO.rogueLO1.inventory.mods;
+        this.rogueBase.chances = rogueLO.rogueLO1.chances;
+        this.rogueBase.generation = rogueLO.rogueLO1.generation;
+        this.rogueBase.appearance.body = rogueLO.appearance.body;
+        this.rogueBase.appearance.feet = rogueLO.appearance.feet;
+        this.rogueBase.appearance.head = rogueLO.appearance.head;
+        this.rogueBase.appearance.voice = rogueLO.appearance.voice;
+
+        if (this.modConf.logEverything == true) {
+            this.logger.info("rogueLoad1 loaded");
+        }
+    }
+    
+
+    public rogueLoad2() {
+        this.rogueBase.inventory.Ammo = rogueLO.rogueLO2.inventory.Ammo;
+        this.rogueBase.inventory.equipment = rogueLO.rogueLO2.inventory.equipment;
+        this.rogueBase.inventory.mods = rogueLO.rogueLO2.inventory.mods;
+        this.rogueBase.chances = rogueLO.rogueLO2.chances;
+        this.rogueBase.generation = rogueLO.rogueLO2.generation;
+        this.rogueBase.appearance.body = rogueLO.appearance.body;
+        this.rogueBase.appearance.feet = rogueLO.appearance.feet;
+        this.rogueBase.appearance.head = rogueLO.appearance.head;
+        this.rogueBase.appearance.voice = rogueLO.appearance.voice;
+
+        if (this.modConf.logEverything == true) {
+            this.logger.info("rogueLoad2 loaded");
+        }
+    }
+
+    public rogueLoad3() {
+        this.rogueBase.inventory.Ammo = rogueLO.rogueLO3.inventory.Ammo;
+        this.rogueBase.inventory.equipment = rogueLO.rogueLO3.inventory.equipment;
+        this.rogueBase.inventory.mods = rogueLO.rogueLO3.inventory.mods;
+        this.rogueBase.chances = rogueLO.rogueLO3.chances;
+        this.rogueBase.generation = rogueLO.rogueLO3.generation;
+        this.rogueBase.appearance.body = rogueLO.appearance.body;
+        this.rogueBase.appearance.feet = rogueLO.appearance.feet;
+        this.rogueBase.appearance.head = rogueLO.appearance.head;
+        this.rogueBase.appearance.voice = rogueLO.appearance.voice;
+
+        if (this.modConf.logEverything == true) {
+            this.logger.info("rogueLoad3 loaded");
         }
     }
 

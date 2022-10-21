@@ -533,8 +533,8 @@
     },
     "pmcType2": {
         "Factory": {
-            "usec": "followerBigPipe",
-            "bear": "bossKnight"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Customs": {
             "usec": "pmcBot",
@@ -545,20 +545,20 @@
             "bear": "pmcBot"
         },
         "Interchange": {
-            "usec": "followerBigPipe",
-            "bear": "bossKnight"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Laboratory": {
-            "usec": "followerBigPipe",
-            "bear": "bossKnight"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Lighthouse": {
             "usec": "pmcBot",
             "bear": "pmcBot"
         },
         "ReserveBase": {
-            "usec": "followerBigPipe",
-            "bear": "bossKnight"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Shoreline": {
             "usec": "pmcBot",
@@ -571,8 +571,8 @@
     },
     "pmcType3": {
         "Factory": {
-            "usec": "followerBigPipe",
-            "bear": "bossKnight"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Customs": {
             "usec": "pmcBot",
@@ -583,20 +583,20 @@
             "bear": "pmcBot"
         },
         "Interchange": {
-            "usec": "followerBigPipe",
-            "bear": "bossKnight"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Laboratory": {
-            "usec": "followerBigPipe",
-            "bear": "bossKnight"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Lighthouse": {
             "usec": "pmcBot",
             "bear": "pmcBot"
         },
         "ReserveBase": {
-            "usec": "followerBigPipe",
-            "bear": "bossKnight"
+            "usec": "pmcBot",
+            "bear": "pmcBot"
         },
         "Shoreline": {
             "usec": "pmcBot",

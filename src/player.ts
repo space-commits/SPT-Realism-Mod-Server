@@ -70,10 +70,10 @@ export class Player {
             this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 2;
 
             this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
-            this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.55;
+            this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.5;
 
-            this.globalDB.Inertia.BaseJumpPenalty = 0.6;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 0.8;
+            this.globalDB.Inertia.BaseJumpPenalty = 0.58;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 0.78;
 
             this.globalDB.Inertia.SprintBrakeInertia["y"] = 75;
 

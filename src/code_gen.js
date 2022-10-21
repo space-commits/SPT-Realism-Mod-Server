@@ -744,21 +744,11 @@ class CodeGen {
         }
     }
     armorPusherHelper(serverItem, fileItem) {
-        if (this.modConf.realistic_faceshields == true) {
-            if (serverItem._id === fileItem.ItemID) {
-                var serverConfItems = serverItem._props.ConflictingItems;
-                var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true"];
-                var combinedArr = armorPropertyValues.concat(serverConfItems);
-                serverItem._props.ConflictingItems = combinedArr;
-            }
-        }
-        if (this.modConf.realistic_faceshields == false) {
-            if (serverItem._id === fileItem.ItemID) {
-                var serverConfItems = serverItem._props.ConflictingItems;
-                let armorPropertyValues = ["true"];
-                let combinedArr = armorPropertyValues.concat(serverConfItems);
-                serverItem._props.ConflictingItems = combinedArr;
-            }
+        if (serverItem._id === fileItem.ItemID) {
+            var serverConfItems = serverItem._props.ConflictingItems;
+            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true"];
+            var combinedArr = armorPropertyValues.concat(serverConfItems);
+            serverItem._props.ConflictingItems = combinedArr;
         }
     }
     modPusherHelper(serverItem, fileItem) {

@@ -795,26 +795,15 @@ export class CodeGen {
     public armorPusherHelper(serverItem: any, fileItem: any) {
 
 
-        if (this.modConf.realistic_faceshields == true) {
-            if (serverItem._id === fileItem.ItemID) {
 
-                var serverConfItems = serverItem._props.ConflictingItems;
-                var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true"];
+        if (serverItem._id === fileItem.ItemID) {
 
-                var combinedArr = armorPropertyValues.concat(serverConfItems)
-                serverItem._props.ConflictingItems = combinedArr;
-            }
+            var serverConfItems = serverItem._props.ConflictingItems;
+            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true"];
+
+            var combinedArr = armorPropertyValues.concat(serverConfItems)
+            serverItem._props.ConflictingItems = combinedArr;
         }
-
-        if (this.modConf.realistic_faceshields == false) {
-            if (serverItem._id === fileItem.ItemID) {
-                var serverConfItems = serverItem._props.ConflictingItems;
-                let armorPropertyValues: string[] = ["true"];
-                let combinedArr: string[] = armorPropertyValues.concat(serverConfItems)
-                serverItem._props.ConflictingItems = combinedArr;
-            }
-        }
-
     }
 
     public modPusherHelper(serverItem: any, fileItem: any) {
