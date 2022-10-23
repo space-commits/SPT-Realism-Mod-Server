@@ -404,7 +404,7 @@
           "TIER2MEDKIT",
           "TIER3MEDKIT"
         ],
-        "SecuredContainer": [],
+        "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }
     },
@@ -983,7 +983,7 @@
           "TIER2MEDKIT",
           "TIER3MEDKIT"
         ],
-        "SecuredContainer": [],
+        "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }
     },
@@ -1679,7 +1679,7 @@
           "TIER2MEDKIT",
           "TIER3MEDKIT"
         ],
-        "SecuredContainer": [],
+        "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }
     },

@@ -104,6 +104,8 @@
         "RecoilHandDamping": 0.65,
         "WeaponAllowADS": false,
         "Weight": 2.92,
-        "DurabilityBurnRatio": 1.15
+        "DurabilityBurnRatio": 1.15,
+        "AutoROF": 30,
+        "SemiROF": 450
     }
 }

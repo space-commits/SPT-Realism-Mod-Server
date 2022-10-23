@@ -19,6 +19,7 @@ const items_1 = require("./items");
 const code_gen_1 = require("./code_gen");
 const quests_1 = require("./quests");
 const traders_1 = require("./traders");
+const airdrops_1 = require("./airdrops");
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -27,6 +28,7 @@ const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const commonStats = require("../db/bots/common.json");
 const modConfig = require("../config/config.json");
+const airdropLoot = require("../db/airdrops/airdrop_loot.json");
 class Mod {
     preAkiLoad(container) {
         const logger = container.resolve("WinstonLogger");
@@ -105,6 +107,7 @@ class Mod {
                     const tieredFlea = new fleamarket_1.TieredFlea(tables);
                     const player = new player_1.Player(logger, tables, modConfig, custProfile, commonStats);
                     const helper = new helper_1.Helper(tables, arrays, logger);
+                    const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     let scavData = profileHelper.getScavProfile(sessionID);
                     try {
@@ -193,6 +196,9 @@ class Mod {
                         }
                         this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
                         this.updateBots(pmcData, logger, modConfig, bots);
+                        if (modConfig.airdrop_changes == true) {
+                            this.updateAirdrops(logger, modConfig, airConf);
+                        }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
                         }
@@ -242,6 +248,7 @@ class Mod {
                     const tables = databaseServer4.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
+                    const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
                     const arrays = new arrays_1.Arrays(tables);
                     const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(tables);
@@ -249,6 +256,9 @@ class Mod {
                     try {
                         this.updateBots(pmcData, logger, modConfig, bots);
                         this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
+                        if (modConfig.airdrop_changes == true) {
+                            this.updateAirdrops(logger, modConfig, airConf);
+                        }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
                         }
@@ -269,6 +279,7 @@ class Mod {
         const tables = databaseServer.getTables();
         const AKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const jsonUtil = container.resolve("JsonUtil");
+        const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const arrays = new arrays_1.Arrays(tables);
         const helper = new helper_1.Helper(tables, arrays, logger);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
@@ -286,6 +297,7 @@ class Mod {
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig);
+        const airdrop = new airdrops_1.Airdrops(logger, tables, modConfig, airConf);
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
@@ -293,6 +305,9 @@ class Mod {
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
+        if (modConfig.airdrop_changes == true) {
+            airdrop.loadAirdrops();
+        }
         if (modConfig.trader_changes == true) {
             traders.loadTraders();
         }
@@ -493,6 +508,52 @@ class Mod {
                     }
                 }
             }
+        }
+    }
+    airdropWeighter(medical, provisions, materials, supplies, elecronics, ammo, weapons, gear) {
+        function add(a, b) { return a + b; }
+        var airdropLoot = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot"];
+        var weights = [medical, provisions, materials, supplies, elecronics, ammo, weapons, gear];
+        var totalWeight = weights.reduce(add, 0);
+        var weighedElems = [];
+        var currentElem = 0;
+        while (currentElem < airdropLoot.length) {
+            for (let i = 0; i < weights[currentElem]; i++)
+                weighedElems[weighedElems.length] = airdropLoot[currentElem];
+            currentElem++;
+        }
+        var randomTier = Math.floor(Math.random() * totalWeight);
+        return weighedElems[randomTier];
+    }
+    updateAirdrops(logger, modConfig, airConf) {
+        var loot = this.airdropWeighter(30, 30, 15, 15, 10, 5, 5, 5);
+        if (loot === "medical_loot") {
+            airConf.loot = airdropLoot.medical_loot;
+        }
+        if (loot === "provisions_loot") {
+            airConf.loot = airdropLoot.provisions_loot;
+        }
+        if (loot === "materials_loot") {
+            airConf.loot = airdropLoot.materials_loot;
+        }
+        if (loot === "supplies_loot") {
+            airConf.loot = airdropLoot.supplies_loot;
+        }
+        if (loot === "electronics_loot") {
+            airConf.loot = airdropLoot.electronics_loot;
+        }
+        if (loot === "ammo_loot") {
+            airConf.loot = airdropLoot.ammo_loot;
+        }
+        if (loot === "weapons_loot") {
+            airConf.loot = airdropLoot.weapons_loot;
+        }
+        if (loot === "gear_loot") {
+            airConf.loot = airdropLoot.gear_loot;
+        }
+        if (modConfig.logEverything == true) {
+            logger.info("Aidrop Loot = " + loot);
+            logger.info("Realism Mod: Airdrop Loot Has Been Reconfigured");
         }
     }
 }

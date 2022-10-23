@@ -773,8 +773,7 @@
             "576fd4ec2459777f0b518431",
             "5947db3f86f77447880cf76f",
             "6113d6c3290d254f5e6b27db",
-            "5cf638cbd7f00c06595bc936",
-            "618a5d5852ecee1505530b2a"
+            "5cf638cbd7f00c06595bc936"
           ]
         },
         "55d48a634bdc2d8b2f8b456a": {
@@ -1397,7 +1396,7 @@
           "5696686a4bdc2da3298b456a",
           "569668774bdc2da2298b4568"
         ],
-        "SecuredContainer": [],
+        "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }
     },
@@ -3349,7 +3348,7 @@
           "5696686a4bdc2da3298b456a",
           "569668774bdc2da2298b4568"
         ],
-        "SecuredContainer": [],
+        "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }
     },
@@ -5291,7 +5290,7 @@
           "5696686a4bdc2da3298b456a",
           "569668774bdc2da2298b4568"
         ],
-        "SecuredContainer": [],
+        "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }
     },
@@ -7845,7 +7844,7 @@
           "5696686a4bdc2da3298b456a",
           "569668774bdc2da2298b4568"
         ],
-        "SecuredContainer": [],
+        "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }
     },

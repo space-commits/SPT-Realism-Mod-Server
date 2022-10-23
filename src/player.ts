@@ -54,7 +54,6 @@ export class Player {
             this.globalDB.Stamina.CrouchConsumption["x"] = 3.5;
             this.globalDB.Stamina.CrouchConsumption["y"] = 5;
 
-
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
 
@@ -69,11 +68,11 @@ export class Player {
             this.globalDB.Inertia.SpeedLimitDurationMax["x"] *= 2;
             this.globalDB.Inertia.SpeedLimitDurationMax["y"] *= 2;
 
-            this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 1;
-            this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.5;
+            this.globalDB.Inertia.SpeedInertiaAfterJump["x"] = 0.98;
+            this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.47;
 
-            this.globalDB.Inertia.BaseJumpPenalty = 0.58;
-            this.globalDB.Inertia.BaseJumpPenaltyDuration = 0.78;
+            this.globalDB.Inertia.BaseJumpPenalty = 0.55;
+            this.globalDB.Inertia.BaseJumpPenaltyDuration = 0.75;
 
             this.globalDB.Inertia.SprintBrakeInertia["y"] = 75;
 
@@ -84,10 +83,6 @@ export class Player {
             this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.58;
 
             this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.31;
-
-            this.globalDB.Health.Falling.DamagePerMeter = 11;
-            this.globalDB.Health.Falling.SafeHeight = 2;
-            this.globalDB.Stamina.SafeHeightOverweight = 1.67;
 
             this.globalDB.Stamina.Capacity = 140;
             this.globalDB.Stamina.BaseRestorationRate = 11;
@@ -124,6 +119,20 @@ export class Player {
                 this.logger.info("Movement Changes Enabled");
             }
         }
+
+        if(this.modConf.fall_damage_changes == true){
+            this.globalDB.Health.Falling.DamagePerMeter = 10;
+            this.globalDB.Health.Falling.SafeHeight = 2.15;
+            this.globalDB.Stamina.SafeHeightOverweight = 1.8;
+        }
+
+        
+        if(this.modConf.no_fall_damage == true){
+            this.globalDB.Health.Falling.DamagePerMeter = 0;
+            this.globalDB.Health.Falling.SafeHeight = 1000;
+            this.globalDB.Stamina.SafeHeightOverweight = 10000;
+        }
+
 
         if (this.modConf.med_changes == true) {
             this.globalDB.Health.Effects.Existence.EnergyDamage = 1;
