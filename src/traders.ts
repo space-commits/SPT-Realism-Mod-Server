@@ -1,5 +1,6 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
+import { ITraderConfig } from "@spt-aki/models/spt/config/ITraderConfig";
 
 const customPrap = require("../db/traders/prapor/assort.json");
 const customThera = require("../db/traders/therapist/assort.json");
@@ -8,6 +9,8 @@ const customPK = require("../db/traders/pk/assort.json");
 const customMech = require("../db/traders/mechanic/assort.json");
 const customRag = require("../db/traders/ragman/assort.json");
 const customJaeg = require("../db/traders/jaeger/assort.json");
+
+const fenseLimits = require("../db/traders/fence/fenceLimits.json");
 
 // const sellCatPrap = require("../db/traders/prapor/sell_categories.json");
 const sellCatThera = require("../db/traders/therapist/sell_categories.json");
@@ -19,7 +22,7 @@ const sellCatMech = require("../db/traders/mechanic/sell_categories.json");
 
 
 export class Traders {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) {}
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf : ITraderConfig) {}
 
 
     public loadTraders() {
@@ -31,6 +34,13 @@ export class Traders {
         this.tables.traders['5a7c2eca46aef81a7ca2145d'].base.sell_category = sellCatMech.sell_category;
         // this.tables.traders['5ac3b934156ae10c4430e83c'].base.sell_category = sellCatRag;
         // this.tables.traders['5c0647fdd443bc2504c2d371'].base.sell_category = sellCatJaeg;
+
+        this.traderConf.fence.maxPresetsPercent = 5;
+        this.traderConf.fence.partialRefreshChangePercent = 30;
+        this.traderConf.fence.assortSize = 60;
+        this.traderConf.fence.itemPriceMult = 1.8;
+        this.traderConf.fence.presetPriceMult = 2.5;
+        this.traderConf.fence.itemTypeLimits = fenseLimits.itemTypeLimits;
 
         if (this.modConf.logEverything == true) {
             this.logger.info("Traders Loaded");

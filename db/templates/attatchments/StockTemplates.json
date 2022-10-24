@@ -275,7 +275,7 @@
     "59ecc28286f7746d7a68aa8c": {
         "ItemID": "59ecc28286f7746d7a68aa8c",
         "Name": "stock_ak_zenit_pt-3_lock",
-        "ModType": "",
+        "ModType": "stock_adapter",
         "VerticalRecoil": -15,
         "HorizontalRecoil": 20,
         "Dispersion": 0,
@@ -296,7 +296,7 @@
     "5b222d335acfc4771e1be099": {
         "ItemID": "5b222d335acfc4771e1be099",
         "Name": "stock_ak_zenit_pt_1_lock_fixed",
-        "ModType": "",
+        "ModType": "stock_adapter",
         "VerticalRecoil": -10,
         "HorizontalRecoil": 20,
         "Dispersion": 0,
@@ -317,7 +317,7 @@
     "5ac78eaf5acfc4001926317a": {
         "ItemID": "5ac78eaf5acfc4001926317a",
         "Name": "stock_ak_zenit_pt-3m_lock",
-        "ModType": "",
+        "ModType": "stock_adapter",
         "VerticalRecoil": -15,
         "HorizontalRecoil": 20,
         "Dispersion": 0,

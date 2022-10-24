@@ -1527,9 +1527,11 @@ export class Armor {
                 fileData._props.Weight = 0.99;
             }
 
-            //Blunt Damage Multiplier for Armored Rigs and Vests
+            //Multiplier for Armored Rigs and Vests
             if (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567") {
                 fileData._props.BluntThroughput *= 1;
+                fileData._props.speedPenaltyPercent *= 1.25;
+                fileData._props.weaponErgonomicPenalty *= 1.25;
             }
 
             //Blunt Damage Multiplier for Armored Rigs and Vests that below lvl 6
@@ -1555,6 +1557,10 @@ export class Armor {
 
 
             //Blunt Damage Multiplier for Helmets
+            if (fileData._parent === "5a341c4086f77401f2541505" || fileData._parent === "5a341c4686f77469e155819e" || fileData._parent === "57bef4c42459772e8d35a53b" ) {
+                fileData._props.speedPenaltyPercent *= 1.25;
+                fileData._props.weaponErgonomicPenalty *= 1.25;
+            }
 
             if (fileData._parent === "5a341c4086f77401f2541505" && fileData._props.armorClass <= 3 || fileData._parent === "5a341c4686f77469e155819e") {
                 fileData._props.BluntThroughput *= 0.65;

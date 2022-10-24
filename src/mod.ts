@@ -9,6 +9,7 @@ import type { StaticRouterModService } from "@spt-aki/services/mod/staticRouter/
 import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
 import { HttpResponseUtil } from "@spt-aki/utils/HttpResponseUtil";
 import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
+import { ITraderConfig } from "@spt-aki/models/spt/config/ITraderConfig";
 import { IAirdropConfig } from "@spt-aki/models/spt/config/IAirdropConfig";
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
 import { RandomUtil } from "@spt-aki/utils/RandomUtil";
@@ -371,6 +372,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const AKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
+        const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const arrays = new Arrays(tables);
         const helper = new Helper(tables, arrays, logger);
         const ammo = new Ammo(logger, tables, modConfig);
@@ -387,7 +389,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         const quests = new Quests(logger, tables, modConfig);
-        const traders = new Traders(logger, tables, modConfig);
+        const traders = new Traders(logger, tables, modConfig, traderConf);
         const airdrop = new Airdrops(logger, tables, modConfig, airConf);
 
         // codegen.attTemplatesCodeGen();

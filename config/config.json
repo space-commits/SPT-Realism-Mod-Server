@@ -1,5 +1,6 @@
 {
-    " //A NOTE ON CONFIGURATION: I encourage you try this mod as it is intended and leave everything set to true.//":"All these settings are balanced with each other, the mod is supposed to be hardcore and unforgivng like EFT is supposed to be. Either way, enjoy :)//",
+    " //A NOTE ON CONFIGURATION: I encourage you try this mod as it is intended and leave everything set to their defaults.//":
+    "All these settings are balanced with each other, the mod is supposed to be hardcore and unforgivng like EFT is supposed to be. Either way, enjoy :)//",
    
     "//Disables Armour and Ammo changes if set to false, the core of Realism Mod. Player and bot health will also no longer be adjusted and starting profiles no longer changed.//": 
     "//If disabled, current armour durablity and player health will not be corrected but max durability/health will be.//",
@@ -50,19 +51,19 @@
 
     "//If set to true, the fleamarket will unlock progressivly by category of item based on the player's level.//": 
     "//There are 7 tiers in total, the final one being a 'full unlock'.//",
-    "tiered_flea": true,
+    "tiered_flea": false,
    
     "//Enables a hardcore fleamarket config. There are very few offers per item, if any at all. Item condition and stack amount vary a lot, high prices, and so on.//": 
     "",
     "flea_changes": false,
 
-    "//If set to true, airdrops will have 'types' (medical supplies, food, ammo, etc.) and will only have items of that type.//" : 
-    "//Different types have different rarity, airdrop types will be rerolled when starting the game or at the end of raids.//",
-    "airdrop_changes" : true,
-
     "//Enables changes to trader sell categories to be more unique and makre more sense.//": 
     "For now just changes what Therapist, Skier and Mechanic will buy. Many more changes to traders will come in the future.//",
     "trader_changes": false,
+
+    "//If set to true, airdrops will have 'types' (medical supplies, food, ammo, etc.) and will only have items of that type.//" : 
+    "//Different types have different rarity, airdrop types will be rerolled when starting the game or at the end of raids.//",
+    "airdrop_changes" : true,
 
     "//All items examined if set to true.//": "",
     "all_examined": true,
@@ -84,8 +85,8 @@
     "all_USEC": false,
     "all_bear": false,
     "dev_mode": false,
-    "guarantee_boss_spawn": false,
-    "disable_flea_blacklist": false,
-    "no_fall_damage": true,
+    "guarantee_boss_spawn": true,
+    "disable_flea_blacklist": true,
+    "no_fall_damage": false,
     "logEverything": true
 }

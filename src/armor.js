@@ -43,9 +43,9 @@ class Armor {
                 fileData._props.Durability = 80;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 3;
-                fileData._props.speedPenaltyPercent = -2;
+                fileData._props.speedPenaltyPercent = -2.5;
                 fileData._props.mousePenalty = 0;
-                fileData._props.weaponErgonomicPenalty = -2;
+                fileData._props.weaponErgonomicPenalty = -2.5;
                 fileData._props.BluntThroughput = 0.45;
                 fileData._props.ArmorMaterial = 'Aramid';
                 fileData._props.Weight = 3.5;
@@ -68,9 +68,9 @@ class Armor {
                 fileData._props.Durability = 90;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 4;
-                fileData._props.speedPenaltyPercent = -1;
+                fileData._props.speedPenaltyPercent = -1.25;
                 fileData._props.mousePenalty = 0;
-                fileData._props.weaponErgonomicPenalty = -1;
+                fileData._props.weaponErgonomicPenalty = -1.25;
                 fileData._props.BluntThroughput = 0.52;
                 fileData._props.ArmorMaterial = 'Aramid';
                 fileData._props.Weight = 3;

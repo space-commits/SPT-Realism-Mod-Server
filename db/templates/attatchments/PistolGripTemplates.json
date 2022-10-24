@@ -1161,22 +1161,6 @@
         "ConflictingItems": [],
         "Weight": 0.146
     },
-    "5a69a2ed8dc32e000d46d1f1": {
-        "ItemID": "5a69a2ed8dc32e000d46d1f1",
-        "Name": "pistolgrip_val_rotor_43_tube_adapter",
-        "ModType": "",
-        "VerticalRecoil": -20,
-        "HorizontalRecoil": 20,
-        "Dispersion": 0,
-        "AimSpeed": 0,
-        "DrawSpeed": 0,
-        "Ergonomics": 2,
-        "Accuracy": 0,
-        "ConflictingItems": [
-            "57c450252459772d28133253"
-        ],
-        "Weight": 0.065
-    },
     "5dcbd6dddbd3d91b3e5468de": {
         "ItemID": "5dcbd6dddbd3d91b3e5468de",
         "Name": "pistolgrip_mdr_dt_mdr_std_blk",
@@ -1236,7 +1220,7 @@
     "5bfe86a20db834001d23e8f7": {
         "ItemID": "5bfe86a20db834001d23e8f7",
         "Name": "pistolgrip_870_fab_defense_agr_870_grip",
-        "ModType": "grip_buffer_adapter",
+        "ModType": "grip_stock_adapter",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -7,
         "Dispersion": -2,
@@ -1247,10 +1231,26 @@
         "ConflictingItems": [],
         "Weight": 0.13
     },
+    "5a69a2ed8dc32e000d46d1f1": {
+        "ItemID": "5a69a2ed8dc32e000d46d1f1",
+        "Name": "pistolgrip_val_rotor_43_tube_adapter",
+        "ModType": "grip_stock_adapter",
+        "VerticalRecoil": -15,
+        "HorizontalRecoil": 15,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "DrawSpeed": 0,
+        "Ergonomics": 2,
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "57c450252459772d28133253"
+        ],
+        "Weight": 0.065
+    },
     "5e848d99865c0f329958c83b": {
         "ItemID": "5e848d99865c0f329958c83b",
         "Name": "pistolgrip_ks23_toz_ks23_plastic",
-        "ModType": "",
+        "ModType": "grip_stock_adapter",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -6,
         "Dispersion": -2,
@@ -1264,7 +1264,7 @@
     "6259c3d8012d6678ec38eeb8": {
         "ItemID": "6259c3d8012d6678ec38eeb8",
         "Name": "pistolgrip_m3_benelli_telescopic_stock_handle",
-        "ModType": "",
+        "ModType": "grip_stock_adapter",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -7,
         "Dispersion": -2,

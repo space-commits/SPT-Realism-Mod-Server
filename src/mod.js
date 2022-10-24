@@ -280,6 +280,7 @@ class Mod {
         const AKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const jsonUtil = container.resolve("JsonUtil");
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
+        const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const arrays = new arrays_1.Arrays(tables);
         const helper = new helper_1.Helper(tables, arrays, logger);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
@@ -296,7 +297,7 @@ class Mod {
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
-        const traders = new traders_1.Traders(logger, tables, modConfig);
+        const traders = new traders_1.Traders(logger, tables, modConfig, traderConf);
         const airdrop = new airdrops_1.Airdrops(logger, tables, modConfig, airConf);
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();

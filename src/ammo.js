@@ -30,7 +30,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = -150;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -30;
+                fileData._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 1;
                     fileData._props.MisfireChance = 0;
@@ -53,7 +53,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.7;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -15;
+                fileData._props.ammoRec = -10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -99,7 +99,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 21;
+                fileData._props.ammoRec = 22;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.22;
                     fileData._props.MisfireChance = 0;
@@ -122,7 +122,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 70;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 14;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -144,7 +144,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = -30;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 12;
+                fileData._props.ammoRec = 14;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
@@ -166,7 +166,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 33;
+                fileData._props.ammoRec = 30;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -389,7 +389,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.5;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -45;
+                fileData._props.ammoRec = -15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -412,7 +412,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.7;
                 fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -20;
+                fileData._props.ammoRec = -10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -435,7 +435,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 30;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 28;
+                fileData._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -480,7 +480,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 30;
+                fileData._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -502,7 +502,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -12;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -524,7 +524,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.95;
                 fileData._props.ammoAccr = -8;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 10;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -546,7 +546,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.85;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 32;
+                fileData._props.ammoRec = 25;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -569,7 +569,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.9;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -32;
+                fileData._props.ammoRec = -15;
                 fileData._props.BallisticCoeficient = 0.013;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
@@ -615,7 +615,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 70;
+                fileData._props.ammoRec = 40;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -629,7 +629,7 @@ class Ammo {
             if (fileData._id === "5737218f245977612125ba51") {
                 fileData._props.PenetrationPower = 7;
                 fileData._props.ArmorDamage = 195;
-                fileData._props.Damage = 39;
+                fileData._props.Damage = 40;
                 fileData._props.InitialSpeed = 250;
                 fileData._props.RicochetChance = 0.08;
                 fileData._props.FragmentationChance = 0.55;
@@ -638,7 +638,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.5;
                 fileData._props.ammoAccr = 15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -28;
+                fileData._props.ammoRec = -18;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.4;
                     fileData._props.MisfireChance = 0;
@@ -651,7 +651,7 @@ class Ammo {
             if (fileData._id === "57372140245977611f70ee91") {
                 fileData._props.PenetrationPower = 17;
                 fileData._props.ArmorDamage = 69;
-                fileData._props.Damage = 40;
+                fileData._props.Damage = 41;
                 fileData._props.InitialSpeed = 420;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0.38;
@@ -660,7 +660,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.45;
                 fileData._props.ammoAccr = -8;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 31;
+                fileData._props.ammoRec = 21;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.4;
                     fileData._props.MisfireChance = 0;
@@ -673,7 +673,7 @@ class Ammo {
             if (fileData._id === "5737207f24597760ff7b25f2") {
                 fileData._props.PenetrationPower = 7;
                 fileData._props.ArmorDamage = 170;
-                fileData._props.Damage = 32;
+                fileData._props.Damage = 33;
                 fileData._props.InitialSpeed = 280;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.3;
@@ -682,7 +682,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.43;
                 fileData._props.ammoAccr = -5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 3;
+                fileData._props.ammoRec = 6;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -717,7 +717,7 @@ class Ammo {
             if (fileData._id === "57371f8d24597761006c6a81") {
                 fileData._props.PenetrationPower = 13;
                 fileData._props.ArmorDamage = 85;
-                fileData._props.Damage = 32;
+                fileData._props.Damage = 33;
                 fileData._props.InitialSpeed = 315;
                 fileData._props.RicochetChance = 0.42;
                 fileData._props.FragmentationChance = 0.24;
@@ -726,7 +726,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.37;
                 fileData._props.ammoAccr = -2;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -739,7 +739,7 @@ class Ammo {
             if (fileData._id === "57371f2b24597761224311f1") {
                 fileData._props.PenetrationPower = 15;
                 fileData._props.ArmorDamage = 79;
-                fileData._props.Damage = 39;
+                fileData._props.Damage = 40;
                 fileData._props.InitialSpeed = 330;
                 fileData._props.RicochetChance = 0.21;
                 fileData._props.FragmentationChance = 0.35;
@@ -748,7 +748,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.39;
                 fileData._props.ammoAccr = -7;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 10;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.4;
                     fileData._props.MisfireChance = 0;
@@ -783,7 +783,7 @@ class Ammo {
             if (fileData._id === "57371b192459775a9f58a5e0") {
                 fileData._props.PenetrationPower = 8;
                 fileData._props.ArmorDamage = 155;
-                fileData._props.Damage = 43;
+                fileData._props.Damage = 44;
                 fileData._props.InitialSpeed = 297;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.35;
@@ -792,7 +792,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.4;
                 fileData._props.ammoAccr = -4;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 11;
+                fileData._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.4;
                     fileData._props.MisfireChance = 0;
@@ -814,7 +814,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.35;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 4;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -836,7 +836,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.3;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -2;
+                fileData._props.ammoRec = -4;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -849,7 +849,7 @@ class Ammo {
             if (fileData._id === "573720e02459776143012541") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 65;
-                fileData._props.Damage = 36;
+                fileData._props.Damage = 37;
                 fileData._props.InitialSpeed = 325;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.42;
@@ -858,7 +858,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.41;
                 fileData._props.ammoAccr = 11;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 7;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.4;
                     fileData._props.MisfireChance = 0;
@@ -880,7 +880,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.31;
                 fileData._props.ammoAccr = -13;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -902,7 +902,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.31;
                 fileData._props.ammoAccr = -14;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 30;
+                fileData._props.ammoRec = 25;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
@@ -916,7 +916,7 @@ class Ammo {
                 fileData._props.PenetrationPower = 35;
                 fileData._props.ArmorDamage = 45;
                 fileData._props.buckshotBullets = 0;
-                fileData._props.Damage = 28;
+                fileData._props.Damage = 30;
                 fileData._props.InitialSpeed = 480;
                 fileData._props.RicochetChance = 0.44;
                 fileData._props.FragmentationChance = 0.38;
@@ -925,7 +925,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.29;
                 fileData._props.ammoAccr = -13;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 19;
+                fileData._props.ammoRec = 22;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.38;
                     fileData._props.MisfireChance = 0;
@@ -939,7 +939,7 @@ class Ammo {
             if (fileData._id === "5c0d56a986f774449d5de529") {
                 fileData._props.PenetrationPower = 35;
                 fileData._props.ArmorDamage = 35;
-                fileData._props.Damage = 55;
+                fileData._props.Damage = 60;
                 fileData._props.InitialSpeed = 385;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0.35;
@@ -948,7 +948,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.59;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 5.5;
                     fileData._props.MisfireChance = 0;
@@ -959,9 +959,9 @@ class Ammo {
             }
             //QuakeMaker
             if (fileData._id === "5efb0e16aeb21837e749c7ff") {
-                fileData._props.PenetrationPower = 21;
-                fileData._props.ArmorDamage = 65;
-                fileData._props.Damage = 62;
+                fileData._props.PenetrationPower = 20;
+                fileData._props.ArmorDamage = 67;
+                fileData._props.Damage = 68;
                 fileData._props.InitialSpeed = 304;
                 fileData._props.RicochetChance = 0.19;
                 fileData._props.FragmentationChance = 0.15;
@@ -970,7 +970,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.67;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 12;
+                fileData._props.ammoRec = 19;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
@@ -1005,7 +1005,7 @@ class Ammo {
             if (fileData._id === "5a3c16fe86f77452b62de32a") {
                 fileData._props.PenetrationPower = 23;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 57;
+                fileData._props.Damage = 63;
                 fileData._props.InitialSpeed = 457;
                 fileData._props.RicochetChance = 0.16;
                 fileData._props.FragmentationChance = 0.37;
@@ -1014,7 +1014,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.63;
                 fileData._props.ammoAccr = -4;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 11;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.22;
                     fileData._props.MisfireChance = 0;
@@ -1036,7 +1036,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.45;
                 fileData._props.ammoAccr = 5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -4;
+                fileData._props.ammoRec = -10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -1058,7 +1058,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.37;
                 fileData._props.ammoAccr = 13;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 12;
+                fileData._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
@@ -1080,7 +1080,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.35;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 18;
+                fileData._props.ammoRec = 25;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
@@ -1102,7 +1102,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.37;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 20;
+                fileData._props.ammoRec = 30;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
@@ -1116,7 +1116,7 @@ class Ammo {
             if (fileData._id === "5a26ac06c4a282000c5a90a8") {
                 fileData._props.PenetrationPower = 39;
                 fileData._props.ArmorDamage = 34;
-                fileData._props.Damage = 62;
+                fileData._props.Damage = 67;
                 fileData._props.InitialSpeed = 415;
                 fileData._props.RicochetChance = 0.1;
                 fileData._props.FragmentationChance = 0.5;
@@ -1125,7 +1125,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.65;
                 fileData._props.ammoAccr = -5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 0;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -1138,7 +1138,7 @@ class Ammo {
             if (fileData._id === "5a26abfac4a28232980eabff") {
                 fileData._props.PenetrationPower = 47;
                 fileData._props.ArmorDamage = 26;
-                fileData._props.Damage = 56;
+                fileData._props.Damage = 58;
                 fileData._props.InitialSpeed = 400;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.3;
@@ -1147,7 +1147,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.55;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 0;
+                fileData._props.ammoRec = -5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -1160,7 +1160,7 @@ class Ammo {
             if (fileData._id === "5a269f97c4a282000b151807") {
                 fileData._props.PenetrationPower = 52;
                 fileData._props.ArmorDamage = 26;
-                fileData._props.Damage = 52;
+                fileData._props.Damage = 54;
                 fileData._props.InitialSpeed = 420;
                 fileData._props.RicochetChance = 0.45;
                 fileData._props.FragmentationChance = 0.27;
@@ -1169,7 +1169,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.49;
                 fileData._props.ammoAccr = -7;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -1;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.7;
                     fileData._props.MisfireChance = 0;
@@ -1182,7 +1182,7 @@ class Ammo {
             if (fileData._id === "5a26ac0ec4a28200741e1e18") {
                 fileData._props.PenetrationPower = 58;
                 fileData._props.ArmorDamage = 21;
-                fileData._props.Damage = 47;
+                fileData._props.Damage = 50;
                 fileData._props.InitialSpeed = 400;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.21;
@@ -1191,7 +1191,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.45;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -7;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.8;
                     fileData._props.MisfireChance = 0;
@@ -1205,7 +1205,7 @@ class Ammo {
             if (fileData._id === "5ea2a8e200685063ec28c05a") {
                 fileData._props.PenetrationPower = 25;
                 fileData._props.ArmorDamage = 52;
-                fileData._props.Damage = 59;
+                fileData._props.Damage = 64;
                 fileData._props.InitialSpeed = 292;
                 fileData._props.RicochetChance = 0.2;
                 fileData._props.FragmentationChance = 0.3;
@@ -1214,7 +1214,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.65;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -4;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 5;
                     fileData._props.MisfireChance = 0;
@@ -1227,7 +1227,7 @@ class Ammo {
             if (fileData._id === "5efb0fc6aeb21837e749c801") {
                 fileData._props.PenetrationPower = 21;
                 fileData._props.ArmorDamage = 80;
-                fileData._props.Damage = 69;
+                fileData._props.Damage = 73;
                 fileData._props.InitialSpeed = 274;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.27;
@@ -1236,7 +1236,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.73;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 6;
+                fileData._props.ammoRec = 22;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 1.2;
                     fileData._props.MisfireChance = 0;
@@ -1249,7 +1249,7 @@ class Ammo {
             if (fileData._id === "5efb0d4f4bc50b58e81710f3") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 60;
-                fileData._props.Damage = 42;
+                fileData._props.Damage = 44;
                 fileData._props.InitialSpeed = 254;
                 fileData._props.RicochetChance = 0.25;
                 fileData._props.FragmentationChance = 0.23;
@@ -1271,7 +1271,7 @@ class Ammo {
             if (fileData._id === "5e81f423763d9f754677bf2e") {
                 fileData._props.PenetrationPower = 25;
                 fileData._props.ArmorDamage = 55;
-                fileData._props.Damage = 47;
+                fileData._props.Damage = 49;
                 fileData._props.InitialSpeed = 290;
                 fileData._props.RicochetChance = 0.18;
                 fileData._props.FragmentationChance = 0.24;
@@ -1280,7 +1280,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.55;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 13;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -1302,7 +1302,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.41;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 32;
+                fileData._props.ammoRec = 30;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 1.14;
                     fileData._props.MisfireChance = 0;
@@ -1336,7 +1336,7 @@ class Ammo {
             if (fileData._id === "62330c18744e5e31df12f516") {
                 fileData._props.PenetrationPower = 40;
                 fileData._props.ArmorDamage = 53;
-                fileData._props.Damage = 67;
+                fileData._props.Damage = 70;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.25;
                 fileData._props.HeavyBleedingDelta = 0.35;
@@ -1356,7 +1356,7 @@ class Ammo {
             if (fileData._id === "62330c40bdd19b369e1e53d1") {
                 fileData._props.PenetrationPower = 41;
                 fileData._props.ArmorDamage = 47;
-                fileData._props.Damage = 65;
+                fileData._props.Damage = 67;
                 fileData._props.RicochetChance = 0.4;
                 fileData._props.FragmentationChance = 0.12;
                 fileData._props.HeavyBleedingDelta = 0.27;
@@ -1376,7 +1376,7 @@ class Ammo {
             if (fileData._id === "62330b3ed4dc74626d570b95") {
                 fileData._props.PenetrationPower = 42;
                 fileData._props.ArmorDamage = 40;
-                fileData._props.Damage = 55;
+                fileData._props.Damage = 58;
                 fileData._props.RicochetChance = 0.5;
                 fileData._props.FragmentationChance = 0.08;
                 fileData._props.HeavyBleedingDelta = 0.22;
@@ -1397,7 +1397,7 @@ class Ammo {
             if (fileData._id === "5ba26812d4351e003201fef1") {
                 fileData._props.PenetrationPower = 40;
                 fileData._props.ArmorDamage = 17;
-                fileData._props.Damage = 34;
+                fileData._props.Damage = 36;
                 fileData._props.InitialSpeed = 690;
                 fileData._props.RicochetChance = 0.27;
                 fileData._props.FragmentationChance = 0.5;
@@ -1406,7 +1406,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.37;
                 fileData._props.ammoAccr = -5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -2;
+                fileData._props.ammoRec = -5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -1428,7 +1428,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.45;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -20;
+                fileData._props.ammoRec = -15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
@@ -1472,7 +1472,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.25;
                 fileData._props.ammoAccr = -8;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -3;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -1486,7 +1486,7 @@ class Ammo {
             if (fileData._id === "5cc86832d7f00c000d3a6e6c") {
                 fileData._props.PenetrationPower = 50;
                 fileData._props.ArmorDamage = 10;
-                fileData._props.Damage = 35;
+                fileData._props.Damage = 36;
                 fileData._props.InitialSpeed = 729;
                 fileData._props.RicochetChance = 0.45;
                 fileData._props.FragmentationChance = 0.39;
@@ -1495,7 +1495,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.35;
                 fileData._props.ammoAccr = -8;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 11;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
@@ -1517,7 +1517,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.29;
                 fileData._props.ammoAccr = -9;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 3;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -1530,7 +1530,7 @@ class Ammo {
             if (fileData._id === "5cc86840d7f00c002412c56c") {
                 fileData._props.PenetrationPower = 48;
                 fileData._props.ArmorDamage = 11;
-                fileData._props.Damage = 37;
+                fileData._props.Damage = 38;
                 fileData._props.InitialSpeed = 724;
                 fileData._props.RicochetChance = 0.5;
                 fileData._props.FragmentationChance = 0.37;
@@ -1552,7 +1552,7 @@ class Ammo {
             if (fileData._id === "5cc80f8fe4a949033b0224a2") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 69;
-                fileData._props.Damage = 39;
+                fileData._props.Damage = 40;
                 fileData._props.InitialSpeed = 594;
                 fileData._props.RicochetChance = 0.12;
                 fileData._props.FragmentationChance = 0.43;
@@ -1561,7 +1561,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.39;
                 fileData._props.ammoAccr = 5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -6;
+                fileData._props.ammoRec = -7;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -1574,7 +1574,7 @@ class Ammo {
             if (fileData._id === "5cc80f53e4a949000e1ea4f8") {
                 fileData._props.PenetrationPower = 49;
                 fileData._props.ArmorDamage = 10;
-                fileData._props.Damage = 30;
+                fileData._props.Damage = 31;
                 fileData._props.InitialSpeed = 716;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.25;
@@ -1596,7 +1596,7 @@ class Ammo {
             if (fileData._id === "5cc80f67e4a949035e43bbba") {
                 fileData._props.PenetrationPower = 51;
                 fileData._props.ArmorDamage = 5;
-                fileData._props.Damage = 24;
+                fileData._props.Damage = 25;
                 fileData._props.InitialSpeed = 305;
                 fileData._props.RicochetChance = 0.1;
                 fileData._props.FragmentationChance = 0.45;
@@ -1605,7 +1605,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.25;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -25;
+                fileData._props.ammoRec = -15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
@@ -1627,12 +1627,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.29;
                 fileData._props.ammoAccr = -7;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 1;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.1;
+                    fileData._props.DurabilityBurnModificator = 1.12;
                     fileData._props.HeatFactor = 1.02;
                 }
             }
@@ -1641,7 +1641,7 @@ class Ammo {
             if (fileData._id === "573602322459776445391df1") {
                 fileData._props.PenetrationPower = 45;
                 fileData._props.ArmorDamage = 70;
-                fileData._props.Damage = 49;
+                fileData._props.Damage = 50;
                 fileData._props.InitialSpeed = 385;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.42;
@@ -1650,12 +1650,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.55;
                 fileData._props.ammoAccr = 1;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.4;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.2;
+                    fileData._props.DurabilityBurnModificator = 1.3;
                     fileData._props.HeatFactor = 1.04;
                 }
             }
@@ -1663,7 +1663,7 @@ class Ammo {
             if (fileData._id === "573601b42459776410737435") {
                 fileData._props.PenetrationPower = 37;
                 fileData._props.ArmorDamage = 72;
-                fileData._props.Damage = 43;
+                fileData._props.Damage = 45;
                 fileData._props.InitialSpeed = 375;
                 fileData._props.RicochetChance = 0.3;
                 fileData._props.FragmentationChance = 0.44;
@@ -1672,7 +1672,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.53;
                 fileData._props.ammoAccr = 2;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -6;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -1685,7 +1685,7 @@ class Ammo {
             if (fileData._id === "5735ff5c245977640e39ba7e") {
                 fileData._props.PenetrationPower = 24;
                 fileData._props.ArmorDamage = 50;
-                fileData._props.Damage = 53;
+                fileData._props.Damage = 54;
                 fileData._props.InitialSpeed = 427;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0.4;
@@ -1694,7 +1694,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.59;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 13;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 1.3;
                     fileData._props.MisfireChance = 0;
@@ -1707,7 +1707,7 @@ class Ammo {
             if (fileData._id === "5735fdcd2459776445391d61") {
                 fileData._props.PenetrationPower = 26;
                 fileData._props.ArmorDamage = 49;
-                fileData._props.Damage = 50;
+                fileData._props.Damage = 51;
                 fileData._props.InitialSpeed = 425;
                 fileData._props.RicochetChance = 0.19;
                 fileData._props.FragmentationChance = 0.47;
@@ -1716,12 +1716,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.61;
                 fileData._props.ammoAccr = -2;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -1;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1;
+                    fileData._props.DurabilityBurnModificator = 1.2;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -1773,7 +1773,7 @@ class Ammo {
             if (fileData._id === "573603562459776430731618") {
                 fileData._props.PenetrationPower = 45;
                 fileData._props.ArmorDamage = 27;
-                fileData._props.Damage = 33;
+                fileData._props.Damage = 34;
                 fileData._props.InitialSpeed = 430;
                 fileData._props.RicochetChance = 0.5;
                 fileData._props.FragmentationChance = 0.28;
@@ -1782,7 +1782,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.41;
                 fileData._props.ammoAccr = -7;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 0;
+                fileData._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -1805,7 +1805,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.69;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -1827,7 +1827,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.55;
                 fileData._props.ammoAccr = -25;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 2.2;
                     fileData._props.MisfireChance = 0;
@@ -1871,7 +1871,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.59;
                 fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -5;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -1893,7 +1893,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.55;
                 fileData._props.ammoAccr = -8;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -2;
+                fileData._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -1916,7 +1916,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -1938,12 +1938,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -6;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1;
+                    fileData._props.DurabilityBurnModificator = 1.1;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -1982,7 +1982,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -1;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
@@ -2005,7 +2005,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.6;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 5;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -2027,7 +2027,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.85;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 7;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
@@ -2049,7 +2049,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.59;
                 fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -39;
+                fileData._props.ammoRec = -15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -2082,7 +2082,7 @@ class Ammo {
             }
             // AAC AP
             if (fileData._id === "5fd20ff893a8961fc660a954") {
-                fileData._props.PenetrationPower = 52;
+                fileData._props.PenetrationPower = 54;
                 fileData._props.ArmorDamage = 55;
                 fileData._props.Damage = 95;
                 fileData._props.InitialSpeed = 640;
@@ -2093,7 +2093,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.55;
                 fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 10;
+                fileData._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
@@ -2116,7 +2116,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.85;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
@@ -2160,7 +2160,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.89;
                 fileData._props.ammoAccr = 5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -6;
+                fileData._props.ammoRec = -5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -2182,7 +2182,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.75;
                 fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 7;
+                fileData._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.8;
                     fileData._props.MisfireChance = 0;
@@ -2205,7 +2205,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 21;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -2294,7 +2294,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.89;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
@@ -2316,7 +2316,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.79;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 5;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -2338,7 +2338,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.75;
                 fileData._props.ammoAccr = -2;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 4;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -2360,7 +2360,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.73;
                 fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 6;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -2405,12 +2405,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 3;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.7;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.3;
+                    fileData._props.DurabilityBurnModificator = 1.4;
                     fileData._props.HeatFactor = 1.06;
                 }
             }
@@ -2427,7 +2427,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.89;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 3;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 2.3;
                     fileData._props.MisfireChance = 0;
@@ -2449,7 +2449,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 10;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 2.4;
                     fileData._props.MisfireChance = 0;
@@ -2493,12 +2493,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.85;
                 fileData._props.ammoAccr = -2;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 1;
+                fileData._props.ammoRec = 2;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.1;
+                    fileData._props.DurabilityBurnModificator = 1.05;
                     fileData._props.HeatFactor = 1.02;
                 }
             }
@@ -2515,12 +2515,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.75;
                 fileData._props.ammoAccr = -5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.2;
+                    fileData._props.DurabilityBurnModificator = 1.4;
                     fileData._props.HeatFactor = 1.04;
                 }
             }
@@ -2537,12 +2537,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.7;
                 fileData._props.ammoAccr = -8;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 0;
+                fileData._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1;
+                    fileData._props.DurabilityBurnModificator = 2;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -2560,12 +2560,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.79;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 6;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 2.7;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.6;
+                    fileData._props.DurabilityBurnModificator = 1.7;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -2583,7 +2583,7 @@ class Ammo {
                 fileData._props.MisfireChance = 0.3;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -25;
+                fileData._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 35;
                     fileData._props.MisfireChance = 0;
@@ -2627,7 +2627,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.67;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -2649,7 +2649,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.65;
                 fileData._props.ammoAccr = -12;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -2671,7 +2671,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.63;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 12;
+                fileData._props.ammoRec = 22;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 1.1;
                     fileData._props.MisfireChance = 0;
@@ -2694,12 +2694,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.85;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 2.2;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.4;
+                    fileData._props.DurabilityBurnModificator = 1.2;
                     fileData._props.HeatFactor = 1.08;
                 }
             }
@@ -2716,12 +2716,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.93;
                 fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 5;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 2.4;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.5;
+                    fileData._props.DurabilityBurnModificator = 1.25;
                     fileData._props.HeatFactor = 1.1;
                 }
             }
@@ -2738,12 +2738,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.49;
                 fileData._props.ammoAccr = -25;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 9;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.9;
+                    fileData._props.DurabilityBurnModificator = 1.4;
                     fileData._props.HeatFactor = 1.18;
                 }
             }
@@ -2761,7 +2761,7 @@ class Ammo {
                 fileData._props.MalfMisfireChance = 35;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -30;
+                fileData._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 50;
                     fileData._props.MisfireChance = 0;
@@ -2783,12 +2783,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.75;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 9;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 1;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.9;
+                    fileData._props.DurabilityBurnModificator = 1.2;
                     fileData._props.HeatFactor = 1.18;
                 }
             }
@@ -2805,12 +2805,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.75;
                 fileData._props.ammoAccr = -2;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -3;
+                fileData._props.ammoRec = -6;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2;
+                    fileData._props.DurabilityBurnModificator = 1;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -2832,7 +2832,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2;
+                    fileData._props.DurabilityBurnModificator = 1;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -2849,12 +2849,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.69;
                 fileData._props.ammoAccr = 5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 4;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2.2;
+                    fileData._props.DurabilityBurnModificator = 1.1;
                     fileData._props.HeatFactor = 1.04;
                 }
             }
@@ -2871,12 +2871,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.65;
                 fileData._props.ammoAccr = -7;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 7;
+                fileData._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2.7;
+                    fileData._props.DurabilityBurnModificator = 1.2;
                     fileData._props.HeatFactor = 1.14;
                 }
             }
@@ -2893,12 +2893,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.67;
                 fileData._props.ammoAccr = -8;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -2;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2;
+                    fileData._props.DurabilityBurnModificator = 1.1;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -2915,12 +2915,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.61;
                 fileData._props.ammoAccr = -5;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 4;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.4;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2.4;
+                    fileData._props.DurabilityBurnModificator = 1.4;
                     fileData._props.HeatFactor = 1.08;
                 }
             }
@@ -2937,12 +2937,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.69;
                 fileData._props.ammoAccr = 25;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -3;
+                fileData._props.ammoRec = 17;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1;
+                    fileData._props.DurabilityBurnModificator = 1.8;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -2959,12 +2959,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.59;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 5;
+                fileData._props.ammoRec = 13;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1.5;
+                    fileData._props.DurabilityBurnModificator = 1.6;
                     fileData._props.HeatFactor = 1.1;
                 }
             }
@@ -2982,7 +2982,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -1;
+                fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.7;
                     fileData._props.MisfireChance = 0;
@@ -3004,7 +3004,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.89;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -2;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 2.4;
                     fileData._props.MisfireChance = 0;
@@ -3048,7 +3048,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.75;
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 5;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
@@ -3092,7 +3092,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.77;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 2;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 1;
                     fileData._props.MisfireChance = 0;
@@ -3114,7 +3114,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.55;
                 fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -2;
+                fileData._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
@@ -3136,7 +3136,7 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.79;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = -3;
+                fileData._props.ammoRec = -4;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -3158,13 +3158,13 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.59;
                 fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 3;
+                fileData._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 6.3;
-                    fileData._props.HeatFactor = 1.06;
+                    fileData._props.DurabilityBurnModificator = 9.3;
+                    fileData._props.HeatFactor = 1.1;
                 }
             }
             // M995
@@ -3180,12 +3180,12 @@ class Ammo {
                 fileData._props.LightBleedingDelta = 0.57;
                 fileData._props.ammoAccr = -7;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 3;
+                fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2.6;
+                    fileData._props.DurabilityBurnModificator = 3.6;
                     fileData._props.HeatFactor = 1.06;
                 }
             }
@@ -3207,7 +3207,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 1.3;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 10;
+                    fileData._props.DurabilityBurnModificator = 8;
                     fileData._props.HeatFactor = 1.24;
                 }
             }

@@ -8,6 +8,7 @@ const customPK = require("../db/traders/pk/assort.json");
 const customMech = require("../db/traders/mechanic/assort.json");
 const customRag = require("../db/traders/ragman/assort.json");
 const customJaeg = require("../db/traders/jaeger/assort.json");
+const fenseLimits = require("../db/traders/fence/fenceLimits.json");
 // const sellCatPrap = require("../db/traders/prapor/sell_categories.json");
 const sellCatThera = require("../db/traders/therapist/sell_categories.json");
 const sellCatSkier = require("../db/traders/skier/sell_categories.json");
@@ -16,10 +17,11 @@ const sellCatMech = require("../db/traders/mechanic/sell_categories.json");
 // const sellCatRag = require("../db/traders/ragman/sell_categories.json");
 // const sellCatJaeg = require("../db/traders/jaeger/sell_categories.json");
 class Traders {
-    constructor(logger, tables, modConf) {
+    constructor(logger, tables, modConf, traderConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
+        this.traderConf = traderConf;
     }
     loadTraders() {
         // this.tables.traders['54cb50c76803fa8b248b4571'].base.sell_category = sellCatPrap;
@@ -29,6 +31,12 @@ class Traders {
         this.tables.traders['5a7c2eca46aef81a7ca2145d'].base.sell_category = sellCatMech.sell_category;
         // this.tables.traders['5ac3b934156ae10c4430e83c'].base.sell_category = sellCatRag;
         // this.tables.traders['5c0647fdd443bc2504c2d371'].base.sell_category = sellCatJaeg;
+        this.traderConf.fence.maxPresetsPercent = 5;
+        this.traderConf.fence.partialRefreshChangePercent = 30;
+        this.traderConf.fence.assortSize = 60;
+        this.traderConf.fence.itemPriceMult = 1.8;
+        this.traderConf.fence.presetPriceMult = 2.5;
+        this.traderConf.fence.itemTypeLimits = fenseLimits.itemTypeLimits;
         if (this.modConf.logEverything == true) {
             this.logger.info("Traders Loaded");
         }

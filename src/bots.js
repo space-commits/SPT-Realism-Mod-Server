@@ -87,13 +87,8 @@ class Bots {
             for (let i in this.map) {
                 if (this.map[i].base?.BossLocationSpawn !== undefined) {
                     for (let k in this.map[i].base.BossLocationSpawn) {
-                        this.map[i].base.BossLocationSpawn[k].BossDifficult = "impossible";
-                        if (this.map[i].base.BossLocationSpawn[k].BossName === "bossKnight") {
-                            this.map[i].base.BossLocationSpawn[k].BossEscortDifficult = "impossible";
-                        }
-                        else {
-                            this.map[i].base.BossLocationSpawn[k].BossEscortDifficult = "hard";
-                        }
+                        this.map[i].base.BossLocationSpawn[k].BossDifficult = "hard";
+                        this.map[i].base.BossLocationSpawn[k].BossEscortDifficult = "hard";
                     }
                 }
             }
