@@ -417,7 +417,7 @@
         "Eyewear": 70,
         "ArmBand": 0,
         "TacticalVest": 100,
-        "Backpack": 15,
+        "Backpack": 25,
         "FirstPrimaryWeapon": 100,
         "SecondPrimaryWeapon": 5,
         "Holster": 15,
@@ -996,7 +996,7 @@
         "Eyewear": 70,
         "ArmBand": 0,
         "TacticalVest": 100,
-        "Backpack": 100,
+        "Backpack": 25,
         "FirstPrimaryWeapon": 100,
         "SecondPrimaryWeapon": 10,
         "Holster": 10,
@@ -1430,7 +1430,7 @@
             "59bfe68886f7746004266202",
             "59bfe68886f7746004266202",
             "59bfe68886f7746004266202",
-            "5c07a8770db8340023300450"
+            "5d4405aaa4b9361e6a4e6bd3"
           ],
           "mod_magazine": [
             "55d4887d4bdc2d962f8b4570",
@@ -1497,7 +1497,7 @@
             "5dfa3d7ac41b2312ea33362a"
           ]
         },
-        "5c07a8770db8340023300450": {
+        "5d4405aaa4b9361e6a4e6bd3": {
           "mod_barrel": [
             "5d440b9fa4b93601354d480c"
           ],
@@ -1692,7 +1692,7 @@
         "Eyewear": 70,
         "ArmBand": 0,
         "TacticalVest": 100,
-        "Backpack": 100,
+        "Backpack": 25,
         "FirstPrimaryWeapon": 100,
         "SecondPrimaryWeapon": 10,
         "Holster": 10,

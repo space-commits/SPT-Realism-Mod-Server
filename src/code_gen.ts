@@ -347,12 +347,12 @@ export class CodeGen {
         let ModMalfunctionChance = 0;
         let ReloadSpeed = 0;
         let AimSpeed = 0;
-        let DrawSpeed = 0;
         let Length = 0;
         let CanCylceSubs = false;
         let RecoilAngle = 0;
         let StockAllowADS = false;
         let FixSpeed = 0;
+        let ChamberSpeed = 0;
         let ModShotDispersion = 0;
         let Ergonomics = serverItem._props.Ergonomics
         let Accuracy = serverItem._props.Accuracy
@@ -458,7 +458,8 @@ export class CodeGen {
                 ConflictingItems,
                 FixSpeed,
                 Ergonomics,
-                Weight
+                Weight,
+                ChamberSpeed
             };
             return item;
         }
@@ -523,7 +524,6 @@ export class CodeGen {
                 HorizontalRecoil,
                 Dispersion,
                 AimSpeed,
-                DrawSpeed,
                 Ergonomics,
                 Accuracy,
                 ConflictingItems,
@@ -544,7 +544,6 @@ export class CodeGen {
                 ModMalfunctionChance,
                 CameraRecoil,
                 AimSpeed,
-                DrawSpeed,
                 Ergonomics,
                 Accuracy,
                 HasShoulderContact,
@@ -586,7 +585,7 @@ export class CodeGen {
                 HorizontalRecoil,
                 Dispersion,
                 AimSpeed,
-                DrawSpeed,
+                ChamberSpeed,
                 Length,
                 Ergonomics,
                 Accuracy,
@@ -622,7 +621,7 @@ export class CodeGen {
                 ModMalfunctionChance,
                 ReloadSpeed,
                 AimSpeed,
-                DrawSpeed,
+                ChamberSpeed,
                 Length,
                 CanCylceSubs,
                 Ergonomics,
@@ -829,7 +828,7 @@ export class CodeGen {
                 var serverConfItems = serverItem._props.ConflictingItems;
                 // var modConfItems = fileItem.ConflictingItems;
                 var modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
-                fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.DrawSpeed?.toString() || "0",
+                fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
                 fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0"];
 
                 // for (let j in modPropertyValues) {

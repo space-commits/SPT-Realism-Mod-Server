@@ -1528,7 +1528,7 @@ export class Armor {
             }
 
             //Multiplier for Armored Rigs and Vests
-            if (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567") {
+            if (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567" && fileData._props.speedPenaltyPercent != null) {
                 fileData._props.BluntThroughput *= 1;
                 fileData._props.speedPenaltyPercent *= 1.25;
                 fileData._props.weaponErgonomicPenalty *= 1.25;
@@ -1557,7 +1557,7 @@ export class Armor {
 
 
             //Blunt Damage Multiplier for Helmets
-            if (fileData._parent === "5a341c4086f77401f2541505" || fileData._parent === "5a341c4686f77469e155819e" || fileData._parent === "57bef4c42459772e8d35a53b" ) {
+            if (fileData._parent === "5a341c4086f77401f2541505" || fileData._parent === "5a341c4686f77469e155819e" || fileData._parent === "57bef4c42459772e8d35a53b" && fileData._props.speedPenaltyPercent != null) {
                 fileData._props.speedPenaltyPercent *= 1.25;
                 fileData._props.weaponErgonomicPenalty *= 1.25;
             }

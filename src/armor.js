@@ -43,9 +43,9 @@ class Armor {
                 fileData._props.Durability = 80;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 3;
-                fileData._props.speedPenaltyPercent = -2.5;
+                fileData._props.speedPenaltyPercent = -2;
                 fileData._props.mousePenalty = 0;
-                fileData._props.weaponErgonomicPenalty = -2.5;
+                fileData._props.weaponErgonomicPenalty = -2;
                 fileData._props.BluntThroughput = 0.45;
                 fileData._props.ArmorMaterial = 'Aramid';
                 fileData._props.Weight = 3.5;
@@ -68,9 +68,9 @@ class Armor {
                 fileData._props.Durability = 90;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 4;
-                fileData._props.speedPenaltyPercent = -1.25;
+                fileData._props.speedPenaltyPercent = -1;
                 fileData._props.mousePenalty = 0;
-                fileData._props.weaponErgonomicPenalty = -1.25;
+                fileData._props.weaponErgonomicPenalty = -1;
                 fileData._props.BluntThroughput = 0.52;
                 fileData._props.ArmorMaterial = 'Aramid';
                 fileData._props.Weight = 3;
@@ -1514,9 +1514,11 @@ class Armor {
                 fileData._props.ArmorMaterial = 'Ceramic';
                 fileData._props.Weight = 0.99;
             }
-            //Blunt Damage Multiplier for Armored Rigs and Vests
-            if (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567") {
+            //Multiplier for Armored Rigs and Vests
+            if (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567" && fileData._props.speedPenaltyPercent != null) {
                 fileData._props.BluntThroughput *= 1;
+                fileData._props.speedPenaltyPercent *= 1.25;
+                fileData._props.weaponErgonomicPenalty *= 1.25;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that below lvl 6
             if (fileData._props.armorClass <= 6 && (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567")) {
@@ -1539,6 +1541,10 @@ class Armor {
                 fileData._props.BluntThroughput *= 1.4;
             }
             //Blunt Damage Multiplier for Helmets
+            if (fileData._parent === "5a341c4086f77401f2541505" || fileData._parent === "5a341c4686f77469e155819e" || fileData._parent === "57bef4c42459772e8d35a53b" && fileData._props.speedPenaltyPercent != null) {
+                fileData._props.speedPenaltyPercent *= 1.25;
+                fileData._props.weaponErgonomicPenalty *= 1.25;
+            }
             if (fileData._parent === "5a341c4086f77401f2541505" && fileData._props.armorClass <= 3 || fileData._parent === "5a341c4686f77469e155819e") {
                 fileData._props.BluntThroughput *= 0.65;
             }

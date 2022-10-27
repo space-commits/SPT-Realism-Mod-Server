@@ -35,7 +35,7 @@ class Bots {
     }
     loadBots() {
         if (this.modConf.openZonesFix == true) {
-            for (const location in botZones.zones) {
+            for (let location in botZones.zones) {
                 this.tables.locations[location].base.OpenZones = botZones.zones[location];
             }
         }

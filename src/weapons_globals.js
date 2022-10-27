@@ -70,13 +70,13 @@ class WeaponsGlobals {
                     || fileData._props.weapClass === "machinegun"
                     || fileData._props.weapClass === "marksmanRifle"
                     || fileData._props.weapClass === "assaultRifle") {
-                    fileData._props.RecoilForceUp *= 0.7;
+                    fileData._props.RecoilForceUp *= 0.8;
                     fileData._props.RecoilForceBack *= 0.5;
                     fileData._props.Convergence *= 5.5;
                     fileData._props.RecolDispersion *= 0.5;
                     fileData._props.CameraRecoil *= 0.5;
                     fileData._props.CameraSnap *= 0.5;
-                    fileData._props.Ergonomics = 60;
+                    fileData._props.Ergonomics *= 1.1;
                 }
                 if (fileData._props.weapClass === "pistol") {
                     fileData._props.RecoilForceUp *= 0.3;
@@ -85,7 +85,7 @@ class WeaponsGlobals {
                     fileData._props.RecolDispersion *= 0.5;
                     fileData._props.CameraRecoil *= 1;
                     fileData._props.CameraSnap *= 1.7;
-                    fileData._props.Ergonomics = 60;
+                    fileData._props.Ergonomics *= 1.1;
                 }
             }
             this.globalDB.Aiming.RecoilCrank = true;

@@ -268,7 +268,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": 3.5
+                            "value": 3.7
                         },
                         "width": {
                             "compareMethod": "<=",
@@ -526,7 +526,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": "4"
+                            "value": "4.2"
                         },
                         "width": {
                             "compareMethod": ">=",
@@ -778,7 +778,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": 3.8
+                            "value": 4
                         },
                         "width": {
                             "compareMethod": ">=",
@@ -952,7 +952,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": "7.5"
+                            "value": "7.8"
                         },
                         "width": {
                             "compareMethod": ">=",
@@ -1160,7 +1160,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": "6.9"
+                            "value": "7.2"
                         },
                         "width": {
                             "compareMethod": ">=",
@@ -2021,7 +2021,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": "4.8"
+                            "value": "5.2"
                         },
                         "width": {
                             "compareMethod": ">=",
@@ -2724,7 +2724,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": 4
+                            "value": 5
                         },
                         "width": {
                             "compareMethod": ">=",
@@ -3142,7 +3142,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": 7.3
+                            "value": 7.7
                         },
                         "width": {
                             "compareMethod": ">=",
@@ -3360,7 +3360,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": 5
+                            "value": 5.5
                         },
                         "width": {
                             "compareMethod": ">=",
