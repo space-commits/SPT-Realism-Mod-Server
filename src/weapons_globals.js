@@ -39,6 +39,16 @@ class WeaponsGlobals {
                     fileData._props.RepairComplexity = 0;
                     fileData._props.RepairQuality = 0.1;
                 }
+                if (fileData._props.weapClass === "smg"
+                    || fileData._props.weapClass === "shotgun"
+                    || fileData._props.weapClass === "assaultCarbine"
+                    || fileData._props.weapClass === "sniperRifle"
+                    || fileData._props.weapClass === "assaultRifle"
+                    || fileData._props.weapClass === "machinegun"
+                    || fileData._props.weapClass === "marksmanRifle"
+                    || fileData._props.weapClass === "assaultRifle") {
+                    fileData._props.Ergonomics = 75;
+                }
             }
         }
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {

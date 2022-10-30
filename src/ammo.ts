@@ -15,7 +15,7 @@ export class Ammo {
                 fileData._props.PenetrationPower = 15;
                 fileData._props.ArmorDamage = 0;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 18;
+                fileData._props.Damage = 17;
                 fileData._props.InitialSpeed = 320;
                 fileData._props.BallisticCoeficient = 0.02;
                 fileData._props.RicochetChance = 0.45;
@@ -23,7 +23,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 0.47;
                 fileData._props.HeavyBleedingDelta = 0.6;
                 fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = -150;
+                fileData._props.ammoAccr = -50;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
@@ -39,14 +39,14 @@ export class Ammo {
                 fileData._props.PenetrationPower = 8;
                 fileData._props.ArmorDamage = 50;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 20;
+                fileData._props.Damage = 19;
                 fileData._props.InitialSpeed = 330;
                 fileData._props.RicochetChance = 0.35;
                 fileData._props.FragmentationChance = 0.25;
                 fileData._props.BulletMassGram = 0.9;
-                fileData._props.HeavyBleedingDelta = 0.2; 
+                fileData._props.HeavyBleedingDelta = 0.2;
                 fileData._props.LightBleedingDelta = 0.7;
-                fileData._props.ammoAccr = 0;
+                fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -10;
                 if (this.modConf.malf_changes == true) {
@@ -69,7 +69,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 1.9;
                 fileData._props.HeavyBleedingDelta = 0.3;
                 fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = 30;
+                fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
@@ -108,14 +108,14 @@ export class Ammo {
                 fileData._props.PenetrationPower = 25;
                 fileData._props.ArmorDamage = 15;
                 fileData._props.buckshotBullets = 9;
-                fileData._props.Damage = 25;
+                fileData._props.Damage = 23;
                 fileData._props.InitialSpeed = 430;
                 fileData._props.RicochetChance = 0.22;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 2.1;
                 fileData._props.HeavyBleedingDelta = 0.4;
                 fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = 70;
+                fileData._props.ammoAccr = 25;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
@@ -137,7 +137,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 20;
                 fileData._props.HeavyBleedingDelta = 0.7;
                 fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = -30;
+                fileData._props.ammoAccr = -40;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 14;
                 if (this.modConf.malf_changes == true) {
@@ -159,7 +159,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 36.6;
                 fileData._props.HeavyBleedingDelta = 0.7;
                 fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = -15;
+                fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 30;
                 if (this.modConf.malf_changes == true) {
@@ -182,7 +182,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 22.5;
                 fileData._props.HeavyBleedingDelta = 0.6;
                 fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = -30;
+                fileData._props.ammoAccr = -35;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 50;
                 if (this.modConf.malf_changes == true) {
@@ -204,7 +204,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 28;
                 fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.95;
-                fileData._props.ammoAccr = -20;
+                fileData._props.ammoAccr = -25;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 28;
                 if (this.modConf.malf_changes == true) {
@@ -226,7 +226,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 40;
                 fileData._props.HeavyBleedingDelta = 0.9;
                 fileData._props.LightBleedingDelta = 1;
-                fileData._props.ammoAccr = -10;
+                fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 40;
                 if (this.modConf.malf_changes == true) {
@@ -248,7 +248,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 19.6;
                 fileData._props.HeavyBleedingDelta = 0.9;
                 fileData._props.LightBleedingDelta = 1;
-                fileData._props.ammoAccr = -14;
+                fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 17;
                 if (this.modConf.malf_changes == true) {
@@ -270,7 +270,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 33.5;
                 fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.85;
-                fileData._props.ammoAccr = -10;
+                fileData._props.ammoAccr = 5;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 40;
                 if (this.modConf.malf_changes == true) {
@@ -314,7 +314,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 19.4;
                 fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.95;
-                fileData._props.ammoAccr = 15;
+                fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 26;
                 if (this.modConf.malf_changes == true) {
@@ -336,7 +336,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 19.5;
                 fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.95;
-                fileData._props.ammoAccr = 20;
+                fileData._props.ammoAccr = 30;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 44;
                 if (this.modConf.malf_changes == true) {
@@ -382,7 +382,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 1;
                 fileData._props.HeavyBleedingDelta = 0.2;
                 fileData._props.LightBleedingDelta = 0.5;
-                fileData._props.ammoAccr = 0;
+                fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -15;
                 if (this.modConf.malf_changes == true) {
@@ -405,7 +405,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 1.26;
                 fileData._props.HeavyBleedingDelta = 0.3;
                 fileData._props.LightBleedingDelta = 0.7;
-                fileData._props.ammoAccr = 20;
+                fileData._props.ammoAccr = 0;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -10;
                 if (this.modConf.malf_changes == true) {
@@ -414,6 +414,29 @@ export class Ammo {
                     fileData._props.MalfFeedChance = 0;
                     fileData._props.DurabilityBurnModificator = 1;
                     fileData._props.HeatFactor = 1;
+                }
+            }
+            //7.3mm buckshot
+            if (fileData._id === "5d6e69c7a4b9360b6c0d54e4") {
+                fileData._props.PenetrationPower = 14;
+                fileData._props.ArmorDamage = 22;
+                fileData._props.buckshotBullets = 8;
+                fileData._props.Damage = 25;
+                fileData._props.InitialSpeed = 475;
+                fileData._props.RicochetChance = 0.26;
+                fileData._props.FragmentationChance = 0.2;
+                fileData._props.BulletMassGram = 2;
+                fileData._props.HeavyBleedingDelta = 0.4;
+                fileData._props.LightBleedingDelta = 0.9;
+                fileData._props.ammoAccr = 20;
+                fileData._props.ammoHear = 0;
+                fileData._props.ammoRec = 10;
+                if (this.modConf.malf_changes == true) {
+                    fileData._props.MalfMisfireChance = 0;
+                    fileData._props.MisfireChance = 0;
+                    fileData._props.MalfFeedChance = 0;
+                    fileData._props.DurabilityBurnModificator = 1;
+                    fileData._props.HeatFactor = 1.1;
                 }
             }
             //7.5mm buckshot
@@ -437,29 +460,6 @@ export class Ammo {
                     fileData._props.MalfFeedChance = 0;
                     fileData._props.DurabilityBurnModificator = 2.8;
                     fileData._props.HeatFactor = 1.28;
-                }
-            }
-            //7.3mm buckshot
-            if (fileData._id === "5d6e69c7a4b9360b6c0d54e4") {
-                fileData._props.PenetrationPower = 14;
-                fileData._props.ArmorDamage = 22;
-                fileData._props.buckshotBullets = 8;
-                fileData._props.Damage = 25;
-                fileData._props.InitialSpeed = 475;
-                fileData._props.RicochetChance = 0.26;
-                fileData._props.FragmentationChance = 0.2;
-                fileData._props.BulletMassGram = 2;
-                fileData._props.HeavyBleedingDelta = 0.4;
-                fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = 40;
-                fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 10;
-                if (this.modConf.malf_changes == true) {
-                    fileData._props.MalfMisfireChance = 0;
-                    fileData._props.MisfireChance = 0;
-                    fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 1;
-                    fileData._props.HeatFactor = 1.1;
                 }
             }
             //Star slug
@@ -495,7 +495,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 19.4;
                 fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 1;
-                fileData._props.ammoAccr = -12;
+                fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
@@ -517,7 +517,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 20;
                 fileData._props.HeavyBleedingDelta = 0.9;
                 fileData._props.LightBleedingDelta = 0.95;
-                fileData._props.ammoAccr = -8;
+                fileData._props.ammoAccr = -15;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
@@ -539,7 +539,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 28.7;
                 fileData._props.HeavyBleedingDelta = 0.7;
                 fileData._props.LightBleedingDelta = 0.85;
-                fileData._props.ammoAccr = 10;
+                fileData._props.ammoAccr = 20;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 25;
                 if (this.modConf.malf_changes == true) {
@@ -562,10 +562,10 @@ export class Ammo {
                 fileData._props.BulletMassGram = 3.38;
                 fileData._props.HeavyBleedingDelta = 0.6;
                 fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = 0;
+                fileData._props.ammoAccr = -50;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = -15;
-                fileData._props.BallisticCoeficient = 0.013;
+                fileData._props.BallisticCoeficient = 0.015;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -585,7 +585,7 @@ export class Ammo {
                 fileData._props.BulletMassGram = 3.38;
                 fileData._props.HeavyBleedingDelta = 0.5;
                 fileData._props.LightBleedingDelta = 0.9;
-                fileData._props.ammoAccr = 0;
+                fileData._props.ammoAccr = -25;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 0;
                 fileData._props.BallisticCoeficient = 0.017;
@@ -1933,7 +1933,7 @@ export class Ammo {
                 fileData._props.LightBleedingDelta = 1;
                 fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec =  5;
+                fileData._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
@@ -2414,7 +2414,7 @@ export class Ammo {
                 fileData._props.PenetrationPower = 53;
                 fileData._props.ArmorDamage = 91;
                 fileData._props.Damage = 147;
-                fileData._props.InitialSpeed = 800; 
+                fileData._props.InitialSpeed = 800;
                 fileData._props.RicochetChance = 0.13;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 11.34;
@@ -3328,7 +3328,7 @@ export class Ammo {
                 fileData._props.PenetrationPower = 30;
                 fileData._props.buckshotBullets = 0;
             }
-            if(fileData._parent === "5485a8684bdc2da71d8b4567" && fileData._props?.DurabilityBurnModificator !== undefined && this.modConf.malf_changes == true){
+            if (fileData._parent === "5485a8684bdc2da71d8b4567" && fileData._props?.DurabilityBurnModificator !== undefined && this.modConf.malf_changes == true) {
                 var duraBurn = Math.max(1, fileData._props.DurabilityBurnModificator * 0.6);
                 var misfireChance = Math.max(0, fileData._props.MalfMisfireChance *= 0.9);
                 fileData._props.DurabilityBurnModificator = duraBurn;

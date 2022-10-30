@@ -640,12 +640,12 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    public airdropWeighter(medical: number, provisions: number, materials: number, supplies: number, elecronics: number, ammo: number, weapons: number, gear: number,) {
+    public airdropWeighter(medical: number, provisions: number, materials: number, supplies: number, elecronics: number, ammo: number, weapons: number, gear: number, tp: number) {
 
         function add(a, b) { return a + b; }
 
-        var airdropLoot = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot"];
-        var weights = [medical, provisions, materials, supplies, elecronics, ammo, weapons, gear]
+        var airdropLoot = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
+        var weights = [medical, provisions, materials, supplies, elecronics, ammo, weapons, gear, tp]
         var totalWeight = weights.reduce(add, 0);
 
         var weighedElems = [];
@@ -663,7 +663,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     }
 
     public updateAirdrops(logger: ILogger, modConfig, airConf: IAirdropConfig){
-        var loot = this.airdropWeighter(30, 30, 15, 15, 10, 5, 5, 5);
+        var loot = this.airdropWeighter(60, 60, 30, 30, 20, 10, 10, 10, 1);
 
         if(loot === "medical_loot"){
             airConf.loot = airdropLoot.medical_loot;
@@ -688,6 +688,9 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
         if(loot === "gear_loot"){
             airConf.loot = airdropLoot.gear_loot;
+        }
+        if(loot === "tp"){
+            airConf.loot = airdropLoot.tp;
         }
 
         if (modConfig.logEverything == true) {
