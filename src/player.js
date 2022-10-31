@@ -48,7 +48,7 @@ class Player {
             this.globalDB.Stamina.PoseLevelDecreaseSpeed["y"] = 1.3; //down heavyweight
             this.globalDB.Stamina.CrouchConsumption["x"] = 3.5;
             this.globalDB.Stamina.CrouchConsumption["y"] = 5;
-            this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.15;
+            this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB.Stamina.SprintSpeedLowerLimit = 0.02;
             this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] *= 0.45;
             this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] *= 0.45;

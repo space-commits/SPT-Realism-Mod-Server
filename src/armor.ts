@@ -192,7 +192,7 @@ export class Armor {
                 fileData._props.speedPenaltyPercent = -2;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -2;
-                fileData._props.BluntThroughput = 0.6;
+                fileData._props.BluntThroughput = 0.55;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 8.1;
             }
@@ -204,7 +204,7 @@ export class Armor {
                 fileData._props.speedPenaltyPercent = -2;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -2;
-                fileData._props.BluntThroughput = 0.6;
+                fileData._props.BluntThroughput = 0.55;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 8.1;
             }
@@ -216,7 +216,7 @@ export class Armor {
                 fileData._props.speedPenaltyPercent = -2;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -2;
-                fileData._props.BluntThroughput = 0.6;
+                fileData._props.BluntThroughput = 0.55;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 8.1;
             }
@@ -475,7 +475,7 @@ export class Armor {
                 fileData._props.speedPenaltyPercent = -6;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -9;
-                fileData._props.BluntThroughput = 0.55;
+                fileData._props.BluntThroughput = 0.45;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 10.3;
             }
@@ -536,7 +536,7 @@ export class Armor {
                 fileData._props.speedPenaltyPercent = -8;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -9;
-                fileData._props.BluntThroughput = 0.53;
+                fileData._props.BluntThroughput = 0.48;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 9.9;
             }
@@ -560,7 +560,7 @@ export class Armor {
                 fileData._props.speedPenaltyPercent = -4;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -7;
-                fileData._props.BluntThroughput = 0.57;
+                fileData._props.BluntThroughput = 0.52;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 9.1;
             }

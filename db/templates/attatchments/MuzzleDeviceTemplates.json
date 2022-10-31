@@ -3461,7 +3461,7 @@
         "ItemID": "5ef61964ec7f42238c31e0c1",
         "Name": "muzzle_m1911_anarchy_outdoors_1911_muzzle_brake_1143x23",
         "ModType": "",
-        "VerticalRecoil": -15,
+        "VerticalRecoil": -20,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 0,
