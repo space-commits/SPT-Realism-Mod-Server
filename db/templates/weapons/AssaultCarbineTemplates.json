@@ -118,7 +118,7 @@
         "Ergonomics": 80,
         "VerticalRecoil": 52,
         "HorizontalRecoil": 185,
-        "Dispersion": 11,
+        "Dispersion": 12,
         "CameraRecoil": 0.052,
         "CameraSnap": 3.5,
         "Convergence": 7.2,
@@ -141,7 +141,7 @@
         "Weight": 1.2,
         "DurabilityBurnRatio": 0.38,
         "AutoROF": 800,
-        "SemiROF": 450
+        "SemiROF": 400
     },
     "5d43021ca4b9362eab4b5e25": {
         "ItemID": "5d43021ca4b9362eab4b5e25",
@@ -154,7 +154,7 @@
         "Ergonomics": 80,
         "VerticalRecoil": 52,
         "HorizontalRecoil": 185,
-        "Dispersion": 11,
+        "Dispersion": 12,
         "CameraRecoil": 0.052,
         "CameraSnap": 3.5,
         "Convergence": 7.2,
@@ -177,7 +177,7 @@
         "Weight": 1,
         "DurabilityBurnRatio": 0.32,
         "AutoROF": 800,
-        "SemiROF": 450
+        "SemiROF": 500
     },
     "59e6152586f77473dc057aa1": {
         "ItemID": "59e6152586f77473dc057aa1",

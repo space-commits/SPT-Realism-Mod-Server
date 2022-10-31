@@ -32,8 +32,8 @@ export class Player {
         if (this.modConf.movement_changes == true) {
 
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
-            this.globalDB.Stamina.WalkOverweightLimits["y"] = 75;
-            this.globalDB.Stamina.BaseOverweightLimits["x"] = 28;
+            this.globalDB.Stamina.WalkOverweightLimits["y"] = 72;
+            this.globalDB.Stamina.BaseOverweightLimits["x"] = 30;
             this.globalDB.Stamina.BaseOverweightLimits["y"] = 52;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
@@ -43,7 +43,7 @@ export class Player {
             this.globalDB.WalkSpeed["x"] = 0.6;
             this.globalDB.WalkSpeed["y"] = 0.82;
             this.globalDB.SprintSpeed["x"] = 0.02;
-            this.globalDB.SprintSpeed["y"] = 0.42;
+            this.globalDB.SprintSpeed["y"] = 0.4;
 
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
@@ -55,7 +55,7 @@ export class Player {
             this.globalDB.Stamina.CrouchConsumption["y"] = 5;
 
             this.globalDB.Stamina.SprintAccelerationLowerLimit = 0.2;
-            this.globalDB.Stamina.SprintSpeedLowerLimit = 0.025;
+            this.globalDB.Stamina.SprintSpeedLowerLimit = 0.02;
 
             this.globalDB.Inertia.SpeedLimitAfterFallMin["x"] *= 0.45;
             this.globalDB.Inertia.SpeedLimitAfterFallMin["y"] *= 0.45;

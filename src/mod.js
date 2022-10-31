@@ -40,9 +40,9 @@ class Mod {
         const staticRouterModService = container.resolve("StaticRouterModService");
         const HttpResponse = container.resolve("HttpResponseUtil");
         const configServer = container.resolve("ConfigServer");
-        const databaseServer1 = container.resolve("DatabaseServer");
+        const databaseServer = container.resolve("DatabaseServer");
         const fleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
-        const tables = databaseServer1.getTables();
+        const tables = databaseServer.getTables();
         const router = container.resolve("DynamicRouterModService");
         this.path = require("path");
         const flea = new fleamarket_1.FleamarketConfig(logger, tables, fleaConf, modConfig, customFleaConfig);
@@ -63,7 +63,7 @@ class Mod {
                 const itemHelper = container.resolve("ItemHelper");
                 const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
                 const inventoryMagGenComponents = container.resolveAll("InventoryMagGen");
-                const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer1, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, inventoryMagGenComponents);
+                const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, inventoryMagGenComponents);
                 result.generateWeaponByTpl = (sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) => {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 };
@@ -78,7 +78,7 @@ class Mod {
                 const itemFilterServ = container.resolve("ItemFilterService");
                 const profileHelper = container.resolve("ProfileHelper");
                 const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
-                const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
+                const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
                 result.generateExtraPropertiesForItem = (itemTemplate, botRole = null) => {
                     return _botModGen.genExtraItemProps(itemTemplate, botRole);
                 };
@@ -88,7 +88,7 @@ class Mod {
             }, { frequency: "Always" });
             container.afterResolution("BotLootCacheService", (_t, result) => {
                 const ragfairPriceServ = container.resolve("RagfairPriceService");
-                const botLootServ = new bot_loot_serv_1.BotLootServer(logger, jsonUtil, databaseServer1, pmcLootGenerator, ragfairPriceServ);
+                const botLootServ = new bot_loot_serv_1.BotLootServer(logger, jsonUtil, databaseServer, pmcLootGenerator, ragfairPriceServ);
                 result.getLootFromCache = (botRole, isPmc, lootType, lootPool) => {
                     return botLootServ.getLootCache(botRole, isPmc, lootType, lootPool);
                 };

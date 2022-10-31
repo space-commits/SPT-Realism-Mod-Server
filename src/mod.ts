@@ -89,9 +89,9 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const staticRouterModService = container.resolve<StaticRouterModService>("StaticRouterModService");
         const HttpResponse = container.resolve<HttpResponseUtil>("HttpResponseUtil");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
-        const databaseServer1 = container.resolve<DatabaseServer>("DatabaseServer");
+        const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const fleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
-        const tables = databaseServer1.getTables();
+        const tables = databaseServer.getTables();
 
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
         this.path = require("path");
@@ -121,7 +121,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                 const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
                 const inventoryMagGenComponents = container.resolveAll<IInventoryMagGen>("InventoryMagGen");
-                const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer1, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, inventoryMagGenComponents);
+                const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, inventoryMagGenComponents);
                 result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult => {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 }
@@ -137,7 +137,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 const itemFilterServ = container.resolve<ItemFilterService>("ItemFilterService");
                 const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                 const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
-                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer1, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
+                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
                 result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole = null): { upd?: Upd } => {
                     return _botModGen.genExtraItemProps(itemTemplate, botRole);
                 }
@@ -149,7 +149,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
             container.afterResolution("BotLootCacheService", (_t, result: BotLootCacheService) => {
                 const ragfairPriceServ = container.resolve<RagfairPriceService>("RagfairPriceService");
-                const botLootServ = new BotLootServer(logger, jsonUtil, databaseServer1, pmcLootGenerator, ragfairPriceServ);
+                const botLootServ = new BotLootServer(logger, jsonUtil, databaseServer, pmcLootGenerator, ragfairPriceServ);
                 result.getLootFromCache = (botRole: string, isPmc: boolean, lootType: LootCacheType, lootPool: Items): ITemplateItem[] => {
                     return botLootServ.getLootCache(botRole, isPmc, lootType, lootPool);
                 }
