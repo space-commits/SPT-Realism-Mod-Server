@@ -39,6 +39,9 @@ class Bots {
                 this.tables.locations[location].base.OpenZones = botZones.zones[location];
             }
         }
+        if (this.modConf.increased_bot_cap == true) {
+            this.botConf.maxBotCap = rmBotConfig.maxBotCap;
+        }
         this.botConf.equipment["pmc"] = {
             "weaponModLimits": {
                 "scopeLimit": 10,

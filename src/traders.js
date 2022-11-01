@@ -37,6 +37,9 @@ class Traders {
         this.traderConf.fence.itemPriceMult = 1.8;
         this.traderConf.fence.presetPriceMult = 2.5;
         this.traderConf.fence.itemTypeLimits = fenseLimits.itemTypeLimits;
+        this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
+        this.tables.globals.config.Health.HealPrice.EnergyPointPrice = 30;
+        this.tables.globals.config.Health.HealPrice.HydrationPointPrice = 30;
         if (this.modConf.logEverything == true) {
             this.logger.info("Traders Loaded");
         }

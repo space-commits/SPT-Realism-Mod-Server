@@ -44,6 +44,11 @@ export class Bots {
             }
         }
 
+        if (this.modConf.increased_bot_cap == true) {
+
+            this.botConf.maxBotCap = rmBotConfig.maxBotCap
+        }
+
         this.botConf.equipment["pmc"] = {
             "weaponModLimits": {
                 "scopeLimit": 10,
@@ -90,10 +95,12 @@ export class Bots {
             }
         }
 
-        if (this.modConf.difficulty == true) {
-
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.useDifficultyOverride = true;
+        }
 
+
+        if (this.modConf.boss_difficulty == true) {
             for (let i in this.map) {
                 if (this.map[i].base?.BossLocationSpawn !== undefined) {
                     for (let k in this.map[i].base.BossLocationSpawn) {
@@ -300,7 +307,7 @@ export class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue1;
 
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.pmcType = rmBotConfig.pmcType1;
             this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;;
         }
@@ -350,7 +357,7 @@ export class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue2;
 
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.pmcType = rmBotConfig.pmcType2;
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
         }
@@ -400,7 +407,7 @@ export class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
 
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.pmcType = rmBotConfig.pmcType2;
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
         }
@@ -450,7 +457,7 @@ export class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
 
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.pmcType = rmBotConfig.pmcType3;
             this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;;
         }
@@ -664,7 +671,7 @@ export class Bots {
             this.logger.info("rogueLoad1 loaded");
         }
     }
-    
+
 
     public rogueLoad2() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO2.inventory.Ammo;

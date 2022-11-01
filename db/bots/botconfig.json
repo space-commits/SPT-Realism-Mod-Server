@@ -6,7 +6,17 @@
         "59f32bb586f774757e1e8442",
         "6087e570b998180e9f76dc24"
     ],
-    "maxBotCap": 25,
+    "maxBotCap": {
+		"factory": 15,
+		"customs": 25,
+		"woods": 30,
+		"shoreline": 30,
+		"lighthouse": 30,
+		"reservebase": 30,
+		"interchange": 30,
+		"laboratory": 20,
+		"default": 20
+	},
     "lootNValue1": {
         "scav": 3.2,
         "pmc": 3.15
@@ -408,16 +418,16 @@
         "chanceSameSideIsHostilePercent": 95,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 25,
+                "min": 30,
                 "max": 45
             },
             "cursedassault": {
-                "min": 15,
+                "min": 20,
                 "max": 40
             },
             "pmcbot": {
-                "min": 5,
-                "max": 10
+                "min": 0,
+                "max": 0
             },
             "exusec": {
                 "min": 0,
@@ -442,16 +452,16 @@
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
             "assault": {
+                "min": 30,
+                "max": 45
+            },
+            "cursedassault": {
                 "min": 20,
                 "max": 40
             },
-            "cursedassault": {
-                "min": 15,
-                "max": 40
-            },
             "pmcbot": {
-                "min": 5,
-                "max": 10
+                "min": 0,
+                "max": 0
             },
             "exusec": {
                 "min": 0,
@@ -476,16 +486,16 @@
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 15,
-                "max": 40
+                "min": 30,
+                "max": 45
             },
             "cursedassault": {
-                "min": 15,
+                "min": 20,
                 "max": 40
             },
             "pmcbot": {
-                "min": 5,
-                "max": 10
+                "min": 0,
+                "max": 0
             },
             "exusec": {
                 "min": 0,

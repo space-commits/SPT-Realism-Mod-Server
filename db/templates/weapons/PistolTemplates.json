@@ -105,7 +105,7 @@
         "Weight": 0.231,
         "DurabilityBurnRatio": 0.25,
         "AutoROF": 30,
-        "SemiROF": 480
+        "SemiROF": 390
     },
     "5f36a0e5fbf956000b716b65": {
         "ItemID": "5f36a0e5fbf956000b716b65",
@@ -141,7 +141,7 @@
         "Weight": 0.205,
         "DurabilityBurnRatio": 0.25,
         "AutoROF": 30,
-        "SemiROF": 480
+        "SemiROF": 390
     },
     "6193a720f8ee7e52e42109ed": {
         "ItemID": "6193a720f8ee7e52e42109ed",
@@ -213,7 +213,7 @@
         "Weight": 0.231,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 30,
-        "SemiROF": 430
+        "SemiROF": 380
     },
     "5a7ae0c351dfba0017554310": {
         "ItemID": "5a7ae0c351dfba0017554310",
@@ -249,7 +249,7 @@
         "Weight": 0.231,
         "DurabilityBurnRatio": 0.18,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 390
     },
     "5b1fa9b25acfc40018633c01": {
         "ItemID": "5b1fa9b25acfc40018633c01",
@@ -285,7 +285,7 @@
         "Weight": 0.231,
         "DurabilityBurnRatio": 0.6,
         "AutoROF": 1100,
-        "SemiROF": 450
+        "SemiROF": 350
     },
     "602a9740da11d6478d5a06dc": {
         "ItemID": "602a9740da11d6478d5a06dc",
@@ -321,7 +321,7 @@
         "Weight": 0.49,
         "DurabilityBurnRatio": 0.3,
         "AutoROF": 30,
-        "SemiROF": 470
+        "SemiROF": 410
     },
     "56d59856d2720bd8418b456a": {
         "ItemID": "56d59856d2720bd8418b456a",
@@ -357,7 +357,7 @@
         "Weight": 0.231,
         "DurabilityBurnRatio": 0.07,
         "AutoROF": 30,
-        "SemiROF": 460
+        "SemiROF": 420
     },
     "576a581d2459771e7b1bc4f1": {
         "ItemID": "576a581d2459771e7b1bc4f1",
@@ -393,7 +393,7 @@
         "Weight": 0.79,
         "DurabilityBurnRatio": 0.05,
         "AutoROF": 30,
-        "SemiROF": 400
+        "SemiROF": 300
     },
     "59f98b4986f7746f546d2cef": {
         "ItemID": "59f98b4986f7746f546d2cef",
@@ -429,7 +429,7 @@
         "Weight": 0.79,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 30,
-        "SemiROF": 400
+        "SemiROF": 290
     },
     "571a12c42459771f627b58a0": {
         "ItemID": "571a12c42459771f627b58a0",
@@ -465,7 +465,7 @@
         "Weight": 0.664,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 30,
-        "SemiROF": 440
+        "SemiROF": 320
     },
     "5b3b713c5acfc4330140bd8d": {
         "ItemID": "5b3b713c5acfc4330140bd8d",
@@ -501,7 +501,7 @@
         "Weight": 0.664,
         "DurabilityBurnRatio": 0.15,
         "AutoROF": 30,
-        "SemiROF": 440
+        "SemiROF": 320
     },
     "5d3eb3b0a4b93615055e84d2": {
         "ItemID": "5d3eb3b0a4b93615055e84d2",
@@ -537,7 +537,7 @@
         "Weight": 0.23,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 400
     },
     "5d67abc1a4b93614ec50137f": {
         "ItemID": "5d67abc1a4b93614ec50137f",
@@ -573,7 +573,7 @@
         "Weight": 0.23,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 400
     },
     "5448bd6b4bdc2dfc2f8b4569": {
         "ItemID": "5448bd6b4bdc2dfc2f8b4569",
@@ -609,7 +609,7 @@
         "Weight": 0.686,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 350
     },
     "579204f224597773d619e051": {
         "ItemID": "579204f224597773d619e051",
@@ -645,7 +645,7 @@
         "Weight": 0.69,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 350
     },
     "56e0598dd2720bb5668b45a6": {
         "ItemID": "56e0598dd2720bb5668b45a6",
@@ -681,7 +681,7 @@
         "Weight": 0.674,
         "DurabilityBurnRatio": 0.25,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 350
     },
     "5a17f98cfcdbcb0980087290": {
         "ItemID": "5a17f98cfcdbcb0980087290",
@@ -717,7 +717,7 @@
         "Weight": 0.86,
         "DurabilityBurnRatio": 0.3,
         "AutoROF": 750,
-        "SemiROF": 400
+        "SemiROF": 300
     },
     "5abccb7dd8ce87001773e277": {
         "ItemID": "5abccb7dd8ce87001773e277",
@@ -753,6 +753,6 @@
         "Weight": 0.81,
         "DurabilityBurnRatio": 0.3,
         "AutoROF": 750,
-        "SemiROF": 400
+        "SemiROF": 300
     }
 }

@@ -239,7 +239,7 @@
             "BuffType": "MaxStamina",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 910,
             "Value": -21,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -248,7 +248,7 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 910,
             "Value": -0.16,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -257,25 +257,16 @@
             "BuffType": "HandsTremor",
             "Chance": 1,
             "Delay": 15,
-            "Duration": 1100,
+            "Duration": 910,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 1100,
-            "Value": 0,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 910,
             "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
@@ -284,10 +275,46 @@
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 910,
             "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 610,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 910,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_esmarch": [
@@ -295,7 +322,7 @@
             "BuffType": "MaxStamina",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 970,
             "Value": -22,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -304,7 +331,7 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 970,
             "Value": -0.17,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -312,26 +339,17 @@
         {
             "BuffType": "HandsTremor",
             "Chance": 1,
-            "Delay": 15,
-            "Duration": 1100,
+            "Delay": 10,
+            "Duration": 970,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 1100,
-            "Value": 0,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 970,
             "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
@@ -340,10 +358,46 @@
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 970,
             "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 80,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 330,
+            "Duration": 80,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 650,
+            "Duration": 80,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 970,
+            "Duration": 80,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_calok": [
@@ -351,7 +405,7 @@
             "BuffType": "MaxStamina",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 1000,
+            "Duration": 900,
             "Value": -16,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -360,7 +414,7 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 1000,
+            "Duration": 900,
             "Value": -0.11,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -368,26 +422,17 @@
         {
             "BuffType": "HandsTremor",
             "Chance": 1,
-            "Delay": 15,
-            "Duration": 1000,
+            "Delay": 20,
+            "Duration": 900,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 1000,
-            "Value": 0,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 1000,
+            "Duration": 900,
             "Value": -10,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
@@ -396,10 +441,46 @@
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 1000,
+            "Duration": 900,
             "Value": -10,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 20,
+            "Duration": 50,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 600,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 900,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_immobi": [
@@ -407,7 +488,7 @@
             "BuffType": "MaxStamina",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 650,
             "Value": -22,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -416,7 +497,7 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 650,
             "Value": -0.17,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -425,25 +506,16 @@
             "BuffType": "HandsTremor",
             "Chance": 1,
             "Delay": 15,
-            "Duration": 1100,
+            "Duration": 650,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 1100,
-            "Value": 0,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 650,
             "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
@@ -452,10 +524,37 @@
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 650,
             "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 80,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 330,
+            "Duration": 80,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 650,
+            "Duration": 80,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_alu": [
@@ -463,7 +562,7 @@
             "BuffType": "MaxStamina",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 610,
             "Value": -21,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -472,7 +571,7 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 610,
             "Value": -0.16,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -481,25 +580,16 @@
             "BuffType": "HandsTremor",
             "Chance": 1,
             "Delay": 15,
-            "Duration": 1100,
+            "Duration": 610,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 1100,
-            "Value": 0,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 610,
             "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
@@ -508,10 +598,37 @@
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 1100,
+            "Duration": 610,
             "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 610,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_AI-2": [
@@ -591,15 +708,6 @@
             "SkillName": ""
         },
         {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 600,
-            "Value": 0,
-            "AbsoluteValue": false,
-            "SkillName": ""
-        },
-        {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 10,
@@ -616,6 +724,42 @@
             "Value": -8,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 240,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 465,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 690,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_IFAK": [
@@ -647,15 +791,6 @@
             "SkillName": ""
         },
         {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 500,
-            "Value": 0,
-            "AbsoluteValue": false,
-            "SkillName": ""
-        },
-        {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 10,
@@ -672,6 +807,51 @@
             "Value": -6,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 240,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 465,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 690,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 915,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_AFAK": [
@@ -679,7 +859,7 @@
             "BuffType": "MaxStamina",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 500,
+            "Duration": 450,
             "Value": -6,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -688,7 +868,7 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 500,
+            "Duration": 450,
             "Value": -0.05,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -697,25 +877,16 @@
             "BuffType": "HandsTremor",
             "Chance": 1,
             "Delay": 15,
-            "Duration": 500,
+            "Duration": 450,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 500,
-            "Value": 0,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 500,
+            "Duration": 450,
             "Value": -6,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
@@ -724,10 +895,55 @@
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 500,
+            "Duration": 450,
             "Value": -6,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 40,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 230,
+            "Duration": 40,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 450,
+            "Duration": 40,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 670,
+            "Duration": 40,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 890,
+            "Duration": 40,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_grizzly": [
@@ -735,7 +951,7 @@
             "BuffType": "MaxStamina",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 400,
+            "Duration": 550,
             "Value": -9,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -744,7 +960,7 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 400,
+            "Duration": 550,
             "Value": -0.08,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -753,25 +969,16 @@
             "BuffType": "HandsTremor",
             "Chance": 1,
             "Delay": 15,
-            "Duration": 400,
+            "Duration": 550,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 400,
-            "Value": 0,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 400,
+            "Duration": 550,
             "Value": -6,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
@@ -780,10 +987,100 @@
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 10,
-            "Duration": 400,
+            "Duration": 550,
             "Value": -6,
             "AbsoluteValue": true,
             "SkillName": "Strength"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 240,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 465,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 690,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 915,
+            "Duration": 45,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 50,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 600,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 900,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 1200,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_vaseline": [
@@ -888,15 +1185,6 @@
             "Duration": 1200,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 10,
-            "Duration": 1200,
-            "Value": 0,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
@@ -1006,6 +1294,69 @@
             "Value": -45,
             "AbsoluteValue": true,
             "SkillName": "Vitality"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 250,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 490,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 730,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 970,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 1210,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 1450,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ],
     "Buffs_surv12": [
@@ -1034,15 +1385,6 @@
             "Duration": 1200,
             "Value": 0,
             "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "Pain",
-            "Chance": 1,
-            "Delay": 5,
-            "Duration": 1200,
-            "Value": 10,
-            "AbsoluteValue": false,
             "SkillName": ""
         },
         {
@@ -1143,6 +1485,69 @@
             "Value": -45,
             "AbsoluteValue": true,
             "SkillName": "Vitality"
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 250,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 490,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 730,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 970,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 1210,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 1450,
+            "Duration": 120,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
         }
     ]
 }

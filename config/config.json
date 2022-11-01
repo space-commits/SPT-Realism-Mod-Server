@@ -6,6 +6,14 @@
     "//If disabled, current armour durablity and player health will not be corrected but max durability/health will be.//",
     "realism": true,
 
+    "//Buffs helmets and faceshields by racing their armor level by 1. Their blunt throughput has been modified to compensate.//": 
+    "//Not carefully balanced, just for those that want a slightly less hardcore experience//",
+    "buff_helmets": true,
+
+    "//Armor above 5kg will reduce mouse sensitivity by % equal to their weight.//": 
+    "//If disabled, armor will have no mouse sensitivity penalty//",
+    "armor_mouse_penalty": true,
+
     "//WIP. Enables complete overhaul of recoil and attachments. See mod overview page on the hub for details//": 
     "//YOU MUST DELETE THE REALISMMOD.DLL FROM YOUR BEPINEX/PLUGINS FOLDER IF YOU WANT TO DISABLE THIS FEATURE. OTHERWISE YOUR GAME WILL CRASH//",
     "recoil_attachment_overhaul": true,
@@ -29,12 +37,16 @@
     "//This also disables changes made to botconfig (durability, bot ratios, loot limits) and custom loot generation functions that override AKI-SPT's.//",
     "bot_changes": true,
 
+    "//Raises bot cap on most maps.//": 
+    "////",
+    "increased_bot_cap": true,
+
     "//Bot health settings. If set to true, these bot types will have the same health as the player. If false, they will have default EFT health pools.//": 
     "//realism option must be true for this to take effect. If realism is false, all bots will have defualt health.//",
     "realistic_boss_health" : false,
-    "realistic_boss_follower_health": false,
-    "realistic_raider_rogue_health": false,
-    "realistic_cultist_health" : false,
+    "realistic_boss_follower_health": true,
+    "realistic_raider_rogue_health": true,
+    "realistic_cultist_health" : true,
 
     "//OpenZones fix. Adds more zones that bots can spawn in. Credit to JustNU//": 
     "//This will most likely interfere with Lua's Spawn Rework, leave disabled if you're using that.//",
@@ -42,7 +54,8 @@
 
     "//WIP. PMC AI type will be changed, and PMC and Boss difficulty will be raised, if set to true//":
     "//Only use if not using FAIL or other AI mods. Will just simply set bosses and PMC from 'AsOnline' to higher difficulty settings (Hard or Impossible). Not compatible with FAIL, use that instead if you need to choose one or the other.//",
-    "difficulty": true,
+    "pmc_difficulty": true,
+    "boss_difficulty": true,
 
     "//Changes bot names to actual names from a huge list. Bear names can use Latin or Cyrillic alphabet//": 
     "//Names come courtesy of user Computica//",
@@ -54,7 +67,7 @@
     "tiered_flea": false,
    
     "//Enables a hardcore fleamarket config. There are very few offers per item, if any at all. Item condition and stack amount vary a lot, high prices, and so on.//": 
-    "",
+    "////",
     "flea_changes": false,
 
     "//Enables changes to trader sell categories to be more unique and make more sense.//": 

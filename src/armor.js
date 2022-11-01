@@ -1120,7 +1120,7 @@ class Armor {
                 fileData._props.Weight = 4;
             }
             //Rys-T
-            if (fileData._id === "5f60c85b58eff926626a60f7") {
+            if (fileData._id === "5f60c74e3b85f6263c145586") {
                 fileData._props.Durability = 30;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
@@ -1188,7 +1188,7 @@ class Armor {
             }
             //Ops-Core FAST Visor
             if (fileData._id === "5a16b672fcdbcb001912fa83") {
-                fileData._props.Durability = 11;
+                fileData._props.Durability = 15;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 1;
                 fileData._props.speedPenaltyPercent = -0.175;
@@ -1202,7 +1202,7 @@ class Armor {
             //// Class 2 ////
             //Caiman Fixed Arm Visor
             if (fileData._id === "5f60bf4558eff926626a60f2") {
-                fileData._props.Durability = 12;
+                fileData._props.Durability = 15;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 2;
                 fileData._props.speedPenaltyPercent = -0.19;
@@ -1216,7 +1216,7 @@ class Armor {
             //// Class 3 ////
             //Heavy Trooper mask
             if (fileData._id === "5ea058e01dbce517f324b3e2") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 12;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 3;
                 fileData._props.speedPenaltyPercent = -0.2;
@@ -1229,7 +1229,7 @@ class Armor {
             }
             //Caiman Mandible
             if (fileData._id === "5f60c076f2bcbb675b00dac2") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 15;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 3;
                 fileData._props.speedPenaltyPercent = -0.325;
@@ -1242,7 +1242,7 @@ class Armor {
             }
             //Kiver face shield
             if (fileData._id === "5b46238386f7741a693bcf9c") {
-                fileData._props.Durability = 20;
+                fileData._props.Durability = 25;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 3;
                 fileData._props.speedPenaltyPercent = -0.61;
@@ -1255,7 +1255,7 @@ class Armor {
             }
             //TW EXFIL Visor Black
             if (fileData._id === "5e00cdd986f7747473332240") {
-                fileData._props.Durability = 25;
+                fileData._props.Durability = 30;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 3;
                 fileData._props.speedPenaltyPercent = -0.125;
@@ -1268,7 +1268,7 @@ class Armor {
             }
             //TW EXFIL Visor Coyote
             if (fileData._id === "5e01f37686f774773c6f6c15") {
-                fileData._props.Durability = 25;
+                fileData._props.Durability = 30;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 3;
                 fileData._props.speedPenaltyPercent = -0.125;
@@ -1282,7 +1282,7 @@ class Armor {
             //// Class 4 ////
             //Zsh Visor
             if (fileData._id === "5aa7e3abe5b5b000171d064d") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 15;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 4;
                 fileData._props.speedPenaltyPercent = -0.55;
@@ -1295,7 +1295,7 @@ class Armor {
             }
             //FAST Mandible
             if (fileData._id === "5a16ba61fcdbcb098008728a") {
-                fileData._props.Durability = 40;
+                fileData._props.Durability = 45;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 4;
                 fileData._props.speedPenaltyPercent = -0.4;
@@ -1308,7 +1308,7 @@ class Armor {
             }
             //Altyn Visor
             if (fileData._id === "5aa7e373e5b5b000137b76f0") {
-                fileData._props.Durability = 15;
+                fileData._props.Durability = 20;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 4;
                 fileData._props.speedPenaltyPercent = -0.7;
@@ -1321,7 +1321,7 @@ class Armor {
             }
             //Rys-T Visor
             if (fileData._id === "5f60c85b58eff926626a60f7") {
-                fileData._props.Durability = 18;
+                fileData._props.Durability = 24;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 4;
                 fileData._props.speedPenaltyPercent = -0.6;
@@ -1335,7 +1335,7 @@ class Armor {
             }
             //FAST Side Armor
             if (fileData._id === "5a16badafcdbcb001865f72d") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 14;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 4;
                 fileData._props.speedPenaltyPercent = -0.15;
@@ -1361,7 +1361,7 @@ class Armor {
             //// Class 5 ////
             //LSHZ Visor
             if (fileData._id === "5d6d3829a4b9361bc8618943") {
-                fileData._props.Durability = 15;
+                fileData._props.Durability = 20;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.5;
@@ -1374,7 +1374,7 @@ class Armor {
             }
             //Vulkan-5 Visor
             if (fileData._id === "5ca2113f86f7740b2547e1d2") {
-                fileData._props.Durability = 25;
+                fileData._props.Durability = 30;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.9;
@@ -1387,7 +1387,7 @@ class Armor {
             }
             //Multi-Hit Visor
             if (fileData._id === "5a16b7e1fcdbcb00165aa6c9") {
-                fileData._props.Durability = 50;
+                fileData._props.Durability = 55;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.65;
@@ -1400,7 +1400,7 @@ class Armor {
             }
             //Maska Visor
             if (fileData._id === "5c0919b50db834001b7ce3b9") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 20;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.55;
@@ -1413,7 +1413,7 @@ class Armor {
             }
             //Maska Killa Visor
             if (fileData._id === "5c0e842486f77443a74d2976") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 20;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.55;
@@ -1426,7 +1426,7 @@ class Armor {
             }
             //Crye Airframe Chops
             if (fileData._id === "5c178a942e22164bef5ceca3") {
-                fileData._props.Durability = 20;
+                fileData._props.Durability = 25;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.38;
@@ -1439,7 +1439,7 @@ class Armor {
             }
             //Crye Airframe Ears
             if (fileData._id === "5c1793902e221602b21d3de2") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 15;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.125;
@@ -1452,7 +1452,7 @@ class Armor {
             }
             //TW EXFIL Ear Covers Black
             if (fileData._id === "5e00cfa786f77469dc6e5685") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 15;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.085;
@@ -1465,7 +1465,7 @@ class Armor {
             }
             //TW EXFIL Ear Covers Coyote
             if (fileData._id === "5e01f31d86f77465cf261343") {
-                fileData._props.Durability = 10;
+                fileData._props.Durability = 15;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.085;
@@ -1478,7 +1478,7 @@ class Armor {
             }
             //Caiman Hybrid Ballistic Applique
             if (fileData._id === "5f60b85bbdb8e27dee3dc985") {
-                fileData._props.Durability = 25;
+                fileData._props.Durability = 30;
                 fileData._props.MaxDurability = fileData._props.Durability;
                 fileData._props.armorClass = 5;
                 fileData._props.speedPenaltyPercent = -0.34;
@@ -1517,8 +1517,11 @@ class Armor {
             //Multiplier for Armored Rigs and Vests
             if (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567" && fileData._props.speedPenaltyPercent != null) {
                 fileData._props.BluntThroughput *= 1;
-                fileData._props.speedPenaltyPercent *= 1.25;
-                fileData._props.weaponErgonomicPenalty *= 1.25;
+                fileData._props.speedPenaltyPercent *= 1;
+                fileData._props.weaponErgonomicPenalty *= 1;
+                if (this.modConf.armor_mouse_penalty == true) {
+                    fileData._props.mousePenalty = -fileData._props.Weight;
+                }
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that below lvl 6
             if (fileData._props.armorClass <= 6 && (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567")) {
@@ -1542,8 +1545,21 @@ class Armor {
             }
             //Blunt Damage Multiplier for Helmets
             if (fileData._parent === "5a341c4086f77401f2541505" || fileData._parent === "5a341c4686f77469e155819e" || fileData._parent === "57bef4c42459772e8d35a53b" && fileData._props.speedPenaltyPercent != null) {
-                fileData._props.speedPenaltyPercent *= 1.25;
-                fileData._props.weaponErgonomicPenalty *= 1.25;
+                fileData._props.speedPenaltyPercent *= 1;
+                fileData._props.weaponErgonomicPenalty *= 1;
+                if (this.modConf.buff_helmets && fileData._props.armorClass <= 10) {
+                    fileData._props.armorClass += 1;
+                    fileData._props.BluntThroughput *= 1.15;
+                    if (fileData._parent === "57bef4c42459772e8d35a53b") {
+                        fileData._props.Durability *= 1.15;
+                        fileData._props.MaxDurability = fileData._props.Durability;
+                    }
+                }
+                if (this.modConf.armor_mouse_penalty == true) {
+                    if (fileData._props.armorClass > 2 && fileData._props.Weight > 0.5) {
+                        fileData._props.mousePenalty = -fileData._props.Weight;
+                    }
+                }
             }
             if (fileData._parent === "5a341c4086f77401f2541505" && fileData._props.armorClass <= 3 || fileData._parent === "5a341c4686f77469e155819e") {
                 fileData._props.BluntThroughput *= 0.65;
