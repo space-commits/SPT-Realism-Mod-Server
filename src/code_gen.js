@@ -818,5 +818,61 @@ class CodeGen {
             }
         }
     }
+    // public pushToAllMods() {
+    //     for (let i in this.itemDB) {
+    //         let serverItem = this.itemDB[i];
+    //         if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
+    //             var array = ["undefined", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "false", "0", "false", "0"]
+    //             var serverConfItems = serverItem._props.ConflictingItems;
+    //             var combinedArr = array.concat(serverConfItems)
+    //             serverItem._props.ConflictingItems = combinedArr;
+    //         }
+    //     }
+    // }
+    descriptionGen() {
+        for (let localeItem in this.tables.locales.global["en"].templates) {
+            let locale = this.tables.locales.global["en"].templates[localeItem];
+            for (let templatItem in this.itemDB) {
+                let item = this.itemDB[templatItem];
+                if (localeItem === templatItem) {
+                    if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
+                        let modType = item._props.ConflictingItems[1];
+                        if (modType === "booster") {
+                            locale.Description = "This muzzle device is a booster. It gives the full firerate stats on short barreled rifles, and a reduced amount on longer barreld rifles." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "muzzle_supp_adapter") {
+                            locale.Description = "This muzzle device is an adapter, it will lose all its stats except accuracy if a suppressor is attached to it." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "shot_pump_grip_adapt") {
+                            locale.Description = "If a foregrip is attached to this pump grip there will be a bonus to chamber/pump speed." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "buffer_adapter" || modType === "stock_adapter" || modType === "grip_stock_adapter") {
+                            locale.Description = "This adapater changes the recoil profile of the weapon by raising or lowering the stock in line with the barrel. It will not impart any stats unless a stock is attached. If it has a pistol grip slot, the pistol grip provides a bonus to ergo and recoil stats if attached." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "hydraulic_buffer") {
+                            locale.Description = "This hydraulic buffer loses all its stats if not places on a shotgun, sniper rifle or assault carbine." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "buffer") {
+                            locale.Description = "This buffer tube loses its recoil, firerate and durability burn stats if not placed on a weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "buffer_stock") {
+                            locale.Description = "This stock loses its firerate and durability burn stats if not placed on weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "stock" && item._props.ConflictingItems[15] === "false") {
+                            locale.Description = "This stock allows aiming down sights with any faceshield." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "foregrip_adapter") {
+                            locale.Description = "This adapter will lose its negative ergo stat if a grip is attached to it." + `\n\n${locale.Description}`;
+                        }
+                        if (item._parent === "57bef4c42459772e8d35a53b" || item._parent === "5a341c4086f77401f2541505") {
+                            if (item._props.ConflictingItems[1] === "true") {
+                                locale.Description = "This faceshield allows the use of sights while using any stock in the extended position." + `\n\n${locale.Description}`;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 exports.CodeGen = CodeGen;

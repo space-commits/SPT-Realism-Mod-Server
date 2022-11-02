@@ -301,12 +301,8 @@
       "items": {
         "TacticalVest": [],
         "Pockets": [],
-        "Backpack": [
-          "TIER1MEDKIT",
-          "TIER2MEDKIT",
-          "TIER3MEDKIT"
-        ],
-        "SecuredContainer": ["SUPERBOTMEDKIT"],
+        "Backpack": [],
+        "SecuredContainer": [],
         "SpecialLoot": []
       }
     },

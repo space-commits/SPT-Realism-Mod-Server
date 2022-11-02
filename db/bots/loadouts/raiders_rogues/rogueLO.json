@@ -399,12 +399,8 @@
       "items": {
         "TacticalVest": [],
         "Pockets": [],
-        "Backpack": [
-          "TIER1MEDKIT",
-          "TIER2MEDKIT",
-          "TIER3MEDKIT"
-        ],
-        "SecuredContainer": ["SUPERBOTMEDKIT"],
+        "Backpack": [],
+        "SecuredContainer": [],
         "SpecialLoot": []
       }
     },
@@ -978,11 +974,7 @@
       "items": {
         "TacticalVest": [],
         "Pockets": [],
-        "Backpack": [
-          "TIER1MEDKIT",
-          "TIER2MEDKIT",
-          "TIER3MEDKIT"
-        ],
+        "Backpack": [],
         "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }
@@ -1674,11 +1666,7 @@
       "items": {
         "TacticalVest": [],
         "Pockets": [],
-        "Backpack": [
-          "TIER1MEDKIT",
-          "TIER2MEDKIT",
-          "TIER3MEDKIT"
-        ],
+        "Backpack": [],
         "SecuredContainer": ["SUPERBOTMEDKIT"],
         "SpecialLoot": []
       }

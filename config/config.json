@@ -26,7 +26,8 @@
     "movement_changes": true,
     "fall_damage_changes": true,
     
-    "//Enables changes to medical items if set to true.//": "",
+    "//Enables changes to medical items if set to true.//": 
+    "MAKE SURE TO USE THE revert_med_changes OPTION BELOW IF YOU WANT TO DISABLE THIS FEATURE.",
     "med_changes": true,
 
     "//If set to true **AND** med_changes is set to false, the meds in your inventory will be restored back to their full HP resource.//": 

@@ -349,7 +349,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -5,
-        "AimSpeed": -20,
+        "AimSpeed": -15,
         "Ergonomics": 20,
         "Accuracy": 0,
         "ConflictingItems": [],

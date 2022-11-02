@@ -1059,6 +1059,7 @@ class Ammo {
                 fileData._props.ammoAccr = 13;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 20;
+                fileData._props.Weight = 0.0083;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
@@ -1081,6 +1082,7 @@ class Ammo {
                 fileData._props.ammoAccr = 10;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 25;
+                fileData._props.Weight = 0.0093;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;

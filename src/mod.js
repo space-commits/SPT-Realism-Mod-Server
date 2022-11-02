@@ -306,6 +306,7 @@ class Mod {
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
+        codegen.descriptionGen();
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();
         }

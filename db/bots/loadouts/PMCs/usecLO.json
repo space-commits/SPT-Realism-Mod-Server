@@ -1396,7 +1396,7 @@
           "5696686a4bdc2da3298b456a",
           "569668774bdc2da2298b4568"
         ],
-        "SecuredContainer": ["SUPERBOTMEDKIT"],
+        "SecuredContainer": [],
         "SpecialLoot": []
       }
     },
@@ -3348,7 +3348,7 @@
           "5696686a4bdc2da3298b456a",
           "569668774bdc2da2298b4568"
         ],
-        "SecuredContainer": ["SUPERBOTMEDKIT"],
+        "SecuredContainer": [],
         "SpecialLoot": []
       }
     },
@@ -5290,7 +5290,7 @@
           "5696686a4bdc2da3298b456a",
           "569668774bdc2da2298b4568"
         ],
-        "SecuredContainer": ["SUPERBOTMEDKIT"],
+        "SecuredContainer": [],
         "SpecialLoot": []
       }
     },
@@ -7843,7 +7843,7 @@
           "5696686a4bdc2da3298b456a",
           "569668774bdc2da2298b4568"
         ],
-        "SecuredContainer": ["SUPERBOTMEDKIT"],
+        "SecuredContainer": [],
         "SpecialLoot": []
       }
     },

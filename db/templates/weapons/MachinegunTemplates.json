@@ -46,7 +46,7 @@
         "Ergonomics": 80,
         "VerticalRecoil": 64,
         "HorizontalRecoil": 185,
-        "Dispersion": 12,
+        "Dispersion": 15,
         "CameraRecoil": 0.06,
         "CameraSnap": 3.5,
         "Convergence": 7.1,

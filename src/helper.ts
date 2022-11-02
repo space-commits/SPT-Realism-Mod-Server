@@ -61,7 +61,8 @@ export class Helper {
 
                 if (profileData.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
                     profileData.Inventory.items[i]._tpl === "TIER1MEDKI2" ||
-                    profileData.Inventory.items[i]._tpl === "TIER1MEDKI3") {
+                    profileData.Inventory.items[i]._tpl === "TIER1MEDKI3" ||
+                    profileData.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
                     profileData.Inventory.items[i]._tpl = "5755356824597772cb798962"
                     profileData.Inventory.items[i].upd.MedKit.HpResource = 100;
                 }

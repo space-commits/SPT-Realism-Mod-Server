@@ -85,8 +85,10 @@ class Bots {
                 }
             }
         }
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.useDifficultyOverride = true;
+        }
+        if (this.modConf.boss_difficulty == true) {
             for (let i in this.map) {
                 if (this.map[i].base?.BossLocationSpawn !== undefined) {
                     for (let k in this.map[i].base.BossLocationSpawn) {
@@ -260,7 +262,7 @@ class Bots {
         this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue1;
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.pmcType = rmBotConfig.pmcType1;
             this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;
             ;
@@ -299,7 +301,7 @@ class Bots {
         this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue2;
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.pmcType = rmBotConfig.pmcType2;
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;
             ;
@@ -338,7 +340,7 @@ class Bots {
         this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.pmcType = rmBotConfig.pmcType2;
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;
             ;
@@ -377,7 +379,7 @@ class Bots {
         this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
-        if (this.modConf.difficulty == true) {
+        if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.pmcType = rmBotConfig.pmcType3;
             this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;
             ;
