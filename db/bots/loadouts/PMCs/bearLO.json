@@ -5031,8 +5031,10 @@
           "5ca2151486f774244a3b8d30": 1,
           "5e9dacf986f774054d6b89f4": 1,
           "5c0e625a86f7742d77340f62": 1,
-          "5f5f41476bdad616ad46d631": 1,
-          "5ab8e79e86f7742d8b372e78": 1
+          "5f5f41476bdad616ad46d631": 2,
+          "5ab8e79e86f7742d8b372e78": 1,
+          "5ca21c6986f77479963115a7": 1,
+          "545cdb794bdc2d3a198b456a": 1
         },
         "TacticalVest": {
           "59e7643b86f7742cbf2c109a": 2,
@@ -5048,7 +5050,9 @@
           "5ab8dced86f774646209ec87": 3,
           "5e4ac41886f77406a511c9a8": 2,
           "5d5d87f786f77427997cfaef": 2,
-          "5c0e746986f7741453628fe5": 3
+          "5c0e746986f7741453628fe5": 3,
+          "61bcc89aef0f505f0c6cd0fc": 2,
+          "628d0618d1ba6e4fa07ce5a4": 2
         },
         "Backpack": {
           "618bb76513f5097c8d5aa2d5": 7,
@@ -6696,7 +6700,7 @@
         "mod_handguard": 100,
         "mod_magazine": 100,
         "mod_reciever": 100,
-        "mod_nvg": 10,
+        "mod_nvg": 15,
         "mod_foregrip": 80,
         "mod_launcher": 0,
         "mod_sight_rear": 100,
@@ -6704,10 +6708,10 @@
         "mod_stock_000": 100,
         "mod_stock_001": 100,
         "mod_stock_akms": 100,
-        "mod_equipment": 50,
-        "mod_equipment_000": 50,
-        "mod_equipment_001": 50,
-        "mod_equipment_002": 20,
+        "mod_equipment": 65,
+        "mod_equipment_000": 65,
+        "mod_equipment_001": 65,
+        "mod_equipment_002": 65,
         "mod_pistol_grip_akms": 100,
         "mod_pistol_grip": 100,
         "mod_gas_block": 100,

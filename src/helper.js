@@ -49,6 +49,21 @@ class Helper {
             }
         }
     }
+    probabilityWeighter(items, weights) {
+        function add(a, b) { return a + b; }
+        var botTiers = items;
+        var weights = weights;
+        var totalWeight = weights.reduce(add, 0);
+        var weighedElems = [];
+        var currentElem = 0;
+        while (currentElem < botTiers.length) {
+            for (let i = 0; i < weights[currentElem]; i++)
+                weighedElems[weighedElems.length] = botTiers[currentElem];
+            currentElem++;
+        }
+        var randomTier = Math.floor(Math.random() * totalWeight);
+        return weighedElems[randomTier];
+    }
     removeCustomItems(profileData) {
         var inventProp = profileData?.Inventory;
         if (inventProp !== undefined) {

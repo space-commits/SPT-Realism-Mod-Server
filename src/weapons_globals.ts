@@ -53,7 +53,7 @@ export class WeaponsGlobals {
                 }
                 if (fileData._props.weapClass === "pistol"
                 ) {
-                    fileData._props.RecoilForceUp *= 1.12;
+                    fileData._props.RecoilForceUp *= 1.14;
                     fileData._props.CameraRecoil *= 0.8;
                     fileData._props.RecolDispersion *= 1.15;
                 }

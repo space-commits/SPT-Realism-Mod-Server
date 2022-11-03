@@ -410,7 +410,7 @@
             }
         },
         "isUsec": 50,
-        "difficulty" : "Hard",
+        "difficulty" : "Medium",
         "maxBackpackLootTotalRub": 75000,
         "maxPocketLootTotalRub": 25000,
         "maxVestLootTotalRub": 25000,

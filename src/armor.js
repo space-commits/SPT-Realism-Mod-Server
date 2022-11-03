@@ -183,7 +183,7 @@ class Armor {
                 fileData._props.speedPenaltyPercent = -2;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -2;
-                fileData._props.BluntThroughput = 0.55;
+                fileData._props.BluntThroughput = 0.5;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 8.1;
             }
@@ -195,7 +195,7 @@ class Armor {
                 fileData._props.speedPenaltyPercent = -2;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -2;
-                fileData._props.BluntThroughput = 0.55;
+                fileData._props.BluntThroughput = 0.5;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 8.1;
             }
@@ -207,7 +207,7 @@ class Armor {
                 fileData._props.speedPenaltyPercent = -2;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -2;
-                fileData._props.BluntThroughput = 0.55;
+                fileData._props.BluntThroughput = 0.5;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 8.1;
             }
@@ -465,7 +465,7 @@ class Armor {
                 fileData._props.speedPenaltyPercent = -6;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -9;
-                fileData._props.BluntThroughput = 0.45;
+                fileData._props.BluntThroughput = 0.35;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 10.3;
             }
@@ -526,7 +526,7 @@ class Armor {
                 fileData._props.speedPenaltyPercent = -8;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -9;
-                fileData._props.BluntThroughput = 0.48;
+                fileData._props.BluntThroughput = 0.43;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 9.9;
             }
@@ -550,7 +550,7 @@ class Armor {
                 fileData._props.speedPenaltyPercent = -4;
                 fileData._props.mousePenalty = 0;
                 fileData._props.weaponErgonomicPenalty = -7;
-                fileData._props.BluntThroughput = 0.52;
+                fileData._props.BluntThroughput = 0.48;
                 fileData._props.ArmorMaterial = 'ArmoredSteel';
                 fileData._props.Weight = 9.1;
             }
@@ -1533,15 +1533,15 @@ class Armor {
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 8
             if (fileData._props.armorClass >= 8 && (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567")) {
-                fileData._props.BluntThroughput *= 1.15;
+                fileData._props.BluntThroughput *= 1.1;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 9
             if (fileData._props.armorClass >= 9 && (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567")) {
-                fileData._props.BluntThroughput *= 1.25;
+                fileData._props.BluntThroughput *= 1.2;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 10
             if (fileData._props.armorClass >= 10 && (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567")) {
-                fileData._props.BluntThroughput *= 1.4;
+                fileData._props.BluntThroughput *= 1.45;
             }
             //Blunt Damage Multiplier for Helmets
             if (fileData._parent === "5a341c4086f77401f2541505" || fileData._parent === "5a341c4686f77469e155819e" || fileData._parent === "57bef4c42459772e8d35a53b" && fileData._props.speedPenaltyPercent != null) {
@@ -1549,7 +1549,7 @@ class Armor {
                 fileData._props.weaponErgonomicPenalty *= 1;
                 if (this.modConf.buff_helmets && fileData._props.armorClass <= 10) {
                     fileData._props.armorClass += 1;
-                    fileData._props.BluntThroughput *= 1.15;
+                    fileData._props.BluntThroughput *= 1.1;
                     if (fileData._parent === "57bef4c42459772e8d35a53b") {
                         fileData._props.Durability *= 1.15;
                         fileData._props.MaxDurability = fileData._props.Durability;
@@ -1565,10 +1565,10 @@ class Armor {
                 fileData._props.BluntThroughput *= 0.65;
             }
             if (fileData._parent === "5a341c4086f77401f2541505" && fileData._props.armorClass == 4) {
-                fileData._props.BluntThroughput *= 0.75;
+                fileData._props.BluntThroughput *= 0.7;
             }
             if (fileData._parent === "5a341c4086f77401f2541505" && fileData._props.armorClass == 5) {
-                fileData._props.BluntThroughput *= 1.2;
+                fileData._props.BluntThroughput *= 1.15;
             }
             //Set min/max armor durability for bots
             if (fileData._parent === "5448e5284bdc2dcb718b4567" ||
