@@ -928,7 +928,7 @@ export class CodeGen {
                         if(modType === "buffer_stock"){
                             locale.Description = "This stock loses its firerate and durability burn stats if not placed on weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." +  `\n\n${locale.Description }`;
                         }
-                        if(modType === "stock" && item._props.ConflictingItems[15] === "false"){
+                        if(modType === "stock" && item._props.ConflictingItems[15] === "true"){
                             locale.Description = "This stock allows aiming down sights with any faceshield." +  `\n\n${locale.Description }`;
                         }
                         if(modType === "foregrip_adapter"){
