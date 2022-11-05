@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Bots = void 0;
+exports.BotTierTracker = exports.Bots = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const scavLO = require("../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../db/bots/loadouts/PMCs/bearLO.json");
@@ -9,7 +9,7 @@ const raiderLO = require("../db/bots/loadouts/raiders_rogues/raiderLO.json");
 const rogueLO = require("../db/bots/loadouts/raiders_rogues/rogueLO.json");
 const scavLootLimitCat = require("../db/bots/loadouts/scavs/scavLootLimitCat.json");
 const PMCLootLimitCat = require("../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
-const commonStats = require("../db/bots/common.json");
+const botHealth = require("../db/bots/botHealth.json");
 const rmBotConfig = require("../db/bots/botconfig.json");
 const USECNames = require("../db/bots/names/USECNames.json");
 const bearNames = require("../db/bots/names/bearNames.json");
@@ -33,10 +33,15 @@ class Bots {
         this.rogueBase = this.botDB["exusec"];
         this.botConf = this.configServ.getConfig(ConfigTypes_1.ConfigTypes.BOT);
         this.botConfPMC = this.botConf.pmc;
+        this.tierTrakcer = new BotTierTracker();
     }
     loadBots() {
         // this.botConfig1();
         // this.randomizedPMCBehaviour();
+        if (this.modConf.realism == true) {
+            //Adjust Thermal stim to compensate for lower base temp
+            this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
+        }
         if (this.modConf.openZonesFix == true) {
             for (let location in botZones.zones) {
                 this.tables.locations[location].base.OpenZones = botZones.zones[location];
@@ -143,40 +148,40 @@ class Bots {
         }
         this.array.scav_bot_health_list.forEach(setScavHealth);
         function setScavHealth(bot) {
-            bot.health.BodyParts = commonStats.scavHealth.BodyParts;
-            bot.health.Temperature = commonStats.health.Temperature;
+            bot.health.BodyParts = botHealth.scavHealth.BodyParts;
+            bot.health.Temperature = botHealth.health.Temperature;
         }
         this.array.PMC_list.forEach(setHealth);
         function setHealth(bot) {
-            bot.health.BodyParts = commonStats.health.BodyParts;
-            bot.health.Temperature = commonStats.health.Temperature;
+            bot.health.BodyParts = botHealth.health.BodyParts;
+            bot.health.Temperature = botHealth.health.Temperature;
         }
         if (this.modConf.realistic_boss_health == true) {
             this.array.boss_bot_list.forEach(setHealth);
             function setHealth(bot) {
-                bot.health.BodyParts = commonStats.health.BodyParts;
-                bot.health.Temperature = commonStats.health.Temperature;
+                bot.health.BodyParts = botHealth.health.BodyParts;
+                bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_boss_follower_health == true) {
             this.array.boss_follower_list.forEach(setHealth);
             function setHealth(bot) {
-                bot.health.BodyParts = commonStats.health.BodyParts;
-                bot.health.Temperature = commonStats.health.Temperature;
+                bot.health.BodyParts = botHealth.health.BodyParts;
+                bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_raider_rogue_health == true) {
             this.array.rogue_raider_list.forEach(setHealth);
             function setHealth(bot) {
-                bot.health.BodyParts = commonStats.health.BodyParts;
-                bot.health.Temperature = commonStats.health.Temperature;
+                bot.health.BodyParts = botHealth.health.BodyParts;
+                bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_cultist_health == true) {
             this.array.cultist_list.forEach(setHealth);
             function setHealth(bot) {
-                bot.health.BodyParts = commonStats.health.BodyParts;
-                bot.health.Temperature = commonStats.health.Temperature;
+                bot.health.BodyParts = botHealth.health.BodyParts;
+                bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.logEverything == true) {
@@ -189,7 +194,7 @@ class Bots {
             this.logger.info("Bot Health Set");
         }
     }
-    botTest(tier, pmcData) {
+    botTest(tier) {
         if (tier == 1) {
             this.botConfig1();
             this.scavLoad1();
@@ -201,27 +206,27 @@ class Bots {
         }
         if (tier == 2) {
             this.botConfig2();
-            this.scavLoad1();
-            this.usecLoad1();
-            this.bearLoad1();
+            this.scavLoad2();
+            this.usecLoad2();
+            this.bearLoad2();
             this.rogueLoad2();
             this.raiderLoad1();
             this.logger.warning("Tier 2 Test Selected");
         }
         if (tier == 3) {
             this.botConfig3();
-            this.scavLoad1();
-            this.usecLoad1();
-            this.bearLoad1();
+            this.scavLoad3();
+            this.usecLoad3();
+            this.bearLoad3();
             this.rogueLoad3();
             this.raiderLoad1();
             this.logger.warning("Tier 3 Test Selected");
         }
         if (tier == 4) {
             this.botConfig3();
-            this.scavLoad1();
-            this.usecLoad1();
-            this.bearLoad1();
+            this.scavLoad3();
+            this.usecLoad4();
+            this.bearLoad4();
             this.rogueLoad3();
             this.raiderLoad1();
             this.logger.warning("Tier 4 Test Selected");
@@ -261,12 +266,14 @@ class Bots {
     }
     randomizedPMCBehaviour() {
         if (this.modConf.pmc_difficulty == true) {
-            var behaviourWeights = [5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-            var behavioursArray = ["assault", "pmcBot", "bossKilla", "bossBully", "bossKilla", "bossKojaniy", "bossGluhar", "bossSanitar", "bossKnight", "followerBully", "followerKojaniy", "followerSanitar", "followerBigPipe", "sectantWarrior", "sectantPriest"];
+            var behaviourWeights = [5, 5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+            var behavioursArray = ["assault", "pmcBot", "exUsec", "bossKilla", "bossBully", "bossKilla", "bossGluhar", "bossSanitar", "bossKnight", "followerBully", "followerSanitar", "followerBigPipe", "followerGluharAssault", "followerGluharScout"];
             var behaviour1 = this.helper.probabilityWeighter(behavioursArray, behaviourWeights);
             var behaviour2 = this.helper.probabilityWeighter(behavioursArray, behaviourWeights);
             var behaviour3 = this.helper.probabilityWeighter(behavioursArray, behaviourWeights);
             var behaviour4 = this.helper.probabilityWeighter(behavioursArray, behaviourWeights);
+            var behaviour5 = this.helper.probabilityWeighter(behavioursArray, behaviourWeights);
+            var behaviour6 = this.helper.probabilityWeighter(behavioursArray, behaviourWeights);
             this.botConfPMC.pmcType = {
                 "Factory": {
                     "usec": behaviour1,
@@ -277,32 +284,32 @@ class Bots {
                     "bear": behaviour4
                 },
                 "Woods": {
-                    "usec": behaviour4,
-                    "bear": behaviour1
+                    "usec": behaviour5,
+                    "bear": behaviour6
                 },
                 "Interchange": {
-                    "usec": behaviour2,
-                    "bear": behaviour3
+                    "usec": behaviour6,
+                    "bear": behaviour1
                 },
                 "Laboratory": {
-                    "usec": behaviour3,
-                    "bear": behaviour1
-                },
-                "Lighthouse": {
-                    "usec": behaviour4,
+                    "usec": behaviour5,
                     "bear": behaviour2
                 },
-                "ReserveBase": {
-                    "usec": behaviour1,
+                "Lighthouse": {
+                    "usec": behaviour3,
                     "bear": behaviour4
                 },
+                "ReserveBase": {
+                    "usec": behaviour2,
+                    "bear": behaviour6
+                },
                 "Shoreline": {
-                    "usec": behaviour4,
-                    "bear": behaviour3
+                    "usec": behaviour1,
+                    "bear": behaviour5
                 },
                 "default": {
-                    "usec": behaviour2,
-                    "bear": behaviour1
+                    "usec": behaviour4,
+                    "bear": behaviour5
                 }
             };
             this.logger.info("" + this.botConfPMC.pmcType.Factory.usec);
@@ -424,44 +431,6 @@ class Bots {
             this.logger.info("botConfig3 loaded");
         }
     }
-    // public botConfig4() {
-    //     //Set bot armor and weapon min durability
-    //     this.botConf.durability.pmc = rmBotConfig.durability3.pmc
-    //     this.botConf.durability.pmcbot = rmBotConfig.durability3.pmcbot
-    //     this.botConf.durability.boss = rmBotConfig.durability3.boss
-    //     this.botConf.durability.follower = rmBotConfig.durability3.follower
-    //     this.botConf.durability.assault = rmBotConfig.durability3.assault
-    //     this.botConf.durability.cursedassault = rmBotConfig.durability3.cursedassault
-    //     this.botConf.durability.marksman = rmBotConfig.durability3.marksman
-    //     this.botConf.durability.exusec = rmBotConfig.durability3.exusec
-    //     this.botConf.durability.sectantpriest = rmBotConfig.durability3.sectantpriest
-    //     this.botConf.durability.sectantwarrior = rmBotConfig.durability3.sectantwarrior
-    //     //adjust PMC money stack limits and adjust PMC item spawn limits
-    //     this.botConfPMC.dynamicLoot.moneyStackLimits = rmBotConfig.pmc3.dynamicLoot.moneyStackLimits;
-    //     //adjust PMC max loot in rubles
-    //     this.botConfPMC.maxBackpackLootTotalRub = rmBotConfig.pmc3.maxBackpackLootTotalRub;
-    //     this.botConfPMC.maxPocketLootTotalRub = rmBotConfig.pmc3.maxPocketLootTotalRub;
-    //     this.botConfPMC.maxVestLootTotalRub = rmBotConfig.pmc3.maxVestLootTotalRub;
-    //     //adjust PMC hostile chance
-    //     this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc3.chanceSameSideIsHostilePercent;
-    //     this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc3.looseWeaponInBackpackChancePercent;
-    //     this.botConfPMC.isUsec = rmBotConfig.pmc3.isUsec;
-    //     this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
-    //     //set loot N value
-    //     this.botConf.lootNValue = rmBotConfig.lootNValue3;
-    //     if (this.modConf.pmc_difficulty == true) {
-    //         this.botConfPMC.pmcType = rmBotConfig.pmcType3;
-    //         this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;;
-    //     }
-    //     this.scavLoad3();
-    //     this.usecLoad4();
-    //     this.bearLoad4();
-    //     this.raiderLoad1();
-    //     this.rogueLoad3();
-    //     if (this.modConf.logEverything == true) {
-    //         this.logger.info("botConfig3 loaded");
-    //     }
-    // }
     scavLoad1() {
         this.scavBase.inventory.Ammo = scavLO.scavLO1.inventory.Ammo;
         this.scavBase.inventory.equipment = scavLO.scavLO1.inventory.equipment;
@@ -470,6 +439,7 @@ class Bots {
         this.scavBase.chances = scavLO.scavLO1.chances;
         this.scavBase.generation = scavLO.scavLO1.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
+        BotTierTracker.scavTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("scavLoad1 loaded");
         }
@@ -482,6 +452,7 @@ class Bots {
         this.scavBase.chances = scavLO.scavLO2.chances;
         this.scavBase.generation = scavLO.scavLO2.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit2;
+        BotTierTracker.scavTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("scavLoad2 loaded");
         }
@@ -494,6 +465,7 @@ class Bots {
         this.scavBase.chances = scavLO.scavLO3.chances;
         this.scavBase.generation = scavLO.scavLO3.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit3;
+        BotTierTracker.scavTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("scavLoad3 loaded");
         }
@@ -509,6 +481,7 @@ class Bots {
         this.usecBase.appearance.feet = usecLO.usecLO1.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO1.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
+        BotTierTracker.usecTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
         }
@@ -524,6 +497,7 @@ class Bots {
         this.usecBase.appearance.feet = usecLO.usecLO2.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO2.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
+        BotTierTracker.usecTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
         }
@@ -539,6 +513,7 @@ class Bots {
         this.usecBase.appearance.feet = usecLO.usecLO3.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO3.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
+        BotTierTracker.usecTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
         }
@@ -554,6 +529,7 @@ class Bots {
         this.usecBase.appearance.feet = usecLO.usecLO4.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO4.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
+        BotTierTracker.usecTier = 4;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
         }
@@ -569,6 +545,7 @@ class Bots {
         this.bearBase.appearance.feet = bearLO.bearLO1.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO1.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
+        BotTierTracker.bearTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
         }
@@ -584,6 +561,7 @@ class Bots {
         this.bearBase.appearance.feet = bearLO.bearLO2.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO2.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
+        BotTierTracker.bearTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
         }
@@ -599,6 +577,7 @@ class Bots {
         this.bearBase.appearance.feet = bearLO.bearLO3.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO3.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
+        BotTierTracker.bearTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
         }
@@ -614,6 +593,7 @@ class Bots {
         this.bearBase.appearance.feet = bearLO.bearLO4.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO4.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
+        BotTierTracker.bearTier = 4;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
         }
@@ -621,15 +601,14 @@ class Bots {
     raiderLoad1() {
         this.raiderBase.inventory.Ammo = raiderLO.raiderLO1.inventory.Ammo;
         this.raiderBase.inventory.equipment = raiderLO.raiderLO1.inventory.equipment;
-        this.rogueBase.inventory.equipment.FirstPrimaryWeapon = this.rogueBase.inventory.equipment.FirstPrimaryWeapon;
-        this.rogueBase.inventory.equipment.SecondPrimaryWeapon = this.rogueBase.inventory.equipment.SecondPrimaryWeapon;
-        this.rogueBase.inventory.equipment.Holster = this.rogueBase.inventory.equipment.Holster;
+        this.raiderBase.inventory.mods = raiderLO.raiderLO1.inventory.mods;
         this.raiderBase.chances = raiderLO.raiderLO1.chances;
         this.raiderBase.generation = raiderLO.raiderLO1.generation;
         this.raiderBase.appearance.body = raiderLO.appearance.body;
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
         this.raiderBase.appearance.voice = raiderLO.appearance.voice;
+        BotTierTracker.raiderTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("raiderLoad1 loaded");
         }
@@ -637,16 +616,14 @@ class Bots {
     rogueLoad1() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO1.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO1.inventory.equipment;
-        this.rogueBase.inventory.equipment.FirstPrimaryWeapon = this.rogueBase.inventory.equipment.FirstPrimaryWeapon;
-        this.rogueBase.inventory.equipment.SecondPrimaryWeapon = this.rogueBase.inventory.equipment.SecondPrimaryWeapon;
-        this.rogueBase.inventory.equipment.Holster = this.rogueBase.inventory.equipment.Holster;
-        this.rogueBase.inventory.mods = rogueLO.rogueLO1.inventory.mods;
+        this.rogueBase.inventory.mods = {};
         this.rogueBase.chances = rogueLO.rogueLO1.chances;
         this.rogueBase.generation = rogueLO.rogueLO1.generation;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
+        BotTierTracker.rogueTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("rogueLoad1 loaded");
         }
@@ -654,16 +631,14 @@ class Bots {
     rogueLoad2() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO2.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO2.inventory.equipment;
-        this.rogueBase.inventory.equipment.FirstPrimaryWeapon = this.rogueBase.inventory.equipment.FirstPrimaryWeapon;
-        this.rogueBase.inventory.equipment.SecondPrimaryWeapon = this.rogueBase.inventory.equipment.SecondPrimaryWeapon;
-        this.rogueBase.inventory.equipment.Holster = this.rogueBase.inventory.equipment.Holster;
-        this.rogueBase.inventory.mods = rogueLO.rogueLO2.inventory.mods;
+        this.rogueBase.inventory.mods = {};
         this.rogueBase.chances = rogueLO.rogueLO2.chances;
         this.rogueBase.generation = rogueLO.rogueLO2.generation;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
+        BotTierTracker.rogueTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("rogueLoad2 loaded");
         }
@@ -671,19 +646,43 @@ class Bots {
     rogueLoad3() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO3.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO3.inventory.equipment;
-        this.rogueBase.inventory.equipment.FirstPrimaryWeapon = this.rogueBase.inventory.equipment.FirstPrimaryWeapon;
-        this.rogueBase.inventory.equipment.SecondPrimaryWeapon = this.rogueBase.inventory.equipment.SecondPrimaryWeapon;
-        this.rogueBase.inventory.equipment.Holster = this.rogueBase.inventory.equipment.Holster;
-        this.rogueBase.inventory.mods = rogueLO.rogueLO3.inventory.mods;
+        this.rogueBase.inventory.mods = {};
         this.rogueBase.chances = rogueLO.rogueLO3.chances;
         this.rogueBase.generation = rogueLO.rogueLO3.generation;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
+        BotTierTracker.rogueTier = 3;
+        this.logger.info("/////////////////Tier = " + this.tierTrakcer.getTier("exusec"));
         if (this.modConf.logEverything == true) {
             this.logger.info("rogueLoad3 loaded");
         }
     }
 }
 exports.Bots = Bots;
+class BotTierTracker {
+    getTier(botType) {
+        if (botType === "usec") {
+            return BotTierTracker.usecTier;
+        }
+        if (botType === "bear") {
+            return BotTierTracker.bearTier;
+        }
+        if (botType === "assault") {
+            return BotTierTracker.scavTier;
+        }
+        if (botType === "pmcbot") {
+            return BotTierTracker.raiderTier;
+        }
+        if (botType === "exusec") {
+            return BotTierTracker.rogueTier;
+        }
+    }
+}
+exports.BotTierTracker = BotTierTracker;
+BotTierTracker.usecTier = 1;
+BotTierTracker.bearTier = 1;
+BotTierTracker.scavTier = 1;
+BotTierTracker.rogueTier = 1;
+BotTierTracker.raiderTier = 1;

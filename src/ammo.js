@@ -224,14 +224,14 @@ class Ammo {
             if (fileData._id === "5d6e6869a4b9361c140bcfde") {
                 fileData._props.PenetrationPower = 22;
                 fileData._props.ArmorDamage = 168;
-                fileData._props.Damage = 175;
+                fileData._props.Damage = 180;
                 fileData._props.InitialSpeed = 395;
                 fileData._props.RicochetChance = 0.15;
                 fileData._props.FragmentationChance = 0;
                 fileData._props.BulletMassGram = 40;
                 fileData._props.HeavyBleedingDelta = 0.9;
                 fileData._props.LightBleedingDelta = 1;
-                fileData._props.ammoAccr = -20;
+                fileData._props.ammoAccr = -10;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 30;
                 if (this.modConf.malf_changes == true) {
@@ -253,9 +253,9 @@ class Ammo {
                 fileData._props.BulletMassGram = 19.6;
                 fileData._props.HeavyBleedingDelta = 0.9;
                 fileData._props.LightBleedingDelta = 1;
-                fileData._props.ammoAccr = -15;
+                fileData._props.ammoAccr = -20;
                 fileData._props.ammoHear = 0;
-                fileData._props.ammoRec = 18;
+                fileData._props.ammoRec = 22;
                 if (this.modConf.malf_changes == true) {
                     fileData._props.MalfMisfireChance = 0;
                     fileData._props.MisfireChance = 0;
@@ -319,7 +319,7 @@ class Ammo {
                 fileData._props.BulletMassGram = 19.4;
                 fileData._props.HeavyBleedingDelta = 0.8;
                 fileData._props.LightBleedingDelta = 0.95;
-                fileData._props.ammoAccr = 20;
+                fileData._props.ammoAccr = 15;
                 fileData._props.ammoHear = 0;
                 fileData._props.ammoRec = 19;
                 if (this.modConf.malf_changes == true) {
@@ -1399,7 +1399,7 @@ class Ammo {
             if (fileData._id === "5ba26812d4351e003201fef1") {
                 fileData._props.PenetrationPower = 40;
                 fileData._props.ArmorDamage = 17;
-                fileData._props.Damage = 36;
+                fileData._props.Damage = 35;
                 fileData._props.InitialSpeed = 690;
                 fileData._props.RicochetChance = 0.27;
                 fileData._props.FragmentationChance = 0.5;

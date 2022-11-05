@@ -25,17 +25,20 @@ export class FleamarketConfig {
 
     public loadFleaConfig() {
 
-        // if (this.modConfig.flea_changes == true || this.modConfig.tiered_flea == true) {
+        if (this.modConfig.flea_changes == true || this.modConfig.tiered_flea == true) {
 
-        //     this.fleaConf.dynamic.blacklist.enableBsgList = false;
-        //     this.fleaConf.dynamic.blacklist.custom = this.custFleaConf.blacklist.custom;
-        // }
+            this.fleaConf.dynamic.blacklist.enableBsgList = true;
+            this.fleaConf.dynamic.blacklist.custom = this.custFleaConf.blacklist.custom;
+        }
 
 
         if (this.modConfig.disable_flea_blacklist == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = false;
             this.fleaConf.dynamic.blacklist.custom = [];
         }
+
+        this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT");
+
 
         if (this.modConfig.flea_changes == true) {
 
@@ -83,7 +86,6 @@ export class FleamarketConfig {
             this.logger.info("Fleamarket loaded");
         }
     }
-
 }
 
 export class TieredFlea {
@@ -92,6 +94,7 @@ export class TieredFlea {
 
     public globalDB = this.tables.globals.config;
     public itemDB = this.tables.templates.items;
+
 
     public flea0() {
         this.canSellAll(false);
@@ -261,7 +264,6 @@ export class TieredFlea {
         this.canSellContainer(bool);
         this.canSellPouch(bool);
         this.canSellRepairKit(bool);
-        this.canSellCustomMeds(bool);
         this.canSellMounts(bool);
         this.canSellReddots(bool);
         this.canSellIrons(bool);
@@ -681,15 +683,5 @@ export class TieredFlea {
             }
         }
     }
-    public canSellCustomMeds(bool) {
-        for (let i in this.itemDB) {
-            if (this.itemDB[i]._id === "TIER1MEDKIT"
-                || this.itemDB[i]._id === "TIER2MEDKIT"
-                || this.itemDB[i]._id === "TIER3MEDKIT"
-                || this.itemDB[i]._id === "SUPERBOTMEDKIT"
-            ) {
-                this.itemDB[i]._props.CanSellOnRagfair = bool
-            }
-        }
-    }
+
 }

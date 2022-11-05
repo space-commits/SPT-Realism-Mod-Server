@@ -10,7 +10,7 @@
         "Weight": 0.015,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 50
+        "ChamberSpeed": 40
     },
     "5648ac824bdc2ded0b8b457d": {
         "ItemID": "5648ac824bdc2ded0b8b457d",
@@ -23,7 +23,7 @@
         "Weight": 0.017,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 35
+        "ChamberSpeed": 30
     },
     "5c0faf68d174af02a96260b8": {
         "ItemID": "5c0faf68d174af02a96260b8",
@@ -114,7 +114,7 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 50
+        "ChamberSpeed": 40
     },
     "5bb20dbcd4351e44f824c04e": {
         "ItemID": "5bb20dbcd4351e44f824c04e",
@@ -140,7 +140,7 @@
         "Weight": 0.035,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 50
+        "ChamberSpeed": 40
     },
     "5b2240bf5acfc40dc528af69": {
         "ItemID": "5b2240bf5acfc40dc528af69",
@@ -153,7 +153,7 @@
         "Weight": 0.04,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 50
+        "ChamberSpeed": 40
     },
     "5d44334ba4b9362b346d1948": {
         "ItemID": "5d44334ba4b9362b346d1948",
@@ -166,7 +166,7 @@
         "Weight": 0.04,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 50
+        "ChamberSpeed": 40
     },
     "5f633ff5c444ce7e3c30a006": {
         "ItemID": "5f633ff5c444ce7e3c30a006",
@@ -179,7 +179,7 @@
         "Weight": 0.028,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 50
+        "ChamberSpeed": 40
     },
     "62811d61578c54356d6d67ea": {
         "ItemID": "62811d61578c54356d6d67ea",
@@ -233,7 +233,7 @@
         "Weight": 0.013,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 20
+        "ChamberSpeed": 0
     },
     "5fbcc640016cce60e8341acc": {
         "ItemID": "5fbcc640016cce60e8341acc",
@@ -246,7 +246,7 @@
         "Weight": 0.035,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 45
+        "ChamberSpeed": 35
     },
     "6181688c6c780c1e710c9b04": {
         "ItemID": "6181688c6c780c1e710c9b04",
@@ -272,7 +272,7 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 50
+        "ChamberSpeed": 40
     },
     "5926c32286f774616e42de99": {
         "ItemID": "5926c32286f774616e42de99",
@@ -324,7 +324,7 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 50
+        "ChamberSpeed": 40
     },
     "58949edd86f77409483e16a9": {
         "ItemID": "58949edd86f77409483e16a9",
@@ -337,7 +337,7 @@
         "Weight": 0.033,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 35
+        "ChamberSpeed": 30
     },
     "58949fac86f77409483e16aa": {
         "ItemID": "58949fac86f77409483e16aa",

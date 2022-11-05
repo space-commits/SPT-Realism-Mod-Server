@@ -128,8 +128,6 @@ class AttatchmentBase {
                     || serverItem._id === "5a33b652c4a28232996e407c"
                     || serverItem._id === "5d2c770c48f0354b4a07c100"
                     || serverItem._id === "5d2c772c48f0355d95672c25"
-                    || serverItem._id === "5b099bb25acfc400186331e8"
-                    || serverItem._id === "5649af884bdc2d1b2b8b4589"
                     || serverItem._id === "5926dad986f7741f82604363"
                     || serverItem._id === "5b7be47f5acfc400170e2dd2"
                     || serverItem._id === "5b7be4895acfc400170e2dd5"

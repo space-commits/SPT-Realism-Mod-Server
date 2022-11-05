@@ -1,7 +1,6 @@
 {
   "appearance": {
     "body": [
-      "5fd3e9f71b735718c25cd9f8",
       "5fcf63da5c287f01f22bf245",
       "618109c96d7ca35d076b3363",
       "5d1f566d86f7744bcd13459a",
@@ -173,7 +172,7 @@
           "5cadf6e5ae921500113bb973": 4,
           "5cadf6eeae921500134b2799": 2
         },
-        "Caliber762x35":{
+        "Caliber762x35": {
           "5fd20ff893a8961fc660a954": 5,
           "6196364158ef8c428c287d9f": 5,
           "5fbe3ffdf8b6a877a729ea82": 10,
@@ -198,8 +197,7 @@
         "FaceCover": {
           "5ab8f39486f7745cd93a1cca": 10,
           "5ab8f4ff86f77431c60d91ba": 5,
-          "5b432f3d5acfc4704b4a1dfb": 10,
-          "60363c0c92ec1c31037959f5": 2
+          "5b432f3d5acfc4704b4a1dfb": 10
         },
         "ArmorVest": {
           "609e8540d5c319764c2bc2e9": 5,
@@ -211,8 +209,7 @@
           "62a61c988ec41a51b34758d5": 5,
           "5c1a1cc52e221602b3136e3d": 10,
           "5d5fca1ea4b93635fd598c07": 10,
-          "5d6d2e22a4b9361bd5780d05": 10,
-          "545cdb794bdc2d3a198b456a": 5
+          "5d6d2e22a4b9361bd5780d05": 10
         },
         "ArmBand": {
           "619bde7fc9546643a67df6f4": 1,
@@ -246,41 +243,43 @@
           "5e9dcf5986f7746c417435b3": 1
         },
         "FirstPrimaryWeapon": {
-          "5ac66d015acfc400180ae6e4": 1,
-          "5ac66d9b5acfc4001633997a": 1,
-          "5ac66d725acfc43b321d4b60": 1,
-          "5dcbd56fdbd3d91b3e5468d5": 1,
-          "623063e994fc3f7b302a9696": 1,
-          "5bb2475ed4351e00853264e3": 1,
-          "5fbcc1d9016cce60e8341ab3": 1,
-          "606587252535c57a13424cfd": 1,
-          "628a60ae6b1d481ff772e9c8": 1,
-          "628b9c37a733087d0d7fe84b": 1,
-          "5447a9cd4bdc2dbd208b4567": 1,
-          "6184055050224f204c1da540": 1,
-          "5d43021ca4b9362eab4b5e25": 1,
-          "5926bb2186f7744b1c6c6e60": 1,
-          "5ba26383d4351e00334c93d9": 1,
-          "5de7bd7bfd6b4e6e2276dc25": 1,
-          "58948c8e86f77409493f7266": 1,
-          "5cc82d76e24e8d00134b4b83": 1,
-          "5fc3e272f8b6a877a729eac5": 1,
-          "5fb64bc92b1b027b1f50bcf2": 1,
-          "6259b864ebedf17603599e88": 1,
-          "576165642459773c7a400233": 1,
-          "57c44b372459772d2b39b8ce": 1
+          "623063e994fc3f7b302a9696": 10,
+          "5ac66d015acfc400180ae6e4": 10,
+          "5ac66d9b5acfc4001633997a": 10,
+          "5ac66d725acfc43b321d4b60": 10,
+          "5dcbd56fdbd3d91b3e5468d5": 10,
+          "5bb2475ed4351e00853264e3": 10,
+          "5fbcc1d9016cce60e8341ab3": 10,
+          "606587252535c57a13424cfd": 10,
+          "628a60ae6b1d481ff772e9c8": 10,
+
+          "628b9c37a733087d0d7fe84b": 5,
+
+          "5447a9cd4bdc2dbd208b4567": 20,
+          "618428466ef05c2ce828f218": 10,
+          "5d43021ca4b9362eab4b5e25": 5,
+          "5926bb2186f7744b1c6c6e60": 5,
+          "5ba26383d4351e00334c93d9": 5,
+          "5de7bd7bfd6b4e6e2276dc25": 5,
+          "58948c8e86f77409493f7266": 5,
+          "5cc82d76e24e8d00134b4b83": 5,
+          "5fc3e272f8b6a877a729eac5": 5,
+          "5fb64bc92b1b027b1f50bcf2": 2,
+          "6259b864ebedf17603599e88": 2,
+          "576165642459773c7a400233": 2,
+          "57c44b372459772d2b39b8ce": 5
         },
         "SecondPrimaryWeapon": {
           "5a7828548dc32e5a9c28b516": 1
         },
         "Holster": {
-          "5d3eb3b0a4b93615055e84d2": 1,
-          "5a7ae0c351dfba0017554310": 1,
-          "5b1fa9b25acfc40018633c01": 1,
-          "56d59856d2720bd8418b456a": 1,
-          "602a9740da11d6478d5a06dc": 1,
-          "59f98b4986f7746f546d2cef": 1,
-          "6193a720f8ee7e52e42109ed": 1,
+          "5d67abc1a4b93614ec50137f": 10,
+          "5a7ae0c351dfba0017554310": 20,
+          "5b1fa9b25acfc40018633c01": 5,
+          "56d59856d2720bd8418b456a": 20,
+          "602a9740da11d6478d5a06dc": 20,
+          "59f98b4986f7746f546d2cef": 10,
+          "6193a720f8ee7e52e42109ed": 10,
           "61a4c8884f95bc3b2c5dc96f": 1
         },
         "Scabbard": {
@@ -291,7 +290,7 @@
           "5bffe7930db834001b734a39": 5
         },
         "Pockets": {
-          "5af99e9186f7747c447120b8": 1
+          "557ffd194bdc2d28148b457f": 1
         },
         "SecuredContainer": {
           "5c0a794586f77461c458f892": 1
@@ -309,15 +308,15 @@
     "chances": {
       "equipment": {
         "Headwear": 100,
-        "Earpiece": 70,
+        "Earpiece": 100,
         "FaceCover": 100,
         "ArmorVest": 100,
-        "Eyewear": 70,
+        "Eyewear": 100,
         "ArmBand": 100,
         "TacticalVest": 100,
         "Backpack": 30,
         "FirstPrimaryWeapon": 100,
-        "SecondPrimaryWeapon": 15,
+        "SecondPrimaryWeapon": 10,
         "Holster": 50,
         "Scabbard": 100,
         "Pockets": 100,

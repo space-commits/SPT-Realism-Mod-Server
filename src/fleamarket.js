@@ -27,14 +27,15 @@ class FleamarketConfig {
         this.custFleaConf = custFleaConf;
     }
     loadFleaConfig() {
-        // if (this.modConfig.flea_changes == true || this.modConfig.tiered_flea == true) {
-        //     this.fleaConf.dynamic.blacklist.enableBsgList = false;
-        //     this.fleaConf.dynamic.blacklist.custom = this.custFleaConf.blacklist.custom;
-        // }
+        if (this.modConfig.flea_changes == true || this.modConfig.tiered_flea == true) {
+            this.fleaConf.dynamic.blacklist.enableBsgList = true;
+            this.fleaConf.dynamic.blacklist.custom = this.custFleaConf.blacklist.custom;
+        }
         if (this.modConfig.disable_flea_blacklist == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = false;
             this.fleaConf.dynamic.blacklist.custom = [];
         }
+        this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT");
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.sell.chance.base = 45;
             this.fleaConf.sell.time.base = 60;
@@ -245,7 +246,6 @@ class TieredFlea {
         this.canSellContainer(bool);
         this.canSellPouch(bool);
         this.canSellRepairKit(bool);
-        this.canSellCustomMeds(bool);
         this.canSellMounts(bool);
         this.canSellReddots(bool);
         this.canSellIrons(bool);
@@ -610,16 +610,6 @@ class TieredFlea {
     canSellMaps(bool) {
         for (let i in this.itemDB) {
             if (this.itemDB[i]._parent === "567849dd4bdc2d150f8b456e") {
-                this.itemDB[i]._props.CanSellOnRagfair = bool;
-            }
-        }
-    }
-    canSellCustomMeds(bool) {
-        for (let i in this.itemDB) {
-            if (this.itemDB[i]._id === "TIER1MEDKIT"
-                || this.itemDB[i]._id === "TIER2MEDKIT"
-                || this.itemDB[i]._id === "TIER3MEDKIT"
-                || this.itemDB[i]._id === "SUPERBOTMEDKIT") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }

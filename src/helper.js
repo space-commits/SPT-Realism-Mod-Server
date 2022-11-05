@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Helper = void 0;
-const medRevertCount = require("../db/saved/info.json");
 const dir = __dirname;
 const dirArray = dir.split("\\");
 const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
@@ -10,7 +9,6 @@ class Helper {
         this.tables = tables;
         this.arrays = arrays;
         this.logger = logger;
-        // public array = new Arrays(this.tables);
         this.itemDB = this.tables.templates.items;
         this.array = this.arrays;
         this.medItems = this.array.stash_meds;

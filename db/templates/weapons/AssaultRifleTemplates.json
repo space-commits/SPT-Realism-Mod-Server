@@ -104,7 +104,7 @@
         "WeaponAllowADS": false,
         "Weight": 2.05,
         "DurabilityBurnRatio": 0.22,
-        "AutoROF": 572,
+        "AutoROF": 582,
         "SemiROF": 450
     },
     "5ac66d2e5acfc43b321d4b53": {
@@ -392,7 +392,7 @@
         "WeaponAllowADS": false,
         "Weight": 2.038,
         "DurabilityBurnRatio": 0.27,
-        "AutoROF": 572,
+        "AutoROF": 592,
         "SemiROF": 450
     },
     "583990e32459771419544dd2": {
@@ -536,7 +536,7 @@
         "WeaponAllowADS": false,
         "Weight": 2.042,
         "DurabilityBurnRatio": 0.22,
-        "AutoROF": 572,
+        "AutoROF": 592,
         "SemiROF": 450
     },
     "5644bd2b4bdc2d3b4c8b4572": {

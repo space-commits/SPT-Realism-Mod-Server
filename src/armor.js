@@ -1533,25 +1533,25 @@ class Armor {
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 8
             if (fileData._props.armorClass >= 8 && (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567")) {
-                fileData._props.BluntThroughput *= 1.1;
+                fileData._props.BluntThroughput *= 1.15;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 9
             if (fileData._props.armorClass >= 9 && (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567")) {
-                fileData._props.BluntThroughput *= 1.2;
+                fileData._props.BluntThroughput *= 1.27;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 10
             if (fileData._props.armorClass >= 10 && (fileData._parent === "5448e54d4bdc2dcc718b4568" || fileData._parent === "5448e5284bdc2dcb718b4567")) {
-                fileData._props.BluntThroughput *= 1.45;
+                fileData._props.BluntThroughput *= 1.49;
             }
             //Blunt Damage Multiplier for Helmets
             if (fileData._parent === "5a341c4086f77401f2541505" || fileData._parent === "5a341c4686f77469e155819e" || fileData._parent === "57bef4c42459772e8d35a53b" && fileData._props.speedPenaltyPercent != null) {
                 fileData._props.speedPenaltyPercent *= 1;
                 fileData._props.weaponErgonomicPenalty *= 1;
-                if (this.modConf.buff_helmets && fileData._props.armorClass <= 10) {
+                if (this.modConf.buff_helmets && fileData._props.armorClass <= 10 && fileData._props.armorClass >= 0) {
                     fileData._props.armorClass += 1;
-                    fileData._props.BluntThroughput *= 1.1;
+                    fileData._props.BluntThroughput *= 1;
                     if (fileData._parent === "57bef4c42459772e8d35a53b") {
-                        fileData._props.Durability *= 1.15;
+                        fileData._props.Durability *= 1.2;
                         fileData._props.MaxDurability = fileData._props.Durability;
                     }
                 }

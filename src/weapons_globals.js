@@ -39,21 +39,6 @@ class WeaponsGlobals {
                     fileData._props.RepairComplexity = 0;
                     fileData._props.RepairQuality = 0.1;
                 }
-                if (fileData._props.weapClass === "smg"
-                    || fileData._props.weapClass === "shotgun"
-                    || fileData._props.weapClass === "assaultCarbine"
-                    || fileData._props.weapClass === "sniperRifle"
-                    || fileData._props.weapClass === "assaultRifle"
-                    || fileData._props.weapClass === "machinegun"
-                    || fileData._props.weapClass === "marksmanRifle"
-                    || fileData._props.weapClass === "assaultRifle") {
-                    fileData._props.Ergonomics = 75;
-                }
-                if (fileData._props.weapClass === "pistol") {
-                    fileData._props.RecoilForceUp *= 1.14;
-                    fileData._props.CameraRecoil *= 0.8;
-                    fileData._props.RecolDispersion *= 1.15;
-                }
             }
         }
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
@@ -70,6 +55,24 @@ class WeaponsGlobals {
             this.globalDB.Aiming.RecoilZIntensityByPose["z"] = 1;
             this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.05;
             this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.4;
+            for (let i in this.itemDB) {
+                let fileData = this.itemDB[i];
+                if (fileData._props.weapClass === "smg"
+                    || fileData._props.weapClass === "shotgun"
+                    || fileData._props.weapClass === "assaultCarbine"
+                    || fileData._props.weapClass === "sniperRifle"
+                    || fileData._props.weapClass === "assaultRifle"
+                    || fileData._props.weapClass === "machinegun"
+                    || fileData._props.weapClass === "marksmanRifle"
+                    || fileData._props.weapClass === "assaultRifle") {
+                    fileData._props.Ergonomics = 70;
+                }
+                if (fileData._props.weapClass === "pistol") {
+                    fileData._props.RecoilForceUp *= 1.14;
+                    fileData._props.CameraRecoil *= 0.8;
+                    fileData._props.RecolDispersion *= 1.15;
+                }
+            }
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }

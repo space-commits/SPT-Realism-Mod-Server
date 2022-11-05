@@ -5,6 +5,7 @@ const BotWeaponGenerator_1 = require("C:/snapshot/project/obj/generators/BotWeap
 const BotGeneratorHelper_1 = require("C:/snapshot/project/obj/helpers/BotGeneratorHelper");
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
+const bots_1 = require("./bots");
 class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) {
         const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
@@ -78,6 +79,84 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
         }
         return true;
+    }
+    getPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole) {
+        //right now it will just pick the first preset that matches, need to find a way to randomize it.
+        const tierChecker = new bots_1.BotTierTracker();
+        const tier = tierChecker.getTier(botRole);
+        this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
+        this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
+        const weaponMods = [];
+        const weaponPresets = [];
+        try {
+            let preset;
+            //I need to put all preset files in the same folder
+            let presetFile = require(`../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
+            for (let presetObj in presetFile) {
+                if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
+                    let presetTier = presetFile[presetObj]._name.slice(0, 1);
+                    let pTierNum = Number(presetTier);
+                    if (pTierNum <= tier) {
+                        weaponPresets.push(presetFile[presetObj]);
+                        this.logger.warning(`Found A Preset Within Tier`);
+                    }
+                }
+            }
+            if (weaponPresets.length == 0) {
+                for (let presetObj in presetFile) {
+                    if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
+                        weaponPresets.push(presetFile[presetObj]);
+                        this.logger.warning(`Found a preset outside of tier`);
+                    }
+                }
+            }
+            this.logger.warning("Choices:");
+            for (let i in weaponPresets) {
+                this.logger.warning(weaponPresets[i]._name);
+            }
+            let randomPreset = weaponPresets[Math.floor(Math.random() * weaponPresets.length)];
+            this.logger.warning("Chose:");
+            this.logger.warning(randomPreset._name);
+            preset = this.jsonUtil.clone(randomPreset);
+            //find a way to check for specific slots and then change the itemID, getting it from an array of possible items for that slot. Base weapon preset would need
+            //whatever rail adapters it needs, etc. Could be very error prone due to BSG's inconsistent slot naming.
+            if (preset) {
+                const parentItem = preset._items[0];
+                preset._items[0] = {
+                    ...parentItem, ...{
+                        "parentId": weaponParentId,
+                        "slotId": equipmentSlot,
+                        ...this.botGeneratorHelper.generateExtraPropertiesForItem(itemTemplate, botRole)
+                    }
+                };
+                weaponMods.push(...preset._items);
+            }
+        }
+        catch {
+            this.logger.warning(`Could not find custom preset for weapon with tpl ${weaponTpl}, trying to find a default preset.`);
+            let preset;
+            for (const presetObj of Object.values(this.databaseServer.getTables().globals.ItemPresets)) {
+                if (presetObj._items[0]._tpl === weaponTpl) {
+                    preset = this.jsonUtil.clone(presetObj);
+                    break;
+                }
+            }
+            if (preset) {
+                const parentItem = preset._items[0];
+                preset._items[0] = {
+                    ...parentItem, ...{
+                        "parentId": weaponParentId,
+                        "slotId": equipmentSlot,
+                        ...this.botGeneratorHelper.generateExtraPropertiesForItem(itemTemplate, botRole)
+                    }
+                };
+                weaponMods.push(...preset._items);
+            }
+            else {
+                throw new Error(`Could not find preset for weapon with tpl ${weaponTpl}`);
+            }
+        }
+        return weaponMods;
     }
 }
 exports.BotWepGen = BotWepGen;

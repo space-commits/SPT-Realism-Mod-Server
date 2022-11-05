@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CodeGen = void 0;
-const magazineJSON = require("../db/bots/loadouts/common/magazines.json");
+// const magazineJSON = require("../db/bots/loadouts/common/magazines.json");
 const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
 const HeadArmorTemplates = require("../db/templates/armor/HeadArmorTemplates.json");
 const MuzzleDeviceTemplates = require("../db/templates/attatchments/MuzzleDeviceTemplates.json");
@@ -39,16 +39,16 @@ class CodeGen {
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
     }
-    magsToJSON() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-            if (serverItem._parent === "5448bc234bdc2d3c308b4569" || serverItem._parent === "610720f290b75a49ff2e5e25") {
-                let fileItem = magazineJSON[i];
-                magazineJSON[i] = this.doAssignJSONMagazine(fileItem);
-                this.helper.saveToJSONFile(magazineJSON, '/db/bots/loadouts/common/magazines.json');
-            }
-        }
-    }
+    // public magsToJSON() {
+    //     for (let i in this.itemDB) {
+    //         let serverItem = this.itemDB[i];
+    //         if (serverItem._parent === "5448bc234bdc2d3c308b4569" || serverItem._parent === "610720f290b75a49ff2e5e25") {
+    //             let fileItem = magazineJSON[i];
+    //             magazineJSON[i] = this.doAssignJSONMagazine(fileItem);
+    //             this.helper.saveToJSONFile(magazineJSON, '/db/bots/loadouts/common/magazines.json');
+    //         }
+    //     }
+    // }
     armorTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
@@ -863,6 +863,9 @@ class CodeGen {
                         }
                         if (modType === "foregrip_adapter") {
                             locale.Description = "This adapter will lose its negative ergo stat if a grip is attached to it." + `\n\n${locale.Description}`;
+                        }
+                        if (modType === "scope") {
+                            locale.Description = "ADS speed modifier only applies when this sight is in use." + `\n\n${locale.Description}`;
                         }
                         if (item._parent === "57bef4c42459772e8d35a53b" || item._parent === "5a341c4086f77401f2541505") {
                             if (item._props.ConflictingItems[1] === "true") {

@@ -14,11 +14,6 @@ export class Meds {
             this.buffDB[buffName] = this.buffs[buffName]
         }
 
-        if (this.modConf.realism == true) {
-            //Adjust Thermal stim to compensate for lower base temp
-            this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
-        }
-
         for (let i in this.itemDB) {
             let fileData = this.itemDB[i];
             ///Pain Meds//

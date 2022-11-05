@@ -45,8 +45,8 @@
     "//Bot health settings. If set to true, these bot types will have the same health as the player. If false, they will have default EFT health pools.//": 
     "//realism option must be true for this to take effect. If realism is false, all bots will have defualt health.//",
     "realistic_boss_health" : false,
-    "realistic_boss_follower_health": true,
-    "realistic_raider_rogue_health": true,
+    "realistic_boss_follower_health": false,
+    "realistic_raider_rogue_health": false,
     "realistic_cultist_health" : true,
 
     "//OpenZones fix. Adds more zones that bots can spawn in. Credit to JustNU//": 
@@ -92,7 +92,7 @@
     "//Testing parameters. For testing purposes only. No support given if these are enabled//": 
     "Set to true to enable bot testing parameters. Set the tier to 1-4 to spawn a sepcific tier of bot. Disabling weapons will deactivate the AI, they will spawn but not move or react",
     "bot_testing": false,
-    "bot_test_tier": 3,
+    "bot_test_tier": 4,
     "bot_test_weps_enabled": false,
     "all_scavs": false,
     "all_PMCs": false,
@@ -102,5 +102,5 @@
     "guarantee_boss_spawn": false,
     "disable_flea_blacklist": false,
     "no_fall_damage": false,
-    "logEverything": true
+    "logEverything": false
 }
