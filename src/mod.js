@@ -323,20 +323,20 @@ class Mod {
         if (modConfig.med_changes == true) {
             items.createCustomMedItems();
             meds.loadMeds();
-            custFleaConf.loadFleaConfig();
-            flea.loadFleaGlobal();
-            if (modConfig.malf_changes == true) {
-                weaponsStats.loadWepStats();
-            }
-            if (modConfig.recoil_attachment_overhaul) {
-                quests.fixMechancicQuests();
-            }
-            attatchBase.loadAttRestrict();
-            attatchStats.loadAttStats();
-            items.loadItems();
-            player.loadPlayer();
-            weaponsGlobals.loadGlobalWeps();
         }
+        custFleaConf.loadFleaConfig();
+        flea.loadFleaGlobal();
+        if (modConfig.malf_changes == true) {
+            weaponsStats.loadWepStats();
+        }
+        if (modConfig.recoil_attachment_overhaul) {
+            quests.fixMechancicQuests();
+        }
+        attatchBase.loadAttRestrict();
+        attatchStats.loadAttStats();
+        items.loadItems();
+        player.loadPlayer();
+        weaponsGlobals.loadGlobalWeps();
     }
     postAkiLoad(container) {
         this.modLoader = container.resolve("PreAkiModLoader");

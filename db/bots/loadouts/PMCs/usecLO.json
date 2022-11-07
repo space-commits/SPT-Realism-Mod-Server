@@ -3228,18 +3228,11 @@
           "56742c284bdc2d98058b456d",
           "5c1265fc86f7743f896a21c2",
           "5d235b4d86f7742e017bc88a",
-          "5a0ea79b86f7741d4a35298e",
-          "5a0dc95c86f77452440fc675",
-          "5a0ee30786f774023b6ee08f",
-          "5a13ef0686f7746e5a411744",
-          "5a0ee34586f774023b6ee092",
-          "5a0eeb1a86f774688b70aa5c",
-          "5a13f46386f7741dd7384b04",
           "5a145d4786f7744cbb6f4a12",
-          "5a145d7b86f7744cbb6f4a13",
           "5a0eee1486f77402aa773226"
         ],
         "Backpack": [
+          "5a145d7b86f7744cbb6f4a13",
           "62a0a098de7ac8199358053b",
           "590a3efd86f77437d351a25b",
           "59e7715586f7742ee5789605",
@@ -3390,7 +3383,7 @@
         "mod_tactical_003": 35,
         "mod_tactical_2": 35,
         "mod_flashlight": 35,
-        "mod_scope": 30,
+        "mod_scope": 50,
         "mod_stock": 100,
         "mod_charge": 100,
         "mod_handguard": 100,
@@ -4254,7 +4247,7 @@
             "5b39f8db5acfc40016387a1b"
           ]
         },
-        "628a6678ccaab13006640e49":{
+        "628a6678ccaab13006640e49": {
           "mod_stock": [
             "5649be884bdc2d79388b4577",
             "5c0faeddd174af02a962601f"
@@ -5252,18 +5245,11 @@
           "56742c284bdc2d98058b456d",
           "5c1265fc86f7743f896a21c2",
           "5d235b4d86f7742e017bc88a",
-          "5a0ea79b86f7741d4a35298e",
-          "5a0dc95c86f77452440fc675",
-          "5a0ee30786f774023b6ee08f",
-          "5a13ef0686f7746e5a411744",
-          "5a0ee34586f774023b6ee092",
-          "5a0eeb1a86f774688b70aa5c",
-          "5a13f46386f7741dd7384b04",
-          "5a145d4786f7744cbb6f4a12",
-          "5a145d7b86f7744cbb6f4a13",
-          "5a0eee1486f77402aa773226"
+          "5a145d4786f7744cbb6f4a12"
         ],
         "Backpack": [
+          "5a0eee1486f77402aa773226",
+          "5a145d7b86f7744cbb6f4a13",
           "62a0a098de7ac8199358053b",
           "590a3efd86f77437d351a25b",
           "59e7715586f7742ee5789605",
@@ -5414,7 +5400,7 @@
         "mod_tactical_003": 45,
         "mod_tactical_2": 45,
         "mod_flashlight": 45,
-        "mod_scope": 50,
+        "mod_scope": 75,
         "mod_stock": 100,
         "mod_charge": 100,
         "mod_handguard": 100,
@@ -5668,7 +5654,7 @@
           "5d5e9c74a4b9364855191c40": 4,
           "5b40e3f35acfc40016388218": 4,
           "5b40e4035acfc47a87740943": 4,
-          "5a154d5cfcdbcb001a3b00da": 4,
+          "5ac8d6885acfc400180ae7b0": 4,
           "5c17a7ed2e2216152142459c": 3,
           "5e01ef6886f77445f643baa4": 2
         },
@@ -5683,7 +5669,8 @@
         },
         "ArmorVest": {
           "5c0e655586f774045612eeb2": 3,
-          "6038b4b292ec1c3103795a0b": 2,
+          "6038b4b292ec1c3103795a0b": 1,
+          "5e4abb5086f77406975c9342": 1,
           "5b44cf1486f77431723e3d05": 1,
           "5b44d0de86f774503d30cba8": 1
         },
@@ -5702,14 +5689,15 @@
         "TacticalVest": {
           "5d5d85c586f774279a21cbdb": 2,
           "5e9db13186f7742f845ee9d3": 3,
-          "628dc750b910320f4c27a732": 4,
           "544a5caa4bdc2d1a388b4568": 3,
           "5b44c8ea86f7742d1627baf1": 2,
           "5c0e9f2c86f77432297fe0a3": 2,
           "5648a69d4bdc2ded0b8b457b": 2,
-          "5b44cad286f77402a54ae7e5": 2,
+          "5b44cad286f77402a54ae7e5": 3,
           "60a3c70cde5f453f634816a3": 1,
-          "61bc85697113f767765c7fe7": 1
+          "60a3c68c37ea821725773ef5": 1,
+          "61bc85697113f767765c7fe7": 3,
+          "628dc750b910320f4c27a732": 4
         },
         "Backpack": {
           "619cf0335771dd3c390269ae": 4,
@@ -5794,7 +5782,7 @@
             "5a398b75c4a282000a51a266"
           ]
         },
-        "5a154d5cfcdbcb001a3b00da": {
+        "5ac8d6885acfc400180ae7b0": {
           "mod_nvg": [
             "5a16b8a9fcdbcb00165aa6ca"
           ],
@@ -7399,7 +7387,7 @@
             "59e4cf5286f7741778269d8a"
           ]
         },
-        "628a6678ccaab13006640e49":{
+        "628a6678ccaab13006640e49": {
           "mod_stock": [
             "5649be884bdc2d79388b4577",
             "5c0faeddd174af02a962601f"
@@ -7899,18 +7887,11 @@
           "5d235b4d86f7742e017bc88a",
           "5bc9b720d4351e450201234b",
           "56742c2e4bdc2d95058b456d",
-          "5a0ea79b86f7741d4a35298e",
-          "5a0dc95c86f77452440fc675",
-          "5a0ee30786f774023b6ee08f",
-          "5a13ef0686f7746e5a411744",
-          "5a0ee34586f774023b6ee092",
-          "5a0eeb1a86f774688b70aa5c",
-          "5a13f46386f7741dd7384b04",
-          "5a145d4786f7744cbb6f4a12",
-          "5a145d7b86f7744cbb6f4a13",
-          "5a0eee1486f77402aa773226"
+          "5a145d4786f7744cbb6f4a12"
         ],
         "Backpack": [
+          "5a0eee1486f77402aa773226",
+          "5a145d7b86f7744cbb6f4a13",
           "590a3efd86f77437d351a25b",
           "59e7715586f7742ee5789605",
           "5b432c305acfc40019478128",
@@ -8070,7 +8051,7 @@
         "mod_tactical_003": 80,
         "mod_tactical_2": 80,
         "mod_flashlight": 80,
-        "mod_scope": 98,
+        "mod_scope": 100,
         "mod_stock": 100,
         "mod_charge": 100,
         "mod_handguard": 100,

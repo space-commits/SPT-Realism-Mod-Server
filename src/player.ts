@@ -43,7 +43,7 @@ export class Player {
             this.globalDB.WalkSpeed["x"] = 0.6;
             this.globalDB.WalkSpeed["y"] = 0.82;
             this.globalDB.SprintSpeed["x"] = 0.02;
-            this.globalDB.SprintSpeed["y"] = 0.4;
+            this.globalDB.SprintSpeed["y"] = 0.41;
 
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
@@ -89,9 +89,9 @@ export class Player {
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
             this.globalDB.Stamina.OxygenRestoration *= 2.1;
 
-            this.globalDB.Stamina.AimDrainRate = 0.2;
-            this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.1;
-            this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.2;
+            this.globalDB.Stamina.AimDrainRate = 0.25;
+            this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.05;
+            this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing
 
             this.globalDB.Inertia.SideTime["x"] = 0.76;

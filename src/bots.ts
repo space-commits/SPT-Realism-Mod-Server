@@ -89,12 +89,14 @@ export class Bots {
             ]
         }
 
-        for (let item in this.itemDB) {
-            for (let hat in this.array.conflicting_hats) {
-                if (this.itemDB[item]._id === this.array.conflicting_hats[hat]) {
-                    let ca = this.array.conflicting_masks;
-                    let sa = this.itemDB[item]._props.ConflictingItems;
-                    this.itemDB[item]._props.ConflictingItems = ca.concat(sa);
+        if(this.modConf.headgear_conflicts == true){
+            for (let item in this.itemDB) {
+                for (let hat in this.array.conflicting_hats) {
+                    if (this.itemDB[item]._id === this.array.conflicting_hats[hat]) {
+                        let ca = this.array.conflicting_masks;
+                        let sa = this.itemDB[item]._props.ConflictingItems;
+                        this.itemDB[item]._props.ConflictingItems = ca.concat(sa);
+                    }
                 }
             }
         }
@@ -709,7 +711,7 @@ export class Bots {
     public rogueLoad1() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO1.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO1.inventory.equipment;
-        this.rogueBase.inventory.mods = {};
+        this.rogueBase.inventory.mods = rogueLO.rogueLO1.inventory.mods;;
         this.rogueBase.chances = rogueLO.rogueLO1.chances;
         this.rogueBase.generation = rogueLO.rogueLO1.generation;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
@@ -726,7 +728,7 @@ export class Bots {
     public rogueLoad2() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO2.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO2.inventory.equipment;
-        this.rogueBase.inventory.mods = {};
+        this.rogueBase.inventory.mods = rogueLO.rogueLO2.inventory.mods;
         this.rogueBase.chances = rogueLO.rogueLO2.chances;
         this.rogueBase.generation = rogueLO.rogueLO2.generation;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
@@ -742,7 +744,7 @@ export class Bots {
     public rogueLoad3() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO3.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO3.inventory.equipment;
-        this.rogueBase.inventory.mods = {};
+        this.rogueBase.inventory.mods = rogueLO.rogueLO3.inventory.mods;
         this.rogueBase.chances = rogueLO.rogueLO3.chances;
         this.rogueBase.generation = rogueLO.rogueLO3.generation;
         this.rogueBase.appearance.body = rogueLO.appearance.body;

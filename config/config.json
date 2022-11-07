@@ -13,6 +13,9 @@
     "//Armor above 5kg will reduce mouse sensitivity by % equal to their weight.//": 
     "//If disabled, armor will have no mouse sensitivity penalty//",
     "armor_mouse_penalty": true,
+    
+    "//Makes some masks and headgear conflict to prevent bots from looking cursed, these are items that clip badly. If you want to look cursed too, you can disable it.//": "",
+    "headgear_conflicts": true,
 
     "//WIP. Enables complete overhaul of recoil and attachments. See mod overview page on the hub for details//": 
     "//YOU MUST DELETE THE REALISMMOD.DLL FROM YOUR BEPINEX/PLUGINS FOLDER IF YOU WANT TO DISABLE THIS FEATURE. OTHERWISE YOUR GAME WILL CRASH//",
@@ -34,7 +37,7 @@
     "//This config option will turn itself back to false once this is done. You are able to repeat this process 5 times.//",
     "revert_med_changes": false,
 
-    "//Bots will no longer have tiered loadouts and will use vanilla loadouts, if set to false.//": 
+    "//If set to false, bots will no longer have tiered loadouts and will use vanilla loadouts.//": 
     "//This also disables changes made to botconfig (durability, bot ratios, loot limits) and custom loot generation functions that override AKI-SPT's.//",
     "bot_changes": true,
 
@@ -53,8 +56,8 @@
     "//This will most likely interfere with Lua's Spawn Rework, leave disabled if you're using that.//",
     "open_zones_fix": true,
 
-    "//WIP. PMC AI type will be changed, and PMC and Boss difficulty will be raised, if set to true//":
-    "//Only use if not using FAIL or other AI mods. Will just simply set bosses and PMC from 'AsOnline' to higher difficulty settings (Hard or Impossible). Not compatible with FAIL, use that instead if you need to choose one or the other.//",
+    "//PMC and Boss difficulty will be raised, if set to true//":
+    "//Only use if not using FAIL or other AI mods. Will just simply set bosses and PMC from 'AsOnline' to a higher difficulty settings (Hard or Impossible). Not compatible with FAIL, use that instead if you need to choose one or the other.//",
     "pmc_difficulty": true,
     "boss_difficulty": true,
 
@@ -72,7 +75,7 @@
     "flea_changes": false,
 
     "//Enables changes to trader sell categories to be more unique and make more sense.//": 
-    "For now just changes what Therapist, Skier and Mechanic will buy. Also reduced Fence inventory. Many more changes to traders will come in the future.//",
+    "For now just changes what Therapist, Skier and Mechanic will buy, Fence's inventory and cost of Therapist's healing. Many more changes to traders will come in the future.//",
     "trader_changes": true,
 
     "//If set to true, airdrops will have 'types' (medical supplies, food, ammo, etc.) and will only have items of that type.//" : 

@@ -424,8 +424,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.med_changes == true) {
             items.createCustomMedItems();
             meds.loadMeds();
-        
-
+        }
         custFleaConf.loadFleaConfig();
         flea.loadFleaGlobal();
 

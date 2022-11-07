@@ -953,7 +953,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 5.5;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2.2;
+                    fileData._props.DurabilityBurnModificator = 2;
                     fileData._props.HeatFactor = 1.04;
                 }
             }
@@ -975,7 +975,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 16.2;
+                    fileData._props.DurabilityBurnModificator = 12;
                     fileData._props.HeatFactor = 1.24;
                 }
             }
@@ -1019,7 +1019,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 0.22;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 3.2;
+                    fileData._props.DurabilityBurnModificator = 3;
                     fileData._props.HeatFactor = 1.22;
                 }
             }
@@ -1041,7 +1041,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 0.2;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2;
+                    fileData._props.DurabilityBurnModificator = 1.5;
                     fileData._props.HeatFactor = 1;
                 }
             }
@@ -1064,7 +1064,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 18.2;
+                    fileData._props.DurabilityBurnModificator = 13;
                     fileData._props.HeatFactor = 1.24;
                 }
             }
@@ -1087,7 +1087,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 0.6;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 18.8;
+                    fileData._props.DurabilityBurnModificator = 14;
                     fileData._props.HeatFactor = 1.32;
                 }
             }
@@ -1109,7 +1109,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 0.5;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 25.2;
+                    fileData._props.DurabilityBurnModificator = 15;
                     fileData._props.HeatFactor = 1.4;
                 }
             }
@@ -1243,7 +1243,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 1.2;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 15.6;
+                    fileData._props.DurabilityBurnModificator = 12;
                     fileData._props.HeatFactor = 1.12;
                 }
             }
@@ -1287,7 +1287,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 0.3;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 2.3;
+                    fileData._props.DurabilityBurnModificator = 2;
                     fileData._props.HeatFactor = 1.26;
                 }
             }
@@ -1309,7 +1309,7 @@ class Ammo {
                     fileData._props.MalfMisfireChance = 1.14;
                     fileData._props.MisfireChance = 0;
                     fileData._props.MalfFeedChance = 0;
-                    fileData._props.DurabilityBurnModificator = 28.2;
+                    fileData._props.DurabilityBurnModificator = 16;
                     fileData._props.HeatFactor = 1.64;
                 }
             }
@@ -3337,7 +3337,7 @@ class Ammo {
                 fileData._props.buckshotBullets = 0;
             }
             if (fileData._parent === "5485a8684bdc2da71d8b4567" && fileData._props?.DurabilityBurnModificator !== undefined && this.modConf.malf_changes == true) {
-                var duraBurn = Math.max(1, fileData._props.DurabilityBurnModificator * 0.6);
+                var duraBurn = Math.max(1, fileData._props.DurabilityBurnModificator * 0.55);
                 var misfireChance = Math.max(0, fileData._props.MalfMisfireChance *= 0.9);
                 fileData._props.DurabilityBurnModificator = duraBurn;
                 fileData._props.MalfMisfireChance = misfireChance;

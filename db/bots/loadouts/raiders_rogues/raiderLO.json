@@ -6,7 +6,8 @@
       "5d1f566d86f7744bcd13459a",
       "5e9d9fa986f774054d6b89f2",
       "5f5e401747344c2e4f6c42c5",
-      "5df89f1f86f77412631087ea"
+      "5df89f1f86f77412631087ea",
+      "5d28ae4986f7742926686187"
     ],
     "feet": [
       "5d1f591186f7744bcc048755",
@@ -19,7 +20,9 @@
       "5d1f58cb86f7744bca3f0b9a",
       "5fce42bc187e6a2b994b8247",
       "5e9dcc8a86f77434375990e2",
-      "5e4bb6d786f77406975c9364"
+      "5e4bb6d786f77406975c9364",
+      "5d28af7886f77429275dba25",
+      "609e86c09776a947754429b2"
     ],
     "head": [
       "5cde96047d6c8b20b577f016",
@@ -184,10 +187,12 @@
         "Headwear": {
           "61bca7cda0eae612383adf57": 5,
           "5f60b34a41e30a4ab12a6947": 5,
-          "5e00c1ad86f774747333222c": 2,
-          "5a154d5cfcdbcb001a3b00da": 8,
+          "5e00c1ad86f774747333222c": 3,
+          "5a154d5cfcdbcb001a3b00da": 5,
           "5e4bfc1586f774264f7582d3": 5,
-          "5b40e3f35acfc40016388218": 5
+          "5b40e3f35acfc40016388218": 5,
+          "5ea17ca01412a1425304d1c0": 1,
+          "5ca20ee186f774799474abc2": 1
         },
         "Earpiece": {
           "6033fa48ffd42c541047f728": 20,
@@ -195,9 +200,10 @@
           "628e4e576d783146b124c64d": 1
         },
         "FaceCover": {
-          "5ab8f39486f7745cd93a1cca": 10,
-          "5ab8f4ff86f77431c60d91ba": 5,
-          "5b432f3d5acfc4704b4a1dfb": 10
+          "5ab8f39486f7745cd93a1cca": 20,
+          "5ab8f4ff86f77431c60d91ba": 10,
+          "5b432f3d5acfc4704b4a1dfb": 20,
+          "5b4329f05acfc47a86086aa1": 1
         },
         "ArmorVest": {
           "609e8540d5c319764c2bc2e9": 5,
@@ -252,9 +258,7 @@
           "5fbcc1d9016cce60e8341ab3": 10,
           "606587252535c57a13424cfd": 10,
           "628a60ae6b1d481ff772e9c8": 10,
-
           "628b9c37a733087d0d7fe84b": 5,
-
           "5447a9cd4bdc2dbd208b4567": 20,
           "618428466ef05c2ce828f218": 10,
           "5d43021ca4b9362eab4b5e25": 5,
@@ -296,7 +300,115 @@
           "5c0a794586f77461c458f892": 1
         }
       },
-      "mods": {},
+      "mods": {
+        "5ca20ee186f774799474abc2": {
+          "mod_equipment": [
+            "5ca2113f86f7740b2547e1d2"
+          ]
+        },
+        "5ea18c84ecf1982c7712d9a2": {
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
+        "5ea17ca01412a1425304d1c0": {
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca",
+            "5ea18c84ecf1982c7712d9a2"
+          ]
+        },
+        "5f60b34a41e30a4ab12a6947": {
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca",
+            "5f60bf4558eff926626a60f2"
+          ],
+          "mod_equipment_000": [
+            "5f60c076f2bcbb675b00dac2"
+          ],
+          "mod_equipment_002": [
+            "5f60b85bbdb8e27dee3dc985"
+          ],
+          "mod_mount": [
+            "5a398b75c4a282000a51a266"
+          ]
+        },
+        "5e4bfc1586f774264f7582d3": {
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ],
+          "mod_equipment_000": [
+            "5a16b672fcdbcb001912fa83",
+            "5a16b7e1fcdbcb00165aa6c9"
+          ],
+          "mod_mount": [
+            "5a398b75c4a282000a51a266"
+          ]
+        },
+        "61bca7cda0eae612383adf57": {
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ],
+          "mod_equipment_000": [
+            "5a16b672fcdbcb001912fa83",
+            "5a16b7e1fcdbcb00165aa6c9"
+          ],
+          "mod_mount": [
+            "5a398b75c4a282000a51a266"
+          ]
+        },
+        "5e01ef6886f77445f643baa4": {
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ],
+          "mod_equipment_000": [
+            "5e01f31d86f77465cf261343",
+            "5e00cfa786f77469dc6e5685"
+          ],
+          "mod_equipment_001": [
+            "5e00cdd986f7747473332240",
+            "5e01f37686f774773c6f6c15"
+          ]
+        },
+        "5a154d5cfcdbcb001a3b00da": {
+          "mod_nvg": [
+            "5a16b8a9fcdbcb00165aa6ca",
+            "5c0558060db834001b735271"
+          ],
+          "mod_equipment_000": [
+            "5a16b672fcdbcb001912fa83",
+            "5a16badafcdbcb001865f72d",
+            "5a16b7e1fcdbcb00165aa6c9"
+          ],
+          "mod_equipment_002": [
+            "5c0e66e2d174af02a96252f4"
+          ],
+          "mod_mount": [
+            "5a398b75c4a282000a51a266"
+          ]
+        },
+        "5a16b8a9fcdbcb00165aa6ca": {
+          "mod_nvg": [
+            "5c0695860db834001b735461",
+            "5a16b93dfcdbcbcae6687261"
+          ]
+        },
+        "5c0695860db834001b735461": {
+          "mod_nvg": [
+            "5c0696830db834001d23f5da"
+          ]
+        },
+        "5a16b93dfcdbcbcae6687261": {
+          "mod_nvg": [
+            "57235b6f24597759bf5a30f1"
+          ]
+        }
+      },
       "items": {
         "TacticalVest": [],
         "Pockets": [],
@@ -356,9 +468,9 @@
         "mod_stock_001": 100,
         "mod_stock_akms": 100,
         "mod_equipment": 100,
-        "mod_equipment_000": 100,
-        "mod_equipment_001": 100,
-        "mod_equipment_002": 100,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 50,
         "mod_pistol_grip_akms": 100,
         "mod_pistol_grip": 100,
         "mod_gas_block": 100,

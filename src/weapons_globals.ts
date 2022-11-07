@@ -142,7 +142,7 @@ export class WeaponsGlobals {
             this.globalDB.Aiming.RecoilZIntensityByPose["z"] = 1;
 
             this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.1;
-            this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.6;
+            this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.55;
 
             if (this.modConf.logEverything == true) {
                 this.logger.info("Legacy Recoil Enabled");
