@@ -18,7 +18,12 @@ import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
 import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
 import { BaseClasses } from "@spt-aki/models/enums/BaseClasses";
 import { Preset } from "@spt-aki/models/eft/common/IGlobals";
-import { BotTierTracker } from "./bots";
+import { ApplicationContext } from "@spt-aki/context/ApplicationContext";
+import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
+import { IStartOfflineRaidRequestData } from "@spt-aki/models/eft/match/IStartOffineRaidRequestData";
+import { WeatherController } from "@spt-aki/controllers/WeatherController";
+import { BotTierTracker, RaidInfoTracker } from "./helper";
+import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 
 
 
@@ -125,22 +130,22 @@ export class BotWepGen extends BotWeaponGenerator {
             let presetFile = require(`../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
             for (let presetObj in presetFile) {
                 if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
-                    let presetTier =  presetFile[presetObj]._name.slice(0, 1);
+                    let presetTier = presetFile[presetObj]._name.slice(0, 1);
                     let pTierNum = Number(presetTier);
-                    if(pTierNum <= tier){
+                    if (pTierNum <= tier) {
                         weaponPresets.push(presetFile[presetObj]);
                         this.logger.warning(`Found A Preset Within Tier`);
                     }
 
                 }
             }
-            if(weaponPresets.length == 0){
+            if (weaponPresets.length == 0) {
                 for (let presetObj in presetFile) {
                     if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                         weaponPresets.push(presetFile[presetObj]);
                         this.logger.warning(`Found a preset outside of tier`);
                     }
-                } 
+                }
             }
             this.logger.warning("Choices:");
             for (let i in weaponPresets) {
@@ -341,7 +346,7 @@ export class BotModGen extends BotGeneratorHelper {
 
     public genExtraItemProps(itemTemplate: ITemplateItem, botRole = null): { upd?: Upd } {
         const properties: Upd = {};
-
+    
         if (itemTemplate._props.MaxDurability) {
             if (itemTemplate._props.weapClass) // Is weapon
             {
@@ -378,7 +383,11 @@ export class BotModGen extends BotGeneratorHelper {
         }
 
         if (itemTemplate._parent === BaseClasses.NIGHTVISION) {
-            properties.Togglable = { "On": true }
+            if (RaidInfoTracker.TOD == "day") {
+                properties.Togglable = { "On": false }
+            } else {
+                properties.Togglable = { "On": true }
+            }
         }
 
         // Togglable face shield

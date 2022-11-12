@@ -40,13 +40,16 @@ import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen
 import { DynamicRouterModService } from "@spt-aki/services/mod/dynamicRouter/DynamicRouterModService"
 import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
 import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod";
+import { ApplicationContext } from "@spt-aki/context/ApplicationContext";
+import { IStartOfflineRaidRequestData } from "@spt-aki/models/eft/match/IStartOffineRaidRequestData";
+import { WeatherController } from "@spt-aki/controllers/WeatherController";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
 import { AttatchmentBase } from "./attatchment_base";
 import { AttatchmentStats } from "./attatchment_stats";
 import { FleamarketConfig, TieredFlea, FleamarketGlobal } from "./fleamarket";
-import { Helper } from "./helper"
+import { Helper, RaidInfoTracker } from "./helper"
 import { Arrays } from "./arrays"
 import { Meds } from "./meds";
 import { Player } from "./player"
@@ -60,6 +63,7 @@ import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
 import { Traders } from "./traders";
 import { Airdrops } from "./airdrops";
+import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
 
 
 const medRevertCount = require("../db/saved/info.json");
@@ -104,8 +108,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             [
                 {
                     url: "/RealismMod/GetInfo",
-                    action: (url, info, sessionId, output) =>
-                    {
+                    action: (url, info, sessionId, output) => {
                         return jsonUtil.serialize(this.path.resolve(this.modLoader.getModPath("SPT-Realism-Mod")));
                     }
                 }
@@ -152,8 +155,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     return botLootServ.getLootCache(botRole, isPmc, lootType, lootPool);
                 }
             }, { frequency: "Always" });
-
-
         }
 
         staticRouterModService.registerStaticRouter(
@@ -165,12 +166,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
                         const databaseServer2 = container.resolve<DatabaseServer>("DatabaseServer");
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-                        const tables = databaseServer2.getTables();
-                        const arrays = new Arrays(tables);
-                        const helper = new Helper(tables, arrays, logger);
-                        const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
-                        const tieredFlea = new TieredFlea(tables);
-                        const player = new Player(logger, tables, modConfig, custProfile, botHealth);
+                        const tables2 = databaseServer2.getTables();
+                        const arrays = new Arrays(tables2);
+                        const helper = new Helper(tables2, arrays, logger);
+                        const tieredFlea = new TieredFlea(tables2);
+                        const player = new Player(logger, tables2, modConfig, custProfile, botHealth);
                         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
 
                         let pmcData = profileHelper.getPmcProfile(sessionID);
@@ -264,8 +264,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 pmcData.Info.MemberCategory = 2;
                             }
                             this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
-                            this.updateBots(pmcData, logger, modConfig, bots, helper);
-                            if(modConfig.airdrop_changes == true){
+                            if (modConfig.airdrop_changes == true) {
                                 this.updateAirdrops(logger, modConfig, airConf, helper);
                             }
                             if (modConfig.logEverything == true) {
@@ -292,15 +291,15 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const databaseServer3 = container.resolve<DatabaseServer>("DatabaseServer");
-                        const tables = databaseServer3.getTables();
-                        const player = new Player(logger, tables, modConfig, custProfile, botHealth);
-                        const arrays = new Arrays(tables);
-                        const helper = new Helper(tables, arrays, logger);
+                        const tables3 = databaseServer3.getTables();
+                        const player = new Player(logger, tables3, modConfig, custProfile, botHealth);
+                        const arrays = new Arrays(tables3);
+                        const helper = new Helper(tables3, arrays, logger);
 
                         let pmcData = profileHelper.getPmcProfile(sessionID);
 
                         try {
-                            if(modConfig.med_changes == true){
+                            if (modConfig.med_changes == true) {
                                 this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
                             }
 
@@ -312,6 +311,99 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         }
                         catch (e) {
                             logger.error("Realism Mod: Error Editing New Profile: " + e);
+                            return HttpResponse.nullResponse();
+                        }
+                    }
+                }
+            ],
+            "RealismMod"
+        );
+
+        staticRouterModService.registerStaticRouter(
+            "runAtRaidStart",
+            [
+                {
+                    url: "/client/match/offline/start",
+                    action: (url, info, sessionID, output) => {
+
+                        try {
+                            const databaseServer4 = container.resolve<DatabaseServer>("DatabaseServer");
+                            const tables4 = databaseServer4.getTables();
+                            const arrays = new Arrays(tables4);
+                            const helper = new Helper(tables4, arrays, logger);
+                            const bots = new Bots(logger, tables4, configServer, modConfig, arrays, helper);
+                            const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+                            const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+                            const weatherController = container.resolve<WeatherController>("WeatherController");
+                            const matchInfo = appContext.getLatestValue(ContextVariableType.MATCH_INFO).getValue<IStartOfflineRaidRequestData>();
+                            // const sessionId = appContext.getLatestValue(ContextVariableType.SESSION_ID).getValue<string>();
+                            const time = weatherController.generate().time;
+                            const mapName = matchInfo.locationName;
+                            let realTime = "";
+                            let mapType = "";
+                            let pmcData = profileHelper.getPmcProfile(sessionID);
+
+              
+
+                            if (matchInfo.dateTime === "PAST") {
+                                realTime = getTime(time, 12);
+                            }
+                            if (matchInfo.dateTime === "CURR") {
+                                realTime = time;
+                            }
+
+                            function getTime(time, hourDiff) {
+                                let [h, m] = time.split(':');
+                                if (parseInt(h) == 0) {
+                                    return `${h}:${m}`
+                                }
+                                h = Math.abs(parseInt(h) - hourDiff);
+                                return `${h}:${m}`
+                            }
+
+                            function getTOD(time) {
+                                let TOD = "";
+                                let [h, m] = time.split(':');
+                                if (parseInt(h) >= 6 && parseInt(h) < 20 || mapName === "Factory" || mapName === "Laboratory") {
+                                    TOD = "day";
+                                }
+                                else {
+                                    TOD = "night";
+                                }
+                                return TOD;
+                            }
+
+                            for(let map in arrays.CQB_maps){
+                                if(arrays.CQB_maps[map] === mapName){
+                                    mapType = "cqb";
+                                }
+                            }
+                            for(let map in arrays.outdoor_maps){
+                                if(arrays.outdoor_maps[map] === mapName){
+                                    mapType = "outdoor";
+                                }
+                            }
+                            for(let map in arrays.urban_maps){
+                                if(arrays.urban_maps[map] === mapName){
+                                    mapType = "urban";
+                                }
+                            }
+
+                            RaidInfoTracker.TOD = getTOD(realTime);
+                            RaidInfoTracker.mapType = mapType;
+
+                            if(modConfig.logEverything == true){
+                                logger.warning("Map = " + mapName);
+                                logger.warning("Time of Day = " + RaidInfoTracker.TOD);
+                                logger.warning("Map Type = " + RaidInfoTracker.mapType);
+                            }
+                            
+                            this.updateBots(pmcData, logger, modConfig, bots, helper);
+
+                            return HttpResponse.nullResponse();
+                        }
+                        catch (e) {
+                            logger.error("Realism Mod: Failed To Fetch Application Context Data" + e);
                             return HttpResponse.nullResponse();
                         }
                     }
@@ -340,10 +432,8 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         let pmcData = profileHelper.getPmcProfile(sessionID);
 
                         try {
-
-                            this.updateBots(pmcData, logger, modConfig, bots, helper);
                             this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
-                            if(modConfig.airdrop_changes == true){
+                            if (modConfig.airdrop_changes == true) {
                                 this.updateAirdrops(logger, modConfig, airConf, helper);
                             }
                             if (modConfig.logEverything == true) {
@@ -403,11 +493,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         codegen.pushArmorToServer();
         codegen.descriptionGen();
 
-        if(modConfig.airdrop_changes == true){
+        if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();
         }
 
-        if(modConfig.trader_changes == true){
+        if (modConfig.trader_changes == true) {
             traders.loadTraders();
         }
 
@@ -444,8 +534,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
     }
 
-    public postAkiLoad(container: DependencyContainer)
-    {
+    public postAkiLoad(container: DependencyContainer) {
         this.modLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
     }
 
@@ -543,15 +632,17 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
     }
-    public getBotTier(pmcData, bots: Bots, helper: Helper){
+    public getBotTier(pmcData, bots: Bots, helper: Helper) {
         this.setBotTier(pmcData, "scav", bots, helper);
         this.setBotTier(pmcData, "bear", bots, helper);
         this.setBotTier(pmcData, "usec", bots, helper);
+        this.setBotTier(pmcData, "raider", bots, helper);
+        this.setBotTier(pmcData, "rogue", bots, helper);
     }
 
     public setBotTier(pmcData: IPmcData, type: string, bots: Bots, helper: Helper) {
         var tier = 1;
-        var tierArray =  [1, 2, 3, 4];
+        var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0) {
             tier = helper.probabilityWeighter(tierArray, [20, 1, 0, 0]);
         }
@@ -565,18 +656,60 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             tier = helper.probabilityWeighter(tierArray, [10, 20, 5, 1]);
         }
         if (pmcData.Info.Level >= 20) {
-            tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 1]);
+            tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 4]);
         }
         if (pmcData.Info.Level >= 25) {
-            tier = helper.probabilityWeighter(tierArray,[1, 5, 30, 5]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 30, 8]);
         }
         if (pmcData.Info.Level >= 30) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 25]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 30]);
         }
         if (pmcData.Info.Level >= 35) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 35]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 40]);
         }
 
+        if (type === "raider") {
+            if (tier == 1) {
+                bots.raiderLoad1();
+            }
+            if (tier == 2) {
+                bots.raiderLoad2();
+            }
+            if (tier == 3) {
+                bots.raiderLoad2();
+            }
+            if (tier == 4) {
+                bots.raiderLoad3();
+            }
+        }
+        if (type === "rogue") {
+            if (tier == 1) {
+                bots.rogueLoad1();
+            }
+            if (tier == 2) {
+                bots.rogueLoad2();
+            }
+            if (tier == 3) {
+                bots.rogueLoad2();
+            }
+            if (tier == 4) {
+                bots.rogueLoad3();
+            }
+        }
+        if (type === "scav") {
+            if (tier == 1) {
+                bots.scavLoad1();
+            }
+            if (tier == 2) {
+                bots.scavLoad2();
+            }
+            if (tier == 3) {
+                bots.scavLoad3();
+            }
+            if (tier == 4) {
+                bots.scavLoad3();
+            }
+        }
         if (type === "scav") {
             if (tier == 1) {
                 bots.scavLoad1();
@@ -667,7 +800,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     }
                     if (pmcData.Info.Level >= 25) {
                         baseTier = helper.probabilityWeighter(baseTiers, [2, 10, 2, 0]);
-                     }
+                    }
                     if (pmcData.Info.Level >= 30) {
                         baseTier = helper.probabilityWeighter(baseTiers, [1, 5, 15, 0]);
                     }
@@ -684,7 +817,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     }
                     if (baseTier == 3) {
                         bots.botConfig3();
-                        logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 3");     
+                        logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 3");
                     }
                     if (config.logEverything == true) {
                         logger.info("Realism Mod: Bots Base Tier Has Been Reconfigured");
@@ -694,44 +827,43 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    public updateAirdrops(logger: ILogger, modConfig, airConf: IAirdropConfig, helper: Helper){
+    public updateAirdrops(logger: ILogger, modConfig, airConf: IAirdropConfig, helper: Helper) {
         var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
         var weights = [60, 60, 30, 30, 20, 10, 10, 10, 1];
         var loot = helper.probabilityWeighter(airdropLootArr, weights);
-        if(loot === "medical_loot"){
+        if (loot === "medical_loot") {
             airConf.loot = airdropLoot.medical_loot;
         }
-        if(loot === "provisions_loot"){
+        if (loot === "provisions_loot") {
             airConf.loot = airdropLoot.provisions_loot;
         }
-        if(loot === "materials_loot"){
+        if (loot === "materials_loot") {
             airConf.loot = airdropLoot.materials_loot;
         }
-        if(loot === "supplies_loot"){
+        if (loot === "supplies_loot") {
             airConf.loot = airdropLoot.supplies_loot;
         }
-        if(loot === "electronics_loot"){
+        if (loot === "electronics_loot") {
             airConf.loot = airdropLoot.electronics_loot;
         }
-        if(loot === "ammo_loot"){
+        if (loot === "ammo_loot") {
             airConf.loot = airdropLoot.ammo_loot;
         }
-        if(loot === "weapons_loot"){
+        if (loot === "weapons_loot") {
             airConf.loot = airdropLoot.weapons_loot;
         }
-        if(loot === "gear_loot"){
+        if (loot === "gear_loot") {
             airConf.loot = airdropLoot.gear_loot;
         }
-        if(loot === "tp"){
+        if (loot === "tp") {
             airConf.loot = airdropLoot.tp;
         }
-
         if (modConfig.logEverything == true) {
             logger.info("Aidrop Loot = " + loot);
             logger.info("Realism Mod: Airdrop Loot Has Been Reconfigured");
         }
     }
-    
+
 }
 
 module.exports = { mod: new Mod() }

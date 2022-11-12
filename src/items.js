@@ -17,8 +17,8 @@ class _Items {
         this.globalDB["AllowSelectEntryPoint"] = true;
         if (this.config.all_examined == true) {
             for (let i in this.itemDB) {
-                let fileData = this.itemDB[i];
-                fileData._props.ExaminedByDefault = true;
+                let serverItem = this.itemDB[i];
+                serverItem._props.ExaminedByDefault = true;
             }
             if (this.config.logEverything == true) {
                 this.logger.info("All Items Examined");

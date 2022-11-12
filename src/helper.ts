@@ -14,19 +14,19 @@ export class Helper {
     private array = this.arrays;
     private medItems = this.array.stash_meds;
 
-    public correctMedItems(profileData, pmcEXP) {
-        var inventProp = profileData?.Inventory;
+    public correctMedItems(proserverItem, pmcEXP) {
+        var inventProp = proserverItem?.Inventory;
         if (inventProp !== undefined) {
-            for (var i = 0; i < profileData.Inventory.items.length; i++) {
-                var itemProp = profileData.Inventory.items[i]?.upd?.MedKit?.HpResource;
+            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
+                var itemProp = proserverItem.Inventory.items[i]?.upd?.MedKit?.HpResource;
                 if (itemProp !== undefined) {
                     for (var j = 0; j < this.medItems.length; j++) {
-                        if (profileData.Inventory.items[i]._tpl === this.medItems[j]
-                            && profileData.Inventory.items[i].upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) {
-                            profileData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (proserverItem.Inventory.items[i]._tpl === this.medItems[j]
+                            && proserverItem.Inventory.items[i].upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) {
+                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
-                        if (pmcEXP == 0 && profileData.Inventory.items[i]._tpl === this.medItems[j]) {
-                            profileData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (pmcEXP == 0 && proserverItem.Inventory.items[i]._tpl === this.medItems[j]) {
+                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
                     }
                 }
@@ -34,15 +34,15 @@ export class Helper {
         }
     }
 
-    public revertMedItems(profileData) {
-        var inventProp = profileData?.Inventory;
+    public revertMedItems(proserverItem) {
+        var inventProp = proserverItem?.Inventory;
         if (inventProp !== undefined) {
-            for (var i = 0; i < profileData.Inventory.items.length; i++) {
-                var itemProp = profileData.Inventory.items[i]?.upd?.MedKit?.HpResource;
+            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
+                var itemProp = proserverItem.Inventory.items[i]?.upd?.MedKit?.HpResource;
                 if (itemProp !== undefined) {
                     for (var j = 0; j < this.medItems.length; j++) {
-                        if (profileData.Inventory.items[i]._tpl === this.medItems[j]) {
-                            profileData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (proserverItem.Inventory.items[i]._tpl === this.medItems[j]) {
+                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
                     }
                 }
@@ -72,17 +72,17 @@ export class Helper {
 
     }
 
-    public removeCustomItems(profileData) {
-        var inventProp = profileData?.Inventory;
+    public removeCustomItems(proserverItem) {
+        var inventProp = proserverItem?.Inventory;
         if (inventProp !== undefined) {
-            for (var i = 0; i < profileData.Inventory.items.length; i++) {
+            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
 
-                if (profileData.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
-                    profileData.Inventory.items[i]._tpl === "TIER1MEDKI2" ||
-                    profileData.Inventory.items[i]._tpl === "TIER1MEDKI3" ||
-                    profileData.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
-                    profileData.Inventory.items[i]._tpl = "5755356824597772cb798962"
-                    profileData.Inventory.items[i].upd.MedKit.HpResource = 100;
+                if (proserverItem.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
+                    proserverItem.Inventory.items[i]._tpl === "TIER1MEDKI2" ||
+                    proserverItem.Inventory.items[i]._tpl === "TIER1MEDKI3" ||
+                    proserverItem.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
+                    proserverItem.Inventory.items[i]._tpl = "5755356824597772cb798962"
+                    proserverItem.Inventory.items[i].upd.MedKit.HpResource = 100;
                 }
             }
         }
@@ -94,6 +94,36 @@ export class Helper {
             if (err) throw err;
         });
     }
+}
 
+ export class RaidInfoTracker{
+    public static TOD = "";
+    public static mapType = "";
+    
+ }
 
+ export class BotTierTracker {
+    public static usecTier: number = 1;
+    public static bearTier: number = 1;
+    public static scavTier: number = 1;
+    public static rogueTier: number = 1;
+    public static raiderTier: number = 1;
+
+    public getTier(botType: string): number {
+        if (botType === "usec") {
+            return BotTierTracker.usecTier;
+        }
+        if (botType === "bear") {
+            return BotTierTracker.bearTier;
+        }
+        if (botType === "assault") {
+            return BotTierTracker.scavTier;
+        }
+        if (botType === "pmcbot") {
+            return BotTierTracker.raiderTier;
+        }
+        if (botType === "exusec") {
+            return BotTierTracker.rogueTier;
+        }
+    }
 }

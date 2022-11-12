@@ -1,0 +1,248 @@
+{
+    "ScavMP18v1": {
+        "_id": "1e3998a4d19b69cfd9c18b85",
+        "_name": "ScavMP18v1",
+        "_parent": "647fb81b1f1391ea3aaae9d3",
+        "_changeWeaponName": false,
+        "_type": "Preset",
+        "_items": [
+            {
+                "_id": "647fb81b1f1391ea3aaae9d3",
+                "_tpl": "61f7c9e189e6fb1a5e3ea78d",
+                "upd": {
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "f680f3a781f75f14210141ae",
+                "_tpl": "61f4012adfc9f01a816adda1",
+                "parentId": "647fb81b1f1391ea3aaae9d3",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "a86f39f24edfbbc23c5de90f",
+                "_tpl": "61f7b234ea4ab34f2f59c3ec",
+                "parentId": "647fb81b1f1391ea3aaae9d3",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "5984a1afa0bb4b9d68c7fc70",
+                "_tpl": "61f7b85367ddd414173fdb36",
+                "parentId": "f680f3a781f75f14210141ae",
+                "slotId": "mod_handguard"
+            }
+        ]
+    },
+    "ScavMP18v2": {
+        "_id": "9890b1787f267ac16147dd12",
+        "_name": "ScavMP18v2",
+        "_parent": "d6756f1408b709a88ff2efb0",
+        "_changeWeaponName": false,
+        "_type": "Preset",
+        "_items": [
+            {
+                "_id": "d6756f1408b709a88ff2efb0",
+                "_tpl": "61f7c9e189e6fb1a5e3ea78d",
+                "upd": {
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "c42f13dff5e7df11deb139c0",
+                "_tpl": "61f4012adfc9f01a816adda1",
+                "parentId": "d6756f1408b709a88ff2efb0",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "0e3113f281440a1fbec03b45",
+                "_tpl": "61f7b234ea4ab34f2f59c3ec",
+                "parentId": "d6756f1408b709a88ff2efb0",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "3bb10a6f8b4b66af467c3e5d",
+                "_tpl": "61f8024263dc1250e26eb029",
+                "parentId": "c42f13dff5e7df11deb139c0",
+                "slotId": "mod_handguard"
+            }
+        ]
+    },
+    "ScavMP18v3": {
+        "_id": "a227a987342b002308f74ba2",
+        "_name": "ScavMP18v3",
+        "_parent": "e1e1537d5df45696924a949f",
+        "_changeWeaponName": false,
+        "_type": "Preset",
+        "_items": [
+            {
+                "_id": "e1e1537d5df45696924a949f",
+                "_tpl": "61f7c9e189e6fb1a5e3ea78d",
+                "upd": {
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "1d358a3337260ca2ba182a6f",
+                "_tpl": "61f4012adfc9f01a816adda1",
+                "parentId": "e1e1537d5df45696924a949f",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "0fc312393d09e929f92ed7cc",
+                "_tpl": "61f803b8ced75b2e852e35f8",
+                "parentId": "e1e1537d5df45696924a949f",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "e73ac57c1d3c5f56f86beaf4",
+                "_tpl": "61f8024263dc1250e26eb029",
+                "parentId": "1d358a3337260ca2ba182a6f",
+                "slotId": "mod_handguard"
+            }
+        ]
+    },
+    "ScavMP18v4": {
+        "_id": "cfd5a4968509cb546b496213",
+        "_name": "ScavMP18v4",
+        "_parent": "add6523e5091f21809911537",
+        "_changeWeaponName": false,
+        "_type": "Preset",
+        "_items": [
+            {
+                "_id": "add6523e5091f21809911537",
+                "_tpl": "61f7c9e189e6fb1a5e3ea78d",
+                "upd": {
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "26932e97689f543796023661",
+                "_tpl": "61f4012adfc9f01a816adda1",
+                "parentId": "add6523e5091f21809911537",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "213bece9be4fc11cb89e652c",
+                "_tpl": "61f803b8ced75b2e852e35f8",
+                "parentId": "add6523e5091f21809911537",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "19ad959cf4bceb6579b38aff",
+                "_tpl": "61f7b85367ddd414173fdb36",
+                "parentId": "26932e97689f543796023661",
+                "slotId": "mod_handguard"
+            }
+        ]
+    },
+    "ScavMP18v5": {
+        "_id": "43b6002b8b446077fd94f699",
+        "_name": "ScavMP18v5",
+        "_parent": "258a7870dc3da081ec3c3fa3",
+        "_changeWeaponName": false,
+        "_type": "Preset",
+        "_items": [
+            {
+                "_id": "258a7870dc3da081ec3c3fa3",
+                "_tpl": "61f7c9e189e6fb1a5e3ea78d",
+                "upd": {
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "14fb1e7b72dc3a62444ec9e1",
+                "_tpl": "61f4012adfc9f01a816adda1",
+                "parentId": "258a7870dc3da081ec3c3fa3",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "43d8e23e75a6e0220578014d",
+                "_tpl": "61f7b234ea4ab34f2f59c3ec",
+                "parentId": "258a7870dc3da081ec3c3fa3",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "893a5b8334f77c92b3107cf8",
+                "_tpl": "61f8024263dc1250e26eb029",
+                "parentId": "14fb1e7b72dc3a62444ec9e1",
+                "slotId": "mod_handguard"
+            },
+            {
+                "_id": "5299f4c93379ecd96d3113b9",
+                "_tpl": "61f804acfcba9556ea304cb8",
+                "parentId": "14fb1e7b72dc3a62444ec9e1",
+                "slotId": "mod_scope"
+            },
+            {
+                "_id": "593cf04444142cbe2575a193",
+                "_tpl": "5dff77c759400025ea5150cf",
+                "parentId": "5299f4c93379ecd96d3113b9",
+                "slotId": "mod_scope"
+            },
+            {
+                "_id": "7e11e75475e4700dc76341cd",
+                "_tpl": "5dff772da3651922b360bf91",
+                "parentId": "593cf04444142cbe2575a193",
+                "slotId": "mod_scope"
+            }
+        ]
+    },
+    "ScavMP18v6": {
+        "_id": "70a0e9bfa6b24e25b1ce152d",
+        "_name": "ScavMP18v6",
+        "_parent": "0d1964598095dc5617763294",
+        "_changeWeaponName": false,
+        "_type": "Preset",
+        "_items": [
+            {
+                "_id": "0d1964598095dc5617763294",
+                "_tpl": "61f7c9e189e6fb1a5e3ea78d",
+                "upd": {
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "edf57c62a81805a80b2198ad",
+                "_tpl": "61f4012adfc9f01a816adda1",
+                "parentId": "0d1964598095dc5617763294",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "b9ed7c91cb459c17c5e19d0c",
+                "_tpl": "61f803b8ced75b2e852e35f8",
+                "parentId": "0d1964598095dc5617763294",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "d9d2fa53d2966e5eb3ee5f80",
+                "_tpl": "61f7b85367ddd414173fdb36",
+                "parentId": "edf57c62a81805a80b2198ad",
+                "slotId": "mod_handguard"
+            },
+            {
+                "_id": "4039f46d3a28d5eccc173a66",
+                "_tpl": "61f804acfcba9556ea304cb8",
+                "parentId": "edf57c62a81805a80b2198ad",
+                "slotId": "mod_scope"
+            },
+            {
+                "_id": "65adff489272c0711297e32b",
+                "_tpl": "57ae0171245977343c27bfcf",
+                "parentId": "4039f46d3a28d5eccc173a66",
+                "slotId": "mod_scope"
+            }
+        ]
+    }
+}

@@ -46,6 +46,18 @@ export class AttatchmentBase {
                     }
                 }
 
+
+                let cantedMountConfWeaps: string[] = [ "5926bb2186f7744b1c6c6e60" , "5d2f0d8048f0356c925bc3b0", "5e00903ae9dc277128008b87", "5de7bd7bfd6b4e6e2276dc25"];
+
+                for(let item in cantedMountConfWeaps){
+                    if (serverItem._id === cantedMountConfWeaps[item]){
+                        serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
+                    }
+                }
+                if(serverItem._props.weapClass === "pistol"){
+                   serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
+                }
+
                 if (serverItem._id === "5b31163c5acfc400153b71cb"
                     || serverItem._id === "58d2664f86f7747fec5834f6"
                     || serverItem._id === "5c7d55f52e221644f31bff6a"

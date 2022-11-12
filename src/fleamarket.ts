@@ -47,8 +47,8 @@ export class FleamarketConfig {
             this.fleaConf.sell.time.min = 20;
             this.fleaConf.sell.time.max = 60;
 
-            this.fleaConf.sell.reputation.gain = 0.0000004;
-            this.fleaConf.sell.reputation.loss = 0.0000004;
+            this.fleaConf.sell.reputation.gain = 0.0000005;
+            this.fleaConf.sell.reputation.loss = 0.0000005;
 
             this.fleaConf.dynamic.currencies = {
                 "5449016a4bdc2d6f028b456f": 20,

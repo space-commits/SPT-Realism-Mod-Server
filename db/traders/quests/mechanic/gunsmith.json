@@ -29,7 +29,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": 18
+                            "value": 55
                         },
                         "hasItemFromCategory": [
                             "55818b164bdc2ddc698b456c"
@@ -51,7 +51,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": "1000"
+                            "value": "200"
                         },
                         "target": [
                             "54491c4f4bdc2db1078b4568"
@@ -63,8 +63,8 @@
                             "value": 0
                         },
                         "width": {
-                            "compareMethod": "<=",
-                            "value": 4
+                            "compareMethod": ">=",
+                            "value": 0
                         }
                     },
                     "dynamicLocale": false
@@ -239,7 +239,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "20"
+                            "value": "45"
                         },
                         "hasItemFromCategory": [],
                         "height": {
@@ -259,7 +259,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": "280"
+                            "value": "215"
                         },
                         "target": [
                             "57dc2fa62459775949412633"
@@ -271,8 +271,8 @@
                             "value": 3.7
                         },
                         "width": {
-                            "compareMethod": "<=",
-                            "value": 3
+                            "compareMethod": ">=",
+                            "value": 0
                         }
                     },
                     "dynamicLocale": false
@@ -1743,7 +1743,7 @@
                         },
                         "width": {
                             "compareMethod": ">=",
-                            "value": 4
+                            "value": 0
                         }
                     },
                     "dynamicLocale": false
@@ -1990,7 +1990,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "12"
+                            "value": "44"
                         },
                         "hasItemFromCategory": [
                             "550aa4cd4bdc2dd8348b456c"
@@ -2012,7 +2012,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": "320"
+                            "value": "190"
                         },
                         "target": [
                             "5ac66d9b5acfc4001633997a"
@@ -2025,7 +2025,7 @@
                         },
                         "width": {
                             "compareMethod": ">=",
-                            "value": 4
+                            "value": 0
                         }
                     },
                     "dynamicLocale": false
@@ -2414,7 +2414,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "10"
+                            "value": "55"
                         },
                         "hasItemFromCategory": [],
                         "height": {
@@ -2434,7 +2434,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": "320"
+                            "value": "220"
                         },
                         "target": [
                             "5ac66d015acfc400180ae6e4"
@@ -2446,8 +2446,8 @@
                             "value": 0
                         },
                         "width": {
-                            "compareMethod": "<=",
-                            "value": 4
+                            "compareMethod": ">=",
+                            "value": 0
                         }
                     },
                     "dynamicLocale": false

@@ -1556,7 +1556,7 @@
         "ItemID": "55d482194bdc2d1d4e8b456b",
         "Name": "mag_ak74_izhmash_6L31_545x39_60",
         "ModType": "",
-        "ReloadSpeed": -8,
+        "ReloadSpeed": -7,
         "Ergonomics": -10,
         "MagMalfunctionChance": 11,
         "LoadUnloadModifier": 85,

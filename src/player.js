@@ -39,9 +39,9 @@ class Player {
             this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 34;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 80;
             this.globalDB.WalkSpeed["x"] = 0.6;
-            this.globalDB.WalkSpeed["y"] = 0.82;
-            this.globalDB.SprintSpeed["x"] = 0.02;
-            this.globalDB.SprintSpeed["y"] = 0.41;
+            this.globalDB.WalkSpeed["y"] = 0.83;
+            this.globalDB.SprintSpeed["x"] = 0.03;
+            this.globalDB.SprintSpeed["y"] = 0.42;
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight
@@ -66,7 +66,7 @@ class Player {
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
             this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.8;
             this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.58;
-            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.31;
+            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.315;
             this.globalDB.Stamina.Capacity = 140;
             this.globalDB.Stamina.BaseRestorationRate = 11;
             this.globalDB.Stamina.OxygenCapacity *= 1.3;

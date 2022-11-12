@@ -512,24 +512,6 @@
             "SkillName": ""
         },
         {
-            "BuffType": "SkillRate",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 650,
-            "Value": -25,
-            "AbsoluteValue": true,
-            "SkillName": "Endurance"
-        },
-        {
-            "BuffType": "SkillRate",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 650,
-            "Value": -25,
-            "AbsoluteValue": true,
-            "SkillName": "Strength"
-        },
-        {
             "BuffType": "Pain",
             "Chance": 1,
             "Delay": 10,
@@ -584,24 +566,6 @@
             "Value": 0,
             "AbsoluteValue": true,
             "SkillName": ""
-        },
-        {
-            "BuffType": "SkillRate",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 610,
-            "Value": -25,
-            "AbsoluteValue": true,
-            "SkillName": "Endurance"
-        },
-        {
-            "BuffType": "SkillRate",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 610,
-            "Value": -25,
-            "AbsoluteValue": true,
-            "SkillName": "Strength"
         },
         {
             "BuffType": "Pain",

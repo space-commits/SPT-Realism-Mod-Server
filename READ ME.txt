@@ -36,4 +36,4 @@ Katto for the code for function "SetHealth" taken from their Server Value Modifi
 
 Fin for providing code and method for generating bot mods, insuring that scopes and such are spawned correctly, and coding tips.
 
-Chomp, Crow, Alex, Fin, Lua, aleves, ThurmanMurman, SamSWAT, CWX, Eresh, and many others for all their help and putting up with my dumb question
+Chomp, Crow, Alex (and the othe Alex), Fin, Lua, aleves, ThurmanMurman, SamSWAT, CWX, Eresh, and many others for all their help and putting up with my dumb question

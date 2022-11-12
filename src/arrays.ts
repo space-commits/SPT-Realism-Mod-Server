@@ -9,6 +9,24 @@ export class Arrays {
     public itemDB = this.tables.templates.items;
     public botDB = this.tables.bots.types;
 
+    public outdoor_maps = [
+        "Shoreline",
+        "Woods",
+        "Lighthouse"
+    ]
+
+    public urban_maps = [
+        "Customs",
+        "ReserveBase",
+        "Interchange"
+    ]
+
+    public CQB_maps = [
+        "Factory",
+        "Laboratory"
+    ]
+
+
     public traderIDs = [
         "54cb50c76803fa8b248b4571",
         "54cb57776803fa99248b456e",

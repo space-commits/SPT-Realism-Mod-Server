@@ -21,27 +21,31 @@ export class WeaponsGlobals {
             this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
 
             for (let i in this.itemDB) {
-                let fileData = this.itemDB[i];
-                if (fileData._props.weapClass === "smg"
-                    || fileData._props.weapClass === "shotgun"
-                    || fileData._props.weapClass === "assaultCarbine"
-                    || fileData._props.weapClass === "sniperRifle"
-                    || fileData._props.weapClass === "assaultRifle"
-                    || fileData._props.weapClass === "machinegun"
-                    || fileData._props.weapClass === "marksmanRifle"
-                    || fileData._props.weapClass === "assaultRifle"
-                    || fileData._props.weapClass === "pistol"
-                    || fileData._parent === "616eb7aea207f41933308f46"
+                let serverItem = this.itemDB[i];
+                if (serverItem._props.weapClass === "smg"
+                    || serverItem._props.weapClass === "shotgun"
+                    || serverItem._props.weapClass === "assaultCarbine"
+                    || serverItem._props.weapClass === "sniperRifle"
+                    || serverItem._props.weapClass === "assaultRifle"
+                    || serverItem._props.weapClass === "machinegun"
+                    || serverItem._props.weapClass === "marksmanRifle"
+                    || serverItem._props.weapClass === "assaultRifle"
+                    || serverItem._props.weapClass === "pistol"
+                    || serverItem._parent === "616eb7aea207f41933308f46"
                 ) {
-                    fileData._props.MinRepairDegradation = 0;
-                    fileData._props.MaxRepairDegradation = 0.005;
-                    fileData._props.MinRepairKitDegradation = 0;
-                    fileData._props.MaxRepairKitDegradation = 0;
-                    fileData._props.RepairComplexity = 0;
-                    fileData._props.RepairQuality = 0.1;
+                    serverItem._props.MinRepairDegradation = 0;
+                    serverItem._props.MaxRepairDegradation = 0.005;
+                    serverItem._props.MinRepairKitDegradation = 0;
+                    serverItem._props.MaxRepairKitDegradation = 0;
+                    serverItem._props.RepairComplexity = 0;
+                    serverItem._props.RepairQuality = 0.1;
                 }
             }
         }
+
+
+        
+
 
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
 
@@ -65,23 +69,23 @@ export class WeaponsGlobals {
             this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.4;
 
             for (let i in this.itemDB) {
-                let fileData = this.itemDB[i];
-                if (fileData._props.weapClass === "smg"
-                    || fileData._props.weapClass === "shotgun"
-                    || fileData._props.weapClass === "assaultCarbine"
-                    || fileData._props.weapClass === "sniperRifle"
-                    || fileData._props.weapClass === "assaultRifle"
-                    || fileData._props.weapClass === "machinegun"
-                    || fileData._props.weapClass === "marksmanRifle"
-                    || fileData._props.weapClass === "assaultRifle"
+                let serverItem = this.itemDB[i];
+                if (serverItem._props.weapClass === "smg"
+                    || serverItem._props.weapClass === "shotgun"
+                    || serverItem._props.weapClass === "assaultCarbine"
+                    || serverItem._props.weapClass === "sniperRifle"
+                    || serverItem._props.weapClass === "assaultRifle"
+                    || serverItem._props.weapClass === "machinegun"
+                    || serverItem._props.weapClass === "marksmanRifle"
+                    || serverItem._props.weapClass === "assaultRifle"
                 ) {
-                    fileData._props.Ergonomics = 70;
+                    serverItem._props.Ergonomics = 70;
                 }
-                if (fileData._props.weapClass === "pistol"
+                if (serverItem._props.weapClass === "pistol"
                 ) {
-                    fileData._props.RecoilForceUp *= 1.14;
-                    fileData._props.CameraRecoil *= 0.8;
-                    fileData._props.RecolDispersion *= 1.15;
+                    serverItem._props.RecoilForceUp *= 1.14;
+                    serverItem._props.CameraRecoil *= 0.8;
+                    serverItem._props.RecolDispersion *= 1.15;
                 }
             }
 
@@ -93,32 +97,32 @@ export class WeaponsGlobals {
         if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true) {
 
             for (let i in this.itemDB) {
-                let fileData = this.itemDB[i];
-                if (fileData._props.weapClass === "smg"
-                    || fileData._props.weapClass === "shotgun"
-                    || fileData._props.weapClass === "assaultCarbine"
-                    || fileData._props.weapClass === "sniperRifle"
-                    || fileData._props.weapClass === "assaultRifle"
-                    || fileData._props.weapClass === "machinegun"
-                    || fileData._props.weapClass === "marksmanRifle"
-                    || fileData._props.weapClass === "assaultRifle"
+                let serverItem = this.itemDB[i];
+                if (serverItem._props.weapClass === "smg"
+                    || serverItem._props.weapClass === "shotgun"
+                    || serverItem._props.weapClass === "assaultCarbine"
+                    || serverItem._props.weapClass === "sniperRifle"
+                    || serverItem._props.weapClass === "assaultRifle"
+                    || serverItem._props.weapClass === "machinegun"
+                    || serverItem._props.weapClass === "marksmanRifle"
+                    || serverItem._props.weapClass === "assaultRifle"
                 ) {
-                    fileData._props.RecoilForceUp *= 0.8;
-                    fileData._props.RecoilForceBack *= 0.5;
-                    fileData._props.Convergence *= 5.5;
-                    fileData._props.RecolDispersion *= 0.5;
-                    fileData._props.CameraRecoil *= 0.5;
-                    fileData._props.CameraSnap *= 0.5;
-                    fileData._props.Ergonomics *= 1.1;
+                    serverItem._props.RecoilForceUp *= 0.8;
+                    serverItem._props.RecoilForceBack *= 0.5;
+                    serverItem._props.Convergence *= 5.5;
+                    serverItem._props.RecolDispersion *= 0.5;
+                    serverItem._props.CameraRecoil *= 0.5;
+                    serverItem._props.CameraSnap *= 0.5;
+                    serverItem._props.Ergonomics *= 1.1;
                 }
-                if (fileData._props.weapClass === "pistol") {
-                    fileData._props.RecoilForceUp *= 0.3;
-                    fileData._props.RecoilForceBack *= 2;
-                    fileData._props.Convergence *= 4;
-                    fileData._props.RecolDispersion *= 0.5;
-                    fileData._props.CameraRecoil *= 1;
-                    fileData._props.CameraSnap *= 1.7;
-                    fileData._props.Ergonomics *= 1.1;
+                if (serverItem._props.weapClass === "pistol") {
+                    serverItem._props.RecoilForceUp *= 0.3;
+                    serverItem._props.RecoilForceBack *= 2;
+                    serverItem._props.Convergence *= 4;
+                    serverItem._props.RecolDispersion *= 0.5;
+                    serverItem._props.CameraRecoil *= 1;
+                    serverItem._props.CameraSnap *= 1.7;
+                    serverItem._props.Ergonomics *= 1.1;
                 }
             }
 

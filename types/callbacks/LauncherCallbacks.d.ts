@@ -3,7 +3,7 @@ import { IEmptyRequestData } from "../models/eft/common/IEmptyRequestData";
 import { IChangeRequestData } from "../models/eft/launcher/IChangeRequestData";
 import { ILoginRequestData } from "../models/eft/launcher/ILoginRequestData";
 import { IRegisterData } from "../models/eft/launcher/IRegisterData";
-import { IRemoveProfileData } from "../models/eft/launcher/IRemoveProfileData";
+import { IRemoveProserverItem } from "../models/eft/launcher/IRemoveProserverItem";
 import { SaveServer } from "../servers/SaveServer";
 import { HttpResponseUtil } from "../utils/HttpResponseUtil";
 import { Watermark } from "../utils/Watermark";
@@ -22,7 +22,7 @@ declare class LauncherCallbacks {
     wipe(url: string, info: IRegisterData, sessionID: string): "FAILED" | "OK";
     getServerVersion(): string;
     ping(url: string, info: IEmptyRequestData, sessionID: string): string;
-    removeProfile(url: string, info: IRemoveProfileData, sessionID: string): string;
+    removeProfile(url: string, info: IRemoveProserverItem, sessionID: string): string;
     getCompatibleTarkovVersion(): string;
 }
 export { LauncherCallbacks };

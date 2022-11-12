@@ -7,6 +7,20 @@ class Arrays {
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
         this.botDB = this.tables.bots.types;
+        this.outdoor_maps = [
+            "Shoreline",
+            "Woods",
+            "Lighthouse"
+        ];
+        this.urban_maps = [
+            "Customs",
+            "ReserveBase",
+            "Interchange"
+        ];
+        this.CQB_maps = [
+            "Factory",
+            "Laboratory"
+        ];
         this.traderIDs = [
             "54cb50c76803fa8b248b4571",
             "54cb57776803fa99248b456e",

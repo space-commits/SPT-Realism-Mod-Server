@@ -36,12 +36,12 @@ export declare class InRaidHelper {
      * Reset points earned during session property
      * Increment exp
      * Remove Labs keycard
-     * @param profileData Profile to update
+     * @param proserverItem Profile to update
      * @param saveProgressRequest post raid save data request data
      * @param sessionID Sessino id
      * @returns Reset profile object
      */
-    updateProfileBaseStats(profileData: IPmcData, saveProgressRequest: ISaveProgressRequestData, sessionID: string): IPmcData;
+    updateProfileBaseStats(proserverItem: IPmcData, saveProgressRequest: ISaveProgressRequestData, sessionID: string): IPmcData;
     /**
      * Some maps have one-time-use keys (e.g. Labs
      * Remove the relevant key from an inventory based on the post-raid request data passed in

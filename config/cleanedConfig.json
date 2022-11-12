@@ -67,10 +67,11 @@
 
     "//If set to true, the fleamarket will unlock progressivly by category of item based on the player's level.//": 
     "//There are 7 tiers in total, the final one being a 'full unlock'.//",
-    "tiered_flea": false,
+    "tiered_flea": true,
    
-    "//Enables a hardcore fleamarket config. There are very few offers per item, if any at all. Item condition and stack amount vary a lot, high prices, and so on.//": "",
-    "flea_changes": false,
+    "//Enables a hardcore fleamarket config. There are very few offers per item, if any at all. Item condition and stack amount vary a lot, high prices, and so on.//": 
+    "////",
+    "flea_changes": true,
 
     "//Enables changes to trader sell categories to be more unique and make more sense.//": 
     "For now just changes what Therapist, Skier and Mechanic will buy, Fence's inventory and cost of Therapist's healing. Many more changes to traders will come in the future.//",
@@ -94,7 +95,7 @@
     "Set to true to enable bot testing parameters. Set the tier to 1-4 to spawn a sepcific tier of bot. Disabling weapons will deactivate the AI, they will spawn but not move or react",
     "bot_testing": false,
     "bot_test_tier": 4,
-    "bot_test_weps_enabled": true,
+    "bot_test_weps_enabled": false,
     "all_scavs": false,
     "all_PMCs": false,
     "all_USEC": false,
@@ -103,5 +104,5 @@
     "guarantee_boss_spawn": false,
     "disable_flea_blacklist": false,
     "no_fall_damage": false,
-    "logEverything": true
+    "logEverything": false
 }

@@ -5,7 +5,7 @@ const BotWeaponGenerator_1 = require("C:/snapshot/project/obj/generators/BotWeap
 const BotGeneratorHelper_1 = require("C:/snapshot/project/obj/helpers/BotGeneratorHelper");
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
-const bots_1 = require("./bots");
+const helper_1 = require("./helper");
 class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) {
         const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
@@ -82,7 +82,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     }
     getPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole) {
         //right now it will just pick the first preset that matches, need to find a way to randomize it.
-        const tierChecker = new bots_1.BotTierTracker();
+        const tierChecker = new helper_1.BotTierTracker();
         const tier = tierChecker.getTier(botRole);
         this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
         this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
@@ -304,7 +304,12 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             properties.Light = { "IsActive": this.randomUtil.getBool(), "SelectedMode": 0 };
         }
         if (itemTemplate._parent === BaseClasses_1.BaseClasses.NIGHTVISION) {
-            properties.Togglable = { "On": true };
+            if (helper_1.RaidInfoTracker.TOD == "day") {
+                properties.Togglable = { "On": false };
+            }
+            else {
+                properties.Togglable = { "On": true };
+            }
         }
         // Togglable face shield
         if (itemTemplate._props.HasHinge && itemTemplate._props.FaceShieldComponent) {

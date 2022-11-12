@@ -63,8 +63,8 @@ export declare class InventoryHelper {
     protected getPlayerStashSize(sessionID: string): Record<number, number>;
     /**
     * Internal helper function to transfer an item from one profile to another.
-    * fromProfileData: Profile of the source.
-    * toProfileData: Profile of the destination.
+    * fromProserverItem: Profile of the source.
+    * toProserverItem: Profile of the destination.
     * body: Move request
     */
     moveItemToProfile(fromItems: Item[], toItems: Item[], body: IInventoryMoveRequestData): void;

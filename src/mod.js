@@ -20,6 +20,7 @@ const code_gen_1 = require("./code_gen");
 const quests_1 = require("./quests");
 const traders_1 = require("./traders");
 const airdrops_1 = require("./airdrops");
+const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -99,12 +100,11 @@ class Mod {
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const databaseServer2 = container.resolve("DatabaseServer");
                     const profileHelper = container.resolve("ProfileHelper");
-                    const tables = databaseServer2.getTables();
-                    const arrays = new arrays_1.Arrays(tables);
-                    const helper = new helper_1.Helper(tables, arrays, logger);
-                    const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
-                    const tieredFlea = new fleamarket_1.TieredFlea(tables);
-                    const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth);
+                    const tables2 = databaseServer2.getTables();
+                    const arrays = new arrays_1.Arrays(tables2);
+                    const helper = new helper_1.Helper(tables2, arrays, logger);
+                    const tieredFlea = new fleamarket_1.TieredFlea(tables2);
+                    const player = new player_1.Player(logger, tables2, modConfig, custProfile, botHealth);
                     const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     let scavData = profileHelper.getScavProfile(sessionID);
@@ -193,7 +193,6 @@ class Mod {
                             pmcData.Info.MemberCategory = 2;
                         }
                         this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
-                        this.updateBots(pmcData, logger, modConfig, bots, helper);
                         if (modConfig.airdrop_changes == true) {
                             this.updateAirdrops(logger, modConfig, airConf, helper);
                         }
@@ -215,10 +214,10 @@ class Mod {
                 action: (url, info, sessionID, output) => {
                     const profileHelper = container.resolve("ProfileHelper");
                     const databaseServer3 = container.resolve("DatabaseServer");
-                    const tables = databaseServer3.getTables();
-                    const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth);
-                    const arrays = new arrays_1.Arrays(tables);
-                    const helper = new helper_1.Helper(tables, arrays, logger);
+                    const tables3 = databaseServer3.getTables();
+                    const player = new player_1.Player(logger, tables3, modConfig, custProfile, botHealth);
+                    const arrays = new arrays_1.Arrays(tables3);
+                    const helper = new helper_1.Helper(tables3, arrays, logger);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     try {
                         if (modConfig.med_changes == true) {
@@ -232,6 +231,83 @@ class Mod {
                     }
                     catch (e) {
                         logger.error("Realism Mod: Error Editing New Profile: " + e);
+                        return HttpResponse.nullResponse();
+                    }
+                }
+            }
+        ], "RealismMod");
+        staticRouterModService.registerStaticRouter("runAtRaidStart", [
+            {
+                url: "/client/match/offline/start",
+                action: (url, info, sessionID, output) => {
+                    try {
+                        const databaseServer4 = container.resolve("DatabaseServer");
+                        const tables4 = databaseServer4.getTables();
+                        const arrays = new arrays_1.Arrays(tables4);
+                        const helper = new helper_1.Helper(tables4, arrays, logger);
+                        const bots = new bots_1.Bots(logger, tables4, configServer, modConfig, arrays, helper);
+                        const profileHelper = container.resolve("ProfileHelper");
+                        const appContext = container.resolve("ApplicationContext");
+                        const weatherController = container.resolve("WeatherController");
+                        const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.MATCH_INFO).getValue();
+                        // const sessionId = appContext.getLatestValue(ContextVariableType.SESSION_ID).getValue<string>();
+                        const time = weatherController.generate().time;
+                        const mapName = matchInfo.locationName;
+                        let realTime = "";
+                        let mapType = "";
+                        let pmcData = profileHelper.getPmcProfile(sessionID);
+                        if (matchInfo.dateTime === "PAST") {
+                            realTime = getTime(time, 12);
+                        }
+                        if (matchInfo.dateTime === "CURR") {
+                            realTime = time;
+                        }
+                        function getTime(time, hourDiff) {
+                            let [h, m] = time.split(':');
+                            if (parseInt(h) == 0) {
+                                return `${h}:${m}`;
+                            }
+                            h = Math.abs(parseInt(h) - hourDiff);
+                            return `${h}:${m}`;
+                        }
+                        function getTOD(time) {
+                            let TOD = "";
+                            let [h, m] = time.split(':');
+                            if (parseInt(h) >= 6 && parseInt(h) < 20 || mapName === "Factory" || mapName === "Laboratory") {
+                                TOD = "day";
+                            }
+                            else {
+                                TOD = "night";
+                            }
+                            return TOD;
+                        }
+                        for (let map in arrays.CQB_maps) {
+                            if (arrays.CQB_maps[map] === mapName) {
+                                mapType = "cqb";
+                            }
+                        }
+                        for (let map in arrays.outdoor_maps) {
+                            if (arrays.outdoor_maps[map] === mapName) {
+                                mapType = "outdoor";
+                            }
+                        }
+                        for (let map in arrays.urban_maps) {
+                            if (arrays.urban_maps[map] === mapName) {
+                                mapType = "urban";
+                            }
+                        }
+                        helper_1.RaidInfoTracker.TOD = getTOD(realTime);
+                        helper_1.RaidInfoTracker.mapType = mapType;
+                        if (modConfig.logEverything == true) {
+                            logger.warning("Map = " + mapName);
+                            logger.warning("Time of Day = " + helper_1.RaidInfoTracker.TOD);
+                            logger.warning("Map Type = " + helper_1.RaidInfoTracker.mapType);
+                        }
+                        this.updateBots(pmcData, logger, modConfig, bots, helper);
+                        return HttpResponse.nullResponse();
+                    }
+                    catch (e) {
+                        logger.error("Realism Mod: Failed To Fetch Application Context Data" + e);
                         return HttpResponse.nullResponse();
                     }
                 }
@@ -253,7 +329,6 @@ class Mod {
                     const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     try {
-                        this.updateBots(pmcData, logger, modConfig, bots, helper);
                         this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
                         if (modConfig.airdrop_changes == true) {
                             this.updateAirdrops(logger, modConfig, airConf, helper);
@@ -431,6 +506,8 @@ class Mod {
         this.setBotTier(pmcData, "scav", bots, helper);
         this.setBotTier(pmcData, "bear", bots, helper);
         this.setBotTier(pmcData, "usec", bots, helper);
+        this.setBotTier(pmcData, "raider", bots, helper);
+        this.setBotTier(pmcData, "rogue", bots, helper);
     }
     setBotTier(pmcData, type, bots, helper) {
         var tier = 1;
@@ -448,16 +525,58 @@ class Mod {
             tier = helper.probabilityWeighter(tierArray, [10, 20, 5, 1]);
         }
         if (pmcData.Info.Level >= 20) {
-            tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 1]);
+            tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 4]);
         }
         if (pmcData.Info.Level >= 25) {
-            tier = helper.probabilityWeighter(tierArray, [1, 5, 30, 5]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 30, 8]);
         }
         if (pmcData.Info.Level >= 30) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 25]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 30]);
         }
         if (pmcData.Info.Level >= 35) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 35]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 40]);
+        }
+        if (type === "raider") {
+            if (tier == 1) {
+                bots.raiderLoad1();
+            }
+            if (tier == 2) {
+                bots.raiderLoad2();
+            }
+            if (tier == 3) {
+                bots.raiderLoad2();
+            }
+            if (tier == 4) {
+                bots.raiderLoad3();
+            }
+        }
+        if (type === "rogue") {
+            if (tier == 1) {
+                bots.rogueLoad1();
+            }
+            if (tier == 2) {
+                bots.rogueLoad2();
+            }
+            if (tier == 3) {
+                bots.rogueLoad2();
+            }
+            if (tier == 4) {
+                bots.rogueLoad3();
+            }
+        }
+        if (type === "scav") {
+            if (tier == 1) {
+                bots.scavLoad1();
+            }
+            if (tier == 2) {
+                bots.scavLoad2();
+            }
+            if (tier == 3) {
+                bots.scavLoad3();
+            }
+            if (tier == 4) {
+                bots.scavLoad3();
+            }
         }
         if (type === "scav") {
             if (tier == 1) {

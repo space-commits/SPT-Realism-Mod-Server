@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotTierTracker = exports.Bots = void 0;
+exports.Bots = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
+const helper_1 = require("./helper");
 const scavLO = require("../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../db/bots/loadouts/PMCs/usecLO.json");
@@ -33,7 +34,6 @@ class Bots {
         this.rogueBase = this.botDB["exusec"];
         this.botConf = this.configServ.getConfig(ConfigTypes_1.ConfigTypes.BOT);
         this.botConfPMC = this.botConf.pmc;
-        this.tierTrakcer = new BotTierTracker();
     }
     loadBots() {
         // this.botConfig1();
@@ -212,7 +212,7 @@ class Bots {
             this.usecLoad2();
             this.bearLoad2();
             this.rogueLoad2();
-            this.raiderLoad1();
+            this.raiderLoad2();
             this.logger.warning("Tier 2 Test Selected");
         }
         if (tier == 3) {
@@ -221,7 +221,7 @@ class Bots {
             this.usecLoad3();
             this.bearLoad3();
             this.rogueLoad3();
-            this.raiderLoad1();
+            this.raiderLoad3();
             this.logger.warning("Tier 3 Test Selected");
         }
         if (tier == 4) {
@@ -230,7 +230,7 @@ class Bots {
             this.usecLoad4();
             this.bearLoad4();
             this.rogueLoad3();
-            this.raiderLoad1();
+            this.raiderLoad3();
             this.logger.warning("Tier 4 Test Selected");
         }
         if (this.modConf.bot_test_weps_enabled == false) {
@@ -357,8 +357,6 @@ class Bots {
             this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;
             ;
         }
-        this.raiderLoad1();
-        this.rogueLoad1();
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig1 loaded");
         }
@@ -392,8 +390,6 @@ class Bots {
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;
             ;
         }
-        this.raiderLoad1();
-        this.rogueLoad2();
         if (this.modConf.logEverything == true) {
             this.logger.info("boatConfig2 loaded");
         }
@@ -427,8 +423,6 @@ class Bots {
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;
             ;
         }
-        this.raiderLoad1();
-        this.rogueLoad3();
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
         }
@@ -441,7 +435,10 @@ class Bots {
         this.scavBase.chances = scavLO.scavLO1.chances;
         this.scavBase.generation = scavLO.scavLO1.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
-        BotTierTracker.scavTier = 1;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.scavBase.chances.mods.mod_flashlight = 40;
+        }
+        helper_1.BotTierTracker.scavTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("scavLoad1 loaded");
         }
@@ -454,7 +451,10 @@ class Bots {
         this.scavBase.chances = scavLO.scavLO2.chances;
         this.scavBase.generation = scavLO.scavLO2.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit2;
-        BotTierTracker.scavTier = 2;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.scavBase.chances.mods.mod_flashlight = 60;
+        }
+        helper_1.BotTierTracker.scavTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("scavLoad2 loaded");
         }
@@ -467,7 +467,10 @@ class Bots {
         this.scavBase.chances = scavLO.scavLO3.chances;
         this.scavBase.generation = scavLO.scavLO3.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit3;
-        BotTierTracker.scavTier = 3;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.scavBase.chances.mods.mod_flashlight = 80;
+        }
+        helper_1.BotTierTracker.scavTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("scavLoad3 loaded");
         }
@@ -483,7 +486,11 @@ class Bots {
         this.usecBase.appearance.feet = usecLO.usecLO1.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO1.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
-        BotTierTracker.usecTier = 1;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.usecBase.chances.mods.mod_nvg = 5;
+            this.usecBase.chances.mods.mod_flashlight = 50;
+        }
+        helper_1.BotTierTracker.usecTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
         }
@@ -499,7 +506,20 @@ class Bots {
         this.usecBase.appearance.feet = usecLO.usecLO2.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO2.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
-        BotTierTracker.usecTier = 2;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.usecBase.chances.mods.mod_nvg = 10;
+            this.usecBase.chances.mods.mod_flashlight = 70;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.usecTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
         }
@@ -515,7 +535,20 @@ class Bots {
         this.usecBase.appearance.feet = usecLO.usecLO3.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO3.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
-        BotTierTracker.usecTier = 3;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.usecBase.chances.mods.mod_nvg = 20;
+            this.usecBase.chances.mods.mod_flashlight = 80;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.usecTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
         }
@@ -531,7 +564,20 @@ class Bots {
         this.usecBase.appearance.feet = usecLO.usecLO4.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO4.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
-        BotTierTracker.usecTier = 4;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.usecBase.chances.mods.mod_nvg = 40;
+            this.usecBase.chances.mods.mod_flashlight = 100;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.usecTier = 4;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
         }
@@ -547,7 +593,11 @@ class Bots {
         this.bearBase.appearance.feet = bearLO.bearLO1.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO1.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
-        BotTierTracker.bearTier = 1;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.bearBase.chances.mods.mod_nvg = 5;
+            this.bearBase.chances.mods.mod_flashlight = 50;
+        }
+        helper_1.BotTierTracker.bearTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
         }
@@ -563,7 +613,20 @@ class Bots {
         this.bearBase.appearance.feet = bearLO.bearLO2.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO2.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
-        BotTierTracker.bearTier = 2;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.bearBase.chances.mods.mod_nvg = 10;
+            this.bearBase.chances.mods.mod_flashlight = 70;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.bearTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
         }
@@ -579,7 +642,21 @@ class Bots {
         this.bearBase.appearance.feet = bearLO.bearLO3.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO3.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
-        BotTierTracker.bearTier = 3;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.bearBase.chances.mods.mod_nvg = 20;
+            this.bearBase.chances.mods.mod_flashlight = 80;
+            this.bearBase.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.bearTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
         }
@@ -595,7 +672,21 @@ class Bots {
         this.bearBase.appearance.feet = bearLO.bearLO4.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO4.experience.level;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
-        BotTierTracker.bearTier = 4;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.bearBase.chances.mods.mod_nvg = 40;
+            this.bearBase.chances.mods.mod_flashlight = 100;
+            this.bearBase.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.bearTier = 4;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
         }
@@ -603,6 +694,7 @@ class Bots {
     raiderLoad1() {
         this.raiderBase.inventory.Ammo = raiderLO.raiderLO1.inventory.Ammo;
         this.raiderBase.inventory.equipment = raiderLO.raiderLO1.inventory.equipment;
+        this.raiderBase.inventory.items = raiderLO.raiderLO1.inventory.items;
         this.raiderBase.inventory.mods = raiderLO.raiderLO1.inventory.mods;
         this.raiderBase.chances = raiderLO.raiderLO1.chances;
         this.raiderBase.generation = raiderLO.raiderLO1.generation;
@@ -610,9 +702,77 @@ class Bots {
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
         this.raiderBase.appearance.voice = raiderLO.appearance.voice;
-        BotTierTracker.raiderTier = 1;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.raiderBase.chances.mods.mod_nvg = 15;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.raiderTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("raiderLoad1 loaded");
+        }
+    }
+    raiderLoad2() {
+        this.raiderBase.inventory.Ammo = raiderLO.raiderLO2.inventory.Ammo;
+        this.raiderBase.inventory.equipment = raiderLO.raiderLO2.inventory.equipment;
+        this.raiderBase.inventory.items = raiderLO.raiderLO2.inventory.items;
+        this.raiderBase.inventory.mods = raiderLO.raiderLO2.inventory.mods;
+        this.raiderBase.chances = raiderLO.raiderLO2.chances;
+        this.raiderBase.generation = raiderLO.raiderLO2.generation;
+        this.raiderBase.appearance.body = raiderLO.appearance.body;
+        this.raiderBase.appearance.feet = raiderLO.appearance.feet;
+        this.raiderBase.appearance.head = raiderLO.appearance.head;
+        this.raiderBase.appearance.voice = raiderLO.appearance.voice;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.raiderBase.chances.mods.mod_nvg = 30;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.raiderTier = 2;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("raiderLoad2 loaded");
+        }
+    }
+    raiderLoad3() {
+        this.raiderBase.inventory.Ammo = raiderLO.raiderLO3.inventory.Ammo;
+        this.raiderBase.inventory.equipment = raiderLO.raiderLO3.inventory.equipment;
+        this.raiderBase.inventory.items = raiderLO.raiderLO3.inventory.items;
+        this.raiderBase.inventory.mods = raiderLO.raiderLO3.inventory.mods;
+        this.raiderBase.chances = raiderLO.raiderLO3.chances;
+        this.raiderBase.generation = raiderLO.raiderLO3.generation;
+        this.raiderBase.appearance.body = raiderLO.appearance.body;
+        this.raiderBase.appearance.feet = raiderLO.appearance.feet;
+        this.raiderBase.appearance.head = raiderLO.appearance.head;
+        this.raiderBase.appearance.voice = raiderLO.appearance.voice;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.raiderBase.chances.mods.mod_nvg = 60;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        helper_1.BotTierTracker.raiderTier = 3;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("raiderLoad3 loaded");
         }
     }
     rogueLoad1() {
@@ -626,7 +786,10 @@ class Bots {
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
-        BotTierTracker.rogueTier = 1;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.rogueBase.chances.mods.mod_nvg = 12;
+        }
+        helper_1.BotTierTracker.rogueTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("rogueLoad1 loaded");
         }
@@ -641,7 +804,10 @@ class Bots {
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
-        BotTierTracker.rogueTier = 2;
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.rogueBase.chances.mods.mod_nvg = 25;
+        }
+        helper_1.BotTierTracker.rogueTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("rogueLoad2 loaded");
         }
@@ -656,36 +822,13 @@ class Bots {
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
-        BotTierTracker.rogueTier = 3;
-        this.logger.info("/////////////////Tier = " + this.tierTrakcer.getTier("exusec"));
+        if (helper_1.RaidInfoTracker.TOD === "night") {
+            this.rogueBase.chances.mods.mod_nvg = 50;
+        }
+        helper_1.BotTierTracker.rogueTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("rogueLoad3 loaded");
         }
     }
 }
 exports.Bots = Bots;
-class BotTierTracker {
-    getTier(botType) {
-        if (botType === "usec") {
-            return BotTierTracker.usecTier;
-        }
-        if (botType === "bear") {
-            return BotTierTracker.bearTier;
-        }
-        if (botType === "assault") {
-            return BotTierTracker.scavTier;
-        }
-        if (botType === "pmcbot") {
-            return BotTierTracker.raiderTier;
-        }
-        if (botType === "exusec") {
-            return BotTierTracker.rogueTier;
-        }
-    }
-}
-exports.BotTierTracker = BotTierTracker;
-BotTierTracker.usecTier = 1;
-BotTierTracker.bearTier = 1;
-BotTierTracker.scavTier = 1;
-BotTierTracker.rogueTier = 1;
-BotTierTracker.raiderTier = 1;

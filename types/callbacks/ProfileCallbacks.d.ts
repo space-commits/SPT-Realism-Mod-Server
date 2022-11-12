@@ -27,7 +27,7 @@ export declare class ProfileCallbacks {
      * @param sessionID Session id
      * @returns Profile object
      */
-    getProfileData(url: string, info: IEmptyRequestData, sessionID: string): IGetBodyResponseData<IPmcData[]>;
+    getProserverItem(url: string, info: IEmptyRequestData, sessionID: string): IGetBodyResponseData<IPmcData[]>;
     /**
      * Handle the creation of a scav profile for player
      * Occurs post-raid and when profile first created immediately after character details are confirmed by player

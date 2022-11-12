@@ -259,7 +259,7 @@
         "Weight": 0.017,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 15
+        "ChamberSpeed": 0
     },
     "606587bd6d0bd7580617bacc": {
         "ItemID": "606587bd6d0bd7580617bacc",
