@@ -110,8 +110,8 @@ export class Bots {
 
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.useDifficultyOverride = true;
+            this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
         }
-
 
         if (this.modConf.boss_difficulty == true) {
             for (let i in this.map) {
@@ -287,11 +287,13 @@ export class Bots {
         }
 
         if (this.modConf.all_USEC == false && this.modConf.all_bear == true) {
+            this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance
             this.botConfPMC.isUsec = 0;
             this.logger.warning("All Bear");
         }
 
         if (this.modConf.all_bear == false && this.modConf.all_USEC == true) {
+            this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance
             this.botConfPMC.isUsec = 100;
             this.logger.warning("All USEC");
         }
@@ -310,8 +312,8 @@ export class Bots {
     public randomizedPMCBehaviour() {
 
         if (this.modConf.pmc_difficulty == true) {
-            var behaviourWeights = [5, 5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-            var behavioursArray = ["assault", "pmcBot", "exUsec", "bossKilla", "bossBully", "bossKilla", "bossGluhar", "bossSanitar", "bossKnight", "followerBully", "followerSanitar", "followerBigPipe", "followerGluharAssault", "followerGluharScout"];
+            var behaviourWeights = [5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+            var behavioursArray = ["pmcBot", "exUsec", "bossKilla", "bossBully", "bossKilla", "bossGluhar", "bossSanitar", "bossKnight", "followerBully", "followerSanitar", "followerBigPipe", "followerGluharAssault", "followerGluharScout"];
 
             var behaviour1 = this.helper.probabilityWeighter(behavioursArray, behaviourWeights);
             var behaviour2 = this.helper.probabilityWeighter(behavioursArray, behaviourWeights);
@@ -461,39 +463,39 @@ export class Bots {
     public botConfig3() {
 
         //Set bot armor and weapon min durability
-        this.botConf.durability.pmc = rmBotConfig.durability2.pmc
-        this.botConf.durability.pmcbot = rmBotConfig.durability2.pmcbot
-        this.botConf.durability.boss = rmBotConfig.durability2.boss
-        this.botConf.durability.follower = rmBotConfig.durability2.follower
-        this.botConf.durability.assault = rmBotConfig.durability2.assault
-        this.botConf.durability.cursedassault = rmBotConfig.durability2.cursedassault
-        this.botConf.durability.marksman = rmBotConfig.durability2.marksman
-        this.botConf.durability.exusec = rmBotConfig.durability2.exusec
-        this.botConf.durability.sectantpriest = rmBotConfig.durability2.sectantpriest
-        this.botConf.durability.sectantwarrior = rmBotConfig.durability2.sectantwarrior
+        this.botConf.durability.pmc = rmBotConfig.durability3.pmc
+        this.botConf.durability.pmcbot = rmBotConfig.durability3.pmcbot
+        this.botConf.durability.boss = rmBotConfig.durability3.boss
+        this.botConf.durability.follower = rmBotConfig.durability3.follower
+        this.botConf.durability.assault = rmBotConfig.durability3.assault
+        this.botConf.durability.cursedassault = rmBotConfig.durability3.cursedassault
+        this.botConf.durability.marksman = rmBotConfig.durability3.marksman
+        this.botConf.durability.exusec = rmBotConfig.durability3.exusec
+        this.botConf.durability.sectantpriest = rmBotConfig.durability3.sectantpriest
+        this.botConf.durability.sectantwarrior = rmBotConfig.durability3.sectantwarrior
 
         //adjust PMC money stack limits and adjust PMC item spawn limits
-        this.botConfPMC.dynamicLoot.moneyStackLimits = rmBotConfig.pmc2.dynamicLoot.moneyStackLimits;
+        this.botConfPMC.dynamicLoot.moneyStackLimits = rmBotConfig.pmc3.dynamicLoot.moneyStackLimits;
 
         //adjust PMC max loot in rubles
-        this.botConfPMC.maxBackpackLootTotalRub = rmBotConfig.pmc2.maxBackpackLootTotalRub;
-        this.botConfPMC.maxPocketLootTotalRub = rmBotConfig.pmc2.maxPocketLootTotalRub;
-        this.botConfPMC.maxVestLootTotalRub = rmBotConfig.pmc2.maxVestLootTotalRub;
+        this.botConfPMC.maxBackpackLootTotalRub = rmBotConfig.pmc3.maxBackpackLootTotalRub;
+        this.botConfPMC.maxPocketLootTotalRub = rmBotConfig.pmc3.maxPocketLootTotalRub;
+        this.botConfPMC.maxVestLootTotalRub = rmBotConfig.pmc3.maxVestLootTotalRub;
 
         //adjust PMC hostile chance
-        this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc2.chanceSameSideIsHostilePercent;
+        this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc3.chanceSameSideIsHostilePercent;
 
-        this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc2.looseWeaponInBackpackChancePercent;
+        this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc3.looseWeaponInBackpackChancePercent;
 
-        this.botConfPMC.isUsec = rmBotConfig.pmc2.isUsec;
+        this.botConfPMC.isUsec = rmBotConfig.pmc3.isUsec;
 
-        this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
+        this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
 
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
 
         if (this.modConf.pmc_difficulty == true) {
-            this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
+            this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;;
         }
 
         if (this.modConf.logEverything == true) {

@@ -231,10 +231,9 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                     }
                                 }
                                 if (hydroProp !== undefined) {
-                                    if (modConfig.revert_med_changes == true && modConfig.med_changes == false && medRevertCount.MedRevertCount <= 4) {
+                                    if (modConfig.revert_med_changes == true && modConfig.med_changes == false) {
                                         this.revertMeds(pmcData, helper);
                                         this.revertMeds(scavData, helper);
-                                        medRevertCount.MedRevertCount += 1;
                                         modConfig.revert_med_changes = false;
                                         helper.saveToJSONFile(medRevertCount, 'db/saved/info.json');
                                         helper.saveToJSONFile(modConfig, 'config/config.json');
@@ -264,9 +263,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 pmcData.Info.MemberCategory = 2;
                             }
                             this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
-                            if (modConfig.airdrop_changes == true) {
-                                this.updateAirdrops(logger, modConfig, airConf, helper);
-                            }
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Profile Checked");
                             }
@@ -327,6 +323,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     action: (url, info, sessionID, output) => {
 
                         try {
+                            const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
                             const databaseServer4 = container.resolve<DatabaseServer>("DatabaseServer");
                             const tables4 = databaseServer4.getTables();
                             const arrays = new Arrays(tables4);
@@ -399,7 +396,15 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             }
                             
                             this.updateBots(pmcData, logger, modConfig, bots, helper);
-
+                            
+                            if (modConfig.airdrop_changes == true) {
+                                if(RaidInfoTracker.TOD === "day"){
+                                    this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 10, 10, 10, 1]);
+                                }
+                                if(RaidInfoTracker.TOD === "night"){
+                                    this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 20, 30, 30, 30, 1]);
+                                }
+                            }
                             return HttpResponse.nullResponse();
                         }
                         catch (e) {
@@ -433,9 +438,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
                         try {
                             this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
-                            if (modConfig.airdrop_changes == true) {
-                                this.updateAirdrops(logger, modConfig, airConf, helper);
-                            }
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Updated at Raid End");
                             }
@@ -644,7 +646,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0) {
-            tier = helper.probabilityWeighter(tierArray, [20, 1, 0, 0]);
+            tier = helper.probabilityWeighter(tierArray, [15, 1, 0, 0]);
         }
         if (pmcData.Info.Level >= 5) {
             tier = helper.probabilityWeighter(tierArray, [20, 5, 1, 0]);
@@ -694,20 +696,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             }
             if (tier == 4) {
                 bots.rogueLoad3();
-            }
-        }
-        if (type === "scav") {
-            if (tier == 1) {
-                bots.scavLoad1();
-            }
-            if (tier == 2) {
-                bots.scavLoad2();
-            }
-            if (tier == 3) {
-                bots.scavLoad3();
-            }
-            if (tier == 4) {
-                bots.scavLoad3();
             }
         }
         if (type === "scav") {
@@ -827,9 +815,8 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    public updateAirdrops(logger: ILogger, modConfig, airConf: IAirdropConfig, helper: Helper) {
+    public updateAirdrops(logger: ILogger, modConfig, airConf: IAirdropConfig, helper: Helper, weights: Array<number>) {
         var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
-        var weights = [60, 60, 30, 30, 20, 10, 10, 10, 1];
         var loot = helper.probabilityWeighter(airdropLootArr, weights);
         if (loot === "medical_loot") {
             airConf.loot = airdropLoot.medical_loot;

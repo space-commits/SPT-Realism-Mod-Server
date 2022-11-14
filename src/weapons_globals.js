@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WeaponsGlobals = void 0;
+const mastering = require("../db/items/mastering.json");
 class WeaponsGlobals {
     constructor(logger, tables, modConf) {
         this.logger = logger;
@@ -40,6 +41,9 @@ class WeaponsGlobals {
                     serverItem._props.RepairQuality = 0.1;
                 }
             }
+        }
+        if (this.modConf.mastery_changes == true) {
+            this.globalDB.Mastering = mastering.Mastering;
         }
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
             this.globalDB.Aiming.AimProceduralIntensity = 1;

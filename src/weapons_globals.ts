@@ -1,6 +1,8 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 
+const mastering = require("../db/items/mastering.json");
+
 export class WeaponsGlobals {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
@@ -44,7 +46,10 @@ export class WeaponsGlobals {
         }
 
 
-        
+        if(this.modConf.mastery_changes == true){
+            this.globalDB.Mastering = mastering.Mastering;
+        }
+
 
 
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {

@@ -31,13 +31,13 @@ class Player {
     loadPlayer() {
         if (this.modConf.movement_changes == true) {
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
-            this.globalDB.Stamina.WalkOverweightLimits["y"] = 72;
+            this.globalDB.Stamina.WalkOverweightLimits["y"] = 75;
             this.globalDB.Stamina.BaseOverweightLimits["x"] = 30;
-            this.globalDB.Stamina.BaseOverweightLimits["y"] = 52;
+            this.globalDB.Stamina.BaseOverweightLimits["y"] = 55;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 34;
-            this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 80;
+            this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 85;
             this.globalDB.WalkSpeed["x"] = 0.6;
             this.globalDB.WalkSpeed["y"] = 0.83;
             this.globalDB.SprintSpeed["x"] = 0.03;
@@ -61,12 +61,12 @@ class Player {
             this.globalDB.Inertia.SpeedInertiaAfterJump["y"] = 1.47;
             this.globalDB.Inertia.BaseJumpPenalty = 0.55;
             this.globalDB.Inertia.BaseJumpPenaltyDuration = 0.75;
-            this.globalDB.Inertia.SprintBrakeInertia["y"] = 75;
+            this.globalDB.Inertia.SprintBrakeInertia["y"] = 100;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["x"] = 0.812;
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
-            this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.8;
-            this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.58;
-            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.315;
+            this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.52;
+            this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.43;
+            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.4;
             this.globalDB.Stamina.Capacity = 140;
             this.globalDB.Stamina.BaseRestorationRate = 11;
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
