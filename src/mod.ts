@@ -43,6 +43,10 @@ import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod";
 import { ApplicationContext } from "@spt-aki/context/ApplicationContext";
 import { IStartOfflineRaidRequestData } from "@spt-aki/models/eft/match/IStartOffineRaidRequestData";
 import { WeatherController } from "@spt-aki/controllers/WeatherController";
+import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
+import { LocalisationService } from "@spt-aki/services/LocalisationService";
+import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
+
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -63,7 +67,6 @@ import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
 import { Traders } from "./traders";
 import { Airdrops } from "./airdrops";
-import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
 
 
 const medRevertCount = require("../db/saved/info.json");
@@ -75,6 +78,7 @@ const custProfile = require("../db/profile/profile.json");
 const botHealth = require("../db/bots/botHealth.json");
 const modConfig = require("../config/config.json");
 const airdropLoot = require("../db/airdrops/airdrop_loot.json");
+const pmcTypes = require("../db/bots/pmcTypes.json");
 
 class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
@@ -94,6 +98,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const HttpResponse = container.resolve<HttpResponseUtil>("HttpResponseUtil");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+        const localisationService = container.resolve<LocalisationService>("LocalisationService");
         const fleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const tables = databaseServer.getTables();
 
@@ -122,7 +127,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                 const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
                 const inventoryMagGenComponents = container.resolveAll<IInventoryMagGen>("InventoryMagGen");
-                const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, inventoryMagGenComponents);
+                const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, localisationService, inventoryMagGenComponents);
                 result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult => {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 }
@@ -138,7 +143,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 const itemFilterServ = container.resolve<ItemFilterService>("ItemFilterService");
                 const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                 const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
-                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
+                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
                 result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole = null): { upd?: Upd } => {
                     return _botModGen.genExtraItemProps(itemTemplate, botRole);
                 }
@@ -171,7 +176,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const helper = new Helper(tables2, arrays, logger);
                         const tieredFlea = new TieredFlea(tables2);
                         const player = new Player(logger, tables2, modConfig, custProfile, botHealth);
-                        const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
 
                         let pmcData = profileHelper.getPmcProfile(sessionID);
                         let scavData = profileHelper.getScavProfile(sessionID);
@@ -333,9 +337,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.MATCH_INFO).getValue<IStartOfflineRaidRequestData>();
+                            const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
                             // const sessionId = appContext.getLatestValue(ContextVariableType.SESSION_ID).getValue<string>();
                             const time = weatherController.generate().time;
                             const mapName = matchInfo.locationName;
+                            RaidInfoTracker.mapName = mapName;
                             let realTime = "";
                             let mapType = "";
                             let pmcData = profileHelper.getPmcProfile(sessionID);
@@ -361,7 +367,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             function getTOD(time) {
                                 let TOD = "";
                                 let [h, m] = time.split(':');
-                                if (parseInt(h) >= 6 && parseInt(h) < 20 || mapName === "Factory" || mapName === "Laboratory") {
+                                if (parseInt(h) >= 6 && parseInt(h) < 20 || (mapName === "Factory" || mapName === "Laboratory")) {
                                     TOD = "day";
                                 }
                                 else {
@@ -389,12 +395,15 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
-                            if(modConfig.logEverything == true){
-                                logger.warning("Map = " + mapName);
-                                logger.warning("Time of Day = " + RaidInfoTracker.TOD);
-                                logger.warning("Map Type = " + RaidInfoTracker.mapType);
+                            if(modConfig.pmc_difficulty == true){
+                                if(RaidInfoTracker.TOD === "day"){
+                                    botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
+                                }
+                                if(RaidInfoTracker.TOD === "night"){
+                                    botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
+                                }
                             }
-                            
+
                             this.updateBots(pmcData, logger, modConfig, bots, helper);
                             
                             if (modConfig.airdrop_changes == true) {
@@ -405,6 +414,13 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                     this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 20, 30, 30, 30, 1]);
                                 }
                             }
+
+                            if(modConfig.logEverything == true){
+                                logger.warning("Map = " + mapName);
+                                logger.warning("Time of Day = " + RaidInfoTracker.TOD);
+                                logger.warning("Map Type = " + RaidInfoTracker.mapType);
+                            }
+
                             return HttpResponse.nullResponse();
                         }
                         catch (e) {
@@ -750,7 +766,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         var property = pmcData?.Info?.Level;
         if (config.bot_changes == true) {
             if (property === undefined) {
-                bots.randomizedPMCBehaviour();
                 bots.botConfig1();
                 bots.scavLoad1();
                 bots.usecLoad1();
@@ -768,7 +783,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     logger.warning("Realism Mod: Bots Are In Test Mode");
                 }
                 if (config.bot_testing == false) {
-                    bots.randomizedPMCBehaviour();
                     this.getBotTier(pmcData, bots, helper);
                     var baseTiers = [1, 2, 3];
                     if (pmcData.Info.Level >= 0) {

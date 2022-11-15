@@ -99,6 +99,7 @@ export class Helper {
  export class RaidInfoTracker{
     public static TOD = "";
     public static mapType = "";
+    public static mapName = "";
     
  }
 

@@ -10,7 +10,7 @@ import { ISearchFriendResponse } from "../../eft/profile/ISearchFriendResponse";
 export interface IProfileCallbacks {
     onLoad(sessionID: string): any;
     createProfile(url: string, info: IProfileCreateRequestData, sessionID: string): IGetBodyResponseData<any>;
-    getProserverItem(url: string, info: IEmptyRequestData, sessionID: string): IGetBodyResponseData<any>;
+    getProfileData(url: string, info: IEmptyRequestData, sessionID: string): IGetBodyResponseData<any>;
     regenerateScav(url: string, info: IEmptyRequestData, sessionID: string): IGetBodyResponseData<any>;
     changeVoice(url: string, info: IProfileChangeVoiceRequestData, sessionID: string): INullResponseData;
     changeNickname(url: string, info: IProfileChangeNicknameRequestData, sessionID: string): IGetBodyResponseData<any>;

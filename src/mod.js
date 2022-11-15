@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
+const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
 const ammo_1 = require("./ammo");
 const armor_1 = require("./armor");
 const attatchment_base_1 = require("./attatchment_base");
@@ -20,7 +21,6 @@ const code_gen_1 = require("./code_gen");
 const quests_1 = require("./quests");
 const traders_1 = require("./traders");
 const airdrops_1 = require("./airdrops");
-const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -30,6 +30,7 @@ const custProfile = require("../db/profile/profile.json");
 const botHealth = require("../db/bots/botHealth.json");
 const modConfig = require("../config/config.json");
 const airdropLoot = require("../db/airdrops/airdrop_loot.json");
+const pmcTypes = require("../db/bots/pmcTypes.json");
 class Mod {
     preAkiLoad(container) {
         const logger = container.resolve("WinstonLogger");
@@ -42,6 +43,7 @@ class Mod {
         const HttpResponse = container.resolve("HttpResponseUtil");
         const configServer = container.resolve("ConfigServer");
         const databaseServer = container.resolve("DatabaseServer");
+        const localisationService = container.resolve("LocalisationService");
         const fleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const tables = databaseServer.getTables();
         const router = container.resolve("DynamicRouterModService");
@@ -62,7 +64,7 @@ class Mod {
                 const itemHelper = container.resolve("ItemHelper");
                 const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
                 const inventoryMagGenComponents = container.resolveAll("InventoryMagGen");
-                const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, inventoryMagGenComponents);
+                const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, localisationService, inventoryMagGenComponents);
                 result.generateWeaponByTpl = (sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) => {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 };
@@ -77,7 +79,7 @@ class Mod {
                 const itemFilterServ = container.resolve("ItemFilterService");
                 const profileHelper = container.resolve("ProfileHelper");
                 const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
-                const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, configServer);
+                const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
                 result.generateExtraPropertiesForItem = (itemTemplate, botRole = null) => {
                     return _botModGen.genExtraItemProps(itemTemplate, botRole);
                 };
@@ -105,7 +107,6 @@ class Mod {
                     const helper = new helper_1.Helper(tables2, arrays, logger);
                     const tieredFlea = new fleamarket_1.TieredFlea(tables2);
                     const player = new player_1.Player(logger, tables2, modConfig, custProfile, botHealth);
-                    const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     let scavData = profileHelper.getScavProfile(sessionID);
                     try {
@@ -247,9 +248,11 @@ class Mod {
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.MATCH_INFO).getValue();
+                        const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
                         // const sessionId = appContext.getLatestValue(ContextVariableType.SESSION_ID).getValue<string>();
                         const time = weatherController.generate().time;
                         const mapName = matchInfo.locationName;
+                        helper_1.RaidInfoTracker.mapName = mapName;
                         let realTime = "";
                         let mapType = "";
                         let pmcData = profileHelper.getPmcProfile(sessionID);
@@ -270,7 +273,7 @@ class Mod {
                         function getTOD(time) {
                             let TOD = "";
                             let [h, m] = time.split(':');
-                            if (parseInt(h) >= 6 && parseInt(h) < 20 || mapName === "Factory" || mapName === "Laboratory") {
+                            if (parseInt(h) >= 6 && parseInt(h) < 20 || (mapName === "Factory" || mapName === "Laboratory")) {
                                 TOD = "day";
                             }
                             else {
@@ -295,10 +298,13 @@ class Mod {
                         }
                         helper_1.RaidInfoTracker.TOD = getTOD(realTime);
                         helper_1.RaidInfoTracker.mapType = mapType;
-                        if (modConfig.logEverything == true) {
-                            logger.warning("Map = " + mapName);
-                            logger.warning("Time of Day = " + helper_1.RaidInfoTracker.TOD);
-                            logger.warning("Map Type = " + helper_1.RaidInfoTracker.mapType);
+                        if (modConfig.pmc_difficulty == true) {
+                            if (helper_1.RaidInfoTracker.TOD === "day") {
+                                botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
+                            }
+                            if (helper_1.RaidInfoTracker.TOD === "night") {
+                                botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
+                            }
                         }
                         this.updateBots(pmcData, logger, modConfig, bots, helper);
                         if (modConfig.airdrop_changes == true) {
@@ -308,6 +314,11 @@ class Mod {
                             if (helper_1.RaidInfoTracker.TOD === "night") {
                                 this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 20, 30, 30, 30, 1]);
                             }
+                        }
+                        if (modConfig.logEverything == true) {
+                            logger.warning("Map = " + mapName);
+                            logger.warning("Time of Day = " + helper_1.RaidInfoTracker.TOD);
+                            logger.warning("Map Type = " + helper_1.RaidInfoTracker.mapType);
                         }
                         return HttpResponse.nullResponse();
                     }
@@ -614,7 +625,6 @@ class Mod {
         var property = pmcData?.Info?.Level;
         if (config.bot_changes == true) {
             if (property === undefined) {
-                bots.randomizedPMCBehaviour();
                 bots.botConfig1();
                 bots.scavLoad1();
                 bots.usecLoad1();
@@ -632,7 +642,6 @@ class Mod {
                     logger.warning("Realism Mod: Bots Are In Test Mode");
                 }
                 if (config.bot_testing == false) {
-                    bots.randomizedPMCBehaviour();
                     this.getBotTier(pmcData, bots, helper);
                     var baseTiers = [1, 2, 3];
                     if (pmcData.Info.Level >= 0) {

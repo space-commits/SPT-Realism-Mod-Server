@@ -1,5 +1,5 @@
 import { IRegisterData } from "../../eft/launcher/IRegisterData";
-import { IRemoveProserverItem } from "../../eft/launcher/IRemoveProserverItem";
+import { IRemoveProfileData } from "../../eft/launcher/IRemoveProfileData";
 import { ILoginRequestData } from "../../eft/launcher/ILoginRequestData";
 import { IChangeRequestData } from "../../eft/launcher/IChangeRequestData";
 import { IGetMiniProfileRequestData } from "../../eft/launcher/IGetMiniProfileRequestData.js";
@@ -15,6 +15,6 @@ export interface ILauncherCallbacks {
     getAllMiniProfiles(url: string, info: any, sessionID: string): string;
     getServerVersion(): string;
     ping(url: string, info: any, sessionID: string): string;
-    removeProfile(url: string, info: IRemoveProserverItem, sessionID: string): string;
+    removeProfile(url: string, info: IRemoveProfileData, sessionID: string): string;
     getCompatibleTarkovVersion(): string;
 }

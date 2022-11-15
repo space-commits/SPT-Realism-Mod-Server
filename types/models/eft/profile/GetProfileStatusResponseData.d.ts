@@ -1,8 +1,8 @@
 export interface GetProfileStatusResponseData {
     maxPveCountExceeded: false;
-    profiles: ProserverItem[];
+    profiles: ProfileData[];
 }
-export interface ProserverItem {
+export interface ProfileData {
     profileid: string;
     profileToken: string;
     status: string;

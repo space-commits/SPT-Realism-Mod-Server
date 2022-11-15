@@ -90,6 +90,7 @@ class RaidInfoTracker {
 exports.RaidInfoTracker = RaidInfoTracker;
 RaidInfoTracker.TOD = "";
 RaidInfoTracker.mapType = "";
+RaidInfoTracker.mapName = "";
 class BotTierTracker {
     getTier(botType) {
         if (botType === "usec") {
