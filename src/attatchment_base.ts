@@ -47,15 +47,15 @@ export class AttatchmentBase {
                 }
 
 
-                let cantedMountConfWeaps: string[] = [ "5926bb2186f7744b1c6c6e60" , "5d2f0d8048f0356c925bc3b0", "5e00903ae9dc277128008b87", "5de7bd7bfd6b4e6e2276dc25"];
+                let cantedMountConfWeaps: string[] = ["5926bb2186f7744b1c6c6e60", "5d2f0d8048f0356c925bc3b0", "5e00903ae9dc277128008b87", "5de7bd7bfd6b4e6e2276dc25"];
 
-                for(let item in cantedMountConfWeaps){
-                    if (serverItem._id === cantedMountConfWeaps[item]){
+                for (let item in cantedMountConfWeaps) {
+                    if (serverItem._id === cantedMountConfWeaps[item]) {
                         serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
                     }
                 }
-                if(serverItem._props.weapClass === "pistol"){
-                   serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
+                if (serverItem._props.weapClass === "pistol") {
+                    serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
                 }
 
                 if (serverItem._id === "5b31163c5acfc400153b71cb"
@@ -141,7 +141,7 @@ export class AttatchmentBase {
                     || serverItem._id === "5a37ca54c4a282000d72296a"
                     || serverItem._id === "55d48a634bdc2d8b2f8b456a"
                     || serverItem._id === "5addbfef5acfc400185c2857"
-                    || serverItem._id === "5a33b652c4a28232996e407c"      
+                    || serverItem._id === "5a33b652c4a28232996e407c"
                     || serverItem._id === "5d2c770c48f0354b4a07c100"
                     || serverItem._id === "5d2c772c48f0355d95672c25"
                     || serverItem._id === "5926dad986f7741f82604363"
@@ -152,7 +152,9 @@ export class AttatchmentBase {
                     || serverItem._id === "57ffb0062459777a045af529"
                     || serverItem._id === "5f2aa49f9b44de6b1b4e68d4"
                     || serverItem._id === "5aaf8e43e5b5b00015693246"
-                    || serverItem._id === "5f2aa49f9b44de6b1b4e68d4"
+                    || serverItem._id === "5827272a24597748c74bdeea"
+                    || serverItem._id === "58272b392459774b4c7b3ccd"
+                 
                 ) {
                     serverItem._props.Slots[0]._botRequired = serverItem._props.Slots[0]._required;
                     serverItem._props.Slots[0]._botRequired = true;

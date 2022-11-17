@@ -403,10 +403,10 @@ export class BotModGen extends BotGeneratorHelper {
         }
 
         if (itemTemplate._parent === BaseClasses.NIGHTVISION) {
-            if (RaidInfoTracker.TOD == "day") {
-                properties.Togglable = { "On": false }
-            } else {
+            if (RaidInfoTracker.TOD == "night") {
                 properties.Togglable = { "On": true }
+            } else {
+                properties.Togglable = { "On": false }
             }
         }
         // Togglable face shield
@@ -414,7 +414,7 @@ export class BotModGen extends BotGeneratorHelper {
             // Get chance from botconfig for bot type, use 75% if no value found
             const faceShieldActiveChance = (this.botConfig.equipment[this.getBotEquipmentRole(botRole)]?.faceShieldIsActiveChancePercent != undefined)
                 ? this.botConfig.equipment[this.getBotEquipmentRole(botRole)].faceShieldIsActiveChancePercent
-                : 75;
+                : 100;
             properties.Togglable = { "On": (this.randomUtil.getInt(1, 100) < faceShieldActiveChance) }
         }
 

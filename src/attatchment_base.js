@@ -145,7 +145,8 @@ class AttatchmentBase {
                     || serverItem._id === "57ffb0062459777a045af529"
                     || serverItem._id === "5f2aa49f9b44de6b1b4e68d4"
                     || serverItem._id === "5aaf8e43e5b5b00015693246"
-                    || serverItem._id === "5f2aa49f9b44de6b1b4e68d4") {
+                    || serverItem._id === "5827272a24597748c74bdeea"
+                    || serverItem._id === "58272b392459774b4c7b3ccd") {
                     serverItem._props.Slots[0]._botRequired = serverItem._props.Slots[0]._required;
                     serverItem._props.Slots[0]._botRequired = true;
                 }

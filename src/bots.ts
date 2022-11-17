@@ -80,6 +80,7 @@ export class Bots {
         }];
 
         this.botConf.equipment["assault"] = { "lightLaserIsActiveChancePercent": 50 };
+        
         this.botConf.equipment["pmcBot"] = {
             "lightLaserIsActiveChancePercent": 50,
             "faceShieldIsActiveChancePercent": 100,
@@ -344,6 +345,18 @@ export class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue1;
 
+        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
+
+        if (RaidInfoTracker.TOD === "night") {
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
+        }
+        else {
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 10;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
+        }
+
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;;
         }
@@ -387,6 +400,26 @@ export class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue2;
 
+        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
+
+        if (RaidInfoTracker.TOD === "night") {
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 80;
+        }
+        else {
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 20;
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 80;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 20;
+        }
+
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
         }
@@ -429,6 +462,27 @@ export class Bots {
 
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
+
+        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
+
+        if (RaidInfoTracker.TOD === "night") {
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 50;
+        }
+        else {
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 30;
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 80;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 20;
+        }
+
 
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;;
@@ -524,19 +578,12 @@ export class Bots {
         this.usecBase.appearance.body = usecLO.usecLO1.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO1.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO1.experience.level;
-        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
 
         if (RaidInfoTracker.TOD === "night") {
             this.usecBase.chances.mods.mod_nvg = 5;
             this.usecBase.chances.mods.mod_flashlight = 50;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         }
-        else {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 10;
-        }
-        if (RaidInfoTracker.mapType === "cqb") {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
-        }
+
 
         this.botConf.pmc.pmcType.sptusec = pmcTypes.pmcTypeTimmy.sptusec;
 
@@ -556,29 +603,20 @@ export class Bots {
         this.usecBase.appearance.body = usecLO.usecLO2.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO2.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO2.experience.level;
-        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
-
+     
         if (RaidInfoTracker.TOD === "night") {
             this.usecBase.chances.mods.mod_nvg = 10;
             this.usecBase.chances.mods.mod_flashlight = 70;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 80;
-        }
-        else {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 20;
         }
 
         if (RaidInfoTracker.mapType === "urban") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_urban;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 50;
         }
         if (RaidInfoTracker.mapType === "cqb") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_cqb;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_outdoor;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 10;
         }
 
         BotTierTracker.usecTier = 2;
@@ -597,29 +635,21 @@ export class Bots {
         this.usecBase.appearance.body = usecLO.usecLO3.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO3.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO3.experience.level;
-        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
 
         if (RaidInfoTracker.TOD === "night") {
             this.usecBase.chances.mods.mod_nvg = 20;
             this.usecBase.chances.mods.mod_flashlight = 80;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 50;
         }
-        else {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 30;
-        }
+
 
         if (RaidInfoTracker.mapType === "urban") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_urban;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 50;
         }
         if (RaidInfoTracker.mapType === "cqb") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_outdoor;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 10;
         }
 
 
@@ -639,29 +669,21 @@ export class Bots {
         this.usecBase.appearance.body = usecLO.usecLO4.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO4.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO4.experience.level;
-        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
+
 
         if (RaidInfoTracker.TOD === "night") {
             this.usecBase.chances.mods.mod_nvg = 40;
             this.usecBase.chances.mods.mod_flashlight = 100;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 20;
-        }
-        else {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 40;
         }
 
         if (RaidInfoTracker.mapType === "urban") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 50;
         }
         if (RaidInfoTracker.mapType === "cqb") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_outdoor;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 10;
         }
 
         BotTierTracker.usecTier = 4;
@@ -681,18 +703,10 @@ export class Bots {
         this.bearBase.appearance.body = bearLO.bearLO1.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO1.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO1.experience.level;
-        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
-        
+
         if (RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 5;
             this.bearBase.chances.mods.mod_flashlight = 50;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
-        }
-        else {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 10;
-        }
-        if (RaidInfoTracker.mapType === "cqb") {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         }
 
         this.botConf.pmc.pmcType.sptbear = pmcTypes.pmcTypeTimmy.sptbear;
@@ -713,29 +727,21 @@ export class Bots {
         this.bearBase.appearance.body = bearLO.bearLO2.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO2.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO2.experience.level;
-        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
 
         if (RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 10;
             this.bearBase.chances.mods.mod_flashlight = 70;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 80;
         }
-        else {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 20;
-        }
+       
 
         if (RaidInfoTracker.mapType === "urban") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_urban;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 50;
         }
         if (RaidInfoTracker.mapType === "cqb") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_cqb;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_outdoor;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 10;
         }
 
 
@@ -755,30 +761,21 @@ export class Bots {
         this.bearBase.appearance.body = bearLO.bearLO3.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO3.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO3.experience.level;
-        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
 
         if (RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 20;
             this.bearBase.chances.mods.mod_flashlight = 80;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 50;
         }
-        else {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 30;
-        }
-
+     
         if (RaidInfoTracker.mapType === "urban") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_urban;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 50;
         }
         if (RaidInfoTracker.mapType === "cqb") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_cqb;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_outdoor;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 10;
         }
 
         BotTierTracker.bearTier = 3;
@@ -797,30 +794,21 @@ export class Bots {
         this.bearBase.appearance.body = bearLO.bearLO4.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO4.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO4.experience.level;
-        this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
 
         if (RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 40;
             this.bearBase.chances.mods.mod_flashlight = 100;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 20;
         }
-        else {
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 40;
-        }
-
+       
         if (RaidInfoTracker.mapType === "urban") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_urban;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 50;
         }
         if (RaidInfoTracker.mapType === "cqb") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 10;
         }
 
 

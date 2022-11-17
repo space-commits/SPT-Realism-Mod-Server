@@ -22,6 +22,11 @@ class Quests {
                     ergo = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.ergonomics.value;
                     recoil = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.recoil.value;
                     weight = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.weight.value;
+                    if (this.modConf.unstuck_GS) {
+                        ergo *= 0.5;
+                        recoil *= 2;
+                        weight *= 2;
+                    }
                     var questDescArr = {
                         "5ac242f286f774138762ee03": "Hello, mercenary. Yes, I am Mechanic. Let's get to the point, did you want to help? I have a lot of work to do today. There’s so little time, and the programmer unit for PLC100 is out of order. And those weapon orders... Anyway, here's why I'm telling you this. I build various weapons with modifications for my clients, and I'll need some help with it. I need you to assemble an MP-133, I won’t have time to build it myself, and I don't have parts for it either anyway. This gun should have more than " + ergo + " ergonomics, a laser designator, an extended mag, and less than " + recoil + " recoil sum. And for the love of God, don't put one of those stockless pistol grips on it, the customer isn't some drunken gopnik! Build one for me, and then we can talk about more work.",
                         "5ac2430486f77412450b42c4": "You have not failed me with the shotgun, so you may know your way around tools. That didn’t save me much time though. All exchanges are on fire, hope it won’t start a panic. Nevertheless, I think it's not for long, so the plan remains the same. Okay, I need to work. And you, try to get hold of an AKS-74U. With a Zenit B-11 handguard, 60-round extended mag. Don't give it to me with the stock folded, even Scavs know not to use rifles without their stock. Ergonomics over " + ergo + ", recoil sum less than " + recoil + ", sighting range 100 or more. And, of course, as light as possible, " + weight + "kg or less. Yes, indexes here have nothing to do with that. I hope you've remembered everything. See you soon.",

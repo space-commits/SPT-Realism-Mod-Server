@@ -98,9 +98,9 @@ class Player {
             }
         }
         if (this.modConf.fall_damage_changes == true) {
-            this.globalDB.Health.Falling.DamagePerMeter = 10;
-            this.globalDB.Health.Falling.SafeHeight = 2.15;
-            this.globalDB.Stamina.SafeHeightOverweight = 1.8;
+            this.globalDB.Health.Falling.DamagePerMeter = 11;
+            this.globalDB.Health.Falling.SafeHeight = 2.1;
+            this.globalDB.Stamina.SafeHeightOverweight = 1.75;
         }
         if (this.modConf.no_fall_damage == true) {
             this.globalDB.Health.Falling.DamagePerMeter = 0;

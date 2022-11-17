@@ -318,11 +318,11 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             properties.Light = { "IsActive": (this.randomUtil.getInt(1, 100) < lightLaserActiveChance), "SelectedMode": 0 };
         }
         if (itemTemplate._parent === BaseClasses_1.BaseClasses.NIGHTVISION) {
-            if (helper_1.RaidInfoTracker.TOD == "day") {
-                properties.Togglable = { "On": false };
+            if (helper_1.RaidInfoTracker.TOD == "night") {
+                properties.Togglable = { "On": true };
             }
             else {
-                properties.Togglable = { "On": true };
+                properties.Togglable = { "On": false };
             }
         }
         // Togglable face shield
@@ -330,7 +330,7 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             // Get chance from botconfig for bot type, use 75% if no value found
             const faceShieldActiveChance = (this.botConfig.equipment[this.getBotEquipmentRole(botRole)]?.faceShieldIsActiveChancePercent != undefined)
                 ? this.botConfig.equipment[this.getBotEquipmentRole(botRole)].faceShieldIsActiveChancePercent
-                : 75;
+                : 100;
             properties.Togglable = { "On": (this.randomUtil.getInt(1, 100) < faceShieldActiveChance) };
         }
         return Object.keys(properties).length

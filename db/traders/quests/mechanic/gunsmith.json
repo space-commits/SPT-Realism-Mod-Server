@@ -29,7 +29,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": 55
+                            "value": 40 
                         },
                         "hasItemFromCategory": [
                             "55818b164bdc2ddc698b456c"
@@ -51,7 +51,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": "200"
+                            "value": "550"
                         },
                         "target": [
                             "54491c4f4bdc2db1078b4568"
@@ -239,7 +239,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "45"
+                            "value": "40"
                         },
                         "hasItemFromCategory": [],
                         "height": {
@@ -494,7 +494,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": 40
+                            "value": 35
                         },
                         "hasItemFromCategory": [
                             "550aa4cd4bdc2dd8348b456c",
@@ -747,7 +747,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "45"
+                            "value": "35"
                         },
                         "hasItemFromCategory": [
                             "550aa4cd4bdc2dd8348b456c"
@@ -778,7 +778,7 @@
                         "visibilityConditions": [],
                         "weight": {
                             "compareMethod": "<=",
-                            "value": 4
+                            "value": 4.2
                         },
                         "width": {
                             "compareMethod": ">=",
@@ -1129,7 +1129,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "20"
+                            "value": "15"
                         },
                         "hasItemFromCategory": [
                             "550aa4cd4bdc2dd8348b456c"
@@ -1305,7 +1305,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "45"
+                            "value": "40"
                         },
                         "hasItemFromCategory": [
                             "55818b164bdc2ddc698b456c",
@@ -1531,7 +1531,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "35"
+                            "value": "30"
                         },
                         "hasItemFromCategory": [
                             "550aa4cd4bdc2dd8348b456c"
@@ -1710,7 +1710,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": 12
+                            "value": 10
                         },
                         "hasItemFromCategory": [],
                         "height": {
@@ -1990,7 +1990,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "44"
+                            "value": "40"
                         },
                         "hasItemFromCategory": [
                             "550aa4cd4bdc2dd8348b456c"
@@ -2245,7 +2245,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "30"
+                            "value": "20"
                         },
                         "hasItemFromCategory": [],
                         "height": {
@@ -2265,7 +2265,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": "230"
+                            "value": "250"
                         },
                         "target": [
                             "57c44b372459772d2b39b8ce"
@@ -2414,7 +2414,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": "55"
+                            "value": "40"
                         },
                         "hasItemFromCategory": [],
                         "height": {
@@ -2434,7 +2434,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": "220"
+                            "value": "230"
                         },
                         "target": [
                             "5ac66d015acfc400180ae6e4"
@@ -2695,7 +2695,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": 52
+                            "value": 45
                         },
                         "hasItemFromCategory": [],
                         "height": {
@@ -2922,7 +2922,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": 38
+                            "value": 40
                         },
                         "hasItemFromCategory": [],
                         "height": {
@@ -2942,7 +2942,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": "300"
+                            "value": "310"
                         },
                         "target": [
                             "5a0ec13bfcdbcb00165aa685"
@@ -3133,7 +3133,7 @@
                         "parentId": "",
                         "recoil": {
                             "compareMethod": "<=",
-                            "value": 400
+                            "value": 450
                         },
                         "target": [
                             "5aafa857e5b5b00018480968"
@@ -3331,7 +3331,7 @@
                         },
                         "ergonomics": {
                             "compareMethod": ">=",
-                            "value": 40
+                            "value": 30
                         },
                         "hasItemFromCategory": [],
                         "height": {
