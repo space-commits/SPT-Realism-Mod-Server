@@ -33,7 +33,7 @@ export class Player {
 
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 75;
-            this.globalDB.Stamina.BaseOverweightLimits["x"] = 30;
+            this.globalDB.Stamina.BaseOverweightLimits["x"] = 27;
             this.globalDB.Stamina.BaseOverweightLimits["y"] = 55;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;

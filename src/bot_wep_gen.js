@@ -282,6 +282,8 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
     }
     genExtraItemProps(itemTemplate, botRole = null) {
         const properties = {};
+        const logger = tsyringe_1.container.resolve("WinstonLogger");
+        logger.info("I HAVE LOGGED");
         if (itemTemplate._props.MaxDurability) {
             if (itemTemplate._props.weapClass) // Is weapon
              {
@@ -331,7 +333,12 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             const faceShieldActiveChance = (this.botConfig.equipment[this.getBotEquipmentRole(botRole)]?.faceShieldIsActiveChancePercent != undefined)
                 ? this.botConfig.equipment[this.getBotEquipmentRole(botRole)].faceShieldIsActiveChancePercent
                 : 100;
-            properties.Togglable = { "On": (this.randomUtil.getInt(1, 100) < faceShieldActiveChance) };
+            if (faceShieldActiveChance === 100) {
+                properties.Togglable = { "On": true };
+            }
+            else {
+                properties.Togglable = { "On": (this.randomUtil.getInt(1, 100) < faceShieldActiveChance) };
+            }
         }
         return Object.keys(properties).length
             ? { upd: properties }

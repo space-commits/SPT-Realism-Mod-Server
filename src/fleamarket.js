@@ -38,9 +38,9 @@ class FleamarketConfig {
         this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT");
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.sell.chance.base = 45;
-            this.fleaConf.sell.time.base = 60;
-            this.fleaConf.sell.time.min = 20;
-            this.fleaConf.sell.time.max = 60;
+            this.fleaConf.sell.time.base = 30;
+            this.fleaConf.sell.time.min = 10;
+            this.fleaConf.sell.time.max = 30;
             this.fleaConf.sell.reputation.gain = 0.0000005;
             this.fleaConf.sell.reputation.loss = 0.0000005;
             this.fleaConf.dynamic.currencies = {

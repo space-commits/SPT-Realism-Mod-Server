@@ -42,7 +42,7 @@
         "VerticalRecoil": -1,
         "HorizontalRecoil": -2,
         "Dispersion": -2,
-        "Ergonomics": 8,
+        "Ergonomics": 9,
         "Accuracy": 5,
         "ConflictingItems": [
             "6183fc15d3a39d50044c13e9",
@@ -1135,7 +1135,7 @@
         "VerticalRecoil": -2,
         "HorizontalRecoil": -2,
         "Dispersion": -3,
-        "Ergonomics": 14,
+        "Ergonomics": 16,
         "Accuracy": 0,
         "ConflictingItems": [
             "61816dfa6ef05c2ce828f1ad",

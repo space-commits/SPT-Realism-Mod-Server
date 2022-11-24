@@ -415,7 +415,13 @@ export class BotModGen extends BotGeneratorHelper {
             const faceShieldActiveChance = (this.botConfig.equipment[this.getBotEquipmentRole(botRole)]?.faceShieldIsActiveChancePercent != undefined)
                 ? this.botConfig.equipment[this.getBotEquipmentRole(botRole)].faceShieldIsActiveChancePercent
                 : 100;
-            properties.Togglable = { "On": (this.randomUtil.getInt(1, 100) < faceShieldActiveChance) }
+            if (faceShieldActiveChance === 100) {
+                properties.Togglable = { "On": true }
+            }
+            else {
+                properties.Togglable = { "On": (this.randomUtil.getInt(1, 100) < faceShieldActiveChance) }
+            }
+
         }
 
         return Object.keys(properties).length

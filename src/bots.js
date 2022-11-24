@@ -69,14 +69,38 @@ class Bots {
                 "add": {},
                 "edit": {}
             }];
-        this.botConf.equipment["assault"] = { "lightLaserIsActiveChancePercent": 50 };
+        this.botConf.equipment["assault"] = {
+            "lightLaserIsActiveChancePercent": 50,
+            "faceShieldIsActiveChancePercent": 100,
+            "randomisedArmorSlots": [],
+            "randomisedWeaponModSlots": [],
+            "weaponModLimits": {},
+            "clothing": [],
+            "weightingAdjustments": [],
+            "blacklist": [],
+            "whitelist": []
+        };
         this.botConf.equipment["pmcBot"] = {
             "lightLaserIsActiveChancePercent": 50,
             "faceShieldIsActiveChancePercent": 100,
+            "randomisedArmorSlots": [],
+            "randomisedWeaponModSlots": [],
+            "weaponModLimits": {},
+            "clothing": [],
+            "weightingAdjustments": [],
+            "blacklist": [],
+            "whitelist": []
         };
         this.botConf.equipment["exUsec"] = {
             "lightLaserIsActiveChancePercent": 50,
             "faceShieldIsActiveChancePercent": 100,
+            "randomisedArmorSlots": [],
+            "randomisedWeaponModSlots": [],
+            "weaponModLimits": {},
+            "clothing": [],
+            "weightingAdjustments": [],
+            "blacklist": [],
+            "whitelist": []
         };
         if (this.modConf.headgear_conflicts == true) {
             for (let item in this.itemDB) {
@@ -598,6 +622,7 @@ class Bots {
         this.bearBase.appearance.body = bearLO.bearLO1.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO1.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO1.experience.level;
+        this.bearBase.appearance.voice = bearLO.LowTierVoice;
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 5;
             this.bearBase.chances.mods.mod_flashlight = 50;
@@ -618,6 +643,7 @@ class Bots {
         this.bearBase.appearance.body = bearLO.bearLO2.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO2.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO2.experience.level;
+        this.bearBase.appearance.voice = bearLO.LowTierVoice;
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 10;
             this.bearBase.chances.mods.mod_flashlight = 70;
@@ -646,6 +672,7 @@ class Bots {
         this.bearBase.appearance.body = bearLO.bearLO3.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO3.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO3.experience.level;
+        this.bearBase.appearance.voice = bearLO.HighTierVoice;
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 20;
             this.bearBase.chances.mods.mod_flashlight = 80;
@@ -675,6 +702,7 @@ class Bots {
         this.bearBase.appearance.body = bearLO.bearLO4.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO4.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO4.experience.level;
+        this.bearBase.appearance.voice = bearLO.HighTierVoice;
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 40;
             this.bearBase.chances.mods.mod_flashlight = 100;

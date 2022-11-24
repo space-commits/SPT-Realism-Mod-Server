@@ -23,7 +23,7 @@ class Quests {
                     recoil = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.recoil.value;
                     weight = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.weight.value;
                     if (this.modConf.unstuck_GS) {
-                        ergo *= 0.5;
+                        ergo *= 0.25;
                         recoil *= 2;
                         weight *= 2;
                     }

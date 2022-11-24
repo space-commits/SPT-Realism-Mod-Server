@@ -322,7 +322,7 @@
     "5d120a28d7ad1a1c8962e295": {
         "ItemID": "5d120a28d7ad1a1c8962e295",
         "Name": "stock_ace_double_star_ace_recoil_pad_05",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -4,
         "Dispersion": -1,
@@ -342,7 +342,7 @@
     "5bbde409d4351e003562b036": {
         "ItemID": "5bbde409d4351e003562b036",
         "Name": "stock_mosin_aim_sports_buttpad_extended",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -5,
         "Dispersion": 0,
@@ -362,7 +362,7 @@
     "611a31ce5b7ffe001b4649d1": {
         "ItemID": "611a31ce5b7ffe001b4649d1",
         "Name": "stock_mr43_izhmeh_mr43_buttpad",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -5,
         "Dispersion": 0,
@@ -382,13 +382,13 @@
     "5cc700cae4a949035e43ba72": {
         "ItemID": "5cc700cae4a949035e43ba72",
         "Name": "stock_p90_fn_p90_butt_pad_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -2,
         "Dispersion": 0,
         "CameraRecoil": -1,
         "AimSpeed": 0,
-        "Ergonomics": 3,
+        "Ergonomics": -10,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": true,
@@ -402,13 +402,13 @@
     "5cc700d4e4a949000f0f0f28": {
         "ItemID": "5cc700d4e4a949000f0f0f28",
         "Name": "stock_p90_damage industries_butt_pad",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -10,
+        "Dispersion": -15,
         "CameraRecoil": -5,
         "AimSpeed": 0,
-        "Ergonomics": 15,
+        "Ergonomics": 10,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": true,
@@ -422,7 +422,7 @@
     "618167616ef05c2ce828f1a8": {
         "ItemID": "618167616ef05c2ce828f1a8",
         "Name": "stock_mk16_fn_scar_stock_butt_pad",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -2,
         "Dispersion": -2,
@@ -442,7 +442,7 @@
     "5a0c59791526d8dba737bba7": {
         "ItemID": "5a0c59791526d8dba737bba7",
         "Name": "stock_ak_izhmash_6g15u_butt_pad",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -6,
         "Dispersion": 3,
@@ -462,7 +462,7 @@
     "58d2912286f7744e27117493": {
         "ItemID": "58d2912286f7744e27117493",
         "Name": "stock_ar15_magpul_rubber_butt_pad",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -2,
         "Dispersion": -1,
@@ -482,7 +482,7 @@
     "606ef0812535c57a13424d20": {
         "ItemID": "606ef0812535c57a13424d20",
         "Name": "stock_mp155_kalshnikov_ultima_stock_buttpad_small",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -2,
@@ -502,7 +502,7 @@
     "606f262c6d0bd7580617bafa": {
         "ItemID": "606f262c6d0bd7580617bafa",
         "Name": "stock_mp155_kalshnikov_ultima_stock_buttpad_med",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -1,
@@ -522,7 +522,7 @@
     "606f263a8900dc2d9a55b68d": {
         "ItemID": "606f263a8900dc2d9a55b68d",
         "Name": "stock_mp155_kalshnikov_ultima_stock_buttpad_large",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": 3,
@@ -771,7 +771,7 @@
     "5c0e2ff6d174af02a1659d4a": {
         "ItemID": "5c0e2ff6d174af02a1659d4a",
         "Name": "stock_ar15_adar_wood_v1",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
         "Dispersion": 0,
@@ -827,7 +827,7 @@
     "5b39f8db5acfc40016387a1b": {
         "ItemID": "5b39f8db5acfc40016387a1b",
         "Name": "stock_ar15_vltor_emod",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": -8,
@@ -847,7 +847,7 @@
     "5bb20e70d4351e0035629f8f": {
         "ItemID": "5bb20e70d4351e0035629f8f",
         "Name": "stock_ar15_hk_slim_line",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -13,
         "Dispersion": -4,
@@ -867,7 +867,7 @@
     "5fbbaa86f9986c4cff3fe5f6": {
         "ItemID": "5fbbaa86f9986c4cff3fe5f6",
         "Name": "stock_ar15_kriss_defiance_ds150",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": -6,
@@ -887,7 +887,7 @@
     "5fc2369685fd526b824a5713": {
         "ItemID": "5fc2369685fd526b824a5713",
         "Name": "stock_ar15_b5_precision",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
         "Dispersion": -5,
@@ -927,7 +927,7 @@
     "617155ee50224f204c1da3cd": {
         "ItemID": "617155ee50224f204c1da3cd",
         "Name": "stock_417_hk_417_adjustable_buttstock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -13,
         "Dispersion": -3,
@@ -947,7 +947,7 @@
     "5d135e83d7ad1a21b83f42d8": {
         "ItemID": "5d135e83d7ad1a21b83f42d8",
         "Name": "stock_ar15_magpul_ctr_carbine",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -6,
@@ -967,7 +967,7 @@
     "55d4ae6c4bdc2d8b2f8b456e": {
         "ItemID": "55d4ae6c4bdc2d8b2f8b456e",
         "Name": "stock_ar15_high_standart_m4ss",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -987,7 +987,7 @@
     "58d2947e86f77447aa070d53": {
         "ItemID": "58d2947e86f77447aa070d53",
         "Name": "stock_ar15_magpul_moe_carbine_sg",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
         "Dispersion": -5,
@@ -1007,7 +1007,7 @@
     "5a9eb32da2750c00171b3f9c": {
         "ItemID": "5a9eb32da2750c00171b3f9c",
         "Name": "stock_ar15_fab_defense_gl_shock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -3,
@@ -1027,7 +1027,7 @@
     "5a33e75ac4a2826c6e06d759": {
         "ItemID": "5a33e75ac4a2826c6e06d759",
         "Name": "stock_ar15_hera_arms_cqr",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -5,
@@ -1083,7 +1083,7 @@
     "5c793fde2e221601da358614": {
         "ItemID": "5c793fde2e221601da358614",
         "Name": "stock_ar15_strike_industries_viper_mod_1",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
         "Dispersion": -3,
@@ -1124,7 +1124,7 @@
     "58d2947686f774485c6a1ee5": {
         "ItemID": "58d2947686f774485c6a1ee5",
         "Name": "stock_ar15_magpul_moe_carbine_od",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
         "Dispersion": -5,
@@ -1144,7 +1144,7 @@
     "5947eab886f77475961d96c5": {
         "ItemID": "5947eab886f77475961d96c5",
         "Name": "stock_ar15_magpul_ubr_gen2_fde",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -7,
@@ -1164,7 +1164,7 @@
     "58d2946c86f7744e271174b5": {
         "ItemID": "58d2946c86f7744e271174b5",
         "Name": "stock_ar15_magpul_moe_carbine_fg",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
         "Dispersion": -5,
@@ -1184,7 +1184,7 @@
     "5b0800175acfc400153aebd4": {
         "ItemID": "5b0800175acfc400153aebd4",
         "Name": "stock_ar15_ergo_f93_pro_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": -5,
@@ -1204,7 +1204,7 @@
     "5947e98b86f774778f1448bc": {
         "ItemID": "5947e98b86f774778f1448bc",
         "Name": "stock_ar15_magpul_ubr_gen2_blk",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -7,
@@ -1245,7 +1245,7 @@
     "602e620f9b513876d4338d9a": {
         "ItemID": "602e620f9b513876d4338d9a",
         "Name": "stock_ar15_fab_defense_gl_core",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -14,
         "Dispersion": -5,
@@ -1265,7 +1265,7 @@
     "5d44069ca4b9361ebd26fc37": {
         "ItemID": "5d44069ca4b9361ebd26fc37",
         "Name": "stock_ar15_magpul_prs_gen3",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -9,
@@ -1285,7 +1285,7 @@
     "5d4406a8a4b9361e4f6eb8b7": {
         "ItemID": "5d4406a8a4b9361e4f6eb8b7",
         "Name": "stock_ar15_magpul_prs_gen3_gry",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -9,
@@ -1305,7 +1305,7 @@
     "5a33cae9c4a28232980eb086": {
         "ItemID": "5a33cae9c4a28232980eb086",
         "Name": "stock_ar15_magpul_prs_gen2_fde",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -9,
@@ -1325,7 +1325,7 @@
     "628a85ee6b1d481ff772e9d5": {
         "ItemID": "628a85ee6b1d481ff772e9d5",
         "Name": "stock_ar15_sb_tactical_sba3",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 10,
@@ -1345,7 +1345,7 @@
     "57ade1442459771557167e15": {
         "ItemID": "57ade1442459771557167e15",
         "Name": "stock_ar15_armacon_baskak",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 12,
@@ -1365,7 +1365,7 @@
     "606587d11246154cad35d635": {
         "ItemID": "606587d11246154cad35d635",
         "Name": "stock_ar15_cmmg_ripstock_micro",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -4,
@@ -1385,7 +1385,7 @@
     "5d120a10d7ad1a4e1026ba85": {
         "ItemID": "5d120a10d7ad1a4e1026ba85",
         "Name": "stock_ar15_double_star_ace_socom_gen_4",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 4,
         "Dispersion": 8,
@@ -1426,7 +1426,7 @@
     "5beec8c20db834001d2c465c": {
         "ItemID": "5beec8c20db834001d2c465c",
         "Name": "stock_ar15_izhmash_ak12_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -4,
@@ -1446,7 +1446,7 @@
     "5fce16961f152d4312622bc9": {
         "ItemID": "5fce16961f152d4312622bc9",
         "Name": "stock_ar15_kriss_defiance_ds150_fde",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": -6,
@@ -1466,7 +1466,7 @@
     "56eabf3bd2720b75698b4569": {
         "ItemID": "56eabf3bd2720b75698b4569",
         "Name": "stock_ar15_magpul_moe_carbine_blk",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
         "Dispersion": -5,
@@ -1486,7 +1486,7 @@
     "58d2946386f774496974c37e": {
         "ItemID": "58d2946386f774496974c37e",
         "Name": "stock_ar15_magpul_moe_carbine_fde",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
         "Dispersion": -5,
@@ -1506,7 +1506,7 @@
     "5d135ecbd7ad1a21c176542e": {
         "ItemID": "5d135ecbd7ad1a21c176542e",
         "Name": "stock_ar15_magpul_ctr_carbine_fde",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -6,
@@ -1526,7 +1526,7 @@
     "5bfe86df0db834001b734685": {
         "ItemID": "5bfe86df0db834001b734685",
         "Name": "stock_ar15_fab_defense_glr_16_s",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -14,
         "Dispersion": -2,
@@ -1546,7 +1546,7 @@
     "5ae30c9a5acfc408fb139a03": {
         "ItemID": "5ae30c9a5acfc408fb139a03",
         "Name": "stock_ar15_lmt_sopmod",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -6,
@@ -1566,7 +1566,7 @@
     "5c87a07c2e2216001219d4a2": {
         "ItemID": "5c87a07c2e2216001219d4a2",
         "Name": "stock_ar15_hk_e1",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -6,
@@ -1586,7 +1586,7 @@
     "617154aa1cb55961fa0fdb3b": {
         "ItemID": "617154aa1cb55961fa0fdb3b",
         "Name": "stock_417_hk_417_concave_e2",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -7,
@@ -1606,7 +1606,7 @@
     "5947c73886f7747701588af5": {
         "ItemID": "5947c73886f7747701588af5",
         "Name": "stock_ar15_mft_bus",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": -6,
@@ -1626,7 +1626,7 @@
     "5ac50c185acfc400163398d4": {
         "ItemID": "5ac50c185acfc400163398d4",
         "Name": "stock_ak74m_izhmash_ak74m_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
@@ -1646,7 +1646,7 @@
     "5649b0fc4bdc2d17108b4588": {
         "ItemID": "5649b0fc4bdc2d17108b4588",
         "Name": "stock_ak74_izhmash_ak74_std_plastic",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
@@ -1666,7 +1666,7 @@
     "59ff3b6a86f77477562ff5ed": {
         "ItemID": "59ff3b6a86f77477562ff5ed",
         "Name": "stock_akms_izhmash_akms_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 10,
@@ -1686,7 +1686,7 @@
     "5abcd472d8ce8700166032ae": {
         "ItemID": "5abcd472d8ce8700166032ae",
         "Name": "stock_akms_izhmash_akmsn_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 10,
@@ -1706,7 +1706,7 @@
     "57616ca52459773c69055192": {
         "ItemID": "57616ca52459773c69055192",
         "Name": "stock_saiga12_izhmash_saiga12_fold_ak_type",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
@@ -1726,7 +1726,7 @@
     "599851db86f77467372f0a18": {
         "ItemID": "599851db86f77467372f0a18",
         "Name": "stock_pp-19-01_izhmash_vityaz_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -1746,7 +1746,7 @@
     "619b69037b9de8162902673e": {
         "ItemID": "619b69037b9de8162902673e",
         "Name": "stock_ak_hera_arms_cqr47",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -7,
         "Dispersion": -5,
@@ -1790,7 +1790,7 @@
     "5b222d405acfc400153af4fe": {
         "ItemID": "5b222d405acfc400153af4fe",
         "Name": "stock_ak_zenit_pt_1",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -7,
         "HorizontalRecoil": -6,
         "Dispersion": -3,
@@ -1810,7 +1810,7 @@
     "59ecc3dd86f7746dc827481c": {
         "ItemID": "59ecc3dd86f7746dc827481c",
         "Name": "stock_ak_zenit_pt-3",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -4,
@@ -1830,7 +1830,7 @@
     "5b04473a5acfc40018632f70": {
         "ItemID": "5b04473a5acfc40018632f70",
         "Name": "stock_ak_fab_defense_uas_ak_p",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -5,
@@ -1850,7 +1850,7 @@
     "5e217ba4c1434648c13568cd": {
         "ItemID": "5e217ba4c1434648c13568cd",
         "Name": "stock_ak_hexagon_kocherga_red",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -20,
         "HorizontalRecoil": 25,
         "Dispersion": 10,
@@ -1870,7 +1870,7 @@
     "5cbdb1b0ae9215000d50e105": {
         "ItemID": "5cbdb1b0ae9215000d50e105",
         "Name": "stock_ak74_izhmash_ak74_std_plum",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
@@ -1890,7 +1890,7 @@
     "5ab626e4d8ce87272e4c6e43": {
         "ItemID": "5ab626e4d8ce87272e4c6e43",
         "Name": "stock_aks74_izhmash_aks74_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -1910,7 +1910,7 @@
     "57dc347d245977596754e7a1": {
         "ItemID": "57dc347d245977596754e7a1",
         "Name": "stock_aks74u_izhmash_aks74u_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -1930,7 +1930,7 @@
     "5649b1c04bdc2d16268b457c": {
         "ItemID": "5649b1c04bdc2d16268b457c",
         "Name": "stock_ak74_izhmash_ak74_std_wood",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -12,
         "Dispersion": 0,
@@ -1950,7 +1950,7 @@
     "59e6227d86f77440d64f5dc2": {
         "ItemID": "59e6227d86f77440d64f5dc2",
         "Name": "stock_ak_molot_vepr_km_vpo_136",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -12,
         "Dispersion": 0,
@@ -1970,7 +1970,7 @@
     "59d6514b86f774171a068a08": {
         "ItemID": "59d6514b86f774171a068a08",
         "Name": "stock_ak_izhmash_akm_std_wood",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -12,
         "Dispersion": 0,
@@ -1990,7 +1990,7 @@
     "59e89d0986f77427600d226e": {
         "ItemID": "59e89d0986f77427600d226e",
         "Name": "stock_ak_molot_vpo_209",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -12,
         "Dispersion": 0,
@@ -2010,7 +2010,7 @@
     "5b0e794b5acfc47a877359b2": {
         "ItemID": "5b0e794b5acfc47a877359b2",
         "Name": "stock_ak_magpul_zhukov_s",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -13,
         "Dispersion": -7,
@@ -2030,7 +2030,7 @@
     "6087e2a5232e5a31c233d552": {
         "ItemID": "6087e2a5232e5a31c233d552",
         "Name": "stock_ak_promag_archangel_opfor_aa47",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -12,
         "Dispersion": -4,
@@ -2050,7 +2050,7 @@
     "578395e82459774a0e553c7b": {
         "ItemID": "578395e82459774a0e553c7b",
         "Name": "stock_vss_tochmash_vss_std_wood",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -5,
@@ -2070,7 +2070,7 @@
     "57c450252459772d28133253": {
         "ItemID": "57c450252459772d28133253",
         "Name": "stock_val_tochmash_val_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": 4,
         "Dispersion": 2,
@@ -2090,7 +2090,7 @@
     "5c471b5d2e221602b21d4e14": {
         "ItemID": "5c471b5d2e221602b21d4e14",
         "Name": "stock_svd_s_izhmash_svd_s_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": 7,
         "Dispersion": 2,
@@ -2110,7 +2110,7 @@
     "61825d136ef05c2ce828f1cc": {
         "ItemID": "61825d136ef05c2ce828f1cc",
         "Name": "stock_mk16_fn_scar_folding_stock_extension_fde",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -6,
         "Dispersion": 0,
@@ -2230,7 +2230,7 @@
     "5b7d63b75acfc400170e2f8a": {
         "ItemID": "5b7d63b75acfc400170e2f8a",
         "Name": "stock_fal_magpul_prs_2",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -10,
@@ -2250,7 +2250,7 @@
     "5b7d63cf5acfc4001876c8df": {
         "ItemID": "5b7d63cf5acfc4001876c8df",
         "Name": "stock_sa58_ds_arms_para_folding_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2270,7 +2270,7 @@
     "5b7d63de5acfc400170e2f8d": {
         "ItemID": "5b7d63de5acfc400170e2f8d",
         "Name": "stock_sa58_ds_arms_para_spr_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -1,
         "HorizontalRecoil": -15,
         "Dispersion": -11,
@@ -2290,7 +2290,7 @@
     "5b7d64555acfc4001876c8e2": {
         "ItemID": "5b7d64555acfc4001876c8e2",
         "Name": "stock_sa58_ds_arms_para_brs",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -12,
         "Dispersion": -13,
@@ -2310,7 +2310,7 @@
     "5b7d645e5acfc400170e2f90": {
         "ItemID": "5b7d645e5acfc400170e2f90",
         "Name": "stock_sa58_ds_arms_humpback_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -10,
         "Dispersion": -10,
@@ -2330,7 +2330,7 @@
     "622f14e899892a7f9e08f6c5": {
         "ItemID": "622f14e899892a7f9e08f6c5",
         "Name": "stock_g36_hk_kv_3_adjustable",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -15,
         "HorizontalRecoil": 12,
         "Dispersion": -2,
@@ -2350,7 +2350,7 @@
     "622f140da5958f63c67f1735": {
         "ItemID": "622f140da5958f63c67f1735",
         "Name": "stock_g36_hk_buttstock_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -13,
         "HorizontalRecoil": 10,
         "Dispersion": -2,
@@ -2370,7 +2370,7 @@
     "5c5db6ee2e221600113fba54": {
         "ItemID": "5c5db6ee2e221600113fba54",
         "Name": "stock_mpx_maxim_defence_cqb_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 5,
         "Dispersion": 5,
@@ -2390,7 +2390,7 @@
     "5c5db6f82e2216003a0fe914": {
         "ItemID": "5c5db6f82e2216003a0fe914",
         "Name": "stock_mpx_pmm_ulss",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -5,
         "Dispersion": 0,
@@ -2410,7 +2410,7 @@
     "5894a13e86f7742405482982": {
         "ItemID": "5894a13e86f7742405482982",
         "Name": "stock_all_sig_mpx_mcx_early_type",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 8,
         "Dispersion": 6,
@@ -2430,7 +2430,7 @@
     "5fbcc437d724d907e2077d5c": {
         "ItemID": "5fbcc437d724d907e2077d5c",
         "Name": "stock_all_sig_thin_folding_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2450,7 +2450,7 @@
     "5fbcc429900b1d5091531dd7": {
         "ItemID": "5fbcc429900b1d5091531dd7",
         "Name": "stock_all_sig_telescoping_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": -5,
@@ -2470,7 +2470,7 @@
     "5c07c9660db834001a66b588": {
         "ItemID": "5c07c9660db834001a66b588",
         "Name": "stock_mp5_hk_pistol_end_cap",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2490,7 +2490,7 @@
     "5d2f25bc48f03502573e5d85": {
         "ItemID": "5d2f25bc48f03502573e5d85",
         "Name": "stock_mp5k_hk_kurtz_end_cap",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2510,7 +2510,7 @@
     "5926d40686f7740f152b6b7e": {
         "ItemID": "5926d40686f7740f152b6b7e",
         "Name": "stock_mp5_hk_a3_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -6,
         "HorizontalRecoil": 0,
         "Dispersion": 2,
@@ -2530,7 +2530,7 @@
     "5926d3c686f77410de68ebc8": {
         "ItemID": "5926d3c686f77410de68ebc8",
         "Name": "stock_mp5_hk_a2_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -10,
         "Dispersion": -5,
@@ -2550,7 +2550,7 @@
     "5fc3e4ee7283c4046c5814af": {
         "ItemID": "5fc3e4ee7283c4046c5814af",
         "Name": "stock_ump_hk_ump_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -15,
         "HorizontalRecoil": 12,
         "Dispersion": -2,
@@ -2570,7 +2570,7 @@
     "5fb6558ad6f0b2136f2d7eb7": {
         "ItemID": "5fb6558ad6f0b2136f2d7eb7",
         "Name": "stock_vector_kriss_gen_2_folding_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -18,
         "HorizontalRecoil": 15,
         "Dispersion": 0,
@@ -2590,7 +2590,7 @@
     "5fb655a72b1b027b1f50bd06": {
         "ItemID": "5fb655a72b1b027b1f50bd06",
         "Name": "stock_vector_kriss_pistol_sling_adapter",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2610,7 +2610,7 @@
     "5bcf0213d4351e0085327c17": {
         "ItemID": "5bcf0213d4351e0085327c17",
         "Name": "stock_mp7_hk_a1_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2630,7 +2630,7 @@
     "5bd704e7209c4d00d7167c31": {
         "ItemID": "5bd704e7209c4d00d7167c31",
         "Name": "stock_mp7_hk_a2_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2650,7 +2650,7 @@
     "5de910da8b6c4240ba2651b5": {
         "ItemID": "5de910da8b6c4240ba2651b5",
         "Name": "stock_mp9_bt_mp9_folding_stock_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2670,7 +2670,7 @@
     "5a17fb9dfcdbcbcae6687291": {
         "ItemID": "5a17fb9dfcdbcbcae6687291",
         "Name": "stock_aps_toz_apb_wire",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -70,
         "HorizontalRecoil": 0,
         "Dispersion": 20,
@@ -2690,7 +2690,7 @@
     "5d1c702ad7ad1a632267f429": {
         "ItemID": "5d1c702ad7ad1a632267f429",
         "Name": "stock_glock_fab_defence_glr_17",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -70,
         "HorizontalRecoil": 0,
         "Dispersion": 10,
@@ -2710,7 +2710,7 @@
     "61f7b234ea4ab34f2f59c3ec": {
         "ItemID": "61f7b234ea4ab34f2f59c3ec",
         "Name": "stock_mp18_izhmash_wood",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": 5,
         "Dispersion": 7,
@@ -2730,7 +2730,7 @@
     "61f803b8ced75b2e852e35f8": {
         "ItemID": "61f803b8ced75b2e852e35f8",
         "Name": "stock_mp18_izhmash_plastic",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -13,
         "Dispersion": -4,
@@ -2750,7 +2750,7 @@
     "6259c3387d6aab70bc23a18d": {
         "ItemID": "6259c3387d6aab70bc23a18d",
         "Name": "stock_m3_benelli_5_position_telescoping_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -19,
         "Dispersion": -7,
@@ -2770,7 +2770,7 @@
     "625eb0faa6e3a82193267ad9": {
         "ItemID": "625eb0faa6e3a82193267ad9",
         "Name": "stock_m3_benelli_pistol_grip_synthetic_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -19,
         "Dispersion": -7,
@@ -2790,7 +2790,7 @@
     "5a7880d0c5856700142fdd9d": {
         "ItemID": "5a7880d0c5856700142fdd9d",
         "Name": "stock_870_remington_sps_12g",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -15,
         "Dispersion": -5,
@@ -2810,7 +2810,7 @@
     "5a788169c5856700142fdd9e": {
         "ItemID": "5a788169c5856700142fdd9e",
         "Name": "stock_870_shockwave_technologies_raptor_grip",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2830,7 +2830,7 @@
     "5a78813bc5856700186c4abe": {
         "ItemID": "5a78813bc5856700186c4abe",
         "Name": "stock_870_magpul_sga",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -8,
         "HorizontalRecoil": -20,
         "Dispersion": -8,
@@ -2850,7 +2850,7 @@
     "5e848dc4e4dbc5266a4ec63d": {
         "ItemID": "5e848dc4e4dbc5266a4ec63d",
         "Name": "stock_ks23_toz_ks23_std_metal",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -2870,7 +2870,7 @@
     "5e848db4681bea2ada00daa9": {
         "ItemID": "5e848db4681bea2ada00daa9",
         "Name": "stock_ks23_toz_ks23_std_wood",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -25,
         "Dispersion": -5,
@@ -2890,7 +2890,7 @@
     "612781056f3d944a17348d60": {
         "ItemID": "612781056f3d944a17348d60",
         "Name": "stock_mc255_ckib_255_std_wood",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -11,
         "Dispersion": -4,
@@ -2910,7 +2910,7 @@
     "606eef756d0bd7580617baf8": {
         "ItemID": "606eef756d0bd7580617baf8",
         "Name": "stock_mp155_kalshnikov_ultima_stock",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -10,
         "HorizontalRecoil": -11,
         "Dispersion": -8,
@@ -2930,7 +2930,7 @@
     "607d5a891246154cad35d6aa": {
         "ItemID": "607d5a891246154cad35d6aa",
         "Name": "stock_mp155_izhmeh_monte_carlo_walnut",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -9,
         "HorizontalRecoil": -18,
         "Dispersion": -6,
@@ -2950,7 +2950,7 @@
     "56083be64bdc2d20478b456f": {
         "ItemID": "56083be64bdc2d20478b456f",
         "Name": "stock_mr133_plastic_long",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -18,
         "Dispersion": -4,
@@ -2970,7 +2970,7 @@
     "56083cba4bdc2de22e8b456f": {
         "ItemID": "56083cba4bdc2de22e8b456f",
         "Name": "stock_mr133_std_long",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -20,
         "Dispersion": -6,
@@ -2990,7 +2990,7 @@
     "56083a334bdc2dc8488b4571": {
         "ItemID": "56083a334bdc2dc8488b4571",
         "Name": "stock_mr133_pistol_plastic",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -3010,7 +3010,7 @@
     "5eea217fc64c5d0dfc05712a": {
         "ItemID": "5eea217fc64c5d0dfc05712a",
         "Name": "stock_590_magpul_sga",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -8,
         "HorizontalRecoil": -20,
         "Dispersion": -8,
@@ -3030,7 +3030,7 @@
     "5e87116b81c4ed43e83cefdd": {
         "ItemID": "5e87116b81c4ed43e83cefdd",
         "Name": "stock_590_mossberg_590a1_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -17,
         "Dispersion": -5,
@@ -3050,7 +3050,7 @@
     "5cc700b9e4a949000f0f0f25": {
         "ItemID": "5cc700b9e4a949000f0f0f25",
         "Name": "stock_p90_fn_p90_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -3072,7 +3072,7 @@
     "5cebec10d7f00c065703d185": {
         "ItemID": "5cebec10d7f00c065703d185",
         "Name": "stock_p90_fn_ps90_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -3094,7 +3094,7 @@
     "5ea03e9400685063ec28bfa4": {
         "ItemID": "5ea03e9400685063ec28bfa4",
         "Name": "stock_ppsh_zis_ppsh41_std_wood",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": 0,
@@ -3116,13 +3116,13 @@
     "5addbf175acfc408fb13965b": {
         "ItemID": "5addbf175acfc408fb13965b",
         "Name": "stock_m1a_promag_archangel_prs",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -17,
         "Dispersion": -5,
         "CameraRecoil": -5,
         "AimSpeed": -5,
-        "Ergonomics": 18,
+        "Ergonomics": 19,
         "Accuracy": 15,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -3140,14 +3140,14 @@
     "5ab372a310e891001717f0d8": {
         "ItemID": "5ab372a310e891001717f0d8",
         "Name": "stock_m14_troy_sass_chassis",
-        "ModType": "",
+        "ModType": "StockF",
         "VerticalRecoil": -20,
         "HorizontalRecoil": 20,
         "Dispersion": -3,
         "CameraRecoil": 0,
         "AimSpeed": 0,
-        "Ergonomics": 5,
-        "Accuracy": -50,
+        "Ergonomics": 10,
+        "Accuracy": -25,
         "HasShoulderContact": false,
         "BlocksFolding": false,
         "AutoROF": 0,
@@ -3164,7 +3164,7 @@
     "5aaf8e43e5b5b00015693246": {
         "ItemID": "5aaf8e43e5b5b00015693246",
         "Name": "stock_m1a_springfield_armory_socom_16",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -3186,14 +3186,14 @@
     "5addc7005acfc4001669f275": {
         "ItemID": "5addc7005acfc4001669f275",
         "Name": "stock_m14_sage_ebr_m14alcs",
-        "ModType": "",
+        "ModType": "StockF",
         "VerticalRecoil": -10,
         "HorizontalRecoil": -2,
         "Dispersion": -3.5,
         "CameraRecoil": 0,
         "AimSpeed": 0,
         "Ergonomics": 8,
-        "Accuracy": 60,
+        "Accuracy": 50,
         "HasShoulderContact": false,
         "BlocksFolding": false,
         "AutoROF": 0,
@@ -3208,13 +3208,13 @@
     "5addc7ac5acfc400194dbd90": {
         "ItemID": "5addc7ac5acfc400194dbd90",
         "Name": "stock_m14_sage_ebr_m14alcs_buttstock",
-        "ModType": "stock",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -11,
         "Dispersion": 0,
         "CameraRecoil": 0,
         "AimSpeed": -5,
-        "Ergonomics": 0,
+        "Ergonomics": 4,
         "Accuracy": 5,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -3228,13 +3228,13 @@
     "5c503af12e221602b177ca02": {
         "ItemID": "5c503af12e221602b177ca02",
         "Name": "stock_vepr_molot_vpo-101_std_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -39,
         "HorizontalRecoil": -39,
         "Dispersion": 0,
         "CameraRecoil": 0,
         "AimSpeed": 0,
-        "Ergonomics": 15,
+        "Ergonomics": 14,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -3250,13 +3250,13 @@
     "5f63405df5750b524b45f114": {
         "ItemID": "5f63405df5750b524b45f114",
         "Name": "stock_vepr_pflevsha_svd_type_walnut",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -15,
         "Dispersion": -5,
         "CameraRecoil": -5,
         "AimSpeed": 0,
-        "Ergonomics": 16,
+        "Ergonomics": 17,
         "Accuracy": 15,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -3272,7 +3272,7 @@
     "5de655be4a9f347bc92edb88": {
         "ItemID": "5de655be4a9f347bc92edb88",
         "Name": "stock_vpo215_molot_vpo_215_std_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -1,
         "HorizontalRecoil": -20,
         "Dispersion": -2,
@@ -3334,7 +3334,7 @@
     "62811f828193841aca4a45c3": {
         "ItemID": "62811f828193841aca4a45c3",
         "Name": "stock_ax_accuracy_international_ax_butt_stock_pb",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -5,
@@ -3354,7 +3354,7 @@
     "624c29ce09cd027dff2f8cd7": {
         "ItemID": "624c29ce09cd027dff2f8cd7",
         "Name": "stock_cnc_cnc_guns_m12b",
-        "ModType": "stock",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": -3,
@@ -3374,7 +3374,7 @@
     "623b2e9d11c3296b440d1638": {
         "ItemID": "623b2e9d11c3296b440d1638",
         "Name": "stock_sv-98_cnc_guns_ov_sv98",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -1,
         "HorizontalRecoil": -1,
         "Dispersion": -1,
@@ -3396,7 +3396,7 @@
     "61faa91878830f069b6b7967": {
         "ItemID": "61faa91878830f069b6b7967",
         "Name": "stock_sv-98_izhmash_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -5,
@@ -3418,7 +3418,7 @@
     "58889d0c2459775bc215d981": {
         "ItemID": "58889d0c2459775bc215d981",
         "Name": "stock_dvl-10_lobaev_dvl-10_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -2,
@@ -3440,7 +3440,7 @@
     "5df35e59c41b2312ea3334d5": {
         "ItemID": "5df35e59c41b2312ea3334d5",
         "Name": "stock_t5000_orsis_t5000_se_chassis",
-        "ModType": "",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -3467,13 +3467,13 @@
     "5df35ddddfc58d14537c2036": {
         "ItemID": "5df35ddddfc58d14537c2036",
         "Name": "stock_t5000_orsis_t5000_se_folding_stock_std",
-        "ModType": "stock",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -17,
         "Dispersion": -3,
         "CameraRecoil": -10,
         "AimSpeed": 0,
-        "Ergonomics": 17,
+        "Ergonomics": 18,
         "Accuracy": 15,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -3489,7 +3489,7 @@
     "5d25d0ac8abbc3054f3e61f7": {
         "ItemID": "5d25d0ac8abbc3054f3e61f7",
         "Name": "stock_m700_ai_at_aics_chasiss",
-        "ModType": "",
+        "ModType": "StockR",
         "VerticalRecoil": -10,
         "HorizontalRecoil": -12,
         "Dispersion": -10,
@@ -3497,7 +3497,7 @@
         "AimSpeed": -5,
         "Ergonomics": 10,
         "Accuracy": 25,
-        "HasShoulderContact": false,
+        "HasShoulderContact": true,
         "BlocksFolding": false,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3516,7 +3516,7 @@
     "5cdeac22d7f00c000f26168f": {
         "ItemID": "5cdeac22d7f00c000f26168f",
         "Name": "stock_m700_magpul_pro_700_chasiss",
-        "ModType": "",
+        "ModType": "StockN",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -2,
         "Dispersion": -1,
@@ -3543,7 +3543,7 @@
     "5cdeac42d7f00c000d36ba73": {
         "ItemID": "5cdeac42d7f00c000d36ba73",
         "Name": "stock_m700_magpul_pro_700_folding_stock",
-        "ModType": "stock",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -9,
@@ -3565,7 +3565,7 @@
     "5cde739cd7f00c0010373bd3": {
         "ItemID": "5cde739cd7f00c0010373bd3",
         "Name": "stock_m700_abarms_mrs_mod_x_gen_3",
-        "ModType": "",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -3614,7 +3614,7 @@
     "5cf13123d7f00c1085616a50": {
         "ItemID": "5cf13123d7f00c1085616a50",
         "Name": "stock_m700_promag_archangel_precision_stock",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -17,
         "Dispersion": -5,
@@ -3644,7 +3644,7 @@
     "5bfeb32b0db834001a6694d9": {
         "ItemID": "5bfeb32b0db834001a6694d9",
         "Name": "stock_m700_hogue_overmolded_ghillie_green_pillar_bedded_stock",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -1,
         "HorizontalRecoil": -11,
         "Dispersion": -1,
@@ -3674,7 +3674,7 @@
     "587e0531245977466077a0f7": {
         "ItemID": "587e0531245977466077a0f7",
         "Name": "stock_sks_molot_op_sks_std",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -14,
         "Dispersion": 0,
@@ -3696,7 +3696,7 @@
     "574dad8024597745964bf05c": {
         "ItemID": "574dad8024597745964bf05c",
         "Name": "stock_sks_toz_sks_std_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -14,
         "Dispersion": 0,
@@ -3718,7 +3718,7 @@
     "5d0236dad7ad1a0940739d29": {
         "ItemID": "5d0236dad7ad1a0940739d29",
         "Name": "stock_sks_fab_defence_uas_sks",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -12,
         "HorizontalRecoil": 0,
         "Dispersion": -6,
@@ -3740,7 +3740,7 @@
     "5afd7ded5acfc40017541f5e": {
         "ItemID": "5afd7ded5acfc40017541f5e",
         "Name": "stock_sks_tapco_intrafuse_sks_railed",
-        "ModType": "",
+        "ModType": "StockN",
         "VerticalRecoil": -5,
         "HorizontalRecoil": 8,
         "Dispersion": 0,
@@ -3762,7 +3762,7 @@
     "5bfd37c80db834001d23e842": {
         "ItemID": "5bfd37c80db834001d23e842",
         "Name": "stock_mosin_izhmash_mosin_carabine_sniper_cut_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
@@ -3784,7 +3784,7 @@
     "5bfd384c0db834001a6691d3": {
         "ItemID": "5bfd384c0db834001a6691d3",
         "Name": "stock_mosin_izhmash_mosin_carabine_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
@@ -3808,7 +3808,7 @@
     "5bfd35380db83400232fe5cc": {
         "ItemID": "5bfd35380db83400232fe5cc",
         "Name": "stock_mosin_izhmash_mosin_infantry_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": 0,
@@ -3835,7 +3835,7 @@
     "5ae096d95acfc400185c2c81": {
         "ItemID": "5ae096d95acfc400185c2c81",
         "Name": "stock_mosin_izhmash_mosin_std_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": 0,
@@ -3861,7 +3861,7 @@
     "5bfd36290db834001966869a": {
         "ItemID": "5bfd36290db834001966869a",
         "Name": "stock_mosin_izhmash_mosin_sniper_sawn_off_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -3883,7 +3883,7 @@
     "5bfd36ad0db834001c38ef66": {
         "ItemID": "5bfd36ad0db834001c38ef66",
         "Name": "stock_mosin_izhmash_mosin_carabine_sawn_off_wood",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -4,
         "Dispersion": 0,
@@ -3907,7 +3907,7 @@
     "5bbdb870d4351e00367fb67d": {
         "ItemID": "5bbdb870d4351e00367fb67d",
         "Name": "stock_mosin_ati_monte_carlo",
-        "ModType": "stock",
+        "ModType": "StockN",
         "VerticalRecoil": -7,
         "HorizontalRecoil": -7,
         "Dispersion": -5,
@@ -3929,7 +3929,7 @@
     "5bae13bad4351e00320204af": {
         "ItemID": "5bae13bad4351e00320204af",
         "Name": "stock_mosin_promag_archangel_opfor_prs",
-        "ModType": "stock",
+        "ModType": "StockR",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -17,
         "Dispersion": -5,
@@ -3971,7 +3971,7 @@
     "5c99f3592e221644fc633070": {
         "ItemID": "5c99f3592e221644fc633070",
         "Name": "stock_toz-106_pafnuch_mosin_custom",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 10,
         "HorizontalRecoil": -30,
         "Dispersion": -5,
@@ -3993,7 +3993,7 @@
     "5adf23995acfc400185c2aeb": {
         "ItemID": "5adf23995acfc400185c2aeb",
         "Name": "stock_toz-106_toz_full_std",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": 0,
@@ -4015,7 +4015,7 @@
     "5a38ef1fc4a282000b1521f6": {
         "ItemID": "5a38ef1fc4a282000b1521f6",
         "Name": "stock_toz-106_toz_short_std_wood",
-        "ModType": "stock",
+        "ModType": "Stock",
         "VerticalRecoil": -10,
         "HorizontalRecoil": 20,
         "Dispersion": 10,

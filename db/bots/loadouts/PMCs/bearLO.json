@@ -1,4 +1,16 @@
 {
+  "LowTierVoice": [
+    "Bear_1",
+    "Bear_2",
+    "Bear_3"
+  ],
+  "HighTierVoice": [
+    "Bear_1",
+    "Bear_2",
+    "Bear_3",
+    "Bear_1_Eng",
+    "Bear_2_Eng"
+  ],
   "bearLO1": {
     "experience": {
       "level": {
@@ -224,9 +236,9 @@
           "5929a2a086f7744f4b234d43": 6
         },
         "Backpack": {
-          "5ab8ee7786f7742d8f33f0b9": 5,
-          "56e33680d2720be2748b4576": 2,
-          "56e33634d2720bd8058b456b": 1,
+          "5ab8ee7786f7742d8f33f0b9": 10,
+          "56e33680d2720be2748b4576": 5,
+          "56e33634d2720bd8058b456b": 5,
           "618cfae774bb2d036a049e7c": 1
         },
         "Earpiece": {
@@ -1740,12 +1752,12 @@
         },
         "Backpack": {
           "618bb76513f5097c8d5aa2d5": 1,
-          "5ab8ee7786f7742d8f33f0b9": 4,
-          "56e33680d2720be2748b4576": 3,
+          "5ab8ee7786f7742d8f33f0b9": 6,
+          "56e33680d2720be2748b4576": 5,
           "5e9dcf5986f7746c417435b3": 1,
           "5ca20d5986f774331e7c9602": 1,
-          "618cfae774bb2d036a049e7c": 2,
-          "544a5cde4bdc2d39388b456b": 3
+          "618cfae774bb2d036a049e7c": 1,
+          "544a5cde4bdc2d39388b456b": 5
         },
         "Earpiece": {
           "5c165d832e2216398b5a7e36": 2,
@@ -3120,7 +3132,7 @@
         "mod_muzzle_001": 90,
         "mod_tactical": 60,
         "mod_tactical_000": 60,
-        "mod_tactical_001": 60, 
+        "mod_tactical_001": 60,
         "mod_tactical_002": 60,
         "mod_tactical_003": 60,
         "mod_tactical_2": 60,

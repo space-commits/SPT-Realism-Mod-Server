@@ -666,6 +666,19 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Aramid';
             }
             //// Class 1 ////
+            //Knight Mask
+            if (serverItem._id === "62963c18dbc8ab5f0d382d0b") {
+                serverItem._props.Durability = 20;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 1;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.BluntThroughput = 0.5;
+                serverItem._props.DeafStrength = "Low";
+                serverItem._props.ArmorMaterial = 'Combined';
+                serverItem._props.headSegments = [
+                    "Top"
+                ];
+            }
             //Kolpak
             if (serverItem._id === "59e7711e86f7746cae05fbe1") {
                 serverItem._props.Durability = 100;
@@ -707,6 +720,21 @@ class Armor {
                 serverItem._props.Weight = 0.45;
             }
             //// Class 2 ////
+            //Glorious E Mask
+            if (serverItem._id === "62a09e08de7ac81993580532") {
+                serverItem._props.Durability = 50;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 2;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.BluntThroughput = 0.5;
+                serverItem._props.DeafStrength = "Low";
+                serverItem._props.ArmorMaterial = 'Aramid';
+                serverItem._props.headSegments = [
+                    "Top",
+                    "Ears",
+                    "Jaws"
+                ];
+            }
             //Djeta
             if (serverItem._id === "5c0d2727d174af02a012cf58") {
                 serverItem._props.Durability = 20;
@@ -720,11 +748,12 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 1.3;
             }
+            //// Class 3 ////
             //Shattered Facemask
             if (serverItem._id === "5b432b2f5acfc4771e1c6622") {
                 serverItem._props.Durability = 60;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 2;
+                serverItem._props.armorClass = 3;
                 serverItem._props.speedPenaltyPercent = -0.9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.9;
@@ -732,8 +761,12 @@ class Armor {
                 serverItem._props.DeafStrength = "Low";
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 1.8;
+                serverItem._props.headSegments = [
+                    "Top",
+                    "Ears",
+                    "Jaws"
+                ];
             }
-            //// Class 3 ////
             //Tagilla's Welding Mask "UBEY"
             if (serverItem._id === "60a7ad2a2198820d95707a2e") {
                 serverItem._props.Durability = 30;
@@ -1547,7 +1580,7 @@ class Armor {
             if (serverItem._parent === "5a341c4086f77401f2541505" || serverItem._parent === "5a341c4686f77469e155819e" || serverItem._parent === "57bef4c42459772e8d35a53b" && serverItem._props.speedPenaltyPercent != null) {
                 serverItem._props.speedPenaltyPercent *= 1;
                 serverItem._props.weaponErgonomicPenalty *= 1;
-                if (this.modConf.buff_helmets && serverItem._props.armorClass <= 10 && serverItem._props.armorClass >= 0) {
+                if (this.modConf.buff_helmets && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
                     serverItem._props.armorClass += 1;
                     serverItem._props.BluntThroughput *= 1;
                     if (serverItem._parent === "57bef4c42459772e8d35a53b") {
