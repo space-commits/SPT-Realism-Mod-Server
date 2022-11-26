@@ -1050,8 +1050,7 @@
         "Pockets": [],
         "Backpack": [],
         "SecuredContainer": [
-          "SUPERBOTMEDKIT"
-        ],
+],
         "SpecialLoot": []
       }
     },
@@ -1792,9 +1791,7 @@
         "TacticalVest": [],
         "Pockets": [],
         "Backpack": [],
-        "SecuredContainer": [
-          "SUPERBOTMEDKIT"
-        ],
+        "SecuredContainer": [],
         "SpecialLoot": []
       }
     },
