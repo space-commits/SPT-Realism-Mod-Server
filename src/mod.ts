@@ -185,7 +185,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             var hydroProp = pmcData?.Health?.Hydration;
 
                             if (healthProp !== undefined) {
-                                if (modConfig.realism == false) {
+                                if (modConfig.realistic_player_health == false) {
                                     pmcData.Health.BodyParts["Head"].Health.Maximum = player.defaultHeadHealth;
                                     pmcData.Health.BodyParts["Chest"].Health.Maximum = player.defaultChestHealth;
                                     pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.defaultStomaHealth;
@@ -209,7 +209,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                         logger.info("Realism Mod: Player Health Set To Vanilla Defaults");
                                     }
                                 }
-                                if (modConfig.realism == true) {
+                                if (modConfig.realistic_player_health == true) {
                                     pmcData.Health.BodyParts["Head"].Health.Maximum = player.headHealth;
                                     pmcData.Health.BodyParts["Chest"].Health.Maximum = player.chestHealth;
                                     pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.stomaHealth;
@@ -303,7 +303,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
                             }
 
-                            if (modConfig.realism == true) {
+                            if (modConfig.realistic_player_health == true) {
                                 this.correctNewHealth(pmcData, player, logger);
                             }
                             logger.info("Realism Mod: New Profile Modified");
@@ -346,7 +346,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             let mapType = "";
                             let pmcData = profileHelper.getPmcProfile(sessionID);
 
-              
+
 
                             if (matchInfo.dateTime === "PAST") {
                                 realTime = getTime(time, 12);
@@ -376,18 +376,18 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 return TOD;
                             }
 
-                            for(let map in arrays.CQB_maps){
-                                if(arrays.CQB_maps[map] === mapName){
+                            for (let map in arrays.CQB_maps) {
+                                if (arrays.CQB_maps[map] === mapName) {
                                     mapType = "cqb";
                                 }
                             }
-                            for(let map in arrays.outdoor_maps){
-                                if(arrays.outdoor_maps[map] === mapName){
+                            for (let map in arrays.outdoor_maps) {
+                                if (arrays.outdoor_maps[map] === mapName) {
                                     mapType = "outdoor";
                                 }
                             }
-                            for(let map in arrays.urban_maps){
-                                if(arrays.urban_maps[map] === mapName){
+                            for (let map in arrays.urban_maps) {
+                                if (arrays.urban_maps[map] === mapName) {
                                     mapType = "urban";
                                 }
                             }
@@ -395,27 +395,27 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
-                            if(modConfig.pmc_difficulty == true){
-                                if(RaidInfoTracker.TOD === "day"){
+                            if (modConfig.pmc_types == true) {
+                                if (RaidInfoTracker.TOD === "day") {
                                     botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
                                 }
-                                if(RaidInfoTracker.TOD === "night"){
+                                if (RaidInfoTracker.TOD === "night") {
                                     botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
                                 }
                             }
 
                             this.updateBots(pmcData, logger, modConfig, bots, helper);
-                            
+
                             if (modConfig.airdrop_changes == true) {
-                                if(RaidInfoTracker.TOD === "day"){
+                                if (RaidInfoTracker.TOD === "day") {
                                     this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 10, 10, 10, 1]);
                                 }
-                                if(RaidInfoTracker.TOD === "night"){
+                                if (RaidInfoTracker.TOD === "night") {
                                     this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 20, 30, 30, 30, 1]);
                                 }
                             }
 
-                            if(modConfig.logEverything == true){
+                            if (modConfig.logEverything == true) {
                                 logger.warning("Map = " + mapName);
                                 logger.warning("Time of Day = " + RaidInfoTracker.TOD);
                                 logger.warning("Map Type = " + RaidInfoTracker.mapType);
@@ -523,8 +523,8 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.loadBots();
         }
 
-        if (modConfig.realism == true) {
-            ammo.loadAmmo();
+        if (modConfig.realistic_ballistics == true) {
+            ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
         }

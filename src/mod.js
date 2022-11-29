@@ -113,7 +113,7 @@ class Mod {
                         var healthProp = pmcData?.Health;
                         var hydroProp = pmcData?.Health?.Hydration;
                         if (healthProp !== undefined) {
-                            if (modConfig.realism == false) {
+                            if (modConfig.realistic_player_health == false) {
                                 pmcData.Health.BodyParts["Head"].Health.Maximum = player.defaultHeadHealth;
                                 pmcData.Health.BodyParts["Chest"].Health.Maximum = player.defaultChestHealth;
                                 pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.defaultStomaHealth;
@@ -136,7 +136,7 @@ class Mod {
                                     logger.info("Realism Mod: Player Health Set To Vanilla Defaults");
                                 }
                             }
-                            if (modConfig.realism == true) {
+                            if (modConfig.realistic_player_health == true) {
                                 pmcData.Health.BodyParts["Head"].Health.Maximum = player.headHealth;
                                 pmcData.Health.BodyParts["Chest"].Health.Maximum = player.chestHealth;
                                 pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.stomaHealth;
@@ -220,7 +220,7 @@ class Mod {
                         if (modConfig.med_changes == true) {
                             this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
                         }
-                        if (modConfig.realism == true) {
+                        if (modConfig.realistic_player_health == true) {
                             this.correctNewHealth(pmcData, player, logger);
                         }
                         logger.info("Realism Mod: New Profile Modified");
@@ -298,7 +298,7 @@ class Mod {
                         }
                         helper_1.RaidInfoTracker.TOD = getTOD(realTime);
                         helper_1.RaidInfoTracker.mapType = mapType;
-                        if (modConfig.pmc_difficulty == true) {
+                        if (modConfig.pmc_types == true) {
                             if (helper_1.RaidInfoTracker.TOD === "day") {
                                 botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
                             }
@@ -403,8 +403,8 @@ class Mod {
         if (modConfig.bot_changes == true) {
             bots.loadBots();
         }
-        if (modConfig.realism == true) {
-            ammo.loadAmmo();
+        if (modConfig.realistic_ballistics == true) {
+            ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
         }

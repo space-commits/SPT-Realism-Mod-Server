@@ -25,13 +25,13 @@
                 "bossSanitar": 10,
                 "bossTagilla": 1,
                 "bossBully": 10,
-                "gifter": 10,
-                "followerKojaniy": 10,
+                "gifter": 1,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
-                "exUsec": 10,
+                "assault": 20,
+                "exUsec": 5,
                 "sectantPriest": 1
             },
             "factory4_night": {
@@ -39,11 +39,11 @@
                 "bossTagilla": 2,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 2
             },
@@ -56,7 +56,7 @@
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -65,7 +65,7 @@
                 "bossTagilla": 1,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
@@ -82,7 +82,7 @@
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -91,11 +91,11 @@
                 "bossTagilla": 1,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -108,7 +108,7 @@
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -117,11 +117,11 @@
                 "bossTagilla": 1,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -134,7 +134,7 @@
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             }
@@ -145,11 +145,11 @@
                 "bossTagilla": 1,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -158,11 +158,11 @@
                 "bossTagilla": 2,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 2
             },
@@ -175,7 +175,7 @@
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -184,11 +184,11 @@
                 "bossTagilla": 1,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -201,7 +201,7 @@
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -210,11 +210,11 @@
                 "bossTagilla": 1,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -223,11 +223,11 @@
                 "bossTagilla": 1,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -236,11 +236,11 @@
                 "bossTagilla": 1,
                 "bossBully": 10,
                 "gifter": 10,
-                "followerKojaniy": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             },
@@ -253,7 +253,7 @@
                 "followerTagilla": 1,
                 "followerBully": 10,
                 "followerSanitar": 10,
-                "assault": 40,
+                "assault": 20,
                 "exUsec": 10,
                 "sectantPriest": 1
             }
@@ -270,10 +270,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 20,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 20,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "factory4_night": {
                 "bossKilla": 10,
@@ -284,10 +284,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "bigmap": {
                 "bossKilla": 5,
@@ -298,7 +298,7 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
                 "followerKojaniy": 5
@@ -312,10 +312,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 20,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 20,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "woods": {
                 "bossKilla": 5,
@@ -326,7 +326,7 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
                 "followerKojaniy": 5
@@ -340,10 +340,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 20,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 20,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "lighthouse": {
                 "bossKilla": 5,
@@ -354,10 +354,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 5
+                "followerKojaniy": 0
             },
             "rezervbase": {
                 "bossKilla": 20,
@@ -368,10 +368,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 20,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 20,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "shoreline": {
                 "bossKilla": 5,
@@ -382,7 +382,7 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
                 "followerKojaniy": 5
@@ -398,10 +398,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             }, 
             "factory4_night": {
                 "bossKilla": 10,
@@ -412,10 +412,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "bigmap": {
                 "bossKilla": 5,
@@ -424,13 +424,13 @@
                 "pmcBot": 15,
                 "assault": 10,
                 "exUsec": 10,
-                "followerBirdEye": 20,
+                "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerTagilla": 0,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 20
+                "followerKojaniy": 10
             },
             "laboratory": {
                 "bossKilla": 10,
@@ -441,10 +441,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "woods": {
                 "bossKilla": 5,
@@ -455,7 +455,7 @@
                 "exUsec": 10,
                 "followerBirdEye": 20,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerTagilla": 0,
                 "followerBigPipe": 5,
                 "gifter": 1,
@@ -470,10 +470,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "lighthouse": {
                 "bossKilla": 5,
@@ -482,13 +482,13 @@
                 "pmcBot": 15,
                 "assault": 10,
                 "exUsec": 10,
-                "followerBirdEye": 20,
+                "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerTagilla": 0,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 20
+                "followerKojaniy": 10
             },
             "rezervbase": {
                 "bossKilla": 5,
@@ -499,10 +499,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "shoreline": {
                 "bossKilla": 5,
@@ -511,13 +511,13 @@
                 "pmcBot": 15,
                 "assault": 10,
                 "exUsec": 10,
-                "followerBirdEye": 20,
+                "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerTagilla": 0,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 20
+                "followerKojaniy": 10
             }
         }
     },
@@ -532,10 +532,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 20,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 20,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "factory4_night": {
                 "bossKilla": 10,
@@ -546,10 +546,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "bigmap": {
                 "bossKilla": 10,
@@ -560,7 +560,7 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
                 "followerKojaniy": 1
@@ -574,10 +574,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "woods": {
                 "bossKilla": 5,
@@ -588,7 +588,7 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
                 "followerKojaniy": 5
@@ -602,10 +602,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "lighthouse": {
                 "bossKilla": 5,
@@ -616,7 +616,7 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
                 "followerKojaniy": 5
@@ -630,10 +630,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "shoreline": {
                 "bossKilla": 5,
@@ -644,7 +644,7 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
                 "followerKojaniy": 5
@@ -660,10 +660,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "factory4_night": {
                 "bossKilla": 10,
@@ -674,10 +674,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "bigmap": {
                 "bossKilla": 10,
@@ -688,10 +688,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 5
             },
             "laboratory": {
                 "bossKilla": 10,
@@ -702,10 +702,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "woods": {
                 "bossKilla": 5,
@@ -714,12 +714,12 @@
                 "pmcBot": 15,
                 "assault": 10,
                 "exUsec": 10,
-                "followerBirdEye": 20,
+                "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 20
+                "followerKojaniy": 10
             },
             "interchange": {
                 "bossKilla": 10,
@@ -730,10 +730,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "lighthouse": {
                 "bossKilla": 5,
@@ -742,12 +742,12 @@
                 "pmcBot": 15,
                 "assault": 10,
                 "exUsec": 10,
-                "followerBirdEye": 20,
+                "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 20
+                "followerKojaniy": 10
             },
             "rezervbase": {
                 "bossKilla": 10,
@@ -758,10 +758,10 @@
                 "exUsec": 10,
                 "followerBirdEye": 10,
                 "bossKnight": 10,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 10,
                 "gifter": 1,
-                "followerKojaniy": 1
+                "followerKojaniy": 0
             },
             "shoreline": {
                 "bossKilla": 5,
@@ -770,12 +770,12 @@
                 "pmcBot": 15,
                 "assault": 10,
                 "exUsec": 10,
-                "followerBirdEye": 20,
+                "followerBirdEye": 10,
                 "bossKnight": 5,
-                "cursedAssault": 10,
+                "cursedAssault": 1,
                 "followerBigPipe": 5,
                 "gifter": 1,
-                "followerKojaniy": 20
+                "followerKojaniy": 10
             }
         }
     }

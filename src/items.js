@@ -72,7 +72,7 @@ class _Items {
         itemID._props.effects_damage = effectsDamage;
         itemID._props.CanSellOnRagfair = false;
         if (this.modConfig.logEverything == true) {
-            this.logger.warning("Item " + itemID._id + " Added");
+            this.logger.info("Item " + itemID._id + " Added");
         }
     }
     addToHandbook(id, parentID, price) {
@@ -95,7 +95,7 @@ class _Items {
         this.itemDB[newitemID] = this.jsonUtil.clone(this.itemDB[itemtoClone]);
         this.itemDB[newitemID]._id = newitemID;
         if (this.modConfig.logEverything == true) {
-            this.logger.warning(this.itemDB[itemtoClone]._name + " cloned");
+            this.logger.info(this.itemDB[itemtoClone]._name + " cloned");
         }
     }
     addToHideout(craft) {

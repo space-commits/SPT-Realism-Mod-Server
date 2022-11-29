@@ -41,13 +41,10 @@ export class Bots {
     public loadBots() {
 
 
-        if (this.modConf.realism == true) {
-            //Adjust Thermal stim to compensate for lower base temp
-            this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
-        }
+        //Adjust Thermal stim to compensate for lower base temp
+        this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
 
-
-        if (this.modConf.openZonesFix == true) {
+        if (this.modConf.open_zones_fix == true) {
             for (let location in botZones.zones) {
                 this.tables.locations[location].base.OpenZones = botZones.zones[location];
             }
@@ -79,8 +76,8 @@ export class Bots {
             "edit": {}
         }];
 
-        this.botConf.equipment["assault"] = { 
-            "lightLaserIsActiveChancePercent": 50, 
+        this.botConf.equipment["assault"] = {
+            "lightLaserIsActiveChancePercent": 50,
             "faceShieldIsActiveChancePercent": 100,
             "randomisedArmorSlots": [],
             "randomisedWeaponModSlots": [],
@@ -90,7 +87,7 @@ export class Bots {
             "blacklist": [],
             "whitelist": []
         };
-        
+
         this.botConf.equipment["pmcBot"] = {
             "lightLaserIsActiveChancePercent": 50,
             "faceShieldIsActiveChancePercent": 100,
@@ -609,8 +606,10 @@ export class Bots {
             this.usecBase.chances.mods.mod_flashlight = 50;
         }
 
+        if (this.modConf.pmc_types == true) {
+            this.botConf.pmc.pmcType.sptusec = pmcTypes.pmcTypeTimmy.sptusec;
+        }
 
-        this.botConf.pmc.pmcType.sptusec = pmcTypes.pmcTypeTimmy.sptusec;
 
         BotTierTracker.usecTier = 1;
         if (this.modConf.logEverything == true) {
@@ -628,7 +627,7 @@ export class Bots {
         this.usecBase.appearance.body = usecLO.usecLO2.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO2.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO2.experience.level;
-     
+
         if (RaidInfoTracker.TOD === "night") {
             this.usecBase.chances.mods.mod_nvg = 10;
             this.usecBase.chances.mods.mod_flashlight = 70;
@@ -735,7 +734,10 @@ export class Bots {
             this.bearBase.chances.mods.mod_flashlight = 50;
         }
 
-        this.botConf.pmc.pmcType.sptbear = pmcTypes.pmcTypeTimmy.sptbear;
+        if(this.modConf.pmc_types == true){
+            this.botConf.pmc.pmcType.sptbear = pmcTypes.pmcTypeTimmy.sptbear;
+        }
+
 
         BotTierTracker.bearTier = 1;
         if (this.modConf.logEverything == true) {
@@ -759,7 +761,7 @@ export class Bots {
             this.bearBase.chances.mods.mod_nvg = 10;
             this.bearBase.chances.mods.mod_flashlight = 70;
         }
-       
+
 
         if (RaidInfoTracker.mapType === "urban") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_urban;
@@ -795,7 +797,7 @@ export class Bots {
             this.bearBase.chances.mods.mod_flashlight = 80;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
         }
-     
+
         if (RaidInfoTracker.mapType === "urban") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_urban;
         }
@@ -829,7 +831,7 @@ export class Bots {
             this.bearBase.chances.mods.mod_flashlight = 100;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
         }
-       
+
         if (RaidInfoTracker.mapType === "urban") {
             this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_urban;
         }

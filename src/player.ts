@@ -139,7 +139,7 @@ export class Player {
             this.globalDB.Health.Effects.Existence.HydrationDamage = 1.5;
         }
 
-        if (this.modConf.realism == true) {
+        if (this.modConf.realistic_player_health == true || this.modConf.realistic_ballistics == true) {
 
             let health = this.globalDB.Health.Effects
             let mult = 1.136
@@ -164,19 +164,24 @@ export class Player {
             this.debuffMul(health.Wound.ThresholdMax, mult);
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);
+        }
 
+        if (this.modConf.realistic_ballistics == true) 
+        {
             this.tables.templates.profiles.Standard.bear.character.Inventory = this.custProfile.Standard.bear.Inventory;
             this.tables.templates.profiles.Standard.usec.character.Inventory = this.custProfile.Standard.usec.Inventory;
-
+    
             this.tables.templates.profiles["Left Behind"].bear.character.Inventory = this.custProfile["Left Behind"].bear.Inventory;
             this.tables.templates.profiles["Left Behind"].usec.character.Inventory = this.custProfile["Left Behind"].usec.Inventory;
-
+    
             this.tables.templates.profiles["Prepare To Escape"].bear.character.Inventory = this.custProfile["Prepare To Escape"].bear.Inventory;
             this.tables.templates.profiles["Prepare To Escape"].usec.character.Inventory = this.custProfile["Prepare To Escape"].usec.Inventory;
-
+    
             this.tables.templates.profiles["Edge Of Darkness"].bear.character.Inventory = this.custProfile["Edge Of Darkness"].bear.Inventory;
             this.tables.templates.profiles["Edge Of Darkness"].usec.character.Inventory = this.custProfile["Edge Of Darkness"].usec.Inventory;
         }
+
+
 
   
         if(this.modConf.med_changes == false){
@@ -197,7 +202,7 @@ export class Player {
                     usecInventory[i]._tpl === "TIER1MEDKI2" ||
                     usecInventory[i]._tpl === "TIER1MEDKI3") {
                     usecInventory[i]._tpl = "5755356824597772cb798962"
-                    usecInventory
+                    usecInventory[i].upd.MedKit.HpResource = 100;
                 }
             }
         }

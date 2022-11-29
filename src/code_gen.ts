@@ -941,6 +941,9 @@ export class CodeGen {
                             if(item._props.ConflictingItems[1] === "true"){
                                 locale.Description = "This faceshield allows the use of sights while using any stock in the extended position." +  `\n\n${locale.Description }`;
                             }
+                            if(item._props.ConflictingItems[1] === "false"){
+                                locale.Description = "This faceshield does NOT allow the use of sights while using any stock in the extended position." +  `\n\n${locale.Description }`;
+                            }
                         }
 
 

@@ -29,7 +29,7 @@
                 "cost": 50
             }
         },
-        "MaxHpResource": 250,
+        "MaxHpResource": 260,
         "medUseTime": 1200,
         "hpResourceRate": 0.001
     },
@@ -43,7 +43,7 @@
                 "cost": 50
             }
         },
-        "MaxHpResource": 370,
+        "MaxHpResource": 380,
         "medUseTime": 1200,
         "hpResourceRate": 0.001
     },
@@ -57,7 +57,7 @@
                 "cost": 50
             }
         },
-        "MaxHpResource": 500,
+        "MaxHpResource": 510,
         "medUseTime": 1200,
         "hpResourceRate": 0.001
     },

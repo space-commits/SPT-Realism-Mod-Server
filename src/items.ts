@@ -1,8 +1,6 @@
 
-import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
+
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { container } from "tsyringe";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { IHideoutProduction } from "@spt-aki/models/eft/hideout/IHideoutProduction";
@@ -120,7 +118,7 @@ export class _Items {
         itemID._props.CanSellOnRagfair = false;
         if(this.modConfig.logEverything == true)
         {
-            this.logger.warning("Item " + itemID._id + " Added");
+            this.logger.info("Item " + itemID._id + " Added");
         }
     }
 
@@ -151,7 +149,7 @@ export class _Items {
         this.itemDB[newitemID]._id = newitemID;
         if(this.modConfig.logEverything == true)
         {
-            this.logger.warning(this.itemDB[itemtoClone]._name + " cloned");
+            this.logger.info(this.itemDB[itemtoClone]._name + " cloned");
         }
     }
 

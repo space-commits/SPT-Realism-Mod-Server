@@ -11,12 +11,12 @@ class Airdrops {
         this.itemDB = this.tables.templates.items;
     }
     loadAirdrops() {
-        this.airConf.airdropChancePercent.bigmap = 10;
-        this.airConf.airdropChancePercent.woods = 15;
-        this.airConf.airdropChancePercent.lighthouse = 15;
-        this.airConf.airdropChancePercent.shoreline = 15;
-        this.airConf.airdropChancePercent.interchange = 5;
-        this.airConf.airdropChancePercent.reserve = 5;
+        this.airConf.airdropChancePercent.bigmap = 15;
+        this.airConf.airdropChancePercent.woods = 20;
+        this.airConf.airdropChancePercent.lighthouse = 20;
+        this.airConf.airdropChancePercent.shoreline = 20;
+        this.airConf.airdropChancePercent.interchange = 10;
+        this.airConf.airdropChancePercent.reserve = 10;
         this.airConf.planeVolume = 0.2;
         this.airConf.airdropMinStartTimeSeconds = 300;
         this.airConf.airdropMaxStartTimeSeconds = 1200;

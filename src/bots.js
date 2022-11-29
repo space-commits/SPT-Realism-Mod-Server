@@ -37,11 +37,9 @@ class Bots {
         this.botConfPMC = this.botConf.pmc;
     }
     loadBots() {
-        if (this.modConf.realism == true) {
-            //Adjust Thermal stim to compensate for lower base temp
-            this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
-        }
-        if (this.modConf.openZonesFix == true) {
+        //Adjust Thermal stim to compensate for lower base temp
+        this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
+        if (this.modConf.open_zones_fix == true) {
             for (let location in botZones.zones) {
                 this.tables.locations[location].base.OpenZones = botZones.zones[location];
             }
@@ -522,7 +520,9 @@ class Bots {
             this.usecBase.chances.mods.mod_nvg = 5;
             this.usecBase.chances.mods.mod_flashlight = 50;
         }
-        this.botConf.pmc.pmcType.sptusec = pmcTypes.pmcTypeTimmy.sptusec;
+        if (this.modConf.pmc_types == true) {
+            this.botConf.pmc.pmcType.sptusec = pmcTypes.pmcTypeTimmy.sptusec;
+        }
         helper_1.BotTierTracker.usecTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
@@ -627,7 +627,9 @@ class Bots {
             this.bearBase.chances.mods.mod_nvg = 5;
             this.bearBase.chances.mods.mod_flashlight = 50;
         }
-        this.botConf.pmc.pmcType.sptbear = pmcTypes.pmcTypeTimmy.sptbear;
+        if (this.modConf.pmc_types == true) {
+            this.botConf.pmc.pmcType.sptbear = pmcTypes.pmcTypeTimmy.sptbear;
+        }
         helper_1.BotTierTracker.bearTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad1 loaded");

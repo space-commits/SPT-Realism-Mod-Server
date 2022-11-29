@@ -111,7 +111,7 @@ class Player {
             this.globalDB.Health.Effects.Existence.EnergyDamage = 1;
             this.globalDB.Health.Effects.Existence.HydrationDamage = 1.5;
         }
-        if (this.modConf.realism == true) {
+        if (this.modConf.realistic_player_health == true || this.modConf.realistic_ballistics == true) {
             let health = this.globalDB.Health.Effects;
             let mult = 1.136;
             health.Wound.WorkingTime = 3600;
@@ -130,6 +130,8 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMax, mult);
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);
+        }
+        if (this.modConf.realistic_ballistics == true) {
             this.tables.templates.profiles.Standard.bear.character.Inventory = this.custProfile.Standard.bear.Inventory;
             this.tables.templates.profiles.Standard.usec.character.Inventory = this.custProfile.Standard.usec.Inventory;
             this.tables.templates.profiles["Left Behind"].bear.character.Inventory = this.custProfile["Left Behind"].bear.Inventory;
@@ -155,7 +157,7 @@ class Player {
                     usecInventory[i]._tpl === "TIER1MEDKI2" ||
                     usecInventory[i]._tpl === "TIER1MEDKI3") {
                     usecInventory[i]._tpl = "5755356824597772cb798962";
-                    usecInventory;
+                    usecInventory[i].upd.MedKit.HpResource = 100;
                 }
             }
         }
