@@ -35,7 +35,9 @@ class FleamarketConfig {
             this.fleaConf.dynamic.blacklist.enableBsgList = false;
             this.fleaConf.dynamic.blacklist.custom = [];
         }
-        this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT");
+        if (this.modConfig.med_changes == true) {
+            this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT");
+        }
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.sell.chance.base = 45;
             this.fleaConf.sell.time.base = 30;
@@ -50,7 +52,7 @@ class FleamarketConfig {
             };
             this.fleaConf.dynamic.offerItemCount.min = 0;
             this.fleaConf.dynamic.offerItemCount.max = 2;
-            this.fleaConf.dynamic.price.min = 1.25;
+            this.fleaConf.dynamic.price.min = 1.15;
             this.fleaConf.dynamic.price.max = 2;
             this.fleaConf.dynamic.presetPrice.min = 2;
             this.fleaConf.dynamic.presetPrice.max = 3;

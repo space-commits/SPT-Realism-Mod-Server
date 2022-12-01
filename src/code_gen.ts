@@ -899,9 +899,9 @@ export class CodeGen {
     public descriptionGen() {
         for (let localeItem in this.tables.locales.global["en"].templates) {
             let locale = this.tables.locales.global["en"].templates[localeItem];
-            for (let templatItem in this.itemDB) {
-                let item = this.itemDB[templatItem];
-                if (localeItem === templatItem) {
+            for (let templateItem in this.itemDB) {
+                let item = this.itemDB[templateItem];
+                if (localeItem === templateItem) {
 
                     if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
 

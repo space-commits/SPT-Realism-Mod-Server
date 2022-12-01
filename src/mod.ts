@@ -537,10 +537,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         flea.loadFleaGlobal();
 
         if (modConfig.malf_changes == true) {
-            weaponsStats.loadWepStats();
+            ammo.loadGlobalMalfChanges();
         }
 
         if (modConfig.recoil_attachment_overhaul) {
+            ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
         }
 
@@ -668,16 +669,16 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             tier = helper.probabilityWeighter(tierArray, [20, 5, 1, 0]);
         }
         if (pmcData.Info.Level >= 10) {
-            tier = helper.probabilityWeighter(tierArray, [30, 10, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [20, 10, 5, 1]);
         }
         if (pmcData.Info.Level >= 15) {
             tier = helper.probabilityWeighter(tierArray, [10, 20, 5, 1]);
         }
         if (pmcData.Info.Level >= 20) {
-            tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 4]);
+            tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 5]);
         }
         if (pmcData.Info.Level >= 25) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 30, 8]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 30, 10]);
         }
         if (pmcData.Info.Level >= 30) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 30]);

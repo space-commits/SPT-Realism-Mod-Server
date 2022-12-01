@@ -2655,7 +2655,7 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 0,
-        "AimSpeed": 0,
+        "AimSpeed": 5,
         "Ergonomics": 0,
         "Accuracy": 0,
         "HasShoulderContact": true,
