@@ -907,46 +907,111 @@ export class CodeGen {
 
                         let modType = item._props.ConflictingItems[1];
 
-                        if(modType === "booster"){
-                            locale.Description = "This muzzle device is a booster. It gives the full firerate stats on short barreled rifles, and a reduced amount on longer barreld rifles." +  `\n\n${locale.Description }`;
+                        if (modType === "booster") {
+                            locale.Description = "This muzzle device is a booster. It gives the full firerate stats on short barreled rifles, and a reduced amount on longer barreld rifles." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "muzzle_supp_adapter"){
-                            locale.Description = "This muzzle device is an adapter, it will lose all its stats except accuracy if a suppressor is attached to it." +  `\n\n${locale.Description }`;
+                        if (modType === "muzzle_supp_adapter") {
+                            locale.Description = "This muzzle device is an adapter, it will lose all its stats except accuracy if a suppressor is attached to it." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "shot_pump_grip_adapt"){
-                            locale.Description = "If a foregrip is attached to this pump grip there will be a bonus to chamber/pump speed." +  `\n\n${locale.Description }`;
+                        if (modType === "shot_pump_grip_adapt") {
+                            locale.Description = "If a foregrip is attached to this pump grip there will be a bonus to chamber/pump speed." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "buffer_adapter" || modType === "stock_adapter" || modType === "grip_stock_adapter"){
-                            locale.Description = "This adapater changes the recoil profile of the weapon by raising or lowering the stock in line with the barrel. It will not impart any stats unless a stock is attached. If it has a pistol grip slot, the pistol grip provides a bonus to ergo and recoil stats if attached." +  `\n\n${locale.Description }`;
+                        if (modType === "buffer_adapter" || modType === "stock_adapter" || modType === "grip_stock_adapter") {
+                            locale.Description = "This adapater changes the recoil profile of the weapon by raising or lowering the stock in line with the barrel. It will not impart any stats unless a stock is attached. If it has a pistol grip slot, the pistol grip provides a bonus to ergo and recoil stats if attached." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "hydraulic_buffer"){
-                            locale.Description = "This hydraulic buffer loses all its stats if not places on a shotgun, sniper rifle or assault carbine." +  `\n\n${locale.Description }`;
+                        if (modType === "hydraulic_buffer") {
+                            locale.Description = "This hydraulic buffer loses all its stats if not places on a shotgun, sniper rifle or assault carbine." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "buffer"){
-                            locale.Description = "This buffer tube loses its recoil, firerate and durability burn stats if not placed on a weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." +  `\n\n${locale.Description }`;
+                        if (modType === "buffer") {
+                            locale.Description = "This buffer tube loses its recoil, firerate and durability burn stats if not placed on a weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "buffer_stock"){
-                            locale.Description = "This stock loses its firerate and durability burn stats if not placed on weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." +  `\n\n${locale.Description }`;
+                        if (modType === "buffer_stock") {
+                            locale.Description = "This stock loses its firerate and durability burn stats if not placed on weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "stock" && item._props.ConflictingItems[15] === "true"){
-                            locale.Description = "This stock allows aiming down sights with any faceshield." +  `\n\n${locale.Description }`;
+                        if (modType === "stock" && item._props.ConflictingItems[15] === "true") {
+                            locale.Description = "This stock allows aiming down sights with any faceshield." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "foregrip_adapter"){
-                            locale.Description = "This adapter will lose its negative ergo stat if a grip is attached to it." +  `\n\n${locale.Description }`;
+                        if (modType === "foregrip_adapter") {
+                            locale.Description = "This adapter will lose its negative ergo stat if a grip is attached to it." + `\n\n${locale.Description}`;
                         }
-                        if(modType === "scope"){
-                            locale.Description = "ADS speed modifier only applies when this sight is in use." +  `\n\n${locale.Description }`;
+                        if (modType === "scope") {
+                            locale.Description = "ADS speed modifier only applies when this sight is in use." + `\n\n${locale.Description}`;
                         }
-                        if (item._parent === "57bef4c42459772e8d35a53b" || item._parent === "5a341c4086f77401f2541505"){
-                            if(item._props.ConflictingItems[1] === "true"){
-                                locale.Description = "This faceshield allows the use of sights while using any stock in the extended position." +  `\n\n${locale.Description }`;
+                        if (item._parent === "57bef4c42459772e8d35a53b" || item._parent === "5a341c4086f77401f2541505") {
+                            if (item._props.ConflictingItems[1] === "true") {
+                                locale.Description = "This faceshield allows the use of sights while using any stock in the extended position." + `\n\n${locale.Description}`;
                             }
-                            if(item._props.ConflictingItems[1] === "false"){
-                                locale.Description = "This faceshield does NOT allow the use of sights while using any stock in the extended position." +  `\n\n${locale.Description }`;
+                            if (item._props.ConflictingItems[1] === "false") {
+                                locale.Description = "This faceshield does NOT allow the use of sights while using any stock in the extended position." + `\n\n${locale.Description}`;
                             }
                         }
+                    }
 
+                    if (item._parent === "5485a8684bdc2da71d8b4567") {
 
+                        if (item._props.Caliber === "Caliber20g") {
+                            locale.Description = "Ammo stats are out of a Toz-106." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber12g") {
+                            locale.Description = "Ammo stats are out of a 610mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber23x75") {
+                            locale.Description = "Ammo stats are out of a 700mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber46x30") {
+                            locale.Description = "Ammo stats are out of an MP7." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber57x28") {
+                            locale.Description = "Ammo stats are out of a standard P90/264mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x18PM") {
+                            locale.Description = "Ammo stats are out of a Makarov." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x19PARA") {
+                            locale.Description = "Ammo stats are out of a 254mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber1143x23ACP") {
+                            locale.Description = "Ammo stats are out of a 254mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x33R") {
+                            locale.Description = "Ammo stats are out of a 127mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x21") {
+                            locale.Description = "Ammo stats are out of a SR-1MP" + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x25TT") {
+                            locale.Description = "Ammo stats are out of a TT-30 Tokarev." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x35") {
+                            locale.Description = "Ammo stats are out of a 229mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x39") {
+                            locale.Description = "Ammo stats are out of a VSS/AS VAL." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber366TKM") {
+                            locale.Description = "Ammo stats are out of a 415mm barrel/standard AKM pattern rifle." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber556x45NATO") {
+                            locale.Description = "Ammo stats are out of a 419mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber545x39") {
+                            locale.Description = "Ammo stats are out of a 415mm barrel/standard AK-74 pattern rifle." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x39") {
+                            locale.Description = "Ammo stats are out of a 415mm barrel/standard AKM pattern rifle." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x51") {
+                            locale.Description = "Ammo stats are out of a 508mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x54R") {
+                            locale.Description = "Ammo stats are out of a 508mm barrel" + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber127x55") {
+                            locale.Description = "Ammo stats are out of the ASH-12." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber86x70") {
+                            locale.Description = "Ammo stats are out of a 610mm barrel." + `\n\n${locale.Description}`;
+                        }
                     }
                 }
             }

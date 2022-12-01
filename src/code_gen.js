@@ -876,6 +876,71 @@ class CodeGen {
                             }
                         }
                     }
+                    if (item._parent === "5485a8684bdc2da71d8b4567") {
+                        if (item._props.Caliber === "Caliber20g") {
+                            locale.Description = "Ammo stats are out of a Toz-106." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber12g") {
+                            locale.Description = "Ammo stats are out of a 610mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber23x75") {
+                            locale.Description = "Ammo stats are out of a 700mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber46x30") {
+                            locale.Description = "Ammo stats are out of an MP7." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber57x28") {
+                            locale.Description = "Ammo stats are out of a standard P90/264mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x18PM") {
+                            locale.Description = "Ammo stats are out of a Makarov." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x19PARA") {
+                            locale.Description = "Ammo stats are out of a 254mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber1143x23ACP") {
+                            locale.Description = "Ammo stats are out of a 254mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x33R") {
+                            locale.Description = "Ammo stats are out of a 127mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x21") {
+                            locale.Description = "Ammo stats are out of a SR-1MP" + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x25TT") {
+                            locale.Description = "Ammo stats are out of a TT-30 Tokarev." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x35") {
+                            locale.Description = "Ammo stats are out of a 229mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber9x39") {
+                            locale.Description = "Ammo stats are out of a VSS/AS VAL." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber366TKM") {
+                            locale.Description = "Ammo stats are out of a 415mm barrel/standard AKM pattern rifle." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber556x45NATO") {
+                            locale.Description = "Ammo stats are out of a 419mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber545x39") {
+                            locale.Description = "Ammo stats are out of a 415mm barrel/standard AK-74 pattern rifle." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x39") {
+                            locale.Description = "Ammo stats are out of a 415mm barrel/standard AKM pattern rifle." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x51") {
+                            locale.Description = "Ammo stats are out of a 508mm barrel." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber762x54R") {
+                            locale.Description = "Ammo stats are out of a 508mm barrel" + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber127x55") {
+                            locale.Description = "Ammo stats are out of the ASH-12." + `\n\n${locale.Description}`;
+                        }
+                        if (item._props.Caliber === "Caliber86x70") {
+                            locale.Description = "Ammo stats are out of a 610mm barrel." + `\n\n${locale.Description}`;
+                        }
+                    }
                 }
             }
         }

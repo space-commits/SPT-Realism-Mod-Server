@@ -392,7 +392,7 @@
         "HeatFactor": 1.06,
         "CoolFactor": 1.09,
         "DurabilityBurnModificator": 0.93,
-        "Velocity": -16.31,
+        "Velocity": -7,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.409,
@@ -913,7 +913,7 @@
         "HeatFactor": 1.1,
         "CoolFactor": 0.9,
         "DurabilityBurnModificator": 1,
-        "Velocity": -2.1,
+        "Velocity": 0,
         "ConflictingItems": [
             "5c0e2f5cd174af02a012cfc9",
             "5ae30db85acfc408fb139a05",
@@ -1859,7 +1859,7 @@
         "HeatFactor": 1.05,
         "CoolFactor": 0.94,
         "DurabilityBurnModificator": 1,
-        "Velocity": 5.6,
+        "Velocity": 2.5,
         "ConflictingItems": [
             "5a6086ea4f39f99cd479502f",
             "5a608bf24f39f98ffc77720e",

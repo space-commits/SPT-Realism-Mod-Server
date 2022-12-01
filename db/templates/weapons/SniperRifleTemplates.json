@@ -313,7 +313,7 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
-        "Velocity": 1.81,
+        "Velocity": 0,
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.7,
         "WeaponAllowADS": false,
