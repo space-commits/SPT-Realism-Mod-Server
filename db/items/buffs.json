@@ -99,7 +99,7 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 780,
-            "Value": -50,
+            "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
         },
@@ -108,7 +108,7 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 780,
-            "Value": -50,
+            "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Strength"
         },
@@ -144,7 +144,7 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 780,
-            "Value": -25,
+            "Value": -35,
             "AbsoluteValue": true,
             "SkillName": "Perception"
         },
@@ -153,7 +153,7 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 780,
-            "Value": -25,
+            "Value": -35,
             "AbsoluteValue": true,
             "SkillName": "Intellect"
         },
@@ -162,7 +162,7 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 780,
-            "Value": -25,
+            "Value": -35,
             "AbsoluteValue": true,
             "SkillName": "Attention"
         },
@@ -267,7 +267,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 910,
-            "Value": -25,
+            "Value": -15,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
         },
@@ -276,7 +276,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 910,
-            "Value": -25,
+            "Value": -15,
             "AbsoluteValue": true,
             "SkillName": "Strength"
         },
@@ -350,7 +350,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 970,
-            "Value": -25,
+            "Value": -17,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
         },
@@ -359,7 +359,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 970,
-            "Value": -25,
+            "Value": -17,
             "AbsoluteValue": true,
             "SkillName": "Strength"
         },
@@ -489,7 +489,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 650,
-            "Value": -22,
+            "Value": -12,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -498,7 +498,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 650,
-            "Value": -0.17,
+            "Value": -0.08,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -545,7 +545,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 610,
-            "Value": -21,
+            "Value": -10,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -554,7 +554,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 610,
-            "Value": -0.16,
+            "Value": -0.07,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -1129,7 +1129,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -50,
+            "Value": -35,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -1219,7 +1219,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -45,
+            "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
         },
@@ -1329,7 +1329,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -45,
+            "Value": -35,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -1338,7 +1338,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -0.3,
+            "Value": -0.35,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -1419,7 +1419,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -45,
+            "Value": -25,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
         },

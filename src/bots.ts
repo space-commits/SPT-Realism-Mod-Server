@@ -965,6 +965,7 @@ export class Bots {
     public rogueLoad1() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO1.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO1.inventory.equipment;
+        this.rogueBase.inventory.items = rogueLO.rogueLO1.inventory.items;
         this.rogueBase.inventory.mods = rogueLO.rogueLO1.inventory.mods;;
         this.rogueBase.chances = rogueLO.rogueLO1.chances;
         this.rogueBase.generation = rogueLO.rogueLO1.generation;
@@ -990,6 +991,7 @@ export class Bots {
     public rogueLoad2() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO2.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO2.inventory.equipment;
+        this.rogueBase.inventory.items = rogueLO.rogueLO2.inventory.items;
         this.rogueBase.inventory.mods = rogueLO.rogueLO2.inventory.mods;
         this.rogueBase.chances = rogueLO.rogueLO2.chances;
         this.rogueBase.generation = rogueLO.rogueLO2.generation;
@@ -1014,6 +1016,7 @@ export class Bots {
     public rogueLoad3() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO3.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO3.inventory.equipment;
+        this.rogueBase.inventory.items = rogueLO.rogueLO3.inventory.items;
         this.rogueBase.inventory.mods = rogueLO.rogueLO3.inventory.mods;
         this.rogueBase.chances = rogueLO.rogueLO3.chances;
         this.rogueBase.generation = rogueLO.rogueLO3.generation;
