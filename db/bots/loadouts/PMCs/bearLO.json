@@ -4221,6 +4221,7 @@
           ],
           "mod_reciever": [
             "59d6507c86f7741b846413a2",
+            "5d2c770c48f0354b4a07c100",
             "5d2c770c48f0354b4a07c100"
           ],
           "mod_sight_rear": [
@@ -4283,7 +4284,8 @@
           ],
           "mod_reciever": [
             "5d2c770c48f0354b4a07c100",
-            "59e6449086f7746c9f75e822"
+            "59e6449086f7746c9f75e822",
+            "5d2c770c48f0354b4a07c100"
           ],
           "mod_sight_rear": [
             "59d650cf86f7741b846413a4"
@@ -4340,6 +4342,7 @@
           ],
           "mod_reciever": [
             "5649af094bdc2df8348b4586",
+            "5d2c770c48f0354b4a07c100",
             "5d2c770c48f0354b4a07c100"
           ],
           "mod_sight_rear": [
@@ -4866,7 +4869,7 @@
         "mod_tactical_003": 55,
         "mod_tactical_2": 55,
         "mod_flashlight": 60,
-        "mod_scope": 85,
+        "mod_scope": 95,
         "mod_stock": 100,
         "mod_charge": 100,
         "mod_handguard": 100,
@@ -6157,7 +6160,7 @@
             "5cf518cfd7f00c065b422214",
             "5b222d335acfc4771e1be099",
             "5649b2314bdc2d79388b4576",
-            "5addbf175acfc408fb13965b"
+            "6087e2a5232e5a31c233d552"
           ],
           "mod_magazine": [
             "59d625f086f774661516605d",

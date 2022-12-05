@@ -2,40 +2,43 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports._Items = void 0;
 class _Items {
-    constructor(logger, tables, modConfig, jsonUtil, medItems, crafts) {
+    constructor(logger, tables, modConfig, jsonUtil, medItems, crafts, inventoryConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
         this.jsonUtil = jsonUtil;
         this.medItems = medItems;
         this.crafts = crafts;
+        this.inventoryConf = inventoryConf;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
-        this.config = this.modConfig;
     }
-    loadItems() {
+    loadItemsRestrictions() {
         this.globalDB["AllowSelectEntryPoint"] = true;
-        if (this.config.all_examined == true) {
+        if (this.modConfig.all_examined == true) {
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];
                 serverItem._props.ExaminedByDefault = true;
             }
-            if (this.config.logEverything == true) {
+            if (this.modConfig.logEverything == true) {
                 this.logger.info("All Items Examined");
             }
         }
-        if (this.config.remove_inraid_restrictions == true) {
+        if (this.modConfig.remove_fir_req == true) {
+            this.inventoryConf.newItemsMarkedFound = true;
+        }
+        if (this.modConfig.remove_inraid_restrictions == true) {
             this.globalDB.RestrictionsInRaid = [];
             for (let item in this.itemDB) {
                 if (this.itemDB[item]?._props?.DiscardLimit !== undefined) {
                     this.itemDB[item]._props.DiscardLimit = -1;
                 }
             }
-            if (this.config.logEverything == true) {
+            if (this.modConfig.logEverything == true) {
                 this.logger.info("In-Raid Restrictions Removed");
             }
         }
-        if (this.config.logEverything == true) {
+        if (this.modConfig.logEverything == true) {
             this.logger.info("Items Loaded");
         }
     }

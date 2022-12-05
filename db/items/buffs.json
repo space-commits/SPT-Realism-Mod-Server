@@ -23,7 +23,7 @@
             "Chance": 1,
             "Delay": 60,
             "Duration": 300,
-            "Value": -0.015,
+            "Value": -0.02,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -61,7 +61,7 @@
             "Chance": 1,
             "Delay": 45,
             "Duration": 220,
-            "Value": -0.02,
+            "Value": -0.025,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -99,7 +99,7 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 780,
-            "Value": -25,
+            "Value": -20,
             "AbsoluteValue": true,
             "SkillName": "Endurance"
         },
@@ -108,7 +108,7 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 780,
-            "Value": -25,
+            "Value": -20,
             "AbsoluteValue": true,
             "SkillName": "Strength"
         },
@@ -171,7 +171,7 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 780,
-            "Value": -0.025,
+            "Value": -0.03,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -1201,7 +1201,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -0.105,
+            "Value": -0.11,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -1210,7 +1210,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -0.105,
+            "Value": -0.11,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -1401,7 +1401,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -0.1,
+            "Value": -0.115,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -1410,7 +1410,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 1200,
-            "Value": -0.1,
+            "Value": -0.115,
             "AbsoluteValue": true,
             "SkillName": ""
         },

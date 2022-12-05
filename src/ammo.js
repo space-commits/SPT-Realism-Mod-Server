@@ -570,7 +570,7 @@ class Ammo {
                 serverItem._props.ammoAccr = -50;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -15;
-                serverItem._props.BallisticCoeficient = 0.015;
+                serverItem._props.BallisticCoeficient = 0.018;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
@@ -593,7 +593,7 @@ class Ammo {
                 serverItem._props.ammoAccr = -25;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
-                serverItem._props.BallisticCoeficient = 0.017;
+                serverItem._props.BallisticCoeficient = 0.020;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
@@ -3336,6 +3336,9 @@ class Ammo {
                 serverItem._props.Damage = 67;
                 serverItem._props.PenetrationPower = 30;
                 serverItem._props.buckshotBullets = 0;
+            }
+            if (serverItem._props.buckshotBullets > 2) {
+                serverItem._props.BallisticCoeficient *= 0.9;
             }
         }
         if (this.modConf.logEverything == true) {

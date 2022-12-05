@@ -44,12 +44,6 @@ export class Bots {
         //Adjust Thermal stim to compensate for lower base temp
         this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
 
-        if (this.modConf.open_zones_fix == true) {
-            for (let location in botZones.zones) {
-                this.tables.locations[location].base.OpenZones = botZones.zones[location];
-            }
-        }
-
         if (this.modConf.increased_bot_cap == true) {
 
             this.botConf.maxBotCap = rmBotConfig.maxBotCap

@@ -7,15 +7,15 @@
         "6087e570b998180e9f76dc24"
     ],
     "maxBotCap": {
-		"factory": 15,
-		"customs": 25,
-		"woods": 30,
-		"shoreline": 30,
-		"lighthouse": 30,
+		"factory": 20,
+		"customs": 30,
+		"woods": 35,
+		"shoreline": 35,
+		"lighthouse": 35,
 		"reservebase": 30,
-		"interchange": 30,
+		"interchange": 35,
 		"laboratory": 20,
-		"default": 20
+		"default": 25
 	},
     "lootNValue1": {
         "scav": 3.2,

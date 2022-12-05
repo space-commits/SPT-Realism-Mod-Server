@@ -5,8 +5,8 @@
             "max": 0
         },
         "itemCount": {
-            "min": 10,
-            "max": 20
+            "min": 15,
+            "max": 30
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",
@@ -83,8 +83,8 @@
             "max": 0
         },
         "itemCount": {
-            "min": 10,
-            "max": 20
+            "min": 15,
+            "max": 30
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",
@@ -159,8 +159,8 @@
             "max": 0
         },
         "itemCount": {
-            "min": 10,
-            "max": 20
+            "min": 15,
+            "max": 30
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",
@@ -241,8 +241,8 @@
             "max": 0
         },
         "itemCount": {
-            "min": 10,
-            "max": 20
+            "min": 15,
+            "max": 25
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",
@@ -316,8 +316,8 @@
             "max": 0
         },
         "itemCount": {
-            "min": 10,
-            "max": 15
+            "min": 12,
+            "max": 20
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",
@@ -393,8 +393,8 @@
             "max": 0
         },
         "itemCount": {
-            "min": 5,
-            "max": 15
+            "min": 10,
+            "max": 20
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",
@@ -469,8 +469,8 @@
             "max": 6
         },
         "itemCount": {
-            "min": 5,
-            "max": 15
+            "min": 8,
+            "max": 20
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",
@@ -582,8 +582,8 @@
             "max": 0
         },
         "itemCount": {
-            "min": 5,
-            "max": 15
+            "min": 8,
+            "max": 20
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",

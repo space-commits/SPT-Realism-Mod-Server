@@ -7,9 +7,25 @@ const mechGunsmith = require("../db/traders/quests/mechanic/gunsmith.json");
 export class Quests {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
-    public questFile = this.tables.templates.quests;
-    public questObj = this.tables.locales.global["en"].quest;
+    public questDB = this.tables.templates.quests;
+    public questLoaleObj = this.tables.locales.global["en"].quest;
     public questDesc = this.tables.locales.global["en"].mail;
+
+
+    // public removeFIRReqeuirement(){
+    //     for(let quest in this.questDB){
+    //         let availForFin = this.questDB[quest].conditions.AvailableForFinish;
+    //         for(let requirement in availForFin){
+    //             if (availForFin[requirement]._props.onlyFoundInRaid){
+    //                 availForFin[requirement]._props.onlyFoundInRaid = false;
+    //             }                
+    //         }
+    //     }
+
+    //     if (this.modConf.logEverything == true) {
+    //         this.logger.info("FIR Requirements Removed");
+    //     }
+    // }
 
     public fixMechancicQuests() {
 
@@ -18,10 +34,10 @@ export class Quests {
         var recoil = 0;
         var weight = 0;
 
-        for (let quest in this.questFile) {
+        for (let quest in this.questDB) {
             for (let myQuest in mechGunsmith) {
-                if (this.questFile[quest]._id === mechGunsmith[myQuest]._id) {
-                    this.questFile[quest] = mechGunsmith[myQuest];
+                if (this.questDB[quest]._id === mechGunsmith[myQuest]._id) {
+                    this.questDB[quest] = mechGunsmith[myQuest];
                     ergo = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.ergonomics.value;
                     recoil = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.recoil.value;
                     weight = mechGunsmith[myQuest].conditions.AvailableForFinish[0]._props.weight.value;
@@ -51,10 +67,10 @@ export class Quests {
                         "5b486d8686f77450c05449c9": "What do you think, how much does human life cost? Not much, I guess. But what’s even more surprising for me, it’s the contemporary art market. The value of art pieces by renowned artists grows every year. They are definitely talented, but the more you look at it, the more it seems that anything can be art. It can be a Rothko painting, a displaced urinal, or a bunch of garbage. However, in my opinion, the most amazing pieces of art are weapons, starting from the melee - which is already universally recognized as such and can be found in many museums - to an old AK or M4, which are beautiful as they are. But a weapon only transcends to true art when it becomes unique, one-of-a-kind, in the hands of someone who knows how to use it, who modifies it for his own needs, creating a masterpiece worthy of being displayed in the best of museums. Bring me one such masterpiece, an M4A1 with a KAC QDSS NT-4 (FDE) silencer, Alexander Arms MK10 rifle-length handguard, REAP-IR thermal scope, and a 60-round magazine. Ergonomics should be not less than " + ergo + ", the recoil sum less than " + recoil + ", and the weight of " + weight + " kg or less.",
                     }
 
-                    for (let locale in this.questObj) {
+                    for (let locale in this.questLoaleObj) {
                         if(locale === myQuest){
                             for(let mail in this.questDesc){
-                                if (mail === this.questObj[locale].description) {
+                                if (mail === this.questLoaleObj[locale].description) {
                                     for (let key in questDescArr) {
                                         if (mail === key) {
                                             this.questDesc[mail] = questDescArr[key];

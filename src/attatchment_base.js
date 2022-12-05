@@ -11,7 +11,6 @@ class AttatchmentBase {
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
     }
-    // public array = new Arrays(this.tables);
     loadAttRestrict() {
         if (this.modConf.bot_changes == true) {
             for (let i in this.itemDB) {

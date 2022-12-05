@@ -9,8 +9,6 @@ export class AttatchmentBase {
     public globalDB = this.tables.globals.config;
     public itemDB = this.tables.templates.items;
 
-    // public array = new Arrays(this.tables);
-
     public loadAttRestrict() {
         if (this.modConf.bot_changes == true) {
             for (let i in this.itemDB) {
@@ -45,7 +43,6 @@ export class AttatchmentBase {
                         }
                     }
                 }
-
 
                 let cantedMountConfWeaps: string[] = ["5926bb2186f7744b1c6c6e60", "5d2f0d8048f0356c925bc3b0", "5e00903ae9dc277128008b87", "5de7bd7bfd6b4e6e2276dc25"];
 
@@ -154,7 +151,7 @@ export class AttatchmentBase {
                     || serverItem._id === "5aaf8e43e5b5b00015693246"
                     || serverItem._id === "5827272a24597748c74bdeea"
                     || serverItem._id === "58272b392459774b4c7b3ccd"
-                 
+
                 ) {
                     serverItem._props.Slots[0]._botRequired = serverItem._props.Slots[0]._required;
                     serverItem._props.Slots[0]._botRequired = true;

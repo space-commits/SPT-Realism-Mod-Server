@@ -12,7 +12,6 @@ const arrays_1 = require("./arrays");
 const meds_1 = require("./meds");
 const player_1 = require("./player");
 const weapons_globals_1 = require("./weapons_globals");
-const weapons_stats_1 = require("./weapons_stats");
 const bots_1 = require("./bots");
 const bot_wep_gen_1 = require("./bot_wep_gen");
 const bot_loot_serv_1 = require("./bot_loot_serv");
@@ -21,6 +20,7 @@ const code_gen_1 = require("./code_gen");
 const quests_1 = require("./quests");
 const traders_1 = require("./traders");
 const airdrops_1 = require("./airdrops");
+const maps_1 = require("./maps");
 const medRevertCount = require("../db/saved/info.json");
 const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -113,6 +113,7 @@ class Mod {
                         var healthProp = pmcData?.Health;
                         var hydroProp = pmcData?.Health?.Hydration;
                         if (healthProp !== undefined) {
+                            this.correctNegativeHP(pmcData, logger);
                             if (modConfig.realistic_player_health == false) {
                                 pmcData.Health.BodyParts["Head"].Health.Maximum = player.defaultHeadHealth;
                                 pmcData.Health.BodyParts["Chest"].Health.Maximum = player.defaultChestHealth;
@@ -346,6 +347,7 @@ class Mod {
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     try {
                         this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
+                        this.correctNegativeHP(pmcData, logger);
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
                         }
@@ -359,12 +361,24 @@ class Mod {
             }
         ], "pmc");
     }
+    correctNegativeHP(pmcData, logger) {
+        for (let part in pmcData.Health.BodyParts) {
+            if (pmcData.Health.BodyParts[part].Health.Current <= 0) {
+                logger.warning("Body Part " + pmcData.Health.BodyParts[part] + "has negative HP: " + pmcData.Health.BodyParts[part].Health.Current + " , correcting");
+                pmcData.Health.BodyParts[part].Health.Current = 15;
+            }
+        }
+        if (modConfig.logEverything == true) {
+            logger.info("Realism Mod: Checked for Negative HP");
+        }
+    }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseServer = container.resolve("DatabaseServer");
         const configServer = container.resolve("ConfigServer");
         const tables = databaseServer.getTables();
         const AKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
+        const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
         const jsonUtil = container.resolve("JsonUtil");
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
@@ -375,17 +389,18 @@ class Mod {
         const attatchBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
         const attatchStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig, arrays);
         const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
-        const items = new items_1._Items(logger, tables, modConfig, jsonUtil, medItems, crafts);
+        const items = new items_1._Items(logger, tables, modConfig, jsonUtil, medItems, crafts, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
-        const weaponsStats = new weapons_stats_1.WeaponsStats(logger, tables, modConfig);
+        // const weaponsStats = new WeaponsStats(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf);
         const airdrop = new airdrops_1.Airdrops(logger, tables, modConfig, airConf);
+        const maps = new maps_1.Maps(logger, tables, modConfig);
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
@@ -394,6 +409,12 @@ class Mod {
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
         codegen.descriptionGen();
+        if (modConfig.open_zones_fix == true) {
+            maps.openZonesFix();
+        }
+        if (modConfig.boss_spawns == true) {
+            maps.loadSpawnChanges();
+        }
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();
         }
@@ -421,9 +442,12 @@ class Mod {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
         }
+        // if(modConfig.remove_fir_req == true){
+        //     quests.removeFIRReqeuirement();
+        // }
         attatchBase.loadAttRestrict();
         attatchStats.loadAttStats();
-        items.loadItems();
+        items.loadItemsRestrictions();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
     }
@@ -481,31 +505,31 @@ class Mod {
                 logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
             }
             if (property !== undefined) {
-                if (pmcData.Info.Level >= 0) {
+                if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
                     this.fleaHelper(flea.flea0(), ragfairOfferGen, container, arrays);
                     logger.info("Realism mod: Fleamarket Locked At Tier 0");
                 }
-                if (pmcData.Info.Level >= 5) {
+                if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
                     this.fleaHelper(flea.flea1(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
                 }
-                if (pmcData.Info.Level >= 10) {
+                if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
                     this.fleaHelper(flea.flea2(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
                 }
-                if (pmcData.Info.Level >= 15) {
+                if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
                     this.fleaHelper(flea.flea3(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
                 }
-                if (pmcData.Info.Level >= 20) {
+                if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
                     this.fleaHelper(flea.flea4(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
                 }
-                if (pmcData.Info.Level >= 25) {
+                if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
                     this.fleaHelper(flea.flea5(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
                 }
-                if (pmcData.Info.Level >= 30) {
+                if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
                     this.fleaHelper(flea.flea6(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
                 }
@@ -526,28 +550,28 @@ class Mod {
     setBotTier(pmcData, type, bots, helper) {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
-        if (pmcData.Info.Level >= 0) {
+        if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
             tier = helper.probabilityWeighter(tierArray, [15, 1, 0, 0]);
         }
-        if (pmcData.Info.Level >= 5) {
+        if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
             tier = helper.probabilityWeighter(tierArray, [20, 5, 1, 0]);
         }
-        if (pmcData.Info.Level >= 10) {
+        if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
             tier = helper.probabilityWeighter(tierArray, [20, 10, 5, 1]);
         }
-        if (pmcData.Info.Level >= 15) {
+        if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
             tier = helper.probabilityWeighter(tierArray, [10, 20, 5, 1]);
         }
-        if (pmcData.Info.Level >= 20) {
+        if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
             tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 5]);
         }
-        if (pmcData.Info.Level >= 25) {
+        if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 30, 10]);
         }
-        if (pmcData.Info.Level >= 30) {
+        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 30]);
         }
-        if (pmcData.Info.Level >= 35) {
+        if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 40]);
         }
         if (type === "raider") {
@@ -645,28 +669,28 @@ class Mod {
                 if (config.bot_testing == false) {
                     this.getBotTier(pmcData, bots, helper);
                     var baseTiers = [1, 2, 3];
-                    if (pmcData.Info.Level >= 0) {
+                    if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
                         baseTier = helper.probabilityWeighter(baseTiers, [10, 1, 0, 0]);
                     }
-                    if (pmcData.Info.Level >= 5) {
+                    if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
                         baseTier = helper.probabilityWeighter(baseTiers, [10, 1, 0, 0]);
                     }
-                    if (pmcData.Info.Level >= 10) {
+                    if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
                         baseTier = helper.probabilityWeighter(baseTiers, [10, 2, 1, 0]);
                     }
-                    if (pmcData.Info.Level >= 15) {
+                    if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
                         baseTier = helper.probabilityWeighter(baseTiers, [10, 3, 1, 0]);
                     }
-                    if (pmcData.Info.Level >= 20) {
+                    if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
                         baseTier = helper.probabilityWeighter(baseTiers, [6, 5, 1, 0]);
                     }
-                    if (pmcData.Info.Level >= 25) {
+                    if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
                         baseTier = helper.probabilityWeighter(baseTiers, [2, 10, 2, 0]);
                     }
-                    if (pmcData.Info.Level >= 30) {
+                    if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
                         baseTier = helper.probabilityWeighter(baseTiers, [1, 5, 15, 0]);
                     }
-                    if (pmcData.Info.Level >= 35) {
+                    if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
                         baseTier = helper.probabilityWeighter(baseTiers, [1, 2, 20, 0]);
                     }
                     if (baseTier == 1) {

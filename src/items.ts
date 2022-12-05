@@ -4,39 +4,44 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { IHideoutProduction } from "@spt-aki/models/eft/hideout/IHideoutProduction";
+import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";
 
 export class _Items {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private jsonUtil: JsonUtil, private medItems, private crafts) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private jsonUtil: JsonUtil, private medItems, private crafts, private inventoryConf: IInventoryConfig) { }
 
     public globalDB = this.tables.globals.config;
     public itemDB = this.tables.templates.items;
-    public config = this.modConfig
 
-
-    public loadItems() {
+    public loadItemsRestrictions() {
         this.globalDB["AllowSelectEntryPoint"] = true;
 
-        if (this.config.all_examined == true) {
+        if (this.modConfig.all_examined == true) {
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];
                 serverItem._props.ExaminedByDefault = true;
             }
-            if (this.config.logEverything == true) {
+            if (this.modConfig.logEverything == true) {
                 this.logger.info("All Items Examined");
             }
         }
-        if (this.config.remove_inraid_restrictions == true) {
+
+        if (this.modConfig.remove_fir_req == true) {
+            this.inventoryConf.newItemsMarkedFound = true;
+        }
+
+        if (this.modConfig.remove_inraid_restrictions == true) {
             this.globalDB.RestrictionsInRaid = [];
-            for(let item in this.itemDB){
-                if(this.itemDB[item]?._props?.DiscardLimit !== undefined){
+            for (let item in this.itemDB) {
+                if (this.itemDB[item]?._props?.DiscardLimit !== undefined) {
                     this.itemDB[item]._props.DiscardLimit = -1;
                 }
             }
-            if (this.config.logEverything == true) {
+            if (this.modConfig.logEverything == true) {
                 this.logger.info("In-Raid Restrictions Removed");
             }
         }
-        if (this.config.logEverything == true) {
+
+        if (this.modConfig.logEverything == true) {
             this.logger.info("Items Loaded");
         }
 
@@ -101,7 +106,7 @@ export class _Items {
             this.medItems.SUPERBOTMEDKIT.effects_damage
         );
         this.addToHandbook("SUPERBOTMEDKIT", "5b47574386f77428ca22b338", 1);
-        this.addToLocale("SUPERBOTMEDKIT","Super Bot Medkit", "SUPERBOTMEDKIT", "Super medkit for bots, will only appear in their Secure Container.");
+        this.addToLocale("SUPERBOTMEDKIT", "Super Bot Medkit", "SUPERBOTMEDKIT", "Super medkit for bots, will only appear in their Secure Container.");
     }
 
 
@@ -116,8 +121,7 @@ export class _Items {
         itemID._props.BackgroundColor = color;
         itemID._props.effects_damage = effectsDamage;
         itemID._props.CanSellOnRagfair = false;
-        if(this.modConfig.logEverything == true)
-        {
+        if (this.modConfig.logEverything == true) {
             this.logger.info("Item " + itemID._id + " Added");
         }
     }
@@ -147,8 +151,7 @@ export class _Items {
     private cloneItem(itemtoClone: string, newitemID: string) {
         this.itemDB[newitemID] = this.jsonUtil.clone(this.itemDB[itemtoClone])
         this.itemDB[newitemID]._id = newitemID;
-        if(this.modConfig.logEverything == true)
-        {
+        if (this.modConfig.logEverything == true) {
             this.logger.info(this.itemDB[itemtoClone]._name + " cloned");
         }
     }
