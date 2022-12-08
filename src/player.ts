@@ -4,8 +4,7 @@ import { ILogger } from "../types/models/spt/utils/ILogger";
 export class Player {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private custProfile, private commonStats) { }
 
-    public globalDB = this.tables.globals.config;
-    public itemDB = this.tables.templates.items;
+    private globalDB = this.tables.globals.config;
 
     public headHealth = this.commonStats.health.BodyParts[0].Head.max;
     public chestHealth = this.commonStats.health.BodyParts[0].Chest.max;
@@ -31,13 +30,13 @@ export class Player {
 
         if (this.modConf.movement_changes == true) {
 
-            this.globalDB.Stamina.WalkOverweightLimits["x"] = 53;
+            this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 73;
-            this.globalDB.Stamina.BaseOverweightLimits["x"] = 26;
-            this.globalDB.Stamina.BaseOverweightLimits["y"] = 53;
+            this.globalDB.Stamina.BaseOverweightLimits["x"] = 27;
+            this.globalDB.Stamina.BaseOverweightLimits["y"] = 55;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
-            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 32;
+            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 30;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 82;
 
             this.globalDB.WalkSpeed["x"] = 0.6;
@@ -82,7 +81,7 @@ export class Player {
             this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.52;
             this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.43;
 
-            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.4;
+            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.39;
 
             this.globalDB.Stamina.Capacity = 140;
             this.globalDB.Stamina.BaseRestorationRate = 11;
@@ -120,14 +119,14 @@ export class Player {
             }
         }
 
-        if(this.modConf.fall_damage_changes == true){
-            this.globalDB.Health.Falling.DamagePerMeter = 11;
-            this.globalDB.Health.Falling.SafeHeight = 2.1;
-            this.globalDB.Stamina.SafeHeightOverweight = 1.75;
+        if (this.modConf.fall_damage_changes == true) {
+            this.globalDB.Health.Falling.DamagePerMeter = 11.5;
+            this.globalDB.Health.Falling.SafeHeight = 2;
+            this.globalDB.Stamina.SafeHeightOverweight = 1.7;
         }
 
-        
-        if(this.modConf.no_fall_damage == true){
+
+        if (this.modConf.no_fall_damage == true) {
             this.globalDB.Health.Falling.DamagePerMeter = 0;
             this.globalDB.Health.Falling.SafeHeight = 1000;
             this.globalDB.Stamina.SafeHeightOverweight = 10000;
@@ -139,7 +138,15 @@ export class Player {
             this.globalDB.Health.Effects.Existence.HydrationDamage = 1.5;
         }
 
-        if (this.modConf.realistic_player_health == true || this.modConf.realistic_ballistics == true) {
+
+        if (this.modConf.realistic_ballistics == true) {
+
+            this.globalDB.LegsOverdamage *= 1.8;
+            this.globalDB.HandsOverdamage *= 1;
+            this.globalDB.StomachOverdamage *= 1.9;
+        }
+
+        if(this.modConf.realistic_player_health == true){
 
             let health = this.globalDB.Health.Effects
             let mult = 1.136
@@ -150,10 +157,6 @@ export class Player {
 
             health.LightBleeding.HealthLoopTime = 10;
             health.LightBleeding.DamageHealth = 0.6;
-
-            this.globalDB.LegsOverdamage *= 1.8;
-            this.globalDB.HandsOverdamage *= 1;
-            this.globalDB.StomachOverdamage *= 1.9;
 
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.Threshold /= mult
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult)
@@ -166,25 +169,24 @@ export class Player {
             this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);
         }
 
-        if (this.modConf.realistic_ballistics == true) 
-        {
+        if (this.modConf.realistic_ballistics == true) {
             this.tables.templates.profiles.Standard.bear.character.Inventory = this.custProfile.Standard.bear.Inventory;
             this.tables.templates.profiles.Standard.usec.character.Inventory = this.custProfile.Standard.usec.Inventory;
-    
+
             this.tables.templates.profiles["Left Behind"].bear.character.Inventory = this.custProfile["Left Behind"].bear.Inventory;
             this.tables.templates.profiles["Left Behind"].usec.character.Inventory = this.custProfile["Left Behind"].usec.Inventory;
-    
+
             this.tables.templates.profiles["Prepare To Escape"].bear.character.Inventory = this.custProfile["Prepare To Escape"].bear.Inventory;
             this.tables.templates.profiles["Prepare To Escape"].usec.character.Inventory = this.custProfile["Prepare To Escape"].usec.Inventory;
-    
+
             this.tables.templates.profiles["Edge Of Darkness"].bear.character.Inventory = this.custProfile["Edge Of Darkness"].bear.Inventory;
             this.tables.templates.profiles["Edge Of Darkness"].usec.character.Inventory = this.custProfile["Edge Of Darkness"].usec.Inventory;
         }
 
 
 
-  
-        if(this.modConf.med_changes == false){
+
+        if (this.modConf.med_changes == false) {
             let bearInventory = this.custProfile["Realism Mod"].bear.character.Inventory.items;
             let usecInventory = this.custProfile["Realism Mod"].usec.character.Inventory.items;
             for (let i = 0; i < bearInventory.length; i++) {
@@ -197,7 +199,7 @@ export class Player {
                 }
             }
             for (let i = 0; i < usecInventory.length; i++) {
-    
+
                 if (usecInventory[i]._tpl === "TIER1MEDKIT" ||
                     usecInventory[i]._tpl === "TIER1MEDKI2" ||
                     usecInventory[i]._tpl === "TIER1MEDKI3") {
@@ -214,7 +216,7 @@ export class Player {
         }
     }
 
-    debuffMul(buff, mult) {
+    private debuffMul(buff, mult) {
         if (buff?.Threshold !== undefined) {
             buff.Threshold /= mult;
             buff.K *= mult;

@@ -5,10 +5,9 @@ export class Armor {
 
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
-    public globalDB = this.tables.globals.config;
-    public itemDB = this.tables.templates.items;
-    public armMat = this.globalDB.ArmorMaterials;
-    public config = this.modConf;
+   private globalDB = this.tables.globals.config;
+   private itemDB = this.tables.templates.items;
+   private armMat = this.globalDB.ArmorMaterials;
 
     public loadArmor() {
 
@@ -1635,7 +1634,7 @@ export class Armor {
                 serverItem._props.durabSpawnMax = 100;
             }
         }
-        if (this.config.logEverything == true) {
+        if (this.modConf.logEverything == true) {
             this.logger.info("Armour loaded");
         }
     }

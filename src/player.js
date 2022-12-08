@@ -9,7 +9,6 @@ class Player {
         this.custProfile = custProfile;
         this.commonStats = commonStats;
         this.globalDB = this.tables.globals.config;
-        this.itemDB = this.tables.templates.items;
         this.headHealth = this.commonStats.health.BodyParts[0].Head.max;
         this.chestHealth = this.commonStats.health.BodyParts[0].Chest.max;
         this.stomaHealth = this.commonStats.health.BodyParts[0].Stomach.max;
@@ -30,13 +29,13 @@ class Player {
     }
     loadPlayer() {
         if (this.modConf.movement_changes == true) {
-            this.globalDB.Stamina.WalkOverweightLimits["x"] = 53;
+            this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 73;
-            this.globalDB.Stamina.BaseOverweightLimits["x"] = 26;
-            this.globalDB.Stamina.BaseOverweightLimits["y"] = 53;
+            this.globalDB.Stamina.BaseOverweightLimits["x"] = 27;
+            this.globalDB.Stamina.BaseOverweightLimits["y"] = 55;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
-            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 32;
+            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 30;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 82;
             this.globalDB.WalkSpeed["x"] = 0.6;
             this.globalDB.WalkSpeed["y"] = 0.83;
@@ -66,7 +65,7 @@ class Player {
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
             this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.52;
             this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.43;
-            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.4;
+            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.39;
             this.globalDB.Stamina.Capacity = 140;
             this.globalDB.Stamina.BaseRestorationRate = 11;
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
@@ -98,9 +97,9 @@ class Player {
             }
         }
         if (this.modConf.fall_damage_changes == true) {
-            this.globalDB.Health.Falling.DamagePerMeter = 11;
-            this.globalDB.Health.Falling.SafeHeight = 2.1;
-            this.globalDB.Stamina.SafeHeightOverweight = 1.75;
+            this.globalDB.Health.Falling.DamagePerMeter = 11.5;
+            this.globalDB.Health.Falling.SafeHeight = 2;
+            this.globalDB.Stamina.SafeHeightOverweight = 1.7;
         }
         if (this.modConf.no_fall_damage == true) {
             this.globalDB.Health.Falling.DamagePerMeter = 0;
@@ -111,7 +110,12 @@ class Player {
             this.globalDB.Health.Effects.Existence.EnergyDamage = 1;
             this.globalDB.Health.Effects.Existence.HydrationDamage = 1.5;
         }
-        if (this.modConf.realistic_player_health == true || this.modConf.realistic_ballistics == true) {
+        if (this.modConf.realistic_ballistics == true) {
+            this.globalDB.LegsOverdamage *= 1.8;
+            this.globalDB.HandsOverdamage *= 1;
+            this.globalDB.StomachOverdamage *= 1.9;
+        }
+        if (this.modConf.realistic_player_health == true) {
             let health = this.globalDB.Health.Effects;
             let mult = 1.136;
             health.Wound.WorkingTime = 3600;
@@ -119,9 +123,6 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMax, mult);
             health.LightBleeding.HealthLoopTime = 10;
             health.LightBleeding.DamageHealth = 0.6;
-            this.globalDB.LegsOverdamage *= 1.8;
-            this.globalDB.HandsOverdamage *= 1;
-            this.globalDB.StomachOverdamage *= 1.9;
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.Threshold /= mult;
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult);
             this.debuffMul(health.Fracture.FallingProbability, 1);

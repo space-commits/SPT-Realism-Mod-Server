@@ -2,17 +2,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AttatchmentStats = void 0;
 class AttatchmentStats {
-    constructor(logger, tables, modConf, array) {
+    constructor(logger, tables, modConf, arrays) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.array = array;
-        this.globalDB = this.tables.globals.config;
+        this.arrays = arrays;
         this.itemDB = this.tables.templates.items;
-        this.config = this.modConf;
     }
     loadAttStats() {
-        const parentArray = this.array.mod_parent_IDs;
+        const parentArray = this.arrays.mod_parent_IDs;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             for (let parent in parentArray) {
@@ -23,7 +21,7 @@ class AttatchmentStats {
                 }
             }
         }
-        if (this.config.logEverything == true) {
+        if (this.modConf.logEverything == true) {
             this.logger.info("Attatchment Stats Loaded");
         }
     }

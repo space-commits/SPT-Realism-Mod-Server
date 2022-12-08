@@ -8,7 +8,6 @@ class Maps {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.itemDB = this.tables.templates.items;
     }
     loadSpawnChanges() {
         this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;

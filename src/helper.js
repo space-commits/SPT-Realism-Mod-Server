@@ -10,37 +10,36 @@ class Helper {
         this.arrays = arrays;
         this.logger = logger;
         this.itemDB = this.tables.templates.items;
-        this.array = this.arrays;
-        this.medItems = this.array.stash_meds;
+        this.medItems = this.arrays.stash_meds;
     }
-    correctMedItems(proserverItem, pmcEXP) {
-        var inventProp = proserverItem?.Inventory;
+    correctMedItems(playerData, pmcEXP) {
+        var inventProp = playerData?.Inventory;
         if (inventProp !== undefined) {
-            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
-                var itemProp = proserverItem.Inventory.items[i]?.upd?.MedKit?.HpResource;
+            for (var i = 0; i < playerData.Inventory.items.length; i++) {
+                var itemProp = playerData.Inventory.items[i]?.upd?.MedKit?.HpResource;
                 if (itemProp !== undefined) {
                     for (var j = 0; j < this.medItems.length; j++) {
-                        if (proserverItem.Inventory.items[i]._tpl === this.medItems[j]
-                            && proserverItem.Inventory.items[i].upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) {
-                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]
+                            && playerData.Inventory.items[i].upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) {
+                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
-                        if (pmcEXP == 0 && proserverItem.Inventory.items[i]._tpl === this.medItems[j]) {
-                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (pmcEXP == 0 && playerData.Inventory.items[i]._tpl === this.medItems[j]) {
+                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
                     }
                 }
             }
         }
     }
-    revertMedItems(proserverItem) {
-        var inventProp = proserverItem?.Inventory;
+    revertMedItems(playerData) {
+        var inventProp = playerData?.Inventory;
         if (inventProp !== undefined) {
-            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
-                var itemProp = proserverItem.Inventory.items[i]?.upd?.MedKit?.HpResource;
+            for (var i = 0; i < playerData.Inventory.items.length; i++) {
+                var itemProp = playerData.Inventory.items[i]?.upd?.MedKit?.HpResource;
                 if (itemProp !== undefined) {
                     for (var j = 0; j < this.medItems.length; j++) {
-                        if (proserverItem.Inventory.items[i]._tpl === this.medItems[j]) {
-                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]) {
+                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
                     }
                 }
@@ -62,16 +61,15 @@ class Helper {
         var randomTier = Math.floor(Math.random() * totalWeight);
         return weighedElems[randomTier];
     }
-    removeCustomItems(proserverItem) {
-        var inventProp = proserverItem?.Inventory;
-        if (inventProp !== undefined) {
-            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
-                if (proserverItem.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
-                    proserverItem.Inventory.items[i]._tpl === "TIER1MEDKI2" ||
-                    proserverItem.Inventory.items[i]._tpl === "TIER1MEDKI3" ||
-                    proserverItem.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
-                    proserverItem.Inventory.items[i]._tpl = "5755356824597772cb798962";
-                    proserverItem.Inventory.items[i].upd.MedKit.HpResource = 100;
+    removeCustomItems(playerData) {
+        if (playerData?.Inventory !== undefined) {
+            for (var i = 0; i < playerData.Inventory.items.length; i++) {
+                if (playerData.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
+                    playerData.Inventory.items[i]._tpl === "TIER1MEDKI2" ||
+                    playerData.Inventory.items[i]._tpl === "TIER1MEDKI3" ||
+                    playerData.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
+                    playerData.Inventory.items[i]._tpl = "5755356824597772cb798962";
+                    playerData.Inventory.items[i].upd.MedKit.HpResource = 100;
                 }
             }
         }

@@ -3,9 +3,8 @@ import { ILogger } from "../types/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
-import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { BotTierTracker, Helper, RaidInfoTracker } from "./helper";
+import { BotTierTracker, RaidInfoTracker } from "./helper";
+import { Arrays } from "./arrays";
 
 const scavLO = require("../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../db/bots/loadouts/PMCs/bearLO.json");
@@ -22,21 +21,21 @@ const botZones = require("../db/bots/spawnZones.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
 
 export class Bots {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private configServ: ConfigServer, private modConf, private array, private helper: Helper) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private configServ: ConfigServer, private modConf, private arrays: Arrays) { }
 
-    public globalDB = this.tables.globals.config;
-    public itemDB = this.tables.templates.items;
-    public botDB = this.tables.bots.types;
-    public map = this.tables.locations;
+    globalDB = this.tables.globals.config;
+    itemDB = this.tables.templates.items;
+    botDB = this.tables.bots.types;
+    map = this.tables.locations;
 
-    public scavBase = this.botDB["assault"];
-    public usecBase = this.botDB["usec"];
-    public bearBase = this.botDB["bear"];
-    public raiderBase = this.botDB["pmcbot"];
-    public rogueBase = this.botDB["exusec"];
+    scavBase = this.botDB["assault"];
+    usecBase = this.botDB["usec"];
+    bearBase = this.botDB["bear"];
+    raiderBase = this.botDB["pmcbot"];
+    rogueBase = this.botDB["exusec"];
 
-    public botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
-    public botConfPMC = this.botConf.pmc;
+    botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
+    botConfPMC = this.botConf.pmc;
 
     public loadBots() {
 
@@ -108,9 +107,9 @@ export class Bots {
 
         if (this.modConf.headgear_conflicts == true) {
             for (let item in this.itemDB) {
-                for (let hat in this.array.conflicting_hats) {
-                    if (this.itemDB[item]._id === this.array.conflicting_hats[hat]) {
-                        let ca = this.array.conflicting_masks;
+                for (let hat in this.arrays.conflicting_hats) {
+                    if (this.itemDB[item]._id === this.arrays.conflicting_hats[hat]) {
+                        let ca = this.arrays.conflicting_masks;
                         let sa = this.itemDB[item]._props.ConflictingItems;
                         this.itemDB[item]._props.ConflictingItems = ca.concat(sa);
                     }
@@ -119,7 +118,7 @@ export class Bots {
         }
 
         if (this.modConf.med_changes == true) {
-            this.array.non_scav_bot_list.forEach(addBotMedkit);
+            this.arrays.non_scav_bot_list.forEach(addBotMedkit);
             function addBotMedkit(bot) {
                 if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
                     bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
@@ -170,7 +169,7 @@ export class Bots {
 
     public setBotHealth() {
 
-        this.array.bot_list.forEach(increaseVitality);
+        this.arrays.bot_list.forEach(increaseVitality);
         function increaseVitality(bot) {
             if (bot.skills?.Common !== undefined) {
                 if (bot.skills.Common["Vitality"] !== undefined) {
@@ -191,20 +190,20 @@ export class Bots {
             }
         }
 
-        this.array.scav_bot_health_list.forEach(setScavHealth);
+        this.arrays.scav_bot_health_list.forEach(setScavHealth);
         function setScavHealth(bot) {
             bot.health.BodyParts = botHealth.scavHealth.BodyParts
             bot.health.Temperature = botHealth.health.Temperature;
         }
 
-        this.array.PMC_list.forEach(setHealth);
+        this.arrays.PMC_list.forEach(setHealth);
         function setHealth(bot) {
             bot.health.BodyParts = botHealth.health.BodyParts;
             bot.health.Temperature = botHealth.health.Temperature;
         }
 
         if (this.modConf.realistic_boss_health == true) {
-            this.array.boss_bot_list.forEach(setHealth);
+            this.arrays.boss_bot_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
@@ -212,7 +211,7 @@ export class Bots {
         }
 
         if (this.modConf.realistic_boss_follower_health == true) {
-            this.array.boss_follower_list.forEach(setHealth);
+            this.arrays.boss_follower_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
@@ -220,7 +219,7 @@ export class Bots {
         }
 
         if (this.modConf.realistic_raider_rogue_health == true) {
-            this.array.rogue_raider_list.forEach(setHealth);
+            this.arrays.rogue_raider_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
@@ -228,7 +227,7 @@ export class Bots {
         }
 
         if (this.modConf.realistic_cultist_health == true) {
-            this.array.cultist_list.forEach(setHealth);
+            this.arrays.cultist_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
@@ -288,7 +287,7 @@ export class Bots {
         }
 
         if (this.modConf.bot_test_weps_enabled == false) {
-            this.array.bot_list.forEach(removeWeps);
+            this.arrays.bot_list.forEach(removeWeps);
             function removeWeps(bot) {
                 bot.inventory.equipment.FirstPrimaryWeapon = [];
                 bot.inventory.equipment.Holster = [];

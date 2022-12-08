@@ -2,13 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Airdrops = void 0;
 class Airdrops {
-    constructor(logger, tables, modConfig, airConf) {
+    constructor(logger, modConfig, airConf) {
         this.logger = logger;
-        this.tables = tables;
         this.modConfig = modConfig;
         this.airConf = airConf;
-        this.globalDB = this.tables.globals.config;
-        this.itemDB = this.tables.templates.items;
     }
     loadAirdrops() {
         this.airConf.airdropChancePercent.bigmap = 15;

@@ -46,6 +46,18 @@ import { WeatherController } from "@spt-aki/controllers/WeatherController";
 import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
 import { LocalisationService } from "@spt-aki/services/LocalisationService";
 import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
+import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";
+import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
+import { MathUtil } from "@spt-aki/utils/MathUtil";
+import { TimeUtil } from "@spt-aki/utils/TimeUtil";
+import { AssortHelper } from "@spt-aki/helpers/AssortHelper";
+import { RagfairAssortGenerator } from "@spt-aki/generators/RagfairAssortGenerator";
+import { TraderHelper } from "@spt-aki/helpers/TraderHelper";
+import { FenceService } from "@spt-aki/services/FenceService";
+import { TraderAssortService } from "@spt-aki/services/TraderAssortService";
+import { PaymentHelper } from "@spt-aki/helpers/PaymentHelper";
+import { ITrader } from "@spt-aki/models/eft/common/tables/ITrader";
+
 
 
 import { Ammo } from "./ammo";
@@ -58,20 +70,18 @@ import { Arrays } from "./arrays"
 import { Meds } from "./meds";
 import { Player } from "./player"
 import { WeaponsGlobals } from "./weapons_globals"
-import { WeaponsStats } from "./weapons_stats"
 import { Bots } from "./bots";
 import { BotModGen, BotWepGen } from "./bot_wep_gen";
 import { BotLootServer } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
-import { Traders } from "./traders";
+import { RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
-import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";
 
 const medRevertCount = require("../db/saved/info.json");
-const customFleaConfig = require("../db/traders/ragfair/blacklist.json");
+const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
@@ -103,10 +113,42 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const fleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const tables = databaseServer.getTables();
 
+        const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+        const assortHelper = container.resolve<AssortHelper>("AssortHelper");
+        const paymentHelper = container.resolve<PaymentHelper>("PaymentHelper");
+
+        const mathUtil = container.resolve<MathUtil>("MathUtil");
+        const timeUtil = container.resolve<TimeUtil>("TimeUtil");
+        const traderAssortService = container.resolve<TraderAssortService>("TraderAssortService");
+        const traderHelper = container.resolve<TraderHelper>("TraderHelper");
+        const fenceService = container.resolve<FenceService>("FenceService");
+
+        const ragfairPriceServ = container.resolve<RagfairPriceService>("RagfairPriceService");
+        const botLootServ = new BotLootServer(logger, jsonUtil, databaseServer, pmcLootGenerator, ragfairPriceServ);
+
+        const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+        const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
+        const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
+        const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
+        const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
+        const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
+        const botEquipFilterServ = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
+        const itemFilterServ = container.resolve<ItemFilterService>("ItemFilterService");
+        const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
+        const inventoryMagGenComponents = container.resolveAll<IInventoryMagGen>("InventoryMagGen");
+
+        const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
+        const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
+        const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, traderHelper, fenceService, configServer);
+
+
+        const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, localisationService, inventoryMagGenComponents);
+        const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
+
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
         this.path = require("path");
 
-        const flea = new FleamarketConfig(logger, tables, fleaConf, modConfig, customFleaConfig);
+        const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
 
         router.registerDynamicRouter(
@@ -124,27 +166,12 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         if (modConfig.bot_changes == true) {
             container.afterResolution("BotWeaponGenerator", (_t, result: BotWeaponGenerator) => {
-                const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
-                const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-                const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
-                const inventoryMagGenComponents = container.resolveAll<IInventoryMagGen>("InventoryMagGen");
-                const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, localisationService, inventoryMagGenComponents);
                 result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult => {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
                 }
             }, { frequency: "Always" });
 
             container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
-                const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
-                const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
-                const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-                const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
-                const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
-                const botEquipFilterServ = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
-                const itemFilterServ = container.resolve<ItemFilterService>("ItemFilterService");
-                const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-                const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
-                const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
                 result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole = null): { upd?: Upd } => {
                     return _botModGen.genExtraItemProps(itemTemplate, botRole);
                 }
@@ -155,13 +182,22 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
 
             container.afterResolution("BotLootCacheService", (_t, result: BotLootCacheService) => {
-                const ragfairPriceServ = container.resolve<RagfairPriceService>("RagfairPriceService");
-                const botLootServ = new BotLootServer(logger, jsonUtil, databaseServer, pmcLootGenerator, ragfairPriceServ);
                 result.getLootFromCache = (botRole: string, isPmc: boolean, lootType: LootCacheType, lootPool: Items): ITemplateItem[] => {
                     return botLootServ.getLootCache(botRole, isPmc, lootType, lootPool);
                 }
             }, { frequency: "Always" });
         }
+
+
+        if (modConfig.trader_changes == true) {
+            container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
+                result.resetExpiredTrader = (trader: ITrader): void => {
+                    return traderRefersh.myResetExpiredTrader(trader);
+                }
+            }, { frequency: "Always" });
+        }
+
+
 
         staticRouterModService.registerStaticRouter(
             "CheckProfile",
@@ -169,14 +205,15 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 {
                     url: "/client/game/version/validate",
                     action: (url, info, sessionID, output) => {
+
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
-                        const databaseServer2 = container.resolve<DatabaseServer>("DatabaseServer");
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-                        const tables2 = databaseServer2.getTables();
-                        const arrays = new Arrays(tables2);
-                        const helper = new Helper(tables2, arrays, logger);
-                        const tieredFlea = new TieredFlea(tables2);
-                        const player = new Player(logger, tables2, modConfig, custProfile, botHealth);
+                        const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
+                        const postLoadTables = postLoadDBServer.getTables();
+                        const arrays = new Arrays(postLoadTables);
+                        const helper = new Helper(postLoadTables, arrays, logger);
+                        const tieredFlea = new TieredFlea(postLoadTables);
+                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth);
 
                         let pmcData = profileHelper.getPmcProfile(sessionID);
                         let scavData = profileHelper.getScavProfile(sessionID);
@@ -294,11 +331,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     action: (url, info, sessionID, output) => {
 
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-                        const databaseServer3 = container.resolve<DatabaseServer>("DatabaseServer");
-                        const tables3 = databaseServer3.getTables();
-                        const player = new Player(logger, tables3, modConfig, custProfile, botHealth);
-                        const arrays = new Arrays(tables3);
-                        const helper = new Helper(tables3, arrays, logger);
+                        const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
+                        const postLoadtables = postLoadDBServer.getTables();
+                        const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth);
+                        const arrays = new Arrays(postLoadtables);
+                        const helper = new Helper(postLoadtables, arrays, logger);
 
                         let pmcData = profileHelper.getPmcProfile(sessionID);
 
@@ -332,11 +369,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
                         try {
                             const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
-                            const databaseServer4 = container.resolve<DatabaseServer>("DatabaseServer");
-                            const tables4 = databaseServer4.getTables();
-                            const arrays = new Arrays(tables4);
-                            const helper = new Helper(tables4, arrays, logger);
-                            const bots = new Bots(logger, tables4, configServer, modConfig, arrays, helper);
+                            const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
+                            const postLoadTables = postLoadDBServer.getTables();
+                            const arrays = new Arrays(postLoadTables);
+                            const helper = new Helper(postLoadTables, arrays, logger);
+                            const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays);
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
@@ -443,24 +480,20 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 {
                     url: "/raid/profile/save",
                     action: (url, info, sessionID, output) => {
-                        const databaseServer4 = container.resolve<DatabaseServer>("DatabaseServer");
-                        const configServer = container.resolve<ConfigServer>("ConfigServer");
-                        const tables = databaseServer4.getTables();
+                        const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
+                        const postLoadTables = postLoadDBServer.getTables();
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
-                        const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
-                        const arrays = new Arrays(tables);
-                        const tieredFlea = new TieredFlea(tables);
-                        const helper = new Helper(tables, arrays, logger);
-                        const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
-
+                        const arrays = new Arrays(postLoadTables);
+                        const tieredFlea = new TieredFlea(postLoadTables);
+  
                         let pmcData = profileHelper.getPmcProfile(sessionID);
 
                         try {
                             this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
 
                             this.correctNegativeHP(pmcData, logger);
-       
+
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Updated at Raid End");
                             }
@@ -477,12 +510,12 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         );
     }
 
-    public correctNegativeHP(pmcData: IPmcData, logger: ILogger){
-        for(let part in  pmcData.Health.BodyParts){
-            if(pmcData.Health.BodyParts[part].Health.Current <= 0){
+    private correctNegativeHP(pmcData: IPmcData, logger: ILogger) {
+        for (let part in pmcData.Health.BodyParts) {
+            if (pmcData.Health.BodyParts[part].Health.Current <= 0) {
                 logger.warning("Body Part " + pmcData.Health.BodyParts[part] + "has negative HP: " + pmcData.Health.BodyParts[part].Health.Current + " , correcting");
                 pmcData.Health.BodyParts[part].Health.Current = 15;
-            }   
+            }
 
         }
         if (modConfig.logEverything == true) {
@@ -507,19 +540,19 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const armor = new Armor(logger, tables, modConfig);
         const attatchBase = new AttatchmentBase(logger, tables, arrays, modConfig);
         const attatchStats = new AttatchmentStats(logger, tables, modConfig, arrays);
-        const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
+        const bots = new Bots(logger, tables, configServer, modConfig, arrays);
         const items = new _Items(logger, tables, modConfig, jsonUtil, medItems, crafts, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, botHealth);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
-        // const weaponsStats = new WeaponsStats(logger, tables, modConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
-        const custFleaConf = new FleamarketConfig(logger, tables, AKIFleaConf, modConfig, customFleaConfig);
+        const custFleaConf = new FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
         const quests = new Quests(logger, tables, modConfig);
-        const traders = new Traders(logger, tables, modConfig, traderConf);
-        const airdrop = new Airdrops(logger, tables, modConfig, airConf);
+        const traders = new Traders(logger, tables, modConfig, traderConf, arrays);
+        const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Maps(logger, tables, modConfig);
+        const randomizeTraderAssort = new RandomizeTraderAssort();
 
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
@@ -534,13 +567,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         codegen.descriptionGen();
 
 
-        if(modConfig.open_zones_fix == true)
-        {
+        if (modConfig.open_zones_fix == true) {
             maps.openZonesFix();
         }
 
-        if(modConfig.boss_spawns == true)
-        {
+        if (modConfig.boss_spawns == true) {
             maps.loadSpawnChanges();
         }
 
@@ -549,7 +580,9 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
         if (modConfig.trader_changes == true) {
-            traders.loadTraders();
+            traders.loadTraderTweaks();
+            traders.loadTraderAssorts();
+            randomizeTraderAssort.loadRandomizedTraderStock();
         }
 
         if (modConfig.bot_changes == true) {
@@ -576,14 +609,14 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.recoil_attachment_overhaul) {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
+            attatchStats.loadAttStats();
         }
 
-        // if(modConfig.remove_fir_req == true){
-        //     quests.removeFIRReqeuirement();
-        // }
+        if (modConfig.remove_fir_req == true) {
+            quests.removeFIRQuestRequire();
+        }
 
         attatchBase.loadAttRestrict();
-        attatchStats.loadAttStats();
         items.loadItemsRestrictions();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
@@ -594,11 +627,11 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         this.modLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
     }
 
-    public revertMeds(pmcData: IPmcData, helper: Helper) {
+    private revertMeds(pmcData: IPmcData, helper: Helper) {
         helper.revertMedItems(pmcData);
     }
 
-    public checkMeds(pmcData: IPmcData, pmcEXP, helper: Helper, player: Player, logger: ILogger) {
+    private checkMeds(pmcData: IPmcData, pmcEXP: number, helper: Helper, player: Player, logger: ILogger) {
         helper.correctMedItems(pmcData, pmcEXP);
         pmcData.Health.Hydration.Maximum = player.hydration;
         pmcData.Health.Energy.Maximum = player.energy;
@@ -612,7 +645,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    public correctNewHealth(pmcData: IPmcData, player: Player, logger: ILogger) {
+    private correctNewHealth(pmcData: IPmcData, player: Player, logger: ILogger) {
         pmcData.Health.BodyParts["Head"].Health.Maximum = player.headHealth;
         pmcData.Health.BodyParts["Chest"].Health.Maximum = player.chestHealth;
         pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.stomaHealth;
@@ -633,7 +666,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
     }
 
-    public fleaHelper(tier, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays) {
+    private fleaHelper(tier, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays) {
         container.resolve<RagfairOfferService>("RagfairOfferService").offers = [];
         tier;
         ragfairOfferGen.generateDynamicOffers();
@@ -642,7 +675,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    public updateFlea(pmcData: IPmcData, logger: ILogger, config, flea: TieredFlea, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays) {
+    private updateFlea(pmcData: IPmcData, logger: ILogger, config, flea: TieredFlea, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays) {
 
         var property = pmcData?.Info?.Level;
 
@@ -672,7 +705,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     this.fleaHelper(flea.flea4(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
                 }
-                if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30){
+                if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
                     this.fleaHelper(flea.flea5(), ragfairOfferGen, container, arrays);
                     logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
                 }
@@ -688,7 +721,8 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
     }
-    public getBotTier(pmcData, bots: Bots, helper: Helper) {
+
+    private getBotTier(pmcData, bots: Bots, helper: Helper) {
         this.setBotTier(pmcData, "scav", bots, helper);
         this.setBotTier(pmcData, "bear", bots, helper);
         this.setBotTier(pmcData, "usec", bots, helper);
@@ -696,7 +730,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         this.setBotTier(pmcData, "rogue", bots, helper);
     }
 
-    public setBotTier(pmcData: IPmcData, type: string, bots: Bots, helper: Helper) {
+    private setBotTier(pmcData: IPmcData, type: string, bots: Bots, helper: Helper) {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
@@ -717,7 +751,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 30, 10]);
         }
-        if (pmcData.Info.Level >= 30 && pmcData.Info.Level< 35) {
+        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 30]);
         }
         if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
@@ -797,7 +831,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     }
 
 
-    public updateBots(pmcData: IPmcData, logger: ILogger, config, bots: Bots, helper: Helper) {
+    private updateBots(pmcData: IPmcData, logger: ILogger, config, bots: Bots, helper: Helper) {
 
         var baseTier = 1;
 
@@ -867,7 +901,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    public updateAirdrops(logger: ILogger, modConfig, airConf: IAirdropConfig, helper: Helper, weights: Array<number>) {
+    private updateAirdrops(logger: ILogger, modConfig, airConf: IAirdropConfig, helper: Helper, weights: Array<number>) {
         var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
         var loot = helper.probabilityWeighter(airdropLootArr, weights);
         if (loot === "medical_loot") {

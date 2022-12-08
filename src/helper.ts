@@ -1,5 +1,8 @@
 
+import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
+import { Arrays } from "./arrays";
 
 const dir = __dirname;
 const dirArray = dir.split("\\");
@@ -7,26 +10,25 @@ const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length 
 
 export class Helper {
 
-    constructor(private tables: IDatabaseTables, private arrays, private logger) { }
+    constructor(private tables: IDatabaseTables, private arrays: Arrays, private logger: ILogger) { }
 
 
     private itemDB = this.tables.templates.items;
-    private array = this.arrays;
-    private medItems = this.array.stash_meds;
+    private medItems = this.arrays.stash_meds;
 
-    public correctMedItems(proserverItem, pmcEXP) {
-        var inventProp = proserverItem?.Inventory;
+    public correctMedItems(playerData: IPmcData, pmcEXP: number) {
+        var inventProp = playerData?.Inventory;
         if (inventProp !== undefined) {
-            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
-                var itemProp = proserverItem.Inventory.items[i]?.upd?.MedKit?.HpResource;
+            for (var i = 0; i < playerData.Inventory.items.length; i++) {
+                var itemProp = playerData.Inventory.items[i]?.upd?.MedKit?.HpResource;
                 if (itemProp !== undefined) {
                     for (var j = 0; j < this.medItems.length; j++) {
-                        if (proserverItem.Inventory.items[i]._tpl === this.medItems[j]
-                            && proserverItem.Inventory.items[i].upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) {
-                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]
+                            && playerData.Inventory.items[i].upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) {
+                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
-                        if (pmcEXP == 0 && proserverItem.Inventory.items[i]._tpl === this.medItems[j]) {
-                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (pmcEXP == 0 && playerData.Inventory.items[i]._tpl === this.medItems[j]) {
+                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
                     }
                 }
@@ -34,15 +36,15 @@ export class Helper {
         }
     }
 
-    public revertMedItems(proserverItem) {
-        var inventProp = proserverItem?.Inventory;
+    public revertMedItems(playerData: IPmcData) {
+        var inventProp = playerData?.Inventory;
         if (inventProp !== undefined) {
-            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
-                var itemProp = proserverItem.Inventory.items[i]?.upd?.MedKit?.HpResource;
+            for (var i = 0; i < playerData.Inventory.items.length; i++) {
+                var itemProp = playerData.Inventory.items[i]?.upd?.MedKit?.HpResource;
                 if (itemProp !== undefined) {
                     for (var j = 0; j < this.medItems.length; j++) {
-                        if (proserverItem.Inventory.items[i]._tpl === this.medItems[j]) {
-                            proserverItem.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]) {
+                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
                     }
                 }
@@ -72,17 +74,16 @@ export class Helper {
 
     }
 
-    public removeCustomItems(proserverItem) {
-        var inventProp = proserverItem?.Inventory;
-        if (inventProp !== undefined) {
-            for (var i = 0; i < proserverItem.Inventory.items.length; i++) {
+    public removeCustomItems(playerData: IPmcData) {
+        if (playerData?.Inventory !== undefined) {
+            for (var i = 0; i < playerData.Inventory.items.length; i++) {
 
-                if (proserverItem.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
-                    proserverItem.Inventory.items[i]._tpl === "TIER1MEDKI2" ||
-                    proserverItem.Inventory.items[i]._tpl === "TIER1MEDKI3" ||
-                    proserverItem.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
-                    proserverItem.Inventory.items[i]._tpl = "5755356824597772cb798962"
-                    proserverItem.Inventory.items[i].upd.MedKit.HpResource = 100;
+                if (playerData.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
+                    playerData.Inventory.items[i]._tpl === "TIER1MEDKI2" ||
+                    playerData.Inventory.items[i]._tpl === "TIER1MEDKI3" ||
+                    playerData.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
+                    playerData.Inventory.items[i]._tpl = "5755356824597772cb798962"
+                    playerData.Inventory.items[i].upd.MedKit.HpResource = 100;
                 }
             }
         }
@@ -96,19 +97,18 @@ export class Helper {
     }
 }
 
- export class RaidInfoTracker{
-    public static TOD = "";
-    public static mapType = "";
-    public static mapName = "";
-    
- }
+export class RaidInfoTracker {
+    static TOD = "";
+    static mapType = "";
+    static mapName = "";
+}
 
- export class BotTierTracker {
-    public static usecTier: number = 1;
-    public static bearTier: number = 1;
-    public static scavTier: number = 1;
-    public static rogueTier: number = 1;
-    public static raiderTier: number = 1;
+export class BotTierTracker {
+    static usecTier: number = 1;
+    static bearTier: number = 1;
+    static scavTier: number = 1;
+    static rogueTier: number = 1;
+    static raiderTier: number = 1;
 
     public getTier(botType: string): number {
         if (botType === "usec") {

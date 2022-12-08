@@ -19,17 +19,16 @@ class FleamarketGlobal {
 }
 exports.FleamarketGlobal = FleamarketGlobal;
 class FleamarketConfig {
-    constructor(logger, tables, fleaConf, modConfig, custFleaConf) {
+    constructor(logger, fleaConf, modConfig, custFleaBlacklist) {
         this.logger = logger;
-        this.tables = tables;
         this.fleaConf = fleaConf;
         this.modConfig = modConfig;
-        this.custFleaConf = custFleaConf;
+        this.custFleaBlacklist = custFleaBlacklist;
     }
     loadFleaConfig() {
         if (this.modConfig.flea_changes == true || this.modConfig.tiered_flea == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = true;
-            this.fleaConf.dynamic.blacklist.custom = this.custFleaConf.blacklist.custom;
+            this.fleaConf.dynamic.blacklist.custom = this.custFleaBlacklist.blacklist.custom;
         }
         if (this.modConfig.disable_flea_blacklist == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = false;
@@ -78,7 +77,6 @@ exports.FleamarketConfig = FleamarketConfig;
 class TieredFlea {
     constructor(tables) {
         this.tables = tables;
-        this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
     }
     flea0() {
@@ -137,7 +135,6 @@ class TieredFlea {
         this.canSellFood(true);
         this.canSellGear(true);
         this.canSellAmmo(true);
-        this.canSellKeys(true);
         this.canSellLights(true);
         this.canSellGrips(true);
         this.canSellStocks(true);
@@ -146,6 +143,7 @@ class TieredFlea {
         this.canSellNVGScopes(true);
         this.canSellAssaultScopes(true);
         this.canSellIrons(true);
+        this.canSellParts(true);
     }
     flea6() {
         this.canSellAll(false);
@@ -166,7 +164,6 @@ class TieredFlea {
         this.canSellFood(true);
         this.canSellMeds(true);
         this.canSellGear(true);
-        this.canSellKeys(true);
         this.canSellRepairKit(true);
         this.canSellLights(true);
         this.canSellGrips(true);
@@ -179,6 +176,7 @@ class TieredFlea {
         this.canSellIrons(true);
         this.canSellReddots(true);
         this.canSellMounts(true);
+        this.canSellParts(true);
     }
     fleaFullUnlock() {
         this.canSellAll(false);
@@ -217,6 +215,7 @@ class TieredFlea {
         this.canSellIrons(true);
         this.canSellReddots(true);
         this.canSellMounts(true);
+        this.canSellParts(true);
     }
     canSellAll(bool) {
         this.canSellMeds(bool);
@@ -254,6 +253,7 @@ class TieredFlea {
         this.canSellAssaultScopes(bool);
         this.canSellMagnifiedScopes(bool);
         this.canSellThermalScopes(bool);
+        this.canSellThermal(bool);
         this.canSellNVGScopes(bool);
         this.canSellNVG(bool);
         this.canSellMagazines(bool);
@@ -264,6 +264,7 @@ class TieredFlea {
         this.canSellLights(bool);
         this.canSellSupps(bool);
         this.canSellMuzzleDevices(bool);
+        this.canSellParts(bool);
     }
     canSellContainer(bool) {
         for (let i in this.itemDB) {

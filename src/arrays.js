@@ -4,8 +4,6 @@ exports.Arrays = void 0;
 class Arrays {
     constructor(tables) {
         this.tables = tables;
-        this.globalDB = this.tables.globals.config;
-        this.itemDB = this.tables.templates.items;
         this.botDB = this.tables.bots.types;
         this.outdoor_maps = [
             "Shoreline",
@@ -46,6 +44,71 @@ class Arrays {
             "5751a89d24597722aa0e8db0",
             "5d02778e86f774203e7dedbe",
             "5d02797c86f774203f38e30a"
+        ];
+        this.key_parent_id = [
+            "5c99f98d86f7745c314214b3",
+            "5c99f98d86f7745c314214b3",
+        ];
+        this.gear_parent_id = [
+            "5448e5284bdc2dcb718b4567",
+            "5448e54d4bdc2dcc718b4568",
+            "57bef4c42459772e8d35a53b",
+            "5a341c4086f77401f2541505",
+            "5448e53e4bdc2d60728b4567",
+            "5a341c4686f77469e155819e",
+            "5645bcb74bdc2ded0b8b4578"
+        ];
+        this.barter_parent_id = [
+            "590c745b86f7743cc433c5f2",
+            "57864ada245977548638de91",
+            "57864a66245977548f04a81f",
+            "57864ee62459775490116fc1",
+            "5d650c3e815116009f6201d2",
+            "57864c322459775490116fbf",
+            "57864c8c245977548867e7f1",
+            "57864bb7245977548b3b66c2",
+            "57864a3d24597754843f8721",
+            "5448ecbe4bdc2d60728b4568"
+        ];
+        this.weapon_parent_IDs = [
+            "5447b5e04bdc2d62278b4567",
+            "5447b5f14bdc2d61278b4567",
+            "5447b5cf4bdc2d65278b4567",
+            "5447b6094bdc2dc3278b4567",
+            "5447b6194bdc2d67278b4567",
+            "5447b6254bdc2dc3278b4568",
+            "5447bee84bdc2dc3278b4569",
+            "5447bedf4bdc2d87278b4568",
+            "5447bed64bdc2d97278b4568",
+            "5447b5fc4bdc2d87278b4567",
+            "5447e1d04bdc2dff2f8b4567"
+        ];
+        this.mod_parent_IDs = [
+            "550aa4bf4bdc2dd6348b456b",
+            "550aa4dd4bdc2dc9348b4569",
+            "550aa4cd4bdc2dd8348b456c",
+            "555ef6e44bdc2de9068b457e",
+            "55818b224bdc2dde698b456f",
+            "55818a304bdc2db5418b457d",
+            "55818a594bdc2db9688b456a",
+            "55818a6f4bdc2db9688b456b",
+            "55818acf4bdc2dde698b456b",
+            "55818ad54bdc2ddc698b4569",
+            "55818add4bdc2d5b648b456f",
+            "55818ae44bdc2dde698b456c",
+            "55818ac54bdc2d5b648b456e",
+            "55818aeb4bdc2ddc698b456a",
+            "5448bc234bdc2d3c308b4569",
+            "5a74651486f7744e73386dd1",
+            "55818af64bdc2d5b648b4570",
+            "55818a684bdc2ddd698b456d",
+            "56ea9461d2720b67698b456f",
+            "55818a104bdc2db9688b4569",
+            "55818afb4bdc2dde698b456d",
+            "55818b084bdc2d5b648b4571",
+            "55818b164bdc2ddc698b456c",
+            "610720f290b75a49ff2e5e25",
+            "627a137bf21bc425b06ab944"
         ];
         this.equipment_slots = {
             Headwear: "Headwear",
@@ -159,33 +222,6 @@ class Arrays {
             this.botDB["bossknight"],
             this.botDB["followerbigpipe"],
             this.botDB["followerbirdeye"]
-        ];
-        this.mod_parent_IDs = [
-            "550aa4bf4bdc2dd6348b456b",
-            "550aa4dd4bdc2dc9348b4569",
-            "550aa4cd4bdc2dd8348b456c",
-            "555ef6e44bdc2de9068b457e",
-            "55818b224bdc2dde698b456f",
-            "55818a304bdc2db5418b457d",
-            "55818a594bdc2db9688b456a",
-            "55818a6f4bdc2db9688b456b",
-            "55818acf4bdc2dde698b456b",
-            "55818ad54bdc2ddc698b4569",
-            "55818add4bdc2d5b648b456f",
-            "55818ae44bdc2dde698b456c",
-            "55818ac54bdc2d5b648b456e",
-            "55818aeb4bdc2ddc698b456a",
-            "5448bc234bdc2d3c308b4569",
-            "5a74651486f7744e73386dd1",
-            "55818af64bdc2d5b648b4570",
-            "55818a684bdc2ddd698b456d",
-            "56ea9461d2720b67698b456f",
-            "55818a104bdc2db9688b4569",
-            "55818afb4bdc2dde698b456d",
-            "55818b084bdc2d5b648b4571",
-            "55818b164bdc2ddc698b456c",
-            "610720f290b75a49ff2e5e25",
-            "627a137bf21bc425b06ab944"
         ];
         this.mod_types = {
             "FlashHider": "550aa4bf4bdc2dd6348b456b",

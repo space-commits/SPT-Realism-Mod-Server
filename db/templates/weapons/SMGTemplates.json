@@ -210,7 +210,7 @@
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.68,
         "WeaponAllowADS": false,
-        "Weight": 0.68,
+        "Weight": 0.924,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 900,
         "SemiROF": 450
@@ -246,7 +246,7 @@
         "RecoilDamping": 0.7,
         "RecoilHandDamping": 0.68,
         "WeaponAllowADS": false,
-        "Weight": 0.74,
+        "Weight": 1.097,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 800,
         "SemiROF": 450
@@ -462,7 +462,7 @@
         "RecoilDamping": 0.77,
         "RecoilHandDamping": 0.75,
         "WeaponAllowADS": false,
-        "Weight": 1.62,
+        "Weight": 1.445,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 950,
         "SemiROF": 450

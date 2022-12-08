@@ -69,7 +69,7 @@ class WeaponsGlobals {
                     || serverItem._props.weapClass === "machinegun"
                     || serverItem._props.weapClass === "marksmanRifle"
                     || serverItem._props.weapClass === "assaultRifle") {
-                    serverItem._props.Ergonomics = 70;
+                    serverItem._props.Ergonomics = 80;
                 }
                 if (serverItem._props.weapClass === "pistol") {
                     serverItem._props.RecoilForceUp *= 1.14;

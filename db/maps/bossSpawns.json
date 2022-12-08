@@ -321,13 +321,13 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 0,
+            "BossChance": 100,
             "BossZone": "Zone_Blockpost",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "1",
+            "BossEscortAmount": "1,2,3",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -342,7 +342,7 @@
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "1,2",
+            "BossEscortAmount": "1,2,3",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -357,7 +357,7 @@
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "1,1,2",
+            "BossEscortAmount": "1,2,3",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -372,7 +372,7 @@
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "1,1,2",
+            "BossEscortAmount": "1,2,3",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -381,13 +381,13 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 25,
+            "BossChance": 100,
             "BossZone": "Zone_Island",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2",
+            "BossEscortAmount": "1,2,3",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -396,13 +396,13 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 25,
+            "BossChance": 100,
             "BossZone": "Zone_RoofRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "0",
+            "BossEscortAmount": "1,2,3",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -411,13 +411,13 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 25,
+            "BossChance": 100,
             "BossZone": "Zone_RoofBeach",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "1",
+            "BossEscortAmount": "1,2,3",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -426,13 +426,13 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 25,
+            "BossChance": 100,
             "BossZone": "Zone_Hellicopter",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "1,2",
+            "BossEscortAmount": "1,2,3",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -487,7 +487,7 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2,2,2,2,3",
-            "Time": 1000,
+            "Time": 300,
             "TriggerId": "",
             "TriggerName": "",
             "Supports": null,
@@ -711,7 +711,7 @@
     "LabsBossLocationSpawn": [
         {
             "BossName": "bossSanitar",
-            "BossChance": 10,
+            "BossChance": 15,
             "BossZone": "BotZoneFloor1, BotZoneFloor2",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -724,7 +724,7 @@
         },
         {
             "BossName": "bossTagilla",
-            "BossChance": 10,
+            "BossChance": 15,
             "BossZone": "BotZoneFloor1, BotZoneFloor2",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -743,25 +743,23 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": 900,
-            "TriggerId": "",
-            "TriggerName": "",
-            "Delay": 0,
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "pmcBot",
-            "BossChance": 100,
-            "BossZone": "BotZoneFloor2",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "pmcBot",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
             "Time": 300,
             "TriggerId": "",
             "TriggerName": "",
-            "Delay": 0,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "pmcBot",
+            "BossChance": 100,
+            "BossZone": "BotZoneFloor2",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "pmcBot",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
+            "Time": 60,
+            "TriggerId": "",
+            "TriggerName": "",
             "RandomTimeSpawn": false
         },
         {
@@ -773,10 +771,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": 450,
+            "Time": 1,
             "TriggerId": "autoId_00008_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -788,10 +785,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": 800,
+            "Time": 1,
             "TriggerId": "autoId_00010_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -803,10 +799,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "autoId_00007_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -818,10 +813,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "autoId_00007_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -833,10 +827,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": 600,
+            "Time": 1,
             "TriggerId": "autoId_00632_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -848,10 +841,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": 600,
+            "Time": 1,
             "TriggerId": "autoId_00632_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -863,10 +855,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "autoId_00012_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -878,10 +869,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "autoId_00012_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -893,10 +883,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": 1200,
+            "Time": 1,
             "TriggerId": "autoId_00014_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -908,10 +897,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,2,2,1,1,2,2,2,2,1,1,2,2,3",
-            "Time": 1200,
+            "Time": 1,
             "TriggerId": "autoId_00014_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -923,10 +911,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,2,2,1,1,2,2,2,2,1,1,2,2,3",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "autoId_00009_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -938,10 +925,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "autoId_00009_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 0,
             "RandomTimeSpawn": false
         },
         {
@@ -953,10 +939,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "autoId_00014_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 8,
             "RandomTimeSpawn": false
         },
         {
@@ -968,10 +953,9 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "1,1,1,1,2,2,2,1,1,1,1,2,2,2,3",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "autoId_00632_EXFIL",
             "TriggerName": "interactObject",
-            "Delay": 8,
             "RandomTimeSpawn": false
         }
     ]

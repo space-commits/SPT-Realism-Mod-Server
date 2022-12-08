@@ -9,7 +9,6 @@ class Armor {
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
         this.armMat = this.globalDB.ArmorMaterials;
-        this.config = this.modConf;
     }
     loadArmor() {
         //Armor Destructibility values
@@ -1613,7 +1612,7 @@ class Armor {
                 serverItem._props.durabSpawnMax = 100;
             }
         }
-        if (this.config.logEverything == true) {
+        if (this.modConf.logEverything == true) {
             this.logger.info("Armour loaded");
         }
     }

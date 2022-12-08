@@ -43,8 +43,8 @@ export class CodeGen {
 
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private helper: Helper, private arrays: Arrays) { }
 
-    public globalDB = this.tables.globals.config;
-    public itemDB = this.tables.templates.items;
+    globalDB = this.tables.globals.config;
+    itemDB = this.tables.templates.items;
 
     // public magsToJSON() {
     //     for (let i in this.itemDB) {
@@ -791,7 +791,7 @@ export class CodeGen {
         }
     }
 
-    public armorPusherHelper(serverItem: any, fileItem: any) {
+    private armorPusherHelper(serverItem: any, fileItem: any) {
 
         if (serverItem._id === fileItem.ItemID) {
 
@@ -803,7 +803,7 @@ export class CodeGen {
         }
     }
 
-    public modPusherHelper(serverItem: any, fileItem: any) {
+    private modPusherHelper(serverItem: any, fileItem: any) {
 
 
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
@@ -839,7 +839,7 @@ export class CodeGen {
         }
     }
 
-    public weapPusherHelper(serverItem: any, fileItem: any) {
+    private weapPusherHelper(serverItem: any, fileItem: any) {
         if (serverItem._id === fileItem.ItemID) {
 
             if (this.modConf.malf_changes == true) {

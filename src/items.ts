@@ -9,8 +9,8 @@ import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";
 export class _Items {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private jsonUtil: JsonUtil, private medItems, private crafts, private inventoryConf: IInventoryConfig) { }
 
-    public globalDB = this.tables.globals.config;
-    public itemDB = this.tables.templates.items;
+    private globalDB = this.tables.globals.config;
+    private itemDB = this.tables.templates.items;
 
     public loadItemsRestrictions() {
         this.globalDB["AllowSelectEntryPoint"] = true;

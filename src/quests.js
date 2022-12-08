@@ -11,19 +11,19 @@ class Quests {
         this.questLoaleObj = this.tables.locales.global["en"].quest;
         this.questDesc = this.tables.locales.global["en"].mail;
     }
-    // public removeFIRReqeuirement(){
-    //     for(let quest in this.questDB){
-    //         let availForFin = this.questDB[quest].conditions.AvailableForFinish;
-    //         for(let requirement in availForFin){
-    //             if (availForFin[requirement]._props.onlyFoundInRaid){
-    //                 availForFin[requirement]._props.onlyFoundInRaid = false;
-    //             }                
-    //         }
-    //     }
-    //     if (this.modConf.logEverything == true) {
-    //         this.logger.info("FIR Requirements Removed");
-    //     }
-    // }
+    removeFIRQuestRequire() {
+        for (let quest in this.questDB) {
+            let availForFin = this.questDB[quest].conditions.AvailableForFinish;
+            for (let requirement in availForFin) {
+                if (availForFin[requirement]._props.onlyFoundInRaid) {
+                    availForFin[requirement]._props.onlyFoundInRaid = false;
+                }
+            }
+        }
+        if (this.modConf.logEverything == true) {
+            this.logger.info("FIR Requirements Removed");
+        }
+    }
     fixMechancicQuests() {
         var ergo = 0;
         var recoil = 0;

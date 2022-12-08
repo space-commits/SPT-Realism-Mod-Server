@@ -176,16 +176,14 @@ class CheckRequired {
 }
 exports.CheckRequired = CheckRequired;
 class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
-    myShouldModBeSpawned(itemSlot, modSlot, modSpawnChances) {
-        const _checkRequired = new CheckRequired();
-        const modSpawnChance = _checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot) ? 100 : modSpawnChances[modSlot];
+    myShouldModBeSpawned(itemSlot, modSlot, modSpawnChances, checkRequired) {
+        const modSpawnChance = checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot) ? 100 : modSpawnChances[modSlot];
         if (modSpawnChance === 100) {
             return true;
         }
         return this.probabilityHelper.rollChance(modSpawnChance);
     }
-    myIsModValidForSlot(modToAdd, itemSlot, modSlot, parentTemplate) {
-        const _checkRequired = new CheckRequired();
+    myIsModValidForSlot(modToAdd, itemSlot, modSlot, parentTemplate, checkRequired) {
         if (!modToAdd[1]) {
             {
                 this.logger.error(this.localisationService.getText("bot-no_item_template_found_when_adding_mod", { modId: modToAdd[1]._id, modSlot: modSlot }));
@@ -194,7 +192,7 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             }
         }
         if (!modToAdd[0]) {
-            if (_checkRequired.checkRequired(itemSlot)) {
+            if (checkRequired.checkRequired(itemSlot)) {
                 this.logger.error(this.localisationService.getText("bot-unable_to_add_mod_item_invalid", { itemName: modToAdd[1]._name, modSlot: modSlot, parentItemName: parentTemplate._name }));
             }
             return false;
@@ -206,8 +204,7 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
         return true;
     }
     botModGen(sessionId, weapon, modPool, weaponParentId, parentWeaponTemplate, modSpawnChances, ammoTpl, botRole) {
-        BotModGen.container = tsyringe_1.container;
-        const _checkRequired = new CheckRequired();
+        const checkRequired = new CheckRequired();
         const pmcProfile = this.profileHelper.getPmcProfile(sessionId);
         const botEquipmentRole = this.getBotEquipmentRole(botRole);
         const modLimits = this.initModLimits(botEquipmentRole);
@@ -227,7 +224,7 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
                 this.logger.error(this.localisationService.getText("bot-weapon_missing_mod_slot", { modSlot: modSlot, weaponId: parentWeaponTemplate._id, weaponName: parentWeaponTemplate._name }));
                 continue;
             }
-            if (!this.myShouldModBeSpawned(modsParent, modSlot, modSpawnChances)) {
+            if (!this.myShouldModBeSpawned(modsParent, modSlot, modSpawnChances, checkRequired)) {
                 continue;
             }
             const isRandomisableSlot = botEquipConfig.randomisedWeaponModSlots && botEquipConfig.randomisedWeaponModSlots.includes(modSlot);
@@ -237,7 +234,7 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
                 continue;
             }
             const modToAddTemplate = modToAdd[1];
-            if (!this.myIsModValidForSlot(modToAdd, modsParent, modSlot, parentWeaponTemplate)) {
+            if (!this.myIsModValidForSlot(modToAdd, modsParent, modSlot, parentWeaponTemplate, checkRequired)) {
                 continue;
             }
             if (this.modHasReachedItemLimit(botEquipmentRole, modToAddTemplate, modLimits)) {

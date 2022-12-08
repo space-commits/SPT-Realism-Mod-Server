@@ -17,13 +17,12 @@ const bearNames = require("../db/bots/names/bearNames.json");
 const botZones = require("../db/bots/spawnZones.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
 class Bots {
-    constructor(logger, tables, configServ, modConf, array, helper) {
+    constructor(logger, tables, configServ, modConf, arrays) {
         this.logger = logger;
         this.tables = tables;
         this.configServ = configServ;
         this.modConf = modConf;
-        this.array = array;
-        this.helper = helper;
+        this.arrays = arrays;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
         this.botDB = this.tables.bots.types;
@@ -97,9 +96,9 @@ class Bots {
         };
         if (this.modConf.headgear_conflicts == true) {
             for (let item in this.itemDB) {
-                for (let hat in this.array.conflicting_hats) {
-                    if (this.itemDB[item]._id === this.array.conflicting_hats[hat]) {
-                        let ca = this.array.conflicting_masks;
+                for (let hat in this.arrays.conflicting_hats) {
+                    if (this.itemDB[item]._id === this.arrays.conflicting_hats[hat]) {
+                        let ca = this.arrays.conflicting_masks;
                         let sa = this.itemDB[item]._props.ConflictingItems;
                         this.itemDB[item]._props.ConflictingItems = ca.concat(sa);
                     }
@@ -107,7 +106,7 @@ class Bots {
             }
         }
         if (this.modConf.med_changes == true) {
-            this.array.non_scav_bot_list.forEach(addBotMedkit);
+            this.arrays.non_scav_bot_list.forEach(addBotMedkit);
             function addBotMedkit(bot) {
                 if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
                     bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
@@ -149,7 +148,7 @@ class Bots {
         }
     }
     setBotHealth() {
-        this.array.bot_list.forEach(increaseVitality);
+        this.arrays.bot_list.forEach(increaseVitality);
         function increaseVitality(bot) {
             if (bot.skills?.Common !== undefined) {
                 if (bot.skills.Common["Vitality"] !== undefined) {
@@ -169,39 +168,39 @@ class Bots {
                 bot.skills.Common["Vitality"].min = 5100;
             }
         }
-        this.array.scav_bot_health_list.forEach(setScavHealth);
+        this.arrays.scav_bot_health_list.forEach(setScavHealth);
         function setScavHealth(bot) {
             bot.health.BodyParts = botHealth.scavHealth.BodyParts;
             bot.health.Temperature = botHealth.health.Temperature;
         }
-        this.array.PMC_list.forEach(setHealth);
+        this.arrays.PMC_list.forEach(setHealth);
         function setHealth(bot) {
             bot.health.BodyParts = botHealth.health.BodyParts;
             bot.health.Temperature = botHealth.health.Temperature;
         }
         if (this.modConf.realistic_boss_health == true) {
-            this.array.boss_bot_list.forEach(setHealth);
+            this.arrays.boss_bot_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_boss_follower_health == true) {
-            this.array.boss_follower_list.forEach(setHealth);
+            this.arrays.boss_follower_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_raider_rogue_health == true) {
-            this.array.rogue_raider_list.forEach(setHealth);
+            this.arrays.rogue_raider_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_cultist_health == true) {
-            this.array.cultist_list.forEach(setHealth);
+            this.arrays.cultist_list.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
@@ -255,7 +254,7 @@ class Bots {
             this.logger.warning("Tier 4 Test Selected");
         }
         if (this.modConf.bot_test_weps_enabled == false) {
-            this.array.bot_list.forEach(removeWeps);
+            this.arrays.bot_list.forEach(removeWeps);
             function removeWeps(bot) {
                 bot.inventory.equipment.FirstPrimaryWeapon = [];
                 bot.inventory.equipment.Holster = [];

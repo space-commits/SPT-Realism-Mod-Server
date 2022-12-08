@@ -1,14 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AttatchmentBase = void 0;
-// import { Arrays } from "./arrays";
 class AttatchmentBase {
     constructor(logger, tables, arrays, modConf) {
         this.logger = logger;
         this.tables = tables;
         this.arrays = arrays;
         this.modConf = modConf;
-        this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
     }
     loadAttRestrict() {

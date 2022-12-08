@@ -1,4 +1,4 @@
-import { DependencyContainer } from "tsyringe";
+
 import { BaseClasses } from "@spt-aki/models/enums/BaseClasses";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { Items } from "@spt-aki/models/eft/common/tables/IBotType";
@@ -6,8 +6,6 @@ import { BotLootCacheService } from "@spt-aki/services/BotLootCacheService";
 import { LootCacheType } from "@spt-aki/models/spt/bots/BotLootCache";
 
 export class BotLootServer extends BotLootCacheService {
-
-    private static container: DependencyContainer;
 
     public getLootCache(botRole: string, isPmc: boolean, lootType: LootCacheType, lootPool: Items): ITemplateItem[] {
          
@@ -43,7 +41,7 @@ export class BotLootServer extends BotLootCacheService {
         }
     }
 
-    public myAddLootToCache(botRole: string, isPmc: boolean, lootPool: Items): void
+    private myAddLootToCache(botRole: string, isPmc: boolean, lootPool: Items): void
     {
         const specialLootTemplates: ITemplateItem[] = [];
         const backpackLootTemplates: ITemplateItem[] = [];

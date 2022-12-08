@@ -26,7 +26,6 @@ import { LocalisationService } from "@spt-aki/services/LocalisationService";
 
 export class BotWepGen extends BotWeaponGenerator {
 
-    private static container: DependencyContainer;
 
     public botWepGen(sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean): GenerateWeaponResult {
 
@@ -83,7 +82,7 @@ export class BotWepGen extends BotWeaponGenerator {
         };
     }
 
-    public isWepValid(weaponItemArray: Item[]): boolean {
+    private isWepValid(weaponItemArray: Item[]): boolean {
         const _checkRequired = new CheckRequired();
         for (const mod of weaponItemArray) {
             const modDbTemplate = this.itemHelper.getItem(mod._tpl)[1];
@@ -200,6 +199,7 @@ export class BotWepGen extends BotWeaponGenerator {
 }
 
 export class CheckRequired {
+    
     public checkRequired(slot) {
         if (slot?._botRequired != undefined) {
             if (slot._botRequired == true)
@@ -215,14 +215,12 @@ export class CheckRequired {
 
 
 export class BotModGen extends BotGeneratorHelper {
-    F
-
-    private static container: DependencyContainer;
 
 
-    public myShouldModBeSpawned(itemSlot: Slot, modSlot: string, modSpawnChances: ModsChances): boolean {
-        const _checkRequired = new CheckRequired();
-        const modSpawnChance = _checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot) ? 100 : modSpawnChances[modSlot];
+
+    private myShouldModBeSpawned(itemSlot: Slot, modSlot: string, modSpawnChances: ModsChances, checkRequired: CheckRequired): boolean {
+
+        const modSpawnChance = checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot) ? 100 : modSpawnChances[modSlot];
 
         if (modSpawnChance === 100) {
             return true;
@@ -231,9 +229,8 @@ export class BotModGen extends BotGeneratorHelper {
         return this.probabilityHelper.rollChance(modSpawnChance)
     }
 
-    myIsModValidForSlot(modToAdd: [boolean, ITemplateItem], itemSlot: Slot, modSlot: string, parentTemplate: ITemplateItem): boolean {
-        const _checkRequired = new CheckRequired();
-
+    private myIsModValidForSlot(modToAdd: [boolean, ITemplateItem], itemSlot: Slot, modSlot: string, parentTemplate: ITemplateItem, checkRequired: CheckRequired): boolean {
+   
         if (!modToAdd[1]) {
             {
                 this.logger.error(this.localisationService.getText("bot-no_item_template_found_when_adding_mod", { modId: modToAdd[1]._id, modSlot: modSlot }));
@@ -244,7 +241,7 @@ export class BotModGen extends BotGeneratorHelper {
         }
 
         if (!modToAdd[0]) {
-            if (_checkRequired.checkRequired(itemSlot)) {
+            if (checkRequired.checkRequired(itemSlot)) {
                 this.logger.error(this.localisationService.getText("bot-unable_to_add_mod_item_invalid", { itemName: modToAdd[1]._name, modSlot: modSlot, parentItemName: parentTemplate._name }));
             }
 
@@ -262,8 +259,8 @@ export class BotModGen extends BotGeneratorHelper {
     }
 
     public botModGen(sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentWeaponTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string): Item[] {
-        BotModGen.container = container;
-        const _checkRequired = new CheckRequired();
+     
+        const checkRequired = new CheckRequired();
 
         const pmcProfile = this.profileHelper.getPmcProfile(sessionId);
         const botEquipmentRole = this.getBotEquipmentRole(botRole);
@@ -291,7 +288,7 @@ export class BotModGen extends BotGeneratorHelper {
                 continue;
             }
 
-            if (!this.myShouldModBeSpawned(modsParent, modSlot, modSpawnChances)) {
+            if (!this.myShouldModBeSpawned(modsParent, modSlot, modSpawnChances, checkRequired)) {
                 continue;
             }
 
@@ -305,7 +302,7 @@ export class BotModGen extends BotGeneratorHelper {
 
             const modToAddTemplate = modToAdd[1];
 
-            if (!this.myIsModValidForSlot(modToAdd, modsParent, modSlot, parentWeaponTemplate)) {
+            if (!this.myIsModValidForSlot(modToAdd, modsParent, modSlot, parentWeaponTemplate, checkRequired)) {
                 continue;
             }
 
@@ -428,7 +425,6 @@ export class BotModGen extends BotGeneratorHelper {
             ? { upd: properties }
             : {};
     }
-
 }
 
 

@@ -1,13 +1,12 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
-// import { Arrays } from "./arrays";
+import { Arrays } from "./arrays";
 
 export class AttatchmentBase {
 
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private arrays, private modConf) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private arrays: Arrays, private modConf) { }
 
-    public globalDB = this.tables.globals.config;
-    public itemDB = this.tables.templates.items;
+    private itemDB = this.tables.templates.items;
 
     public loadAttRestrict() {
         if (this.modConf.bot_changes == true) {

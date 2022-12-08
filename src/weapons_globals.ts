@@ -6,8 +6,8 @@ const mastering = require("../db/items/mastering.json");
 export class WeaponsGlobals {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
-    public globalDB = this.tables.globals.config;
-    public itemDB = this.tables.templates.items;
+    private globalDB = this.tables.globals.config;
+    private itemDB = this.tables.templates.items;
 
     public loadGlobalWeps() {
 
@@ -84,7 +84,7 @@ export class WeaponsGlobals {
                     || serverItem._props.weapClass === "marksmanRifle"
                     || serverItem._props.weapClass === "assaultRifle"
                 ) {
-                    serverItem._props.Ergonomics = 70;
+                    serverItem._props.Ergonomics = 80;
                 }
                 if (serverItem._props.weapClass === "pistol"
                 ) {

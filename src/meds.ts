@@ -4,11 +4,11 @@ import { ILogger } from "../types/models/spt/utils/ILogger";
 export class Meds {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private medItems, private buffs) { }
 
-    public globalDB = this.tables.globals.config;
-    public itemDB = this.tables.templates.items;
-    public buffDB = this.globalDB.Health.Effects.Stimulator.Buffs;
+    private globalDB = this.tables.globals.config;
+    private itemDB = this.tables.templates.items;
+    private buffDB = this.globalDB.Health.Effects.Stimulator.Buffs;
 
-    public loadMeds(){
+    public loadMeds() {
 
         for (const buffName in this.buffs) {
             this.buffDB[buffName] = this.buffs[buffName]
@@ -24,7 +24,7 @@ export class Meds {
                 serverItem._props.StimulatorBuffs = this.medItems.analgin.StimulatorBuffs;
                 serverItem._props.effects_damage = this.medItems.analgin.effects_damage;
                 serverItem._props.effects_health = this.medItems.analgin.effects_health;
-                serverItem._props.medUseTime = this.medItems.analgin.medUseTime;  
+                serverItem._props.medUseTime = this.medItems.analgin.medUseTime;
             }
             //Ibuprofen
             if (serverItem._id === "5af0548586f7743a532b7e99") {

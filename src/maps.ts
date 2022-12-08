@@ -9,10 +9,8 @@ export class Maps {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
 
-    public itemDB = this.tables.templates.items;
-
     public loadSpawnChanges() {
-        
+
         this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;
         this.tables.locations.factory4_day.base.BossLocationSpawn = bossSpawns.FactoryDayBossLocationSpawn;
         this.tables.locations.factory4_night.base.BossLocationSpawn = bossSpawns.FactoryNightBossLocationSpawn;
