@@ -408,7 +408,7 @@ class Mod {
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
         const quests = new quests_1.Quests(logger, tables, modConfig);
-        const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays);
+        const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, helper);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Maps(logger, tables, modConfig);
         const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
@@ -428,11 +428,6 @@ class Mod {
         }
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();
-        }
-        if (modConfig.trader_changes == true) {
-            traders.loadTraderTweaks();
-            traders.loadTraderAssorts();
-            randomizeTraderAssort.loadRandomizedTraderStock();
         }
         if (modConfig.bot_changes == true) {
             bots.loadBots();
@@ -458,6 +453,12 @@ class Mod {
         }
         if (modConfig.remove_fir_req == true) {
             quests.removeFIRQuestRequire();
+        }
+        if (modConfig.trader_changes == true) {
+            traders.loadTraderTweaks();
+            traders.addItemsToAssorts();
+            traders.setLoyaltyLevels();
+            randomizeTraderAssort.loadRandomizedTraderStock();
         }
         attatchBase.loadAttRestrict();
         items.loadItemsRestrictions();

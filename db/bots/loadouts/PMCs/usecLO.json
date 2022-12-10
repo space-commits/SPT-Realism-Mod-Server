@@ -199,11 +199,11 @@
           "59e7635f86f7742cbf2c1095": 1
         },
         "Eyewear": {
-          "5d5fca1ea4b93635fd598c07": 1,
-          "5d6d2e22a4b9361bd5780d05": 1,
-          "5c0d32fcd174af02a1659c75": 1,
-          "5c1a1cc52e221602b3136e3d": 1,
-          "557ff21e4bdc2d89578b4586": 2,
+          "5d5fca1ea4b93635fd598c07": 5,
+          "5d6d2e22a4b9361bd5780d05": 5,
+          "5c0d32fcd174af02a1659c75": 5,
+          "5c1a1cc52e221602b3136e3d": 5,
+          "557ff21e4bdc2d89578b4586": 5,
           "5d6d2ef3a4b93618084f58bd": 1
         },
         "ArmBand": {
@@ -1775,11 +1775,11 @@
           "6038b4ca92ec1c3103795a0d": 1
         },
         "Eyewear": {
-          "5d5fca1ea4b93635fd598c07": 1,
-          "5d6d2e22a4b9361bd5780d05": 1,
-          "5c0d32fcd174af02a1659c75": 1,
-          "5c1a1cc52e221602b3136e3d": 1,
-          "557ff21e4bdc2d89578b4586": 2,
+          "5d5fca1ea4b93635fd598c07": 5,
+          "5d6d2e22a4b9361bd5780d05": 5,
+          "5c0d32fcd174af02a1659c75": 5,
+          "5c1a1cc52e221602b3136e3d": 5,
+          "557ff21e4bdc2d89578b4586": 4,
           "5d6d2ef3a4b93618084f58bd": 1
         },
         "ArmBand": {
@@ -3785,12 +3785,13 @@
           "5b44cf1486f77431723e3d05": 1
         },
         "Eyewear": {
-          "5d5fca1ea4b93635fd598c07": 1,
-          "5d6d2e22a4b9361bd5780d05": 1,
-          "5c0d32fcd174af02a1659c75": 1,
-          "5c1a1cc52e221602b3136e3d": 1,
-          "557ff21e4bdc2d89578b4586": 1,
-          "5d6d2ef3a4b93618084f58bd": 1
+          "5d5fca1ea4b93635fd598c07": 5,
+          "5d6d2e22a4b9361bd5780d05": 5,
+          "5c0d32fcd174af02a1659c75": 5,
+          "5c1a1cc52e221602b3136e3d": 5,
+          "557ff21e4bdc2d89578b4586": 3,
+          "5d6d2ef3a4b93618084f58bd": 1,
+          "603409c80ca681766b6a0fb2": 3
         },
         "ArmBand": {
           "619bdfd4c9546643a67df6fa": 1
@@ -5563,8 +5564,8 @@
         "mod_stock_000": 100,
         "mod_stock_001": 100,
         "mod_stock_akms": 100,
-        "mod_equipment": 50,
-        "mod_equipment_000": 50,
+        "mod_equipment": 70,
+        "mod_equipment_000": 70,
         "mod_equipment_001": 50,
         "mod_equipment_002": 20,
         "mod_pistol_grip_akms": 100,
@@ -5852,12 +5853,12 @@
           "5aa2ba19e5b5b00014028f4e": 1,
           "5b40e61f5acfc4001a599bec": 1,
           "5d96141523f0ea1b7f2aacab": 1,
-          "5d5e7d28a4b936645d161203": 8,
-          "5d5e9c74a4b9364855191c40": 8,
+          "5d5e7d28a4b936645d161203": 7,
+          "5d5e9c74a4b9364855191c40": 7,
           "5b40e3f35acfc40016388218": 8,
-          "5b40e4035acfc47a87740943": 8,
-          "5ac8d6885acfc400180ae7b0": 8,
-          "5c17a7ed2e2216152142459c": 8,
+          "5b40e4035acfc47a87740943": 7,
+          "5ac8d6885acfc400180ae7b0": 9,
+          "5c17a7ed2e2216152142459c": 9,
           "5e01ef6886f77445f643baa4": 4
         },
         "Earpiece": {
@@ -5879,13 +5880,13 @@
           "5b44d0de86f774503d30cba8": 1
         },
         "Eyewear": {
-          "5d5fca1ea4b93635fd598c07": 1,
-          "5d6d2e22a4b9361bd5780d05": 1,
-          "5c0d32fcd174af02a1659c75": 1,
-          "5c1a1cc52e221602b3136e3d": 1,
-          "557ff21e4bdc2d89578b4586": 2,
+          "5d5fca1ea4b93635fd598c07": 5,
+          "5d6d2e22a4b9361bd5780d05": 5,
+          "5c0d32fcd174af02a1659c75": 5,
+          "5c1a1cc52e221602b3136e3d": 5,
+          "557ff21e4bdc2d89578b4586": 3,
           "5d6d2ef3a4b93618084f58bd": 1,
-          "603409c80ca681766b6a0fb2": 1
+          "603409c80ca681766b6a0fb2": 5
         },
         "ArmBand": {
           "619bdfd4c9546643a67df6fa": 1
@@ -8297,10 +8298,10 @@
         "mod_stock_000": 100,
         "mod_stock_001": 100,
         "mod_stock_akms": 100,
-        "mod_equipment": 50,
-        "mod_equipment_000": 50,
-        "mod_equipment_001": 50,
-        "mod_equipment_002": 20,
+        "mod_equipment": 70,
+        "mod_equipment_000": 70,
+        "mod_equipment_001": 60,
+        "mod_equipment_002": 30,
         "mod_pistol_grip_akms": 100,
         "mod_pistol_grip": 100,
         "mod_gas_block": 100,

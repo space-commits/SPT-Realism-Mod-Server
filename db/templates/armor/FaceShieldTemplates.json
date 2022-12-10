@@ -93,5 +93,15 @@
         "ItemID": "5c0d2727d174af02a012cf58",
         "Name": "item_equipment_helmet_psh97_jeta",
         "AllowADS": false
+    },
+    "60a7ad3a0c5cb24b0134664a": {
+        "ItemID": "60a7ad3a0c5cb24b0134664a",
+        "Name": "item_equipment_facecover_welding_gorilla",
+        "AllowADS": false
+    },
+    "60a7ad2a2198820d95707a2e": {
+        "ItemID": "60a7ad2a2198820d95707a2e",
+        "Name": "item_equipment_facecover_welding_kill",
+        "AllowADS": false
     }
 }

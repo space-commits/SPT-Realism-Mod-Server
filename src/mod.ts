@@ -549,7 +549,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
         const quests = new Quests(logger, tables, modConfig);
-        const traders = new Traders(logger, tables, modConfig, traderConf, arrays);
+        const traders = new Traders(logger, tables, modConfig, traderConf, arrays, helper);
         const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Maps(logger, tables, modConfig);
         const randomizeTraderAssort = new RandomizeTraderAssort();
@@ -559,7 +559,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         // codegen.armorTemplatesCodeGen();
 
         // codegen.pushToAllMods();
-
 
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
@@ -579,11 +578,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             airdrop.loadAirdrops();
         }
 
-        if (modConfig.trader_changes == true) {
-            traders.loadTraderTweaks();
-            traders.loadTraderAssorts();
-            randomizeTraderAssort.loadRandomizedTraderStock();
-        }
+
 
         if (modConfig.bot_changes == true) {
             bots.loadBots();
@@ -614,6 +609,13 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         if (modConfig.remove_fir_req == true) {
             quests.removeFIRQuestRequire();
+        }
+
+        if (modConfig.trader_changes == true) {
+            traders.loadTraderTweaks();
+            traders.addItemsToAssorts();
+            traders.setLoyaltyLevels();
+            randomizeTraderAssort.loadRandomizedTraderStock();
         }
 
         attatchBase.loadAttRestrict();

@@ -19,20 +19,29 @@ const sellCatSkier = require("../db/traders/skier/sell_categories.json");
 const sellCatMech = require("../db/traders/mechanic/sell_categories.json");
 // const sellCatRag = require("../db/traders/ragman/sell_categories.json");
 // const sellCatJaeg = require("../db/traders/jaeger/sell_categories.json");
+const ammoDB = require("../db/templates/ammo/ammoTemplates.json");
+const prapId = "54cb50c76803fa8b248b4571";
+const theraId = "54cb57776803fa99248b456e";
+const skierId = "58330581ace78e27b8b10cee";
+const pkId = "5935c25fb3acc3127c3d8cd9";
+const mechId = "5a7c2eca46aef81a7ca2145d";
+const ragmId = "5ac3b934156ae10c4430e83c";
+const jaegId = "5c0647fdd443bc2504c2d371";
 class Traders {
-    constructor(logger, tables, modConf, traderConf, array) {
+    constructor(logger, tables, modConf, traderConf, array, helper) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
         this.traderConf = traderConf;
         this.array = array;
+        this.helper = helper;
     }
     loadTraderTweaks() {
         // this.tables.traders['54cb50c76803fa8b248b4571'].base.sell_category = sellCatPrap;
-        this.tables.traders['54cb57776803fa99248b456e'].base.sell_category = sellCatThera.sell_category;
-        this.tables.traders['58330581ace78e27b8b10cee'].base.sell_category = sellCatSkier.sell_category;
+        this.tables.traders[theraId].base.sell_category = sellCatThera.sell_category;
+        this.tables.traders[skierId].base.sell_category = sellCatSkier.sell_category;
         // this.tables.traders['5935c25fb3acc3127c3d8cd9'].base.sell_category = sellCatPK;
-        this.tables.traders['5a7c2eca46aef81a7ca2145d'].base.sell_category = sellCatMech.sell_category;
+        this.tables.traders[mechId].base.sell_category = sellCatMech.sell_category;
         // this.tables.traders['5ac3b934156ae10c4430e83c'].base.sell_category = sellCatRag;
         // this.tables.traders['5c0647fdd443bc2504c2d371'].base.sell_category = sellCatJaeg;
         this.traderConf.fence.maxPresetsPercent = 5;
@@ -49,13 +58,72 @@ class Traders {
         }
     }
     loadTraderAssorts() {
-        this.tables.traders["54cb50c76803fa8b248b4571"].assort = customPrap;
-        this.tables.traders["54cb57776803fa99248b456e"].assort = customThera;
-        this.tables.traders["58330581ace78e27b8b10cee"].assort = customSkier;
-        this.tables.traders["5935c25fb3acc3127c3d8cd9"].assort = customPK;
-        this.tables.traders["5a7c2eca46aef81a7ca2145d"].assort = customMech;
-        this.tables.traders["5ac3b934156ae10c4430e83c"].assort = customRag;
-        this.tables.traders["5c0647fdd443bc2504c2d371"].assort = customJaeg;
+        this.tables.traders[prapId].assort = customPrap;
+        this.tables.traders[theraId].assort = customThera;
+        this.tables.traders[skierId].assort = customSkier;
+        this.tables.traders[pkId].assort = customPK;
+        this.tables.traders[mechId].assort = customMech;
+        this.tables.traders[ragmId].assort = customRag;
+        this.tables.traders[jaegId].assort = customJaeg;
+    }
+    setLoyaltyLevels() {
+        this.loyaltyLevelHeleper(ammoDB);
+    }
+    loyaltyLevelHeleper(db) {
+        for (let i in db) {
+            let loyaltyLvl = db[i].LoyaltyLevel;
+            let itemID = db[i].ItemID;
+            for (let trader in this.tables.traders) {
+                if (this.tables.traders[trader].assort?.items !== undefined) {
+                    for (let item in this.tables.traders[trader].assort.items) {
+                        if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
+                            let id = this.tables.traders[trader].assort.items[item]._id;
+                            this.tables.traders[trader].assort.loyal_level_items[id] = loyaltyLvl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    addItemsToAssorts() {
+        //therapist
+        if (this.modConf.med_changes == true) {
+            this.assortPusher(theraId, "TIER1MEDKIT", 1, "5449016a4bdc2d6f028b456f", 1, false, 25000);
+            this.assortPusher(theraId, "TIER2MEDKIT", 1, "5449016a4bdc2d6f028b456f", 3, false, 50000);
+            this.assortPusher(theraId, "TIER3MEDKIT", 1, "5449016a4bdc2d6f028b456f", 4, false, 75000);
+        }
+    }
+    assortPusher(trader, itemId, buyRestriction, saleCurrency, loyalLvl, useHandbook, cost) {
+        let assort = this.tables.traders[trader].assort;
+        let assortId = this.helper.genId();
+        if (useHandbook == true) {
+            for (let i in this.tables.templates.handbook.Items) {
+                if (this.tables.templates.handbook.Items[i].Id === itemId) {
+                    cost = this.tables.templates.handbook.Items[i].Price;
+                }
+            }
+        }
+        assort.items.push({
+            "_id": assortId,
+            "_tpl": itemId,
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "BuyRestrictionMax": buyRestriction,
+                "BuyRestrictionCurrent": 0,
+                "StackObjectsCount": 1
+            }
+        });
+        assort.barter_scheme[assortId] =
+            [
+                [
+                    {
+                        "count": cost,
+                        "_tpl": saleCurrency
+                    }
+                ]
+            ];
+        assort.loyal_level_items[assortId] = loyalLvl;
     }
 }
 exports.Traders = Traders;
@@ -71,13 +139,18 @@ class RandomizeTraderAssort {
             if (this.tables.traders[trader].assort?.items !== undefined) {
                 let assort = this.tables.traders[trader].assort.items;
                 for (let i in assort) {
-                    let item = assort[i];
-                    if (item.upd?.StackObjectsCount !== undefined) {
-                        this.stockHelper(item);
+                    if (assort[i].upd?.StackObjectsCount !== undefined) {
+                        this.stockHelper(assort[i]);
                     }
-                    if (item.upd?.UnlimitedCount !== undefined) {
-                        item.upd.UnlimitedCount = false;
+                    if (assort[i].upd?.UnlimitedCount !== undefined) {
+                        assort[i].upd.UnlimitedCount = false;
                     }
+                }
+            }
+            if (this.tables.traders[trader].assort?.loyal_level_items !== undefined) {
+                let ll = this.tables.traders[trader].assort?.loyal_level_items;
+                for (let i in ll) {
+                    this.randomizeLL(ll, i);
                 }
             }
         }
@@ -130,6 +203,13 @@ class RandomizeTraderAssort {
         var itemParent = this.itemDB[item._tpl]._parent;
         if (itemParent === parent) {
             item.upd.StackObjectsCount = Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    }
+    randomizeLL(ll, i) {
+        let level = ll[i];
+        let randNum = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+        if (randNum <= 3) {
+            ll[i] = Math.max(1, Math.floor(Math.random() * (level - level - 1)) + level);
         }
     }
 }

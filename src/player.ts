@@ -30,14 +30,14 @@ export class Player {
 
         if (this.modConf.movement_changes == true) {
 
-            this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
-            this.globalDB.Stamina.WalkOverweightLimits["y"] = 73;
-            this.globalDB.Stamina.BaseOverweightLimits["x"] = 27;
+            this.globalDB.Stamina.WalkOverweightLimits["x"] = 50;
+            this.globalDB.Stamina.WalkOverweightLimits["y"] = 70;
+            this.globalDB.Stamina.BaseOverweightLimits["x"] = 25;
             this.globalDB.Stamina.BaseOverweightLimits["y"] = 55;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
-            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 30;
-            this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 82;
+            this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 32;
+            this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 80;
 
             this.globalDB.WalkSpeed["x"] = 0.6;
             this.globalDB.WalkSpeed["y"] = 0.83;
@@ -81,7 +81,7 @@ export class Player {
             this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.52;
             this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.43;
 
-            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.39;
+            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.37;
 
             this.globalDB.Stamina.Capacity = 140;
             this.globalDB.Stamina.BaseRestorationRate = 11;

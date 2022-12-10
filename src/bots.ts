@@ -425,7 +425,7 @@ export class Bots {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 80;
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapType === "cqb") {
             this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
@@ -488,7 +488,7 @@ export class Bots {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 80;
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapType === "cqb") {
             this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;

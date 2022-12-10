@@ -364,7 +364,7 @@ class Bots {
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 20;
         }
         if (helper_1.RaidInfoTracker.mapType === "urban") {
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 80;
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         }
         if (helper_1.RaidInfoTracker.mapType === "cqb") {
             this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
@@ -414,7 +414,7 @@ class Bots {
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 30;
         }
         if (helper_1.RaidInfoTracker.mapType === "urban") {
-            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 80;
+            this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         }
         if (helper_1.RaidInfoTracker.mapType === "cqb") {
             this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
