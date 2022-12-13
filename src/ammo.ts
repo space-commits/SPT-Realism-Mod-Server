@@ -8,7 +8,7 @@ export class Ammo {
     private itemDB = this.tables.templates.items;
 
     public loadAmmoStats() {
-        this.globalDB.Ballistic.GlobalDamageDegradationCoefficient = 0.69;
+        this.globalDB.Ballistic.GlobalDamageDegradationCoefficient = 0.68;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             //// AMMO ////
@@ -3496,7 +3496,7 @@ export class Ammo {
             if (serverItem._parent === "5485a8684bdc2da71d8b4567") {
 
                 if (this.modConf.recoil_attachment_overhaul == true) {
-                    serverItem._props.casingMass = Math.min(5, (serverItem._props.ammoRec / 400) + 1);
+                    serverItem._props.casingMass = Math.min(1.05, (serverItem._props.ammoRec / 500) + 1);
                 }
             }
         }

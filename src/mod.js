@@ -119,7 +119,7 @@ class Mod {
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const postLoadTables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadTables);
-                    const helper = new helper_1.Helper(postLoadTables, arrays, logger);
+                    const helper = new helper_1.Helper(postLoadTables, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
@@ -230,7 +230,7 @@ class Mod {
                     const postLoadtables = postLoadDBServer.getTables();
                     const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, botHealth);
                     const arrays = new arrays_1.Arrays(postLoadtables);
-                    const helper = new helper_1.Helper(postLoadtables, arrays, logger);
+                    const helper = new helper_1.Helper(postLoadtables, arrays);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     try {
                         if (modConfig.med_changes == true) {
@@ -258,7 +258,7 @@ class Mod {
                         const postLoadDBServer = container.resolve("DatabaseServer");
                         const postLoadTables = postLoadDBServer.getTables();
                         const arrays = new arrays_1.Arrays(postLoadTables);
-                        const helper = new helper_1.Helper(postLoadTables, arrays, logger);
+                        const helper = new helper_1.Helper(postLoadTables, arrays);
                         const bots = new bots_1.Bots(logger, postLoadTables, configServer, modConfig, arrays);
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
@@ -297,18 +297,18 @@ class Mod {
                             }
                             return TOD;
                         }
-                        for (let map in arrays.CQB_maps) {
-                            if (arrays.CQB_maps[map] === mapName) {
+                        for (let map in arrays.cqbMaps) {
+                            if (arrays.cqbMaps[map] === mapName) {
                                 mapType = "cqb";
                             }
                         }
-                        for (let map in arrays.outdoor_maps) {
-                            if (arrays.outdoor_maps[map] === mapName) {
+                        for (let map in arrays.outdoorMaps) {
+                            if (arrays.outdoorMaps[map] === mapName) {
                                 mapType = "outdoor";
                             }
                         }
-                        for (let map in arrays.urban_maps) {
-                            if (arrays.urban_maps[map] === mapName) {
+                        for (let map in arrays.urbanMaps) {
+                            if (arrays.urbanMaps[map] === mapName) {
                                 mapType = "urban";
                             }
                         }
@@ -394,7 +394,7 @@ class Mod {
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const arrays = new arrays_1.Arrays(tables);
-        const helper = new helper_1.Helper(tables, arrays, logger);
+        const helper = new helper_1.Helper(tables, arrays);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attatchBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
@@ -571,10 +571,10 @@ class Mod {
             tier = helper.probabilityWeighter(tierArray, [20, 5, 1, 0]);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, [20, 10, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [15, 10, 5, 1]);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, [10, 20, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [5, 20, 5, 1]);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
             tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 5]);

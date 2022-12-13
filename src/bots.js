@@ -26,7 +26,7 @@ class Bots {
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
         this.botDB = this.tables.bots.types;
-        this.map = this.tables.locations;
+        this.mapDB = this.tables.locations;
         this.scavBase = this.botDB["assault"];
         this.usecBase = this.botDB["usec"];
         this.bearBase = this.botDB["bear"];
@@ -96,9 +96,9 @@ class Bots {
         };
         if (this.modConf.headgear_conflicts == true) {
             for (let item in this.itemDB) {
-                for (let hat in this.arrays.conflicting_hats) {
-                    if (this.itemDB[item]._id === this.arrays.conflicting_hats[hat]) {
-                        let ca = this.arrays.conflicting_masks;
+                for (let hat in this.arrays.conflHats) {
+                    if (this.itemDB[item]._id === this.arrays.conflHats[hat]) {
+                        let ca = this.arrays.conflMasks;
                         let sa = this.itemDB[item]._props.ConflictingItems;
                         this.itemDB[item]._props.ConflictingItems = ca.concat(sa);
                     }
@@ -106,7 +106,7 @@ class Bots {
             }
         }
         if (this.modConf.med_changes == true) {
-            this.arrays.non_scav_bot_list.forEach(addBotMedkit);
+            this.arrays.nonScavBotArr.forEach(addBotMedkit);
             function addBotMedkit(bot) {
                 if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
                     bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
@@ -119,11 +119,11 @@ class Bots {
             ;
         }
         if (this.modConf.boss_difficulty == true) {
-            for (let i in this.map) {
-                if (this.map[i].base?.BossLocationSpawn !== undefined) {
-                    for (let k in this.map[i].base.BossLocationSpawn) {
-                        this.map[i].base.BossLocationSpawn[k].BossDifficult = "hard";
-                        this.map[i].base.BossLocationSpawn[k].BossEscortDifficult = "hard";
+            for (let i in this.mapDB) {
+                if (this.mapDB[i].base?.BossLocationSpawn !== undefined) {
+                    for (let k in this.mapDB[i].base.BossLocationSpawn) {
+                        this.mapDB[i].base.BossLocationSpawn[k].BossDifficult = "hard";
+                        this.mapDB[i].base.BossLocationSpawn[k].BossEscortDifficult = "hard";
                     }
                 }
             }
@@ -143,12 +143,21 @@ class Bots {
                 this.logger.info("Bot Names Changed");
             }
         }
+        if (this.modConf.guarantee_boss_spawn == true) {
+            for (let i in this.mapDB) {
+                if (this.mapDB[i].base?.BossLocationSpawn !== undefined) {
+                    for (let k in this.mapDB[i].base.BossLocationSpawn) {
+                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = 100;
+                    }
+                }
+            }
+        }
         if (this.modConf.logEverything == true) {
             this.logger.info("Bots Loaded");
         }
     }
     setBotHealth() {
-        this.arrays.bot_list.forEach(increaseVitality);
+        this.arrays.botArr.forEach(increaseVitality);
         function increaseVitality(bot) {
             if (bot.skills?.Common !== undefined) {
                 if (bot.skills.Common["Vitality"] !== undefined) {
@@ -168,39 +177,39 @@ class Bots {
                 bot.skills.Common["Vitality"].min = 5100;
             }
         }
-        this.arrays.scav_bot_health_list.forEach(setScavHealth);
+        this.arrays.scavBotHealthArr.forEach(setScavHealth);
         function setScavHealth(bot) {
             bot.health.BodyParts = botHealth.scavHealth.BodyParts;
             bot.health.Temperature = botHealth.health.Temperature;
         }
-        this.arrays.PMC_list.forEach(setHealth);
+        this.arrays.pmcList.forEach(setHealth);
         function setHealth(bot) {
             bot.health.BodyParts = botHealth.health.BodyParts;
             bot.health.Temperature = botHealth.health.Temperature;
         }
         if (this.modConf.realistic_boss_health == true) {
-            this.arrays.boss_bot_list.forEach(setHealth);
+            this.arrays.bossBotArr.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_boss_follower_health == true) {
-            this.arrays.boss_follower_list.forEach(setHealth);
+            this.arrays.bossFollowerArr.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_raider_rogue_health == true) {
-            this.arrays.rogue_raider_list.forEach(setHealth);
+            this.arrays.rogueRaiderList.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
         if (this.modConf.realistic_cultist_health == true) {
-            this.arrays.cultist_list.forEach(setHealth);
+            this.arrays.cultistArr.forEach(setHealth);
             function setHealth(bot) {
                 bot.health.BodyParts = botHealth.health.BodyParts;
                 bot.health.Temperature = botHealth.health.Temperature;
@@ -254,7 +263,7 @@ class Bots {
             this.logger.warning("Tier 4 Test Selected");
         }
         if (this.modConf.bot_test_weps_enabled == false) {
-            this.arrays.bot_list.forEach(removeWeps);
+            this.arrays.botArr.forEach(removeWeps);
             function removeWeps(bot) {
                 bot.inventory.equipment.FirstPrimaryWeapon = [];
                 bot.inventory.equipment.Holster = [];
@@ -277,15 +286,6 @@ class Bots {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
             this.botConfPMC.isUsec = 100;
             this.logger.warning("All USEC");
-        }
-        if (this.modConf.guarantee_boss_spawn == true) {
-            for (let i in this.map) {
-                if (this.map[i].base?.BossLocationSpawn !== undefined) {
-                    for (let k in this.map[i].base.BossLocationSpawn) {
-                        this.map[i].base.BossLocationSpawn[k].BossChance = 100;
-                    }
-                }
-            }
         }
     }
     botConfig1() {

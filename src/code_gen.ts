@@ -122,79 +122,79 @@ export class CodeGen {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
-                for (let value in this.arrays.mod_types) {
-                    if (serverItem._parent === this.arrays.mod_types[value]) {
-                        if (this.arrays.mod_types[value] === "550aa4bf4bdc2dd6348b456b" ||
-                            this.arrays.mod_types[value] === "550aa4dd4bdc2dc9348b4569" ||
-                            this.arrays.mod_types[value] === "550aa4cd4bdc2dd8348b456c"
+                for (let value in this.arrays.modTypes) {
+                    if (serverItem._parent === this.arrays.modTypes[value]) {
+                        if (this.arrays.modTypes[value] === "550aa4bf4bdc2dd6348b456b" ||
+                            this.arrays.modTypes[value] === "550aa4dd4bdc2dc9348b4569" ||
+                            this.arrays.modTypes[value] === "550aa4cd4bdc2dd8348b456c"
                         ) {
                             let id = "muzzle"
                             this.itemWriteToFile(MuzzleDeviceTemplates, "MuzzleDeviceTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "555ef6e44bdc2de9068b457e") {
+                        if (this.arrays.modTypes[value] === "555ef6e44bdc2de9068b457e") {
                             let id = "barrel"
                             this.itemWriteToFile(BarrelTemplates, "BarrelTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818b224bdc2dde698b456f") {
+                        if (this.arrays.modTypes[value] === "55818b224bdc2dde698b456f") {
                             let id = "mount"
                             this.itemWriteToFile(MountTemplates, "MountTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818a304bdc2db5418b457d") {
+                        if (this.arrays.modTypes[value] === "55818a304bdc2db5418b457d") {
                             let id = "receiver"
                             this.itemWriteToFile(ReceiverTemplates, "ReceiverTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818a594bdc2db9688b456a") {
+                        if (this.arrays.modTypes[value] === "55818a594bdc2db9688b456a") {
                             let id = "stock"
                             this.itemWriteToFile(StockTemplates, "StockTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818a6f4bdc2db9688b456b") {
+                        if (this.arrays.modTypes[value] === "55818a6f4bdc2db9688b456b") {
                             let id = "charging"
                             this.itemWriteToFile(ChargingHandleTemplates, "ChargingHandleTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818acf4bdc2dde698b456b" ||
-                            this.arrays.mod_types[value] === "55818ad54bdc2ddc698b4569" ||
-                            this.arrays.mod_types[value] === "55818add4bdc2d5b648b456f" ||
-                            this.arrays.mod_types[value] === "55818ae44bdc2dde698b456c" ||
-                            this.arrays.mod_types[value] === "55818aeb4bdc2ddc698b456a"
+                        if (this.arrays.modTypes[value] === "55818acf4bdc2dde698b456b" ||
+                            this.arrays.modTypes[value] === "55818ad54bdc2ddc698b4569" ||
+                            this.arrays.modTypes[value] === "55818add4bdc2d5b648b456f" ||
+                            this.arrays.modTypes[value] === "55818ae44bdc2dde698b456c" ||
+                            this.arrays.modTypes[value] === "55818aeb4bdc2ddc698b456a"
                         ) {
                             let id = "scope"
                             this.itemWriteToFile(ScopeTemplates, "ScopeTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818ac54bdc2d5b648b456e") {
+                        if (this.arrays.modTypes[value] === "55818ac54bdc2d5b648b456e") {
                             let id = "irons"
                             this.itemWriteToFile(IronSightTemplates, "IronSightTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "5448bc234bdc2d3c308b4569" ||
-                            this.arrays.mod_types[value] === "610720f290b75a49ff2e5e25" ||
-                            this.arrays.mod_types[value] === "627a137bf21bc425b06ab944"
+                        if (this.arrays.modTypes[value] === "5448bc234bdc2d3c308b4569" ||
+                            this.arrays.modTypes[value] === "610720f290b75a49ff2e5e25" ||
+                            this.arrays.modTypes[value] === "627a137bf21bc425b06ab944"
                         ) {
                             let id = "magazine"
                             this.itemWriteToFile(MagazineTemplates, "MagazineTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "5a74651486f7744e73386dd1" ||
-                            this.arrays.mod_types[value] === "55818afb4bdc2dde698b456d"
+                        if (this.arrays.modTypes[value] === "5a74651486f7744e73386dd1" ||
+                            this.arrays.modTypes[value] === "55818afb4bdc2dde698b456d"
                         ) {
                             let id = "aux"
                             this.itemWriteToFile(AuxiliaryModTemplates, "AuxiliaryModTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818af64bdc2d5b648b4570") {
+                        if (this.arrays.modTypes[value] === "55818af64bdc2d5b648b4570") {
                             let id = "foregrip"
                             this.itemWriteToFile(ForegripTemplates, "ForegripTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818a684bdc2ddd698b456d") {
+                        if (this.arrays.modTypes[value] === "55818a684bdc2ddd698b456d") {
                             let id = "pistolgrip"
                             this.itemWriteToFile(PistolGripTemplates, "PistolGripTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "56ea9461d2720b67698b456f") {
+                        if (this.arrays.modTypes[value] === "56ea9461d2720b67698b456f") {
                             let id = "gasblock"
                             this.itemWriteToFile(GasblockTemplates, "GasblockTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818a104bdc2db9688b4569") {
+                        if (this.arrays.modTypes[value] === "55818a104bdc2db9688b4569") {
                             let id = "handguard"
                             this.itemWriteToFile(HandguardTemplates, "HandguardTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
                         }
-                        if (this.arrays.mod_types[value] === "55818b084bdc2d5b648b4571" ||
-                            this.arrays.mod_types[value] === "55818b164bdc2ddc698b456c"
+                        if (this.arrays.modTypes[value] === "55818b084bdc2d5b648b4571" ||
+                            this.arrays.modTypes[value] === "55818b164bdc2ddc698b456c"
                         ) {
                             let id = "flashlight"
                             this.itemWriteToFile(FlashlightLaserTemplates, "FlashlightLaserTemplates", i, serverItem, "attatchments", this.assignJSONToMod, id);
@@ -887,6 +887,7 @@ export class CodeGen {
                 serverItem._props.Weight = fileItem.Weight;
                 serverItem._props.bFirerate = fileItem.AutoROF;
                 serverItem._props.SingleFireRate = fileItem.SemiROF;
+                serverItem._props.DoubleActionAccuracyPenalty = fileItem.DoubleActionAccuracyPenalty;
 
                 var serverConfItems = serverItem._props.ConflictingItems;
                 var weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "unused", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",

@@ -10,7 +10,7 @@ class AttatchmentStats {
         this.itemDB = this.tables.templates.items;
     }
     loadAttStats() {
-        const parentArray = this.arrays.mod_parent_IDs;
+        const parentArray = this.arrays.modParentIDs;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             for (let parent in parentArray) {

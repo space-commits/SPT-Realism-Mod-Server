@@ -211,7 +211,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                         const postLoadTables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadTables);
-                        const helper = new Helper(postLoadTables, arrays, logger);
+                        const helper = new Helper(postLoadTables, arrays);
                         const tieredFlea = new TieredFlea(postLoadTables);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth);
 
@@ -335,7 +335,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadtables = postLoadDBServer.getTables();
                         const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth);
                         const arrays = new Arrays(postLoadtables);
-                        const helper = new Helper(postLoadtables, arrays, logger);
+                        const helper = new Helper(postLoadtables, arrays);
 
                         let pmcData = profileHelper.getPmcProfile(sessionID);
 
@@ -372,7 +372,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                             const postLoadTables = postLoadDBServer.getTables();
                             const arrays = new Arrays(postLoadTables);
-                            const helper = new Helper(postLoadTables, arrays, logger);
+                            const helper = new Helper(postLoadTables, arrays);
                             const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays);
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
@@ -417,18 +417,18 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 return TOD;
                             }
 
-                            for (let map in arrays.CQB_maps) {
-                                if (arrays.CQB_maps[map] === mapName) {
+                            for (let map in arrays.cqbMaps) {
+                                if (arrays.cqbMaps[map] === mapName) {
                                     mapType = "cqb";
                                 }
                             }
-                            for (let map in arrays.outdoor_maps) {
-                                if (arrays.outdoor_maps[map] === mapName) {
+                            for (let map in arrays.outdoorMaps) {
+                                if (arrays.outdoorMaps[map] === mapName) {
                                     mapType = "outdoor";
                                 }
                             }
-                            for (let map in arrays.urban_maps) {
-                                if (arrays.urban_maps[map] === mapName) {
+                            for (let map in arrays.urbanMaps) {
+                                if (arrays.urbanMaps[map] === mapName) {
                                     mapType = "urban";
                                 }
                             }
@@ -535,7 +535,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const arrays = new Arrays(tables);
-        const helper = new Helper(tables, arrays, logger);
+        const helper = new Helper(tables, arrays);
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
         const attatchBase = new AttatchmentBase(logger, tables, arrays, modConfig);
@@ -742,10 +742,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             tier = helper.probabilityWeighter(tierArray, [20, 5, 1, 0]);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, [20, 10, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [15, 10, 5, 1]);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, [10, 20, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [5, 20, 5, 1]);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
             tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 5]);

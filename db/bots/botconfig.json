@@ -409,7 +409,7 @@
                 "569668774bdc2da2298b4568": 100
             }
         },
-        "isUsec": 50,
+        "isUsec": 48,
         "difficulty" : "Hard",
         "maxBackpackLootTotalRub": 75000,
         "maxPocketLootTotalRub": 25000,
@@ -418,12 +418,12 @@
         "chanceSameSideIsHostilePercent": 95,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 30,
-                "max": 45
+                "min": 35,
+                "max": 50
             },
             "cursedassault": {
-                "min": 20,
-                "max": 40
+                "min": 35,
+                "max": 50
             },
             "pmcbot": {
                 "min": 0,
@@ -443,7 +443,7 @@
                 "569668774bdc2da2298b4568": 200
             }
         },
-        "isUsec": 58,
+        "isUsec": 52,
         "difficulty" : "Hard",
         "maxBackpackLootTotalRub": 90000,
         "maxPocketLootTotalRub": 35000,
@@ -452,12 +452,12 @@
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 30,
-                "max": 45
+                "min": 35,
+                "max": 50
             },
             "cursedassault": {
-                "min": 20,
-                "max": 40
+                "min": 35,
+                "max": 50
             },
             "pmcbot": {
                 "min": 0,
@@ -486,12 +486,12 @@
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 30,
-                "max": 45
+                "min": 35,
+                "max": 50
             },
             "cursedassault": {
-                "min": 20,
-                "max": 40
+                "min": 35,
+                "max": 50
             },
             "pmcbot": {
                 "min": 0,
@@ -501,120 +501,6 @@
                 "min": 0,
                 "max": 0
             }
-        }
-    },
-    "pmcType1": {
-        "Factory": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Customs": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Woods": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Interchange": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Laboratory": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Lighthouse": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "ReserveBase": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Shoreline": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "default": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        }
-    },
-    "pmcType2": {
-        "Factory": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Customs": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Woods": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Interchange": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Laboratory": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Lighthouse": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "ReserveBase": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Shoreline": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "default": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        }
-    },
-    "pmcType3": {
-        "Factory": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Customs": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Woods": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Interchange": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Laboratory": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Lighthouse": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "ReserveBase": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "Shoreline": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
-        },
-        "default": {
-            "usec": "pmcBot",
-            "bear": "pmcBot"
         }
     },
     "pmcTest": {

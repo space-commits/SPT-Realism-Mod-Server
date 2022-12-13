@@ -6,19 +6,19 @@ export class Arrays {
 
     private botDB = this.tables.bots.types;
 
-    public outdoor_maps = [
+    public outdoorMaps = [
         "Shoreline",
         "Woods",
         "Lighthouse"
     ]
 
-    public urban_maps = [
+    public urbanMaps = [
         "Customs",
         "ReserveBase",
         "Interchange"
     ]
 
-    public CQB_maps = [
+    public cqbMaps = [
         "Factory",
         "Laboratory"
     ]
@@ -35,7 +35,7 @@ export class Arrays {
         "5c0647fdd443bc2504c2d371"
     ];
 
-    public stash_meds = [
+    public stashMeds = [
         "544fb37f4bdc2dee738b4567",
         "5af0548586f7743a532b7e99",
         "5e8488fa988a8701445df1e4",
@@ -53,12 +53,12 @@ export class Arrays {
     ];
 
 
-    public key_parent_id = [
-        "5c99f98d86f7745c314214b3",
+    public keyParentIDs = [
+        "5c164d2286f774194c5e69fa",
         "5c99f98d86f7745c314214b3",
     ]
 
-    public gear_parent_id = [
+    public gearParentIDs = [
         "5448e5284bdc2dcb718b4567",
         "5448e54d4bdc2dcc718b4568",
         "57bef4c42459772e8d35a53b",
@@ -69,7 +69,7 @@ export class Arrays {
     ]
 
 
-    public barter_parent_id = [
+    public barterParentIDs = [
         "590c745b86f7743cc433c5f2",
         "57864ada245977548638de91",
         "57864a66245977548f04a81f",
@@ -82,7 +82,7 @@ export class Arrays {
         "5448ecbe4bdc2d60728b4568"
     ]
 
-    public weapon_parent_IDs = [
+    public weaponParentIDs = [
         "5447b5e04bdc2d62278b4567",
         "5447b5f14bdc2d61278b4567",
         "5447b5cf4bdc2d65278b4567",
@@ -96,7 +96,7 @@ export class Arrays {
         "5447e1d04bdc2dff2f8b4567"
     ]
 
-    public mod_parent_IDs = [
+    public modParentIDs = [
         "550aa4bf4bdc2dd6348b456b",
         "550aa4dd4bdc2dc9348b4569",
         "550aa4cd4bdc2dd8348b456c",
@@ -124,7 +124,7 @@ export class Arrays {
         "627a137bf21bc425b06ab944"
     ]
 
-    public equipment_slots = {
+    public equipmentSlots = {
         Headwear: "Headwear",
         Earpiece: "Earpiece",
         FaceCover: "FaceCover",
@@ -141,7 +141,7 @@ export class Arrays {
         Scabbard: "Scabbard"
     };
 
-    public boss_bot_list = [
+    public bossBotArr = [
         this.botDB["bosssanitar"],
         this.botDB["bosskojaniy"],
         this.botDB["bosskilla"],
@@ -154,7 +154,7 @@ export class Arrays {
         this.botDB["sectantpriest"]
     ];
 
-    public boss_follower_list = [
+    public bossFollowerArr = [
         this.botDB["followerbully"],
         this.botDB["followergluharassault"],
         this.botDB["followergluharscout"],
@@ -165,33 +165,33 @@ export class Arrays {
         this.botDB["followertagilla"],
     ];
 
-    public PMC_list = [
+    public pmcList = [
         this.botDB["usec"],
         this.botDB["bear"],
     ];
 
-    public rogue_raider_list = [
+    public rogueRaiderList = [
         this.botDB["pmcbot"],
         this.botDB["exusec"],
     ];
 
-    public cultist_list = [
+    public cultistArr = [
         this.botDB["sectantwarrior"],
         this.botDB["sectantpriest"],
     ];
 
-    public scav_bot_list = [
+    public scavBotArr = [
         this.botDB["cursedassault"],
         this.botDB["assault"],
         this.botDB["marksman"]
     ];
 
-    public scav_bot_health_list = [
+    public scavBotHealthArr = [
         this.botDB["cursedassault"],
         this.botDB["assault"],
     ];
 
-    public non_scav_bot_list = [
+    public nonScavBotArr = [
         this.botDB["followerbully"],
         this.botDB["followergluharassault"],
         this.botDB["followergluharscout"],
@@ -218,7 +218,7 @@ export class Arrays {
         this.botDB["followerbirdeye"]
     ];
 
-    public bot_list = [
+    public botArr = [
         this.botDB["followerbully"],
         this.botDB["followergluharassault"],
         this.botDB["followergluharscout"],
@@ -247,7 +247,7 @@ export class Arrays {
         this.botDB["followerbirdeye"]
     ];
 
-    public mod_types = {
+    public modTypes = {
         "FlashHider": "550aa4bf4bdc2dd6348b456b",
         "MuzzleCombo": "550aa4dd4bdc2dc9348b4569",
         "Silencer": "550aa4cd4bdc2dd8348b456c",
@@ -275,7 +275,7 @@ export class Arrays {
         "GrenadeLauncherMagazine": "627a137bf21bc425b06ab944"
     };
 
-    public conflicting_hats = [
+    public conflHats = [
         "60bf74184a63fc79b60c57f6",
         "5df8a58286f77412631087ed",
         "5d96141523f0ea1b7f2aacab",
@@ -303,7 +303,7 @@ export class Arrays {
         "61c18db6dfd64163ea78fbb4"
     ];
 
-    public conflicting_masks = [
+    public conflMasks = [
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",
         "5b432b6c5acfc4001a599bf0",

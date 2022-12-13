@@ -5,17 +5,17 @@ class Arrays {
     constructor(tables) {
         this.tables = tables;
         this.botDB = this.tables.bots.types;
-        this.outdoor_maps = [
+        this.outdoorMaps = [
             "Shoreline",
             "Woods",
             "Lighthouse"
         ];
-        this.urban_maps = [
+        this.urbanMaps = [
             "Customs",
             "ReserveBase",
             "Interchange"
         ];
-        this.CQB_maps = [
+        this.cqbMaps = [
             "Factory",
             "Laboratory"
         ];
@@ -29,7 +29,7 @@ class Arrays {
             "5ac3b934156ae10c4430e83c",
             "5c0647fdd443bc2504c2d371"
         ];
-        this.stash_meds = [
+        this.stashMeds = [
             "544fb37f4bdc2dee738b4567",
             "5af0548586f7743a532b7e99",
             "5e8488fa988a8701445df1e4",
@@ -45,11 +45,11 @@ class Arrays {
             "5d02778e86f774203e7dedbe",
             "5d02797c86f774203f38e30a"
         ];
-        this.key_parent_id = [
-            "5c99f98d86f7745c314214b3",
+        this.keyParentIDs = [
+            "5c164d2286f774194c5e69fa",
             "5c99f98d86f7745c314214b3",
         ];
-        this.gear_parent_id = [
+        this.gearParentIDs = [
             "5448e5284bdc2dcb718b4567",
             "5448e54d4bdc2dcc718b4568",
             "57bef4c42459772e8d35a53b",
@@ -58,7 +58,7 @@ class Arrays {
             "5a341c4686f77469e155819e",
             "5645bcb74bdc2ded0b8b4578"
         ];
-        this.barter_parent_id = [
+        this.barterParentIDs = [
             "590c745b86f7743cc433c5f2",
             "57864ada245977548638de91",
             "57864a66245977548f04a81f",
@@ -70,7 +70,7 @@ class Arrays {
             "57864a3d24597754843f8721",
             "5448ecbe4bdc2d60728b4568"
         ];
-        this.weapon_parent_IDs = [
+        this.weaponParentIDs = [
             "5447b5e04bdc2d62278b4567",
             "5447b5f14bdc2d61278b4567",
             "5447b5cf4bdc2d65278b4567",
@@ -83,7 +83,7 @@ class Arrays {
             "5447b5fc4bdc2d87278b4567",
             "5447e1d04bdc2dff2f8b4567"
         ];
-        this.mod_parent_IDs = [
+        this.modParentIDs = [
             "550aa4bf4bdc2dd6348b456b",
             "550aa4dd4bdc2dc9348b4569",
             "550aa4cd4bdc2dd8348b456c",
@@ -110,7 +110,7 @@ class Arrays {
             "610720f290b75a49ff2e5e25",
             "627a137bf21bc425b06ab944"
         ];
-        this.equipment_slots = {
+        this.equipmentSlots = {
             Headwear: "Headwear",
             Earpiece: "Earpiece",
             FaceCover: "FaceCover",
@@ -126,7 +126,7 @@ class Arrays {
             Holster: "Holster",
             Scabbard: "Scabbard"
         };
-        this.boss_bot_list = [
+        this.bossBotArr = [
             this.botDB["bosssanitar"],
             this.botDB["bosskojaniy"],
             this.botDB["bosskilla"],
@@ -138,7 +138,7 @@ class Arrays {
             this.botDB["followerbirdeye"],
             this.botDB["sectantpriest"]
         ];
-        this.boss_follower_list = [
+        this.bossFollowerArr = [
             this.botDB["followerbully"],
             this.botDB["followergluharassault"],
             this.botDB["followergluharscout"],
@@ -148,28 +148,28 @@ class Arrays {
             this.botDB["followersanitar"],
             this.botDB["followertagilla"],
         ];
-        this.PMC_list = [
+        this.pmcList = [
             this.botDB["usec"],
             this.botDB["bear"],
         ];
-        this.rogue_raider_list = [
+        this.rogueRaiderList = [
             this.botDB["pmcbot"],
             this.botDB["exusec"],
         ];
-        this.cultist_list = [
+        this.cultistArr = [
             this.botDB["sectantwarrior"],
             this.botDB["sectantpriest"],
         ];
-        this.scav_bot_list = [
+        this.scavBotArr = [
             this.botDB["cursedassault"],
             this.botDB["assault"],
             this.botDB["marksman"]
         ];
-        this.scav_bot_health_list = [
+        this.scavBotHealthArr = [
             this.botDB["cursedassault"],
             this.botDB["assault"],
         ];
-        this.non_scav_bot_list = [
+        this.nonScavBotArr = [
             this.botDB["followerbully"],
             this.botDB["followergluharassault"],
             this.botDB["followergluharscout"],
@@ -195,7 +195,7 @@ class Arrays {
             this.botDB["followerbigpipe"],
             this.botDB["followerbirdeye"]
         ];
-        this.bot_list = [
+        this.botArr = [
             this.botDB["followerbully"],
             this.botDB["followergluharassault"],
             this.botDB["followergluharscout"],
@@ -223,7 +223,7 @@ class Arrays {
             this.botDB["followerbigpipe"],
             this.botDB["followerbirdeye"]
         ];
-        this.mod_types = {
+        this.modTypes = {
             "FlashHider": "550aa4bf4bdc2dd6348b456b",
             "MuzzleCombo": "550aa4dd4bdc2dc9348b4569",
             "Silencer": "550aa4cd4bdc2dd8348b456c",
@@ -250,7 +250,7 @@ class Arrays {
             "CylinderMagazine": "610720f290b75a49ff2e5e25",
             "GrenadeLauncherMagazine": "627a137bf21bc425b06ab944"
         };
-        this.conflicting_hats = [
+        this.conflHats = [
             "60bf74184a63fc79b60c57f6",
             "5df8a58286f77412631087ed",
             "5d96141523f0ea1b7f2aacab",
@@ -277,7 +277,7 @@ class Arrays {
             "5b43271c5acfc432ff4dce65",
             "61c18db6dfd64163ea78fbb4"
         ];
-        this.conflicting_masks = [
+        this.conflMasks = [
             "5b432c305acfc40019478128",
             "60363c0c92ec1c31037959f5",
             "5b432b6c5acfc4001a599bf0",

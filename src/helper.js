@@ -5,12 +5,11 @@ const dir = __dirname;
 const dirArray = dir.split("\\");
 const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
 class Helper {
-    constructor(tables, arrays, logger) {
+    constructor(tables, arrays) {
         this.tables = tables;
         this.arrays = arrays;
-        this.logger = logger;
         this.itemDB = this.tables.templates.items;
-        this.medItems = this.arrays.stash_meds;
+        this.medItems = this.arrays.stashMeds;
     }
     correctMedItems(playerData, pmcEXP) {
         var inventProp = playerData?.Inventory;
@@ -73,6 +72,12 @@ class Helper {
                 }
             }
         }
+    }
+    pickRandNumInRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    pickRandNumOneInTen() {
+        return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     }
     saveToJSONFile(data, filePath) {
         var fs = require('fs');

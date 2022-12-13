@@ -2,7 +2,7 @@
     "CustomsBossLocationSpawn": [
         {
             "BossName": "bossKnight",
-            "BossChance": 15,
+            "BossChance": 20,
             "BossZone": "ZoneScavBase, ZoneGasStation, ZoneDormitory, ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -37,7 +37,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 15,
+            "BossChance": 25,
             "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -50,7 +50,7 @@
         },
         {
             "BossName": "bossBully",
-            "BossChance": 25,
+            "BossChance": 30,
             "BossZone": "ZoneScavBase, ZoneGasStation, ZoneDormitory, ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -63,7 +63,7 @@
         },
         {
             "BossName": "bossSanitar",
-            "BossChance": 5,
+            "BossChance": 10,
             "BossZone": "ZoneScavBase, ZoneGasStation, ZoneDormitory, ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -76,7 +76,7 @@
         },
         {
             "BossName": "bossGluhar",
-            "BossChance": 5,
+            "BossChance": 10,
             "BossZone": "ZoneScavBase, ZoneGasStation, ZoneDormitory, ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -113,7 +113,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 30,
+            "BossChance": 35,
             "BossZone": "ZoneScavBase,ZoneBrige,ZoneCrossRoad,ZoneDormitory,ZoneGasStation,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneSnipeBrige,ZoneSnipeTower,ZoneSnipeFactory,ZoneBlockPost,ZoneBlockPostSniper,ZoneBlockPostSniper3,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -125,7 +125,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 30,
+            "BossChance": 35,
             "BossZone": "ZoneScavBase,ZoneBrige,ZoneCrossRoad,ZoneDormitory,ZoneGasStation,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneSnipeBrige,ZoneSnipeTower,ZoneSnipeFactory,ZoneBlockPost,ZoneBlockPostSniper,ZoneBlockPostSniper3,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -142,7 +142,7 @@
     "FactoryDayBossLocationSpawn": [
         {
             "BossName": "bossTagilla",
-            "BossChance": 20,
+            "BossChance": 25,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -154,7 +154,7 @@
         },
         {
             "BossName": "bossKilla",
-            "BossChance": 10,
+            "BossChance": 15,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -167,7 +167,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 20,
+            "BossChance": 25,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -181,7 +181,7 @@
     "FactoryNightBossLocationSpawn": [
         {
             "BossName": "bossTagilla",
-            "BossChance": 25,
+            "BossChance": 30,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -193,7 +193,7 @@
         },
         {
             "BossName": "bossKilla",
-            "BossChance": 10,
+            "BossChance": 15,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -218,7 +218,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 35,
+            "BossChance": 40,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -232,7 +232,7 @@
     "InterchangeBossLocationSpawn": [
         {
             "BossName": "bossKilla",
-            "BossChance": 30,
+            "BossChance": 35,
             "BossZone": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -245,7 +245,7 @@
         },
         {
             "BossName": "bossTagilla",
-            "BossChance": 15,
+            "BossChance": 20,
             "BossZone": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -257,7 +257,7 @@
         },
         {
             "BossName": "bossBully",
-            "BossChance": 10,
+            "BossChance": 15,
             "BossZone": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark,ZonePowerStation,ZoneTrucks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -270,7 +270,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 30,
+            "BossChance": 35,
             "BossZone": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark,ZonePowerStation,ZoneTrucks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -284,7 +284,7 @@
     "LighthouseBossLocationSpawn": [
         {
             "BossName": "bossKnight",
-            "BossChance": 35,
+            "BossChance": 40,
             "BossZone": "Zone_TreatmentContainers,Zone_Chalet,Zone_Village,Zone_Bridge,Zone_OldHouse,Zone_LongRoad,Zone_DestroyedHouse,Zone_Island,Zone_SniperPeak",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -321,7 +321,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 100,
+            "BossChance": 0,
             "BossZone": "Zone_Blockpost",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -443,7 +443,7 @@
     "ReserveBossLocationSpawn": [
         {
             "BossName": "bossGluhar",
-            "BossChance": 25,
+            "BossChance": 30,
             "BossZone": "ZoneRailStrorage,ZoneRailStrorage,ZoneRailStrorage,ZonePTOR1,ZonePTOR2,ZoneBarrack,ZoneBarrack,ZoneBarrack,ZoneSubStorage",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -480,7 +480,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 35,
+            "BossChance": 40,
             "BossZone": "ZoneRailStrorage",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -525,7 +525,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 35,
+            "BossChance": 40,
             "BossZone": "ZoneSubCommand",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -542,7 +542,7 @@
     "ShorelineBossLocationSpawn": [
         {
             "BossName": "bossKnight",
-            "BossChance": 15,
+            "BossChance": 20,
             "BossZone": "ZoneSanatorium1,ZoneSanatorium2,ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZonePort,ZoneBunkeSniper,ZonePowerStationSniper,ZoneForestTruck,ZoneForestSpawn",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -577,7 +577,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 15,
+            "BossChance": 20,
             "BossZone": "ZoneForestGasStation,ZoneForestSpawn",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -590,7 +590,7 @@
         },
         {
             "BossName": "bossSanitar",
-            "BossChance": 30,
+            "BossChance": 35,
             "BossZone": "ZonePort,ZoneGreenHouses,ZoneSanatorium1,ZoneGreenHouses,ZoneSanatorium2, ZoneMeteoStation",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -603,7 +603,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 15,
+            "BossChance": 20,
             "BossZone": "ZoneSanatorium1,ZoneSanatorium2",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -616,7 +616,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 30,
+            "BossChance": 35,
             "BossZone": "ZoneSanatorium1,ZoneSanatorium2,ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZonePort,ZoneBunkeSniper,ZonePowerStationSniper,ZoneForestTruck,ZoneForestSpawn",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -633,8 +633,8 @@
     "WoodsBossLocationSpawn": [
         {
             "BossName": "bossKnight",
-            "BossChance": 15,
-            "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneWoodCutter,ZoneBigRocks,ZoneRoad,ZoneHighRocks,ZoneMiniHouse,ZoneBigRocks",
+            "BossChance": 20,
+            "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneWoodCutter,ZoneRoad,ZoneHighRocks,ZoneMiniHouse,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -668,8 +668,8 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 30,
-            "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneWoodCutter,ZoneBigRocks,ZoneRoad,ZoneHighRocks,ZoneMiniHouse,ZoneBigRocks",
+            "BossChance": 35,
+            "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneWoodCutter,ZoneRoad,ZoneHighRocks,ZoneMiniHouse,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -683,7 +683,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 15,
+            "BossChance": 30,
             "BossZone": "ZoneMiniHouse,ZoneBrokenVill",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -696,8 +696,8 @@
         },
         {
             "BossName": "bossKojaniy",
-            "BossChance": 30,
-            "BossZone": "ZoneWoodCutter",
+            "BossChance": 35,
+            "BossZone": "ZoneWoodCutter, ZoneHouse, ZoneBigRocks, ZoneHighRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "followerKojaniy",
@@ -711,7 +711,7 @@
     "LabsBossLocationSpawn": [
         {
             "BossName": "bossSanitar",
-            "BossChance": 15,
+            "BossChance": 20,
             "BossZone": "BotZoneFloor1, BotZoneFloor2",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -724,7 +724,7 @@
         },
         {
             "BossName": "bossTagilla",
-            "BossChance": 15,
+            "BossChance": 20,
             "BossZone": "BotZoneFloor1, BotZoneFloor2",
             "BossPlayer": false,
             "BossDifficult": "normal",

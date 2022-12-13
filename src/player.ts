@@ -141,9 +141,9 @@ export class Player {
 
         if (this.modConf.realistic_ballistics == true) {
 
-            this.globalDB.LegsOverdamage *= 1.8;
+            this.globalDB.LegsOverdamage *= 1.75;
             this.globalDB.HandsOverdamage *= 1;
-            this.globalDB.StomachOverdamage *= 1.9;
+            this.globalDB.StomachOverdamage *= 1.85;
         }
 
         if(this.modConf.realistic_player_health == true){

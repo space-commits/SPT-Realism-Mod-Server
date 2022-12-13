@@ -10,11 +10,11 @@ const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length 
 
 export class Helper {
 
-    constructor(private tables: IDatabaseTables, private arrays: Arrays, private logger: ILogger) { }
+    constructor(private tables: IDatabaseTables, private arrays: Arrays) { }
 
 
     private itemDB = this.tables.templates.items;
-    private medItems = this.arrays.stash_meds;
+    private medItems = this.arrays.stashMeds;
 
     public correctMedItems(playerData: IPmcData, pmcEXP: number) {
         var inventProp = playerData?.Inventory;
@@ -87,6 +87,14 @@ export class Helper {
                 }
             }
         }
+    }
+
+    public pickRandNumInRange(min: number, max: number) : number{
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    public pickRandNumOneInTen() : number{
+        return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     }
 
     public saveToJSONFile(data, filePath) {
