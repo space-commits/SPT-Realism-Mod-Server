@@ -8,6 +8,30 @@ import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import { Helper } from "./helper";
+import { ParentClasses } from "./parent_classes";
+
+const AssaultRifleTemplates = require("../db/templates/weapons/AssaultRifleTemplates.json");
+const AssaultCarbineTemplates = require("../db/templates/weapons/AssaultCarbineTemplates.json");
+const MachinegunTemplates = require("../db/templates/weapons/MachinegunTemplates.json");
+const MarksmanRifleTemplates = require("../db/templates/weapons/MarksmanRifleTemplates.json");
+const PistolTemplates = require("../db/templates/weapons/PistolTemplates.json");
+const ShotgunTemplates = require("../db/templates/weapons/ShotgunTemplates.json");
+const SMGTemplates = require("../db/templates/weapons/SMGTemplates.json");
+const SniperRifleTemplates = require("../db/templates/weapons/SniperRifleTemplates.json");
+const SpecialWeaponTemplates = require("../db/templates/weapons/SpecialWeaponTemplates.json");
+const GrenadeLauncherTemplates = require("../db/templates/weapons/GrenadeLauncherTemplates.json");
+
+const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
+const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
+const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTemplates.json");
+const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
+const armorVestsTemplates = require("../db/templates/armor/armorVestsTemplates.json");
+const armorMasksTemplates = require("../db/templates/armor/armorMasksTemplates.json");
+
+
+
+const weapTemplates = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
+const armorTemlplates = [FaceShieldTemplates, armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates];
 
 const customPrap = require("../db/traders/prapor/assort.json");
 const customThera = require("../db/traders/therapist/assort.json");
@@ -29,6 +53,7 @@ const sellCatMech = require("../db/traders/mechanic/sell_categories.json");
 
 const ammoDB = require("../db/templates/ammo/ammoTemplates.json");
 
+
 const prapId = "54cb50c76803fa8b248b4571";
 const theraId = "54cb57776803fa99248b456e";
 const skierId = "58330581ace78e27b8b10cee";
@@ -40,7 +65,10 @@ const jaegId = "5c0647fdd443bc2504c2d371";
 export class Traders {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private helper: Helper) { }
 
+    itemDB = this.tables.templates.items;
+
     public loadTraderTweaks() {
+
 
         // this.tables.traders['54cb50c76803fa8b248b4571'].base.sell_category = sellCatPrap;
         this.tables.traders[theraId].base.sell_category = sellCatThera.sell_category;
@@ -78,19 +106,38 @@ export class Traders {
 
 
     public setLoyaltyLevels() {
-        this.loyaltyLevelHeleper(ammoDB);
+        this.loyaltyLevelHelper(ammoDB, false);
+        this.loyaltyLevelHelper(weapTemplates, true);
+        this.loyaltyLevelHelper(armorTemlplates, true);
     }
 
-    private loyaltyLevelHeleper(db) {
-        for (let i in db) {
-            let loyaltyLvl = db[i].LoyaltyLevel;
-            let itemID = db[i].ItemID;
+    private loyaltyLevelHelper(db, multifile: boolean) {
+
+        if (multifile == false) {
+            this.setLL(db);
+
+        } else {
+            for (let files in db) {
+                let file = db[files];
+                this.setLL(file);
+            }
+        }
+    }
+
+    private setLL(file) {
+        for (let item in file) {
+            let loyaltyLvl = file[item].LoyaltyLevel;
+            let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
                 if (this.tables.traders[trader].assort?.items !== undefined) {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
-                            this.tables.traders[trader].assort.loyal_level_items[id] = loyaltyLvl;
+                            if (this.itemDB[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== ParentClasses.MONEY) {
+                                this.tables.traders[trader].assort.loyal_level_items[id] = Math.max(1, loyaltyLvl - 1);
+                            } else {
+                                this.tables.traders[trader].assort.loyal_level_items[id] = Math.min(4, loyaltyLvl);
+                            }
                         }
                     }
                 }
@@ -116,22 +163,16 @@ export class Traders {
         this.assortNestedItemPusher(mechId, "5b2389515acfc4771e1be0c0", { "5b2388675acfc4771e1be0be": "mod_scope_000" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
         this.assortNestedItemPusher(mechId, "5a37ca54c4a282000d72296a", { "5b3b99475acfc432ff4dcbee": "mod_scope_000" }, 1, "5449016a4bdc2d6f028b456f", 4, true, undefined, 1.25, { "58d268fc86f774111273f8c2": "mod_scope_001" });
         this.assortNestedItemPusher(mechId, "618bab21526131765025ab3f", { "618ba27d9008e4636a67f61d": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 4, true, undefined, 1.25, { "618ba92152ecee1505530bd3": "mod_mount", "5a32aa8bc4a2826c6e06d737": "mod_scope" });
-
     }
 
-    private assortNestedItemPusher(trader: string, itemId: string, nestedChildItems: Record<string, string>, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbook: boolean, price?: number, priceMulti?: number, secondaryChildItems?: Record<string, string>,) {
+    private assortNestedItemPusher(trader: string, itemId: string, nestedChildItems: Record<string, string>, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbook: boolean, price: number = 0, priceMulti: number = 1, secondaryChildItems?: Record<string, string>,) {
 
-        let assort: ITraderAssort = this.tables.traders[trader].assort;
-        let assortId: string = this.helper.genId();
-        let parent: string = assortId;
-        let idArr: string[] = [];
-
-        if (price === undefined) {
-            price = 0;
-        }
+        let assort = this.tables.traders[trader].assort;
+        let assortId = this.helper.genId();
+        let parent = assortId;
+        let idArr = [];
 
         if (useHandbook == true) {
-
             idArr.push(itemId);
             for (let key in nestedChildItems) {
                 idArr.push(key);
@@ -149,33 +190,7 @@ export class Traders {
             }
         }
 
-        price *= priceMulti;
-
-        assort.items.push(
-            {
-                "_id": assortId,
-                "_tpl": itemId,
-                "parentId": "hideout",
-                "slotId": "hideout",
-                "upd": {
-                    "BuyRestrictionMax": buyRestriction,
-                    "BuyRestrictionCurrent": 0,
-                    "StackObjectsCount": 1
-                }
-            }
-        );
-
-        assort.barter_scheme[assortId] =
-            [
-                [
-                    {
-                        "count": price,
-                        "_tpl": saleCurrency
-                    }
-                ]
-            ];
-
-        assort.loyal_level_items[assortId] = loyalLvl;
+        this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
 
         for (let key in nestedChildItems) {
             let id = this.helper.genId();
@@ -206,7 +221,7 @@ export class Traders {
         }
     }
 
-    private assortItemPusher(trader: string, itemId: string, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbook: boolean, price?: number, priceMulti?: number) {
+    private assortItemPusher(trader: string, itemId: string, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbook: boolean, price: number = 0, priceMulti: number = 1) {
 
         let assort = this.tables.traders[trader].assort;
         let assortId = this.helper.genId();
@@ -214,10 +229,18 @@ export class Traders {
         if (useHandbook == true) {
             for (let i in this.tables.templates.handbook.Items) {
                 if (this.tables.templates.handbook.Items[i].Id === itemId) {
-                    price = this.tables.templates.handbook.Items[i].Price * priceMulti;
+                    price = this.tables.templates.handbook.Items[i].Price;
                 }
             }
         }
+
+        this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
+
+    }
+
+    private assortPusherHelper(assort: ITraderAssort, assortId: string, price: number, saleCurrency: string, loyalLvl: number, itemId: string, buyRestriction: number, priceMulti: number) {
+
+        price *= priceMulti;
 
         assort.items.push(
             {
@@ -246,6 +269,7 @@ export class Traders {
         assort.loyal_level_items[assortId] = loyalLvl;
     }
 }
+
 
 export class RandomizeTraderAssort {
 
@@ -279,67 +303,84 @@ export class RandomizeTraderAssort {
     }
 
     public stockHelper(item: Item) {
+
+        let itemParent = this.itemDB[item._tpl]._parent;
+        
         //ammo
-        this.randomizeStock("5485a8684bdc2da71d8b4567", item, 1, 120, true);
-        this.randomizeStock("543be5cb4bdc2deb348b4568", item, 0, 2);
+        this.randomizeStock(itemParent, ParentClasses.AMMO, item, 1, 120, true);
+        this.randomizeStock(itemParent, ParentClasses.AMMO_BOX, item, 0, 2);
 
         //weapons
         for (let id in this.arrays.weaponParentIDs) {
-            this.randomizeStock(this.arrays.weaponParentIDs[id], item, 0, 1);
+            this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0, 1);
         }
 
         //weapon mods
         for (let id in this.arrays.modParentIDs) {
-            this.randomizeStock(this.arrays.modParentIDs[id], item, 0, 1);
+            this.randomizeStock(itemParent, this.arrays.modParentIDs[id], item, 0, 1);
         }
 
         //gear
         for (let id in this.arrays.gearParentIDs) {
-            this.randomizeStock(this.arrays.gearParentIDs[id], item, 0, 1);
+            this.randomizeStock(itemParent, this.arrays.gearParentIDs[id], item, 0, 1);
         }
 
         //barter items
         for (let id in this.arrays.barterParentIDs) {
-            this.randomizeStock(this.arrays.barterParentIDs[id], item, 0, 2);
+            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0, 2);
         }
 
         //keys 
         for (let id in this.arrays.keyParentIDs) {
-            this.randomizeStock(this.arrays.keyParentIDs[id], item, 0, 1);
+            this.randomizeStock(itemParent, this.arrays.keyParentIDs[id], item, 0, 1);
         }
 
+        //maps
+        this.randomizeStock(itemParent, ParentClasses.MAP, item, 0, 1);
+
+        //nvg + thermals:
+        this.randomizeStock(itemParent, ParentClasses.NIGHTVISION, item, 0, 1);
+        this.randomizeStock(itemParent, ParentClasses.SPECIAL_SCOPE, item, 0, 1);
+        this.randomizeStock(itemParent, ParentClasses.THEMALVISION, item, 0, 1);
+
         //magazine
-        this.randomizeStock("5448bc234bdc2d3c308b4569", item, 0, 4);
+        if (itemParent === ParentClasses.MAGAZINE) {
+            let magCap = this.itemDB[item._tpl]?._props?.Cartridges[0]._max_count;
+            if (magCap <= 35) {
+                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0, 4);
+            } else if (magCap > 35 && magCap <= 45) {
+                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0, 3);
+            }
+            else {
+                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0, 1);
+            }
+        }
 
         //medical
-        this.randomizeStock("5448f3a64bdc2d60728b456a", item, 0, 1);
-        this.randomizeStock("5448f3a14bdc2d27728b4569", item, 0, 2);
-        this.randomizeStock("5448f3ac4bdc2dce718b4569", item, 0, 3);
+        this.randomizeStock(itemParent, ParentClasses.STIMULATOR, item, 0, 1);
+        this.randomizeStock(itemParent, ParentClasses.DRUGS, item, 0, 2);
+        this.randomizeStock(itemParent, ParentClasses.MEDICAL, item, 0, 3);
 
         //special items
-        this.randomizeStock("5447e0e74bdc2d3c308b4567", item, 3, 6);
+        this.randomizeStock(itemParent, ParentClasses.SPEC_ITEM, item, 3, 6);
 
         //grenades
-        this.randomizeStock("543be6564bdc2df4348b4568", item, 0, 3);
+        this.randomizeStock(itemParent, ParentClasses.THROW_WEAPON, item, 0, 3);
 
         //money
-        this.randomizeStock("543be5dd4bdc2deb348b4569", item, 0, 1000);
+        this.randomizeStock(itemParent, ParentClasses.MONEY, item, 0, 1500);
 
         //container
-        this.randomizeStock("5795f317245977243854e041", item, 0, 1);
-        this.randomizeStock("5671435f4bdc2d96058b4569", item, 0, 1);
+        this.randomizeStock(itemParent, ParentClasses.SIMPLE_CONTAINER, item, 0, 1);
+        this.randomizeStock(itemParent, ParentClasses.LOCKABLE_CONTAINER, item, 0, 1);
 
         //provisions
-        this.randomizeStock("5448e8d64bdc2dce718b4568", item, 0, 1);
-        this.randomizeStock("5448e8d04bdc2ddf718b4569", item, 0, 1);
-
-        //map
-        this.randomizeStock("5448e8d04bdc2ddf718b4569", item, 0, 1);
+        this.randomizeStock(itemParent, ParentClasses.FOOD, item, 0, 1);
+        this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0, 1);
     }
 
-    private randomizeStock(parent: string, item: Item, min: number, max: number, isAmmo?: boolean) {
-        var itemParent = this.itemDB[item._tpl]._parent;
-        if (itemParent === parent) {
+    private randomizeStock(assortItemParent: string, catParent: string, item: Item, min: number, max: number, isAmmo?: boolean) {
+        if (assortItemParent === catParent) {
             if (isAmmo == true) {
                 let randNum = this.helper.pickRandNumOneInTen();
                 if (randNum <= 4) {
@@ -396,6 +437,4 @@ export class TraderRefresh extends TraderAssortHelper {
         }
         return assortItems;
     }
-
-
 }

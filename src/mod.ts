@@ -1,4 +1,4 @@
-import { DependencyContainer } from "tsyringe";
+import { container, DependencyContainer } from "tsyringe";
 import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
 import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
@@ -59,7 +59,6 @@ import { PaymentHelper } from "@spt-aki/helpers/PaymentHelper";
 import { ITrader } from "@spt-aki/models/eft/common/tables/ITrader";
 
 
-
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
 import { AttatchmentBase } from "./attatchment_base";
@@ -71,7 +70,7 @@ import { Meds } from "./meds";
 import { Player } from "./player"
 import { WeaponsGlobals } from "./weapons_globals"
 import { Bots } from "./bots";
-import { BotModGen, BotWepGen } from "./bot_wep_gen";
+import { BotGenHelper, BotWepGen } from "./bot_wep_gen";
 import { BotLootServer } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
@@ -79,6 +78,7 @@ import { Quests } from "./quests";
 import { RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
+import { Gear } from "./gear";
 
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -97,6 +97,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     private modLoader: PreAkiModLoader;
 
     public preAkiLoad(container: DependencyContainer): void {
+
 
         const logger = container.resolve<ILogger>("WinstonLogger");
 
@@ -139,11 +140,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
+
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, traderHelper, fenceService, configServer);
-
-
         const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, localisationService, inventoryMagGenComponents);
-        const _botModGen = new BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
+        const _botModGen = new BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
 
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
         this.path = require("path");
@@ -179,15 +179,12 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
                 }
             }, { frequency: "Always" });
-
-
             container.afterResolution("BotLootCacheService", (_t, result: BotLootCacheService) => {
                 result.getLootFromCache = (botRole: string, isPmc: boolean, lootType: LootCacheType, lootPool: Items): ITemplateItem[] => {
                     return botLootServ.getLootCache(botRole, isPmc, lootType, lootPool);
                 }
             }, { frequency: "Always" });
         }
-
 
         if (modConfig.trader_changes == true) {
             container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
@@ -196,8 +193,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 }
             }, { frequency: "Always" });
         }
-
-
 
         staticRouterModService.registerStaticRouter(
             "CheckProfile",
@@ -449,10 +444,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
                             if (modConfig.airdrop_changes == true) {
                                 if (RaidInfoTracker.TOD === "day") {
-                                    this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 10, 10, 10, 1]);
+                                    this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 15, 15, 15, 1]);
                                 }
                                 if (RaidInfoTracker.TOD === "night") {
-                                    this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 20, 30, 30, 30, 1]);
+                                    this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 30, 40, 40, 40, 1]);
                                 }
                             }
 
@@ -486,7 +481,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables);
-  
+
                         let pmcData = profileHelper.getPmcProfile(sessionID);
 
                         try {
@@ -553,18 +548,21 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Maps(logger, tables, modConfig);
         const randomizeTraderAssort = new RandomizeTraderAssort();
+        const gear = new Gear(arrays, tables);
 
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
 
-        // codegen.pushToAllMods();
 
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
         codegen.descriptionGen();
 
+        if(modConfig.headgear_conflicts == true){
+            gear.loadGearConflicts();
+        }
 
         if (modConfig.open_zones_fix == true) {
             maps.openZonesFix();
@@ -577,8 +575,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();
         }
-
-
 
         if (modConfig.bot_changes == true) {
             bots.loadBots();
@@ -617,8 +613,12 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             traders.setLoyaltyLevels();
             randomizeTraderAssort.loadRandomizedTraderStock();
         }
+        if (modConfig.bot_changes == true) {
+            attatchBase.loadAttRequirements();
+        }
 
-        attatchBase.loadAttRestrict();
+        attatchBase.loadAttConmpat();
+
         items.loadItemsRestrictions();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();

@@ -33,7 +33,8 @@
         "Weight": 2.627,
         "DurabilityBurnRatio": 0.35,
         "AutoROF": 40,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 2
     },
     "574d967124597745970e7c94": {
         "ItemID": "574d967124597745970e7c94",
@@ -69,7 +70,8 @@
         "Weight": 2.627,
         "DurabilityBurnRatio": 0.35,
         "AutoROF": 40,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 2
     },
     "5c501a4d2e221602b412b540": {
         "ItemID": "5c501a4d2e221602b412b540",
@@ -105,7 +107,8 @@
         "Weight": 2.092,
         "DurabilityBurnRatio": 0.4,
         "AutoROF": 600,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 3
     },
     "5c07c60e0db834002330051f": {
         "ItemID": "5c07c60e0db834002330051f",
@@ -141,7 +144,8 @@
         "Weight": 1.2,
         "DurabilityBurnRatio": 0.38,
         "AutoROF": 800,
-        "SemiROF": 400
+        "SemiROF": 400,
+        "LoyaltyLevel": 2
     },
     "5d43021ca4b9362eab4b5e25": {
         "ItemID": "5d43021ca4b9362eab4b5e25",
@@ -177,7 +181,8 @@
         "Weight": 1,
         "DurabilityBurnRatio": 0.32,
         "AutoROF": 800,
-        "SemiROF": 500
+        "SemiROF": 500,
+        "LoyaltyLevel": 3
     },
     "59e6152586f77473dc057aa1": {
         "ItemID": "59e6152586f77473dc057aa1",
@@ -191,7 +196,7 @@
         "VerticalRecoil": 84,
         "HorizontalRecoil": 220,
         "Dispersion": 14,
-        "CameraRecoil": 0.062 ,
+        "CameraRecoil": 0.062,
         "CameraSnap": 3.5,
         "Convergence": 7.5,
         "RecoilAngle": 65,
@@ -213,7 +218,8 @@
         "Weight": 2.267,
         "DurabilityBurnRatio": 0.22,
         "AutoROF": 600,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 2
     },
     "59e6687d86f77411d949b251": {
         "ItemID": "59e6687d86f77411d949b251",
@@ -249,6 +255,7 @@
         "Weight": 2.267,
         "DurabilityBurnRatio": 0.22,
         "AutoROF": 600,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 2
     }
 }

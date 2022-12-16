@@ -250,6 +250,11 @@ class Arrays {
             "CylinderMagazine": "610720f290b75a49ff2e5e25",
             "GrenadeLauncherMagazine": "627a137bf21bc425b06ab944"
         };
+        this.conflNVGomponents = [
+            "5c0695860db834001b735461",
+            "5c11046cd174af02a012e42b",
+            "5a16b8a9fcdbcb00165aa6ca"
+        ];
         this.conflHats = [
             "60bf74184a63fc79b60c57f6",
             "5df8a58286f77412631087ed",
@@ -275,7 +280,8 @@ class Arrays {
             "5f60e6403b85f6263c14558c",
             "5f60e784f2bcbb675b00dac7",
             "5b43271c5acfc432ff4dce65",
-            "61c18db6dfd64163ea78fbb4"
+            "61c18db6dfd64163ea78fbb4",
+            "5aa2ba46e5b5b000137b758d"
         ];
         this.conflMasks = [
             "5b432c305acfc40019478128",

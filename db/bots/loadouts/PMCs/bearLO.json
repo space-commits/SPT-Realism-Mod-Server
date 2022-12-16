@@ -2011,7 +2011,7 @@
           "mod_stock": [
             "5bfe86df0db834001b734685",
             "55d4ae6c4bdc2d8b2f8b456e",
-            "5c793fde2e221601da358614",
+            "5ae30c9a5acfc408fb139a03",
             "5a9eb32da2750c00171b3f9c",
             "5beec8c20db834001d2c465c"
           ]
@@ -2020,7 +2020,7 @@
           "mod_stock_000": [
             "5bfe86df0db834001b734685",
             "55d4ae6c4bdc2d8b2f8b456e",
-            "5c793fde2e221601da358614",
+            "5ae30c9a5acfc408fb139a03",
             "5a9eb32da2750c00171b3f9c",
             "5beec8c20db834001d2c465c"
           ]
@@ -3551,6 +3551,21 @@
       },
       "mods": {
         "Helmets": {},
+        "5c0695860db834001b735461": {
+          "mod_nvg": [
+            "5c0696830db834001d23f5da"
+          ]
+        },
+        "5a16b93dfcdbcbcae6687261": {
+          "mod_nvg": [
+            "57235b6f24597759bf5a30f1"
+          ] 
+        },
+        "5a16b8a9fcdbcb00165aa6ca": {
+          "mod_nvg": [
+            "5c0695860db834001b735461"
+          ]
+        },
         "5a7c4850e899ef00150be885": {
           "mod_nvg": [
             "5a16b8a9fcdbcb00165aa6ca"
@@ -3790,18 +3805,22 @@
           "mod_stock": [
             "5bfe86df0db834001b734685",
             "55d4ae6c4bdc2d8b2f8b456e",
-            "5c793fde2e221601da358614",
+            "602e620f9b513876d4338d9a",
             "5a9eb32da2750c00171b3f9c",
-            "5beec8c20db834001d2c465c"
+            "5beec8c20db834001d2c465c",
+            "5ae30c9a5acfc408fb139a03",
+            "5c793fde2e221601da358614"
           ]
         },
         "5c0faeddd174af02a962601f": {
           "mod_stock_000": [
             "5bfe86df0db834001b734685",
             "55d4ae6c4bdc2d8b2f8b456e",
-            "5c793fde2e221601da358614",
+            "602e620f9b513876d4338d9a",
             "5a9eb32da2750c00171b3f9c",
-            "5beec8c20db834001d2c465c"
+            "5beec8c20db834001d2c465c",
+            "5ae30c9a5acfc408fb139a03",
+            "5c793fde2e221601da358614"
           ]
         },
         "59ecc28286f7746d7a68aa8c": {
@@ -5312,7 +5331,7 @@
         "5a16b93dfcdbcbcae6687261": {
           "mod_nvg": [
             "57235b6f24597759bf5a30f1"
-          ]
+          ] 
         },
         "5a16b8a9fcdbcb00165aa6ca": {
           "mod_nvg": [
@@ -5628,7 +5647,9 @@
             "5bfe86df0db834001b734685",
             "5c793fde2e221601da358614",
             "5a9eb32da2750c00171b3f9c",
-            "5beec8c20db834001d2c465c"
+            "5beec8c20db834001d2c465c",
+            "5d135e83d7ad1a21b83f42d8",
+            "602e620f9b513876d4338d9a"
           ]
         },
         "5cf518cfd7f00c065b422214": {
@@ -5637,7 +5658,9 @@
             "5bfe86df0db834001b734685",
             "5c793fde2e221601da358614",
             "5a9eb32da2750c00171b3f9c",
-            "5beec8c20db834001d2c465c"
+            "5beec8c20db834001d2c465c",
+            "5d135e83d7ad1a21b83f42d8",
+            "602e620f9b513876d4338d9a"
           ]
         },
         "5c0faeddd174af02a962601f": {
@@ -5646,7 +5669,9 @@
             "5bfe86df0db834001b734685",
             "5c793fde2e221601da358614",
             "5a9eb32da2750c00171b3f9c",
-            "5beec8c20db834001d2c465c"
+            "5beec8c20db834001d2c465c",
+            "5d135e83d7ad1a21b83f42d8",
+            "602e620f9b513876d4338d9a"
           ]
         },
         "5649b2314bdc2d79388b4576": {

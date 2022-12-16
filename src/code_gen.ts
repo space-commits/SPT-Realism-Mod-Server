@@ -3,12 +3,17 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";
 import { Helper } from "./helper";
+import { ParentClasses } from "./parent_classes";
 
 
 // const magazineJSON = require("../db/bots/loadouts/common/magazines.json");
 
 const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
-const HeadArmorTemplates = require("../db/templates/armor/HeadArmorTemplates.json");
+const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
+const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTemplates.json");
+const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
+const armorVestsTemplates = require("../db/templates/armor/armorVestsTemplates.json");
+
 
 const ammoTemplates = require("../db/templates/ammo/ammoTemplates.json");
 
@@ -48,21 +53,10 @@ export class CodeGen {
     globalDB = this.tables.globals.config;
     itemDB = this.tables.templates.items;
 
-    // public magsToJSON() {
-    //     for (let i in this.itemDB) {
-    //         let serverItem = this.itemDB[i];
-    //         if (serverItem._parent === "5448bc234bdc2d3c308b4569" || serverItem._parent === "610720f290b75a49ff2e5e25") {
-    //             let fileItem = magazineJSON[i];
-    //             magazineJSON[i] = this.doAssignJSONMagazine(fileItem);
-    //             this.helper.saveToJSONFile(magazineJSON, '/db/bots/loadouts/common/magazines.json');
-    //         }
-    //     }
-    // }
-
     public ammoTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === "5485a8684bdc2da71d8b4567" || serverItem._parent === "543be5cb4bdc2deb348b4568") {
+            if (serverItem._parent === ParentClasses.AMMO ||  ParentClasses.AMMO_BOX) {
                 this.itemWriteToFile(ammoTemplates, "ammoTemplates", i, serverItem, "ammo", this.assignJSONToAmmo);
             }
         }
@@ -71,10 +65,20 @@ export class CodeGen {
     public armorTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === "57bef4c42459772e8d35a53b" || serverItem._parent === "5a341c4086f77401f2541505") {
-                if (serverItem._props.HasHinge == true) {
-                    this.itemWriteToFile(FaceShieldTemplates, "FaceShieldTemplates", i, serverItem, "armor", this.assignJSONToArmor);
-                }
+            if ((serverItem._parent === ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === ParentClasses.HEADWEAR) && serverItem._props.HasHinge == true) {
+                this.itemWriteToFile(FaceShieldTemplates, "FaceShieldTemplates", i, serverItem, "armor", this.assignJSONToArmor);
+            }
+            if (serverItem._parent === ParentClasses.CHESTRIG && serverItem._props.armorClass > 0) {
+                this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "armor", this.assignJSONToArmor);
+            }
+            if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT && serverItem._props.armorClass > 0) {
+                this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "armor", this.assignJSONToArmor);
+            }
+            if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass > 0) {
+                this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "armor", this.assignJSONToArmor);
+            }
+            if (serverItem._parent === ParentClasses.ARMORVEST && serverItem._props.armorClass > 0) {
+                this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "armor", this.assignJSONToArmor);
             }
         }
     }
@@ -205,10 +209,10 @@ export class CodeGen {
         }
     }
 
-    private itemWriteToFile(filePathObj: object, fileStr: string, index: string, serverItem: ITemplateItem, folderStr: string, funJsonAssign, item?: string) {
+    private itemWriteToFile(filePathObj: object, fileStr: string, index: string, serverItem: ITemplateItem, folderStr: string, funJsonAssign: Function, id?: string) {
         let fileItem = filePathObj[index];
 
-        filePathObj[index] = funJsonAssign(serverItem, fileItem);
+        filePathObj[index] = funJsonAssign(serverItem, fileItem, id);
 
         this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
     }
@@ -216,6 +220,7 @@ export class CodeGen {
     private assignJSONToAmmo(serverItem: ITemplateItem, fileItem: any) {
 
         if (fileItem) {
+            fileItem.loyaltyLevel = 2;
             fileItem;
             return fileItem;
         }
@@ -244,12 +249,15 @@ export class CodeGen {
         let ItemID = serverItem._id;
         let Name = serverItem._name;
         let AllowADS = true;
+        let LoyaltyLevel = 2;
 
         let item = {
             ItemID,
             Name,
-            AllowADS
+            AllowADS,
+            LoyaltyLevel
         };
+
         return item;
     }
 
@@ -296,6 +304,7 @@ export class CodeGen {
         let Weight = serverItem._props.Weight;
         let AutoROF = serverItem._props.bFirerate;
         let SemiROF = serverItem._props.SingleFireRate;
+        let loyaltyLevel = 2;
 
         let item = {
             ItemID,
@@ -331,7 +340,8 @@ export class CodeGen {
             Velocity,
             Weight,
             AutoROF,
-            SemiROF
+            SemiROF,
+            loyaltyLevel
         };
         return item;
 
@@ -798,7 +808,7 @@ export class CodeGen {
     public pushArmorToServer() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === "57bef4c42459772e8d35a53b" || serverItem._parent === "5a341c4086f77401f2541505") {
+            if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === ParentClasses.HEADWEAR) {
                 for (let i in FaceShieldTemplates) {
                     let fileItem = FaceShieldTemplates[i];
                     this.armorPusherHelper(serverItem, fileItem);
@@ -954,7 +964,7 @@ export class CodeGen {
                         if (modType === "scope") {
                             locale.Description = "ADS speed modifier only applies when this sight is in use." + `\n\n${locale.Description}`;
                         }
-                        if (item._parent === "57bef4c42459772e8d35a53b" || item._parent === "5a341c4086f77401f2541505") {
+                        if (item._parent === ParentClasses.ARMOREDEQUIPMENT || item._parent === ParentClasses.HEADWEAR) {
                             if (item._props.ConflictingItems[1] === "true") {
                                 locale.Description = "This faceshield allows the use of sights while using any stock in the extended position." + `\n\n${locale.Description}`;
                             }
@@ -964,7 +974,7 @@ export class CodeGen {
                         }
                     }
 
-                    if (item._parent === "5485a8684bdc2da71d8b4567") {
+                    if (item._parent ===  ParentClasses.AMMO) {
 
                         if (item._props.Caliber === "Caliber20g") {
                             locale.Description = "Ammo stats are out of a Toz-106." + `\n\n${locale.Description}`;

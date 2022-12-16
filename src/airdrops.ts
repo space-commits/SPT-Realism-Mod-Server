@@ -1,6 +1,11 @@
 
 import { IAirdropConfig } from "@spt-aki/models/spt/config/IAirdropConfig";
 import { ILogger } from "../types/models/spt/utils/ILogger";
+import { LootGenerator } from "@spt-aki/generators/LootGenerator";
+import { DependencyContainer } from "tsyringe";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { LootRequest } from "@spt-aki/models/spt/services/LootRequest";
+
 
 
 export class Airdrops {

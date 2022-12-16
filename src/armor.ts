@@ -1,13 +1,14 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
+import { ParentClasses } from "./parent_classes";
 
 export class Armor {
 
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
-   private globalDB = this.tables.globals.config;
-   private itemDB = this.tables.templates.items;
-   private armMat = this.globalDB.ArmorMaterials;
+    private globalDB = this.tables.globals.config;
+    private itemDB = this.tables.templates.items;
+    private armMat = this.globalDB.ArmorMaterials;
 
     public loadArmor() {
 
@@ -1559,7 +1560,7 @@ export class Armor {
             }
 
             //Multiplier for Armored Rigs and Vests
-            if (serverItem._parent === "5448e54d4bdc2dcc718b4568" || serverItem._parent === "5448e5284bdc2dcb718b4567" && serverItem._props.speedPenaltyPercent != null) {
+            if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG && serverItem._props.speedPenaltyPercent != null) {
                 serverItem._props.BluntThroughput *= 1;
                 serverItem._props.speedPenaltyPercent *= 1;
                 serverItem._props.weaponErgonomicPenalty *= 1;
@@ -1570,36 +1571,36 @@ export class Armor {
             }
 
             //Blunt Damage Multiplier for Armored Rigs and Vests that below lvl 6
-            if (serverItem._props.armorClass <= 6 && (serverItem._parent === "5448e54d4bdc2dcc718b4568" || serverItem._parent === "5448e5284bdc2dcb718b4567")) {
+            if (serverItem._props.armorClass <= 6 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1.15;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 7
-            if (serverItem._props.armorClass >= 7 && (serverItem._parent === "5448e54d4bdc2dcc718b4568" || serverItem._parent === "5448e5284bdc2dcb718b4567")) {
+            if (serverItem._props.armorClass >= 7 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 8
-            if (serverItem._props.armorClass >= 8 && (serverItem._parent === "5448e54d4bdc2dcc718b4568" || serverItem._parent === "5448e5284bdc2dcb718b4567")) {
+            if (serverItem._props.armorClass >= 8 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1.15;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 9
-            if (serverItem._props.armorClass >= 9 && (serverItem._parent === "5448e54d4bdc2dcc718b4568" || serverItem._parent === "5448e5284bdc2dcb718b4567")) {
+            if (serverItem._props.armorClass >= 9 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1.27;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 10
-            if (serverItem._props.armorClass >= 10 && (serverItem._parent === "5448e54d4bdc2dcc718b4568" || serverItem._parent === "5448e5284bdc2dcb718b4567")) {
+            if (serverItem._props.armorClass >= 10 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1.49;
             }
 
 
             //Blunt Damage Multiplier for Helmets
-            if (serverItem._parent === "5a341c4086f77401f2541505" || serverItem._parent === "5a341c4686f77469e155819e" || serverItem._parent === "57bef4c42459772e8d35a53b" && serverItem._props.speedPenaltyPercent != null) {
+            if (serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT && serverItem._props.speedPenaltyPercent != null) {
                 serverItem._props.speedPenaltyPercent *= 1;
                 serverItem._props.weaponErgonomicPenalty *= 1;
-                if (this.modConf.buff_helmets && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
+                if (this.modConf.buff_helmets == true && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
                     serverItem._props.armorClass += 1;
                     serverItem._props.BluntThroughput *= 1;
-                    if (serverItem._parent === "57bef4c42459772e8d35a53b") {
-                        serverItem._props.Durability *= 1.2;
+                    if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) {
+                        serverItem._props.Durability *= 1.25;
                         serverItem._props.MaxDurability = serverItem._props.Durability;
                     }
                 }
@@ -1612,24 +1613,24 @@ export class Armor {
 
             }
 
-            if (serverItem._parent === "5a341c4086f77401f2541505" && serverItem._props.armorClass <= 3 || serverItem._parent === "5a341c4686f77469e155819e") {
+            if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass <= 3 || serverItem._parent === ParentClasses.FACECOVER) {
                 serverItem._props.BluntThroughput *= 0.65;
             }
 
-            if (serverItem._parent === "5a341c4086f77401f2541505" && serverItem._props.armorClass == 4) {
+            if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass == 4) {
                 serverItem._props.BluntThroughput *= 0.7;
             }
 
-            if (serverItem._parent === "5a341c4086f77401f2541505" && serverItem._props.armorClass == 5) {
+            if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass == 5) {
                 serverItem._props.BluntThroughput *= 1.15;
             }
 
             //Set min/max armor durability for bots
-            if (serverItem._parent === "5448e5284bdc2dcb718b4567" ||
-                serverItem._parent === "5448e54d4bdc2dcc718b4568" ||
-                serverItem._parent === "57bef4c42459772e8d35a53b" ||
-                serverItem._parent === "5a341c4086f77401f2541505" ||
-                serverItem._parent === "5a341c4686f77469e155819e") {
+            if (serverItem._parent === ParentClasses.CHESTRIG ||
+                serverItem._parent === ParentClasses.ARMORVEST ||
+                serverItem._parent === ParentClasses.ARMOREDEQUIPMENT ||
+                serverItem._parent === ParentClasses.HEADWEAR ||
+                serverItem._parent === ParentClasses.FACECOVER) {
                 serverItem._props.durabSpawnMin = 85;
                 serverItem._props.durabSpawnMax = 100;
             }

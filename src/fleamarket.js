@@ -35,7 +35,7 @@ class FleamarketConfig {
             this.fleaConf.dynamic.blacklist.custom = [];
         }
         if (this.modConfig.med_changes == true) {
-            this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT");
+            this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT", "TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");
         }
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.sell.chance.base = 45;

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotModGen = exports.CheckRequired = exports.BotWepGen = void 0;
+exports.BotGenHelper = exports.CheckRequired = exports.BotWepGen = void 0;
 const BotWeaponGenerator_1 = require("C:/snapshot/project/obj/generators/BotWeaponGenerator");
 const BotGeneratorHelper_1 = require("C:/snapshot/project/obj/helpers/BotGeneratorHelper");
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
@@ -19,7 +19,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         const profileHelper = tsyringe_1.container.resolve("ProfileHelper");
         const botWeaponGeneratorHelper = tsyringe_1.container.resolve("BotWeaponGeneratorHelper");
         const localisationService = tsyringe_1.container.resolve("LocalisationService");
-        const _botModGen = new BotModGen(this.logger, jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, durabilityLimitsHelper, this.itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
+        const _botModGen = new BotGenHelper(this.logger, jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, durabilityLimitsHelper, this.itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
         const modPool = botTemplateInventory.mods;
         const weaponItemTemplate = this.itemHelper.getItem(weaponTpl)[1];
         if (!weaponItemTemplate) {
@@ -175,7 +175,7 @@ class CheckRequired {
     }
 }
 exports.CheckRequired = CheckRequired;
-class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
+class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
     myShouldModBeSpawned(itemSlot, modSlot, modSpawnChances, checkRequired) {
         const modSpawnChance = checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot) ? 100 : modSpawnChances[modSlot];
         if (modSpawnChance === 100) {
@@ -296,7 +296,12 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             properties.Foldable = { "Folded": false };
         }
         if (itemTemplate._props.weapFireType && itemTemplate._props.weapFireType.length) {
-            properties.FireMode = { "FireMode": this.randomUtil.getArrayValue(itemTemplate._props.weapFireType) };
+            if ((itemTemplate._props.weapClass === "smg" || itemTemplate._props.weapClass === "pistol") && itemTemplate._props.weapFireType.includes("fullauto")) {
+                properties.FireMode = { "FireMode": "fullauto" };
+            }
+            else {
+                properties.FireMode = { "FireMode": this.randomUtil.getArrayValue(itemTemplate._props.weapFireType) };
+            }
         }
         if (itemTemplate._props.MaxHpResource) {
             properties.MedKit = { "HpResource": itemTemplate._props.MaxHpResource };
@@ -340,4 +345,4 @@ class BotModGen extends BotGeneratorHelper_1.BotGeneratorHelper {
             : {};
     }
 }
-exports.BotModGen = BotModGen;
+exports.BotGenHelper = BotGenHelper;

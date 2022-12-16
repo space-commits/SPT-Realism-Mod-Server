@@ -1,6 +1,6 @@
 
 import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
-import { BotGeneratorHelper } from "@spt-aki/helpers/BotGeneratorHelper";
+import { BotGeneratorHelper, ExhaustableArray } from "@spt-aki/helpers/BotGeneratorHelper";
 import { container, DependencyContainer } from "tsyringe";
 import { ITemplateItem, Slot } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { Inventory, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
@@ -22,8 +22,6 @@ import { BotTierTracker, RaidInfoTracker } from "./helper";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { LocalisationService } from "@spt-aki/services/LocalisationService";
 
-
-
 export class BotWepGen extends BotWeaponGenerator {
 
 
@@ -41,7 +39,7 @@ export class BotWepGen extends BotWeaponGenerator {
         const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
         const localisationService = container.resolve<LocalisationService>("LocalisationService");
 
-        const _botModGen = new BotModGen(this.logger, jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, durabilityLimitsHelper, this.itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
+        const _botModGen = new BotGenHelper(this.logger, jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, durabilityLimitsHelper, this.itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
 
         const modPool = botTemplateInventory.mods;
         const weaponItemTemplate = this.itemHelper.getItem(weaponTpl)[1];
@@ -199,7 +197,7 @@ export class BotWepGen extends BotWeaponGenerator {
 }
 
 export class CheckRequired {
-    
+
     public checkRequired(slot) {
         if (slot?._botRequired != undefined) {
             if (slot._botRequired == true)
@@ -213,10 +211,7 @@ export class CheckRequired {
 }
 
 
-
-export class BotModGen extends BotGeneratorHelper {
-
-
+export class BotGenHelper extends BotGeneratorHelper {
 
     private myShouldModBeSpawned(itemSlot: Slot, modSlot: string, modSpawnChances: ModsChances, checkRequired: CheckRequired): boolean {
 
@@ -230,7 +225,7 @@ export class BotModGen extends BotGeneratorHelper {
     }
 
     private myIsModValidForSlot(modToAdd: [boolean, ITemplateItem], itemSlot: Slot, modSlot: string, parentTemplate: ITemplateItem, checkRequired: CheckRequired): boolean {
-   
+
         if (!modToAdd[1]) {
             {
                 this.logger.error(this.localisationService.getText("bot-no_item_template_found_when_adding_mod", { modId: modToAdd[1]._id, modSlot: modSlot }));
@@ -259,7 +254,7 @@ export class BotModGen extends BotGeneratorHelper {
     }
 
     public botModGen(sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentWeaponTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string): Item[] {
-     
+
         const checkRequired = new CheckRequired();
 
         const pmcProfile = this.profileHelper.getPmcProfile(sessionId);
@@ -320,9 +315,10 @@ export class BotModGen extends BotGeneratorHelper {
                     modSpawnChances["mod_scope_001"] = 100;
                     modSpawnChances["mod_scope_002"] = 100;
                 }
-
                 this.addCompatibleModsForProvidedMod("mod_scope", modToAddTemplate, modPool, botEquipBlacklist);
             }
+
+
 
             // If front/rear sight are to be added, set opposite to 100% chance
             if (["mod_sight_front", "mod_sight_rear"].includes(modSlot)) {
@@ -375,7 +371,12 @@ export class BotModGen extends BotGeneratorHelper {
         }
 
         if (itemTemplate._props.weapFireType && itemTemplate._props.weapFireType.length) {
-            properties.FireMode = { "FireMode": this.randomUtil.getArrayValue(itemTemplate._props.weapFireType) };
+            if ((itemTemplate._props.weapClass === "smg" || itemTemplate._props.weapClass === "pistol") && itemTemplate._props.weapFireType.includes("fullauto")) {
+                properties.FireMode = { "FireMode": "fullauto" };
+            } else {
+                properties.FireMode = { "FireMode": this.randomUtil.getArrayValue(itemTemplate._props.weapFireType) };
+            }
+
         }
 
         if (itemTemplate._props.MaxHpResource) {

@@ -1,5 +1,6 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
+import { ParentClasses } from "./parent_classes";
 
 const mastering = require("../db/items/mastering.json");
 
@@ -33,7 +34,7 @@ export class WeaponsGlobals {
                     || serverItem._props.weapClass === "marksmanRifle"
                     || serverItem._props.weapClass === "assaultRifle"
                     || serverItem._props.weapClass === "pistol"
-                    || serverItem._parent === "616eb7aea207f41933308f46"
+                    || serverItem._parent === ParentClasses.REPAIRKITS
                 ) {
                     serverItem._props.MinRepairDegradation = 0;
                     serverItem._props.MaxRepairDegradation = 0.005;

@@ -38,7 +38,7 @@ export class FleamarketConfig {
         }
 
         if (this.modConfig.med_changes == true) {
-            this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT");
+            this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT", "TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");
         }
 
 

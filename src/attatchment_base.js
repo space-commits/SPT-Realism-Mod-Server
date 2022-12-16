@@ -9,45 +9,50 @@ class AttatchmentBase {
         this.modConf = modConf;
         this.itemDB = this.tables.templates.items;
     }
-    loadAttRestrict() {
+    loadAttConmpat() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === "55818a104bdc2db9688b4569") {
+                for (let slot in serverItem._props.Slots) {
+                    if (serverItem._props.Slots[slot]._name === "mod_scope" || serverItem._props.Slots[slot]._name === "mod_tactical") {
+                        var serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
+                        var compatMods = [
+                            "57fd23e32459772d0805bcf1",
+                            "544909bb4bdc2d6f028b4577",
+                            "5d10b49bd7ad1a1a560708b0",
+                            "5c06595c0db834001a66af6c",
+                            "5a7b483fe899ef0016170d15",
+                            "61605d88ffa6e502ac5e7eeb",
+                            "5c5952732e2216398b5abda2"
+                        ];
+                        serverItem._props.Slots[slot]._props.filters[0].Filter = compatMods.concat(serverArr);
+                    }
+                }
+            }
+            if (serverItem._parent === "55818a304bdc2db5418b457d") {
+                for (let slot in serverItem._props.Slots) {
+                    if (serverItem._props.Slots[slot]._name === "mod_sight_rear") {
+                        var serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
+                        var compatMods = ["5649a2464bdc2d91118b45a8"];
+                        serverItem._props.Slots[slot]._props.filters[0].Filter = compatMods.concat(serverArr);
+                    }
+                }
+            }
+            let cantedMountConfWeaps = ["5926bb2186f7744b1c6c6e60", "5d2f0d8048f0356c925bc3b0", "5e00903ae9dc277128008b87", "5de7bd7bfd6b4e6e2276dc25"];
+            for (let item in cantedMountConfWeaps) {
+                if (serverItem._id === cantedMountConfWeaps[item]) {
+                    serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
+                }
+            }
+            if (serverItem._props.weapClass === "pistol") {
+                serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
+            }
+        }
+    }
+    loadAttRequirements() {
         if (this.modConf.bot_changes == true) {
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];
-                if (serverItem._parent === "55818a104bdc2db9688b4569") {
-                    for (let slot in serverItem._props.Slots) {
-                        if (serverItem._props.Slots[slot]._name === "mod_scope" || serverItem._props.Slots[slot]._name === "mod_tactical") {
-                            var serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
-                            var compatMods = [
-                                "57fd23e32459772d0805bcf1",
-                                "544909bb4bdc2d6f028b4577",
-                                "5d10b49bd7ad1a1a560708b0",
-                                "5c06595c0db834001a66af6c",
-                                "5a7b483fe899ef0016170d15",
-                                "61605d88ffa6e502ac5e7eeb",
-                                "5c5952732e2216398b5abda2"
-                            ];
-                            serverItem._props.Slots[slot]._props.filters[0].Filter = compatMods.concat(serverArr);
-                        }
-                    }
-                }
-                if (serverItem._parent === "55818a304bdc2db5418b457d") {
-                    for (let slot in serverItem._props.Slots) {
-                        if (serverItem._props.Slots[slot]._name === "mod_sight_rear") {
-                            var serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
-                            var compatMods = ["5649a2464bdc2d91118b45a8"];
-                            serverItem._props.Slots[slot]._props.filters[0].Filter = compatMods.concat(serverArr);
-                        }
-                    }
-                }
-                let cantedMountConfWeaps = ["5926bb2186f7744b1c6c6e60", "5d2f0d8048f0356c925bc3b0", "5e00903ae9dc277128008b87", "5de7bd7bfd6b4e6e2276dc25"];
-                for (let item in cantedMountConfWeaps) {
-                    if (serverItem._id === cantedMountConfWeaps[item]) {
-                        serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
-                    }
-                }
-                if (serverItem._props.weapClass === "pistol") {
-                    serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
-                }
                 if (serverItem._id === "5b31163c5acfc400153b71cb"
                     || serverItem._id === "58d2664f86f7747fec5834f6"
                     || serverItem._id === "5c7d55f52e221644f31bff6a"
@@ -143,7 +148,12 @@ class AttatchmentBase {
                     || serverItem._id === "5f2aa49f9b44de6b1b4e68d4"
                     || serverItem._id === "5aaf8e43e5b5b00015693246"
                     || serverItem._id === "5827272a24597748c74bdeea"
-                    || serverItem._id === "58272b392459774b4c7b3ccd") {
+                    || serverItem._id === "58272b392459774b4c7b3ccd"
+                    || serverItem._id === "5a16b93dfcdbcbcae6687261"
+                    || serverItem._id === "5c066ef40db834001966a595"
+                    || serverItem._id === "5c11046cd174af02a012e42b"
+                    || serverItem._id === "5c0695860db834001b735461"
+                    || serverItem._id === "5a16b8a9fcdbcb00165aa6ca") {
                     serverItem._props.Slots[0]._botRequired = serverItem._props.Slots[0]._required;
                     serverItem._props.Slots[0]._botRequired = true;
                 }
@@ -163,6 +173,10 @@ class AttatchmentBase {
                 if (serverItem._id === "615d8dbd290d254f5e6b2ed6") {
                     serverItem._props.Slots[3]._botRequired = serverItem._props.Slots[3]._required;
                     serverItem._props.Slots[3]._botRequired = true;
+                }
+                if (serverItem._id === "5a16b93dfcdbcbcae6687261") {
+                    serverItem._props.Slots[0]._botRequired = serverItem._props.Slots[0]._required;
+                    serverItem._props.Slots[0]._botRequired = true;
                 }
             }
         }

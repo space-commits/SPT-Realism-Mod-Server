@@ -21,6 +21,7 @@ const quests_1 = require("./quests");
 const traders_1 = require("./traders");
 const airdrops_1 = require("./airdrops");
 const maps_1 = require("./maps");
+const gear_1 = require("./gear");
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -70,7 +71,7 @@ class Mod {
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, traderHelper, fenceService, configServer);
         const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, localisationService, inventoryMagGenComponents);
-        const _botModGen = new bot_wep_gen_1.BotModGen(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
+        const _botModGen = new bot_wep_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
         const router = container.resolve("DynamicRouterModService");
         this.path = require("path");
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
@@ -325,10 +326,10 @@ class Mod {
                         this.updateBots(pmcData, logger, modConfig, bots, helper);
                         if (modConfig.airdrop_changes == true) {
                             if (helper_1.RaidInfoTracker.TOD === "day") {
-                                this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 10, 10, 10, 1]);
+                                this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 15, 15, 15, 1]);
                             }
                             if (helper_1.RaidInfoTracker.TOD === "night") {
-                                this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 20, 30, 30, 30, 1]);
+                                this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 30, 40, 40, 40, 1]);
                             }
                         }
                         if (modConfig.logEverything == true) {
@@ -412,14 +413,17 @@ class Mod {
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Maps(logger, tables, modConfig);
         const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
+        const gear = new gear_1.Gear(arrays, tables);
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
-        // codegen.pushToAllMods();
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
         codegen.descriptionGen();
+        if (modConfig.headgear_conflicts == true) {
+            gear.loadGearConflicts();
+        }
         if (modConfig.open_zones_fix == true) {
             maps.openZonesFix();
         }
@@ -460,7 +464,10 @@ class Mod {
             traders.setLoyaltyLevels();
             randomizeTraderAssort.loadRandomizedTraderStock();
         }
-        attatchBase.loadAttRestrict();
+        if (modConfig.bot_changes == true) {
+            attatchBase.loadAttRequirements();
+        }
+        attatchBase.loadAttConmpat();
         items.loadItemsRestrictions();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();

@@ -33,7 +33,8 @@
         "Weight": 1.3,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 1
     },
     "60db29ce99594040e04c4a27": {
         "ItemID": "60db29ce99594040e04c4a27",
@@ -70,7 +71,8 @@
         "DurabilityBurnRatio": 0.35,
         "AutoROF": 30,
         "SemiROF": 450,
-        "DoubleActionAccuracyPenalty": 1.1
+        "DoubleActionAccuracyPenalty": 1.1,
+        "LoyaltyLevel": 1
     },
     "5580223e4bdc2d1c128b457f": {
         "ItemID": "5580223e4bdc2d1c128b457f",
@@ -106,7 +108,8 @@
         "Weight": 3.5,
         "DurabilityBurnRatio": 0.5,
         "AutoROF": 900,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 1
     },
     "54491c4f4bdc2db1078b4568": {
         "ItemID": "54491c4f4bdc2db1078b4568",
@@ -142,7 +145,8 @@
         "Weight": 1.1,
         "DurabilityBurnRatio": 0.35,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 1
     },
     "5e870397991fd70db46995c8": {
         "ItemID": "5e870397991fd70db46995c8",
@@ -178,7 +182,8 @@
         "Weight": 1.1,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 2
     },
     "5a7828548dc32e5a9c28b516": {
         "ItemID": "5a7828548dc32e5a9c28b516",
@@ -214,7 +219,8 @@
         "Weight": 1.1,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 2
     },
     "5e848cc2988a8701445df1e8": {
         "ItemID": "5e848cc2988a8701445df1e8",
@@ -250,7 +256,8 @@
         "Weight": 1.5,
         "DurabilityBurnRatio": 1,
         "AutoROF": 30,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 4
     },
     "56dee2bdd2720bc8328b4567": {
         "ItemID": "56dee2bdd2720bc8328b4567",
@@ -286,7 +293,8 @@
         "Weight": 1.2,
         "DurabilityBurnRatio": 0.3,
         "AutoROF": 40,
-        "SemiROF": 325
+        "SemiROF": 325,
+        "LoyaltyLevel": 3
     },
     "606dae0ab0e443224b421bb7": {
         "ItemID": "606dae0ab0e443224b421bb7",
@@ -322,7 +330,8 @@
         "Weight": 1.1,
         "DurabilityBurnRatio": 0.32,
         "AutoROF": 40,
-        "SemiROF": 300
+        "SemiROF": 300,
+        "LoyaltyLevel": 2
     },
     "6259b864ebedf17603599e88": {
         "ItemID": "6259b864ebedf17603599e88",
@@ -358,7 +367,8 @@
         "Weight": 1.22,
         "DurabilityBurnRatio": 1.15,
         "AutoROF": 60,
-        "SemiROF": 350
+        "SemiROF": 350,
+        "LoyaltyLevel": 4
     },
     "576165642459773c7a400233": {
         "ItemID": "576165642459773c7a400233",
@@ -394,6 +404,7 @@
         "Weight": 2.622,
         "DurabilityBurnRatio": 0.35,
         "AutoROF": 40,
-        "SemiROF": 285
+        "SemiROF": 285,
+        "LoyaltyLevel": 3
     }
 }

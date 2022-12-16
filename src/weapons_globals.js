@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WeaponsGlobals = void 0;
+const parent_classes_1 = require("./parent_classes");
 const mastering = require("../db/items/mastering.json");
 class WeaponsGlobals {
     constructor(logger, tables, modConf) {
@@ -32,7 +33,7 @@ class WeaponsGlobals {
                     || serverItem._props.weapClass === "marksmanRifle"
                     || serverItem._props.weapClass === "assaultRifle"
                     || serverItem._props.weapClass === "pistol"
-                    || serverItem._parent === "616eb7aea207f41933308f46") {
+                    || serverItem._parent === parent_classes_1.ParentClasses.REPAIRKITS) {
                     serverItem._props.MinRepairDegradation = 0;
                     serverItem._props.MaxRepairDegradation = 0.005;
                     serverItem._props.MinRepairKitDegradation = 0;

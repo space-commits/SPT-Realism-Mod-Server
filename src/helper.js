@@ -95,6 +95,14 @@ class Helper {
         }
         return result;
     }
+    loopItemDBAndRun(fun, itemDB) {
+        for (let item in itemDB) {
+            let serverItem = this.itemDB[item];
+            {
+                fun(serverItem, item);
+            }
+        }
+    }
 }
 exports.Helper = Helper;
 class RaidInfoTracker {

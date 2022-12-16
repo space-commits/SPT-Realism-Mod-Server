@@ -3850,7 +3850,94 @@
       },
       "mods": {
         "Helmet Mods": {},
+        "5c0695860db834001b735461": {
+          "mod_nvg": [
+            "5c0696830db834001d23f5da"
+          ]
+        },
+        "5a16b93dfcdbcbcae6687261": {
+          "mod_nvg": [
+            "57235b6f24597759bf5a30f1"
+          ]
+        },
+        "5a16b8a9fcdbcb00165aa6ca": {
+          "mod_nvg": [
+            "5c0695860db834001b735461",
+            "5a16b93dfcdbcbcae6687261"
+          ]
+        },
+        "5a16badafcdbcb001865f72d": {
+          "mod_equipment": [
+            "5a16ba61fcdbcb098008728a"
+          ]
+        },
         "Helmets": {},
+        "5c17a7ed2e2216152142459c": {
+          "mod_nvg": [
+            "5a16b8a9fcdbcb00165aa6ca"
+          ],
+          "mod_equipment_000": [
+            "5a16b672fcdbcb001912fa83",
+            "5a16b7e1fcdbcb00165aa6c9"
+          ],
+          "mod_equipment_001": [
+            "5c178a942e22164bef5ceca3",
+            "5c1793902e221602b21d3de2"
+          ],
+          "mod_mount": [
+            "5a398b75c4a282000a51a266"
+          ]
+        },
+        "5ac8d6885acfc400180ae7b0": {
+          "mod_nvg": [
+            "5a16b8a9fcdbcb00165aa6ca"
+          ],
+          "mod_equipment_000": [
+            "5a16b672fcdbcb001912fa83",
+            "5a16badafcdbcb001865f72d",
+            "5a16b7e1fcdbcb00165aa6c9"
+          ],
+          "mod_equipment_001": [
+            "5a16b9fffcdbcb0176308b34"
+          ],
+          "mod_equipment_002": [
+            "5c0e66e2d174af02a96252f4"
+          ],
+          "mod_mount": [
+            "5a398b75c4a282000a51a266"
+          ]
+        },
+        "5e01ef6886f77445f643baa4": {
+          "mod_nvg": [
+            "5c0558060db834001b735271"
+          ],
+          "mod_equipment_000": [
+            "5e01f31d86f77465cf261343",
+            "5e00cfa786f77469dc6e5685"
+          ]
+        },
+        "5d5e7d28a4b936645d161203": {
+          "mod_nvg": [
+            "5a16b8a9fcdbcb00165aa6ca"
+          ],
+          "mod_equipment_002": [
+            "5c0e66e2d174af02a96252f4"
+          ],
+          "mod_mount": [
+            "5a398b75c4a282000a51a266"
+          ]
+        },
+        "5d5e9c74a4b9364855191c40": {
+          "mod_nvg": [
+            "5a16b8a9fcdbcb00165aa6ca"
+          ],
+          "mod_equipment_002": [
+            "5c0e66e2d174af02a96252f4"
+          ],
+          "mod_mount": [
+            "5a398b75c4a282000a51a266"
+          ]
+        },
         "Magazines": {},
         "Handguards": {},
         "Receivers": {},
@@ -3860,27 +3947,6 @@
         "Mounts": {},
         "Stocks": {},
         "Guns": {},
-        "5ea05cf85ad9772e6624305d": {
-          "mod_equipment_000": [
-            "5a16b672fcdbcb001912fa83"
-          ],
-          "mod_equipment_001": [
-            "5a16b9fffcdbcb0176308b34"
-          ],
-          "mod_mount": [
-            "5a398b75c4a282000a51a266"
-          ]
-        },
-        "5d5e7d28a4b936645d161203": {
-          "mod_mount": [
-            "5a398b75c4a282000a51a266"
-          ]
-        },
-        "5d5e9c74a4b9364855191c40": {
-          "mod_mount": [
-            "5a398b75c4a282000a51a266"
-          ]
-        },
         "5a7828548dc32e5a9c28b516": {
           "mod_barrel": [
             "5a787f7ac5856700177af660"

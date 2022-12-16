@@ -33,7 +33,8 @@
         "Weight": 0.1,
         "DurabilityBurnRatio": 1.15,
         "AutoROF": 650,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 4
     },
     "5beed0f50db834001c062b12": {
         "ItemID": "5beed0f50db834001c062b12",
@@ -69,6 +70,7 @@
         "Weight": 2.458,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 650,
-        "SemiROF": 450
+        "SemiROF": 450,
+        "LoyaltyLevel": 4
     }
 }

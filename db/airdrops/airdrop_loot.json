@@ -392,8 +392,8 @@
             "max": 0
         },
         "itemCount": {
-            "min": 10,
-            "max": 20
+            "min": 20,
+            "max": 30
         },
         "itemBlacklist": [
             "5e997f0b86f7741ac73993e2",
@@ -405,11 +405,10 @@
             "5e85aac65505fa48730d8af2"
         ],
         "itemTypeWhitelist": [
-            "5485a8684bdc2da71d8b4567",
-            "543be5cb4bdc2deb348b4568"
+            "5485a8684bdc2da71d8b4567"
         ],
         "itemLimits": {
-            "543be5cb4bdc2deb348b4568": 10,
+            "543be5cb4bdc2deb348b4568": 1,
             "5447b5cf4bdc2d65278b4567": 1,
             "5448e8d04bdc2ddf718b4569": 3,
             "5448e8d64bdc2dce718b4568": 3,

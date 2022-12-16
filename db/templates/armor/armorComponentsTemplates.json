@@ -1,0 +1,56 @@
+{
+    "5f60b85bbdb8e27dee3dc985": {
+        "ItemID": "5f60b85bbdb8e27dee3dc985",
+        "Name": "item_equipment_helmet_galvion_applique",
+        "AllowADS": true,
+        "LoyaltyLevel": 3
+    },
+    "5d6d3be5a4b9361bc73bc763": {
+        "ItemID": "5d6d3be5a4b9361bc73bc763",
+        "Name": "item_equipment_helmet_lshz2dtm_aventail",
+        "AllowADS": true,
+        "LoyaltyLevel": 2
+    },
+    "5a16badafcdbcb001865f72d": {
+        "ItemID": "5a16badafcdbcb001865f72d",
+        "Name": "helmet_ops_core_fast_side_armor",
+        "AllowADS": true,
+        "LoyaltyLevel": 3
+    },
+    "5c1793902e221602b21d3de2": {
+        "ItemID": "5c1793902e221602b21d3de2",
+        "Name": "item_equipment_helmet_crye_airframe_ears",
+        "AllowADS": true,
+        "LoyaltyLevel": 3
+    },
+    "5e00cfa786f77469dc6e5685": {
+        "ItemID": "5e00cfa786f77469dc6e5685",
+        "Name": "helmet_team_wendy_exfil_ear_covers",
+        "AllowADS": true,
+        "LoyaltyLevel": 3
+    },
+    "5e01f31d86f77465cf261343": {
+        "ItemID": "5e01f31d86f77465cf261343",
+        "Name": "helmet_team_wendy_exfil_ear_covers_coyote",
+        "AllowADS": true,
+        "LoyaltyLevel": 3
+    },
+    "5c0e66e2d174af02a96252f4": {
+        "ItemID": "5c0e66e2d174af02a96252f4",
+        "Name": "item_equipment_helmet_gentex_slaap_tan",
+        "AllowADS": true,
+        "LoyaltyLevel": 4
+    },
+    "5c178a942e22164bef5ceca3": {
+        "ItemID": "5c178a942e22164bef5ceca3",
+        "Name": "item_equipment_helmet_crye_airframe_chops",
+        "AllowADS": true,
+        "LoyaltyLevel": 3
+    },
+    "5ea18c84ecf1982c7712d9a2": {
+        "ItemID": "5ea18c84ecf1982c7712d9a2",
+        "Name": "item_equipment_helmet_diamond_age_bastion_shield",
+        "AllowADS": true,
+        "LoyaltyLevel": 4
+    }
+}
