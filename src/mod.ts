@@ -79,6 +79,7 @@ import { RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
+import { SaveServer } from "@spt-aki/servers/SaveServer";
 
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -366,14 +367,14 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
                             const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                             const postLoadTables = postLoadDBServer.getTables();
-                            const arrays = new Arrays(postLoadTables);
-                            const helper = new Helper(postLoadTables, arrays);
-                            const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays);
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.MATCH_INFO).getValue<IStartOfflineRaidRequestData>();
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
+                            const arrays = new Arrays(postLoadTables);
+                            const helper = new Helper(postLoadTables, arrays);
+                            const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays);
                             // const sessionId = appContext.getLatestValue(ContextVariableType.SESSION_ID).getValue<string>();
                             const time = weatherController.generate().time;
                             const mapName = matchInfo.locationName;
@@ -382,7 +383,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             let mapType = "";
                             let pmcData = profileHelper.getPmcProfile(sessionID);
 
-
+                            if(mapName === "laboratory"){
+                                botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
+                                botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
+                            }
 
                             if (matchInfo.dateTime === "PAST") {
                                 realTime = getTime(time, 12);
@@ -403,7 +407,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             function getTOD(time) {
                                 let TOD = "";
                                 let [h, m] = time.split(':');
-                                if (parseInt(h) >= 6 && parseInt(h) < 20 || (mapName === "Factory" || mapName === "Laboratory")) {
+                                if (parseInt(h) >= 6 && parseInt(h) < 20 || (mapName === "factory4_day" || mapName === "Factory" || mapName === "Laboratory" || mapName === "laboratory")) {
                                     TOD = "day";
                                 }
                                 else {
@@ -440,7 +444,9 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 }
                             }
 
+                            logger.warning("pre update bots");
                             this.updateBots(pmcData, logger, modConfig, bots, helper);
+                            logger.warning("post update bots");
 
                             if (modConfig.airdrop_changes == true) {
                                 if (RaidInfoTracker.TOD === "day") {
@@ -452,9 +458,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             }
 
                             if (modConfig.logEverything == true) {
-                                logger.warning("Map = " + mapName);
-                                logger.warning("Time of Day = " + RaidInfoTracker.TOD);
-                                logger.warning("Map Type = " + RaidInfoTracker.mapType);
+                                logger.warning("Map Name = " + mapName);
+                                logger.warning("Map Type  = " + RaidInfoTracker.mapType);
+                                logger.warning("Time " + time);
+                                logger.warning("Time of Day = " + getTOD(realTime));
                             }
 
                             return HttpResponse.nullResponse();
@@ -560,6 +567,10 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         codegen.pushArmorToServer();
         codegen.descriptionGen();
 
+        if(modConfig.armor_mouse_penalty == true){
+            armor.armorMousePenalty();            
+        }
+
         if(modConfig.headgear_conflicts == true){
             gear.loadGearConflicts();
         }
@@ -622,7 +633,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         items.loadItemsRestrictions();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
-
     }
 
     public postAkiLoad(container: DependencyContainer) {
@@ -730,6 +740,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         this.setBotTier(pmcData, "usec", bots, helper);
         this.setBotTier(pmcData, "raider", bots, helper);
         this.setBotTier(pmcData, "rogue", bots, helper);
+        this.setBotTier(pmcData, "goons", bots, helper);
     }
 
     private setBotTier(pmcData: IPmcData, type: string, bots: Bots, helper: Helper) {
@@ -759,7 +770,20 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 40]);
         }
-
+        if (type === "goons") {
+            if (tier == 1) {
+                bots.goonsLoad1();
+            }
+            if (tier == 2) {
+                bots.goonsLoad2();
+            }
+            if (tier == 3) {
+                bots.goonsLoad2();
+            }
+            if (tier == 4) {
+                bots.goonsLoad3();
+            }
+        }
         if (type === "raider") {
             if (tier == 1) {
                 bots.raiderLoad1();
@@ -835,8 +859,6 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
     private updateBots(pmcData: IPmcData, logger: ILogger, config, bots: Bots, helper: Helper) {
 
-        var baseTier = 1;
-
         var property = pmcData?.Info?.Level;
         if (config.bot_changes == true) {
             if (property === undefined) {
@@ -846,6 +868,7 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 bots.bearLoad1();
                 bots.rogueLoad1();
                 bots.raiderLoad1();
+                bots.goonsLoad1();
                 logger.info("Realism Mod: Bots Have Been Set To Default (Tier 1)");
                 if (config.logEverything == true) {
                     logger.info("Realism Mod: Bots Have Been Reconfigured");
@@ -858,40 +881,15 @@ class Mod implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 }
                 if (config.bot_testing == false) {
                     this.getBotTier(pmcData, bots, helper);
-                    var baseTiers = [1, 2, 3];
-                    if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-                        baseTier = helper.probabilityWeighter(baseTiers, [10, 1, 0, 0]);
-                    }
-                    if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-                        baseTier = helper.probabilityWeighter(baseTiers, [10, 1, 0, 0]);
-                    }
-                    if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-                        baseTier = helper.probabilityWeighter(baseTiers, [10, 2, 1, 0]);
-                    }
-                    if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-                        baseTier = helper.probabilityWeighter(baseTiers, [10, 3, 1, 0]);
-                    }
-                    if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-                        baseTier = helper.probabilityWeighter(baseTiers, [6, 5, 1, 0]);
-                    }
-                    if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-                        baseTier = helper.probabilityWeighter(baseTiers, [2, 10, 2, 0]);
-                    }
-                    if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-                        baseTier = helper.probabilityWeighter(baseTiers, [1, 5, 15, 0]);
-                    }
-                    if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
-                        baseTier = helper.probabilityWeighter(baseTiers, [1, 2, 20, 0]);
-                    }
-                    if (baseTier == 1) {
+                    if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 15) {
                         bots.botConfig1();
                         logger.info("Realism Mod: Bots Have Been Set To Base Tier 1");
                     }
-                    if (baseTier == 2) {
+                    if (pmcData.Info.Level >= 16 && pmcData.Info.Level < 25) {
                         bots.botConfig2();
                         logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 2");
                     }
-                    if (baseTier == 3) {
+                    if (pmcData.Info.Level >= 26) {
                         bots.botConfig3();
                         logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 3");
                     }

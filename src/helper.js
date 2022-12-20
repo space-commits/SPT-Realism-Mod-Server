@@ -95,14 +95,6 @@ class Helper {
         }
         return result;
     }
-    loopItemDBAndRun(fun, itemDB) {
-        for (let item in itemDB) {
-            let serverItem = this.itemDB[item];
-            {
-                fun(serverItem, item);
-            }
-        }
-    }
 }
 exports.Helper = Helper;
 class RaidInfoTracker {
@@ -128,6 +120,9 @@ class BotTierTracker {
         if (botType === "exusec") {
             return BotTierTracker.rogueTier;
         }
+        if (botType === "bossknight" || botType === "followerbigpipe" || botType === "followerbirdeye") {
+            return BotTierTracker.goonsTier;
+        }
     }
 }
 exports.BotTierTracker = BotTierTracker;
@@ -136,3 +131,4 @@ BotTierTracker.bearTier = 1;
 BotTierTracker.scavTier = 1;
 BotTierTracker.rogueTier = 1;
 BotTierTracker.raiderTier = 1;
+BotTierTracker.goonsTier = 1;

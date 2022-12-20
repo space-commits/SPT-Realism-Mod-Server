@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WeaponsGlobals = void 0;
-const parent_classes_1 = require("./parent_classes");
+const enums_1 = require("./enums");
 const mastering = require("../db/items/mastering.json");
 class WeaponsGlobals {
     constructor(logger, tables, modConf) {
@@ -33,7 +33,7 @@ class WeaponsGlobals {
                     || serverItem._props.weapClass === "marksmanRifle"
                     || serverItem._props.weapClass === "assaultRifle"
                     || serverItem._props.weapClass === "pistol"
-                    || serverItem._parent === parent_classes_1.ParentClasses.REPAIRKITS) {
+                    || serverItem._parent === enums_1.ParentClasses.REPAIRKITS) {
                     serverItem._props.MinRepairDegradation = 0;
                     serverItem._props.MaxRepairDegradation = 0.005;
                     serverItem._props.MinRepairKitDegradation = 0;
@@ -48,6 +48,7 @@ class WeaponsGlobals {
         }
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
             this.globalDB.Aiming.AimProceduralIntensity = 1;
+            this.globalDB.Aiming.spp;
             this.globalDB.Aiming.RecoilCrank = true;
             this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
             this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.7;

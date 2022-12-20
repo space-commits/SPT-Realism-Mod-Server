@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Ammo = void 0;
-const parent_classes_1 = require("./parent_classes");
+const enums_1 = require("./enums");
 class Ammo {
     constructor(logger, tables, modConf) {
         this.logger = logger;
@@ -1464,7 +1464,7 @@ class Ammo {
             }
             //AP SX
             if (serverItem._id === "5ba26835d4351e0035628ff5") {
-                serverItem._props.PenetrationPower = 52;
+                serverItem._props.PenetrationPower = 51;
                 serverItem._props.ArmorDamage = 10;
                 serverItem._props.Damage = 25;
                 serverItem._props.InitialSpeed = 680;
@@ -3349,7 +3349,7 @@ class Ammo {
     loadAmmoFirerateChanges() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === parent_classes_1.ParentClasses.AMMO) {
+            if (serverItem._parent === enums_1.ParentClasses.AMMO) {
                 if (this.modConf.recoil_attachment_overhaul == true) {
                     serverItem._props.casingMass = Math.min(1.05, (serverItem._props.ammoRec / 500) + 1);
                 }
@@ -3363,7 +3363,7 @@ class Ammo {
         const _9x18AmmoArr = this.itemDB["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === parent_classes_1.ParentClasses.AMMO) {
+            if (serverItem._parent === enums_1.ParentClasses.AMMO) {
                 if (serverItem._props?.DurabilityBurnModificator !== undefined) {
                     var duraBurn = Math.max(1, serverItem._props.DurabilityBurnModificator * 0.55);
                     var misfireChance = Math.max(0, serverItem._props.MalfMisfireChance *= 0.9);

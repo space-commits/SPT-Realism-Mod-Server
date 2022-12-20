@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Armor = void 0;
-const parent_classes_1 = require("./parent_classes");
+const enums_1 = require("./enums");
 class Armor {
     constructor(logger, tables, modConf) {
         this.logger = logger;
@@ -447,15 +447,15 @@ class Armor {
             }
             //S&S Precision PlateFrame plate carrier (Goons Edition)
             if (serverItem._id === "628b9784bcf6e2659e09b8a2") {
-                serverItem._props.Durability = 95;
+                serverItem._props.Durability = 75;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 7;
+                serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -3;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -3;
                 serverItem._props.BluntThroughput = 0.22;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
-                serverItem._props.Weight = 6.4;
+                serverItem._props.Weight = 6;
             }
             //TV-110
             if (serverItem._id === "5c0e746986f7741453628fe5") {
@@ -1548,73 +1548,76 @@ class Armor {
                 serverItem._props.Weight = 0.99;
             }
             //Multiplier for Armored Rigs and Vests
-            if (serverItem._parent === parent_classes_1.ParentClasses.ARMORVEST || serverItem._parent === parent_classes_1.ParentClasses.CHESTRIG && serverItem._props.speedPenaltyPercent != null) {
+            if (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG && serverItem._props.speedPenaltyPercent != null) {
                 serverItem._props.BluntThroughput *= 1;
                 serverItem._props.speedPenaltyPercent *= 1;
                 serverItem._props.weaponErgonomicPenalty *= 1;
-                if (this.modConf.armor_mouse_penalty == true) {
-                    serverItem._props.mousePenalty = -serverItem._props.Weight;
-                }
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that below lvl 6
-            if (serverItem._props.armorClass <= 6 && (serverItem._parent === parent_classes_1.ParentClasses.ARMORVEST || serverItem._parent === parent_classes_1.ParentClasses.CHESTRIG)) {
+            if (serverItem._props.armorClass <= 6 && (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1.15;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 7
-            if (serverItem._props.armorClass >= 7 && (serverItem._parent === parent_classes_1.ParentClasses.ARMORVEST || serverItem._parent === parent_classes_1.ParentClasses.CHESTRIG)) {
+            if (serverItem._props.armorClass >= 7 && (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 8
-            if (serverItem._props.armorClass >= 8 && (serverItem._parent === parent_classes_1.ParentClasses.ARMORVEST || serverItem._parent === parent_classes_1.ParentClasses.CHESTRIG)) {
+            if (serverItem._props.armorClass >= 8 && (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1.15;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 9
-            if (serverItem._props.armorClass >= 9 && (serverItem._parent === parent_classes_1.ParentClasses.ARMORVEST || serverItem._parent === parent_classes_1.ParentClasses.CHESTRIG)) {
+            if (serverItem._props.armorClass >= 9 && (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1.27;
             }
             //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 10
-            if (serverItem._props.armorClass >= 10 && (serverItem._parent === parent_classes_1.ParentClasses.ARMORVEST || serverItem._parent === parent_classes_1.ParentClasses.CHESTRIG)) {
+            if (serverItem._props.armorClass >= 10 && (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG)) {
                 serverItem._props.BluntThroughput *= 1.49;
             }
             //Blunt Damage Multiplier for Helmets
-            if (serverItem._parent === parent_classes_1.ParentClasses.HEADWEAR || serverItem._parent === parent_classes_1.ParentClasses.FACECOVER || serverItem._parent === parent_classes_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.speedPenaltyPercent != null) {
-                serverItem._props.speedPenaltyPercent *= 1;
-                serverItem._props.weaponErgonomicPenalty *= 1;
+            if (serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) {
                 if (this.modConf.buff_helmets == true && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
                     serverItem._props.armorClass += 1;
-                    serverItem._props.BluntThroughput *= 1;
-                    if (serverItem._parent === parent_classes_1.ParentClasses.ARMOREDEQUIPMENT) {
+                    serverItem._props.BluntThroughput *= 0.85;
+                    if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) {
                         serverItem._props.Durability *= 1.25;
                         serverItem._props.MaxDurability = serverItem._props.Durability;
                     }
                 }
-                if (this.modConf.armor_mouse_penalty == true) {
-                    if (serverItem._props.armorClass > 2 && serverItem._props.Weight > 0.5) {
-                        serverItem._props.mousePenalty = -serverItem._props.Weight;
-                    }
-                }
             }
-            if (serverItem._parent === parent_classes_1.ParentClasses.HEADWEAR && serverItem._props.armorClass <= 3 || serverItem._parent === parent_classes_1.ParentClasses.FACECOVER) {
+            if (serverItem._parent === enums_1.ParentClasses.HEADWEAR && serverItem._props.armorClass <= 3 || serverItem._parent === enums_1.ParentClasses.FACECOVER) {
                 serverItem._props.BluntThroughput *= 0.65;
             }
-            if (serverItem._parent === parent_classes_1.ParentClasses.HEADWEAR && serverItem._props.armorClass == 4) {
+            if (serverItem._parent === enums_1.ParentClasses.HEADWEAR && serverItem._props.armorClass == 4) {
                 serverItem._props.BluntThroughput *= 0.7;
             }
-            if (serverItem._parent === parent_classes_1.ParentClasses.HEADWEAR && serverItem._props.armorClass == 5) {
+            if (serverItem._parent === enums_1.ParentClasses.HEADWEAR && serverItem._props.armorClass == 5) {
                 serverItem._props.BluntThroughput *= 1.15;
             }
             //Set min/max armor durability for bots
-            if (serverItem._parent === parent_classes_1.ParentClasses.CHESTRIG ||
-                serverItem._parent === parent_classes_1.ParentClasses.ARMORVEST ||
-                serverItem._parent === parent_classes_1.ParentClasses.ARMOREDEQUIPMENT ||
-                serverItem._parent === parent_classes_1.ParentClasses.HEADWEAR ||
-                serverItem._parent === parent_classes_1.ParentClasses.FACECOVER) {
+            if (serverItem._parent === enums_1.ParentClasses.CHESTRIG ||
+                serverItem._parent === enums_1.ParentClasses.ARMORVEST ||
+                serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT ||
+                serverItem._parent === enums_1.ParentClasses.HEADWEAR ||
+                serverItem._parent === enums_1.ParentClasses.FACECOVER) {
                 serverItem._props.durabSpawnMin = 85;
                 serverItem._props.durabSpawnMax = 100;
             }
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("Armour loaded");
+        }
+    }
+    armorMousePenalty() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG || serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) && serverItem._props.speedPenaltyPercent != null) {
+                if (this.modConf.armor_mouse_penalty == true) {
+                    serverItem._props.mousePenalty = -serverItem._props.Weight;
+                }
+            }
+        }
+        if (this.modConf.logEverything == true) {
+            this.logger.info("Armour Mouse Penalty Added");
         }
     }
 }

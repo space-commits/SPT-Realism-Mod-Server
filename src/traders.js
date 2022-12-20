@@ -5,7 +5,7 @@ const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const arrays_1 = require("./arrays");
 const TraderAssortHelper_1 = require("C:/snapshot/project/obj/helpers/TraderAssortHelper");
 const helper_1 = require("./helper");
-const parent_classes_1 = require("./parent_classes");
+const enums_1 = require("./enums");
 const AssaultRifleTemplates = require("../db/templates/weapons/AssaultRifleTemplates.json");
 const AssaultCarbineTemplates = require("../db/templates/weapons/AssaultCarbineTemplates.json");
 const MachinegunTemplates = require("../db/templates/weapons/MachinegunTemplates.json");
@@ -112,7 +112,7 @@ class Traders {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
-                            if (this.itemDB[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== parent_classes_1.ParentClasses.MONEY) {
+                            if (this.itemDB[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
                                 this.tables.traders[trader].assort.loyal_level_items[id] = Math.max(1, loyaltyLvl - 1);
                             }
                             else {
@@ -257,8 +257,8 @@ class RandomizeTraderAssort {
     stockHelper(item) {
         let itemParent = this.itemDB[item._tpl]._parent;
         //ammo
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.AMMO, item, 1, 120, true);
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.AMMO_BOX, item, 0, 2);
+        this.randomizeAmmoStock(itemParent, item);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.AMMO_BOX, item, 0, 2);
         //weapons
         for (let id in this.arrays.weaponParentIDs) {
             this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0, 1);
@@ -280,55 +280,82 @@ class RandomizeTraderAssort {
             this.randomizeStock(itemParent, this.arrays.keyParentIDs[id], item, 0, 1);
         }
         //maps
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.MAP, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.MAP, item, 0, 1);
         //nvg + thermals:
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.NIGHTVISION, item, 0, 1);
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.SPECIAL_SCOPE, item, 0, 1);
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.THEMALVISION, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.NIGHTVISION, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.SPECIAL_SCOPE, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.THEMALVISION, item, 0, 1);
         //magazine
-        if (itemParent === parent_classes_1.ParentClasses.MAGAZINE) {
+        if (itemParent === enums_1.ParentClasses.MAGAZINE) {
             let magCap = this.itemDB[item._tpl]?._props?.Cartridges[0]._max_count;
             if (magCap <= 35) {
-                this.randomizeStock(itemParent, parent_classes_1.ParentClasses.MAGAZINE, item, 0, 4);
+                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0, 4);
             }
             else if (magCap > 35 && magCap <= 45) {
-                this.randomizeStock(itemParent, parent_classes_1.ParentClasses.MAGAZINE, item, 0, 3);
+                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0, 3);
             }
             else {
-                this.randomizeStock(itemParent, parent_classes_1.ParentClasses.MAGAZINE, item, 0, 1);
+                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0, 1);
             }
         }
         //medical
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.STIMULATOR, item, 0, 1);
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.DRUGS, item, 0, 2);
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.MEDICAL, item, 0, 3);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.STIMULATOR, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.DRUGS, item, 0, 2);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.MEDICAL, item, 0, 3);
         //special items
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.SPEC_ITEM, item, 3, 6);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.SPEC_ITEM, item, 3, 6);
         //grenades
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.THROW_WEAPON, item, 0, 3);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.THROW_WEAPON, item, 0, 3);
         //money
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.MONEY, item, 0, 1500);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.MONEY, item, 0, 1500);
         //container
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.SIMPLE_CONTAINER, item, 0, 1);
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.LOCKABLE_CONTAINER, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.SIMPLE_CONTAINER, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.LOCKABLE_CONTAINER, item, 0, 1);
         //provisions
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.FOOD, item, 0, 1);
-        this.randomizeStock(itemParent, parent_classes_1.ParentClasses.DRINK, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.FOOD, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.DRINK, item, 0, 1);
     }
-    randomizeStock(assortItemParent, catParent, item, min, max, isAmmo) {
-        if (assortItemParent === catParent) {
-            if (isAmmo == true) {
-                let randNum = this.helper.pickRandNumOneInTen();
-                if (randNum <= 4) {
-                    item.upd.StackObjectsCount = 0;
-                }
-                else {
-                    item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
-                }
+    randomizeAmmoStock(assortItemParent, item) {
+        if (assortItemParent === enums_1.ParentClasses.AMMO) {
+            let randNum = this.helper.pickRandNumOneInTen();
+            if (randNum <= 4) {
+                item.upd.StackObjectsCount = 0;
             }
             else {
-                item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 40, 150);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x19mm, 30, 130);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 30, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x39mm, 20, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._45ACP, 30, 130);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._46x30mm, 30, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._57x28mm, 30, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 30, 140);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._366TKM, 30, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x39mm, 20, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x51mm, 20, 80);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x54rmm, 20, 80);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._300BLK, 30, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._556x45mm, 20, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._545x39mm, 20, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._127x108mm, 5, 40);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._127x55mm, 20, 120);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._12ga, 15, 40);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._20ga, 20, 80);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._23x75mm, 5, 12);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._26x75mm, 1, 2);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x46mm, 1, 3);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x53mm, 1, 3);
             }
+        }
+    }
+    randomizeAmmoStockHelper(item, caliber, min, max) {
+        if (this.itemDB[item._tpl]._props.Caliber === caliber) {
+            item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+        }
+    }
+    randomizeStock(assortItemParent, catParent, item, min, max) {
+        if (assortItemParent === catParent) {
+            item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
         }
     }
     randomizeLL(ll, i) {

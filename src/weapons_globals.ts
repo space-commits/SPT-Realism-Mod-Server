@@ -1,6 +1,6 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
-import { ParentClasses } from "./parent_classes";
+import { ParentClasses } from "./enums";
 
 const mastering = require("../db/items/mastering.json");
 
@@ -51,12 +51,9 @@ export class WeaponsGlobals {
             this.globalDB.Mastering = mastering.Mastering;
         }
 
-
-
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
 
             this.globalDB.Aiming.AimProceduralIntensity = 1;
-
             this.globalDB.Aiming.RecoilCrank = true;
 
             this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;

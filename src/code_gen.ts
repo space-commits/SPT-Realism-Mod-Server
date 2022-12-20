@@ -3,7 +3,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";
 import { Helper } from "./helper";
-import { ParentClasses } from "./parent_classes";
+import { ParentClasses } from "./enums";
 
 
 // const magazineJSON = require("../db/bots/loadouts/common/magazines.json");

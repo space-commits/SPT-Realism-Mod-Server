@@ -89,3 +89,31 @@ export const enum ParentClasses {
     MAP = "567849dd4bdc2d150f8b456e",
     REPAIRKITS = "616eb7aea207f41933308f46"
 }
+
+export const enum Calibers {
+    _9x19mm = "Caliber9x19PARA",
+    _9x18mm = "Caliber9x18PM",
+    _9x21mm = "Caliber9x21",
+    _9x39mm = "Caliber9x39",
+    _45ACP = "Caliber1143x23ACP",
+    _46x30mm = "Caliber46x30",
+    _57x28mm = "Caliber57x28",
+    _762x25mm = "Caliber762x25TT",
+    _366TKM = "Caliber366TKM",
+    _762x39mm = "Caliber762x39",
+    _762x51mm = "Caliber762x51",
+    _762x54rmm = "Caliber762x54R",
+    _300BLK = "Caliber762x35",
+    _556x45mm = "Caliber556x45NATO",
+    _545x39mm = "Caliber545x39",
+    _127x55mm = "Caliber127x55",
+    _338mag = "Caliber86x70",
+    _357mag = "Caliber9x33R",
+    _127x108mm = "Caliber127x108",
+    _40x46mm = "Caliber40x46",
+    _40x53mm = "Caliber40mmRU",
+    _26x75mm = "Caliber26x75",
+    _12ga = "Caliber12g",
+    _20ga = "Caliber20g",
+    _23x75mm = "Caliber23x75"
+}

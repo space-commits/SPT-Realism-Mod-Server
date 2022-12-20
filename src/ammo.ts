@@ -1,6 +1,6 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
-import { ParentClasses } from "./parent_classes";
+import { ParentClasses } from "./enums";
 
 export class Ammo {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
@@ -1527,7 +1527,7 @@ export class Ammo {
             }
             //AP SX
             if (serverItem._id === "5ba26835d4351e0035628ff5") {
-                serverItem._props.PenetrationPower = 52;
+                serverItem._props.PenetrationPower = 51;
                 serverItem._props.ArmorDamage = 10;
                 serverItem._props.Damage = 25;
                 serverItem._props.InitialSpeed = 680;

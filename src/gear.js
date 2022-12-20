@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Gear = void 0;
-const parent_classes_1 = require("./parent_classes");
+const enums_1 = require("./enums");
 class Gear {
     constructor(arrays, tables) {
         this.arrays = arrays;
@@ -15,7 +15,7 @@ class Gear {
         var armorCompArr = [];
         for (let item in this.itemDB) {
             let serverItem = this.itemDB[item];
-            if (serverItem._parent === parent_classes_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {
+            if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {
                 armorCompArr.push(serverItem._id);
             }
         }

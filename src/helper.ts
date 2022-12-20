@@ -127,6 +127,7 @@ export class BotTierTracker {
     static scavTier: number = 1;
     static rogueTier: number = 1;
     static raiderTier: number = 1;
+    static goonsTier: number = 1;
 
     public getTier(botType: string): number {
         if (botType === "usec") {
@@ -143,6 +144,9 @@ export class BotTierTracker {
         }
         if (botType === "exusec") {
             return BotTierTracker.rogueTier;
+        }
+        if(botType === "bossknight" || botType === "followerbigpipe" || botType === "followerbirdeye"){
+            return BotTierTracker.goonsTier;
         }
     }
 }

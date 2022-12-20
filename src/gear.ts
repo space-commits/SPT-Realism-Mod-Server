@@ -1,7 +1,7 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 
 import { Arrays } from "./arrays";
-import { ParentClasses } from "./parent_classes";
+import { ParentClasses } from "./enums";
 
 export class Gear {
     constructor(private arrays: Arrays, private tables: IDatabaseTables) { }

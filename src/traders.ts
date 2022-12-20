@@ -8,7 +8,7 @@ import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import { Helper } from "./helper";
-import { ParentClasses } from "./parent_classes";
+import { Calibers, ParentClasses } from "./enums";
 
 const AssaultRifleTemplates = require("../db/templates/weapons/AssaultRifleTemplates.json");
 const AssaultCarbineTemplates = require("../db/templates/weapons/AssaultCarbineTemplates.json");
@@ -307,7 +307,7 @@ export class RandomizeTraderAssort {
         let itemParent = this.itemDB[item._tpl]._parent;
         
         //ammo
-        this.randomizeStock(itemParent, ParentClasses.AMMO, item, 1, 120, true);
+        this.randomizeAmmoStock(itemParent, item);
         this.randomizeStock(itemParent, ParentClasses.AMMO_BOX, item, 0, 2);
 
         //weapons
@@ -379,20 +379,51 @@ export class RandomizeTraderAssort {
         this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0, 1);
     }
 
-    private randomizeStock(assortItemParent: string, catParent: string, item: Item, min: number, max: number, isAmmo?: boolean) {
-        if (assortItemParent === catParent) {
-            if (isAmmo == true) {
-                let randNum = this.helper.pickRandNumOneInTen();
+    private randomizeAmmoStock(assortItemParent: string, item: Item){
+
+        if(assortItemParent === ParentClasses.AMMO){
+            let randNum = this.helper.pickRandNumOneInTen();
                 if (randNum <= 4) {
                     item.upd.StackObjectsCount = 0;
                 }
                 else {
-                    item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+                    this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 40, 150);
+                    this.randomizeAmmoStockHelper(item, Calibers._9x19mm, 30, 130);
+                    this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 30, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._9x39mm, 20, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._45ACP, 30, 130);
+                    this.randomizeAmmoStockHelper(item, Calibers._46x30mm, 30, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 30, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 30, 140);
+                    this.randomizeAmmoStockHelper(item, Calibers._366TKM, 30, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._762x39mm, 20, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._762x51mm, 20, 80);
+                    this.randomizeAmmoStockHelper(item, Calibers._762x54rmm, 20, 80);
+                    this.randomizeAmmoStockHelper(item, Calibers._300BLK, 30, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._556x45mm, 20, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._545x39mm, 20, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._127x108mm, 5, 40);
+                    this.randomizeAmmoStockHelper(item, Calibers._127x55mm, 20, 120);
+                    this.randomizeAmmoStockHelper(item, Calibers._12ga, 15, 40);
+                    this.randomizeAmmoStockHelper(item, Calibers._20ga, 20, 80);
+                    this.randomizeAmmoStockHelper(item, Calibers._23x75mm, 5, 12);
+                    this.randomizeAmmoStockHelper(item, Calibers._26x75mm, 1, 2);
+                    this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1, 3);
+                    this.randomizeAmmoStockHelper(item, Calibers._40x53mm, 1, 3);
+
                 }
-            }
-            else {
-                item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
-            }
+        }
+    }
+
+    private randomizeAmmoStockHelper(item: Item, caliber: string, min: number, max: number){
+        if(this.itemDB[item._tpl]._props.Caliber === caliber){
+            item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+        }
+    }
+
+    private randomizeStock(assortItemParent: string, catParent: string, item: Item, min: number, max: number) {
+        if (assortItemParent === catParent) {
+            item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
         }
     }
 

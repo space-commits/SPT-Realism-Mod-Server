@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CodeGen = void 0;
-const parent_classes_1 = require("./parent_classes");
+const enums_1 = require("./enums");
 // const magazineJSON = require("../db/bots/loadouts/common/magazines.json");
 const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
 const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
@@ -47,7 +47,7 @@ class CodeGen {
     ammoTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === parent_classes_1.ParentClasses.AMMO || parent_classes_1.ParentClasses.AMMO_BOX) {
+            if (serverItem._parent === enums_1.ParentClasses.AMMO || enums_1.ParentClasses.AMMO_BOX) {
                 this.itemWriteToFile(ammoTemplates, "ammoTemplates", i, serverItem, "ammo", this.assignJSONToAmmo);
             }
         }
@@ -55,19 +55,19 @@ class CodeGen {
     armorTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if ((serverItem._parent === parent_classes_1.ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === parent_classes_1.ParentClasses.HEADWEAR) && serverItem._props.HasHinge == true) {
+            if ((serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === enums_1.ParentClasses.HEADWEAR) && serverItem._props.HasHinge == true) {
                 this.itemWriteToFile(FaceShieldTemplates, "FaceShieldTemplates", i, serverItem, "armor", this.assignJSONToArmor);
             }
-            if (serverItem._parent === parent_classes_1.ParentClasses.CHESTRIG && serverItem._props.armorClass > 0) {
+            if (serverItem._parent === enums_1.ParentClasses.CHESTRIG && serverItem._props.armorClass > 0) {
                 this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "armor", this.assignJSONToArmor);
             }
-            if (serverItem._parent === parent_classes_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.armorClass > 0) {
+            if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.armorClass > 0) {
                 this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "armor", this.assignJSONToArmor);
             }
-            if (serverItem._parent === parent_classes_1.ParentClasses.HEADWEAR && serverItem._props.armorClass > 0) {
+            if (serverItem._parent === enums_1.ParentClasses.HEADWEAR && serverItem._props.armorClass > 0) {
                 this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "armor", this.assignJSONToArmor);
             }
-            if (serverItem._parent === parent_classes_1.ParentClasses.ARMORVEST && serverItem._props.armorClass > 0) {
+            if (serverItem._parent === enums_1.ParentClasses.ARMORVEST && serverItem._props.armorClass > 0) {
                 this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "armor", this.assignJSONToArmor);
             }
         }
@@ -757,7 +757,7 @@ class CodeGen {
     pushArmorToServer() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === parent_classes_1.ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === parent_classes_1.ParentClasses.HEADWEAR) {
+            if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === enums_1.ParentClasses.HEADWEAR) {
                 for (let i in FaceShieldTemplates) {
                     let fileItem = FaceShieldTemplates[i];
                     this.armorPusherHelper(serverItem, fileItem);
@@ -891,7 +891,7 @@ class CodeGen {
                         if (modType === "scope") {
                             locale.Description = "ADS speed modifier only applies when this sight is in use." + `\n\n${locale.Description}`;
                         }
-                        if (item._parent === parent_classes_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === parent_classes_1.ParentClasses.HEADWEAR) {
+                        if (item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR) {
                             if (item._props.ConflictingItems[1] === "true") {
                                 locale.Description = "This faceshield allows the use of sights while using any stock in the extended position." + `\n\n${locale.Description}`;
                             }
@@ -900,7 +900,7 @@ class CodeGen {
                             }
                         }
                     }
-                    if (item._parent === parent_classes_1.ParentClasses.AMMO) {
+                    if (item._parent === enums_1.ParentClasses.AMMO) {
                         if (item._props.Caliber === "Caliber20g") {
                             locale.Description = "Ammo stats are out of a Toz-106." + `\n\n${locale.Description}`;
                         }

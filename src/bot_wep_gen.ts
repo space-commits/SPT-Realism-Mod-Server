@@ -111,7 +111,6 @@ export class BotWepGen extends BotWeaponGenerator {
 
     public override getPresetWeaponMods(weaponTpl: string, equipmentSlot: string, weaponParentId: string, itemTemplate: ITemplateItem, botRole: string): Item[] {
 
-        //right now it will just pick the first preset that matches, need to find a way to randomize it.
         const tierChecker = new BotTierTracker();
         const tier = tierChecker.getTier(botRole);
 
@@ -122,7 +121,6 @@ export class BotWepGen extends BotWeaponGenerator {
         const weaponPresets = [];
         try {
             let preset;
-            //I need to put all preset files in the same folder
             let presetFile = require(`../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
             for (let presetObj in presetFile) {
                 if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
@@ -152,9 +150,6 @@ export class BotWepGen extends BotWeaponGenerator {
             // this.logger.warning("Chose:");
             // this.logger.warning(randomPreset._name);
             preset = this.jsonUtil.clone(randomPreset);
-
-            //find a way to check for specific slots and then change the itemID, getting it from an array of possible items for that slot. Base weapon preset would need
-            //whatever rail adapters it needs, etc. Could be very error prone due to BSG's inconsistent slot naming.
             if (preset) {
                 const parentItem = preset._items[0];
                 preset._items[0] = {

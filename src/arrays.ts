@@ -7,20 +7,29 @@ export class Arrays {
     private botDB = this.tables.bots.types;
 
     public outdoorMaps = [
+        "shoreline",
         "Shoreline",
+        "woods",
         "Woods",
+        "lighthouse",
         "Lighthouse"
     ]
 
     public urbanMaps = [
+        "bigmap",
         "Customs",
-        "ReserveBase",
-        "Interchange"
+        "rezervbase",
+        "ReserveBase"
     ]
 
     public cqbMaps = [
         "Factory",
-        "Laboratory"
+        "factory4_night",
+        "factory4_day",
+        "Laboratory",
+        "laboratory",
+        "Interchange",
+        "interchange"
     ]
 
 

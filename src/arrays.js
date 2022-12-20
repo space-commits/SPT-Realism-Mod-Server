@@ -6,18 +6,27 @@ class Arrays {
         this.tables = tables;
         this.botDB = this.tables.bots.types;
         this.outdoorMaps = [
+            "shoreline",
             "Shoreline",
+            "woods",
             "Woods",
+            "lighthouse",
             "Lighthouse"
         ];
         this.urbanMaps = [
+            "bigmap",
             "Customs",
-            "ReserveBase",
-            "Interchange"
+            "rezervbase",
+            "ReserveBase"
         ];
         this.cqbMaps = [
             "Factory",
-            "Laboratory"
+            "factory4_night",
+            "factory4_day",
+            "Laboratory",
+            "laboratory",
+            "Interchange",
+            "interchange"
         ];
         this.traderIDs = [
             "54cb50c76803fa8b248b4571",
