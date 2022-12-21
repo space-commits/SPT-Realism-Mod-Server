@@ -42,8 +42,8 @@ class FleamarketConfig {
             this.fleaConf.sell.time.base = 30;
             this.fleaConf.sell.time.min = 10;
             this.fleaConf.sell.time.max = 30;
-            this.fleaConf.sell.reputation.gain = 0.0000005;
-            this.fleaConf.sell.reputation.loss = 0.0000005;
+            this.fleaConf.sell.reputation.gain = 0.0000007;
+            this.fleaConf.sell.reputation.loss = 0.0000007;
             this.fleaConf.dynamic.currencies = {
                 "5449016a4bdc2d6f028b456f": 20,
                 "5696686a4bdc2da3298b456a": 40,
@@ -51,18 +51,18 @@ class FleamarketConfig {
             };
             this.fleaConf.dynamic.offerItemCount.min = 0;
             this.fleaConf.dynamic.offerItemCount.max = 2;
-            this.fleaConf.dynamic.price.min = 1.15;
+            this.fleaConf.dynamic.price.min = 1;
             this.fleaConf.dynamic.price.max = 2;
-            this.fleaConf.dynamic.presetPrice.min = 2;
-            this.fleaConf.dynamic.presetPrice.max = 3;
+            this.fleaConf.dynamic.presetPrice.min = 1.3;
+            this.fleaConf.dynamic.presetPrice.max = 2;
             this.fleaConf.dynamic.endTimeSeconds.min = 600;
             this.fleaConf.dynamic.endTimeSeconds.max = 3600;
-            this.fleaConf.dynamic.condition.conditionChance = 0.99;
-            this.fleaConf.dynamic.condition.min = 0.45;
-            this.fleaConf.dynamic.condition.max = 0.98;
+            this.fleaConf.dynamic.condition.conditionChance = 1;
+            this.fleaConf.dynamic.condition.min = 0.5;
+            this.fleaConf.dynamic.condition.max = 0.99;
             this.fleaConf.dynamic.nonStackableCount.min = 0;
             this.fleaConf.dynamic.nonStackableCount.max = 2;
-            this.fleaConf.dynamic.stackablePercent.min = 10;
+            this.fleaConf.dynamic.stackablePercent.min = 15;
             this.fleaConf.dynamic.stackablePercent.max = 100;
             if (this.modConfig.logEverything == true) {
                 this.logger.info("Flea Changes Enabled");
@@ -132,7 +132,6 @@ class TieredFlea {
         this.canSellHelmParts(true);
         this.canSellArmor(true);
         this.canSellSnip(true);
-        this.canSellFood(true);
         this.canSellGear(true);
         this.canSellAmmo(true);
         this.canSellLights(true);
@@ -161,8 +160,6 @@ class TieredFlea {
         this.canSellAmmo(true);
         this.canSellDMR(true);
         this.canSellBarters(true);
-        this.canSellFood(true);
-        this.canSellMeds(true);
         this.canSellGear(true);
         this.canSellRepairKit(true);
         this.canSellLights(true);
@@ -199,7 +196,6 @@ class TieredFlea {
         this.canSellAR(true);
         this.canSellGear(true);
         this.canSellRepairKit(true);
-        this.canSellMeds(true);
         this.canSellMuzzleDevices(true);
         this.canSellSupps(true);
         this.canSellLights(true);

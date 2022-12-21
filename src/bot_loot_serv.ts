@@ -8,15 +8,13 @@ import { LootCacheType } from "@spt-aki/models/spt/bots/BotLootCache";
 export class BotLootServer extends BotLootCacheService {
 
     public getLootCache(botRole: string, isPmc: boolean, lootType: LootCacheType, lootPool: Items): ITemplateItem[] {
-         
-        if (!this.botRoleExistsInCache(botRole))
-        {
+
+        if (!this.botRoleExistsInCache(botRole)) {
             this.initCacheForBotRole(botRole)
-            this.myAddLootToCache(botRole, isPmc, lootPool);   
+            this.myAddLootToCache(botRole, isPmc, lootPool);
         }
 
-        switch (lootType)
-        {
+        switch (lootType) {
             case LootCacheType.SPECIAL:
                 return this.lootCache[botRole].specialItems;
             case LootCacheType.BACKPACK:
@@ -36,54 +34,49 @@ export class BotLootServer extends BotLootCacheService {
             case LootCacheType.STIM_ITEMS:
                 return this.lootCache[botRole].stimItems;
             default:
-                this.logger.error(`loot cache failed for loot: ${lootType} on bot: ${botRole}, was a pmc: ${isPmc}`);
+                this.logger.error(this.localisationService.getText("bot-loot_type_not_found", { lootType: lootType, botRole: botRole, isPmc: isPmc }));
                 break;
         }
     }
 
-    private myAddLootToCache(botRole: string, isPmc: boolean, lootPool: Items): void
-    {
+    private myAddLootToCache(botRole: string, isPmc: boolean, lootPool: Items): void {
         const specialLootTemplates: ITemplateItem[] = [];
         const backpackLootTemplates: ITemplateItem[] = [];
         const pocketLootTemplates: ITemplateItem[] = [];
         const vestLootTemplates: ITemplateItem[] = [];
         const combinedPoolTemplates: ITemplateItem[] = [];
 
-        for (const [slot, pool] of Object.entries(lootPool))
-        {
-            if (!pool || !pool.length)
-            {
+        for (const [slot, pool] of Object.entries(lootPool)) {
+            if (!pool || !pool.length) {
                 continue;
             }
 
-            let poolItems: ITemplateItem[] = [];
+            let itemsToAdd: ITemplateItem[] = [];
             const items = this.databaseServer.getTables().templates.items;
-            switch (slot.toLowerCase())
-            {
+            switch (slot.toLowerCase()) {
                 case "specialloot":
-                    poolItems = pool.map(lootTpl => items[lootTpl]);
-                    this.addUniqueItemsToPool(specialLootTemplates, poolItems);
+                    itemsToAdd = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(specialLootTemplates, itemsToAdd);
                     break;
                 case "pockets":
-                    poolItems = pool.map(lootTpl => items[lootTpl]);
-                    this.addUniqueItemsToPool(pocketLootTemplates, poolItems);
+                    itemsToAdd = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(pocketLootTemplates, itemsToAdd);
                     break;
                 case "tacticalvest":
-                    poolItems = pool.map(lootTpl => items[lootTpl]);
-                    this.addUniqueItemsToPool(vestLootTemplates, poolItems);
+                    itemsToAdd = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(vestLootTemplates, itemsToAdd);
                     break;
                 case "securedcontainer":
                     // Don't add these items to loot pool
                     break;
                 default:
-                    poolItems = pool.map(lootTpl => items[lootTpl]);
-                    this.addUniqueItemsToPool(backpackLootTemplates, poolItems);
+                    itemsToAdd = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(backpackLootTemplates, itemsToAdd);
             }
-            
+
             // Add items to combined pool if any exist
-            if (Object.keys(poolItems).length > 0)
-            {
-                this.addUniqueItemsToPool(combinedPoolTemplates, poolItems);
+            if (Object.keys(itemsToAdd).length > 0) {
+                this.addUniqueItemsToPool(combinedPoolTemplates, itemsToAdd);
             }
         }
 

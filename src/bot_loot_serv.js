@@ -30,7 +30,7 @@ class BotLootServer extends BotLootCacheService_1.BotLootCacheService {
             case BotLootCache_1.LootCacheType.STIM_ITEMS:
                 return this.lootCache[botRole].stimItems;
             default:
-                this.logger.error(`loot cache failed for loot: ${lootType} on bot: ${botRole}, was a pmc: ${isPmc}`);
+                this.logger.error(this.localisationService.getText("bot-loot_type_not_found", { lootType: lootType, botRole: botRole, isPmc: isPmc }));
                 break;
         }
     }
@@ -44,31 +44,31 @@ class BotLootServer extends BotLootCacheService_1.BotLootCacheService {
             if (!pool || !pool.length) {
                 continue;
             }
-            let poolItems = [];
+            let itemsToAdd = [];
             const items = this.databaseServer.getTables().templates.items;
             switch (slot.toLowerCase()) {
                 case "specialloot":
-                    poolItems = pool.map(lootTpl => items[lootTpl]);
-                    this.addUniqueItemsToPool(specialLootTemplates, poolItems);
+                    itemsToAdd = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(specialLootTemplates, itemsToAdd);
                     break;
                 case "pockets":
-                    poolItems = pool.map(lootTpl => items[lootTpl]);
-                    this.addUniqueItemsToPool(pocketLootTemplates, poolItems);
+                    itemsToAdd = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(pocketLootTemplates, itemsToAdd);
                     break;
                 case "tacticalvest":
-                    poolItems = pool.map(lootTpl => items[lootTpl]);
-                    this.addUniqueItemsToPool(vestLootTemplates, poolItems);
+                    itemsToAdd = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(vestLootTemplates, itemsToAdd);
                     break;
                 case "securedcontainer":
                     // Don't add these items to loot pool
                     break;
                 default:
-                    poolItems = pool.map(lootTpl => items[lootTpl]);
-                    this.addUniqueItemsToPool(backpackLootTemplates, poolItems);
+                    itemsToAdd = pool.map(lootTpl => items[lootTpl]);
+                    this.addUniqueItemsToPool(backpackLootTemplates, itemsToAdd);
             }
             // Add items to combined pool if any exist
-            if (Object.keys(poolItems).length > 0) {
-                this.addUniqueItemsToPool(combinedPoolTemplates, poolItems);
+            if (Object.keys(itemsToAdd).length > 0) {
+                this.addUniqueItemsToPool(combinedPoolTemplates, itemsToAdd);
             }
         }
         // Sort all items by their worth

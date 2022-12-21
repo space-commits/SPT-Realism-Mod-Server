@@ -8,7 +8,7 @@ export class AttatchmentBase {
 
     private itemDB = this.tables.templates.items;
 
-    public loadAttConmpat() {
+    public loadAttCompat() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._parent === "55818a104bdc2db9688b4569") {

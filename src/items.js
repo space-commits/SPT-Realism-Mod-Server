@@ -12,6 +12,7 @@ class _Items {
         this.inventoryConf = inventoryConf;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
+        this.locales = this.tables.locales.global["en"];
     }
     loadItemsRestrictions() {
         this.globalDB["AllowSelectEntryPoint"] = true;
@@ -86,13 +87,12 @@ class _Items {
         });
     }
     addToLocale(id, name, shortname, description) {
-        const locales = this.tables.locales.global.en;
-        locales.templates[id] =
-            {
-                "Name": name,
-                "ShortName": shortname,
-                "Description": description
-            };
+        let nameId = `${id}` + " Name";
+        let shortnameId = `${id}` + " ShortName";
+        let descriptionId = `${id}` + " Description";
+        this.locales[nameId] = name;
+        this.locales[shortnameId] = shortname;
+        this.locales[descriptionId] = description;
     }
     cloneItem(itemtoClone, newitemID) {
         this.itemDB[newitemID] = this.jsonUtil.clone(this.itemDB[itemtoClone]);

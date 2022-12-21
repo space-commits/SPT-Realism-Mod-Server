@@ -105,10 +105,10 @@ RaidInfoTracker.mapType = "";
 RaidInfoTracker.mapName = "";
 class BotTierTracker {
     getTier(botType) {
-        if (botType === "usec") {
+        if (botType === "sptusec") {
             return BotTierTracker.usecTier;
         }
-        if (botType === "bear") {
+        if (botType === "sptbear") {
             return BotTierTracker.bearTier;
         }
         if (botType === "assault") {

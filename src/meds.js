@@ -13,6 +13,8 @@ class Meds {
         this.buffDB = this.globalDB.Health.Effects.Stimulator.Buffs;
     }
     loadMeds() {
+        //Adjust Thermal stim to compensate for lower base temp
+        this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
         for (const buffName in this.buffs) {
             this.buffDB[buffName] = this.buffs[buffName];
         }

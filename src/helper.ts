@@ -130,10 +130,10 @@ export class BotTierTracker {
     static goonsTier: number = 1;
 
     public getTier(botType: string): number {
-        if (botType === "usec") {
+        if (botType === "sptusec") {
             return BotTierTracker.usecTier;
         }
-        if (botType === "bear") {
+        if (botType === "sptbear") {
             return BotTierTracker.bearTier;
         }
         if (botType === "assault") {

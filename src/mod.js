@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
+;
 const ammo_1 = require("./ammo");
 const armor_1 = require("./armor");
 const attatchment_base_1 = require("./attatchment_base");
@@ -32,7 +33,7 @@ const botHealth = require("../db/bots/botHealth.json");
 const modConfig = require("../config/config.json");
 const airdropLoot = require("../db/airdrops/airdrop_loot.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
-class Mod {
+class Main {
     preAkiLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const jsonUtil = container.resolve("JsonUtil");
@@ -46,7 +47,6 @@ class Mod {
         const databaseServer = container.resolve("DatabaseServer");
         const localisationService = container.resolve("LocalisationService");
         const fleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
-        const tables = databaseServer.getTables();
         const profileHelper = container.resolve("ProfileHelper");
         const assortHelper = container.resolve("AssortHelper");
         const paymentHelper = container.resolve("PaymentHelper");
@@ -55,23 +55,25 @@ class Mod {
         const traderAssortService = container.resolve("TraderAssortService");
         const traderHelper = container.resolve("TraderHelper");
         const fenceService = container.resolve("FenceService");
-        const ragfairPriceServ = container.resolve("RagfairPriceService");
-        const botLootServ = new bot_loot_serv_1.BotLootServer(logger, jsonUtil, databaseServer, pmcLootGenerator, ragfairPriceServ);
+        const ragfairPriceService = container.resolve("RagfairPriceService");
+        const botLootServ = new bot_loot_serv_1.BotLootServer(logger, jsonUtil, databaseServer, pmcLootGenerator, localisationService, ragfairPriceService);
         const itemHelper = container.resolve("ItemHelper");
         const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
         const probabilityHelper = container.resolve("ProbabilityHelper");
-        const durabilityLimitsHelper = container.resolve("DurabilityLimitsHelper");
-        const inventoryHelper = container.resolve("InventoryHelper");
-        const containerHelper = container.resolve("ContainerHelper");
-        const botEquipFilterServ = container.resolve("BotEquipmentFilterService");
-        const itemFilterServ = container.resolve("ItemFilterService");
+        const botEquipmentFilterService = container.resolve("BotEquipmentFilterService");
+        const itemFilterService = container.resolve("ItemFilterService");
         const botGeneratorHelper = container.resolve("BotGeneratorHelper");
         const inventoryMagGenComponents = container.resolveAll("InventoryMagGen");
+        const traderPurchasePefrsisterService = container.resolve("TraderPurchasePersisterService");
+        const botEquipmentModGenerator = container.resolve("BotEquipmentModGenerator");
+        const botWeaponModLimitService = container.resolve("BotWeaponModLimitService");
+        const botHelper = container.resolve("BotHelper");
+        const botEquipmentModPoolService = container.resolve("BotEquipmentModPoolService");
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
-        const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, traderHelper, fenceService, configServer);
-        const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, localisationService, inventoryMagGenComponents);
-        const _botModGen = new bot_wep_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, botEquipFilterServ, itemFilterServ, profileHelper, botWeaponGeneratorHelper, localisationService, configServer);
+        const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
+        const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
+        const _botModGen = new bot_wep_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const router = container.resolve("DynamicRouterModService");
         this.path = require("path");
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
@@ -86,16 +88,13 @@ class Mod {
         ], "RealismMod");
         if (modConfig.bot_changes == true) {
             container.afterResolution("BotWeaponGenerator", (_t, result) => {
-                result.generateWeaponByTpl = (sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc) => {
-                    return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc);
+                result.generateWeaponByTpl = (sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel) => {
+                    return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel);
                 };
             }, { frequency: "Always" });
-            container.afterResolution("BotGeneratorHelper", (_t, result) => {
-                result.generateExtraPropertiesForItem = (itemTemplate, botRole = null) => {
-                    return _botModGen.genExtraItemProps(itemTemplate, botRole);
-                };
-                result.generateModsForWeapon = (sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole) => {
-                    return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole);
+            container.afterResolution("BotEquipmentModGenerator", (_t, result) => {
+                result.generateModsForWeapon = (sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole) => {
+                    return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
                 };
             }, { frequency: "Always" });
             container.afterResolution("BotLootCacheService", (_t, result) => {
@@ -261,14 +260,14 @@ class Mod {
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
-                        const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.MATCH_INFO).getValue();
+                        const matchinfoRegPlayer = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.REGISTER_PLAYER_REQUEST).getValue();
+                        const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.MATCH_INFO).getValue();
                         const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
                         const arrays = new arrays_1.Arrays(postLoadTables);
                         const helper = new helper_1.Helper(postLoadTables, arrays);
                         const bots = new bots_1.Bots(logger, postLoadTables, configServer, modConfig, arrays);
-                        // const sessionId = appContext.getLatestValue(ContextVariableType.SESSION_ID).getValue<string>();
                         const time = weatherController.generate().time;
-                        const mapName = matchInfo.locationName;
+                        const mapName = matchinfoRegPlayer.locationId;
                         helper_1.RaidInfoTracker.mapName = mapName;
                         let realTime = "";
                         let mapType = "";
@@ -277,10 +276,10 @@ class Mod {
                             botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
                             botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
                         }
-                        if (matchInfo.dateTime === "PAST") {
+                        if (matchInfoStartOff.dateTime === "PAST") {
                             realTime = getTime(time, 12);
                         }
-                        if (matchInfo.dateTime === "CURR") {
+                        if (matchInfoStartOff.dateTime === "CURR") {
                             realTime = time;
                         }
                         function getTime(time, hourDiff) {
@@ -294,7 +293,7 @@ class Mod {
                         function getTOD(time) {
                             let TOD = "";
                             let [h, m] = time.split(':');
-                            if (parseInt(h) >= 6 && parseInt(h) < 20 || (mapName === "factory4_day" || mapName === "Factory" || mapName === "Laboratory" || mapName === "laboratory")) {
+                            if (parseInt(h) >= 6 && parseInt(h) < 20 || (mapName === "factory4_day" || mapName === "laboratory")) {
                                 TOD = "day";
                             }
                             else {
@@ -327,9 +326,9 @@ class Mod {
                                 botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
                             }
                         }
-                        logger.warning("pre update bots");
-                        this.updateBots(pmcData, logger, modConfig, bots, helper);
-                        logger.warning("post update bots");
+                        if (modConfig.bot_changes) {
+                            this.updateBots(pmcData, logger, modConfig, bots, helper);
+                        }
                         if (modConfig.airdrop_changes == true) {
                             if (helper_1.RaidInfoTracker.TOD === "day") {
                                 this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 15, 15, 15, 1]);
@@ -405,8 +404,8 @@ class Mod {
         const helper = new helper_1.Helper(tables, arrays);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
-        const attatchBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
-        const attatchStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig, arrays);
+        const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
+        const attachStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig, arrays);
         const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays);
         const items = new items_1._Items(logger, tables, modConfig, jsonUtil, medItems, crafts, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
@@ -446,6 +445,16 @@ class Mod {
         if (modConfig.bot_changes == true) {
             bots.loadBots();
         }
+        if (modConfig.increased_bot_cap == true) {
+            bots.increaseBotCap();
+        }
+        if (modConfig.bot_names == true) {
+            bots.botNames();
+        }
+        if (modConfig.guarantee_boss_spawn == true) {
+            bots.bossSpawns();
+        }
+        bots.botDifficulty();
         if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
             armor.loadArmor();
@@ -454,6 +463,7 @@ class Mod {
         if (modConfig.med_changes == true) {
             items.createCustomMedItems();
             meds.loadMeds();
+            bots.botMeds();
         }
         custFleaConf.loadFleaConfig();
         flea.loadFleaGlobal();
@@ -463,7 +473,7 @@ class Mod {
         if (modConfig.recoil_attachment_overhaul) {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
-            attatchStats.loadAttStats();
+            attachStats.loadAttStats();
         }
         if (modConfig.remove_fir_req == true) {
             quests.removeFIRQuestRequire();
@@ -474,10 +484,10 @@ class Mod {
             traders.setLoyaltyLevels();
             randomizeTraderAssort.loadRandomizedTraderStock();
         }
-        if (modConfig.bot_changes == true) {
-            attatchBase.loadAttRequirements();
-        }
-        attatchBase.loadAttConmpat();
+        // if (modConfig.bot_changes == true) {
+        //     attachBase.loadAttRequirements();
+        // }
+        attachBase.loadAttCompat();
         items.loadItemsRestrictions();
         player.loadPlayer();
         weaponsGlobals.loadGlobalWeps();
@@ -520,52 +530,56 @@ class Mod {
         pmcData.Health.Temperature.Maximum = player.tempMax;
         logger.info("Realism Mod: New Profile Health Has Been Adjusted");
     }
-    fleaHelper(tier, ragfairOfferGen, container, arrays) {
-        container.resolve("RagfairOfferService").offers = [];
-        tier;
+    fleaHelper(fetchTier, ragfairOfferGen, container) {
+        var offers = container.resolve("RagfairOfferService").getOffers();
+        for (let o in offers) {
+            container.resolve("RagfairOfferService").removeOfferById(offers[o]._id);
+        }
+        let traders = container.resolve("RagfairServer").getUpdateableTraders();
+        fetchTier;
         ragfairOfferGen.generateDynamicOffers();
-        for (let i in arrays.traderIDs) {
-            ragfairOfferGen.generateFleaOffersForTrader(arrays.traderIDs[i]);
+        for (let traderID in traders) {
+            ragfairOfferGen.generateFleaOffersForTrader(traders[traderID]);
         }
     }
     updateFlea(pmcData, logger, config, flea, ragfairOfferGen, container, arrays) {
         var property = pmcData?.Info?.Level;
         if (config.tiered_flea == true) {
             if (property === undefined) {
-                this.fleaHelper(flea.flea0(), ragfairOfferGen, container, arrays);
+                this.fleaHelper(flea.flea0, ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
             }
             if (property !== undefined) {
                 if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-                    this.fleaHelper(flea.flea0(), ragfairOfferGen, container, arrays);
+                    this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
                     logger.info("Realism mod: Fleamarket Locked At Tier 0");
                 }
                 if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-                    this.fleaHelper(flea.flea1(), ragfairOfferGen, container, arrays);
+                    this.fleaHelper(flea.flea1(), ragfairOfferGen, container);
                     logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
                 }
                 if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-                    this.fleaHelper(flea.flea2(), ragfairOfferGen, container, arrays);
+                    this.fleaHelper(flea.flea2(), ragfairOfferGen, container);
                     logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
                 }
                 if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-                    this.fleaHelper(flea.flea3(), ragfairOfferGen, container, arrays);
+                    this.fleaHelper(flea.flea3(), ragfairOfferGen, container);
                     logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
                 }
                 if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-                    this.fleaHelper(flea.flea4(), ragfairOfferGen, container, arrays);
+                    this.fleaHelper(flea.flea4(), ragfairOfferGen, container);
                     logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
                 }
                 if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-                    this.fleaHelper(flea.flea5(), ragfairOfferGen, container, arrays);
+                    this.fleaHelper(flea.flea5(), ragfairOfferGen, container);
                     logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
                 }
                 if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-                    this.fleaHelper(flea.flea6(), ragfairOfferGen, container, arrays);
+                    this.fleaHelper(flea.flea6(), ragfairOfferGen, container);
                     logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
                 }
                 if (pmcData.Info.Level >= 35) {
-                    this.fleaHelper(flea.fleaFullUnlock(), ragfairOfferGen, container, arrays);
+                    this.fleaHelper(flea.fleaFullUnlock(), ragfairOfferGen, container);
                     logger.info("Realism Mod: Fleamarket Unlocked");
                 }
             }
@@ -693,42 +707,40 @@ class Mod {
     }
     updateBots(pmcData, logger, config, bots, helper) {
         var property = pmcData?.Info?.Level;
-        if (config.bot_changes == true) {
-            if (property === undefined) {
-                bots.botConfig1();
-                bots.scavLoad1();
-                bots.usecLoad1();
-                bots.bearLoad1();
-                bots.rogueLoad1();
-                bots.raiderLoad1();
-                bots.goonsLoad1();
-                logger.info("Realism Mod: Bots Have Been Set To Default (Tier 1)");
-                if (config.logEverything == true) {
-                    logger.info("Realism Mod: Bots Have Been Reconfigured");
-                }
+        if (property === undefined) {
+            bots.botConfig1();
+            bots.scavLoad1();
+            bots.usecLoad1();
+            bots.bearLoad1();
+            bots.rogueLoad1();
+            bots.raiderLoad1();
+            bots.goonsLoad1();
+            logger.info("Realism Mod: Bots Have Been Set To Default (Tier 1)");
+            if (config.logEverything == true) {
+                logger.info("Realism Mod: Bots Have Been Reconfigured");
             }
-            if (property !== undefined) {
-                if (config.bot_testing == true) {
-                    bots.botTest(config.bot_test_tier);
-                    logger.warning("Realism Mod: Bots Are In Test Mode");
+        }
+        if (property !== undefined) {
+            if (config.bot_testing == true) {
+                bots.botTest(config.bot_test_tier);
+                logger.warning("Realism Mod: Bots Are In Test Mode");
+            }
+            if (config.bot_testing == false) {
+                this.getBotTier(pmcData, bots, helper);
+                if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 15) {
+                    bots.botConfig1();
+                    logger.info("Realism Mod: Bots Have Been Set To Base Tier 1");
                 }
-                if (config.bot_testing == false) {
-                    this.getBotTier(pmcData, bots, helper);
-                    if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 15) {
-                        bots.botConfig1();
-                        logger.info("Realism Mod: Bots Have Been Set To Base Tier 1");
-                    }
-                    if (pmcData.Info.Level >= 16 && pmcData.Info.Level < 25) {
-                        bots.botConfig2();
-                        logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 2");
-                    }
-                    if (pmcData.Info.Level >= 26) {
-                        bots.botConfig3();
-                        logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 3");
-                    }
-                    if (config.logEverything == true) {
-                        logger.info("Realism Mod: Bots Base Tier Has Been Reconfigured");
-                    }
+                if (pmcData.Info.Level >= 16 && pmcData.Info.Level < 25) {
+                    bots.botConfig2();
+                    logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 2");
+                }
+                if (pmcData.Info.Level >= 26) {
+                    bots.botConfig3();
+                    logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 3");
+                }
+                if (config.logEverything == true) {
+                    logger.info("Realism Mod: Bots Base Tier Has Been Reconfigured");
                 }
             }
         }
@@ -769,4 +781,4 @@ class Mod {
         }
     }
 }
-module.exports = { mod: new Mod() };
+module.exports = { mod: new Main() };

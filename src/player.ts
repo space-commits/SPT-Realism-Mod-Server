@@ -16,7 +16,6 @@ export class Player {
     public tempCurr = 30;
     public tempMax = 30;
 
-
     public defaultHeadHealth = this.tables.templates.profiles.Standard.bear.character.Health.BodyParts.Head.Health.Maximum;
     public defaultChestHealth = this.tables.templates.profiles.Standard.bear.character.Health.BodyParts.Chest.Health.Maximum;
     public defaultStomaHealth = this.tables.templates.profiles.Standard.bear.character.Health.BodyParts.Stomach.Health.Maximum;
@@ -146,7 +145,7 @@ export class Player {
             this.globalDB.StomachOverdamage *= 1.85;
         }
 
-        if(this.modConf.realistic_player_health == true){
+        if (this.modConf.realistic_player_health == true) {
 
             let health = this.globalDB.Health.Effects
             let mult = 1.136

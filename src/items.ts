@@ -11,6 +11,8 @@ export class _Items {
 
     private globalDB = this.tables.globals.config;
     private itemDB = this.tables.templates.items;
+    private locales = this.tables.locales.global["en"];
+    
 
     public loadItemsRestrictions() {
         this.globalDB["AllowSelectEntryPoint"] = true;
@@ -126,7 +128,6 @@ export class _Items {
         }
     }
 
-
     private addToHandbook(id: string, parentID: string, price: number) {
 
         this.tables.templates.handbook.Items.push(
@@ -139,13 +140,13 @@ export class _Items {
     }
     private addToLocale(id: string, name: string, shortname: string, description: string) {
 
-        const locales = this.tables.locales.global.en;
-        locales.templates[id] =
-        {
-            "Name": name,
-            "ShortName": shortname,
-            "Description": description
-        };
+        let nameId = `${id}` + " Name";
+        let shortnameId = `${id}` + " ShortName";
+        let descriptionId = `${id}` + " Description";
+
+        this.locales[nameId] = name;
+        this.locales[shortnameId] = shortname;
+        this.locales[descriptionId] = description;
     }
 
     private cloneItem(itemtoClone: string, newitemID: string) {
