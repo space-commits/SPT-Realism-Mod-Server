@@ -37,7 +37,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             weaponWithModsArray = _botModGen.botModGen(sessionId, weaponWithModsArray, modPool, weaponWithModsArray[0]._id, weaponItemTemplate, modChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
         }
         // Use weapon preset from globals.json if weapon isnt valid
-        if (!this.isWeaponValid(weaponWithModsArray)) {
+        if (!this.myIsWeaponValid(weaponWithModsArray)) {
             // Weapon is bad, fall back to weapons preset
             weaponWithModsArray = this.getPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, weaponItemTemplate, botRole);
         }
@@ -52,7 +52,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             weaponTemplate: weaponItemTemplate
         };
     }
-    isWepValid(weaponItemArray) {
+    myIsWeaponValid(weaponItemArray) {
         const _checkRequired = new CheckRequired();
         for (const mod of weaponItemArray) {
             const modDbTemplate = this.itemHelper.getItem(mod._tpl)[1];
@@ -69,11 +69,11 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                 const slotName = modSlot._name;
                 const weaponSlotItem = weaponItemArray.find(x => x.parentId === mod._id && x.slotId === slotName);
                 if (!weaponSlotItem) {
-                    this.logger.warning(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
+                    this.logger.error(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
                     return false;
                 }
                 if (!allowedTpls.includes(weaponSlotItem._tpl)) {
-                    this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modDbTemplate._name, weaponTpl: weaponSlotItem._tpl }));
+                    this.logger.error(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modDbTemplate._name, weaponTpl: weaponSlotItem._tpl }));
                     return false;
                 }
             }
@@ -173,7 +173,9 @@ class CheckRequired {
 exports.CheckRequired = CheckRequired;
 class BotGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
     myShouldModBeSpawned(itemSlot, modSlot, modSpawnChances, checkRequired) {
-        const modSpawnChance = checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot) ? 100 : modSpawnChances[modSlot];
+        const modSpawnChance = checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot)
+            ? 100
+            : modSpawnChances[modSlot];
         if (modSpawnChance === 100) {
             return true;
         }
@@ -280,7 +282,7 @@ class BotGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
                 continue;
             }
             // Check spawn chance of mod
-            if (!this.shouldModBeSpawned(modsParentSlot, modSlot, modSpawnChances)) {
+            if (!this.myShouldModBeSpawned(modsParentSlot, modSlot, modSpawnChances, checkRequired)) {
                 continue;
             }
             const isRandomisableSlot = randomisationSettings && randomisationSettings.randomisedWeaponModSlots?.includes(modSlot);
@@ -290,7 +292,7 @@ class BotGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
                 continue;
             }
             const modToAddTemplate = modToAdd[1];
-            if (!this.isModValidForSlot(modToAdd, modsParentSlot, modSlot, parentTemplate)) {
+            if (!this.myIsModValidForSlot(modToAdd, modsParentSlot, modSlot, parentTemplate, checkRequired)) {
                 continue;
             }
             // Skip added mod to weapon if limit type reached
@@ -336,7 +338,7 @@ class BotGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
                 }
                 if (containsModInPool) {
                     // Call self recursivly to add mods to this mod
-                    this.generateModsForWeapon(sessionId, weapon, modPool, modId, modToAddTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
+                    this.botModGen(sessionId, weapon, modPool, modId, modToAddTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
                 }
             }
         }

@@ -19,7 +19,7 @@ import { BotGeneratorHelper } from "@spt-aki/helpers/BotGeneratorHelper";
 import { WeightedRandomHelper } from "@spt-aki/helpers/WeightedRandomHelper";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
-import { Inventory, Items, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
+import { Chances, Inventory, ItemMinMax, Items, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
@@ -59,6 +59,11 @@ import { TraderPurchasePersisterService } from "@spt-aki/services/TraderPurchase
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";;
 import { BotEquipmentModGenerator } from "@spt-aki/generators/BotEquipmentModGenerator";
 import { BotModLimits, BotWeaponModLimitService } from "@spt-aki/services/BotWeaponModLimitService";
+import { BotHelper } from "@spt-aki/helpers/BotHelper";
+import { BotEquipmentModPoolService } from "@spt-aki/services/BotEquipmentModPoolService";
+import { BotLootGenerator } from "@spt-aki/generators/BotLootGenerator";
+import { Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
+import { HandbookHelper } from "@spt-aki/helpers/HandbookHelper";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -72,7 +77,7 @@ import { Player } from "./player"
 import { WeaponsGlobals } from "./weapons_globals"
 import { Bots } from "./bots";
 import { BotGenHelper, BotWepGen } from "./bot_wep_gen";
-import { BotLootServer } from "./bot_loot_serv";
+import { BotLooGen, MyLootCache } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
@@ -80,8 +85,8 @@ import { RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
-import { BotHelper } from "@spt-aki/helpers/BotHelper";
-import { BotEquipmentModPoolService } from "@spt-aki/services/BotEquipmentModPoolService";
+
+
 
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -125,9 +130,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const traderHelper = container.resolve<TraderHelper>("TraderHelper");
         const fenceService = container.resolve<FenceService>("FenceService");
 
-        const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
-        const botLootServ = new BotLootServer(logger, jsonUtil, databaseServer, pmcLootGenerator, localisationService, ragfairPriceService);
-
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
         const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
         const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
@@ -140,9 +142,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const botWeaponModLimitService = container.resolve<BotWeaponModLimitService>("BotWeaponModLimitService");
         const botHelper = container.resolve<BotHelper>("BotHelper");
         const botEquipmentModPoolService = container.resolve<BotEquipmentModPoolService>("BotEquipmentModPoolService");
-
-
-
+        const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
+        const botWeaponGenerator = container.resolve<BotWeaponGenerator>("BotWeaponGenerator");
+        const botLootCacheService = container.resolve<BotLootCacheService>("BotLootCacheService");
 
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
@@ -150,6 +152,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
         const _botModGen = new BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
+        const botLooGen = new BotLooGen(logger, hashUtil, randomUtil, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
 
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
         this.path = require("path");
@@ -183,9 +186,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 }
             }, { frequency: "Always" });
 
-            container.afterResolution("BotLootCacheService", (_t, result: BotLootCacheService) => {
-                result.getLootFromCache = (botRole: string, isPmc: boolean, lootType: LootCacheType, lootPool: Items): ITemplateItem[] => {
-                    return botLootServ.getLootCache(botRole, isPmc, lootType, lootPool);
+            container.afterResolution("BotLootGenerator", (_t, result: BotLootGenerator) => {
+                result.generateLoot = (sessionId: string, templateInventory: Inventory, itemCounts: ItemMinMax, isPmc: boolean, botRole: string, botInventory: PmcInventory, equipmentChances: Chances, botLevel: number): void => {
+                    return botLooGen.genLoot(sessionId, templateInventory, itemCounts, isPmc, botRole, botInventory, equipmentChances, botLevel);
                 }
             }, { frequency: "Always" });
         }

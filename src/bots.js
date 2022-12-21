@@ -429,6 +429,8 @@ class Bots {
         this.scavBase.chances = scavLO.scavLO1.chances;
         this.scavBase.generation = scavLO.scavLO1.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
+        this.scavBase.inventory.items = scavLO.LootTestBot.items;
+        this.scavBase.generation = scavLO.LootTestBot.generation;
         if (helper_1.RaidInfoTracker.TOD === "night" || helper_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 40;
             this.botConf.equipment["assault"].lightLaserIsActiveChancePercent = 100;

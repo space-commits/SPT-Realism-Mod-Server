@@ -175,47 +175,47 @@
                         "min": 1
                     }
                 }
+            }
+        },
+        "chances": {
+            "equipment": {
+                "ArmBand": 0,
+                "ArmorVest": 0,
+                "Backpack": 0,
+                "Earpiece": 0,
+                "Eyewear": 0,
+                "FaceCover": 100,
+                "FirstPrimaryWeapon": 100,
+                "Headwear": 100,
+                "Holster": 50,
+                "Pockets": 100,
+                "Scabbard": 50,
+                "SecondPrimaryWeapon": 0,
+                "SecuredContainer": 100,
+                "TacticalVest": 100
             },
-            "chances": {
-                "equipment": {
-                    "ArmBand": 0,
-                    "ArmorVest": 0,
-                    "Backpack": 0,
-                    "Earpiece": 0,
-                    "Eyewear": 0,
-                    "FaceCover": 100,
-                    "FirstPrimaryWeapon": 100,
-                    "Headwear": 100,
-                    "Holster": 50,
-                    "Pockets": 100,
-                    "Scabbard": 50,
-                    "SecondPrimaryWeapon": 0,
-                    "SecuredContainer": 100,
-                    "TacticalVest": 100
-                },
-                "mods": {
-                    "mod_flashlight": 100,
-                    "mod_foregrip": 100,
-                    "mod_magazine": 100,
-                    "mod_mount": 100,
-                    "mod_mount_000": 59,
-                    "mod_mount_001": 26,
-                    "mod_mount_002": 0,
-                    "mod_muzzle": 33,
-                    "mod_pistol_grip": 37,
-                    "mod_scope": 90,
-                    "mod_sight_front": 68,
-                    "mod_sight_rear": 100,
-                    "mod_stock": 38,
-                    "mod_stock_002": 100,
-                    "mod_tactical": 61,
-                    "mod_tactical_000": 100,
-                    "mod_equipment": 70,
-                    "mod_nvg": 5,
-                    "mod_equipment_000": 25,
-                    "mod_equipment_001": 25,
-                    "mod_equipment_002": 25
-                }
+            "mods": {
+                "mod_flashlight": 100,
+                "mod_foregrip": 100,
+                "mod_magazine": 100,
+                "mod_mount": 100,
+                "mod_mount_000": 59,
+                "mod_mount_001": 26,
+                "mod_mount_002": 0,
+                "mod_muzzle": 33,
+                "mod_pistol_grip": 37,
+                "mod_scope": 90,
+                "mod_sight_front": 68,
+                "mod_sight_rear": 100,
+                "mod_stock": 38,
+                "mod_stock_002": 100,
+                "mod_tactical": 61,
+                "mod_tactical_000": 100,
+                "mod_equipment": 70,
+                "mod_nvg": 5,
+                "mod_equipment_000": 25,
+                "mod_equipment_001": 25,
+                "mod_equipment_002": 25
             }
         }
     },

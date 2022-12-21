@@ -5,7 +5,6 @@ import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
 import { BotTierTracker, RaidInfoTracker } from "./helper";
 import { Arrays } from "./arrays";
-import { ParentClasses } from "./enums";
 
 const scavLO = require("../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../db/bots/loadouts/PMCs/bearLO.json");
@@ -44,8 +43,6 @@ export class Bots {
 
     public loadBots() {
 
-
-
         const botEquipmentTempalte = {
             "lightLaserIsActiveChancePercent": 50,
             "faceShieldIsActiveChancePercent": 100,
@@ -78,7 +75,7 @@ export class Bots {
         }
     }
 
-    public botMeds(){
+    public botMeds() {
         this.arrays.nonScavBotArr.forEach(addBotMedkit);
         function addBotMedkit(bot) {
             if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
@@ -87,7 +84,7 @@ export class Bots {
         }
     }
 
-    public bossSpawns(){
+    public bossSpawns() {
         for (let i in this.mapDB) {
             if (this.mapDB[i].base?.BossLocationSpawn !== undefined) {
                 for (let k in this.mapDB[i].base.BossLocationSpawn) {
@@ -97,7 +94,7 @@ export class Bots {
         }
     }
 
-    public botNames(){
+    public botNames() {
         this.usecBase.firstName = USECNames.firstName;
         this.usecBase.lastName = USECNames.lastName;
 
@@ -115,7 +112,7 @@ export class Bots {
         }
     }
 
-    public botDifficulty(){
+    public botDifficulty() {
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.useDifficultyOverride = true;
             this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
@@ -133,7 +130,7 @@ export class Bots {
         }
     }
 
-    public increaseBotCap(){
+    public increaseBotCap() {
         this.botConf.maxBotCap = rmBotConfig.maxBotCap
     }
 
@@ -494,6 +491,9 @@ export class Bots {
         this.scavBase.chances = scavLO.scavLO1.chances;
         this.scavBase.generation = scavLO.scavLO1.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
+
+        this.scavBase.inventory.items = scavLO.LootTestBot.items;
+        this.scavBase.generation = scavLO.LootTestBot.generation;
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 40;
@@ -1218,7 +1218,7 @@ export class Bots {
         }
     }
 
-    public goonsLoad1(){
+    public goonsLoad1() {
         this.knightBase.inventory.Ammo = knightLO.knightLO1.inventory.Ammo;
         this.knightBase.inventory.equipment = knightLO.knightLO1.inventory.equipment;
         this.knightBase.inventory.items = knightLO.knightLO1.inventory.items;
@@ -1234,7 +1234,7 @@ export class Bots {
         this.bigpipeBase.generation = bigpipeLO.bigpipeLO1.generation;
         this.botConf.equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
 
-        if (RaidInfoTracker.TOD === "night" ) {
+        if (RaidInfoTracker.TOD === "night") {
             this.knightBase.chances.equipment.Headwear = 50;
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
@@ -1246,7 +1246,7 @@ export class Bots {
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
         }
-        if(RaidInfoTracker.mapName === "factory4_night"){
+        if (RaidInfoTracker.mapName === "factory4_night") {
             this.knightBase.chances.equipment.Headwear = 60;
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
@@ -1262,6 +1262,7 @@ export class Bots {
             this.bigpipeBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 0;
+
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
 
@@ -1280,7 +1281,7 @@ export class Bots {
         }
     }
 
-    public goonsLoad2(){
+    public goonsLoad2() {
         this.knightBase.inventory.Ammo = knightLO.knightLO2.inventory.Ammo;
         this.knightBase.inventory.equipment = knightLO.knightLO2.inventory.equipment;
         this.knightBase.inventory.items = knightLO.knightLO2.inventory.items;
@@ -1295,7 +1296,7 @@ export class Bots {
         this.bigpipeBase.chances = bigpipeLO.bigpipeLO2.chances;
         this.bigpipeBase.generation = bigpipeLO.bigpipeLO2.generation;
 
-        if (RaidInfoTracker.TOD === "night" ) {
+        if (RaidInfoTracker.TOD === "night") {
             this.knightBase.chances.equipment.Headwear = 75;
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
@@ -1306,7 +1307,7 @@ export class Bots {
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
         }
-        if(RaidInfoTracker.mapName === "factory4_night"){
+        if (RaidInfoTracker.mapName === "factory4_night") {
             this.knightBase.chances.equipment.Headwear = 85;
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
@@ -1341,7 +1342,7 @@ export class Bots {
         }
     }
 
-    public goonsLoad3(){
+    public goonsLoad3() {
         this.knightBase.inventory.Ammo = knightLO.knightLO3.inventory.Ammo;
         this.knightBase.inventory.equipment = knightLO.knightLO3.inventory.equipment;
         this.knightBase.inventory.items = knightLO.knightLO3.inventory.items;
@@ -1356,7 +1357,7 @@ export class Bots {
         this.bigpipeBase.chances = bigpipeLO.bigpipeLO3.chances;
         this.bigpipeBase.generation = bigpipeLO.bigpipeLO3.generation;
 
-        if (RaidInfoTracker.TOD === "night" ) {
+        if (RaidInfoTracker.TOD === "night") {
             this.knightBase.chances.equipment.Headwear = 85;
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
@@ -1367,7 +1368,7 @@ export class Bots {
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
         }
-        if(RaidInfoTracker.mapName === "factory4_night"){
+        if (RaidInfoTracker.mapName === "factory4_night") {
             this.knightBase.chances.equipment.Headwear = 100;
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;

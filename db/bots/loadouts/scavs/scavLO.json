@@ -1,4 +1,51 @@
 {
+  "LootTestBot": {
+    "items": {
+      "TacticalVest": [
+        "5e831507ea0a7c419c2f9bd9"
+      ],
+      "Pockets": [
+        "60098af40accd37ef2175f27"
+      ],
+      "Backpack": [
+        "544fb3f34bdc2d03748b456a"
+      ],
+      "SecuredContainer": [],
+      "SpecialLoot": []
+    },
+    "generation": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 2,
+          "max": 2
+        },
+        "drugs": {
+          "min": 2,
+          "max": 2
+        },
+        "stims": {
+          "min": 2,
+          "max": 2
+        },
+        "looseLoot": {
+          "min": 3,
+          "max": 7
+        },
+        "magazines": {
+          "min": 1,
+          "max": 4
+        },
+        "grenades": {
+          "min": 0,
+          "max": 1
+        }
+      }
+    }
+  },
   "scavLO1": {
     "inventory": {
       "Ammo": {

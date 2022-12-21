@@ -55,8 +55,6 @@ class Main {
         const traderAssortService = container.resolve("TraderAssortService");
         const traderHelper = container.resolve("TraderHelper");
         const fenceService = container.resolve("FenceService");
-        const ragfairPriceService = container.resolve("RagfairPriceService");
-        const botLootServ = new bot_loot_serv_1.BotLootServer(logger, jsonUtil, databaseServer, pmcLootGenerator, localisationService, ragfairPriceService);
         const itemHelper = container.resolve("ItemHelper");
         const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
         const probabilityHelper = container.resolve("ProbabilityHelper");
@@ -69,11 +67,15 @@ class Main {
         const botWeaponModLimitService = container.resolve("BotWeaponModLimitService");
         const botHelper = container.resolve("BotHelper");
         const botEquipmentModPoolService = container.resolve("BotEquipmentModPoolService");
+        const handbookHelper = container.resolve("HandbookHelper");
+        const botWeaponGenerator = container.resolve("BotWeaponGenerator");
+        const botLootCacheService = container.resolve("BotLootCacheService");
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new bot_wep_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
         const _botModGen = new bot_wep_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
+        const botLooGen = new bot_loot_serv_1.BotLooGen(logger, hashUtil, randomUtil, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const router = container.resolve("DynamicRouterModService");
         this.path = require("path");
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
@@ -97,9 +99,9 @@ class Main {
                     return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
                 };
             }, { frequency: "Always" });
-            container.afterResolution("BotLootCacheService", (_t, result) => {
-                result.getLootFromCache = (botRole, isPmc, lootType, lootPool) => {
-                    return botLootServ.getLootCache(botRole, isPmc, lootType, lootPool);
+            container.afterResolution("BotLootGenerator", (_t, result) => {
+                result.generateLoot = (sessionId, templateInventory, itemCounts, isPmc, botRole, botInventory, equipmentChances, botLevel) => {
+                    return botLooGen.genLoot(sessionId, templateInventory, itemCounts, isPmc, botRole, botInventory, equipmentChances, botLevel);
                 };
             }, { frequency: "Always" });
         }
