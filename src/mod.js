@@ -139,54 +139,8 @@ class Main {
                         var healthProp = pmcData?.Health;
                         var hydroProp = pmcData?.Health?.Hydration;
                         if (healthProp !== undefined) {
-                            this.correctNegativeHP(pmcData, logger);
-                            if (modConfig.realistic_player_health == false) {
-                                pmcData.Health.BodyParts["Head"].Health.Maximum = player.defaultHeadHealth;
-                                pmcData.Health.BodyParts["Chest"].Health.Maximum = player.defaultChestHealth;
-                                pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.defaultStomaHealth;
-                                pmcData.Health.BodyParts["LeftArm"].Health.Maximum = player.defaultArmHealth;
-                                pmcData.Health.BodyParts["RightArm"].Health.Maximum = player.defaultArmHealth;
-                                pmcData.Health.BodyParts["LeftLeg"].Health.Maximum = player.defaultLegHealth;
-                                pmcData.Health.BodyParts["RightLeg"].Health.Maximum = player.defaultLegHealth;
-                                pmcData.Health.Temperature.Current = player.defaultTemp;
-                                pmcData.Health.Temperature.Maximum = player.defaultTemp;
-                                if (pmcData.Health.BodyParts["Chest"].Health.Current > pmcData.Health.BodyParts["Chest"].Health.Maximum) {
-                                    pmcData.Health.BodyParts["Head"].Health.Current = player.defaultHeadHealth;
-                                    pmcData.Health.BodyParts["Chest"].Health.Current = player.defaultChestHealth;
-                                    pmcData.Health.BodyParts["Stomach"].Health.Current = player.defaultStomaHealth;
-                                    pmcData.Health.BodyParts["LeftArm"].Health.Current = player.defaultArmHealth;
-                                    pmcData.Health.BodyParts["RightArm"].Health.Current = player.defaultArmHealth;
-                                    pmcData.Health.BodyParts["LeftLeg"].Health.Current = player.defaultLegHealth;
-                                    pmcData.Health.BodyParts["RightLeg"].Health.Current = player.defaultLegHealth;
-                                }
-                                if (modConfig.logEverything == true) {
-                                    logger.info("Realism Mod: Player Health Set To Vanilla Defaults");
-                                }
-                            }
-                            if (modConfig.realistic_player_health == true) {
-                                pmcData.Health.BodyParts["Head"].Health.Maximum = player.headHealth;
-                                pmcData.Health.BodyParts["Chest"].Health.Maximum = player.chestHealth;
-                                pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.stomaHealth;
-                                pmcData.Health.BodyParts["LeftArm"].Health.Maximum = player.armHealth;
-                                pmcData.Health.BodyParts["RightArm"].Health.Maximum = player.armHealth;
-                                pmcData.Health.BodyParts["LeftLeg"].Health.Maximum = player.legHealth;
-                                pmcData.Health.BodyParts["RightLeg"].Health.Maximum = player.legHealth;
-                                pmcData.Health.Temperature.Current = player.tempCurr;
-                                pmcData.Health.Temperature.Maximum = player.tempMax;
-                                if (pmcData.Info.Experience == 0 || pmcData.Health.BodyParts["Head"].Health.Current > player.headHealth) {
-                                    pmcData.Health.BodyParts["Head"].Health.Current = player.headHealth;
-                                    pmcData.Health.BodyParts["Chest"].Health.Current = player.chestHealth;
-                                    pmcData.Health.BodyParts["Stomach"].Health.Current = player.stomaHealth;
-                                    pmcData.Health.BodyParts["LeftArm"].Health.Current = player.armHealth;
-                                    pmcData.Health.BodyParts["RightArm"].Health.Current = player.armHealth;
-                                    pmcData.Health.BodyParts["LeftLeg"].Health.Current = player.legHealth;
-                                    pmcData.Health.BodyParts["RightLeg"].Health.Current = player.legHealth;
-                                    logger.info("Realism Mod: Profile Health Has Been Corrected");
-                                }
-                                if (modConfig.logEverything == true) {
-                                    logger.info("Realism Mod: Player Health Has Been Adjusted");
-                                }
-                            }
+                            player.correctNegativeHP(pmcData);
+                            player.setPlayerHealth(pmcData, scavData);
                             if (hydroProp !== undefined) {
                                 if (modConfig.revert_med_changes == true && modConfig.med_changes == false) {
                                     this.revertMeds(pmcData, helper);
@@ -243,12 +197,14 @@ class Main {
                     const arrays = new arrays_1.Arrays(postLoadtables);
                     const helper = new helper_1.Helper(postLoadtables, arrays);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
+                    let scavData = profileHelper.getScavProfile(sessionID);
                     try {
                         if (modConfig.med_changes == true) {
                             this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
+                            this.checkMeds(scavData, scavData.Info.Experience, helper, player, logger);
                         }
                         if (modConfig.realistic_player_health == true) {
-                            this.correctNewHealth(pmcData, player, logger);
+                            player.correctNewHealth(pmcData, scavData);
                         }
                         logger.info("Realism Mod: New Profile Modified");
                         return HttpResponse.nullResponse();
@@ -373,10 +329,11 @@ class Main {
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     try {
                         this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
-                        this.correctNegativeHP(pmcData, logger);
+                        player.correctNegativeHP(pmcData);
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
                         }
@@ -389,17 +346,6 @@ class Main {
                 }
             }
         ], "pmc");
-    }
-    correctNegativeHP(pmcData, logger) {
-        for (let part in pmcData.Health.BodyParts) {
-            if (pmcData.Health.BodyParts[part].Health.Current <= 0) {
-                logger.warning("Body Part " + pmcData.Health.BodyParts[part] + "has negative HP: " + pmcData.Health.BodyParts[part].Health.Current + " , correcting");
-                pmcData.Health.BodyParts[part].Health.Current = 15;
-            }
-        }
-        if (modConfig.logEverything == true) {
-            logger.info("Realism Mod: Checked for Negative HP");
-        }
     }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
@@ -521,25 +467,6 @@ class Main {
         if (modConfig.logEverything == true) {
             logger.info("Realism Mod: Meds Checked");
         }
-    }
-    correctNewHealth(pmcData, player, logger) {
-        pmcData.Health.BodyParts["Head"].Health.Maximum = player.headHealth;
-        pmcData.Health.BodyParts["Chest"].Health.Maximum = player.chestHealth;
-        pmcData.Health.BodyParts["Stomach"].Health.Maximum = player.stomaHealth;
-        pmcData.Health.BodyParts["LeftArm"].Health.Maximum = player.armHealth;
-        pmcData.Health.BodyParts["RightArm"].Health.Maximum = player.armHealth;
-        pmcData.Health.BodyParts["LeftLeg"].Health.Maximum = player.legHealth;
-        pmcData.Health.BodyParts["RightLeg"].Health.Maximum = player.legHealth;
-        pmcData.Health.BodyParts["Head"].Health.Current = player.headHealth;
-        pmcData.Health.BodyParts["Chest"].Health.Current = player.chestHealth;
-        pmcData.Health.BodyParts["Stomach"].Health.Current = player.stomaHealth;
-        pmcData.Health.BodyParts["LeftArm"].Health.Current = player.armHealth;
-        pmcData.Health.BodyParts["RightArm"].Health.Current = player.armHealth;
-        pmcData.Health.BodyParts["LeftLeg"].Health.Current = player.legHealth;
-        pmcData.Health.BodyParts["RightLeg"].Health.Current = player.legHealth;
-        pmcData.Health.Temperature.Current = player.tempCurr;
-        pmcData.Health.Temperature.Maximum = player.tempMax;
-        logger.info("Realism Mod: New Profile Health Has Been Adjusted");
     }
     fleaHelper(fetchTier, ragfairOfferGen, container) {
         var offers = container.resolve("RagfairOfferService").getOffers();

@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
 class Player {
-    constructor(logger, tables, modConf, custProfile, commonStats) {
+    constructor(logger, tables, modConfig, custProfile, commonStats) {
         this.logger = logger;
         this.tables = tables;
-        this.modConf = modConf;
+        this.modConfig = modConfig;
         this.custProfile = custProfile;
         this.commonStats = commonStats;
         this.globalDB = this.tables.globals.config;
@@ -27,8 +27,102 @@ class Player {
         this.defaultEnergy = this.tables.templates.profiles.Standard.bear.character.Health.Energy.Maximum;
         this.defaultTemp = this.tables.templates.profiles.Standard.bear.character.Health.Temperature.Maximum;
     }
+    correctNegativeHP(pmcData) {
+        for (let part in pmcData.Health.BodyParts) {
+            if (pmcData.Health.BodyParts[part].Health.Current <= 0) {
+                this.logger.warning("Body Part " + pmcData.Health.BodyParts[part] + "has negative HP: " + pmcData.Health.BodyParts[part].Health.Current + " , correcting");
+                pmcData.Health.BodyParts[part].Health.Current = 15;
+            }
+        }
+        if (this.modConfig.logEverything == true) {
+            this.logger.info("Realism Mod: Checked for Negative HP");
+        }
+    }
+    setPlayerHealth(pmcData, scavData) {
+        if (this.modConfig.realistic_player_health == false) {
+            this.setPlayerHealthHelper(pmcData, true, false);
+            this.setPlayerHealthHelper(scavData, true, false);
+            if ((pmcData.Health.BodyParts["Chest"].Health.Current > pmcData.Health.BodyParts["Chest"].Health.Maximum) || (scavData.Health.BodyParts["Chest"].Health.Current > scavData.Health.BodyParts["Chest"].Health.Maximum)) {
+                this.setPlayerHealthHelper(pmcData, false, false);
+                this.setPlayerHealthHelper(scavData, false, false);
+            }
+            if (this.modConfig.logEverything == true) {
+                this.logger.info("Realism Mod: Player Health Set To Vanilla Defaults");
+            }
+        }
+        if (this.modConfig.realistic_player_health == true) {
+            this.setPlayerHealthHelper(pmcData, true, true);
+            this.setPlayerHealthHelper(scavData, true, true);
+            if (pmcData.Info.Experience == 0 || (pmcData.Health.BodyParts["Head"].Health.Current > this.headHealth || scavData.Health.BodyParts["Head"].Health.Current > this.headHealth)) {
+                this.setPlayerHealthHelper(pmcData, false, true);
+                this.setPlayerHealthHelper(scavData, false, true);
+                this.logger.info("Realism Mod: Profile Health Has Been Corrected");
+            }
+            if (this.modConfig.logEverything == true) {
+                this.logger.info("Realism Mod: Player Health Has Been Adjusted");
+            }
+        }
+    }
+    correctNewHealth(pmcData, scavData) {
+        this.setPlayerHealthHelper(pmcData, true, true, true);
+        this.setPlayerHealthHelper(scavData, true, true, true);
+        this.logger.info("Realism Mod: New Profile Health Has Been Adjusted");
+    }
+    setPlayerHealthHelper(playerData, setMax, setReal, setMaxCurr = false) {
+        var head = playerData.Health.BodyParts["Head"].Health;
+        var chest = playerData.Health.BodyParts["Chest"].Health;
+        var stomach = playerData.Health.BodyParts["Stomach"].Health;
+        var leftArm = playerData.Health.BodyParts["LeftArm"].Health;
+        var rightArm = playerData.Health.BodyParts["RightArm"].Health;
+        var leftLeg = playerData.Health.BodyParts["LeftLeg"].Health;
+        var rightLeg = playerData.Health.BodyParts["RightLeg"].Health;
+        if (setReal == false) {
+            playerData.Health.Temperature.Current = this.defaultTemp;
+            playerData.Health.Temperature.Maximum = this.defaultTemp;
+            if (setMax == true || setMaxCurr == true) {
+                head.Maximum = this.defaultHeadHealth;
+                chest.Maximum = this.defaultChestHealth;
+                stomach.Maximum = this.defaultStomaHealth;
+                leftArm.Maximum = this.defaultArmHealth;
+                rightArm.Maximum = this.defaultArmHealth;
+                leftLeg.Maximum = this.defaultLegHealth;
+                rightLeg.Maximum = this.defaultLegHealth;
+            }
+            if (setMax == false || setMaxCurr == true) {
+                head.Current = this.defaultHeadHealth;
+                chest.Current = this.defaultChestHealth;
+                stomach.Current = this.defaultStomaHealth;
+                leftArm.Current = this.defaultArmHealth;
+                rightArm.Current = this.defaultArmHealth;
+                leftLeg.Current = this.defaultLegHealth;
+                rightLeg.Current = this.defaultLegHealth;
+            }
+        }
+        else {
+            playerData.Health.Temperature.Current = this.tempCurr;
+            playerData.Health.Temperature.Maximum = this.tempMax;
+            if (setMax == true || setMaxCurr == true) {
+                head.Maximum = this.headHealth;
+                chest.Maximum = this.chestHealth;
+                stomach.Maximum = this.stomaHealth;
+                leftArm.Maximum = this.armHealth;
+                rightArm.Maximum = this.armHealth;
+                leftLeg.Maximum = this.legHealth;
+                rightLeg.Maximum = this.legHealth;
+            }
+            if (setMax == false || setMaxCurr == true) {
+                head.Current = this.headHealth;
+                chest.Current = this.chestHealth;
+                stomach.Current = this.stomaHealth;
+                leftArm.Current = this.armHealth;
+                rightArm.Current = this.armHealth;
+                leftLeg.Current = this.legHealth;
+                rightLeg.Current = this.legHealth;
+            }
+        }
+    }
     loadPlayer() {
-        if (this.modConf.movement_changes == true) {
+        if (this.modConfig.movement_changes == true) {
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 50;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 70;
             this.globalDB.Stamina.BaseOverweightLimits["x"] = 25;
@@ -92,30 +186,30 @@ class Player {
             this.globalDB.Inertia.InertiaBackwardCoef["y"] = 0.6;
             this.globalDB.Inertia.InertiaLimits["y"] = 70;
             this.globalDB.Inertia.InertiaLimits["z"] = 0.5;
-            if (this.modConf.logEverything == true) {
+            if (this.modConfig.logEverything == true) {
                 this.logger.info("Movement Changes Enabled");
             }
         }
-        if (this.modConf.fall_damage_changes == true) {
+        if (this.modConfig.fall_damage_changes == true) {
             this.globalDB.Health.Falling.DamagePerMeter = 11.5;
             this.globalDB.Health.Falling.SafeHeight = 2;
             this.globalDB.Stamina.SafeHeightOverweight = 1.7;
         }
-        if (this.modConf.no_fall_damage == true) {
+        if (this.modConfig.no_fall_damage == true) {
             this.globalDB.Health.Falling.DamagePerMeter = 0;
             this.globalDB.Health.Falling.SafeHeight = 1000;
             this.globalDB.Stamina.SafeHeightOverweight = 10000;
         }
-        if (this.modConf.med_changes == true) {
+        if (this.modConfig.med_changes == true) {
             this.globalDB.Health.Effects.Existence.EnergyDamage = 1;
             this.globalDB.Health.Effects.Existence.HydrationDamage = 1.5;
         }
-        if (this.modConf.realistic_ballistics == true) {
+        if (this.modConfig.realistic_ballistics == true) {
             this.globalDB.LegsOverdamage *= 1.75;
             this.globalDB.HandsOverdamage *= 1;
             this.globalDB.StomachOverdamage *= 1.85;
         }
-        if (this.modConf.realistic_player_health == true) {
+        if (this.modConfig.realistic_player_health == true) {
             let health = this.globalDB.Health.Effects;
             let mult = 1.136;
             health.Wound.WorkingTime = 3600;
@@ -132,7 +226,7 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);
         }
-        if (this.modConf.realistic_ballistics == true) {
+        if (this.modConfig.realistic_ballistics == true) {
             this.tables.templates.profiles.Standard.bear.character.Inventory = this.custProfile.Standard.bear.Inventory;
             this.tables.templates.profiles.Standard.usec.character.Inventory = this.custProfile.Standard.usec.Inventory;
             this.tables.templates.profiles["Left Behind"].bear.character.Inventory = this.custProfile["Left Behind"].bear.Inventory;
@@ -142,7 +236,7 @@ class Player {
             this.tables.templates.profiles["Edge Of Darkness"].bear.character.Inventory = this.custProfile["Edge Of Darkness"].bear.Inventory;
             this.tables.templates.profiles["Edge Of Darkness"].usec.character.Inventory = this.custProfile["Edge Of Darkness"].usec.Inventory;
         }
-        if (this.modConf.med_changes == false) {
+        if (this.modConfig.med_changes == false) {
             let bearInventory = this.custProfile["Realism Mod"].bear.character.Inventory.items;
             let usecInventory = this.custProfile["Realism Mod"].usec.character.Inventory.items;
             for (let i = 0; i < bearInventory.length; i++) {
@@ -163,7 +257,7 @@ class Player {
             }
         }
         this.tables.templates.profiles["Realism Mod"] = this.custProfile["Realism Mod"];
-        if (this.modConf.logEverything == true) {
+        if (this.modConfig.logEverything == true) {
             this.logger.info("Player Loaded");
         }
     }

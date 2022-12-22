@@ -27,6 +27,18 @@
                 "duration": 0,
                 "fadeOut": 0,
                 "cost": 50
+            },
+            "HeavyBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 10
+            },
+            "LightBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 5
             }
         },
         "MaxHpResource": 260,
@@ -41,6 +53,18 @@
                 "duration": 0,
                 "fadeOut": 0,
                 "cost": 50
+            },
+            "HeavyBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 10
+            },
+            "LightBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 5
             }
         },
         "MaxHpResource": 380,
@@ -55,6 +79,18 @@
                 "duration": 0,
                 "fadeOut": 0,
                 "cost": 50
+            },
+            "HeavyBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 10
+            },
+            "LightBleeding": {
+                "delay": 1,
+                "duration": 0,
+                "fadeOut": 0,
+                "cost": 5
             }
         },
         "MaxHpResource": 510,

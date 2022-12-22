@@ -183,8 +183,11 @@ class Bots {
             this.logger.info("Killa chest health = " + this.botDB["bosskilla"].health.BodyParts[0].Chest.min);
             this.logger.info("Knight Vitality = " + this.botDB["bossknight"].skills.Common["Vitality"].max);
             this.logger.info("PMC chest health = " + this.botDB["usec"].health.BodyParts[0].Chest.min);
-            this.logger.info("Scav head health min = " + this.botDB["assault"].health.BodyParts[0].Head.min);
-            this.logger.info("Scav head health max = " + this.botDB["assault"].health.BodyParts[0].Head.max);
+            this.logger.info("Scav head health  max = " + this.botDB["assault"].health.BodyParts[0].Head.max);
+            this.logger.info("Scav chest health  max = " + this.botDB["assault"].health.BodyParts[0].Chest.min);
+            this.logger.info("Scav leg health max = " + this.botDB["assault"].health.BodyParts[0].LeftLeg.max);
+            this.logger.info("Scav arm health  max = " + this.botDB["assault"].health.BodyParts[0].LeftArm.min);
+            this.logger.info("Scav stomach health  max = " + this.botDB["assault"].health.BodyParts[0].Stomach.max);
             this.logger.info("Cultist chest health = " + this.botDB["sectantwarrior"].health.BodyParts[0].Chest.min);
             this.logger.info("Bot Health Set");
         }
