@@ -25,11 +25,9 @@ import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
 import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
 import { ProbabilityHelper } from "@spt-aki/helpers/ProbabilityHelper";
-import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
 import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
 import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponResult";
 import { BotLootCacheService } from "@spt-aki/services/BotLootCacheService";
-import { LootCacheType } from "@spt-aki/models/spt/bots/BotLootCache";
 import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
 import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
 import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
@@ -62,22 +60,26 @@ import { BotModLimits, BotWeaponModLimitService } from "@spt-aki/services/BotWea
 import { BotHelper } from "@spt-aki/helpers/BotHelper";
 import { BotEquipmentModPoolService } from "@spt-aki/services/BotEquipmentModPoolService";
 import { BotLootGenerator } from "@spt-aki/generators/BotLootGenerator";
-import { Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
+import { IBotBase, Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
 import { HandbookHelper } from "@spt-aki/helpers/HandbookHelper";
+import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
+import { MinMax } from "@spt-aki/models/common/MinMax";
+import { IRandomisedBotLevelResult } from "@spt-aki/models/eft/bot/IRandomisedBotLevelResult";
+import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
 import { AttatchmentBase as AttachmentBase } from "./attatchment_base";
 import { AttatchmentStats as AttachmentStats } from "./attatchment_stats";
 import { FleamarketConfig, TieredFlea, FleamarketGlobal } from "./fleamarket";
-import { BotTierTracker, Helper, RaidInfoTracker } from "./helper"
+import { Helper, RaidInfoTracker } from "./helper"
 import { Arrays } from "./arrays"
 import { Meds } from "./meds";
 import { Player } from "./player"
 import { WeaponsGlobals } from "./weapons_globals"
 import { Bots } from "./bots";
-import { BotGenHelper, BotWepGen } from "./bot_wep_gen";
-import { BotLooGen, MyLootCache } from "./bot_loot_serv";
+import { BotGenHelper, BotWepGen, GenBotLvl } from "./bot_gen";
+import { BotLooGen } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
@@ -85,8 +87,6 @@ import { RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
-
-
 
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -153,6 +153,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
         const _botModGen = new BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const botLooGen = new BotLooGen(logger, hashUtil, randomUtil, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
+        const genBotLvl = new GenBotLvl(logger, randomUtil, databaseServer);
+
 
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
         this.path = require("path");
@@ -178,6 +180,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number): GenerateWeaponResult => {
                     return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel);
                 }
+                result.addExtraMagazinesToInventory = (generatedWeaponResult: GenerateWeaponResult, magCounts: MinMax, inventory: PmcInventory, botRole: string): void => {
+                    return _botWepGen.magGen(generatedWeaponResult, magCounts, inventory, botRole);
+                }
             }, { frequency: "Always" });
 
             container.afterResolution("BotEquipmentModGenerator", (_t, result: BotEquipmentModGenerator) => {
@@ -191,6 +196,13 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     return botLooGen.genLoot(sessionId, templateInventory, itemCounts, isPmc, botRole, botInventory, equipmentChances, botLevel);
                 }
             }, { frequency: "Always" });
+
+            container.afterResolution("BotLevelGenerator", (_t, result: BotLevelGenerator) => {
+                result.generateBotLevel = (levelDetails: MinMax, botGenerationDetails: BotGenerationDetails, bot: IBotBase): IRandomisedBotLevelResult => {
+                    return genBotLvl.genBotLvl(levelDetails, botGenerationDetails, bot);
+                }
+            }, { frequency: "Always" });
+
         }
 
         if (modConfig.trader_changes == true) {
@@ -609,7 +621,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.guarantee_boss_spawn == true) {
             bots.bossSpawns();
         }
-        
+
         bots.botDifficulty();
 
         if (modConfig.realistic_ballistics == true) {
@@ -646,9 +658,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             traders.setLoyaltyLevels();
             randomizeTraderAssort.loadRandomizedTraderStock();
         }
-        // if (modConfig.bot_changes == true) {
-        //     attachBase.loadAttRequirements();
-        // }
+        if (modConfig.bot_changes == true) {
+            attachBase.loadAttRequirements();
+        }
 
         attachBase.loadAttCompat();
 

@@ -3559,7 +3559,7 @@
         "5a16b93dfcdbcbcae6687261": {
           "mod_nvg": [
             "57235b6f24597759bf5a30f1"
-          ] 
+          ]
         },
         "5a16b8a9fcdbcb00165aa6ca": {
           "mod_nvg": [
@@ -4060,10 +4060,49 @@
         },
         "59e649f986f77411d949b246": {
           "mod_handguard": [
-            "5d2c829448f0353a5c7d6674",
+            "5d1b198cd7ad1a604869ad72",
             "5cbda392ae92155f3c17c39f",
             "5648ae314bdc2d3d1c8b457f",
-            "5c617a5f2e2216000f1e81b3"
+            "5c617a5f2e2216000f1e81b3",
+            "5648b4534bdc2d3d1c8b4580"
+          ]
+        },
+        "5b7be4895acfc400170e2dd5": {
+          "mod_foregrip": [
+            "5c1bc4812e22164bef5cfde7",
+            "5c791e872e2216001219c40a",
+            "5c1bc7752e221602b1779b34",
+            "5cf4fb76d7f00c065703d3ac",
+            "5c1bc5fb2e221602b1779b32",
+            "5c1bc7752e221602b1779b34",
+            "5c1bc7432e221602b412949d",
+            "5b057b4f5acfc4771e1bd3e9"
+          ]
+        },
+        "5d1b198cd7ad1a604869ad72": {
+          "mod_foregrip": [
+            "5b7be4895acfc400170e2dd5"
+          ],
+          "mod_tactical_001": [
+            "5b7be47f5acfc400170e2dd2"
+          ]
+        },
+        "5648b4534bdc2d3d1c8b4580": {
+          "mod_foregrip": [
+            "5c1bc4812e22164bef5cfde7",
+            "5c791e872e2216001219c40a",
+            "5c1bc7752e221602b1779b34",
+            "5cf4fb76d7f00c065703d3ac",
+            "5c1bc5fb2e221602b1779b32",
+            "5c1bc7752e221602b1779b34",
+            "5c1bc7432e221602b412949d",
+            "5b057b4f5acfc4771e1bd3e9"
+          ],
+          "mod_tactical_001": [
+            "57d17e212459775a1179a0f5",
+            "560d657b4bdc2da74d8b4572",
+            "5a5f1ce64f39f90b401987bc",
+            "6272370ee4013c5d7e31f418"
           ]
         },
         "5c617a5f2e2216000f1e81b3": {
@@ -5331,7 +5370,7 @@
         "5a16b93dfcdbcbcae6687261": {
           "mod_nvg": [
             "57235b6f24597759bf5a30f1"
-          ] 
+          ]
         },
         "5a16b8a9fcdbcb00165aa6ca": {
           "mod_nvg": [

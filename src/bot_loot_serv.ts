@@ -11,12 +11,15 @@ import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
 import { container } from "tsyringe";
 
 export class MyBotLootCache {
+    specialItems: ITemplateItem[]
     backpackLoot: ITemplateItem[]
     pocketLoot: ITemplateItem[]
     vestLoot: ITemplateItem[]
     combinedPoolLoot: ITemplateItem[]
 
-    specialItems: ITemplateItem[]
+    vestGrenadeItems: ITemplateItem[]
+    pocketGrenadeItems: ITemplateItem[]
+
 
     vestHealingItems: ITemplateItem[]
     vestDrugItems: ITemplateItem[]
@@ -26,7 +29,9 @@ export class MyBotLootCache {
     pocketDrugItems: ITemplateItem[]
     pocketStimItems: ITemplateItem[]
 
-    grenadeItems: ITemplateItem[]
+    bagHealingItems: ITemplateItem[]
+    bagDrugItems: ITemplateItem[]
+    bagStimItems: ITemplateItem[]
 }
 
 export const enum MyLootCacheType {
@@ -36,6 +41,9 @@ export const enum MyLootCacheType {
     VEST = "Vest",
     COMBINED = "Combined",
 
+    VEST_GRENADE_ITEMS = "VestGrenadeItems",
+    POCKET_GRENADE_ITEMS = "PocketGrenadeItems",
+
     VEST_HEALING_ITEMS = "VestHealingItems",
     VEST_DRUG_ITEMS = "VestDrugItems",
     VEST_STIM_ITEMS = "VestStimItems",
@@ -44,7 +52,9 @@ export const enum MyLootCacheType {
     POCKET_DRUG_ITEMS = "PocketDrugItems",
     POCKET_STIM_ITEMS = "PocketStimItems",
 
-    GRENADE_ITEMS = "GrenadeItems"
+    BAG_HEALING_ITEMS = "BagHealingItems",
+    BAG_DRUG_ITEMS = "BagDrugItems",
+    BAG_STIM_ITEMS = "BagStimItems",
 }
 
 export const enum EquipmentSlots {
@@ -85,9 +95,18 @@ export class BotLooGen extends BotLootGenerator {
         const vestLootCount = this.getRandomisedCount(Math.round(looseLootMin / 2), Math.round(looseLootMax / 2), nValue); // Count is half what loose loot min/max is
         const specialLootItemCount = this.getRandomisedCount(itemCounts.specialItems.min, itemCounts.specialItems.max, nValue);
 
-        const healingItemCount = this.getRandomisedCount(itemCounts.healing.min, itemCounts.healing.max, 3);
-        const drugItemCount = this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3)
-        const stimItemCount = this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
+        const vestHealingItemCount = this.getRandomisedCount(itemCounts.healing.min, itemCounts.healing.max, 3);
+        const vestDrugItemCount = this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3)
+        const vestStimItemCount = this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
+
+        const pocketHealingItemCount = this.getRandomisedCount(itemCounts.healing.min, 2, 3);
+        const pocketDrugItemCount = this.getRandomisedCount(itemCounts.drugs.min, 2, 3)
+        const pocketStimItemCount = this.getRandomisedCount(itemCounts.stims.min, 2, 3);
+
+        const bagHealingItemCount = this.getRandomisedCount(0, 1, 3);
+        const bagDrugItemCount = this.getRandomisedCount(0, 1, 3)
+        const bagStimItemCount = this.getRandomisedCount(0, 1, 3);
+
         const grenadeCount = this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
 
         // Special items
@@ -103,7 +122,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_HEALING_ITEMS, lootPool),
             [EquipmentSlots.TACTICAL_VEST],
-            healingItemCount,
+            vestHealingItemCount,
             botInventory,
             botRole,
             false,
@@ -114,7 +133,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_DRUG_ITEMS, lootPool),
             [EquipmentSlots.TACTICAL_VEST],
-            drugItemCount,
+            vestDrugItemCount,
             botInventory,
             botRole,
             false,
@@ -125,7 +144,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_STIM_ITEMS, lootPool),
             [EquipmentSlots.TACTICAL_VEST],
-            stimItemCount,
+            vestStimItemCount,
             botInventory,
             botRole,
             true,
@@ -136,7 +155,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_HEALING_ITEMS, lootPool),
             [EquipmentSlots.TACTICAL_VEST],
-            healingItemCount,
+            pocketHealingItemCount,
             botInventory,
             botRole,
             false,
@@ -147,7 +166,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_DRUG_ITEMS, lootPool),
             [EquipmentSlots.POCKETS],
-            drugItemCount,
+            pocketDrugItemCount,
             botInventory,
             botRole,
             false,
@@ -158,7 +177,40 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_STIM_ITEMS, lootPool),
             [EquipmentSlots.POCKETS],
-            stimItemCount,
+            pocketStimItemCount,
+            botInventory,
+            botRole,
+            true,
+            0,
+            isPmc);
+
+        //Bag Meds
+        this.addLootFromPool(
+            myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_HEALING_ITEMS, lootPool),
+            [EquipmentSlots.BACKPACK],
+            bagHealingItemCount,
+            botInventory,
+            botRole,
+            false,
+            0,
+            isPmc);
+
+        //Bag Drugs
+        this.addLootFromPool(
+            myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_DRUG_ITEMS, lootPool),
+            [EquipmentSlots.BACKPACK],
+            bagDrugItemCount,
+            botInventory,
+            botRole,
+            false,
+            0,
+            isPmc);
+
+        //Bag Stims
+        this.addLootFromPool(
+            myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_STIM_ITEMS, lootPool),
+            [EquipmentSlots.BACKPACK],
+            bagStimItemCount,
             botInventory,
             botRole,
             true,
@@ -169,14 +221,25 @@ export class BotLooGen extends BotLootGenerator {
         /////////////////////////////////////////////////////////////////////////////////
         // Grenades
         this.addLootFromPool(
-            myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.GRENADE_ITEMS, lootPool),
-            [EquipmentSlots.TACTICAL_VEST, EquipmentSlots.POCKETS],
+            myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, lootPool),
+            [EquipmentSlots.TACTICAL_VEST],
             grenadeCount,
             botInventory,
             botRole,
             false,
             0,
             isPmc);
+
+        this.addLootFromPool(
+            myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, lootPool),
+            [EquipmentSlots.POCKETS],
+            grenadeCount,
+            botInventory,
+            botRole,
+            false,
+            0,
+            isPmc);
+
 
         if (isPmc && this.randomUtil.getChance100(this.botConfig.pmc.looseWeaponInBackpackChancePercent)) {
             this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", templateInventory, equipmentChances.mods, botRole, isPmc, botLevel);
@@ -224,21 +287,20 @@ export class MyLootCache extends BotLootCacheService {
 
     private myLootCache: Record<string, MyBotLootCache>;
 
-    private myBotRoleExistsInCache(botRole: string): boolean
-    {
+    private myBotRoleExistsInCache(botRole: string): boolean {
         return !!this.myLootCache[botRole];
     }
 
-    private myInitCacheForBotRole(botRole: string): void
-    {
+    private myInitCacheForBotRole(botRole: string): void {
         this.myLootCache[botRole] = {
             backpackLoot: [],
             pocketLoot: [],
             vestLoot: [],
             combinedPoolLoot: [],
-
             specialItems: [],
-            grenadeItems: [],
+
+            vestGrenadeItems: [],
+            pocketGrenadeItems: [],
 
             vestHealingItems: [],
             vestDrugItems: [],
@@ -246,12 +308,15 @@ export class MyLootCache extends BotLootCacheService {
 
             pocketHealingItems: [],
             pocketDrugItems: [],
-            pocketStimItems: []
+            pocketStimItems: [],
+
+            bagHealingItems: [],
+            bagDrugItems: [],
+            bagStimItems: []
         };
     }
 
-    public override clearCache(): void
-    {
+    public override clearCache(): void {
         this.myLootCache = {};
     }
 
@@ -275,8 +340,10 @@ export class MyLootCache extends BotLootCacheService {
                 return this.myLootCache[botRole].vestLoot;
             case MyLootCacheType.COMBINED:
                 return this.myLootCache[botRole].combinedPoolLoot;
-            case MyLootCacheType.GRENADE_ITEMS:
-                return this.myLootCache[botRole].grenadeItems;
+            case MyLootCacheType.VEST_GRENADE_ITEMS:
+                return this.myLootCache[botRole].vestGrenadeItems;
+            case MyLootCacheType.POCKET_GRENADE_ITEMS:
+                return this.myLootCache[botRole].pocketGrenadeItems;
             case MyLootCacheType.VEST_HEALING_ITEMS:
                 return this.myLootCache[botRole].vestHealingItems;
             case MyLootCacheType.VEST_DRUG_ITEMS:
@@ -289,6 +356,12 @@ export class MyLootCache extends BotLootCacheService {
                 return this.myLootCache[botRole].pocketDrugItems;
             case MyLootCacheType.POCKET_STIM_ITEMS:
                 return this.myLootCache[botRole].pocketStimItems;
+            case MyLootCacheType.BAG_HEALING_ITEMS:
+                return this.myLootCache[botRole].bagHealingItems;
+            case MyLootCacheType.BAG_DRUG_ITEMS:
+                return this.myLootCache[botRole].bagDrugItems;
+            case MyLootCacheType.BAG_STIM_ITEMS:
+                return this.myLootCache[botRole].bagStimItems;
             default:
                 this.logger.error(this.localisationService.getText("bot-loot_type_not_found", { lootType: lootType, botRole: botRole, isPmc: isPmc }));
                 break;
@@ -377,9 +450,25 @@ export class MyLootCache extends BotLootCacheService {
             this.isMedicalItem(template._props)
             && template._parent === BaseClasses.STIMULATOR);
 
+        //bag
+        const bagHealingItems = backpackLootTemplates.filter(template =>
+            this.isMedicalItem(template._props)
+            && template._parent !== BaseClasses.STIMULATOR
+            && template._parent !== BaseClasses.DRUGS);
+
+        const bagDrugItems = backpackLootTemplates.filter(template =>
+            this.isMedicalItem(template._props)
+            && template._parent === BaseClasses.DRUGS);
+
+        const bagStimItems = backpackLootTemplates.filter(template =>
+            this.isMedicalItem(template._props)
+            && template._parent === BaseClasses.STIMULATOR);
         ///////////////////////////////////////////////////////
 
-        const grenadeItems = combinedPoolTemplates.filter(template =>
+        const vestGrenadeItems = vestLootTemplates.filter(template =>
+            this.isGrenade(template._props));
+
+        const pocketGrenadeItems = pocketLootTemplates.filter(template =>
             this.isGrenade(template._props));
 
         // Get loot items (excluding magazines, bullets, grenades and healing items)
@@ -413,7 +502,12 @@ export class MyLootCache extends BotLootCacheService {
         this.myLootCache[botRole].pocketDrugItems = pocketDrugItems;
         this.myLootCache[botRole].pocketStimItems = pocketStimItems;
 
-        this.myLootCache[botRole].grenadeItems = grenadeItems;
+        this.myLootCache[botRole].bagHealingItems = bagHealingItems;
+        this.myLootCache[botRole].bagDrugItems = bagDrugItems;
+        this.myLootCache[botRole].bagStimItems = bagStimItems;
+
+        this.myLootCache[botRole].vestGrenadeItems = vestGrenadeItems;
+        this.myLootCache[botRole].pocketGrenadeItems = pocketGrenadeItems;
 
         this.myLootCache[botRole].specialItems = specialLootItems;
         this.myLootCache[botRole].backpackLoot = backpackLootItems;

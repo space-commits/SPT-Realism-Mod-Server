@@ -18,9 +18,79 @@ import { BotHelper } from "@spt-aki/helpers/BotHelper";
 import { BotEquipmentModPoolService } from "@spt-aki/services/BotEquipmentModPoolService";
 import { EquipmentFilterDetails } from "@spt-aki/models/spt/config/IBotConfig";
 import { ExhaustableArray } from "@spt-aki/helpers/BotGeneratorHelper";
+import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
+import { MinMax } from "@spt-aki/models/common/MinMax";
+import { IRandomisedBotLevelResult } from "@spt-aki/models/eft/bot/IRandomisedBotLevelResult";
+import { IBotBase, Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
+import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
+import { InventoryMagGen } from "@spt-aki/generators/weapongen/InventoryMagGen";
+import { ParentClasses } from "./enums";
+
+export class GenBotLvl extends BotLevelGenerator {
+
+    public genBotLvl(levelDetails: MinMax, botGenerationDetails: BotGenerationDetails, bot: IBotBase): IRandomisedBotLevelResult {
+
+        const expTable = this.databaseServer.getTables().globals.config.exp.level.exp_table;
+        const highestLevel = this.getHighestRelativeBotLevel(botGenerationDetails.playerLevel, botGenerationDetails.botRelativeLevelDeltaMax, levelDetails, expTable);
+
+        // Get random level based on the exp table.
+        let exp = 0;
+        let level = 1;
+
+        if (bot.Info.Settings.Role === "sptBear" || bot.Info.Settings.Role === "sptUsec") {
+            level = this.randomUtil.getInt(levelDetails.min, levelDetails.max);
+
+        }
+        else {
+            level = this.randomUtil.getInt(1, highestLevel);
+        }
+
+        for (let i = 0; i < level; i++) {
+            exp += expTable[i].exp;
+        }
+
+        // Sprinkle in some random exp within the level, unless we are at max level.
+        if (level < expTable.length - 1) {
+            exp += this.randomUtil.getInt(0, expTable[level].exp - 1);
+        }
+
+        return { level, exp };
+    }
+}
 
 export class BotWepGen extends BotWeaponGenerator {
 
+    public magGen(generatedWeaponResult: GenerateWeaponResult, magCounts: MinMax, inventory: PmcInventory, botRole: string) {
+        const weaponMods = generatedWeaponResult.weapon;
+        const weaponTemplate = generatedWeaponResult.weaponTemplate;
+        const ammoTpl = generatedWeaponResult.chosenAmmo;
+        const magazineTpl = this.getMagazineTplFromWeaponTemplate(weaponMods, weaponTemplate, botRole);
+
+        if(weaponTemplate._props.weapClass === ParentClasses.PISTOL){
+            magCounts.min = Math.max(1, Math.round(magCounts.min * 0.5));
+            magCounts.max =  Math.max(2,Math.round(magCounts.max * 0.5));
+        }
+
+        const magTemplate = this.itemHelper.getItem(magazineTpl)[1];
+        if (!magTemplate) {
+            this.logger.error(this.localisationService.getText("bot-unable_to_find_magazine_item", magazineTpl));
+
+            return;
+        }
+
+        const ammoTemplate = this.itemHelper.getItem(ammoTpl)[1];
+        if (!ammoTemplate) {
+            this.logger.error(this.localisationService.getText("bot-unable_to_find_ammo_item", ammoTpl));
+
+            return;
+        }
+
+        const inventoryMagGenModel = new InventoryMagGen(magCounts, magTemplate, weaponTemplate, ammoTemplate, inventory);
+        this.inventoryMagGenComponents.find(v => v.canHandleInventoryMagGen(inventoryMagGenModel)).process(inventoryMagGenModel);
+
+        // Add x stacks of bullets to SecuredContainer (bots use a magic mag packing skill to reload instantly)
+        this.addAmmoToSecureContainer(this.botConfig.secureContainerAmmoStackCount, ammoTpl, ammoTemplate._props.StackMaxSize, inventory);
+    }
 
     public botWepGen(sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number): GenerateWeaponResult {
 

@@ -22,6 +22,7 @@ const bearNames = require("../db/bots/names/bearNames.json");
 const botZones = require("../db/bots/spawnZones.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
 
+
 export class Bots {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private configServ: ConfigServer, private modConf, private arrays: Arrays) { }
 
@@ -491,9 +492,6 @@ export class Bots {
         this.scavBase.chances = scavLO.scavLO1.chances;
         this.scavBase.generation = scavLO.scavLO1.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
-
-        this.scavBase.inventory.items = scavLO.LootTestBot.items;
-        this.scavBase.generation = scavLO.LootTestBot.generation;
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 40;
