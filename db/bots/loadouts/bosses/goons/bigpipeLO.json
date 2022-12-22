@@ -76,7 +76,6 @@
             },
             "items": {
                 "TacticalVest": [
-                    "62a61bbf8ec41a51b34758d2",
                     "60098af40accd37ef2175f27",
                     "590c678286f77426c9660122",
                     "60098ad7c2240c0fe85c570a",
@@ -120,11 +119,12 @@
                     "5da743f586f7744014504f72",
                     "57514643245977207f2c2d09",
                     "544fb6cc4bdc2d34748b456e",
-                    "5e2af2bc86f7746d3f3c33fc"
+                    "5e2af2bc86f7746d3f3c33fc",
+                    "57505f6224597709a92585a9"
                 ],
                 "SecuredContainer": [],
                 "SpecialLoot": [
-                    "62963c18dbc8ab5f0d382d0b"
+                    "62a61bbf8ec41a51b34758d2"
                 ]
             },
             "mods": {
@@ -133,7 +133,6 @@
                         "5c0558060db834001b735271"
                     ],
                     "mod_equipment_000": [
-                        "5a16badafcdbcb001865f72d",
                         "5a16b7e1fcdbcb00165aa6c9"
                     ],
                     "mod_equipment_002": [
@@ -183,14 +182,14 @@
                 "ArmorVest": 0,
                 "Backpack": 0,
                 "Earpiece": 0,
-                "Eyewear": 0,
+                "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,
                 "Headwear": 100,
                 "Holster": 50,
                 "Pockets": 100,
                 "Scabbard": 50,
-                "SecondPrimaryWeapon": 0,
+                "SecondPrimaryWeapon": 25,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -213,9 +212,9 @@
                 "mod_tactical_000": 100,
                 "mod_equipment": 70,
                 "mod_nvg": 5,
-                "mod_equipment_000": 25,
-                "mod_equipment_001": 25,
-                "mod_equipment_002": 25
+                "mod_equipment_000": 15,
+                "mod_equipment_001": 35,
+                "mod_equipment_002": 35
             }
         }
     },
@@ -296,7 +295,6 @@
             },
             "items": {
                 "TacticalVest": [
-                    "62a61bbf8ec41a51b34758d2",
                     "60098af40accd37ef2175f27",
                     "590c678286f77426c9660122",
                     "60098ad7c2240c0fe85c570a",
@@ -344,7 +342,7 @@
                 ],
                 "SecuredContainer": [],
                 "SpecialLoot": [
-                    "62963c18dbc8ab5f0d382d0b"
+                    "62a61bbf8ec41a51b34758d2"
                 ]
             },
             "mods": {
@@ -353,7 +351,6 @@
                         "5c0558060db834001b735271"
                     ],
                     "mod_equipment_000": [
-                        "5a16badafcdbcb001865f72d",
                         "5a16b7e1fcdbcb00165aa6c9"
                     ],
                     "mod_equipment_002": [
@@ -403,14 +400,14 @@
                 "ArmorVest": 0,
                 "Backpack": 0,
                 "Earpiece": 0,
-                "Eyewear": 0,
+                "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,
                 "Headwear": 100,
                 "Holster": 70,
                 "Pockets": 100,
                 "Scabbard": 50,
-                "SecondPrimaryWeapon": 0,
+                "SecondPrimaryWeapon": 50,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -433,9 +430,9 @@
                 "mod_tactical_000": 100,
                 "mod_equipment": 70,
                 "mod_nvg": 10,
-                "mod_equipment_000": 45,
-                "mod_equipment_001": 45,
-                "mod_equipment_002": 35
+                "mod_equipment_000": 25,
+                "mod_equipment_001": 50,
+                "mod_equipment_002": 50
             }
         }
     },
@@ -516,7 +513,6 @@
             },
             "items": {
                 "TacticalVest": [
-                    "62a61bbf8ec41a51b34758d2",
                     "60098af40accd37ef2175f27",
                     "590c678286f77426c9660122",
                     "60098ad7c2240c0fe85c570a",
@@ -564,7 +560,7 @@
                 ],
                 "SecuredContainer": [],
                 "SpecialLoot": [
-                    "62963c18dbc8ab5f0d382d0b"
+                    "62a61bbf8ec41a51b34758d2"
                 ]
             },
             "mods": {
@@ -573,7 +569,6 @@
                         "5c0558060db834001b735271"
                     ],
                     "mod_equipment_000": [
-                        "5a16badafcdbcb001865f72d",
                         "5a16b7e1fcdbcb00165aa6c9"
                     ],
                     "mod_equipment_002": [
@@ -623,14 +618,14 @@
                 "ArmorVest": 0,
                 "Backpack": 0,
                 "Earpiece": 0,
-                "Eyewear": 0,
+                "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,
                 "Headwear": 100,
                 "Holster": 85,
                 "Pockets": 100,
                 "Scabbard": 50,
-                "SecondPrimaryWeapon": 0,
+                "SecondPrimaryWeapon": 75,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -653,9 +648,9 @@
                 "mod_tactical_000": 100,
                 "mod_equipment": 70,
                 "mod_nvg": 15,
-                "mod_equipment_000": 55,
-                "mod_equipment_001": 55,
-                "mod_equipment_002": 45
+                "mod_equipment_000": 35,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100
             }
         }
     }

@@ -3,7 +3,7 @@ import { ILogger } from "../types/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
-import { BotTierTracker, RaidInfoTracker } from "./helper";
+import { BotTierTracker, Helper, RaidInfoTracker } from "./helper";
 import { Arrays } from "./arrays";
 
 const scavLO = require("../db/bots/loadouts/scavs/scavLO.json");
@@ -13,6 +13,7 @@ const raiderLO = require("../db/bots/loadouts/raiders_rogues/raiderLO.json");
 const rogueLO = require("../db/bots/loadouts/raiders_rogues/rogueLO.json");
 const knightLO = require("../db/bots/loadouts/bosses/goons/knightLO.json");
 const bigpipeLO = require("../db/bots/loadouts/bosses/goons/bigpipeLO.json");
+const birdeyeLO = require("../db/bots/loadouts/bosses/goons/birdeyeLO.json");
 const scavLootLimitCat = require("../db/bots/loadouts/scavs/scavLootLimitCat.json");
 const PMCLootLimitCat = require("../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
 const botHealth = require("../db/bots/botHealth.json");
@@ -24,7 +25,7 @@ const pmcTypes = require("../db/bots/pmcTypes.json");
 
 
 export class Bots {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private configServ: ConfigServer, private modConf, private arrays: Arrays) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private configServ: ConfigServer, private modConf, private arrays: Arrays, private helper: Helper) { }
 
     globalDB = this.tables.globals.config;
     itemDB = this.tables.templates.items;
@@ -38,6 +39,7 @@ export class Bots {
     rogueBase = this.botDB["exusec"];
     knightBase = this.botDB["bossknight"];
     bigpipeBase = this.botDB["followerbigpipe"];
+    birdeyeBase = this.botDB["followerbirdeye"];
 
     botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
     botConfPMC = this.botConf.pmc;
@@ -1226,6 +1228,8 @@ export class Bots {
         this.knightBase.inventory.mods = knightLO.knightLO1.inventory.mods;
         this.knightBase.chances = knightLO.knightLO1.chances;
         this.knightBase.generation = knightLO.knightLO1.generation;
+        this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
+        let knightMaskChance = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO1.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO1.inventory.equipment;
@@ -1235,44 +1239,115 @@ export class Bots {
         this.bigpipeBase.generation = bigpipeLO.bigpipeLO1.generation;
         this.botConf.equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
 
+        this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO1.inventory.Ammo;
+        this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO1.inventory.equipment;
+        this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO1.inventory.items;
+        this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO1.inventory.mods;
+        this.birdeyeBase.chances = birdeyeLO.birdeyeLO1.chances;
+        this.birdeyeBase.generation = birdeyeLO.birdeyeLO1.generation;
+        this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
+
         if (RaidInfoTracker.TOD === "night") {
-            this.knightBase.chances.equipment.Headwear = 50;
+            if(knightMaskChance >= 5 ){
+                this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+            }else{
+                this.knightBase.chances.equipment.FaceCover = 100;
+                this.knightBase.chances.equipment.Headwear = 0;
+            }
+
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
-            this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
+            this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
             this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 6;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
+
+            this.birdeyeBase.chances.equipment.Headwear = 100;
+            this.birdeyeBase.chances.mods.mod_nvg = 100;
+            this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
+            this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 1;
+            this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
+            this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapName === "factory4_night") {
-            this.knightBase.chances.equipment.Headwear = 60;
+            if(knightMaskChance >= 5 ){
+                this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+            }else{
+                this.knightBase.chances.equipment.FaceCover = 100;
+                this.knightBase.chances.equipment.Headwear = 0;
+            }
+
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
-            this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 50;
+            this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
+            this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
             this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 6;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
-            this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 50;
+            this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
+
+            this.birdeyeBase.chances.equipment.Headwear = 100;
+            this.birdeyeBase.chances.mods.mod_nvg = 100;
+            this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
+            this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 1;
+            this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 5;
+            this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.TOD === "day") {
             this.knightBase.chances.mods.mod_nvg = 0;
             this.bigpipeBase.chances.mods.mod_nvg = 0;
+            this.birdeyeBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 0;
 
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+
+                if(knightMaskChance >= 6 ){
+                    this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+                }else{
+                    this.knightBase.chances.equipment.FaceCover = 100;
+                    this.knightBase.chances.equipment.Headwear = 0;
+                }
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
 
                 this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
+
+                this.birdeyeBase.chances.equipment.Headwear = 50;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 50;
+                this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
+                this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
+                this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
+
             }
             if (RaidInfoTracker.mapType === "outdoor") {
+
+                if(knightMaskChance >= 8 ){
+                    this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+                }else{
+                    this.knightBase.chances.equipment.FaceCover = 100;
+                    this.knightBase.chances.equipment.Headwear = 0;
+                }
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
+
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0
+
+                this.birdeyeBase.chances.equipment.Headwear = 25;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 25;
+                this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
+                this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
+                this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
         }
 
@@ -1289,6 +1364,8 @@ export class Bots {
         this.knightBase.inventory.mods = knightLO.knightLO2.inventory.mods;
         this.knightBase.chances = knightLO.knightLO2.chances;
         this.knightBase.generation = knightLO.knightLO2.generation;
+        this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
+        let knightMaskChance = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO2.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO2.inventory.equipment;
@@ -1296,44 +1373,116 @@ export class Bots {
         this.bigpipeBase.inventory.mods = bigpipeLO.bigpipeLO2.inventory.mods;
         this.bigpipeBase.chances = bigpipeLO.bigpipeLO2.chances;
         this.bigpipeBase.generation = bigpipeLO.bigpipeLO2.generation;
+        this.botConf.equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
+
+        this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO2.inventory.Ammo;
+        this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO2.inventory.equipment;
+        this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO2.inventory.items;
+        this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO2.inventory.mods;
+        this.birdeyeBase.chances = birdeyeLO.birdeyeLO2.chances;
+        this.birdeyeBase.generation = birdeyeLO.birdeyeLO2.generation;
+        this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
 
         if (RaidInfoTracker.TOD === "night") {
-            this.knightBase.chances.equipment.Headwear = 75;
+
+            if(knightMaskChance >= 4 ){
+                this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+            }else{
+                this.knightBase.chances.equipment.FaceCover = 100;
+                this.knightBase.chances.equipment.Headwear = 0;
+            }
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
+            this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
             this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 8;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
+
+            this.birdeyeBase.chances.equipment.Headwear = 100;
+            this.birdeyeBase.chances.mods.mod_nvg = 100;
+            this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
+            this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 1;
+            this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 5;
+            this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapName === "factory4_night") {
-            this.knightBase.chances.equipment.Headwear = 85;
+
+            if(knightMaskChance >= 3 ){
+                this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+            }else{
+                this.knightBase.chances.equipment.FaceCover = 100;
+                this.knightBase.chances.equipment.Headwear = 0;
+            }
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
-            this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 50;
+            this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
-            this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
+            this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
             this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 8;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
-            this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 50;
+            this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
+
+            this.birdeyeBase.chances.equipment.Headwear = 100;
+            this.birdeyeBase.chances.mods.mod_nvg = 100;
+            this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
+            this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 1;
+            this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 10;
+            this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.TOD === "day") {
             this.knightBase.chances.mods.mod_nvg = 0;
             this.bigpipeBase.chances.mods.mod_nvg = 0;
+            this.birdeyeBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 0;
+
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+
+                if(knightMaskChance >= 3 ){
+                    this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+                }else{
+                    this.knightBase.chances.equipment.FaceCover = 100;
+                    this.knightBase.chances.equipment.Headwear = 0;
+                }
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
 
                 this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
+
+                this.birdeyeBase.chances.equipment.Headwear = 50;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 50;
+                this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
+                this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
+                this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
+
+                if(knightMaskChance >= 4 ){
+                    this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+                }else{
+                    this.knightBase.chances.equipment.FaceCover = 100;
+                    this.knightBase.chances.equipment.Headwear = 0;
+                }
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
+
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
+
+                this.birdeyeBase.chances.equipment.Headwear = 25;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 25;
+                this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
+                this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
+                this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
         }
 
@@ -1350,6 +1499,8 @@ export class Bots {
         this.knightBase.inventory.mods = knightLO.knightLO3.inventory.mods;
         this.knightBase.chances = knightLO.knightLO3.chances;
         this.knightBase.generation = knightLO.knightLO3.generation;
+        this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
+        let knightMaskChance = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO3.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO3.inventory.equipment;
@@ -1357,43 +1508,117 @@ export class Bots {
         this.bigpipeBase.inventory.mods = bigpipeLO.bigpipeLO3.inventory.mods;
         this.bigpipeBase.chances = bigpipeLO.bigpipeLO3.chances;
         this.bigpipeBase.generation = bigpipeLO.bigpipeLO3.generation;
+        this.botConf.equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
+
+        this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO3.inventory.Ammo;
+        this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO3.inventory.equipment;
+        this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO3.inventory.items;
+        this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO3.inventory.mods;
+        this.birdeyeBase.chances = birdeyeLO.birdeyeLO3.chances;
+        this.birdeyeBase.generation = birdeyeLO.birdeyeLO3.generation;
+        this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
 
         if (RaidInfoTracker.TOD === "night") {
-            this.knightBase.chances.equipment.Headwear = 85;
+
+            if(knightMaskChance >= 3 ){
+                this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+            }else{
+                this.knightBase.chances.equipment.FaceCover = 100;
+                this.knightBase.chances.equipment.Headwear = 0;
+            }
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
+            this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
             this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 10;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
+
+            this.birdeyeBase.chances.equipment.Headwear = 100;
+            this.birdeyeBase.chances.mods.mod_nvg = 100;
+            this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
+            this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 1;
+            this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 10;
+            this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapName === "factory4_night") {
-            this.knightBase.chances.equipment.Headwear = 100;
+
+            if(knightMaskChance >= 2 ){
+                this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+            }else{
+                this.knightBase.chances.equipment.FaceCover = 100;
+                this.knightBase.chances.equipment.Headwear = 0;
+            }
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
-            this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 50;
+            this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
-            this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
+            this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
             this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 10;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
-            this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 50;
+            this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
+
+            this.birdeyeBase.chances.equipment.Headwear = 100;
+            this.birdeyeBase.chances.mods.mod_nvg = 100;
+            this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
+            this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 1;
+            this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 20;
+            this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.TOD === "day") {
+
             this.knightBase.chances.mods.mod_nvg = 0;
             this.bigpipeBase.chances.mods.mod_nvg = 0;
+            this.birdeyeBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 0;
+            this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 0;
+
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+  
+                if(knightMaskChance >= 3 ){
+                    this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+                }else{
+                    this.knightBase.chances.equipment.FaceCover = 100;
+                    this.knightBase.chances.equipment.Headwear = 0;
+                }
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
 
                 this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
+
+                this.birdeyeBase.chances.equipment.Headwear = 100;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 80;
+                this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
+                this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
+                this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
+
+                if(knightMaskChance >= 4 ){
+                    this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+                }else{
+                    this.knightBase.chances.equipment.FaceCover = 100;
+                    this.knightBase.chances.equipment.Headwear = 0;
+                }
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
+                
+                this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0
+
+                this.birdeyeBase.chances.equipment.Headwear = 50;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 25;
+                this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
+                this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
+                this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
         }
 

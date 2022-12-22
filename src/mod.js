@@ -23,6 +23,7 @@ const traders_1 = require("./traders");
 const airdrops_1 = require("./airdrops");
 const maps_1 = require("./maps");
 const gear_1 = require("./gear");
+const seasonalevents_1 = require("./seasonalevents");
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -227,12 +228,15 @@ class Main {
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
+                        const seasonalEventsService = container.resolve("SeasonalEventService");
                         const matchinfoRegPlayer = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.REGISTER_PLAYER_REQUEST).getValue();
                         const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.MATCH_INFO).getValue();
                         const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
                         const arrays = new arrays_1.Arrays(postLoadTables);
                         const helper = new helper_1.Helper(postLoadTables, arrays);
-                        const bots = new bots_1.Bots(logger, postLoadTables, configServer, modConfig, arrays);
+                        const bots = new bots_1.Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
+                        const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
+                        const isChristmasActive = seasonalEventsService.christmasEventEnabled();
                         const time = weatherController.generate().time;
                         const mapName = matchinfoRegPlayer.locationId;
                         helper_1.RaidInfoTracker.mapName = mapName;
@@ -260,7 +264,7 @@ class Main {
                         function getTOD(time) {
                             let TOD = "";
                             let [h, m] = time.split(':');
-                            if (parseInt(h) >= 6 && parseInt(h) < 20 || (mapName === "factory4_day" || mapName === "laboratory")) {
+                            if ((mapName != "factory4_night" && parseInt(h) >= 6 && parseInt(h) < 20) || (mapName === "factory4_day" || mapName === "laboratory")) {
                                 TOD = "day";
                             }
                             else {
@@ -295,6 +299,9 @@ class Main {
                         }
                         if (modConfig.bot_changes) {
                             this.updateBots(pmcData, logger, modConfig, bots, helper);
+                            if (isChristmasActive == true) {
+                                seasonalEvents.merryChristmas();
+                            }
                         }
                         if (modConfig.airdrop_changes == true) {
                             if (helper_1.RaidInfoTracker.TOD === "day") {
@@ -363,7 +370,7 @@ class Main {
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
         const attachStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig, arrays);
-        const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays);
+        const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
         const items = new items_1._Items(logger, tables, modConfig, jsonUtil, medItems, crafts, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth);

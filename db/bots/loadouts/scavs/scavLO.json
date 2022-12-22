@@ -20,15 +20,15 @@
           "max": 0
         },
         "healing": {
-          "min": 2,
+          "min": 0,
           "max": 2
         },
         "drugs": {
-          "min": 2,
+          "min": 0,
           "max": 2
         },
         "stims": {
-          "min": 2,
+          "min": 0,
           "max": 2
         },
         "looseLoot": {

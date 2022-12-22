@@ -40,7 +40,10 @@
                 "ArmorVest": {},
                 "Backpack": {},
                 "Earpiece": {},
-                "Eyewear": {},
+                "Eyewear": {
+                    "603409c80ca681766b6a0fb2": 1,
+                    "5c1a1cc52e221602b3136e3d": 1
+                },
                 "FaceCover": {
                     "62963c18dbc8ab5f0d382d0b": 1
                 },
@@ -124,6 +127,9 @@
                     "mod_nvg": [
                         "5c0558060db834001b735271"
                     ],
+                    "mod_equipment_000": [
+                        "5a16b672fcdbcb001912fa83"
+                    ],
                     "mod_equipment_001": [
                         "5c178a942e22164bef5ceca3"
                     ],
@@ -170,8 +176,8 @@
                 "ArmBand": 0,
                 "ArmorVest": 0,
                 "Backpack": 0,
-                "Earpiece": 0,
-                "Eyewear": 0,
+                "Earpiece": 100,
+                "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,
                 "Headwear": 30,
@@ -201,8 +207,8 @@
                 "mod_tactical_000": 100,
                 "mod_equipment": 70,
                 "mod_nvg": 5,
-                "mod_equipment_000": 70,
-                "mod_equipment_001": 100,
+                "mod_equipment_000": 50,
+                "mod_equipment_001": 50,
                 "mod_equipment_002": 15
             }
         }
@@ -248,7 +254,10 @@
                 "ArmorVest": {},
                 "Backpack": {},
                 "Earpiece": {},
-                "Eyewear": {},
+                "Eyewear": {
+                    "603409c80ca681766b6a0fb2": 1,
+                    "5c1a1cc52e221602b3136e3d": 1
+                },
                 "FaceCover": {
                     "62963c18dbc8ab5f0d382d0b": 1
                 },
@@ -331,6 +340,9 @@
                     "mod_nvg": [
                         "5c0558060db834001b735271"
                     ],
+                    "mod_equipment_000": [
+                        "5a16b672fcdbcb001912fa83"
+                    ],
                     "mod_equipment_001": [
                         "5c178a942e22164bef5ceca3"
                     ],
@@ -377,8 +389,8 @@
                 "ArmBand": 0,
                 "ArmorVest": 0,
                 "Backpack": 0,
-                "Earpiece": 0,
-                "Eyewear": 0,
+                "Earpiece": 100,
+                "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,
                 "Headwear": 50,
@@ -408,8 +420,8 @@
                 "mod_tactical_000": 100,
                 "mod_equipment": 70,
                 "mod_nvg": 10,
-                "mod_equipment_000": 70,
-                "mod_equipment_001": 100,
+                "mod_equipment_000": 75,
+                "mod_equipment_001": 75,
                 "mod_equipment_002": 15
             }
         }
@@ -455,7 +467,10 @@
                 "ArmorVest": {},
                 "Backpack": {},
                 "Earpiece": {},
-                "Eyewear": {},
+                "Eyewear": {
+                    "603409c80ca681766b6a0fb2": 1,
+                    "5c1a1cc52e221602b3136e3d": 1
+                },
                 "FaceCover": {
                     "62963c18dbc8ab5f0d382d0b": 1
                 },
@@ -538,6 +553,9 @@
                     "mod_nvg": [
                         "5c0558060db834001b735271"
                     ],
+                    "mod_equipment_000": [
+                        "5a16b672fcdbcb001912fa83"
+                    ],
                     "mod_equipment_001": [
                         "5c178a942e22164bef5ceca3"
                     ],
@@ -584,8 +602,8 @@
                 "ArmBand": 0,
                 "ArmorVest": 0,
                 "Backpack": 0,
-                "Earpiece": 0,
-                "Eyewear": 0,
+                "Earpiece": 100,
+                "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,
                 "Headwear": 70,
@@ -615,7 +633,7 @@
                 "mod_tactical_000": 100,
                 "mod_equipment": 70,
                 "mod_nvg": 15,
-                "mod_equipment_000": 70,
+                "mod_equipment_000": 100,
                 "mod_equipment_001": 100,
                 "mod_equipment_002": 15
             }

@@ -66,6 +66,7 @@ import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
 import { MinMax } from "@spt-aki/models/common/MinMax";
 import { IRandomisedBotLevelResult } from "@spt-aki/models/eft/bot/IRandomisedBotLevelResult";
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
+import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -87,6 +88,7 @@ import { RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
+import { SeasonalEventsHandler } from "./seasonalevents";
 
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -343,12 +345,16 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
+                            const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                             const matchinfoRegPlayer = appContext.getLatestValue(ContextVariableType.REGISTER_PLAYER_REQUEST).getValue<IRegisterPlayerRequestData>();
                             const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.MATCH_INFO).getValue<IStartOfflineRaidRequestData>();
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
                             const arrays = new Arrays(postLoadTables);
                             const helper = new Helper(postLoadTables, arrays);
-                            const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays);
+                            const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
+                            const seasonalEvents = new SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
+                            const isChristmasActive = seasonalEventsService.christmasEventEnabled();
+
                             const time = weatherController.generate().time;
                             const mapName = matchinfoRegPlayer.locationId;
                             RaidInfoTracker.mapName = mapName;
@@ -380,7 +386,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             function getTOD(time) {
                                 let TOD = "";
                                 let [h, m] = time.split(':');
-                                if (parseInt(h) >= 6 && parseInt(h) < 20 || (mapName === "factory4_day" || mapName === "laboratory")) {
+                                if ((mapName != "factory4_night" && parseInt(h) >= 6 && parseInt(h) < 20) || (mapName === "factory4_day" || mapName === "laboratory")) {
                                     TOD = "day";
                                 }
                                 else {
@@ -419,6 +425,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
                             if (modConfig.bot_changes) {
                                 this.updateBots(pmcData, logger, modConfig, bots, helper);
+                                if(isChristmasActive == true){
+                                    seasonalEvents.merryChristmas();
+                                }
                             }
 
 
@@ -504,7 +513,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig);
         const attachStats = new AttachmentStats(logger, tables, modConfig, arrays);
-        const bots = new Bots(logger, tables, configServer, modConfig, arrays);
+        const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
         const items = new _Items(logger, tables, modConfig, jsonUtil, medItems, crafts, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, botHealth);
@@ -518,6 +527,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const maps = new Maps(logger, tables, modConfig);
         const randomizeTraderAssort = new RandomizeTraderAssort();
         const gear = new Gear(arrays, tables);
+
 
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();

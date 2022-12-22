@@ -1,9 +1,49 @@
 {
     "CustomsBossLocationSpawn": [
         {
-            "BossName": "bossKnight",
+            "BossName": "bossBully",
+            "BossChance": 35,
+            "BossZone": "ZoneScavBase, ZoneOldAZS, ZoneDormitory",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "pmcBot",
             "BossChance": 25,
-            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneBlockPostSniper,ZoneBlockPostSniper3,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "pmcBot",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "3,4,5",
+            "Time": -1,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "exUsec",
+            "BossChance": 25,
+            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "exUsec",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "3,4,5",
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": "",
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "bossKnight",
+            "BossChance": 20,
+            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -34,32 +74,6 @@
                 }
             ],
             "RandomTimeSpawn": true
-        },
-        {
-            "BossName": "sectantPriest",
-            "BossChance": 25,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "sectantWarrior",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
-            "Time": -1,
-            "Supports": null,
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "bossBully",
-            "BossChance": 35,
-            "BossZone": "ZoneScavBase, ZoneOldAZS, ZoneDormitory",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "followerBully",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
-            "Time": -1,
-            "Supports": null,
-            "RandomTimeSpawn": false
         },
         {
             "BossName": "bossSanitar",
@@ -112,29 +126,15 @@
             "RandomTimeSpawn": false
         },
         {
-            "BossName": "pmcBot",
+            "BossName": "sectantPriest",
             "BossChance": 25,
-            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneBlockPostSniper,ZoneBlockPostSniper3,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
-            "BossEscortType": "pmcBot",
+            "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3,4,5",
+            "BossEscortAmount": "4",
             "Time": -1,
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "exUsec",
-            "BossChance": 25,
-            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneBlockPostSniper,ZoneBlockPostSniper3,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "exUsec",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3,4,5",
-            "Time": -1,
-            "TriggerId": "",
-            "TriggerName": "",
             "Supports": null,
             "RandomTimeSpawn": false
         }
@@ -176,6 +176,41 @@
             "BossEscortAmount": "2,2,2,3,3,4",
             "Time": -1,
             "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "bossKnight",
+            "BossChance": 5,
+            "BossZone": "BotZone",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "exUsec",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "2",
+            "Time": -1,
+            "Supports": [
+                {
+                    "BossEscortType": "followerBigPipe",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerBirdEye",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerGluharScout",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "0"
+                }
+            ],
+            "RandomTimeSpawn": true
         }
     ],
     "FactoryNightBossLocationSpawn": [
@@ -227,6 +262,41 @@
             "BossEscortAmount": "3,3,3,4,4,5",
             "Time": -1,
             "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "bossKnight",
+            "BossChance": 10,
+            "BossZone": "BotZone",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "exUsec",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "2",
+            "Time": -1,
+            "Supports": [
+                {
+                    "BossEscortType": "followerBigPipe",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerBirdEye",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerGluharScout",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "0"
+                }
+            ],
+            "RandomTimeSpawn": true
         }
     ],
     "InterchangeBossLocationSpawn": [
@@ -256,6 +326,18 @@
             "RandomTimeSpawn": false
         },
         {
+            "BossName": "pmcBot",
+            "BossChance": 25,
+            "BossZone": "ZonePowerStation,ZoneTrucks",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "pmcBot",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "3,3,3,4,4,5",
+            "Time": -1,
+            "RandomTimeSpawn": false
+        },
+        {
             "BossName": "bossBully",
             "BossChance": 15,
             "BossZone": "ZonePowerStation,ZoneTrucks",
@@ -266,18 +348,6 @@
             "BossEscortAmount": "4",
             "Time": -1,
             "Supports": null,
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "pmcBot",
-            "BossChance": 25,
-            "BossZone": "ZonePowerStation,ZoneTrucks",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "pmcBot",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3,3,3,4,4,5",
-            "Time": -1,
             "RandomTimeSpawn": false
         }
     ],
@@ -541,39 +611,17 @@
     ],
     "ShorelineBossLocationSpawn": [
         {
-            "BossName": "bossKnight",
-            "BossChance": 25,
-            "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZoneBunkeSniper,ZonePowerStationSniper,ZoneForestTruck,ZoneForestSpawn",
+            "BossName": "bossSanitar",
+            "BossChance": 40,
+            "BossZone": "ZonePort,ZoneSanatorium1,ZoneGreenHouses,ZoneSanatorium2",
             "BossPlayer": false,
             "BossDifficult": "normal",
-            "BossEscortType": "exUsec",
+            "BossEscortType": "followerSanitar",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2",
+            "BossEscortAmount": "3",
             "Time": -1,
-            "Supports": [
-                {
-                    "BossEscortType": "followerBigPipe",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "1"
-                },
-                {
-                    "BossEscortType": "followerBirdEye",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "1"
-                },
-                {
-                    "BossEscortType": "followerGluharScout",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "0"
-                }
-            ],
-            "RandomTimeSpawn": true
+            "Supports": null,
+            "RandomTimeSpawn": false
         },
         {
             "BossName": "sectantPriest",
@@ -584,19 +632,6 @@
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "4",
-            "Time": -1,
-            "Supports": null,
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "bossSanitar",
-            "BossChance": 40,
-            "BossZone": "ZonePort,ZoneSanatorium1,ZoneGreenHouses,ZoneSanatorium2",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "followerSanitar",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
@@ -617,7 +652,7 @@
         {
             "BossName": "exUsec",
             "BossChance": 35,
-            "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZoneBunkeSniper,ZonePowerStationSniper,ZoneForestTruck,ZoneForestSpawn",
+            "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZoneForestTruck,ZoneForestSpawn",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -628,13 +663,11 @@
             "TriggerName": "",
             "Supports": null,
             "RandomTimeSpawn": false
-        }
-    ],
-    "WoodsBossLocationSpawn": [
+        },
         {
             "BossName": "bossKnight",
-            "BossChance": 30,
-            "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneHighRocks,ZoneMiniHouse,ZoneBigRocks",
+            "BossChance": 25,
+            "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZoneForestTruck,ZoneForestSpawn",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -665,19 +698,19 @@
                 }
             ],
             "RandomTimeSpawn": true
-        },
+        }
+    ],
+    "WoodsBossLocationSpawn": [
         {
-            "BossName": "exUsec",
+            "BossName": "bossKojaniy",
             "BossChance": 40,
-            "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneHighRocks,ZoneMiniHouse,ZoneBigRocks",
+            "BossZone": "ZoneWoodCutter",
             "BossPlayer": false,
             "BossDifficult": "normal",
-            "BossEscortType": "exUsec",
+            "BossEscortType": "followerKojaniy",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3,3,4,4,5",
+            "BossEscortAmount": "2",
             "Time": -1,
-            "TriggerId": "",
-            "TriggerName": "",
             "Supports": null,
             "RandomTimeSpawn": false
         },
@@ -695,17 +728,54 @@
             "RandomTimeSpawn": false
         },
         {
-            "BossName": "bossKojaniy",
+            "BossName": "exUsec",
             "BossChance": 40,
-            "BossZone": "ZoneWoodCutter",
+            "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneMiniHouse,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
-            "BossEscortType": "followerKojaniy",
+            "BossEscortType": "exUsec",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "3,3,4,4,5",
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": "",
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "bossKnight",
+            "BossChance": 30,
+            "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneMiniHouse,ZoneBigRocks",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2",
             "Time": -1,
-            "Supports": null,
-            "RandomTimeSpawn": false
+            "Supports": [
+                {
+                    "BossEscortType": "followerBigPipe",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerBirdEye",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerGluharScout",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "0"
+                }
+            ],
+            "RandomTimeSpawn": true
         }
     ],
     "LabsBossLocationSpawn": [
@@ -735,8 +805,20 @@
             "RandomTimeSpawn": false
         },
         {
+            "BossName": "bossKilla",
+            "BossChance": 15,
+            "BossZone": "BotZoneFloor1",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "0",
+            "Time": -1,
+            "RandomTimeSpawn": false
+        },
+        {
             "BossName": "pmcBot",
-            "BossChance": 100,
+            "BossChance": 50,
             "BossZone": "BotZoneFloor1",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -750,7 +832,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 100,
+            "BossChance": 50,
             "BossZone": "BotZoneFloor2",
             "BossPlayer": false,
             "BossDifficult": "normal",
