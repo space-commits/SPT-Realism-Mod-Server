@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotTierTracker = exports.RaidInfoTracker = exports.Helper = void 0;
+exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.Helper = void 0;
 const dir = __dirname;
 const dirArray = dir.split("\\");
 const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
@@ -97,12 +97,17 @@ class Helper {
     }
 }
 exports.Helper = Helper;
+class EventTracker {
+}
+exports.EventTracker = EventTracker;
+EventTracker.isChristmas = false;
 class RaidInfoTracker {
 }
 exports.RaidInfoTracker = RaidInfoTracker;
 RaidInfoTracker.TOD = "";
 RaidInfoTracker.mapType = "";
 RaidInfoTracker.mapName = "";
+RaidInfoTracker.mapNameUnreliable = "";
 class BotTierTracker {
     getTier(botType) {
         if (botType === "sptusec") {

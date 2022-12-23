@@ -186,8 +186,8 @@
                     "min": 1
                 },
                 "looseLoot": {
-                    "max": 8,
-                    "min": 4
+                    "max": 10,
+                    "min": 5
                 },
                 "magazines": {
                     "max": 5,
@@ -216,7 +216,7 @@
                 "Holster": 100,
                 "Pockets": 100,
                 "Scabbard": 0,
-                "SecondPrimaryWeapon": 100,
+                "SecondPrimaryWeapon": 40,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -431,8 +431,8 @@
                     "min": 1
                 },
                 "looseLoot": {
-                    "max": 8,
-                    "min": 4
+                    "max": 12,
+                    "min": 6
                 },
                 "magazines": {
                     "max": 5,
@@ -461,7 +461,7 @@
                 "Holster": 100,
                 "Pockets": 100,
                 "Scabbard": 0,
-                "SecondPrimaryWeapon": 100,
+                "SecondPrimaryWeapon": 60,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -680,8 +680,8 @@
                     "min": 1
                 },
                 "looseLoot": {
-                    "max": 8,
-                    "min": 4
+                    "max": 14,
+                    "min": 7
                 },
                 "magazines": {
                     "max": 5,
@@ -710,7 +710,7 @@
                 "Holster": 100,
                 "Pockets": 100,
                 "Scabbard": 0,
-                "SecondPrimaryWeapon": 100,
+                "SecondPrimaryWeapon": 80,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },

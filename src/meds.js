@@ -215,14 +215,6 @@ class Meds {
                 serverItem._props.effects_damage = this.medItems.surv12.effects_damage;
                 serverItem._props.medUseTime = this.medItems.surv12.medUseTime;
             }
-            // //filters for pain meds
-            // if(serverItem._props?.effects_damage?.Pain !== undefined && serverItem._parent !== "5448f3a64bdc2d60728b456a"){
-            //     this.logger.warning("Name = " + serverItem._name);
-            // }
-            // //filters for everyting else that isn't a stim
-            // if(serverItem._props?.effects_damage?.Pain === undefined && serverItem._parent !== "5448f3a64bdc2d60728b456a" && serverItem._props?.medUseTime !== undefined){
-            //     this.logger.warning("Name = " + serverItem._name);
-            // }
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("Meds loaded");

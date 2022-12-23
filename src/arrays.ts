@@ -19,6 +19,7 @@ export class Arrays {
         "bigmap",
         "Customs",
         "rezervbase",
+        "RezervBase",
         "ReserveBase"
     ]
 
@@ -74,7 +75,9 @@ export class Arrays {
         "5a341c4086f77401f2541505",
         "5448e53e4bdc2d60728b4567",
         "5a341c4686f77469e155819e",
-        "5645bcb74bdc2ded0b8b4578"
+        "5645bcb74bdc2ded0b8b4578",
+        "5b3f15d486f77432d0509248",
+        "5448e5724bdc2ddf718b4568"
     ]
 
 

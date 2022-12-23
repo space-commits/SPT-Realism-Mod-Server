@@ -51,7 +51,7 @@
                 },
                 "Headwear": {
                     "628e4dd1f477aa12234918aa": 1,
-                    "5ac8d6885acfc400180ae7b0": 3
+                    "5ac8d6885acfc400180ae7b0": 2
                 },
                 "Holster": {
                     "5f36a0e5fbf956000b716b65": 1
@@ -181,7 +181,7 @@
                 "ArmBand": 0,
                 "ArmorVest": 0,
                 "Backpack": 0,
-                "Earpiece": 0,
+                "Earpiece": 100,
                 "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,
@@ -270,7 +270,7 @@
                 },
                 "Headwear": {
                     "628e4dd1f477aa12234918aa": 1,
-                    "5ac8d6885acfc400180ae7b0": 2
+                    "5ac8d6885acfc400180ae7b0": 3
                 },
                 "Holster": {
                     "5f36a0e5fbf956000b716b65": 1
@@ -399,7 +399,7 @@
                 "ArmBand": 0,
                 "ArmorVest": 0,
                 "Backpack": 0,
-                "Earpiece": 0,
+                "Earpiece": 100,
                 "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,
@@ -488,7 +488,7 @@
                 },
                 "Headwear": {
                     "628e4dd1f477aa12234918aa": 1,
-                    "5ac8d6885acfc400180ae7b0": 1
+                    "5ac8d6885acfc400180ae7b0": 4
                 },
                 "Holster": {
                     "5f36a0e5fbf956000b716b65": 1
@@ -617,7 +617,7 @@
                 "ArmBand": 0,
                 "ArmorVest": 0,
                 "Backpack": 0,
-                "Earpiece": 0,
+                "Earpiece": 100,
                 "Eyewear": 100,
                 "FaceCover": 100,
                 "FirstPrimaryWeapon": 100,

@@ -406,7 +406,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 100,
+            "BossChance": 70,
             "BossZone": "Zone_RoofContainers",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -421,7 +421,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 100,
+            "BossChance": 50,
             "BossZone": "Zone_TreatmentRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -436,7 +436,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 100,
+            "BossChance": 50,
             "BossZone": "Zone_TreatmentBeach",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -451,7 +451,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 100,
+            "BossChance": 50,
             "BossZone": "Zone_Island",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -466,7 +466,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 100,
+            "BossChance": 70,
             "BossZone": "Zone_RoofRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -481,7 +481,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 100,
+            "BossChance": 70,
             "BossZone": "Zone_RoofBeach",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -496,7 +496,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 100,
+            "BossChance": 50,
             "BossZone": "Zone_Hellicopter",
             "BossPlayer": false,
             "BossDifficult": "normal",

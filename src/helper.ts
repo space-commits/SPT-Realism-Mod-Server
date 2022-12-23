@@ -115,10 +115,15 @@ export class Helper {
     }
 }
 
+export class EventTracker {
+    static isChristmas: boolean = false;
+}
+
 export class RaidInfoTracker {
-    static TOD = "";
-    static mapType = "";
-    static mapName = "";
+    static TOD: string = "";
+    static mapType: string = "";
+    static mapName: string = "";
+    static mapNameUnreliable: string = "";
 }
 
 export class BotTierTracker {

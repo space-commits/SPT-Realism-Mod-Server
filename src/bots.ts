@@ -333,7 +333,7 @@ export class Bots {
         if (RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 100;
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 80;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 50;
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         } else {
@@ -399,7 +399,7 @@ export class Bots {
         if (RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 100;
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 50;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 50;
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         } else {
@@ -464,7 +464,7 @@ export class Bots {
         if (RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 100;
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 25;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 50;
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         } else {
@@ -498,7 +498,7 @@ export class Bots {
         this.scavBase.generation = scavLO.scavLO1.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
 
-        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 40;
             this.botConf.equipment["assault"].lightLaserIsActiveChancePercent = 100;
         }
@@ -524,7 +524,7 @@ export class Bots {
         this.scavBase.generation = scavLO.scavLO2.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit2;
 
-        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 60;
             this.botConf.equipment["assault"].lightLaserIsActiveChancePercent = 90;
         }
@@ -550,7 +550,7 @@ export class Bots {
         this.scavBase.generation = scavLO.scavLO3.generation;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit3;
 
-        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 80;
             this.botConf.equipment["assault"].lightLaserIsActiveChancePercent = 60;
         }
@@ -583,7 +583,7 @@ export class Bots {
             this.usecBase.chances.mods.mod_flashlight = 40;
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.usecBase.chances.mods.mod_nvg = 15;
             this.usecBase.chances.mods.mod_flashlight = 40;
             this.usecBase.chances.mods.mod_equipment_000 = 20;
@@ -635,7 +635,7 @@ export class Bots {
             this.usecBase.chances.mods.mod_flashlight = 60;
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.usecBase.chances.mods.mod_nvg = 25;
             this.usecBase.chances.mods.mod_flashlight = 60;
             this.usecBase.chances.mods.mod_equipment_000 = 40;
@@ -683,7 +683,7 @@ export class Bots {
             this.usecBase.chances.mods.mod_flashlight = 90;
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.usecBase.chances.mods.mod_nvg = 50;
             this.usecBase.chances.mods.mod_flashlight = 100;
             this.usecBase.chances.mods.mod_equipment_000 = 50;
@@ -733,7 +733,7 @@ export class Bots {
             this.usecBase.chances.mods.mod_flashlight = 100;
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.usecBase.chances.mods.mod_nvg = 50;
             this.usecBase.chances.mods.mod_flashlight = 100;
             this.usecBase.chances.mods.mod_equipment_000 = 50;
@@ -783,7 +783,11 @@ export class Bots {
             this.bearBase.chances.mods.mod_flashlight = 70;
             this.bearBase.chances.mods.mod_equipment_000 = 0.5;
             this.bearBase.chances.mods.mod_equipment = 0.5;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.bearBase.chances.mods.mod_nvg = 15;
+            this.bearBase.chances.mods.mod_flashlight = 40;
+            this.bearBase.chances.mods.mod_equipment_000 = 20;
+            this.bearBase.chances.mods.mod_equipment = 20;
 
         } else {
             this.bearBase.chances.mods.mod_nvg = 0;
@@ -826,8 +830,11 @@ export class Bots {
             this.bearBase.chances.mods.mod_flashlight = 80;
             this.bearBase.chances.mods.mod_equipment_000 = 0.5;
             this.bearBase.chances.mods.mod_equipment = 0.5;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.bearBase.chances.mods.mod_nvg = 25;
+            this.bearBase.chances.mods.mod_flashlight = 60;
+            this.bearBase.chances.mods.mod_equipment_000 = 40;
+            this.bearBase.chances.mods.mod_equipment = 40;
         } else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -867,8 +874,11 @@ export class Bots {
             this.bearBase.chances.mods.mod_equipment_000 = 0.5;
             this.bearBase.chances.mods.mod_equipment = 0.5;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.bearBase.chances.mods.mod_nvg = 50;
+            this.bearBase.chances.mods.mod_flashlight = 100;
+            this.bearBase.chances.mods.mod_equipment_000 = 50;
+            this.bearBase.chances.mods.mod_equipment = 50;
         } else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -907,8 +917,11 @@ export class Bots {
             this.bearBase.chances.mods.mod_equipment_000 = 0.5;
             this.bearBase.chances.mods.mod_equipment = 0.5;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.bearBase.chances.mods.mod_nvg = 50;
+            this.bearBase.chances.mods.mod_flashlight = 100;
+            this.bearBase.chances.mods.mod_equipment_000 = 50;
+            this.bearBase.chances.mods.mod_equipment = 50;
         } else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -948,7 +961,7 @@ export class Bots {
             this.raiderBase.chances.mods.mod_equipment *= 0.5;
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 50;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 100;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 70;
             this.raiderBase.chances.mods.mod_nvg = 40;
             this.raiderBase.chances.mods.mod_equipment_000 = 50;
@@ -1001,7 +1014,7 @@ export class Bots {
             this.raiderBase.chances.mods.mod_equipment *= 0.5;
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 25;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 100;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 50;
             this.raiderBase.chances.mods.mod_nvg = 50;
             this.raiderBase.chances.mods.mod_equipment_000 = 50;
@@ -1055,7 +1068,7 @@ export class Bots {
             this.raiderBase.chances.mods.mod_equipment *= 0.5;
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 100;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
+        } else if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 0;
             this.raiderBase.chances.mods.mod_nvg = 50;
             this.raiderBase.chances.mods.mod_equipment_000 = 60;
@@ -1103,12 +1116,12 @@ export class Bots {
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
-        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.rogueBase.chances.mods.mod_nvg = 30;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 100;
         }
-        if (RaidInfoTracker.TOD === "night" && RaidInfoTracker.mapName === "lighthouse") {
+        if (RaidInfoTracker.TOD === "night" && RaidInfoTracker.mapName === "Lighthouse") {
             this.rogueBase.chances.mods.mod_nvg = 30;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 100;
@@ -1147,12 +1160,12 @@ export class Bots {
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
-        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.rogueBase.chances.mods.mod_nvg = 40;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 100;
         }
-        if (RaidInfoTracker.TOD === "night" && RaidInfoTracker.mapName === "lighthouse") {
+        if (RaidInfoTracker.TOD === "night" && RaidInfoTracker.mapName === "Lighthouse") {
             this.rogueBase.chances.mods.mod_nvg = 40;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 100;
@@ -1190,12 +1203,12 @@ export class Bots {
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
-        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.rogueBase.chances.mods.mod_nvg = 50;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 100;
         }
-        if (RaidInfoTracker.TOD === "night" && RaidInfoTracker.mapName === "lighthouse") {
+        if (RaidInfoTracker.TOD === "night" && RaidInfoTracker.mapName === "Lighthouse") {
             this.rogueBase.chances.mods.mod_nvg = 50;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 100;
@@ -1274,7 +1287,7 @@ export class Bots {
             this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
-        if (RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             if(knightMaskChance >= 5 ){
                 this.knightBase.chances.equipment.Headwear = 100;
                 this.knightBase.chances.equipment.FaceCover = 0;
@@ -1410,7 +1423,7 @@ export class Bots {
             this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
-        if (RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
 
             if(knightMaskChance >= 3 ){
                 this.knightBase.chances.equipment.Headwear = 100;
@@ -1545,7 +1558,7 @@ export class Bots {
             this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
-        if (RaidInfoTracker.mapName === "factory4_night") {
+        if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
 
             if(knightMaskChance >= 2 ){
                 this.knightBase.chances.equipment.Headwear = 100;

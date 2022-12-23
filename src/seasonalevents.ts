@@ -15,9 +15,7 @@ export class SeasonalEventsHandler{
         "5df8a77486f77412672a1e3f"
     ]
 
-    public merryChristmas(){
-
-        this.logger.warning("Merry Christmas!");
+    public giveBotsChristmasPresents(){
 
         for(let bot in this.arrays.botArr){
             if(this.arrays.botArr[bot]?.inventory?.items !== undefined){

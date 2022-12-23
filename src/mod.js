@@ -128,12 +128,14 @@ class Main {
                 action: (url, info, sessionID, output) => {
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const profileHelper = container.resolve("ProfileHelper");
+                    const seasonalEventsService = container.resolve("SeasonalEventService");
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const postLoadTables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const helper = new helper_1.Helper(postLoadTables, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth);
+                    const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     let scavData = profileHelper.getScavProfile(sessionID);
                     try {
@@ -174,7 +176,13 @@ class Main {
                             pmcData.Info.AccountType = 0;
                             pmcData.Info.MemberCategory = 2;
                         }
-                        this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
+                        this.checkForEvents(logger, seasonalEventsService);
+                        if (modConfig.trader_changes == true) {
+                            randomizeTraderAssort.loadRandomizedTraderStock();
+                        }
+                        if (modConfig.tiered_flea == true) {
+                            this.updateFlea(pmcData, logger, tieredFlea, ragfairOfferGenerator, container, arrays);
+                        }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
                         }
@@ -236,14 +244,15 @@ class Main {
                         const helper = new helper_1.Helper(postLoadTables, arrays);
                         const bots = new bots_1.Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
                         const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
-                        const isChristmasActive = seasonalEventsService.christmasEventEnabled();
                         const time = weatherController.generate().time;
-                        const mapName = matchinfoRegPlayer.locationId;
-                        helper_1.RaidInfoTracker.mapName = mapName;
+                        const mapNameRegPlayer = matchinfoRegPlayer.locationId;
+                        const mapNameStartOffl = matchInfoStartOff.locationName;
+                        helper_1.RaidInfoTracker.mapName = mapNameStartOffl;
+                        helper_1.RaidInfoTracker.mapNameUnreliable = mapNameRegPlayer;
                         let realTime = "";
                         let mapType = "";
                         let pmcData = profileHelper.getPmcProfile(sessionID);
-                        if (mapName === "laboratory") {
+                        if (mapNameStartOffl === "Laboratory") {
                             botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
                             botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
                         }
@@ -264,7 +273,7 @@ class Main {
                         function getTOD(time) {
                             let TOD = "";
                             let [h, m] = time.split(':');
-                            if ((mapName != "factory4_night" && parseInt(h) >= 6 && parseInt(h) < 20) || (mapName === "factory4_day" || mapName === "laboratory")) {
+                            if ((mapNameRegPlayer != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (mapNameRegPlayer === "factory4_day" || mapNameStartOffl === "Laboratory")) {
                                 TOD = "day";
                             }
                             else {
@@ -273,17 +282,17 @@ class Main {
                             return TOD;
                         }
                         for (let map in arrays.cqbMaps) {
-                            if (arrays.cqbMaps[map] === mapName) {
+                            if (arrays.cqbMaps[map] === mapNameStartOffl) {
                                 mapType = "cqb";
                             }
                         }
                         for (let map in arrays.outdoorMaps) {
-                            if (arrays.outdoorMaps[map] === mapName) {
+                            if (arrays.outdoorMaps[map] === mapNameStartOffl) {
                                 mapType = "outdoor";
                             }
                         }
                         for (let map in arrays.urbanMaps) {
-                            if (arrays.urbanMaps[map] === mapName) {
+                            if (arrays.urbanMaps[map] === mapNameStartOffl) {
                                 mapType = "urban";
                             }
                         }
@@ -299,8 +308,9 @@ class Main {
                         }
                         if (modConfig.bot_changes) {
                             this.updateBots(pmcData, logger, modConfig, bots, helper);
-                            if (isChristmasActive == true) {
-                                seasonalEvents.merryChristmas();
+                            if (helper_1.EventTracker.isChristmas == true) {
+                                logger.warning("====== Giving Bots Christmas Presents, Don't Be A Scrooge! ======");
+                                seasonalEvents.giveBotsChristmasPresents();
                             }
                         }
                         if (modConfig.airdrop_changes == true) {
@@ -312,8 +322,8 @@ class Main {
                             }
                         }
                         if (modConfig.logEverything == true) {
-                            logger.warning("Map Name = " + mapName);
-                            logger.warning("Map Type  = " + helper_1.RaidInfoTracker.mapType);
+                            logger.warning("Map Name = " + mapNameStartOffl);
+                            logger.warning("Map Type  = " + mapType);
                             logger.warning("Time " + time);
                             logger.warning("Time of Day = " + getTOD(realTime));
                         }
@@ -334,12 +344,16 @@ class Main {
                     const postLoadTables = postLoadDBServer.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
+                    const saveServer = container.resolve("SaveServer");
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
+                    // logger.warning("Saved Map = " + pmcData.);
                     try {
-                        this.updateFlea(pmcData, logger, modConfig, tieredFlea, ragfairOfferGenerator, container, arrays);
+                        if (modConfig.tiered_flea == true) {
+                            this.updateFlea(pmcData, logger, tieredFlea, ragfairOfferGenerator, container, arrays);
+                        }
                         player.correctNegativeHP(pmcData);
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
@@ -382,7 +396,6 @@ class Main {
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, helper);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Maps(logger, tables, modConfig);
-        const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
         const gear = new gear_1.Gear(arrays, tables);
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
@@ -446,7 +459,6 @@ class Main {
             traders.loadTraderTweaks();
             traders.addItemsToAssorts();
             traders.setLoyaltyLevels();
-            randomizeTraderAssort.loadRandomizedTraderStock();
         }
         if (modConfig.bot_changes == true) {
             attachBase.loadAttRequirements();
@@ -461,6 +473,13 @@ class Main {
     }
     revertMeds(pmcData, helper) {
         helper.revertMedItems(pmcData);
+    }
+    checkForEvents(logger, seasonalEventsService) {
+        const isChristmasActive = seasonalEventsService.christmasEventEnabled();
+        helper_1.EventTracker.isChristmas = isChristmasActive;
+        if (isChristmasActive == true) {
+            logger.warning("Merry Christmas!");
+        }
     }
     checkMeds(pmcData, pmcEXP, helper, player, logger) {
         helper.correctMedItems(pmcData, pmcEXP);
@@ -487,46 +506,44 @@ class Main {
             ragfairOfferGen.generateFleaOffersForTrader(traders[traderID]);
         }
     }
-    updateFlea(pmcData, logger, config, flea, ragfairOfferGen, container, arrays) {
+    updateFlea(pmcData, logger, flea, ragfairOfferGen, container, arrays) {
         var property = pmcData?.Info?.Level;
-        if (config.tiered_flea == true) {
-            if (property === undefined) {
-                this.fleaHelper(flea.flea0, ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
+        if (property === undefined) {
+            this.fleaHelper(flea.flea0, ragfairOfferGen, container);
+            logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
+        }
+        if (property !== undefined) {
+            if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
+                this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
+                logger.info("Realism mod: Fleamarket Locked At Tier 0");
             }
-            if (property !== undefined) {
-                if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-                    this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
-                    logger.info("Realism mod: Fleamarket Locked At Tier 0");
-                }
-                if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-                    this.fleaHelper(flea.flea1(), ragfairOfferGen, container);
-                    logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
-                }
-                if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-                    this.fleaHelper(flea.flea2(), ragfairOfferGen, container);
-                    logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
-                }
-                if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-                    this.fleaHelper(flea.flea3(), ragfairOfferGen, container);
-                    logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
-                }
-                if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-                    this.fleaHelper(flea.flea4(), ragfairOfferGen, container);
-                    logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
-                }
-                if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-                    this.fleaHelper(flea.flea5(), ragfairOfferGen, container);
-                    logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
-                }
-                if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-                    this.fleaHelper(flea.flea6(), ragfairOfferGen, container);
-                    logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
-                }
-                if (pmcData.Info.Level >= 35) {
-                    this.fleaHelper(flea.fleaFullUnlock(), ragfairOfferGen, container);
-                    logger.info("Realism Mod: Fleamarket Unlocked");
-                }
+            if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
+                this.fleaHelper(flea.flea1(), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
+            }
+            if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
+                this.fleaHelper(flea.flea2(), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
+            }
+            if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
+                this.fleaHelper(flea.flea3(), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
+            }
+            if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
+                this.fleaHelper(flea.flea4(), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
+            }
+            if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
+                this.fleaHelper(flea.flea5(), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
+            }
+            if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+                this.fleaHelper(flea.flea6(), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
+            }
+            if (pmcData.Info.Level >= 35) {
+                this.fleaHelper(flea.fleaFullUnlock(), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Unlocked");
             }
         }
     }

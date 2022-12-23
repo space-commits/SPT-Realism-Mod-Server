@@ -228,29 +228,37 @@ exports.Traders = Traders;
 class RandomizeTraderAssort {
     constructor() {
         this.databaseServer = tsyringe_1.container.resolve("DatabaseServer");
+        this.logger = tsyringe_1.container.resolve("WinstonLogger");
         this.tables = this.databaseServer.getTables();
         this.itemDB = this.tables.templates.items;
         this.arrays = new arrays_1.Arrays(this.tables);
         this.helper = new helper_1.Helper(this.tables, this.arrays);
     }
     loadRandomizedTraderStock() {
+        const randNum = this.helper.pickRandNumOneInTen();
+        if (helper_1.EventTracker.isChristmas == true) {
+            this.logger.warning("====== Christmas Sale, Everything 30% Off! ======");
+        }
         for (let trader in this.tables.traders) {
             if (this.tables.traders[trader].assort?.items !== undefined) {
                 let assort = this.tables.traders[trader].assort.items;
-                for (let i in assort) {
-                    if (assort[i].upd?.StackObjectsCount !== undefined) {
-                        this.stockHelper(assort[i]);
+                for (let item in assort) {
+                    if (assort[item].upd?.StackObjectsCount !== undefined) {
+                        this.stockHelper(assort[item]);
                     }
-                    if (assort[i].upd?.UnlimitedCount !== undefined) {
-                        assort[i].upd.UnlimitedCount = false;
+                    if (assort[item].upd?.UnlimitedCount !== undefined) {
+                        assort[item].upd.UnlimitedCount = false;
                     }
                 }
             }
             if (this.tables.traders[trader].assort?.loyal_level_items !== undefined) {
-                let ll = this.tables.traders[trader].assort?.loyal_level_items;
-                for (let i in ll) {
-                    this.randomizeLL(ll, i);
+                let ll = this.tables.traders[trader].assort.loyal_level_items;
+                for (let lvl in ll) {
+                    this.randomizeLL(ll, lvl);
                 }
+            }
+            if (this.tables.traders[trader]?.assort?.barter_scheme !== undefined) {
+                this.randomizeCost(trader, randNum);
             }
         }
     }
@@ -356,6 +364,24 @@ class RandomizeTraderAssort {
     randomizeStock(assortItemParent, catParent, item, min, max) {
         if (assortItemParent === catParent) {
             item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+        }
+    }
+    randomizeCost(trader, randNum) {
+        for (let scheme in this.tables.traders[trader].assort.barter_scheme) {
+            let barter = this.tables.traders[trader].assort.barter_scheme[scheme];
+            if (this.itemDB[barter[0][0]._tpl]._parent === enums_1.ParentClasses.MONEY) {
+                if (helper_1.EventTracker.isChristmas != true) {
+                    if (randNum >= 8) {
+                        barter[0][0].count *= 1.1;
+                    }
+                    if (randNum <= 3) {
+                        barter[0][0].count *= 0.9;
+                    }
+                }
+                else {
+                    barter[0][0].count *= 0.7;
+                }
+            }
         }
     }
     randomizeLL(ll, i) {
