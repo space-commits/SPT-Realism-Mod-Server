@@ -99,9 +99,9 @@ export class BotLooGen extends BotLootGenerator {
         const vestDrugItemCount = this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3)
         const vestStimItemCount = this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
 
-        const pocketHealingItemCount = this.getRandomisedCount(Math.max(1, Math.round(itemCounts.healing.min * 0.5)), Math.max(2, Math.round(itemCounts.healing.max * 0.5)), 3);
-        const pocketDrugItemCount = this.getRandomisedCount(Math.max(1, Math.round(itemCounts.drugs.min * 0.5)), Math.max(2, Math.round(itemCounts.drugs.max * 0.5)), 3)
-        const pocketStimItemCount = this.getRandomisedCount(Math.max(1, Math.round(itemCounts.stims.min * 0.5)), Math.max(2, Math.round(itemCounts.stims.max * 0.5)), 3);
+        const pocketHealingItemCount = this.getRandomisedCount(Math.max(0, Math.round(itemCounts.healing.min / 2)), Math.max(1, Math.round(itemCounts.healing.max / 2)), 3);
+        const pocketDrugItemCount = this.getRandomisedCount(Math.max(0, Math.round(itemCounts.drugs.min / 2)), Math.max(1, Math.round(itemCounts.drugs.max / 2)), 3)
+        const pocketStimItemCount = this.getRandomisedCount(Math.max(0, Math.round(itemCounts.stims.min / 2)), Math.max(1, Math.round(itemCounts.stims.max / 2)), 3);
 
         const bagHealingItemCount = this.getRandomisedCount(0, 1, 3);
         const bagDrugItemCount = this.getRandomisedCount(0, 1, 3)
@@ -426,11 +426,12 @@ export class MyLootCache extends BotLootCacheService {
         const vestHealingItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
             && template._parent !== BaseClasses.STIMULATOR
-            && template._parent !== BaseClasses.DRUGS);
-
+            && template?._props?.effects_damage?.Pain === undefined);
+            
         const vestDrugItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent === BaseClasses.DRUGS);
+            && template._parent !== BaseClasses.STIMULATOR
+            && template?._props?.effects_damage?.Pain !== undefined);
 
         const vestStimItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
@@ -440,11 +441,12 @@ export class MyLootCache extends BotLootCacheService {
         const pocketHealingItems = pocketLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
             && template._parent !== BaseClasses.STIMULATOR
-            && template._parent !== BaseClasses.DRUGS);
+            && template?._props?.effects_damage?.Pain === undefined);
 
         const pocketDrugItems = pocketLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent === BaseClasses.DRUGS);
+            && template._parent !== BaseClasses.STIMULATOR
+            && template?._props?.effects_damage?.Pain !== undefined);
 
         const pocketStimItems = pocketLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
@@ -454,11 +456,12 @@ export class MyLootCache extends BotLootCacheService {
         const bagHealingItems = backpackLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
             && template._parent !== BaseClasses.STIMULATOR
-            && template._parent !== BaseClasses.DRUGS);
+            && template?._props?.effects_damage?.Pain === undefined);
 
         const bagDrugItems = backpackLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent === BaseClasses.DRUGS);
+            && template._parent !== BaseClasses.STIMULATOR
+            && template?._props?.effects_damage?.Pain !== undefined);
 
         const bagStimItems = backpackLootTemplates.filter(template =>
             this.isMedicalItem(template._props)

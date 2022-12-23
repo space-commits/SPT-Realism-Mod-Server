@@ -1,14 +1,11 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
-import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
 import { Arrays } from "./arrays";
 
 export class SeasonalEventsHandler{
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private arrays: Arrays, private seasonalEventsService: SeasonalEventService) { }
 
-
-   private  botDB = this.tables.bots.types;
    private  christmasItems = [
         "5df8a72c86f77412640e2e83",
         "5df8a72c86f77412640e2e83",

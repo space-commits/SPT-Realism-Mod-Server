@@ -194,12 +194,12 @@ export class Player {
 
             this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.37;
 
-            this.globalDB.Stamina.Capacity = 140;
+            this.globalDB.Stamina.Capacity = 125;
             this.globalDB.Stamina.BaseRestorationRate = 11;
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
             this.globalDB.Stamina.OxygenRestoration *= 2.1;
 
-            this.globalDB.Stamina.AimDrainRate = 0.25;
+            this.globalDB.Stamina.AimDrainRate = 0.4;
             this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing

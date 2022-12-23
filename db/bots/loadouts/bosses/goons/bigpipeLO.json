@@ -146,7 +146,7 @@
             "generation": {
                 "items": {
                     "drugs": {
-                        "max": 3,
+                        "max": 2,
                         "min": 1
                     },
                     "grenades": {
@@ -365,7 +365,7 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 3,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
@@ -389,7 +389,7 @@
                     "min": 0
                 },
                 "stims": {
-                    "max": 3,
+                    "max": 2,
                     "min": 1
                 }
             }
@@ -583,7 +583,7 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 3,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
@@ -591,7 +591,7 @@
                     "min": 1
                 },
                 "healing": {
-                    "max": 2,
+                    "max": 3,
                     "min": 1
                 },
                 "looseLoot": {
@@ -607,7 +607,7 @@
                     "min": 0
                 },
                 "stims": {
-                    "max": 2,
+                    "max": 3,
                     "min": 1
                 }
             }

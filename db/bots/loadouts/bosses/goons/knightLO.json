@@ -142,7 +142,7 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 3,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
@@ -355,7 +355,7 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 3,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {

@@ -19,6 +19,10 @@ export class Meds {
 
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
+
+
+  
+
             ///Pain Meds//
             //Analgin
             if (serverItem._id === "544fb37f4bdc2dee738b4567") {
