@@ -3553,7 +3553,8 @@
         },
         "5a16b8a9fcdbcb00165aa6ca": {
           "mod_nvg": [
-            "5c0695860db834001b735461"
+            "5c0695860db834001b735461",
+            "5a16b93dfcdbcbcae6687261"
           ]
         },
         "5a7c4850e899ef00150be885": {
@@ -6399,6 +6400,11 @@
           "mod_charge": [
             "5648ac824bdc2ded0b8b457d",
             "6130ca3fd92c473c77020dbd"
+          ],
+          "mod_muzzle": [
+            "58272d7f2459774f6311ddfd",
+            "59fb137a86f7740adb646af1",
+            "59c0ec5b86f77435b128bfca"
           ]
         },
         "602a9740da11d6478d5a06dc": {

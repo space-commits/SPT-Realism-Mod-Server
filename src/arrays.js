@@ -17,7 +17,8 @@ class Arrays {
             "bigmap",
             "Customs",
             "rezervbase",
-            "RezervBase"
+            "RezervBase",
+            "ReserveBase"
         ];
         this.cqbMaps = [
             "Factory",
