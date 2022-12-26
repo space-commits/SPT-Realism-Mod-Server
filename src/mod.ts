@@ -18,7 +18,6 @@ import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
 import { BotGeneratorHelper } from "@spt-aki/helpers/BotGeneratorHelper";
 import { WeightedRandomHelper } from "@spt-aki/helpers/WeightedRandomHelper";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
 import { Chances, Inventory, ItemMinMax, Items, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
@@ -74,7 +73,7 @@ import { Armor } from "./armor";
 import { AttatchmentBase as AttachmentBase } from "./attatchment_base";
 import { AttatchmentStats as AttachmentStats } from "./attatchment_stats";
 import { FleamarketConfig, TieredFlea, FleamarketGlobal } from "./fleamarket";
-import { EventTracker, Helper, RaidInfoTracker } from "./helper"
+import { ConfigChecker, EventTracker, Helper, RaidInfoTracker } from "./helper"
 import { Arrays } from "./arrays"
 import { Meds } from "./meds";
 import { Player } from "./player"
@@ -90,9 +89,11 @@ import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
 import { SeasonalEventsHandler } from "./seasonalevents";
-
 import { ItemCloning } from "./item_cloning";
+import * as _path from 'path';
 
+
+const fs = require('fs');
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -112,9 +113,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     public preAkiLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
-
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
-        const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
         const hashUtil = container.resolve<HashUtil>("HashUtil");
         const randomUtil = container.resolve<RandomUtil>("RandomUtil");
         const weightedRandomHelper = container.resolve<WeightedRandomHelper>("WeightedRandomHelper");
@@ -151,6 +150,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const botWeaponGenerator = container.resolve<BotWeaponGenerator>("BotWeaponGenerator");
         const botLootCacheService = container.resolve<BotLootCacheService>("BotLootCacheService");
 
+
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
 
@@ -160,12 +160,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const botLooGen = new BotLooGen(logger, hashUtil, randomUtil, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new GenBotLvl(logger, randomUtil, databaseServer);
 
+        const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
+        flea.loadFleaConfig();
 
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
         this.path = require("path");
-
-        const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
-        flea.loadFleaConfig();
 
         router.registerDynamicRouter(
             "loadResources",
@@ -551,20 +550,20 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const gear = new Gear(arrays, tables);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
 
+        this.dllChecker(logger, modConfig);
+
+        if (modConfig.trader_changes == true) {
+            itemCloning.createCustomWeapons();
+        }
 
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
 
-
         codegen.pushModsToServer();
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
         codegen.descriptionGen();
-
-        if(modConfig.trader_changes == true){
-            itemCloning.createCustomWeapons();
-        }
 
         if (modConfig.armor_mouse_penalty == true) {
             armor.armorMousePenalty();
@@ -622,7 +621,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             ammo.loadGlobalMalfChanges();
         }
 
-        if (modConfig.recoil_attachment_overhaul) {
+        if (modConfig.recoil_attachment_overhaul && ConfigChecker.dllIsPresent == true) {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
             attachStats.loadAttStats();
@@ -651,6 +650,22 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
     public postAkiLoad(container: DependencyContainer) {
         this.modLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
+    }
+
+    private dllChecker(logger: ILogger, modConfig: any) {
+        const plugin = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+
+        if (fs.existsSync(plugin)) {
+            ConfigChecker.dllIsPresent = true;
+            if(modConfig.recoil_attachment_overhaul == false){
+                logger.error("RealismMod.dll is present at path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
+            }
+        } else {
+            if(modConfig.recoil_attachment_overhaul == true){
+                logger.error("RealismMod.dll is missing form path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
+            }
+            ConfigChecker.dllIsPresent = false;
+        }
     }
 
     private revertMeds(pmcData: IPmcData, helper: Helper) {

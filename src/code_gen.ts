@@ -2,7 +2,7 @@ import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";
-import { Helper } from "./helper";
+import { ConfigChecker, Helper } from "./helper";
 import { ParentClasses } from "./enums";
 
 
@@ -832,7 +832,7 @@ export class CodeGen {
     private modPusherHelper(serverItem: any, fileItem: any) {
 
 
-        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
             if (serverItem._id === fileItem.ItemID) {
                 serverItem._props.Ergonomics = fileItem.Ergonomics;
                 serverItem._props.Accuracy = fileItem.Accuracy;
@@ -876,7 +876,7 @@ export class CodeGen {
                 serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
             }
 
-            if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+            if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
                 serverItem._props.Ergonomics = fileItem.Ergonomics;
                 serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
                 serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;

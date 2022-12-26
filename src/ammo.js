@@ -3350,9 +3350,7 @@ class Ammo {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._parent === enums_1.ParentClasses.AMMO) {
-                if (this.modConf.recoil_attachment_overhaul == true) {
-                    serverItem._props.casingMass = Math.min(1.05, (serverItem._props.ammoRec / 500) + 1);
-                }
+                serverItem._props.casingMass = Math.min(1.05, (serverItem._props.ammoRec / 500) + 1);
             }
         }
         if (this.modConf.logEverything == true) {

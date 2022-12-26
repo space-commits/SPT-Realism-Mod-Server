@@ -1,6 +1,7 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 import { ParentClasses } from "./enums";
+import { ConfigChecker } from "./helper";
 
 const mastering = require("../db/items/mastering.json");
 
@@ -51,7 +52,7 @@ export class WeaponsGlobals {
             this.globalDB.Mastering = mastering.Mastering;
         }
 
-        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
 
             this.globalDB.Aiming.AimProceduralIntensity = 1;
             this.globalDB.Aiming.RecoilCrank = true;
@@ -97,7 +98,7 @@ export class WeaponsGlobals {
             }
         }
 
-        if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true) {
+        if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true && ConfigChecker.dllIsPresent != true) {
 
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WeaponsGlobals = void 0;
 const enums_1 = require("./enums");
+const helper_1 = require("./helper");
 const mastering = require("../db/items/mastering.json");
 class WeaponsGlobals {
     constructor(logger, tables, modConf) {
@@ -46,7 +47,7 @@ class WeaponsGlobals {
         if (this.modConf.mastery_changes == true) {
             this.globalDB.Mastering = mastering.Mastering;
         }
-        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && helper_1.ConfigChecker.dllIsPresent == true) {
             this.globalDB.Aiming.AimProceduralIntensity = 1;
             this.globalDB.Aiming.RecoilCrank = true;
             this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
@@ -82,7 +83,7 @@ class WeaponsGlobals {
                 this.logger.info("Recoil Changes Enabled");
             }
         }
-        if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true) {
+        if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true && helper_1.ConfigChecker.dllIsPresent != true) {
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];
                 if (serverItem._props.weapClass === "smg"

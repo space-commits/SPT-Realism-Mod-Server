@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.Helper = void 0;
+exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.Helper = void 0;
+const fs = require('fs');
 const dir = __dirname;
 const dirArray = dir.split("\\");
 const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
@@ -80,7 +81,6 @@ class Helper {
         return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     }
     saveToJSONFile(data, filePath) {
-        var fs = require('fs');
         fs.writeFile(modFolder + filePath, JSON.stringify(data, null, 4), function (err) {
             if (err)
                 throw err;
@@ -97,6 +97,10 @@ class Helper {
     }
 }
 exports.Helper = Helper;
+class ConfigChecker {
+}
+exports.ConfigChecker = ConfigChecker;
+ConfigChecker.dllIsPresent = false;
 class EventTracker {
 }
 exports.EventTracker = EventTracker;

@@ -1,9 +1,9 @@
 
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";
 
+const fs = require('fs');
 const dir = __dirname;
 const dirArray = dir.split("\\");
 const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
@@ -89,16 +89,15 @@ export class Helper {
         }
     }
 
-    public pickRandNumInRange(min: number, max: number) : number{
+    public pickRandNumInRange(min: number, max: number): number {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    public pickRandNumOneInTen() : number{
+    public pickRandNumOneInTen(): number {
         return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     }
 
     public saveToJSONFile(data, filePath) {
-        var fs = require('fs');
         fs.writeFile(modFolder + filePath, JSON.stringify(data, null, 4), function (err) {
             if (err) throw err;
         });
@@ -113,6 +112,10 @@ export class Helper {
         }
         return result;
     }
+}
+
+export class ConfigChecker {
+    static dllIsPresent: boolean = false;
 }
 
 export class EventTracker {
@@ -153,7 +156,7 @@ export class BotTierTracker {
         if (botType === "exusec") {
             return BotTierTracker.rogueTier;
         }
-        if(botType === "bossknight" || botType === "followerbigpipe" || botType === "followerbirdeye"){
+        if (botType === "bossknight" || botType === "followerbigpipe" || botType === "followerbirdeye") {
             return BotTierTracker.goonsTier;
         }
         if (botType === "bosskilla") {

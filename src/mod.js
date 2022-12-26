@@ -1,4 +1,27 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
@@ -25,6 +48,8 @@ const maps_1 = require("./maps");
 const gear_1 = require("./gear");
 const seasonalevents_1 = require("./seasonalevents");
 const item_cloning_1 = require("./item_cloning");
+const _path = __importStar(require("path"));
+const fs = require('fs');
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -39,7 +64,6 @@ class Main {
     preAkiLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const jsonUtil = container.resolve("JsonUtil");
-        const pmcLootGenerator = container.resolve("PMCLootGenerator");
         const hashUtil = container.resolve("HashUtil");
         const randomUtil = container.resolve("RandomUtil");
         const weightedRandomHelper = container.resolve("WeightedRandomHelper");
@@ -79,10 +103,10 @@ class Main {
         const _botModGen = new bot_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const botLooGen = new bot_loot_serv_1.BotLooGen(logger, hashUtil, randomUtil, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new bot_gen_1.GenBotLvl(logger, randomUtil, databaseServer);
-        const router = container.resolve("DynamicRouterModService");
-        this.path = require("path");
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
+        const router = container.resolve("DynamicRouterModService");
+        this.path = require("path");
         router.registerDynamicRouter("loadResources", [
             {
                 url: "/RealismMod/GetInfo",
@@ -399,6 +423,10 @@ class Main {
         const maps = new maps_1.Maps(logger, tables, modConfig);
         const gear = new gear_1.Gear(arrays, tables);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
+        this.dllChecker(logger, modConfig);
+        if (modConfig.trader_changes == true) {
+            itemCloning.createCustomWeapons();
+        }
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
@@ -406,9 +434,6 @@ class Main {
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
         codegen.descriptionGen();
-        if (modConfig.trader_changes == true) {
-            itemCloning.createCustomWeapons();
-        }
         if (modConfig.armor_mouse_penalty == true) {
             armor.armorMousePenalty();
         }
@@ -452,7 +477,7 @@ class Main {
         if (modConfig.malf_changes == true) {
             ammo.loadGlobalMalfChanges();
         }
-        if (modConfig.recoil_attachment_overhaul) {
+        if (modConfig.recoil_attachment_overhaul && helper_1.ConfigChecker.dllIsPresent == true) {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
             attachStats.loadAttStats();
@@ -475,6 +500,21 @@ class Main {
     }
     postAkiLoad(container) {
         this.modLoader = container.resolve("PreAkiModLoader");
+    }
+    dllChecker(logger, modConfig) {
+        const plugin = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+        if (fs.existsSync(plugin)) {
+            helper_1.ConfigChecker.dllIsPresent = true;
+            if (modConfig.recoil_attachment_overhaul == false) {
+                logger.error("RealismMod.dll is present at path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
+            }
+        }
+        else {
+            if (modConfig.recoil_attachment_overhaul == true) {
+                logger.error("RealismMod.dll is missing form path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
+            }
+            helper_1.ConfigChecker.dllIsPresent = false;
+        }
     }
     revertMeds(pmcData, helper) {
         helper.revertMedItems(pmcData);

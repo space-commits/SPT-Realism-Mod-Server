@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CodeGen = void 0;
+const helper_1 = require("./helper");
 const enums_1 = require("./enums");
 // const magazineJSON = require("../db/bots/loadouts/common/magazines.json");
 const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
@@ -774,7 +775,7 @@ class CodeGen {
         }
     }
     modPusherHelper(serverItem, fileItem) {
-        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+        if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && helper_1.ConfigChecker.dllIsPresent == true) {
             if (serverItem._id === fileItem.ItemID) {
                 serverItem._props.Ergonomics = fileItem.Ergonomics;
                 serverItem._props.Accuracy = fileItem.Accuracy;
@@ -812,7 +813,7 @@ class CodeGen {
                 serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
                 serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
             }
-            if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true) {
+            if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && helper_1.ConfigChecker.dllIsPresent == true) {
                 serverItem._props.Ergonomics = fileItem.Ergonomics;
                 serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
                 serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
