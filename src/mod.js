@@ -24,6 +24,7 @@ const airdrops_1 = require("./airdrops");
 const maps_1 = require("./maps");
 const gear_1 = require("./gear");
 const seasonalevents_1 = require("./seasonalevents");
+const item_cloning_1 = require("./item_cloning");
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -385,7 +386,7 @@ class Main {
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
         const attachStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig, arrays);
         const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
-        const items = new items_1._Items(logger, tables, modConfig, jsonUtil, medItems, crafts, inventoryConf);
+        const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
@@ -397,6 +398,7 @@ class Main {
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Maps(logger, tables, modConfig);
         const gear = new gear_1.Gear(arrays, tables);
+        const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
@@ -404,6 +406,9 @@ class Main {
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
         codegen.descriptionGen();
+        if (modConfig.trader_changes == true) {
+            itemCloning.createCustomWeapons();
+        }
         if (modConfig.armor_mouse_penalty == true) {
             armor.armorMousePenalty();
         }
@@ -438,7 +443,7 @@ class Main {
             bots.setBotHealth();
         }
         if (modConfig.med_changes == true) {
-            items.createCustomMedItems();
+            itemCloning.createCustomMedItems();
             meds.loadMeds();
             bots.botMeds();
         }
@@ -554,6 +559,8 @@ class Main {
         this.setBotTier(pmcData, "raider", bots, helper);
         this.setBotTier(pmcData, "rogue", bots, helper);
         this.setBotTier(pmcData, "goons", bots, helper);
+        this.setBotTier(pmcData, "killa", bots, helper);
+        this.setBotTier(pmcData, "tagilla", bots, helper);
     }
     setBotTier(pmcData, type, bots, helper) {
         var tier = 1;
@@ -581,6 +588,34 @@ class Main {
         }
         if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 40]);
+        }
+        if (type === "tagilla") {
+            if (tier == 1) {
+                bots.tagillaLoad1();
+            }
+            if (tier == 2) {
+                bots.tagillaLoad2();
+            }
+            if (tier == 3) {
+                bots.tagillaLoad2();
+            }
+            if (tier == 4) {
+                bots.tagillaLoad3();
+            }
+        }
+        if (type === "killa") {
+            if (tier == 1) {
+                bots.killaLoad1();
+            }
+            if (tier == 2) {
+                bots.killaLoad2();
+            }
+            if (tier == 3) {
+                bots.killaLoad2();
+            }
+            if (tier == 4) {
+                bots.killaLoad3();
+            }
         }
         if (type === "goons") {
             if (tier == 1) {

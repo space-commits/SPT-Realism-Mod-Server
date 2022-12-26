@@ -128,6 +128,12 @@ class BotTierTracker {
         if (botType === "bossknight" || botType === "followerbigpipe" || botType === "followerbirdeye") {
             return BotTierTracker.goonsTier;
         }
+        if (botType === "bosskilla") {
+            return BotTierTracker.killaTier;
+        }
+        if (botType === "bosstagilla") {
+            return BotTierTracker.tagillaTier;
+        }
     }
 }
 exports.BotTierTracker = BotTierTracker;
@@ -137,3 +143,5 @@ BotTierTracker.scavTier = 1;
 BotTierTracker.rogueTier = 1;
 BotTierTracker.raiderTier = 1;
 BotTierTracker.goonsTier = 1;
+BotTierTracker.killaTier = 1;
+BotTierTracker.tagillaTier = 1;

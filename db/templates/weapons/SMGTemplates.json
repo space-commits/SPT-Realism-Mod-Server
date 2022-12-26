@@ -1,4 +1,44 @@
 {
+    "mechSTM9v1": {
+        "ItemID": "mechSTM9v1",
+        "Name": "weapon_stmarms_stm_9_9x19",
+        "WeapType": "",
+        "OperationType": "buffer",
+        "WeapAccuracy": 0,
+        "BaseTorque": 1,
+        "HasShoulderContact": false,
+        "Ergonomics": 80,
+        "VerticalRecoil": 40,
+        "HorizontalRecoil": 180,
+        "Dispersion": 15,
+        "CameraRecoil": 0.075,
+        "CameraSnap": 3.5,
+        "Convergence": 10,
+        "RecoilAngle": 73,
+        "BaseMalfunctionChance": 0.34,
+        "HeatFactorGun": 0.35,
+        "HeatFactorByShot": 1,
+        "CoolFactorGun": 0.1,
+        "CoolFactorGunMods": 1,
+        "AllowOverheat": true,
+        "CenterOfImpact": 0.01,
+        "HipAccuracyRestorationDelay": 0.2,
+        "HipAccuracyRestorationSpeed": 7,
+        "HipInnaccuracyGain": 0.16,
+        "ShotgunDispersion": 0,
+        "Velocity": 0,
+        "RecoilDamping": 0.74,
+        "RecoilHandDamping": 0.71,
+        "WeaponAllowADS": false,
+        "Weight": 0.35,
+        "DurabilityBurnRatio": 0.3,
+        "AutoROF": 800,
+        "SemiROF": 450,
+        "LoyaltyLevel": 2,
+        "weapFireType": [
+            "fullauto"
+        ]
+    },
     "60339954d62c9b14ed777c06": {
         "ItemID": "60339954d62c9b14ed777c06",
         "Name": "weapon_stmarms_stm_9_9x19",
@@ -70,7 +110,7 @@
         "Weight": 1.962,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 650,
-        "SemiROF": 450,
+        "SemiROF": 360,
         "LoyaltyLevel": 1
     },
     "59984ab886f7743e98271174": {
@@ -107,7 +147,7 @@
         "Weight": 1.809,
         "DurabilityBurnRatio": 0.08,
         "AutoROF": 700,
-        "SemiROF": 450,
+        "SemiROF": 340,
         "LoyaltyLevel": 2
     },
     "5e00903ae9dc277128008b87": {
@@ -144,7 +184,7 @@
         "Weight": 0.75,
         "DurabilityBurnRatio": 0.15,
         "AutoROF": 900,
-        "SemiROF": 450,
+        "SemiROF": 350,
         "LoyaltyLevel": 2
     },
     "5de7bd7bfd6b4e6e2276dc25": {
@@ -181,7 +221,7 @@
         "Weight": 0.75,
         "DurabilityBurnRatio": 0.2,
         "AutoROF": 1100,
-        "SemiROF": 450,
+        "SemiROF": 350,
         "LoyaltyLevel": 3
     },
     "5d2f0d8048f0356c925bc3b0": {
@@ -218,7 +258,7 @@
         "Weight": 0.924,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 900,
-        "SemiROF": 450,
+        "SemiROF": 360,
         "LoyaltyLevel": 1
     },
     "5926bb2186f7744b1c6c6e60": {
@@ -255,7 +295,7 @@
         "Weight": 1.097,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 800,
-        "SemiROF": 450,
+        "SemiROF": 360,
         "LoyaltyLevel": 3
     },
     "58948c8e86f77409493f7266": {
@@ -292,7 +332,7 @@
         "Weight": 0.64,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 850,
-        "SemiROF": 450,
+        "SemiROF": 390,
         "LoyaltyLevel": 3
     },
     "5fc3f2d5900b1d5091531e57": {
@@ -329,7 +369,7 @@
         "Weight": 1.8,
         "DurabilityBurnRatio": 0.6,
         "AutoROF": 950,
-        "SemiROF": 450,
+        "SemiROF": 365,
         "LoyaltyLevel": 4
     },
     "5fb64bc92b1b027b1f50bcf2": {
@@ -366,7 +406,7 @@
         "Weight": 1.86,
         "DurabilityBurnRatio": 0.6,
         "AutoROF": 1100,
-        "SemiROF": 450,
+        "SemiROF": 365,
         "LoyaltyLevel": 4
     },
     "5fc3e272f8b6a877a729eac5": {
@@ -403,7 +443,7 @@
         "Weight": 1.22,
         "DurabilityBurnRatio": 0.2,
         "AutoROF": 600,
-        "SemiROF": 450,
+        "SemiROF": 365,
         "LoyaltyLevel": 3
     },
     "5cc82d76e24e8d00134b4b83": {
@@ -440,7 +480,7 @@
         "Weight": 0.7,
         "DurabilityBurnRatio": 0.05,
         "AutoROF": 900,
-        "SemiROF": 450,
+        "SemiROF": 335,
         "LoyaltyLevel": 3
     },
     "5ba26383d4351e00334c93d9": {
@@ -477,7 +517,7 @@
         "Weight": 1.445,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 950,
-        "SemiROF": 450,
+        "SemiROF": 375,
         "LoyaltyLevel": 2
     },
     "5bd70322209c4d00d7167b8f": {
@@ -514,7 +554,7 @@
         "Weight": 1.58,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 950,
-        "SemiROF": 450,
+        "SemiROF": 375,
         "LoyaltyLevel": 3
     },
     "5ea03f7400685063ec28bfa8": {
@@ -551,7 +591,7 @@
         "Weight": 1.01,
         "DurabilityBurnRatio": 0.01,
         "AutoROF": 1000,
-        "SemiROF": 450,
+        "SemiROF": 310,
         "LoyaltyLevel": 1
     },
     "57f3c6bd24597738e730fa2f": {
@@ -588,7 +628,7 @@
         "Weight": 1.33,
         "DurabilityBurnRatio": 0.2,
         "AutoROF": 900,
-        "SemiROF": 450,
+        "SemiROF": 335,
         "LoyaltyLevel": 1
     },
     "57d14d2524597714373db789": {
@@ -625,7 +665,7 @@
         "Weight": 1.33,
         "DurabilityBurnRatio": 0.2,
         "AutoROF": 900,
-        "SemiROF": 450,
+        "SemiROF": 330,
         "LoyaltyLevel": 1
     },
     "57f4c844245977379d5c14d1": {
@@ -662,7 +702,7 @@
         "Weight": 1.33,
         "DurabilityBurnRatio": 0.025,
         "AutoROF": 1000,
-        "SemiROF": 450,
+        "SemiROF": 340,
         "LoyaltyLevel": 1
     }
 }

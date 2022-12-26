@@ -148,7 +148,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                     let pTierNum = Number(presetTier);
                     if (pTierNum <= tier) {
                         weaponPresets.push(presetFile[presetObj]);
-                        // this.logger.warning(`Found A Preset Within Tier`);
+                        this.logger.warning(`Found A Preset Within Tier`);
                     }
                 }
             }
@@ -156,17 +156,17 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                 for (let presetObj in presetFile) {
                     if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                         weaponPresets.push(presetFile[presetObj]);
-                        // this.logger.warning(`Found a preset outside of tier`);
+                        this.logger.warning(`Found a preset outside of tier`);
                     }
                 }
             }
-            // this.logger.warning("Choices:");
-            // for (let i in weaponPresets) {
-            //     this.logger.warning(weaponPresets[i]._name);
-            // }
+            this.logger.warning("Choices:");
+            for (let i in weaponPresets) {
+                this.logger.warning(weaponPresets[i]._name);
+            }
             let randomPreset = weaponPresets[Math.floor(Math.random() * weaponPresets.length)];
-            // this.logger.warning("Chose:");
-            // this.logger.warning(randomPreset._name);
+            this.logger.warning("Chose:");
+            this.logger.warning(randomPreset._name);
             preset = this.jsonUtil.clone(randomPreset);
             if (preset) {
                 const parentItem = preset._items[0];

@@ -757,7 +757,7 @@ class CodeGen {
     pushArmorToServer() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === enums_1.ParentClasses.HEADWEAR) {
+            if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER) {
                 for (let i in FaceShieldTemplates) {
                     let fileItem = FaceShieldTemplates[i];
                     this.armorPusherHelper(serverItem, fileItem);
@@ -834,6 +834,9 @@ class CodeGen {
                 serverItem._props.bFirerate = fileItem.AutoROF;
                 serverItem._props.SingleFireRate = fileItem.SemiROF;
                 serverItem._props.DoubleActionAccuracyPenalty = fileItem.DoubleActionAccuracyPenalty;
+                if (fileItem.weapFireType !== undefined) {
+                    serverItem._props.weapFireType = fileItem.weapFireType;
+                }
                 var serverConfItems = serverItem._props.ConflictingItems;
                 var weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "unused", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
                     fileItem?.RecoilDamping?.toString() || "70", fileItem?.RecoilHandDamping?.toString() || "65", fileItem?.WeaponAllowADS?.toString() || "false"];
@@ -889,7 +892,7 @@ class CodeGen {
                 if (modType === "scope") {
                     locale[`${templateItem}` + " Description"] = "ADS speed modifier only applies when this sight is in use." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR) {
+                if (item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR || item._parent === enums_1.ParentClasses.FACECOVER) {
                     if (item._props.ConflictingItems[1] === "true") {
                         locale[`${templateItem}` + " Description"] = "This faceshield allows the use of sights while using any stock in the extended position." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }

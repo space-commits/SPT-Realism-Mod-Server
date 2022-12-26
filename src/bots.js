@@ -11,13 +11,14 @@ const rogueLO = require("../db/bots/loadouts/raiders_rogues/rogueLO.json");
 const knightLO = require("../db/bots/loadouts/bosses/goons/knightLO.json");
 const bigpipeLO = require("../db/bots/loadouts/bosses/goons/bigpipeLO.json");
 const birdeyeLO = require("../db/bots/loadouts/bosses/goons/birdeyeLO.json");
+const killaLO = require("../db/bots/loadouts/bosses/killaLO.json");
+const tagillaLO = require("../db/bots/loadouts/bosses/tagillaLO.json");
 const scavLootLimitCat = require("../db/bots/loadouts/scavs/scavLootLimitCat.json");
 const PMCLootLimitCat = require("../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
 const botHealth = require("../db/bots/botHealth.json");
 const rmBotConfig = require("../db/bots/botconfig.json");
 const USECNames = require("../db/bots/names/USECNames.json");
 const bearNames = require("../db/bots/names/bearNames.json");
-const botZones = require("../db/bots/spawnZones.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
 class Bots {
     constructor(logger, tables, configServ, modConf, arrays, helper) {
@@ -39,6 +40,8 @@ class Bots {
         this.knightBase = this.botDB["bossknight"];
         this.bigpipeBase = this.botDB["followerbigpipe"];
         this.birdeyeBase = this.botDB["followerbirdeye"];
+        this.killaBase = this.botDB["bosskilla"];
+        this.tagillaBase = this.botDB["bosstagilla"];
         this.botConf = this.configServ.getConfig(ConfigTypes_1.ConfigTypes.BOT);
         this.botConfPMC = this.botConf.pmc;
     }
@@ -67,6 +70,8 @@ class Bots {
         this.botConf.equipment["bossknight"] = botEquipmentTempalte;
         this.botConf.equipment["followerbigpipe"] = botEquipmentTempalte;
         this.botConf.equipment["followerbirdeye"] = botEquipmentTempalte;
+        this.botConf.equipment["bosskilla"] = botEquipmentTempalte;
+        this.botConf.equipment["bosstagilla"] = botEquipmentTempalte;
         if (this.modConf.logEverything == true) {
             this.logger.info("Bots Loaded");
         }
@@ -204,6 +209,8 @@ class Bots {
             this.rogueLoad1();
             this.raiderLoad1();
             this.goonsLoad1();
+            this.killaLoad1();
+            this.tagillaLoad1();
             this.logger.warning("Tier 1 Test Selected");
         }
         if (tier == 2) {
@@ -214,6 +221,8 @@ class Bots {
             this.rogueLoad2();
             this.raiderLoad2();
             this.goonsLoad2();
+            this.killaLoad2();
+            this.tagillaLoad2();
             this.logger.warning("Tier 2 Test Selected");
         }
         if (tier == 3) {
@@ -224,6 +233,8 @@ class Bots {
             this.rogueLoad3();
             this.raiderLoad3();
             this.goonsLoad3();
+            this.killaLoad3();
+            this.tagillaLoad3();
             this.logger.warning("Tier 3 Test Selected");
         }
         if (tier == 4) {
@@ -234,6 +245,8 @@ class Bots {
             this.rogueLoad3();
             this.raiderLoad3();
             this.goonsLoad3();
+            this.killaLoad3();
+            this.tagillaLoad3();
             this.logger.warning("Tier 4 Test Selected");
         }
         if (this.modConf.bot_test_weps_enabled == false) {
@@ -515,25 +528,22 @@ class Bots {
         else if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.usecBase.chances.mods.mod_nvg = 15;
             this.usecBase.chances.mods.mod_flashlight = 40;
-            this.usecBase.chances.mods.mod_equipment_000 = 20;
-            this.usecBase.chances.mods.mod_equipment = 20;
+            this.usecBase.chances.mods.mod_equipment_000 = 10;
+            this.usecBase.chances.mods.mod_equipment = 10;
         }
         else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO1.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 30;
                 this.usecBase.chances.mods.mod_equipment_000 = 15;
                 this.usecBase.chances.mods.mod_equipment = 15;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO1.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 40;
                 this.usecBase.chances.mods.mod_equipment_000 = 20;
                 this.usecBase.chances.mods.mod_equipment = 20;
             }
             if (helper_1.RaidInfoTracker.mapType === "outdoor") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO1.inventory.FirstPrimaryWeapon_outdoor;
                 this.usecBase.chances.mods.mod_equipment_000 = 10;
                 this.usecBase.chances.mods.mod_equipment = 10;
             }
@@ -565,27 +575,27 @@ class Bots {
         else if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.usecBase.chances.mods.mod_nvg = 25;
             this.usecBase.chances.mods.mod_flashlight = 60;
-            this.usecBase.chances.mods.mod_equipment_000 = 40;
-            this.usecBase.chances.mods.mod_equipment = 40;
+            this.usecBase.chances.mods.mod_equipment_000 = 10;
+            this.usecBase.chances.mods.mod_equipment = 10;
         }
         else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 40;
-                this.usecBase.chances.mods.mod_equipment_000 = 30;
-                this.usecBase.chances.mods.mod_equipment = 30;
+                this.usecBase.chances.mods.mod_equipment_000 = 20;
+                this.usecBase.chances.mods.mod_equipment = 20;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 60;
-                this.usecBase.chances.mods.mod_equipment_000 = 40;
-                this.usecBase.chances.mods.mod_equipment = 40;
+                this.usecBase.chances.mods.mod_equipment_000 = 50;
+                this.usecBase.chances.mods.mod_equipment = 50;
             }
             if (helper_1.RaidInfoTracker.mapType === "outdoor") {
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_outdoor;
-                this.usecBase.chances.mods.mod_equipment_000 = 15;
-                this.usecBase.chances.mods.mod_equipment = 15;
+                this.usecBase.chances.mods.mod_equipment_000 = 0;
+                this.usecBase.chances.mods.mod_equipment = 0;
             }
         }
         helper_1.BotTierTracker.usecTier = 2;
@@ -610,29 +620,29 @@ class Bots {
             this.usecBase.chances.mods.mod_equipment = 0;
         }
         else if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
-            this.usecBase.chances.mods.mod_nvg = 50;
+            this.usecBase.chances.mods.mod_nvg = 60;
             this.usecBase.chances.mods.mod_flashlight = 100;
-            this.usecBase.chances.mods.mod_equipment_000 = 50;
-            this.usecBase.chances.mods.mod_equipment = 50;
+            this.usecBase.chances.mods.mod_equipment_000 = 20;
+            this.usecBase.chances.mods.mod_equipment = 20;
         }
         else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 80;
-                this.usecBase.chances.mods.mod_equipment_000 = 40;
-                this.usecBase.chances.mods.mod_equipment = 40;
+                this.usecBase.chances.mods.mod_equipment_000 = 50;
+                this.usecBase.chances.mods.mod_equipment = 50;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 100;
-                this.usecBase.chances.mods.mod_equipment_000 = 60;
-                this.usecBase.chances.mods.mod_equipment = 60;
+                this.usecBase.chances.mods.mod_equipment_000 = 85;
+                this.usecBase.chances.mods.mod_equipment = 85;
             }
             if (helper_1.RaidInfoTracker.mapType === "outdoor") {
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_outdoor;
-                this.usecBase.chances.mods.mod_equipment_000 = 20;
-                this.usecBase.chances.mods.mod_equipment = 20;
+                this.usecBase.chances.mods.mod_equipment_000 = 0;
+                this.usecBase.chances.mods.mod_equipment = 0;
             }
         }
         helper_1.BotTierTracker.usecTier = 3;
@@ -657,10 +667,10 @@ class Bots {
             this.usecBase.chances.mods.mod_equipment = 0;
         }
         else if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
-            this.usecBase.chances.mods.mod_nvg = 50;
+            this.usecBase.chances.mods.mod_nvg = 65;
             this.usecBase.chances.mods.mod_flashlight = 100;
-            this.usecBase.chances.mods.mod_equipment_000 = 50;
-            this.usecBase.chances.mods.mod_equipment = 50;
+            this.usecBase.chances.mods.mod_equipment_000 = 20;
+            this.usecBase.chances.mods.mod_equipment = 20;
         }
         else {
             this.usecBase.chances.mods.mod_nvg = 0;
@@ -701,8 +711,8 @@ class Bots {
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 20;
             this.bearBase.chances.mods.mod_flashlight = 70;
-            this.bearBase.chances.mods.mod_equipment_000 = 0.5;
-            this.bearBase.chances.mods.mod_equipment = 0.5;
+            this.bearBase.chances.mods.mod_equipment_000 = 0;
+            this.bearBase.chances.mods.mod_equipment = 0;
         }
         else if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.bearBase.chances.mods.mod_nvg = 15;
@@ -713,13 +723,16 @@ class Bots {
         else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO1.inventory.FirstPrimaryWeapon_urban;
+                this.bearBase.chances.mods.mod_equipment_000 = 35;
+                this.bearBase.chances.mods.mod_equipment = 35;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO1.inventory.FirstPrimaryWeapon_cqb;
+                this.bearBase.chances.mods.mod_equipment_000 = 50;
+                this.bearBase.chances.mods.mod_equipment = 50;
             }
             if (helper_1.RaidInfoTracker.mapType === "outdoor") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO1.inventory.FirstPrimaryWeapon_outdoor;
+                this.bearBase.chances.mods.mod_equipment_000 = 20;
+                this.bearBase.chances.mods.mod_equipment = 20;
             }
         }
         if (this.modConf.pmc_types == true) {
@@ -744,25 +757,31 @@ class Bots {
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 20;
             this.bearBase.chances.mods.mod_flashlight = 80;
-            this.bearBase.chances.mods.mod_equipment_000 = 0.5;
-            this.bearBase.chances.mods.mod_equipment = 0.5;
+            this.bearBase.chances.mods.mod_equipment_000 = 0;
+            this.bearBase.chances.mods.mod_equipment = 0;
         }
         else if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.bearBase.chances.mods.mod_nvg = 25;
             this.bearBase.chances.mods.mod_flashlight = 60;
-            this.bearBase.chances.mods.mod_equipment_000 = 40;
-            this.bearBase.chances.mods.mod_equipment = 40;
+            this.bearBase.chances.mods.mod_equipment_000 = 20;
+            this.bearBase.chances.mods.mod_equipment = 20;
         }
         else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_urban;
+                this.bearBase.chances.mods.mod_equipment_000 = 45;
+                this.bearBase.chances.mods.mod_equipment = 45;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_cqb;
+                this.bearBase.chances.mods.mod_equipment_000 = 70;
+                this.bearBase.chances.mods.mod_equipment = 70;
             }
             if (helper_1.RaidInfoTracker.mapType === "outdoor") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_outdoor;
+                this.bearBase.chances.mods.mod_equipment_000 = 20;
+                this.bearBase.chances.mods.mod_equipment = 20;
             }
         }
         helper_1.BotTierTracker.bearTier = 2;
@@ -784,26 +803,32 @@ class Bots {
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 40;
             this.bearBase.chances.mods.mod_flashlight = 90;
-            this.bearBase.chances.mods.mod_equipment_000 = 0.5;
-            this.bearBase.chances.mods.mod_equipment = 0.5;
+            this.bearBase.chances.mods.mod_equipment_000 = 0;
+            this.bearBase.chances.mods.mod_equipment = 0;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
         }
         else if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.bearBase.chances.mods.mod_nvg = 50;
             this.bearBase.chances.mods.mod_flashlight = 100;
-            this.bearBase.chances.mods.mod_equipment_000 = 50;
-            this.bearBase.chances.mods.mod_equipment = 50;
+            this.bearBase.chances.mods.mod_equipment_000 = 30;
+            this.bearBase.chances.mods.mod_equipment = 30;
         }
         else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_urban;
+                this.bearBase.chances.mods.mod_equipment_000 = 70;
+                this.bearBase.chances.mods.mod_equipment = 70;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_cqb;
+                this.bearBase.chances.mods.mod_equipment_000 = 100;
+                this.bearBase.chances.mods.mod_equipment = 100;
             }
             if (helper_1.RaidInfoTracker.mapType === "outdoor") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_outdoor;
+                this.bearBase.chances.mods.mod_equipment_000 = 20;
+                this.bearBase.chances.mods.mod_equipment = 20;
             }
         }
         helper_1.BotTierTracker.bearTier = 3;
@@ -825,26 +850,32 @@ class Bots {
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.bearBase.chances.mods.mod_nvg = 40;
             this.bearBase.chances.mods.mod_flashlight = 100;
-            this.bearBase.chances.mods.mod_equipment_000 = 0.5;
-            this.bearBase.chances.mods.mod_equipment = 0.5;
+            this.bearBase.chances.mods.mod_equipment_000 = 0;
+            this.bearBase.chances.mods.mod_equipment = 0;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
         }
         else if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.bearBase.chances.mods.mod_nvg = 50;
             this.bearBase.chances.mods.mod_flashlight = 100;
-            this.bearBase.chances.mods.mod_equipment_000 = 50;
-            this.bearBase.chances.mods.mod_equipment = 50;
+            this.bearBase.chances.mods.mod_equipment_000 = 40;
+            this.bearBase.chances.mods.mod_equipment = 40;
         }
         else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_urban;
+                this.bearBase.chances.mods.mod_equipment_000 = 100;
+                this.bearBase.chances.mods.mod_equipment = 100;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
+                this.bearBase.chances.mods.mod_equipment_000 = 100;
+                this.bearBase.chances.mods.mod_equipment = 100;
             }
             if (helper_1.RaidInfoTracker.mapType === "outdoor") {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
+                this.bearBase.chances.mods.mod_equipment_000 = 20;
+                this.bearBase.chances.mods.mod_equipment = 20;
             }
         }
         helper_1.BotTierTracker.bearTier = 4;
@@ -1493,6 +1524,174 @@ class Bots {
         helper_1.BotTierTracker.goonsTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("goonsLoad3 loaded");
+        }
+    }
+    killaLoad1() {
+        this.killaBase.inventory.Ammo = killaLO.killaLO1.inventory.Ammo;
+        this.killaBase.inventory.equipment = killaLO.killaLO1.inventory.equipment;
+        this.killaBase.inventory.items = killaLO.killaLO1.inventory.items;
+        this.killaBase.inventory.mods = killaLO.killaLO1.inventory.mods;
+        this.killaBase.chances = killaLO.killaLO1.chances;
+        this.killaBase.generation = killaLO.killaLO1.generation;
+        if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.killaBase.chances.mods.mod_flashlight = 60;
+            this.botConf.equipment["bosskilla"].lightLaserIsActiveChancePercent = 100;
+        }
+        if (helper_1.RaidInfoTracker.mapName === "Interchange") {
+            this.botConf.equipment["bosskilla"].lightLaserIsActiveChancePercent = 0;
+        }
+        helper_1.BotTierTracker.killaTier = 1;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("killaLoad1 loaded");
+        }
+    }
+    killaLoad2() {
+        this.killaBase.inventory.Ammo = killaLO.killaLO2.inventory.Ammo;
+        this.killaBase.inventory.equipment = killaLO.killaLO2.inventory.equipment;
+        this.killaBase.inventory.items = killaLO.killaLO2.inventory.items;
+        this.killaBase.inventory.mods = killaLO.killaLO2.inventory.mods;
+        this.killaBase.chances = killaLO.killaLO2.chances;
+        this.killaBase.generation = killaLO.killaLO2.generation;
+        if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.killaBase.chances.mods.mod_flashlight = 60;
+            this.botConf.equipment["bosskilla"].lightLaserIsActiveChancePercent = 50;
+        }
+        if (helper_1.RaidInfoTracker.mapName === "Interchange") {
+            this.botConf.equipment["bosskilla"].lightLaserIsActiveChancePercent = 0;
+        }
+        helper_1.BotTierTracker.killaTier = 2;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("killaLoad2 loaded");
+        }
+    }
+    killaLoad3() {
+        this.killaBase.inventory.Ammo = killaLO.killaLO3.inventory.Ammo;
+        this.killaBase.inventory.equipment = killaLO.killaLO3.inventory.equipment;
+        this.killaBase.inventory.items = killaLO.killaLO3.inventory.items;
+        this.killaBase.inventory.mods = killaLO.killaLO3.inventory.mods;
+        this.killaBase.chances = killaLO.killaLO3.chances;
+        this.killaBase.generation = killaLO.killaLO3.generation;
+        if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.killaBase.chances.mods.mod_flashlight = 60;
+            this.botConf.equipment["bosskilla"].lightLaserIsActiveChancePercent = 25;
+        }
+        if (helper_1.RaidInfoTracker.mapName === "Interchange") {
+            this.botConf.equipment["bosskilla"].lightLaserIsActiveChancePercent = 0;
+        }
+        helper_1.BotTierTracker.killaTier = 3;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("killaLoad3 loaded");
+        }
+    }
+    tagillaLoad1() {
+        this.tagillaBase.inventory.Ammo = tagillaLO.tagillaLO1.inventory.Ammo;
+        this.tagillaBase.inventory.equipment = tagillaLO.tagillaLO1.inventory.equipment;
+        this.tagillaBase.inventory.items = tagillaLO.tagillaLO1.inventory.items;
+        this.tagillaBase.inventory.mods = tagillaLO.tagillaLO1.inventory.mods;
+        this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
+        this.tagillaBase.generation = tagillaLO.tagillaLO1.generation;
+        // this.tagillaBase.appearance = tagillaLO.appearance;
+        let randnum = this.helper.pickRandNumOneInTen();
+        if (randnum >= 8) {
+            this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
+            this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 0;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad3a0c5cb24b0134664a"] = 0;
+            this.tagillaBase.chances.equipment.FaceCover = 0;
+        }
+        else {
+            this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 0;
+            this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 1;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 1;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad3a0c5cb24b0134664a"] = 1;
+        }
+        if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.tagillaBase.chances.mods.mod_flashlight = 60;
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 100;
+        }
+        else if (helper_1.RaidInfoTracker.mapName === "Interchange") {
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 0;
+        }
+        else {
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 100;
+        }
+        helper_1.BotTierTracker.tagillaTier = 1;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("tagillaLoad1 loaded");
+        }
+    }
+    tagillaLoad2() {
+        this.tagillaBase.inventory.Ammo = tagillaLO.tagillaLO2.inventory.Ammo;
+        this.tagillaBase.inventory.equipment = tagillaLO.tagillaLO2.inventory.equipment;
+        this.tagillaBase.inventory.items = tagillaLO.tagillaLO2.inventory.items;
+        this.tagillaBase.inventory.mods = tagillaLO.tagillaLO2.inventory.mods;
+        this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
+        this.tagillaBase.generation = tagillaLO.tagillaLO2.generation;
+        // this.tagillaBase.appearance = tagillaLO.appearance;
+        let randnum = this.helper.pickRandNumOneInTen();
+        if (randnum >= 5) {
+            this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
+            this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 0;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad3a0c5cb24b0134664a"] = 0;
+            this.tagillaBase.chances.equipment.FaceCover = 0;
+        }
+        else {
+            this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 0;
+            this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 1;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 1;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad3a0c5cb24b0134664a"] = 1;
+        }
+        if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.tagillaBase.chances.mods.mod_flashlight = 60;
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 50;
+        }
+        else if (helper_1.RaidInfoTracker.mapName === "Interchange") {
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 0;
+        }
+        else {
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 100;
+        }
+        helper_1.BotTierTracker.tagillaTier = 2;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("tagillaLoad2 loaded");
+        }
+    }
+    tagillaLoad3() {
+        this.tagillaBase.inventory.Ammo = tagillaLO.tagillaLO3.inventory.Ammo;
+        this.tagillaBase.inventory.equipment = tagillaLO.tagillaLO3.inventory.equipment;
+        this.tagillaBase.inventory.items = tagillaLO.tagillaLO3.inventory.items;
+        this.tagillaBase.inventory.mods = tagillaLO.tagillaLO3.inventory.mods;
+        this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
+        this.tagillaBase.generation = tagillaLO.tagillaLO3.generation;
+        // this.tagillaBase.appearance = tagillaLO.appearance;
+        let randnum = this.helper.pickRandNumOneInTen();
+        if (randnum >= 3) {
+            this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
+            this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 0;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad3a0c5cb24b0134664a"] = 0;
+            this.tagillaBase.chances.equipment.FaceCover = 0;
+        }
+        else {
+            this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 0;
+            this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 1;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 1;
+            this.tagillaBase.inventory.equipment.FaceCover["60a7ad3a0c5cb24b0134664a"] = 1;
+        }
+        if (helper_1.RaidInfoTracker.mapNameUnreliable === "factory4_night") {
+            this.tagillaBase.chances.mods.mod_flashlight = 60;
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 25;
+        }
+        else if (helper_1.RaidInfoTracker.mapName === "Interchange") {
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 0;
+        }
+        else {
+            this.botConf.equipment["bosstagilla"].lightLaserIsActiveChancePercent = 100;
+        }
+        helper_1.BotTierTracker.tagillaTier = 3;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("tagillaLoad3 loaded");
         }
     }
 }

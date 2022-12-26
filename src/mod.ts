@@ -90,7 +90,8 @@ import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
 import { SeasonalEventsHandler } from "./seasonalevents";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+
+import { ItemCloning } from "./item_cloning";
 
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -536,7 +537,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig);
         const attachStats = new AttachmentStats(logger, tables, modConfig, arrays);
         const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
-        const items = new _Items(logger, tables, modConfig, jsonUtil, medItems, crafts, inventoryConf);
+        const items = new _Items(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, botHealth);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
@@ -548,6 +549,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Maps(logger, tables, modConfig);
         const gear = new Gear(arrays, tables);
+        const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
 
 
         // codegen.attTemplatesCodeGen();
@@ -559,6 +561,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         codegen.pushWeaponsToServer();
         codegen.pushArmorToServer();
         codegen.descriptionGen();
+
+        if(modConfig.trader_changes == true){
+            itemCloning.createCustomWeapons();
+        }
 
         if (modConfig.armor_mouse_penalty == true) {
             armor.armorMousePenalty();
@@ -605,7 +611,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
         if (modConfig.med_changes == true) {
-            items.createCustomMedItems();
+            itemCloning.createCustomMedItems();
             meds.loadMeds();
             bots.botMeds();
         }
@@ -741,6 +747,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         this.setBotTier(pmcData, "raider", bots, helper);
         this.setBotTier(pmcData, "rogue", bots, helper);
         this.setBotTier(pmcData, "goons", bots, helper);
+        this.setBotTier(pmcData, "killa", bots, helper);
+        this.setBotTier(pmcData, "tagilla", bots, helper);
     }
 
     private setBotTier(pmcData: IPmcData, type: string, bots: Bots, helper: Helper) {
@@ -769,6 +777,35 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
         if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 40]);
+        }
+
+        if (type === "tagilla") {
+            if (tier == 1) {
+                bots.tagillaLoad1();
+            }
+            if (tier == 2) {
+                bots.tagillaLoad2();
+            }
+            if (tier == 3) {
+                bots.tagillaLoad2();
+            }
+            if (tier == 4) {
+                bots.tagillaLoad3();
+            }
+        }
+        if (type === "killa") {
+            if (tier == 1) {
+                bots.killaLoad1();
+            }
+            if (tier == 2) {
+                bots.killaLoad2();
+            }
+            if (tier == 3) {
+                bots.killaLoad2();
+            }
+            if (tier == 4) {
+                bots.killaLoad3();
+            }
         }
         if (type === "goons") {
             if (tier == 1) {

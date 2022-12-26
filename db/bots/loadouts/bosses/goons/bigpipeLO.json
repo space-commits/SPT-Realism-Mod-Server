@@ -142,37 +142,37 @@
                         "5a398b75c4a282000a51a266"
                     ]
                 }
-            },
-            "generation": {
-                "items": {
-                    "drugs": {
-                        "max": 2,
-                        "min": 1
-                    },
-                    "grenades": {
-                        "max": 2,
-                        "min": 1
-                    },
-                    "healing": {
-                        "max": 2,
-                        "min": 1
-                    },
-                    "looseLoot": {
-                        "max": 6,
-                        "min": 2
-                    },
-                    "magazines": {
-                        "max": 5,
-                        "min": 3
-                    },
-                    "specialItems": {
-                        "max": 1,
-                        "min": 1
-                    },
-                    "stims": {
-                        "max": 1,
-                        "min": 1
-                    }
+            }
+        },
+        "generation": {
+            "items": {
+                "drugs": {
+                    "max": 2,
+                    "min": 1
+                },
+                "grenades": {
+                    "max": 2,
+                    "min": 1
+                },
+                "healing": {
+                    "max": 2,
+                    "min": 1
+                },
+                "looseLoot": {
+                    "max": 6,
+                    "min": 2
+                },
+                "magazines": {
+                    "max": 5,
+                    "min": 3
+                },
+                "specialItems": {
+                    "max": 1,
+                    "min": 1
+                },
+                "stims": {
+                    "max": 1,
+                    "min": 1
                 }
             }
         },

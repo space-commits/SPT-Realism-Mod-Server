@@ -146,13 +146,26 @@ export class Traders {
     }
 
     public addItemsToAssorts() {
-        //therapist
+        //therapist//
         if (this.modConf.med_changes == true) {
             this.assortItemPusher(theraId, "TIER1MEDKIT", 1, "5449016a4bdc2d6f028b456f", 1, false, 25000);
             this.assortItemPusher(theraId, "TIER2MEDKIT", 1, "5449016a4bdc2d6f028b456f", 3, false, 50000);
             this.assortItemPusher(theraId, "TIER3MEDKIT", 1, "5449016a4bdc2d6f028b456f", 4, false, 75000);
         }
 
+        //ragman//
+        this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
+        this.assortNestedItemPusher(ragmId, "5e00c1ad86f774747333222c", { "5e01f31d86f77465cf261343": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 5, true, undefined, 1.25, {"5c0558060db834001b735271": "mod_nvg"});
+        this.assortNestedItemPusher(ragmId, "5ea05cf85ad9772e6624305d", { "5a16badafcdbcb001865f72d": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 1, true, undefined, 1.25, {"5ea058e01dbce517f324b3e2": "mod_nvg"});
+        this.assortNestedItemPusher(ragmId, "5aa7cfc0e5b5b00015693143", { "5a16b8a9fcdbcb00165aa6ca": "mod_nvg", "5a16b93dfcdbcbcae6687261" : "mod_nvg", "57235b6f24597759bf5a30f1": "mod_nvg"}, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.3);
+
+        //mechanic//
+        //guns
+        this.assortItemPusher(mechId, "mechOPSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+        this.assortItemPusher(mechId, "mechSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
+        this.assortItemPusher(mechId, "mechSTM9v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 20000);
+
+        //scopes
         this.assortNestedItemPusher(mechId, "616584766ef05c2ce828ef57", { "5c7d560b2e22160bc12c6139": "mod_scope", "5c7d55de2e221644f31bff68": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25);
         this.assortNestedItemPusher(mechId, "58d39d3d86f77445bb794ae7", { "58d39b0386f77443380bf13c": "mod_scope", "58d399e486f77442e0016fe7": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
         this.assortNestedItemPusher(mechId, "58d39d3d86f77445bb794ae7", { "58d399e486f77442e0016fe7": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.1);
@@ -192,6 +205,7 @@ export class Traders {
 
         this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
 
+
         for (let key in nestedChildItems) {
             let id = this.helper.genId();
             assort.items.push(
@@ -221,12 +235,12 @@ export class Traders {
         }
     }
 
-    private assortItemPusher(trader: string, itemId: string, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbook: boolean, price: number = 0, priceMulti: number = 1) {
+    private assortItemPusher(trader: string, itemId: string, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbookPrice: boolean, price: number = 0, priceMulti: number = 1) {
 
         let assort = this.tables.traders[trader].assort;
         let assortId = this.helper.genId();
 
-        if (useHandbook == true) {
+        if (useHandbookPrice == true) {
             for (let i in this.tables.templates.handbook.Items) {
                 if (this.tables.templates.handbook.Items[i].Id === itemId) {
                     price = this.tables.templates.handbook.Items[i].Price;
@@ -442,14 +456,13 @@ export class RandomizeTraderAssort {
         for (let scheme in this.tables.traders[trader].assort.barter_scheme) {
             let barter = this.tables.traders[trader].assort.barter_scheme[scheme];
             if (this.itemDB[barter[0][0]._tpl]._parent === ParentClasses.MONEY) {
-                if (EventTracker.isChristmas != true) {
-                    if (randNum >= 8) {
-                        barter[0][0].count *= 1.1;
-                    }
-                    if (randNum <= 3) {
-                        barter[0][0].count *= 0.9;
-                    }
-                } else {
+                if (randNum >= 8) {
+                    barter[0][0].count *= 1.1;
+                }
+                if (randNum <= 3) {
+                    barter[0][0].count *= 0.9;
+                }
+                if (EventTracker.isChristmas == true) {
                     barter[0][0].count *= 0.7;
                 }
 

@@ -133,6 +133,9 @@ export class BotTierTracker {
     static rogueTier: number = 1;
     static raiderTier: number = 1;
     static goonsTier: number = 1;
+    static killaTier: number = 1;
+    static tagillaTier: number = 1;
+
 
     public getTier(botType: string): number {
         if (botType === "sptusec") {
@@ -152,6 +155,12 @@ export class BotTierTracker {
         }
         if(botType === "bossknight" || botType === "followerbigpipe" || botType === "followerbirdeye"){
             return BotTierTracker.goonsTier;
+        }
+        if (botType === "bosskilla") {
+            return BotTierTracker.killaTier;
+        }
+        if (botType === "bosstagilla") {
+            return BotTierTracker.tagillaTier;
         }
     }
 }

@@ -1,0 +1,663 @@
+{
+    "killaLO1": {
+        "inventory": {
+            "Ammo": {
+                "Caliber545x39": {
+                    "5c0d5e4486f77478390952fe": 1,
+                    "56dff026d2720bb8668b4567": 2,
+                    "56dff061d2720bb5668b4567": 4,
+                    "56dfef82d2720bbd668b4567": 4,
+                    "56dff421d2720b5f5a8b4567": 4,
+                    "56dff216d2720bbd668b4568": 4
+                },
+                "Caliber762x25TT": {
+                    "5735ff5c245977640e39ba7e": 1,
+                    "573601b42459776410737435": 1,
+                    "5735fdcd2459776445391d61": 1,
+                    "573602322459776445391df1": 1,
+                    "5736026a245977644601dc61": 1,
+                    "573603562459776430731618": 1,
+                    "573603c924597764442bd9cb": 10
+                },
+                "Caliber762x39": {
+                    "59e4cf5286f7741778269d8a": 10,
+                    "5656d7c34bdc2d9d198b4587": 5,
+                    "59e4d3d286f774176a36250a": 5,
+                    "59e0d99486f7744a32234762": 1,
+                    "601aa3d2b2bcb34913271e6d": 0
+                },
+                "Caliber9x19PARA": {
+                    "5efb0da7a29a85116f6ea05f": 2,
+                    "56d59d3ad2720bdb418b4577": 5,
+                    "5efb0e16aeb21837e749c7ff": 4,
+                    "5c0d56a986f774449d5de529": 4,
+                    "5a3c16fe86f77452b62de32a": 4
+                },
+                "Caliber1143x23ACP": {
+                    "5efb0cabfb3e451d70735af5": 1,
+                    "5efb0fc6aeb21837e749c801": 1,
+                    "5efb0d4f4bc50b58e81710f3": 1,
+                    "5ea2a8e200685063ec28c05a": 1,
+                    "5e81f423763d9f754677bf2e": 1
+                }
+            },
+            "equipment": {
+                "ArmBand": {},
+                "ArmorVest": {
+                    "5c0e541586f7747fa54205c9": 1
+                },
+                "Backpack": {},
+                "Earpiece": {},
+                "Eyewear": {},
+                "FaceCover": {},
+                "FirstPrimaryWeapon": {
+                    "59984ab886f7743e98271174": 5,
+                    "5abcbc27d8ce8700182eceeb": 5,
+                    "5beed0f50db834001c062b12": 0,
+                    "5ea03f7400685063ec28bfa8": 2
+                },
+                "Headwear": {
+                    "5c0e874186f7745dc7616606": 1
+                },
+                "Holster": {
+                    "571a12c42459771f627b58a0": 2,
+                    "6193a720f8ee7e52e42109ed": 0,
+                    "5a7ae0c351dfba0017554310": 1,
+                    "5b1fa9b25acfc40018633c01": 0
+                },
+                "Pockets": {
+                    "5af99e9186f7747c447120b8": 1
+                },
+                "Scabbard": {
+                    "5bffdc370db834001d23eca8": 1
+                },
+                "SecondPrimaryWeapon": {},
+                "SecuredContainer": {
+                    "5c0a794586f77461c458f892": 1
+                },
+                "TacticalVest": {
+                    "5c0e9f2c86f77432297fe0a3": 2,
+                    "5ca20abf86f77418567a43f2": 1
+                }
+            },
+            "items": {
+                "Backpack": [],
+                "Pockets": [
+                    "5c94bbff86f7747ee735c08f",
+                    "5c1f79a086f7746ed066fb8f",
+                    "5c1d0d6d86f7744bb2683e1f",
+                    "5e42c81886f7742a01529f57",
+                    "5e42c83786f7742a021fdf3c",
+                    "5e42c71586f7747f245e1343",
+                    "5ad7247386f7747487619dc3",
+                    "5fd4c4fa16cac650092f6771",
+                    "5fd4c4fa16cac650092f6771",
+                    "5ad5db3786f7743568421cce",
+                    "5ad5d7d286f77450166e0a89",
+                    "5addaffe86f77470b455f900",
+                    "5ad5d64486f774079b080af8",
+                    "5ad5d49886f77455f9731921",
+                    "5ad5d20586f77449be26d877",
+                    "5ad5cfbd86f7742c825d6104",
+                    "5ad5ccd186f774446d5706e9",
+                    "5448ba0b4bdc2d02308b456c",
+                    "5d235a5986f77443f6329bc6",
+                    "5734758f24597738025ee253",
+                    "59faf7ca86f7740dbe19f6c2",
+                    "5bc9b720d4351e450201234b",
+                    "573474f924597738002c6174",
+                    "5c1267ee86f77416ec610f72",
+                    "5d1b3a5d86f774252167ba22",
+                    "5d1b3f2d86f774253763b735",
+                    "544fb37f4bdc2dee738b4567",
+                    "5755383e24597772cb798966",
+                    "5751a89d24597722aa0e8db0",
+                    "5af0548586f7743a532b7e99",
+                    "544fb3f34bdc2d03748b456a",
+                    "5e831507ea0a7c419c2f9bd9",
+                    "5751a25924597722c463c472",
+                    "5755356824597772cb798962",
+                    "544fb45d4bdc2dee738b4568",
+                    "5ed515e03a40a50460332579",
+                    "5ed5160a87bb8443d10680b5",
+                    "5c10c8fd86f7743d7d706df3",
+                    "5c0e531286f7747fa54205c2",
+                    "5751435d24597720a27126d1",
+                    "544fb6cc4bdc2d34748b456e"
+                ],
+                "SecuredContainer": [],
+                "SpecialLoot": [],
+                "TacticalVest": [
+                    "5710c24ad2720bc3458b45a3",
+                    "5a0c27731526d80618476ac4",
+                    "5e32f56fcb6d5863cc5e5ee4",
+                    "5e340dcdcb6d5863cc5e5efb"
+                ]
+            },
+            "mods": {
+                "5c0e874186f7745dc7616606": {
+                    "mod_equipment": [
+                      "5c0e842486f77443a74d2976"
+                    ]
+                  }
+            }
+        },
+        "generation": {
+            "items": {
+                "drugs": {
+                    "max": 1,
+                    "min": 1
+                },
+                "grenades": {
+                    "max": 1,
+                    "min": 1
+                },
+                "healing": {
+                    "max": 1,
+                    "min": 1
+                },
+                "looseLoot": {
+                    "max": 4,
+                    "min": 2
+                },
+                "magazines": {
+                    "max": 4,
+                    "min": 3
+                },
+                "specialItems": {
+                    "max": 0,
+                    "min": 0
+                },
+                "stims": {
+                    "max": 1,
+                    "min": 1
+                }
+            }
+        },
+        "chances": {
+            "equipment": {
+                "ArmBand": 0,
+                "ArmorVest": 100,
+                "Backpack": 0,
+                "Earpiece": 0,
+                "Eyewear": 0,
+                "FaceCover": 0,
+                "FirstPrimaryWeapon": 100,
+                "Headwear": 100,
+                "Holster": 50,
+                "Pockets": 100,
+                "Scabbard": 100,
+                "SecondPrimaryWeapon": 0,
+                "SecuredContainer": 100,
+                "TacticalVest": 100
+            },
+            "mods": {
+                "mod_charge": 13,
+                "mod_equipment": 100,
+                "mod_foregrip": 8,
+                "mod_launcher": 0,
+                "mod_magazine": 100,
+                "mod_mount": 0,
+                "mod_mount_000": 100,
+                "mod_mount_001": 83,
+                "mod_mount_002": 0,
+                "mod_mount_003": 100,
+                "mod_muzzle": 92,
+                "mod_reciever": 100,
+                "mod_scope": 39,
+                "mod_sight_front": 0,
+                "mod_sight_rear": 53,
+                "mod_stock": 100,
+                "mod_stock_001": 100,
+                "mod_stock_akms": 100,
+                "mod_tactical": 84,
+                "mod_tactical_000": 0
+            }
+        }
+    },
+    "killaLO2": {
+        "inventory": {
+            "Ammo": {
+                "Caliber545x39": {
+                    "5c0d5e4486f77478390952fe": 1,
+                    "56dff026d2720bb8668b4567": 4,
+                    "56dff061d2720bb5668b4567": 4,
+                    "56dfef82d2720bbd668b4567": 4,
+                    "56dff421d2720b5f5a8b4567": 4,
+                    "56dff216d2720bbd668b4568": 4
+                },
+                "Caliber762x25TT": {
+                    "5735ff5c245977640e39ba7e": 1,
+                    "573601b42459776410737435": 1,
+                    "5735fdcd2459776445391d61": 1,
+                    "573602322459776445391df1": 1,
+                    "5736026a245977644601dc61": 1,
+                    "573603562459776430731618": 1,
+                    "573603c924597764442bd9cb": 10
+                },
+                "Caliber762x39": {
+                    "59e4cf5286f7741778269d8a": 2,
+                    "5656d7c34bdc2d9d198b4587": 5,
+                    "59e4d3d286f774176a36250a": 5,
+                    "59e0d99486f7744a32234762": 2,
+                    "601aa3d2b2bcb34913271e6d": 0
+                },
+                "Caliber9x19PARA": {
+                    "5efb0da7a29a85116f6ea05f": 3,
+                    "56d59d3ad2720bdb418b4577": 6,
+                    "5efb0e16aeb21837e749c7ff": 4,
+                    "5c0d56a986f774449d5de529": 4,
+                    "5a3c16fe86f77452b62de32a": 4
+                },
+                "Caliber1143x23ACP": {
+                    "5efb0cabfb3e451d70735af5": 1,
+                    "5efb0fc6aeb21837e749c801": 1,
+                    "5efb0d4f4bc50b58e81710f3": 1,
+                    "5ea2a8e200685063ec28c05a": 1,
+                    "5e81f423763d9f754677bf2e": 1
+                }
+            },
+            "equipment": {
+                "ArmBand": {},
+                "ArmorVest": {
+                    "5c0e541586f7747fa54205c9": 1
+                },
+                "Backpack": {},
+                "Earpiece": {},
+                "Eyewear": {},
+                "FaceCover": {},
+                "FirstPrimaryWeapon": {
+                    "59984ab886f7743e98271174": 5,
+                    "5abcbc27d8ce8700182eceeb": 5,
+                    "5beed0f50db834001c062b12": 5,
+                    "5ea03f7400685063ec28bfa8": 1
+                },
+                "Headwear": {
+                    "5c0e874186f7745dc7616606": 1
+                },
+                "Holster": {
+                    "571a12c42459771f627b58a0": 5,
+                    "6193a720f8ee7e52e42109ed": 1,
+                    "5a7ae0c351dfba0017554310": 10,
+                    "5b1fa9b25acfc40018633c01": 1
+                },
+                "Pockets": {
+                    "5af99e9186f7747c447120b8": 1
+                },
+                "Scabbard": {
+                    "5bffdc370db834001d23eca8": 1
+                },
+                "SecondPrimaryWeapon": {},
+                "SecuredContainer": {
+                    "5c0a794586f77461c458f892": 1
+                },
+                "TacticalVest": {
+                    "5c0e9f2c86f77432297fe0a3": 2,
+                    "5ca20abf86f77418567a43f2": 1
+                }
+            },
+            "items": {
+                "Backpack": [],
+                "Pockets": [
+                    "5c94bbff86f7747ee735c08f",
+                    "5c1f79a086f7746ed066fb8f",
+                    "5c1d0d6d86f7744bb2683e1f",
+                    "5c1e495a86f7743109743dfb",
+                    "5e42c81886f7742a01529f57",
+                    "5e42c83786f7742a021fdf3c",
+                    "5e42c71586f7747f245e1343",
+                    "5ad7247386f7747487619dc3",
+                    "5fd4c4fa16cac650092f6771",
+                    "5fd4c4fa16cac650092f6771",
+                    "5ad5db3786f7743568421cce",
+                    "5ad5d7d286f77450166e0a89",
+                    "5addaffe86f77470b455f900",
+                    "5ad5d64486f774079b080af8",
+                    "5ad5d49886f77455f9731921",
+                    "5ad5d20586f77449be26d877",
+                    "5ad5cfbd86f7742c825d6104",
+                    "5ad5ccd186f774446d5706e9",
+                    "5448ba0b4bdc2d02308b456c",
+                    "5d235a5986f77443f6329bc6",
+                    "5734758f24597738025ee253",
+                    "59faf7ca86f7740dbe19f6c2",
+                    "5bc9b720d4351e450201234b",
+                    "573474f924597738002c6174",
+                    "5c1267ee86f77416ec610f72",
+                    "5d1b3a5d86f774252167ba22",
+                    "5d1b3f2d86f774253763b735",
+                    "544fb37f4bdc2dee738b4567",
+                    "5755383e24597772cb798966",
+                    "5751a89d24597722aa0e8db0",
+                    "5af0548586f7743a532b7e99",
+                    "544fb3f34bdc2d03748b456a",
+                    "60098af40accd37ef2175f27",
+                    "5e831507ea0a7c419c2f9bd9",
+                    "5751a25924597722c463c472",
+                    "5755356824597772cb798962",
+                    "544fb45d4bdc2dee738b4568",
+                    "5ed515e03a40a50460332579",
+                    "5ed5160a87bb8443d10680b5",
+                    "5c10c8fd86f7743d7d706df3",
+                    "5c0e531286f7747fa54205c2",
+                    "5c0e531d86f7747fa23f4d42",
+                    "5ed515c8d380ab312177c0fa",
+                    "5751435d24597720a27126d1",
+                    "544fb6cc4bdc2d34748b456e"
+                ],
+                "SecuredContainer": [],
+                "SpecialLoot": [],
+                "TacticalVest": [
+                    "5710c24ad2720bc3458b45a3",
+                    "5a0c27731526d80618476ac4",
+                    "5e32f56fcb6d5863cc5e5ee4",
+                    "5e340dcdcb6d5863cc5e5efb"
+                ]
+            },
+            "mods": {
+                "5c0e874186f7745dc7616606": {
+                    "mod_equipment": [
+                      "5c0e842486f77443a74d2976"
+                    ]
+                  }
+            }
+        },
+        "generation": {
+            "items": {
+                "drugs": {
+                    "max": 1,
+                    "min": 1
+                },
+                "grenades": {
+                    "max": 2,
+                    "min": 1
+                },
+                "healing": {
+                    "max": 1,
+                    "min": 1
+                },
+                "looseLoot": {
+                    "max": 5,
+                    "min": 2
+                },
+                "magazines": {
+                    "max": 5,
+                    "min": 3
+                },
+                "specialItems": {
+                    "max": 0,
+                    "min": 0
+                },
+                "stims": {
+                    "max": 2,
+                    "min": 1
+                }
+            }
+        },
+        "chances": {
+            "equipment": {
+                "ArmBand": 0,
+                "ArmorVest": 100,
+                "Backpack": 0,
+                "Earpiece": 0,
+                "Eyewear": 0,
+                "FaceCover": 0,
+                "FirstPrimaryWeapon": 100,
+                "Headwear": 100,
+                "Holster": 50,
+                "Pockets": 100,
+                "Scabbard": 100,
+                "SecondPrimaryWeapon": 0,
+                "SecuredContainer": 100,
+                "TacticalVest": 100
+            },
+            "mods": {
+                "mod_charge": 13,
+                "mod_equipment": 100,
+                "mod_foregrip": 8,
+                "mod_launcher": 0,
+                "mod_magazine": 100,
+                "mod_mount": 0,
+                "mod_mount_000": 100,
+                "mod_mount_001": 83,
+                "mod_mount_002": 0,
+                "mod_mount_003": 100,
+                "mod_muzzle": 92,
+                "mod_reciever": 100,
+                "mod_scope": 39,
+                "mod_sight_front": 0,
+                "mod_sight_rear": 53,
+                "mod_stock": 100,
+                "mod_stock_001": 100,
+                "mod_stock_akms": 100,
+                "mod_tactical": 84,
+                "mod_tactical_000": 0
+            }
+        }
+    },
+    "killaLO3": {
+        "inventory": {
+            "Ammo": {
+                "Caliber545x39": {
+                    "5c0d5e4486f77478390952fe": 2,
+                    "56dff026d2720bb8668b4567": 6,
+                    "56dff061d2720bb5668b4567": 4,
+                    "56dfef82d2720bbd668b4567": 4,
+                    "56dff421d2720b5f5a8b4567": 1,
+                    "56dff216d2720bbd668b4568": 1
+                },
+                "Caliber762x25TT": {
+                    "5735ff5c245977640e39ba7e": 1,
+                    "573601b42459776410737435": 1,
+                    "5735fdcd2459776445391d61": 1,
+                    "573602322459776445391df1": 1,
+                    "5736026a245977644601dc61": 1,
+                    "573603562459776430731618": 1,
+                    "573603c924597764442bd9cb": 10
+                },
+                "Caliber762x39": {
+                    "59e4cf5286f7741778269d8a": 1,
+                    "5656d7c34bdc2d9d198b4587": 10,
+                    "59e4d3d286f774176a36250a": 5,
+                    "59e0d99486f7744a32234762": 5,
+                    "601aa3d2b2bcb34913271e6d": 1
+                },
+                "Caliber9x19PARA": {
+                    "5efb0da7a29a85116f6ea05f": 6,
+                    "56d59d3ad2720bdb418b4577": 10,
+                    "5efb0e16aeb21837e749c7ff": 4,
+                    "5c0d56a986f774449d5de529": 4,
+                    "5a3c16fe86f77452b62de32a": 4
+                },
+                "Caliber1143x23ACP": {
+                    "5efb0cabfb3e451d70735af5": 5,
+                    "5efb0fc6aeb21837e749c801": 1,
+                    "5efb0d4f4bc50b58e81710f3": 1,
+                    "5ea2a8e200685063ec28c05a": 1,
+                    "5e81f423763d9f754677bf2e": 1
+                }
+            },
+            "equipment": {
+                "ArmBand": {},
+                "ArmorVest": {
+                    "5c0e541586f7747fa54205c9": 1
+                },
+                "Backpack": {},
+                "Earpiece": {},
+                "Eyewear": {},
+                "FaceCover": {},
+                "FirstPrimaryWeapon": {
+                    "59984ab886f7743e98271174": 5,
+                    "5abcbc27d8ce8700182eceeb": 5,
+                    "5beed0f50db834001c062b12": 15,
+                    "5ea03f7400685063ec28bfa8": 1
+                },
+                "Headwear": {
+                    "5c0e874186f7745dc7616606": 1
+                },
+                "Holster": {
+                    "571a12c42459771f627b58a0": 1,
+                    "6193a720f8ee7e52e42109ed": 5,
+                    "5a7ae0c351dfba0017554310": 10,
+                    "5b1fa9b25acfc40018633c01": 5
+                },
+                "Pockets": {
+                    "5af99e9186f7747c447120b8": 1
+                },
+                "Scabbard": {
+                    "5bffdc370db834001d23eca8": 1
+                },
+                "SecondPrimaryWeapon": {},
+                "SecuredContainer": {
+                    "5c0a794586f77461c458f892": 1
+                },
+                "TacticalVest": {
+                    "5c0e9f2c86f77432297fe0a3": 3,
+                    "5ca20abf86f77418567a43f2": 1
+                }
+            },
+            "items": {
+                "Backpack": [],
+                "Pockets": [
+                    "5c94bbff86f7747ee735c08f",
+                    "5c1f79a086f7746ed066fb8f",
+                    "5c1d0d6d86f7744bb2683e1f",
+                    "5c1e495a86f7743109743dfb",
+                    "5c1d0efb86f7744baf2e7b7b",
+                    "5e42c81886f7742a01529f57",
+                    "5e42c83786f7742a021fdf3c",
+                    "5e42c71586f7747f245e1343",
+                    "5ad7247386f7747487619dc3",
+                    "5fd4c4fa16cac650092f6771",
+                    "5fd4c4fa16cac650092f6771",
+                    "5ad5db3786f7743568421cce",
+                    "5ad5d7d286f77450166e0a89",
+                    "5addaffe86f77470b455f900",
+                    "5ad5d64486f774079b080af8",
+                    "5ad5d49886f77455f9731921",
+                    "5ad5d20586f77449be26d877",
+                    "5ad5cfbd86f7742c825d6104",
+                    "5ad5ccd186f774446d5706e9",
+                    "5448ba0b4bdc2d02308b456c",
+                    "5d235a5986f77443f6329bc6",
+                    "5734758f24597738025ee253",
+                    "59faf7ca86f7740dbe19f6c2",
+                    "5bc9b720d4351e450201234b",
+                    "573474f924597738002c6174",
+                    "5c1267ee86f77416ec610f72",
+                    "5d1b3a5d86f774252167ba22",
+                    "5d1b3f2d86f774253763b735",
+                    "544fb37f4bdc2dee738b4567",
+                    "5755383e24597772cb798966",
+                    "5751a89d24597722aa0e8db0",
+                    "5af0548586f7743a532b7e99",
+                    "544fb3f34bdc2d03748b456a",
+                    "5e8488fa988a8701445df1e4",
+                    "60098af40accd37ef2175f27",
+                    "5e831507ea0a7c419c2f9bd9",
+                    "5751a25924597722c463c472",
+                    "5755356824597772cb798962",
+                    "60098ad7c2240c0fe85c570a",
+                    "544fb45d4bdc2dee738b4568",
+                    "5ed515e03a40a50460332579",
+                    "5ed5160a87bb8443d10680b5",
+                    "5c10c8fd86f7743d7d706df3",
+                    "5c0e534186f7747fa1419867",
+                    "5c0e531286f7747fa54205c2",
+                    "5c0e531d86f7747fa23f4d42",
+                    "5ed515c8d380ab312177c0fa",
+                    "5c0e533786f7747fa23f4d47",
+                    "5751435d24597720a27126d1",
+                    "544fb6cc4bdc2d34748b456e"
+                ],
+                "SecuredContainer": [],
+                "SpecialLoot": [],
+                "TacticalVest": [
+                    "5710c24ad2720bc3458b45a3",
+                    "5a0c27731526d80618476ac4",
+                    "5e32f56fcb6d5863cc5e5ee4",
+                    "5e340dcdcb6d5863cc5e5efb"
+                ]
+            },
+            "mods": {
+                "5c0e874186f7745dc7616606": {
+                    "mod_equipment": [
+                      "5c0e842486f77443a74d2976"
+                    ]
+                  }
+            }
+        },
+        "generation": {
+            "items": {
+                "drugs": {
+                    "max": 1,
+                    "min": 1
+                },
+                "grenades": {
+                    "max": 3,
+                    "min": 1
+                },
+                "healing": {
+                    "max": 1,
+                    "min": 1
+                },
+                "looseLoot": {
+                    "max": 6,
+                    "min": 2
+                },
+                "magazines": {
+                    "max": 6,
+                    "min": 3
+                },
+                "specialItems": {
+                    "max": 0,
+                    "min": 0
+                },
+                "stims": {
+                    "max": 3,
+                    "min": 1
+                }
+            }
+        },
+        "chances": {
+            "equipment": {
+                "ArmBand": 0,
+                "ArmorVest": 100,
+                "Backpack": 0,
+                "Earpiece": 0,
+                "Eyewear": 0,
+                "FaceCover": 0,
+                "FirstPrimaryWeapon": 100,
+                "Headwear": 100,
+                "Holster": 50,
+                "Pockets": 100,
+                "Scabbard": 50,
+                "SecondPrimaryWeapon": 0,
+                "SecuredContainer": 100,
+                "TacticalVest": 100
+            },
+            "mods": {
+                "mod_charge": 13,
+                "mod_equipment": 100,
+                "mod_foregrip": 8,
+                "mod_launcher": 0,
+                "mod_magazine": 100,
+                "mod_mount": 0,
+                "mod_mount_000": 100,
+                "mod_mount_001": 83,
+                "mod_mount_002": 0,
+                "mod_mount_003": 100,
+                "mod_muzzle": 92,
+                "mod_reciever": 100,
+                "mod_scope": 39,
+                "mod_sight_front": 0,
+                "mod_sight_rear": 53,
+                "mod_stock": 100,
+                "mod_stock_001": 100,
+                "mod_stock_akms": 100,
+                "mod_tactical": 84,
+                "mod_tactical_000": 0
+            }
+        }
+    }
+}

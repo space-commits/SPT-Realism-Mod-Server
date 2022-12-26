@@ -70,7 +70,7 @@
         "Weight": 1.1,
         "DurabilityBurnRatio": 0.35,
         "AutoROF": 30,
-        "SemiROF": 450,
+        "SemiROF": 290,
         "DoubleActionAccuracyPenalty": 1.1,
         "LoyaltyLevel": 1
     },
@@ -108,7 +108,7 @@
         "Weight": 3.5,
         "DurabilityBurnRatio": 0.5,
         "AutoROF": 900,
-        "SemiROF": 450,
+        "SemiROF": 300,
         "LoyaltyLevel": 1
     },
     "54491c4f4bdc2db1078b4568": {
@@ -293,7 +293,7 @@
         "Weight": 1.2,
         "DurabilityBurnRatio": 0.3,
         "AutoROF": 40,
-        "SemiROF": 325,
+        "SemiROF": 320,
         "LoyaltyLevel": 3
     },
     "606dae0ab0e443224b421bb7": {
@@ -330,7 +330,7 @@
         "Weight": 1.1,
         "DurabilityBurnRatio": 0.32,
         "AutoROF": 40,
-        "SemiROF": 300,
+        "SemiROF": 330,
         "LoyaltyLevel": 2
     },
     "6259b864ebedf17603599e88": {
@@ -367,7 +367,7 @@
         "Weight": 1.22,
         "DurabilityBurnRatio": 1.15,
         "AutoROF": 60,
-        "SemiROF": 350,
+        "SemiROF": 370,
         "LoyaltyLevel": 4
     },
     "576165642459773c7a400233": {
@@ -404,7 +404,7 @@
         "Weight": 2.622,
         "DurabilityBurnRatio": 0.35,
         "AutoROF": 40,
-        "SemiROF": 285,
+        "SemiROF": 300,
         "LoyaltyLevel": 3
     }
 }
