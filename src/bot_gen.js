@@ -9,6 +9,7 @@ const BotGeneratorHelper_1 = require("C:/snapshot/project/obj/helpers/BotGenerat
 const BotLevelGenerator_1 = require("C:/snapshot/project/obj/generators/BotLevelGenerator");
 const InventoryMagGen_1 = require("C:/snapshot/project/obj/generators/weapongen/InventoryMagGen");
 const enums_1 = require("./enums");
+const modConfig = require("../config/config.json");
 class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
     genBotLvl(levelDetails, botGenerationDetails, bot) {
         const expTable = this.databaseServer.getTables().globals.config.exp.level.exp_table;
@@ -134,9 +135,11 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     getPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole) {
         const tierChecker = new helper_1.BotTierTracker();
         const tier = tierChecker.getTier(botRole);
-        // this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
-        // this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
-        this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
+        if (modConfig.logEverything == true) {
+            this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
+            this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
+            this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
+        }
         var weaponMods = [];
         var weaponPresets = [];
         try {
@@ -148,7 +151,9 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                     let pTierNum = Number(presetTier);
                     if (pTierNum <= tier) {
                         weaponPresets.push(presetFile[presetObj]);
-                        this.logger.warning(`Found A Preset Within Tier`);
+                        if (modConfig.logEverything == true) {
+                            this.logger.warning(`Found A Preset Within Tier`);
+                        }
                     }
                 }
             }
@@ -156,17 +161,25 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                 for (let presetObj in presetFile) {
                     if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                         weaponPresets.push(presetFile[presetObj]);
-                        this.logger.warning(`Found a preset outside of tier`);
+                        if (modConfig.logEverything == true) {
+                            this.logger.warning(`Found a preset outside of tier`);
+                        }
                     }
                 }
             }
-            this.logger.warning("Choices:");
+            if (modConfig.logEverything == true) {
+                this.logger.warning("Choices:");
+            }
             for (let i in weaponPresets) {
-                this.logger.warning(weaponPresets[i]._name);
+                if (modConfig.logEverything == true) {
+                    this.logger.warning(weaponPresets[i]._name);
+                }
             }
             let randomPreset = weaponPresets[Math.floor(Math.random() * weaponPresets.length)];
-            this.logger.warning("Chose:");
-            this.logger.warning(randomPreset._name);
+            if (modConfig.logEverything == true) {
+                this.logger.warning("Chose:");
+                this.logger.warning(randomPreset._name);
+            }
             preset = this.jsonUtil.clone(randomPreset);
             if (preset) {
                 const parentItem = preset._items[0];

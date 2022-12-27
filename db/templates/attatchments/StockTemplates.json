@@ -679,7 +679,7 @@
         "HasShoulderContact": false,
         "BlocksFolding": false,
         "AutoROF": -5,
-        "SemiROF": -15,
+        "SemiROF": -10,
         "ModMalfunctionChance": 5,
         "StockAllowADS": false,
         "ConflictingItems": [],

@@ -26,6 +26,8 @@ import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDeta
 import { InventoryMagGen } from "@spt-aki/generators/weapongen/InventoryMagGen";
 import { ParentClasses } from "./enums";
 
+const modConfig = require("../config/config.json");
+
 export class GenBotLvl extends BotLevelGenerator {
 
     public genBotLvl(levelDetails: MinMax, botGenerationDetails: BotGenerationDetails, bot: IBotBase): IRandomisedBotLevelResult {
@@ -66,9 +68,9 @@ export class BotWepGen extends BotWeaponGenerator {
         const ammoTpl = generatedWeaponResult.chosenAmmo;
         const magazineTpl = this.getMagazineTplFromWeaponTemplate(weaponMods, weaponTemplate, botRole);
 
-        if(weaponTemplate._props.weapClass === ParentClasses.PISTOL){
+        if (weaponTemplate._props.weapClass === ParentClasses.PISTOL) {
             magCounts.min = Math.max(1, Math.round(magCounts.min * 0.5));
-            magCounts.max =  Math.max(2,Math.round(magCounts.max * 0.5));
+            magCounts.max = Math.max(2, Math.round(magCounts.max * 0.5));
         }
 
         const magTemplate = this.itemHelper.getItem(magazineTpl)[1];
@@ -190,9 +192,13 @@ export class BotWepGen extends BotWeaponGenerator {
         const tierChecker = new BotTierTracker();
         const tier = tierChecker.getTier(botRole);
 
-        // this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
-        // this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
-        this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
+
+        if (modConfig.logEverything == true) {
+            this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
+            this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
+            this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
+        }
+
         var weaponMods = [];
         var weaponPresets = [];
         try {
@@ -204,7 +210,10 @@ export class BotWepGen extends BotWeaponGenerator {
                     let pTierNum = Number(presetTier);
                     if (pTierNum <= tier) {
                         weaponPresets.push(presetFile[presetObj]);
-                        this.logger.warning(`Found A Preset Within Tier`);
+                        if (modConfig.logEverything == true) {
+                            this.logger.warning(`Found A Preset Within Tier`);
+                        }
+
                     }
 
                 }
@@ -213,18 +222,29 @@ export class BotWepGen extends BotWeaponGenerator {
                 for (let presetObj in presetFile) {
                     if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                         weaponPresets.push(presetFile[presetObj]);
-                        this.logger.warning(`Found a preset outside of tier`);
+                        if (modConfig.logEverything == true) {
+                            this.logger.warning(`Found a preset outside of tier`);
+                        }
+
                     }
                 }
             }
-            this.logger.warning("Choices:");
+            if (modConfig.logEverything == true) {
+                this.logger.warning("Choices:");
+            }
+
             for (let i in weaponPresets) {
-                this.logger.warning(weaponPresets[i]._name);
+                if (modConfig.logEverything == true) {
+                    this.logger.warning(weaponPresets[i]._name);
+                }
             }
 
             let randomPreset = weaponPresets[Math.floor(Math.random() * weaponPresets.length)]
-            this.logger.warning("Chose:");
-            this.logger.warning(randomPreset._name);
+            if (modConfig.logEverything == true) {
+                this.logger.warning("Chose:");
+                this.logger.warning(randomPreset._name);
+            }
+
             preset = this.jsonUtil.clone(randomPreset);
             if (preset) {
                 const parentItem = preset._items[0];
@@ -472,7 +492,7 @@ export class BotGenHelper extends BotEquipmentModGenerator {
             const modId = this.hashUtil.generate();
             weapon.push(this.createModItem(modId, modToAddTemplate._id, weaponParentId, modSlot, modToAddTemplate, botRole));
 
-            
+
             // I first thought we could use the recursive generateModsForItems as previously for cylinder magazines.
             // However, the recurse doesnt go over the slots of the parent mod but over the modPool which is given by the bot config
             // where we decided to keep cartridges instead of camoras. And since a CylinderMagazine only has one cartridge entry and
