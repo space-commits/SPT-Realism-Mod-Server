@@ -52,10 +52,7 @@
                 "Backpack": {
                     "628bc7fb408e2b2e9c0801b1": 1
                 },
-                "Earpiece": {
-                    "5645bcc04bdc2d363b8b4572": 1,
-                    "6033fa48ffd42c541047f728": 1
-                },
+                "Earpiece": {},
                 "Eyewear": {},
                 "FaceCover": {},
                 "FirstPrimaryWeapon": {
@@ -186,8 +183,8 @@
                     "min": 1
                 },
                 "looseLoot": {
-                    "max": 10,
-                    "min": 5
+                    "max": 14,
+                    "min": 7
                 },
                 "magazines": {
                     "max": 5,
@@ -296,10 +293,7 @@
                 "Backpack": {
                     "628bc7fb408e2b2e9c0801b1": 1
                 },
-                "Earpiece": {
-                    "5645bcc04bdc2d363b8b4572": 1,
-                    "6033fa48ffd42c541047f728": 1
-                },
+                "Earpiece": {},
                 "Eyewear": {},
                 "FaceCover": {},
                 "FirstPrimaryWeapon": {
@@ -431,8 +425,8 @@
                     "min": 1
                 },
                 "looseLoot": {
-                    "max": 12,
-                    "min": 6
+                    "max": 14,
+                    "min": 8
                 },
                 "magazines": {
                     "max": 5,
@@ -541,10 +535,7 @@
                 "Backpack": {
                     "628bc7fb408e2b2e9c0801b1": 1
                 },
-                "Earpiece": {
-                    "5645bcc04bdc2d363b8b4572": 1,
-                    "6033fa48ffd42c541047f728": 1
-                },
+                "Earpiece": {},
                 "Eyewear": {},
                 "FaceCover": {},
                 "FirstPrimaryWeapon": {
@@ -681,7 +672,7 @@
                 },
                 "looseLoot": {
                     "max": 14,
-                    "min": 7
+                    "min": 9
                 },
                 "magazines": {
                     "max": 5,

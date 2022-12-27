@@ -44,14 +44,16 @@
                     "603409c80ca681766b6a0fb2": 1,
                     "62a61c988ec41a51b34758d5": 1
                 },
-                "FaceCover": {},
+                "FaceCover": {
+                    "62a61bbf8ec41a51b34758d2": 1
+                },
                 "FirstPrimaryWeapon": {
                     "5bd70322209c4d00d7167b8f": 1,
                     "5fbcc1d9016cce60e8341ab3": 5
                 },
                 "Headwear": {
                     "628e4dd1f477aa12234918aa": 1,
-                    "5ac8d6885acfc400180ae7b0": 2
+                    "5ac8d6885acfc400180ae7b0": 4
                 },
                 "Holster": {
                     "5f36a0e5fbf956000b716b65": 1
@@ -123,9 +125,7 @@
                     "57505f6224597709a92585a9"
                 ],
                 "SecuredContainer": [],
-                "SpecialLoot": [
-                    "62a61bbf8ec41a51b34758d2"
-                ]
+                "SpecialLoot": []
             },
             "mods": {
                 "5ac8d6885acfc400180ae7b0": {
@@ -263,14 +263,16 @@
                     "603409c80ca681766b6a0fb2": 1,
                     "62a61c988ec41a51b34758d5": 1
                 },
-                "FaceCover": {},
+                "FaceCover": {
+                    "62a61bbf8ec41a51b34758d2": 1
+                },
                 "FirstPrimaryWeapon": {
                     "5bd70322209c4d00d7167b8f": 1,
                     "5fbcc1d9016cce60e8341ab3": 5
                 },
                 "Headwear": {
                     "628e4dd1f477aa12234918aa": 1,
-                    "5ac8d6885acfc400180ae7b0": 3
+                    "5ac8d6885acfc400180ae7b0": 6
                 },
                 "Holster": {
                     "5f36a0e5fbf956000b716b65": 1
@@ -341,9 +343,7 @@
                     "5e2af2bc86f7746d3f3c33fc"
                 ],
                 "SecuredContainer": [],
-                "SpecialLoot": [
-                    "62a61bbf8ec41a51b34758d2"
-                ]
+                "SpecialLoot": []
             },
             "mods": {
                 "5ac8d6885acfc400180ae7b0": {
@@ -481,14 +481,16 @@
                     "603409c80ca681766b6a0fb2": 1,
                     "62a61c988ec41a51b34758d5": 1
                 },
-                "FaceCover": {},
+                "FaceCover": {
+                    "62a61bbf8ec41a51b34758d2": 1
+                },
                 "FirstPrimaryWeapon": {
                     "5bd70322209c4d00d7167b8f": 1,
                     "5fbcc1d9016cce60e8341ab3": 5
                 },
                 "Headwear": {
                     "628e4dd1f477aa12234918aa": 1,
-                    "5ac8d6885acfc400180ae7b0": 4
+                    "5ac8d6885acfc400180ae7b0": 8
                 },
                 "Holster": {
                     "5f36a0e5fbf956000b716b65": 1
@@ -559,9 +561,7 @@
                     "5e2af2bc86f7746d3f3c33fc"
                 ],
                 "SecuredContainer": [],
-                "SpecialLoot": [
-                    "62a61bbf8ec41a51b34758d2"
-                ]
+                "SpecialLoot": []
             },
             "mods": {
                 "5ac8d6885acfc400180ae7b0": {

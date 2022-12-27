@@ -78,7 +78,6 @@ export class Bots {
         this.botConf.equipment["bosskilla"] = botEquipmentTempalte;
         this.botConf.equipment["bosstagilla"] = botEquipmentTempalte;
 
-
         if (this.modConf.logEverything == true) {
             this.logger.info("Bots Loaded");
         }
@@ -93,7 +92,7 @@ export class Bots {
         }
     }
 
-    public bossSpawns() {
+    public forceBossSpawns() {
         for (let i in this.mapDB) {
             if (this.mapDB[i].base?.BossLocationSpawn !== undefined) {
                 for (let k in this.mapDB[i].base.BossLocationSpawn) {
@@ -1274,7 +1273,7 @@ export class Bots {
         this.knightBase.chances = knightLO.knightLO1.chances;
         this.knightBase.generation = knightLO.knightLO1.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        let knightMaskChance = this.helper.pickRandNumOneInTen();
+        let randNum = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO1.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO1.inventory.equipment;
@@ -1293,12 +1292,20 @@ export class Bots {
         this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
 
         if (RaidInfoTracker.TOD === "night") {
-            if (knightMaskChance >= 5) {
+            if (randNum >= 5) {
                 this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                 this.knightBase.chances.equipment.FaceCover = 0;
             } else {
                 this.knightBase.chances.equipment.FaceCover = 100;
                 this.knightBase.chances.equipment.Headwear = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                this.knightBase.chances.equipment.FaceCover = 100;
             }
 
             this.knightBase.chances.mods.mod_nvg = 100;
@@ -1307,7 +1314,6 @@ export class Bots {
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
             this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
-            this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 6;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
 
@@ -1320,12 +1326,20 @@ export class Bots {
             this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
-            if (knightMaskChance >= 5) {
+            if (randNum >= 5) {
                 this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                 this.knightBase.chances.equipment.FaceCover = 0;
             } else {
                 this.knightBase.chances.equipment.FaceCover = 100;
                 this.knightBase.chances.equipment.Headwear = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                this.knightBase.chances.equipment.FaceCover = 100;
             }
 
             this.knightBase.chances.mods.mod_nvg = 100;
@@ -1334,7 +1348,6 @@ export class Bots {
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
             this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
-            this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 6;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
 
@@ -1356,13 +1369,22 @@ export class Bots {
 
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
 
-                if (knightMaskChance >= 6) {
+                if (randNum >= 6) {
                     this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                     this.knightBase.chances.equipment.FaceCover = 0;
                 } else {
                     this.knightBase.chances.equipment.FaceCover = 100;
                     this.knightBase.chances.equipment.Headwear = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                    this.knightBase.chances.equipment.FaceCover = 100;
                 }
+
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
 
                 this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
@@ -1377,13 +1399,22 @@ export class Bots {
             }
             if (RaidInfoTracker.mapType === "outdoor") {
 
-                if (knightMaskChance >= 8) {
+                if (randNum >= 8) {
                     this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                     this.knightBase.chances.equipment.FaceCover = 0;
                 } else {
                     this.knightBase.chances.equipment.FaceCover = 100;
                     this.knightBase.chances.equipment.Headwear = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                    this.knightBase.chances.equipment.FaceCover = 100;
                 }
+
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
 
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0
@@ -1410,7 +1441,7 @@ export class Bots {
         this.knightBase.chances = knightLO.knightLO2.chances;
         this.knightBase.generation = knightLO.knightLO2.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        let knightMaskChance = this.helper.pickRandNumOneInTen();
+        let randNum = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO2.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO2.inventory.equipment;
@@ -1430,20 +1461,28 @@ export class Bots {
 
         if (RaidInfoTracker.TOD === "night") {
 
-            if (knightMaskChance >= 4) {
+            if (randNum >= 4) {
                 this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                 this.knightBase.chances.equipment.FaceCover = 0;
             } else {
                 this.knightBase.chances.equipment.FaceCover = 100;
                 this.knightBase.chances.equipment.Headwear = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                this.knightBase.chances.equipment.FaceCover = 100;
             }
+
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
             this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
-            this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 8;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
 
@@ -1457,20 +1496,28 @@ export class Bots {
         }
         if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
 
-            if (knightMaskChance >= 3) {
+            if (randNum >= 3) {
                 this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                 this.knightBase.chances.equipment.FaceCover = 0;
             } else {
                 this.knightBase.chances.equipment.FaceCover = 100;
                 this.knightBase.chances.equipment.Headwear = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                this.knightBase.chances.equipment.FaceCover = 100;
             }
+
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
             this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
-            this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 8;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
 
@@ -1492,13 +1539,22 @@ export class Bots {
 
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
 
-                if (knightMaskChance >= 3) {
+                if (randNum >= 3) {
                     this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                     this.knightBase.chances.equipment.FaceCover = 0;
                 } else {
                     this.knightBase.chances.equipment.FaceCover = 100;
                     this.knightBase.chances.equipment.Headwear = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                    this.knightBase.chances.equipment.FaceCover = 100;
                 }
+
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
 
                 this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
@@ -1512,13 +1568,22 @@ export class Bots {
             }
             if (RaidInfoTracker.mapType === "outdoor") {
 
-                if (knightMaskChance >= 4) {
+                if (randNum >= 4) {
                     this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                     this.knightBase.chances.equipment.FaceCover = 0;
                 } else {
                     this.knightBase.chances.equipment.FaceCover = 100;
                     this.knightBase.chances.equipment.Headwear = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                    this.knightBase.chances.equipment.FaceCover = 100;
                 }
+
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
 
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
@@ -1545,7 +1610,7 @@ export class Bots {
         this.knightBase.chances = knightLO.knightLO3.chances;
         this.knightBase.generation = knightLO.knightLO3.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        let knightMaskChance = this.helper.pickRandNumOneInTen();
+        let randNum = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO3.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO3.inventory.equipment;
@@ -1565,20 +1630,28 @@ export class Bots {
 
         if (RaidInfoTracker.TOD === "night") {
 
-            if (knightMaskChance >= 3) {
+            if (randNum >= 3) {
                 this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                 this.knightBase.chances.equipment.FaceCover = 0;
             } else {
                 this.knightBase.chances.equipment.FaceCover = 100;
                 this.knightBase.chances.equipment.Headwear = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                this.knightBase.chances.equipment.FaceCover = 100;
             }
+
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
             this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
-            this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 10;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
 
@@ -1592,20 +1665,28 @@ export class Bots {
         }
         if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
 
-            if (knightMaskChance >= 2) {
+            if (randNum >= 2) {
                 this.knightBase.chances.equipment.Headwear = 100;
+                this.knightBase.chances.equipment.FaceCover = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                 this.knightBase.chances.equipment.FaceCover = 0;
             } else {
                 this.knightBase.chances.equipment.FaceCover = 100;
                 this.knightBase.chances.equipment.Headwear = 0;
+
+                this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                this.knightBase.chances.equipment.FaceCover = 100;
             }
+
             this.knightBase.chances.mods.mod_nvg = 100;
             this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
             this.botConf.equipment["bossknight"].nvgIsActiveChancePercent = 100;
 
             this.bigpipeBase.chances.mods.mod_nvg = 100;
             this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
-            this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 10;
             this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 100;
             this.botConf.equipment["followerbigpipe"].nvgIsActiveChancePercent = 100;
 
@@ -1628,13 +1709,22 @@ export class Bots {
 
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
 
-                if (knightMaskChance >= 3) {
+                if (randNum >= 3) {
                     this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                     this.knightBase.chances.equipment.FaceCover = 0;
                 } else {
                     this.knightBase.chances.equipment.FaceCover = 100;
                     this.knightBase.chances.equipment.Headwear = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                    this.knightBase.chances.equipment.FaceCover = 100;
                 }
+
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 100;
 
                 this.bigpipeBase.chances.mods.mod_equipment_000 = 100;
@@ -1648,13 +1738,22 @@ export class Bots {
             }
             if (RaidInfoTracker.mapType === "outdoor") {
 
-                if (knightMaskChance >= 4) {
+                if (randNum >= 4) {
                     this.knightBase.chances.equipment.Headwear = 100;
+                    this.knightBase.chances.equipment.FaceCover = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 1;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 0;
                     this.knightBase.chances.equipment.FaceCover = 0;
                 } else {
                     this.knightBase.chances.equipment.FaceCover = 100;
                     this.knightBase.chances.equipment.Headwear = 0;
+
+                    this.bigpipeBase.inventory.equipment.Headwear["5ac8d6885acfc400180ae7b0"] = 0;
+                    this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
+                    this.knightBase.chances.equipment.FaceCover = 100;
                 }
+                
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
 
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0
@@ -1746,7 +1845,6 @@ export class Bots {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO1.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO1.generation;
-        // this.tagillaBase.appearance = tagillaLO.appearance;
 
         let randnum = this.helper.pickRandNumOneInTen();
 
@@ -1787,7 +1885,6 @@ export class Bots {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO2.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO2.generation;
-        // this.tagillaBase.appearance = tagillaLO.appearance;
 
         let randnum = this.helper.pickRandNumOneInTen();
 
@@ -1828,7 +1925,6 @@ export class Bots {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO3.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO3.generation;
-        // this.tagillaBase.appearance = tagillaLO.appearance;
 
         let randnum = this.helper.pickRandNumOneInTen();
 
@@ -1860,6 +1956,21 @@ export class Bots {
         if (this.modConf.logEverything == true) {
             this.logger.info("tagillaLoad3 loaded");
         }
+    }
+
+    public forceBossItems() {
+
+        this.tagillaBase.inventory.equipment.Headwear = { "60a7acf20c5cb24b01346648": 1 }
+        this.tagillaBase.inventory.equipment.FaceCover = { "60a7ad2a2198820d95707a2e": 1, "60a7ad3a0c5cb24b0134664a": 1 }
+        this.tagillaBase.chances.equipment.FaceCover = 100;
+
+        this.bigpipeBase.inventory.equipment.Headwear = { "628e4dd1f477aa12234918aa": 1 }
+        this.bigpipeBase.inventory.equipment.FaceCover = { "62a61bbf8ec41a51b34758d2": 1 }
+        this.bigpipeBase.chances.equipment.FaceCover = 100;
+
+        this.knightBase.inventory.equipment.Headwear = {}
+        this.knightBase.chances.equipment.Headwear = 0;
+        this.knightBase.chances.equipment.FaceCover = 100;
     }
 
 

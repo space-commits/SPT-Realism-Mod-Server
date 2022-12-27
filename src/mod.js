@@ -459,7 +459,7 @@ class Main {
             bots.botNames();
         }
         if (modConfig.guarantee_boss_spawn == true) {
-            bots.bossSpawns();
+            bots.forceBossSpawns();
         }
         bots.botDifficulty();
         if (modConfig.realistic_ballistics == true) {
@@ -752,6 +752,11 @@ class Main {
             bots.rogueLoad1();
             bots.raiderLoad1();
             bots.goonsLoad1();
+            bots.killaLoad1();
+            bots.tagillaLoad1();
+            if (modConfig.force_boss_items == true) {
+                bots.forceBossItems();
+            }
             logger.info("Realism Mod: Bots Have Been Set To Default (Tier 1)");
             if (config.logEverything == true) {
                 logger.info("Realism Mod: Bots Have Been Reconfigured");
@@ -779,6 +784,9 @@ class Main {
                 if (config.logEverything == true) {
                     logger.info("Realism Mod: Bots Base Tier Has Been Reconfigured");
                 }
+            }
+            if (modConfig.force_boss_items == true) {
+                bots.forceBossItems();
             }
         }
     }
