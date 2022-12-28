@@ -51,7 +51,7 @@
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
-        "RecoilAngle": 72,
+        "RecoilAngle": 74,
         "BaseMalfunctionChance": 0.03,
         "HeatFactorGun": 0.17,
         "HeatFactorByShot": 1,

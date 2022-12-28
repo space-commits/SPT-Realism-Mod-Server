@@ -74,7 +74,7 @@ class WeaponsGlobals {
                     serverItem._props.Ergonomics = 80;
                 }
                 if (serverItem._props.weapClass === "pistol") {
-                    serverItem._props.RecoilForceUp *= 1.14;
+                    // serverItem._props.RecoilForceUp *= 1.14;
                     serverItem._props.CameraRecoil *= 0.8;
                     serverItem._props.RecolDispersion *= 1.15;
                 }
