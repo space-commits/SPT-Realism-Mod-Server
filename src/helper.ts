@@ -4,9 +4,6 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { Arrays } from "./arrays";
 
 const fs = require('fs');
-const dir = __dirname;
-const dirArray = dir.split("\\");
-const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
 
 export class Helper {
 
@@ -52,12 +49,11 @@ export class Helper {
         }
     }
 
-    public probabilityWeighter(items, weights) {
+    public probabilityWeighter(items: any, weights: number[]) {
 
         function add(a, b) { return a + b; }
 
         var botTiers = items;
-        var weights = weights;
         var totalWeight = weights.reduce(add, 0);
 
         var weighedElems = [];
@@ -97,7 +93,11 @@ export class Helper {
         return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     }
 
-    public saveToJSONFile(data, filePath) {
+    public saveToJSONFile(data: any, filePath: string) {
+
+        let dir = __dirname;
+        let dirArray = dir.split("\\");
+        let modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
         fs.writeFile(modFolder + filePath, JSON.stringify(data, null, 4), function (err) {
             if (err) throw err;
         });

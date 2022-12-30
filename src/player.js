@@ -2,12 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
 class Player {
-    constructor(logger, tables, modConfig, custProfile, commonStats) {
+    constructor(logger, tables, modConfig, custProfile, commonStats, medItems) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
         this.custProfile = custProfile;
         this.commonStats = commonStats;
+        this.medItems = medItems;
         this.globalDB = this.tables.globals.config;
         this.headHealth = this.commonStats.health.BodyParts[0].Head.max;
         this.chestHealth = this.commonStats.health.BodyParts[0].Chest.max;
@@ -121,7 +122,7 @@ class Player {
             }
         }
     }
-    loadPlayer() {
+    loadPlayerStats() {
         if (this.modConfig.movement_changes == true) {
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 50;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 70;
@@ -159,8 +160,8 @@ class Player {
             this.globalDB.Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
             this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.52;
             this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.43;
-            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.37;
-            this.globalDB.Stamina.Capacity = 125;
+            this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.38;
+            this.globalDB.Stamina.Capacity = 115;
             this.globalDB.Stamina.BaseRestorationRate = 11;
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
             this.globalDB.Stamina.OxygenRestoration *= 2.1;
@@ -226,6 +227,14 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);
         }
+        if (this.modConfig.logEverything == true) {
+            this.logger.info("Player Loaded");
+        }
+    }
+    playerProfiles() {
+        this.tables.templates.profiles["Realism Mod"] = this.custProfile["Realism Mod"];
+        const bearInventory = this.tables.templates.profiles["Realism Mod"].bear.character.Inventory.items;
+        const usecInventory = this.tables.templates.profiles["Realism Mod"].usec.character.Inventory.items;
         if (this.modConfig.realistic_ballistics == true) {
             this.tables.templates.profiles.Standard.bear.character.Inventory = this.custProfile.Standard.bear.Inventory;
             this.tables.templates.profiles.Standard.usec.character.Inventory = this.custProfile.Standard.usec.Inventory;
@@ -236,29 +245,40 @@ class Player {
             this.tables.templates.profiles["Edge Of Darkness"].bear.character.Inventory = this.custProfile["Edge Of Darkness"].bear.Inventory;
             this.tables.templates.profiles["Edge Of Darkness"].usec.character.Inventory = this.custProfile["Edge Of Darkness"].usec.Inventory;
         }
-        if (this.modConfig.med_changes == false) {
-            let bearInventory = this.custProfile["Realism Mod"].bear.character.Inventory.items;
-            let usecInventory = this.custProfile["Realism Mod"].usec.character.Inventory.items;
-            for (let i = 0; i < bearInventory.length; i++) {
-                if (bearInventory[i]._tpl === "TIER1MEDKIT" ||
-                    bearInventory[i]._tpl === "TIER1MEDKI2" ||
-                    bearInventory[i]._tpl === "TIER1MEDKI3") {
-                    bearInventory[i]._tpl = "5755356824597772cb798962";
-                    bearInventory[i].upd.MedKit.HpResource = 100;
-                }
+        for (let i in bearInventory) {
+            if (this.modConfig.med_changes == false) {
+                this.resetMedkitHP(bearInventory[i]);
             }
-            for (let i = 0; i < usecInventory.length; i++) {
-                if (usecInventory[i]._tpl === "TIER1MEDKIT" ||
-                    usecInventory[i]._tpl === "TIER1MEDKI2" ||
-                    usecInventory[i]._tpl === "TIER1MEDKI3") {
-                    usecInventory[i]._tpl = "5755356824597772cb798962";
-                    usecInventory[i].upd.MedKit.HpResource = 100;
-                }
+            else {
+                this.setMedkitHP(bearInventory[i]);
             }
         }
-        this.tables.templates.profiles["Realism Mod"] = this.custProfile["Realism Mod"];
-        if (this.modConfig.logEverything == true) {
-            this.logger.info("Player Loaded");
+        for (let i in usecInventory) {
+            if (this.modConfig.med_changes == false) {
+                this.resetMedkitHP(usecInventory[i]);
+            }
+            else {
+                this.setMedkitHP(usecInventory[i]);
+            }
+        }
+    }
+    resetMedkitHP(invItem) {
+        if (invItem._tpl === "TIER1MEDKIT" ||
+            invItem._tpl === "TIER2MEDKIT" ||
+            invItem._tpl === "TIER3MEDKIT") {
+            invItem._tpl = "5755356824597772cb798962";
+            invItem.upd.MedKit.HpResource = 100;
+        }
+    }
+    setMedkitHP(invItem) {
+        if (invItem._tpl === "TIER1MEDKIT") {
+            invItem.upd.MedKit.HpResource = this.medItems.TIER1MEDKIT.MaxHpResource;
+        }
+        if (invItem._tpl === "TIER2MEDKIT") {
+            invItem.upd.MedKit.HpResource = this.medItems.TIER2MEDKIT.MaxHpResource;
+        }
+        if (invItem._tpl === "TIER3MEDKIT") {
+            invItem.upd.MedKit.HpResource = this.medItems.TIER3MEDKIT.MaxHpResource;
         }
     }
     debuffMul(buff, mult) {

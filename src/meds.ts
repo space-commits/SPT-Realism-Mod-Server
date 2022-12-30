@@ -7,6 +7,7 @@ export class Meds {
     private globalDB = this.tables.globals.config;
     private itemDB = this.tables.templates.items;
     private buffDB = this.globalDB.Health.Effects.Stimulator.Buffs;
+    
 
     public loadMeds() {
 

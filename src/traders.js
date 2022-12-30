@@ -252,13 +252,21 @@ class RandomizeTraderAssort {
         }
         for (let trader in this.tables.traders) {
             if (this.tables.traders[trader].assort?.items !== undefined) {
-                let assort = this.tables.traders[trader].assort.items;
-                for (let item in assort) {
-                    if (assort[item].upd?.StackObjectsCount !== undefined) {
-                        this.stockHelper(assort[item]);
+                let assortItems = this.tables.traders[trader].assort.items;
+                for (let item in assortItems) {
+                    let itemId = assortItems[item]._id;
+                    let itemTemplId = assortItems[item]._tpl;
+                    if (assortItems[item].upd?.StackObjectsCount !== undefined) {
+                        this.stockHelper(assortItems[item]);
                     }
-                    if (assort[item].upd?.UnlimitedCount !== undefined) {
-                        assort[item].upd.UnlimitedCount = false;
+                    if (assortItems[item].upd?.UnlimitedCount !== undefined) {
+                        assortItems[item].upd.UnlimitedCount = false;
+                    }
+                    if (this.tables.traders[trader]?.assort?.barter_scheme) {
+                        let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
+                        if (barter !== undefined) {
+                            this.setAndRandomizeCost(randNum, itemTemplId, barter);
+                        }
                     }
                 }
             }
@@ -267,9 +275,6 @@ class RandomizeTraderAssort {
                 for (let lvl in ll) {
                     this.randomizeLL(ll, lvl);
                 }
-            }
-            if (this.tables.traders[trader]?.assort?.barter_scheme !== undefined) {
-                this.randomizeCost(trader, randNum);
             }
         }
     }
@@ -377,20 +382,53 @@ class RandomizeTraderAssort {
             item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
         }
     }
-    randomizeCost(trader, randNum) {
-        for (let scheme in this.tables.traders[trader].assort.barter_scheme) {
-            let barter = this.tables.traders[trader].assort.barter_scheme[scheme];
-            if (this.itemDB[barter[0][0]._tpl]._parent === enums_1.ParentClasses.MONEY) {
-                if (randNum >= 8) {
-                    barter[0][0].count *= 1.1;
-                }
-                if (randNum <= 3) {
-                    barter[0][0].count *= 0.9;
-                }
-                if (helper_1.EventTracker.isChristmas == true) {
-                    barter[0][0].count *= 0.7;
-                }
+    setAndRandomizeCost(randNum, itemTemplId, barter) {
+        if (this.itemDB[barter[0][0]._tpl]._parent === enums_1.ParentClasses.MONEY) {
+            this.adjustPriceByCategory(barter[0][0], itemTemplId);
+            if (randNum >= 8) {
+                barter[0][0].count *= 1.1;
             }
+            if (randNum <= 3) {
+                barter[0][0].count *= 0.9;
+            }
+            if (helper_1.EventTracker.isChristmas == true) {
+                barter[0][0].count *= 0.7;
+            }
+        }
+    }
+    adjustPriceByCategory(barter, itemTemplId) {
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.AMMO) {
+            barter.count *= 2;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.AMMO_BOX) {
+            barter.count *= 2;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.DRUGS) {
+            barter.count *= 1.5;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDKIT) {
+            barter.count *= 1.5;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDS) {
+            barter.count *= 1.5;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.STIMULATOR) {
+            barter.count *= 1.5;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDICAL_SUPPLIES) {
+            barter.count *= 1.5;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.FOOD) {
+            barter.count *= 1.5;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.DRINK) {
+            barter.count *= 1.5;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.HEADWEAR) {
+            barter.count *= 0.6;
+        }
+        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) {
+            barter.count *= 0.6;
         }
     }
     randomizeLL(ll, i) {

@@ -67,6 +67,7 @@ import { IRandomisedBotLevelResult } from "@spt-aki/models/eft/bot/IRandomisedBo
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
 import { SaveServer } from "@spt-aki/servers/SaveServer";
+import { ILocations } from "@spt-aki/models/spt/server/ILocations";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -91,6 +92,9 @@ import { Gear } from "./gear";
 import { SeasonalEventsHandler } from "./seasonalevents";
 import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
+import { DescriptionGen } from "./description_gen";
+import { JsonHandler } from "./json-handler";
+
 
 
 const fs = require('fs');
@@ -232,8 +236,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const arrays = new Arrays(postLoadTables);
                         const helper = new Helper(postLoadTables, arrays);
                         const tieredFlea = new TieredFlea(postLoadTables);
-                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth);
+                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
+
 
                         let pmcData = profileHelper.getPmcProfile(sessionID);
                         let scavData = profileHelper.getScavProfile(sessionID);
@@ -288,6 +293,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             if (modConfig.tiered_flea == true) {
                                 this.updateFlea(pmcData, logger, tieredFlea, ragfairOfferGenerator, container, arrays);
                             }
+                            if(modConfig.boss_spawns == true){
+                                this.setBossSpawnChance(pmcData, postLoadTables.locations);
+                            }
 
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Profile Checked");
@@ -314,7 +322,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                         const postLoadtables = postLoadDBServer.getTables();
-                        const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth);
+                        const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems);
                         const arrays = new Arrays(postLoadtables);
                         const helper = new Helper(postLoadtables, arrays);
 
@@ -488,7 +496,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const saveServer = container.resolve<SaveServer>("SaveServer");
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables);
-                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth);
+                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
 
 
                         let pmcData = profileHelper.getPmcProfile(sessionID);
@@ -538,7 +546,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
         const items = new _Items(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new Player(logger, tables, modConfig, custProfile, botHealth);
+        const player = new Player(logger, tables, modConfig, custProfile, botHealth, medItems);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
@@ -549,6 +557,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const maps = new Maps(logger, tables, modConfig);
         const gear = new Gear(arrays, tables);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
+        const descGen = new DescriptionGen(tables);
+        const jsonHandler = new JsonHandler(tables, modConfig);
 
         this.dllChecker(logger, modConfig);
 
@@ -560,10 +570,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
 
-        codegen.pushModsToServer();
-        codegen.pushWeaponsToServer();
-        codegen.pushArmorToServer();
-        codegen.descriptionGen();
+        jsonHandler.pushModsToServer();
+        jsonHandler.pushWeaponsToServer();
+        jsonHandler.pushArmorToServer();
+        descGen.descriptionGen();
 
         if (modConfig.armor_mouse_penalty == true) {
             armor.armorMousePenalty();
@@ -635,16 +645,16 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             traders.loadTraderTweaks();
             traders.addItemsToAssorts();
             traders.setLoyaltyLevels();
-
         }
         if (modConfig.bot_changes == true) {
             attachBase.loadAttRequirements();
         }
-
+        
         attachBase.loadAttCompat();
 
         items.loadItemsRestrictions();
-        player.loadPlayer();
+        player.loadPlayerStats();
+        player.playerProfiles();
         weaponsGlobals.loadGlobalWeps();
     }
 
@@ -657,11 +667,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         if (fs.existsSync(plugin)) {
             ConfigChecker.dllIsPresent = true;
-            if(modConfig.recoil_attachment_overhaul == false){
+            if (modConfig.recoil_attachment_overhaul == false) {
                 logger.error("RealismMod.dll is present at path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
             }
         } else {
-            if(modConfig.recoil_attachment_overhaul == true){
+            if (modConfig.recoil_attachment_overhaul == true) {
                 logger.error("RealismMod.dll is missing form path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
             }
             ConfigChecker.dllIsPresent = false;
@@ -752,8 +762,49 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 logger.info("Realism Mod: Fleamarket Unlocked");
             }
         }
-
     }
+
+    private setBossSpawnChance(pmcData: IPmcData, mapDB: ILocations) {
+        if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
+           this.bossSpawnHelper(mapDB, 0.01);
+        }
+        if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
+            this.bossSpawnHelper(mapDB, 0.1);
+        }
+        if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
+            this.bossSpawnHelper(mapDB, 0.4);
+        }
+        if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
+            this.bossSpawnHelper(mapDB, 0.5);
+        }
+        if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
+            this.bossSpawnHelper(mapDB, 0.6);
+        }
+        if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
+            this.bossSpawnHelper(mapDB, 0.8);
+        }
+        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+            this.bossSpawnHelper(mapDB, 1);
+        }
+        if (pmcData.Info.Level >= 35 && pmcData.Info.Level < 40) {
+            this.bossSpawnHelper(mapDB, 1.2);
+        }
+        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+            this.bossSpawnHelper(mapDB, 1.3);
+        }
+    }
+
+    private bossSpawnHelper(mapDB: ILocations, chanceMulti: number){
+        for (let i in mapDB) {
+            if (mapDB[i].base?.BossLocationSpawn !== undefined) {
+                for (let k in mapDB[i].base.BossLocationSpawn) {
+                    let chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
+                    mapDB[i].base.BossLocationSpawn[k].BossChance = chance
+                }
+            }
+        }
+    }
+
 
     private getBotTier(pmcData, bots: Bots, helper: Helper) {
         this.setBotTier(pmcData, "scav", bots, helper);
@@ -922,7 +973,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.goonsLoad1();
             bots.killaLoad1();
             bots.tagillaLoad1();
-            if(modConfig.force_boss_items == true){
+            if (modConfig.force_boss_items == true) {
                 bots.forceBossItems();
             }
             logger.info("Realism Mod: Bots Have Been Set To Default (Tier 1)");
@@ -953,7 +1004,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     logger.info("Realism Mod: Bots Base Tier Has Been Reconfigured");
                 }
             }
-            if(modConfig.force_boss_items == true){
+            if (modConfig.force_boss_items == true) {
                 bots.forceBossItems();
             }
         }

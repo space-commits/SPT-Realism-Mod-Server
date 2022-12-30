@@ -208,6 +208,9 @@ class Main {
                         if (modConfig.tiered_flea == true) {
                             this.updateFlea(pmcData, logger, tieredFlea, ragfairOfferGenerator, container, arrays);
                         }
+                        if (modConfig.boss_spawns == true) {
+                            this.setBossSpawnChance(pmcData, postLoadTables.locations);
+                        }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
                         }
@@ -412,7 +415,7 @@ class Main {
         const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
         const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth);
+        const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth, medItems);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
@@ -495,7 +498,8 @@ class Main {
         }
         attachBase.loadAttCompat();
         items.loadItemsRestrictions();
-        player.loadPlayer();
+        player.loadPlayerStats();
+        player.playerProfiles();
         weaponsGlobals.loadGlobalWeps();
     }
     postAkiLoad(container) {
@@ -589,6 +593,45 @@ class Main {
             if (pmcData.Info.Level >= 35) {
                 this.fleaHelper(flea.fleaFullUnlock(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Unlocked");
+            }
+        }
+    }
+    setBossSpawnChance(pmcData, mapDB) {
+        if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
+            this.bossSpawnHelper(mapDB, 0.01);
+        }
+        if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
+            this.bossSpawnHelper(mapDB, 0.1);
+        }
+        if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
+            this.bossSpawnHelper(mapDB, 0.4);
+        }
+        if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
+            this.bossSpawnHelper(mapDB, 0.5);
+        }
+        if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
+            this.bossSpawnHelper(mapDB, 0.6);
+        }
+        if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
+            this.bossSpawnHelper(mapDB, 0.8);
+        }
+        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+            this.bossSpawnHelper(mapDB, 1);
+        }
+        if (pmcData.Info.Level >= 35 && pmcData.Info.Level < 40) {
+            this.bossSpawnHelper(mapDB, 1.2);
+        }
+        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+            this.bossSpawnHelper(mapDB, 1.3);
+        }
+    }
+    bossSpawnHelper(mapDB, chanceMulti) {
+        for (let i in mapDB) {
+            if (mapDB[i].base?.BossLocationSpawn !== undefined) {
+                for (let k in mapDB[i].base.BossLocationSpawn) {
+                    let chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
+                    mapDB[i].base.BossLocationSpawn[k].BossChance = chance;
+                }
             }
         }
     }

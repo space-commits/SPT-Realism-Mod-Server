@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.Helper = void 0;
 const fs = require('fs');
-const dir = __dirname;
-const dirArray = dir.split("\\");
-const modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
 class Helper {
     constructor(tables, arrays) {
         this.tables = tables;
@@ -81,6 +78,9 @@ class Helper {
         return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     }
     saveToJSONFile(data, filePath) {
+        let dir = __dirname;
+        let dirArray = dir.split("\\");
+        let modFolder = (`${dirArray[dirArray.length - 4]}/${dirArray[dirArray.length - 3]}/${dirArray[dirArray.length - 2]}/`);
         fs.writeFile(modFolder + filePath, JSON.stringify(data, null, 4), function (err) {
             if (err)
                 throw err;

@@ -1292,7 +1292,7 @@ export class Bots {
         this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
 
         if (RaidInfoTracker.TOD === "night") {
-            if (randNum >= 5) {
+            if (randNum >= 6) {
                 this.knightBase.chances.equipment.Headwear = 100;
                 this.knightBase.chances.equipment.FaceCover = 0;
 
@@ -1326,7 +1326,7 @@ export class Bots {
             this.botConf.equipment["followerbirdeye"].nvgIsActiveChancePercent = 100;
         }
         if (RaidInfoTracker.mapNameUnreliable === "factory4_night") {
-            if (randNum >= 5) {
+            if (randNum >= 6) {
                 this.knightBase.chances.equipment.Headwear = 100;
                 this.knightBase.chances.equipment.FaceCover = 0;
 
@@ -1539,7 +1539,7 @@ export class Bots {
 
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
 
-                if (randNum >= 3) {
+                if (randNum >= 4) {
                     this.knightBase.chances.equipment.Headwear = 100;
                     this.knightBase.chances.equipment.FaceCover = 0;
 
@@ -1568,7 +1568,7 @@ export class Bots {
             }
             if (RaidInfoTracker.mapType === "outdoor") {
 
-                if (randNum >= 4) {
+                if (randNum >= 5) {
                     this.knightBase.chances.equipment.Headwear = 100;
                     this.knightBase.chances.equipment.FaceCover = 0;
 
