@@ -3,54 +3,196 @@
         "ItemID": "5f60b85bbdb8e27dee3dc985",
         "Name": "item_equipment_helmet_galvion_applique",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "Abbr. NIJ IIIA"
     },
     "5d6d3be5a4b9361bc73bc763": {
         "ItemID": "5d6d3be5a4b9361bc73bc763",
         "Name": "item_equipment_helmet_lshz2dtm_aventail",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 2"
     },
     "5a16badafcdbcb001865f72d": {
         "ItemID": "5a16badafcdbcb001865f72d",
         "Name": "helmet_ops_core_fast_side_armor",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ IIIA"
     },
     "5c1793902e221602b21d3de2": {
         "ItemID": "5c1793902e221602b21d3de2",
         "Name": "item_equipment_helmet_crye_airframe_ears",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ IIIA"
     },
     "5e00cfa786f77469dc6e5685": {
         "ItemID": "5e00cfa786f77469dc6e5685",
         "Name": "helmet_team_wendy_exfil_ear_covers",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "17gr V0 ≥ 731 m/s"
     },
     "5e01f31d86f77465cf261343": {
         "ItemID": "5e01f31d86f77465cf261343",
         "Name": "helmet_team_wendy_exfil_ear_covers_coyote",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "17gr V0 ≥ 731 m/s"
     },
     "5c0e66e2d174af02a96252f4": {
         "ItemID": "5c0e66e2d174af02a96252f4",
         "Name": "item_equipment_helmet_gentex_slaap_tan",
         "AllowADS": true,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "ArmorClass": "7.62x39 MSC @ 732 m/s"
     },
     "5c178a942e22164bef5ceca3": {
         "ItemID": "5c178a942e22164bef5ceca3",
         "Name": "item_equipment_helmet_crye_airframe_chops",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ IIIA"
     },
     "5ea18c84ecf1982c7712d9a2": {
         "ItemID": "5ea18c84ecf1982c7712d9a2",
         "Name": "item_equipment_helmet_diamond_age_bastion_shield",
         "AllowADS": true,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "ArmorClass": "NIJ III"
+    },
+    "5e00cdd986f7747473332240": {
+        "ItemID": "5e00cdd986f7747473332240",
+        "Name": "item_equipment_helmet_team_wendy_exfil_face_shield",
+        "AllowADS": false,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "BS EN 166:2002 Class 2B"
+    },
+    "5ac4c50d5acfc40019262e87": {
+        "ItemID": "5ac4c50d5acfc40019262e87",
+        "Name": "item_equipment_helmet_k1c_shield",
+        "AllowADS": false,
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Unclassified"
+    },
+    "5b46238386f7741a693bcf9c": {
+        "ItemID": "5b46238386f7741a693bcf9c",
+        "Name": "item_equipment_helmet_kiverm_shield",
+        "AllowADS": false,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 1"
+    },
+    "5f60c85b58eff926626a60f7": {
+        "ItemID": "5f60c85b58eff926626a60f7",
+        "Name": "item_equipment_helmet_rys_t_shield",
+        "AllowADS": false,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 2"
+    },
+    "5aa7e3abe5b5b000171d064d": {
+        "ItemID": "5aa7e3abe5b5b000171d064d",
+        "Name": "helmet_zsh_1-2m_v1_face_shield",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 2"
+    },
+    "5ca2113f86f7740b2547e1d2": {
+        "ItemID": "5ca2113f86f7740b2547e1d2",
+        "Name": "item_equipment_helmet_vulkan_shield",
+        "AllowADS": false,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "GOST 2A"
+    },
+    "5d6d3829a4b9361bc8618943": {
+        "ItemID": "5d6d3829a4b9361bc8618943",
+        "Name": "item_equipment_helmet_lshz2dtm_shield",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "GOST 2"
+    },
+    "5c0e842486f77443a74d2976": {
+        "ItemID": "5c0e842486f77443a74d2976",
+        "Name": "item_equipment_helmet_maska_1sh_shield_killa",
+        "AllowADS": false,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "GOST 2"
+    },
+    "5aa7e373e5b5b000137b76f0": {
+        "ItemID": "5aa7e373e5b5b000137b76f0",
+        "Name": "helmet_altyn_face_shield",
+        "AllowADS": false,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 2"
+    },
+    "5a16b7e1fcdbcb00165aa6c9": {
+        "ItemID": "5a16b7e1fcdbcb00165aa6c9",
+        "Name": "helmet_ops_core_handgun_face_shield",
+        "AllowADS": false,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "Abbr. NIJ IIIA"
+    },
+    "5a16b672fcdbcb001912fa83": {
+        "ItemID": "5a16b672fcdbcb001912fa83",
+        "Name": "helmet_ops_core_fast_visor",
+        "AllowADS": true,
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Gentex PRS-1011"
+    },
+    "5c0919b50db834001b7ce3b9": {
+        "ItemID": "5c0919b50db834001b7ce3b9",
+        "Name": "item_equipment_helmet_maska_1sh_shield",
+        "AllowADS": false,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "GOST 2"
+    },
+    "5e01f37686f774773c6f6c15": {
+        "ItemID": "5e01f37686f774773c6f6c15",
+        "Name": "item_equipment_helmet_team_wendy_exfil_face_shield_coyote",
+        "AllowADS": false,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "BS EN 166:2002 Class 2B"
+    },
+    "5ea058e01dbce517f324b3e2": {
+        "ItemID": "5ea058e01dbce517f324b3e2",
+        "Name": "item_equipment_helmet_tk_heavy_trooper",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "Unclassified"
+    },
+    "5f60c076f2bcbb675b00dac2": {
+        "ItemID": "5f60c076f2bcbb675b00dac2",
+        "Name": "item_equipment_helmet_galvion_mandible",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "16gr V50 ≥ 905 m/s"
+    },
+    "5a16ba61fcdbcb098008728a": {
+        "ItemID": "5a16ba61fcdbcb098008728a",
+        "Name": "helmet_ops_core_fast_gunsight_mandible",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ II"
+    },
+    "5f60bf4558eff926626a60f2": {
+        "ItemID": "5f60bf4558eff926626a60f2",
+        "Name": "item_equipment_helmet_galvion_fixed_arm_visor",
+        "AllowADS": true,
+        "LoyaltyLevel": 1,
+        "ArmorClass": "MIL-PRF-32432 (GL)"
+    },
+    "60a7ad3a0c5cb24b0134664a": {
+        "ItemID": "60a7ad3a0c5cb24b0134664a",
+        "Name": "item_equipment_facecover_welding_gorilla",
+        "AllowADS": false,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "Unclassified"
+    },
+    "60a7ad2a2198820d95707a2e": {
+        "ItemID": "60a7ad2a2198820d95707a2e",
+        "Name": "item_equipment_facecover_welding_kill",
+        "AllowADS": false,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "Unclassified"
     }
 }

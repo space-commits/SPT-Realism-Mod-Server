@@ -558,7 +558,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const gear = new Gear(arrays, tables);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);
-        const jsonHandler = new JsonHandler(tables, modConfig);
+        const jsonHand = new JsonHandler(tables);
 
         this.dllChecker(logger, modConfig);
 
@@ -570,9 +570,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
 
-        jsonHandler.pushModsToServer();
-        jsonHandler.pushWeaponsToServer();
-        jsonHandler.pushArmorToServer();
+        jsonHand.pushModsToServer();
+        jsonHand.pushWeaponsToServer();
+        jsonHand.pushArmorToServer();
         descGen.descriptionGen();
 
         if (modConfig.armor_mouse_penalty == true) {
@@ -805,7 +805,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-
     private getBotTier(pmcData, bots: Bots, helper: Helper) {
         this.setBotTier(pmcData, "scav", bots, helper);
         this.setBotTier(pmcData, "bear", bots, helper);
@@ -836,13 +835,13 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 5]);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 30, 10]);
+            tier = helper.probabilityWeighter(tierArray, [2, 4, 25, 10]);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 30]);
+            tier = helper.probabilityWeighter(tierArray, [2, 4, 8, 30]);
         }
         if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 40]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 35]);
         }
 
         if (type === "tagilla") {

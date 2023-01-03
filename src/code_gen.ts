@@ -8,7 +8,6 @@ import { ParentClasses } from "./enums";
 
 // const magazineJSON = require("../db/bots/loadouts/common/magazines.json");
 
-const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
 const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTemplates.json");
 const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
@@ -65,9 +64,6 @@ export class CodeGen {
     public armorTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if ((serverItem._parent === ParentClasses.ARMOREDEQUIPMENT || serverItem._parent === ParentClasses.HEADWEAR) && serverItem._props.HasHinge == true) {
-                this.itemWriteToFile(FaceShieldTemplates, "FaceShieldTemplates", i, serverItem, "armor", this.assignJSONToArmor);
-            }
             if (serverItem._parent === ParentClasses.CHESTRIG && serverItem._props.armorClass > 0) {
                 this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "armor", this.assignJSONToArmor);
             }
@@ -250,12 +246,14 @@ export class CodeGen {
         let Name = serverItem._name;
         let AllowADS = true;
         let LoyaltyLevel = 2;
+        let ArmorClass = "";
 
         let item = {
             ItemID,
             Name,
             AllowADS,
-            LoyaltyLevel
+            LoyaltyLevel,
+            ArmorClass
         };
 
         return item;

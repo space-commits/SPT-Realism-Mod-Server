@@ -1,13 +1,13 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ParentClasses } from "./enums";
-
-export class DescriptionGen {
-
-    constructor(private tables: IDatabaseTables) { }
-  
-    private itemDB = this.tables.templates.items;
-
-    public descriptionGen() {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescriptionGen = void 0;
+const enums_1 = require("./enums");
+class DescriptionGen {
+    constructor(tables) {
+        this.tables = tables;
+        this.itemDB = this.tables.templates.items;
+    }
+    descriptionGen() {
         let locale = this.tables.locales.global["en"];
         for (let templateItem in this.itemDB) {
             let item = this.itemDB[templateItem];
@@ -43,7 +43,7 @@ export class DescriptionGen {
                 if (modType === "scope") {
                     locale[`${templateItem}` + " Description"] = "ADS speed modifier only applies when this sight is in use." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if ((item._parent === ParentClasses.ARMOREDEQUIPMENT || item._parent === ParentClasses.HEADWEAR || item._parent === ParentClasses.FACECOVER) && item._props.HasHinge == true) {
+                if ((item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR || item._parent === enums_1.ParentClasses.FACECOVER) && item._props.HasHinge == true) {
                     if (item._props.ConflictingItems[1] === "true") {
                         locale[`${templateItem}` + " Description"] = "This faceshield allows the use of sights while using any stock in the extended position." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
@@ -52,8 +52,7 @@ export class DescriptionGen {
                     }
                 }
             }
-
-            if (item._parent === ParentClasses.AMMO) {
+            if (item._parent === enums_1.ParentClasses.AMMO) {
                 if (item._props.Caliber === "Caliber20g") {
                     locale[`${templateItem}` + " Description"] = "Ammo stats are out of a Toz-106." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
@@ -121,3 +120,4 @@ export class DescriptionGen {
         }
     }
 }
+exports.DescriptionGen = DescriptionGen;

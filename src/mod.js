@@ -49,6 +49,8 @@ const gear_1 = require("./gear");
 const seasonalevents_1 = require("./seasonalevents");
 const item_cloning_1 = require("./item_cloning");
 const _path = __importStar(require("path"));
+const description_gen_1 = require("./description_gen");
+const json_handler_1 = require("./json-handler");
 const fs = require('fs');
 const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -159,7 +161,7 @@ class Main {
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const helper = new helper_1.Helper(postLoadTables, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     let scavData = profileHelper.getScavProfile(sessionID);
@@ -230,7 +232,7 @@ class Main {
                     const profileHelper = container.resolve("ProfileHelper");
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const postLoadtables = postLoadDBServer.getTables();
-                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, botHealth);
+                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems);
                     const arrays = new arrays_1.Arrays(postLoadtables);
                     const helper = new helper_1.Helper(postLoadtables, arrays);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
@@ -375,7 +377,7 @@ class Main {
                     const saveServer = container.resolve("SaveServer");
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
                     let pmcData = profileHelper.getPmcProfile(sessionID);
                     // logger.warning("Saved Map = " + pmcData.);
                     try {
@@ -426,6 +428,8 @@ class Main {
         const maps = new maps_1.Maps(logger, tables, modConfig);
         const gear = new gear_1.Gear(arrays, tables);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
+        const descGen = new description_gen_1.DescriptionGen(tables);
+        const jsonHand = new json_handler_1.JsonHandler(tables);
         this.dllChecker(logger, modConfig);
         if (modConfig.trader_changes == true) {
             itemCloning.createCustomWeapons();
@@ -433,10 +437,10 @@ class Main {
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
-        codegen.pushModsToServer();
-        codegen.pushWeaponsToServer();
-        codegen.pushArmorToServer();
-        codegen.descriptionGen();
+        jsonHand.pushModsToServer();
+        jsonHand.pushWeaponsToServer();
+        jsonHand.pushArmorToServer();
+        descGen.descriptionGen();
         if (modConfig.armor_mouse_penalty == true) {
             armor.armorMousePenalty();
         }
@@ -664,13 +668,13 @@ class Main {
             tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 5]);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 30, 10]);
+            tier = helper.probabilityWeighter(tierArray, [2, 4, 25, 10]);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 30]);
+            tier = helper.probabilityWeighter(tierArray, [2, 4, 8, 30]);
         }
         if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 40]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 35]);
         }
         if (type === "tagilla") {
             if (tier == 1) {

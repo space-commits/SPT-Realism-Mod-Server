@@ -21,7 +21,6 @@ const SniperRifleTemplates = require("../db/templates/weapons/SniperRifleTemplat
 const SpecialWeaponTemplates = require("../db/templates/weapons/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../db/templates/weapons/GrenadeLauncherTemplates.json");
 
-const FaceShieldTemplates = require("../db/templates/armor/FaceShieldTemplates.json");
 const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTemplates.json");
 const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
@@ -31,7 +30,7 @@ const armorMasksTemplates = require("../db/templates/armor/armorMasksTemplates.j
 
 
 const weapTemplates = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
-const armorTemlplates = [FaceShieldTemplates, armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates];
+const armorTemlplates = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates];
 
 const customPrap = require("../db/traders/prapor/assort.json");
 const customThera = require("../db/traders/therapist/assort.json");
@@ -129,7 +128,7 @@ export class Traders {
             let loyaltyLvl = file[item].LoyaltyLevel;
             let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined) {
+                if (this.tables.traders[trader].assort?.items !== undefined) {         
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
@@ -156,7 +155,7 @@ export class Traders {
         //ragman//
         this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
         this.assortNestedItemPusher(ragmId, "5e00c1ad86f774747333222c", { "5e01f31d86f77465cf261343": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 5, true, undefined, 1.25, {"5c0558060db834001b735271": "mod_nvg"});
-        this.assortNestedItemPusher(ragmId, "5ea05cf85ad9772e6624305d", { "5a16badafcdbcb001865f72d": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 1, true, undefined, 1.25, {"5ea058e01dbce517f324b3e2": "mod_nvg"});
+        this.assortNestedItemPusher(ragmId, "5ea05cf85ad9772e6624305d", { "5a16badafcdbcb001865f72d": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25, {"5ea058e01dbce517f324b3e2": "mod_nvg"});
         this.assortNestedItemPusher(ragmId, "5aa7cfc0e5b5b00015693143", { "5a16b8a9fcdbcb00165aa6ca": "mod_nvg", "5a16b93dfcdbcbcae6687261" : "mod_nvg", "57235b6f24597759bf5a30f1": "mod_nvg"}, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.3);
 
         //mechanic//
@@ -195,11 +194,7 @@ export class Traders {
             }
 
             for (let item in idArr) {
-                for (let i in this.tables.templates.handbook.Items) {
-                    if (this.tables.templates.handbook.Items[i].Id === idArr[item]) {
-                        price += this.tables.templates.handbook.Items[i].Price;
-                    }
-                }
+                price += this.handBookPriceLookup(idArr[item]);
             }
         }
 
@@ -241,15 +236,16 @@ export class Traders {
         let assortId = this.helper.genId();
 
         if (useHandbookPrice == true) {
-            for (let i in this.tables.templates.handbook.Items) {
-                if (this.tables.templates.handbook.Items[i].Id === itemId) {
-                    price = this.tables.templates.handbook.Items[i].Price;
-                }
-            }
+            price += this.handBookPriceLookup(itemId);
         }
 
         this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
 
+    }
+
+    private handBookPriceLookup(itemId: string) : number {
+        let item = this.tables.templates.handbook.Items.find(i => i.Id === itemId);
+        return item.Price;
     }
 
     private assortPusherHelper(assort: ITraderAssort, assortId: string, price: number, saleCurrency: string, loyalLvl: number, itemId: string, buyRestriction: number, priceMulti: number) {

@@ -177,7 +177,7 @@ class Armor {
             //// Class 8////
             //Black Slick
             if (serverItem._id === "5e4abb5086f77406975c9342") {
-                serverItem._props.Durability = 200;
+                serverItem._props.Durability = 150;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
@@ -189,7 +189,7 @@ class Armor {
             }
             //Olive Slick
             if (serverItem._id === "6038b4ca92ec1c3103795a0d") {
-                serverItem._props.Durability = 200;
+                serverItem._props.Durability = 150;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
@@ -201,7 +201,7 @@ class Armor {
             }
             //Tan Slick
             if (serverItem._id === "6038b4b292ec1c3103795a0b") {
-                serverItem._props.Durability = 200;
+                serverItem._props.Durability = 150;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
@@ -322,7 +322,7 @@ class Armor {
             }
             //Redut-T5
             if (serverItem._id === "5ca21c6986f77479963115a7") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 120;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 9;
                 serverItem._props.speedPenaltyPercent = -12;
@@ -508,15 +508,27 @@ class Armor {
             //// Class 8 ////  
             //MK4A Assault
             if (serverItem._id === "60a3c70cde5f453f634816a3") {
-                serverItem._props.Durability = 115;
+                serverItem._props.Durability = 110;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 8;
+                serverItem._props.speedPenaltyPercent = -4;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -8;
+                serverItem._props.BluntThroughput = 0.18;
+                serverItem._props.ArmorMaterial = 'Combined';
+                serverItem._props.Weight = 10;
+            }
+            //MK4A Protection
+            if (serverItem._id === "60a3c68c37ea821725773ef5") {
+                serverItem._props.Durability = 125;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -10;
-                serverItem._props.BluntThroughput = 0.19;
+                serverItem._props.BluntThroughput = 0.15;
                 serverItem._props.ArmorMaterial = 'Combined';
-                serverItem._props.Weight = 10.7;
+                serverItem._props.Weight = 12.5;
             }
             //AVS
             if (serverItem._id === "544a5caa4bdc2d1a388b4568") {
@@ -591,30 +603,6 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 9;
             }
-            // Bagariy
-            if (serverItem._id === "628d0618d1ba6e4fa07ce5a4") {
-                serverItem._props.Durability = 85;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 9;
-                serverItem._props.speedPenaltyPercent = -8;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.25;
-                serverItem._props.ArmorMaterial = 'Ceramic';
-                serverItem._props.Weight = 13;
-            }
-            //MK4A Protection
-            if (serverItem._id === "60a3c68c37ea821725773ef5") {
-                serverItem._props.Durability = 120;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 9;
-                serverItem._props.speedPenaltyPercent = -5;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -10;
-                serverItem._props.BluntThroughput = 0.16;
-                serverItem._props.ArmorMaterial = 'Combined';
-                serverItem._props.Weight = 12.5;
-            }
             //AVS MBAV (Tagilla)
             if (serverItem._id === "609e860ebd219504d8507525") {
                 serverItem._props.Durability = 115;
@@ -638,6 +626,19 @@ class Armor {
                 serverItem._props.BluntThroughput = 0.195;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 9.5;
+            }
+            /// Class 10 ///
+            // Bagariy
+            if (serverItem._id === "628d0618d1ba6e4fa07ce5a4") {
+                serverItem._props.Durability = 85;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 10;
+                serverItem._props.speedPenaltyPercent = -8;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -9;
+                serverItem._props.BluntThroughput = 0.35;
+                serverItem._props.ArmorMaterial = 'Ceramic';
+                serverItem._props.Weight = 13;
             }
             /////// HELMETS //////
             //// Class 0 ////
@@ -1264,7 +1265,7 @@ class Armor {
             if (serverItem._id === "5f60c076f2bcbb675b00dac2") {
                 serverItem._props.Durability = 15;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 3;
+                serverItem._props.armorClass = 5;
                 serverItem._props.speedPenaltyPercent = -0.325;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.325;
@@ -1370,7 +1371,7 @@ class Armor {
             if (serverItem._id === "5a16badafcdbcb001865f72d") {
                 serverItem._props.Durability = 14;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
+                serverItem._props.armorClass = 5;
                 serverItem._props.speedPenaltyPercent = -0.15;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.15;
@@ -1485,9 +1486,9 @@ class Armor {
             }
             //TW EXFIL Ear Covers Black
             if (serverItem._id === "5e00cfa786f77469dc6e5685") {
-                serverItem._props.Durability = 15;
+                serverItem._props.Durability = 20;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 5;
+                serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.085;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.085;
@@ -1498,9 +1499,9 @@ class Armor {
             }
             //TW EXFIL Ear Covers Coyote
             if (serverItem._id === "5e01f31d86f77465cf261343") {
-                serverItem._props.Durability = 15;
+                serverItem._props.Durability = 20;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 5;
+                serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.085;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.085;
@@ -1534,12 +1535,10 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 0.45;
             }
-            //// Class 9 ////
-            //Bastion Helmet Armor
             if (serverItem._id === "5ea18c84ecf1982c7712d9a2") {
-                serverItem._props.Durability = 25;
+                serverItem._props.Durability = 30;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 9;
+                serverItem._props.armorClass = 6;
                 serverItem._props.speedPenaltyPercent = -0.5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -3.2;

@@ -3,6 +3,7 @@
         "ItemID": "5b432b2f5acfc4771e1c6622",
         "Name": "item_equipment_facecover_shatteredmask",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Unclassified"
     }
 }

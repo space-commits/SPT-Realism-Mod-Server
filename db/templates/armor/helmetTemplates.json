@@ -3,216 +3,266 @@
         "ItemID": "5b432d215acfc4771e1c6624",
         "Name": "item_equipment_helmet_LSHZ",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 1"
     },
     "5d5e7d28a4b936645d161203": {
         "ItemID": "5d5e7d28a4b936645d161203",
         "Name": "helmet_mich2001_od",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "NIJ II"
     },
     "5e4bfc1586f774264f7582d3": {
         "ItemID": "5e4bfc1586f774264f7582d3",
         "Name": "item_equipment_helmet_tc800",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ IIIA"
     },
     "5f60c74e3b85f6263c145586": {
         "ItemID": "5f60c74e3b85f6263c145586",
         "Name": "item_equipment_helmet_rys_t",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "GOST 2"
     },
     "60bf74184a63fc79b60c57f6": {
         "ItemID": "60bf74184a63fc79b60c57f6",
         "Name": "item_equipment_head_bomber",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Gopnik"
     },
     "61bca7cda0eae612383adf57": {
         "ItemID": "61bca7cda0eae612383adf57",
         "Name": "item_equipment_helmet_nfm_hjelm",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "PM 3"
     },
     "59ef13ca86f77445fd0e2483": {
         "ItemID": "59ef13ca86f77445fd0e2483",
         "Name": "jack_o_lantern",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Spooki"
     },
     "5d6d3716a4b9361bc8618872": {
         "ItemID": "5d6d3716a4b9361bc8618872",
         "Name": "item_equipment_helmet_lshz2dtm",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "NIJ II "
     },
     "5aa7d193e5b5b000171d063f": {
         "ItemID": "5aa7d193e5b5b000171d063f",
         "Name": "helmet_sphera-C",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "GOST 2"
     },
     "5d5e9c74a4b9364855191c40": {
         "ItemID": "5d5e9c74a4b9364855191c40",
         "Name": "helmet_mich2002_od",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "NIJ II"
     },
     "5df8a58286f77412631087ed": {
         "ItemID": "5df8a58286f77412631087ed",
         "Name": "helmet_crew",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Unclassified"
     },
     "5a154d5cfcdbcb001a3b00da": {
         "ItemID": "5a154d5cfcdbcb001a3b00da",
         "Name": "helmet_ops_core_fast",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ II"
     },
     "5aa7e276e5b5b000171d0647": {
         "ItemID": "5aa7e276e5b5b000171d0647",
         "Name": "helmet_altyn",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "GOST 2"
     },
     "5aa7e4a4e5b5b000137b76f2": {
         "ItemID": "5aa7e4a4e5b5b000137b76f2",
         "Name": "helmet_zsh_1-2m_v2",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 2"
     },
     "5aa7cfc0e5b5b00015693143": {
         "ItemID": "5aa7cfc0e5b5b00015693143",
         "Name": "helmet_6B47_cover",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 1"
     },
     "5b4329f05acfc47a86086aa1": {
         "ItemID": "5b4329f05acfc47a86086aa1",
         "Name": "item_equipment_facecover_devtac",
         "AllowADS": true,
-        "LoyaltyLevel": 5
+        "LoyaltyLevel": 5,
+        "ArmorClass": "NIJ IIIA"
     },
     "5ac8d6885acfc400180ae7b0": {
         "ItemID": "5ac8d6885acfc400180ae7b0",
         "Name": "helmet_ops_core_fast_tan",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ II"
     },
     "5a7c4850e899ef00150be885": {
         "ItemID": "5a7c4850e899ef00150be885",
         "Name": "helmet_ratnik_6B47",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "GOST 1"
     },
     "5c06c6a80db834001b735491": {
         "ItemID": "5c06c6a80db834001b735491",
         "Name": "item_equipment_helmet_ssh-68",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "GOST 1"
     },
     "5645bc214bdc2d363b8b4571": {
         "ItemID": "5645bc214bdc2d363b8b4571",
         "Name": "helmet",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 1"
     },
     "5aa7d03ae5b5b00016327db5": {
         "ItemID": "5aa7d03ae5b5b00016327db5",
         "Name": "helmet_un",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "NIJ IIA"
     },
     "5aa7e454e5b5b0214e506fa2": {
         "ItemID": "5aa7e454e5b5b0214e506fa2",
         "Name": "helmet_zsh_1-2m_v1",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 2"
     },
     "5c091a4e0db834001d5addc8": {
         "ItemID": "5c091a4e0db834001d5addc8",
         "Name": "item_equipment_helmet_maska_1sh",
         "AllowADS": true,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "ArmorClass": "GOST 2"
     },
     "59e7711e86f7746cae05fbe1": {
         "ItemID": "59e7711e86f7746cae05fbe1",
         "Name": "helmet_k1c",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Unclassified"
     },
     "5ca20ee186f774799474abc2": {
         "ItemID": "5ca20ee186f774799474abc2",
         "Name": "item_equipment_helmet_vulkan5",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "GOST 2"
     },
     "5b40e3f35acfc40016388218": {
         "ItemID": "5b40e3f35acfc40016388218",
         "Name": "item_equipment_helmet_ACHHC_black",
         "AllowADS": true,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "ArmorClass": "NIJ IIIA"
     },
     "5b40e4035acfc47a87740943": {
         "ItemID": "5b40e4035acfc47a87740943",
         "Name": "item_equipment_helmet_ACHHC_green",
         "AllowADS": true,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "ArmorClass": "NIJ IIIA"
     },
     "5b40e1525acfc4771e1c6611": {
         "ItemID": "5b40e1525acfc4771e1c6611",
         "Name": "item_equipment_helmet_ULACH_black",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ IIIA"
     },
     "5b40e2bc5acfc40016388216": {
         "ItemID": "5b40e2bc5acfc40016388216",
         "Name": "item_equipment_helmet_ULACH_coyote",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ IIIA"
     },
     "5c17a7ed2e2216152142459c": {
         "ItemID": "5c17a7ed2e2216152142459c",
         "Name": "item_equipment_helmet_crye_airframe_tan",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ II"
     },
     "5ea17ca01412a1425304d1c0": {
         "ItemID": "5ea17ca01412a1425304d1c0",
         "Name": "item_equipment_helmet_diamond_age_bastion",
         "AllowADS": true,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "ArmorClass": "17gr V50 ≥ 670m/s"
     },
     "5f60b34a41e30a4ab12a6947": {
         "ItemID": "5f60b34a41e30a4ab12a6947",
         "Name": "item_equipment_helmet_galvion_caiman",
         "AllowADS": true,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ II"
     },
     "5ea05cf85ad9772e6624305d": {
         "ItemID": "5ea05cf85ad9772e6624305d",
         "Name": "item_equipment_helmet_hops_core_fast",
         "AllowADS": true,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Unclassified"
     },
     "5c0e874186f7745dc7616606": {
         "ItemID": "5c0e874186f7745dc7616606",
         "Name": "item_equipment_helmet_maska_1sh_killa",
         "AllowADS": true,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "ArmorClass": "GOST 2"
     },
     "5e00c1ad86f774747333222c": {
         "ItemID": "5e00c1ad86f774747333222c",
         "Name": "item_equipment_helmet_team_wendy_exfil",
         "AllowADS": true,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "ArmorClass": "17gr V50 ≥ 731 m/s"
     },
     "5e01ef6886f77445f643baa4": {
         "ItemID": "5e01ef6886f77445f643baa4",
         "Name": "item_equipment_helmet_team_wendy_exfil_coyote",
         "AllowADS": true,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "ArmorClass": "17gr V50 ≥ 731 m/s"
+    },
+    "5c08f87c0db8340019124324": {
+        "ItemID": "5c08f87c0db8340019124324",
+        "Name": "item_equipment_helmet_shpm",
+        "AllowADS": false,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "Unclassified"
+    },
+    "5c0d2727d174af02a012cf58": {
+        "ItemID": "5c0d2727d174af02a012cf58",
+        "Name": "item_equipment_helmet_psh97_jeta",
+        "AllowADS": false,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "Unclassified"
     }
 }

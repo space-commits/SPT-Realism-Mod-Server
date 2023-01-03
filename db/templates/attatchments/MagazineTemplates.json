@@ -413,7 +413,7 @@
         "LoadUnloadModifier": 15,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.5,
+        "Weight": 0.4,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0
     },
@@ -427,7 +427,7 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.35,
+        "Weight": 0.28,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0
     },
