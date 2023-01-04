@@ -163,11 +163,15 @@ class Main {
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
-                    let pmcData = profileHelper.getPmcProfile(sessionID);
-                    let scavData = profileHelper.getScavProfile(sessionID);
+                    const pmcData = profileHelper.getPmcProfile(sessionID);
+                    const scavData = profileHelper.getScavProfile(sessionID);
+                    let level = 1;
+                    if (pmcData?.Info?.Level !== undefined) {
+                        level = pmcData.Info.Level;
+                    }
                     try {
-                        var healthProp = pmcData?.Health;
-                        var hydroProp = pmcData?.Health?.Hydration;
+                        const healthProp = pmcData?.Health;
+                        const hydroProp = pmcData?.Health?.Hydration;
                         if (healthProp !== undefined) {
                             player.correctNegativeHP(pmcData);
                             player.setPlayerHealth(pmcData, scavData);
@@ -208,10 +212,10 @@ class Main {
                             randomizeTraderAssort.loadRandomizedTraderStock();
                         }
                         if (modConfig.tiered_flea == true) {
-                            this.updateFlea(pmcData, logger, tieredFlea, ragfairOfferGenerator, container, arrays);
+                            this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
                         }
                         if (modConfig.boss_spawns == true) {
-                            this.setBossSpawnChance(pmcData, postLoadTables.locations);
+                            this.setBossSpawnChance(postLoadTables.locations, level);
                         }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
@@ -235,8 +239,8 @@ class Main {
                     const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems);
                     const arrays = new arrays_1.Arrays(postLoadtables);
                     const helper = new helper_1.Helper(postLoadtables, arrays);
-                    let pmcData = profileHelper.getPmcProfile(sessionID);
-                    let scavData = profileHelper.getScavProfile(sessionID);
+                    const pmcData = profileHelper.getPmcProfile(sessionID);
+                    const scavData = profileHelper.getScavProfile(sessionID);
                     try {
                         if (modConfig.med_changes == true) {
                             this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
@@ -277,11 +281,11 @@ class Main {
                         const time = weatherController.generate().time;
                         const mapNameRegPlayer = matchinfoRegPlayer.locationId;
                         const mapNameStartOffl = matchInfoStartOff.locationName;
+                        const pmcData = profileHelper.getPmcProfile(sessionID);
                         helper_1.RaidInfoTracker.mapName = mapNameStartOffl;
                         helper_1.RaidInfoTracker.mapNameUnreliable = mapNameRegPlayer;
                         let realTime = "";
                         let mapType = "";
-                        let pmcData = profileHelper.getPmcProfile(sessionID);
                         if (mapNameStartOffl === "Laboratory") {
                             botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
                             botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
@@ -374,15 +378,17 @@ class Main {
                     const postLoadTables = postLoadDBServer.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
-                    const saveServer = container.resolve("SaveServer");
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
-                    let pmcData = profileHelper.getPmcProfile(sessionID);
-                    // logger.warning("Saved Map = " + pmcData.);
+                    const pmcData = profileHelper.getPmcProfile(sessionID);
+                    let level = 1;
+                    if (pmcData?.Info?.Level !== undefined) {
+                        level = pmcData.Info.Level;
+                    }
                     try {
                         if (modConfig.tiered_flea == true) {
-                            this.updateFlea(pmcData, logger, tieredFlea, ragfairOfferGenerator, container, arrays);
+                            this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
                         }
                         player.correctNegativeHP(pmcData);
                         if (modConfig.logEverything == true) {
@@ -548,84 +554,83 @@ class Main {
         }
     }
     fleaHelper(fetchTier, ragfairOfferGen, container) {
-        var offers = container.resolve("RagfairOfferService").getOffers();
+        const offers = container.resolve("RagfairOfferService").getOffers();
+        const traders = container.resolve("RagfairServer").getUpdateableTraders();
         for (let o in offers) {
             container.resolve("RagfairOfferService").removeOfferById(offers[o]._id);
         }
-        let traders = container.resolve("RagfairServer").getUpdateableTraders();
         fetchTier;
         ragfairOfferGen.generateDynamicOffers();
         for (let traderID in traders) {
             ragfairOfferGen.generateFleaOffersForTrader(traders[traderID]);
         }
     }
-    updateFlea(pmcData, logger, flea, ragfairOfferGen, container, arrays) {
-        var property = pmcData?.Info?.Level;
-        if (property === undefined) {
+    updateFlea(logger, flea, ragfairOfferGen, container, arrays, level) {
+        if (level === undefined) {
             this.fleaHelper(flea.flea0, ragfairOfferGen, container);
             logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
         }
-        if (property !== undefined) {
-            if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
+        if (level !== undefined) {
+            if (level >= 0 && level < 5) {
                 this.fleaHelper(flea.flea0(), ragfairOfferGen, container);
                 logger.info("Realism mod: Fleamarket Locked At Tier 0");
             }
-            if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
+            if (level >= 5 && level < 10) {
                 this.fleaHelper(flea.flea1(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
             }
-            if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
+            if (level >= 10 && level < 15) {
                 this.fleaHelper(flea.flea2(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
             }
-            if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
+            if (level >= 15 && level < 20) {
                 this.fleaHelper(flea.flea3(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
             }
-            if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
+            if (level >= 20 && level < 25) {
                 this.fleaHelper(flea.flea4(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
             }
-            if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
+            if (level >= 25 && level < 30) {
                 this.fleaHelper(flea.flea5(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
             }
-            if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+            if (level >= 30 && level < 35) {
                 this.fleaHelper(flea.flea6(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
             }
-            if (pmcData.Info.Level >= 35) {
+            if (level >= 35) {
                 this.fleaHelper(flea.fleaFullUnlock(), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Unlocked");
             }
         }
     }
-    setBossSpawnChance(pmcData, mapDB) {
-        if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
+    setBossSpawnChance(mapDB, level) {
+        if (level >= 0 && level < 5) {
             this.bossSpawnHelper(mapDB, 0.01);
         }
-        if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
+        if (level >= 5 && level < 10) {
             this.bossSpawnHelper(mapDB, 0.1);
         }
-        if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
+        if (level >= 10 && level < 15) {
             this.bossSpawnHelper(mapDB, 0.4);
         }
-        if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
+        if (level >= 15 && level < 20) {
             this.bossSpawnHelper(mapDB, 0.5);
         }
-        if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
+        if (level >= 20 && level < 25) {
             this.bossSpawnHelper(mapDB, 0.6);
         }
-        if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
+        if (level >= 25 && level < 30) {
             this.bossSpawnHelper(mapDB, 0.8);
         }
-        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+        if (level >= 30 && level < 35) {
             this.bossSpawnHelper(mapDB, 1);
         }
-        if (pmcData.Info.Level >= 35 && pmcData.Info.Level < 40) {
+        if (level >= 35 && level < 40) {
             this.bossSpawnHelper(mapDB, 1.2);
         }
-        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+        if (level >= 30 && level < 35) {
             this.bossSpawnHelper(mapDB, 1.3);
         }
     }

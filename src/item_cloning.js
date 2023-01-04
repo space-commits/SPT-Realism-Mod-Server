@@ -78,9 +78,9 @@ class ItemCloning {
         });
     }
     addToLocale(id, name, shortname, description) {
-        let nameId = `${id}` + " Name";
-        let shortnameId = `${id}` + " ShortName";
-        let descriptionId = `${id}` + " Description";
+        const nameId = `${id}` + " Name";
+        const shortnameId = `${id}` + " ShortName";
+        const descriptionId = `${id}` + " Description";
         this.locales[nameId] = name;
         this.locales[shortnameId] = shortname;
         this.locales[descriptionId] = description;

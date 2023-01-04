@@ -261,8 +261,8 @@ export class Player {
 
         if (this.modConfig.realistic_player_health == true) {
 
-            let health = this.globalDB.Health.Effects
-            let mult = 1.136
+            const health = this.globalDB.Health.Effects
+            const mult = 1.136
 
             health.Wound.WorkingTime = 3600;
             this.debuffMul(health.Wound.ThresholdMin, mult);

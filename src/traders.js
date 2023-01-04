@@ -241,7 +241,7 @@ class RandomizeTraderAssort {
         this.helper = new helper_1.Helper(this.tables, this.arrays);
     }
     loadRandomizedTraderStock() {
-        const randNum = this.helper.pickRandNumOneInTen();
+        let randNum = this.helper.pickRandNumOneInTen();
         if (helper_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 30% Off! ======");
         }
@@ -351,8 +351,8 @@ class RandomizeTraderAssort {
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 30, 140);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._366TKM, 30, 120);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x39mm, 20, 120);
-                this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x51mm, 20, 80);
-                this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x54rmm, 20, 80);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x51mm, 15, 80);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x54rmm, 15, 80);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._300BLK, 30, 120);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._556x45mm, 20, 120);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._545x39mm, 20, 120);

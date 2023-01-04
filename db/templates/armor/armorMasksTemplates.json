@@ -5,5 +5,12 @@
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "Unclassified"
+    },
+    "603409c80ca681766b6a0fb2": {
+        "ItemID": "603409c80ca681766b6a0fb2",
+        "Name": "item_equipment_glasses_npp",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "Anti-Shatter Resistance V50 ≥ 230 m/s"
     }
 }

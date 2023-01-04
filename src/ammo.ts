@@ -2442,7 +2442,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 9.2;
                 serverItem._props.HeavyBleedingDelta = 0.35;
                 serverItem._props.LightBleedingDelta = 0.75;
-                serverItem._props.ammoAccr = -2;
+                serverItem._props.ammoAccr = -5;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 4;
 
@@ -2488,7 +2488,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 12.2;
                 serverItem._props.HeavyBleedingDelta = 0.32;
                 serverItem._props.LightBleedingDelta = 0.7;
-                serverItem._props.ammoAccr = -8;
+                serverItem._props.ammoAccr = -11;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
 
@@ -2512,7 +2512,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 10.6;
                 serverItem._props.HeavyBleedingDelta = 0.75;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ammoAccr = -10;
+                serverItem._props.ammoAccr = 15;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
 
@@ -2535,7 +2535,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 11.34;
                 serverItem._props.HeavyBleedingDelta = 0.42;
                 serverItem._props.LightBleedingDelta = 0.89;
-                serverItem._props.ammoAccr = -15;
+                serverItem._props.ammoAccr = -20;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
 
@@ -2558,7 +2558,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 10.8;
                 serverItem._props.HeavyBleedingDelta = 0.65;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ammoAccr = -20;
+                serverItem._props.ammoAccr = -15;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 14;
 
@@ -2581,7 +2581,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 9.2;
                 serverItem._props.HeavyBleedingDelta = 0.4;
                 serverItem._props.LightBleedingDelta = 0.85;
-                serverItem._props.ammoAccr = 0;
+                serverItem._props.ammoAccr = -10;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 serverItem._props.RepairSpeed = 0;
@@ -2605,7 +2605,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 9.52;
                 serverItem._props.HeavyBleedingDelta = 0.4;
                 serverItem._props.LightBleedingDelta = 0.85;
-                serverItem._props.ammoAccr = -2;
+                serverItem._props.ammoAccr = -12;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 2;
 
@@ -2628,7 +2628,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 9.75;
                 serverItem._props.HeavyBleedingDelta = 0.35;
                 serverItem._props.LightBleedingDelta = 0.75;
-                serverItem._props.ammoAccr = -5;
+                serverItem._props.ammoAccr = -15;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
 
@@ -2651,7 +2651,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 8.2;
                 serverItem._props.HeavyBleedingDelta = 0.33;
                 serverItem._props.LightBleedingDelta = 0.7;
-                serverItem._props.ammoAccr = -8;
+                serverItem._props.ammoAccr = -18;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 18;
 
@@ -2675,7 +2675,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 8;
                 serverItem._props.HeavyBleedingDelta = 0.37;
                 serverItem._props.LightBleedingDelta = 0.79;
-                serverItem._props.ammoAccr = -10;
+                serverItem._props.ammoAccr = 5;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
 
@@ -2722,7 +2722,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 7.6;
                 serverItem._props.HeavyBleedingDelta = 0.32;
                 serverItem._props.LightBleedingDelta = 0.69;
-                serverItem._props.ammoAccr = -5;
+                serverItem._props.ammoAccr = -10;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
 
@@ -2745,7 +2745,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 7.9;
                 serverItem._props.HeavyBleedingDelta = 0.31;
                 serverItem._props.LightBleedingDelta = 0.67;
-                serverItem._props.ammoAccr = -10;
+                serverItem._props.ammoAccr = -15;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 14;
 
@@ -2768,7 +2768,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 7.9;
                 serverItem._props.HeavyBleedingDelta = 0.3;
                 serverItem._props.LightBleedingDelta = 0.65;
-                serverItem._props.ammoAccr = -12;
+                serverItem._props.ammoAccr = -18;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 17;
 
@@ -2791,7 +2791,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 7.9;
                 serverItem._props.HeavyBleedingDelta = 0.29;
                 serverItem._props.LightBleedingDelta = 0.63;
-                serverItem._props.ammoAccr = -15;
+                serverItem._props.ammoAccr = -20;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 20;
 
@@ -2815,7 +2815,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.6;
                 serverItem._props.HeavyBleedingDelta = 0.4;
                 serverItem._props.LightBleedingDelta = 0.85;
-                serverItem._props.ammoAccr = -10;
+                serverItem._props.ammoAccr = 5;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
 
@@ -2838,7 +2838,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.56;
                 serverItem._props.HeavyBleedingDelta = 0.39;
                 serverItem._props.LightBleedingDelta = 0.93;
-                serverItem._props.ammoAccr = -20;
+                serverItem._props.ammoAccr = 10;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
 
@@ -2931,7 +2931,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.23;
                 serverItem._props.HeavyBleedingDelta = 0.35;
                 serverItem._props.LightBleedingDelta = 0.75;
-                serverItem._props.ammoAccr = -2;
+                serverItem._props.ammoAccr = -5;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -6;
 
@@ -2954,7 +2954,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.43;
                 serverItem._props.HeavyBleedingDelta = 0.33;
                 serverItem._props.LightBleedingDelta = 0.69;
-                serverItem._props.ammoAccr = 15;
+                serverItem._props.ammoAccr = -2;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
 
@@ -2977,7 +2977,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.62;
                 serverItem._props.HeavyBleedingDelta = 0.32;
                 serverItem._props.LightBleedingDelta = 0.69;
-                serverItem._props.ammoAccr = 5;
+                serverItem._props.ammoAccr = -3;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 4;
 
@@ -3000,7 +3000,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.7;
                 serverItem._props.HeavyBleedingDelta = 0.3;
                 serverItem._props.LightBleedingDelta = 0.65;
-                serverItem._props.ammoAccr = -7;
+                serverItem._props.ammoAccr = -12;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
 
@@ -3023,7 +3023,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.1;
                 serverItem._props.HeavyBleedingDelta = 0.31;
                 serverItem._props.LightBleedingDelta = 0.67;
-                serverItem._props.ammoAccr = -8;
+                serverItem._props.ammoAccr = -13;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
 
@@ -3046,7 +3046,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 4.1;
                 serverItem._props.HeavyBleedingDelta = 0.28;
                 serverItem._props.LightBleedingDelta = 0.61;
-                serverItem._props.ammoAccr = -5;
+                serverItem._props.ammoAccr = -10;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
 
@@ -3115,7 +3115,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.56;
                 serverItem._props.HeavyBleedingDelta = 0.5;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ammoAccr = 10;
+                serverItem._props.ammoAccr = 15;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
 
@@ -3138,7 +3138,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.56;
                 serverItem._props.HeavyBleedingDelta = 0.42;
                 serverItem._props.LightBleedingDelta = 0.89;
-                serverItem._props.ammoAccr = -15;
+                serverItem._props.ammoAccr = 0;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 5;
 
@@ -3207,7 +3207,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 4.14;
                 serverItem._props.HeavyBleedingDelta = 0.3;
                 serverItem._props.LightBleedingDelta = 0.65;
-                serverItem._props.ammoAccr = -5;
+                serverItem._props.ammoAccr = -8;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
 
@@ -3230,7 +3230,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.56;
                 serverItem._props.HeavyBleedingDelta = 0.36;
                 serverItem._props.LightBleedingDelta = 0.77;
-                serverItem._props.ammoAccr = -10;
+                serverItem._props.ammoAccr = -5;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 5;
 
@@ -3253,7 +3253,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 4;
                 serverItem._props.HeavyBleedingDelta = 0.25;
                 serverItem._props.LightBleedingDelta = 0.55;
-                serverItem._props.ammoAccr = -18;
+                serverItem._props.ammoAccr = -20;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
 
@@ -3276,7 +3276,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.63;
                 serverItem._props.HeavyBleedingDelta = 0.37;
                 serverItem._props.LightBleedingDelta = 0.79;
-                serverItem._props.ammoAccr = 0;
+                serverItem._props.ammoAccr = -8;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -4;
 
@@ -3299,7 +3299,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 4;
                 serverItem._props.HeavyBleedingDelta = 0.27;
                 serverItem._props.LightBleedingDelta = 0.59;
-                serverItem._props.ammoAccr = 0;
+                serverItem._props.ammoAccr = -10;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 18;
 
@@ -3322,7 +3322,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 3.37;
                 serverItem._props.HeavyBleedingDelta = 0.26;
                 serverItem._props.LightBleedingDelta = 0.57;
-                serverItem._props.ammoAccr = -7;
+                serverItem._props.ammoAccr = -9;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
 

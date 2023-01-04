@@ -49,18 +49,6 @@ class WeaponsGlobals {
         }
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && helper_1.ConfigChecker.dllIsPresent == true) {
             this.globalDB.Aiming.AimProceduralIntensity = 1;
-            this.globalDB.Aiming.RecoilCrank = true;
-            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
-            this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.7;
-            this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.65;
-            this.globalDB.Aiming.RecoilYIntensityByPose["y"] = 1.2;
-            this.globalDB.Aiming.RecoilYIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.RecoilZIntensityByPose["x"] = 0.5;
-            this.globalDB.Aiming.RecoilZIntensityByPose["y"] = 1.35;
-            this.globalDB.Aiming.RecoilZIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.05;
-            this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.4;
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];
                 if (serverItem._props.weapClass === "smg"
@@ -74,7 +62,6 @@ class WeaponsGlobals {
                     serverItem._props.Ergonomics = 80;
                 }
                 if (serverItem._props.weapClass === "pistol") {
-                    // serverItem._props.RecoilForceUp *= 1.14;
                     serverItem._props.CameraRecoil *= 0.8;
                     serverItem._props.RecolDispersion *= 1.15;
                 }
@@ -82,6 +69,20 @@ class WeaponsGlobals {
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }
+        }
+        if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true) {
+            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
+            this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.7;
+            this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
+            this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.65;
+            this.globalDB.Aiming.RecoilYIntensityByPose["y"] = 1.2;
+            this.globalDB.Aiming.RecoilYIntensityByPose["z"] = 1;
+            this.globalDB.Aiming.RecoilZIntensityByPose["x"] = 0.5;
+            this.globalDB.Aiming.RecoilZIntensityByPose["y"] = 1.35;
+            this.globalDB.Aiming.RecoilZIntensityByPose["z"] = 1;
+            this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.05;
+            this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.4;
+            this.globalDB.Aiming.RecoilCrank = true;
         }
         if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true && helper_1.ConfigChecker.dllIsPresent != true) {
             for (let i in this.itemDB) {
@@ -112,23 +113,13 @@ class WeaponsGlobals {
                     serverItem._props.Ergonomics *= 1.1;
                 }
             }
+            this.globalDB.Aiming.AimProceduralIntensity = 0.8;
             this.globalDB.Aiming.RecoilCrank = true;
             this.globalDB.Aiming.RecoilDamping = 0.7;
             this.globalDB.Aiming.RecoilHandDamping = 0.65;
             this.globalDB.Aiming.RecoilConvergenceMult = 1;
             this.globalDB.Aiming.RecoilVertBonus = 0;
             this.globalDB.Aiming.RecoilBackBonus = 0;
-            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
-            this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.7;
-            this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.65;
-            this.globalDB.Aiming.RecoilYIntensityByPose["y"] = 1.2;
-            this.globalDB.Aiming.RecoilYIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.RecoilZIntensityByPose["x"] = 0.5;
-            this.globalDB.Aiming.RecoilZIntensityByPose["y"] = 1.35;
-            this.globalDB.Aiming.RecoilZIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.1;
-            this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.55;
             if (this.modConf.logEverything == true) {
                 this.logger.info("Legacy Recoil Enabled");
             }

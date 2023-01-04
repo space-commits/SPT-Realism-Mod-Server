@@ -1273,7 +1273,7 @@ export class Bots {
         this.knightBase.chances = knightLO.knightLO1.chances;
         this.knightBase.generation = knightLO.knightLO1.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        let randNum = this.helper.pickRandNumOneInTen();
+        const randNum = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO1.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO1.inventory.equipment;
@@ -1441,7 +1441,7 @@ export class Bots {
         this.knightBase.chances = knightLO.knightLO2.chances;
         this.knightBase.generation = knightLO.knightLO2.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        let randNum = this.helper.pickRandNumOneInTen();
+        const randNum = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO2.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO2.inventory.equipment;
@@ -1610,7 +1610,7 @@ export class Bots {
         this.knightBase.chances = knightLO.knightLO3.chances;
         this.knightBase.generation = knightLO.knightLO3.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        let randNum = this.helper.pickRandNumOneInTen();
+        const randNum = this.helper.pickRandNumOneInTen();
 
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO3.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO3.inventory.equipment;
@@ -1846,7 +1846,7 @@ export class Bots {
         this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO1.generation;
 
-        let randnum = this.helper.pickRandNumOneInTen();
+        const randnum = this.helper.pickRandNumOneInTen();
 
         if (randnum >= 8) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -1886,7 +1886,7 @@ export class Bots {
         this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO2.generation;
 
-        let randnum = this.helper.pickRandNumOneInTen();
+        const randnum = this.helper.pickRandNumOneInTen();
 
         if (randnum >= 5) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -1926,7 +1926,7 @@ export class Bots {
         this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO3.generation;
 
-        let randnum = this.helper.pickRandNumOneInTen();
+        const randnum = this.helper.pickRandNumOneInTen();
 
         if (randnum >= 3) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;

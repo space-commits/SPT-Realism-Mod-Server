@@ -1492,7 +1492,7 @@
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
         "Velocity": 0.5,
-        "RecoilAngle": 0,
+        "RecoilAngle": 8,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064
@@ -2645,10 +2645,10 @@
         "ItemID": "5998598e86f7740b3f498a86",
         "Name": "muzzle_saiga_9_izhmash_saiga_9_std_9x19",
         "ModType": "",
-        "VerticalRecoil": -6,
-        "HorizontalRecoil": -12,
-        "Dispersion": -12,
-        "CameraRecoil": 0,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -10,
+        "Dispersion": -5,
+        "CameraRecoil": -5,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2658,7 +2658,7 @@
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
         "Velocity": 0,
-        "RecoilAngle": 0,
+        "RecoilAngle": 10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.07
@@ -3553,7 +3553,8 @@
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.34
+        "Weight": 0.34,
+        "ModShotDispersion": -5
     },
     "560838c94bdc2d77798b4569": {
         "ItemID": "560838c94bdc2d77798b4569",
@@ -3567,7 +3568,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "CanCylceSubs": false,
-        "Accuracy": 20,
+        "Accuracy": -10,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
@@ -3575,7 +3576,8 @@
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.101
+        "Weight": 0.101,
+        "ModShotDispersion": 20
     },
     "58272d7f2459774f6311ddfd": {
         "ItemID": "58272d7f2459774f6311ddfd",
@@ -3597,7 +3599,8 @@
         "RecoilAngle": 20,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.233
+        "Weight": 0.233,
+        "ModShotDispersion": -10
     },
     "5c0111ab0db834001966914d": {
         "ItemID": "5c0111ab0db834001966914d",
@@ -3611,7 +3614,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "CanCylceSubs": false,
-        "Accuracy": 20,
+        "Accuracy": -20,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
@@ -3619,7 +3622,8 @@
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.12
+        "Weight": 0.12,
+        "ModShotDispersion": 20
     },
     "58889c7324597754281f9439": {
         "ItemID": "58889c7324597754281f9439",
@@ -4972,7 +4976,7 @@
         "SemiROF": 1.5,
         "ModMalfunctionChance": 0,
         "CanCylceSubs": false,
-        "Accuracy": 8,
+        "Accuracy": 10,
         "HeatFactor": 1.18,
         "CoolFactor": 1.1,
         "DurabilityBurnModificator": 1.21,
@@ -4980,7 +4984,8 @@
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.493
+        "Weight": 0.493,
+        "ModShotDispersion": 5
     },
     "5b363dd25acfc4001a598fd2": {
         "ItemID": "5b363dd25acfc4001a598fd2",
@@ -4994,7 +4999,7 @@
         "SemiROF": 1.85,
         "ModMalfunctionChance": 0,
         "CanCylceSubs": false,
-        "Accuracy": 6,
+        "Accuracy": 5,
         "HeatFactor": 1.18,
         "CoolFactor": 1.13,
         "DurabilityBurnModificator": 1.25,
@@ -5006,7 +5011,8 @@
             "56deeefcd2720bc8328b4568"
         ],
         "Ergonomics": 0,
-        "Weight": 0.97
+        "Weight": 0.97,
+        "ModShotDispersion": 10
     },
     "54490a4d4bdc2dbc018b4573": {
         "ItemID": "54490a4d4bdc2dbc018b4573",

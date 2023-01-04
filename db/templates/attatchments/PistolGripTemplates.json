@@ -164,7 +164,7 @@
         "Dispersion": -5,
         "AimSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 2.5,
+        "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.09
     },
@@ -177,7 +177,7 @@
         "Dispersion": -5,
         "AimSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 2.5,
+        "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.09
     },
@@ -229,7 +229,7 @@
         "Dispersion": -10,
         "AimSpeed": 0,
         "Ergonomics": 10,
-        "Accuracy": 5,
+        "Accuracy": 10,
         "ConflictingItems": [],
         "Weight": 0.09
     },
@@ -320,7 +320,7 @@
         "Dispersion": 0,
         "AimSpeed": 0,
         "Ergonomics": 0,
-        "Accuracy": 10,
+        "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.15
     },
@@ -840,7 +840,7 @@
         "Dispersion": 0,
         "AimSpeed": 0,
         "Ergonomics": 0,
-        "Accuracy": 10,
+        "Accuracy": 5.5,
         "ConflictingItems": [],
         "Weight": 0.11
     },
@@ -1009,7 +1009,7 @@
         "Dispersion": 0,
         "AimSpeed": 0,
         "Ergonomics": 4,
-        "Accuracy": 10,
+        "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.08
     },
@@ -1113,7 +1113,7 @@
         "Dispersion": 0,
         "AimSpeed": 0,
         "Ergonomics": 5,
-        "Accuracy": 5,
+        "Accuracy": 3,
         "ConflictingItems": [],
         "Weight": 0.08
     },
