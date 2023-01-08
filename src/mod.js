@@ -52,7 +52,6 @@ const _path = __importStar(require("path"));
 const description_gen_1 = require("./description_gen");
 const json_handler_1 = require("./json-handler");
 const fs = require('fs');
-const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
@@ -161,7 +160,7 @@ class Main {
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const helper = new helper_1.Helper(postLoadTables, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
@@ -180,7 +179,6 @@ class Main {
                                     this.revertMeds(pmcData, helper);
                                     this.revertMeds(scavData, helper);
                                     modConfig.revert_med_changes = false;
-                                    helper.saveToJSONFile(medRevertCount, 'db/saved/info.json');
                                     helper.saveToJSONFile(modConfig, 'config/config.json');
                                     logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                 }
@@ -236,9 +234,9 @@ class Main {
                     const profileHelper = container.resolve("ProfileHelper");
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const postLoadtables = postLoadDBServer.getTables();
-                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems);
                     const arrays = new arrays_1.Arrays(postLoadtables);
                     const helper = new helper_1.Helper(postLoadtables, arrays);
+                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems, helper);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     try {
@@ -380,7 +378,8 @@ class Main {
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
+                    const helper = new helper_1.Helper(postLoadTables, arrays);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     let level = 1;
                     if (pmcData?.Info?.Level !== undefined) {
@@ -423,7 +422,7 @@ class Main {
         const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
         const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth, medItems);
+        const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
@@ -661,25 +660,25 @@ class Main {
             tier = helper.probabilityWeighter(tierArray, [15, 1, 0, 0]);
         }
         if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = helper.probabilityWeighter(tierArray, [20, 5, 1, 0]);
+            tier = helper.probabilityWeighter(tierArray, [20, 2, 0, 0]);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, [15, 10, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [15, 8, 2, 0]);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, [5, 20, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [5, 20, 2, 1]);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 5]);
+            tier = helper.probabilityWeighter(tierArray, [5, 10, 15, 5]);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
             tier = helper.probabilityWeighter(tierArray, [2, 4, 25, 10]);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, [2, 4, 8, 30]);
+            tier = helper.probabilityWeighter(tierArray, [2, 4, 10, 30]);
         }
         if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 35]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 35]);
         }
         if (type === "tagilla") {
             if (tier == 1) {

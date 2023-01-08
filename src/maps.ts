@@ -2,7 +2,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 
 
-const botZones = require("../db/bots/spawnZones.json");
+const botZones = require("../db/maps/spawnZones.json");
 const bossSpawns = require("../db/maps/bossSpawns.json");
 
 export class Maps {

@@ -70,7 +70,7 @@ class WeaponsGlobals {
                 this.logger.info("Recoil Changes Enabled");
             }
         }
-        if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true) {
+        if (this.modConf.legacy_recoil_changes == true || this.modConf.recoil_attachment_overhaul) {
             this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
             this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.7;
             this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
@@ -95,16 +95,16 @@ class WeaponsGlobals {
                     || serverItem._props.weapClass === "machinegun"
                     || serverItem._props.weapClass === "marksmanRifle"
                     || serverItem._props.weapClass === "assaultRifle") {
-                    serverItem._props.RecoilForceUp *= 0.8;
-                    serverItem._props.RecoilForceBack *= 0.5;
-                    serverItem._props.Convergence *= 5.5;
-                    serverItem._props.RecolDispersion *= 0.5;
+                    serverItem._props.RecoilForceUp *= 1;
+                    serverItem._props.RecoilForceBack *= 0.75;
+                    serverItem._props.Convergence *= 2.5;
+                    serverItem._props.RecolDispersion *= 0.95;
                     serverItem._props.CameraRecoil *= 0.5;
                     serverItem._props.CameraSnap *= 0.5;
                     serverItem._props.Ergonomics *= 1.1;
                 }
                 if (serverItem._props.weapClass === "pistol") {
-                    serverItem._props.RecoilForceUp *= 0.3;
+                    serverItem._props.RecoilForceUp *= 0.6;
                     serverItem._props.RecoilForceBack *= 2;
                     serverItem._props.Convergence *= 4;
                     serverItem._props.RecolDispersion *= 0.5;
@@ -115,7 +115,7 @@ class WeaponsGlobals {
             }
             this.globalDB.Aiming.AimProceduralIntensity = 0.8;
             this.globalDB.Aiming.RecoilCrank = true;
-            this.globalDB.Aiming.RecoilDamping = 0.7;
+            this.globalDB.Aiming.RecoilDamping = 0.67;
             this.globalDB.Aiming.RecoilHandDamping = 0.65;
             this.globalDB.Aiming.RecoilConvergenceMult = 1;
             this.globalDB.Aiming.RecoilVertBonus = 0;

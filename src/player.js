@@ -2,20 +2,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
 class Player {
-    constructor(logger, tables, modConfig, custProfile, commonStats, medItems) {
+    constructor(logger, tables, modConfig, custProfile, commonStats, medItems, helper) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
         this.custProfile = custProfile;
         this.commonStats = commonStats;
         this.medItems = medItems;
+        this.helper = helper;
         this.globalDB = this.tables.globals.config;
         this.headHealth = this.commonStats.health.BodyParts[0].Head.max;
         this.chestHealth = this.commonStats.health.BodyParts[0].Chest.max;
         this.stomaHealth = this.commonStats.health.BodyParts[0].Stomach.max;
         this.armHealth = this.commonStats.health.BodyParts[0].RightArm.max;
         this.legHealth = this.commonStats.health.BodyParts[0].RightLeg.max;
-        this.hydration = 100;
+        this.hydration = 110;
         this.energy = 130;
         this.tempCurr = 30;
         this.tempMax = 30;
@@ -25,6 +26,7 @@ class Player {
         this.defaultArmHealth = this.tables.templates.profiles.Standard.bear.character.Health.BodyParts.LeftArm.Health.Maximum;
         this.defaultLegHealth = this.tables.templates.profiles.Standard.bear.character.Health.BodyParts.LeftLeg.Health.Maximum;
         this.defaultHydration = this.tables.templates.profiles.Standard.bear.character.Health.Hydration.Maximum;
+        this.defaultHydro = this.tables.templates.profiles.Standard.bear.character.Health.Hydration.Maximum;
         this.defaultEnergy = this.tables.templates.profiles.Standard.bear.character.Health.Energy.Maximum;
         this.defaultTemp = this.tables.templates.profiles.Standard.bear.character.Health.Temperature.Maximum;
     }
@@ -40,15 +42,17 @@ class Player {
         }
     }
     setPlayerHealth(pmcData, scavData) {
-        if (this.modConfig.realistic_player_health == false) {
+        if (this.modConfig.realistic_player_health == false && this.modConfig.revert_hp == true) {
             this.setPlayerHealthHelper(pmcData, true, false);
             this.setPlayerHealthHelper(scavData, true, false);
             if ((pmcData.Health.BodyParts["Chest"].Health.Current > pmcData.Health.BodyParts["Chest"].Health.Maximum) || (scavData.Health.BodyParts["Chest"].Health.Current > scavData.Health.BodyParts["Chest"].Health.Maximum)) {
                 this.setPlayerHealthHelper(pmcData, false, false);
                 this.setPlayerHealthHelper(scavData, false, false);
             }
+            this.modConfig.revert_hp = false;
+            this.helper.saveToJSONFile(this.modConfig, 'config/config.json');
             if (this.modConfig.logEverything == true) {
-                this.logger.info("Realism Mod: Player Health Set To Vanilla Defaults");
+                this.logger.info("Realism Mod: Player Health Reverted To Vanilla Defaults");
             }
         }
         if (this.modConfig.realistic_player_health == true) {
@@ -203,7 +207,12 @@ class Player {
         }
         if (this.modConfig.med_changes == true) {
             this.globalDB.Health.Effects.Existence.EnergyDamage = 1;
+            this.globalDB.Health.Effects.Exhaustion.Damage = 0.5;
+            this.globalDB.Health.Effects.Exhaustion.DefaultDelay = 60;
             this.globalDB.Health.Effects.Existence.HydrationDamage = 1.5;
+            this.globalDB.Health.Effects.Dehydration.BleedingHealth = 0.2;
+            this.globalDB.Health.Effects.Dehydration.DamageOnStrongDehydration = 0.5;
+            this.globalDB.Health.Effects.Dehydration.DefaultDelay = 60;
         }
         if (this.modConfig.realistic_ballistics == true) {
             this.globalDB.LegsOverdamage *= 1.75;
@@ -217,12 +226,12 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.Wound.ThresholdMax, mult);
             health.LightBleeding.HealthLoopTime = 10;
-            health.LightBleeding.DamageHealth = 0.6;
+            health.LightBleeding.DamageHealth = 0.5;
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.Threshold /= mult;
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult);
             this.debuffMul(health.Fracture.FallingProbability, 1);
             this.debuffMul(health.HeavyBleeding.Probability, 1.55);
-            this.debuffMul(health.LightBleeding.Probability, 2.05);
+            this.debuffMul(health.LightBleeding.Probability, 2.1);
             this.debuffMul(health.Wound.ThresholdMax, mult);
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);

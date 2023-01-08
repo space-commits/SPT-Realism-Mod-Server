@@ -11,16 +11,19 @@ class AttatchmentStats {
     }
     loadAttStats() {
         const parentArray = this.arrays.modParentIDs;
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-            for (let parent in parentArray) {
-                if (serverItem._parent === parentArray[parent]) {
-                    if (serverItem._props.Ergonomics != null) {
-                        serverItem._props.Ergonomics *= 1;
-                    }
-                }
-            }
-        }
+        // for (let i in this.itemDB) {
+        //     let serverItem = this.itemDB[i];
+        //     if (serverItem._props?.Zooms !== undefined) {
+        //         for (let zoomArr in serverItem._props.Zooms) {
+        //             for (let zoom in serverItem._props.Zooms[zoomArr]) {
+        //                 if (serverItem._props.Zooms[zoomArr][zoom] > 1) {
+        //                     serverItem._props.Zooms[zoomArr][zoom] *= 10;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // this.logger.info(""+this.itemDB["57adff4f24597737f373b6e6"]._props.Zooms[0][0]);
         if (this.modConf.logEverything == true) {
             this.logger.info("Attatchment Stats Loaded");
         }

@@ -98,7 +98,6 @@ import { JsonHandler } from "./json-handler";
 
 
 const fs = require('fs');
-const medRevertCount = require("../db/saved/info.json");
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
@@ -236,7 +235,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const arrays = new Arrays(postLoadTables);
                         const helper = new Helper(postLoadTables, arrays);
                         const tieredFlea = new TieredFlea(postLoadTables);
-                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
+                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -263,7 +262,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                         this.revertMeds(pmcData, helper);
                                         this.revertMeds(scavData, helper);
                                         modConfig.revert_med_changes = false;
-                                        helper.saveToJSONFile(medRevertCount, 'db/saved/info.json');
                                         helper.saveToJSONFile(modConfig, 'config/config.json');
                                         logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                     }
@@ -327,9 +325,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                         const postLoadtables = postLoadDBServer.getTables();
-                        const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems);
                         const arrays = new Arrays(postLoadtables);
                         const helper = new Helper(postLoadtables, arrays);
+                        const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems, helper);
+     
+      
 
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -502,7 +502,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables);
-                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems);
+                        const helper = new Helper(postLoadTables, arrays);
+                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         let level = 1;
 
@@ -555,7 +556,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
         const items = new _Items(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new Player(logger, tables, modConfig, custProfile, botHealth, medItems);
+        const player = new Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
@@ -831,25 +832,25 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             tier = helper.probabilityWeighter(tierArray, [15, 1, 0, 0]);
         }
         if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = helper.probabilityWeighter(tierArray, [20, 5, 1, 0]);
+            tier = helper.probabilityWeighter(tierArray, [20, 2, 0, 0]);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, [15, 10, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [15, 8, 2, 0]);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, [5, 20, 5, 1]);
+            tier = helper.probabilityWeighter(tierArray, [5, 20, 2, 1]);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = helper.probabilityWeighter(tierArray, [5, 15, 15, 5]);
+            tier = helper.probabilityWeighter(tierArray, [5, 10, 15, 5]);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
             tier = helper.probabilityWeighter(tierArray, [2, 4, 25, 10]);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, [2, 4, 8, 30]);
+            tier = helper.probabilityWeighter(tierArray, [2, 4, 10, 30]);
         }
         if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 5, 35]);
+            tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 35]);
         }
 
         if (type === "tagilla") {
