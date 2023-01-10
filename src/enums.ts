@@ -87,7 +87,8 @@ export const enum ParentClasses {
     ITEM = "54009119af1c881c07000029",
     CYLINDER_MAGAZINE = "610720f290b75a49ff2e5e25",
     MAP = "567849dd4bdc2d150f8b456e",
-    REPAIRKITS = "616eb7aea207f41933308f46"
+    REPAIRKITS = "616eb7aea207f41933308f46",
+    COMPASS = "5f4fbaaca5573a5ac31db429"
 }
 
 export const enum Calibers {

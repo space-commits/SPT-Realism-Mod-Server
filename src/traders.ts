@@ -389,6 +389,8 @@ export class RandomizeTraderAssort {
 
         //special items
         this.randomizeStock(itemParent, ParentClasses.SPEC_ITEM, item, 3, 6);
+        this.randomizeStock(itemParent, ParentClasses.PORTABLE_RANGE_FINDER, item, 0, 1);
+        this.randomizeStock(itemParent, ParentClasses.COMPASS, item, 0, 1);
 
         //grenades
         this.randomizeStock(itemParent, ParentClasses.THROW_WEAPON, item, 0, 3);
@@ -418,6 +420,7 @@ export class RandomizeTraderAssort {
                 this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 30, 120);
                 this.randomizeAmmoStockHelper(item, Calibers._9x39mm, 20, 120);
                 this.randomizeAmmoStockHelper(item, Calibers._45ACP, 30, 130);
+                this.randomizeAmmoStockHelper(item, Calibers._357mag, 12, 50);
                 this.randomizeAmmoStockHelper(item, Calibers._46x30mm, 30, 120);
                 this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 30, 120);
                 this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 30, 140);

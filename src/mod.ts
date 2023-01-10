@@ -781,10 +781,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             this.bossSpawnHelper(mapDB, 0.1);
         }
         if (level >= 10 && level < 15) {
-            this.bossSpawnHelper(mapDB, 0.4);
+            this.bossSpawnHelper(mapDB, 0.2);
         }
         if (level >= 15 && level < 20) {
-            this.bossSpawnHelper(mapDB, 0.5);
+            this.bossSpawnHelper(mapDB, 0.4);
         }
         if (level >= 20 && level < 25) {
             this.bossSpawnHelper(mapDB, 0.6);
@@ -796,10 +796,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             this.bossSpawnHelper(mapDB, 1);
         }
         if (level >= 35 && level < 40) {
-            this.bossSpawnHelper(mapDB, 1.2);
+            this.bossSpawnHelper(mapDB, 1.1);
         }
-        if (level >= 30 && level < 35) {
-            this.bossSpawnHelper(mapDB, 1.3);
+        if (level >= 40) {
+            this.bossSpawnHelper(mapDB, 1.2);
         }
     }
 
@@ -849,7 +849,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
             tier = helper.probabilityWeighter(tierArray, [2, 4, 10, 30]);
         }
-        if (pmcData.Info.Level >= 35 && pmcData.Info.Level) {
+        if (pmcData.Info.Level >= 35) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 35]);
         }
 

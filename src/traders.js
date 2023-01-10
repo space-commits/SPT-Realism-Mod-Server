@@ -323,6 +323,8 @@ class RandomizeTraderAssort {
         this.randomizeStock(itemParent, enums_1.ParentClasses.MEDICAL, item, 0, 3);
         //special items
         this.randomizeStock(itemParent, enums_1.ParentClasses.SPEC_ITEM, item, 3, 6);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.PORTABLE_RANGE_FINDER, item, 0, 1);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.COMPASS, item, 0, 1);
         //grenades
         this.randomizeStock(itemParent, enums_1.ParentClasses.THROW_WEAPON, item, 0, 3);
         //money
@@ -346,6 +348,7 @@ class RandomizeTraderAssort {
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 30, 120);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x39mm, 20, 120);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._45ACP, 30, 130);
+                this.randomizeAmmoStockHelper(item, enums_1.Calibers._357mag, 12, 50);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._46x30mm, 30, 120);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._57x28mm, 30, 120);
                 this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 30, 140);
