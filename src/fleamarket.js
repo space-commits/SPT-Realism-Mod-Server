@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TieredFlea = exports.FleamarketConfig = exports.FleamarketGlobal = void 0;
+const enums_1 = require("./enums");
 class FleamarketGlobal {
     constructor(logger, tables, modConfig) {
         this.logger = logger;
@@ -143,6 +144,7 @@ class TieredFlea {
         this.canSellAssaultScopes(true);
         this.canSellIrons(true);
         this.canSellParts(true);
+        this.canSellFlare(true);
     }
     flea6() {
         this.canSellAll(false);
@@ -174,6 +176,8 @@ class TieredFlea {
         this.canSellReddots(true);
         this.canSellMounts(true);
         this.canSellParts(true);
+        this.canSellSpecWeap(true);
+        this.canSellFlare(true);
     }
     fleaFullUnlock() {
         this.canSellAll(false);
@@ -212,8 +216,13 @@ class TieredFlea {
         this.canSellReddots(true);
         this.canSellMounts(true);
         this.canSellParts(true);
+        this.canSellSpecWeap(true);
+        this.canSellFlare(true);
     }
     canSellAll(bool) {
+        this.canSellFlare(bool);
+        this.canSellNadeLauncher(bool);
+        this.canSellSpecWeap(bool);
         this.canSellMeds(bool);
         this.canSellStims(bool);
         this.canSellFood(bool);
@@ -511,51 +520,72 @@ class TieredFlea {
             }
         }
     }
+    canSellSpecWeap(bool) {
+        for (let i in this.itemDB) {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.SPECIAL_WEAPON) {
+                this.itemDB[i]._props.CanSellOnRagfair = bool;
+            }
+        }
+    }
+    canSellFlare(bool) {
+        for (let i in this.itemDB) {
+            if (this.itemDB[i]._id === "6217726288ed9f0845317459" || this.itemDB[i]._id === "62178be9d0050232da3485d9" || this.itemDB[i]._id === "62178c4d4ecf221597654e3d") {
+                this.itemDB[i]._props.CanSellOnRagfair = bool;
+            }
+        }
+    }
+    canSellNadeLauncher(bool) {
+        for (let i in this.itemDB) {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.GRENADE_LAUNCHER) {
+                this.itemDB[i]._props.CanSellOnRagfair = bool;
+            }
+        }
+    }
     canSellAR(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b5f14bdc2d61278b4567" || this.itemDB[i]._parent === "5447bed64bdc2d97278b4568") {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.ASSAULT_RIFLE || this.itemDB[i]._parent === enums_1.ParentClasses.MACHINE_GUN) {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     canSellDMR(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b6194bdc2d67278b4567") {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.MARKSMAN_RIFLE) {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     canSellSMG(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b5e04bdc2d62278b4567") {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.SMG) {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     canSellMelee(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447e1d04bdc2dff2f8b4567") {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.KNIFE) {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     canSellSnip(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b6254bdc2dc3278b4568") {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.SNIPER_RIFLE) {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     canSellCarbine(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b5fc4bdc2d87278b4567") {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.ASSAULT_CARBINE) {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     canSellShotgun(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b6094bdc2dc3278b4567"
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.SHOTGUN
                 || this.itemDB[i]._id === "60db29ce99594040e04c4a27") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
@@ -563,7 +593,7 @@ class TieredFlea {
     }
     canSellPistol(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB[i]._parent === "617f1ef5e8b54b0998387733" && this.itemDB[i]._id !== "6275303a9f372d6ea97f9ec7") {
+            if (this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }

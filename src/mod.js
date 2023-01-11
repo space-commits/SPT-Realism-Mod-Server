@@ -505,6 +505,7 @@ class Main {
         if (modConfig.bot_changes == true) {
             attachBase.loadAttRequirements();
         }
+        logger.warning("" + tables.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Weight);
         attachBase.loadAttCompat();
         items.loadItemsRestrictions();
         player.loadPlayerStats();
@@ -523,10 +524,10 @@ class Main {
             }
         }
         else {
+            helper_1.ConfigChecker.dllIsPresent = false;
             if (modConfig.recoil_attachment_overhaul == true) {
                 logger.error("RealismMod.dll is missing form path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
             }
-            helper_1.ConfigChecker.dllIsPresent = false;
         }
     }
     revertMeds(pmcData, helper) {

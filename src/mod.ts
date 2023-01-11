@@ -579,7 +579,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
-
+        
         jsonHand.pushModsToServer();
         jsonHand.pushWeaponsToServer();
         jsonHand.pushArmorToServer();
@@ -659,6 +659,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.bot_changes == true) {
             attachBase.loadAttRequirements();
         }
+
+        logger.warning(""+tables.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Weight);
         
         attachBase.loadAttCompat();
 
@@ -681,10 +683,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 logger.error("RealismMod.dll is present at path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
             }
         } else {
+            ConfigChecker.dllIsPresent = false;
             if (modConfig.recoil_attachment_overhaul == true) {
                 logger.error("RealismMod.dll is missing form path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
             }
-            ConfigChecker.dllIsPresent = false;
         }
     }
 
