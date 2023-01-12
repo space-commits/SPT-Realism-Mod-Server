@@ -203,6 +203,26 @@ export class Arrays {
         this.botDB["assault"],
     ];
 
+    public standardBotHPArr = [
+        this.botDB["marksman"],
+        this.botDB["usec"],
+        this.botDB["bear"]
+    ];
+
+    public midBotHPArr = [
+        this.botDB["followerbully"],
+        this.botDB["followergluharassault"],
+        this.botDB["followergluharscout"],
+        this.botDB["followergluharsecurity"],
+        this.botDB["followergluharsnipe"],
+        this.botDB["followerkojaniy"],
+        this.botDB["followersanitar"],
+        this.botDB["followertagilla"],
+        this.botDB["sectantwarrior"],
+        this.botDB["pmcbot"],
+        this.botDB["exusec"],
+    ];
+
     public nonScavBotArr = [
         this.botDB["followerbully"],
         this.botDB["followergluharassault"],

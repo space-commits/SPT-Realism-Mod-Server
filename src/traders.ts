@@ -10,16 +10,21 @@ import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import { EventTracker, Helper } from "./helper";
 import { Calibers, ParentClasses } from "./enums";
 
-const AssaultRifleTemplates = require("../db/templates/weapons/AssaultRifleTemplates.json");
-const AssaultCarbineTemplates = require("../db/templates/weapons/AssaultCarbineTemplates.json");
-const MachinegunTemplates = require("../db/templates/weapons/MachinegunTemplates.json");
-const MarksmanRifleTemplates = require("../db/templates/weapons/MarksmanRifleTemplates.json");
-const PistolTemplates = require("../db/templates/weapons/PistolTemplates.json");
-const ShotgunTemplates = require("../db/templates/weapons/ShotgunTemplates.json");
-const SMGTemplates = require("../db/templates/weapons/SMGTemplates.json");
-const SniperRifleTemplates = require("../db/templates/weapons/SniperRifleTemplates.json");
-const SpecialWeaponTemplates = require("../db/templates/weapons/SpecialWeaponTemplates.json");
-const GrenadeLauncherTemplates = require("../db/templates/weapons/GrenadeLauncherTemplates.json");
+
+const modConfig = require("../config/config.json");
+const weapPath = modConfig.weap_preset;
+const attPath = modConfig.att_preset;
+
+const AssaultRifleTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/AssaultRifleTemplates.json");
+const AssaultCarbineTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/AssaultCarbineTemplates.json");
+const MachinegunTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/MachinegunTemplates.json");
+const MarksmanRifleTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/MarksmanRifleTemplates.json");
+const PistolTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/PistolTemplates.json");
+const ShotgunTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/ShotgunTemplates.json");
+const SMGTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/SMGTemplates.json");
+const SniperRifleTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/SniperRifleTemplates.json");
+const SpecialWeaponTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/SpecialWeaponTemplates.json");
+const GrenadeLauncherTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
 
 const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTemplates.json");

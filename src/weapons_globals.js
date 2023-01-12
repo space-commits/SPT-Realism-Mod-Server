@@ -120,6 +120,16 @@ class WeaponsGlobals {
                 this.logger.info("Legacy Recoil Enabled");
             }
         }
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._props.weapClass) {
+                serverItem._props.Ergonomics *= this.modConf.ergo_multi;
+                serverItem._props.RecoilForceUp *= this.modConf.vert_recoil_multi;
+                serverItem._props.RecoilForceBack *= this.modConf.horz_recoil_multi;
+                serverItem._props.Convergence *= this.modConf.convergence_multi;
+                serverItem._props.RecolDispersion *= this.modConf.dispersion_multi;
+            }
+        }
         if (this.modConf.logEverything == true) {
             this.logger.info("Weapons Globals Loaded");
         }

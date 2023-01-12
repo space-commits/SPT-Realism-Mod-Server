@@ -40,7 +40,6 @@ const bots_1 = require("./bots");
 const bot_gen_1 = require("./bot_gen");
 const bot_loot_serv_1 = require("./bot_loot_serv");
 const items_1 = require("./items");
-const code_gen_1 = require("./code_gen");
 const quests_1 = require("./quests");
 const traders_1 = require("./traders");
 const airdrops_1 = require("./airdrops");
@@ -425,7 +424,7 @@ class Main {
         const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
-        const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
+        // const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, helper);
@@ -505,7 +504,6 @@ class Main {
         if (modConfig.bot_changes == true) {
             attachBase.loadAttRequirements();
         }
-        logger.warning("" + tables.templates.items["5447a9cd4bdc2dbd208b4567"]._props.Weight);
         attachBase.loadAttCompat();
         items.loadItemsRestrictions();
         player.loadPlayerStats();
@@ -516,17 +514,17 @@ class Main {
         this.modLoader = container.resolve("PreAkiModLoader");
     }
     dllChecker(logger, modConfig) {
-        const plugin = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
-        if (fs.existsSync(plugin)) {
+        const realismdll = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+        if (fs.existsSync(realismdll)) {
             helper_1.ConfigChecker.dllIsPresent = true;
             if (modConfig.recoil_attachment_overhaul == false) {
-                logger.error("RealismMod.dll is present at path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
+                logger.error("RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
             }
         }
         else {
             helper_1.ConfigChecker.dllIsPresent = false;
             if (modConfig.recoil_attachment_overhaul == true) {
-                logger.error("RealismMod.dll is missing form path: " + plugin + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
+                logger.error("RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
             }
         }
     }

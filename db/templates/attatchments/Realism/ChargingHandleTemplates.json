@@ -375,6 +375,7 @@
         "Ergonomics": 0,
         "Weight": 0.019,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 30
+        "HorizontalRecoil": 0,
+        "ChamberSpeed": 20
     }
 }

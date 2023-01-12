@@ -187,6 +187,10 @@ class Bots {
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
+        this.botHPMultiHelper(this.arrays.standardBotHPArr, this.modConf.standard_bot_hp_multi);
+        this.botHPMultiHelper(this.arrays.scavBotHealthArr, this.modConf.standard_bot_hp_multi);
+        this.botHPMultiHelper(this.arrays.midBotHPArr, this.modConf.mid_bot_hp_multi);
+        this.botHPMultiHelper(this.arrays.bossBotArr, this.modConf.boss_bot_hp_multi);
         if (this.modConf.logEverything == true) {
             this.logger.info("Killa chest health = " + this.botDB["bosskilla"].health.BodyParts[0].Chest.min);
             this.logger.info("Knight Vitality = " + this.botDB["bossknight"].skills.Common["Vitality"].max);
@@ -198,6 +202,25 @@ class Bots {
             this.logger.info("Scav stomach health  max = " + this.botDB["assault"].health.BodyParts[0].Stomach.max);
             this.logger.info("Cultist chest health = " + this.botDB["sectantwarrior"].health.BodyParts[0].Chest.min);
             this.logger.info("Bot Health Set");
+        }
+    }
+    botHPMultiHelper(botarr, multi, isScav) {
+        botarr.forEach(setHealthMulti);
+        function setHealthMulti(bot) {
+            for (let part in bot.health.BodyParts[0]) {
+                if (part != "Head") {
+                    bot.health.BodyParts[0][part].min *= multi;
+                    bot.health.BodyParts[0][part].max *= multi;
+                }
+            }
+            if (isScav == true) {
+                for (let part in bot.health.BodyParts[1]) {
+                    if (part != "Head") {
+                        bot.health.BodyParts[0][part].min *= multi;
+                        bot.health.BodyParts[0][part].max *= multi;
+                    }
+                }
+            }
         }
     }
     botTest(tier) {
