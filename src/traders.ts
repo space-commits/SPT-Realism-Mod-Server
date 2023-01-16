@@ -45,7 +45,7 @@ const customMech = require("../db/traders/mechanic/assort.json");
 const customRag = require("../db/traders/ragman/assort.json");
 const customJaeg = require("../db/traders/jaeger/assort.json");
 
-const fenseLimits = require("../db/traders/fence/fenceLimits.json");
+const fenceLimits = require("../db/traders/fence/fenceLimits.json");
 
 // const sellCatPrap = require("../db/traders/prapor/sell_categories.json");
 const sellCatThera = require("../db/traders/therapist/sell_categories.json");
@@ -87,7 +87,7 @@ export class Traders {
         this.traderConf.fence.assortSize = 60;
         this.traderConf.fence.itemPriceMult = 1.8;
         this.traderConf.fence.presetPriceMult = 2.5;
-        this.traderConf.fence.itemTypeLimits = fenseLimits.itemTypeLimits;
+        this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
 
         this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
         this.tables.globals.config.Health.HealPrice.EnergyPointPrice = 30;

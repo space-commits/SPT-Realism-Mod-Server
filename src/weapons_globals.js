@@ -110,7 +110,7 @@ class WeaponsGlobals {
                 }
             }
             this.globalDB.Aiming.AimProceduralIntensity = 0.8;
-            this.globalDB.Aiming.RecoilCrank = true;
+            this.globalDB.Aiming.RecoilCrank = this.modConf.recoil_crank;
             this.globalDB.Aiming.RecoilDamping = 0.67;
             this.globalDB.Aiming.RecoilHandDamping = 0.65;
             this.globalDB.Aiming.RecoilConvergenceMult = 1;

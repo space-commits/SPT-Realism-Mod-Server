@@ -187,13 +187,14 @@ class Bots {
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
+    }
+    botHpMulti() {
         this.botHPMultiHelper(this.arrays.standardBotHPArr, this.modConf.standard_bot_hp_multi);
         this.botHPMultiHelper(this.arrays.scavBotHealthArr, this.modConf.standard_bot_hp_multi);
         this.botHPMultiHelper(this.arrays.midBotHPArr, this.modConf.mid_bot_hp_multi);
         this.botHPMultiHelper(this.arrays.bossBotArr, this.modConf.boss_bot_hp_multi);
         if (this.modConf.logEverything == true) {
             this.logger.info("Killa chest health = " + this.botDB["bosskilla"].health.BodyParts[0].Chest.min);
-            this.logger.info("Knight Vitality = " + this.botDB["bossknight"].skills.Common["Vitality"].max);
             this.logger.info("PMC chest health = " + this.botDB["usec"].health.BodyParts[0].Chest.min);
             this.logger.info("Scav head health  max = " + this.botDB["assault"].health.BodyParts[0].Head.max);
             this.logger.info("Scav chest health  max = " + this.botDB["assault"].health.BodyParts[0].Chest.min);

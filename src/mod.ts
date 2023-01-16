@@ -629,6 +629,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.setBotHealth();
         }
 
+        bots.botHpMulti();
+
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
             meds.loadMeds();
@@ -678,12 +680,12 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (fs.existsSync(realismdll)) {
             ConfigChecker.dllIsPresent = true;
             if (modConfig.recoil_attachment_overhaul == false) {
-                logger.error("RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
+                logger.error("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
             }
         } else {
             ConfigChecker.dllIsPresent = false;
             if (modConfig.recoil_attachment_overhaul == true) {
-                logger.error("RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
+                logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
             }
         }
     }
@@ -805,7 +807,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
     private bossSpawnHelper(mapDB: ILocations, chanceMulti: number){
         for (let i in mapDB) {
-            if (mapDB[i].base?.BossLocationSpawn !== undefined) {
+            if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
                 for (let k in mapDB[i].base.BossLocationSpawn) {
                     let chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
                     mapDB[i].base.BossLocationSpawn[k].BossChance = chance
@@ -841,13 +843,13 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             tier = helper.probabilityWeighter(tierArray, [5, 20, 2, 1]);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = helper.probabilityWeighter(tierArray, [5, 10, 15, 5]);
+            tier = helper.probabilityWeighter(tierArray, [2, 10, 15, 5]);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = helper.probabilityWeighter(tierArray, [2, 4, 25, 10]);
+            tier = helper.probabilityWeighter(tierArray, [1, 4, 25, 10]);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, [2, 4, 10, 30]);
+            tier = helper.probabilityWeighter(tierArray, [1, 4, 10, 30]);
         }
         if (pmcData.Info.Level >= 35) {
             tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 35]);

@@ -47,6 +47,13 @@ class AttatchmentBase {
             if (serverItem._props.weapClass === "pistol") {
                 serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
             }
+            // if(serverItem._id === "622b3d5cf9cfc87d675d2de9"){
+            //     let scopes = serverItem._props.Slots[0]._props.filters[0].Filter;
+            //     for(let scope in scopes)
+            //     {
+            //         serverItem._props.Slots[2]._props.filters[0].Filter.push(scopes[scope]);
+            //     }
+            // }
         }
     }
     loadAttRequirements() {

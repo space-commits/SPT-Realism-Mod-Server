@@ -147,16 +147,18 @@ export class Player {
 
     public loadPlayerStats() {
 
-        if (this.modConfig.movement_changes == true) {
-
-            this.globalDB.Stamina.WalkOverweightLimits["x"] = 50;
+        if (this.modConfig.weight_limits_changes == true){
+            this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 70;
-            this.globalDB.Stamina.BaseOverweightLimits["x"] = 25;
-            this.globalDB.Stamina.BaseOverweightLimits["y"] = 55;
+            this.globalDB.Stamina.BaseOverweightLimits["x"] = 24;
+            this.globalDB.Stamina.BaseOverweightLimits["y"] = 60;
             this.globalDB.Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB.Stamina.SprintOverweightLimits["y"] = 30;
             this.globalDB.Stamina.WalkSpeedOverweightLimits["x"] = 32;
-            this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 80;
+            this.globalDB.Stamina.WalkSpeedOverweightLimits["y"] = 85;
+        }
+
+        if (this.modConfig.movement_changes == true) {
 
             this.globalDB.WalkSpeed["x"] = 0.6;
             this.globalDB.WalkSpeed["y"] = 0.83;

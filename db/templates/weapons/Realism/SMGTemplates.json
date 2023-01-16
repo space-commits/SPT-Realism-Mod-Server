@@ -135,7 +135,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.1,
+        "CenterOfImpact": 0.09,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -147,7 +147,7 @@
         "Weight": 1.962,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 650,
-        "SemiROF": 360,
+        "SemiROF": 400,
         "LoyaltyLevel": 1
     },
     "59984ab886f7743e98271174": {
@@ -172,7 +172,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.145,
+        "CenterOfImpact": 0.1,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -184,7 +184,7 @@
         "Weight": 1.809,
         "DurabilityBurnRatio": 0.08,
         "AutoROF": 700,
-        "SemiROF": 340,
+        "SemiROF": 390,
         "LoyaltyLevel": 2
     },
     "5e00903ae9dc277128008b87": {
@@ -295,7 +295,7 @@
         "Weight": 0.924,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 900,
-        "SemiROF": 360,
+        "SemiROF": 340,
         "LoyaltyLevel": 1
     },
     "5926bb2186f7744b1c6c6e60": {
@@ -332,7 +332,7 @@
         "Weight": 1.097,
         "DurabilityBurnRatio": 0.12,
         "AutoROF": 800,
-        "SemiROF": 360,
+        "SemiROF": 340,
         "LoyaltyLevel": 3
     },
     "58948c8e86f77409493f7266": {
@@ -369,7 +369,7 @@
         "Weight": 0.64,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 850,
-        "SemiROF": 390,
+        "SemiROF": 400,
         "LoyaltyLevel": 3
     },
     "5fc3f2d5900b1d5091531e57": {
@@ -381,10 +381,10 @@
         "BaseTorque": -1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 13,
+        "VerticalRecoil": 16,
         "HorizontalRecoil": 220,
-        "Dispersion": 19,
-        "CameraRecoil": 0.085,
+        "Dispersion": 21,
+        "CameraRecoil": 0.088,
         "CameraSnap": 3.5,
         "Convergence": 8,
         "RecoilAngle": 250,
@@ -400,8 +400,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.77,
-        "RecoilHandDamping": 0.55,
+        "RecoilDamping": 0.8,
+        "RecoilHandDamping": 0.8,
         "WeaponAllowADS": false,
         "Weight": 1.8,
         "DurabilityBurnRatio": 0.6,
@@ -421,7 +421,7 @@
         "VerticalRecoil": 21,
         "HorizontalRecoil": 240,
         "Dispersion": 22,
-        "CameraRecoil": 0.09,
+        "CameraRecoil": 0.091,
         "CameraSnap": 3.5,
         "Convergence": 8,
         "RecoilAngle": 250,
@@ -437,8 +437,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.77,
-        "RecoilHandDamping": 0.55,
+        "RecoilDamping": 0.8,
+        "RecoilHandDamping": 0.8,
         "WeaponAllowADS": false,
         "Weight": 1.86,
         "DurabilityBurnRatio": 0.6,
@@ -554,7 +554,7 @@
         "Weight": 1.445,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 950,
-        "SemiROF": 375,
+        "SemiROF": 380,
         "LoyaltyLevel": 2
     },
     "5bd70322209c4d00d7167b8f": {
@@ -591,7 +591,7 @@
         "Weight": 1.58,
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 950,
-        "SemiROF": 375,
+        "SemiROF": 380,
         "LoyaltyLevel": 3
     },
     "5ea03f7400685063ec28bfa8": {
