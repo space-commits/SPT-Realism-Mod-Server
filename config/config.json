@@ -57,7 +57,7 @@
     "convergence_multi": 1.0,
     "dispersion_multi": 1.0,
     "ergo_multi": 1.0,
-    "standard_bot_hp_multi": 1.5,
-    "mid_bot_hp_multi": 1.5,
-    "boss_bot_hp_multi": 1.5
+    "standard_bot_hp_multi": 1.0,
+    "mid_bot_hp_multi": 1.0,
+    "boss_bot_hp_multi": 1.0
 }

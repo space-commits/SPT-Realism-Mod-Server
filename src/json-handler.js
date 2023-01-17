@@ -123,6 +123,7 @@ class JsonHandler {
                 serverItem._props.Velocity = fileItem.Velocity;
                 serverItem._props.Weight = fileItem.Weight;
                 serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
+                serverItem._props.Loudness = fileItem.Loudness;
                 var serverConfItems = serverItem._props.ConflictingItems;
                 // var modConfItems = fileItem.ConflictingItems;
                 var modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",

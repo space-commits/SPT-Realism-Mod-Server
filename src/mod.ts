@@ -94,6 +94,7 @@ import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
 import { DescriptionGen } from "./description_gen";
 import { JsonHandler } from "./json-handler";
+import { table } from "console";
 
 
 
@@ -242,8 +243,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
                         let level = 1;
 
-                        if(pmcData?.Info?.Level !== undefined)
-                        {
+                        if (pmcData?.Info?.Level !== undefined) {
                             level = pmcData.Info.Level;
                         }
 
@@ -296,7 +296,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             if (modConfig.tiered_flea == true) {
                                 this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
                             }
-                            if(modConfig.boss_spawns == true){
+                            if (modConfig.boss_spawns == true) {
                                 this.setBossSpawnChance(postLoadTables.locations, level);
                             }
 
@@ -328,8 +328,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const arrays = new Arrays(postLoadtables);
                         const helper = new Helper(postLoadtables, arrays);
                         const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems, helper);
-     
-      
+
+
 
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -390,7 +390,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             RaidInfoTracker.mapNameUnreliable = mapNameRegPlayer;
                             let realTime = "";
                             let mapType = "";
-           
+
 
                             if (mapNameStartOffl === "Laboratory") {
                                 botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
@@ -507,13 +507,12 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         let level = 1;
 
-                        if(pmcData?.Info?.Level !== undefined)
-                        {
+                        if (pmcData?.Info?.Level !== undefined) {
                             level = pmcData.Info.Level;
                         }
 
                         try {
-              
+
                             if (modConfig.tiered_flea == true) {
                                 this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
                             }
@@ -559,7 +558,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const player = new Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
-        // const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
+        const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, helper);
@@ -576,10 +575,22 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             itemCloning.createCustomWeapons();
         }
 
+        for (let item in tables.templates.items) {
+            // if (tables.templates.items[item]._parent === "5645bcb74bdc2ded0b8b4578") {
+            //     tables.templates.items[item]._props.CompressorAttack = 0.1;
+            //     tables.templates.items[item]._props.CompressorTreshold = -50;
+            // }
+            if (tables.templates.items[item]._parent === "550aa4bf4bdc2dd6348b456b") {
+                logger.warning(""+tables.templates.items[item]._props.Loudness);
+                logger.warning(""+tables.templates.items[item]._name);
+
+            }
+        }
+
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
-        
+
         jsonHand.pushModsToServer();
         jsonHand.pushWeaponsToServer();
         jsonHand.pushArmorToServer();
@@ -661,7 +672,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.bot_changes == true) {
             attachBase.loadAttRequirements();
         }
-        
+
         attachBase.loadAttCompat();
 
         items.loadItemsRestrictions();
@@ -733,7 +744,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     }
 
     private updateFlea(logger: ILogger, flea: TieredFlea, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays, level: number) {
-      
+
         if (level === undefined) {
             this.fleaHelper(flea.flea0, ragfairOfferGen, container);
             logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
@@ -775,9 +786,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     }
 
     private setBossSpawnChance(mapDB: ILocations, level: number) {
-        
+
         if (level >= 0 && level < 5) {
-           this.bossSpawnHelper(mapDB, 0.01);
+            this.bossSpawnHelper(mapDB, 0.01);
         }
         if (level >= 5 && level < 10) {
             this.bossSpawnHelper(mapDB, 0.1);
@@ -805,7 +816,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    private bossSpawnHelper(mapDB: ILocations, chanceMulti: number){
+    private bossSpawnHelper(mapDB: ILocations, chanceMulti: number) {
         for (let i in mapDB) {
             if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
                 for (let k in mapDB[i].base.BossLocationSpawn) {

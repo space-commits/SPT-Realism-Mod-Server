@@ -40,6 +40,7 @@ const bots_1 = require("./bots");
 const bot_gen_1 = require("./bot_gen");
 const bot_loot_serv_1 = require("./bot_loot_serv");
 const items_1 = require("./items");
+const code_gen_1 = require("./code_gen");
 const quests_1 = require("./quests");
 const traders_1 = require("./traders");
 const airdrops_1 = require("./airdrops");
@@ -424,7 +425,7 @@ class Main {
         const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
-        // const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
+        const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, helper);
@@ -438,13 +439,14 @@ class Main {
         if (modConfig.trader_changes == true) {
             itemCloning.createCustomWeapons();
         }
-        for (let i in tables.locations) {
-            if (i !== "lighthouse" && i !== "laboratory" && tables.locations[i].base?.BossLocationSpawn !== undefined) {
-                logger.warning(i);
-                for (let k in tables.locations[i].base.BossLocationSpawn) {
-                    let chance = Math.round(tables.locations[i].base.BossLocationSpawn[k].BossChance * 2);
-                    tables.locations[i].base.BossLocationSpawn[k].BossChance = chance;
-                }
+        for (let item in tables.templates.items) {
+            // if (tables.templates.items[item]._parent === "5645bcb74bdc2ded0b8b4578") {
+            //     tables.templates.items[item]._props.CompressorAttack = 0.1;
+            //     tables.templates.items[item]._props.CompressorTreshold = -50;
+            // }
+            if (tables.templates.items[item]._parent === "550aa4bf4bdc2dd6348b456b") {
+                logger.warning("" + tables.templates.items[item]._props.Loudness);
+                logger.warning("" + tables.templates.items[item]._name);
             }
         }
         // codegen.attTemplatesCodeGen();

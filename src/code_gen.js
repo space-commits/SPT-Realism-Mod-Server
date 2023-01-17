@@ -191,7 +191,7 @@ class CodeGen {
     itemWriteToFile(filePathObj, fileStr, index, serverItem, folderStr, funJsonAssign, id) {
         let fileItem = filePathObj[index];
         filePathObj[index] = funJsonAssign(serverItem, fileItem, id);
-        this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
+        this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${attPath}/${fileStr}.json`);
     }
     assignJSONToAmmo(serverItem, fileItem) {
         if (fileItem) {
@@ -312,6 +312,7 @@ class CodeGen {
     assignJSONToMod(serverItem, fileItem, ID) {
         //new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
+            // fileItem.Loudness = serverItem._props.Loudness;
             // fileItem.HeatFactor = serverItem._props.HeatFactor; You need to give it a value. If you set it to the server item's propety value, the new property will only appear if the server mod has that property
             //    if(serverItem._props?.Recoil !== undefined){
             //     fileItem.VerticalRecoil = serverItem._props.Recoil;
@@ -353,6 +354,7 @@ class CodeGen {
         let ConflictingItems = serverItem._props.ConflictingItems;
         let Weight = serverItem._props.Weight;
         let ShotgunDispersion = serverItem._props.ShotgunDispersion;
+        let Loudness = serverItem._props.Loudness;
         if (ID === "muzzle") {
             let item = {
                 ItemID,
@@ -375,7 +377,8 @@ class CodeGen {
                 ConflictingItems,
                 Ergonomics,
                 Weight,
-                ModShotDispersion
+                ModShotDispersion,
+                Loudness
             };
             return item;
         }
@@ -399,7 +402,8 @@ class CodeGen {
                 ConflictingItems,
                 Ergonomics,
                 Weight,
-                ShotgunDispersion
+                ShotgunDispersion,
+                Loudness
             };
             return item;
         }

@@ -18,7 +18,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5d440b93a4b9364276578d4b": {
         "ItemID": "5d440b93a4b9364276578d4b",
@@ -47,7 +48,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.4,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "560836fb4bdc2d773f8b4569": {
         "ItemID": "560836fb4bdc2d773f8b4569",
@@ -68,7 +70,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1.025
+        "ShotgunDispersion": 1.025,
+        "Loudness": 0
     },
     "622b3858034a3e17ad0b81f5": {
         "ItemID": "622b3858034a3e17ad0b81f5",
@@ -89,7 +92,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.47,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "55d3632e4bdc2d972f8b4569": {
         "ItemID": "55d3632e4bdc2d972f8b4569",
@@ -110,7 +114,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.7326,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "560837824bdc2d57468b4568": {
         "ItemID": "560837824bdc2d57468b4568",
@@ -131,7 +136,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.5,
-        "ShotgunDispersion": 1.075
+        "ShotgunDispersion": 1.075,
+        "Loudness": 0
     },
     "5cc701d7e4a94900100ac4e7": {
         "ItemID": "5cc701d7e4a94900100ac4e7",
@@ -158,7 +164,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "611a30addbdd8440277441dc": {
         "ItemID": "611a30addbdd8440277441dc",
@@ -179,7 +186,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 2.4,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5894a2c386f77427140b8342": {
         "ItemID": "5894a2c386f77427140b8342",
@@ -204,7 +212,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.25,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "55d35ee94bdc2d61338b4568": {
         "ItemID": "55d35ee94bdc2d61338b4568",
@@ -225,7 +234,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.6305,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "55d447bb4bdc2d892f8b456f": {
         "ItemID": "55d447bb4bdc2d892f8b456f",
@@ -246,7 +256,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 2.2,
-        "ShotgunDispersion": 0.94
+        "ShotgunDispersion": 0.94,
+        "Loudness": 0
     },
     "5e848d2eea0a7c419c2f9bfd": {
         "ItemID": "5e848d2eea0a7c419c2f9bfd",
@@ -267,7 +278,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.23,
-        "ShotgunDispersion": 1.1
+        "ShotgunDispersion": 1.1,
+        "Loudness": 0
     },
     "5e848d1c264f7c180b5e35a9": {
         "ItemID": "5e848d1c264f7c180b5e35a9",
@@ -288,7 +300,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.91,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a34fae7c4a2826c6e06d760": {
         "ItemID": "5a34fae7c4a2826c6e06d760",
@@ -309,7 +322,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5580169d4bdc2d9d138b4585": {
         "ItemID": "5580169d4bdc2d9d138b4585",
@@ -330,7 +344,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.5,
-        "ShotgunDispersion": 0.8
+        "ShotgunDispersion": 0.8,
+        "Loudness": 0
     },
     "5c0e2f94d174af029f650d56": {
         "ItemID": "5c0e2f94d174af029f650d56",
@@ -354,7 +369,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.9616,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "55d4491a4bdc2d882f8b456e": {
         "ItemID": "55d4491a4bdc2d882f8b456e",
@@ -375,7 +391,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 0.9
+        "ShotgunDispersion": 0.9,
+        "Loudness": 0
     },
     "5fbbfabed5cb881a7363194e": {
         "ItemID": "5fbbfabed5cb881a7363194e",
@@ -396,7 +413,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.409,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "588200af24597742fa221dfb": {
         "ItemID": "588200af24597742fa221dfb",
@@ -417,7 +435,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.25,
-        "ShotgunDispersion": 0.9
+        "ShotgunDispersion": 0.9,
+        "Loudness": 0
     },
     "5fbbfacda56d053a3543f799": {
         "ItemID": "5fbbfacda56d053a3543f799",
@@ -438,7 +457,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.479,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5c5db5962e2216000e5e46eb": {
         "ItemID": "5c5db5962e2216000e5e46eb",
@@ -463,7 +483,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.19,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6076c1b9f2cb2e02a42acedc": {
         "ItemID": "6076c1b9f2cb2e02a42acedc",
@@ -484,7 +505,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 1.05
+        "ShotgunDispersion": 1.05,
+        "Loudness": 0
     },
     "5888945a2459774bf43ba385": {
         "ItemID": "5888945a2459774bf43ba385",
@@ -506,7 +528,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 2.378,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5888956924597752983e182d": {
         "ItemID": "5888956924597752983e182d",
@@ -529,7 +552,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 2.112,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "612368f58b401f4f51239b33": {
         "ItemID": "612368f58b401f4f51239b33",
@@ -550,7 +574,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.55,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5c5db5b82e2216003a0fe71d": {
         "ItemID": "5c5db5b82e2216003a0fe71d",
@@ -574,7 +599,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.28,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5cc701aae4a949000e1ea45c": {
         "ItemID": "5cc701aae4a949000e1ea45c",
@@ -601,7 +627,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.5,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5d440b9fa4b93601354d480c": {
         "ItemID": "5d440b9fa4b93601354d480c",
@@ -630,7 +657,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.9276,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5e87071478f43e51ca2de5e1": {
         "ItemID": "5e87071478f43e51ca2de5e1",
@@ -642,7 +670,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "Length": 0,
-        "Accuracy": 5,
+        "Accuracy": 0,
         "CenterOfImpact": 0.073,
         "HeatFactor": 0.92,
         "CoolFactor": 0.96,
@@ -651,7 +679,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 0.88
+        "ShotgunDispersion": 0.88,
+        "Loudness": 0
     },
     "5bb20d9cd4351e00334c9d8a": {
         "ItemID": "5bb20d9cd4351e00334c9d8a",
@@ -678,7 +707,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.985,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5c6d85e02e22165df16b81f4": {
         "ItemID": "5c6d85e02e22165df16b81f4",
@@ -716,7 +746,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.765,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5bb20d92d4351e00853263eb": {
         "ItemID": "5bb20d92d4351e00853263eb",
@@ -743,7 +774,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.615,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5bb20da5d4351e0035629dbf": {
         "ItemID": "5bb20da5d4351e0035629dbf",
@@ -770,7 +802,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.13,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5f2aa46b878ef416f538b567": {
         "ItemID": "5f2aa46b878ef416f538b567",
@@ -791,7 +824,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.91,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5bb20dadd4351e00367faeff": {
         "ItemID": "5bb20dadd4351e00367faeff",
@@ -812,7 +846,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "55d448594bdc2d8c2f8b4569": {
         "ItemID": "55d448594bdc2d8c2f8b4569",
@@ -833,7 +868,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a34f7f1c4a2826c6e06d75d": {
         "ItemID": "5a34f7f1c4a2826c6e06d75d",
@@ -854,7 +890,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.12,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5608373c4bdc2dc8488b4570": {
         "ItemID": "5608373c4bdc2dc8488b4570",
@@ -875,7 +912,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.3,
-        "ShotgunDispersion": 1.05
+        "ShotgunDispersion": 1.05,
+        "Loudness": 0
     },
     "5c5db5c62e22160012542255": {
         "ItemID": "5c5db5c62e22160012542255",
@@ -896,7 +934,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.35,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5fc23678ab884124df0cd590": {
         "ItemID": "5fc23678ab884124df0cd590",
@@ -925,7 +964,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "560836484bdc2d20478b456e": {
         "ItemID": "560836484bdc2d20478b456e",
@@ -946,7 +986,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 0.975
+        "ShotgunDispersion": 0.975,
+        "Loudness": 0
     },
     "588200cf2459774414733d55": {
         "ItemID": "588200cf2459774414733d55",
@@ -967,7 +1008,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.35,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5c5db5852e2216003a0fe71a": {
         "ItemID": "5c5db5852e2216003a0fe71a",
@@ -994,7 +1036,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.16,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "56deec93d2720bec348b4568": {
         "ItemID": "56deec93d2720bec348b4568",
@@ -1015,7 +1058,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.55,
-        "ShotgunDispersion": 1.05
+        "ShotgunDispersion": 1.05,
+        "Loudness": 0
     },
     "588200c224597743990da9ed": {
         "ItemID": "588200c224597743990da9ed",
@@ -1036,7 +1080,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.25,
-        "ShotgunDispersion": 0.95
+        "ShotgunDispersion": 0.95,
+        "Loudness": 0
     },
     "58aeaaa886f7744fc1560f81": {
         "ItemID": "58aeaaa886f7744fc1560f81",
@@ -1061,7 +1106,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5cadc1c6ae9215000f2775a4": {
         "ItemID": "5cadc1c6ae9215000f2775a4",
@@ -1082,7 +1128,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6194ef39de3cdf1d2614a768": {
         "ItemID": "6194ef39de3cdf1d2614a768",
@@ -1103,7 +1150,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.113,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6183fd9e8004cc50514c358f": {
         "ItemID": "6183fd9e8004cc50514c358f",
@@ -1124,7 +1172,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.05,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5d3eb5b6a4b9361eab311902": {
         "ItemID": "5d3eb5b6a4b9361eab311902",
@@ -1145,7 +1194,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.17,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6065878ac9cf8012264142fd": {
         "ItemID": "6065878ac9cf8012264142fd",
@@ -1166,7 +1216,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.13,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "60658776f2cb2e02a42ace2b": {
         "ItemID": "60658776f2cb2e02a42ace2b",
@@ -1194,7 +1245,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.47,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6183b084a112697a4b3a6e6c": {
         "ItemID": "6183b084a112697a4b3a6e6c",
@@ -1215,7 +1267,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.26,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "560836b64bdc2d57468b4567": {
         "ItemID": "560836b64bdc2d57468b4567",
@@ -1236,7 +1289,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.85,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6183fc15d3a39d50044c13e9": {
         "ItemID": "6183fc15d3a39d50044c13e9",
@@ -1257,7 +1311,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.9,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "618168b350224f204c1da4d8": {
         "ItemID": "618168b350224f204c1da4d8",
@@ -1278,7 +1333,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.02,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a787f25c5856700186c4ab9": {
         "ItemID": "5a787f25c5856700186c4ab9",
@@ -1299,7 +1355,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 0.9
+        "ShotgunDispersion": 0.9,
+        "Loudness": 0
     },
     "560835c74bdc2dc8488b456f": {
         "ItemID": "560835c74bdc2dc8488b456f",
@@ -1320,7 +1377,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.85,
-        "ShotgunDispersion": 0.95
+        "ShotgunDispersion": 0.95,
+        "Loudness": 0
     },
     "6183b0711cb55961fa0fdcad": {
         "ItemID": "6183b0711cb55961fa0fdcad",
@@ -1341,7 +1399,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.12,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6183fd911cb55961fa0fdce9": {
         "ItemID": "6183fd911cb55961fa0fdce9",
@@ -1362,7 +1421,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5e81c519cb2b95385c177551": {
         "ItemID": "5e81c519cb2b95385c177551",
@@ -1383,7 +1443,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.095,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "622b379bf9cfc87d675d2de5": {
         "ItemID": "622b379bf9cfc87d675d2de5",
@@ -1404,7 +1465,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.39,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "61702be9faa1272e431522c3": {
         "ItemID": "61702be9faa1272e431522c3",
@@ -1425,7 +1487,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.24,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5c48a2852e221602b21d5923": {
         "ItemID": "5c48a2852e221602b21d5923",
@@ -1446,7 +1509,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.509,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5dcbe9431e1f4616d354987e": {
         "ItemID": "5dcbe9431e1f4616d354987e",
@@ -1467,7 +1531,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.62,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "622b38c56762c718e457e246": {
         "ItemID": "622b38c56762c718e457e246",
@@ -1488,7 +1553,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.69,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5dfa397fb11454561e39246c": {
         "ItemID": "5dfa397fb11454561e39246c",
@@ -1509,7 +1575,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.6,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6259c2c1d714855d182bad85": {
         "ItemID": "6259c2c1d714855d182bad85",
@@ -1530,7 +1597,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5df917564a9f347bc92edca3": {
         "ItemID": "5df917564a9f347bc92edca3",
@@ -1551,7 +1619,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.02,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "61f4012adfc9f01a816adda1": {
         "ItemID": "61f4012adfc9f01a816adda1",
@@ -1572,7 +1641,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.35,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "55d449444bdc2d962f8b456d": {
         "ItemID": "55d449444bdc2d962f8b456d",
@@ -1593,7 +1663,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.25,
-        "ShotgunDispersion": 1.025
+        "ShotgunDispersion": 1.025,
+        "Loudness": 0
     },
     "603372d154072b51b239f9e1": {
         "ItemID": "603372d154072b51b239f9e1",
@@ -1624,7 +1695,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.5,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5fbbc366ca32ed67276c1557": {
         "ItemID": "5fbbc366ca32ed67276c1557",
@@ -1645,7 +1717,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.16,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "603373004e02ce1eaa358814": {
         "ItemID": "603373004e02ce1eaa358814",
@@ -1668,7 +1741,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6194efe07c6c7b169525f11b": {
         "ItemID": "6194efe07c6c7b169525f11b",
@@ -1689,7 +1763,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.122,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a6b5f868dc32e000a311389": {
         "ItemID": "5a6b5f868dc32e000a311389",
@@ -1710,7 +1785,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5c471cb32e221602b177afaa": {
         "ItemID": "5c471cb32e221602b177afaa",
@@ -1731,7 +1807,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.834,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "603372f153a60014f970616d": {
         "ItemID": "603372f153a60014f970616d",
@@ -1758,7 +1835,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.6,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5ea02bb600685063ec28bfa1": {
         "ItemID": "5ea02bb600685063ec28bfa1",
@@ -1779,7 +1857,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.51,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5fc3e4a27283c4046c5814ab": {
         "ItemID": "5fc3e4a27283c4046c5814ab",
@@ -1800,7 +1879,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.409,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5608379a4bdc2d26448b4569": {
         "ItemID": "5608379a4bdc2d26448b4569",
@@ -1821,7 +1901,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.55,
-        "ShotgunDispersion": 1.1
+        "ShotgunDispersion": 1.1,
+        "Loudness": 0
     },
     "571a26d524597720680fbe8a": {
         "ItemID": "571a26d524597720680fbe8a",
@@ -1842,7 +1923,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "628121434fa03b6b6c35dc6a": {
         "ItemID": "628121434fa03b6b6c35dc6a",
@@ -1871,7 +1953,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.93,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5fb653962b1b027b1f50bd03": {
         "ItemID": "5fb653962b1b027b1f50bd03",
@@ -1892,7 +1975,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.21,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5beec1bd0db834001e6006f3": {
         "ItemID": "5beec1bd0db834001e6006f3",
@@ -1913,7 +1997,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.94,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5fb65363d1409e5ca04b54f5": {
         "ItemID": "5fb65363d1409e5ca04b54f5",
@@ -1934,7 +2019,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.17,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5df256570dee1b22f862e9c4": {
         "ItemID": "5df256570dee1b22f862e9c4",
@@ -1955,7 +2041,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 2.5,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6194eff92d2c397d6600348b": {
         "ItemID": "6194eff92d2c397d6600348b",
@@ -1976,7 +2063,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.141,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a787fadc5856700155a6ca1": {
         "ItemID": "5a787fadc5856700155a6ca1",
@@ -1997,7 +2085,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.1,
-        "ShotgunDispersion": 1.1
+        "ShotgunDispersion": 1.1,
+        "Loudness": 0
     },
     "628121651d5df4475f46a33c": {
         "ItemID": "628121651d5df4475f46a33c",
@@ -2023,7 +2112,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a6b5ed88dc32e000c52ec86": {
         "ItemID": "5a6b5ed88dc32e000c52ec86",
@@ -2044,7 +2134,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5d3eb59ea4b9361c284bb4b2": {
         "ItemID": "5d3eb59ea4b9361c284bb4b2",
@@ -2065,7 +2156,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5b1fa9ea5acfc40018633c0a": {
         "ItemID": "5b1fa9ea5acfc40018633c0a",
@@ -2086,7 +2178,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "56d5a1f7d2720bb3418b456a": {
         "ItemID": "56d5a1f7d2720bb3418b456a",
@@ -2107,7 +2200,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a787fdfc5856700142fdd9a": {
         "ItemID": "5a787fdfc5856700142fdd9a",
@@ -2128,7 +2222,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 1.15
+        "ShotgunDispersion": 1.15,
+        "Loudness": 0
     },
     "5beec2820db834001b095426": {
         "ItemID": "5beec2820db834001b095426",
@@ -2149,7 +2244,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.45,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "602a95edda11d6478d5a06da": {
         "ItemID": "602a95edda11d6478d5a06da",
@@ -2170,7 +2266,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "560837544bdc2de22e8b456e": {
         "ItemID": "560837544bdc2de22e8b456e",
@@ -2191,7 +2288,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.35,
-        "ShotgunDispersion": 1.075
+        "ShotgunDispersion": 1.075,
+        "Loudness": 0
     },
     "602a95fe4e02ce1eaa358729": {
         "ItemID": "602a95fe4e02ce1eaa358729",
@@ -2212,7 +2310,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "560837154bdc2da74d8b4568": {
         "ItemID": "560837154bdc2da74d8b4568",
@@ -2233,7 +2332,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.25,
-        "ShotgunDispersion": 1.05
+        "ShotgunDispersion": 1.05,
+        "Loudness": 0
     },
     "5fbbc383d5cb881a7363194a": {
         "ItemID": "5fbbc383d5cb881a7363194a",
@@ -2254,7 +2354,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "603372b4da11d6478d5a07ff": {
         "ItemID": "603372b4da11d6478d5a07ff",
@@ -2287,7 +2388,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.409,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "587de4282459771bca0ec90b": {
         "ItemID": "587de4282459771bca0ec90b",
@@ -2308,7 +2410,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a787ebcc5856700142fdd98": {
         "ItemID": "5a787ebcc5856700142fdd98",
@@ -2329,7 +2432,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a787f7ac5856700177af660": {
         "ItemID": "5a787f7ac5856700177af660",
@@ -2350,7 +2454,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.8,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a6b5b8a8dc32e001207faf3": {
         "ItemID": "5a6b5b8a8dc32e001207faf3",
@@ -2371,7 +2476,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6281214c1d5df4475f46a33a": {
         "ItemID": "6281214c1d5df4475f46a33a",
@@ -2397,7 +2503,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.45,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5a6b60158dc32e000a31138b": {
         "ItemID": "5a6b60158dc32e000a31138b",
@@ -2418,7 +2525,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6281215b4fa03b6b6c35dc6c": {
         "ItemID": "6281215b4fa03b6b6c35dc6c",
@@ -2444,7 +2552,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.45,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5bfd4cc90db834001d23e846": {
         "ItemID": "5bfd4cc90db834001d23e846",
@@ -2472,7 +2581,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.7,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5bfd4cd60db834001c38f095": {
         "ItemID": "5bfd4cd60db834001c38f095",
@@ -2500,7 +2610,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.9,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5bfd4cbe0db834001b73449f": {
         "ItemID": "5bfd4cbe0db834001b73449f",
@@ -2521,7 +2632,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.5,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5ae09bff5acfc4001562219d": {
         "ItemID": "5ae09bff5acfc4001562219d",
@@ -2545,7 +2657,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.7,
-        "ShotgunDispersion": 1.9
+        "ShotgunDispersion": 1.9,
+        "Loudness": 0
     },
     "5a6b5e468dc32e001207faf5": {
         "ItemID": "5a6b5e468dc32e001207faf5",
@@ -2566,7 +2679,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6194f017ed0429009f543eaa": {
         "ItemID": "6194f017ed0429009f543eaa",
@@ -2578,7 +2692,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "Length": 0,
-        "Accuracy": 1,
+        "Accuracy": 0,
         "CenterOfImpact": 0.175,
         "HeatFactor": 1.06,
         "CoolFactor": 1.09,
@@ -2587,7 +2701,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.163,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6194f02d9bb3d20b0946d2f0": {
         "ItemID": "6194f02d9bb3d20b0946d2f0",
@@ -2599,7 +2714,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "Length": 0,
-        "Accuracy": 2,
+        "Accuracy": 0,
         "CenterOfImpact": 0.189,
         "HeatFactor": 1.06,
         "CoolFactor": 1.09,
@@ -2608,7 +2723,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.17,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5f3e7801153b8571434a924c": {
         "ItemID": "5f3e7801153b8571434a924c",
@@ -2629,7 +2745,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5f3e77f59103d430b93f94c1": {
         "ItemID": "5f3e77f59103d430b93f94c1",
@@ -2650,7 +2767,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5aaf9d53e5b5b00015042a52": {
         "ItemID": "5aaf9d53e5b5b00015042a52",
@@ -2671,7 +2789,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.04,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5addbac75acfc400194dbc56": {
         "ItemID": "5addbac75acfc400194dbc56",
@@ -2692,7 +2811,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.11,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5bfebc320db8340019668d79": {
         "ItemID": "5bfebc320db8340019668d79",
@@ -2713,7 +2833,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5d2703038abbc3105103d94c": {
         "ItemID": "5d2703038abbc3105103d94c",
@@ -2734,7 +2855,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5d2702e88abbc31ed91efc44": {
         "ItemID": "5d2702e88abbc31ed91efc44",
@@ -2755,7 +2877,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.45,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5bfebc250db834001a6694e1": {
         "ItemID": "5bfebc250db834001a6694e1",
@@ -2776,7 +2899,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.45,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5b099a765acfc47a8607efe3": {
         "ItemID": "5b099a765acfc47a8607efe3",
@@ -2788,7 +2912,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "Length": 0,
-        "Accuracy": 2,
+        "Accuracy": 0,
         "CenterOfImpact": 0.0436,
         "HeatFactor": 0.98,
         "CoolFactor": 0.99,
@@ -2804,7 +2928,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.83,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5b7be1125acfc4001876c0e5": {
         "ItemID": "5b7be1125acfc4001876c0e5",
@@ -2816,7 +2941,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "Length": 0,
-        "Accuracy": 5,
+        "Accuracy": 0,
         "CenterOfImpact": 0.0392,
         "HeatFactor": 0.94,
         "CoolFactor": 0.94,
@@ -2832,7 +2957,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.96,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5b7be1265acfc400161d0798": {
         "ItemID": "5b7be1265acfc400161d0798",
@@ -2844,7 +2970,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "Length": 0,
-        "Accuracy": 10,
+        "Accuracy": 0,
         "CenterOfImpact": 0.0349,
         "HeatFactor": 0.88,
         "CoolFactor": 0.91,
@@ -2856,7 +2982,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.2,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "571a279b24597720b4066566": {
         "ItemID": "571a279b24597720b4066566",
@@ -2877,7 +3004,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.062,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "5b3baf8f5acfc40dc5296692": {
         "ItemID": "5b3baf8f5acfc40dc5296692",
@@ -2898,7 +3026,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     },
     "6130c3dffaa1272e43151c7d": {
         "ItemID": "6130c3dffaa1272e43151c7d",
@@ -2919,6 +3048,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.415,
-        "ShotgunDispersion": 1
+        "ShotgunDispersion": 1,
+        "Loudness": 0
     }
 }
