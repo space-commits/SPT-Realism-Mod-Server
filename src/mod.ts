@@ -576,15 +576,13 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
         for (let item in tables.templates.items) {
-            // if (tables.templates.items[item]._parent === "5645bcb74bdc2ded0b8b4578") {
-            //     tables.templates.items[item]._props.CompressorAttack = 0.1;
-            //     tables.templates.items[item]._props.CompressorTreshold = -50;
-            // }
-            if (tables.templates.items[item]._parent === "550aa4bf4bdc2dd6348b456b") {
-                logger.warning(""+tables.templates.items[item]._props.Loudness);
-                logger.warning(""+tables.templates.items[item]._name);
-
+            if (tables.templates.items[item]._parent === "5645bcb74bdc2ded0b8b4578") {
+                tables.templates.items[item]._props.CompressorAttack = 0.1;
+                tables.templates.items[item]._props.CompressorTreshold = -40;
+                tables.templates.items[item]._props.Resonance = 0;
+                tables.templates.items[item]._props.Distortion = 0;
             }
+
         }
 
         // codegen.attTemplatesCodeGen();
@@ -848,13 +846,13 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             tier = helper.probabilityWeighter(tierArray, [20, 2, 0, 0]);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, [15, 8, 2, 0]);
+            tier = helper.probabilityWeighter(tierArray, [15, 8, 1, 0]);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
             tier = helper.probabilityWeighter(tierArray, [5, 20, 2, 1]);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = helper.probabilityWeighter(tierArray, [2, 10, 15, 5]);
+            tier = helper.probabilityWeighter(tierArray, [2, 10, 15, 2]);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
             tier = helper.probabilityWeighter(tierArray, [1, 4, 25, 10]);

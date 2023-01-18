@@ -529,7 +529,7 @@
         "Ergonomics": 0,
         "Weight": 2.378,
         "ShotgunDispersion": 1,
-        "Loudness": 0
+        "Loudness": -60
     },
     "5888956924597752983e182d": {
         "ItemID": "5888956924597752983e182d",
