@@ -219,7 +219,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.32;
+                serverItem._props.BluntThroughput = 0.35;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 7.9;
             }
@@ -231,9 +231,21 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.34;
+                serverItem._props.BluntThroughput = 0.38;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 7.2;
+            }
+            //Korund
+            if (serverItem._id === "5f5f41476bdad616ad46d631") {
+                serverItem._props.Durability = 115;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 8;
+                serverItem._props.speedPenaltyPercent = -9;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -9;
+                serverItem._props.BluntThroughput = 0.5;
+                serverItem._props.ArmorMaterial = 'Titan';
+                serverItem._props.Weight = 9.8;
             }
             //// Class 9////
             //THOR Integrated Carrier
@@ -259,18 +271,6 @@ class Armor {
                 serverItem._props.BluntThroughput = 0.24;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 7.4;
-            }
-            //Korund
-            if (serverItem._id === "5f5f41476bdad616ad46d631") {
-                serverItem._props.Durability = 115;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 9;
-                serverItem._props.speedPenaltyPercent = -9;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.4;
-                serverItem._props.ArmorMaterial = 'Ceramic';
-                serverItem._props.Weight = 9.8;
             }
             //Ghzel-K
             if (serverItem._id === "5ab8e79e86f7742d8b372e78") {
@@ -298,15 +298,15 @@ class Armor {
             }
             //FORT Defender
             if (serverItem._id === "5e9dacf986f774054d6b89f4") {
-                serverItem._props.Durability = 95;
+                serverItem._props.Durability = 115;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 9;
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.36;
+                serverItem._props.BluntThroughput = 0.44;
                 serverItem._props.ArmorMaterial = 'Titan';
-                serverItem._props.Weight = 11.5;
+                serverItem._props.Weight = 10;
             }
             //Redut-M
             if (serverItem._id === "5ca2151486f774244a3b8d30") {
@@ -316,19 +316,19 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -10;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -10;
-                serverItem._props.BluntThroughput = 0.33;
+                serverItem._props.BluntThroughput = 0.38;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 13.5;
             }
             //Redut-T5
             if (serverItem._id === "5ca21c6986f77479963115a7") {
-                serverItem._props.Durability = 120;
+                serverItem._props.Durability = 125;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 9;
                 serverItem._props.speedPenaltyPercent = -12;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -12;
-                serverItem._props.BluntThroughput = 0.3;
+                serverItem._props.BluntThroughput = 0.33;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 16.5;
             }
@@ -578,6 +578,18 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 7.5;
             }
+            // Bagariy
+            if (serverItem._id === "628d0618d1ba6e4fa07ce5a4") {
+                serverItem._props.Durability = 120;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 8;
+                serverItem._props.speedPenaltyPercent = -8;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -9;
+                serverItem._props.BluntThroughput = 0.4;
+                serverItem._props.ArmorMaterial = 'Titan';
+                serverItem._props.Weight = 13;
+            }
             //// Class 9 ////  
             //Crye Precision CPC plate carrier (Goons Edition)
             if (serverItem._id === "628b9c7d45122232a872358f") {
@@ -628,18 +640,6 @@ class Armor {
                 serverItem._props.Weight = 9.5;
             }
             /// Class 10 ///
-            // Bagariy
-            if (serverItem._id === "628d0618d1ba6e4fa07ce5a4") {
-                serverItem._props.Durability = 85;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 10;
-                serverItem._props.speedPenaltyPercent = -8;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.35;
-                serverItem._props.ArmorMaterial = 'Ceramic';
-                serverItem._props.Weight = 13;
-            }
             /////// HELMETS //////
             //// Class 0 ////
             //Beanie

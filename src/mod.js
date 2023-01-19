@@ -439,14 +439,6 @@ class Main {
         if (modConfig.trader_changes == true) {
             itemCloning.createCustomWeapons();
         }
-        for (let item in tables.templates.items) {
-            if (tables.templates.items[item]._parent === "5645bcb74bdc2ded0b8b4578") {
-                tables.templates.items[item]._props.CompressorAttack = 0.1;
-                tables.templates.items[item]._props.CompressorTreshold = -40;
-                tables.templates.items[item]._props.Resonance = 0;
-                tables.templates.items[item]._props.Distortion = 0;
-            }
-        }
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
@@ -502,6 +494,7 @@ class Main {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
             attachStats.loadAttStats();
+            gear.loadHeadsetTweaks();
         }
         if (modConfig.remove_fir_req == true) {
             quests.removeFIRQuestRequire();

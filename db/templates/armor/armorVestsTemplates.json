@@ -88,7 +88,7 @@
         "Name": "item_equipment_armor_defender2",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 5"
+        "ArmorClass": "GOST 5A"
     },
     "62a09d79de7ac81993580530": {
         "ItemID": "62a09d79de7ac81993580530",
@@ -130,7 +130,7 @@
         "Name": "item_equipment_armor_korundvm",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6"
+        "ArmorClass": "GOST 5"
     },
     "607f20859ee58b18e41ecd90": {
         "ItemID": "607f20859ee58b18e41ecd90",

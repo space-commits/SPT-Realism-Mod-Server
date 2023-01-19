@@ -60,7 +60,7 @@
         "Name": "item_equipment_rig_bagarii",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6A"
+        "ArmorClass": "GOST 5"
     },
     "5e4ac41886f77406a511c9a8": {
         "ItemID": "5e4ac41886f77406a511c9a8",
