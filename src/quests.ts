@@ -41,9 +41,9 @@ export class Quests {
 
             if (this.questDB[quest].QuestName.includes("Gunsmith")) {
                 let conditions = this.questDB[quest].conditions.AvailableForFinish[0];
-                conditions._props.ergonomics.value *= 0.1;
-                conditions._props.recoil.value *= 10;
-                conditions._props.weight.value *= 10;
+                conditions._props.ergonomics.value *= 0.01;
+                conditions._props.recoil.value *= 100;
+                conditions._props.weight.value *= 100;
                 conditions._props.width.compareMethod = ">=";
                 conditions._props.width.value = 0;
             }

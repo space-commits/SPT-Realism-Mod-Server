@@ -171,8 +171,8 @@
         "ItemID": "5ca20ee186f774799474abc2",
         "Name": "item_equipment_helmet_vulkan5",
         "AllowADS": true,
-        "LoyaltyLevel": 3,
-        "ArmorClass": "GOST 2"
+        "LoyaltyLevel": 5,
+        "ArmorClass": "GOST 5"
     },
     "5b40e3f35acfc40016388218": {
         "ItemID": "5b40e3f35acfc40016388218",

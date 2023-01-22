@@ -284,10 +284,6 @@ class Main {
                         helper_1.RaidInfoTracker.mapNameUnreliable = mapNameRegPlayer;
                         let realTime = "";
                         let mapType = "";
-                        if (mapNameStartOffl === "Laboratory") {
-                            botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
-                            botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
-                        }
                         if (matchInfoStartOff.dateTime === "PAST") {
                             realTime = getTime(time, 12);
                         }
@@ -344,6 +340,10 @@ class Main {
                                 logger.warning("====== Giving Bots Christmas Presents, Don't Be A Scrooge! ======");
                                 seasonalEvents.giveBotsChristmasPresents();
                             }
+                        }
+                        if (mapNameStartOffl === "Laboratory") {
+                            botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
+                            botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
                         }
                         if (modConfig.airdrop_changes == true) {
                             if (helper_1.RaidInfoTracker.TOD === "day") {
@@ -474,17 +474,17 @@ class Main {
             bots.forceBossSpawns();
         }
         bots.botDifficulty();
+        if (modConfig.med_changes == true) {
+            itemCloning.createCustomMedItems();
+            meds.loadMeds();
+            bots.botMeds();
+        }
         if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
         }
         bots.botHpMulti();
-        if (modConfig.med_changes == true) {
-            itemCloning.createCustomMedItems();
-            meds.loadMeds();
-            bots.botMeds();
-        }
         custFleaConf.loadFleaConfig();
         flea.loadFleaGlobal();
         if (modConfig.malf_changes == true) {

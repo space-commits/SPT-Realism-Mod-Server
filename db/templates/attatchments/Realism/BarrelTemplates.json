@@ -697,7 +697,7 @@
         "HeatFactor": 1.02,
         "CoolFactor": 1.03,
         "DurabilityBurnModificator": 0.94,
-        "Velocity": -5,
+        "Velocity": -6,
         "ConflictingItems": [
             "5c6d10e82e221601da357b07",
             "5bb20dfcd4351e00334c9e24",

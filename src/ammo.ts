@@ -2700,11 +2700,11 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 0.49;
                 serverItem._props.MisfireChance = 0.3;
                 serverItem._props.ammoAccr = 0;
-                serverItem._props.ammoHear = 0;
+                serverItem._props.ammoHear = 1;
                 serverItem._props.ammoRec = -20;
 
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 35;
+                    serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -2806,7 +2806,7 @@ export class Ammo {
             //// 5.45x39 ////
             // SP
             if (serverItem._id === "56dff421d2720b5f5a8b4567") {
-                serverItem._props.PenetrationPower = 49;
+                serverItem._props.PenetrationPower = 50;
                 serverItem._props.ArmorDamage = 33;
                 serverItem._props.Damage = 110;
                 serverItem._props.InitialSpeed = 895;
@@ -2829,7 +2829,7 @@ export class Ammo {
             }
             // HP
             if (serverItem._id === "56dff216d2720bbd668b4568") {
-                serverItem._props.PenetrationPower = 51;
+                serverItem._props.PenetrationPower = 52;
                 serverItem._props.ArmorDamage = 35;
                 serverItem._props.Damage = 105;
                 serverItem._props.InitialSpeed = 905;
@@ -2886,11 +2886,11 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 0.39;
                 serverItem._props.MalfMisfireChance = 35;
                 serverItem._props.ammoAccr = 0;
-                serverItem._props.ammoHear = 0;
+                serverItem._props.ammoHear = 1;
                 serverItem._props.ammoRec = -20;
 
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 50;
+                    serverItem._props.MalfMisfireChance = 1.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -2945,8 +2945,8 @@ export class Ammo {
             }
             // PS
             if (serverItem._id === "56dff3afd2720bba668b4567") {
-                serverItem._props.PenetrationPower = 62;
-                serverItem._props.ArmorDamage = 30;
+                serverItem._props.PenetrationPower = 58;
+                serverItem._props.ArmorDamage = 40;
                 serverItem._props.Damage = 64;
                 serverItem._props.InitialSpeed = 880;
                 serverItem._props.RicochetChance = 0.34;
@@ -2968,8 +2968,8 @@ export class Ammo {
             }
             // PP
             if (serverItem._id === "56dff2ced2720bb4668b4567") {
-                serverItem._props.PenetrationPower = 58;
-                serverItem._props.ArmorDamage = 40;
+                serverItem._props.PenetrationPower = 63;
+                serverItem._props.ArmorDamage = 30;
                 serverItem._props.Damage = 65;
                 serverItem._props.InitialSpeed = 880;
                 serverItem._props.RicochetChance = 0.32;
@@ -3455,35 +3455,27 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 0.47;
                 serverItem._props.Damage = 40;
                 serverItem._props.PenetrationPower = 25;
-                serverItem._props.buckshotBullets = 0;
             }
-            //m67
+            //m67 shrapnel
             if (serverItem._id === "5996f6fc86f7745e585b4de3") {
                 serverItem._props.HeavyBleedingDelta = 0.33;
                 serverItem._props.LightBleedingDelta = 0.57;
                 serverItem._props.Damage = 60;
                 serverItem._props.PenetrationPower = 35;
-                serverItem._props.buckshotBullets = 0;
             }
-            //F-1
+            //F-1 shrapnel
             if (serverItem._id === "5996f6d686f77467977ba6cc") {
                 serverItem._props.HeavyBleedingDelta = 0.37;
                 serverItem._props.LightBleedingDelta = 0.77;
                 serverItem._props.Damage = 30;
                 serverItem._props.PenetrationPower = 25;
-                serverItem._props.buckshotBullets = 2;
             }
-            //RGD-5
+            //RGD-5 shrapnel
             if (serverItem._id === "5996f6cb86f774678763a6ca") {
                 serverItem._props.HeavyBleedingDelta = 0.35;
                 serverItem._props.LightBleedingDelta = 0.65;
                 serverItem._props.Damage = 67;
                 serverItem._props.PenetrationPower = 30;
-                serverItem._props.buckshotBullets = 0;
-            }
-
-            if (serverItem._props.buckshotBullets > 2) {
-                serverItem._props.BallisticCoeficient *= 0.9;
             }
         }
 
@@ -3491,6 +3483,7 @@ export class Ammo {
             this.logger.info("Ammo Stats Loaded");
         }
     }
+
     public loadAmmoFirerateChanges() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];

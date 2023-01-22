@@ -392,11 +392,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             let mapType = "";
 
 
-                            if (mapNameStartOffl === "Laboratory") {
-                                botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
-                                botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
-                            }
-
                             if (matchInfoStartOff.dateTime === "PAST") {
                                 realTime = getTime(time, 12);
                             }
@@ -461,6 +456,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 }
                             }
 
+                            if (mapNameStartOffl === "Laboratory") {
+                                botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
+                                botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
+                            }
 
                             if (modConfig.airdrop_changes == true) {
                                 if (RaidInfoTracker.TOD === "day") {
@@ -471,6 +470,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 }
                             }
 
+              
                             if (modConfig.logEverything == true) {
                                 logger.warning("Map Name = " + mapNameStartOffl);
                                 logger.warning("Map Type  = " + mapType);
@@ -575,7 +575,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             itemCloning.createCustomWeapons();
         }
 
-
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
@@ -623,6 +622,12 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         bots.botDifficulty();
 
+        if (modConfig.med_changes == true) {
+            itemCloning.createCustomMedItems();
+            meds.loadMeds();
+            bots.botMeds();
+        }
+
         if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
             armor.loadArmor();
@@ -631,11 +636,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         bots.botHpMulti();
 
-        if (modConfig.med_changes == true) {
-            itemCloning.createCustomMedItems();
-            meds.loadMeds();
-            bots.botMeds();
-        }
         custFleaConf.loadFleaConfig();
         flea.loadFleaGlobal();
 

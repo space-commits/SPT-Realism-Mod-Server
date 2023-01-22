@@ -24,21 +24,21 @@
         "ItemID": "5c0e53c886f7747fa54205c7",
         "Name": "item_equipment_armor_6b13_digital",
         "AllowADS": true,
-        "LoyaltyLevel": 3,
-        "ArmorClass": "GOST 4"
+        "LoyaltyLevel": 5,
+        "ArmorClass": "GOST 6A"
     },
     "5c0e51be86f774598e797894": {
         "ItemID": "5c0e51be86f774598e797894",
         "Name": "item_equipment_armor_6b13_flora",
         "AllowADS": true,
-        "LoyaltyLevel": 3,
-        "ArmorClass": "GOST 4"
+        "LoyaltyLevel": 5,
+        "ArmorClass": "GOST 6A"
     },
     "5c0e541586f7747fa54205c9": {
         "ItemID": "5c0e541586f7747fa54205c9",
         "Name": "item_equipment_armor_6b13_killa",
         "AllowADS": true,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 5,
         "ArmorClass": "NIJ IV"
     },
     "5df8a2ca86f7740bfe6df777": {
@@ -59,8 +59,8 @@
         "ItemID": "5c0e57ba86f7747fa141986d",
         "Name": "item_equipment_armor_6b23_mflora",
         "AllowADS": true,
-        "LoyaltyLevel": 4,
-        "ArmorClass": "GOST 4"
+        "LoyaltyLevel": 5,
+        "ArmorClass": "GOST 6A"
     },
     "5fd4c474dd870108a754b241": {
         "ItemID": "5fd4c474dd870108a754b241",
