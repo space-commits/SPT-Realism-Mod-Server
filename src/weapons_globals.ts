@@ -13,6 +13,8 @@ export class WeaponsGlobals {
 
     public loadGlobalWeps() {
 
+        this.globalDB.Aiming.RecoilScaling = 0.5;
+
         if (this.modConf.malf_changes == true) {
             this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
             this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
@@ -26,15 +28,16 @@ export class WeaponsGlobals {
 
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];
-                if (serverItem._props.weapClass === "smg"
-                    || serverItem._props.weapClass === "shotgun"
-                    || serverItem._props.weapClass === "assaultCarbine"
-                    || serverItem._props.weapClass === "sniperRifle"
-                    || serverItem._props.weapClass === "assaultRifle"
-                    || serverItem._props.weapClass === "machinegun"
-                    || serverItem._props.weapClass === "marksmanRifle"
-                    || serverItem._props.weapClass === "assaultRifle"
-                    || serverItem._props.weapClass === "pistol"
+                if (serverItem._parent === ParentClasses.SMG
+                    || serverItem._parent === ParentClasses.SHOTGUN
+                    || serverItem._parent === ParentClasses.ASSAULT_CARBINE
+                    || serverItem._parent === ParentClasses.SNIPER_RIFLE
+                    || serverItem._parent === ParentClasses.ASSAULT_RIFLE
+                    || serverItem._parent === ParentClasses.MACHINE_GUN
+                    || serverItem._parent === ParentClasses.MARKSMAN_RIFLE
+                    || serverItem._parent === ParentClasses.PISTOL
+                    || serverItem._parent === ParentClasses.GRENADE_LAUNCHER
+                    || serverItem._parent === ParentClasses.SPECIAL_WEAPON
                     || serverItem._parent === ParentClasses.REPAIRKITS
                 ) {
                     serverItem._props.MinRepairDegradation = 0;
@@ -57,15 +60,17 @@ export class WeaponsGlobals {
             this.globalDB.Aiming.AimProceduralIntensity = 1;
  
             for (let i in this.itemDB) {
+
                 let serverItem = this.itemDB[i];
-                if (serverItem._props.weapClass === "smg"
-                    || serverItem._props.weapClass === "shotgun"
-                    || serverItem._props.weapClass === "assaultCarbine"
-                    || serverItem._props.weapClass === "sniperRifle"
-                    || serverItem._props.weapClass === "assaultRifle"
-                    || serverItem._props.weapClass === "machinegun"
-                    || serverItem._props.weapClass === "marksmanRifle"
-                    || serverItem._props.weapClass === "assaultRifle"
+                if (serverItem._parent === ParentClasses.SMG
+                || serverItem._parent === ParentClasses.SHOTGUN
+                || serverItem._parent === ParentClasses.ASSAULT_CARBINE
+                || serverItem._parent === ParentClasses.SNIPER_RIFLE
+                || serverItem._parent=== ParentClasses.ASSAULT_RIFLE
+                || serverItem._parent === ParentClasses.MACHINE_GUN
+                || serverItem._parent === ParentClasses.MARKSMAN_RIFLE
+                || serverItem._parent === ParentClasses.GRENADE_LAUNCHER
+
                 ) {
                     serverItem._props.Ergonomics = 80;
                 }
@@ -77,6 +82,7 @@ export class WeaponsGlobals {
 
         if(this.modConf.legacy_recoil_changes == true || this.modConf.recoil_attachment_overhaul)
         {
+
             this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
             this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.7;
             this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;

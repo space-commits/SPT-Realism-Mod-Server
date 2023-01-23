@@ -13,6 +13,7 @@ class WeaponsGlobals {
         this.itemDB = this.tables.templates.items;
     }
     loadGlobalWeps() {
+        this.globalDB.Aiming.RecoilScaling = 0.5;
         if (this.modConf.malf_changes == true) {
             this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
             this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
@@ -25,15 +26,16 @@ class WeaponsGlobals {
             this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];
-                if (serverItem._props.weapClass === "smg"
-                    || serverItem._props.weapClass === "shotgun"
-                    || serverItem._props.weapClass === "assaultCarbine"
-                    || serverItem._props.weapClass === "sniperRifle"
-                    || serverItem._props.weapClass === "assaultRifle"
-                    || serverItem._props.weapClass === "machinegun"
-                    || serverItem._props.weapClass === "marksmanRifle"
-                    || serverItem._props.weapClass === "assaultRifle"
-                    || serverItem._props.weapClass === "pistol"
+                if (serverItem._parent === enums_1.ParentClasses.SMG
+                    || serverItem._parent === enums_1.ParentClasses.SHOTGUN
+                    || serverItem._parent === enums_1.ParentClasses.ASSAULT_CARBINE
+                    || serverItem._parent === enums_1.ParentClasses.SNIPER_RIFLE
+                    || serverItem._parent === enums_1.ParentClasses.ASSAULT_RIFLE
+                    || serverItem._parent === enums_1.ParentClasses.MACHINE_GUN
+                    || serverItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE
+                    || serverItem._parent === enums_1.ParentClasses.PISTOL
+                    || serverItem._parent === enums_1.ParentClasses.GRENADE_LAUNCHER
+                    || serverItem._parent === enums_1.ParentClasses.SPECIAL_WEAPON
                     || serverItem._parent === enums_1.ParentClasses.REPAIRKITS) {
                     serverItem._props.MinRepairDegradation = 0;
                     serverItem._props.MaxRepairDegradation = 0.005;
@@ -51,14 +53,14 @@ class WeaponsGlobals {
             this.globalDB.Aiming.AimProceduralIntensity = 1;
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];
-                if (serverItem._props.weapClass === "smg"
-                    || serverItem._props.weapClass === "shotgun"
-                    || serverItem._props.weapClass === "assaultCarbine"
-                    || serverItem._props.weapClass === "sniperRifle"
-                    || serverItem._props.weapClass === "assaultRifle"
-                    || serverItem._props.weapClass === "machinegun"
-                    || serverItem._props.weapClass === "marksmanRifle"
-                    || serverItem._props.weapClass === "assaultRifle") {
+                if (serverItem._parent === enums_1.ParentClasses.SMG
+                    || serverItem._parent === enums_1.ParentClasses.SHOTGUN
+                    || serverItem._parent === enums_1.ParentClasses.ASSAULT_CARBINE
+                    || serverItem._parent === enums_1.ParentClasses.SNIPER_RIFLE
+                    || serverItem._parent === enums_1.ParentClasses.ASSAULT_RIFLE
+                    || serverItem._parent === enums_1.ParentClasses.MACHINE_GUN
+                    || serverItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE
+                    || serverItem._parent === enums_1.ParentClasses.GRENADE_LAUNCHER) {
                     serverItem._props.Ergonomics = 80;
                 }
             }

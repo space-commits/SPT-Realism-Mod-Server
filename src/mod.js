@@ -259,7 +259,7 @@ class Main {
         ], "RealismMod");
         staticRouterModService.registerStaticRouter("runAtRaidStart", [
             {
-                url: "/client/match/offline/start",
+                url: "/client/raid/configuration",
                 action: (url, info, sessionID, output) => {
                     try {
                         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
@@ -270,7 +270,7 @@ class Main {
                         const weatherController = container.resolve("WeatherController");
                         const seasonalEventsService = container.resolve("SeasonalEventService");
                         const matchinfoRegPlayer = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.REGISTER_PLAYER_REQUEST).getValue();
-                        const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.MATCH_INFO).getValue();
+                        const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
                         const arrays = new arrays_1.Arrays(postLoadTables);
                         const helper = new helper_1.Helper(postLoadTables, arrays);
@@ -278,16 +278,16 @@ class Main {
                         const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
                         const time = weatherController.generate().time;
                         const mapNameRegPlayer = matchinfoRegPlayer.locationId;
-                        const mapNameStartOffl = matchInfoStartOff.locationName;
+                        const mapNameStartOffl = matchInfoStartOff.location;
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         helper_1.RaidInfoTracker.mapName = mapNameStartOffl;
                         helper_1.RaidInfoTracker.mapNameUnreliable = mapNameRegPlayer;
                         let realTime = "";
                         let mapType = "";
-                        if (matchInfoStartOff.dateTime === "PAST") {
+                        if (matchInfoStartOff.timeVariant === "PAST") {
                             realTime = getTime(time, 12);
                         }
-                        if (matchInfoStartOff.dateTime === "CURR") {
+                        if (matchInfoStartOff.timeVariant === "CURR") {
                             realTime = time;
                         }
                         function getTime(time, hourDiff) {

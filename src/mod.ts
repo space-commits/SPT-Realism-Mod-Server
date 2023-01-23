@@ -35,7 +35,7 @@ import { DynamicRouterModService } from "@spt-aki/services/mod/dynamicRouter/Dyn
 import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
 import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod";
 import { ApplicationContext } from "@spt-aki/context/ApplicationContext";
-import { IStartOfflineRaidRequestData } from "@spt-aki/models/eft/match/IStartOffineRaidRequestData";
+import { IGetRaidConfigurationRequestData } from "@spt-aki/models/eft/match/IGetRaidConfigurationRequestData";
 import { WeatherController } from "@spt-aki/controllers/WeatherController";
 import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
 import { LocalisationService } from "@spt-aki/services/LocalisationService";
@@ -360,7 +360,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             "runAtRaidStart",
             [
                 {
-                    url: "/client/match/offline/start",
+                    url: "/client/raid/configuration",
                     action: (url, info, sessionID, output) => {
 
                         try {
@@ -372,7 +372,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const weatherController = container.resolve<WeatherController>("WeatherController");
                             const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                             const matchinfoRegPlayer = appContext.getLatestValue(ContextVariableType.REGISTER_PLAYER_REQUEST).getValue<IRegisterPlayerRequestData>();
-                            const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.MATCH_INFO).getValue<IStartOfflineRaidRequestData>();
+                            const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
 
                             const arrays = new Arrays(postLoadTables);
@@ -382,7 +382,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
                             const time = weatherController.generate().time;
                             const mapNameRegPlayer = matchinfoRegPlayer.locationId;
-                            const mapNameStartOffl = matchInfoStartOff.locationName;
+                            const mapNameStartOffl = matchInfoStartOff.location;
 
                             const pmcData = profileHelper.getPmcProfile(sessionID);
 
@@ -392,10 +392,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             let mapType = "";
 
 
-                            if (matchInfoStartOff.dateTime === "PAST") {
+                            if (matchInfoStartOff.timeVariant === "PAST") {
                                 realTime = getTime(time, 12);
                             }
-                            if (matchInfoStartOff.dateTime === "CURR") {
+                            if (matchInfoStartOff.timeVariant === "CURR") {
                                 realTime = time;
                             }
 
@@ -677,7 +677,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
     private dllChecker(logger: ILogger, modConfig: any) {
         const realismdll = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
-
         if (fs.existsSync(realismdll)) {
             ConfigChecker.dllIsPresent = true;
             if (modConfig.recoil_attachment_overhaul == false) {

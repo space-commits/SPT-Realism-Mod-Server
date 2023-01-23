@@ -2,6 +2,7 @@ import { HealthHelper } from "../helpers/HealthHelper";
 import { InventoryHelper } from "../helpers/InventoryHelper";
 import { ItemHelper } from "../helpers/ItemHelper";
 import { IPmcData } from "../models/eft/common/IPmcData";
+import { IWorkoutData } from "../models/eft/health/IWorkoutData";
 import { IHealthTreatmentRequestData } from "../models/eft/health/IHealthTreatmentRequestData";
 import { IOffraidEatRequestData } from "../models/eft/health/IOffraidEatRequestData";
 import { IOffraidHealRequestData } from "../models/eft/health/IOffraidHealRequestData";
@@ -27,7 +28,7 @@ export declare class HealthController {
      * @param sessionID
      * @param addEffects Should effects found be added or removed from profile
      */
-    saveVitality(pmcData: IPmcData, info: ISyncHealthRequestData, sessionID: string, addEffects?: boolean): void;
+    saveVitality(pmcData: IPmcData, info: ISyncHealthRequestData, sessionID: string, addEffects?: boolean, deleteExistingEffects?: boolean): void;
     /**
      * When healing in menu
      * @param pmcData
@@ -40,9 +41,23 @@ export declare class HealthController {
     /**
      * Occurs on post-raid healing page
      * @param pmcData player profile
-     * @param info Request data from client
+     * @param healthTreatmentRequest Request data from client
      * @param sessionID Session id
      * @returns
      */
-    healthTreatment(pmcData: IPmcData, info: IHealthTreatmentRequestData, sessionID: string): IItemEventRouterResponse;
+    healthTreatment(pmcData: IPmcData, healthTreatmentRequest: IHealthTreatmentRequestData, sessionID: string): IItemEventRouterResponse;
+    /**
+     * applies skills from hideout workout.
+     * @param pmcData Player profile
+     * @param info Request data
+     * @param sessionID
+     */
+    applyWorkoutChanges(pmcData: IPmcData, info: IWorkoutData, sessionId: string): void;
+    /**
+     * iterate over treatment request diff and find effects to remove from player limbs
+     * @param sessionId
+     * @param profile Profile to update
+     * @param treatmentRequest client request
+     */
+    protected removeEffectsAfterPostRaidHeal(sessionId: string, profile: IPmcData, treatmentRequest: IHealthTreatmentRequestData): void;
 }

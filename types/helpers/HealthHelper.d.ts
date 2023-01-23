@@ -29,24 +29,25 @@ export declare class HealthHelper {
      * @param sessionID Session id
      * @param addEffects Should effects be added or removed (default - add)
      */
-    saveVitality(pmcData: IPmcData, info: ISyncHealthRequestData, sessionID: string, addEffects?: boolean): void;
+    saveVitality(pmcData: IPmcData, info: ISyncHealthRequestData, sessionID: string, addEffects?: boolean, deleteExistingEffects?: boolean): void;
     protected saveHealth(pmcData: IPmcData, sessionID: string): void;
     /**
      * Save effects to profile
      * Works by removing all effects and adding them back from profile
-     * Remoces empty 'Effects' objects if found
+     * Removes empty 'Effects' objects if found
      * @param pmcData Player profile
      * @param sessionID Session id
      * @param addEffects Should effects be added back to profile
      * @returns
      */
-    protected saveEffects(pmcData: IPmcData, sessionID: string, addEffects: boolean): void;
+    protected saveEffects(pmcData: IPmcData, sessionID: string, addEffects: boolean, deleteExistingEffects?: boolean): void;
     /**
      * Add effect to body part in profile
      * @param pmcData Player profile
      * @param effectBodyPart body part to edit
      * @param effectType Effect to add to body part
+     * @param duration How long the effect has left in seconds (-1 by default, no duration).
      */
-    protected addEffect(pmcData: IPmcData, effectBodyPart: string, effectType: Effect): void;
+    protected addEffect(pmcData: IPmcData, effectBodyPart: string, effectType: Effect, duration?: number): void;
     protected isEmpty(map: any): boolean;
 }
