@@ -218,7 +218,6 @@ export class CodeGen {
     private assignJSONToAmmo(serverItem: ITemplateItem, fileItem: any) {
 
         if (fileItem) {
-            fileItem.loyaltyLevel = 2;
             fileItem;
             return fileItem;
         }

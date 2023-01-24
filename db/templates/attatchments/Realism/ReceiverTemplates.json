@@ -1369,5 +1369,44 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0
+    },
+    "63075cc5962d0247b029dc2a": {
+        "ItemID": "63075cc5962d0247b029dc2a",
+        "Name": "reciever_glock_glock_19x_std",
+        "ModType": "",
+        "ModMalfunctionChance": 0,
+        "Accuracy": 0,
+        "HeatFactor": 1.058,
+        "CoolFactor": 0.98,
+        "DurabilityBurnModificator": 0.99,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.27
+    },
+    "62e7c72df68e7a0676050c77": {
+        "ItemID": "62e7c72df68e7a0676050c77",
+        "Name": "reciever_aug_steyr_aug_a3",
+        "ModType": "",
+        "ModMalfunctionChance": 0,
+        "Accuracy": 0,
+        "HeatFactor": 0.96,
+        "CoolFactor": 1.048,
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.794
+    },
+    "62e27a7865f0b1592a49e17b": {
+        "ItemID": "62e27a7865f0b1592a49e17b",
+        "Name": "reciever_sr2m_tochmash_sr2_std",
+        "ModType": "",
+        "ModMalfunctionChance": 0,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 0.97,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.168
     }
 }

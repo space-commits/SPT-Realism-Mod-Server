@@ -111,6 +111,18 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0
     },
+    "57616a9e2459773c7a400234": {
+        "ItemID": "57616a9e2459773c7a400234",
+        "Name": "mag_saiga12_izhmash_Sb5_12x76_5",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0.1,
+        "LoadUnloadModifier": -15,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.19
+    },
     "5a966f51a2750c00156aacf6": {
         "ItemID": "5a966f51a2750c00156aacf6",
         "Name": "mag_saiga12_pro_mag_sai_02_12x76_10",
@@ -1094,7 +1106,7 @@
         "ItemID": "544a378f4bdc2d30388b4567",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_40",
         "ModType": "",
-        "ReloadSpeed": 5,
+        "ReloadSpeed": -2,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0.05,
         "LoadUnloadModifier": 10,
@@ -2392,46 +2404,112 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0
     },
-    "6241c2c2117ad530666a5108": {
-        "ItemID": "6241c2c2117ad530666a5108",
-        "Name": "mag_stanag_maopul_pmag_airsoft_6_30_fde",
+    "633ec6ee025b096d320a3b15": {
+        "ItemID": "633ec6ee025b096d320a3b15",
+        "Name": "mag_rsh12_kbp_rsh12_cylinder_127x55_5",
         "ModType": "",
         "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.23
+    },
+    "62e153bcdb1a5c41971c1b5b": {
+        "ItemID": "62e153bcdb1a5c41971c1b5b",
+        "Name": "mag_sr2m_tochmash_9x21_30",
+        "ModType": "",
+        "ReloadSpeed": -5,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0.08,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.138,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.17
     },
-    "5d52d479a4b936793d58c76b": {
-        "ItemID": "5d52d479a4b936793d58c76b",
-        "Name": "mag_ags30_zid_ags30_snail_std_30x29_30",
+    "633a98eab8b0506e48497c1a": {
+        "ItemID": "633a98eab8b0506e48497c1a",
+        "Name": "mag_sr2m_tochmash_9x21_20",
         "ModType": "",
         "ReloadSpeed": 0,
         "Ergonomics": 0,
-        "MagMalfunctionChance": 0,
+        "MagMalfunctionChance": 0.03,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.088,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.13
     },
-    "5cffa483d7ad1a049e54ef1c": {
-        "ItemID": "5cffa483d7ad1a049e54ef1c",
-        "Name": "mag_utes_ckib_nsv_belt_127x108_100",
+    "630e1adbbd357927e4007c09": {
+        "ItemID": "630e1adbbd357927e4007c09",
+        "Name": "mag_aug_steyr_std_556x45_10",
         "ModType": "",
         "ReloadSpeed": 0,
         "Ergonomics": 0,
-        "MagMalfunctionChance": 0,
+        "MagMalfunctionChance": 0.005,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.1,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "Weight": 0.1
+    },
+    "62e7c98b550c8218d602cbb4": {
+        "ItemID": "62e7c98b550c8218d602cbb4",
+        "Name": "mag_aug_steyr_std_556x45_30",
+        "ModType": "",
+        "ReloadSpeed": 2.5,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0.017,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.13
+    },
+    "630e295c984633f1fb0e7c30": {
+        "ItemID": "630e295c984633f1fb0e7c30",
+        "Name": "mag_aug_steyr_std_556x45_42",
+        "ModType": "",
+        "ReloadSpeed": -3.5,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0.055,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.142
+    },
+    "630769c4962d0247b029dc60": {
+        "ItemID": "630769c4962d0247b029dc60",
+        "Name": "mag_glock_glock_big_stick_9x19_24_fde",
+        "ModType": "",
+        "ReloadSpeed": -3.5,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0.15,
+        "LoadUnloadModifier": -10,
+        "CheckTimeModifier": -30,
+        "ConflictingItems": [],
+        "Weight": 0.112
+    },
+    "630767c37d50ff5e8a1ea71a": {
+        "ItemID": "630767c37d50ff5e8a1ea71a",
+        "Name": "mag_glock_glock_big_stick_9x19_31_fde",
+        "ModType": "",
+        "ReloadSpeed": -5,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0.2,
+        "LoadUnloadModifier": -10,
+        "CheckTimeModifier": -30,
+        "ConflictingItems": [],
+        "Weight": 0.14
+    },
+    "63076701a987397c0816d21b": {
+        "ItemID": "63076701a987397c0816d21b",
+        "Name": "mag_glock_glock_w_pad_9x19_19_fde",
+        "ModType": "",
+        "ReloadSpeed": 1,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0,
+        "LoadUnloadModifier": -10,
+        "CheckTimeModifier": -20,
+        "ConflictingItems": [],
+        "Weight": 0.106
     }
 }

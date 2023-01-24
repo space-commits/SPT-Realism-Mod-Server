@@ -195,7 +195,6 @@ class CodeGen {
     }
     assignJSONToAmmo(serverItem, fileItem) {
         if (fileItem) {
-            fileItem.loyaltyLevel = 2;
             fileItem;
             return fileItem;
         }

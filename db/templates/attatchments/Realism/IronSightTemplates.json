@@ -1369,5 +1369,25 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0
+    },
+    "630765cb962d0247b029dc45": {
+        "ItemID": "630765cb962d0247b029dc45",
+        "Name": "sight_rear_glock_glock_19x",
+        "ModType": "",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.008
+    },
+    "630765777d50ff5e8a1ea718": {
+        "ItemID": "630765777d50ff5e8a1ea718",
+        "Name": "sight_front_glock_glock_19x",
+        "ModType": "",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.007
     }
 }

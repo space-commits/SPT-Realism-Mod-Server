@@ -510,5 +510,18 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08
+    },
+    "634e61b0767cb15c4601a877": {
+        "ItemID": "634e61b0767cb15c4601a877",
+        "Name": "foregrip_aug_steyr_a1_foregrip",
+        "ModType": "",
+        "VerticalRecoil": -2,
+        "HorizontalRecoil": -2,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 5,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.08
     }
 }

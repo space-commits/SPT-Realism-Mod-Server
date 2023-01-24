@@ -1225,5 +1225,35 @@
         "Weight": 0.51,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0
+    },
+    "62ebd290c427473eff0baafb": {
+        "ItemID": "62ebd290c427473eff0baafb",
+        "Name": "scope_aug_steyr_rail_optic_1,5x",
+        "ModType": "scope",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.624
+    },
+    "62ea7c793043d74a0306e19f": {
+        "ItemID": "62ea7c793043d74a0306e19f",
+        "Name": "scope_aug_steyr_stg77_optic_1,5x",
+        "ModType": "scope",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 1.22
+    },
+    "62ff9920fe938a24c90c10d2": {
+        "ItemID": "62ff9920fe938a24c90c10d2",
+        "Name": "scope_sr2m_tochmash_kp_sr2",
+        "ModType": "scope",
+        "AimSpeed": -12,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.27
     }
 }

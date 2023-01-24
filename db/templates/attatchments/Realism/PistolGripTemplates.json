@@ -569,7 +569,7 @@
         "Ergonomics": 6,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.190
+        "Weight": 0.19
     },
     "5998517986f7746017232f7e": {
         "ItemID": "5998517986f7746017232f7e",
@@ -1199,5 +1199,44 @@
             "607d5aa50494a626335e12ed"
         ],
         "Weight": 0.13
+    },
+    "633ec8e4025b096d320a3b1e": {
+        "ItemID": "633ec8e4025b096d320a3b1e",
+        "Name": "pistolgrip_rsh12_kbp_rsh12_std",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 2,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.11
+    },
+    "637b9c37b7e3bc41b21ce71a": {
+        "ItemID": "637b9c37b7e3bc41b21ce71a",
+        "Name": "pistolgrip_sr2m_tochmash_std",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 3,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.07
+    },
+    "637ba29bf7ca6372bf2613db": {
+        "ItemID": "637ba29bf7ca6372bf2613db",
+        "Name": "pistolgrip_sr2m_tochmash_std_blk",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 3,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.07
     }
 }

@@ -12,7 +12,7 @@ export class Airdrops {
     constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
 
     public loadAirdrops() {
-        this.airConf.airdropChancePercent.bigmap = 15;
+        this.airConf.airdropChancePercent.bigmap = 100;//15
         this.airConf.airdropChancePercent.woods = 20;
         this.airConf.airdropChancePercent.lighthouse = 20;
         this.airConf.airdropChancePercent.shoreline = 20;
@@ -21,8 +21,8 @@ export class Airdrops {
 
         this.airConf.planeVolume = 0.2;
 
-        this.airConf.airdropMinStartTimeSeconds = 300;
-        this.airConf.airdropMaxStartTimeSeconds = 1200;
+        this.airConf.airdropMinStartTimeSeconds = 1;//300
+        this.airConf.airdropMaxStartTimeSeconds = 2;//1200
 
 
         if (this.modConfig.logEverything == true) {

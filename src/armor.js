@@ -143,10 +143,22 @@ class Armor {
                 serverItem._props.Durability = 115;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 7;
+                serverItem._props.speedPenaltyPercent = -4.5;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -4.5;
+                serverItem._props.BluntThroughput = 0.2;
+                serverItem._props.ArmorMaterial = 'UHMWPE';
+                serverItem._props.Weight = 7.5;
+            }
+            //Hexatac
+            if (serverItem._id === "63737f448b28897f2802b874") {
+                serverItem._props.Durability = 100;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 7;
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -4;
-                serverItem._props.BluntThroughput = 0.2;
+                serverItem._props.BluntThroughput = 0.25;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 6.8;
             }
@@ -577,7 +589,7 @@ class Armor {
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
                 serverItem._props.BluntThroughput = 0.23;
-                serverItem._props.ArmorMaterial = 'UHMWPE';
+                serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 7.5;
             }
             // Bagariy
@@ -638,10 +650,22 @@ class Armor {
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
                 serverItem._props.BluntThroughput = 0.19;
-                serverItem._props.ArmorMaterial = 'UHMWPE';
+                serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 9.5;
             }
             /// Class 10 ///
+            //Shellback Banshee
+            if (serverItem._id === "639343fce101f4caa40a4ef3") {
+                serverItem._props.Durability = 100;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 10;
+                serverItem._props.speedPenaltyPercent = -4;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -4;
+                serverItem._props.BluntThroughput = 0.25;
+                serverItem._props.ArmorMaterial = 'Combined';
+                serverItem._props.Weight = 8;
+            }
             /////// HELMETS //////
             //// Class 0 ////
             //Beanie

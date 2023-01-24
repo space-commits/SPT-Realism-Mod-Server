@@ -208,5 +208,12 @@
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "GOST 2"
+    },
+    "63737f448b28897f2802b874": {
+        "ItemID": "63737f448b28897f2802b874",
+        "Name": "item_equipment_armor_hexatac",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "PM 8"
     }
 }

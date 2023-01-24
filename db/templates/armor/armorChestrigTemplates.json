@@ -138,5 +138,12 @@
         "AllowADS": true,
         "LoyaltyLevel": 4,
         "ArmorClass": "NIJ III+"
+    },
+    "639343fce101f4caa40a4ef3": {
+        "ItemID": "639343fce101f4caa40a4ef3",
+        "Name": "item_equipment_rig_shellback_tactical_banshee",
+        "AllowADS": true,
+        "LoyaltyLevel": 5,
+        "ArmorClass": "XSAPI"
     }
 }

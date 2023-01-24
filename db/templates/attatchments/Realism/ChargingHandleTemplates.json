@@ -377,5 +377,27 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 20
+    },
+    "62e7c880f68e7a0676050c7c": {
+        "ItemID": "62e7c880f68e7a0676050c7c",
+        "Name": "charge_aug_steyr_a1_handle",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "ConflictingItems": [],
+        "FixSpeed": 0,
+        "Ergonomics": 0,
+        "Weight": 0.013,
+        "ChamberSpeed": 0
+    },
+    "62ebbc53e3c1e1ec7c02c44f": {
+        "ItemID": "62ebbc53e3c1e1ec7c02c44f",
+        "Name": "charge_aug_steyr_a3_handle",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "ConflictingItems": [],
+        "FixSpeed": 0,
+        "Ergonomics": 0,
+        "Weight": 0.011,
+        "ChamberSpeed": 5
     }
 }

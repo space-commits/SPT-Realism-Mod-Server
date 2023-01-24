@@ -1817,5 +1817,109 @@
             "5c90c3622e221601da359851"
         ],
         "Weight": 0.24
+    },
+    "62e281349ecd3f493f6df954": {
+        "ItemID": "62e281349ecd3f493f6df954",
+        "Name": "mount_sr2m_zenit_b17",
+        "ModType": "",
+        "Ergonomics": -1,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.04
+    },
+    "638db77630c4240f9e06f8b6": {
+        "ItemID": "638db77630c4240f9e06f8b6",
+        "Name": "mount_dovetail_sag_bit_bracket",
+        "ModType": "",
+        "Ergonomics": -1,
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5947db3f86f77447880cf76f",
+            "6113d6c3290d254f5e6b27db",
+            "57486e672459770abd687134",
+            "5c82342f2e221644f31c060e",
+            "576fd4ec2459777f0b518431",
+            "5c82343a2e221644f31c0611",
+            "5cf638cbd7f00c06595bc936",
+            "5a7c74b3e899ef0014332c29",
+            "591ee00d86f774592f7b841e",
+            "5d0a29ead7ad1a0026013f27",
+            "57acb6222459771ec34b5cb0",
+            "5c61a40d2e2216001403158d",
+            "5c90c3622e221601da359851",
+            "5d2c76ed48f03532f2136169",
+            "5d2c770c48f0354b4a07c100",
+            "5d2c772c48f0355d95672c25",
+            "5649af884bdc2d1b2b8b4589",
+            "5dff8db859400025ea5150d4",
+            "5dfcd0e547101c39625f66f9",
+            "5827272a24597748c74bdeea",
+            "59985a6c86f77414ec448d17",
+            "5a957c3fa2750c00137fa5f7"
+        ],
+        "Weight": 0.075
+    },
+    "62ed189fb3608410ef5a2bfc": {
+        "ItemID": "62ed189fb3608410ef5a2bfc",
+        "Name": "mount_sr2m_tochmash_short_rail",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.05
+    },
+    "62ed1921b3608410ef5a2c04": {
+        "ItemID": "62ed1921b3608410ef5a2c04",
+        "Name": "mount_sr2m_tochmash_med_rail",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.06
+    },
+    "62e7c8f91cd3fde4d503d690": {
+        "ItemID": "62e7c8f91cd3fde4d503d690",
+        "Name": "mount_aug_steyr_aug_a3_m1_long_rail",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.154
+    },
+    "62ebba1fb658e07ef9082b5a": {
+        "ItemID": "62ebba1fb658e07ef9082b5a",
+        "Name": "mount_aug_steyr_aug_a3_m1_short_rail",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.114
+    },
+    "6388c5d19c00405f4717c0f0": {
+        "ItemID": "6388c5d19c00405f4717c0f0",
+        "Name": "mount_pri_precision_reflex_long_rail_section_gen3",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.16
+    },
+    "6388c4ac8d895f557a0c6515": {
+        "ItemID": "6388c4ac8d895f557a0c6515",
+        "Name": "mount_pri_precision_reflex_bottom_rail_section_gen3",
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.075
+    },
+    "6388c4478d895f557a0c6512": {
+        "ItemID": "6388c4478d895f557a0c6512",
+        "Name": "mount_pri_precision_reflex_short_rail_section_gen3",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.07
     }
 }
