@@ -62,6 +62,7 @@ class WeaponsGlobals {
                     || serverItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE
                     || serverItem._parent === enums_1.ParentClasses.GRENADE_LAUNCHER) {
                     serverItem._props.Ergonomics = 80;
+                    serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.1);
                 }
             }
             if (this.modConf.logEverything == true) {

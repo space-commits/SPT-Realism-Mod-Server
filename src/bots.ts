@@ -69,6 +69,7 @@ export class Bots {
         this.botConf.equipment["pmc"].blacklist = [];
         this.botConf.equipment["pmc"].weightingAdjustments = [];
         this.botConf.equipment["pmc"].clothing = [];
+        this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
 
         this.botConf.equipment["assault"] = botEquipmentTempalte;
         this.botConf.equipment["pmcbot"] = botEquipmentTempalte;

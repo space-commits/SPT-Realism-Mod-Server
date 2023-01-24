@@ -73,6 +73,7 @@ export class WeaponsGlobals {
 
                 ) {
                     serverItem._props.Ergonomics = 80;
+                    serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.1);
                 }
             }
             if (this.modConf.logEverything == true) {
