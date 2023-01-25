@@ -1069,10 +1069,7 @@
                 "_id": "d0ce3be15dd66583889e6d38",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-                    "Repairable": {
-                        "MaxDurability": 100,
-                        "Durability": 100
-                    },
+
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1199,10 +1196,7 @@
                 "_id": "31c96d8b8b00379e24dcce78",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-                    "Repairable": {
-                        "MaxDurability": 100,
-                        "Durability": 100
-                    },
+
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1335,10 +1329,7 @@
                 "_id": "9a59542933fef5e3c5be3a44",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-                    "Repairable": {
-                        "MaxDurability": 100,
-                        "Durability": 100
-                    },
+
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1465,10 +1456,7 @@
                 "_id": "4ed0e81cbcca07b5f264659f",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-                    "Repairable": {
-                        "MaxDurability": 100,
-                        "Durability": 100
-                    },
+
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1613,10 +1601,7 @@
                 "_id": "9729b385d58a66cff896357a",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-                    "Repairable": {
-                        "MaxDurability": 100,
-                        "Durability": 100
-                    },
+
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1749,10 +1734,7 @@
                 "_id": "f1c9af0bf4e76d1cea384287",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-                    "Repairable": {
-                        "MaxDurability": 100,
-                        "Durability": 100
-                    },
+
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1891,10 +1873,7 @@
                 "_id": "cdf36d00081ebb6735553402",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-                    "Repairable": {
-                        "MaxDurability": 100,
-                        "Durability": 100
-                    },
+
                     "FireMode": {
                         "FireMode": "single"
                     }

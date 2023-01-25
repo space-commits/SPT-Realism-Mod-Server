@@ -299,6 +299,7 @@
             "items": {
                 "Backpack": [],
                 "Pockets": [
+                    "637b6179104668754b72f8f5",
                     "5c94bbff86f7747ee735c08f",
                     "5c1f79a086f7746ed066fb8f",
                     "5c1d0d6d86f7744bb2683e1f",
@@ -519,6 +520,8 @@
             "items": {
                 "Backpack": [],
                 "Pockets": [
+                    "637b620db7afa97bfc3d7009",
+                    "637b6179104668754b72f8f5",
                     "5c94bbff86f7747ee735c08f",
                     "5c1f79a086f7746ed066fb8f",
                     "5c1d0d6d86f7744bb2683e1f",

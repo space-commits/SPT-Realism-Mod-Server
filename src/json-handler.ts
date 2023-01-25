@@ -213,4 +213,9 @@ export class JsonHandler {
         }
     }
 
+    public cleanPresets()
+    {
+        
+    }
+
 }
