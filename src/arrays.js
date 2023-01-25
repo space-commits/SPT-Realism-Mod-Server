@@ -18,7 +18,8 @@ class Arrays {
             "Customs",
             "rezervbase",
             "RezervBase",
-            "ReserveBase"
+            "ReserveBase",
+            "Streets of Tarkov"
         ];
         this.cqbMaps = [
             "Factory",

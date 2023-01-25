@@ -593,7 +593,7 @@ class TieredFlea {
     }
     canSellPistol(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567") {
+            if (this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || "617f1ef5e8b54b0998387733") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }

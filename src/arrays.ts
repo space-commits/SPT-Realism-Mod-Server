@@ -20,7 +20,8 @@ export class Arrays {
         "Customs",
         "rezervbase",
         "RezervBase",
-        "ReserveBase"
+        "ReserveBase",
+        "Streets of Tarkov"
     ]
 
     public cqbMaps = [
@@ -32,7 +33,6 @@ export class Arrays {
         "Interchange",
         "interchange"
     ]
-
 
     public traderIDs = [
         "54cb50c76803fa8b248b4571",
