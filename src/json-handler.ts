@@ -34,6 +34,8 @@ const PistolGripTemplates = require("../db/templates/attatchments/" + `${attPath
 const GasblockTemplates = require("../db/templates/attatchments/" + `${attPath}` + "/GasblockTemplates.json");
 const HandguardTemplates = require("../db/templates/attatchments/" + `${attPath}` + "/HandguardTemplates.json");
 const FlashlightLaserTemplates = require("../db/templates/attatchments/" + `${attPath}` + "/FlashlightLaserTemplates.json");
+const UBGLTempaltes = require("../db/templates/attatchments/" + `${attPath}` + "/UBGLTempaltes.json");
+
 
 const AssaultRifleTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/AssaultRifleTemplates.json");
 const AssaultCarbineTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/AssaultCarbineTemplates.json");
@@ -72,6 +74,7 @@ export class JsonHandler {
                 this.callHelper(GasblockTemplates, serverItem, this.modPusherHelper);
                 this.callHelper(HandguardTemplates, serverItem, this.modPusherHelper);
                 this.callHelper(FlashlightLaserTemplates, serverItem, this.modPusherHelper);
+                this.callHelper(UBGLTempaltes, serverItem, this.modPusherHelper)
             }
         }
     }
