@@ -74,6 +74,7 @@ class Main {
         const databaseServer = container.resolve("DatabaseServer");
         const localisationService = container.resolve("LocalisationService");
         const fleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
+        const durahelp = container.resolve("DurabilityLimitsHelper");
         const profileHelper = container.resolve("ProfileHelper");
         const assortHelper = container.resolve("AssortHelper");
         const paymentHelper = container.resolve("PaymentHelper");
@@ -158,7 +159,7 @@ class Main {
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const postLoadTables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadTables);
-                    const helper = new helper_1.Helper(postLoadTables, arrays);
+                    const helper = new helper_1.Helper(postLoadTables, arrays, modConfig);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
@@ -182,10 +183,8 @@ class Main {
                                     helper.saveToJSONFile(modConfig, 'config/config.json');
                                     logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                 }
-                                if (modConfig.med_changes == true) {
-                                    this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
-                                    this.checkMeds(scavData, pmcData.Info.Experience, helper, player, logger);
-                                }
+                                this.checkProfile(pmcData, pmcData.Info.Experience, helper, player, logger);
+                                this.checkProfile(scavData, pmcData.Info.Experience, helper, player, logger);
                                 if (modConfig.med_changes == false) {
                                     helper.removeCustomItems(pmcData);
                                     pmcData.Health.Hydration.Maximum = player.defaultHydration;
@@ -235,15 +234,13 @@ class Main {
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const postLoadtables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadtables);
-                    const helper = new helper_1.Helper(postLoadtables, arrays);
+                    const helper = new helper_1.Helper(postLoadtables, arrays, modConfig);
                     const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems, helper);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     try {
-                        if (modConfig.med_changes == true) {
-                            this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
-                            this.checkMeds(scavData, scavData.Info.Experience, helper, player, logger);
-                        }
+                        this.checkProfile(pmcData, pmcData.Info.Experience, helper, player, logger);
+                        this.checkProfile(scavData, scavData.Info.Experience, helper, player, logger);
                         if (modConfig.realistic_player_health == true) {
                             player.correctNewHealth(pmcData, scavData);
                         }
@@ -273,7 +270,7 @@ class Main {
                         const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
                         const arrays = new arrays_1.Arrays(postLoadTables);
-                        const helper = new helper_1.Helper(postLoadTables, arrays);
+                        const helper = new helper_1.Helper(postLoadTables, arrays, modConfig);
                         const bots = new bots_1.Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
                         const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
                         const time = weatherController.generate().time;
@@ -378,7 +375,7 @@ class Main {
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
-                    const helper = new helper_1.Helper(postLoadTables, arrays);
+                    const helper = new helper_1.Helper(postLoadTables, arrays, modConfig);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     let level = 1;
@@ -414,7 +411,7 @@ class Main {
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const arrays = new arrays_1.Arrays(tables);
-        const helper = new helper_1.Helper(tables, arrays);
+        const helper = new helper_1.Helper(tables, arrays, modConfig);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
@@ -435,6 +432,7 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables);
+        const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
         this.dllChecker(logger, modConfig);
         if (modConfig.trader_changes == true) {
             itemCloning.createCustomWeapons();
@@ -510,7 +508,7 @@ class Main {
         attachBase.loadAttCompat();
         items.loadItemsRestrictions();
         player.loadPlayerStats();
-        player.playerProfiles();
+        player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
     }
     postAkiLoad(container) {
@@ -541,17 +539,19 @@ class Main {
             logger.warning("Merry Christmas!");
         }
     }
-    checkMeds(pmcData, pmcEXP, helper, player, logger) {
-        helper.correctMedItems(pmcData, pmcEXP);
-        pmcData.Health.Hydration.Maximum = player.hydration;
-        pmcData.Health.Energy.Maximum = player.energy;
-        if (pmcData.Info.Experience == 0) {
-            pmcData.Health.Hydration.Current = player.hydration;
-            pmcData.Health.Energy.Current = player.energy;
-            logger.info("Realism Mod: New Profile Meds And Hydration/Energy Adjusted");
+    checkProfile(pmcData, pmcEXP, helper, player, logger) {
+        helper.correctItemResources(pmcData, pmcEXP);
+        if (modConfig.med_changes == true) {
+            pmcData.Health.Hydration.Maximum = player.hydration;
+            pmcData.Health.Energy.Maximum = player.energy;
+            if (pmcData.Info.Experience == 0) {
+                pmcData.Health.Hydration.Current = player.hydration;
+                pmcData.Health.Energy.Current = player.energy;
+                logger.info("Realism Mod: New Profile Meds And Hydration/Energy Adjusted");
+            }
         }
         if (modConfig.logEverything == true) {
-            logger.info("Realism Mod: Meds Checked");
+            logger.info("Realism Mod: Profile Checked");
         }
     }
     fleaHelper(fetchTier, ragfairOfferGen, container) {

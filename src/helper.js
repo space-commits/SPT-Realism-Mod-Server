@@ -3,24 +3,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.Helper = void 0;
 const fs = require('fs');
 class Helper {
-    constructor(tables, arrays) {
+    constructor(tables, arrays, modConfig) {
         this.tables = tables;
         this.arrays = arrays;
+        this.modConfig = modConfig;
         this.itemDB = this.tables.templates.items;
         this.medItems = this.arrays.stashMeds;
     }
-    correctMedItems(playerData, pmcEXP) {
-        var inventProp = playerData?.Inventory;
-        if (inventProp !== undefined) {
-            for (var i = 0; i < playerData.Inventory.items.length; i++) {
-                var itemProp = playerData.Inventory.items[i]?.upd?.MedKit?.HpResource;
-                if (itemProp !== undefined) {
-                    for (var j = 0; j < this.medItems.length; j++) {
-                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]
-                            && playerData.Inventory.items[i].upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) {
-                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
-                        }
-                        if (pmcEXP == 0 && playerData.Inventory.items[i]._tpl === this.medItems[j]) {
+    revertMedItems(playerData) {
+        if (playerData?.Inventory !== undefined) {
+            for (let i in playerData.Inventory.items) {
+                if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
+                    for (let j in this.medItems) {
+                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]) {
                             playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
                     }
@@ -28,18 +23,34 @@ class Helper {
             }
         }
     }
-    revertMedItems(playerData) {
-        var inventProp = playerData?.Inventory;
-        if (inventProp !== undefined) {
-            for (var i = 0; i < playerData.Inventory.items.length; i++) {
-                var itemProp = playerData.Inventory.items[i]?.upd?.MedKit?.HpResource;
-                if (itemProp !== undefined) {
-                    for (var j = 0; j < this.medItems.length; j++) {
-                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]) {
-                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
-                        }
-                    }
+    correctItemResources(playerData, pmcEXP) {
+        if (playerData?.Inventory !== undefined) {
+            for (let i in playerData.Inventory.items) {
+                let profileItem = playerData.Inventory.items[i];
+                if (profileItem?.upd?.Repairable?.Durability !== undefined) {
+                    this.correctDuraHelper(profileItem);
                 }
+                if (this.modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
+                    this.correctMedicalRes(profileItem, pmcEXP);
+                }
+            }
+        }
+    }
+    correctMedicalRes(profileItem, pmcEXP) {
+        for (let j in this.medItems) {
+            if (profileItem._tpl === this.medItems[j]) {
+                if ((profileItem.upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
+                    profileItem.upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                }
+            }
+        }
+    }
+    correctDuraHelper(profileItem) {
+        for (let j in this.itemDB) {
+            let serverItem = this.itemDB[j];
+            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.MaxDurability != serverItem._props.MaxDurability) {
+                profileItem.upd.Repairable.Durability = serverItem._props.Durability;
+                profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;
             }
         }
     }

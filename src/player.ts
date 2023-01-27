@@ -1,7 +1,9 @@
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { ILogger } from "../types/models/spt/utils/ILogger";
+import { ParentClasses } from "./enums";
 import { Helper } from "./helper";
 
 
@@ -147,7 +149,7 @@ export class Player {
 
     public loadPlayerStats() {
 
-        if (this.modConfig.weight_limits_changes == true){
+        if (this.modConfig.weight_limits_changes == true) {
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 70;
             this.globalDB.Stamina.BaseOverweightLimits["x"] = 24;
@@ -209,7 +211,7 @@ export class Player {
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
             this.globalDB.Stamina.OxygenRestoration *= 2.1;
 
-            this.globalDB.Stamina.AimDrainRate = 0.3;
+            this.globalDB.Stamina.AimDrainRate = 0.35;
             this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing
@@ -301,44 +303,54 @@ export class Player {
         }
     }
 
-    public playerProfiles() {
-
-
-        this.tables.templates.profiles["Realism Mod"] = this.custProfile["Realism Mod"];
-
-        const bearInventory = this.tables.templates.profiles["Realism Mod"].bear.character.Inventory.items;
-        const usecInventory = this.tables.templates.profiles["Realism Mod"].usec.character.Inventory.items;
-
-        if (this.modConfig.realistic_ballistics == true) {
-            this.tables.templates.profiles.Standard.bear.character.Inventory = this.custProfile.Standard.bear.Inventory;
-            this.tables.templates.profiles.Standard.usec.character.Inventory = this.custProfile.Standard.usec.Inventory;
-
-            this.tables.templates.profiles["Left Behind"].bear.character.Inventory = this.custProfile["Left Behind"].bear.Inventory;
-            this.tables.templates.profiles["Left Behind"].usec.character.Inventory = this.custProfile["Left Behind"].usec.Inventory;
-
-            this.tables.templates.profiles["Prepare To Escape"].bear.character.Inventory = this.custProfile["Prepare To Escape"].bear.Inventory;
-            this.tables.templates.profiles["Prepare To Escape"].usec.character.Inventory = this.custProfile["Prepare To Escape"].usec.Inventory;
-
-            this.tables.templates.profiles["Edge Of Darkness"].bear.character.Inventory = this.custProfile["Edge Of Darkness"].bear.Inventory;
-            this.tables.templates.profiles["Edge Of Darkness"].usec.character.Inventory = this.custProfile["Edge Of Darkness"].usec.Inventory;
+    private debuffMul(buff, mult) {
+        if (buff?.Threshold !== undefined) {
+            buff.Threshold /= mult;
+            buff.K *= mult;
+        } else if (buff?.Threshold == undefined) {
+            buff *= mult;
         }
+    }
 
-        for (let i in bearInventory) {
+    public playerProfiles(jsonUtil: JsonUtil) {
+
+        this.tables.templates.profiles["Realism Mod"] = jsonUtil.clone(this.tables.templates.profiles["Standard"])
+        this.tables.templates.profiles["Realism Mod"].bear.Inventory = this.custProfile.BearInventory;
+        this.tables.templates.profiles["Realism Mod"].usec.Inventory = this.custProfile.USECInventory;
+
+        for (let profile in this.tables.templates.profiles){
+            this.correctInventory(this.tables.templates.profiles[profile].bear.character.Inventory.items);
+            this.correctInventory(this.tables.templates.profiles[profile].usec.character.Inventory.items);
+        }
+    }
+
+    private correctInventory(inventory) {
+        for (let i in inventory) {
             if (this.modConfig.med_changes == false) {
-                this.resetMedkitHP(bearInventory[i]);
+                this.resetMedkitHP(inventory[i]);
             }
             else {
-                this.setMedkitHP(bearInventory[i]);
+                this.setMedkitHP(inventory[i]);
+            }
+            if (this.modConfig.realistic_ballistics == true) {
+                this.setArmorDuabaility(inventory[i]);
             }
         }
-        for (let i in usecInventory) {
-            if (this.modConfig.med_changes == false) {
-                this.resetMedkitHP(usecInventory[i]);
-            }
-            else {
-                this.setMedkitHP(usecInventory[i]);
-            }
+    }
 
+    private setArmorDuabaility(invItem: Item) {
+        for (let i in this.tables.templates.items) {
+            let serverItem = this.tables.templates.items[i];
+            if (invItem._tpl === this.tables.templates.items[i]._id
+                && invItem?.upd?.Repairable !== undefined
+                && (serverItem._parent === ParentClasses.ARMORVEST
+                    || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT
+                    || serverItem._parent === ParentClasses.HEADWEAR
+                    || serverItem._parent === ParentClasses.CHESTRIG)
+            ) {
+                invItem.upd.Repairable.Durability = this.tables.templates.items[i]._props.Durability;
+                invItem.upd.Repairable.MaxDurability = this.tables.templates.items[i]._props.Durability;
+            }
         }
     }
 
@@ -362,14 +374,4 @@ export class Player {
             invItem.upd.MedKit.HpResource = this.medItems.TIER3MEDKIT.MaxHpResource;
         }
     }
-
-    private debuffMul(buff, mult) {
-        if (buff?.Threshold !== undefined) {
-            buff.Threshold /= mult;
-            buff.K *= mult;
-        } else if (buff?.Threshold == undefined) {
-            buff *= mult;
-        }
-    }
-
 }

@@ -18,7 +18,7 @@ import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
 import { BotGeneratorHelper } from "@spt-aki/helpers/BotGeneratorHelper";
 import { WeightedRandomHelper } from "@spt-aki/helpers/WeightedRandomHelper";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { Chances, Inventory, ItemMinMax, Items, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
+import { Chances, Inventory, ItemMinMax, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
@@ -66,8 +66,8 @@ import { MinMax } from "@spt-aki/models/common/MinMax";
 import { IRandomisedBotLevelResult } from "@spt-aki/models/eft/bot/IRandomisedBotLevelResult";
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
-import { SaveServer } from "@spt-aki/servers/SaveServer";
 import { ILocations } from "@spt-aki/models/spt/server/ILocations";
+import { DurabilityLimitsHelper } from "@spt-aki/helpers/DurabilityLimitsHelper";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -94,9 +94,6 @@ import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
 import { DescriptionGen } from "./description_gen";
 import { JsonHandler } from "./json-handler";
-import { table } from "console";
-
-
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -127,6 +124,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const localisationService = container.resolve<LocalisationService>("LocalisationService");
         const fleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
+        const durahelp = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
 
         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         const assortHelper = container.resolve<AssortHelper>("AssortHelper");
@@ -153,7 +151,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
         const botWeaponGenerator = container.resolve<BotWeaponGenerator>("BotWeaponGenerator");
         const botLootCacheService = container.resolve<BotLootCacheService>("BotLootCacheService");
-
 
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
@@ -210,10 +207,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     return genBotLvl.genBotLvl(levelDetails, botGenerationDetails, bot);
                 }
             }, { frequency: "Always" });
-
         }
 
-        if (modConfig.trader_changes == true) {
+        
+
+        if (modConfig.trader_changes ==  true) {
             container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
                 result.resetExpiredTrader = (trader: ITrader): void => {
                     return traderRefersh.myResetExpiredTrader(trader);
@@ -234,7 +232,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                         const postLoadTables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadTables);
-                        const helper = new Helper(postLoadTables, arrays);
+                        const helper = new Helper(postLoadTables, arrays, modConfig);
                         const tieredFlea = new TieredFlea(postLoadTables);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
@@ -265,10 +263,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                         helper.saveToJSONFile(modConfig, 'config/config.json');
                                         logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                     }
-                                    if (modConfig.med_changes == true) {
-                                        this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
-                                        this.checkMeds(scavData, pmcData.Info.Experience, helper, player, logger);
-                                    }
+
+                                    this.checkProfile(pmcData, pmcData.Info.Experience, helper, player, logger);
+                                    this.checkProfile(scavData, pmcData.Info.Experience, helper, player, logger);
+
                                     if (modConfig.med_changes == false) {
                                         helper.removeCustomItems(pmcData);
                                         pmcData.Health.Hydration.Maximum = player.defaultHydration
@@ -326,7 +324,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                         const postLoadtables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadtables);
-                        const helper = new Helper(postLoadtables, arrays);
+                        const helper = new Helper(postLoadtables, arrays, modConfig);
                         const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems, helper);
 
 
@@ -335,10 +333,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const scavData = profileHelper.getScavProfile(sessionID);
 
                         try {
-                            if (modConfig.med_changes == true) {
-                                this.checkMeds(pmcData, pmcData.Info.Experience, helper, player, logger);
-                                this.checkMeds(scavData, scavData.Info.Experience, helper, player, logger);
-                            }
+
+                            this.checkProfile(pmcData, pmcData.Info.Experience, helper, player, logger);
+                            this.checkProfile(scavData, scavData.Info.Experience, helper, player, logger);
 
                             if (modConfig.realistic_player_health == true) {
                                 player.correctNewHealth(pmcData, scavData);
@@ -376,7 +373,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
 
                             const arrays = new Arrays(postLoadTables);
-                            const helper = new Helper(postLoadTables, arrays);
+                            const helper = new Helper(postLoadTables, arrays, modConfig);
                             const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
                             const seasonalEvents = new SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
 
@@ -470,7 +467,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 }
                             }
 
-              
+
                             if (modConfig.logEverything == true) {
                                 logger.warning("Map Name = " + mapNameStartOffl);
                                 logger.warning("Map Type  = " + mapType);
@@ -502,7 +499,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables);
-                        const helper = new Helper(postLoadTables, arrays);
+                        const helper = new Helper(postLoadTables, arrays, modConfig);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         let level = 1;
@@ -537,6 +534,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
     public postDBLoad(container: DependencyContainer): void {
 
+
+
         const logger = container.resolve<ILogger>("WinstonLogger");
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
@@ -547,7 +546,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const arrays = new Arrays(tables);
-        const helper = new Helper(tables, arrays);
+        const helper = new Helper(tables, arrays, modConfig);
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig);
@@ -568,6 +567,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables);
+
+        const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
 
         this.dllChecker(logger, modConfig);
 
@@ -667,7 +668,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         items.loadItemsRestrictions();
         player.loadPlayerStats();
-        player.playerProfiles();
+        player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
     }
 
@@ -702,17 +703,19 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    private checkMeds(pmcData: IPmcData, pmcEXP: number, helper: Helper, player: Player, logger: ILogger) {
-        helper.correctMedItems(pmcData, pmcEXP);
-        pmcData.Health.Hydration.Maximum = player.hydration;
-        pmcData.Health.Energy.Maximum = player.energy;
-        if (pmcData.Info.Experience == 0) {
-            pmcData.Health.Hydration.Current = player.hydration;
-            pmcData.Health.Energy.Current = player.energy
-            logger.info("Realism Mod: New Profile Meds And Hydration/Energy Adjusted");
+    private checkProfile(pmcData: IPmcData, pmcEXP: number, helper: Helper, player: Player, logger: ILogger) {
+        helper.correctItemResources(pmcData, pmcEXP);
+        if (modConfig.med_changes == true) {
+            pmcData.Health.Hydration.Maximum = player.hydration;
+            pmcData.Health.Energy.Maximum = player.energy;
+            if (pmcData.Info.Experience == 0) {
+                pmcData.Health.Hydration.Current = player.hydration;
+                pmcData.Health.Energy.Current = player.energy
+                logger.info("Realism Mod: New Profile Meds And Hydration/Energy Adjusted");
+            }
         }
         if (modConfig.logEverything == true) {
-            logger.info("Realism Mod: Meds Checked");
+            logger.info("Realism Mod: Profile Checked");
         }
     }
 

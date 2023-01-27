@@ -3,7 +3,7 @@ import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
 import { container, DependencyContainer } from "tsyringe";
 import { ITemplateItem, Slot } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { Inventory, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { Item, Upd } from "@spt-aki/models/eft/common/tables/IItem";
 import { ProbabilityHelper } from "@spt-aki/helpers/ProbabilityHelper";
 import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponResult";
 import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
@@ -25,6 +25,7 @@ import { IBotBase, Inventory as PmcInventory } from "@spt-aki/models/eft/common/
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { InventoryMagGen } from "@spt-aki/generators/weapongen/InventoryMagGen";
 import { ParentClasses } from "./enums";
+
 
 const modConfig = require("../config/config.json");
 

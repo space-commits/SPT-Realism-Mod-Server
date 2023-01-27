@@ -1,45 +1,25 @@
-
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
+import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";
+import { ParentClasses } from "./enums";
 
 const fs = require('fs');
 
 export class Helper {
 
-    constructor(private tables: IDatabaseTables, private arrays: Arrays) { }
+    constructor(private tables: IDatabaseTables, private arrays: Arrays, private modConfig) { }
 
 
     private itemDB = this.tables.templates.items;
     private medItems = this.arrays.stashMeds;
 
-    public correctMedItems(playerData: IPmcData, pmcEXP: number) {
-        var inventProp = playerData?.Inventory;
-        if (inventProp !== undefined) {
-            for (var i = 0; i < playerData.Inventory.items.length; i++) {
-                var itemProp = playerData.Inventory.items[i]?.upd?.MedKit?.HpResource;
-                if (itemProp !== undefined) {
-                    for (var j = 0; j < this.medItems.length; j++) {
-                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]
-                            && playerData.Inventory.items[i].upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) {
-                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
-                        }
-                        if (pmcEXP == 0 && playerData.Inventory.items[i]._tpl === this.medItems[j]) {
-                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     public revertMedItems(playerData: IPmcData) {
-        var inventProp = playerData?.Inventory;
-        if (inventProp !== undefined) {
-            for (var i = 0; i < playerData.Inventory.items.length; i++) {
-                var itemProp = playerData.Inventory.items[i]?.upd?.MedKit?.HpResource;
-                if (itemProp !== undefined) {
-                    for (var j = 0; j < this.medItems.length; j++) {
+        if (playerData?.Inventory !== undefined) {
+            for (let i in playerData.Inventory.items) {
+                if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
+                    for (let j in this.medItems) {
                         if (playerData.Inventory.items[i]._tpl === this.medItems[j]) {
                             playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
                         }
@@ -48,6 +28,44 @@ export class Helper {
             }
         }
     }
+
+    public correctItemResources(playerData: IPmcData, pmcEXP: number) {
+        if (playerData?.Inventory !== undefined) {
+            for (let i in playerData.Inventory.items) {
+                let profileItem = playerData.Inventory.items[i];
+                if (profileItem?.upd?.Repairable?.Durability !== undefined) {
+                    this.correctDuraHelper(profileItem);
+                }
+                if (this.modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
+                    this.correctMedicalRes(profileItem, pmcEXP);
+                }
+            }
+        }
+    }
+
+    private correctMedicalRes(profileItem: Item, pmcEXP: number) {
+        for (let j in this.medItems) {
+
+            if (profileItem._tpl === this.medItems[j]) {
+                if ((profileItem.upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
+                    profileItem.upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                }
+            }
+        }
+    }
+
+    private correctDuraHelper(profileItem: Item) {
+        for (let j in this.itemDB) {
+            let serverItem = this.itemDB[j]
+            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.MaxDurability != serverItem._props.MaxDurability) {
+                profileItem.upd.Repairable.Durability = serverItem._props.Durability;
+                profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;
+            }
+        }
+    }
+
+
+
 
     public probabilityWeighter(items: any, weights: number[]) {
 

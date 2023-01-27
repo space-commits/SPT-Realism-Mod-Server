@@ -63,14 +63,6 @@ export class Bots {
             "whitelist": []
         }
 
-        this.botConf.equipment["pmc"].weaponModLimits.scopeLimit = 100;
-        this.botConf.equipment["pmc"].weaponModLimits.lightLaserLimit = 2;
-        this.botConf.equipment["pmc"].randomisation = [];
-        this.botConf.equipment["pmc"].blacklist = [];
-        this.botConf.equipment["pmc"].weightingAdjustments = [];
-        this.botConf.equipment["pmc"].clothing = [];
-        this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-
         this.botConf.equipment["assault"] = botEquipmentTempalte;
         this.botConf.equipment["pmcbot"] = botEquipmentTempalte;
         this.botConf.equipment["exusec"] = botEquipmentTempalte;
@@ -79,6 +71,17 @@ export class Bots {
         this.botConf.equipment["followerbirdeye"] = botEquipmentTempalte;
         this.botConf.equipment["bosskilla"] = botEquipmentTempalte;
         this.botConf.equipment["bosstagilla"] = botEquipmentTempalte;
+
+
+        this.botConf.equipment["pmc"].weaponModLimits.scopeLimit = 100;
+        this.botConf.equipment["pmc"].weaponModLimits.lightLaserLimit = 2;
+        this.botConf.equipment["pmc"].randomisation = [];
+        this.botConf.equipment["pmc"].blacklist = [];
+        this.botConf.equipment["pmc"].weightingAdjustments = [];
+        this.botConf.equipment["pmc"].clothing = [];
+        this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
+
+
 
         if (this.modConf.logEverything == true) {
             this.logger.info("Bots Loaded");
@@ -354,7 +357,7 @@ export class Bots {
         this.botConf.durability.sectantwarrior = rmBotConfig.durability1.sectantwarrior
 
         //adjust PMC money stack limits and adjust PMC item spawn limits
-        this.botConfPMC.dynamicLoot.moneyStackLimits = rmBotConfig.pmc1.dynamicLoot.moneyStackLimits;
+        this.botConfPMC.dynamicLoot = rmBotConfig.pmc1.dynamicLoot;
         //adjust PMC max loot in rubles
         this.botConfPMC.maxBackpackLootTotalRub = rmBotConfig.pmc1.maxBackpackLootTotalRub;
         this.botConfPMC.maxPocketLootTotalRub = rmBotConfig.pmc1.maxPocketLootTotalRub;
@@ -398,6 +401,7 @@ export class Bots {
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;;
         }
+        
 
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig1 loaded");
@@ -419,7 +423,7 @@ export class Bots {
         this.botConf.durability.sectantwarrior = rmBotConfig.durability2.sectantwarrior
 
         //adjust PMC money stack limits and adjust PMC item spawn limits
-        this.botConfPMC.dynamicLoot.moneyStackLimits = rmBotConfig.pmc2.dynamicLoot.moneyStackLimits;
+        this.botConfPMC.dynamicLoot = rmBotConfig.pmc2.dynamicLoot;
 
         //adjust PMC max loot in rubles
         this.botConfPMC.maxBackpackLootTotalRub = rmBotConfig.pmc2.maxBackpackLootTotalRub;
@@ -484,7 +488,7 @@ export class Bots {
         this.botConf.durability.sectantwarrior = rmBotConfig.durability3.sectantwarrior
 
         //adjust PMC money stack limits and adjust PMC item spawn limits
-        this.botConfPMC.dynamicLoot.moneyStackLimits = rmBotConfig.pmc3.dynamicLoot.moneyStackLimits;
+        this.botConfPMC.dynamicLoot = rmBotConfig.pmc3.dynamicLoot;
 
         //adjust PMC max loot in rubles
         this.botConfPMC.maxBackpackLootTotalRub = rmBotConfig.pmc3.maxBackpackLootTotalRub;
@@ -528,6 +532,8 @@ export class Bots {
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;;
         }
+
+        this.logger.warning("/////////////////BOT CONFIG////////////////////////////");
 
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
@@ -1179,6 +1185,7 @@ export class Bots {
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
+        this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 100;
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.rogueBase.chances.mods.mod_nvg = 30;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;
@@ -1223,6 +1230,7 @@ export class Bots {
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
+        this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 100;
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.rogueBase.chances.mods.mod_nvg = 40;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;
@@ -1266,6 +1274,7 @@ export class Bots {
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
+        this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 100;
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapNameUnreliable === "factory4_night") {
             this.rogueBase.chances.mods.mod_nvg = 50;
             this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;

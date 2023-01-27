@@ -1,24 +1,4 @@
 {
-    "pmcTypeNotFucked": {
-        "map": {
-            "bossKilla": 1,
-            "bossSanitar": 1,
-            "bossTagilla": 1,
-            "followerBully": 1,
-            "pmcBot": 1,
-            "assault": 1,
-            "exUsec": 1,
-            "followerBirdEye": 1,
-            "sectantPriest": 1,
-            "bossBully": 1,
-            "bossKnight": 1,
-            "cursedAssault": 1,
-            "followerTagilla": 1,
-            "followerBigPipe": 1,
-            "gifter": 1,
-            "followerKojaniy": 1
-        }
-    },
     "pmcTypeTimmy": {
         "sptbear": {
             "factory4_day": {
@@ -102,6 +82,16 @@
                 "sectantPriest": 4
             },
             "shoreline": {
+                "bossSanitar": 15,
+                "bossTagilla": 1,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 20,
+                "followerTagilla": 1,
+                "assault": 15,
+                "sectantPriest": 4
+            },
+            "tarkovstreets": {
                 "bossSanitar": 15,
                 "bossTagilla": 1,
                 "bossBully": 15,
@@ -223,6 +213,19 @@
                 "bossBully": 10,
                 "gifter": 10,
                 "followerKojaniy": 10,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 2
+            },
+            "tarkovstreets": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 0,
                 "followerTagilla": 1,
                 "followerBully": 5,
                 "followerSanitar": 5,
@@ -491,6 +494,20 @@
                 "followerBigPipe": 5,
                 "gifter": 1,
                 "followerKojaniy": 15
+            },
+            "tarkovstreets": {
+                "bossKilla": 5,
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "pmcBot": 15,
+                "assault": 10,
+                "exUsec": 10,
+                "followerBirdEye": 10,
+                "bossKnight": 5,
+                "cursedAssault": 1,
+                "followerBigPipe": 5,
+                "gifter": 1,
+                "followerKojaniy": 0
             }
         }
     },
@@ -621,6 +638,20 @@
                 "followerBigPipe": 5,
                 "gifter": 1,
                 "followerKojaniy": 15
+            },
+            "tarkovstreets": {
+                "bossKilla": 10,
+                "bossSanitar": 10,
+                "bossTagilla": 2,
+                "pmcBot": 15,
+                "assault": 10,
+                "exUsec": 10,
+                "followerBirdEye": 10,
+                "bossKnight": 10,
+                "cursedAssault": 1,
+                "followerBigPipe": 10,
+                "gifter": 1,
+                "followerKojaniy": 0
             }
         },
         "sptusec": {
@@ -749,6 +780,20 @@
                 "followerBigPipe": 5,
                 "gifter": 1,
                 "followerKojaniy": 20
+            },
+            "tarkovstreets": {
+                "bossKilla": 10,
+                "bossSanitar": 10,
+                "bossTagilla": 2,
+                "pmcBot": 15,
+                "assault": 15,
+                "exUsec": 15,
+                "followerBirdEye": 15,
+                "bossKnight": 10,
+                "cursedAssault": 1,
+                "followerBigPipe": 10,
+                "gifter": 1,
+                "followerKojaniy": 0
             }
         }
     }

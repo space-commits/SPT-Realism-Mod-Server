@@ -1,4 +1,110 @@
 {
+    "StreetsBossLocationSpawn": [
+        {
+            "BossChance": 15,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "0",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "followerGluharAssault",
+            "BossName": "bossGluhar",
+            "BossPlayer": false,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "RandomTimeSpawn": false,
+            "Supports": [
+                {
+                    "BossEscortAmount": "2",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortType": "followerGluharAssault"
+                },
+                {
+                    "BossEscortAmount": "2",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortType": "followerGluharSecurity"
+                },
+                {
+                    "BossEscortAmount": "1",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortType": "followerGluharScout"
+                }
+            ],
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": ""
+        },
+        {
+            "BossChance": 10,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "0",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "pmcBot",
+            "BossName": "bossKilla",
+            "BossPlayer": false,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": ""
+        },
+        {
+            "BossName": "bossSanitar",
+            "BossChance": 10,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerSanitar",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "3",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "bossBully",
+            "BossChance": 15,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "pmcBot",
+            "BossChance": 30,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking,ZoneSnipeCinema,ZoneSnipeCarShowroom,ZoneSnipeBuilding,ZoneSnipeSW01",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "pmcBot",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "3,4,5",
+            "Time": -1,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "sectantPriest",
+            "BossChance": 30,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        }
+
+    ],
     "CustomsBossLocationSpawn": [
         {
             "BossName": "bossBully",
