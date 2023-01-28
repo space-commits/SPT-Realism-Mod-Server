@@ -1,8 +1,8 @@
 {
   "Mastering": [
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 600,
+      "Level3": 1800,
       "Name": "M4",
       "Templates": [
         "5c07c60e0db834002330051f",
@@ -23,8 +23,8 @@
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 400,
+      "Level3": 1500,
       "Name": "AKM",
       "Templates": [
         "59d6088586f774275f37482f",
@@ -58,8 +58,8 @@
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 750,
+      "Level3": 1000,
       "Name": "SKS",
       "Templates": [
         "587e02ff24597743df3deaeb",
@@ -67,8 +67,8 @@
       ]
     },
     {
-      "Level2": 400,
-      "Level3": 800,
+      "Level2": 800,
+      "Level3": 2000,
       "Name": "P226",
       "Templates": [
         "576a581d2459771e7b1bc4f1",
@@ -84,12 +84,13 @@
         "5e81c3cbac2bb513793cdc75",
         "5f36a0e5fbf956000b716b65",
         "602a9740da11d6478d5a06dc",
-        "6193a720f8ee7e52e42109ed"
+        "6193a720f8ee7e52e42109ed",
+        "63088377b5cd696784087147"
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 500,
+      "Level3": 1800,
       "Name": "MP153",
       "Templates": [
         "6259b864ebedf17603599e88",
@@ -98,7 +99,7 @@
       ]
     },
     {
-      "Level2": 400,
+      "Level2": 300,
       "Level3": 800,
       "Name": "MP-18",
       "Templates": [
@@ -107,8 +108,8 @@
       ]
     },
     {
-      "Level2": 400,
-      "Level3": 800,
+      "Level2": 900,
+      "Level3": 2200,
       "Name": "PM",
       "Templates": [
         "5448bd6b4bdc2dfc2f8b4569",
@@ -119,8 +120,8 @@
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 700,
+      "Level3": 2000,
       "Name": "MP5",
       "Templates": [
         "5d2f0d8048f0356c925bc3b0",
@@ -129,8 +130,8 @@
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 600,
+      "Level3": 1600,
       "Name": "PP-91",
       "Templates": [
         "57f3c6bd24597738e730fa2f",
@@ -140,7 +141,7 @@
     },
     {
       "Level2": 400,
-      "Level3": 800,
+      "Level3": 1000,
       "Name": "SV98",
       "Templates": [
         "5bfea6e90db834001b7347f3",
@@ -155,16 +156,16 @@
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 500,
+      "Level3": 1600,
       "Name": "M1A",
       "Templates": [
         "5aafa857e5b5b00018480968"
       ]
     },
     {
-      "Level2": 400,
-      "Level3": 800,
+      "Level2": 700,
+      "Level3": 2000,
       "Name": "M870",
       "Templates": [
         "5e870397991fd70db46995c8",
@@ -174,16 +175,16 @@
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 500,
+      "Level3": 1500,
       "Name": "SA-58",
       "Templates": [
         "5b0bbe4e5acfc40dc528a72d"
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 650,
+      "Level3": 1800,
       "Name": "mp7",
       "Templates": [
         "5ba26383d4351e00334c93d9",
@@ -193,49 +194,45 @@
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 900,
+      "Level3": 2000,
       "Name": "MDR",
       "Templates": [
         "5c488a752e221602b412af63",
-        "5dcbd56fdbd3d91b3e5468d5"
+        "5dcbd56fdbd3d91b3e5468d5",
+        "62e7c4fba689e8c9c50dfc38",
+        "63171672192e68c5460cebc5",
+        "5cadfbf7ae92152ac412eeef",
+        "5f2a9575926fd9352339381f"
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
-      "Name": "ASH12",
+      "Name": "SR2",
       "Templates": [
-        "5cadfbf7ae92152ac412eeef"
-      ]
+        "62e14904c2699c0ec93adc47"
+      ],
+      "Level2": 600,
+      "Level3": 1600
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 650,
+      "Level3": 1600,
       "Name": "P90",
       "Templates": [
         "5cc82d76e24e8d00134b4b83"
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 400,
+      "Level3": 800,
       "Name": "PPSH",
       "Templates": [
         "5ea03f7400685063ec28bfa8"
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
-      "Name": "RFB",
-      "Templates": [
-        "5f2a9575926fd9352339381f"
-      ]
-    },
-    {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 750,
+      "Level3": 2000,
       "Name": "VECTOR",
       "Templates": [
         "5fb64bc92b1b027b1f50bcf2",
@@ -243,18 +240,19 @@
       ]
     },
     {
-      "Level2": 200,
-      "Level3": 400,
+      "Level2": 600,
+      "Level3": 2000,
       "Name": "RHINO",
       "Templates": [
         "624c2e8614da335f1e034d8c",
         "61a4c8884f95bc3b2c5dc96f",
-        "60db29ce99594040e04c4a27"
+        "60db29ce99594040e04c4a27",
+        "633ec7c2a6918cb895019c6c"
       ]
     },
     {
-      "Level2": 1000,
-      "Level3": 3000,
+      "Level2": 500,
+      "Level3": 1500,
       "Name": "G36",
       "Templates": [
         "623063e994fc3f7b302a9696"

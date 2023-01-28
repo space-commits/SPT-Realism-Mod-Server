@@ -94,6 +94,7 @@ import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
 import { DescriptionGen } from "./description_gen";
 import { JsonHandler } from "./json-handler";
+import { IRepairConfig } from "@spt-aki/models/spt/config/IRepairConfig";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -232,7 +233,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                         const postLoadTables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadTables);
-                        const helper = new Helper(postLoadTables, arrays, modConfig);
+                        const helper = new Helper(postLoadTables, arrays);
                         const tieredFlea = new TieredFlea(postLoadTables);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
@@ -324,7 +325,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                         const postLoadtables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadtables);
-                        const helper = new Helper(postLoadtables, arrays, modConfig);
+                        const helper = new Helper(postLoadtables, arrays);
                         const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems, helper);
 
 
@@ -373,7 +374,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
 
                             const arrays = new Arrays(postLoadTables);
-                            const helper = new Helper(postLoadTables, arrays, modConfig);
+                            const helper = new Helper(postLoadTables, arrays);
                             const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
                             const seasonalEvents = new SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
 
@@ -499,7 +500,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables);
-                        const helper = new Helper(postLoadTables, arrays, modConfig);
+                        const helper = new Helper(postLoadTables, arrays);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         let level = 1;
@@ -545,8 +546,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
+        const repairConfig = configServer.getConfig<IRepairConfig>(ConfigTypes.REPAIR);
         const arrays = new Arrays(tables);
-        const helper = new Helper(tables, arrays, modConfig);
+        const helper = new Helper(tables, arrays);
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig);
@@ -555,7 +557,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const items = new _Items(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
-        const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
+        const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig, repairConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
@@ -568,7 +570,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables);
 
-        const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
 
         this.dllChecker(logger, modConfig);
 
@@ -641,7 +642,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         flea.loadFleaGlobal();
 
         if (modConfig.malf_changes == true) {
-            ammo.loadGlobalMalfChanges();
+            ammo.loadAmmoMalfChanges();
+            traders.loadTraderRepairs();
+            weaponsGlobals.loadGlobalMalfChangs();
         }
 
         if (modConfig.recoil_attachment_overhaul && ConfigChecker.dllIsPresent == true) {
@@ -815,7 +818,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     let chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
                     mapDB[i].base.BossLocationSpawn[k].BossChance = chance
                 }
-            }
+            } 
         }
     }
 

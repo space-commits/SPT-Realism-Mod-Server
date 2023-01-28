@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.Helper = void 0;
 const fs = require('fs');
+const modConfig = require("../config/config.json");
 class Helper {
-    constructor(tables, arrays, modConfig) {
+    constructor(tables, arrays) {
         this.tables = tables;
         this.arrays = arrays;
-        this.modConfig = modConfig;
         this.itemDB = this.tables.templates.items;
         this.medItems = this.arrays.stashMeds;
     }
@@ -28,9 +28,9 @@ class Helper {
             for (let i in playerData.Inventory.items) {
                 let profileItem = playerData.Inventory.items[i];
                 if (profileItem?.upd?.Repairable?.Durability !== undefined) {
-                    this.correctDuraHelper(profileItem);
+                    this.correctDuraHelper(profileItem, pmcEXP);
                 }
-                if (this.modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
+                if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
                     this.correctMedicalRes(profileItem, pmcEXP);
                 }
             }
@@ -45,10 +45,10 @@ class Helper {
             }
         }
     }
-    correctDuraHelper(profileItem) {
+    correctDuraHelper(profileItem, pmcEXP) {
         for (let j in this.itemDB) {
             let serverItem = this.itemDB[j];
-            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.MaxDurability != serverItem._props.MaxDurability) {
+            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
                 profileItem.upd.Repairable.Durability = serverItem._props.Durability;
                 profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;
             }

@@ -3350,7 +3350,7 @@ class Ammo {
             this.logger.info("Ammo Firerate Stats Loaded");
         }
     }
-    loadGlobalMalfChanges() {
+    loadAmmoMalfChanges() {
         const _9x18AmmoArr = this.itemDB["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];

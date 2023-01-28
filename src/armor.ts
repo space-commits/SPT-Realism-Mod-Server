@@ -1661,6 +1661,9 @@ export class Armor {
                 if (this.modConf.armor_mouse_penalty == true) {
                     serverItem._props.mousePenalty = -serverItem._props.Weight;
                 }
+                else {
+                    serverItem._props.mousePenalty = 0;
+                }
             }
         }
         if (this.modConf.logEverything == true) {

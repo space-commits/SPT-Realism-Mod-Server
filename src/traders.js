@@ -33,6 +33,7 @@ const customPK = require("../db/traders/pk/assort.json");
 const customMech = require("../db/traders/mechanic/assort.json");
 const customRag = require("../db/traders/ragman/assort.json");
 const customJaeg = require("../db/traders/jaeger/assort.json");
+const traderRepairs = require("../db/traders/repair/traderRepair.json");
 const fenceLimits = require("../db/traders/fence/fenceLimits.json");
 // const sellCatPrap = require("../db/traders/prapor/sell_categories.json");
 const sellCatThera = require("../db/traders/therapist/sell_categories.json");
@@ -88,6 +89,20 @@ class Traders {
         this.tables.traders[mechId].assort = customMech;
         this.tables.traders[ragmId].assort = customRag;
         this.tables.traders[jaegId].assort = customJaeg;
+    }
+    loadTraderRepairs() {
+        this.tables.traders[prapId].base.repair = traderRepairs.Prapor;
+        this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
+        this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
+        for (let ll in this.tables.traders[prapId].base.loyaltyLevels) {
+            this.tables.traders[prapId].base.loyaltyLevels[ll].buy_price_coef *= 1.3;
+        }
+        for (let ll in this.tables.traders[skierId].base.loyaltyLevels) {
+            this.tables.traders[skierId].base.loyaltyLevels[ll].buy_price_coef *= 0.8;
+        }
+        for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
+            this.tables.traders[mechId].base.loyaltyLevels[ll].buy_price_coef *= 1.1;
+        }
     }
     setLoyaltyLevels() {
         this.loyaltyLevelHelper(ammoDB, false);
@@ -246,7 +261,7 @@ class RandomizeTraderAssort {
     loadRandomizedTraderStock() {
         let randNum = this.helper.pickRandNumOneInTen();
         if (helper_1.EventTracker.isChristmas == true) {
-            this.logger.warning("====== Christmas Sale, Everything 30% Off! ======");
+            this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
         }
         for (let trader in this.tables.traders) {
             if (this.tables.traders[trader].assort?.items !== undefined) {
@@ -393,7 +408,7 @@ class RandomizeTraderAssort {
                 barter[0][0].count *= 0.9;
             }
             if (helper_1.EventTracker.isChristmas == true) {
-                barter[0][0].count *= 0.7;
+                barter[0][0].count *= 0.6;
             }
         }
     }

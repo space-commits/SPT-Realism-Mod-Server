@@ -7,6 +7,7 @@ import { BotTierTracker, Helper, RaidInfoTracker } from "./helper";
 import { Arrays } from "./arrays";
 import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
 
+
 const scavLO = require("../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../db/bots/loadouts/PMCs/usecLO.json");
@@ -213,12 +214,9 @@ export class Bots {
                 bot.health.Temperature = botHealth.health.Temperature;
             }
         }
-
-
     }
 
-    public botHpMulti()
-    {
+    public botHpMulti() {
         this.botHPMultiHelper(this.arrays.standardBotHPArr, this.modConf.standard_bot_hp_multi);
         this.botHPMultiHelper(this.arrays.scavBotHealthArr, this.modConf.standard_bot_hp_multi);
         this.botHPMultiHelper(this.arrays.midBotHPArr, this.modConf.mid_bot_hp_multi);
@@ -237,19 +235,19 @@ export class Bots {
         }
     }
 
-    private botHPMultiHelper(botarr: IBotType[], multi, isScav? : boolean){
+    private botHPMultiHelper(botarr: IBotType[], multi, isScav?: boolean) {
         botarr.forEach(setHealthMulti);
         function setHealthMulti(bot) {
-            for(let part in bot.health.BodyParts[0]){
-                if(part != "Head"){
+            for (let part in bot.health.BodyParts[0]) {
+                if (part != "Head") {
                     bot.health.BodyParts[0][part].min *= multi;
                     bot.health.BodyParts[0][part].max *= multi;
                 }
 
             }
-            if(isScav == true){
-                for(let part in bot.health.BodyParts[1]){
-                    if(part != "Head"){
+            if (isScav == true) {
+                for (let part in bot.health.BodyParts[1]) {
+                    if (part != "Head") {
                         bot.health.BodyParts[0][part].min *= multi;
                         bot.health.BodyParts[0][part].max *= multi;
                     }
@@ -317,6 +315,8 @@ export class Bots {
                 bot.inventory.equipment.FirstPrimaryWeapon = [];
                 bot.inventory.equipment.Holster = [];
             }
+
+            this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
         }
 
         if (this.modConf.all_scavs == true && this.modConf.all_PMCs == false) {
@@ -401,7 +401,7 @@ export class Bots {
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;;
         }
-        
+
 
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig1 loaded");
@@ -807,6 +807,18 @@ export class Bots {
             }
         }
 
+
+        if (this.modConf.pmc_types == true) {
+
+            for (let map in this.botConf.pmc.pmcType.sptusec) {
+                for (let type in this.botConf.pmc.pmcType.sptusec[map]) {
+                    if (type === "cursedAssault") {
+                        this.botConf.pmc.pmcType.sptusec[map][type] *= 2;
+                    }
+                }
+            }
+        }
+
         BotTierTracker.usecTier = 4;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
@@ -1004,6 +1016,13 @@ export class Bots {
             }
         }
 
+        for (let map in this.botConf.pmc.pmcType.sptbear) {
+            for (let type in this.botConf.pmc.pmcType.sptbear[map]) {
+                if (type === "cursedAssault") {
+                    this.botConf.pmc.pmcType.sptbear[map][type] *= 2;
+                }
+            }
+        }
 
         BotTierTracker.bearTier = 4;
         if (this.modConf.logEverything == true) {
@@ -1794,7 +1813,7 @@ export class Bots {
                     this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
                     this.knightBase.chances.equipment.FaceCover = 100;
                 }
-                
+
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
 
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0

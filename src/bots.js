@@ -280,6 +280,7 @@ class Bots {
                 bot.inventory.equipment.FirstPrimaryWeapon = [];
                 bot.inventory.equipment.Holster = [];
             }
+            this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
         }
         if (this.modConf.all_scavs == true && this.modConf.all_PMCs == false) {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.scavTest.convertIntoPmcChance;
@@ -718,6 +719,15 @@ class Bots {
                 this.usecBase.chances.mods.mod_equipment = 25;
             }
         }
+        if (this.modConf.pmc_types == true) {
+            for (let map in this.botConf.pmc.pmcType.sptusec) {
+                for (let type in this.botConf.pmc.pmcType.sptusec[map]) {
+                    if (type === "cursedAssault") {
+                        this.botConf.pmc.pmcType.sptusec[map][type] *= 2;
+                    }
+                }
+            }
+        }
         helper_1.BotTierTracker.usecTier = 4;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
@@ -902,6 +912,13 @@ class Bots {
                 this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
                 this.bearBase.chances.mods.mod_equipment_000 = 20;
                 this.bearBase.chances.mods.mod_equipment = 20;
+            }
+        }
+        for (let map in this.botConf.pmc.pmcType.sptbear) {
+            for (let type in this.botConf.pmc.pmcType.sptbear[map]) {
+                if (type === "cursedAssault") {
+                    this.botConf.pmc.pmcType.sptbear[map][type] *= 2;
+                }
             }
         }
         helper_1.BotTierTracker.bearTier = 4;

@@ -5,47 +5,50 @@ const enums_1 = require("./enums");
 const helper_1 = require("./helper");
 const mastering = require("../db/items/mastering.json");
 class WeaponsGlobals {
-    constructor(logger, tables, modConf) {
+    constructor(logger, tables, modConf, repairConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
+        this.repairConf = repairConf;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
     }
-    loadGlobalWeps() {
-        this.globalDB.Aiming.RecoilScaling = 0.5;
-        if (this.modConf.malf_changes == true) {
-            this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
-            this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
-            this.globalDB.Overheat.MaxCOIIncreaseMult = 4;
-            this.globalDB.Overheat.FirerateReduceMinMult = 1;
-            this.globalDB.Overheat.FirerateOverheatBorder = 120;
-            this.globalDB.Overheat.AutoshotChance = 0.4;
-            this.globalDB.Overheat.OverheatProblemsStart = 70;
-            this.globalDB.Overheat.MinWearOnOverheat = 0.2;
-            this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
-            for (let i in this.itemDB) {
-                let serverItem = this.itemDB[i];
-                if (serverItem._parent === enums_1.ParentClasses.SMG
-                    || serverItem._parent === enums_1.ParentClasses.SHOTGUN
-                    || serverItem._parent === enums_1.ParentClasses.ASSAULT_CARBINE
-                    || serverItem._parent === enums_1.ParentClasses.SNIPER_RIFLE
-                    || serverItem._parent === enums_1.ParentClasses.ASSAULT_RIFLE
-                    || serverItem._parent === enums_1.ParentClasses.MACHINE_GUN
-                    || serverItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE
-                    || serverItem._parent === enums_1.ParentClasses.PISTOL
-                    || serverItem._parent === enums_1.ParentClasses.GRENADE_LAUNCHER
-                    || serverItem._parent === enums_1.ParentClasses.SPECIAL_WEAPON
-                    || serverItem._parent === enums_1.ParentClasses.REPAIRKITS) {
-                    serverItem._props.MinRepairDegradation = 0;
-                    serverItem._props.MaxRepairDegradation = 0.005;
-                    serverItem._props.MinRepairKitDegradation = 0;
-                    serverItem._props.MaxRepairKitDegradation = 0;
-                    serverItem._props.RepairComplexity = 0;
-                    serverItem._props.RepairQuality = 0.1;
-                }
+    loadGlobalMalfChangs() {
+        this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 100;
+        this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 101;
+        this.globalDB.Overheat.MaxCOIIncreaseMult = 4;
+        this.globalDB.Overheat.FirerateReduceMinMult = 1;
+        this.globalDB.Overheat.FirerateOverheatBorder = 120;
+        this.globalDB.Overheat.AutoshotChance = 0.4;
+        this.globalDB.Overheat.OverheatProblemsStart = 70;
+        this.globalDB.Overheat.MinWearOnOverheat = 0.2;
+        this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
+        this.repairConf.applyRandomizeDurabilityLoss = true;
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === enums_1.ParentClasses.SMG
+                || serverItem._parent === enums_1.ParentClasses.SHOTGUN
+                || serverItem._parent === enums_1.ParentClasses.ASSAULT_CARBINE
+                || serverItem._parent === enums_1.ParentClasses.SNIPER_RIFLE
+                || serverItem._parent === enums_1.ParentClasses.ASSAULT_RIFLE
+                || serverItem._parent === enums_1.ParentClasses.MACHINE_GUN
+                || serverItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE
+                || serverItem._parent === enums_1.ParentClasses.PISTOL
+                || serverItem._parent === enums_1.ParentClasses.GRENADE_LAUNCHER
+                || serverItem._parent === enums_1.ParentClasses.SPECIAL_WEAPON) {
+                serverItem._props.MinRepairDegradation = 0;
+                serverItem._props.MaxRepairDegradation = 0.05;
+                serverItem._props.MinRepairKitDegradation = 0;
+                serverItem._props.MaxRepairKitDegradation = 0;
+                serverItem._props.RepairComplexity = 0;
+            }
+            if (serverItem._parent === enums_1.ParentClasses.REPAIRKITS) { }
+            {
+                serverItem._props.RepairQuality = 0;
             }
         }
+    }
+    loadGlobalWeps() {
         if (this.modConf.mastery_changes == true) {
             this.globalDB.Mastering = mastering.Mastering;
         }
@@ -62,7 +65,7 @@ class WeaponsGlobals {
                     || serverItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE
                     || serverItem._parent === enums_1.ParentClasses.GRENADE_LAUNCHER) {
                     serverItem._props.Ergonomics = 80;
-                    serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.1);
+                    serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.15);
                 }
             }
             if (this.modConf.logEverything == true) {
