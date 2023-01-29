@@ -1,4 +1,36 @@
 {
+    "receiver_vepr12_molot": {
+        "ItemID": "receiver_vepr12_molot",
+        "Name": "receiver_vepr12_molot",
+        "ModType": "",
+        "ModMalfunctionChance": 0,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 0.95,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.202,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "ChamberSpeed": 0
+    },
+    "upper_famas": {
+        "ItemID": "upper_famas",
+        "Name": "upper_famas",
+        "ModType": "",
+        "ModMalfunctionChance": 0,
+        "Accuracy": 0,
+        "HeatFactor": 0.989,
+        "CoolFactor": 1.01,
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.438,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "ChamberSpeed": 0
+    },
     "5d3eb44aa4b93650d64e4979": {
         "ItemID": "5d3eb44aa4b93650d64e4979",
         "Name": "reciever_57_fn_five_seven_cover_std",

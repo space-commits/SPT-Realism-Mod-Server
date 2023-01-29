@@ -126,15 +126,14 @@ class JsonHandler {
                 serverItem._props.Weight = fileItem.Weight;
                 serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
                 serverItem._props.Loudness = fileItem.Loudness;
+                if (fileItem.ModType === "Stock") {
+                    serverItem._parent = "55818a594bdc2db9688b456a";
+                }
                 var serverConfItems = serverItem._props.ConflictingItems;
-                // var modConfItems = fileItem.ConflictingItems;
                 var modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
                     fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
                     fileItem?.Length?.toString() || "0", fileItem?.CanCylceSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0",
                     fileItem?.ModShotDispersion?.toString() || "0"];
-                // for (let j in modPropertyValues) {
-                //     serverConfItems[j] = modPropertyValues[j];
-                // }
                 var combinedArr = modPropertyValues.concat(serverConfItems);
                 serverItem._props.ConflictingItems = combinedArr;
             }

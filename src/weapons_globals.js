@@ -14,8 +14,8 @@ class WeaponsGlobals {
         this.itemDB = this.tables.templates.items;
     }
     loadGlobalMalfChangs() {
-        this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 100;
-        this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 101;
+        this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
+        this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
         this.globalDB.Overheat.MaxCOIIncreaseMult = 4;
         this.globalDB.Overheat.FirerateReduceMinMult = 1;
         this.globalDB.Overheat.FirerateOverheatBorder = 120;

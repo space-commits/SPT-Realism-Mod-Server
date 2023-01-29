@@ -1,4 +1,40 @@
 {
+    "sight_rear_molot_vepr12": {
+        "ItemID": "sight_rear_molot_vepr12",
+        "Name": "sight_rear_molot_vepr12",
+        "ModType": "",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.025,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
+    "sight_rear_l85a2": {
+        "ItemID": "sight_rear_l85a2",
+        "Name": "sight_rear_l85a2",
+        "ModType": "",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.15,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
+    "sight_front_l85a2": {
+        "ItemID": "sight_front_l85a2",
+        "Name": "sight_front_l85a2",
+        "ModType": "",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.126,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
     "5c05295e0db834001a66acbb": {
         "ItemID": "5c05295e0db834001a66acbb",
         "Name": "sight_rear_acog_trijicon_acog_backup_rear_sight",

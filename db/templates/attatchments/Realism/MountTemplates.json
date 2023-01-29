@@ -1,4 +1,40 @@
 {
+    "mount_l85a2_rail": {
+        "ItemID": "mount_l85a2_rail",
+        "Name": "mount_l85a2_rail",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.08
+    },
+    "mount_famas_bottom": {
+        "ItemID": "mount_famas_bottom",
+        "Name": "mount_famas_bottom",
+        "ModType": "foregrip_adapter",
+        "Ergonomics": -2,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.07
+    },
+    "mount_famas_side": {
+        "ItemID": "mount_famas_side",
+        "Name": "mount_famas_side",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.05
+    },
+    "mount_famas_optic_rail": {
+        "ItemID": "mount_famas_optic_rail",
+        "Name": "mount_famas_optic_rail",
+        "ModType": "",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.15
+    },
     "57c69dd424597774c03b7bbc": {
         "ItemID": "57c69dd424597774c03b7bbc",
         "Name": "mount_all_lobaev_dvl_std",
