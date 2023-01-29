@@ -25,7 +25,7 @@ export class WeaponsGlobals {
         this.globalDB.Overheat.MinWearOnOverheat = 0.2;
         this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
 
-        this.repairConf.applyRandomizeDurabilityLoss = true;
+        // this.repairConf.applyRandomizeDurabilityLoss = false;
 
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];

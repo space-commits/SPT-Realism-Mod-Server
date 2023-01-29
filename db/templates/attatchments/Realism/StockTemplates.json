@@ -3521,7 +3521,7 @@
         "Dispersion": -3,
         "CameraRecoil": -10,
         "AimSpeed": 0,
-        "Ergonomics": 20,
+        "Ergonomics": 17,
         "Accuracy": 8,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -3530,7 +3530,7 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 1.04
+        "Weight": 0.74
     },
     "623b2e9d11c3296b440d1638": {
         "ItemID": "623b2e9d11c3296b440d1638",
@@ -3550,7 +3550,7 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.55,
+        "Weight": 0.85,
         "HeatFactor": 1,
         "CoolFactor": 1
     },

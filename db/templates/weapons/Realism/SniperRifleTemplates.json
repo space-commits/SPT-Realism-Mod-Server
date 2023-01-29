@@ -168,7 +168,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.01,
+        "CenterOfImpact": 0.035,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,

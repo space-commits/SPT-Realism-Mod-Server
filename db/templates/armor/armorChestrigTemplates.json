@@ -67,7 +67,7 @@
         "Name": "item_equipment_armor_arscpc",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ IIIA"
+        "ArmorClass": "NIJ III+"
     },
     "5c0e746986f7741453628fe5": {
         "ItemID": "5c0e746986f7741453628fe5",
