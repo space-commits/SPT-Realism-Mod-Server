@@ -469,6 +469,14 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             }
 
 
+                            for (let map in botConf.pmc.pmcType.sptusec) {
+                                for (let type in botConf.pmc.pmcType.sptusec[map]) {
+                                    logger.warning(type);
+                                }
+                            }
+                    
+
+
                             if (modConfig.logEverything == true) {
                                 logger.warning("Map Name = " + mapNameStartOffl);
                                 logger.warning("Map Type  = " + mapType);
@@ -569,7 +577,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables);
-
+        
 
         this.dllChecker(logger, modConfig);
 
@@ -578,7 +586,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
         // codegen.attTemplatesCodeGen();
-        // codegen.weapTemplatesCodeGen();
+        codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
 
         jsonHand.pushModsToServer();

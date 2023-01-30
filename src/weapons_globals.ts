@@ -46,10 +46,6 @@ export class WeaponsGlobals {
                 serverItem._props.MaxRepairKitDegradation = 0;
                 serverItem._props.RepairComplexity = 0;
             }
-            if(serverItem._parent === ParentClasses.REPAIRKITS){}
-            {
-                serverItem._props.RepairQuality = 0;
-            }
 
         }
     }

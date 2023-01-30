@@ -350,6 +350,11 @@ class Main {
                                 this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 30, 40, 40, 40, 1]);
                             }
                         }
+                        for (let map in botConf.pmc.pmcType.sptusec) {
+                            for (let type in botConf.pmc.pmcType.sptusec[map]) {
+                                logger.warning(type);
+                            }
+                        }
                         if (modConfig.logEverything == true) {
                             logger.warning("Map Name = " + mapNameStartOffl);
                             logger.warning("Map Type  = " + mapType);

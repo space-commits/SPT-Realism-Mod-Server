@@ -1456,7 +1456,7 @@
         "Ergonomics": 0,
         "MagMalfunctionChance": 0.6,
         "LoadUnloadModifier": 0,
-        "CheckTimeModifier": 0,
+        "CheckTimeModifier": -35,
         "ConflictingItems": [],
         "Weight": 0.156,
         "VerticalRecoil": 0,
