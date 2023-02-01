@@ -789,7 +789,7 @@
         "Dispersion": 0,
         "AimSpeed": 0,
         "Length": 0,
-        "Ergonomics": 5,
+        "Ergonomics": 0,
         "Accuracy": -10,
         "HeatFactor": 1.062,
         "CoolFactor": 0.978,
@@ -812,7 +812,6 @@
         "ConflictingItems": [],
         "Weight": 0.129
     },
-
     "5d00e0cbd7ad1a6c6566a42d": {
         "ItemID": "5d00e0cbd7ad1a6c6566a42d",
         "Name": "handguard_ar15_strike_industries_viper",

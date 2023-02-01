@@ -2591,5 +2591,41 @@
         "CheckTimeModifier": -20,
         "ConflictingItems": [],
         "Weight": 0.106
+    },
+    "5d52d479a4b936793d58c76b": {
+        "ItemID": "5d52d479a4b936793d58c76b",
+        "Name": "mag_ags30_zid_ags30_snail_std_30x29_30",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.088
+    },
+    "5cffa483d7ad1a049e54ef1c": {
+        "ItemID": "5cffa483d7ad1a049e54ef1c",
+        "Name": "mag_utes_ckib_nsv_belt_127x108_100",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": -1,
+        "MagMalfunctionChance": 0,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.1
+    },
+    "6241c2c2117ad530666a5108": {
+        "ItemID": "6241c2c2117ad530666a5108",
+        "Name": "mag_stanag_maopul_pmag_airsoft_6_30_fde",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": -3,
+        "MagMalfunctionChance": 0.08,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.138
     }
 }

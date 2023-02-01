@@ -1277,5 +1277,18 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07
+    },
+    "stock_m1014_buttstock": {
+        "ItemID": "stock_m1014_buttstock",
+        "Name": "stock_m1014_buttstock",
+        "ModType": "",
+        "VerticalRecoil": -44,
+        "HorizontalRecoil": -44,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 22,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.715
     }
 }

@@ -586,7 +586,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
         // codegen.attTemplatesCodeGen();
-        codegen.weapTemplatesCodeGen();
+        // codegen.weapTemplatesCodeGen();
         // codegen.armorTemplatesCodeGen();
 
         jsonHand.pushModsToServer();

@@ -311,7 +311,6 @@ class CodeGen {
     assignJSONToMod(serverItem, fileItem, ID) {
         //new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
-            // fileItem.Loudness = serverItem._props.Loudness;
             // fileItem.HeatFactor = serverItem._props.HeatFactor; You need to give it a value. If you set it to the server item's propety value, the new property will only appear if the server mod has that property
             //    if(serverItem._props?.Recoil !== undefined){
             //     fileItem.VerticalRecoil = serverItem._props.Recoil;
@@ -354,6 +353,7 @@ class CodeGen {
         let Weight = serverItem._props.Weight;
         let ShotgunDispersion = serverItem._props.ShotgunDispersion;
         let Loudness = serverItem._props.Loudness;
+        let MalfChance = 0;
         if (ID === "muzzle") {
             let item = {
                 ItemID,
@@ -377,7 +377,8 @@ class CodeGen {
                 Ergonomics,
                 Weight,
                 ModShotDispersion,
-                Loudness
+                Loudness,
+                MalfChance
             };
             return item;
         }
@@ -402,7 +403,8 @@ class CodeGen {
                 Ergonomics,
                 Weight,
                 ShotgunDispersion,
-                Loudness
+                Loudness,
+                MalfChance
             };
             return item;
         }
@@ -430,7 +432,8 @@ class CodeGen {
                 DurabilityBurnModificator,
                 ConflictingItems,
                 Ergonomics,
-                Weight
+                Weight,
+                MalfChance
             };
             return item;
         }
@@ -495,7 +498,8 @@ class CodeGen {
                 HeatFactor,
                 CoolFactor,
                 DurabilityBurnModificator,
-                Weight
+                Weight,
+                MalfChance
             };
             return item;
         }
@@ -556,7 +560,8 @@ class CodeGen {
                 DurabilityBurnModificator,
                 ConflictingItems,
                 Ergonomics,
-                Weight
+                Weight,
+                MalfChance
             };
             return item;
         }
@@ -624,7 +629,8 @@ class CodeGen {
                 ConflictingItems,
                 FixSpeed,
                 StockAllowADS,
-                Weight
+                Weight,
+                MalfChance
             };
             return item;
         }

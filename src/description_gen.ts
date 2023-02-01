@@ -11,10 +11,31 @@ export class DescriptionGen {
         let locale = this.tables.locales.global["en"];
         for (let templateItem in this.itemDB) {
             let item = this.itemDB[templateItem];
+
+            if(item._parent === ParentClasses.AMMO && item._props.ammoHear === 1)
+            {
+                locale[`${templateItem}` + " Description"] = "This ammunition is subsonic and is in a calibre that requires special attachments or modifications in order to be cycled reliably." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+            }
+
             if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
                 let modType = item._props.ConflictingItems[1];
+                if ((item._parent === ParentClasses.SILENCER || item._parent === ParentClasses.FLASH_HIDER || item._parent === ParentClasses.COMPENSATOR) && item._props.ConflictingItems[8] !== "0") {
+                    locale[`${templateItem}` + " Description"] = "The malfunction reduction of this muzzle attachment does not affect manually operated firearms such as bolt action rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
+                if ( item._props.ConflictingItems[13] === "true") {
+                    locale[`${templateItem}` + " Description"] = "This attachment allows the reliable cycling of subsonic ammunition." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
+                if (modType === "gasblock_upgassed") {
+                    locale[`${templateItem}` + " Description"] = "This gasblock facilitates a large gas port opening on barrels that have one. If combined with such a barrel, the barrel's malfunction penalty is removed at the expense of more recoil and durability burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
+                if (modType === "gasblock_downgassed") {
+                    locale[`${templateItem}` + " Description"] = "This gasblock makes the rifle under-gassed, reducing recoil but also reducing reliability. It has increased negative effects on short barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
+                if (modType === "short_barrel") {
+                    locale[`${templateItem}` + " Description"] = "This barrel has a large gas port and requires a gas block that facilitates this in order for the rifle to run reliably. If the right gas block is used the increased malfunction chance penatly of this barrel is removed" + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
                 if (modType === "booster") {
-                    locale[`${templateItem}` + " Description"] = "This muzzle device is a booster. It gives the full firerate stats on short barreled rifles, and a reduced amount on longer barreld rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                    locale[`${templateItem}` + " Description"] = "This muzzle device is a booster. It gives the full firerate, malfunction and durabiltiy burn stats on short barreled rifles, and a reduced amount on longer barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "muzzle_supp_adapter") {
                     locale[`${templateItem}` + " Description"] = "This muzzle device is an adapter, it will lose all its stats except accuracy if a suppressor is attached to it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
