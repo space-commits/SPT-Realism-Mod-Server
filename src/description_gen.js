@@ -16,6 +16,12 @@ class DescriptionGen {
             }
             if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
                 let modType = item._props.ConflictingItems[1];
+                if (modType === "DI") {
+                    locale[`${templateItem}` + " Description"] = "This weapon uses a Direct Impingement operating system, suppressors give increased durabiltiy burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
+                if (modType === "short_AK") {
+                    locale[`${templateItem}` + " Description"] = "This weapon has a short barrel, and a low dwell time, and therefore has reduced reliability. It is recommended to use this weapon with a booster attached, or at least a suppressor." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
                 if ((item._parent === enums_1.ParentClasses.SILENCER || item._parent === enums_1.ParentClasses.FLASH_HIDER || item._parent === enums_1.ParentClasses.COMPENSATOR) && item._props.ConflictingItems[8] !== "0") {
                     locale[`${templateItem}` + " Description"] = "The malfunction reduction of this muzzle attachment does not affect manually operated firearms such as bolt action rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
@@ -29,12 +35,12 @@ class DescriptionGen {
                     locale[`${templateItem}` + " Description"] = "This gasblock makes the rifle under-gassed, reducing recoil but also reducing reliability. It has increased negative effects on short barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "short_barrel") {
-                    locale[`${templateItem}` + " Description"] = "This barrel has a large gas port and requires a gas block that facilitates this in order for the rifle to run reliably. If the right gas block is used the increased malfunction chance penatly of this barrel is removed" + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                    locale[`${templateItem}` + " Description"] = "This barrel has a large gas port and requires a gas block that facilitates this in order for the rifle to cycle reliably. If the right gas block is used the increased malfunction chance penatly of this barrel is removed, but recoil, firerate and durabiltiy burn is increased" + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "booster") {
                     locale[`${templateItem}` + " Description"] = "This muzzle device is a booster. It gives the full firerate, malfunction and durabiltiy burn stats on short barreled rifles, and a reduced amount on longer barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "muzzle_supp_adapter") {
+                if (modType === "muzzle_supp_adapter" || modType === "sig_taper_brake" || modType === "barrel_2slot") {
                     locale[`${templateItem}` + " Description"] = "This muzzle device is an adapter, it will lose all its stats except accuracy if a suppressor is attached to it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "shot_pump_grip_adapt") {

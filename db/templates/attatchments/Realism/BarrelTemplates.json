@@ -355,7 +355,7 @@
         "HorizontalRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 2000,
+        "ModMalfunctionChance": 1500,
         "Length": 0,
         "Accuracy": 0,
         "CenterOfImpact": 0.029,

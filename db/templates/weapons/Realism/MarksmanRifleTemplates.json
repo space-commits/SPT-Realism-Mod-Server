@@ -150,7 +150,7 @@
     "5df8ce05b11454561e39243b": {
         "ItemID": "5df8ce05b11454561e39243b",
         "Name": "weapon_kac_sr25_762x51",
-        "WeapType": "",
+        "WeapType": "DI",
         "OperationType": "buffer",
         "WeapAccuracy": 0,
         "BaseTorque": 1,
@@ -187,7 +187,7 @@
     "5a367e5dc4a282000e49738f": {
         "ItemID": "5a367e5dc4a282000e49738f",
         "Name": "weapon_remington_r11_rsass_762x51",
-        "WeapType": "",
+        "WeapType": "DI",
         "OperationType": "buffer",
         "WeapAccuracy": 0,
         "BaseTorque": 1,

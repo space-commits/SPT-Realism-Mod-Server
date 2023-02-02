@@ -187,7 +187,7 @@
     "5c07c60e0db834002330051f": {
         "ItemID": "5c07c60e0db834002330051f",
         "Name": "weapon_adar_2-15_556x45",
-        "WeapType": "",
+        "WeapType": "DI",
         "OperationType": "buffer",
         "WeapAccuracy": -15,
         "BaseTorque": 1,
@@ -224,7 +224,7 @@
     "5d43021ca4b9362eab4b5e25": {
         "ItemID": "5d43021ca4b9362eab4b5e25",
         "Name": "weapon_lone_star_tx15_designated_marksman_556x45",
-        "WeapType": "",
+        "WeapType": "DI",
         "OperationType": "buffer",
         "WeapAccuracy": 15,
         "BaseTorque": 1,
