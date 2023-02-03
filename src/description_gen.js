@@ -17,10 +17,10 @@ class DescriptionGen {
             if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
                 let modType = item._props.ConflictingItems[1];
                 if (modType === "DI") {
-                    locale[`${templateItem}` + " Description"] = "This weapon uses a Direct Impingement operating system, suppressors give increased durabiltiy burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                    locale[`${templateItem}` + " Description"] = "This weapon uses a direct impingement gas system, therefore mounted suppressors have increased durabiltiy burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "short_AK") {
-                    locale[`${templateItem}` + " Description"] = "This weapon has a short barrel, and a low dwell time, and therefore has reduced reliability. It is recommended to use this weapon with a booster attached, or at least a suppressor." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                    locale[`${templateItem}` + " Description"] = "This weapon has a short barrel with a low dwell time, and therefore has reduced reliability. It is recommended to use this weapon with a booster attached, or at least a suppressor." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if ((item._parent === enums_1.ParentClasses.SILENCER || item._parent === enums_1.ParentClasses.FLASH_HIDER || item._parent === enums_1.ParentClasses.COMPENSATOR) && item._props.ConflictingItems[8] !== "0") {
                     locale[`${templateItem}` + " Description"] = "The malfunction reduction of this muzzle attachment does not affect manually operated firearms such as bolt action rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;

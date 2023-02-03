@@ -5,15 +5,14 @@ const enums_1 = require("./enums");
 const helper_1 = require("./helper");
 const mastering = require("../db/items/mastering.json");
 class WeaponsGlobals {
-    constructor(logger, tables, modConf, repairConf) {
+    constructor(logger, tables, modConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.repairConf = repairConf;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
     }
-    loadGlobalMalfChangs() {
+    loadGlobalMalfChanges() {
         this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
         this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
         this.globalDB.Overheat.MaxCOIIncreaseMult = 4;
@@ -23,7 +22,6 @@ class WeaponsGlobals {
         this.globalDB.Overheat.OverheatProblemsStart = 70;
         this.globalDB.Overheat.MinWearOnOverheat = 0.2;
         this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
-        // this.repairConf.applyRandomizeDurabilityLoss = false;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._parent === enums_1.ParentClasses.SMG
@@ -39,8 +37,11 @@ class WeaponsGlobals {
                 serverItem._props.MinRepairDegradation = 0;
                 serverItem._props.MaxRepairDegradation = 0.05;
                 serverItem._props.MinRepairKitDegradation = 0;
-                serverItem._props.MaxRepairKitDegradation = 0;
+                serverItem._props.MaxRepairKitDegradation = 0.0001;
                 serverItem._props.RepairComplexity = 0;
+            }
+            if (serverItem._parent === enums_1.ParentClasses.REPAIRKITS) {
+                serverItem._props.RepairQuality = 0;
             }
         }
     }

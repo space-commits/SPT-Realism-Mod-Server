@@ -7,13 +7,13 @@ import { ConfigChecker } from "./helper";
 const mastering = require("../db/items/mastering.json");
 
 export class WeaponsGlobals {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private repairConf: IRepairConfig) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
     private globalDB = this.tables.globals.config;
     private itemDB = this.tables.templates.items;
 
 
-    public loadGlobalMalfChangs(){
+    public loadGlobalMalfChanges(){
         
         this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
         this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
@@ -24,8 +24,6 @@ export class WeaponsGlobals {
         this.globalDB.Overheat.OverheatProblemsStart = 70;
         this.globalDB.Overheat.MinWearOnOverheat = 0.2;
         this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
-
-        // this.repairConf.applyRandomizeDurabilityLoss = false;
 
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
@@ -43,8 +41,12 @@ export class WeaponsGlobals {
                 serverItem._props.MinRepairDegradation = 0;
                 serverItem._props.MaxRepairDegradation = 0.05;
                 serverItem._props.MinRepairKitDegradation = 0;
-                serverItem._props.MaxRepairKitDegradation = 0;
+                serverItem._props.MaxRepairKitDegradation = 0.0001;
                 serverItem._props.RepairComplexity = 0;
+            }
+            if( serverItem._parent === ParentClasses.REPAIRKITS)
+            {
+                serverItem._props.RepairQuality = 0;
             }
 
         }

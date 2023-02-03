@@ -105,6 +105,7 @@ class Main {
         const _botModGen = new bot_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const botLooGen = new bot_loot_serv_1.BotLooGen(logger, hashUtil, randomUtil, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new bot_gen_1.GenBotLvl(logger, randomUtil, databaseServer);
+        // const repairs = new Repairs(logger, jsonUtil, randomUtil, databaseServer, configServer);
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
         const router = container.resolve("DynamicRouterModService");
@@ -142,6 +143,9 @@ class Main {
                 };
             }, { frequency: "Always" });
         }
+        // if(modConfig.malf_changes == true){
+        //     repairs.getRandomisedWeaponRepairDegredationValue(itemToRepairDetails._props, useRepairKit, itemCurrentMaxDurability, traderQualityMultipler);
+        // }
         if (modConfig.trader_changes == true) {
             container.afterResolution("TraderAssortHelper", (_t, result) => {
                 result.resetExpiredTrader = (trader) => {
@@ -415,7 +419,6 @@ class Main {
         const jsonUtil = container.resolve("JsonUtil");
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
-        const repairConfig = configServer.getConfig(ConfigTypes_1.ConfigTypes.REPAIR);
         const arrays = new arrays_1.Arrays(tables);
         const helper = new helper_1.Helper(tables, arrays);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
@@ -426,7 +429,7 @@ class Main {
         const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
-        const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig, repairConfig);
+        const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
@@ -493,7 +496,7 @@ class Main {
         if (modConfig.malf_changes == true) {
             ammo.loadAmmoMalfChanges();
             traders.loadTraderRepairs();
-            weaponsGlobals.loadGlobalMalfChangs();
+            weaponsGlobals.loadGlobalMalfChanges();
         }
         if (modConfig.recoil_attachment_overhaul && helper_1.ConfigChecker.dllIsPresent == true) {
             ammo.loadAmmoFirerateChanges();

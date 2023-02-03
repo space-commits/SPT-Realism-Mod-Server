@@ -94,7 +94,6 @@ import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
 import { DescriptionGen } from "./description_gen";
 import { JsonHandler } from "./json-handler";
-import { IRepairConfig } from "@spt-aki/models/spt/config/IRepairConfig";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -209,7 +208,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 }
             }, { frequency: "Always" });
         }
-
         
 
         if (modConfig.trader_changes ==  true) {
@@ -554,7 +552,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
-        const repairConfig = configServer.getConfig<IRepairConfig>(ConfigTypes.REPAIR);
         const arrays = new Arrays(tables);
         const helper = new Helper(tables, arrays);
         const ammo = new Ammo(logger, tables, modConfig);
@@ -565,7 +562,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const items = new _Items(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
-        const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig, repairConfig);
+        const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
         const custFleaConf = new FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
@@ -652,7 +649,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.malf_changes == true) {
             ammo.loadAmmoMalfChanges();
             traders.loadTraderRepairs();
-            weaponsGlobals.loadGlobalMalfChangs();
+            weaponsGlobals.loadGlobalMalfChanges();
         }
 
         if (modConfig.recoil_attachment_overhaul && ConfigChecker.dllIsPresent == true) {

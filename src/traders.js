@@ -95,13 +95,16 @@ class Traders {
         this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
         this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
         for (let ll in this.tables.traders[prapId].base.loyaltyLevels) {
-            this.tables.traders[prapId].base.loyaltyLevels[ll].buy_price_coef *= 1.3;
+            this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 1.5;
+            this.logger.warning("prapor");
         }
         for (let ll in this.tables.traders[skierId].base.loyaltyLevels) {
-            this.tables.traders[skierId].base.loyaltyLevels[ll].buy_price_coef *= 0.8;
+            this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.5;
+            this.logger.warning("skier");
         }
         for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
-            this.tables.traders[mechId].base.loyaltyLevels[ll].buy_price_coef *= 1.1;
+            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 1.5;
+            this.logger.warning("mech");
         }
     }
     setLoyaltyLevels() {
