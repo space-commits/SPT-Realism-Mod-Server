@@ -118,15 +118,12 @@ export class Traders {
 
         for(let ll in this.tables.traders[prapId].base.loyaltyLevels){
             this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 1.5
-            this.logger.warning("prapor");
         }
         for(let ll in this.tables.traders[skierId].base.loyaltyLevels){
             this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.5
-            this.logger.warning("skier");
         }
         for(let ll in this.tables.traders[mechId].base.loyaltyLevels){
             this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 1.5
-            this.logger.warning("mech");
         }
     }
 

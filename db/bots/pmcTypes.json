@@ -1,4 +1,223 @@
 {
+    "pmcTypeTest": {
+        "sptbear": {
+            "factory4_day": {
+                "bossTagilla": 100
+            },
+            "factory4_night": {
+                "bossSanitar": 15,
+                "bossTagilla": 400,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 0,
+                "followerTagilla": 4,
+                "assault": 15,
+                "sectantPriest": 4
+            },
+            "bigmap": {
+                "bossSanitar": 15,
+                "bossTagilla": 2,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 15,
+                "followerTagilla": 2,
+                "assault": 15,
+                "sectantPriest": 4
+            },
+            "laboratory": {
+                "bossSanitar": 15,
+                "bossTagilla": 2,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 0,
+                "followerTagilla": 2,
+                "assault": 20,
+                "sectantPriest": 4
+            },
+            "woods": {
+                "bossSanitar": 15,
+                "bossTagilla": 1,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 20,
+                "followerTagilla": 1,
+                "assault": 15,
+                "sectantPriest": 4
+            },
+            "interchange": {
+                "bossSanitar": 15,
+                "bossTagilla": 2,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 0,
+                "followerTagilla": 2,
+                "assault": 15,
+                "sectantPriest": 4
+            },
+            "lighthouse": {
+                "bossSanitar": 15,
+                "bossTagilla": 1,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 20,
+                "followerTagilla": 1,
+                "assault": 15,
+                "sectantPriest": 4
+            },
+            "rezervbase": {
+                "bossSanitar": 15,
+                "bossTagilla": 12,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 0,
+                "followerTagilla": 2,
+                "assault": 15,
+                "sectantPriest": 4
+            },
+            "shoreline": {
+                "bossSanitar": 15,
+                "bossTagilla": 1,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 20,
+                "followerTagilla": 1,
+                "assault": 15,
+                "sectantPriest": 4
+            },
+            "tarkovstreets": {
+                "bossSanitar": 15,
+                "bossTagilla": 1,
+                "bossBully": 15,
+                "gifter": 1,
+                "followerKojaniy": 20,
+                "followerTagilla": 1,
+                "assault": 15,
+                "sectantPriest": 4
+            }
+        },
+        "sptusec": {
+            "factory4_day": {
+                "bossTagilla": 100
+            },
+            "factory4_night": {
+                "bossSanitar": 10,
+                "bossTagilla": 2,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 0,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 3
+            },
+            "bigmap": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 10,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 2
+            },
+            "laboratory": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 0,
+                "followerTagilla": 1,
+                "followerBully": 10,
+                "followerSanitar": 10,
+                "assault": 15,
+                "exUsec": 10,
+                "sectantPriest": 2
+            },
+            "woods": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 10,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 2
+            },
+            "interchange": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 0,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 2
+            },
+            "lighthouse": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 0,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 2
+            },
+            "rezervbase": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 0,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 2
+            },
+            "shoreline": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 10,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 2
+            },
+            "tarkovstreets": {
+                "bossSanitar": 10,
+                "bossTagilla": 1,
+                "bossBully": 10,
+                "gifter": 10,
+                "followerKojaniy": 0,
+                "followerTagilla": 1,
+                "followerBully": 5,
+                "followerSanitar": 5,
+                "assault": 15,
+                "exUsec": 5,
+                "sectantPriest": 2
+            }
+        }
+    },
     "pmcTypeTimmy": {
         "sptbear": {
             "factory4_day": {

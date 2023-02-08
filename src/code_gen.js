@@ -218,12 +218,14 @@ class CodeGen {
         let AllowADS = true;
         let LoyaltyLevel = 2;
         let ArmorClass = "";
+        let CanSpall = false;
         let item = {
             ItemID,
             Name,
             AllowADS,
             LoyaltyLevel,
-            ArmorClass
+            ArmorClass,
+            CanSpall
         };
         return item;
     }
@@ -331,7 +333,7 @@ class CodeGen {
         let ReloadSpeed = 0;
         let AimSpeed = 0;
         let Length = 0;
-        let CanCylceSubs = false;
+        let CanCycleSubs = false;
         let RecoilAngle = 0;
         let StockAllowADS = false;
         let FixSpeed = 0;
@@ -366,7 +368,7 @@ class CodeGen {
                 AutoROF,
                 SemiROF,
                 ModMalfunctionChance,
-                CanCylceSubs,
+                CanCycleSubs,
                 Accuracy,
                 HeatFactor,
                 CoolFactor,
@@ -553,7 +555,7 @@ class CodeGen {
                 AutoROF,
                 SemiROF,
                 ModMalfunctionChance,
-                CanCylceSubs,
+                CanCycleSubs,
                 Accuracy,
                 HeatFactor,
                 CoolFactor,
@@ -612,7 +614,7 @@ class CodeGen {
                 AimSpeed,
                 ChamberSpeed,
                 Length,
-                CanCylceSubs,
+                CanCycleSubs,
                 Ergonomics,
                 Accuracy,
                 CenterOfImpact,

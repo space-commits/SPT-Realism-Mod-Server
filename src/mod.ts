@@ -277,14 +277,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                     }
                                 }
                             }
-                            if (modConfig.dev_mode == true && pmcData?.Info !== undefined) {
-                                pmcData.Info.AccountType = 1;
-                                pmcData.Info.MemberCategory = 1;
-                            }
-                            if (modConfig.dev_mode == false && pmcData?.Info !== undefined) {
-                                pmcData.Info.AccountType = 0;
-                                pmcData.Info.MemberCategory = 2;
-                            }
                             this.checkForEvents(logger, seasonalEventsService);
 
                             if (modConfig.trader_changes == true) {
@@ -435,14 +427,16 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
-                            if (modConfig.pmc_types == true) {
-                                if (RaidInfoTracker.TOD === "day") {
-                                    botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
-                                }
-                                if (RaidInfoTracker.TOD === "night") {
-                                    botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
-                                }
-                            }
+                            // if (modConfig.pmc_types == true) {
+                            //     if (RaidInfoTracker.TOD === "day") {
+                            //         botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
+                            //     }
+                            //     if (RaidInfoTracker.TOD === "night") {
+                            //         botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
+                            //     }
+                            // }
+
+                            botConf.pmc.pmcType = pmcTypes.pmcTypeTest;
 
                             if (modConfig.bot_changes) {
                                 this.updateBots(pmcData, logger, modConfig, bots, helper);
@@ -848,10 +842,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             tier = helper.probabilityWeighter(tierArray, [20, 2, 0, 0]);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, [15, 8, 1, 0]);
+            tier = helper.probabilityWeighter(tierArray, [15, 10, 1, 0]);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, [5, 20, 2, 1]);
+            tier = helper.probabilityWeighter(tierArray, [5, 15, 2, 1]);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
             tier = helper.probabilityWeighter(tierArray, [2, 10, 15, 2]);
@@ -1011,18 +1005,15 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 this.getBotTier(pmcData, bots, helper);
                 if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 15) {
                     bots.botConfig1();
-                    logger.info("Realism Mod: Bots Have Been Set To Base Tier 1");
                 }
                 if (pmcData.Info.Level >= 16 && pmcData.Info.Level < 25) {
                     bots.botConfig2();
-                    logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 2");
                 }
                 if (pmcData.Info.Level >= 26) {
                     bots.botConfig3();
-                    logger.info("Realism Mod: Bots Have Been Adjusted To Base Tier 3");
                 }
                 if (config.logEverything == true) {
-                    logger.info("Realism Mod: Bots Base Tier Has Been Reconfigured");
+                    logger.info("Realism Mod: Bot Tiers Have Been Set");
                 }
             }
             if (modConfig.force_boss_items == true) {

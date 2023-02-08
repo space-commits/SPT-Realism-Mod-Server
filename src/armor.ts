@@ -41,7 +41,7 @@ export class Armor {
         this.armMat.ArmoredSteel.MaxRepairDegradation = 0.24;
         this.armMat.ArmoredSteel.MinRepairDegradation = 0.08;
 
-        for (let i in this.itemDB) {  //Credit to Kiki and Yim for the base code here, with permission :)
+        for (let i in this.itemDB) { 
             let serverItem = this.itemDB[i];
             ////////Body Armor//////////
             //// Class 3////
@@ -65,9 +65,9 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = 1;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = 1;
-                serverItem._props.BluntThroughput = 0.19;
+                serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.ArmorMaterial = 'Aramid';
-                serverItem._props.Weight = 6;
+                serverItem._props.Weight = 3;
             }
             //// Class 4////
             //PACA
@@ -562,7 +562,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -8;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.52;
+                serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 9.9;
             }
@@ -1227,7 +1227,7 @@ export class Armor {
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 2.6;
             }
-            //Class 7
+            //Class 8
             //Vulkan-5
             if (serverItem._id === "5ca20ee186f774799474abc2") {
                 serverItem._props.Durability = 20;
@@ -1584,37 +1584,6 @@ export class Armor {
                 serverItem._props.Weight = 0.99;
             }
 
-
-
-            //Multiplier for Armored Rigs and Vests
-            if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG && serverItem._props.speedPenaltyPercent != null) {
-                serverItem._props.BluntThroughput *= 1;
-                serverItem._props.speedPenaltyPercent *= 1;
-                serverItem._props.weaponErgonomicPenalty *= 1;
-            }
-
-            //Blunt Damage Multiplier for Armored Rigs and Vests that below lvl 6
-            if (serverItem._props.armorClass <= 6 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
-                serverItem._props.BluntThroughput *= 1.15;
-            }
-            //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 7
-            if (serverItem._props.armorClass >= 7 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
-                serverItem._props.BluntThroughput *= 1;
-            }
-            //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 8
-            if (serverItem._props.armorClass >= 8 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
-                serverItem._props.BluntThroughput *= 1.15;
-            }
-            //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 9
-            if (serverItem._props.armorClass >= 9 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
-                serverItem._props.BluntThroughput *= 1.27;
-            }
-            //Blunt Damage Multiplier for Armored Rigs and Vests that above lvl 10
-            if (serverItem._props.armorClass >= 10 && (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG)) {
-                serverItem._props.BluntThroughput *= 1.49;
-            }
-
-
             //Blunt Damage Multiplier for Helmets
             if (serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) {
                 if (this.modConf.buff_helmets == true && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
@@ -1627,19 +1596,7 @@ export class Armor {
                 }
             }
 
-            if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass <= 3 || serverItem._parent === ParentClasses.FACECOVER) {
-                serverItem._props.BluntThroughput *= 0.65;
-            }
-
-            if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass == 4) {
-                serverItem._props.BluntThroughput *= 0.7;
-            }
-
-            if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass == 5) {
-                serverItem._props.BluntThroughput *= 1.15;
-            }
-
-            //Set min/max armor durability for bots
+            //Set min/max armor durability for spawns
             if (serverItem._parent === ParentClasses.CHESTRIG ||
                 serverItem._parent === ParentClasses.ARMORVEST ||
                 serverItem._parent === ParentClasses.ARMOREDEQUIPMENT ||
