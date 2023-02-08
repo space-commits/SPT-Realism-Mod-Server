@@ -327,6 +327,8 @@ class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue1;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
+        this.usecBase.appearance.head = usecLO.appearance.head;
+        this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 100;
@@ -382,6 +384,8 @@ class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue2;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
+        this.usecBase.appearance.head = usecLO.appearance.head;
+        this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 100;
@@ -437,6 +441,8 @@ class Bots {
         //set loot N value
         this.botConf.lootNValue = rmBotConfig.lootNValue3;
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
+        this.usecBase.appearance.head = usecLO.appearance.head;
+        this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (helper_1.RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 100;
@@ -462,7 +468,6 @@ class Bots {
             this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;
             ;
         }
-        this.logger.warning("/////////////////BOT CONFIG////////////////////////////");
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
         }

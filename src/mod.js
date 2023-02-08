@@ -315,14 +315,14 @@ class Main {
                         }
                         helper_1.RaidInfoTracker.TOD = getTOD(realTime);
                         helper_1.RaidInfoTracker.mapType = mapType;
-                        // if (modConfig.pmc_types == true) {
-                        //     if (RaidInfoTracker.TOD === "day") {
-                        //         botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
-                        //     }
-                        //     if (RaidInfoTracker.TOD === "night") {
-                        //         botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
-                        //     }
-                        // }
+                        if (modConfig.pmc_types == true) {
+                            if (helper_1.RaidInfoTracker.TOD === "day") {
+                                botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
+                            }
+                            if (helper_1.RaidInfoTracker.TOD === "night") {
+                                botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
+                            }
+                        }
                         botConf.pmc.pmcType = pmcTypes.pmcTypeTest;
                         if (modConfig.bot_changes) {
                             this.updateBots(pmcData, logger, modConfig, bots, helper);
@@ -341,11 +341,6 @@ class Main {
                             }
                             if (helper_1.RaidInfoTracker.TOD === "night") {
                                 this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 30, 40, 40, 40, 1]);
-                            }
-                        }
-                        for (let map in botConf.pmc.pmcType.sptusec) {
-                            for (let type in botConf.pmc.pmcType.sptusec[map]) {
-                                logger.warning(type);
                             }
                         }
                         if (modConfig.logEverything == true) {

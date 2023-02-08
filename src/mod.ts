@@ -427,14 +427,14 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
-                            // if (modConfig.pmc_types == true) {
-                            //     if (RaidInfoTracker.TOD === "day") {
-                            //         botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
-                            //     }
-                            //     if (RaidInfoTracker.TOD === "night") {
-                            //         botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
-                            //     }
-                            // }
+                            if (modConfig.pmc_types == true) {
+                                if (RaidInfoTracker.TOD === "day") {
+                                    botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
+                                }
+                                if (RaidInfoTracker.TOD === "night") {
+                                    botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
+                                }
+                            }
 
                             botConf.pmc.pmcType = pmcTypes.pmcTypeTest;
 
@@ -459,15 +459,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                     this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 30, 40, 40, 40, 1]);
                                 }
                             }
-
-
-                            for (let map in botConf.pmc.pmcType.sptusec) {
-                                for (let type in botConf.pmc.pmcType.sptusec[map]) {
-                                    logger.warning(type);
-                                }
-                            }
-                    
-
 
                             if (modConfig.logEverything == true) {
                                 logger.warning("Map Name = " + mapNameStartOffl);
