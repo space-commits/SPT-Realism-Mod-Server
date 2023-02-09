@@ -1343,10 +1343,13 @@ class Bots {
                     this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
                     this.knightBase.chances.equipment.FaceCover = 100;
                 }
+                this.knightBase.chances.mods.mod_equipment_000 = 0;
+                this.knightBase.chances.mods.mod_equipment_001 *= 0.5;
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
+                this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
                 this.birdeyeBase.chances.equipment.Headwear = 25;
-                this.birdeyeBase.chances.mods.mod_equipment_000 = 25;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
                 this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
@@ -1486,10 +1489,13 @@ class Bots {
                     this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
                     this.knightBase.chances.equipment.FaceCover = 100;
                 }
+                this.knightBase.chances.mods.mod_equipment_000 = 0;
+                this.knightBase.chances.mods.mod_equipment_001 *= 0.5;
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
+                this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
                 this.birdeyeBase.chances.equipment.Headwear = 25;
-                this.birdeyeBase.chances.mods.mod_equipment_000 = 25;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
                 this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
@@ -1629,10 +1635,13 @@ class Bots {
                     this.bigpipeBase.inventory.equipment.Headwear["628e4dd1f477aa12234918aa"] = 1;
                     this.knightBase.chances.equipment.FaceCover = 100;
                 }
+                this.knightBase.chances.mods.mod_equipment_000 = 0;
+                this.knightBase.chances.mods.mod_equipment_001 *= 0.5;
                 this.botConf.equipment["bossknight"].lightLaserIsActiveChancePercent = 0;
+                this.bigpipeBase.chances.mods.mod_equipment_000 = 0;
                 this.botConf.equipment["followerbigpipe"].lightLaserIsActiveChancePercent = 0;
                 this.birdeyeBase.chances.equipment.Headwear = 50;
-                this.birdeyeBase.chances.mods.mod_equipment_000 = 25;
+                this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
                 this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;

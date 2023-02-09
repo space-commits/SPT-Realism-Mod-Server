@@ -103,7 +103,6 @@
             "Supports": null,
             "RandomTimeSpawn": false
         }
-
     ],
     "CustomsBossLocationSpawn": [
         {
@@ -459,9 +458,24 @@
     ],
     "LighthouseBossLocationSpawn": [
         {
+            "BossChance": 100,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "2",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "followerZryachiy",
+            "BossName": "bossZryachiy",
+            "BossPlayer": false,
+            "BossZone": "Zone_Island",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": ""
+        },
+        {
             "BossName": "bossKnight",
             "BossChance": 50,
-            "BossZone": "Zone_TreatmentContainers,Zone_Chalet,Zone_Village,Zone_Bridge,Zone_OldHouse,Zone_LongRoad,Zone_DestroyedHouse,Zone_Island",
+            "BossZone": "Zone_TreatmentContainers,Zone_Chalet,Zone_Village,Zone_Bridge,Zone_OldHouse,Zone_LongRoad,Zone_DestroyedHouse",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -512,7 +526,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 70,
+            "BossChance": 100,
             "BossZone": "Zone_RoofContainers",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -557,22 +571,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 50,
-            "BossZone": "Zone_Island",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "exUsec",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2,3,4",
-            "Time": -1,
-            "TriggerId": "",
-            "TriggerName": "",
-            "Supports": null,
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "exUsec",
-            "BossChance": 70,
+            "BossChance": 100,
             "BossZone": "Zone_RoofRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -587,7 +586,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 70,
+            "BossChance": 100,
             "BossZone": "Zone_RoofBeach",
             "BossPlayer": false,
             "BossDifficult": "normal",

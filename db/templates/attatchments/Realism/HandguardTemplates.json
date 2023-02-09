@@ -712,7 +712,7 @@
             "5ae30e795acfc408fb139a0b",
             "56ea8d2fd2720b7c698b4570"
         ],
-        "Weight": 0.36
+        "Weight": 0.326
     },
     "5df916dfbb49d91fb446d6b9": {
         "ItemID": "5df916dfbb49d91fb446d6b9",
@@ -724,7 +724,7 @@
         "AimSpeed": 0,
         "Length": 0,
         "Ergonomics": 13,
-        "Accuracy": 18,
+        "Accuracy": 20,
         "HeatFactor": 0.965,
         "CoolFactor": 1.03,
         "ConflictingItems": [
@@ -759,7 +759,7 @@
             "603372b4da11d6478d5a07ff",
             "603372d154072b51b239f9e1"
         ],
-        "Weight": 0.22
+        "Weight": 0.366
     },
     "5c0e2f5cd174af02a012cfc9": {
         "ItemID": "5c0e2f5cd174af02a012cfc9",

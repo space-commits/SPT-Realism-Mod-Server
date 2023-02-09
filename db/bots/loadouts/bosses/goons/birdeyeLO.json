@@ -25,22 +25,19 @@
                 }
             },
             "FirstPrimaryWeapon_outdoor": {
-                "5a367e5dc4a282000e49738f": 1,
+                "5a367e5dc4a282000e49738f": 0,
                 "5bfea6e90db834001b7347f3": 1,
-                "5df8ce05b11454561e39243b": 1,
-                "5447a9cd4bdc2dbd208b4567": 0
+                "5df8ce05b11454561e39243b": 1
             },
             "FirstPrimaryWeapon_cqb": {
                 "5a367e5dc4a282000e49738f": 0,
                 "5bfea6e90db834001b7347f3": 0,
-                "5df8ce05b11454561e39243b": 0,
-                "5447a9cd4bdc2dbd208b4567": 1
+                "5df8ce05b11454561e39243b": 0
             },
             "FirstPrimaryWeapon_urban": {
                 "5a367e5dc4a282000e49738f": 0,
-                "5bfea6e90db834001b7347f3": 1,
-                "5df8ce05b11454561e39243b": 1,
-                "5447a9cd4bdc2dbd208b4567": 1
+                "5bfea6e90db834001b7347f3": 0,
+                "5df8ce05b11454561e39243b": 1
             },
             "equipment": {
                 "ArmBand": {},
@@ -58,8 +55,7 @@
                 "FirstPrimaryWeapon": {
                     "5a367e5dc4a282000e49738f": 1,
                     "5bfea6e90db834001b7347f3": 1,
-                    "5df8ce05b11454561e39243b": 1,
-                    "5447a9cd4bdc2dbd208b4567": 1
+                    "5df8ce05b11454561e39243b": 1
                 },
                 "Headwear": {
                     "5a16bb52fcdbcb001a3b00dc": 1,
@@ -75,7 +71,8 @@
                     "54491bb74bdc2d09088b4567": 1
                 },
                 "SecondPrimaryWeapon": {
-                    "5926bb2186f7744b1c6c6e60": 1
+                    "5926bb2186f7744b1c6c6e60": 5,
+                    "5447a9cd4bdc2dbd208b4567": 1
                 },
                 "SecuredContainer": {
                     "5c0a794586f77461c458f892": 1
@@ -271,20 +268,17 @@
             "FirstPrimaryWeapon_outdoor": {
                 "5a367e5dc4a282000e49738f": 1,
                 "5bfea6e90db834001b7347f3": 1,
-                "5df8ce05b11454561e39243b": 1,
-                "5447a9cd4bdc2dbd208b4567": 0
+                "5df8ce05b11454561e39243b": 1
             },
             "FirstPrimaryWeapon_cqb": {
                 "5a367e5dc4a282000e49738f": 0,
                 "5bfea6e90db834001b7347f3": 0,
-                "5df8ce05b11454561e39243b": 0,
-                "5447a9cd4bdc2dbd208b4567": 1
+                "5df8ce05b11454561e39243b": 0
             },
             "FirstPrimaryWeapon_urban": {
-                "5a367e5dc4a282000e49738f": 0,
-                "5bfea6e90db834001b7347f3": 1,
-                "5df8ce05b11454561e39243b": 1,
-                "5447a9cd4bdc2dbd208b4567": 1
+                "5a367e5dc4a282000e49738f": 1,
+                "5bfea6e90db834001b7347f3": 0,
+                "5df8ce05b11454561e39243b": 1
             },
             "equipment": {
                 "ArmBand": {},
@@ -319,7 +313,8 @@
                     "54491bb74bdc2d09088b4567": 1
                 },
                 "SecondPrimaryWeapon": {
-                    "5926bb2186f7744b1c6c6e60": 1
+                    "5926bb2186f7744b1c6c6e60": 2,
+                    "5447a9cd4bdc2dbd208b4567": 1
                 },
                 "SecuredContainer": {
                     "5c0a794586f77461c458f892": 1
@@ -516,20 +511,17 @@
             "FirstPrimaryWeapon_outdoor": {
                 "5a367e5dc4a282000e49738f": 1,
                 "5bfea6e90db834001b7347f3": 1,
-                "5df8ce05b11454561e39243b": 1,
-                "5447a9cd4bdc2dbd208b4567": 0
+                "5df8ce05b11454561e39243b": 1
             },
             "FirstPrimaryWeapon_cqb": {
                 "5a367e5dc4a282000e49738f": 0,
                 "5bfea6e90db834001b7347f3": 0,
-                "5df8ce05b11454561e39243b": 0,
-                "5447a9cd4bdc2dbd208b4567": 1
+                "5df8ce05b11454561e39243b": 0
             },
             "FirstPrimaryWeapon_urban": {
-                "5a367e5dc4a282000e49738f": 0,
-                "5bfea6e90db834001b7347f3": 1,
-                "5df8ce05b11454561e39243b": 1,
-                "5447a9cd4bdc2dbd208b4567": 1
+                "5a367e5dc4a282000e49738f": 1,
+                "5bfea6e90db834001b7347f3": 0,
+                "5df8ce05b11454561e39243b": 1
             },
             "equipment": {
                 "ArmBand": {},
@@ -547,8 +539,7 @@
                 "FirstPrimaryWeapon": {
                     "5a367e5dc4a282000e49738f": 1,
                     "5bfea6e90db834001b7347f3": 1,
-                    "5df8ce05b11454561e39243b": 1,
-                    "5447a9cd4bdc2dbd208b4567": 1
+                    "5df8ce05b11454561e39243b": 1
                 },
                 "Headwear": {
                     "5a16bb52fcdbcb001a3b00dc": 1,
@@ -564,7 +555,8 @@
                     "54491bb74bdc2d09088b4567": 1
                 },
                 "SecondPrimaryWeapon": {
-                    "5926bb2186f7744b1c6c6e60": 1
+                    "5926bb2186f7744b1c6c6e60": 1,
+                    "5447a9cd4bdc2dbd208b4567": 5
                 },
                 "SecuredContainer": {
                     "5c0a794586f77461c458f892": 1

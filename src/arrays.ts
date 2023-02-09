@@ -163,7 +163,8 @@ export class Arrays {
         this.botDB["bosstagilla"],
         this.botDB["followerbigpipe"],
         this.botDB["followerbirdeye"],
-        this.botDB["sectantpriest"]
+        this.botDB["sectantpriest"],
+        this.botDB["bosszryachiy"]
     ];
 
     public bossFollowerArr = [
@@ -175,6 +176,7 @@ export class Arrays {
         this.botDB["followerkojaniy"],
         this.botDB["followersanitar"],
         this.botDB["followertagilla"],
+        this.botDB["followerzryachiy"], 
     ];
 
     public pmcList = [
@@ -221,6 +223,7 @@ export class Arrays {
         this.botDB["sectantwarrior"],
         this.botDB["pmcbot"],
         this.botDB["exusec"],
+        this.botDB["followerzryachiy"]
     ];
 
     public nonScavBotArr = [
@@ -247,7 +250,9 @@ export class Arrays {
         this.botDB["exusec"],
         this.botDB["bossknight"],
         this.botDB["followerbigpipe"],
-        this.botDB["followerbirdeye"]
+        this.botDB["followerbirdeye"],
+        this.botDB["followerbirdeye"],
+        this.botDB["bosszryachiy"]
     ];
 
     public botArr = [
@@ -276,7 +281,9 @@ export class Arrays {
         this.botDB["exusec"],
         this.botDB["bossknight"],
         this.botDB["followerbigpipe"],
-        this.botDB["followerbirdeye"]
+        this.botDB["followerbirdeye"],
+        this.botDB["bosszryachiy"],
+        this.botDB["followerzryachiy"]
     ];
 
     public modTypes = {

@@ -149,7 +149,8 @@ class Arrays {
             this.botDB["bosstagilla"],
             this.botDB["followerbigpipe"],
             this.botDB["followerbirdeye"],
-            this.botDB["sectantpriest"]
+            this.botDB["sectantpriest"],
+            this.botDB["bosszryachiy"]
         ];
         this.bossFollowerArr = [
             this.botDB["followerbully"],
@@ -160,6 +161,7 @@ class Arrays {
             this.botDB["followerkojaniy"],
             this.botDB["followersanitar"],
             this.botDB["followertagilla"],
+            this.botDB["followerzryachiy"],
         ];
         this.pmcList = [
             this.botDB["usec"],
@@ -199,6 +201,7 @@ class Arrays {
             this.botDB["sectantwarrior"],
             this.botDB["pmcbot"],
             this.botDB["exusec"],
+            this.botDB["followerzryachiy"]
         ];
         this.nonScavBotArr = [
             this.botDB["followerbully"],
@@ -224,7 +227,9 @@ class Arrays {
             this.botDB["exusec"],
             this.botDB["bossknight"],
             this.botDB["followerbigpipe"],
-            this.botDB["followerbirdeye"]
+            this.botDB["followerbirdeye"],
+            this.botDB["followerbirdeye"],
+            this.botDB["bosszryachiy"]
         ];
         this.botArr = [
             this.botDB["followerbully"],
@@ -252,7 +257,9 @@ class Arrays {
             this.botDB["exusec"],
             this.botDB["bossknight"],
             this.botDB["followerbigpipe"],
-            this.botDB["followerbirdeye"]
+            this.botDB["followerbirdeye"],
+            this.botDB["bosszryachiy"],
+            this.botDB["followerzryachiy"]
         ];
         this.modTypes = {
             "FlashHider": "550aa4bf4bdc2dd6348b456b",

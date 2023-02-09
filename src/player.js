@@ -219,7 +219,7 @@ class Player {
         }
         if (this.modConfig.realistic_ballistics == true) {
             this.globalDB.LegsOverdamage *= 1.75;
-            this.globalDB.HandsOverdamage *= 0.9;
+            this.globalDB.HandsOverdamage *= 0.8;
             this.globalDB.StomachOverdamage *= 1.85;
         }
         if (this.modConfig.realistic_player_health == true) {
@@ -254,8 +254,8 @@ class Player {
     }
     playerProfiles(jsonUtil) {
         this.tables.templates.profiles["Realism Mod"] = jsonUtil.clone(this.tables.templates.profiles["Standard"]);
-        this.tables.templates.profiles["Realism Mod"].bear.Inventory = this.custProfile.BearInventory;
-        this.tables.templates.profiles["Realism Mod"].usec.Inventory = this.custProfile.USECInventory;
+        this.tables.templates.profiles["Realism Mod"].bear.character.Inventory = this.custProfile.BearInventory;
+        this.tables.templates.profiles["Realism Mod"].usec.character.Inventory = this.custProfile.USECInventory;
         for (let profile in this.tables.templates.profiles) {
             this.correctInventory(this.tables.templates.profiles[profile].bear.character.Inventory.items);
             this.correctInventory(this.tables.templates.profiles[profile].usec.character.Inventory.items);
