@@ -290,7 +290,7 @@ class Main {
                         function getTOD(time) {
                             let TOD = "";
                             let [h, m] = time.split(':');
-                            if ((mapNameRegPlayer != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (mapNameRegPlayer === "factory4_day" || mapNameStartOffl === "Laboratory")) {
+                            if ((mapNameRegPlayer != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (mapNameRegPlayer === "factory4_day" || mapNameStartOffl === "Laboratory" || mapNameStartOffl === "laboratory")) {
                                 TOD = "day";
                             }
                             else {
@@ -425,6 +425,19 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables);
+        for (let i in tables.locations) {
+            let mapDB = tables.locations;
+            if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
+                logger.warning("======");
+                logger.warning("Name = " + mapDB[i].base.Name);
+                for (let k in mapDB[i].base.BossLocationSpawn) {
+                    if (mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
+                        logger.warning("Name = " + mapDB[i].base.BossLocationSpawn[k].BossName);
+                    }
+                }
+                logger.warning("======");
+            }
+        }
         this.dllChecker(logger, modConfig);
         if (modConfig.trader_changes == true) {
             itemCloning.createCustomWeapons();
@@ -633,8 +646,15 @@ class Main {
         for (let i in mapDB) {
             if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
                 for (let k in mapDB[i].base.BossLocationSpawn) {
-                    let chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                    mapDB[i].base.BossLocationSpawn[k].BossChance = chance;
+                    let chance = mapDB[i].base.BossLocationSpawn[k].BossChance;
+                    if (mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
+                        chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
+                        mapDB[i].base.BossLocationSpawn[k].BossChance = chance;
+                    }
+                    else {
+                        chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
+                        mapDB[i].base.BossLocationSpawn[k].BossChance = chance;
+                    }
                 }
             }
         }

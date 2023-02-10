@@ -4,146 +4,188 @@
         "Name": "item_equipment_rig_m1",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "NIJ III"
+        "ArmorClass": "NIJ III",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "61bcc89aef0f505f0c6cd0fc": {
         "ItemID": "61bcc89aef0f505f0c6cd0fc",
         "Name": "item_equipment_rig_strandhogg",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ III"
+        "ArmorClass": "NIJ III",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e3eb886f7742015526062": {
         "ItemID": "5c0e3eb886f7742015526062",
         "Name": "item_equipment_rig_6b5_khaki",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "ArmorClass": "GOST 3"
+        "ArmorClass": "GOST 3",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5ab8dced86f774646209ec87": {
         "ItemID": "5ab8dced86f774646209ec87",
         "Name": "ana_tactical_m2",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "NIJ III"
+        "ArmorClass": "NIJ III",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e446786f7742013381639": {
         "ItemID": "5c0e446786f7742013381639",
         "Name": "item_equipment_rig_6b5_flora",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "ArmorClass": "GOST 4"
+        "ArmorClass": "GOST 4",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5d5d87f786f77427997cfaef": {
         "ItemID": "5d5d87f786f77427997cfaef",
         "Name": "item_equipment_armor_a18",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ III"
+        "ArmorClass": "NIJ III",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5d5d646386f7742797261fd9": {
         "ItemID": "5d5d646386f7742797261fd9",
         "Name": "item_equipment_armor_6b3",
         "AllowADS": true,
         "LoyaltyLevel": 1,
-        "ArmorClass": "GOST 2A"
+        "ArmorClass": "GOST 2A",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "544a5caa4bdc2d1a388b4568": {
         "ItemID": "544a5caa4bdc2d1a388b4568",
         "Name": "standartRig",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ III+"
+        "ArmorClass": "NIJ III+",
+        "CanSpall": true,
+        "SpallReduction": 0.5
     },
     "628d0618d1ba6e4fa07ce5a4": {
         "ItemID": "628d0618d1ba6e4fa07ce5a4",
         "Name": "item_equipment_rig_bagarii",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 5"
+        "ArmorClass": "GOST 5",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5e4ac41886f77406a511c9a8": {
         "ItemID": "5e4ac41886f77406a511c9a8",
         "Name": "item_equipment_armor_arscpc",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ III+"
+        "ArmorClass": "NIJ III+",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e746986f7741453628fe5": {
         "ItemID": "5c0e746986f7741453628fe5",
         "Name": "item_equipment_rig_tv110",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "NIJ III"
+        "ArmorClass": "NIJ III",
+        "CanSpall": true,
+        "SpallReduction": 0.65
     },
     "628dc750b910320f4c27a732": {
         "ItemID": "628dc750b910320f4c27a732",
         "Name": "item_equipment_rig_bae_rbav_af",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "ESAPI (Rev. J)"
+        "ArmorClass": "ESAPI (Rev. J)",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "61bc85697113f767765c7fe7": {
         "ItemID": "61bc85697113f767765c7fe7",
         "Name": "item_equipment_rig_mmac",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "NIJ III+"
+        "ArmorClass": "NIJ III+",
+        "CanSpall": true,
+        "SpallReduction": 0.6
     },
     "609e860ebd219504d8507525": {
         "ItemID": "609e860ebd219504d8507525",
         "Name": "item_equipment_rig_tagilla",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ IV"
+        "ArmorClass": "NIJ IV",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "628b9784bcf6e2659e09b8a2": {
         "ItemID": "628b9784bcf6e2659e09b8a2",
         "Name": "item_equipment_rig_boss_big_pipe",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "ESAPI (Rev. G)"
+        "ArmorClass": "ESAPI (Rev. G)",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "628b9c7d45122232a872358f": {
         "ItemID": "628b9c7d45122232a872358f",
         "Name": "item_equipment_rig_boss_blackknight",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "ESAPI (Rev. J)"
+        "ArmorClass": "ESAPI (Rev. J)",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5b44cad286f77402a54ae7e5": {
         "ItemID": "5b44cad286f77402a54ae7e5",
         "Name": "item_equipment_rig_carrierTactec",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "NIJ IV"
+        "ArmorClass": "NIJ IV",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "60a3c70cde5f453f634816a3": {
         "ItemID": "60a3c70cde5f453f634816a3",
         "Name": "item_equipment_rig_custom_osprey_assault",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "MK4A Plates"
+        "ArmorClass": "MK4A Plates",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "60a3c68c37ea821725773ef5": {
         "ItemID": "60a3c68c37ea821725773ef5",
         "Name": "item_equipment_rig_custom_osprey_defence",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "MK4A Plates"
+        "ArmorClass": "MK4A Plates",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "628cd624459354321c4b7fa2": {
         "ItemID": "628cd624459354321c4b7fa2",
         "Name": "item_equipment_rig_tt_plate_carrier",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ III+"
+        "ArmorClass": "NIJ III+",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "639343fce101f4caa40a4ef3": {
         "ItemID": "639343fce101f4caa40a4ef3",
         "Name": "item_equipment_rig_shellback_tactical_banshee",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "XSAPI"
+        "ArmorClass": "XSAPI",
+        "CanSpall": false,
+        "SpallReduction": 1
     }
 }

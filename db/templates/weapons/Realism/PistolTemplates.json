@@ -35,7 +35,7 @@
         "AutoROF": 30,
         "SemiROF": 300,
         "DoubleActionAccuracyPenalty": 0.75,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 5
     },
     "624c2e8614da335f1e034d8c": {
         "ItemID": "624c2e8614da335f1e034d8c",
@@ -851,6 +851,6 @@
         "DurabilityBurnRatio": 0.18,
         "AutoROF": 30,
         "SemiROF": 355,
-        "loyaltyLevel": 3
+        "LoyaltyLevel": 3
     }
 }

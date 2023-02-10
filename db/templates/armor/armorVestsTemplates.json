@@ -4,216 +4,278 @@
         "Name": "armor_gjel",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 5"
+        "ArmorClass": "GOST 5",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5ab8e4ed86f7742d8e50c7fa": {
         "ItemID": "5ab8e4ed86f7742d8e50c7fa",
         "Name": "armor_un",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "ArmorClass": "PM 5"
+        "ArmorClass": "PM 5",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "545cdb794bdc2d3a198b456a": {
         "ItemID": "545cdb794bdc2d3a198b456a",
         "Name": "heavy",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6A"
+        "ArmorClass": "GOST 6A",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e53c886f7747fa54205c7": {
         "ItemID": "5c0e53c886f7747fa54205c7",
         "Name": "item_equipment_armor_6b13_digital",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6A"
+        "ArmorClass": "GOST 6A",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e51be86f774598e797894": {
         "ItemID": "5c0e51be86f774598e797894",
         "Name": "item_equipment_armor_6b13_flora",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6A"
+        "ArmorClass": "GOST 6A",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e541586f7747fa54205c9": {
         "ItemID": "5c0e541586f7747fa54205c9",
         "Name": "item_equipment_armor_6b13_killa",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "NIJ IV"
+        "ArmorClass": "NIJ IV",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5df8a2ca86f7740bfe6df777": {
         "ItemID": "5df8a2ca86f7740bfe6df777",
         "Name": "item_equipment_armor_6b2",
         "AllowADS": true,
         "LoyaltyLevel": 1,
-        "ArmorClass": "GOST 2A"
+        "ArmorClass": "GOST 2A",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e5bab86f77461f55ed1f3": {
         "ItemID": "5c0e5bab86f77461f55ed1f3",
         "Name": "item_equipment_armor_6b23_digital",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "GOST 4"
+        "ArmorClass": "GOST 4",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e57ba86f7747fa141986d": {
         "ItemID": "5c0e57ba86f7747fa141986d",
         "Name": "item_equipment_armor_6b23_mflora",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6A"
+        "ArmorClass": "GOST 6A",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5fd4c474dd870108a754b241": {
         "ItemID": "5fd4c474dd870108a754b241",
         "Name": "item_equipment_armor_custom_hexgrid",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ RF3 07"
+        "ArmorClass": "NIJ RF3 07",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "609e8540d5c319764c2bc2e9": {
         "ItemID": "609e8540d5c319764c2bc2e9",
         "Name": "item_equipment_armor_custom_thorcrv",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "ArmorClass": "PM 5"
+        "ArmorClass": "PM 5",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "60a283193cb70855c43a381d": {
         "ItemID": "60a283193cb70855c43a381d",
         "Name": "item_equipment_armor_custom_thorintcar",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "PM 10"
+        "ArmorClass": "PM 10",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5e9dacf986f774054d6b89f4": {
         "ItemID": "5e9dacf986f774054d6b89f4",
         "Name": "item_equipment_armor_defender2",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 5A"
+        "ArmorClass": "GOST 5A",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "62a09d79de7ac81993580530": {
         "ItemID": "62a09d79de7ac81993580530",
         "Name": "item_equipment_armor_drd",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "VSM"
+        "ArmorClass": "VSM",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5b44cd8b86f774503d30cba2": {
         "ItemID": "5b44cd8b86f774503d30cba2",
         "Name": "item_equipment_armor_iotv",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "XSAPI"
+        "ArmorClass": "XSAPI",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5b44cf1486f77431723e3d05": {
         "ItemID": "5b44cf1486f77431723e3d05",
         "Name": "item_equipment_armor_iotv_1",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "XSAPI"
+        "ArmorClass": "XSAPI",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5b44d0de86f774503d30cba8": {
         "ItemID": "5b44d0de86f774503d30cba8",
         "Name": "item_equipment_armor_iotv_2",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "XSAPI"
+        "ArmorClass": "XSAPI",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5b44d22286f774172b0c9de8": {
         "ItemID": "5b44d22286f774172b0c9de8",
         "Name": "item_equipment_armor_kirasa",
         "AllowADS": true,
         "LoyaltyLevel": 1,
-        "ArmorClass": "GOST 2A"
+        "ArmorClass": "GOST 2A",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5f5f41476bdad616ad46d631": {
         "ItemID": "5f5f41476bdad616ad46d631",
         "Name": "item_equipment_armor_korundvm",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 5"
+        "ArmorClass": "GOST 5",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "607f20859ee58b18e41ecd90": {
         "ItemID": "607f20859ee58b18e41ecd90",
         "Name": "item_equipment_armor_paca_twitch",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "NIJ II"
+        "ArmorClass": "NIJ II",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5ca2151486f774244a3b8d30": {
         "ItemID": "5ca2151486f774244a3b8d30",
         "Name": "item_equipment_armor_redut_m",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 5"
+        "ArmorClass": "GOST 5",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5ca21c6986f77479963115a7": {
         "ItemID": "5ca21c6986f77479963115a7",
         "Name": "item_equipment_armor_redut_t",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6"
+        "ArmorClass": "GOST 6",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5e4abb5086f77406975c9342": {
         "ItemID": "5e4abb5086f77406975c9342",
         "Name": "item_equipment_armor_slick",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "NIJ III+"
+        "ArmorClass": "NIJ III+",
+        "CanSpall": true,
+        "SpallReduction": 0.7
     },
     "6038b4ca92ec1c3103795a0d": {
         "ItemID": "6038b4ca92ec1c3103795a0d",
         "Name": "item_equipment_armor_slick_olive",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "NIJ III+"
+        "ArmorClass": "NIJ III+",
+        "CanSpall": true,
+        "SpallReduction": 0.7
     },
     "6038b4b292ec1c3103795a0b": {
         "ItemID": "6038b4b292ec1c3103795a0b",
         "Name": "item_equipment_armor_slick_tan",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "NIJ III+"
+        "ArmorClass": "NIJ III+",
+        "CanSpall": true,
+        "SpallReduction": 0.7
     },
     "5c0e655586f774045612eeb2": {
         "ItemID": "5c0e655586f774045612eeb2",
         "Name": "item_equipment_armor_trooper",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "NIJ III"
+        "ArmorClass": "NIJ III",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e5edb86f77461f55ed1f7": {
         "ItemID": "5c0e5edb86f77461f55ed1f7",
         "Name": "item_equipment_armor_zhuk3",
         "AllowADS": true,
         "LoyaltyLevel": 1,
-        "ArmorClass": "GOST 3"
+        "ArmorClass": "GOST 3",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5c0e625a86f7742d77340f62": {
         "ItemID": "5c0e625a86f7742d77340f62",
         "Name": "item_equipment_armor_zhuk6a",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6"
+        "ArmorClass": "GOST 6",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "59e7635f86f7742cbf2c1095": {
         "ItemID": "59e7635f86f7742cbf2c1095",
         "Name": "module_3m",
         "AllowADS": true,
         "LoyaltyLevel": 1,
-        "ArmorClass": "GOST 2"
+        "ArmorClass": "GOST 2",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "5648a7494bdc2d9d488b4583": {
         "ItemID": "5648a7494bdc2d9d488b4583",
         "Name": "notHeavy",
         "AllowADS": true,
         "LoyaltyLevel": 1,
-        "ArmorClass": "GOST 2"
+        "ArmorClass": "GOST 2",
+        "CanSpall": false,
+        "SpallReduction": 1
     },
     "63737f448b28897f2802b874": {
         "ItemID": "63737f448b28897f2802b874",
         "Name": "item_equipment_armor_hexatac",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "PM 8"
+        "ArmorClass": "PM 8",
+        "CanSpall": false,
+        "SpallReduction": 1
     }
 }

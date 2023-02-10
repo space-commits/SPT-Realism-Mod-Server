@@ -399,7 +399,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             function getTOD(time) {
                                 let TOD = "";
                                 let [h, m] = time.split(':');
-                                if ((mapNameRegPlayer != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (mapNameRegPlayer === "factory4_day" || mapNameStartOffl === "Laboratory")) {
+                                if ((mapNameRegPlayer != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (mapNameRegPlayer === "factory4_day" || mapNameStartOffl === "Laboratory" || mapNameStartOffl === "laboratory")) {
                                     TOD = "day";
                                 }
                                 else {
@@ -560,7 +560,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables);
         
-
         this.dllChecker(logger, modConfig);
 
         if (modConfig.trader_changes == true) {
@@ -805,8 +804,15 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         for (let i in mapDB) {
             if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
                 for (let k in mapDB[i].base.BossLocationSpawn) {
-                    let chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                    mapDB[i].base.BossLocationSpawn[k].BossChance = chance
+                    let chance = mapDB[i].base.BossLocationSpawn[k].BossChance;
+                    if(mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== ""){
+                        chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
+                        mapDB[i].base.BossLocationSpawn[k].BossChance = chance
+                    }
+                    else{
+                        chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
+                        mapDB[i].base.BossLocationSpawn[k].BossChance = chance
+                    }
                 }
             } 
         }

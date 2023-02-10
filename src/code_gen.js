@@ -191,7 +191,7 @@ class CodeGen {
     itemWriteToFile(filePathObj, fileStr, index, serverItem, folderStr, funJsonAssign, id) {
         let fileItem = filePathObj[index];
         filePathObj[index] = funJsonAssign(serverItem, fileItem, id);
-        this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${attPath}/${fileStr}.json`);
+        this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
     }
     assignJSONToAmmo(serverItem, fileItem) {
         if (fileItem) {
@@ -219,13 +219,15 @@ class CodeGen {
         let LoyaltyLevel = 2;
         let ArmorClass = "";
         let CanSpall = false;
+        let SpallReduction = 1;
         let item = {
             ItemID,
             Name,
             AllowADS,
             LoyaltyLevel,
             ArmorClass,
-            CanSpall
+            CanSpall,
+            SpallReduction
         };
         return item;
     }

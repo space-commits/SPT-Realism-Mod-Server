@@ -9,6 +9,7 @@ import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import { EventTracker, Helper } from "./helper";
 import { Calibers, ParentClasses } from "./enums";
+import { RagfairServer } from "@spt-aki/servers/RagfairServer";
 
 
 
@@ -552,6 +553,14 @@ export class TraderRefresh extends TraderAssortHelper {
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
 
         trader.base.refreshTraderRagfairOffers = true;
+
+        //have to manually update ragfair trader offers otherwise trader offers get bugged on ragfair
+        const traders = container.resolve<RagfairServer>("RagfairServer").getUpdateableTraders();
+
+        for (let traderID in traders) {
+            this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
+        }
+        
     }
 
     private getDirtyTraderAssorts(trader: ITrader): Item[] {

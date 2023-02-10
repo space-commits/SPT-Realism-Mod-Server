@@ -58,9 +58,6 @@ class FleamarketConfig {
             this.fleaConf.dynamic.presetPrice.max = 2;
             this.fleaConf.dynamic.endTimeSeconds.min = 600;
             this.fleaConf.dynamic.endTimeSeconds.max = 3600;
-            this.fleaConf.dynamic.condition.conditionChance = 1;
-            this.fleaConf.dynamic.condition.min = 0.5;
-            this.fleaConf.dynamic.condition.max = 0.99;
             this.fleaConf.dynamic.nonStackableCount.min = 1;
             this.fleaConf.dynamic.nonStackableCount.max = 3;
             this.fleaConf.dynamic.stackablePercent.min = 15;

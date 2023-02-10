@@ -34,7 +34,7 @@
         "DurabilityBurnRatio": 0.3,
         "AutoROF": 950,
         "SemiROF": 340,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 4
     },
     "mechSTM9v1": {
         "ItemID": "mechSTM9v1",
