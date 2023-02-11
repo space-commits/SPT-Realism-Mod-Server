@@ -4,13 +4,19 @@
         "Name": "item_equipment_facecover_shatteredmask",
         "AllowADS": true,
         "LoyaltyLevel": 1,
-        "ArmorClass": "Unclassified"
+        "ArmorClass": "Unclassified",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
     },
     "603409c80ca681766b6a0fb2": {
         "ItemID": "603409c80ca681766b6a0fb2",
         "Name": "item_equipment_glasses_npp",
         "AllowADS": true,
         "LoyaltyLevel": 3,
-        "ArmorClass": "Anti-Shatter Resistance V50 ≥ 230 m/s"
+        "ArmorClass": "Anti-Shatter Resistance V50 ≥ 230 m/s",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
     }
 }

@@ -74,7 +74,6 @@ class Main {
         const databaseServer = container.resolve("DatabaseServer");
         const localisationService = container.resolve("LocalisationService");
         const fleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
-        const durahelp = container.resolve("DurabilityLimitsHelper");
         const profileHelper = container.resolve("ProfileHelper");
         const assortHelper = container.resolve("AssortHelper");
         const paymentHelper = container.resolve("PaymentHelper");
@@ -323,7 +322,6 @@ class Main {
                                 botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
                             }
                         }
-                        botConf.pmc.pmcType = pmcTypes.pmcTypeTest;
                         if (modConfig.bot_changes) {
                             this.updateBots(pmcData, logger, modConfig, bots, helper);
                             if (helper_1.EventTracker.isChristmas == true) {
@@ -425,26 +423,13 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables);
-        for (let i in tables.locations) {
-            let mapDB = tables.locations;
-            if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
-                logger.warning("======");
-                logger.warning("Name = " + mapDB[i].base.Name);
-                for (let k in mapDB[i].base.BossLocationSpawn) {
-                    if (mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
-                        logger.warning("Name = " + mapDB[i].base.BossLocationSpawn[k].BossName);
-                    }
-                }
-                logger.warning("======");
-            }
-        }
         this.dllChecker(logger, modConfig);
         if (modConfig.trader_changes == true) {
             itemCloning.createCustomWeapons();
         }
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
-        // codegen.armorTemplatesCodeGen();
+        // codegen.gearTemplatesCodeGen();
         jsonHand.pushModsToServer();
         jsonHand.pushWeaponsToServer();
         jsonHand.pushArmorToServer();

@@ -50,8 +50,8 @@ class FleamarketConfig {
                 "5696686a4bdc2da3298b456a": 40,
                 "569668774bdc2da2298b4568": 40
             };
-            this.fleaConf.dynamic.offerItemCount.min = 1;
-            this.fleaConf.dynamic.offerItemCount.max = 3;
+            this.fleaConf.dynamic.offerItemCount.min = 0;
+            this.fleaConf.dynamic.offerItemCount.max = 2;
             this.fleaConf.dynamic.price.min = 1;
             this.fleaConf.dynamic.price.max = 2;
             this.fleaConf.dynamic.presetPrice.min = 1.3;
@@ -59,7 +59,7 @@ class FleamarketConfig {
             this.fleaConf.dynamic.endTimeSeconds.min = 600;
             this.fleaConf.dynamic.endTimeSeconds.max = 3600;
             this.fleaConf.dynamic.nonStackableCount.min = 1;
-            this.fleaConf.dynamic.nonStackableCount.max = 3;
+            this.fleaConf.dynamic.nonStackableCount.max = 2;
             this.fleaConf.dynamic.stackablePercent.min = 15;
             this.fleaConf.dynamic.stackablePercent.max = 100;
             if (this.modConfig.logEverything == true) {

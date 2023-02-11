@@ -67,7 +67,6 @@ import { IRandomisedBotLevelResult } from "@spt-aki/models/eft/bot/IRandomisedBo
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
 import { ILocations } from "@spt-aki/models/spt/server/ILocations";
-import { DurabilityLimitsHelper } from "@spt-aki/helpers/DurabilityLimitsHelper";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -124,8 +123,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const localisationService = container.resolve<LocalisationService>("LocalisationService");
         const fleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
-        const durahelp = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
-
         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         const assortHelper = container.resolve<AssortHelper>("AssortHelper");
         const paymentHelper = container.resolve<PaymentHelper>("PaymentHelper");
@@ -436,8 +433,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 }
                             }
 
-                            botConf.pmc.pmcType = pmcTypes.pmcTypeTest;
-
                             if (modConfig.bot_changes) {
                                 this.updateBots(pmcData, logger, modConfig, bots, helper);
                                 if (EventTracker.isChristmas == true) {
@@ -568,7 +563,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
-        // codegen.armorTemplatesCodeGen();
+        // codegen.gearTemplatesCodeGen();
 
         jsonHand.pushModsToServer();
         jsonHand.pushWeaponsToServer();

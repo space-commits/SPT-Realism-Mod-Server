@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonHandler = void 0;
+const enums_1 = require("./enums");
 const helper_1 = require("./helper");
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;
@@ -10,6 +11,7 @@ const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTempl
 const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
 const armorVestsTemplates = require("../db/templates/armor/armorVestsTemplates.json");
 const armorMasksTemplates = require("../db/templates/armor/armorMasksTemplates.json");
+const chestrigTemplates = require("../db/templates/gear/chestrigTemplates.json");
 const ammoTemplates = require("../db/templates/ammo/ammoTemplates.json");
 const MuzzleDeviceTemplates = require("../db/templates/attatchments/" + `${attPath}` + "/MuzzleDeviceTemplates.json");
 const BarrelTemplates = require("../db/templates/attatchments/" + `${attPath}` + "/BarrelTemplates.json");
@@ -91,6 +93,10 @@ class JsonHandler {
                 this.callHelper(helmetTemplates, serverItem, this.armorPusher);
                 this.callHelper(armorVestsTemplates, serverItem, this.armorPusher);
                 this.callHelper(armorMasksTemplates, serverItem, this.armorPusher);
+                this.callHelper(armorMasksTemplates, serverItem, this.armorPusher);
+            }
+            if (serverItem._parent === enums_1.ParentClasses.CHESTRIG) {
+                this.callHelper(chestrigTemplates, serverItem, this.armorPusher);
             }
         }
     }
@@ -103,7 +109,7 @@ class JsonHandler {
     armorPusher(serverItem, fileItem) {
         if (serverItem._id === fileItem.ItemID) {
             var serverConfItems = serverItem._props.ConflictingItems;
-            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "0" || "true", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1"];
+            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "0" || "true", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1", fileItem?.ReloadSpeedMulti || "1"];
             var combinedArr = armorPropertyValues.concat(serverConfItems);
             serverItem._props.ConflictingItems = combinedArr;
         }
@@ -174,8 +180,8 @@ class JsonHandler {
                     serverItem._props.weapFireType = fileItem.weapFireType;
                 }
                 var serverConfItems = serverItem._props.ConflictingItems;
-                var weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", "unused", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
-                    fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.65", fileItem?.WeaponAllowADS?.toString() || "false"];
+                var weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
+                    fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.65", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1"];
                 var combinedArr = weapPropertyValues.concat(serverConfItems);
                 serverItem._props.ConflictingItems = combinedArr;
             }

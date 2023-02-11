@@ -2,7 +2,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 import { ITraderConfig } from "@spt-aki/models/spt/config/ITraderConfig";
 import { IBarterScheme, ITrader, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrader";
-import { container, DependencyContainer } from "tsyringe";
+import { container } from "tsyringe";
 import { Arrays } from "./arrays";
 import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
@@ -10,7 +10,6 @@ import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import { EventTracker, Helper } from "./helper";
 import { Calibers, ParentClasses } from "./enums";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";
-
 
 
 const modConfig = require("../config/config.json");
@@ -33,8 +32,6 @@ const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTempl
 const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
 const armorVestsTemplates = require("../db/templates/armor/armorVestsTemplates.json");
 const armorMasksTemplates = require("../db/templates/armor/armorMasksTemplates.json");
-
-
 
 const weapTemplates = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
 const armorTemlplates = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates];

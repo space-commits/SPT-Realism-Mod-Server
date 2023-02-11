@@ -34,7 +34,9 @@
         "DurabilityBurnRatio": 1.15,
         "AutoROF": 650,
         "SemiROF": 450,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1
     },
     "5beed0f50db834001c062b12": {
         "ItemID": "5beed0f50db834001c062b12",
@@ -45,7 +47,7 @@
         "BaseTorque": 0,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 58,
+        "VerticalRecoil": 57,
         "HorizontalRecoil": 230,
         "Dispersion": 20,
         "CameraRecoil": 0.057,
@@ -71,6 +73,8 @@
         "DurabilityBurnRatio": 0.1,
         "AutoROF": 650,
         "SemiROF": 395,
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1
     }
 }

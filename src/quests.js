@@ -28,17 +28,17 @@ class Quests {
             if (this.questDB[quest].QuestName.includes("Gunsmith")) {
                 let conditions = this.questDB[quest].conditions.AvailableForFinish[0];
                 conditions._props.ergonomics.compareMethod = ">=";
-                conditions._props.ergonomics.value = 0;
+                conditions._props.ergonomics.value = -100;
                 conditions._props.recoil.compareMethod = "<=";
-                conditions._props.recoil.value = 10000;
+                conditions._props.recoil.value = 100000;
                 conditions._props.weight.compareMethod = "<=";
-                conditions._props.weight.value = 100;
+                conditions._props.weight.value = 10000;
                 conditions._props.width.compareMethod = ">=";
                 conditions._props.width.value = 0;
                 conditions._props.height.compareMethod = ">=";
                 conditions._props.height.value = 0;
                 conditions._props.durability.compareMethod = "<=";
-                conditions._props.durability.value = 100;
+                conditions._props.durability.value = 200;
                 let id = this.questDB[quest]._id;
                 let desc = this.locales[id + " description"];
                 this.locales[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";

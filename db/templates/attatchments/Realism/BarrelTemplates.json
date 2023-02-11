@@ -165,7 +165,7 @@
         "CameraRecoil": -15,
         "Length": 0,
         "Accuracy": 0,
-        "CenterOfImpact": 0.0175,
+        "CenterOfImpact": 0.017,
         "HeatFactor": 0.96,
         "CoolFactor": 0.96,
         "DurabilityBurnModificator": 0.9,
@@ -180,7 +180,7 @@
             "5d00f63bd7ad1a59283b1c1e"
         ],
         "Ergonomics": 0,
-        "Weight": 1.4,
+        "Weight": 1.1,
         "ShotgunDispersion": 1,
         "Loudness": 0
     },
@@ -240,7 +240,7 @@
         "ModMalfunctionChance": 0,
         "Length": 0,
         "Accuracy": 0,
-        "CenterOfImpact": 0.0247,
+        "CenterOfImpact": 0.024,
         "HeatFactor": 1.02,
         "CoolFactor": 1.03,
         "DurabilityBurnModificator": 1,
@@ -362,7 +362,7 @@
         "ModMalfunctionChance": 2000,
         "Length": 0,
         "Accuracy": 0,
-        "CenterOfImpact": 0.029,
+        "CenterOfImpact": 0.028,
         "HeatFactor": 1.06,
         "CoolFactor": 1.09,
         "DurabilityBurnModificator": 1.15,
@@ -797,7 +797,7 @@
             "5d00f63bd7ad1a59283b1c1e"
         ],
         "Ergonomics": 0,
-        "Weight": 0.9276,
+        "Weight": 0.99,
         "ShotgunDispersion": 1,
         "Loudness": 0
     },
@@ -847,7 +847,7 @@
             "5c6c2c9c2e2216000f2002e4"
         ],
         "Ergonomics": 0,
-        "Weight": 0.985,
+        "Weight": 0.835,
         "ShotgunDispersion": 1,
         "Loudness": 0
     },
@@ -887,7 +887,7 @@
             "5c6c2c9c2e2216000f2002e4"
         ],
         "Ergonomics": 0,
-        "Weight": 0.765,
+        "Weight": 0.615,
         "ShotgunDispersion": 1,
         "Loudness": 0
     },
@@ -916,7 +916,7 @@
             "5c6c2c9c2e2216000f2002e4"
         ],
         "Ergonomics": 0,
-        "Weight": 0.615,
+        "Weight": 0.465,
         "ShotgunDispersion": 1,
         "Loudness": 0
     },
@@ -945,29 +945,7 @@
             "5c6c2c9c2e2216000f2002e4"
         ],
         "Ergonomics": 0,
-        "Weight": 1.13,
-        "ShotgunDispersion": 1,
-        "Loudness": 0
-    },
-    "5f2aa46b878ef416f538b567": {
-        "ItemID": "5f2aa46b878ef416f538b567",
-        "Name": "barrel_rfb_457mm_762x51",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "Length": 0,
-        "Accuracy": 0,
-        "CenterOfImpact": 0.049,
-        "HeatFactor": 0.91,
-        "CoolFactor": 0.96,
-        "DurabilityBurnModificator": 1,
-        "Velocity": -3.2,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.91,
+        "Weight": 1.03,
         "ShotgunDispersion": 1,
         "Loudness": 0
     },
@@ -990,7 +968,29 @@
         "Velocity": 3.8,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 1.2,
+        "Weight": 1.05,
+        "ShotgunDispersion": 1,
+        "Loudness": 0
+    },
+    "5f2aa46b878ef416f538b567": {
+        "ItemID": "5f2aa46b878ef416f538b567",
+        "Name": "barrel_rfb_457mm_762x51",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Length": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.049,
+        "HeatFactor": 0.91,
+        "CoolFactor": 0.96,
+        "DurabilityBurnModificator": 1,
+        "Velocity": -3.2,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.91,
         "ShotgunDispersion": 1,
         "Loudness": 0
     },

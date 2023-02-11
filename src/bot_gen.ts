@@ -434,8 +434,8 @@ export class BotGenHelper extends BotEquipmentModGenerator {
         const botEquipConfig = this.botConfig.equipment[botEquipmentRole];
         const botEquipBlacklist = this.botEquipmentFilterService.getBotEquipmentBlacklist(botEquipmentRole, pmcProfile.Info.Level);
         const botWeaponSightWhitelist = this.botEquipmentFilterService.getBotWeaponSightWhitelist(botEquipmentRole);
-        const randomisationSettings = this.botHelper.getBotRandomisationDetails(botLevel, botEquipConfig);
-
+        const randomisationSettings = this.botHelper.getBotRandomizationDetails(botLevel, botEquipConfig);
+  
         const sortedModKeys = this.sortModKeys(Object.keys(compatibleModsPool));
 
         // Iterate over mod pool and choose mods to add to item
