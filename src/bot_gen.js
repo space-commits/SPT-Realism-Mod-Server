@@ -38,7 +38,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     magGen(generatedWeaponResult, magCounts, inventory, botRole) {
         const weaponMods = generatedWeaponResult.weapon;
         const weaponTemplate = generatedWeaponResult.weaponTemplate;
-        const ammoTpl = generatedWeaponResult.chosenAmmo;
+        const ammoTpl = generatedWeaponResult.chosenAmmoTpl;
         const magazineTpl = this.getMagazineTplFromWeaponTemplate(weaponMods, weaponTemplate, botRole);
         if (weaponTemplate._props.weapClass === enums_1.ParentClasses.PISTOL) {
             magCounts.min = Math.max(1, Math.round(magCounts.min * 0.5));
@@ -97,9 +97,18 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         for (const magazine of weaponWithModsArray.filter(x => x.slotId === this.modMagazineSlotId)) {
             this.fillExistingMagazines(weaponWithModsArray, magazine, ammoTpl);
         }
+        // Fill UBGL if found
+        const ubglMod = weaponWithModsArray.find(x => x.slotId === "mod_launcher");
+        let ubglAmmoTpl = undefined;
+        if (ubglMod) {
+            const ubglTemplate = this.itemHelper.getItem(ubglMod._tpl)[1];
+            ubglAmmoTpl = this.getWeightedCompatibleAmmo(botTemplateInventory.Ammo, ubglTemplate);
+            this.fillUbgl(weaponWithModsArray, ubglMod, ubglAmmoTpl);
+        }
         return {
             weapon: weaponWithModsArray,
-            chosenAmmo: ammoTpl,
+            chosenAmmoTpl: ammoTpl,
+            chosenUbglAmmoTpl: ubglAmmoTpl,
             weaponMods: modPool,
             weaponTemplate: weaponItemTemplate
         };

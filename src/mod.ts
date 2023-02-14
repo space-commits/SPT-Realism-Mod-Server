@@ -50,7 +50,7 @@ import { TraderHelper } from "@spt-aki/helpers/TraderHelper";
 import { FenceService } from "@spt-aki/services/FenceService";
 import { TraderAssortService } from "@spt-aki/services/TraderAssortService";
 import { PaymentHelper } from "@spt-aki/helpers/PaymentHelper";
-import { ITrader } from "@spt-aki/models/eft/common/tables/ITrader";
+import { ITrader, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrader";
 import { IRegisterPlayerRequestData } from "@spt-aki/models/eft/inRaid/IRegisterPlayerRequestData";
 import { TraderPurchasePersisterService } from "@spt-aki/services/TraderPurchasePersisterService";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";;
@@ -84,7 +84,7 @@ import { BotLooGen } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
-import { RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
+import { RagOfferHelper, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
@@ -93,6 +93,16 @@ import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
 import { DescriptionGen } from "./description_gen";
 import { JsonHandler } from "./json-handler";
+import { EventOutputHolder } from "@spt-aki/routers/EventOutputHolder";
+import { SaveServer } from "@spt-aki/servers/SaveServer";
+import { DialogueHelper } from "@spt-aki/helpers/DialogueHelper";
+import { PresetHelper } from "@spt-aki/helpers/PresetHelper";
+import { RagfairServerHelper } from "@spt-aki/helpers/RagfairServerHelper";
+import { RagfairSortHelper } from "@spt-aki/helpers/RagfairSortHelper";
+import { RagfairHelper } from "@spt-aki/helpers/RagfairHelper";
+import { LocaleService } from "@spt-aki/services/LocaleService";
+import { RagfairOfferHelper } from "@spt-aki/helpers/RagfairOfferHelper";
+import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -149,13 +159,24 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const botWeaponGenerator = container.resolve<BotWeaponGenerator>("BotWeaponGenerator");
         const botLootCacheService = container.resolve<BotLootCacheService>("BotLootCacheService");
 
+        const eventOutputHolder = container.resolve<EventOutputHolder>("EventOutputHolder");
+        const saveServer = container.resolve<SaveServer>("SaveServer");
+        const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
+        const presetHelper = container.resolve<PresetHelper>("PresetHelper");
+        const ragfairServerHelper = container.resolve<RagfairServerHelper>("RagfairServerHelper");
+        const ragfairSortHelper = container.resolve<RagfairSortHelper>("RagfairSortHelper");
+        const ragfairHelper = container.resolve<RagfairHelper>("RagfairHelper");
+        const ragfairOfferService = container.resolve<RagfairOfferService>("RagfairOfferService");
+        const localeService = container.resolve<LocaleService>("LocaleService");
+
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
 
+        const ragOfferHelper = new RagOfferHelper(logger, timeUtil, hashUtil, eventOutputHolder, databaseServer, traderHelper, saveServer, dialogueHelper, itemHelper, paymentHelper,presetHelper, profileHelper, ragfairServerHelper, ragfairSortHelper, ragfairHelper, ragfairOfferService, localeService, configServer);
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
         const _botModGen = new BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
-        const botLooGen = new BotLooGen(logger, hashUtil, randomUtil, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
+        const botLootGen = new BotLooGen(logger, hashUtil, randomUtil, itemHelper, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new GenBotLvl(logger, randomUtil, databaseServer);
 
         const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
@@ -195,7 +216,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
             container.afterResolution("BotLootGenerator", (_t, result: BotLootGenerator) => {
                 result.generateLoot = (sessionId: string, templateInventory: Inventory, itemCounts: ItemMinMax, isPmc: boolean, botRole: string, botInventory: PmcInventory, equipmentChances: Chances, botLevel: number): void => {
-                    return botLooGen.genLoot(sessionId, templateInventory, itemCounts, isPmc, botRole, botInventory, equipmentChances, botLevel);
+                    return botLootGen.genLoot(sessionId, templateInventory, itemCounts, isPmc, botRole, botInventory, equipmentChances, botLevel);
                 }
             }, { frequency: "Always" });
 
@@ -211,6 +232,12 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
                 result.resetExpiredTrader = (trader: ITrader): void => {
                     return traderRefersh.myResetExpiredTrader(trader);
+                }
+            }, { frequency: "Always" });
+
+            container.afterResolution("RagfairOfferHelper", (_t, result: RagfairOfferHelper) => {
+                result.getOffersForBuild = (info: ISearchRequestData, itemsToAdd: string[], assorts: Record<string, ITraderAssort>, pmcProfile: IPmcData): IRagfairOffer[] => {
+                    return ragOfferHelper.myGetOffersForBuild(info, itemsToAdd, assorts, pmcProfile);
                 }
             }, { frequency: "Always" });
         }
@@ -635,6 +662,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
             attachStats.loadAttStats();
+        }
+
+        if(modConfig.headset_changes)
+        {
             gear.loadHeadsetTweaks();
         }
 
@@ -828,28 +859,28 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-            tier = helper.probabilityWeighter(tierArray, [15, 1, 0, 0]);
+            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = helper.probabilityWeighter(tierArray, [20, 2, 0, 0]);
+            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, [15, 10, 1, 0]);
+            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, [5, 15, 2, 1]);
+            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = helper.probabilityWeighter(tierArray, [2, 10, 15, 2]);
+            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = helper.probabilityWeighter(tierArray, [1, 4, 25, 10]);
+            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, [1, 4, 10, 30]);
+            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
         if (pmcData.Info.Level >= 35) {
-            tier = helper.probabilityWeighter(tierArray, [1, 2, 8, 35]);
+            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds8);
         }
 
         if (type === "tagilla") {

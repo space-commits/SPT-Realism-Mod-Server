@@ -49,7 +49,7 @@
         "Ergonomics": 80,
         "VerticalRecoil": 57,
         "HorizontalRecoil": 230,
-        "Dispersion": 20,
+        "Dispersion": 22,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -74,7 +74,7 @@
         "AutoROF": 650,
         "SemiROF": 395,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 1.2,
+        "BaseChamberSpeedMulti": 1.1
     }
 }

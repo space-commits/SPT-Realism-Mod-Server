@@ -180,7 +180,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.15;
+                serverItem._props.BluntThroughput = 0.55;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
@@ -192,7 +192,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.15;
+                serverItem._props.BluntThroughput = 0.55;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
@@ -204,7 +204,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.15;
+                serverItem._props.BluntThroughput = 0.55;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
@@ -489,7 +489,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -6;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.BluntThroughput = 0.5;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 10.3;
             }
@@ -562,7 +562,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -8;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.BluntThroughput = 0.48;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 9.9;
             }
@@ -586,7 +586,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -7;
-                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.BluntThroughput = 0.52;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 9.1;
             }
@@ -1587,7 +1587,7 @@ export class Armor {
             //Buff Helemts
             if (serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) {
                 if (this.modConf.buff_helmets == true && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
-                    serverItem._props.armorClass += 1;
+                    serverItem._props.armorClass = +serverItem._props.armorClass + 1;
                     serverItem._props.BluntThroughput *= 0.85;
                     if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) {
                         serverItem._props.Durability *= 1.25;

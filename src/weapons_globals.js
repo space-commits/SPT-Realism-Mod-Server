@@ -131,6 +131,7 @@ class WeaponsGlobals {
                 serverItem._props.RecoilForceBack *= this.modConf.horz_recoil_multi;
                 serverItem._props.Convergence *= this.modConf.convergence_multi;
                 serverItem._props.RecolDispersion *= this.modConf.dispersion_multi;
+                serverItem._props.CameraRecoil *= this.modConf.cam_multi;
             }
         }
         if (this.modConf.logEverything == true) {

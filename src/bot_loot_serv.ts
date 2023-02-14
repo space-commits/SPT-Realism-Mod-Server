@@ -8,7 +8,19 @@ import { Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBo
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
 import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
-import { container } from "tsyringe";
+import { container, inject } from "tsyringe";
+import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
+import { LocalisationService } from "@spt-aki/services/LocalisationService";
+import { BotGeneratorHelper } from "@spt-aki/helpers/BotGeneratorHelper";
+import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
+import { HandbookHelper } from "@spt-aki/helpers/HandbookHelper";
+import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
+import { ConfigServer } from "@spt-aki/servers/ConfigServer";
+import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
+import { HashUtil } from "@spt-aki/utils/HashUtil";
+import { RandomUtil } from "@spt-aki/utils/RandomUtil";
+import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
+import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
 
 export class MyBotLootCache {
     specialItems: ITemplateItem[]
@@ -427,7 +439,7 @@ export class MyLootCache extends BotLootCacheService {
             this.isMedicalItem(template._props)
             && template._parent !== BaseClasses.STIMULATOR
             && template?._props?.effects_damage?.Pain === undefined);
-            
+
         const vestDrugItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
             && template._parent !== BaseClasses.STIMULATOR

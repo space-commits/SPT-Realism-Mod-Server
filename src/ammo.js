@@ -2584,12 +2584,11 @@ class Ammo {
                 serverItem._props.BulletMassGram = 12.6;
                 serverItem._props.HeavyBleedingDelta = 0.22;
                 serverItem._props.LightBleedingDelta = 0.49;
-                serverItem._props.MisfireChance = 0.3;
                 serverItem._props.ammoAccr = 0;
                 serverItem._props.ammoHear = 1;
                 serverItem._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;

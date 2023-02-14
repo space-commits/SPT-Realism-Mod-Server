@@ -108,7 +108,7 @@
         {
             "BossName": "bossBully",
             "BossChance": 35,
-            "BossZone": "ZoneScavBase, ZoneOldAZS, ZoneDormitory",
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneGasStation",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "followerBully",
@@ -121,7 +121,7 @@
         {
             "BossName": "pmcBot",
             "BossChance": 25,
-            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "pmcBot",
@@ -133,7 +133,7 @@
         {
             "BossName": "exUsec",
             "BossChance": 25,
-            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -183,7 +183,7 @@
         {
             "BossName": "bossSanitar",
             "BossChance": 15,
-            "BossZone": "ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare",
+            "BossZone": "ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "followerSanitar",
@@ -196,7 +196,7 @@
         {
             "BossName": "bossGluhar",
             "BossChance": 15,
-            "BossZone": "ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare",
+            "BossZone": "ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "followerGluharAssault",
@@ -233,7 +233,7 @@
         {
             "BossName": "sectantPriest",
             "BossChance": 25,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare",
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",

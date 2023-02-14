@@ -1,11 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TraderRefresh = exports.RandomizeTraderAssort = exports.Traders = void 0;
+exports.TraderRefresh = exports.RagOfferHelper = exports.RandomizeTraderAssort = exports.Traders = void 0;
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const arrays_1 = require("./arrays");
 const TraderAssortHelper_1 = require("C:/snapshot/project/obj/helpers/TraderAssortHelper");
 const helper_1 = require("./helper");
 const enums_1 = require("./enums");
+const RagfairOfferHelper_1 = require("C:/snapshot/project/obj/helpers/RagfairOfferHelper");
+const MemberCategory_1 = require("C:/snapshot/project/obj/models/enums/MemberCategory");
+const RagfairSort_1 = require("C:/snapshot/project/obj/models/enums/RagfairSort");
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
@@ -456,6 +459,52 @@ class RandomizeTraderAssort {
     }
 }
 exports.RandomizeTraderAssort = RandomizeTraderAssort;
+class RagOfferHelper extends RagfairOfferHelper_1.RagfairOfferHelper {
+    myTraderOutOfStock(offer) {
+        if (offer?.items?.length === 0 || offer.CurrentItemCount === 0 || offer.items[0]?.upd?.StackObjectsCount === 0) {
+            return true;
+        }
+        return false;
+    }
+    myGetOffersForBuild(info, itemsToAdd, assorts, pmcProfile) {
+        const offersMap = new Map();
+        const offers = [];
+        for (const offer of this.ragfairOfferService.getOffers()) {
+            if (this.isDisplayableOffer(info, itemsToAdd, assorts, offer, pmcProfile)) {
+                const isTraderOffer = offer.user.memberType === MemberCategory_1.MemberCategory.TRADER;
+                if (isTraderOffer && this.traderBuyRestrictionReached(offer)) {
+                    continue;
+                }
+                if (isTraderOffer && this.myTraderOutOfStock(offer)) {
+                    continue;
+                }
+                const key = offer.items[0]._tpl;
+                if (!offersMap.has(key)) {
+                    offersMap.set(key, []);
+                }
+                offersMap.get(key).push(offer);
+            }
+        }
+        // get best offer for each item to show on screen
+        for (let possibleOffers of offersMap.values()) {
+            // Remove offers with locked = true (quest locked) when > 1 possible offers
+            // single trader item = shows greyed out
+            // multiple offers for item = is greyed out
+            if (possibleOffers.length > 1) {
+                const lockedOffers = this.getLoyaltyLockedOffers(possibleOffers, pmcProfile);
+                // Exclude locked offers + above loyalty locked offers if at least 1 was found
+                const availableOffers = possibleOffers.filter(x => !(x.locked || lockedOffers.includes(x._id)));
+                if (availableOffers.length > 0) {
+                    possibleOffers = availableOffers;
+                }
+            }
+            const offer = this.ragfairSortHelper.sortOffers(possibleOffers, RagfairSort_1.RagfairSort.PRICE, 0)[0];
+            offers.push(offer);
+        }
+        return offers;
+    }
+}
+exports.RagOfferHelper = RagOfferHelper;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     myResetExpiredTrader(trader) {
         trader.assort.items = this.getDirtyTraderAssorts(trader);

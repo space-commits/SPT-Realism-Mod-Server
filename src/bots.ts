@@ -364,7 +364,7 @@ export class Bots {
         this.botConfPMC.maxVestLootTotalRub = rmBotConfig.pmc1.maxVestLootTotalRub;
 
         //adjust PMC hostile chance
-        this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc1.chanceSameSideIsHostilePercent;
+        this.botConfPMC.chanceSameSideIsHostilePercent = this.modConf.bot_hostile1;
 
         this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc1.looseWeaponInBackpackChancePercent;
 
@@ -434,7 +434,7 @@ export class Bots {
         this.botConfPMC.maxVestLootTotalRub = rmBotConfig.pmc2.maxVestLootTotalRub;
 
         //adjust PMC hostile chance
-        this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc2.chanceSameSideIsHostilePercent;
+        this.botConfPMC.chanceSameSideIsHostilePercent = this.modConf.bot_hostile2;
 
         this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc2.looseWeaponInBackpackChancePercent;
 
@@ -502,7 +502,7 @@ export class Bots {
         this.botConfPMC.maxVestLootTotalRub = rmBotConfig.pmc3.maxVestLootTotalRub;
 
         //adjust PMC hostile chance
-        this.botConfPMC.chanceSameSideIsHostilePercent = rmBotConfig.pmc3.chanceSameSideIsHostilePercent;
+        this.botConfPMC.chanceSameSideIsHostilePercent = this.modConf.bot_hostile3;
 
         this.botConfPMC.looseWeaponInBackpackChancePercent = rmBotConfig.pmc3.looseWeaponInBackpackChancePercent;
 

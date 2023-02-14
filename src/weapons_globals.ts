@@ -61,24 +61,7 @@ export class WeaponsGlobals {
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
 
             this.globalDB.Aiming.AimProceduralIntensity = 1;
- 
-            for (let i in this.itemDB) {
-
-                let serverItem = this.itemDB[i];
-                if (serverItem._parent === ParentClasses.SMG
-                || serverItem._parent === ParentClasses.SHOTGUN
-                || serverItem._parent === ParentClasses.ASSAULT_CARBINE
-                || serverItem._parent === ParentClasses.SNIPER_RIFLE
-                || serverItem._parent=== ParentClasses.ASSAULT_RIFLE
-                || serverItem._parent === ParentClasses.MACHINE_GUN
-                || serverItem._parent === ParentClasses.MARKSMAN_RIFLE
-                || serverItem._parent === ParentClasses.GRENADE_LAUNCHER
-
-                ) {
-                    serverItem._props.Ergonomics = 80;
-                    serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.15);
-                }
-            }
+            
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }
@@ -159,6 +142,7 @@ export class WeaponsGlobals {
                 serverItem._props.RecoilForceBack *= this.modConf.horz_recoil_multi;
                 serverItem._props.Convergence *= this.modConf.convergence_multi;
                 serverItem._props.RecolDispersion *= this.modConf.dispersion_multi;
+                serverItem._props.CameraRecoil *= this.modConf.cam_multi;
             }
         }
 

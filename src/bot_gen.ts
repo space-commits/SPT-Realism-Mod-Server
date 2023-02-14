@@ -66,7 +66,7 @@ export class BotWepGen extends BotWeaponGenerator {
     public magGen(generatedWeaponResult: GenerateWeaponResult, magCounts: MinMax, inventory: PmcInventory, botRole: string) {
         const weaponMods = generatedWeaponResult.weapon;
         const weaponTemplate = generatedWeaponResult.weaponTemplate;
-        const ammoTpl = generatedWeaponResult.chosenAmmo;
+        const ammoTpl = generatedWeaponResult.chosenAmmoTpl;
         const magazineTpl = this.getMagazineTplFromWeaponTemplate(weaponMods, weaponTemplate, botRole);
 
         if (weaponTemplate._props.weapClass === ParentClasses.PISTOL) {
@@ -145,9 +145,19 @@ export class BotWepGen extends BotWeaponGenerator {
             this.fillExistingMagazines(weaponWithModsArray, magazine, ammoTpl);
         }
 
+        // Fill UBGL if found
+        const ubglMod = weaponWithModsArray.find(x => x.slotId === "mod_launcher");
+        let ubglAmmoTpl: string = undefined;
+        if (ubglMod) {
+            const ubglTemplate = this.itemHelper.getItem(ubglMod._tpl)[1];
+            ubglAmmoTpl = this.getWeightedCompatibleAmmo(botTemplateInventory.Ammo, ubglTemplate);
+            this.fillUbgl(weaponWithModsArray, ubglMod, ubglAmmoTpl);
+        }
+
         return {
             weapon: weaponWithModsArray,
-            chosenAmmo: ammoTpl,
+            chosenAmmoTpl: ammoTpl,
+            chosenUbglAmmoTpl: ubglAmmoTpl,
             weaponMods: modPool,
             weaponTemplate: weaponItemTemplate
         };
@@ -435,7 +445,7 @@ export class BotGenHelper extends BotEquipmentModGenerator {
         const botEquipBlacklist = this.botEquipmentFilterService.getBotEquipmentBlacklist(botEquipmentRole, pmcProfile.Info.Level);
         const botWeaponSightWhitelist = this.botEquipmentFilterService.getBotWeaponSightWhitelist(botEquipmentRole);
         const randomisationSettings = this.botHelper.getBotRandomizationDetails(botLevel, botEquipConfig);
-  
+
         const sortedModKeys = this.sortModKeys(Object.keys(compatibleModsPool));
 
         // Iterate over mod pool and choose mods to add to item

@@ -44,7 +44,6 @@ export class Gear {
         for (let item in this.itemDB) {
             let serverItem = this.itemDB[item];
 
-
             //Sordin
             if (serverItem._id === "5aa2ba71e5b5b000137b758f") {
                 serverItem._props.Distortion = 0.1;
@@ -52,7 +51,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 14;
                 serverItem._props.CompressorTreshold = -30;
-                serverItem._props.DryVolume = -55;
+                serverItem._props.DryVolume = -48;
                 // serverItem._props.AmbientVolume = -5;
             }
 
@@ -63,7 +62,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 10;
                 serverItem._props.CompressorTreshold = -31;
-                serverItem._props.DryVolume = -58;
+                serverItem._props.DryVolume = -50;
                 // serverItem._props.AmbientVolume = -4;
             }
 
@@ -74,7 +73,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 12;
                 serverItem._props.CompressorTreshold = -33;
-                serverItem._props.DryVolume = -60;
+                serverItem._props.DryVolume = -52;
                 // serverItem._props.AmbientVolume = -6;
             }
 
@@ -85,7 +84,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 10;
                 serverItem._props.CompressorTreshold = -34;
-                serverItem._props.DryVolume = -62;
+                serverItem._props.DryVolume = -54;
                 // serverItem._props.AmbientVolume = -7;
             }
 
@@ -96,7 +95,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 15;
                 serverItem._props.CompressorTreshold = -36;
-                serverItem._props.DryVolume = -65;
+                serverItem._props.DryVolume = -56;
                 // serverItem._props.AmbientVolume = -5;
             }
 
@@ -107,7 +106,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 12;
                 serverItem._props.CompressorTreshold = -37;
-                serverItem._props.DryVolume = -68;
+                serverItem._props.DryVolume = -58;
                 // serverItem._props.AmbientVolume = -5;
             }
 
@@ -118,7 +117,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 11;
                 serverItem._props.CompressorTreshold = -37;
-                serverItem._props.DryVolume = -68;
+                serverItem._props.DryVolume = -58;
                 // serverItem._props.AmbientVolume = -8;
             }
 
@@ -129,7 +128,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 12;
                 serverItem._props.CompressorTreshold = -39;
-                serverItem._props.DryVolume = -72;
+                serverItem._props.DryVolume = -60;
                 // serverItem._props.AmbientVolume = -8;
             }
 
@@ -140,7 +139,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 // serverItem._props.CompressorGain = 10;
                 serverItem._props.CompressorTreshold = -41;
-                serverItem._props.DryVolume = -75;
+                serverItem._props.DryVolume = -62;
                 // serverItem._props.AmbientVolume = -9;
             }
         }
