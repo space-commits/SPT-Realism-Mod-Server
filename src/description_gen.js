@@ -47,7 +47,7 @@ class DescriptionGen {
                     locale[`${templateItem}` + " Description"] = "If a foregrip is attached to this pump grip there will be a bonus to chamber/pump speed." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "buffer_adapter" || modType === "stock_adapter" || modType === "grip_stock_adapter") {
-                    locale[`${templateItem}` + " Description"] = "This adapater changes the recoil profile of the weapon by raising or lowering the stock in line with the barrel. It will not impart any stats unless a stock is attached. If it has a pistol grip slot, the pistol grip provides a bonus to ergo and recoil stats if attached." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                    locale[`${templateItem}` + " Description"] = "This adapater changes the recoil profile of the weapon by raising or lowering the stock in line with the barrel. It will not impart any stats unless a stock is attached. If it has a pistol grip slot, the pistol grip provides a bonus to ergo, recoil and chamber/pump/bolt speed stats if attached." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "hydraulic_buffer") {
                     locale[`${templateItem}` + " Description"] = "This hydraulic buffer loses all its stats if not places on a shotgun, sniper rifle or assault carbine." + `\n\n${locale[`${templateItem}` + " Description"]}`;

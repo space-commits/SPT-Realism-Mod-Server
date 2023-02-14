@@ -51,20 +51,6 @@ class WeaponsGlobals {
         }
         if (this.modConf.recoil_attachment_overhaul == true && this.modConf.legacy_recoil_changes != true && helper_1.ConfigChecker.dllIsPresent == true) {
             this.globalDB.Aiming.AimProceduralIntensity = 1;
-            for (let i in this.itemDB) {
-                let serverItem = this.itemDB[i];
-                if (serverItem._parent === enums_1.ParentClasses.SMG
-                    || serverItem._parent === enums_1.ParentClasses.SHOTGUN
-                    || serverItem._parent === enums_1.ParentClasses.ASSAULT_CARBINE
-                    || serverItem._parent === enums_1.ParentClasses.SNIPER_RIFLE
-                    || serverItem._parent === enums_1.ParentClasses.ASSAULT_RIFLE
-                    || serverItem._parent === enums_1.ParentClasses.MACHINE_GUN
-                    || serverItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE
-                    || serverItem._parent === enums_1.ParentClasses.GRENADE_LAUNCHER) {
-                    serverItem._props.Ergonomics = 80;
-                    serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.15);
-                }
-            }
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }

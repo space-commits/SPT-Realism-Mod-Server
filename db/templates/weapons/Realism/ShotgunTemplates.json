@@ -232,7 +232,7 @@
         "SemiROF": 450,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1.1
     },
     "5e870397991fd70db46995c8": {
         "ItemID": "5e870397991fd70db46995c8",

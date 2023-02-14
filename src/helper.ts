@@ -1,5 +1,6 @@
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";

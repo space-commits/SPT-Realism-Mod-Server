@@ -10,12 +10,10 @@ import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import { EventTracker, Helper } from "./helper";
 import { Calibers, ParentClasses } from "./enums";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";
-import { RagfairOfferHelper } from "@spt-aki/helpers/RagfairOfferHelper";
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { IRagfairOffer } from "@spt-aki/models/eft/ragfair/IRagfairOffer";
 import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
-import { MemberCategory } from "@spt-aki/models/enums/MemberCategory";
-import { RagfairSort } from "@spt-aki/models/enums/RagfairSort";
+import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
+import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
+import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;
@@ -545,72 +543,13 @@ export class RandomizeTraderAssort {
     }
 }
 
-export class RagOfferHelper extends RagfairOfferHelper {
-
-    private myTraderOutOfStock(offer: IRagfairOffer): boolean 
+export class RagCallback extends RagfairCallbacks 
+{
+    
+    public mySearch(url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult>
     {
-        if (offer?.items?.length === 0 || offer.CurrentItemCount === 0 ||  offer.items[0]?.upd?.StackObjectsCount === 0)
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    public myGetOffersForBuild(info: ISearchRequestData, itemsToAdd: string[], assorts: Record<string, ITraderAssort>, pmcProfile: IPmcData): IRagfairOffer[]
-    {
-        const offersMap = new Map<string, IRagfairOffer[]>();
-        const offers: IRagfairOffer[] = [];
-
-        for (const offer of this.ragfairOfferService.getOffers())
-        {
-            if (this.isDisplayableOffer(info, itemsToAdd, assorts, offer, pmcProfile))
-            {
-                const isTraderOffer = offer.user.memberType === MemberCategory.TRADER;
-
-                if (isTraderOffer && this.traderBuyRestrictionReached(offer))
-                {
-                    continue;
-                }
-
-                if (isTraderOffer && this.myTraderOutOfStock(offer))
-                {
-                    continue;
-                }
-
-                const key = offer.items[0]._tpl;
-                if (!offersMap.has(key))
-                {
-                    offersMap.set(key, []);
-                }
-
-                offersMap.get(key).push(offer);
-            }
-        }
-
-        // get best offer for each item to show on screen
-        for (let possibleOffers of offersMap.values())
-        {
-            // Remove offers with locked = true (quest locked) when > 1 possible offers
-            // single trader item = shows greyed out
-            // multiple offers for item = is greyed out
-            if (possibleOffers.length > 1)
-            {
-                const lockedOffers = this.getLoyaltyLockedOffers(possibleOffers, pmcProfile);
-                
-                // Exclude locked offers + above loyalty locked offers if at least 1 was found
-                const availableOffers = possibleOffers.filter(x => !(x.locked || lockedOffers.includes(x._id)));
-                if (availableOffers.length > 0)
-                {
-                    possibleOffers = availableOffers;
-                }                
-            }
-
-            const offer = this.ragfairSortHelper.sortOffers(possibleOffers, RagfairSort.PRICE, 0)[0];
-            offers.push(offer);
-        }
-
-        return offers;
+        this.httpResponse.getBody(this.ragfairController.getOffers(sessionID, info))
+        return this.httpResponse.getBody(this.ragfairController.getOffers(sessionID, info));
     }
 }
 

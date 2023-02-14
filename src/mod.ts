@@ -67,6 +67,10 @@ import { IRandomisedBotLevelResult } from "@spt-aki/models/eft/bot/IRandomisedBo
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
 import { ILocations } from "@spt-aki/models/spt/server/ILocations";
+import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
+import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
+import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
+import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -84,7 +88,7 @@ import { BotLooGen } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
-import { RagOfferHelper, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
+import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
@@ -93,16 +97,7 @@ import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
 import { DescriptionGen } from "./description_gen";
 import { JsonHandler } from "./json-handler";
-import { EventOutputHolder } from "@spt-aki/routers/EventOutputHolder";
-import { SaveServer } from "@spt-aki/servers/SaveServer";
-import { DialogueHelper } from "@spt-aki/helpers/DialogueHelper";
-import { PresetHelper } from "@spt-aki/helpers/PresetHelper";
-import { RagfairServerHelper } from "@spt-aki/helpers/RagfairServerHelper";
-import { RagfairSortHelper } from "@spt-aki/helpers/RagfairSortHelper";
-import { RagfairHelper } from "@spt-aki/helpers/RagfairHelper";
-import { LocaleService } from "@spt-aki/services/LocaleService";
-import { RagfairOfferHelper } from "@spt-aki/helpers/RagfairOfferHelper";
-import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
+import { RagfairController } from "@spt-aki/controllers/RagfairController";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -158,26 +153,19 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
         const botWeaponGenerator = container.resolve<BotWeaponGenerator>("BotWeaponGenerator");
         const botLootCacheService = container.resolve<BotLootCacheService>("BotLootCacheService");
-
-        const eventOutputHolder = container.resolve<EventOutputHolder>("EventOutputHolder");
-        const saveServer = container.resolve<SaveServer>("SaveServer");
-        const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
-        const presetHelper = container.resolve<PresetHelper>("PresetHelper");
-        const ragfairServerHelper = container.resolve<RagfairServerHelper>("RagfairServerHelper");
-        const ragfairSortHelper = container.resolve<RagfairSortHelper>("RagfairSortHelper");
-        const ragfairHelper = container.resolve<RagfairHelper>("RagfairHelper");
-        const ragfairOfferService = container.resolve<RagfairOfferService>("RagfairOfferService");
-        const localeService = container.resolve<LocaleService>("LocaleService");
-
+        const httpResponse = container.resolve<HttpResponseUtil>("HttpResponseUtil");
+        const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
+        const ragfairController = container.resolve<RagfairController>("RagfairController");
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
 
-        const ragOfferHelper = new RagOfferHelper(logger, timeUtil, hashUtil, eventOutputHolder, databaseServer, traderHelper, saveServer, dialogueHelper, itemHelper, paymentHelper,presetHelper, profileHelper, ragfairServerHelper, ragfairSortHelper, ragfairHelper, ragfairOfferService, localeService, configServer);
+        const ragFairCallback = new RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
         const _botModGen = new BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const botLootGen = new BotLooGen(logger, hashUtil, randomUtil, itemHelper, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new GenBotLvl(logger, randomUtil, databaseServer);
+
 
         const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
@@ -226,21 +214,24 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 }
             }, { frequency: "Always" });
         }
-        
 
-        if (modConfig.trader_changes ==  true) {
+
+        if (modConfig.trader_changes == true) {
             container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
                 result.resetExpiredTrader = (trader: ITrader): void => {
                     return traderRefersh.myResetExpiredTrader(trader);
                 }
             }, { frequency: "Always" });
 
-            container.afterResolution("RagfairOfferHelper", (_t, result: RagfairOfferHelper) => {
-                result.getOffersForBuild = (info: ISearchRequestData, itemsToAdd: string[], assorts: Record<string, ITraderAssort>, pmcProfile: IPmcData): IRagfairOffer[] => {
-                    return ragOfferHelper.myGetOffersForBuild(info, itemsToAdd, assorts, pmcProfile);
+            container.afterResolution("RagfairCallbacks", (_t, result: RagfairCallbacks) => {
+                result.search = (url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult> => {
+                    return ragFairCallback.mySearch(url, info, sessionID);
                 }
             }, { frequency: "Always" });
         }
+
+
+
 
         staticRouterModService.registerStaticRouter(
             "CheckProfile",
@@ -581,7 +572,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables);
-        
+
         this.dllChecker(logger, modConfig);
 
         if (modConfig.trader_changes == true) {
@@ -664,8 +655,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             attachStats.loadAttStats();
         }
 
-        if(modConfig.headset_changes)
-        {
+        if (modConfig.headset_changes) {
             gear.loadHeadsetTweaks();
         }
 
@@ -831,16 +821,16 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
                 for (let k in mapDB[i].base.BossLocationSpawn) {
                     let chance = mapDB[i].base.BossLocationSpawn[k].BossChance;
-                    if(mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== ""){
+                    if (mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
                         chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
                         mapDB[i].base.BossLocationSpawn[k].BossChance = chance
                     }
-                    else{
+                    else {
                         chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
                         mapDB[i].base.BossLocationSpawn[k].BossChance = chance
                     }
                 }
-            } 
+            }
         }
     }
 

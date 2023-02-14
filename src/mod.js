@@ -97,18 +97,12 @@ class Main {
         const handbookHelper = container.resolve("HandbookHelper");
         const botWeaponGenerator = container.resolve("BotWeaponGenerator");
         const botLootCacheService = container.resolve("BotLootCacheService");
-        const eventOutputHolder = container.resolve("EventOutputHolder");
-        const saveServer = container.resolve("SaveServer");
-        const dialogueHelper = container.resolve("DialogueHelper");
-        const presetHelper = container.resolve("PresetHelper");
-        const ragfairServerHelper = container.resolve("RagfairServerHelper");
-        const ragfairSortHelper = container.resolve("RagfairSortHelper");
-        const ragfairHelper = container.resolve("RagfairHelper");
-        const ragfairOfferService = container.resolve("RagfairOfferService");
-        const localeService = container.resolve("LocaleService");
+        const httpResponse = container.resolve("HttpResponseUtil");
+        const ragfairServer = container.resolve("RagfairServer");
+        const ragfairController = container.resolve("RagfairController");
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
-        const ragOfferHelper = new traders_1.RagOfferHelper(logger, timeUtil, hashUtil, eventOutputHolder, databaseServer, traderHelper, saveServer, dialogueHelper, itemHelper, paymentHelper, presetHelper, profileHelper, ragfairServerHelper, ragfairSortHelper, ragfairHelper, ragfairOfferService, localeService, configServer);
+        const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new bot_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
         const _botModGen = new bot_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
@@ -157,9 +151,9 @@ class Main {
                     return traderRefersh.myResetExpiredTrader(trader);
                 };
             }, { frequency: "Always" });
-            container.afterResolution("RagfairOfferHelper", (_t, result) => {
-                result.getOffersForBuild = (info, itemsToAdd, assorts, pmcProfile) => {
-                    return ragOfferHelper.myGetOffersForBuild(info, itemsToAdd, assorts, pmcProfile);
+            container.afterResolution("RagfairCallbacks", (_t, result) => {
+                result.search = (url, info, sessionID) => {
+                    return ragFairCallback.mySearch(url, info, sessionID);
                 };
             }, { frequency: "Always" });
         }
