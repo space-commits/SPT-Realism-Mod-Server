@@ -8,10 +8,11 @@ export class DescriptionGen {
     private itemDB = this.tables.templates.items;
 
     public descriptionGen() {
-        let locale = this.tables.locales.global["en"];
-        for (let templateItem in this.itemDB) {
+        for (const index in this.tables.locales.global) {
+        let locale = this.tables.locales.global[index];
+            for (let templateItem in this.itemDB) {
             let item = this.itemDB[templateItem];
-
+    
             if(item._parent === ParentClasses.AMMO && item._props.ammoHear === 1)
             {
                 locale[`${templateItem}` + " Description"] = "This ammunition is subsonic and is in a calibre that requires special attachments or modifications in order to be cycled reliably." + `\n\n${locale[`${templateItem}` + " Description"]}`;
@@ -83,7 +84,7 @@ export class DescriptionGen {
                     }
                 }
             }
-
+    
             if (item._parent === ParentClasses.AMMO) {
                 if (item._props.Caliber === "Caliber20g") {
                     locale[`${templateItem}` + " Description"] = "Ammo stats are out of a Toz-106." + `\n\n${locale[`${templateItem}` + " Description"]}`;
@@ -148,6 +149,7 @@ export class DescriptionGen {
                 if (item._props.Caliber === "Caliber86x70") {
                     locale[`${templateItem}` + " Description"] = "Ammo stats are out of a 610mm barrel." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
+            }
             }
         }
     }

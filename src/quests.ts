@@ -8,7 +8,6 @@ export class Quests {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
     private questDB = this.tables.templates.quests;
-    private locales = this.tables.locales.global["en"];
 
 
 
@@ -47,11 +46,11 @@ export class Quests {
                 conditions._props.durability.value = 200;
 
                 let id = this.questDB[quest]._id;
+                for (const locale in this.tables.locales.global){
+                let desc = this.tables.locales.global[locale][id +" description"];
 
-                let desc = this.locales[id +" description"];
-
-                this.locales[id +" description"] =  `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
-
+                this.tables.locales.global[locale][id +" description"] =  `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
+                }
             }
         }
 

@@ -9,7 +9,6 @@ export class ItemCloning {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private jsonUtil: JsonUtil, private medItems, private crafts) { }
 
     private itemDB = this.tables.templates.items;
-    private locales = this.tables.locales.global["en"];
 
 
     public createCustomMedItems() {
@@ -132,10 +131,11 @@ export class ItemCloning {
         const nameId = `${id}` + " Name";
         const shortnameId = `${id}` + " ShortName";
         const descriptionId = `${id}` + " Description";
-
-        this.locales[nameId] = name;
-        this.locales[shortnameId] = shortname;
-        this.locales[descriptionId] = description;
+        for (const locale in this.tables.locales.global){
+                this.tables.locales.global[locale][nameId] = name;
+                this.tables.locales.global[locale][shortnameId] = shortname;
+                this.tables.locales.global[locale][descriptionId] = description;
+            }
     }
 
     private cloneItem(itemtoClone: string, newitemID: string) {
