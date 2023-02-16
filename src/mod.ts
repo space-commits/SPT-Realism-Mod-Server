@@ -216,7 +216,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
 
-        if (modConfig.trader_changes == true) {
+        if (modConfig.trader_changes == true && modConfig.random_trader_assorts == true) {
             container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
                 result.resetExpiredTrader = (trader: ITrader): void => {
                     return traderRefersh.myResetExpiredTrader(trader);
@@ -294,7 +294,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             }
                             this.checkForEvents(logger, seasonalEventsService);
 
-                            if (modConfig.trader_changes == true) {
+                            if (modConfig.trader_changes == true && modConfig.random_trader_assorts == true) {
                                 randomizeTraderAssort.loadRandomizedTraderStock();
                             }
                             if (modConfig.tiered_flea == true) {
