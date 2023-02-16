@@ -33,7 +33,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1;
+                    serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -102,7 +102,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.22;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 5.2;
@@ -192,7 +192,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 28;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 6;
@@ -214,7 +214,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 25;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.8;
@@ -236,7 +236,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 30;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.8;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 5;
@@ -280,7 +280,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 28;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 5;
@@ -302,7 +302,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 25;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 4.5;
@@ -324,7 +324,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 19;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.6;
@@ -346,7 +346,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 31;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.88;
+                    serverItem._props.MalfMisfireChance = 0.32;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 5.4;
@@ -368,7 +368,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 40;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 4;
+                    serverItem._props.MalfMisfireChance = 1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 11;
@@ -483,7 +483,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.3;
@@ -527,7 +527,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.1;
@@ -549,7 +549,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 25;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.2;
@@ -568,7 +568,7 @@ class Ammo {
                 serverItem._props.BulletMassGram = 3.38;
                 serverItem._props.HeavyBleedingDelta = 0.6;
                 serverItem._props.LightBleedingDelta = 0.9;
-                serverItem._props.ammoAccr = -50;
+                serverItem._props.ammoAccr = -25;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -15;
                 serverItem._props.BallisticCoeficient = 0.018;
@@ -591,7 +591,7 @@ class Ammo {
                 serverItem._props.BulletMassGram = 3.38;
                 serverItem._props.HeavyBleedingDelta = 0.5;
                 serverItem._props.LightBleedingDelta = 0.9;
-                serverItem._props.ammoAccr = -25;
+                serverItem._props.ammoAccr = -10;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 serverItem._props.BallisticCoeficient = 0.020;
@@ -641,7 +641,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -18;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3;
@@ -663,7 +663,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 21;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 5.1;
@@ -685,7 +685,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 6;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.3;
@@ -729,7 +729,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
@@ -751,7 +751,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -795,7 +795,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.1;
@@ -861,7 +861,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.4;
@@ -905,7 +905,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 25;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 25.3;
@@ -928,7 +928,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 22;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.38;
+                    serverItem._props.MalfMisfireChance = 0.19;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 18.9;
@@ -951,7 +951,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 5.5;
+                    serverItem._props.MalfMisfireChance = 1.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -973,7 +973,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 12;
@@ -1017,7 +1017,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.22;
+                    serverItem._props.MalfMisfireChance = 0.11;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3;
@@ -1039,7 +1039,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.5;
@@ -1062,7 +1062,7 @@ class Ammo {
                 serverItem._props.ammoRec = 15;
                 serverItem._props.Weight = 0.0083;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 13;
@@ -1085,7 +1085,7 @@ class Ammo {
                 serverItem._props.ammoRec = 22;
                 serverItem._props.Weight = 0.0093;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 15;
@@ -1107,7 +1107,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.45;
+                    serverItem._props.MalfMisfireChance = 0.22;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 14;
@@ -1130,7 +1130,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -1174,7 +1174,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.7;
+                    serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 6;
@@ -1196,7 +1196,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.8;
+                    serverItem._props.MalfMisfireChance = 0.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 6;
@@ -1219,7 +1219,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 5;
+                    serverItem._props.MalfMisfireChance = 1.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -1241,7 +1241,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1.2;
+                    serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 12;
@@ -1285,7 +1285,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -1307,7 +1307,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1.14;
+                    serverItem._props.MalfMisfireChance = 0.6;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 16;
@@ -1348,7 +1348,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.5;
@@ -1368,7 +1368,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.15;
+                    serverItem._props.MalfMisfireChance = 0.075;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3;
@@ -1388,7 +1388,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.1;
+                    serverItem._props.MalfMisfireChance = 0.05;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -1411,7 +1411,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -1433,7 +1433,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -1500,7 +1500,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.1;
@@ -1544,7 +1544,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -1566,7 +1566,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -1610,7 +1610,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -1655,7 +1655,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.3;
@@ -1699,7 +1699,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1.3;
+                    serverItem._props.MalfMisfireChance = 0.7;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.3;
@@ -1721,7 +1721,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 11;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.5;
@@ -1810,7 +1810,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
@@ -1832,7 +1832,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.1;
@@ -1876,7 +1876,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 8;
@@ -1917,14 +1917,14 @@ class Ammo {
                 serverItem._props.BulletMassGram = 17.3;
                 serverItem._props.HeavyBleedingDelta = 0.25;
                 serverItem._props.LightBleedingDelta = 0.55;
-                serverItem._props.ammoAccr = -25;
+                serverItem._props.ammoAccr = -30;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 2.2;
+                    serverItem._props.MalfMisfireChance = 1.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 7.4;
+                    serverItem._props.DurabilityBurnModificator = 8.4;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -1943,7 +1943,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 6.5;
@@ -1965,7 +1965,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 6.7;
@@ -1987,7 +1987,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.17;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 6;
@@ -2032,7 +2032,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.7;
@@ -2054,7 +2054,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -2076,7 +2076,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -2098,7 +2098,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3;
@@ -2121,7 +2121,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.6;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
@@ -2165,7 +2165,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -2187,7 +2187,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.8;
+                    serverItem._props.MalfMisfireChance = 0.6;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 7.4;
@@ -2210,7 +2210,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.1;
@@ -2254,7 +2254,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1;
+                    serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.9;
@@ -2299,7 +2299,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.4;
@@ -2321,7 +2321,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.5;
@@ -2343,7 +2343,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 4;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.14;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.2;
@@ -2365,7 +2365,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.18;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.6;
@@ -2387,7 +2387,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 12.5;
@@ -2410,7 +2410,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.7;
+                    serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
@@ -2432,7 +2432,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 2.3;
+                    serverItem._props.MalfMisfireChance = 1.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.3;
@@ -2454,7 +2454,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 14;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 2.4;
+                    serverItem._props.MalfMisfireChance = 1.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -2521,7 +2521,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
@@ -2543,7 +2543,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -2566,7 +2566,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 2.7;
+                    serverItem._props.MalfMisfireChance = 1.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.7;
@@ -2588,7 +2588,7 @@ class Ammo {
                 serverItem._props.ammoHear = 1;
                 serverItem._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -2632,7 +2632,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 14;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.4;
@@ -2654,7 +2654,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 17;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.8;
@@ -2676,7 +2676,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1.1;
+                    serverItem._props.MalfMisfireChance = 0.7;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 9.4;
@@ -2699,7 +2699,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 2.2;
+                    serverItem._props.MalfMisfireChance = 1.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.2;
@@ -2721,7 +2721,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 2.4;
+                    serverItem._props.MalfMisfireChance = 1.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.25;
@@ -2766,7 +2766,7 @@ class Ammo {
                 serverItem._props.ammoHear = 1;
                 serverItem._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1.5;
+                    serverItem._props.MalfMisfireChance = 0.75;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -2788,7 +2788,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1;
+                    serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.2;
@@ -2876,7 +2876,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.2;
@@ -2898,7 +2898,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.1;
@@ -2920,7 +2920,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
@@ -2942,7 +2942,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 17;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.8;
@@ -2964,7 +2964,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 13;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.6;
@@ -2987,7 +2987,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.7;
+                    serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -3009,7 +3009,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 2.4;
+                    serverItem._props.MalfMisfireChance = 1.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -3053,7 +3053,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.5;
@@ -3097,7 +3097,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1;
+                    serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.2;
@@ -3119,7 +3119,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -3163,7 +3163,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 18;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.2;
+                    serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 9.3;
@@ -3185,7 +3185,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.3;
+                    serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 3.6;
@@ -3207,7 +3207,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 24;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1.3;
+                    serverItem._props.MalfMisfireChance = 0.7;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 8;

@@ -105,7 +105,6 @@ const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
-const botHealth = require("../db/bots/botHealth.json");
 const modConfig = require("../config/config.json");
 const airdropLoot = require("../db/airdrops/airdrop_loot.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
@@ -248,7 +247,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const arrays = new Arrays(postLoadTables);
                         const helper = new Helper(postLoadTables, arrays);
                         const tieredFlea = new TieredFlea(postLoadTables);
-                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
+                        const player = new Player(logger, postLoadTables, modConfig, custProfile, medItems, helper);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -295,7 +294,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             this.checkForEvents(logger, seasonalEventsService);
 
                             if (modConfig.trader_changes == true) {
-                                randomizeTraderAssort.loadRandomizedTraderStock();
+                                randomizeTraderAssort.loadRandomizedTraderStockAtServerStart();
                             }
                             if (modConfig.tiered_flea == true) {
                                 this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
@@ -331,7 +330,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadtables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadtables);
                         const helper = new Helper(postLoadtables, arrays);
-                        const player = new Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems, helper);
+                        const player = new Player(logger, postLoadtables, modConfig, custProfile, medItems, helper);
 
 
 
@@ -505,8 +504,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables);
                         const helper = new Helper(postLoadTables, arrays);
-                        const player = new Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
+                        const player = new Player(logger, postLoadTables, modConfig, custProfile, medItems, helper);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
+                        const scavData = profileHelper.getScavProfile(sessionID);
+
                         let level = 1;
 
                         if (pmcData?.Info?.Level !== undefined) {
@@ -520,6 +521,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             }
 
                             player.correctNegativeHP(pmcData);
+                            
+                            if(modConfig.realistic_player_health == true){
+                                player.setNewScavHealth(scavData);
+                            }
+                   
 
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Updated at Raid End");
@@ -559,7 +565,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
         const items = new _Items(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
+        const player = new Player(logger, tables, modConfig, custProfile, medItems, helper);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const flea = new FleamarketGlobal(logger, tables, modConfig);
         const codegen = new CodeGen(logger, tables, modConfig, helper, arrays);
@@ -631,6 +637,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             meds.loadMeds();
             bots.botMeds();
         }
+
+
 
         if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
@@ -823,11 +831,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     let chance = mapDB[i].base.BossLocationSpawn[k].BossChance;
                     if (mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
                         chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
-                        mapDB[i].base.BossLocationSpawn[k].BossChance = chance
+                        mapDB[i].base.BossLocationSpawn[k].BossChance = Math.min(chance, 100);
                     }
                     else {
                         chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                        mapDB[i].base.BossLocationSpawn[k].BossChance = chance
+                        mapDB[i].base.BossLocationSpawn[k].BossChance = Math.min(chance, 100);
                     }
                 }
             }

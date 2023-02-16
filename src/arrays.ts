@@ -194,21 +194,12 @@ export class Arrays {
         this.botDB["sectantpriest"],
     ];
 
-    public scavBotArr = [
-        this.botDB["cursedassault"],
-        this.botDB["assault"],
-        this.botDB["marksman"]
-    ];
-
-    public scavBotHealthArr = [
-        this.botDB["cursedassault"],
-        this.botDB["assault"],
-    ];
-
     public standardBotHPArr = [
         this.botDB["marksman"],
         this.botDB["usec"],
-        this.botDB["bear"]
+        this.botDB["bear"],
+        this.botDB["cursedassault"],
+        this.botDB["assault"]
     ];
 
     public midBotHPArr = [

@@ -15,7 +15,7 @@
         "CameraSnap": 3.5,
         "Convergence": 6.5,
         "RecoilAngle": 65,
-        "BaseMalfunctionChance": 0.4,
+        "BaseMalfunctionChance": 0.3,
         "HeatFactorGun": 0.32,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,
@@ -36,7 +36,7 @@
         "SemiROF": 370,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1.2
     },
     "mechSKSv1": {
         "ItemID": "mechSKSv1",
@@ -54,7 +54,7 @@
         "CameraSnap": 3.5,
         "Convergence": 6.5,
         "RecoilAngle": 65,
-        "BaseMalfunctionChance": 0.4,
+        "BaseMalfunctionChance": 0.3,
         "HeatFactorGun": 0.32,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,
@@ -75,7 +75,7 @@
         "SemiROF": 370,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1.2
     },
     "587e02ff24597743df3deaeb": {
         "ItemID": "587e02ff24597743df3deaeb",
@@ -114,7 +114,7 @@
         "SemiROF": 310,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1.15
     },
     "574d967124597745970e7c94": {
         "ItemID": "574d967124597745970e7c94",
@@ -153,7 +153,7 @@
         "SemiROF": 315,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1.15
     },
     "5c501a4d2e221602b412b540": {
         "ItemID": "5c501a4d2e221602b412b540",
@@ -164,10 +164,10 @@
         "BaseTorque": -7,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 230,
-        "HorizontalRecoil": 330,
-        "Dispersion": 16,
-        "CameraRecoil": 0.13,
+        "VerticalRecoil": 240,
+        "HorizontalRecoil": 350,
+        "Dispersion": 24,
+        "CameraRecoil": 0.135,
         "CameraSnap": 3.5,
         "Convergence": 4,
         "RecoilAngle": 65,
@@ -189,10 +189,10 @@
         "Weight": 2.092,
         "DurabilityBurnRatio": 0.4,
         "AutoROF": 600,
-        "SemiROF": 340,
+        "SemiROF": 335,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 1.2,
+        "BaseChamberSpeedMulti": 1.4
     },
     "5c07c60e0db834002330051f": {
         "ItemID": "5c07c60e0db834002330051f",
@@ -230,8 +230,8 @@
         "AutoROF": 800,
         "SemiROF": 370,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 1.02,
+        "BaseChamberSpeedMulti": 1.35
     },
     "5d43021ca4b9362eab4b5e25": {
         "ItemID": "5d43021ca4b9362eab4b5e25",
@@ -269,8 +269,8 @@
         "AutoROF": 800,
         "SemiROF": 500,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 1.12,
+        "BaseChamberSpeedMulti": 1.35
     },
     "59e6152586f77473dc057aa1": {
         "ItemID": "59e6152586f77473dc057aa1",
@@ -308,8 +308,8 @@
         "AutoROF": 600,
         "SemiROF": 380,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1.2,
-        "BaseChamberSpeedMulti": 1.1
+        "BaseReloadSpeedMulti": 1.15,
+        "BaseChamberSpeedMulti": 1.4
     },
     "59e6687d86f77411d949b251": {
         "ItemID": "59e6687d86f77411d949b251",
@@ -347,7 +347,7 @@
         "AutoROF": 600,
         "SemiROF": 390,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1.2,
-        "BaseChamberSpeedMulti": 1.1
+        "BaseReloadSpeedMulti": 1.15,
+        "BaseChamberSpeedMulti": 1.4
     }
 }

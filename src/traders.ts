@@ -112,19 +112,19 @@ export class Traders {
         this.tables.traders[jaegId].assort = customJaeg;
     }
 
-    public loadTraderRepairs(){
+    public loadTraderRepairs() {
         this.tables.traders[prapId].base.repair = traderRepairs.Prapor;
         this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
         this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
 
-        for(let ll in this.tables.traders[prapId].base.loyaltyLevels){
+        for (let ll in this.tables.traders[prapId].base.loyaltyLevels) {
             this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 1.5
         }
-        for(let ll in this.tables.traders[skierId].base.loyaltyLevels){
+        for (let ll in this.tables.traders[skierId].base.loyaltyLevels) {
             this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.5
         }
-        for(let ll in this.tables.traders[mechId].base.loyaltyLevels){
-            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 1.5
+        for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
+            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 2
         }
     }
 
@@ -153,7 +153,7 @@ export class Traders {
             let loyaltyLvl = file[item].LoyaltyLevel;
             let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined) {         
+                if (this.tables.traders[trader].assort?.items !== undefined) {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
@@ -178,10 +178,10 @@ export class Traders {
         }
 
         //ragman//
-        this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
-        this.assortNestedItemPusher(ragmId, "5e00c1ad86f774747333222c", { "5e01f31d86f77465cf261343": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 5, true, undefined, 1.25, {"5c0558060db834001b735271": "mod_nvg"});
-        this.assortNestedItemPusher(ragmId, "5ea05cf85ad9772e6624305d", { "5a16badafcdbcb001865f72d": "mod_equipment_000"}, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25, {"5ea058e01dbce517f324b3e2": "mod_nvg"});
-        this.assortNestedItemPusher(ragmId, "5aa7cfc0e5b5b00015693143", { "5a16b8a9fcdbcb00165aa6ca": "mod_nvg", "5a16b93dfcdbcbcae6687261" : "mod_nvg", "57235b6f24597759bf5a30f1": "mod_nvg"}, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.3);
+        this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
+        this.assortNestedItemPusher(ragmId, "5e00c1ad86f774747333222c", { "5e01f31d86f77465cf261343": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 5, true, undefined, 1.25, { "5c0558060db834001b735271": "mod_nvg" });
+        this.assortNestedItemPusher(ragmId, "5ea05cf85ad9772e6624305d", { "5a16badafcdbcb001865f72d": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25, { "5ea058e01dbce517f324b3e2": "mod_nvg" });
+        this.assortNestedItemPusher(ragmId, "5aa7cfc0e5b5b00015693143", { "5a16b8a9fcdbcb00165aa6ca": "mod_nvg", "5a16b93dfcdbcbcae6687261": "mod_nvg", "57235b6f24597759bf5a30f1": "mod_nvg" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.3);
 
         //mechanic//
         //guns
@@ -268,7 +268,7 @@ export class Traders {
 
     }
 
-    private handBookPriceLookup(itemId: string) : number {
+    private handBookPriceLookup(itemId: string): number {
         let item = this.tables.templates.handbook.Items.find(i => i.Id === itemId);
         return item.Price;
     }
@@ -316,11 +316,9 @@ export class RandomizeTraderAssort {
     private arrays = new Arrays(this.tables);
     private helper = new Helper(this.tables, this.arrays);
 
-    public loadRandomizedTraderStock() {
-        let randNum = this.helper.pickRandNumOneInTen();
-
-        if(EventTracker.isChristmas == true){
-           this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
+    public loadRandomizedTraderStockAtServerStart() {
+        if (EventTracker.isChristmas == true) {
+            this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
         }
 
         for (let trader in this.tables.traders) {
@@ -337,10 +335,11 @@ export class RandomizeTraderAssort {
                     }
                     if (this.tables.traders[trader]?.assort?.barter_scheme) {
                         let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
-                        if(barter !== undefined){
-                            this.setAndRandomizeCost(randNum, itemTemplId, barter);
+                        if (barter !== undefined) {
+                            let randNum = this.helper.pickRandNumOneInTen();
+                            this.setAndRandomizeCost(randNum, itemTemplId, barter, true);
                         }
-                
+
                     }
                 }
             }
@@ -481,56 +480,59 @@ export class RandomizeTraderAssort {
         }
     }
 
-    private setAndRandomizeCost(randNum: number, itemTemplId: string, barter: IBarterScheme[][]) {
+    public setAndRandomizeCost(randNum: number, itemTemplId: string, barter: IBarterScheme[][], setBasePrice: boolean ) {
 
         if (this.itemDB[barter[0][0]._tpl]._parent === ParentClasses.MONEY) {
-            this.adjustPriceByCategory(barter[0][0], itemTemplId);
+            let cost = barter[0][0].count;
+            if(setBasePrice == true){
+                this.adjustPriceByCategory(barter[0][0], itemTemplId, cost);
+            }
             if (randNum >= 8) {
-                barter[0][0].count *= 1.1;
+                barter[0][0].count = cost * 1.15;
             }
             if (randNum <= 3) {
-                barter[0][0].count *= 0.9;
+                barter[0][0].count = cost * 0.85;
             }
             if (EventTracker.isChristmas == true) {
-                barter[0][0].count *= 0.6;
+                barter[0][0].count = cost * 0.6;
             }
         }
     }
 
-    private adjustPriceByCategory(barter: IBarterScheme, itemTemplId: string){
+    private adjustPriceByCategory(barter: IBarterScheme, itemTemplId: string, cost: number) {
 
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.AMMO){
-            barter.count *= 2;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.AMMO) {
+            barter.count = cost * 2;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.AMMO_BOX){
-            barter.count *= 2;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.AMMO_BOX) {
+            barter.count = cost * 2;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.DRUGS){
-            barter.count *= 1.5;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.DRUGS) {
+            barter.count = cost * 1.5;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.MEDKIT){
-            barter.count *= 1.5;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDKIT) {
+            barter.count = cost * 1.5;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.MEDS){
-            barter.count *= 1.5;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDS) {
+            barter.count = cost * 1.5;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.STIMULATOR){
-            barter.count *= 1.5;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.STIMULATOR) {
+            barter.count = cost * 1.5;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.MEDICAL_SUPPLIES){
-            barter.count *= 1.5;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDICAL_SUPPLIES) {
+            barter.count = cost * 1.5;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.FOOD){
-            barter.count *= 1.5;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.FOOD) {
+            barter.count = cost * 1.5;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.DRINK){
-            barter.count *= 1.5;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.DRINK) {
+            barter.count = cost * 1.5;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.HEADWEAR){
-            barter.count *= 0.6;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.HEADWEAR) {
+            barter.count = cost * 0.6;
         }
-        if(this.itemDB[itemTemplId]._parent === ParentClasses.ARMOREDEQUIPMENT){
-            barter.count *= 0.6;
+        if (this.itemDB[itemTemplId]._parent === ParentClasses.ARMOREDEQUIPMENT) {
+            barter.count = cost * 0.6;
         }
     }
 
@@ -543,17 +545,17 @@ export class RandomizeTraderAssort {
     }
 }
 
-export class RagCallback extends RagfairCallbacks 
-{
-    
-    public mySearch(url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult>
-    {
+export class RagCallback extends RagfairCallbacks {
+
+    public mySearch(url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult> {
         this.httpResponse.getBody(this.ragfairController.getOffers(sessionID, info))
         return this.httpResponse.getBody(this.ragfairController.getOffers(sessionID, info));
     }
 }
 
 export class TraderRefresh extends TraderAssortHelper {
+
+
 
 
     public myResetExpiredTrader(trader: ITrader) {
@@ -570,17 +572,23 @@ export class TraderRefresh extends TraderAssortHelper {
         for (let traderID in traders) {
             this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
         }
-        
+
     }
 
     private getDirtyTraderAssorts(trader: ITrader): Item[] {
 
+        const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
+        const arrays = new Arrays(tables);
+        const helper = new Helper(tables, arrays);
 
         var assortItems = trader.assort.items;
+        var assortBarters = trader.assort.barter_scheme;
 
         for (let i in assortItems) {
             let item = assortItems[i];
+            let itemId = assortItems[i]._id;
+            let itemTemplId = assortItems[i]._tpl;
             if (item.upd?.StackObjectsCount !== undefined) {
                 randomTraderAss.stockHelper(item);
             }
@@ -589,6 +597,12 @@ export class TraderRefresh extends TraderAssortHelper {
             }
             if (item.upd?.BuyRestrictionCurrent !== undefined) {
                 item.upd.BuyRestrictionCurrent = 0;
+            }
+            let barter = assortBarters[itemId];
+            if (barter !== undefined) {
+
+                let randNum = helper.pickRandNumOneInTen();
+                randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
             }
         }
         return assortItems;

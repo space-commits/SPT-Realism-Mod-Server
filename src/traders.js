@@ -102,7 +102,7 @@ class Traders {
             this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.5;
         }
         for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
-            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 1.5;
+            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 2;
         }
     }
     setLoyaltyLevels() {
@@ -259,8 +259,7 @@ class RandomizeTraderAssort {
         this.arrays = new arrays_1.Arrays(this.tables);
         this.helper = new helper_1.Helper(this.tables, this.arrays);
     }
-    loadRandomizedTraderStock() {
-        let randNum = this.helper.pickRandNumOneInTen();
+    loadRandomizedTraderStockAtServerStart() {
         if (helper_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
         }
@@ -279,7 +278,8 @@ class RandomizeTraderAssort {
                     if (this.tables.traders[trader]?.assort?.barter_scheme) {
                         let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
                         if (barter !== undefined) {
-                            this.setAndRandomizeCost(randNum, itemTemplId, barter);
+                            let randNum = this.helper.pickRandNumOneInTen();
+                            this.setAndRandomizeCost(randNum, itemTemplId, barter, true);
                         }
                     }
                 }
@@ -399,53 +399,56 @@ class RandomizeTraderAssort {
             item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
         }
     }
-    setAndRandomizeCost(randNum, itemTemplId, barter) {
+    setAndRandomizeCost(randNum, itemTemplId, barter, setBasePrice) {
         if (this.itemDB[barter[0][0]._tpl]._parent === enums_1.ParentClasses.MONEY) {
-            this.adjustPriceByCategory(barter[0][0], itemTemplId);
+            let cost = barter[0][0].count;
+            if (setBasePrice == true) {
+                this.adjustPriceByCategory(barter[0][0], itemTemplId, cost);
+            }
             if (randNum >= 8) {
-                barter[0][0].count *= 1.1;
+                barter[0][0].count = cost * 1.15;
             }
             if (randNum <= 3) {
-                barter[0][0].count *= 0.9;
+                barter[0][0].count = cost * 0.85;
             }
             if (helper_1.EventTracker.isChristmas == true) {
-                barter[0][0].count *= 0.6;
+                barter[0][0].count = cost * 0.6;
             }
         }
     }
-    adjustPriceByCategory(barter, itemTemplId) {
+    adjustPriceByCategory(barter, itemTemplId, cost) {
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.AMMO) {
-            barter.count *= 2;
+            barter.count = cost * 2;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.AMMO_BOX) {
-            barter.count *= 2;
+            barter.count = cost * 2;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.DRUGS) {
-            barter.count *= 1.5;
+            barter.count = cost * 1.5;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDKIT) {
-            barter.count *= 1.5;
+            barter.count = cost * 1.5;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDS) {
-            barter.count *= 1.5;
+            barter.count = cost * 1.5;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.STIMULATOR) {
-            barter.count *= 1.5;
+            barter.count = cost * 1.5;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDICAL_SUPPLIES) {
-            barter.count *= 1.5;
+            barter.count = cost * 1.5;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.FOOD) {
-            barter.count *= 1.5;
+            barter.count = cost * 1.5;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.DRINK) {
-            barter.count *= 1.5;
+            barter.count = cost * 1.5;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.HEADWEAR) {
-            barter.count *= 0.6;
+            barter.count = cost * 0.6;
         }
         if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) {
-            barter.count *= 0.6;
+            barter.count = cost * 0.6;
         }
     }
     randomizeLL(ll, i) {
@@ -476,10 +479,16 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         }
     }
     getDirtyTraderAssorts(trader) {
+        const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
+        const arrays = new arrays_1.Arrays(tables);
+        const helper = new helper_1.Helper(tables, arrays);
         var assortItems = trader.assort.items;
+        var assortBarters = trader.assort.barter_scheme;
         for (let i in assortItems) {
             let item = assortItems[i];
+            let itemId = assortItems[i]._id;
+            let itemTemplId = assortItems[i]._tpl;
             if (item.upd?.StackObjectsCount !== undefined) {
                 randomTraderAss.stockHelper(item);
             }
@@ -488,6 +497,11 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             }
             if (item.upd?.BuyRestrictionCurrent !== undefined) {
                 item.upd.BuyRestrictionCurrent = 0;
+            }
+            let barter = assortBarters[itemId];
+            if (barter !== undefined) {
+                let randNum = helper.pickRandNumOneInTen();
+                randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
             }
         }
         return assortItems;

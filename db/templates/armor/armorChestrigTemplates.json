@@ -97,7 +97,7 @@
         "ArmorClass": "NIJ III+",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.17
+        "ReloadSpeedMulti": 1.17
     },
     "5c0e746986f7741453628fe5": {
         "ItemID": "5c0e746986f7741453628fe5",

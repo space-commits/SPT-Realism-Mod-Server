@@ -380,7 +380,7 @@
         "Dispersion": 0,
         "AutoROF": -5,
         "SemiROF": -1.5,
-        "ModMalfunctionChance": 500,
+        "ModMalfunctionChance": 400,
         "CanCycleSubs": false,
         "Accuracy": 0,
         "HeatFactor": 0.99,

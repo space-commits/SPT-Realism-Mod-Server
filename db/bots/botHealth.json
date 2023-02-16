@@ -2,33 +2,33 @@
   "health": {
     "BodyParts": [
       {
-        "Chest": {
-          "max": 120,
-          "min": 120
-        },
         "Head": {
-          "max": 20,
-          "min": 20
+          "min": 20,
+          "max": 20
         },
-        "LeftArm": {
-          "max": 65,
-          "min": 65
-        },
-        "RightArm": {
-          "max": 65,
-          "min": 65
-        },
-        "RightLeg": {
-          "max": 60,
-          "min": 60
-        },
-        "LeftLeg": {
-          "max": 60,
-          "min": 60
+        "Chest": {
+          "min": 120,
+          "max": 120
         },
         "Stomach": {
-          "max": 120,
-          "min": 120
+          "min": 120,
+          "max": 120
+        },
+        "LeftArm": {
+          "min": 65,
+          "max": 65
+        },
+        "RightArm": {
+          "min": 65,
+          "max": 65
+        },
+        "LeftLeg": {
+          "min": 60,
+          "max": 60
+        },
+        "RightLeg": {
+          "min": 60,
+          "max": 60
         }
       }
     ],

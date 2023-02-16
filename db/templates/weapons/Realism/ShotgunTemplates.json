@@ -35,8 +35,8 @@
         "AutoROF": 40,
         "SemiROF": 320,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 1.05,
+        "BaseChamberSpeedMulti": 1.05
     },
     "weapon_benelli_m1014_12g": {
         "ItemID": "weapon_benelli_m1014_12g",
@@ -113,8 +113,8 @@
         "AutoROF": 30,
         "SemiROF": 450,
         "LoyaltyLevel": 1,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 0.95,
+        "BaseChamberSpeedMulti": 0.95
     },
     "60db29ce99594040e04c4a27": {
         "ItemID": "60db29ce99594040e04c4a27",
@@ -153,7 +153,7 @@
         "SemiROF": 290,
         "DoubleActionAccuracyPenalty": 1.1,
         "LoyaltyLevel": 1,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 0.9,
         "BaseChamberSpeedMulti": 1
     },
     "5580223e4bdc2d1c128b457f": {
@@ -193,7 +193,7 @@
         "SemiROF": 300,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 2
     },
     "54491c4f4bdc2db1078b4568": {
         "ItemID": "54491c4f4bdc2db1078b4568",
@@ -270,7 +270,7 @@
         "AutoROF": 30,
         "SemiROF": 450,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 1.1,
         "BaseChamberSpeedMulti": 1
     },
     "5a7828548dc32e5a9c28b516": {
@@ -309,8 +309,8 @@
         "AutoROF": 30,
         "SemiROF": 450,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 0.95,
+        "BaseChamberSpeedMulti": 0.9
     },
     "5e848cc2988a8701445df1e8": {
         "ItemID": "5e848cc2988a8701445df1e8",
@@ -387,8 +387,8 @@
         "AutoROF": 40,
         "SemiROF": 320,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 0.98,
+        "BaseChamberSpeedMulti": 0.98
     },
     "606dae0ab0e443224b421bb7": {
         "ItemID": "606dae0ab0e443224b421bb7",
@@ -426,8 +426,8 @@
         "AutoROF": 40,
         "SemiROF": 330,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 1.07,
+        "BaseChamberSpeedMulti": 1.12
     },
     "6259b864ebedf17603599e88": {
         "ItemID": "6259b864ebedf17603599e88",
@@ -504,7 +504,7 @@
         "AutoROF": 40,
         "SemiROF": 300,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseReloadSpeedMulti": 1.05,
+        "BaseChamberSpeedMulti": 1.05
     }
 }

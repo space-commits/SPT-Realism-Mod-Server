@@ -175,19 +175,12 @@ class Arrays {
             this.botDB["sectantwarrior"],
             this.botDB["sectantpriest"],
         ];
-        this.scavBotArr = [
-            this.botDB["cursedassault"],
-            this.botDB["assault"],
-            this.botDB["marksman"]
-        ];
-        this.scavBotHealthArr = [
-            this.botDB["cursedassault"],
-            this.botDB["assault"],
-        ];
         this.standardBotHPArr = [
             this.botDB["marksman"],
             this.botDB["usec"],
-            this.botDB["bear"]
+            this.botDB["bear"],
+            this.botDB["cursedassault"],
+            this.botDB["assault"]
         ];
         this.midBotHPArr = [
             this.botDB["followerbully"],

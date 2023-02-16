@@ -2,21 +2,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
 const enums_1 = require("./enums");
+const botHealth = require("../db/bots/botHealth.json");
 class Player {
-    constructor(logger, tables, modConfig, custProfile, commonStats, medItems, helper) {
+    constructor(logger, tables, modConfig, custProfile, medItems, helper) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
         this.custProfile = custProfile;
-        this.commonStats = commonStats;
         this.medItems = medItems;
         this.helper = helper;
         this.globalDB = this.tables.globals.config;
-        this.headHealth = this.commonStats.health.BodyParts[0].Head.max;
-        this.chestHealth = this.commonStats.health.BodyParts[0].Chest.max;
-        this.stomaHealth = this.commonStats.health.BodyParts[0].Stomach.max;
-        this.armHealth = this.commonStats.health.BodyParts[0].RightArm.max;
-        this.legHealth = this.commonStats.health.BodyParts[0].RightLeg.max;
+        this.headHealth = botHealth.health.BodyParts[0].Head.max;
+        this.chestHealth = botHealth.health.BodyParts[0].Chest.max;
+        this.stomaHealth = botHealth.health.BodyParts[0].Stomach.max;
+        this.armHealth = botHealth.health.BodyParts[0].RightArm.max;
+        this.legHealth = botHealth.health.BodyParts[0].RightLeg.max;
         this.hydration = 110;
         this.energy = 130;
         this.tempCurr = 30;
@@ -41,6 +41,9 @@ class Player {
         if (this.modConfig.logEverything == true) {
             this.logger.info("Realism Mod: Checked for Negative HP");
         }
+    }
+    setNewScavHealth(scavData) {
+        this.setPlayerHealthHelper(scavData, true, true);
     }
     setPlayerHealth(pmcData, scavData) {
         if (this.modConfig.realistic_player_health == false && this.modConfig.revert_hp == true) {

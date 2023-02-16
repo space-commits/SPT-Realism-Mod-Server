@@ -57,7 +57,6 @@ const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
-const botHealth = require("../db/bots/botHealth.json");
 const modConfig = require("../config/config.json");
 const airdropLoot = require("../db/airdrops/airdrop_loot.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
@@ -169,7 +168,7 @@ class Main {
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const helper = new helper_1.Helper(postLoadTables, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, helper);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
@@ -206,7 +205,7 @@ class Main {
                         }
                         this.checkForEvents(logger, seasonalEventsService);
                         if (modConfig.trader_changes == true) {
-                            randomizeTraderAssort.loadRandomizedTraderStock();
+                            randomizeTraderAssort.loadRandomizedTraderStockAtServerStart();
                         }
                         if (modConfig.tiered_flea == true) {
                             this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
@@ -235,7 +234,7 @@ class Main {
                     const postLoadtables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadtables);
                     const helper = new helper_1.Helper(postLoadtables, arrays);
-                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, botHealth, medItems, helper);
+                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, medItems, helper);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     try {
@@ -376,8 +375,9 @@ class Main {
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
                     const helper = new helper_1.Helper(postLoadTables, arrays);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, botHealth, medItems, helper);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, helper);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
+                    const scavData = profileHelper.getScavProfile(sessionID);
                     let level = 1;
                     if (pmcData?.Info?.Level !== undefined) {
                         level = pmcData.Info.Level;
@@ -387,6 +387,9 @@ class Main {
                             this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
                         }
                         player.correctNegativeHP(pmcData);
+                        if (modConfig.realistic_player_health == true) {
+                            player.setNewScavHealth(scavData);
+                        }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
                         }
@@ -419,7 +422,7 @@ class Main {
         const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
         const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new player_1.Player(logger, tables, modConfig, custProfile, botHealth, medItems, helper);
+        const player = new player_1.Player(logger, tables, modConfig, custProfile, medItems, helper);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
         const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
@@ -645,11 +648,11 @@ class Main {
                     let chance = mapDB[i].base.BossLocationSpawn[k].BossChance;
                     if (mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
                         chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
-                        mapDB[i].base.BossLocationSpawn[k].BossChance = chance;
+                        mapDB[i].base.BossLocationSpawn[k].BossChance = Math.min(chance, 100);
                     }
                     else {
                         chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                        mapDB[i].base.BossLocationSpawn[k].BossChance = chance;
+                        mapDB[i].base.BossLocationSpawn[k].BossChance = Math.min(chance, 100);
                     }
                 }
             }

@@ -6,18 +6,19 @@ import { ILogger } from "../types/models/spt/utils/ILogger";
 import { ParentClasses } from "./enums";
 import { Helper } from "./helper";
 
+const botHealth = require("../db/bots/botHealth.json");
 
 
 export class Player {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private custProfile, private commonStats, private medItems, private helper: Helper) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private custProfile, private medItems, private helper: Helper) { }
 
     private globalDB = this.tables.globals.config;
 
-    public headHealth = this.commonStats.health.BodyParts[0].Head.max;
-    public chestHealth = this.commonStats.health.BodyParts[0].Chest.max;
-    public stomaHealth = this.commonStats.health.BodyParts[0].Stomach.max;
-    public armHealth = this.commonStats.health.BodyParts[0].RightArm.max;
-    public legHealth = this.commonStats.health.BodyParts[0].RightLeg.max;
+    public headHealth = botHealth.health.BodyParts[0].Head.max;
+    public chestHealth = botHealth.health.BodyParts[0].Chest.max;
+    public stomaHealth = botHealth.health.BodyParts[0].Stomach.max;
+    public armHealth = botHealth.health.BodyParts[0].RightArm.max;
+    public legHealth = botHealth.health.BodyParts[0].RightLeg.max;
     public hydration = 110;
     public energy = 130;
     public tempCurr = 30;
@@ -44,6 +45,10 @@ export class Player {
         if (this.modConfig.logEverything == true) {
             this.logger.info("Realism Mod: Checked for Negative HP");
         }
+    }
+
+    public setNewScavHealth(scavData: IPmcData){
+        this.setPlayerHealthHelper(scavData, true, true);
     }
 
     public setPlayerHealth(pmcData: IPmcData, scavData: IPmcData) {

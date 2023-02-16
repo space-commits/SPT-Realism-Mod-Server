@@ -130,97 +130,87 @@ class Bots {
         this.botConf.maxBotCap = rmBotConfig.maxBotCap;
     }
     setBotHealth() {
-        this.arrays.botArr.forEach(increaseVitality);
-        function increaseVitality(bot) {
-            if (bot.skills?.Common !== undefined) {
-                if (bot.skills.Common["Vitality"] !== undefined) {
-                    bot.skills.Common["Vitality"].max = 5100;
-                    bot.skills.Common["Vitality"].min = 5100;
+        for (let bot in this.arrays.botArr) {
+            let botType = this.arrays.botArr[bot];
+            if (botType.skills?.Common !== undefined) {
+                if (botType.skills.Common["Vitality"] !== undefined) {
+                    botType.skills.Common["Vitality"].max = 5100;
+                    botType.skills.Common["Vitality"].min = 5100;
                 }
                 else {
-                    bot.skills.Common["Vitality"] = {};
-                    bot.skills.Common["Vitality"].max = 5100;
-                    bot.skills.Common["Vitality"].min = 5100;
+                    botType.skills.Common["Vitality"] = {};
+                    botType.skills.Common["Vitality"].max = 5100;
+                    botType.skills.Common["Vitality"].min = 5100;
                 }
             }
             else {
-                bot.skills.Common = [];
-                bot.skills.Common["Vitality"] = {};
-                bot.skills.Common["Vitality"].max = 5100;
-                bot.skills.Common["Vitality"].min = 5100;
+                botType.skills.Common = [];
+                botType.skills.Common["Vitality"] = {};
+                botType.skills.Common["Vitality"].max = 5100;
+                botType.skills.Common["Vitality"].min = 5100;
             }
         }
-        this.arrays.scavBotHealthArr.forEach(setScavHealth);
-        function setScavHealth(bot) {
-            bot.health.BodyParts = botHealth.scavHealth.BodyParts;
-            bot.health.Temperature = botHealth.health.Temperature;
-        }
-        this.arrays.pmcList.forEach(setHealth);
-        function setHealth(bot) {
-            bot.health.BodyParts = botHealth.health.BodyParts;
-            bot.health.Temperature = botHealth.health.Temperature;
-        }
+        this.setBotHPHelper(this.arrays.standardBotHPArr);
         if (this.modConf.realistic_boss_health == true) {
-            this.arrays.bossBotArr.forEach(setHealth);
-            function setHealth(bot) {
-                bot.health.BodyParts = botHealth.health.BodyParts;
-                bot.health.Temperature = botHealth.health.Temperature;
-            }
+            this.setBotHPHelper(this.arrays.bossBotArr);
         }
         if (this.modConf.realistic_boss_follower_health == true) {
-            this.arrays.bossFollowerArr.forEach(setHealth);
-            function setHealth(bot) {
-                bot.health.BodyParts = botHealth.health.BodyParts;
-                bot.health.Temperature = botHealth.health.Temperature;
-            }
+            this.setBotHPHelper(this.arrays.bossFollowerArr);
         }
         if (this.modConf.realistic_raider_rogue_health == true) {
-            this.arrays.rogueRaiderList.forEach(setHealth);
-            function setHealth(bot) {
-                bot.health.BodyParts = botHealth.health.BodyParts;
-                bot.health.Temperature = botHealth.health.Temperature;
-            }
+            this.setBotHPHelper(this.arrays.rogueRaiderList);
         }
         if (this.modConf.realistic_cultist_health == true) {
-            this.arrays.cultistArr.forEach(setHealth);
-            function setHealth(bot) {
-                bot.health.BodyParts = botHealth.health.BodyParts;
-                bot.health.Temperature = botHealth.health.Temperature;
-            }
+            this.setBotHPHelper(this.arrays.cultistArr);
         }
     }
+    setBotHPHelper(botArr) {
+        for (let bot in botArr) {
+            for (let hpSet in botArr[bot].health.BodyParts) {
+                let botPartSet = botArr[bot].health.BodyParts[hpSet];
+                for (let part in botPartSet) {
+                    for (let tempPart in botHealth.health.BodyParts[0]) {
+                        if (part === tempPart) {
+                            botPartSet[part].min = botHealth.health.BodyParts[0][tempPart].min;
+                            botPartSet[part].max = botHealth.health.BodyParts[0][tempPart].max;
+                        }
+                    }
+                }
+            }
+            botArr[bot].health.Temperature = botHealth.health.Temperature;
+        }
+    }
+    //this thing is fucking demonic and cursed
     botHpMulti() {
         this.botHPMultiHelper(this.arrays.standardBotHPArr, this.modConf.standard_bot_hp_multi);
-        this.botHPMultiHelper(this.arrays.scavBotHealthArr, this.modConf.standard_bot_hp_multi);
         this.botHPMultiHelper(this.arrays.midBotHPArr, this.modConf.mid_bot_hp_multi);
         this.botHPMultiHelper(this.arrays.bossBotArr, this.modConf.boss_bot_hp_multi);
         if (this.modConf.logEverything == true) {
-            this.logger.info("Killa chest health = " + this.botDB["bosskilla"].health.BodyParts[0].Chest.min);
-            this.logger.info("PMC chest health = " + this.botDB["usec"].health.BodyParts[0].Chest.min);
+            this.logger.info("Killa chest health = " + this.botDB["bosskilla"].health.BodyParts[0].Chest.max);
+            this.logger.info("Killa vitality = " + this.botDB["bosskilla"].skills.Common["Vitality"].min);
+            this.logger.info("USEC chest health = " + this.botDB["usec"].health.BodyParts[0].Chest.min);
+            this.logger.info("Bear chest health = " + this.botDB["bear"].health.BodyParts[0].Chest.min);
+            this.logger.info("USEC head health = " + this.botDB["usec"].health.BodyParts[0].Head.min);
+            this.logger.info("Bear head health = " + this.botDB["bear"].health.BodyParts[0].Head.min);
+            this.logger.info("Bear leg health = " + this.botDB["bear"].health.BodyParts[0].LeftLeg.min);
+            this.logger.info("Bear arm health = " + this.botDB["bear"].health.BodyParts[0].LeftArm.min);
             this.logger.info("Scav head health  max = " + this.botDB["assault"].health.BodyParts[0].Head.max);
-            this.logger.info("Scav chest health  max = " + this.botDB["assault"].health.BodyParts[0].Chest.min);
+            this.logger.info("Scav chest health  max = " + this.botDB["assault"].health.BodyParts[0].Chest.max);
             this.logger.info("Scav leg health max = " + this.botDB["assault"].health.BodyParts[0].LeftLeg.max);
-            this.logger.info("Scav arm health  max = " + this.botDB["assault"].health.BodyParts[0].LeftArm.min);
+            this.logger.info("Scav arm health  max = " + this.botDB["assault"].health.BodyParts[0].LeftArm.max);
             this.logger.info("Scav stomach health  max = " + this.botDB["assault"].health.BodyParts[0].Stomach.max);
-            this.logger.info("Cultist chest health = " + this.botDB["sectantwarrior"].health.BodyParts[0].Chest.min);
+            this.logger.info("Cultist chest health = " + this.botDB["sectantwarrior"].health.BodyParts[0].Chest.max);
             this.logger.info("Bot Health Set");
         }
     }
-    botHPMultiHelper(botarr, multi, isScav) {
-        botarr.forEach(setHealthMulti);
-        function setHealthMulti(bot) {
-            for (let part in bot.health.BodyParts[0]) {
-                if (part != "Head") {
-                    bot.health.BodyParts[0][part].min *= multi;
-                    bot.health.BodyParts[0][part].max *= multi;
-                }
-            }
-            if (isScav == true) {
-                for (let part in bot.health.BodyParts[1]) {
-                    if (part != "Head") {
-                        bot.health.BodyParts[0][part].min *= multi;
-                        bot.health.BodyParts[0][part].max *= multi;
-                    }
+    //the devil himself
+    botHPMultiHelper(botArr, multi) {
+        for (let bot in botArr) {
+            for (let hpSet in botArr[bot].health.BodyParts) {
+                let botPartSet = botArr[bot].health.BodyParts[hpSet];
+                for (let part in botPartSet) {
+                    botPartSet[part].min = Math.round(botPartSet[part].min * multi);
+                    botPartSet[part].max = Math.round(botPartSet[part].max * multi);
                 }
             }
         }
