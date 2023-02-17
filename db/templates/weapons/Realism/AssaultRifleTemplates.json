@@ -717,7 +717,7 @@
         "CameraSnap": 3.5,
         "Convergence": 6.5,
         "RecoilAngle": 80,
-        "BaseMalfunctionChance": 0.08,
+        "BaseMalfunctionChance": 1.02,
         "HeatFactorGun": 0.25,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,

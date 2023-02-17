@@ -160,7 +160,6 @@ class TieredFlea {
         this.canSellDMR(true);
         this.canSellBarters(true);
         this.canSellGear(true);
-        this.canSellRepairKit(true);
         this.canSellLights(true);
         this.canSellGrips(true);
         this.canSellStocks(true);
@@ -168,6 +167,45 @@ class TieredFlea {
         this.canSellHandguards(true);
         this.canSellMagazines(true);
         this.canSellNVGScopes(true);
+        this.canSellAssaultScopes(true);
+        this.canSellIrons(true);
+        this.canSellReddots(true);
+        this.canSellMounts(true);
+        this.canSellParts(true);
+        this.canSellSpecWeap(true);
+        this.canSellFlare(true);
+    }
+    flea7() {
+        this.canSellAll(false);
+        this.canSellMaps(true);
+        this.canSellPistol(true);
+        this.canSellShotgun(true);
+        this.canSellSpecial(true);
+        this.canSellSMG(true);
+        this.canSellCarbine(true);
+        this.canSellHelmet(true);
+        this.canSellSnip(true);
+        this.canSellBP(true);
+        this.canSellInfo(true);
+        this.canSellHelmParts(true);
+        this.canSellArmor(true);
+        this.canSellAmmo(true);
+        this.canSellDMR(true);
+        this.canSellBarters(true);
+        this.canSellKeys(true);
+        this.canSellAR(true);
+        this.canSellGear(true);
+        this.canSellMuzzleDevices(true);
+        this.canSellSupps(true);
+        this.canSellLights(true);
+        this.canSellGrips(true);
+        this.canSellStocks(true);
+        this.canSellBarrels(true);
+        this.canSellHandguards(true);
+        this.canSellMagazines(true);
+        this.canSellNVG(true);
+        this.canSellNVGScopes(true);
+        this.canSellMagnifiedScopes(true);
         this.canSellAssaultScopes(true);
         this.canSellIrons(true);
         this.canSellReddots(true);
@@ -194,6 +232,7 @@ class TieredFlea {
         this.canSellDMR(true);
         this.canSellBarters(true);
         this.canSellKeys(true);
+        this.canSellKeyCards(true);
         this.canSellAR(true);
         this.canSellGear(true);
         this.canSellRepairKit(true);
@@ -215,6 +254,12 @@ class TieredFlea {
         this.canSellParts(true);
         this.canSellSpecWeap(true);
         this.canSellFlare(true);
+        this.canSellMeds(true);
+        this.canSellStims(true);
+        this.canSellFood(true);
+        this.canSellThermalScopes(true);
+        this.canSellThermal(true);
+        this.canSellNadeLauncher(true);
     }
     canSellAll(bool) {
         this.canSellFlare(bool);
@@ -533,7 +578,7 @@ class TieredFlea {
     }
     canSellNadeLauncher(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === enums_1.ParentClasses.GRENADE_LAUNCHER) {
+            if (this.itemDB[i]._parent === enums_1.ParentClasses.GRENADE_LAUNCHER || this.itemDB[i]._parent === "55818b014bdc2ddc698b456b") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }
@@ -590,7 +635,7 @@ class TieredFlea {
     }
     canSellPistol(bool) {
         for (let i in this.itemDB) {
-            if (this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || "617f1ef5e8b54b0998387733") {
+            if ((this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB[i]._parent === "617f1ef5e8b54b0998387733") && this.itemDB[i]._id !== "617f1ef5e8b54b0998387733") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }
