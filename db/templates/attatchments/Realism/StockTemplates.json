@@ -3433,7 +3433,7 @@
     "5de655be4a9f347bc92edb88": {
         "ItemID": "5de655be4a9f347bc92edb88",
         "Name": "stock_vpo215_molot_vpo_215_std_wood",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": -1,
         "HorizontalRecoil": -20,
         "Dispersion": -2,
@@ -3557,7 +3557,7 @@
     "61faa91878830f069b6b7967": {
         "ItemID": "61faa91878830f069b6b7967",
         "Name": "stock_sv-98_izhmash_wood",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -5,
@@ -3621,7 +3621,7 @@
             "5bfeaa0f0db834001b734927",
             "5bfea7ad0db834001c38f1ee"
         ],
-        "Weight": 0.74,
+        "Weight": 0.62,
         "HeatFactor": 1,
         "CoolFactor": 1
     },
@@ -3643,7 +3643,7 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.31,
+        "Weight": 0.51,
         "HeatFactor": 1,
         "CoolFactor": 1
     },
@@ -3775,7 +3775,7 @@
     "5cf13123d7f00c1085616a50": {
         "ItemID": "5cf13123d7f00c1085616a50",
         "Name": "stock_m700_promag_archangel_precision_stock",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -17,
         "Dispersion": -5,
@@ -3805,7 +3805,7 @@
     "5bfeb32b0db834001a6694d9": {
         "ItemID": "5bfeb32b0db834001a6694d9",
         "Name": "stock_m700_hogue_overmolded_ghillie_green_pillar_bedded_stock",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": -1,
         "HorizontalRecoil": -11,
         "Dispersion": -1,
@@ -3923,7 +3923,7 @@
     "5bfd37c80db834001d23e842": {
         "ItemID": "5bfd37c80db834001d23e842",
         "Name": "stock_mosin_izhmash_mosin_carabine_sniper_cut_wood",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
@@ -3945,7 +3945,7 @@
     "5bfd384c0db834001a6691d3": {
         "ItemID": "5bfd384c0db834001a6691d3",
         "Name": "stock_mosin_izhmash_mosin_carabine_wood",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
@@ -3969,7 +3969,7 @@
     "5bfd35380db83400232fe5cc": {
         "ItemID": "5bfd35380db83400232fe5cc",
         "Name": "stock_mosin_izhmash_mosin_infantry_wood",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": 0,
@@ -3996,7 +3996,7 @@
     "5ae096d95acfc400185c2c81": {
         "ItemID": "5ae096d95acfc400185c2c81",
         "Name": "stock_mosin_izhmash_mosin_std_wood",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": 0,
@@ -4068,7 +4068,7 @@
     "5bbdb870d4351e00367fb67d": {
         "ItemID": "5bbdb870d4351e00367fb67d",
         "Name": "stock_mosin_ati_monte_carlo",
-        "ModType": "StockN",
+        "ModType": "StockR",
         "VerticalRecoil": -7,
         "HorizontalRecoil": -7,
         "Dispersion": -8,

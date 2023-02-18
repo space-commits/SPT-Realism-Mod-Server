@@ -146,12 +146,14 @@ class Main {
                 };
             }, { frequency: "Always" });
         }
-        if (modConfig.trader_changes == true) {
+        if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
             container.afterResolution("TraderAssortHelper", (_t, result) => {
                 result.resetExpiredTrader = (trader) => {
                     return traderRefersh.myResetExpiredTrader(trader);
                 };
             }, { frequency: "Always" });
+        }
+        if (modConfig.randomize_trader_stock == true) {
             container.afterResolution("RagfairCallbacks", (_t, result) => {
                 result.search = (url, info, sessionID) => {
                     return ragFairCallback.mySearch(url, info, sessionID);
@@ -206,9 +208,7 @@ class Main {
                             }
                         }
                         this.checkForEvents(logger, seasonalEventsService);
-                        if (modConfig.trader_changes == true) {
-                            randomizeTraderAssort.loadRandomizedTraderStockAtServerStart();
-                        }
+                        randomizeTraderAssort.adjustTraderStockAtServerStart();
                         if (modConfig.tiered_flea == true) {
                             this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
                         }
@@ -405,6 +405,14 @@ class Main {
             }
         ], "pmc");
     }
+    async postAkiLoadAsync(container) {
+        const logger = container.resolve("WinstonLogger");
+        const databaseServer = container.resolve("DatabaseServer");
+        const tables = databaseServer.getTables();
+        const jsonHand = new json_handler_1.JsonHandler(tables);
+        jsonHand.pushWeaponsToServer();
+        jsonHand.pushModsToServer();
+    }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseServer = container.resolve("DatabaseServer");
@@ -438,7 +446,7 @@ class Main {
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables);
         this.dllChecker(logger, modConfig);
-        if (modConfig.trader_changes == true) {
+        if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
         }
         // codegen.attTemplatesCodeGen();
@@ -479,7 +487,7 @@ class Main {
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
             meds.loadMeds();
-            bots.botMeds();
+            // bots.botMeds();
         }
         if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
@@ -491,8 +499,10 @@ class Main {
         flea.loadFleaGlobal();
         if (modConfig.malf_changes == true) {
             ammo.loadAmmoMalfChanges();
-            traders.loadTraderRepairs();
             weaponsGlobals.loadGlobalMalfChanges();
+        }
+        if (modConfig.trader_repair_changes == true) {
+            traders.loadTraderRepairs();
         }
         if (modConfig.recoil_attachment_overhaul && helper_1.ConfigChecker.dllIsPresent == true) {
             ammo.loadAmmoFirerateChanges();
@@ -505,11 +515,18 @@ class Main {
         if (modConfig.remove_fir_req == true) {
             quests.removeFIRQuestRequire();
         }
+        //traders
         if (modConfig.trader_changes == true) {
             traders.loadTraderTweaks();
-            traders.addItemsToAssorts();
+        }
+        if (modConfig.change_trader_ll == true) {
             traders.setLoyaltyLevels();
         }
+        if (modConfig.add_cust_trader_items == true) {
+            traders.addItemsToAssorts();
+        }
+        traders.loadTraderRefreshTimes();
+        //
         if (modConfig.bot_changes == true) {
             attachBase.loadAttRequirements();
         }

@@ -91,12 +91,12 @@ export class Bots {
     }
 
     public botMeds() {
-        this.arrays.nonScavBotArr.forEach(addBotMedkit);
-        function addBotMedkit(bot) {
-            if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
-                bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
-            }
-        }
+        // this.arrays.nonScavBotArr.forEach(addBotMedkit);
+        // function addBotMedkit(bot) {
+        //     if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
+        //         bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
+        //     }
+        // }
     }
 
     public forceBossSpawns() {

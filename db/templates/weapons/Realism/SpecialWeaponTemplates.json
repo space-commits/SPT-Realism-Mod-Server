@@ -36,7 +36,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "6217726288ed9f0845317459": {
         "ItemID": "6217726288ed9f0845317459",
@@ -75,7 +78,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "62178c4d4ecf221597654e3d": {
         "ItemID": "62178c4d4ecf221597654e3d",
@@ -114,7 +120,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "62178be9d0050232da3485d9": {
         "ItemID": "62178be9d0050232da3485d9",
@@ -153,7 +162,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "624c0b3340357b5f566e8766": {
         "ItemID": "624c0b3340357b5f566e8766",
@@ -192,6 +204,50 @@
         "SemiROF": 450,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
+    },
+    "5e81ebcd8e146c7080625e15": {
+        "ItemID": "5e81ebcd8e146c7080625e15",
+        "Name": "weapon_fn_40gl_s",
+        "WeapType": "",
+        "OperationType": "",
+        "WeapAccuracy": 0,
+        "BaseTorque": 0,
+        "RecoilDamping": 75,
+        "RecoilHandDamping": 60,
+        "HasShoulderContact": false,
+        "WeaponAllowADS": false,
+        "Ergonomics": 51,
+        "VerticalRecoil": 270,
+        "HorizontalRecoil": 460,
+        "Dispersion": 35,
+        "CameraRecoil": 0.032,
+        "CameraSnap": 3.5,
+        "Convergence": 1,
+        "RecoilAngle": 90,
+        "DurabilityBurnRatio": 1.15,
+        "BaseMalfunctionChance": 0.1771,
+        "HeatFactorGun": 1,
+        "HeatFactorByShot": 1,
+        "CoolFactorGun": 0.576,
+        "CoolFactorGunMods": 1,
+        "AllowOverheat": false,
+        "CenterOfImpact": 0.7,
+        "HipAccuracyRestorationDelay": 0.2,
+        "HipAccuracyRestorationSpeed": 7,
+        "HipInnaccuracyGain": 0.16,
+        "Velocity": 0,
+        "Weight": 2.92,
+        "AutoROF": 30,
+        "SemiROF": 450,
+        "LoyaltyLevel": 2,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
+        "MaxChamberSpeed": 1.5,
+        "MinChamberSpeed": 0.7,
+        "IsManuallyOperated": true
     }
 }

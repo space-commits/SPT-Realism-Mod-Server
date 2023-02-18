@@ -16,8 +16,7 @@
             "6087e570b998180e9f76dc24",
             "5d52d479a4b936793d58c76b",
             "5e85aac65505fa48730d8af2",
-            "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT"
+            "63495c500c297e20065a08b1"
         ],
         "itemTypeWhitelist": [
             "5448f3ac4bdc2dce718b4569",
@@ -54,8 +53,7 @@
             "6087e570b998180e9f76dc24",
             "5d52d479a4b936793d58c76b",
             "5e85aac65505fa48730d8af2",
-            "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT"
+            "63495c500c297e20065a08b1"
         ],
         "itemTypeWhitelist": [
             "5448e8d04bdc2ddf718b4569",
@@ -90,8 +88,7 @@
             "6087e570b998180e9f76dc24",
             "5d52d479a4b936793d58c76b",
             "5e85aac65505fa48730d8af2",
-            "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT"
+            "63495c500c297e20065a08b1"
         ],
         "itemTypeWhitelist": [
             "5d650c3e815116009f6201d2",
@@ -130,8 +127,7 @@
             "6087e570b998180e9f76dc24",
             "5d52d479a4b936793d58c76b",
             "5e85aac65505fa48730d8af2",
-            "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT"
+            "63495c500c297e20065a08b1"
         ],
         "itemTypeWhitelist": [
             "57864ada245977548638de91",
@@ -166,8 +162,7 @@
             "6087e570b998180e9f76dc24",
             "5d52d479a4b936793d58c76b",
             "5e85aac65505fa48730d8af2",
-            "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT"
+            "63495c500c297e20065a08b1"
         ],
         "itemTypeWhitelist": [
             "57864a66245977548f04a81f",
@@ -202,8 +197,7 @@
             "6087e570b998180e9f76dc24",
             "5d52d479a4b936793d58c76b",
             "5e85aac65505fa48730d8af2",
-            "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT"
+            "63495c500c297e20065a08b1"
         ],
         "itemTypeWhitelist": [
             "5485a8684bdc2da71d8b4567"
@@ -237,7 +231,6 @@
             "5d52d479a4b936793d58c76b",
             "5e85aac65505fa48730d8af2",
             "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT",
             "5b3b713c5acfc4330140bd8d"
         ],
         "itemTypeWhitelist": [
@@ -319,7 +312,6 @@
             "5d52d479a4b936793d58c76b",
             "5e85aac65505fa48730d8af2",
             "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT",
             "62963c18dbc8ab5f0d382d0b",
             "5c0e874186f7745dc7616606",
             "5c0e842486f77443a74d2976"
@@ -370,7 +362,6 @@
         },
         "itemBlacklist": [
             "63495c500c297e20065a08b1",
-            "SUPERBOTMEDKIT",
             "5e997f0b86f7741ac73993e2",
             "5b44abe986f774283e2e3512",
             "5e99711486f7744bfc4af328",

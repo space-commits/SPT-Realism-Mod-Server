@@ -4,6 +4,8 @@ import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
 import { RagfairOfferHolder } from "@spt-aki/utils/RagfairOfferHolder";
 import { ParentClasses } from "./enums";
 
+const custFleaConfig = require("../db/traders/ragfair/flea_config.json");
+
 export class FleamarketGlobal {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig) { }
 
@@ -40,12 +42,15 @@ export class FleamarketConfig {
         }
 
         if (this.modConfig.med_changes == true) {
-            this.fleaConf.dynamic.blacklist.custom.push("SUPERBOTMEDKIT", "TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");
+            this.fleaConf.dynamic.blacklist.custom.push("TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");
         }
 
 
 
         if (this.modConfig.flea_changes == true) {
+
+
+            this.fleaConf.dynamic.condition = custFleaConfig.condition;
 
             this.fleaConf.sell.chance.base = 45;
             this.fleaConf.sell.time.base = 30;
@@ -64,7 +69,7 @@ export class FleamarketConfig {
             this.fleaConf.dynamic.offerItemCount.min = 0;
             this.fleaConf.dynamic.offerItemCount.max = 2;
 
-            this.fleaConf.dynamic.price.min = 1;
+            this.fleaConf.dynamic.price.min = 1.3;
             this.fleaConf.dynamic.price.max = 2;
             this.fleaConf.dynamic.presetPrice.min = 1.3;
             this.fleaConf.dynamic.presetPrice.max = 2;
@@ -704,7 +709,7 @@ export class TieredFlea {
 
     private canSellPistol(bool) {
         for (let i in this.itemDB) {
-            if ((this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB[i]._parent === "617f1ef5e8b54b0998387733") &&  this.itemDB[i]._id !== "617f1ef5e8b54b0998387733") {
+            if ((this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB[i]._parent === "617f1ef5e8b54b0998387733") && this.itemDB[i]._id !== "617f1ef5e8b54b0998387733") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool
             }
         }

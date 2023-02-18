@@ -36,7 +36,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5beed0f50db834001c062b12": {
         "ItemID": "5beed0f50db834001c062b12",
@@ -47,9 +50,9 @@
         "BaseTorque": 0,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -75,6 +78,9 @@
         "SemiROF": 395,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     }
 }

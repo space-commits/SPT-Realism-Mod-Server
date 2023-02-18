@@ -71,6 +71,8 @@ import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestDa
 import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
+import { RagfairController } from "@spt-aki/controllers/RagfairController";
+import { IPostAkiLoadModAsync } from "@spt-aki/models/external/IPostAkiLoadModAsync";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -97,7 +99,6 @@ import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
 import { DescriptionGen } from "./description_gen";
 import { JsonHandler } from "./json-handler";
-import { RagfairController } from "@spt-aki/controllers/RagfairController";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -109,7 +110,7 @@ const modConfig = require("../config/config.json");
 const airdropLoot = require("../db/airdrops/airdrop_loot.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
 
-class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
+class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiLoadModAsync {
 
     private path: { resolve: (arg0: string) => any; };
     private modLoader: PreAkiModLoader;
@@ -217,13 +218,15 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
 
 
-        if (modConfig.trader_changes == true) {
+        if(modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true){
             container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
                 result.resetExpiredTrader = (trader: ITrader): void => {
                     return traderRefersh.myResetExpiredTrader(trader);
                 }
             }, { frequency: "Always" });
+        }
 
+        if (modConfig.randomize_trader_stock == true ) {
             container.afterResolution("RagfairCallbacks", (_t, result: RagfairCallbacks) => {
                 result.search = (url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult> => {
                     return ragFairCallback.mySearch(url, info, sessionID);
@@ -295,9 +298,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             }
                             this.checkForEvents(logger, seasonalEventsService);
 
-                            if (modConfig.trader_changes == true) {
-                                randomizeTraderAssort.loadRandomizedTraderStockAtServerStart();
-                            }
+                            randomizeTraderAssort.adjustTraderStockAtServerStart();
+                            
                             if (modConfig.tiered_flea == true) {
                                 this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
                             }
@@ -545,9 +547,17 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         );
     }
 
+    public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
+        const logger = container.resolve<ILogger>("WinstonLogger");
+
+        const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+        const tables = databaseServer.getTables();
+        const jsonHand = new JsonHandler(tables);
+        jsonHand.pushWeaponsToServer();
+        jsonHand.pushModsToServer();
+    }
+
     public postDBLoad(container: DependencyContainer): void {
-
-
 
         const logger = container.resolve<ILogger>("WinstonLogger");
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
@@ -583,7 +593,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         this.dllChecker(logger, modConfig);
 
-        if (modConfig.trader_changes == true) {
+        if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
         }
 
@@ -637,7 +647,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
             meds.loadMeds();
-            bots.botMeds();
+            // bots.botMeds();
         }
 
 
@@ -655,8 +665,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         if (modConfig.malf_changes == true) {
             ammo.loadAmmoMalfChanges();
-            traders.loadTraderRepairs();
             weaponsGlobals.loadGlobalMalfChanges();
+        }
+
+        if(modConfig.trader_repair_changes == true){
+            traders.loadTraderRepairs();
         }
 
         if (modConfig.recoil_attachment_overhaul && ConfigChecker.dllIsPresent == true) {
@@ -673,11 +686,19 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             quests.removeFIRQuestRequire();
         }
 
-        if (modConfig.trader_changes == true) {
+        //traders
+        if(modConfig.trader_changes == true){
             traders.loadTraderTweaks();
-            traders.addItemsToAssorts();
+        }
+        if(modConfig.change_trader_ll == true){
             traders.setLoyaltyLevels();
         }
+        if(modConfig.add_cust_trader_items == true){
+            traders.addItemsToAssorts();
+        }
+        traders.loadTraderRefreshTimes();
+        //
+
         if (modConfig.bot_changes == true) {
             attachBase.loadAttRequirements();
         }

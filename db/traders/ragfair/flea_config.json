@@ -1,0 +1,46 @@
+{
+    "condition": {
+        "5422acb9af1c889c16000029": {
+            "_name": "WEAPON",
+            "conditionChance": 0.4,
+            "min": 0.1,
+            "max": 1
+        },
+        "543be5664bdc2dd4348b4569": {
+            "_name": "MEDS",
+            "conditionChance": 0.35,
+            "min": 0.4,
+            "max": 1
+        },
+        "5447e0e74bdc2d3c308b4567": {
+            "_name": "SPEC_ITEM",
+            "conditionChance": 0.5,
+            "min": 0.02,
+            "max": 1
+        },
+        "543be5e94bdc2df1348b4568": {
+            "_name": "KEY",
+            "conditionChance": 1,
+            "min": 0.1,
+            "max": 1
+        },
+        "5448e5284bdc2dcb718b4567": {
+            "_name": "VEST",
+            "conditionChance": 0.5,
+            "min": 0.05,
+            "max": 1
+        },
+        "57bef4c42459772e8d35a53b": {
+            "_name": "ARMORED_EQUIPMENT",
+            "conditionChance": 0.5,
+            "min": 0.05,
+            "max": 1
+        },
+        "543be6674bdc2df1348b4569": {
+            "_name": "FOOD_DRINK",
+            "conditionChance": 0.3,
+            "min": 0.5,
+            "max": 1
+        }
+    }
+}

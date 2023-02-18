@@ -264,6 +264,7 @@ class CodeGen {
         // new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
             // fileItem.HeatFactor = serverItem._props.HeatFactor; You need to give it a value. If you set it to the server item's propety value, the new property will only appear if the server mod has that property
+            fileItem.IsManuallyOperated = false;
             fileItem;
             return fileItem;
         }
@@ -304,6 +305,9 @@ class CodeGen {
         let LoyaltyLevel = 2;
         let BaseReloadSpeedMulti = 1;
         let BaseChamberSpeedMulti = 1;
+        let MaxChamberSpeed = 1.5;
+        let MinChamberSpeed = 0.7;
+        let IsManuallyOperated = false;
         let item = {
             ItemID,
             Name,
@@ -341,7 +345,10 @@ class CodeGen {
             SemiROF,
             LoyaltyLevel,
             BaseReloadSpeedMulti,
-            BaseChamberSpeedMulti
+            BaseChamberSpeedMulti,
+            MaxChamberSpeed,
+            MinChamberSpeed,
+            IsManuallyOperated
         };
         return item;
     }

@@ -36,7 +36,9 @@
         "SemiROF": 350,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.85,
-        "BaseChamberSpeedMulti": 0.9
+        "BaseChamberSpeedMulti": 0.9,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5
     },
     "weapon_famas_556x45": {
         "ItemID": "weapon_famas_556x45",
@@ -47,7 +49,7 @@
         "BaseTorque": 3,
         "HasShoulderContact": true,
         "Ergonomics": 80,
-        "VerticalRecoil": 47,
+        "VerticalRecoil": 49,
         "HorizontalRecoil": 245,
         "Dispersion": 21,
         "CameraRecoil": 0.065,
@@ -75,7 +77,9 @@
         "SemiROF": 355,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.85,
-        "BaseChamberSpeedMulti": 0.9
+        "BaseChamberSpeedMulti": 0.8,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5
     },
     "63171672192e68c5460cebc5": {
         "ItemID": "63171672192e68c5460cebc5",
@@ -114,7 +118,10 @@
         "SemiROF": 345,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 0.85,
-        "BaseChamberSpeedMulti": 0.9
+        "BaseChamberSpeedMulti": 0.9,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "62e7c4fba689e8c9c50dfc38": {
         "ItemID": "62e7c4fba689e8c9c50dfc38",
@@ -153,7 +160,10 @@
         "SemiROF": 345,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.85,
-        "BaseChamberSpeedMulti": 0.9
+        "BaseChamberSpeedMulti": 0.9,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "628b9c37a733087d0d7fe84b": {
         "ItemID": "628b9c37a733087d0d7fe84b",
@@ -164,9 +174,9 @@
         "BaseTorque": -2.8,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 200,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.054,
         "CameraSnap": 3.5,
         "Convergence": 6.9,
@@ -192,7 +202,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.45
+        "BaseChamberSpeedMulti": 1.45,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "628b5638ad252a16da6dd245": {
         "ItemID": "628b5638ad252a16da6dd245",
@@ -203,9 +216,9 @@
         "BaseTorque": -3.7,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 200,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.054,
         "CameraSnap": 3.5,
         "Convergence": 6.9,
@@ -231,7 +244,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.45
+        "BaseChamberSpeedMulti": 1.45,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5ac66d725acfc43b321d4b60": {
         "ItemID": "5ac66d725acfc43b321d4b60",
@@ -270,7 +286,10 @@
         "SemiROF": 385,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5ac66d2e5acfc43b321d4b53": {
         "ItemID": "5ac66d2e5acfc43b321d4b53",
@@ -309,7 +328,10 @@
         "SemiROF": 385,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5a0ec13bfcdbcb00165aa685": {
         "ItemID": "5a0ec13bfcdbcb00165aa685",
@@ -348,7 +370,10 @@
         "SemiROF": 405,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5abcbc27d8ce8700182eceeb": {
         "ItemID": "5abcbc27d8ce8700182eceeb",
@@ -387,7 +412,10 @@
         "SemiROF": 400,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5bf3e0490db83400196199af": {
         "ItemID": "5bf3e0490db83400196199af",
@@ -398,9 +426,9 @@
         "BaseTorque": -3.8,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -426,7 +454,10 @@
         "SemiROF": 395,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5ab8e9fcd8ce870019439434": {
         "ItemID": "5ab8e9fcd8ce870019439434",
@@ -437,9 +468,9 @@
         "BaseTorque": -3.8,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -465,7 +496,10 @@
         "SemiROF": 395,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5bf3e03b0db834001d2c4a9c": {
         "ItemID": "5bf3e03b0db834001d2c4a9c",
@@ -476,9 +510,9 @@
         "BaseTorque": -3.8,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -504,7 +538,10 @@
         "SemiROF": 410,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5ac66cb05acfc40198510a10": {
         "ItemID": "5ac66cb05acfc40198510a10",
@@ -515,7 +552,7 @@
         "BaseTorque": -3.8,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 58,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 245,
         "Dispersion": 22,
         "CameraRecoil": 0.06,
@@ -543,7 +580,10 @@
         "SemiROF": 385,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5ac66d015acfc400180ae6e4": {
         "ItemID": "5ac66d015acfc400180ae6e4",
@@ -582,7 +622,10 @@
         "SemiROF": 385,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "583990e32459771419544dd2": {
         "ItemID": "583990e32459771419544dd2",
@@ -593,9 +636,9 @@
         "BaseTorque": -2,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -621,7 +664,10 @@
         "SemiROF": 410,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5839a40f24597726f856b511": {
         "ItemID": "5839a40f24597726f856b511",
@@ -632,9 +678,9 @@
         "BaseTorque": -2,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -660,7 +706,10 @@
         "SemiROF": 395,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5ac4cd105acfc40016339859": {
         "ItemID": "5ac4cd105acfc40016339859",
@@ -671,9 +720,9 @@
         "BaseTorque": -3.8,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -699,7 +748,10 @@
         "SemiROF": 390,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5ac66d9b5acfc4001633997a": {
         "ItemID": "5ac66d9b5acfc4001633997a",
@@ -710,9 +762,9 @@
         "BaseTorque": -3,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -738,7 +790,10 @@
         "SemiROF": 385,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5644bd2b4bdc2d3b4c8b4572": {
         "ItemID": "5644bd2b4bdc2d3b4c8b4572",
@@ -749,9 +804,9 @@
         "BaseTorque": -3.8,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -777,7 +832,10 @@
         "SemiROF": 400,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "59ff346386f77477562ff5e2": {
         "ItemID": "59ff346386f77477562ff5e2",
@@ -816,7 +874,10 @@
         "SemiROF": 415,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "59d6088586f774275f37482f": {
         "ItemID": "59d6088586f774275f37482f",
@@ -855,7 +916,10 @@
         "SemiROF": 420,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "57dc2fa62459775949412633": {
         "ItemID": "57dc2fa62459775949412633",
@@ -866,9 +930,9 @@
         "BaseTorque": -2,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 57,
+        "VerticalRecoil": 59,
         "HorizontalRecoil": 230,
-        "Dispersion": 22,
+        "Dispersion": 23,
         "CameraRecoil": 0.057,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -894,7 +958,10 @@
         "SemiROF": 415,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4
+        "BaseChamberSpeedMulti": 1.4,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "628a60ae6b1d481ff772e9c8": {
         "ItemID": "628a60ae6b1d481ff772e9c8",
@@ -933,7 +1000,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.5
+        "BaseChamberSpeedMulti": 1.5,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "606587252535c57a13424cfd": {
         "ItemID": "606587252535c57a13424cfd",
@@ -972,7 +1042,10 @@
         "SemiROF": 410,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.85
+        "BaseChamberSpeedMulti": 0.85,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5b0bbe4e5acfc40dc528a72d": {
         "ItemID": "5b0bbe4e5acfc40dc528a72d",
@@ -1011,7 +1084,10 @@
         "SemiROF": 360,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.05,
-        "BaseChamberSpeedMulti": 1.15
+        "BaseChamberSpeedMulti": 1.15,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "6184055050224f204c1da540": {
         "ItemID": "6184055050224f204c1da540",
@@ -1050,7 +1126,10 @@
         "SemiROF": 400,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "618428466ef05c2ce828f218": {
         "ItemID": "618428466ef05c2ce828f218",
@@ -1089,7 +1168,10 @@
         "SemiROF": 400,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "6183afd850224f204c1da514": {
         "ItemID": "6183afd850224f204c1da514",
@@ -1128,7 +1210,10 @@
         "SemiROF": 400,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.95
+        "BaseChamberSpeedMulti": 0.95,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "6165ac306ef05c2ce828ef74": {
         "ItemID": "6165ac306ef05c2ce828ef74",
@@ -1167,7 +1252,10 @@
         "SemiROF": 400,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.95
+        "BaseChamberSpeedMulti": 0.95,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5c488a752e221602b412af63": {
         "ItemID": "5c488a752e221602b412af63",
@@ -1206,7 +1294,10 @@
         "SemiROF": 365,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.6,
-        "BaseChamberSpeedMulti": 0.6
+        "BaseChamberSpeedMulti": 0.6,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5dcbd56fdbd3d91b3e5468d5": {
         "ItemID": "5dcbd56fdbd3d91b3e5468d5",
@@ -1245,7 +1336,10 @@
         "SemiROF": 365,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 0.6,
-        "BaseChamberSpeedMulti": 0.6
+        "BaseChamberSpeedMulti": 0.6,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5cadfbf7ae92152ac412eeef": {
         "ItemID": "5cadfbf7ae92152ac412eeef",
@@ -1284,7 +1378,10 @@
         "SemiROF": 330,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 0.95
+        "BaseChamberSpeedMulti": 0.95,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "623063e994fc3f7b302a9696": {
         "ItemID": "623063e994fc3f7b302a9696",
@@ -1323,7 +1420,10 @@
         "SemiROF": 385,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 0.95
+        "BaseChamberSpeedMulti": 0.95,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5fbcc1d9016cce60e8341ab3": {
         "ItemID": "5fbcc1d9016cce60e8341ab3",
@@ -1362,7 +1462,10 @@
         "SemiROF": 420,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.05,
-        "BaseChamberSpeedMulti": 0.9
+        "BaseChamberSpeedMulti": 0.9,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5bb2475ed4351e00853264e3": {
         "ItemID": "5bb2475ed4351e00853264e3",
@@ -1401,7 +1504,10 @@
         "SemiROF": 410,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.12,
-        "BaseChamberSpeedMulti": 1.02
+        "BaseChamberSpeedMulti": 1.02,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5447a9cd4bdc2dbd208b4567": {
         "ItemID": "5447a9cd4bdc2dbd208b4567",
@@ -1440,6 +1546,9 @@
         "SemiROF": 400,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.02,
-        "BaseChamberSpeedMulti": 1.35
+        "BaseChamberSpeedMulti": 1.35,
+        "MinChamberSpeed": 0.75,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     }
 }

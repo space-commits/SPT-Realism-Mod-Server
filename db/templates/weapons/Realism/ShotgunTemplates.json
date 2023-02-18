@@ -36,7 +36,10 @@
         "SemiROF": 320,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1.05,
-        "BaseChamberSpeedMulti": 1.05
+        "BaseChamberSpeedMulti": 1.05,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "weapon_benelli_m1014_12g": {
         "ItemID": "weapon_benelli_m1014_12g",
@@ -75,7 +78,10 @@
         "SemiROF": 390,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "5a38e6bac4a2826c6e06d79b": {
         "ItemID": "5a38e6bac4a2826c6e06d79b",
@@ -114,7 +120,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 0.95
+        "BaseChamberSpeedMulti": 0.95,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "60db29ce99594040e04c4a27": {
         "ItemID": "60db29ce99594040e04c4a27",
@@ -154,7 +163,10 @@
         "DoubleActionAccuracyPenalty": 1.1,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 0.9,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "5580223e4bdc2d1c128b457f": {
         "ItemID": "5580223e4bdc2d1c128b457f",
@@ -193,7 +205,10 @@
         "SemiROF": 300,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 2
+        "BaseChamberSpeedMulti": 2,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "54491c4f4bdc2db1078b4568": {
         "ItemID": "54491c4f4bdc2db1078b4568",
@@ -232,7 +247,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.1
+        "BaseChamberSpeedMulti": 1.1,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "5e870397991fd70db46995c8": {
         "ItemID": "5e870397991fd70db46995c8",
@@ -271,7 +289,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1.1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "5a7828548dc32e5a9c28b516": {
         "ItemID": "5a7828548dc32e5a9c28b516",
@@ -310,7 +331,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 0.9
+        "BaseChamberSpeedMulti": 0.9,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "5e848cc2988a8701445df1e8": {
         "ItemID": "5e848cc2988a8701445df1e8",
@@ -326,7 +350,7 @@
         "Dispersion": 23,
         "CameraRecoil": 0.3,
         "CameraSnap": 3.5,
-        "Convergence": 7,
+        "Convergence": 6,
         "RecoilAngle": 80,
         "BaseMalfunctionChance": 0.5,
         "HeatFactorGun": 0.5,
@@ -349,7 +373,10 @@
         "SemiROF": 450,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "56dee2bdd2720bc8328b4567": {
         "ItemID": "56dee2bdd2720bc8328b4567",
@@ -388,7 +415,10 @@
         "SemiROF": 320,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.98,
-        "BaseChamberSpeedMulti": 0.98
+        "BaseChamberSpeedMulti": 0.98,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "606dae0ab0e443224b421bb7": {
         "ItemID": "606dae0ab0e443224b421bb7",
@@ -427,7 +457,10 @@
         "SemiROF": 330,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1.07,
-        "BaseChamberSpeedMulti": 1.12
+        "BaseChamberSpeedMulti": 1.12,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "6259b864ebedf17603599e88": {
         "ItemID": "6259b864ebedf17603599e88",
@@ -466,7 +499,10 @@
         "SemiROF": 380,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "576165642459773c7a400233": {
         "ItemID": "576165642459773c7a400233",
@@ -505,6 +541,9 @@
         "SemiROF": 300,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1.05,
-        "BaseChamberSpeedMulti": 1.05
+        "BaseChamberSpeedMulti": 1.05,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     }
 }

@@ -36,7 +36,10 @@
         "SemiROF": 425,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false
     },
     "6275303a9f372d6ea97f9ec7": {
         "ItemID": "6275303a9f372d6ea97f9ec7",
@@ -75,7 +78,10 @@
         "SemiROF": 270,
         "LoyaltyLevel": 5,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "5e81ebcd8e146c7080625e15": {
         "ItemID": "5e81ebcd8e146c7080625e15",
@@ -112,7 +118,10 @@
         "DurabilityBurnRatio": 1.15,
         "AutoROF": 30,
         "SemiROF": 450,
-        "LoyaltyLevel": 5
+        "LoyaltyLevel": 5,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "639af924d0446708ee62294e": {
         "ItemID": "639af924d0446708ee62294e",
@@ -150,7 +159,10 @@
         "SemiROF": 450,
         "loyaltyLevel": 5,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     },
     "639c3fbbd0446708ee622ee9": {
         "ItemID": "639c3fbbd0446708ee622ee9",
@@ -188,6 +200,9 @@
         "SemiROF": 450,
         "loyaltyLevel": 5,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": true
     }
 }
