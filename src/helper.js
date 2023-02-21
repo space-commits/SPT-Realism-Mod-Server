@@ -10,6 +10,14 @@ class Helper {
         this.itemDB = this.tables.templates.items;
         this.medItems = this.arrays.stashMeds;
     }
+    getInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return (max > min) ? Math.floor(Math.random() * (max - min + 1) + min) : min;
+    }
+    getArrayValue(arr) {
+        return arr[this.getInt(0, arr.length - 1)];
+    }
     revertMedItems(playerData) {
         if (playerData?.Inventory !== undefined) {
             for (let i in playerData.Inventory.items) {

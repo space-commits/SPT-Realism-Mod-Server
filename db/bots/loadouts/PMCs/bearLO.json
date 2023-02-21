@@ -1,6 +1,5 @@
 {
-  "appearance": 
-  {
+  "appearance": {
     "head": [
       "5cc084dd14c02e000b0550a3",
       "5fdb50bb2b730a787b3f78cf",
@@ -3411,7 +3410,8 @@
         "5aa7cfc0e5b5b00015693143": 15,
         "5b432d215acfc4771e1c6624": 10,
         "5645bc214bdc2d363b8b4571": 5,
-        "5aa7e454e5b5b0214e506fa2": 5
+        "5aa7e454e5b5b0214e506fa2": 5,
+        "5d6d3716a4b9361bc8618872": 5
       },
       "FirstPrimaryWeapon_urban": {
         "62e14904c2699c0ec93adc47": 3,
@@ -3488,7 +3488,8 @@
           "5aa7cfc0e5b5b00015693143": 10,
           "5b432d215acfc4771e1c6624": 10,
           "5645bc214bdc2d363b8b4571": 10,
-          "5aa7e454e5b5b0214e506fa2": 10
+          "5aa7e454e5b5b0214e506fa2": 10,
+          "5d6d3716a4b9361bc8618872": 10
         },
         "FaceCover": {
           "5bd073a586f7747e6f135799": 1,
@@ -3564,6 +3565,17 @@
       },
       "mods": {
         "Helmets": {},
+        "5d6d3716a4b9361bc8618872": {
+          "mod_equipment_000": [
+            "5d6d3829a4b9361bc8618943"
+          ],
+          "mod_equipment_001": [
+            "5d6d3be5a4b9361bc73bc763"
+          ],
+          "mod_nvg": [
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
         "5c0695860db834001b735461": {
           "mod_nvg": [
             "5c0696830db834001d23f5da"
@@ -4057,7 +4069,7 @@
             "560d657b4bdc2da74d8b4572",
             "5a5f1ce64f39f90b401987bc"
           ],
-          "mod_scope":[
+          "mod_scope": [
             "57ae0171245977343c27bfcf",
             "577d128124597739d65d0e56",
             "58d39d3d86f77445bb794ae7"
@@ -4118,7 +4130,7 @@
             "5c1bc7432e221602b412949d",
             "5b057b4f5acfc4771e1bd3e9"
           ],
-          "mod_tactical_001": [
+          "mod_tactical_002": [
             "57d17e212459775a1179a0f5",
             "560d657b4bdc2da74d8b4572",
             "5a5f1ce64f39f90b401987bc",
@@ -5196,9 +5208,9 @@
         "5beed0f50db834001c062b12": 2
       },
       "FirstPrimaryWeapon_cqb": {
-        "62e14904c2699c0ec93adc47": 5,
-        "57dc2fa62459775949412633": 5,
-        "576165642459773c7a400233": 5,
+        "62e14904c2699c0ec93adc47": 7,
+        "57dc2fa62459775949412633": 7,
+        "576165642459773c7a400233": 7,
         "5a0ec13bfcdbcb00165aa685": 2,
         "5644bd2b4bdc2d3b4c8b4572": 3,
         "5abcbc27d8ce8700182eceeb": 1,
@@ -5210,9 +5222,9 @@
         "57c44b372459772d2b39b8ce": 5,
         "57838ad32459774a17445cd2": 0,
         "5c46fbd72e2216398b5a8c9c": 0,
-        "59984ab886f7743e98271174": 5,
+        "59984ab886f7743e98271174": 7,
         "5cadfbf7ae92152ac412eeef": 2,
-        "5e848cc2988a8701445df1e8": 2,
+        "5e848cc2988a8701445df1e8": 3,
         "5beed0f50db834001c062b12": 2
       },
       "FirstPrimaryWeapon_outdoor": {
@@ -5262,7 +5274,7 @@
         "Headwear": {
           "5aa2ba46e5b5b000137b758d": 1,
           "5b40e5e25acfc4001a599bea": 1,
-          "5b432d215acfc4771e1c6624": 12,
+          "5b432d215acfc4771e1c6624": 8,
           "5aa7e454e5b5b0214e506fa2": 8,
           "5ca20ee186f774799474abc2": 1,
           "5aa7e276e5b5b000171d0647": 6,
@@ -6040,7 +6052,7 @@
             "5c1bc7432e221602b412949d",
             "5c1bc4812e22164bef5cfde7"
           ],
-          "mod_tactical_001": [
+          "mod_tactical_002": [
             "57d17e212459775a1179a0f5",
             "560d657b4bdc2da74d8b4572",
             "5a5f1ce64f39f90b401987bc"
@@ -6235,6 +6247,69 @@
           "mod_charge": [
             "5648ac824bdc2ded0b8b457d",
             "6130ca3fd92c473c77020dbd"
+          ]
+        },
+        "5cdaa99dd7f00c002412d0b2": {
+          "mod_foregrip": [
+            "5cda9bcfd7f00c0c0b53e900",
+            "588226d124597767ad33f787",
+            "5c791e872e2216001219c40a",
+            "5c1bc5af2e221602b412949b",
+            "5c1bc5612e221602b5429350",
+            "5c1bc4812e22164bef5cfde7",
+            "5c1bc5fb2e221602b1779b32",
+            "5c1bc7432e221602b412949d",
+            "5c1bc7752e221602b1779b34",
+            "59fc48e086f77463b1118392"
+          ]
+        },
+        "5cadfbf7ae92152ac412eeef": {
+          "mod_handguard": [
+            "5cdaa99dd7f00c002412d0b2"
+          ],
+          "mod_magazine": [
+            "5caf1109ae9215753c44119f",
+            "5caf1041ae92157c28402e3f",
+            "5caf1041ae92157c28402e3f",
+            "5caf1041ae92157c28402e3f"
+          ],
+          "mod_muzzle": [
+            "5caf17c9ae92150b30006be1",
+            "5caf17c9ae92150b30006be1",
+            "5caf17c9ae92150b30006be1",
+            "5caf187cae92157c28402e43"
+          ],
+          "mod_scope": [
+            "5caf1691ae92152ac412efb9",
+            "5c0517910db83400232ffee5",
+            "5c0505e00db834001b735073",
+            "5caf1691ae92152ac412efb9",
+            "5c0517910db83400232ffee5",
+            "5c0505e00db834001b735073",
+            "570fd6c2d2720bc6458b457f",
+            "60a23797a37c940de7062d02",
+            "616584766ef05c2ce828ef57",
+            "57ac965c24597706be5f975c"
+          ],
+          "mod_sight_front": [
+            "5caf16a2ae92152ac412efbc"
+          ],
+          "mod_tactical_002": [
+            "5b07dd285acfc4001754240d",
+            "5a5f1ce64f39f90b401987bc",
+            "560d657b4bdc2da74d8b4572",
+            "560d657b4bdc2da74d8b4572",
+            "560d657b4bdc2da74d8b4572",
+            "5c5952732e2216398b5abda2",
+            "56def37dd2720bec348b456a",
+            "57d17e212459775a1179a0f5",
+            "6272370ee4013c5d7e31f418",
+            "5c5952732e2216398b5abda2"
+          ],
+          "patron_in_weapon": [
+            "5cadf6ddae9215051e1c23b2",
+            "5cadf6e5ae921500113bb973",
+            "5cadf6eeae921500134b2799"
           ]
         },
         "5abcbc27d8ce8700182eceeb": {

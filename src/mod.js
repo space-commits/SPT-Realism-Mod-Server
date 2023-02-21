@@ -58,7 +58,6 @@ const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
-const airdropLoot = require("../db/airdrops/airdrop_loot.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
 class Main {
     preAkiLoad(container) {
@@ -101,12 +100,15 @@ class Main {
         const ragfairController = container.resolve("RagfairController");
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
+        const locationGenerator = container.resolve("LocationGenerator");
+        const lootGenerator = container.resolve("LootGenerator");
         const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new bot_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
         const _botModGen = new bot_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const botLootGen = new bot_loot_serv_1.BotLooGen(logger, hashUtil, randomUtil, itemHelper, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new bot_gen_1.GenBotLvl(logger, randomUtil, databaseServer);
+        const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer);
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
         const router = container.resolve("DynamicRouterModService");
@@ -157,6 +159,13 @@ class Main {
             container.afterResolution("RagfairCallbacks", (_t, result) => {
                 result.search = (url, info, sessionID) => {
                     return ragFairCallback.mySearch(url, info, sessionID);
+                };
+            }, { frequency: "Always" });
+        }
+        if (modConfig.airdrop_changes == true) {
+            container.afterResolution("LocationController", (_t, result) => {
+                result.getAirdropLoot = () => {
+                    return airdropController.myGetAirdropLoot();
                 };
             }, { frequency: "Always" });
         }
@@ -342,14 +351,6 @@ class Main {
                         if (mapNameStartOffl === "Laboratory") {
                             botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
                             botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
-                        }
-                        if (modConfig.airdrop_changes == true) {
-                            if (helper_1.RaidInfoTracker.TOD === "day") {
-                                this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 15, 15, 15, 1]);
-                            }
-                            if (helper_1.RaidInfoTracker.TOD === "night") {
-                                this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 30, 40, 40, 40, 1]);
-                            }
                         }
                         if (modConfig.logEverything == true) {
                             logger.warning("Map Name = " + mapNameStartOffl);
@@ -626,7 +627,7 @@ class Main {
                 logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
             }
             if (level >= 35 && level < 40) {
-                this.fleaHelper(flea.flea6.bind(flea), ragfairOfferGen, container);
+                this.fleaHelper(flea.flea7.bind(flea), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 7 Unlocked");
             }
             if (level >= 40) {
@@ -874,41 +875,6 @@ class Main {
             if (modConfig.force_boss_items == true) {
                 bots.forceBossItems();
             }
-        }
-    }
-    updateAirdrops(logger, modConfig, airConf, helper, weights) {
-        var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
-        var loot = helper.probabilityWeighter(airdropLootArr, weights);
-        if (loot === "medical_loot") {
-            airConf.loot = airdropLoot.medical_loot;
-        }
-        if (loot === "provisions_loot") {
-            airConf.loot = airdropLoot.provisions_loot;
-        }
-        if (loot === "materials_loot") {
-            airConf.loot = airdropLoot.materials_loot;
-        }
-        if (loot === "supplies_loot") {
-            airConf.loot = airdropLoot.supplies_loot;
-        }
-        if (loot === "electronics_loot") {
-            airConf.loot = airdropLoot.electronics_loot;
-        }
-        if (loot === "ammo_loot") {
-            airConf.loot = airdropLoot.ammo_loot;
-        }
-        if (loot === "weapons_loot") {
-            airConf.loot = airdropLoot.weapons_loot;
-        }
-        if (loot === "gear_loot") {
-            airConf.loot = airdropLoot.gear_loot;
-        }
-        if (loot === "tp") {
-            airConf.loot = airdropLoot.tp;
-        }
-        if (modConfig.logEverything == true) {
-            logger.info("Aidrop Loot = " + loot);
-            logger.info("Realism Mod: Airdrop Loot Has Been Reconfigured");
         }
     }
 }

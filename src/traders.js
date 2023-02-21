@@ -124,7 +124,7 @@ class Traders {
     }
     setLL(file) {
         for (let item in file) {
-            let loyaltyLvl = file[item].LoyaltyLevel;
+            let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
             let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
                 if (this.tables.traders[trader].assort?.items !== undefined) {
@@ -269,7 +269,6 @@ class RandomizeTraderAssort {
         if (helper_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
         }
-        this.logger.warning("Randomizing");
         for (let trader in this.tables.traders) {
             if (this.tables.traders[trader].assort?.items !== undefined) {
                 let assortItems = this.tables.traders[trader].assort.items;
@@ -289,7 +288,6 @@ class RandomizeTraderAssort {
                             let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
                             if (barter !== undefined) {
                                 let randNum = this.helper.pickRandNumOneInTen();
-                                this.logger.warning("Adjusting Prices");
                                 this.setAndRandomizeCost(randNum, itemTemplId, barter, true);
                             }
                         }

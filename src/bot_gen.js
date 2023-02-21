@@ -201,7 +201,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                 };
                 weaponMods.push(...preset._items);
             }
-            this.logger.info(`Realism Mod: Preset was Fetched.`);
+            this.logger.info(`Realism Mod: Preset was Fetched. Working as intended, do not report as issue.`);
         }
         catch {
             this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);

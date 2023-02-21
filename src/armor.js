@@ -1582,6 +1582,10 @@ class Armor {
                         serverItem._props.Durability *= 1.25;
                         serverItem._props.MaxDurability = serverItem._props.Durability;
                     }
+                    if (serverItem._parent === enums_1.ParentClasses.HEADWEAR) {
+                        serverItem._props.Durability *= 1.1;
+                        serverItem._props.MaxDurability = serverItem._props.Durability;
+                    }
                 }
             }
             //Set min/max armor durability for spawns

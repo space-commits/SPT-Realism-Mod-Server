@@ -28,17 +28,17 @@ class FleamarketConfig {
         this.custFleaBlacklist = custFleaBlacklist;
     }
     loadFleaConfig() {
-        if (this.modConfig.flea_changes == true || this.modConfig.tiered_flea == true) {
-            this.fleaConf.dynamic.blacklist.enableBsgList = true;
-            this.fleaConf.dynamic.blacklist.custom = this.custFleaBlacklist.blacklist.custom;
-        }
+        // if (this.modConfig.flea_changes == true || this.modConfig.tiered_flea == true) {
+        //     this.fleaConf.dynamic.blacklist.enableBsgList = true;
+        //     this.fleaConf.dynamic.blacklist.custom = this.custFleaBlacklist.blacklist.custom;
+        // }
         if (this.modConfig.disable_flea_blacklist == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = false;
             this.fleaConf.dynamic.blacklist.custom = [];
         }
-        if (this.modConfig.med_changes == true) {
-            this.fleaConf.dynamic.blacklist.custom.push("TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");
-        }
+        // if (this.modConfig.med_changes == true) {
+        //     this.fleaConf.dynamic.blacklist.custom.push("TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");
+        // }
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.condition = custFleaConfig.condition;
             this.fleaConf.sell.chance.base = 45;

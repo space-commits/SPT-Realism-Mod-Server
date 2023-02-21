@@ -73,6 +73,8 @@ import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyR
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairController } from "@spt-aki/controllers/RagfairController";
 import { IPostAkiLoadModAsync } from "@spt-aki/models/external/IPostAkiLoadModAsync";
+import { LootItem } from "@spt-aki/models/spt/services/LootItem";
+import { LocationController } from "@spt-aki/controllers/LocationController";
 
 import { Ammo } from "./ammo";
 import { Armor } from "./armor";
@@ -91,7 +93,7 @@ import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
 import { Quests } from "./quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
-import { Airdrops } from "./airdrops";
+import { AirdropLootgen, Airdrops } from "./airdrops";
 import { Maps } from "./maps";
 import { Gear } from "./gear";
 import { SeasonalEventsHandler } from "./seasonalevents";
@@ -99,6 +101,10 @@ import { ItemCloning } from "./item_cloning";
 import * as _path from 'path';
 import { DescriptionGen } from "./description_gen";
 import { JsonHandler } from "./json-handler";
+import { info } from "console";
+import { url } from "inspector";
+import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
+import { LootGenerator } from "@spt-aki/generators/LootGenerator";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -107,7 +113,7 @@ const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
-const airdropLoot = require("../db/airdrops/airdrop_loot.json");
+
 const pmcTypes = require("../db/bots/pmcTypes.json");
 
 class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiLoadModAsync {
@@ -158,6 +164,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
         const ragfairController = container.resolve<RagfairController>("RagfairController");
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
+        const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
+        const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
+
 
         const ragFairCallback = new RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
@@ -165,7 +174,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
         const _botModGen = new BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const botLootGen = new BotLooGen(logger, hashUtil, randomUtil, itemHelper, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new GenBotLvl(logger, randomUtil, databaseServer);
-
+        const airdropController = new AirdropLootgen(jsonUtil, hashUtil, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer)
 
         const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
@@ -230,6 +239,14 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             container.afterResolution("RagfairCallbacks", (_t, result: RagfairCallbacks) => {
                 result.search = (url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult> => {
                     return ragFairCallback.mySearch(url, info, sessionID);
+                }
+            }, { frequency: "Always" });
+        }
+
+        if (modConfig.airdrop_changes == true ) {
+            container.afterResolution("LocationController", (_t, result: LocationController) => {
+                result.getAirdropLoot = (): LootItem[] => {
+                    return airdropController.myGetAirdropLoot();
                 }
             }, { frequency: "Always" });
         }
@@ -465,15 +482,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                             if (mapNameStartOffl === "Laboratory") {
                                 botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
                                 botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
-                            }
-
-                            if (modConfig.airdrop_changes == true) {
-                                if (RaidInfoTracker.TOD === "day") {
-                                    this.updateAirdrops(logger, modConfig, airConf, helper, [60, 60, 30, 30, 20, 15, 15, 15, 1]);
-                                }
-                                if (RaidInfoTracker.TOD === "night") {
-                                    this.updateAirdrops(logger, modConfig, airConf, helper, [10, 10, 10, 10, 30, 40, 40, 40, 1]);
-                                }
                             }
 
                             if (modConfig.logEverything == true) {
@@ -810,7 +818,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                 logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
             }
             if (level >= 35 && level < 40) {
-                this.fleaHelper(flea.flea6.bind(flea), ragfairOfferGen, container);
+                this.fleaHelper(flea.flea7.bind(flea), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 7 Unlocked");
             }
             if (level >= 40) {
@@ -1069,43 +1077,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             }
         }
     }
-
-    private updateAirdrops(logger: ILogger, modConfig, airConf: IAirdropConfig, helper: Helper, weights: Array<number>) {
-        var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
-        var loot = helper.probabilityWeighter(airdropLootArr, weights);
-        if (loot === "medical_loot") {
-            airConf.loot = airdropLoot.medical_loot;
-        }
-        if (loot === "provisions_loot") {
-            airConf.loot = airdropLoot.provisions_loot;
-        }
-        if (loot === "materials_loot") {
-            airConf.loot = airdropLoot.materials_loot;
-        }
-        if (loot === "supplies_loot") {
-            airConf.loot = airdropLoot.supplies_loot;
-        }
-        if (loot === "electronics_loot") {
-            airConf.loot = airdropLoot.electronics_loot;
-        }
-        if (loot === "ammo_loot") {
-            airConf.loot = airdropLoot.ammo_loot;
-        }
-        if (loot === "weapons_loot") {
-            airConf.loot = airdropLoot.weapons_loot;
-        }
-        if (loot === "gear_loot") {
-            airConf.loot = airdropLoot.gear_loot;
-        }
-        if (loot === "tp") {
-            airConf.loot = airdropLoot.tp;
-        }
-        if (modConfig.logEverything == true) {
-            logger.info("Aidrop Loot = " + loot);
-            logger.info("Realism Mod: Airdrop Loot Has Been Reconfigured");
-        }
-    }
-
 }
 
 module.exports = { mod: new Main() }

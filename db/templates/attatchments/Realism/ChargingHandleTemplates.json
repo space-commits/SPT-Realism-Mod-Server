@@ -10,7 +10,7 @@
         "Weight": 0.015,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 35
+        "ChamberSpeed": 28
     },
     "5648ac824bdc2ded0b8b457d": {
         "ItemID": "5648ac824bdc2ded0b8b457d",
@@ -23,7 +23,7 @@
         "Weight": 0.017,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 28
+        "ChamberSpeed": 20
     },
     "5c0faf68d174af02a96260b8": {
         "ItemID": "5c0faf68d174af02a96260b8",

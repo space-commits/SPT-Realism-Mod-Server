@@ -17,6 +17,18 @@ export class Helper {
     private itemDB = this.tables.templates.items;
     private medItems = this.arrays.stashMeds;
 
+    public getInt(min: number, max: number): number
+    {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return (max > min) ? Math.floor(Math.random() * (max - min + 1) + min) : min;
+    }
+    
+    public getArrayValue<T>(arr: T[]): T
+    {
+        return arr[this.getInt(0, arr.length - 1)];
+    }
+
     public revertMedItems(playerData: IPmcData) {
         if (playerData?.Inventory !== undefined) {
             for (let i in playerData.Inventory.items) {
