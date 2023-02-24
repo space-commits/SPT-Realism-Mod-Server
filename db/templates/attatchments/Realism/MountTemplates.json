@@ -1731,8 +1731,8 @@
         "ItemID": "5a9d6d21a2750c00137fa649",
         "Name": "mount_keymod_strike_industries_bridge_rail_section",
         "ModType": "",
-        "Ergonomics": -2.5,
-        "Accuracy": 0,
+        "Ergonomics": 0,
+        "Accuracy": 4,
         "ConflictingItems": [
             "59984ab886f7743e98271174"
         ],

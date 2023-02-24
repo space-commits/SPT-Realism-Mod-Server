@@ -15,7 +15,7 @@
         "CameraSnap": 3.5,
         "Convergence": 3,
         "RecoilAngle": 70,
-        "BaseMalfunctionChance": 2,
+        "BaseMalfunctionChance": 1,
         "HeatFactorGun": 1,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,
@@ -36,10 +36,12 @@
         "SemiROF": 450,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.7,
-        "MinChamberSpeed": 0.2,
+        "BaseChamberSpeedMulti": 0.6,
+        "MinChamberSpeed": 0.47,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": true
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1.1,
+        "BaseFixSpeed": 0.9
     },
     "61f7c9e189e6fb1a5e3ea78d": {
         "ItemID": "61f7c9e189e6fb1a5e3ea78d",
@@ -77,10 +79,12 @@
         "SemiROF": 450,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.2,
-        "MinChamberSpeed": 0.4,
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": true
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1.2,
+        "BaseFixSpeed": 1
     },
     "5bfd297f0db834001a669119": {
         "ItemID": "5bfd297f0db834001a669119",
@@ -98,7 +102,7 @@
         "CameraSnap": 3.5,
         "Convergence": 2,
         "RecoilAngle": 70,
-        "BaseMalfunctionChance": 2.7,
+        "BaseMalfunctionChance": 2,
         "HeatFactorGun": 1.2,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,
@@ -118,18 +122,20 @@
         "AutoROF": 30,
         "SemiROF": 450,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.2,
-        "MinChamberSpeed": 0.4,
-        "MaxChamberSpeed": 1.15,
-        "IsManuallyOperated": true
+        "BaseReloadSpeedMulti": 2,
+        "BaseChamberSpeedMulti": 1.35,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 0.95,
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.5
     },
     "5ae08f0a5acfc408fb1398a1": {
         "ItemID": "5ae08f0a5acfc408fb1398a1",
         "Name": "weapon_izhmash_mosin_rifle_762x54",
         "WeapType": "",
         "OperationType": "manual",
-        "WeapAccuracy": 25,
+        "WeapAccuracy": 35,
         "BaseTorque": 0,
         "HasShoulderContact": false,
         "Ergonomics": 80,
@@ -160,11 +166,13 @@
         "AutoROF": 30,
         "SemiROF": 450,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.25,
-        "MinChamberSpeed": 0.4,
-        "MaxChamberSpeed": 1.25,
-        "IsManuallyOperated": true
+        "BaseReloadSpeedMulti": 2,
+        "BaseChamberSpeedMulti": 1.38,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1,
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1.55,
+        "BaseFixSpeed": 1.55
     },
     "55801eed4bdc2d89578b4588": {
         "ItemID": "55801eed4bdc2d89578b4588",
@@ -172,7 +180,7 @@
         "WeapType": "",
         "OperationType": "manual",
         "WeapAccuracy": -5,
-        "BaseTorque": -8,
+        "BaseTorque": -10,
         "HasShoulderContact": false,
         "Ergonomics": 80,
         "VerticalRecoil": 185,
@@ -188,7 +196,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.035,
+        "CenterOfImpact": 0.02,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -197,16 +205,18 @@
         "RecoilDamping": 0.72,
         "RecoilHandDamping": 0.7,
         "WeaponAllowADS": false,
-        "Weight": 1.5,
+        "Weight": 1.9,
         "DurabilityBurnRatio": 0.25,
         "AutoROF": 30,
         "SemiROF": 450,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.9,
-        "MinChamberSpeed": 0.4,
-        "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": true
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1.1,
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1.15,
+        "BaseFixSpeed": 1.15
     },
     "588892092459774ac91d4b11": {
         "ItemID": "588892092459774ac91d4b11",
@@ -245,10 +255,12 @@
         "SemiROF": 450,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.2,
-        "MinChamberSpeed": 0.4,
-        "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": true
+        "BaseChamberSpeedMulti": 2.2,
+        "MinChamberSpeed": 0.6,
+        "MaxChamberSpeed": 1,
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 3,
+        "BaseFixSpeed": 3
     },
     "5df24cf80dee1b22f862e9bc": {
         "ItemID": "5df24cf80dee1b22f862e9bc",
@@ -287,10 +299,12 @@
         "SemiROF": 450,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.5,
-        "MinChamberSpeed": 0.55,
-        "MaxChamberSpeed": 1.2,
-        "IsManuallyOperated": true
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.5,
+        "MaxChamberSpeed": 0.9,
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5bfea6e90db834001b7347f3": {
         "ItemID": "5bfea6e90db834001b7347f3",
@@ -329,10 +343,12 @@
         "SemiROF": 450,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.2,
-        "MinChamberSpeed": 0.4,
-        "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": true
+        "BaseChamberSpeedMulti": 1.1,
+        "MinChamberSpeed": 0.65,
+        "MaxChamberSpeed": 1.2,
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1.3,
+        "BaseFixSpeed": 1.3
     },
     "627e14b21713922ded6f2c15": {
         "ItemID": "627e14b21713922ded6f2c15",
@@ -370,10 +386,12 @@
         "AutoROF": 30,
         "SemiROF": 450,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 2.1,
-        "MinChamberSpeed": 0.45,
-        "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": true
+        "BaseReloadSpeedMulti": 1.12,
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.55,
+        "MaxChamberSpeed": 0.8,
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1.6,
+        "BaseFixSpeed": 1.6
     }
 }

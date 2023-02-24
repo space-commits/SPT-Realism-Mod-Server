@@ -40,7 +40,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "624c2e8614da335f1e034d8c": {
         "ItemID": "624c2e8614da335f1e034d8c",
@@ -83,7 +85,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "61a4c8884f95bc3b2c5dc96f": {
         "ItemID": "61a4c8884f95bc3b2c5dc96f",
@@ -126,7 +130,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": true,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5e81c3cbac2bb513793cdc75": {
         "ItemID": "5e81c3cbac2bb513793cdc75",
@@ -168,7 +174,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5f36a0e5fbf956000b716b65": {
         "ItemID": "5f36a0e5fbf956000b716b65",
@@ -210,7 +218,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "6193a720f8ee7e52e42109ed": {
         "ItemID": "6193a720f8ee7e52e42109ed",
@@ -252,7 +262,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5cadc190ae921500103bb3b6": {
         "ItemID": "5cadc190ae921500103bb3b6",
@@ -294,7 +306,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5a7ae0c351dfba0017554310": {
         "ItemID": "5a7ae0c351dfba0017554310",
@@ -336,7 +350,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5b1fa9b25acfc40018633c01": {
         "ItemID": "5b1fa9b25acfc40018633c01",
@@ -378,7 +394,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "602a9740da11d6478d5a06dc": {
         "ItemID": "602a9740da11d6478d5a06dc",
@@ -420,7 +438,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "56d59856d2720bd8418b456a": {
         "ItemID": "56d59856d2720bd8418b456a",
@@ -462,7 +482,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "576a581d2459771e7b1bc4f1": {
         "ItemID": "576a581d2459771e7b1bc4f1",
@@ -504,7 +526,9 @@
         "BaseChamberSpeedMulti": 1.1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "59f98b4986f7746f546d2cef": {
         "ItemID": "59f98b4986f7746f546d2cef",
@@ -546,7 +570,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "571a12c42459771f627b58a0": {
         "ItemID": "571a12c42459771f627b58a0",
@@ -588,7 +614,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5b3b713c5acfc4330140bd8d": {
         "ItemID": "5b3b713c5acfc4330140bd8d",
@@ -630,7 +658,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5d3eb3b0a4b93615055e84d2": {
         "ItemID": "5d3eb3b0a4b93615055e84d2",
@@ -672,7 +702,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5d67abc1a4b93614ec50137f": {
         "ItemID": "5d67abc1a4b93614ec50137f",
@@ -714,7 +746,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5448bd6b4bdc2dfc2f8b4569": {
         "ItemID": "5448bd6b4bdc2dfc2f8b4569",
@@ -756,7 +790,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "579204f224597773d619e051": {
         "ItemID": "579204f224597773d619e051",
@@ -798,7 +834,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "56e0598dd2720bb5668b45a6": {
         "ItemID": "56e0598dd2720bb5668b45a6",
@@ -840,7 +878,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5a17f98cfcdbcb0980087290": {
         "ItemID": "5a17f98cfcdbcb0980087290",
@@ -882,7 +922,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5abccb7dd8ce87001773e277": {
         "ItemID": "5abccb7dd8ce87001773e277",
@@ -924,7 +966,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "63088377b5cd696784087147": {
         "ItemID": "63088377b5cd696784087147",
@@ -966,6 +1010,8 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     }
 }

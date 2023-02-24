@@ -39,7 +39,9 @@
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "5beed0f50db834001c062b12": {
         "ItemID": "5beed0f50db834001c062b12",
@@ -77,10 +79,12 @@
         "AutoROF": 650,
         "SemiROF": 395,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     }
 }

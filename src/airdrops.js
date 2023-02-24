@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AirdropLootRequest = exports.AirdropLootgen = exports.Airdrops = void 0;
+const enums_1 = require("./enums");
 const LocationController_1 = require("C:/snapshot/project/obj/controllers/LocationController");
 const helper_1 = require("./helper");
 const arrays_1 = require("./arrays");
@@ -35,12 +36,12 @@ class AirdropLootgen extends LocationController_1.LocationController {
         const helper = new helper_1.Helper(tables, arrays);
         let weights = [];
         if (helper_1.RaidInfoTracker.TOD === "day") {
-            weights = [60, 60, 30, 30, 20, 20, 2000, 15, 1];
+            weights = [60, 60, 30, 30, 20, 20, 15, 15, 1];
         }
         if (helper_1.RaidInfoTracker.TOD === "night") {
-            weights = [10, 10, 10, 10, 30, 40, 40, 40, 1];
+            weights = [10, 10, 10, 10, 40, 50, 50, 50, 1];
         }
-        const airdropLoot = this.updateAirdropsLootPools(this.logger, modConfig, helper, weights);
+        const airdropLoot = this.updateAirdropsLootPools(modConfig, helper, weights);
         const options = {
             presetCount: airdropLoot.presetCount,
             itemCount: airdropLoot.itemCount,
@@ -50,7 +51,7 @@ class AirdropLootgen extends LocationController_1.LocationController {
         };
         return this.createRandomAirdropLoot(options, helper);
     }
-    updateAirdropsLootPools(logger, modConfig, helper, weights) {
+    updateAirdropsLootPools(modConfig, helper, weights) {
         const airdropLoot = require("../db/airdrops/airdrop_loot.json");
         var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
         var loot = helper.probabilityWeighter(airdropLootArr, weights);
@@ -82,8 +83,8 @@ class AirdropLootgen extends LocationController_1.LocationController {
             return airdropLoot.tp;
         }
         if (modConfig.logEverything == true) {
-            logger.info("Aidrop Loot = " + loot);
-            logger.info("Realism Mod: Airdrop Loot Has Been Reconfigured");
+            this.logger.info("Aidrop Loot = " + loot);
+            this.logger.info("Realism Mod: Airdrop Loot Has Been Reconfigured");
         }
         return airdropLoot.provisions_loot;
     }
@@ -111,7 +112,14 @@ class AirdropLootgen extends LocationController_1.LocationController {
     findAndAddRandomItemToAirdropLoot(items, itemTypeCounts, options, result, helper) {
         const randomItem = helper.getArrayValue(items)[1];
         const itemLimitCount = itemTypeCounts[randomItem._parent];
-        if (itemLimitCount && itemLimitCount.current > itemLimitCount.max) {
+        if (itemLimitCount === undefined || itemLimitCount === null || itemLimitCount.current === undefined || itemLimitCount.current === null || itemLimitCount.max === undefined || itemLimitCount.max === null) {
+            this.logger.error("No Item Limit Found For Item: " + randomItem._id + " Of Category " + randomItem._parent);
+            return false;
+        }
+        if (randomItem._parent === enums_1.ParentClasses.SNIPER_RIFLE || randomItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE || randomItem._parent === enums_1.ParentClasses.ASSAULT_RIFLE || randomItem._parent === enums_1.ParentClasses.ASSAULT_CARBINE || randomItem._parent === enums_1.ParentClasses.SHOTGUN || randomItem._parent === enums_1.ParentClasses.PISTOL || randomItem._parent === enums_1.ParentClasses.SMG) {
+            return false;
+        }
+        if (itemLimitCount && itemLimitCount.current >= itemLimitCount.max) {
             return false;
         }
         const newLootItem = {

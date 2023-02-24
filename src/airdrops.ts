@@ -46,21 +46,20 @@ export class Airdrops {
 export class AirdropLootgen extends LocationController {
 
 
-    public myGetAirdropLoot(): LootItem[]
-    {
+    public myGetAirdropLoot(): LootItem[] {
         const modConfig = require("../config/config.json");
         const tables = this.databaseServer.getTables();
         const arrays = new Arrays(tables);
         const helper = new Helper(tables, arrays);
         let weights = [];
-        
+
         if (RaidInfoTracker.TOD === "day") {
-            weights = [60, 60, 30, 30, 20, 20, 2000, 15, 1];
+            weights = [60, 60, 30, 30, 20, 20, 15, 15, 1];
         }
         if (RaidInfoTracker.TOD === "night") {
-            weights = [10, 10, 10, 10, 30, 40, 40, 40, 1];
+            weights = [10, 10, 10, 10, 40, 50, 50, 50, 1];
         }
-        const airdropLoot = this.updateAirdropsLootPools(this.logger, modConfig, helper, weights);
+        const airdropLoot = this.updateAirdropsLootPools(modConfig, helper, weights);
 
         const options: AirdropLootRequest = {
             presetCount: airdropLoot.presetCount,
@@ -74,8 +73,8 @@ export class AirdropLootgen extends LocationController {
     }
 
 
-    private updateAirdropsLootPools(logger: ILogger, modConfig, helper: Helper, weights: Array<number>) {
-       
+    private updateAirdropsLootPools(modConfig, helper: Helper, weights: Array<number>) {
+
 
         const airdropLoot = require("../db/airdrops/airdrop_loot.json");
 
@@ -109,8 +108,8 @@ export class AirdropLootgen extends LocationController {
             return airdropLoot.tp;
         }
         if (modConfig.logEverything == true) {
-            logger.info("Aidrop Loot = " + loot);
-            logger.info("Realism Mod: Airdrop Loot Has Been Reconfigured");
+            this.logger.info("Aidrop Loot = " + loot);
+            this.logger.info("Realism Mod: Airdrop Loot Has Been Reconfigured");
         }
         return airdropLoot.provisions_loot;
 
@@ -150,7 +149,18 @@ export class AirdropLootgen extends LocationController {
         const randomItem = helper.getArrayValue(items)[1];
 
         const itemLimitCount = itemTypeCounts[randomItem._parent];
-        if (itemLimitCount && itemLimitCount.current > itemLimitCount.max) {
+
+        if (itemLimitCount === undefined || itemLimitCount === null || itemLimitCount.current === undefined || itemLimitCount.current === null || itemLimitCount.max === undefined || itemLimitCount.max === null) {
+            this.logger.error("No Item Limit Found For Item: " + randomItem._id + " Of Category " + randomItem._parent);
+            return false;
+        }
+
+        if (randomItem._parent === ParentClasses.SNIPER_RIFLE || randomItem._parent === ParentClasses.MARKSMAN_RIFLE || randomItem._parent === ParentClasses.ASSAULT_RIFLE || randomItem._parent === ParentClasses.ASSAULT_CARBINE || randomItem._parent === ParentClasses.SHOTGUN || randomItem._parent === ParentClasses.PISTOL || randomItem._parent === ParentClasses.SMG) {
+            return false;
+        }
+
+
+        if (itemLimitCount && itemLimitCount.current >= itemLimitCount.max) {
             return false;
         }
 
@@ -191,7 +201,7 @@ export class AirdropLootgen extends LocationController {
         return helper.getInt(min, max);
     }
 
-    private findAndAddRandomPresetToAirdropLoot(globalDefaultPresets: [string, Preset][],  itemTypeCounts: Record<string, { current: number; max: number; }>,  itemWhitelist: string[], result: LootItem[], helper): boolean {
+    private findAndAddRandomPresetToAirdropLoot(globalDefaultPresets: [string, Preset][], itemTypeCounts: Record<string, { current: number; max: number; }>, itemWhitelist: string[], result: LootItem[], helper): boolean {
         // Choose random preset and get details from item.json using encyclopedia value (encyclopedia === tplId)
         const randomPreset = helper.getArrayValue(globalDefaultPresets)[1];
         const itemDetails = this.databaseServer.getTables().templates.items[randomPreset._encyclopedia];
@@ -231,12 +241,10 @@ export class AirdropLootgen extends LocationController {
         return true;
     }
 
-    private initItemLimitCounter(limits: Record<string, number>): Record<string, {current: number, max: number}>
-    {
-        const itemTypeCounts: Record<string, {current: number, max: number}> = {};
+    private initItemLimitCounter(limits: Record<string, number>): Record<string, { current: number, max: number }> {
+        const itemTypeCounts: Record<string, { current: number, max: number }> = {};
 
-        for (const x in limits)
-        {
+        for (const x in limits) {
             itemTypeCounts[x] = {
                 current: 0,
                 max: limits[x]

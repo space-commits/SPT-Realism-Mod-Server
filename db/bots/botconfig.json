@@ -560,11 +560,11 @@
         "convertIntoPmcChance": {
             "assault": {
                 "min": 33,
-                "max": 42
+                "max": 45
             },
             "cursedassault": {
                 "min": 33,
-                "max": 42
+                "max": 45
             },
             "pmcbot": {
                 "min": 0,
@@ -596,11 +596,11 @@
         "convertIntoPmcChance": {
             "assault": {
                 "min": 30,
-                "max": 40
+                "max": 45
             },
             "cursedassault": {
                 "min": 30,
-                "max": 40
+                "max": 45
             },
             "pmcbot": {
                 "min": 0,

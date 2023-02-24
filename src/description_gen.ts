@@ -85,6 +85,9 @@ export class DescriptionGen {
             }
 
             if (item._parent === ParentClasses.AMMO) {
+                if (item._id === "56dff4ecd2720b5f5a8b4568" || item._id === "59e4d24686f7741776641ac7") {
+                    locale[`${templateItem}` + " Description"] = "This ammunition is subsonic and will not cycle reliably without modification or use of special suppressors such as the PBS suppressors." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
                 if (item._props.Caliber === "Caliber20g") {
                     locale[`${templateItem}` + " Description"] = "Ammo stats are out of a Toz-106." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }

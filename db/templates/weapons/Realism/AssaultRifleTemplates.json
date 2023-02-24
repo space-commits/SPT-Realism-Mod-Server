@@ -35,10 +35,13 @@
         "AutoROF": 650,
         "SemiROF": 350,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 0.85,
-        "BaseChamberSpeedMulti": 0.9,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
-        "MaxChamberSpeed": 1.5
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "weapon_famas_556x45": {
         "ItemID": "weapon_famas_556x45",
@@ -76,10 +79,13 @@
         "AutoROF": 900,
         "SemiROF": 355,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 0.85,
-        "BaseChamberSpeedMulti": 0.8,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
-        "MaxChamberSpeed": 1.5
+        "MaxChamberSpeed": 1.5,
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "63171672192e68c5460cebc5": {
         "ItemID": "63171672192e68c5460cebc5",
@@ -90,7 +96,7 @@
         "BaseTorque": 4.55,
         "HasShoulderContact": true,
         "Ergonomics": 80,
-        "VerticalRecoil": 45,
+        "VerticalRecoil": 46,
         "HorizontalRecoil": 235,
         "Dispersion": 21,
         "CameraRecoil": 0.054,
@@ -118,10 +124,12 @@
         "SemiROF": 345,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 0.85,
-        "BaseChamberSpeedMulti": 0.9,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "62e7c4fba689e8c9c50dfc38": {
         "ItemID": "62e7c4fba689e8c9c50dfc38",
@@ -132,7 +140,7 @@
         "BaseTorque": 4.55,
         "HasShoulderContact": true,
         "Ergonomics": 80,
-        "VerticalRecoil": 45,
+        "VerticalRecoil": 46,
         "HorizontalRecoil": 235,
         "Dispersion": 21,
         "CameraRecoil": 0.054,
@@ -160,10 +168,12 @@
         "SemiROF": 345,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.85,
-        "BaseChamberSpeedMulti": 0.9,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1,
+        "BaseFixSpeed": 1
     },
     "628b9c37a733087d0d7fe84b": {
         "ItemID": "628b9c37a733087d0d7fe84b",
@@ -187,7 +197,7 @@
         "CoolFactorGun": 0.11,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.048,
+        "CenterOfImpact": 0.045,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -201,11 +211,13 @@
         "AutoROF": 592,
         "SemiROF": 450,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.45,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "628b5638ad252a16da6dd245": {
         "ItemID": "628b5638ad252a16da6dd245",
@@ -229,7 +241,7 @@
         "CoolFactorGun": 0.11,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.033,
+        "CenterOfImpact": 0.04,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -243,11 +255,13 @@
         "AutoROF": 650,
         "SemiROF": 450,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.45,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5ac66d725acfc43b321d4b60": {
         "ItemID": "5ac66d725acfc43b321d4b60",
@@ -271,7 +285,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.065,
+        "CenterOfImpact": 0.055,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -285,11 +299,13 @@
         "AutoROF": 582,
         "SemiROF": 385,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5ac66d2e5acfc43b321d4b53": {
         "ItemID": "5ac66d2e5acfc43b321d4b53",
@@ -313,7 +329,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.065,
+        "CenterOfImpact": 0.047,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -327,11 +343,13 @@
         "AutoROF": 600,
         "SemiROF": 385,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5a0ec13bfcdbcb00165aa685": {
         "ItemID": "5a0ec13bfcdbcb00165aa685",
@@ -355,7 +373,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.08,
+        "CenterOfImpact": 0.065,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -369,11 +387,13 @@
         "AutoROF": 600,
         "SemiROF": 405,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5abcbc27d8ce8700182eceeb": {
         "ItemID": "5abcbc27d8ce8700182eceeb",
@@ -397,7 +417,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.08,
+        "CenterOfImpact": 0.067,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -411,11 +431,13 @@
         "AutoROF": 600,
         "SemiROF": 400,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5bf3e0490db83400196199af": {
         "ItemID": "5bf3e0490db83400196199af",
@@ -439,7 +461,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.065,
+        "CenterOfImpact": 0.053,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -453,11 +475,13 @@
         "AutoROF": 650,
         "SemiROF": 395,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5ab8e9fcd8ce870019439434": {
         "ItemID": "5ab8e9fcd8ce870019439434",
@@ -481,7 +505,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.061,
+        "CenterOfImpact": 0.046,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -495,11 +519,13 @@
         "AutoROF": 650,
         "SemiROF": 395,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5bf3e03b0db834001d2c4a9c": {
         "ItemID": "5bf3e03b0db834001d2c4a9c",
@@ -523,7 +549,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.065,
+        "CenterOfImpact": 0.04,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -537,11 +563,13 @@
         "AutoROF": 650,
         "SemiROF": 410,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5ac66cb05acfc40198510a10": {
         "ItemID": "5ac66cb05acfc40198510a10",
@@ -565,7 +593,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.044,
+        "CenterOfImpact": 0.039,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -579,11 +607,13 @@
         "AutoROF": 655,
         "SemiROF": 385,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5ac66d015acfc400180ae6e4": {
         "ItemID": "5ac66d015acfc400180ae6e4",
@@ -621,11 +651,13 @@
         "AutoROF": 595,
         "SemiROF": 385,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "583990e32459771419544dd2": {
         "ItemID": "583990e32459771419544dd2",
@@ -649,7 +681,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.058,
+        "CenterOfImpact": 0.07,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -663,11 +695,13 @@
         "AutoROF": 680,
         "SemiROF": 410,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5839a40f24597726f856b511": {
         "ItemID": "5839a40f24597726f856b511",
@@ -691,7 +725,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.1,
+        "CenterOfImpact": 0.064,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -705,11 +739,13 @@
         "AutoROF": 680,
         "SemiROF": 395,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5ac4cd105acfc40016339859": {
         "ItemID": "5ac4cd105acfc40016339859",
@@ -733,7 +769,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.055,
+        "CenterOfImpact": 0.041,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -747,11 +783,13 @@
         "AutoROF": 650,
         "SemiROF": 390,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5ac66d9b5acfc4001633997a": {
         "ItemID": "5ac66d9b5acfc4001633997a",
@@ -775,7 +813,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.051,
+        "CenterOfImpact": 0.047,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -789,11 +827,13 @@
         "AutoROF": 592,
         "SemiROF": 385,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "5644bd2b4bdc2d3b4c8b4572": {
         "ItemID": "5644bd2b4bdc2d3b4c8b4572",
@@ -817,7 +857,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.061,
+        "CenterOfImpact": 0.047,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -831,11 +871,13 @@
         "AutoROF": 650,
         "SemiROF": 400,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "59ff346386f77477562ff5e2": {
         "ItemID": "59ff346386f77477562ff5e2",
@@ -859,7 +901,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.087,
+        "CenterOfImpact": 0.07,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -873,11 +915,13 @@
         "AutoROF": 600,
         "SemiROF": 415,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "59d6088586f774275f37482f": {
         "ItemID": "59d6088586f774275f37482f",
@@ -901,7 +945,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.087,
+        "CenterOfImpact": 0.068,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -915,11 +959,13 @@
         "AutoROF": 600,
         "SemiROF": 420,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "57dc2fa62459775949412633": {
         "ItemID": "57dc2fa62459775949412633",
@@ -943,7 +989,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.065,
+        "CenterOfImpact": 0.075,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -957,11 +1003,13 @@
         "AutoROF": 680,
         "SemiROF": 415,
         "LoyaltyLevel": 2,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.4,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "628a60ae6b1d481ff772e9c8": {
         "ItemID": "628a60ae6b1d481ff772e9c8",
@@ -985,7 +1033,7 @@
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
         "AllowOverheat": true,
-        "CenterOfImpact": 0.062,
+        "CenterOfImpact": 0.057,
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
@@ -999,11 +1047,13 @@
         "AutoROF": 605,
         "SemiROF": 450,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.15,
-        "BaseChamberSpeedMulti": 1.5,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.3
     },
     "606587252535c57a13424cfd": {
         "ItemID": "606587252535c57a13424cfd",
@@ -1042,10 +1092,12 @@
         "SemiROF": 410,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.85,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.9,
+        "BaseFixSpeed": 0.8
     },
     "5b0bbe4e5acfc40dc528a72d": {
         "ItemID": "5b0bbe4e5acfc40dc528a72d",
@@ -1083,11 +1135,13 @@
         "AutoROF": 700,
         "SemiROF": 360,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.05,
-        "BaseChamberSpeedMulti": 1.15,
+        "BaseReloadSpeedMulti": 0.9,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.5,
+        "BaseFixSpeed": 1.9
     },
     "6184055050224f204c1da540": {
         "ItemID": "6184055050224f204c1da540",
@@ -1125,11 +1179,13 @@
         "AutoROF": 650,
         "SemiROF": 400,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 0.9,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.95,
+        "BaseFixSpeed": 0.95
     },
     "618428466ef05c2ce828f218": {
         "ItemID": "618428466ef05c2ce828f218",
@@ -1167,11 +1223,13 @@
         "AutoROF": 650,
         "SemiROF": 400,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 0.9,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.95,
+        "BaseFixSpeed": 0.95
     },
     "6183afd850224f204c1da514": {
         "ItemID": "6183afd850224f204c1da514",
@@ -1210,10 +1268,12 @@
         "SemiROF": 400,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.95,
+        "BaseChamberSpeedMulti": 0.9,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.95,
+        "BaseFixSpeed": 0.95
     },
     "6165ac306ef05c2ce828ef74": {
         "ItemID": "6165ac306ef05c2ce828ef74",
@@ -1252,10 +1312,12 @@
         "SemiROF": 400,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.95,
+        "BaseChamberSpeedMulti": 0.9,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.95,
+        "BaseFixSpeed": 0.95
     },
     "5c488a752e221602b412af63": {
         "ItemID": "5c488a752e221602b412af63",
@@ -1266,9 +1328,9 @@
         "BaseTorque": 5,
         "HasShoulderContact": true,
         "Ergonomics": 80,
-        "VerticalRecoil": 48,
+        "VerticalRecoil": 50,
         "HorizontalRecoil": 250,
-        "Dispersion": 16,
+        "Dispersion": 15,
         "CameraRecoil": 0.059,
         "CameraSnap": 3.5,
         "Convergence": 6.5,
@@ -1293,11 +1355,13 @@
         "AutoROF": 650,
         "SemiROF": 365,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 0.6,
-        "BaseChamberSpeedMulti": 0.6,
+        "BaseReloadSpeedMulti": 0.9,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.9,
+        "BaseFixSpeed": 1.1
     },
     "5dcbd56fdbd3d91b3e5468d5": {
         "ItemID": "5dcbd56fdbd3d91b3e5468d5",
@@ -1335,11 +1399,13 @@
         "AutoROF": 650,
         "SemiROF": 365,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 0.6,
-        "BaseChamberSpeedMulti": 0.6,
+        "BaseReloadSpeedMulti": 0.9,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.9,
+        "BaseFixSpeed": 1.1
     },
     "5cadfbf7ae92152ac412eeef": {
         "ItemID": "5cadfbf7ae92152ac412eeef",
@@ -1351,7 +1417,7 @@
         "HasShoulderContact": true,
         "Ergonomics": 80,
         "VerticalRecoil": 115,
-        "HorizontalRecoil": 550,
+        "HorizontalRecoil": 350,
         "Dispersion": 17,
         "CameraRecoil": 0.14,
         "CameraSnap": 3.5,
@@ -1377,11 +1443,13 @@
         "AutoROF": 650,
         "SemiROF": 330,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 0.95,
-        "MinChamberSpeed": 0.7,
+        "BaseReloadSpeedMulti": 3,
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.8,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 4.5,
+        "BaseFixSpeed": 3.5
     },
     "623063e994fc3f7b302a9696": {
         "ItemID": "623063e994fc3f7b302a9696",
@@ -1420,10 +1488,12 @@
         "SemiROF": 385,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 0.95,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.9,
+        "BaseFixSpeed": 0.85    
     },
     "5fbcc1d9016cce60e8341ab3": {
         "ItemID": "5fbcc1d9016cce60e8341ab3",
@@ -1461,11 +1531,13 @@
         "AutoROF": 800,
         "SemiROF": 420,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1.05,
-        "BaseChamberSpeedMulti": 0.9,
+        "BaseReloadSpeedMulti": 0.8,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 0.9,
+        "BaseFixSpeed": 0.8
     },
     "5bb2475ed4351e00853264e3": {
         "ItemID": "5bb2475ed4351e00853264e3",
@@ -1503,11 +1575,13 @@
         "AutoROF": 850,
         "SemiROF": 410,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.12,
-        "BaseChamberSpeedMulti": 1.02,
+        "BaseReloadSpeedMulti": 0.88,
+        "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
-        "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "MaxChamberSpeed": 1.2,
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.4,
+        "BaseFixSpeed": 1.2
     },
     "5447a9cd4bdc2dbd208b4567": {
         "ItemID": "5447a9cd4bdc2dbd208b4567",
@@ -1545,10 +1619,12 @@
         "AutoROF": 800,
         "SemiROF": 400,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1.02,
-        "BaseChamberSpeedMulti": 1.35,
-        "MinChamberSpeed": 0.75,
-        "MaxChamberSpeed": 1.5,
-        "IsManuallyOperated": false
+        "BaseReloadSpeedMulti": 0.88,
+        "BaseChamberSpeedMulti": 1,
+        "MinChamberSpeed": 0.7,
+        "MaxChamberSpeed": 1.2,
+        "IsManuallyOperated": false,
+        "BaseChamberCheckSpeed": 1.4,
+        "BaseFixSpeed": 1.2
     }
 }

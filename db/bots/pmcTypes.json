@@ -12,7 +12,7 @@
                 "followerKojaniy": 0,
                 "followerTagilla": 4,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "bigmap": {
                 "bossSanitar": 15,
@@ -22,7 +22,7 @@
                 "followerKojaniy": 15,
                 "followerTagilla": 2,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "laboratory": {
                 "bossSanitar": 15,
@@ -110,7 +110,7 @@
                 "followerSanitar": 5,
                 "assault": 15,
                 "exUsec": 5,
-                "sectantPriest": 3
+                "sectantPriest": 1
             },
             "bigmap": {
                 "bossSanitar": 10,
@@ -123,7 +123,7 @@
                 "followerSanitar": 5,
                 "assault": 15,
                 "exUsec": 5,
-                "sectantPriest": 2
+                "sectantPriest": 1
             },
             "laboratory": {
                 "bossSanitar": 10,
@@ -136,7 +136,7 @@
                 "followerSanitar": 10,
                 "assault": 15,
                 "exUsec": 10,
-                "sectantPriest": 2
+                "sectantPriest": 1
             },
             "woods": {
                 "bossSanitar": 10,
@@ -149,7 +149,7 @@
                 "followerSanitar": 5,
                 "assault": 15,
                 "exUsec": 5,
-                "sectantPriest": 2
+                "sectantPriest": 1
             },
             "interchange": {
                 "bossSanitar": 10,
@@ -162,7 +162,7 @@
                 "followerSanitar": 5,
                 "assault": 15,
                 "exUsec": 5,
-                "sectantPriest": 2
+                "sectantPriest": 1
             },
             "lighthouse": {
                 "bossSanitar": 10,
@@ -175,7 +175,7 @@
                 "followerSanitar": 5,
                 "assault": 15,
                 "exUsec": 5,
-                "sectantPriest": 2
+                "sectantPriest": 1
             },
             "rezervbase": {
                 "bossSanitar": 10,
@@ -188,7 +188,7 @@
                 "followerSanitar": 5,
                 "assault": 15,
                 "exUsec": 5,
-                "sectantPriest": 2
+                "sectantPriest": 1
             },
             "shoreline": {
                 "bossSanitar": 10,
@@ -201,7 +201,7 @@
                 "followerSanitar": 5,
                 "assault": 15,
                 "exUsec": 5,
-                "sectantPriest": 2
+                "sectantPriest": 1
             },
             "tarkovstreets": {
                 "bossSanitar": 10,
@@ -214,7 +214,7 @@
                 "followerSanitar": 5,
                 "assault": 15,
                 "exUsec": 5,
-                "sectantPriest": 2
+                "sectantPriest": 1
             }
         }
     },
@@ -228,7 +228,7 @@
                 "followerKojaniy": 0,
                 "followerTagilla": 3,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "factory4_night": {
                 "bossSanitar": 15,
@@ -238,7 +238,7 @@
                 "followerKojaniy": 0,
                 "followerTagilla": 4,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "bigmap": {
                 "bossSanitar": 15,
@@ -248,7 +248,7 @@
                 "followerKojaniy": 15,
                 "followerTagilla": 2,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "laboratory": {
                 "bossSanitar": 15,
@@ -258,7 +258,7 @@
                 "followerKojaniy": 0,
                 "followerTagilla": 2,
                 "assault": 20,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "woods": {
                 "bossSanitar": 15,
@@ -268,7 +268,7 @@
                 "followerKojaniy": 20,
                 "followerTagilla": 1,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "interchange": {
                 "bossSanitar": 15,
@@ -278,7 +278,7 @@
                 "followerKojaniy": 0,
                 "followerTagilla": 2,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "lighthouse": {
                 "bossSanitar": 15,
@@ -288,7 +288,7 @@
                 "followerKojaniy": 20,
                 "followerTagilla": 1,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "rezervbase": {
                 "bossSanitar": 15,
@@ -298,7 +298,7 @@
                 "followerKojaniy": 0,
                 "followerTagilla": 2,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "shoreline": {
                 "bossSanitar": 15,
@@ -308,7 +308,7 @@
                 "followerKojaniy": 20,
                 "followerTagilla": 1,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             },
             "tarkovstreets": {
                 "bossSanitar": 15,
@@ -318,7 +318,7 @@
                 "followerKojaniy": 20,
                 "followerTagilla": 1,
                 "assault": 15,
-                "sectantPriest": 4
+                "sectantPriest": 1
             }
         },
         "sptusec": {

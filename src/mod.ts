@@ -116,6 +116,8 @@ const modConfig = require("../config/config.json");
 
 const pmcTypes = require("../db/bots/pmcTypes.json");
 
+var clientValidateCount = 0;
+
 class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiLoadModAsync {
 
     private path: { resolve: (arg0: string) => any; };
@@ -315,7 +317,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                             }
                             this.checkForEvents(logger, seasonalEventsService);
 
-                            randomizeTraderAssort.adjustTraderStockAtServerStart();
+                            if(clientValidateCount === 0){
+                                randomizeTraderAssort.adjustTraderStockAtServerStart();
+                                logger.info("Realism Mod: Trader Stock Adjusted");
+                            }
+                            clientValidateCount += 1;
                             
                             if (modConfig.tiered_flea == true) {
                                 this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
@@ -834,28 +840,34 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             this.bossSpawnHelper(mapDB, 0.01);
         }
         if (level >= 5 && level < 10) {
-            this.bossSpawnHelper(mapDB, 0.1);
+            this.bossSpawnHelper(mapDB, 0.05);
         }
         if (level >= 10 && level < 15) {
-            this.bossSpawnHelper(mapDB, 0.2);
+            this.bossSpawnHelper(mapDB, 0.1);
         }
         if (level >= 15 && level < 20) {
-            this.bossSpawnHelper(mapDB, 0.4);
+            this.bossSpawnHelper(mapDB, 0.2);
         }
         if (level >= 20 && level < 25) {
-            this.bossSpawnHelper(mapDB, 0.6);
+            this.bossSpawnHelper(mapDB, 0.4);
         }
         if (level >= 25 && level < 30) {
-            this.bossSpawnHelper(mapDB, 0.8);
+            this.bossSpawnHelper(mapDB, 0.6);
         }
         if (level >= 30 && level < 35) {
-            this.bossSpawnHelper(mapDB, 1);
+            this.bossSpawnHelper(mapDB, 0.8);
         }
         if (level >= 35 && level < 40) {
+            this.bossSpawnHelper(mapDB, 0.9);
+        }
+        if (level >= 40 && level < 45) {
+            this.bossSpawnHelper(mapDB, 1);
+        }
+        if (level >= 45 && level < 50) {
             this.bossSpawnHelper(mapDB, 1.1);
         }
-        if (level >= 40) {
-            this.bossSpawnHelper(mapDB, 1.2);
+        if (level >= 45 && level < 50) {
+            this.bossSpawnHelper(mapDB, 1.1);
         }
     }
 
