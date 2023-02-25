@@ -7,7 +7,7 @@
         "ArmorClass": "NIJ III",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.84
+        "ReloadSpeedMulti": 0.88
     },
     "61bcc89aef0f505f0c6cd0fc": {
         "ItemID": "61bcc89aef0f505f0c6cd0fc",
@@ -17,7 +17,7 @@
         "ArmorClass": "NIJ III",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.18
+        "ReloadSpeedMulti": 1.14
     },
     "5c0e3eb886f7742015526062": {
         "ItemID": "5c0e3eb886f7742015526062",
@@ -25,9 +25,9 @@
         "AllowADS": true,
         "LoyaltyLevel": 2,
         "ArmorClass": "GOST 3",
-        "CanSpall": false,
-        "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.83
+        "CanSpall": true,
+        "SpallReduction": 0.42,
+        "ReloadSpeedMulti": 0.87
     },
     "5ab8dced86f774646209ec87": {
         "ItemID": "5ab8dced86f774646209ec87",
@@ -37,7 +37,7 @@
         "ArmorClass": "NIJ III",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.86
+        "ReloadSpeedMulti": 0.90
     },
     "5c0e446786f7742013381639": {
         "ItemID": "5c0e446786f7742013381639",
@@ -45,9 +45,9 @@
         "AllowADS": true,
         "LoyaltyLevel": 2,
         "ArmorClass": "GOST 4",
-        "CanSpall": false,
-        "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.83
+        "CanSpall": true,
+        "SpallReduction": 0.42,
+        "ReloadSpeedMulti": 0.87
     },
     "5d5d87f786f77427997cfaef": {
         "ItemID": "5d5d87f786f77427997cfaef",
@@ -57,7 +57,7 @@
         "ArmorClass": "NIJ III",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.19
+        "ReloadSpeedMulti": 1.15
     },
     "5d5d646386f7742797261fd9": {
         "ItemID": "5d5d646386f7742797261fd9",
@@ -65,9 +65,9 @@
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "GOST 2A",
-        "CanSpall": false,
-        "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.82
+        "CanSpall": true,
+        "SpallReduction": 0.5,
+        "ReloadSpeedMulti": 0.86
     },
     "544a5caa4bdc2d1a388b4568": {
         "ItemID": "544a5caa4bdc2d1a388b4568",
@@ -77,7 +77,7 @@
         "ArmorClass": "NIJ III+",
         "CanSpall": true,
         "SpallReduction": 0.5,
-        "ReloadSpeedMulti": 1.2
+        "ReloadSpeedMulti": 1.16
     },
     "628d0618d1ba6e4fa07ce5a4": {
         "ItemID": "628d0618d1ba6e4fa07ce5a4",
@@ -85,9 +85,9 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5",
-        "CanSpall": false,
-        "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.83
+        "CanSpall": true,
+        "SpallReduction": 0.37,
+        "ReloadSpeedMulti": 0.87
     },
     "5e4ac41886f77406a511c9a8": {
         "ItemID": "5e4ac41886f77406a511c9a8",
@@ -97,7 +97,7 @@
         "ArmorClass": "NIJ III+",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.17
+        "ReloadSpeedMulti": 1.14
     },
     "5c0e746986f7741453628fe5": {
         "ItemID": "5c0e746986f7741453628fe5",
@@ -106,8 +106,8 @@
         "LoyaltyLevel": 3,
         "ArmorClass": "NIJ III",
         "CanSpall": true,
-        "SpallReduction": 0.65,
-        "ReloadSpeedMulti": 0.9
+        "SpallReduction": 0.6,
+        "ReloadSpeedMulti": 0.94
     },
     "628dc750b910320f4c27a732": {
         "ItemID": "628dc750b910320f4c27a732",
@@ -117,7 +117,7 @@
         "ArmorClass": "ESAPI (Rev. J)",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.17
+        "ReloadSpeedMulti": 1.13
     },
     "61bc85697113f767765c7fe7": {
         "ItemID": "61bc85697113f767765c7fe7",
@@ -126,8 +126,8 @@
         "LoyaltyLevel": 5,
         "ArmorClass": "NIJ III+",
         "CanSpall": true,
-        "SpallReduction": 0.6,
-        "ReloadSpeedMulti": 1.18
+        "SpallReduction": 0.65,
+        "ReloadSpeedMulti": 1.14
     },
     "609e860ebd219504d8507525": {
         "ItemID": "609e860ebd219504d8507525",
@@ -137,7 +137,7 @@
         "ArmorClass": "NIJ IV",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.85
+        "ReloadSpeedMulti": 0.89
     },
     "628b9784bcf6e2659e09b8a2": {
         "ItemID": "628b9784bcf6e2659e09b8a2",
@@ -147,7 +147,7 @@
         "ArmorClass": "ESAPI (Rev. G)",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.87
+        "ReloadSpeedMulti": 0.91
     },
     "628b9c7d45122232a872358f": {
         "ItemID": "628b9c7d45122232a872358f",
@@ -157,7 +157,7 @@
         "ArmorClass": "ESAPI (Rev. J)",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.16
+        "ReloadSpeedMulti": 1.13
     },
     "5b44cad286f77402a54ae7e5": {
         "ItemID": "5b44cad286f77402a54ae7e5",
@@ -167,7 +167,7 @@
         "ArmorClass": "NIJ IV",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.2
+        "ReloadSpeedMulti": 1.16
     },
     "60a3c70cde5f453f634816a3": {
         "ItemID": "60a3c70cde5f453f634816a3",
@@ -177,7 +177,7 @@
         "ArmorClass": "MK4A Plates",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.17
+        "ReloadSpeedMulti": 1.14
     },
     "60a3c68c37ea821725773ef5": {
         "ItemID": "60a3c68c37ea821725773ef5",
@@ -187,7 +187,7 @@
         "ArmorClass": "MK4A Plates",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.19
+        "ReloadSpeedMulti": 1.15
     },
     "628cd624459354321c4b7fa2": {
         "ItemID": "628cd624459354321c4b7fa2",
@@ -197,7 +197,7 @@
         "ArmorClass": "NIJ III+",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.1
+        "ReloadSpeedMulti": 1.08
     },
     "639343fce101f4caa40a4ef3": {
         "ItemID": "639343fce101f4caa40a4ef3",

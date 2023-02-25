@@ -105,6 +105,8 @@ import { info } from "console";
 import { url } from "inspector";
 import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
 import { LootGenerator } from "@spt-aki/generators/LootGenerator";
+import { OldAmmo } from "./ammo_old";
+import { OldArmor } from "./armor_old";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -586,6 +588,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
         const helper = new Helper(tables, arrays);
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
+        const oldAmmo = new OldAmmo(logger, tables, modConfig);
+        const oldArmor = new OldArmor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig);
         const attachStats = new AttachmentStats(logger, tables, modConfig, arrays);
         const bots = new Bots(logger, tables, configServer, modConfig, arrays, helper);
@@ -666,10 +670,15 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
 
 
 
-        if (modConfig.realistic_ballistics == true) {
+        if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
             ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
+        }
+
+        if(modConfig.old_ballistics == true && modConfig.realistic_ballistics  == false){
+            oldAmmo.loadAmmoStatsOld();
+            oldArmor.loadArmorOld();
         }
 
         bots.botHpMulti();

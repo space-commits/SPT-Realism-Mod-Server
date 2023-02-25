@@ -1914,7 +1914,7 @@
         "ItemID": "5a718f958dc32e00094b97e7",
         "Name": "mag_glock_sgmt_glock_drum_50_9x19_50",
         "ModType": "",
-        "ReloadSpeed": -15,
+        "ReloadSpeed": -18,
         "Ergonomics": -11,
         "MagMalfunctionChance": 1.25,
         "LoadUnloadModifier": -10,

@@ -25,8 +25,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.25,
         "ReloadSpeedMulti": 1
     },
     "5c0e53c886f7747fa54205c7": {
@@ -35,8 +35,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.4,
         "ReloadSpeedMulti": 1
     },
     "5c0e51be86f774598e797894": {
@@ -45,8 +45,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.4,
         "ReloadSpeedMulti": 1
     },
     "5c0e541586f7747fa54205c9": {
@@ -75,8 +75,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 4,
         "ArmorClass": "GOST 4",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.37,
         "ReloadSpeedMulti": 1
     },
     "5c0e57ba86f7747fa141986d": {
@@ -85,8 +85,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.37,
         "ReloadSpeedMulti": 1
     },
     "5fd4c474dd870108a754b241": {
@@ -125,8 +125,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5A",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.37,
         "ReloadSpeedMulti": 1
     },
     "62a09d79de7ac81993580530": {
@@ -175,8 +175,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "GOST 2A",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.37,
         "ReloadSpeedMulti": 1
     },
     "5f5f41476bdad616ad46d631": {
@@ -185,9 +185,9 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5",
-        "CanSpall": false,
-        "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "CanSpall": true,
+        "SpallReduction": 0.37,
+        "ReloadSpeedMulti": 0.65
     },
     "607f20859ee58b18e41ecd90": {
         "ItemID": "607f20859ee58b18e41ecd90",
@@ -205,8 +205,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.35,
         "ReloadSpeedMulti": 1
     },
     "5ca21c6986f77479963115a7": {
@@ -215,8 +215,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.25,
         "ReloadSpeedMulti": 1
     },
     "5e4abb5086f77406975c9342": {
@@ -265,7 +265,7 @@
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "GOST 3",
-        "CanSpall": false,
+        "CanSpall": true,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1
     },
@@ -275,9 +275,9 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6",
-        "CanSpall": false,
-        "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "CanSpall": true,
+        "SpallReduction": 0.5,
+        "ReloadSpeedMulti": 0.75
     },
     "59e7635f86f7742cbf2c1095": {
         "ItemID": "59e7635f86f7742cbf2c1095",

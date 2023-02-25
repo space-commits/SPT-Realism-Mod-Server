@@ -1,40 +1,47 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Armor = void 0;
-const enums_1 = require("./enums");
-class Armor {
-    constructor(logger, tables, modConf) {
-        this.logger = logger;
-        this.tables = tables;
-        this.modConf = modConf;
-        this.globalDB = this.tables.globals.config;
-        this.itemDB = this.tables.templates.items;
-        this.armMat = this.globalDB.ArmorMaterials;
-    }
-    loadArmor() {
+import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { ILogger } from "../types/models/spt/utils/ILogger";
+import { ParentClasses } from "./enums";
+
+export class OldArmor {
+
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
+
+    private globalDB = this.tables.globals.config;
+    private itemDB = this.tables.templates.items;
+    private armMat = this.globalDB.ArmorMaterials;
+
+    public loadArmorOld() {
+
         //Armor Destructibility values
-        this.armMat.Glass.Destructibility = 1.0;
+        this.armMat.Glass.Destructibility = 0.7;
         this.armMat.Glass.MaxRepairDegradation = 0.84;
         this.armMat.Glass.MinRepairDegradation = 0.46;
+
         this.armMat.Aramid.Destructibility = 0.50;
         this.armMat.Aramid.MaxRepairDegradation = 0.32;
         this.armMat.Aramid.MinRepairDegradation = 0.04;
-        this.armMat.Ceramic.Destructibility = 0.30;
+
+        this.armMat.Ceramic.Destructibility = 0.40;
         this.armMat.Ceramic.MaxRepairDegradation = 0.88;
         this.armMat.Ceramic.MinRepairDegradation = 0.68;
+
         this.armMat.Combined.Destructibility = 0.2;
         this.armMat.Combined.MaxRepairDegradation = 0.6;
         this.armMat.Combined.MinRepairDegradation = 0.4;
-        this.armMat.UHMWPE.Destructibility = 0.15;
+
+        this.armMat.UHMWPE.Destructibility = 0.35;
         this.armMat.UHMWPE.MaxRepairDegradation = 0.8;
         this.armMat.UHMWPE.MinRepairDegradation = 0.48;
-        this.armMat.Titan.Destructibility = 0.05;
+
+        this.armMat.Titan.Destructibility = 0.15;
         this.armMat.Titan.MaxRepairDegradation = 0.48;
         this.armMat.Titan.MinRepairDegradation = 0.16;
-        this.armMat.ArmoredSteel.Destructibility = 0.1;
+
+        this.armMat.ArmoredSteel.Destructibility = 0.05;
         this.armMat.ArmoredSteel.MaxRepairDegradation = 0.24;
         this.armMat.ArmoredSteel.MinRepairDegradation = 0.08;
-        for (let i in this.itemDB) {
+
+        for (let i in this.itemDB) { 
             let serverItem = this.itemDB[i];
             ////////Body Armor//////////
             //// Class 3////
@@ -74,6 +81,7 @@ class Armor {
                 serverItem._props.BluntThroughput = 0.25;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3;
+
             }
             //// Class 5////
             //6B2 Flora
@@ -124,6 +132,7 @@ class Armor {
                 serverItem._props.BluntThroughput = 0.13;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 5.2;
+
             }
             //Kirasa
             if (serverItem._id === "5b44d22286f774172b0c9de8") {
@@ -306,7 +315,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.22;
+                serverItem._props.BluntThroughput = 0.22
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 8.3;
             }
@@ -406,6 +415,7 @@ class Armor {
                 serverItem._props.BluntThroughput = 0.33;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 9.5;
+
             }
             //// ARMORED RIGS ////
             //// Class 5 ////
@@ -704,7 +714,7 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.headSegments = [
                     "Top"
-                ];
+                ]
             }
             //Kolpak
             if (serverItem._id === "59e7711e86f7746cae05fbe1") {
@@ -739,8 +749,7 @@ class Armor {
                 serverItem._props.armorClass = 1;
                 serverItem._props.speedPenaltyPercent = -0.225;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.225;
-                ;
+                serverItem._props.weaponErgonomicPenalty = -0.225;;
                 serverItem._props.BluntThroughput = 0.5;
                 serverItem._props.DeafStrength = "None";
                 serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -760,7 +769,7 @@ class Armor {
                     "Top",
                     "Ears",
                     "Jaws"
-                ];
+                ]
             }
             //Djeta
             if (serverItem._id === "5c0d2727d174af02a012cf58") {
@@ -792,7 +801,7 @@ class Armor {
                     "Top",
                     "Ears",
                     "Jaws"
-                ];
+                ]
             }
             //UN Helmet
             if (serverItem._id === "5aa7d03ae5b5b00016327db5") {
@@ -880,7 +889,7 @@ class Armor {
                 serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.75;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.75;
+                serverItem._props.weaponErgonomicPenalty = -0.75
                 serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.DeafStrength = "Low";
                 serverItem._props.ArmorMaterial = 'Combined';
@@ -1034,7 +1043,7 @@ class Armor {
                     "Ears",
                     "Jaws",
                     "Nape"
-                ];
+                ]
             }
             //ZSh
             if (serverItem._id === "5aa7e454e5b5b0214e506fa2") {
@@ -1260,6 +1269,7 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Glass';
                 serverItem._props.Weight = 0.35;
             }
+
             //// Class 2 ////
             //Caiman Fixed Arm Visor
             if (serverItem._id === "5f60bf4558eff926626a60f2") {
@@ -1387,8 +1397,7 @@ class Armor {
                 serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.6;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.6;
-                ;
+                serverItem._props.weaponErgonomicPenalty = -0.6;;
                 serverItem._props.BluntThroughput = 0;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'Combined';
@@ -1562,6 +1571,7 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 0.45;
             }
+
             if (serverItem._id === "5ea18c84ecf1982c7712d9a2") {
                 serverItem._props.Durability = 30;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -1573,50 +1583,35 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 0.99;
             }
+
             //Buff Helemts
-            if (serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) {
+            if (serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) {
                 if (this.modConf.buff_helmets == true && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
                     serverItem._props.armorClass = +serverItem._props.armorClass + 1;
                     serverItem._props.BluntThroughput *= 0.85;
-                    if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) {
+                    if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) {
                         serverItem._props.Durability *= 1.25;
                         serverItem._props.MaxDurability = serverItem._props.Durability;
                     }
-                    if (serverItem._parent === enums_1.ParentClasses.HEADWEAR) {
+                    if (serverItem._parent === ParentClasses.HEADWEAR) {
                         serverItem._props.Durability *= 1.1;
                         serverItem._props.MaxDurability = serverItem._props.Durability;
                     }
                 }
             }
+
             //Set min/max armor durability for spawns
-            if (serverItem._parent === enums_1.ParentClasses.CHESTRIG ||
-                serverItem._parent === enums_1.ParentClasses.ARMORVEST ||
-                serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT ||
-                serverItem._parent === enums_1.ParentClasses.HEADWEAR ||
-                serverItem._parent === enums_1.ParentClasses.FACECOVER) {
+            if (serverItem._parent === ParentClasses.CHESTRIG ||
+                serverItem._parent === ParentClasses.ARMORVEST ||
+                serverItem._parent === ParentClasses.ARMOREDEQUIPMENT ||
+                serverItem._parent === ParentClasses.HEADWEAR ||
+                serverItem._parent === ParentClasses.FACECOVER) {
                 serverItem._props.durabSpawnMin = 85;
                 serverItem._props.durabSpawnMax = 100;
             }
         }
         if (this.modConf.logEverything == true) {
-            this.logger.info("Armour loaded");
-        }
-    }
-    armorMousePenalty() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG || serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) && serverItem._props.speedPenaltyPercent != null) {
-                if (this.modConf.armor_mouse_penalty == true) {
-                    serverItem._props.mousePenalty = -serverItem._props.Weight;
-                }
-                else {
-                    serverItem._props.mousePenalty = 0;
-                }
-            }
-        }
-        if (this.modConf.logEverything == true) {
-            this.logger.info("Armour Mouse Penalty Added");
+            this.logger.info("Old Armour loaded");
         }
     }
 }
-exports.Armor = Armor;

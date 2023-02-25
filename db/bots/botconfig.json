@@ -33,9 +33,9 @@
     "durability1": {
         "default": {
             "armor": {
-                "maxDelta": 10,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 15
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 98,
@@ -47,11 +47,11 @@
         },
         "pmc": {
             "armor": {
-                "lowestMaxPercent": 98,
+                "lowestMaxPercent": 100,
                 "highestMaxPercent": 100,
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -65,7 +65,7 @@
             "armor": {
                 "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 1
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 100,
@@ -77,9 +77,9 @@
         },
         "follower": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -133,9 +133,9 @@
         },
         "pmcbot": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -147,9 +147,9 @@
         },
         "exusec": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -191,9 +191,9 @@
     "durability2": {
         "default": {
             "armor": {
-                "maxDelta": 10,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 15
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 98,
@@ -205,11 +205,11 @@
         },
         "pmc": {
             "armor": {
-                "lowestMaxPercent": 98,
+                "lowestMaxPercent": 100,
                 "highestMaxPercent": 100,
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -223,7 +223,7 @@
             "armor": {
                 "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 1
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 100,
@@ -235,9 +235,9 @@
         },
         "follower": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -291,9 +291,9 @@
         },
         "pmcbot": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -305,9 +305,9 @@
         },
         "exusec": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -349,9 +349,9 @@
     "durability3": {
         "default": {
             "armor": {
-                "maxDelta": 10,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 15
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 98,
@@ -363,11 +363,11 @@
         },
         "pmc": {
             "armor": {
-                "lowestMaxPercent": 98,
+                "lowestMaxPercent": 100,
                 "highestMaxPercent": 100,
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -381,7 +381,7 @@
             "armor": {
                 "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 1
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 100,
@@ -393,9 +393,9 @@
         },
         "follower": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -449,9 +449,9 @@
         },
         "pmcbot": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
@@ -463,9 +463,9 @@
         },
         "exusec": {
             "armor": {
-                "maxDelta": 5,
+                "maxDelta": 0,
                 "minDelta": 0,
-                "minLimitPercent": 5
+                "minLimitPercent": 0
             },
             "weapon": {
                 "lowestMax": 95,
