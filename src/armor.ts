@@ -41,7 +41,7 @@ export class Armor {
         this.armMat.ArmoredSteel.MaxRepairDegradation = 0.24;
         this.armMat.ArmoredSteel.MinRepairDegradation = 0.08;
 
-        for (let i in this.itemDB) { 
+        for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             ////////Body Armor//////////
             //// Class 3////
@@ -53,7 +53,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.3;
+                serverItem._props.BluntThroughput = 0.4;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3.5;
             }
@@ -65,7 +65,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = 1;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = 1;
-                serverItem._props.BluntThroughput = 0.3;
+                serverItem._props.BluntThroughput = 0.35;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3;
             }
@@ -78,7 +78,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -1;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1;
-                serverItem._props.BluntThroughput = 0.35;
+                serverItem._props.BluntThroughput = 0.4;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3;
 
@@ -92,9 +92,21 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
-                serverItem._props.BluntThroughput = 0.25;
+                serverItem._props.BluntThroughput = 0.3;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 5.4;
+            }
+            //Kirasa
+            if (serverItem._id === "5b44d22286f774172b0c9de8") {
+                serverItem._props.Durability = 115;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 5;
+                serverItem._props.speedPenaltyPercent = -8;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -8;
+                serverItem._props.BluntThroughput = 0.25;
+                serverItem._props.ArmorMaterial = 'Titan';
+                serverItem._props.Weight = 7.1;
             }
             //// Class 6////
             //Thor CV
@@ -105,7 +117,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -4;
-                serverItem._props.BluntThroughput = 0.2;
+                serverItem._props.BluntThroughput = 0.3;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 5.7;
             }
@@ -117,34 +129,22 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -7;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -7;
-                serverItem._props.BluntThroughput = 0.24;
+                serverItem._props.BluntThroughput = 0.34;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 8.5;
             }
             //Zhuk-3
             if (serverItem._id === "5c0e5edb86f77461f55ed1f7") {
-                serverItem._props.Durability = 70;
+                serverItem._props.Durability = 80;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 6;
                 serverItem._props.speedPenaltyPercent = -7;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -7;
-                serverItem._props.BluntThroughput = 0.23;
+                serverItem._props.BluntThroughput = 0.26;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 5.2;
 
-            }
-            //Kirasa
-            if (serverItem._id === "5b44d22286f774172b0c9de8") {
-                serverItem._props.Durability = 115;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 5;
-                serverItem._props.speedPenaltyPercent = -8;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -8;
-                serverItem._props.BluntThroughput = 0.22;
-                serverItem._props.ArmorMaterial = 'Titan';
-                serverItem._props.Weight = 7.1;
             }
             //// Class 7////
             //Highcom Trooper
@@ -155,7 +155,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -4.5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -4.5;
-                serverItem._props.BluntThroughput = 0.09;
+                serverItem._props.BluntThroughput = 0.15;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 7.5;
             }
@@ -164,12 +164,12 @@ export class Armor {
                 serverItem._props.Durability = 100;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 7;
-                serverItem._props.speedPenaltyPercent = -3;
+                serverItem._props.speedPenaltyPercent = -2.5;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -3;
-                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.weaponErgonomicPenalty = -2.5;
+                serverItem._props.BluntThroughput = 0.17;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
-                serverItem._props.Weight = 6.5;
+                serverItem._props.Weight = 6;
             }
             //// Class 8////
             //Black Slick
@@ -216,7 +216,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.08;
+                serverItem._props.BluntThroughput = 0.09;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 7.9;
             }
@@ -228,7 +228,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.06;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 9.8;
             }
@@ -242,7 +242,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.BluntThroughput = 0.12;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 11.5;
             }
@@ -254,7 +254,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.1 ;
+                serverItem._props.BluntThroughput = 0.12;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 11.5;
             }
@@ -266,7 +266,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.08;
+                serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 12;
             }
@@ -427,7 +427,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.BluntThroughput = 0.13;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 9.2;
             }
@@ -453,7 +453,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -10;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.15;
+                serverItem._props.BluntThroughput = 0.16;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 12.2;
             }
@@ -507,26 +507,26 @@ export class Armor {
             }
             //ANA M1
             if (serverItem._id === "5c0e722886f7740458316a57") {
-                serverItem._props.Durability = 125;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 7;
-                serverItem._props.speedPenaltyPercent = -7;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -8;
-                serverItem._props.BluntThroughput = 0.20;
-                serverItem._props.ArmorMaterial = '12';
-                serverItem._props.Weight = 8.8;
-            }
-            //ANA M2
-            if (serverItem._id === "5ab8dced86f774646209ec87") {
                 serverItem._props.Durability = 120;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 7;
                 serverItem._props.speedPenaltyPercent = -7;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -8;
-                serverItem._props.BluntThroughput = 0.12;
+                serverItem._props.BluntThroughput = 0.11;
                 serverItem._props.ArmorMaterial = 'Ceramic';
+                serverItem._props.Weight = 8.8;
+            }
+            //ANA M2
+            if (serverItem._id === "5ab8dced86f774646209ec87") {
+                serverItem._props.Durability = 100;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 7;
+                serverItem._props.speedPenaltyPercent = -7;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -8;
+                serverItem._props.BluntThroughput = 0.12;
+                serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 8.4;
             }
             //// Class 8 ////  
@@ -538,7 +538,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -8;
-                serverItem._props.BluntThroughput = 0.09;
+                serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 10;
             }
@@ -659,7 +659,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
-                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.BluntThroughput = 0.13;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 9.5;
             }
@@ -672,7 +672,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -4;
-                serverItem._props.BluntThroughput = 0.12;
+                serverItem._props.BluntThroughput = 0.11;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 8;
             }
@@ -850,7 +850,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -1.25;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1.25;
-                serverItem._props.BluntThroughput = 0.06;
+                serverItem._props.BluntThroughput = 0.07;
                 serverItem._props.DeafStrength = "Low";
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 1.5;
@@ -884,13 +884,13 @@ export class Armor {
             //// Class 4 ////
             //Tagilla's Welding Mask "UBEY"
             if (serverItem._id === "60a7ad2a2198820d95707a2e") {
-                serverItem._props.Durability = 30;
+                serverItem._props.Durability = 33;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.75;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.75
-                serverItem._props.BluntThroughput = 0.04;
+                serverItem._props.BluntThroughput = 0.05;
                 serverItem._props.DeafStrength = "Low";
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 1.5;
@@ -903,7 +903,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -0.9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.9;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.06;
                 serverItem._props.DeafStrength = "Low";
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 1.8;
@@ -929,7 +929,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -1.75;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1.75;
-                serverItem._props.BluntThroughput = 0.08;
+                serverItem._props.BluntThroughput = 0.085;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 3.5;
@@ -1053,7 +1053,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -1.85;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1.85;
-                serverItem._props.BluntThroughput = 0.062;
+                serverItem._props.BluntThroughput = 0.065;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 3.7;
@@ -1066,7 +1066,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -1.85;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1.85;
-                serverItem._props.BluntThroughput = 0.062;
+                serverItem._props.BluntThroughput = 0.065;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 3.7;
@@ -1170,7 +1170,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.055;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 4;
@@ -1209,7 +1209,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -1.3;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1.3;
-                serverItem._props.BluntThroughput = 0.055;
+                serverItem._props.BluntThroughput = 0.05;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 2.6;
@@ -1222,7 +1222,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -1.3;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1.3;
-                serverItem._props.BluntThroughput = 0.055;
+                serverItem._props.BluntThroughput = 0.05;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 2.6;

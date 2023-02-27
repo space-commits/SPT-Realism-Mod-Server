@@ -817,7 +817,7 @@
     "624c0570c9b794431568f5d5": {
         "ItemID": "624c0570c9b794431568f5d5",
         "Name": "patron_rsp_green",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 2
     },
     "624c09cfbc2e27219346d955": {
         "ItemID": "624c09cfbc2e27219346d955",
@@ -827,7 +827,7 @@
     "624c09da2cec124eb67c1046": {
         "ItemID": "624c09da2cec124eb67c1046",
         "Name": "patron_rsp_white",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 1
     },
     "624c09e49b98e019a3315b66": {
         "ItemID": "624c09e49b98e019a3315b66",

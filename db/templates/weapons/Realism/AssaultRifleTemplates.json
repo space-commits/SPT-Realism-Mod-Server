@@ -1622,7 +1622,7 @@
         "BaseReloadSpeedMulti": 0.88,
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
-        "MaxChamberSpeed": 1.2,
+        "MaxChamberSpeed": 1.25,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.4,
         "BaseFixSpeed": 1.2

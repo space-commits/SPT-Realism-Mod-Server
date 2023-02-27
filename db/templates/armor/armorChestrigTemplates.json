@@ -177,7 +177,7 @@
         "ArmorClass": "MK4A Plates",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.14
+        "ReloadSpeedMulti": 1.07
     },
     "60a3c68c37ea821725773ef5": {
         "ItemID": "60a3c68c37ea821725773ef5",
@@ -187,7 +187,7 @@
         "ArmorClass": "MK4A Plates",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.15
+        "ReloadSpeedMulti": 1.09
     },
     "628cd624459354321c4b7fa2": {
         "ItemID": "628cd624459354321c4b7fa2",

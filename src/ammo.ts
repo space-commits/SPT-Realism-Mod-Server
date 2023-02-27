@@ -3337,7 +3337,7 @@ export class Ammo {
             if (serverItem._id === "601949593ae8f707c4608daa") {
                 serverItem._props.PenetrationPower = 95;
                 serverItem._props.ArmorDamage = 33;
-                serverItem._props.Damage = 57;
+                serverItem._props.Damage = 56;
                 serverItem._props.InitialSpeed = 1013;
                 serverItem._props.RicochetChance = 0.29;
                 serverItem._props.FragmentationChance = 0.12;

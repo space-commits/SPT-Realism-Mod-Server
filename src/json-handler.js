@@ -130,10 +130,12 @@ class JsonHandler {
                     serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
                     serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
                     serverItem._props.BlocksFolding = fileItem.BlocksFolding;
-                    serverItem._props.Velocity = fileItem.Velocity;
                     serverItem._props.Weight = fileItem.Weight;
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Loudness = fileItem.Loudness;
+                    if (modConfig.realistic_ballistics == true) {
+                        serverItem._props.Velocity = fileItem.Velocity;
+                    }
                     if (fileItem.ModType === "Stock") {
                         serverItem._parent = "55818a594bdc2db9688b456a";
                     }
@@ -158,6 +160,9 @@ class JsonHandler {
                     serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
                     serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
                 }
+                if (modConfig.realistic_ballistics == true) {
+                    serverItem._props.Velocity = fileItem.Velocity;
+                }
                 if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && helper_1.ConfigChecker.dllIsPresent == true) {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
                     serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
@@ -175,7 +180,6 @@ class JsonHandler {
                     serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
                     serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
-                    serverItem._props.Velocity = fileItem.Velocity;
                     serverItem._props.Weight = fileItem.Weight;
                     serverItem._props.bFirerate = fileItem.AutoROF;
                     serverItem._props.SingleFireRate = fileItem.SemiROF;

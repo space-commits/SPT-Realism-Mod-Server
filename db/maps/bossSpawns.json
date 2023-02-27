@@ -770,6 +770,19 @@
             "RandomTimeSpawn": false
         },
         {
+            "BossName": "bossKojaniy",
+            "BossChance": 15,
+            "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZoneBusStation,ZoneRailWays,ZoneForestTruck,ZoneForestSpawn",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerKojaniy",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "2,2,2,2,2,2,3,3,3,4",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
             "BossName": "bossKnight",
             "BossChance": 25,
             "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZoneForestTruck,ZoneForestSpawn",
@@ -814,7 +827,7 @@
             "BossDifficult": "normal",
             "BossEscortType": "followerKojaniy",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2",
+            "BossEscortAmount": "2,2,2,2,2,2,3,3,3,4",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
