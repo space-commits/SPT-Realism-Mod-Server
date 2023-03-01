@@ -18,6 +18,7 @@ export class Maps {
         this.tables.locations.interchange.base.BossLocationSpawn = bossSpawns.InterchangeBossLocationSpawn;
         this.tables.locations.shoreline.base.BossLocationSpawn = bossSpawns.ShorelineBossLocationSpawn;
         this.tables.locations.lighthouse.base.BossLocationSpawn = bossSpawns.LighthouseBossLocationSpawn;
+        this.tables.locations.lighthouse.base.waves = bossSpawns.LighthouseWaves;
         this.tables.locations.laboratory.base.BossLocationSpawn = bossSpawns.LabsBossLocationSpawn;
         this.tables.locations.woods.base.BossLocationSpawn = bossSpawns.WoodsBossLocationSpawn;
         this.tables.locations.tarkovstreets.base.BossLocationSpawn = bossSpawns.StreetsBossLocationSpawn;
@@ -26,6 +27,7 @@ export class Maps {
             this.logger.info("Map Spawn Changes Loaded");
         }
     }
+    
 
     public openZonesFix() {
 

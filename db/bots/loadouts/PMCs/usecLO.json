@@ -5741,7 +5741,7 @@
     "experience": {
       "aggressorBonus": 0.02,
       "level": {
-        "max": 50,
+        "max": 60,
         "min": 31
       }
     },

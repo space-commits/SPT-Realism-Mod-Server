@@ -637,7 +637,7 @@ class TieredFlea {
     }
     canSellPistol(bool) {
         for (let i in this.itemDB) {
-            if ((this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB[i]._parent === "617f1ef5e8b54b0998387733") && this.itemDB[i]._id !== "617f1ef5e8b54b0998387733") {
+            if ((this.itemDB[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB[i]._parent === "617f1ef5e8b54b0998387733") && this.itemDB[i]._id !== "6275303a9f372d6ea97f9ec7") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool;
             }
         }

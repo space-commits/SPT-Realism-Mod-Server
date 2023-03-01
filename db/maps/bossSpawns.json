@@ -473,51 +473,14 @@
             "TriggerName": ""
         },
         {
-            "BossName": "bossKnight",
-            "BossChance": 50,
-            "BossZone": "Zone_TreatmentContainers,Zone_Chalet,Zone_Village,Zone_Bridge,Zone_OldHouse,Zone_LongRoad,Zone_DestroyedHouse",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "exUsec",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2",
-            "Time": -1,
-            "TriggerId": "",
-            "TriggerName": "",
-            "Supports": [
-                {
-                    "BossEscortType": "followerBigPipe",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "1"
-                },
-                {
-                    "BossEscortType": "followerBirdEye",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "1"
-                },
-                {
-                    "BossEscortType": "followerGluharScout",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "0"
-                }
-            ],
-            "RandomTimeSpawn": true
-        },
-        {
             "BossName": "exUsec",
-            "BossChance": 0,
+            "BossChance": 20,
             "BossZone": "Zone_Blockpost",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "1,2,3",
+            "BossEscortAmount": "1,2",
             "Time": -1,
             "TriggerId": "",
             "TriggerName": "",
@@ -613,6 +576,213 @@
             "TriggerName": "",
             "Supports": null,
             "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "bossKnight",
+            "BossChance": 50,
+            "BossZone": "Zone_TreatmentContainers,Zone_Chalet,Zone_Village,Zone_Bridge,Zone_OldHouse,Zone_LongRoad,Zone_DestroyedHouse",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "exUsec",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "2",
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": "",
+            "Supports": [
+                {
+                    "BossEscortType": "followerBigPipe",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerBirdEye",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerGluharScout",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "0"
+                }
+            ],
+            "RandomTimeSpawn": true
+        }
+    ],
+    "LighthouseWaves": [
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_Chalet",
+            "WildSpawnType": "assault",
+            "isPlayers": false,
+            "number": 2,
+            "slots_max": 5,
+            "slots_min": 1,
+            "time_max": 30,
+            "time_min": 10
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_LongRoad",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 1,
+            "slots_max": 5,
+            "slots_min": 1,
+            "time_max": 120,
+            "time_min": 60
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_Village",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 3,
+            "slots_max": 4,
+            "slots_min": 2,
+            "time_max": 250,
+            "time_min": 90
+        },
+        {
+            "BotPreset": "normal",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_DestroyedHouse",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 3,
+            "slots_max": 4,
+            "slots_min": 2,
+            "time_max": 320,
+            "time_min": 100
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_Rocks",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 4,
+            "slots_max": 2,
+            "slots_min": 1,
+            "time_max": 450,
+            "time_min": 225
+        },
+        {
+            "BotPreset": "normal",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_Containers",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 5,
+            "slots_max": 4,
+            "slots_min": 1,
+            "time_max": 700,
+            "time_min": 420
+        },
+        {
+            "BotPreset": "normal",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_Bridge",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 6,
+            "slots_max": 3,
+            "slots_min": 2,
+            "time_max": 450,
+            "time_min": 300
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_OldHouse",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 7,
+            "slots_max": 3,
+            "slots_min": 1,
+            "time_max": 600,
+            "time_min": 200
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_SniperPeak",
+            "WildSpawnType": "marksman",
+            "isPlayers": false,
+            "number": 8,
+            "slots_max": 1,
+            "slots_min": 1,
+            "time_max": 700,
+            "time_min": 350
+        },
+        {
+            "BotPreset": "normal",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_DestroyedHouse",
+            "WildSpawnType": "assault",
+            "isPlayers": false,
+            "number": 9,
+            "slots_max": 3,
+            "slots_min": 1,
+            "time_max": 1000,
+            "time_min": 500
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_Village",
+            "WildSpawnType": "assault",
+            "isPlayers": false,
+            "number": 10,
+            "slots_max": 4,
+            "slots_min": 2,
+            "time_max": 1200,
+            "time_min": 700
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_Containers",
+            "WildSpawnType": "assault",
+            "isPlayers": false,
+            "number": 11,
+            "slots_max": 4,
+            "slots_min": 2,
+            "time_max": 1110,
+            "time_min": 500
+        },
+        {
+            "BotPreset": "normal",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_OldHouse",
+            "WildSpawnType": "assault",
+            "isPlayers": false,
+            "number": 12,
+            "slots_max": 3,
+            "slots_min": 1,
+            "time_max": 1400,
+            "time_min": 800
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "Zone_LongRoad",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 13,
+            "slots_max": 5,
+            "slots_min": 1,
+            "time_max": 1200,
+            "time_min": 700
         }
     ],
     "ReserveBossLocationSpawn": [

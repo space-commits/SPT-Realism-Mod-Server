@@ -146,7 +146,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -4.5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -4.5;
-                serverItem._props.BluntThroughput = 0.16;
+                serverItem._props.BluntThroughput = 0.15;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 7.5;
             }
@@ -155,17 +155,17 @@ class Armor {
                 serverItem._props.Durability = 100;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 7;
-                serverItem._props.speedPenaltyPercent = -3;
+                serverItem._props.speedPenaltyPercent = -2.5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2.5;
                 serverItem._props.BluntThroughput = 0.17;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
-                serverItem._props.Weight = 6.5;
+                serverItem._props.Weight = 6;
             }
             //// Class 8////
             //Black Slick
             if (serverItem._id === "5e4abb5086f77406975c9342") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 90;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
@@ -177,7 +177,7 @@ class Armor {
             }
             //Olive Slick
             if (serverItem._id === "6038b4ca92ec1c3103795a0d") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 90;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
@@ -189,7 +189,7 @@ class Armor {
             }
             //Tan Slick
             if (serverItem._id === "6038b4b292ec1c3103795a0b") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 90;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
@@ -306,7 +306,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.135;
+                serverItem._props.BluntThroughput = 0.12;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 8.3;
             }
@@ -403,7 +403,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -7;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -7;
-                serverItem._props.BluntThroughput = 0.138;
+                serverItem._props.BluntThroughput = 0.12;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 9.5;
             }
@@ -417,7 +417,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.15;
+                serverItem._props.BluntThroughput = 0.13;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 9.2;
             }
@@ -430,7 +430,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -10;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -12.25;
-                serverItem._props.BluntThroughput = 0.18;
+                serverItem._props.BluntThroughput = 0.15;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 7.5;
             }
@@ -443,7 +443,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -10;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.18;
+                serverItem._props.BluntThroughput = 0.16;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 12.2;
             }
@@ -455,7 +455,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -6;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -7;
-                serverItem._props.BluntThroughput = 0.115;
+                serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 7.9;
             }
@@ -467,13 +467,13 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -3;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -3;
-                serverItem._props.BluntThroughput = 0.13;
+                serverItem._props.BluntThroughput = 0.12;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 6;
             }
             //TV-110
             if (serverItem._id === "5c0e746986f7741453628fe5") {
-                serverItem._props.Durability = 140;
+                serverItem._props.Durability = 115;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 7;
                 serverItem._props.speedPenaltyPercent = -6;
@@ -491,7 +491,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -7;
-                serverItem._props.BluntThroughput = 0.115;
+                serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 8.2;
             }
@@ -515,7 +515,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -7;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -8;
-                serverItem._props.BluntThroughput = 0.138;
+                serverItem._props.BluntThroughput = 0.12;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 8.4;
             }
@@ -528,7 +528,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -8;
-                serverItem._props.BluntThroughput = 0.11;
+                serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 10;
             }
@@ -540,13 +540,13 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -10;
-                serverItem._props.BluntThroughput = 0.10;
+                serverItem._props.BluntThroughput = 0.09;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 12.5;
             }
             //AVS
             if (serverItem._id === "544a5caa4bdc2d1a388b4568") {
-                serverItem._props.Durability = 150;
+                serverItem._props.Durability = 125;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -8;
@@ -564,13 +564,13 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -8;
-                serverItem._props.BluntThroughput = 0.13;
+                serverItem._props.BluntThroughput = 0.11;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 8.5;
             }
             //Eagle MMAC
             if (serverItem._id === "61bc85697113f767765c7fe7") {
-                serverItem._props.Durability = 120;
+                serverItem._props.Durability = 100;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -4;
@@ -588,7 +588,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
-                serverItem._props.BluntThroughput = 0.15;
+                serverItem._props.BluntThroughput = 0.13;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 7.5;
             }
@@ -600,7 +600,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -8;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.092;
+                serverItem._props.BluntThroughput = 0.08;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 13;
             }
@@ -613,7 +613,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -3;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.127;
+                serverItem._props.BluntThroughput = 0.11;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 9.6;
             }
@@ -625,7 +625,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -8;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -16;
-                serverItem._props.BluntThroughput = 0.104;
+                serverItem._props.BluntThroughput = 0.09;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 9;
             }
@@ -637,7 +637,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -6;
-                serverItem._props.BluntThroughput = 0.14;
+                serverItem._props.BluntThroughput = 0.12;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 7.8;
             }
@@ -649,7 +649,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
-                serverItem._props.BluntThroughput = 0.12;
+                serverItem._props.BluntThroughput = 0.13;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 9.5;
             }
@@ -662,7 +662,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -4;
-                serverItem._props.BluntThroughput = 0.14;
+                serverItem._props.BluntThroughput = 0.11;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 8;
             }

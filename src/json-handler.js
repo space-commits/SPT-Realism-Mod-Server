@@ -197,7 +197,5 @@ class JsonHandler {
             }
         }
     }
-    cleanPresets() {
-    }
 }
 exports.JsonHandler = JsonHandler;

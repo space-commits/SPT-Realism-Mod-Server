@@ -107,6 +107,7 @@ import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
 import { LootGenerator } from "@spt-aki/generators/LootGenerator";
 import { OldAmmo } from "./ammo_old";
 import { OldArmor } from "./armor_old";
+import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -231,7 +232,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
         }
 
 
-        if(modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true){
+        if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
             container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
                 result.resetExpiredTrader = (trader: ITrader): void => {
                     return traderRefersh.myResetExpiredTrader(trader);
@@ -239,7 +240,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             }, { frequency: "Always" });
         }
 
-        if (modConfig.randomize_trader_stock == true ) {
+        if (modConfig.randomize_trader_stock == true) {
             container.afterResolution("RagfairCallbacks", (_t, result: RagfairCallbacks) => {
                 result.search = (url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult> => {
                     return ragFairCallback.mySearch(url, info, sessionID);
@@ -247,7 +248,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             }, { frequency: "Always" });
         }
 
-        if (modConfig.airdrop_changes == true ) {
+        if (modConfig.airdrop_changes == true) {
             container.afterResolution("LocationController", (_t, result: LocationController) => {
                 result.getAirdropLoot = (): LootItem[] => {
                     return airdropController.myGetAirdropLoot();
@@ -277,6 +278,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
+                        const profileData = profileHelper.getFullProfile(sessionID)
 
                         let level = 1;
 
@@ -285,6 +287,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                         }
 
                         try {
+
+                            if (modConfig.backup_profiles == true) {
+                                this.backupProfile(profileData, logger);
+                            }
+
                             const healthProp = pmcData?.Health;
                             const hydroProp = pmcData?.Health?.Hydration;
 
@@ -319,12 +326,11 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                             }
                             this.checkForEvents(logger, seasonalEventsService);
 
-                            if(clientValidateCount === 0){
+                            if (clientValidateCount === 0) {
                                 randomizeTraderAssort.adjustTraderStockAtServerStart();
-                                logger.info("Realism Mod: Trader Stock Adjusted");
                             }
                             clientValidateCount += 1;
-                            
+
                             if (modConfig.tiered_flea == true) {
                                 this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
                             }
@@ -361,10 +367,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                         const helper = new Helper(postLoadtables, arrays);
                         const player = new Player(logger, postLoadtables, modConfig, custProfile, medItems, helper);
 
-
-
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
+
 
                         try {
 
@@ -563,6 +568,62 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
         );
     }
 
+    private backupProfile(profileData: IAkiProfile, logger: ILogger) {
+        const profileFileData = JSON.stringify(profileData, null, 4)
+        var index = 0
+        if (index == 0) {
+            index = 1
+            var modPath = _path.join(__dirname, '..')
+            var profileFolderPath = modPath + "/ProfileBackups/"
+            var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id
+
+            logger.warning("dir = " + profileFolderPath);
+
+            if (fs.existsSync(profileFilePath)) {
+
+                this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
+
+            } else {
+
+                fs.mkdir(_path.join(profileFolderPath, profileData.info.id), (err) => {
+                    if (err) {
+                        return console.error(err);
+                    }
+                    logger.log("Backup path does not exist, creating folder....", "magenta")
+
+                });
+
+                this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
+            }
+        }
+    }
+
+
+    private profileBackupHelper(profileFileData: string, pathforProfile: string, profileData: IAkiProfile, logger: ILogger) {
+        var date = new Date()
+        var time = date.toLocaleTimeString();
+        var edit_time = time.replaceAll(" ", "_")
+        var edit_time2 = edit_time.replaceAll(":", "-")
+        var day = date.toISOString()
+            .slice(0, 10)
+        var combinedTime = "_" + day + "_" + edit_time2
+
+        var backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json"
+        fs.writeFile(backupName, profileFileData, {
+            encoding: "utf8",
+            flag: "w",
+            mode: 0o666
+        }, (err) => {
+            if (err)
+                console.log(err);
+            else {
+                logger.log(`Profile backup executed successfully: ${combinedTime}`, "green")
+            }
+        });
+    }
+
+
+
     public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
         const logger = container.resolve<ILogger>("WinstonLogger");
 
@@ -676,7 +737,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             bots.setBotHealth();
         }
 
-        if(modConfig.old_ballistics == true && modConfig.realistic_ballistics  == false){
+        if (modConfig.old_ballistics == true && modConfig.realistic_ballistics == false) {
             oldAmmo.loadAmmoStatsOld();
             oldArmor.loadArmorOld();
         }
@@ -691,7 +752,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             weaponsGlobals.loadGlobalMalfChanges();
         }
 
-        if(modConfig.trader_repair_changes == true){
+        if (modConfig.trader_repair_changes == true) {
             traders.loadTraderRepairs();
         }
 
@@ -710,13 +771,13 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
         }
 
         //traders
-        if(modConfig.trader_changes == true){
+        if (modConfig.trader_changes == true) {
             traders.loadTraderTweaks();
         }
-        if(modConfig.change_trader_ll == true){
+        if (modConfig.change_trader_ll == true) {
             traders.setLoyaltyLevels();
         }
-        if(modConfig.add_cust_trader_items == true){
+        if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }
         traders.loadTraderRefreshTimes();

@@ -1,0 +1,62 @@
+{
+    "info": {
+        "id": "35996d136bb956ae163349d4",
+        "username": "roguetest",
+        "password": "",
+        "wipe": true,
+        "edition": "Edge Of Darkness"
+    },
+    "characters": {
+        "pmc": {
+            "UnlockedInfo": {
+                "unlockedProductionRecipe": []
+            }
+        },
+        "scav": {}
+    },
+    "vitality": {
+        "health": {
+            "Hydration": 0,
+            "Energy": 0,
+            "Temperature": 0,
+            "Head": 0,
+            "Chest": 0,
+            "Stomach": 0,
+            "LeftArm": 0,
+            "RightArm": 0,
+            "LeftLeg": 0,
+            "RightLeg": 0
+        },
+        "effects": {
+            "Head": {},
+            "Chest": {},
+            "Stomach": {},
+            "LeftArm": {},
+            "RightArm": {},
+            "LeftLeg": {},
+            "RightLeg": {}
+        }
+    },
+    "inraid": {
+        "location": "none",
+        "character": "none"
+    },
+    "insurance": [],
+    "aki": {
+        "version": "3.5.0",
+        "mods": [
+            {
+                "author": "ACOGforlife, SAMSWAT",
+                "dateAdded": 1677594160435,
+                "name": "OpticRework",
+                "version": "1.2.2"
+            },
+            {
+                "author": "Fontaine",
+                "dateAdded": 1677594160435,
+                "name": "SPT Realism Mod",
+                "version": "0.7.4"
+            }
+        ]
+    }
+}

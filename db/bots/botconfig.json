@@ -9,9 +9,9 @@
     "maxBotCap": {
         "factory": 20,
         "customs": 30,
-        "woods": 35,
-        "shoreline": 35,
-        "lighthouse": 30,
+        "woods": 30,
+        "shoreline": 30,
+        "lighthouse": 20,
         "reservebase": 25,
         "interchange": 25,
         "laboratory": 20,

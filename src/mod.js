@@ -188,11 +188,15 @@ class Main {
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
+                    const profileData = profileHelper.getFullProfile(sessionID);
                     let level = 1;
                     if (pmcData?.Info?.Level !== undefined) {
                         level = pmcData.Info.Level;
                     }
                     try {
+                        if (modConfig.backup_profiles == true) {
+                            this.backupProfile(profileData, logger);
+                        }
                         const healthProp = pmcData?.Health;
                         const hydroProp = pmcData?.Health?.Hydration;
                         if (healthProp !== undefined) {
@@ -222,7 +226,6 @@ class Main {
                         this.checkForEvents(logger, seasonalEventsService);
                         if (clientValidateCount === 0) {
                             randomizeTraderAssort.adjustTraderStockAtServerStart();
-                            logger.info("Realism Mod: Trader Stock Adjusted");
                         }
                         clientValidateCount += 1;
                         if (modConfig.tiered_flea == true) {
@@ -412,6 +415,50 @@ class Main {
                 }
             }
         ], "pmc");
+    }
+    backupProfile(profileData, logger) {
+        const profileFileData = JSON.stringify(profileData, null, 4);
+        var index = 0;
+        if (index == 0) {
+            index = 1;
+            var modPath = _path.join(__dirname, '..');
+            var profileFolderPath = modPath + "/ProfileBackups/";
+            var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
+            logger.warning("dir = " + profileFolderPath);
+            if (fs.existsSync(profileFilePath)) {
+                this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
+            }
+            else {
+                fs.mkdir(_path.join(profileFolderPath, profileData.info.id), (err) => {
+                    if (err) {
+                        return console.error(err);
+                    }
+                    logger.log("Backup path does not exist, creating folder....", "magenta");
+                });
+                this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
+            }
+        }
+    }
+    profileBackupHelper(profileFileData, pathforProfile, profileData, logger) {
+        var date = new Date();
+        var time = date.toLocaleTimeString();
+        var edit_time = time.replaceAll(" ", "_");
+        var edit_time2 = edit_time.replaceAll(":", "-");
+        var day = date.toISOString()
+            .slice(0, 10);
+        var combinedTime = "_" + day + "_" + edit_time2;
+        var backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json";
+        fs.writeFile(backupName, profileFileData, {
+            encoding: "utf8",
+            flag: "w",
+            mode: 0o666
+        }, (err) => {
+            if (err)
+                console.log(err);
+            else {
+                logger.log(`Profile backup executed successfully: ${combinedTime}`, "green");
+            }
+        });
     }
     async postAkiLoadAsync(container) {
         const logger = container.resolve("WinstonLogger");
