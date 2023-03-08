@@ -25,6 +25,7 @@ import { IBotBase, Inventory as PmcInventory } from "@spt-aki/models/eft/common/
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { InventoryMagGen } from "@spt-aki/generators/weapongen/InventoryMagGen";
 import { ParentClasses } from "./enums";
+import { ItemBaseClassService } from "@spt-aki/services/ItemBaseClassService";
 
 
 const modConfig = require("../config/config.json");
@@ -103,8 +104,9 @@ export class BotWepGen extends BotWeaponGenerator {
         const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
         const botHelper = container.resolve<BotHelper>("BotHelper");
         const botEquipmentModPoolService = container.resolve<BotEquipmentModPoolService>("BotEquipmentModPoolService");
+        const itemBaseClassService = container.resolve<ItemBaseClassService>("ItemBaseClassService");
 
-        const _botModGen = new BotGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
+        const _botModGen = new BotGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
 
         const modPool = botTemplateInventory.mods;
         const weaponItemTemplate = this.itemHelper.getItem(weaponTpl)[1];
@@ -348,7 +350,7 @@ export class BotGenHelper extends BotEquipmentModGenerator {
             return false;
         }
 
-        if (!itemSlot._props.filters[0].Filter.includes(modToAdd[1]._id)) {
+        if (!(itemSlot._props.filters[0].Filter.includes(modToAdd[1]._id) || this.itemBaseClassService.itemHasBaseClass(modToAdd[1]._id, itemSlot._props.filters[0].Filter))) {
             this.logger.error(this.localisationService.getText("bot-mod_not_in_slot_filter_list", { modId: modToAdd[1]._id, modSlot: modSlot, parentName: parentTemplate._name }));
 
             return false;

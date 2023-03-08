@@ -66,7 +66,8 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         const itemFilterService = tsyringe_1.container.resolve("ItemFilterService");
         const botHelper = tsyringe_1.container.resolve("BotHelper");
         const botEquipmentModPoolService = tsyringe_1.container.resolve("BotEquipmentModPoolService");
-        const _botModGen = new BotGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
+        const itemBaseClassService = tsyringe_1.container.resolve("ItemBaseClassService");
+        const _botModGen = new BotGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
         const modPool = botTemplateInventory.mods;
         const weaponItemTemplate = this.itemHelper.getItem(weaponTpl)[1];
         if (!weaponItemTemplate) {
@@ -268,7 +269,7 @@ class BotGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
             }
             return false;
         }
-        if (!itemSlot._props.filters[0].Filter.includes(modToAdd[1]._id)) {
+        if (!(itemSlot._props.filters[0].Filter.includes(modToAdd[1]._id) || this.itemBaseClassService.itemHasBaseClass(modToAdd[1]._id, itemSlot._props.filters[0].Filter))) {
             this.logger.error(this.localisationService.getText("bot-mod_not_in_slot_filter_list", { modId: modToAdd[1]._id, modSlot: modSlot, parentName: parentTemplate._name }));
             return false;
         }
