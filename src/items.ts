@@ -11,7 +11,6 @@ export class _Items {
     private itemDB = this.tables.templates.items;
 
     public loadItemsRestrictions() {
-        this.globalDB["AllowSelectEntryPoint"] = true;
 
         if (this.modConfig.all_examined == true) {
             for (let i in this.itemDB) {

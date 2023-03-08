@@ -554,6 +554,7 @@ class Main {
         if (modConfig.old_ballistics == true && modConfig.realistic_ballistics == false) {
             oldAmmo.loadAmmoStatsOld();
             oldArmor.loadArmorOld();
+            bots.setBotHealth();
         }
         bots.botHpMulti();
         custFleaConf.loadFleaConfig();

@@ -171,8 +171,8 @@ class Player {
             this.globalDB.Inertia.PreSprintAccelerationLimits["x"] = 2.52;
             this.globalDB.Inertia.PreSprintAccelerationLimits["y"] = 1.43;
             this.globalDB.Inertia.SprintAccelerationLimits["x"] = 0.38;
-            this.globalDB.Stamina.Capacity = 115;
-            this.globalDB.Stamina.BaseRestorationRate = 11;
+            this.globalDB.Stamina.Capacity = 100;
+            this.globalDB.Stamina.BaseRestorationRate = 10;
             this.globalDB.Stamina.OxygenCapacity *= 1.3;
             this.globalDB.Stamina.OxygenRestoration *= 2.1;
             this.globalDB.Stamina.AimDrainRate = 0.35;
@@ -196,7 +196,7 @@ class Player {
             this.globalDB.Inertia.InertiaBackwardCoef["x"] = 0.8;
             this.globalDB.Inertia.InertiaBackwardCoef["y"] = 0.6;
             this.globalDB.Inertia.InertiaLimits["y"] = 70;
-            this.globalDB.Inertia.InertiaLimits["z"] = 0.5;
+            this.globalDB.Inertia.InertiaLimits["z"] = 0.5; // set this lower to allow max weight to reach a higher max speed and have acceleration
             if (this.modConfig.logEverything == true) {
                 this.logger.info("Movement Changes Enabled");
             }

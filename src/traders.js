@@ -22,6 +22,7 @@ const SpecialWeaponTemplates = require("../db/templates/weapons/" + `${weapPath}
 const GrenadeLauncherTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
 const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTemplates.json");
+const chestrigTemplates = require("../db/templates/gear/chestrigTemplates.json");
 const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
 const armorVestsTemplates = require("../db/templates/armor/armorVestsTemplates.json");
 const armorMasksTemplates = require("../db/templates/armor/armorMasksTemplates.json");

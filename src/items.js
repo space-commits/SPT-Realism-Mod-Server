@@ -11,7 +11,6 @@ class _Items {
         this.itemDB = this.tables.templates.items;
     }
     loadItemsRestrictions() {
-        this.globalDB["AllowSelectEntryPoint"] = true;
         if (this.modConfig.all_examined == true) {
             for (let i in this.itemDB) {
                 let serverItem = this.itemDB[i];

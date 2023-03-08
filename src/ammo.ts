@@ -9,7 +9,7 @@ export class Ammo {
     private itemDB = this.tables.templates.items;
 
     public loadAmmoStats() {
-        this.globalDB.Ballistic.GlobalDamageDegradationCoefficient = 0.68;
+        this.globalDB.Ballistic.GlobalDamageDegradationCoefficient = 0.65;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             //// AMMO ////
