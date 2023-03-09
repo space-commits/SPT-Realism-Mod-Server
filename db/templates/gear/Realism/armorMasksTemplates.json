@@ -1,0 +1,42 @@
+{
+    "5b432b2f5acfc4771e1c6622": {
+        "ItemID": "5b432b2f5acfc4771e1c6622",
+        "Name": "item_equipment_facecover_shatteredmask",
+        "AllowADS": true,
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Unclassified",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
+    },
+    "603409c80ca681766b6a0fb2": {
+        "ItemID": "603409c80ca681766b6a0fb2",
+        "Name": "item_equipment_glasses_npp",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "Anti-Shatter Resistance V50 ≥ 230 m/s",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
+    },
+    "5b432be65acfc433000ed01f": {
+        "ItemID": "5b432be65acfc433000ed01f",
+        "Name": "tactical_glass",
+        "AllowADS": true,
+        "LoyaltyLevel": 1,
+        "ArmorClass": "Unclassified",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
+    },
+    "59e770b986f7742cbd762754": {
+        "ItemID": "59e770b986f7742cbd762754",
+        "Name": "item_equipment_glasses_6B34",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "Anti-Shatter Resistance V50 ≥ 250 m/s",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
+    }
+}

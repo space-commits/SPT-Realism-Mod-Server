@@ -18,6 +18,7 @@ import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
+const gearPath = modConfig.gear_preset;
 
 const AssaultRifleTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/AssaultRifleTemplates.json");
 const AssaultCarbineTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/AssaultCarbineTemplates.json");
@@ -30,23 +31,17 @@ const SniperRifleTemplates = require("../db/templates/weapons/" + `${weapPath}` 
 const SpecialWeaponTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
 
-const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
-const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTemplates.json");
-const chestrigTemplates = require("../db/templates/gear/chestrigTemplates.json");
-const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
-const armorVestsTemplates = require("../db/templates/armor/armorVestsTemplates.json");
-const armorMasksTemplates = require("../db/templates/armor/armorMasksTemplates.json");
+const armorComponentsTemplates = require("../db/templates/gear/" + `${gearPath}` + "/armorComponentsTemplates.json");
+const armorChestrigTemplates = require("../db/templates/gear/" + `${gearPath}` + "/armorChestrigTemplates.json");
+const helmetTemplates = require("../db/templates/gear/" + `${gearPath}` + "/helmetTemplates.json");
+const armorVestsTemplates = require("../db/templates/gear/" + `${gearPath}` + "/armorVestsTemplates.json");
+const armorMasksTemplates = require("../db/templates/gear/" + `${gearPath}` + "/armorMasksTemplates.json");
+const chestrigTemplates = require("../db/templates/gear/" + `${gearPath}` + "/chestrigTemplates.json");
 
-const weapTemplates = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
-const armorTemlplates = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates];
+const ammoDB = require("../db/templates/ammo/ammoTemplates.json");
 
-const customPrap = require("../db/traders/prapor/assort.json");
-const customThera = require("../db/traders/therapist/assort.json");
-const customSkier = require("../db/traders/skier/assort.json");
-const customPK = require("../db/traders/pk/assort.json");
-const customMech = require("../db/traders/mechanic/assort.json");
-const customRag = require("../db/traders/ragman/assort.json");
-const customJaeg = require("../db/traders/jaeger/assort.json");
+const weapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
+const gearTemlplatesArr = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates, chestrigTemplates];
 
 const traderRepairs = require("../db/traders/repair/traderRepair.json");
 
@@ -60,7 +55,7 @@ const sellCatMech = require("../db/traders/mechanic/sell_categories.json");
 // const sellCatRag = require("../db/traders/ragman/sell_categories.json");
 // const sellCatJaeg = require("../db/traders/jaeger/sell_categories.json");
 
-const ammoDB = require("../db/templates/ammo/ammoTemplates.json");
+
 
 
 const prapId = "54cb50c76803fa8b248b4571";
@@ -134,11 +129,11 @@ export class Traders {
 
     public setLoyaltyLevels() {
         this.loyaltyLevelHelper(ammoDB, false);
-        this.loyaltyLevelHelper(weapTemplates, true);
-        this.loyaltyLevelHelper(armorTemlplates, true);
+        this.loyaltyLevelHelper(weapTemplatesArr, true);
+        this.loyaltyLevelHelper(gearTemlplatesArr, true);
     }
 
-    private loyaltyLevelHelper(db, multifile: boolean) {
+    private loyaltyLevelHelper(db: any[], multifile: boolean) {
 
         if (multifile == false) {
             this.setLL(db);

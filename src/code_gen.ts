@@ -11,11 +11,12 @@ const modConfig = require("../config/config.json");
 const presetPath = "Realism";
 
 
-const armorComponentsTemplates = require("../db/templates/armor/armorComponentsTemplates.json");
-const armorChestrigTemplates = require("../db/templates/armor/armorChestrigTemplates.json");
-const helmetTemplates = require("../db/templates/armor/helmetTemplates.json");
-const armorVestsTemplates = require("../db/templates/armor/armorVestsTemplates.json");
-const chestrigTemplates = require("../db/templates/gear/chestrigTemplates.json");
+const armorComponentsTemplates = require("../db/templates/gear/" + `${presetPath}` + "/armorComponentsTemplates.json");
+const armorChestrigTemplates = require("../db/templates/gear/" + `${presetPath}` + "/armorChestrigTemplates.json");
+const helmetTemplates = require("../db/templates/gear/" + `${presetPath}` + "/helmetTemplates.json");
+const armorVestsTemplates = require("../db/templates/gear/" + `${presetPath}` + "/armorVestsTemplates.json");
+const armorMasksTemplates = require("../db/templates/gear/" + `${presetPath}` + "/armorMasksTemplates.json");
+const chestrigTemplates = require("../db/templates/gear/" + `${presetPath}` + "/chestrigTemplates.json");
 
 
 const ammoTemplates = require("../db/templates/ammo/ammoTemplates.json");
