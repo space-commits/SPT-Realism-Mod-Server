@@ -11,7 +11,7 @@ class Ammo {
         this.itemDB = this.tables.templates.items;
     }
     loadAmmoStats() {
-        this.globalDB.Ballistic.GlobalDamageDegradationCoefficient = 0.65;
+        this.globalDB.Ballistic.GlobalDamageDegradationCoefficient = 0.7;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             //// AMMO ////

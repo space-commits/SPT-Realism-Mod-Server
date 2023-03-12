@@ -402,7 +402,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                     action: (url, info, sessionID, output) => {
 
                         try {
-                            const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
                             const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                             const postLoadTables = postLoadDBServer.getTables();
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
@@ -572,12 +571,12 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
 
     private backupProfile(profileData: IAkiProfile, logger: ILogger) {
         const profileFileData = JSON.stringify(profileData, null, 4)
-        var index = 0
+        var index = 0;
         if (index == 0) {
-            index = 1
-            var modPath = _path.join(__dirname, '..')
-            var profileFolderPath = modPath + "/ProfileBackups/"
-            var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id
+            index = 1;
+            var modPath = _path.join(__dirname, '..');
+            var profileFolderPath = modPath + "/ProfileBackups/";
+            var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
 
             logger.warning("dir = " + profileFolderPath);
 
@@ -589,9 +588,9 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
 
                 fs.mkdir(_path.join(profileFolderPath, profileData.info.id), (err) => {
                     if (err) {
-                        return console.error(err);
+                        return console.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
-                    logger.log("Backup path does not exist, creating folder....", "magenta")
+                    logger.log("Realism Mod: Backup path does not exist, creating folder....", "magenta");
 
                 });
 
@@ -602,24 +601,23 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
 
 
     private profileBackupHelper(profileFileData: string, pathforProfile: string, profileData: IAkiProfile, logger: ILogger) {
-        var date = new Date()
+        var date = new Date();
         var time = date.toLocaleTimeString();
-        var edit_time = time.replaceAll(" ", "_")
-        var edit_time2 = edit_time.replaceAll(":", "-")
-        var day = date.toISOString()
-            .slice(0, 10)
-        var combinedTime = "_" + day + "_" + edit_time2
+        var edit_time = time.replaceAll(" ", "_");
+        var edit_time2 = edit_time.replaceAll(":", "-");
+        var day = date.toISOString().slice(0, 10);
+        var combinedTime = "_" + day + "_" + edit_time2;
 
-        var backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json"
+        var backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json";
         fs.writeFile(backupName, profileFileData, {
             encoding: "utf8",
             flag: "w",
             mode: 0o666
         }, (err) => {
             if (err)
-                console.log(err);
+                console.log("Realism Mod: Error Backing Up Profile; " + err);
             else {
-                logger.log(`Profile backup executed successfully: ${combinedTime}`, "green")
+                logger.log(`Realism Mod: Profile backup executed successfully: ${combinedTime}`, "green");
             }
         });
     }

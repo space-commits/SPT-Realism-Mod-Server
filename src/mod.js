@@ -280,7 +280,6 @@ class Main {
                 url: "/client/raid/configuration",
                 action: (url, info, sessionID, output) => {
                     try {
-                        const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
                         const postLoadDBServer = container.resolve("DatabaseServer");
                         const postLoadTables = postLoadDBServer.getTables();
                         const profileHelper = container.resolve("ProfileHelper");
@@ -432,9 +431,9 @@ class Main {
             else {
                 fs.mkdir(_path.join(profileFolderPath, profileData.info.id), (err) => {
                     if (err) {
-                        return console.error(err);
+                        return console.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
-                    logger.log("Backup path does not exist, creating folder....", "magenta");
+                    logger.log("Realism Mod: Backup path does not exist, creating folder....", "magenta");
                 });
                 this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
             }
@@ -445,8 +444,7 @@ class Main {
         var time = date.toLocaleTimeString();
         var edit_time = time.replaceAll(" ", "_");
         var edit_time2 = edit_time.replaceAll(":", "-");
-        var day = date.toISOString()
-            .slice(0, 10);
+        var day = date.toISOString().slice(0, 10);
         var combinedTime = "_" + day + "_" + edit_time2;
         var backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json";
         fs.writeFile(backupName, profileFileData, {
@@ -455,9 +453,9 @@ class Main {
             mode: 0o666
         }, (err) => {
             if (err)
-                console.log(err);
+                console.log("Realism Mod: Error Backing Up Profile; " + err);
             else {
-                logger.log(`Profile backup executed successfully: ${combinedTime}`, "green");
+                logger.log(`Realism Mod: Profile backup executed successfully: ${combinedTime}`, "green");
             }
         });
     }

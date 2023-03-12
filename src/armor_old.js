@@ -31,7 +31,7 @@ class OldArmor {
         this.armMat.Titan.Destructibility = 0.15;
         this.armMat.Titan.MaxRepairDegradation = 0.48;
         this.armMat.Titan.MinRepairDegradation = 0.16;
-        this.armMat.ArmoredSteel.Destructibility = 0.05;
+        this.armMat.ArmoredSteel.Destructibility = 0.01;
         this.armMat.ArmoredSteel.MaxRepairDegradation = 0.24;
         this.armMat.ArmoredSteel.MinRepairDegradation = 0.08;
         for (let i in this.itemDB) {
@@ -165,37 +165,37 @@ class OldArmor {
             //// Class 8////
             //Black Slick
             if (serverItem._id === "5e4abb5086f77406975c9342") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 120;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.6;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
             //Olive Slick
             if (serverItem._id === "6038b4ca92ec1c3103795a0d") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 120;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.6;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
             //Tan Slick
             if (serverItem._id === "6038b4b292ec1c3103795a0b") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 120;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.6;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
@@ -473,13 +473,13 @@ class OldArmor {
             }
             //TV-110
             if (serverItem._id === "5c0e746986f7741453628fe5") {
-                serverItem._props.Durability = 140;
+                serverItem._props.Durability = 130;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 7;
                 serverItem._props.speedPenaltyPercent = -6;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.025;
+                serverItem._props.BluntThroughput = 0.45;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 10.3;
             }
@@ -546,13 +546,13 @@ class OldArmor {
             }
             //AVS
             if (serverItem._id === "544a5caa4bdc2d1a388b4568") {
-                serverItem._props.Durability = 150;
+                serverItem._props.Durability = 140;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -8;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.025;
+                serverItem._props.BluntThroughput = 0.5;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 9.9;
             }
@@ -570,13 +570,13 @@ class OldArmor {
             }
             //Eagle MMAC
             if (serverItem._id === "61bc85697113f767765c7fe7") {
-                serverItem._props.Durability = 120;
+                serverItem._props.Durability = 110;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -7;
-                serverItem._props.BluntThroughput = 0.03;
+                serverItem._props.BluntThroughput = 0.55;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 9.1;
             }
