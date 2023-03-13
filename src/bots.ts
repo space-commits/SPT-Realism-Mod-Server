@@ -26,8 +26,6 @@ const USECNames = require("../db/bots/names/USECNames.json");
 const bearNames = require("../db/bots/names/bearNames.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
 
-
-
 export class Bots {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private configServ: ConfigServer, private modConf, private arrays: Arrays, private helper: Helper) { }
 
@@ -1487,6 +1485,19 @@ export class Bots {
             }
         }
 
+        
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
+        }
+        if (RaidInfoTracker.mapType === "urban") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_outdoor;
+        }
+
+
         BotTierTracker.goonsTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("goonsLoad1 loaded");
@@ -1659,6 +1670,17 @@ export class Bots {
             }
         }
 
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
+        }
+        if (RaidInfoTracker.mapType === "urban") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_outdoor;
+        }
+
         BotTierTracker.goonsTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("goonsLoad2 loaded");
@@ -1756,6 +1778,7 @@ export class Bots {
             this.birdeyeBase.chances.equipment.Headwear = 100;
             this.birdeyeBase.chances.mods.mod_nvg = 100;
             this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
+
             this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 1;
             this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 20;
             this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
@@ -1795,6 +1818,7 @@ export class Bots {
 
                 this.birdeyeBase.chances.equipment.Headwear = 100;
                 this.birdeyeBase.chances.mods.mod_equipment_000 = 80;
+
                 this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
                 this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
@@ -1826,10 +1850,22 @@ export class Bots {
 
                 this.birdeyeBase.chances.equipment.Headwear = 50;
                 this.birdeyeBase.chances.mods.mod_equipment_000 = 0;
+
                 this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
                 this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
+        }
+        if (RaidInfoTracker.mapType === "urban") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         BotTierTracker.goonsTier = 3;

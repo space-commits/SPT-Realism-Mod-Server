@@ -36,10 +36,10 @@ class AirdropLootgen extends LocationController_1.LocationController {
         const helper = new helper_1.Helper(tables, arrays);
         let weights = [];
         if (helper_1.RaidInfoTracker.TOD === "day") {
-            weights = [60, 60, 30, 30, 20, 20, 15, 15, 1];
+            weights = [65, 65, 40, 40, 40, 20, 15, 15, 1];
         }
         if (helper_1.RaidInfoTracker.TOD === "night") {
-            weights = [10, 10, 10, 10, 40, 50, 50, 50, 1];
+            weights = [10, 10, 15, 15, 20, 85, 75, 70, 1];
         }
         const airdropLoot = this.updateAirdropsLootPools(modConfig, helper, weights);
         const options = {

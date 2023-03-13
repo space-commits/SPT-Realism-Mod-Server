@@ -499,7 +499,8 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                             }
 
                             if (modConfig.logEverything == true) {
-                                logger.warning("Map Name = " + mapNameStartOffl);
+                                logger.warning("Map Name star off= " + mapNameStartOffl);
+                                logger.warning("Map Name reg= " + mapNameStartOffl);
                                 logger.warning("Map Type  = " + mapType);
                                 logger.warning("Time " + time);
                                 logger.warning("Time of Day = " + getTOD(realTime));
@@ -761,6 +762,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
             attachStats.loadAttStats();
+            ammo.grenadeTweaks();
         }
 
         if (modConfig.headset_changes) {

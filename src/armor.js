@@ -46,7 +46,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.4;
+                serverItem._props.BluntThroughput = 0.45;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3.5;
             }
@@ -58,7 +58,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = 1;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = 1;
-                serverItem._props.BluntThroughput = 0.35;
+                serverItem._props.BluntThroughput = 0.4;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3;
             }
@@ -71,7 +71,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -1;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1;
-                serverItem._props.BluntThroughput = 0.4;
+                serverItem._props.BluntThroughput = 0.5;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3;
             }
@@ -84,7 +84,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
-                serverItem._props.BluntThroughput = 0.3;
+                serverItem._props.BluntThroughput = 0.35;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 5.4;
             }

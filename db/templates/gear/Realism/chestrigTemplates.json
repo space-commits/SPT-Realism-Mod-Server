@@ -193,7 +193,7 @@
         "ItemID": "5e9db13186f7742f845ee9d3",
         "Name": "item_equipment_rig_bearing",
         "AllowADS": true,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,

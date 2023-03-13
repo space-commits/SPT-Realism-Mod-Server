@@ -1345,6 +1345,16 @@ class Bots {
                 this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
         }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_outdoor;
+        }
         helper_1.BotTierTracker.goonsTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("goonsLoad1 loaded");
@@ -1491,6 +1501,16 @@ class Bots {
                 this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
         }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_outdoor;
+        }
         helper_1.BotTierTracker.goonsTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("goonsLoad2 loaded");
@@ -1636,6 +1656,16 @@ class Bots {
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
                 this.botConf.equipment["followerbirdeye"].lightLaserIsActiveChancePercent = 0;
             }
+        }
+        if (helper_1.RaidInfoTracker.mapType === "cqb") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
+        }
+        if (helper_1.RaidInfoTracker.mapType === "urban") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (helper_1.RaidInfoTracker.mapType === "outdoor") {
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
         helper_1.BotTierTracker.goonsTier = 3;
         if (this.modConf.logEverything == true) {

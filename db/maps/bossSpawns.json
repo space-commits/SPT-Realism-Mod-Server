@@ -281,42 +281,8 @@
             "BossEscortAmount": "2,2,2,2,2,2,3,3,3,4",
             "Time": -1,
             "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "bossKnight",
-            "BossChance": 5,
-            "BossZone": "BotZone",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "exUsec",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2",
-            "Time": -1,
-            "Supports": [
-                {
-                    "BossEscortType": "followerBigPipe",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "1"
-                },
-                {
-                    "BossEscortType": "followerBirdEye",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "1"
-                },
-                {
-                    "BossEscortType": "followerGluharScout",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "0"
-                }
-            ],
-            "RandomTimeSpawn": true
         }
+
     ],
     "FactoryNightBossLocationSpawn": [
         {
@@ -371,6 +337,41 @@
         {
             "BossName": "bossKnight",
             "BossChance": 10,
+            "BossZone": "BotZone",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "exUsec",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "2",
+            "Time": -1,
+            "Supports": [
+                {
+                    "BossEscortType": "followerBigPipe",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerBirdEye",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerGluharScout",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "0"
+                }
+            ],
+            "RandomTimeSpawn": true
+        },
+        {
+            "BossName": "bossKnight",
+            "BossChance": 5,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",

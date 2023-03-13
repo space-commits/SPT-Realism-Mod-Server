@@ -25,18 +25,14 @@
                 }
             },
             "FirstPrimaryWeapon_outdoor": {
-                "5a367e5dc4a282000e49738f": 0,
                 "5bfea6e90db834001b7347f3": 1,
                 "5df8ce05b11454561e39243b": 1
             },
             "FirstPrimaryWeapon_cqb": {
-                "5a367e5dc4a282000e49738f": 0,
-                "5bfea6e90db834001b7347f3": 0,
-                "5df8ce05b11454561e39243b": 0
+                "5926bb2186f7744b1c6c6e60": 5,
+                "5447a9cd4bdc2dbd208b4567": 1
             },
             "FirstPrimaryWeapon_urban": {
-                "5a367e5dc4a282000e49738f": 0,
-                "5bfea6e90db834001b7347f3": 0,
                 "5df8ce05b11454561e39243b": 1
             },
             "equipment": {
@@ -271,13 +267,11 @@
                 "5df8ce05b11454561e39243b": 1
             },
             "FirstPrimaryWeapon_cqb": {
-                "5a367e5dc4a282000e49738f": 0,
-                "5bfea6e90db834001b7347f3": 0,
-                "5df8ce05b11454561e39243b": 0
+                "5926bb2186f7744b1c6c6e60": 2,
+                "5447a9cd4bdc2dbd208b4567": 1
             },
             "FirstPrimaryWeapon_urban": {
                 "5a367e5dc4a282000e49738f": 1,
-                "5bfea6e90db834001b7347f3": 0,
                 "5df8ce05b11454561e39243b": 1
             },
             "equipment": {
@@ -513,13 +507,11 @@
                 "5df8ce05b11454561e39243b": 1
             },
             "FirstPrimaryWeapon_cqb": {
-                "5a367e5dc4a282000e49738f": 0,
-                "5bfea6e90db834001b7347f3": 0,
-                "5df8ce05b11454561e39243b": 0
+                "5926bb2186f7744b1c6c6e60": 1,
+                "5447a9cd4bdc2dbd208b4567": 5
             },
             "FirstPrimaryWeapon_urban": {
                 "5a367e5dc4a282000e49738f": 1,
-                "5bfea6e90db834001b7347f3": 0,
                 "5df8ce05b11454561e39243b": 1
             },
             "equipment": {

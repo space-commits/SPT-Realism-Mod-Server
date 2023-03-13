@@ -3412,5 +3412,103 @@ class Ammo {
             this.logger.info("Global Mafunction Stats Loaded");
         }
     }
+    grenadeTweaks() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            //flash bang
+            if (serverItem._id === "619256e5f8af2c1a4e1f5d92") {
+                serverItem._props.Contusion.x = 2;
+                serverItem._props.Contusion.y = 8;
+                serverItem._props.Contusion.z = 10;
+            }
+            //zarya stun
+            if (serverItem._id === "5a0c27731526d80618476ac4") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 12;
+                serverItem._props.Contusion.z = 15;
+            }
+            //m67
+            if (serverItem._id === "58d3db5386f77426186285a0") {
+                serverItem._props.Contusion.x = 2;
+                serverItem._props.Contusion.y = 20;
+                serverItem._props.Contusion.z = 30;
+            }
+            //f-1
+            if (serverItem._id === "5710c24ad2720bc3458b45a3") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 14;
+                serverItem._props.Contusion.z = 20;
+            }
+            //rgd
+            if (serverItem._id === "5448be9a4bdc2dfd2f8b456a") {
+                serverItem._props.Contusion.x = 2;
+                serverItem._props.Contusion.y = 18;
+                serverItem._props.Contusion.z = 25;
+            }
+            //rgo
+            if (serverItem._id === "618a431df1eb8e24b8741deb") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 12;
+                serverItem._props.Contusion.z = 15;
+            }
+            //rgn
+            if (serverItem._id === "617fd91e5539a84ec44ce155") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 15;
+                serverItem._props.Contusion.z = 17;
+            }
+            //vog-17
+            if (serverItem._id === "5e32f56fcb6d5863cc5e5ee4") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 10;
+                serverItem._props.Contusion.z = 12;
+            }
+            //vog-25
+            if (serverItem._id === "5e340dcdcb6d5863cc5e5efb") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 19;
+                serverItem._props.Contusion.z = 20;
+            }
+            //vog-40mm
+            if (serverItem._id === "5656eb674bdc2d35148b457c") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 19;
+                serverItem._props.Contusion.z = 20;
+            }
+            //m381
+            if (serverItem._id === "5ede474b0c226a66f5402622") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 12;
+                serverItem._props.Contusion.z = 17;
+            }
+            //m386
+            if (serverItem._id === "5ede475b549eed7c6d5c18fb") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 20;
+                serverItem._props.Contusion.z = 25;
+            }
+            //m406
+            if (serverItem._id === "5ede4739e0350d05467f73e8") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 20;
+                serverItem._props.Contusion.z = 25;
+            }
+            //m433
+            if (serverItem._id === "5f0c892565703e5c461894e9") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 22;
+                serverItem._props.Contusion.z = 27;
+            }
+            //m441
+            if (serverItem._id === "5ede47405b097655935d7d16") {
+                serverItem._props.Contusion.x = 1.5;
+                serverItem._props.Contusion.y = 12;
+                serverItem._props.Contusion.z = 17;
+            }
+        }
+        if (this.modConf.logEverything == true) {
+            this.logger.info("Grenade Tweaks Loaded");
+        }
+    }
 }
 exports.Ammo = Ammo;

@@ -569,6 +569,7 @@ class Main {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
             attachStats.loadAttStats();
+            ammo.grenadeTweaks();
         }
         if (modConfig.headset_changes) {
             gear.loadHeadsetTweaks();
