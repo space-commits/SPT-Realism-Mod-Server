@@ -158,7 +158,6 @@ export class RaidInfoTracker {
     static TOD: string = "";
     static mapType: string = "";
     static mapName: string = "";
-    static mapNameUnreliable: string = "";
 }
 
 export class BotTierTracker {

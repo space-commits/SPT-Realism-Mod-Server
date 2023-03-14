@@ -286,19 +286,15 @@ class Main {
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
                         const seasonalEventsService = container.resolve("SeasonalEventService");
-                        const matchinfoRegPlayer = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.REGISTER_PLAYER_REQUEST).getValue();
                         const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
                         const arrays = new arrays_1.Arrays(postLoadTables);
                         const helper = new helper_1.Helper(postLoadTables, arrays);
                         const bots = new bots_1.Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
                         const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
-                        const time = weatherController.generate().time;
-                        const mapNameRegPlayer = matchinfoRegPlayer.locationId;
-                        const mapNameStartOffl = matchInfoStartOff.location;
                         const pmcData = profileHelper.getPmcProfile(sessionID);
-                        helper_1.RaidInfoTracker.mapName = mapNameStartOffl;
-                        helper_1.RaidInfoTracker.mapNameUnreliable = mapNameRegPlayer;
+                        const time = weatherController.generate().time;
+                        helper_1.RaidInfoTracker.mapName = matchInfoStartOff.location;
                         let realTime = "";
                         let mapType = "";
                         if (matchInfoStartOff.timeVariant === "PAST") {
@@ -318,7 +314,7 @@ class Main {
                         function getTOD(time) {
                             let TOD = "";
                             let [h, m] = time.split(':');
-                            if ((mapNameRegPlayer != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (mapNameRegPlayer === "factory4_day" || mapNameStartOffl === "Laboratory" || mapNameStartOffl === "laboratory")) {
+                            if ((matchInfoStartOff.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (matchInfoStartOff.location === "factory4_day" || matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory")) {
                                 TOD = "day";
                             }
                             else {
@@ -327,17 +323,17 @@ class Main {
                             return TOD;
                         }
                         for (let map in arrays.cqbMaps) {
-                            if (arrays.cqbMaps[map] === mapNameStartOffl) {
+                            if (arrays.cqbMaps[map] === matchInfoStartOff.location) {
                                 mapType = "cqb";
                             }
                         }
                         for (let map in arrays.outdoorMaps) {
-                            if (arrays.outdoorMaps[map] === mapNameStartOffl) {
+                            if (arrays.outdoorMaps[map] === matchInfoStartOff.location) {
                                 mapType = "outdoor";
                             }
                         }
                         for (let map in arrays.urbanMaps) {
-                            if (arrays.urbanMaps[map] === mapNameStartOffl) {
+                            if (arrays.urbanMaps[map] === matchInfoStartOff.location) {
                                 mapType = "urban";
                             }
                         }
@@ -358,12 +354,12 @@ class Main {
                                 seasonalEvents.giveBotsChristmasPresents();
                             }
                         }
-                        if (mapNameStartOffl === "Laboratory") {
+                        if (matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory") {
                             botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
                             botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
                         }
                         if (modConfig.logEverything == true) {
-                            logger.warning("Map Name = " + mapNameStartOffl);
+                            logger.warning("Map Name star off = " + matchInfoStartOff.location);
                             logger.warning("Map Type  = " + mapType);
                             logger.warning("Time " + time);
                             logger.warning("Time of Day = " + getTOD(realTime));
@@ -424,7 +420,6 @@ class Main {
             var modPath = _path.join(__dirname, '..');
             var profileFolderPath = modPath + "/ProfileBackups/";
             var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
-            logger.warning("dir = " + profileFolderPath);
             if (fs.existsSync(profileFilePath)) {
                 this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
             }

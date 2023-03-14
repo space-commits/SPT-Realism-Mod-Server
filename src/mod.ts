@@ -408,7 +408,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
                             const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
-                            const matchinfoRegPlayer = appContext.getLatestValue(ContextVariableType.REGISTER_PLAYER_REQUEST).getValue<IRegisterPlayerRequestData>();
                             const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
 
@@ -416,15 +415,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                             const helper = new Helper(postLoadTables, arrays);
                             const bots = new Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
                             const seasonalEvents = new SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
-
-                            const time = weatherController.generate().time;
-                            const mapNameRegPlayer = matchinfoRegPlayer.locationId;
-                            const mapNameStartOffl = matchInfoStartOff.location;
-
                             const pmcData = profileHelper.getPmcProfile(sessionID);
 
-                            RaidInfoTracker.mapName = mapNameStartOffl;
-                            RaidInfoTracker.mapNameUnreliable = mapNameRegPlayer;
+                            const time = weatherController.generate().time;
+                            RaidInfoTracker.mapName = matchInfoStartOff.location;
                             let realTime = "";
                             let mapType = "";
 
@@ -448,7 +442,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                             function getTOD(time) {
                                 let TOD = "";
                                 let [h, m] = time.split(':');
-                                if ((mapNameRegPlayer != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (mapNameRegPlayer === "factory4_day" || mapNameStartOffl === "Laboratory" || mapNameStartOffl === "laboratory")) {
+                                if ((matchInfoStartOff.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (matchInfoStartOff.location === "factory4_day" || matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory")) {
                                     TOD = "day";
                                 }
                                 else {
@@ -458,17 +452,17 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                             }
 
                             for (let map in arrays.cqbMaps) {
-                                if (arrays.cqbMaps[map] === mapNameStartOffl) {
+                                if (arrays.cqbMaps[map] === matchInfoStartOff.location) {
                                     mapType = "cqb";
                                 }
                             }
                             for (let map in arrays.outdoorMaps) {
-                                if (arrays.outdoorMaps[map] === mapNameStartOffl) {
+                                if (arrays.outdoorMaps[map] === matchInfoStartOff.location) {
                                     mapType = "outdoor";
                                 }
                             }
                             for (let map in arrays.urbanMaps) {
-                                if (arrays.urbanMaps[map] === mapNameStartOffl) {
+                                if (arrays.urbanMaps[map] === matchInfoStartOff.location) {
                                     mapType = "urban";
                                 }
                             }
@@ -493,14 +487,13 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
                                 }
                             }
 
-                            if (mapNameStartOffl === "Laboratory") {
+                            if (matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory") {
                                 botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
                                 botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
                             }
 
                             if (modConfig.logEverything == true) {
-                                logger.warning("Map Name star off= " + mapNameStartOffl);
-                                logger.warning("Map Name reg= " + mapNameStartOffl);
+                                logger.warning("Map Name star off = " + matchInfoStartOff.location);
                                 logger.warning("Map Type  = " + mapType);
                                 logger.warning("Time " + time);
                                 logger.warning("Time of Day = " + getTOD(realTime));
@@ -578,8 +571,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             var modPath = _path.join(__dirname, '..');
             var profileFolderPath = modPath + "/ProfileBackups/";
             var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
-
-            logger.warning("dir = " + profileFolderPath);
 
             if (fs.existsSync(profileFilePath)) {
 

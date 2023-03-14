@@ -129,7 +129,6 @@ exports.RaidInfoTracker = RaidInfoTracker;
 RaidInfoTracker.TOD = "";
 RaidInfoTracker.mapType = "";
 RaidInfoTracker.mapName = "";
-RaidInfoTracker.mapNameUnreliable = "";
 class BotTierTracker {
     getTier(botType) {
         if (botType === "sptusec") {
