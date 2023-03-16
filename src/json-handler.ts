@@ -104,11 +104,11 @@ export class JsonHandler {
                 this.callHelper(helmetTemplates, serverItem, this.armorPusher);
                 this.callHelper(armorVestsTemplates, serverItem, this.armorPusher);
                 this.callHelper(armorMasksTemplates, serverItem, this.armorPusher);
-                this.callHelper(armorMasksTemplates, serverItem, this.armorPusher);
             }
             if (serverItem._parent === ParentClasses.CHESTRIG) {
                 this.callHelper(chestrigTemplates, serverItem, this.armorPusher);
             }
+
         }
     }
 

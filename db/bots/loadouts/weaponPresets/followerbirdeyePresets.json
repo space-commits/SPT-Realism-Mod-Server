@@ -1276,6 +1276,12 @@
                 "slotId": "mod_handguard"
             },
             {
+                "_id": "753a5516fc2d4342b7faf0sd",
+                "_tpl": "637f57a68d137b27f70c4968",
+                "parentId": "753a5516fc2d4342b7faf01d",
+                "slotId": "mod_handguard"
+            },
+            {
                 "_id": "27c1ef8f11a714ee2d7023c2",
                 "_tpl": "5c1780312e221602b66cc189",
                 "parentId": "46ec945bc95127631b8282d3",
@@ -1378,6 +1384,12 @@
                 "slotId": "mod_handguard"
             },
             {
+                "_id": "65d07ba41d29151d63b0c9bf",
+                "_tpl": "637f57b78d137b27f70c496a",
+                "parentId": "65d07ba41d29151d63b0c9df",
+                "slotId": "mod_handguard"
+            },
+            {
                 "_id": "45a8390413d490b5085488c8",
                 "_tpl": "5c1780312e221602b66cc189",
                 "parentId": "ff1549cb66d2f92c29c5aa6f",
@@ -1410,7 +1422,7 @@
             {
                 "_id": "356fd5d379594e3dbeba847b",
                 "_tpl": "588226d124597767ad33f787",
-                "parentId": "65d07ba41d29151d63b0c9df",
+                "parentId": "65d07ba41d29151d63b0c9bf",
                 "slotId": "mod_foregrip"
             },
             {

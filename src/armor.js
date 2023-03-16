@@ -336,7 +336,7 @@ class Armor {
             }
             //Redut-T5
             if (serverItem._id === "5ca21c6986f77479963115a7") {
-                serverItem._props.Durability = 130;
+                serverItem._props.Durability = 125;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 9;
                 serverItem._props.speedPenaltyPercent = -12;
@@ -349,7 +349,7 @@ class Armor {
             //// Class 10////
             //Gen 4 Full
             if (serverItem._id === "5b44cd8b86f774503d30cba2") {
-                serverItem._props.Durability = 105;
+                serverItem._props.Durability = 100;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 10;
                 serverItem._props.speedPenaltyPercent = -10;
@@ -361,7 +361,7 @@ class Armor {
             }
             //Gen 4 Assault
             if (serverItem._id === "5b44cf1486f77431723e3d05") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 95;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 10;
                 serverItem._props.speedPenaltyPercent = -9;
@@ -373,7 +373,7 @@ class Armor {
             }
             //Gen 4 Mobility
             if (serverItem._id === "5b44d0de86f774503d30cba8") {
-                serverItem._props.Durability = 100;
+                serverItem._props.Durability = 95;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 10;
                 serverItem._props.speedPenaltyPercent = -8;
@@ -385,7 +385,7 @@ class Armor {
             }
             //6B43
             if (serverItem._id === "545cdb794bdc2d3a198b456a") {
-                serverItem._props.Durability = 140;
+                serverItem._props.Durability = 120;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 10;
                 serverItem._props.speedPenaltyPercent = -12;
@@ -522,7 +522,7 @@ class Armor {
             //// Class 8 ////  
             //MK4A Assault
             if (serverItem._id === "60a3c70cde5f453f634816a3") {
-                serverItem._props.Durability = 110;
+                serverItem._props.Durability = 105;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -4;
@@ -534,7 +534,7 @@ class Armor {
             }
             //MK4A Protection
             if (serverItem._id === "60a3c68c37ea821725773ef5") {
-                serverItem._props.Durability = 125;
+                serverItem._props.Durability = 100;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -5;
@@ -672,12 +672,36 @@ class Armor {
                 serverItem._props.Durability = 30;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 2;
-                serverItem._props.BluntThroughput = 0.35;
+                serverItem._props.BluntThroughput = 0.25;
                 serverItem._props.ArmorMaterial = 'Glass';
             }
             //yellow goggles
             if (serverItem._id === "59e770b986f7742cbd762754") {
                 serverItem._props.Durability = 15;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 1;
+                serverItem._props.BluntThroughput = 0.20;
+                serverItem._props.ArmorMaterial = 'Glass';
+            }
+            //oakley SIM
+            if (serverItem._id === "5c1a1cc52e221602b3136e3d") {
+                serverItem._props.Durability = 15;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 1;
+                serverItem._props.BluntThroughput = 0.30;
+                serverItem._props.ArmorMaterial = 'Glass';
+            }
+            //pyramex
+            if (serverItem._id === "5c0d32fcd174af02a1659c75") {
+                serverItem._props.Durability = 12;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 1;
+                serverItem._props.BluntThroughput = 0.40;
+                serverItem._props.ArmorMaterial = 'Glass';
+            }
+            //crossbow
+            if (serverItem._id === "5d5fca1ea4b93635fd598c07") {
+                serverItem._props.Durability = 10;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 1;
                 serverItem._props.BluntThroughput = 0.35;

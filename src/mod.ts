@@ -472,10 +472,10 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
 
                             if (modConfig.pmc_types == true) {
                                 if (RaidInfoTracker.TOD === "day") {
-                                    botConf.pmc.pmcType = pmcTypes.pmcTypeDay;
+                                    botConf.pmc.pmcType = pmcTypes.BotTypes2.pmcTypeDay;
                                 }
                                 if (RaidInfoTracker.TOD === "night") {
-                                    botConf.pmc.pmcType = pmcTypes.pmcTypeNight;
+                                    botConf.pmc.pmcType = pmcTypes.BotTypes2.pmcTypeNight;
                                 }
                             }
 
@@ -672,6 +672,13 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
         // codegen.weapTemplatesCodeGen();
         // codegen.gearTemplatesCodeGen();
 
+
+        if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
+            ammo.loadAmmoStats();
+            armor.loadArmor();
+            bots.setBotHealth();
+        }
+
         jsonHand.pushModsToServer();
         jsonHand.pushWeaponsToServer();
         jsonHand.pushArmorToServer();
@@ -719,14 +726,6 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             itemCloning.createCustomMedItems();
             meds.loadMeds();
             // bots.botMeds();
-        }
-
-
-
-        if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
-            ammo.loadAmmoStats();
-            armor.loadArmor();
-            bots.setBotHealth();
         }
 
         if (modConfig.old_ballistics == true && modConfig.realistic_ballistics == false) {

@@ -13,7 +13,7 @@
         "ItemID": "603409c80ca681766b6a0fb2",
         "Name": "item_equipment_glasses_npp",
         "AllowADS": true,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "ArmorClass": "Anti-Shatter Resistance V50 ≥ 230 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
@@ -35,6 +35,36 @@
         "AllowADS": true,
         "LoyaltyLevel": 3,
         "ArmorClass": "Anti-Shatter Resistance V50 ≥ 250 m/s",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
+    },
+    "5c1a1cc52e221602b3136e3d": {
+        "ItemID": "5c1a1cc52e221602b3136e3d",
+        "Name": "item_equipment_glasses_m_frame",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "MIL-PRF 31013",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
+    },
+    "5c0d32fcd174af02a1659c75": {
+        "ItemID": "5c0d32fcd174af02a1659c75",
+        "Name": "item_equipment_glasses_proximity",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "ANSI/ISEA Z87.1+",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1
+    },
+    "5d5fca1ea4b93635fd598c07": {
+        "ItemID": "5d5fca1ea4b93635fd598c07",
+        "Name": "item_equipment_glasses_ess",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "ANSI Z87.1-2015",
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1
