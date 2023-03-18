@@ -11,6 +11,7 @@ class Maps {
     }
     loadSpawnChanges() {
         this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;
+        this.tables.locations.bigmap.base.waves = bossSpawns.CustomsWaves;
         this.tables.locations.factory4_day.base.BossLocationSpawn = bossSpawns.FactoryDayBossLocationSpawn;
         this.tables.locations.factory4_night.base.BossLocationSpawn = bossSpawns.FactoryNightBossLocationSpawn;
         this.tables.locations.factory4_night.base.waves = bossSpawns.FactoryWaves;

@@ -88,6 +88,7 @@ export const enum EquipmentSlots {
 
 export class BotLooGen extends BotLootGenerator {
 
+
     public genLoot(sessionId: string, templateInventory: Inventory, itemCounts: ItemMinMax, isPmc: boolean, botRole: string, botInventory: PmcInventory, equipmentChances: Chances, botLevel: number): void {
 
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
@@ -102,24 +103,45 @@ export class BotLooGen extends BotLootGenerator {
         const looseLootMin = itemCounts.looseLoot.min;
         const looseLootMax = itemCounts.looseLoot.max;
 
-        const lootItemCount = this.getRandomisedCount(looseLootMin, looseLootMax, nValue);
-        const pocketLootCount = this.getRandomisedCount(1, 4, nValue);
-        const vestLootCount = this.getRandomisedCount(Math.round(looseLootMin / 2), Math.round(looseLootMax / 2), nValue); // Count is half what loose loot min/max is
+        var healingTally = 0;
+        var stimTally = 0;
+        var drugTally = 0;
+        var lootTally = 0;
+        var grenadeTally = 0;
+
+        const bagLootItemCount = this.getRandomisedCount(looseLootMin, looseLootMax, nValue);
+        lootTally += bagLootItemCount;
+        const pocketLootCount = lootTally >= looseLootMax ? 0 : this.getRandomisedCount(1, 4, nValue);
+        lootTally += pocketLootCount;
+        const vestLootCount = lootTally >= looseLootMax ? 0 : this.getRandomisedCount(Math.round(looseLootMin / 2), Math.round(looseLootMax / 2), nValue); // Count is half what loose loot min/max is
+        lootTally += vestLootCount;
         const specialLootItemCount = this.getRandomisedCount(itemCounts.specialItems.min, itemCounts.specialItems.max, nValue);
 
         const vestHealingItemCount = this.getRandomisedCount(itemCounts.healing.min, itemCounts.healing.max, 3);
+        healingTally += vestHealingItemCount;
         const vestDrugItemCount = this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3)
+        drugTally += vestDrugItemCount;
         const vestStimItemCount = this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
+        stimTally += vestStimItemCount;
 
-        const pocketHealingItemCount = this.getRandomisedCount(Math.max(0, Math.round(itemCounts.healing.min / 2)), Math.max(1, Math.round(itemCounts.healing.max / 2)), 3);
-        const pocketDrugItemCount = this.getRandomisedCount(Math.max(0, Math.round(itemCounts.drugs.min / 2)), Math.max(1, Math.round(itemCounts.drugs.max / 2)), 3)
-        const pocketStimItemCount = this.getRandomisedCount(Math.max(0, Math.round(itemCounts.stims.min / 2)), Math.max(1, Math.round(itemCounts.stims.max / 2)), 3);
+        const pocketHealingItemCount = healingTally >= itemCounts.healing.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.healing.min / 2)), Math.max(1, Math.round(itemCounts.healing.max / 2)), 3);
+        healingTally += pocketHealingItemCount;
+        const pocketDrugItemCount = drugTally >= itemCounts.drugs.max ? 0 :  this.getRandomisedCount(Math.max(0, Math.round(itemCounts.drugs.min / 2)), Math.max(1, Math.round(itemCounts.drugs.max / 2)), 3)
+        drugTally += pocketDrugItemCount;
+        const pocketStimItemCount = stimTally >= itemCounts.stims.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.stims.min / 2)), Math.max(1, Math.round(itemCounts.stims.max / 2)), 3);
+        stimTally += pocketStimItemCount;
 
-        const bagHealingItemCount = this.getRandomisedCount(0, 1, 3);
-        const bagDrugItemCount = this.getRandomisedCount(0, 1, 3)
-        const bagStimItemCount = this.getRandomisedCount(0, 1, 3);
+        const bagHealingItemCount = healingTally >= itemCounts.healing.max ? 0 : this.getRandomisedCount(0, 1, 3);
+        healingTally += bagHealingItemCount;
+        const bagDrugItemCount = drugTally >= itemCounts.drugs.max ? 0 : this.getRandomisedCount(0, 1, 3);
+        drugTally += bagDrugItemCount;
+        const bagStimItemCount = stimTally >= itemCounts.stims.max ? 0 :  this.getRandomisedCount(0, 1, 3);
+        stimTally += bagStimItemCount;
 
-        const grenadeCount = this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
+        const vestGrenadeCount = this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
+        grenadeTally += vestGrenadeCount;
+        const porcketGrenadeCount  = grenadeTally >= itemCounts.grenades.max ? 0 :  this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
+        grenadeTally += porcketGrenadeCount;
 
         // Special items
         this.addLootFromPool(
@@ -166,7 +188,7 @@ export class BotLooGen extends BotLootGenerator {
         //Pocket Meds
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_HEALING_ITEMS, lootPool),
-            [EquipmentSlots.TACTICAL_VEST],
+            [EquipmentSlots.POCKETS],
             pocketHealingItemCount,
             botInventory,
             botRole,
@@ -235,7 +257,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, lootPool),
             [EquipmentSlots.TACTICAL_VEST],
-            grenadeCount,
+            vestGrenadeCount,
             botInventory,
             botRole,
             false,
@@ -245,7 +267,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, lootPool),
             [EquipmentSlots.POCKETS],
-            grenadeCount,
+            porcketGrenadeCount,
             botInventory,
             botRole,
             false,
@@ -261,7 +283,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, lootPool),
             [EquipmentSlots.BACKPACK],
-            lootItemCount,
+            bagLootItemCount,
             botInventory,
             botRole,
             true,
@@ -437,13 +459,11 @@ export class MyLootCache extends BotLootCacheService {
         //vest
         const vestHealingItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent !== BaseClasses.STIMULATOR
-            && template?._props?.effects_damage?.Pain === undefined);
+            && template._parent === BaseClasses.MEDKIT);
 
         const vestDrugItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent !== BaseClasses.STIMULATOR
-            && template?._props?.effects_damage?.Pain !== undefined);
+            && template._parent === BaseClasses.DRUGS);
 
         const vestStimItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
@@ -452,13 +472,11 @@ export class MyLootCache extends BotLootCacheService {
         //pocket
         const pocketHealingItems = pocketLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent !== BaseClasses.STIMULATOR
-            && template?._props?.effects_damage?.Pain === undefined);
+            && template._parent === BaseClasses.MEDKIT);
 
         const pocketDrugItems = pocketLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent !== BaseClasses.STIMULATOR
-            && template?._props?.effects_damage?.Pain !== undefined);
+            && template._parent === BaseClasses.DRUGS);
 
         const pocketStimItems = pocketLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
@@ -467,13 +485,11 @@ export class MyLootCache extends BotLootCacheService {
         //bag
         const bagHealingItems = backpackLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent !== BaseClasses.STIMULATOR
-            && template?._props?.effects_damage?.Pain === undefined);
+            && template._parent === BaseClasses.MEDKIT);
 
         const bagDrugItems = backpackLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent !== BaseClasses.STIMULATOR
-            && template?._props?.effects_damage?.Pain !== undefined);
+            && template._parent === BaseClasses.DRUGS);
 
         const bagStimItems = backpackLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
