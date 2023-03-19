@@ -89,14 +89,14 @@ class JsonHandler {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass > 0) {
-                this.callHelper(armorChestrigTemplates, serverItem, this.armorPusher);
-                this.callHelper(armorComponentsTemplates, serverItem, this.armorPusher);
-                this.callHelper(helmetTemplates, serverItem, this.armorPusher);
-                this.callHelper(armorVestsTemplates, serverItem, this.armorPusher);
-                this.callHelper(armorMasksTemplates, serverItem, this.armorPusher);
+                this.callHelper(armorChestrigTemplates, serverItem, this.armorPusherHelper);
+                this.callHelper(armorComponentsTemplates, serverItem, this.armorPusherHelper);
+                this.callHelper(helmetTemplates, serverItem, this.armorPusherHelper);
+                this.callHelper(armorVestsTemplates, serverItem, this.armorPusherHelper);
+                this.callHelper(armorMasksTemplates, serverItem, this.armorPusherHelper);
             }
             if (serverItem._parent === enums_1.ParentClasses.CHESTRIG) {
-                this.callHelper(chestrigTemplates, serverItem, this.armorPusher);
+                this.callHelper(chestrigTemplates, serverItem, this.armorPusherHelper);
             }
         }
     }
@@ -106,10 +106,11 @@ class JsonHandler {
             funPusherHelper(serverItem, fileItem);
         }
     }
-    armorPusher(serverItem, fileItem) {
+    armorPusherHelper(serverItem, fileItem) {
         if (serverItem._id === fileItem.ItemID) {
             var serverConfItems = serverItem._props.ConflictingItems;
-            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "0" || "true", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1", fileItem?.ReloadSpeedMulti || "1"];
+            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "0" || "true", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1", fileItem?.ReloadSpeedMulti || "1",
+                fileItem?.MinVelocity || "500", fileItem.MinKE || "2000", fileItem.MinPen || "50"];
             var combinedArr = armorPropertyValues.concat(serverConfItems);
             serverItem._props.ConflictingItems = combinedArr;
         }

@@ -252,12 +252,18 @@ class CodeGen {
         let AllowADS = true;
         let LoyaltyLevel = 2;
         let ReloadSpeedMulti = 1;
+        let MinPen = 50;
+        let MinVelocity = 500;
+        let MinKE = 2000;
         let item = {
             ItemID,
             Name,
             AllowADS,
             LoyaltyLevel,
-            ReloadSpeedMulti
+            ReloadSpeedMulti,
+            MinPen,
+            MinVelocity,
+            MinKE
         };
         return item;
     }

@@ -3220,7 +3220,7 @@ export class Ammo {
             }
             // FMJ -
             if (serverItem._id === "59e6920f86f77411d82aa167") {
-                serverItem._props.PenetrationPower = 60;
+                serverItem._props.PenetrationPower = 58;
                 serverItem._props.ArmorDamage = 20;
                 serverItem._props.Damage = 69;
                 serverItem._props.InitialSpeed = 993;

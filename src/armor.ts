@@ -13,7 +13,7 @@ export class Armor {
     public loadArmor() {
 
         //Armor Destructibility values
-        this.armMat.Glass.Destructibility = 0.65;
+        this.armMat.Glass.Destructibility = 0.6;
         this.armMat.Glass.MaxRepairDegradation = 0.84;
         this.armMat.Glass.MinRepairDegradation = 0.46;
 
@@ -1498,7 +1498,7 @@ export class Armor {
             }
             //Ops-Core Multi-Hit Visor
             if (serverItem._id === "5a16b7e1fcdbcb00165aa6c9") {
-                serverItem._props.Durability = 55;
+                serverItem._props.Durability = 60;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 5;
                 serverItem._props.speedPenaltyPercent = -0.65;
@@ -1670,6 +1670,382 @@ export class Armor {
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("Armour Mouse Penalty Added");
+        }
+    }
+
+    public assignArmorPenRequirements() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem?._props?.armorClass !== undefined) {
+                if (serverItem._props.ArmorMaterial === "Glass") {
+                    if (serverItem._props.armorClass === 1) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "10"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 2) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "20"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 3) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "30"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 4) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "40"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 5) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "50"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 6) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "60"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 7) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "70"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 8) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "80"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 9) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "90"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 10) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "100"; //min pen
+                    }
+                }
+                if (serverItem._props.ArmorMaterial === "ArmoredSteel") {
+                    if (serverItem._props.armorClass === 1) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "10"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 2) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "20"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 3) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "30"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 4) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "40"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 5) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "50"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 6) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "60"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 7) {
+                        serverItem._props.ConflictingItems[6] = "990"; //min velocity
+                        serverItem._props.ConflictingItems[7] = "1600"; //min KE
+                        serverItem._props.ConflictingItems[8] = "62"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 8) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "80"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 9) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "90"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 10) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "100"; //min pen
+                    }
+                }
+                if (serverItem._props.ArmorMaterial === "Aramid") {
+                    if (serverItem._props.armorClass === 1) {
+                        serverItem._props.ConflictingItems[6] = "290"; //min velocity
+                        serverItem._props.ConflictingItems[7] = "160"; //min KE
+                        serverItem._props.ConflictingItems[8] = "10"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 2) {
+                        serverItem._props.ConflictingItems[6] = "290"; //min velocity
+                        serverItem._props.ConflictingItems[7] = "160"; //min KE
+                        serverItem._props.ConflictingItems[8] = "20"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 3) {
+                        serverItem._props.ConflictingItems[6] = "290"; //min velocity
+                        serverItem._props.ConflictingItems[7] = "160"; //min KE
+                        serverItem._props.ConflictingItems[8] = "30"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 4) {
+                        serverItem._props.ConflictingItems[6] = "290"; //min velocity
+                        serverItem._props.ConflictingItems[7] = "160"; //min KE
+                        serverItem._props.ConflictingItems[8] = "40"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 5) {
+                        serverItem._props.ConflictingItems[6] = "290"; //min velocity
+                        serverItem._props.ConflictingItems[7] = "160"; //min KE
+                        serverItem._props.ConflictingItems[8] = "50"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 6) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "60"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 7) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "70"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 8) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "80"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 9) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "90"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 10) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "100"; //min pen
+                    }
+                }
+                if (serverItem._props.ArmorMaterial === "Ceramic") {
+                    if (serverItem._props.armorClass === 1) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "10"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 2) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "20"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 3) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "30"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 4) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "40"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 5) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "50"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 6) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "60"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 7) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "70"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 8) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "80"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 9) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "90"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 10) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "100"; //min pen
+                    }
+                }
+                if (serverItem._props.ArmorMaterial === "Combined") {
+                    if (serverItem._props.armorClass === 1) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "10"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 2) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "20"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 3) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "30"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 4) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "40"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 5) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "50"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 6) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "60"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 7) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "70"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 8) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "80"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 9) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "90"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 10) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "100"; //min pen
+                    }
+                }
+                if (serverItem._props.ArmorMaterial === "UHMWPE") {
+                    if (serverItem._props.armorClass === 1) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "10"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 2) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "20"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 3) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "30"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 4) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "40"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 5) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "50"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 6) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "60"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 7) {
+                        serverItem._props.ConflictingItems[6] = "300"; //min velocity
+                        serverItem._props.ConflictingItems[7] = "750"; //min KE
+                        serverItem._props.ConflictingItems[8] = "70"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 8) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "80"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 9) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "90"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 10) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "100"; //min pen
+                    }
+                }
+                if (serverItem._props.ArmorMaterial === "Titan") {
+                    if (serverItem._props.armorClass === 1) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "10"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 2) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "20"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 3) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "30"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 4) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "40"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 5) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "50"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 6) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "60"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 7) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "70"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 8) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "80"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 9) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "90"; //min pen
+                    }
+                    if (serverItem._props.armorClass === 10) {
+                        serverItem._props.ConflictingItems[6] = ""; //min velocity
+                        serverItem._props.ConflictingItems[7] = ""; //min KE
+                        serverItem._props.ConflictingItems[8] = "100"; //min pen
+                    }
+                }
+                
+            }
+            if (this.modConf.logEverything == true) {
+                this.logger.info("Armour Mouse Penalty Added");
+            }
         }
     }
 }

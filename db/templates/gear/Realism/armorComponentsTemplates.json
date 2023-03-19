@@ -7,7 +7,10 @@
         "ArmorClass": "Abbr. NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5d6d3be5a4b9361bc73bc763": {
         "ItemID": "5d6d3be5a4b9361bc73bc763",
@@ -17,7 +20,10 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5a16badafcdbcb001865f72d": {
         "ItemID": "5a16badafcdbcb001865f72d",
@@ -27,7 +33,10 @@
         "ArmorClass": "NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5c1793902e221602b21d3de2": {
         "ItemID": "5c1793902e221602b21d3de2",
@@ -37,7 +46,10 @@
         "ArmorClass": "NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5e00cfa786f77469dc6e5685": {
         "ItemID": "5e00cfa786f77469dc6e5685",
@@ -47,7 +59,10 @@
         "ArmorClass": "17gr V0 ≥ 731 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5e01f31d86f77465cf261343": {
         "ItemID": "5e01f31d86f77465cf261343",
@@ -57,7 +72,10 @@
         "ArmorClass": "17gr V0 ≥ 731 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5c0e66e2d174af02a96252f4": {
         "ItemID": "5c0e66e2d174af02a96252f4",
@@ -67,7 +85,10 @@
         "ArmorClass": "7.62x39 MSC @ 732 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5c178a942e22164bef5ceca3": {
         "ItemID": "5c178a942e22164bef5ceca3",
@@ -77,7 +98,10 @@
         "ArmorClass": "NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5ea18c84ecf1982c7712d9a2": {
         "ItemID": "5ea18c84ecf1982c7712d9a2",
@@ -87,7 +111,10 @@
         "ArmorClass": "NIJ III",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5e00cdd986f7747473332240": {
         "ItemID": "5e00cdd986f7747473332240",
@@ -97,7 +124,10 @@
         "ArmorClass": "BS EN 166:2002 Class 2B",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5ac4c50d5acfc40019262e87": {
         "ItemID": "5ac4c50d5acfc40019262e87",
@@ -107,7 +137,10 @@
         "ArmorClass": "Unclassified",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5b46238386f7741a693bcf9c": {
         "ItemID": "5b46238386f7741a693bcf9c",
@@ -117,7 +150,10 @@
         "ArmorClass": "GOST 1",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5f60c85b58eff926626a60f7": {
         "ItemID": "5f60c85b58eff926626a60f7",
@@ -127,7 +163,10 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5aa7e3abe5b5b000171d064d": {
         "ItemID": "5aa7e3abe5b5b000171d064d",
@@ -137,7 +176,10 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5ca2113f86f7740b2547e1d2": {
         "ItemID": "5ca2113f86f7740b2547e1d2",
@@ -147,7 +189,10 @@
         "ArmorClass": "GOST 2A",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5d6d3829a4b9361bc8618943": {
         "ItemID": "5d6d3829a4b9361bc8618943",
@@ -157,7 +202,10 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5c0e842486f77443a74d2976": {
         "ItemID": "5c0e842486f77443a74d2976",
@@ -167,7 +215,10 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5aa7e373e5b5b000137b76f0": {
         "ItemID": "5aa7e373e5b5b000137b76f0",
@@ -177,7 +228,10 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5a16b7e1fcdbcb00165aa6c9": {
         "ItemID": "5a16b7e1fcdbcb00165aa6c9",
@@ -187,7 +241,10 @@
         "ArmorClass": "Abbr. NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5a16b672fcdbcb001912fa83": {
         "ItemID": "5a16b672fcdbcb001912fa83",
@@ -197,7 +254,10 @@
         "ArmorClass": "Gentex PRS-1011",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5c0919b50db834001b7ce3b9": {
         "ItemID": "5c0919b50db834001b7ce3b9",
@@ -207,7 +267,10 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5e01f37686f774773c6f6c15": {
         "ItemID": "5e01f37686f774773c6f6c15",
@@ -217,7 +280,10 @@
         "ArmorClass": "BS EN 166:2002 Class 2B",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5ea058e01dbce517f324b3e2": {
         "ItemID": "5ea058e01dbce517f324b3e2",
@@ -227,7 +293,10 @@
         "ArmorClass": "Unclassified",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5f60c076f2bcbb675b00dac2": {
         "ItemID": "5f60c076f2bcbb675b00dac2",
@@ -237,7 +306,10 @@
         "ArmorClass": "16gr V50 ≥ 905 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5a16ba61fcdbcb098008728a": {
         "ItemID": "5a16ba61fcdbcb098008728a",
@@ -247,7 +319,10 @@
         "ArmorClass": "NIJ II",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "5f60bf4558eff926626a60f2": {
         "ItemID": "5f60bf4558eff926626a60f2",
@@ -257,20 +332,33 @@
         "ArmorClass": "MIL-PRF-32432 (GL)",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "60a7ad3a0c5cb24b0134664a": {
         "ItemID": "60a7ad3a0c5cb24b0134664a",
         "Name": "item_equipment_facecover_welding_gorilla",
         "AllowADS": false,
         "LoyaltyLevel": 4,
-        "ArmorClass": "Unclassified"
+        "ArmorClass": "Unclassified",
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     },
     "60a7ad2a2198820d95707a2e": {
         "ItemID": "60a7ad2a2198820d95707a2e",
         "Name": "item_equipment_facecover_welding_kill",
         "AllowADS": false,
         "LoyaltyLevel": 4,
-        "ArmorClass": "Unclassified"
+        "ArmorClass": "Unclassified",
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
     }
 }

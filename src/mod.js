@@ -569,7 +569,7 @@ class Main {
         if (modConfig.headset_changes) {
             gear.loadHeadsetTweaks();
         }
-        if (modConfig.remove_fir_req == true) {
+        if (modConfig.remove_quest_fir_req == true) {
             quests.removeFIRQuestRequire();
         }
         //traders
