@@ -98,7 +98,7 @@ export class JsonHandler {
     public pushArmorToServer() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass > 0) {
+            if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass !== undefined) {
                 this.callHelper(armorChestrigTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(armorComponentsTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(helmetTemplates, serverItem, this.armorPusherHelper);
@@ -124,8 +124,8 @@ export class JsonHandler {
         if (serverItem._id === fileItem.ItemID) {
 
             var serverConfItems = serverItem._props.ConflictingItems;
-            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "0" || "true", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1", fileItem?.ReloadSpeedMulti || "1",
-                fileItem?.MinVelocity || "500", fileItem.MinKE || "2000", fileItem.MinPen || "50"];
+            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "Unclassified", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1", fileItem?.ReloadSpeedMulti || "1",
+                fileItem?.MinVelocity || "500", fileItem.MinKE || "2000", fileItem.MinPen || "50", fileItem.HasBypassedArmor || "false"];
 
             var combinedArr = armorPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;

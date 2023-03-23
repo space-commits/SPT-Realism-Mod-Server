@@ -1527,6 +1527,38 @@
           "max": 1
         }
       }
+    },
+    "generation_med_changes": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 0,
+          "max": 0
+        },
+        "drugs": {
+          "min": 0,
+          "max": 2
+        },
+        "stims": {
+          "min": 0,
+          "max": 1
+        },
+        "looseLoot": {
+          "min": 5,
+          "max": 10
+        },
+        "magazines": {
+          "min": 2,
+          "max": 5
+        },
+        "grenades": {
+          "min": 0,
+          "max": 1
+        }
+      }
     }
   },
   "usecLO2": {
@@ -3534,6 +3566,38 @@
           "max": 1
         }
       }
+    },
+    "generation_med_changes": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 0,
+          "max": 0
+        },
+        "drugs": {
+          "min": 0,
+          "max": 3
+        },
+        "stims": {
+          "min": 0,
+          "max": 1
+        },
+        "looseLoot": {
+          "min": 6,
+          "max": 10
+        },
+        "magazines": {
+          "min": 2,
+          "max": 6
+        },
+        "grenades": {
+          "min": 0,
+          "max": 1
+        }
+      }
     }
   },
   "usecLO3": {
@@ -3776,6 +3840,17 @@
         "5bfea6e90db834001b7347f3": 3,
         "618428466ef05c2ce828f218": 5,
         "5aafa857e5b5b00018480968": 3
+      },
+      "Headwear_cqb": {
+        "5aa2ba19e5b5b00014028f4e": 1,
+        "5aa2a7e8e5b5b00016327c16": 1,
+        "5b40e61f5acfc4001a599bec": 1,
+        "5d96141523f0ea1b7f2aacab": 1,
+        "618aef6d0a5a59657e5f55ee": 1,
+        "5d5e7d28a4b936645d161203": 10,
+        "5d5e9c74a4b9364855191c40": 10,
+        "5b40e2bc5acfc40016388216": 10,
+        "5ac8d6885acfc400180ae7b0": 20
       },
       "equipment": {
         "FirstPrimaryWeapon": {
@@ -5956,8 +6031,40 @@
           "max": 2
         },
         "drugs": {
-          "min": 1,
+          "min": 0,
           "max": 1
+        },
+        "stims": {
+          "min": 0,
+          "max": 1
+        },
+        "looseLoot": {
+          "min": 5,
+          "max": 10
+        },
+        "magazines": {
+          "min": 2,
+          "max": 6
+        },
+        "grenades": {
+          "min": 0,
+          "max": 2
+        }
+      }
+    },
+    "generation_med_changes": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 0,
+          "max": 0
+        },
+        "drugs": {
+          "min": 1,
+          "max": 3
         },
         "stims": {
           "min": 0,
@@ -6222,6 +6329,18 @@
         "628a60ae6b1d481ff772e9c8": 3,
         "5bfea6e90db834001b7347f3": 5,
         "618428466ef05c2ce828f218": 5
+      },
+      "Headwear_cqb": {
+        "5aa2ba19e5b5b00014028f4e": 1,
+        "5b40e61f5acfc4001a599bec": 1,
+        "5d96141523f0ea1b7f2aacab": 1,
+        "5d5e7d28a4b936645d161203": 2,
+        "5d5e9c74a4b9364855191c40": 2,
+        "5b40e3f35acfc40016388218": 2,
+        "5b40e4035acfc47a87740943": 2,
+        "5ac8d6885acfc400180ae7b0": 12,
+        "5c17a7ed2e2216152142459c": 12,
+        "5e01ef6886f77445f643baa4": 5
       },
       "equipment": {
         "FirstPrimaryWeapon": {
@@ -8967,8 +9086,40 @@
           "max": 3
         },
         "drugs": {
-          "min": 1,
+          "min": 0,
           "max": 1
+        },
+        "stims": {
+          "min": 0,
+          "max": 2
+        },
+        "looseLoot": {
+          "min": 4,
+          "max": 10
+        },
+        "magazines": {
+          "min": 3,
+          "max": 5
+        },
+        "grenades": {
+          "min": 1,
+          "max": 2
+        }
+      }
+    },
+    "generation_med_changes": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 0,
+          "max": 0
+        },
+        "drugs": {
+          "min": 2,
+          "max": 4
         },
         "stims": {
           "min": 0,

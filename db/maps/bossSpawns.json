@@ -715,9 +715,9 @@
             "isPlayers": true,
             "number": 0,
             "slots_max": 5,
-            "slots_min": 3,
-            "time_max": -1,
-            "time_min": -1
+            "slots_min": 5,
+            "time_max": 2,
+            "time_min": 1
         },
         {
             "BotPreset": "hard",
@@ -726,10 +726,10 @@
             "WildSpawnType": "assault",
             "isPlayers": false,
             "number": 1,
-            "slots_max": 4,
-            "slots_min": 2,
+            "slots_max": 5,
+            "slots_min": 3,
             "time_max": 60,
-            "time_min": 20
+            "time_min": 10
         },
         {
             "BotPreset": "hard",
@@ -738,10 +738,10 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 2,
-            "slots_max": 4,
+            "slots_max": 5,
             "slots_min": 2,
-            "time_max": 180,
-            "time_min": 100
+            "time_max": 120,
+            "time_min": 60
         },
         {
             "BotPreset": "normal",
@@ -751,9 +751,9 @@
             "isPlayers": true,
             "number": 3,
             "slots_max": 4,
-            "slots_min": 1,
-            "time_max": 300,
-            "time_min": 240
+            "slots_min": 2,
+            "time_max": 240,
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -763,9 +763,9 @@
             "isPlayers": true,
             "number": 4,
             "slots_max": 4,
-            "slots_min": 1,
-            "time_max": 420,
-            "time_min": 360
+            "slots_min": 2,
+            "time_max": 300,
+            "time_min": 240
         },
         {
             "BotPreset": "normal",
@@ -774,10 +774,10 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 5,
-            "slots_max": 3,
+            "slots_max": 4,
             "slots_min": 1,
             "time_max": 510,
-            "time_min": 480
+            "time_min": 300
         },
         {
             "BotPreset": "hard",
@@ -786,7 +786,7 @@
             "WildSpawnType": "assault",
             "isPlayers": false,
             "number": 6,
-            "slots_max": 3,
+            "slots_max": 4,
             "slots_min": 1,
             "time_max": 600,
             "time_min": 520

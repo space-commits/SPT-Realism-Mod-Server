@@ -619,7 +619,7 @@ export class Bots {
         this.usecBase.inventory.items = usecLO.usecLO1.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO1.inventory.mods;
         this.usecBase.chances = usecLO.usecLO1.chances;
-        this.usecBase.generation = usecLO.usecLO1.generation;
+        this.usecBase.generation = this.modConf.med_changes === true ? usecLO.usecLO1.generation_med_changes : usecLO.usecLO1.generation;
         this.usecBase.appearance.body = usecLO.usecLO1.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO1.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO1.experience.level;
@@ -673,17 +673,19 @@ export class Bots {
         this.usecBase.inventory.items = usecLO.usecLO2.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO2.inventory.mods;
         this.usecBase.chances = usecLO.usecLO2.chances;
-        this.usecBase.generation = usecLO.usecLO2.generation;
+        this.usecBase.generation = this.modConf.med_changes === true ? usecLO.usecLO2.generation_med_changes : usecLO.usecLO2.generation;
         this.usecBase.appearance.body = usecLO.usecLO2.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO2.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO2.experience.level;
 
+        
         if (RaidInfoTracker.TOD === "night") {
             this.usecBase.chances.mods.mod_nvg = 25;
             this.usecBase.chances.mods.mod_flashlight = 60;
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_urban;
             this.usecBase.chances.mods.mod_nvg = 25;
             this.usecBase.chances.mods.mod_flashlight = 60;
             this.usecBase.chances.mods.mod_equipment_000 = 10;
@@ -730,7 +732,7 @@ export class Bots {
         this.usecBase.inventory.items = usecLO.usecLO3.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO3.inventory.mods;
         this.usecBase.chances = usecLO.usecLO3.chances;
-        this.usecBase.generation = usecLO.usecLO3.generation;
+        this.usecBase.generation = this.modConf.med_changes === true ? usecLO.usecLO3.generation_med_changes : usecLO.usecLO3.generation;
         this.usecBase.appearance.body = usecLO.usecLO3.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO3.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO3.experience.level;
@@ -741,6 +743,7 @@ export class Bots {
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
             this.usecBase.chances.mods.mod_nvg = 60;
             this.usecBase.chances.mods.mod_flashlight = 100;
             this.usecBase.chances.mods.mod_equipment_000 = 20;
@@ -754,6 +757,7 @@ export class Bots {
                 this.usecBase.chances.mods.mod_equipment = 50;
             }
             if (RaidInfoTracker.mapType === "cqb") {
+                this.usecBase.inventory.equipment.Headwear = usecLO.usecLO3.inventory.Headwear_cqb;
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 85;
@@ -787,7 +791,7 @@ export class Bots {
         this.usecBase.inventory.items = usecLO.usecLO4.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO4.inventory.mods;
         this.usecBase.chances = usecLO.usecLO4.chances;
-        this.usecBase.generation = usecLO.usecLO4.generation;
+        this.usecBase.generation = this.modConf.med_changes === true ? usecLO.usecLO4.generation_med_changes : usecLO.usecLO4.generation;
         this.usecBase.appearance.body = usecLO.usecLO4.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO4.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO4.experience.level;
@@ -799,6 +803,7 @@ export class Bots {
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
             this.usecBase.chances.mods.mod_nvg = 65;
             this.usecBase.chances.mods.mod_flashlight = 100;
             this.usecBase.chances.mods.mod_equipment_000 = 20;
@@ -806,6 +811,7 @@ export class Bots {
         } else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
+                this.usecBase.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_cqb;
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 60;
@@ -858,7 +864,7 @@ export class Bots {
         this.bearBase.inventory.items = bearLO.bearLO1.inventory.items;
         this.bearBase.inventory.mods = bearLO.bearLO1.inventory.mods;
         this.bearBase.chances = bearLO.bearLO1.chances;
-        this.bearBase.generation = bearLO.bearLO1.generation;
+        this.bearBase.generation = this.modConf.med_changes === true ? bearLO.bearLO1.generation_med_changes : bearLO.bearLO1.generation;
         this.bearBase.appearance.body = bearLO.bearLO1.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO1.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO1.experience.level;
@@ -913,7 +919,7 @@ export class Bots {
         this.bearBase.inventory.items = bearLO.bearLO2.inventory.items;
         this.bearBase.inventory.mods = bearLO.bearLO2.inventory.mods;
         this.bearBase.chances = bearLO.bearLO2.chances;
-        this.bearBase.generation = bearLO.bearLO2.generation;
+        this.bearBase.generation = this.modConf.med_changes === true ? bearLO.bearLO2.generation_med_changes : bearLO.bearLO2.generation;
         this.bearBase.appearance.body = bearLO.bearLO2.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO2.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO2.experience.level;
@@ -925,6 +931,7 @@ export class Bots {
             this.bearBase.chances.mods.mod_equipment_000 = 0;
             this.bearBase.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_cqb;
             this.bearBase.chances.mods.mod_nvg = 25;
             this.bearBase.chances.mods.mod_flashlight = 60;
             this.bearBase.chances.mods.mod_equipment_000 = 20;
@@ -970,7 +977,7 @@ export class Bots {
         this.bearBase.inventory.items = bearLO.bearLO3.inventory.items;
         this.bearBase.inventory.mods = bearLO.bearLO3.inventory.mods;
         this.bearBase.chances = bearLO.bearLO3.chances;
-        this.bearBase.generation = bearLO.bearLO3.generation;
+        this.bearBase.generation = this.modConf.med_changes === true ? bearLO.bearLO3.generation_med_changes : bearLO.bearLO3.generation;
         this.bearBase.appearance.body = bearLO.bearLO3.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO3.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO3.experience.level;
@@ -983,6 +990,7 @@ export class Bots {
             this.bearBase.chances.mods.mod_equipment = 0;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_cqb;
             this.bearBase.chances.mods.mod_nvg = 50;
             this.bearBase.chances.mods.mod_flashlight = 100;
             this.bearBase.chances.mods.mod_equipment_000 = 30;
@@ -1028,7 +1036,7 @@ export class Bots {
         this.bearBase.inventory.items = bearLO.bearLO4.inventory.items;
         this.bearBase.inventory.mods = bearLO.bearLO4.inventory.mods;
         this.bearBase.chances = bearLO.bearLO4.chances;
-        this.bearBase.generation = bearLO.bearLO4.generation;
+        this.bearBase.generation = this.modConf.med_changes === true ? bearLO.bearLO4.generation_med_changes : bearLO.bearLO4.generation;
         this.bearBase.appearance.body = bearLO.bearLO4.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO4.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO4.experience.level;
@@ -1041,6 +1049,7 @@ export class Bots {
             this.bearBase.chances.mods.mod_equipment = 0;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
             this.bearBase.chances.mods.mod_nvg = 50;
             this.bearBase.chances.mods.mod_flashlight = 100;
             this.bearBase.chances.mods.mod_equipment_000 = 40;
@@ -1108,6 +1117,7 @@ export class Bots {
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 50;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 100;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_cqb;
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 70;
             this.raiderBase.chances.mods.mod_nvg = 40;
             this.raiderBase.chances.mods.mod_equipment_000 = 50;
@@ -1161,6 +1171,7 @@ export class Bots {
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 25;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 100;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_cqb;
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 50;
             this.raiderBase.chances.mods.mod_nvg = 50;
             this.raiderBase.chances.mods.mod_equipment_000 = 50;
@@ -1215,6 +1226,7 @@ export class Bots {
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 0;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 100;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_cqb;
             this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 0;
             this.raiderBase.chances.mods.mod_nvg = 50;
             this.raiderBase.chances.mods.mod_equipment_000 = 60;

@@ -264,6 +264,7 @@ export class CodeGen {
         let CanSpall = false;
         let SpallReduction = 1;
         let ReloadSpeedMulti = 1;
+        let HasBypassedArmor = false;
 
         let item = {
             ItemID,
@@ -273,7 +274,8 @@ export class CodeGen {
             ArmorClass,
             CanSpall,
             SpallReduction,
-            ReloadSpeedMulti
+            ReloadSpeedMulti,
+            HasBypassedArmor
         };
 
         return item;

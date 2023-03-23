@@ -16,7 +16,7 @@ export class Ammo {
             //// 12ga ////
             //Flechette
             if (serverItem._id === "5d6e6911a4b9361bd5780d52") {
-                serverItem._props.PenetrationPower = 15;
+                serverItem._props.PenetrationPower = 9;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.buckshotBullets = 9;
                 serverItem._props.Damage = 17;
@@ -792,7 +792,7 @@ export class Ammo {
             //PM PRS gs
             if (serverItem._id === "57371eb62459776125652ac1") {
                 serverItem._props.PenetrationPower = 6;
-                serverItem._props.ArmorDamage = 10;
+                serverItem._props.ArmorDamage = 5;
                 serverItem._props.Damage = 25;
                 serverItem._props.InitialSpeed = 301;
                 serverItem._props.RicochetChance = 0.0;
@@ -2852,7 +2852,7 @@ export class Ammo {
             // PRS
             if (serverItem._id === "56dff338d2720bbd668b4569") {
                 serverItem._props.PenetrationPower = 46;
-                serverItem._props.ArmorDamage = 10;
+                serverItem._props.ArmorDamage = 5;
                 serverItem._props.Damage = 61;
                 serverItem._props.InitialSpeed = 910;
                 serverItem._props.RicochetChance = 0.0;
@@ -3152,7 +3152,7 @@ export class Ammo {
             // Mk 255 Mod 0
             if (serverItem._id === "59e6918f86f7746c9f75e849") {
                 serverItem._props.PenetrationPower = 48;
-                serverItem._props.ArmorDamage = 10;
+                serverItem._props.ArmorDamage = 5;
                 serverItem._props.Damage = 60;
                 serverItem._props.InitialSpeed = 880;
                 serverItem._props.RicochetChance = 0.0;

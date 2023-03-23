@@ -1464,6 +1464,38 @@
           "max": 1
         }
       }
+    },
+    "generation_med_changes": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 0,
+          "max": 0
+        },
+        "drugs": {
+          "min": 0,
+          "max": 2
+        },
+        "stims": {
+          "min": 0,
+          "max": 1
+        },
+        "looseLoot": {
+          "min": 5,
+          "max": 10
+        },
+        "magazines": {
+          "min": 2,
+          "max": 5
+        },
+        "grenades": {
+          "min": 0,
+          "max": 1
+        }
+      }
     }
   },
   "bearLO2": {
@@ -3186,6 +3218,38 @@
         "drugs": {
           "min": 0,
           "max": 1
+        },
+        "stims": {
+          "min": 0,
+          "max": 1
+        },
+        "looseLoot": {
+          "min": 6,
+          "max": 10
+        },
+        "magazines": {
+          "min": 2,
+          "max": 7
+        },
+        "grenades": {
+          "min": 0,
+          "max": 1
+        }
+      }
+    },
+    "generation_med_changes": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 0,
+          "max": 0
+        },
+        "drugs": {
+          "min": 0,
+          "max": 3
         },
         "stims": {
           "min": 0,
@@ -4968,8 +5032,40 @@
           "max": 2
         },
         "drugs": {
-          "min": 1,
+          "min": 0,
           "max": 1
+        },
+        "stims": {
+          "min": 0,
+          "max": 1
+        },
+        "looseLoot": {
+          "min": 5,
+          "max": 10
+        },
+        "magazines": {
+          "min": 2,
+          "max": 7
+        },
+        "grenades": {
+          "min": 0,
+          "max": 2
+        }
+      }
+    },
+    "generation_med_changes": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 0,
+          "max": 0
+        },
+        "drugs": {
+          "min": 1,
+          "max": 3
         },
         "stims": {
           "min": 0,
@@ -7183,12 +7279,44 @@
           "max": 3
         },
         "drugs": {
-          "min": 1,
+          "min": 0,
           "max": 1
         },
         "stims": {
           "min": 0,
+          "max": 1
+        },
+        "looseLoot": {
+          "min": 4,
+          "max": 10
+        },
+        "magazines": {
+          "min": 3,
+          "max": 5
+        },
+        "grenades": {
+          "min": 1,
           "max": 2
+        }
+      }
+    },
+    "generation_med_changes": {
+      "items": {
+        "specialItems": {
+          "min": 0,
+          "max": 0
+        },
+        "healing": {
+          "min": 0,
+          "max": 0
+        },
+        "drugs": {
+          "min": 2,
+          "max": 4
+        },
+        "stims": {
+          "min": 0,
+          "max": 1
         },
         "looseLoot": {
           "min": 4,
