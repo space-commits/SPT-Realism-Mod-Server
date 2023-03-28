@@ -65,6 +65,7 @@ export class GenBotLvl extends BotLevelGenerator {
 export class BotWepGen extends BotWeaponGenerator {
 
     public magGen(generatedWeaponResult: GenerateWeaponResult, magCounts: MinMax, inventory: PmcInventory, botRole: string) {
+
         const weaponMods = generatedWeaponResult.weapon;
         const weaponTemplate = generatedWeaponResult.weaponTemplate;
         const ammoTpl = generatedWeaponResult.chosenAmmoTpl;
@@ -87,6 +88,11 @@ export class BotWepGen extends BotWeaponGenerator {
             this.logger.error(this.localisationService.getText("bot-unable_to_find_ammo_item", ammoTpl));
 
             return;
+        }
+
+        // Has an UBGL
+        if (generatedWeaponResult.chosenUbglAmmoTpl) {
+            this.addUbglGrenadesToBotInventory(weaponMods, generatedWeaponResult, inventory);
         }
 
         const inventoryMagGenModel = new InventoryMagGen(magCounts, magTemplate, weaponTemplate, ammoTemplate, inventory);

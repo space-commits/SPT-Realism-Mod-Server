@@ -10,7 +10,10 @@
         "ReloadSpeedMulti": 0.88,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "61bcc89aef0f505f0c6cd0fc": {
         "ItemID": "61bcc89aef0f505f0c6cd0fc",
@@ -23,7 +26,10 @@
         "ReloadSpeedMulti": 1.14,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "5c0e3eb886f7742015526062": {
         "ItemID": "5c0e3eb886f7742015526062",
@@ -36,7 +42,10 @@
         "ReloadSpeedMulti": 0.87,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "5ab8dced86f774646209ec87": {
         "ItemID": "5ab8dced86f774646209ec87",
@@ -49,7 +58,10 @@
         "ReloadSpeedMulti": 0.90,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "5c0e446786f7742013381639": {
         "ItemID": "5c0e446786f7742013381639",
@@ -62,7 +74,10 @@
         "ReloadSpeedMulti": 0.87,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": true,
+        "HasNeckArmor": true
     },
     "5d5d87f786f77427997cfaef": {
         "ItemID": "5d5d87f786f77427997cfaef",
@@ -75,7 +90,10 @@
         "ReloadSpeedMulti": 1.15,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "5d5d646386f7742797261fd9": {
         "ItemID": "5d5d646386f7742797261fd9",
@@ -88,7 +106,10 @@
         "ReloadSpeedMulti": 0.86,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": true,
+        "HasNeckArmor": false
     },
     "544a5caa4bdc2d1a388b4568": {
         "ItemID": "544a5caa4bdc2d1a388b4568",
@@ -97,11 +118,14 @@
         "LoyaltyLevel": 4,
         "ArmorClass": "NIJ III+",
         "CanSpall": true,
-        "SpallReduction": 0.5,
+        "SpallReduction": 0.45,
         "ReloadSpeedMulti": 1.16,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": true,
+        "HasNeckArmor": false
     },
     "628d0618d1ba6e4fa07ce5a4": {
         "ItemID": "628d0618d1ba6e4fa07ce5a4",
@@ -114,7 +138,10 @@
         "ReloadSpeedMulti": 0.87,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": true,
+        "HasNeckArmor": false
     },
     "5e4ac41886f77406a511c9a8": {
         "ItemID": "5e4ac41886f77406a511c9a8",
@@ -127,7 +154,10 @@
         "ReloadSpeedMulti": 1.14,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "5c0e746986f7741453628fe5": {
         "ItemID": "5c0e746986f7741453628fe5",
@@ -136,11 +166,14 @@
         "LoyaltyLevel": 3,
         "ArmorClass": "NIJ III",
         "CanSpall": true,
-        "SpallReduction": 0.6,
+        "SpallReduction": 0.5,
         "ReloadSpeedMulti": 0.94,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "628dc750b910320f4c27a732": {
         "ItemID": "628dc750b910320f4c27a732",
@@ -153,7 +186,10 @@
         "ReloadSpeedMulti": 1.13,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": true,
+        "HasNeckArmor": false
     },
     "61bc85697113f767765c7fe7": {
         "ItemID": "61bc85697113f767765c7fe7",
@@ -162,11 +198,14 @@
         "LoyaltyLevel": 5,
         "ArmorClass": "NIJ III+",
         "CanSpall": true,
-        "SpallReduction": 0.65,
+        "SpallReduction": 0.55,
         "ReloadSpeedMulti": 1.14,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "609e860ebd219504d8507525": {
         "ItemID": "609e860ebd219504d8507525",
@@ -179,7 +218,10 @@
         "ReloadSpeedMulti": 0.89,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "628b9784bcf6e2659e09b8a2": {
         "ItemID": "628b9784bcf6e2659e09b8a2",
@@ -192,7 +234,10 @@
         "ReloadSpeedMulti": 0.91,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "628b9c7d45122232a872358f": {
         "ItemID": "628b9c7d45122232a872358f",
@@ -205,7 +250,10 @@
         "ReloadSpeedMulti": 1.13,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "5b44cad286f77402a54ae7e5": {
         "ItemID": "5b44cad286f77402a54ae7e5",
@@ -218,7 +266,10 @@
         "ReloadSpeedMulti": 1.16,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "60a3c70cde5f453f634816a3": {
         "ItemID": "60a3c70cde5f453f634816a3",
@@ -231,7 +282,10 @@
         "ReloadSpeedMulti": 1.07,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": false,
+        "HasNeckArmor": true
     },
     "60a3c68c37ea821725773ef5": {
         "ItemID": "60a3c68c37ea821725773ef5",
@@ -244,7 +298,10 @@
         "ReloadSpeedMulti": 1.09,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": false,
+        "HasNeckArmor": true
     },
     "628cd624459354321c4b7fa2": {
         "ItemID": "628cd624459354321c4b7fa2",
@@ -257,7 +314,10 @@
         "ReloadSpeedMulti": 1.08,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     },
     "639343fce101f4caa40a4ef3": {
         "ItemID": "639343fce101f4caa40a4ef3",
@@ -270,6 +330,9 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "HasSideArmor": true,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false
     }
 }

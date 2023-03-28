@@ -302,6 +302,8 @@ export class Bots {
             function removeWeps(bot) {
                 bot.inventory.equipment.FirstPrimaryWeapon = [];
                 bot.inventory.equipment.Holster = [];
+                bot.inventory.equipment.Backpack = [];
+
             }
 
             this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;

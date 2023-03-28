@@ -269,6 +269,7 @@ class Bots {
             function removeWeps(bot) {
                 bot.inventory.equipment.FirstPrimaryWeapon = [];
                 bot.inventory.equipment.Holster = [];
+                bot.inventory.equipment.Backpack = [];
             }
             this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
         }
@@ -671,6 +672,7 @@ class Bots {
                 this.usecBase.chances.mods.mod_equipment = 50;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
+                this.usecBase.inventory.equipment.Headwear = usecLO.usecLO3.inventory.Headwear_cqb;
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 85;
@@ -721,6 +723,7 @@ class Bots {
         else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
+                this.usecBase.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_cqb;
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 60;

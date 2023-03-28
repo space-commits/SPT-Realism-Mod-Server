@@ -231,6 +231,10 @@ class CodeGen {
         let SpallReduction = 1;
         let ReloadSpeedMulti = 1;
         let HasBypassedArmor = false;
+        let HasSideArmor = false;
+        let HasStomachArmor = false;
+        let HasHitSecondaryArmor = false;
+        let HasNeckArmor = false;
         let item = {
             ItemID,
             Name,
@@ -240,7 +244,11 @@ class CodeGen {
             CanSpall,
             SpallReduction,
             ReloadSpeedMulti,
-            HasBypassedArmor
+            HasBypassedArmor,
+            HasSideArmor,
+            HasStomachArmor,
+            HasHitSecondaryArmor,
+            HasNeckArmor
         };
         return item;
     }

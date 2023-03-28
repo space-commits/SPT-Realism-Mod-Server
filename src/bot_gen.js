@@ -54,6 +54,10 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             this.logger.error(this.localisationService.getText("bot-unable_to_find_ammo_item", ammoTpl));
             return;
         }
+        // Has an UBGL
+        if (generatedWeaponResult.chosenUbglAmmoTpl) {
+            this.addUbglGrenadesToBotInventory(weaponMods, generatedWeaponResult, inventory);
+        }
         const inventoryMagGenModel = new InventoryMagGen_1.InventoryMagGen(magCounts, magTemplate, weaponTemplate, ammoTemplate, inventory);
         this.inventoryMagGenComponents.find(v => v.canHandleInventoryMagGen(inventoryMagGenModel)).process(inventoryMagGenModel);
         // Add x stacks of bullets to SecuredContainer (bots use a magic mag packing skill to reload instantly)
