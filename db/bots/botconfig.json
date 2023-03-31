@@ -92,8 +92,8 @@
         },
         "assault": {
             "armor": {
-                "maxDelta": 20,
-                "minDelta": 5,
+                "maxDelta": 10,
+                "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
@@ -250,8 +250,8 @@
         },
         "assault": {
             "armor": {
-                "maxDelta": 20,
-                "minDelta": 5,
+                "maxDelta": 10,
+                "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
@@ -408,8 +408,8 @@
         },
         "assault": {
             "armor": {
-                "maxDelta": 20,
-                "minDelta": 5,
+                "maxDelta": 10,
+                "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {

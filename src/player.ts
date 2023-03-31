@@ -154,6 +154,15 @@ export class Player {
 
     public loadPlayerStats() {
 
+        this.globalDB.Stamina.OxygenCapacity *= 1.3;
+        this.globalDB.Stamina.OxygenRestoration *= 2.1;
+
+        this.globalDB.Stamina.AimDrainRate = 0.35;
+        this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.05;
+        this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.3;
+        this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing
+
+
         if (this.modConfig.weight_limits_changes == true) {
             this.globalDB.Stamina.WalkOverweightLimits["x"] = 55;
             this.globalDB.Stamina.WalkOverweightLimits["y"] = 70;
@@ -213,13 +222,6 @@ export class Player {
 
             this.globalDB.Stamina.Capacity = 100;
             this.globalDB.Stamina.BaseRestorationRate = 10;
-            this.globalDB.Stamina.OxygenCapacity *= 1.3;
-            this.globalDB.Stamina.OxygenRestoration *= 2.1;
-
-            this.globalDB.Stamina.AimDrainRate = 0.35;
-            this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.05;
-            this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.3;
-            this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing
 
             this.globalDB.Inertia.SideTime["x"] = 0.76;
             this.globalDB.Inertia.SideTime["y"] = 0.38;

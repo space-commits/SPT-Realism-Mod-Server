@@ -244,45 +244,6 @@
             "RandomTimeSpawn": false
         }
     ],
-    "FactoryDayBossLocationSpawn": [
-        {
-            "BossName": "bossTagilla",
-            "BossChance": 30,
-            "BossZone": "BotZone",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "followerBully",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "0",
-            "Time": -1,
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "bossKilla",
-            "BossChance": 15,
-            "BossZone": "BotZone",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "followerTagilla",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "0",
-            "Time": -1,
-            "Supports": null,
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "pmcBot",
-            "BossChance": 20,
-            "BossZone": "BotZone",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "pmcBot",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2,2,2,2,2,2,3,3,3,4",
-            "Time": -1,
-            "RandomTimeSpawn": false
-        }
-    ],
     "CustomsWaves": [
         {
             "BotPreset": "easy",
@@ -585,6 +546,80 @@
             "time_min": 140
         }
     ],
+    "FactoryDayBossLocationSpawn": [
+        {
+            "BossName": "bossTagilla",
+            "BossChance": 30,
+            "BossZone": "BotZone",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "0",
+            "Time": -1,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "bossKilla",
+            "BossChance": 15,
+            "BossZone": "BotZone",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerTagilla",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "0",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "pmcBot",
+            "BossChance": 20,
+            "BossZone": "BotZone",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "pmcBot",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "2,2,2,2,2,2,3,3,3,4",
+            "Time": -1,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "bossKnight",
+            "BossChance": 5,
+            "BossZone": "BotZone",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "exUsec",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "2",
+            "Time": -1,
+            "Supports": [
+                {
+                    "BossEscortType": "followerBigPipe",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerBirdEye",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "1"
+                },
+                {
+                    "BossEscortType": "followerGluharScout",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortAmount": "0"
+                }
+            ],
+            "RandomTimeSpawn": true
+        }
+    ],
     "FactoryNightBossLocationSpawn": [
         {
             "BossName": "bossTagilla",
@@ -638,41 +673,6 @@
         {
             "BossName": "bossKnight",
             "BossChance": 10,
-            "BossZone": "BotZone",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "exUsec",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2",
-            "Time": -1,
-            "Supports": [
-                {
-                    "BossEscortType": "followerBigPipe",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "1"
-                },
-                {
-                    "BossEscortType": "followerBirdEye",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "1"
-                },
-                {
-                    "BossEscortType": "followerGluharScout",
-                    "BossEscortDifficult": [
-                        "normal"
-                    ],
-                    "BossEscortAmount": "0"
-                }
-            ],
-            "RandomTimeSpawn": true
-        },
-        {
-            "BossName": "bossKnight",
-            "BossChance": 5,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
