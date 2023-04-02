@@ -315,7 +315,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -9;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.12
+                serverItem._props.BluntThroughput = 0.11
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 8.3;
             }

@@ -723,13 +723,13 @@ class Bots {
         else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (helper_1.RaidInfoTracker.mapType === "urban") {
-                this.usecBase.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_cqb;
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 60;
                 this.usecBase.chances.mods.mod_equipment = 60;
             }
             if (helper_1.RaidInfoTracker.mapType === "cqb") {
+                this.usecBase.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_cqb;
                 this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 80;
