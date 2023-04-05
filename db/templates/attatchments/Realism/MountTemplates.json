@@ -836,7 +836,7 @@
     "619624b26db0f2477964e6b0": {
         "ItemID": "619624b26db0f2477964e6b0",
         "Name": "mount_usp_hk_match_compensator",
-        "ModType": "",
+        "ModType": "counter_weight",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -854,7 +854,7 @@
     "619621a4de3cdf1d2614a7a7": {
         "ItemID": "619621a4de3cdf1d2614a7a7",
         "Name": "mount_usp_hk_elite_compensator",
-        "ModType": "",
+        "ModType": "counter_weight",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,

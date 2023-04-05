@@ -379,6 +379,7 @@ export class Bots {
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         } else {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 0;
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
                 this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 30;
             }
@@ -386,7 +387,7 @@ export class Bots {
                 this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 80;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 20;
+                this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 0;
             }
         }
 
@@ -449,6 +450,7 @@ export class Bots {
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         } else {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 0;
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
                 this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 50;
             }
@@ -456,7 +458,7 @@ export class Bots {
                 this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 25;
+                this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 0;
             }
         }
 
@@ -517,6 +519,7 @@ export class Bots {
             this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
         } else {
             this.botConf.equipment["pmc"].nvgIsActiveChancePercent = 0;
+            this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
                 this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 75;
             }
@@ -524,7 +527,7 @@ export class Bots {
                 this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 30;
+                this.botConf.equipment["pmc"].lightLaserIsActiveChancePercent = 0;
             }
         }
 
@@ -687,7 +690,6 @@ export class Bots {
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_urban;
             this.usecBase.chances.mods.mod_nvg = 25;
             this.usecBase.chances.mods.mod_flashlight = 60;
             this.usecBase.chances.mods.mod_equipment_000 = 10;
@@ -695,22 +697,29 @@ export class Bots {
         } else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 40;
                 this.usecBase.chances.mods.mod_equipment_000 = 20;
                 this.usecBase.chances.mods.mod_equipment = 20;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 60;
                 this.usecBase.chances.mods.mod_equipment_000 = 50;
                 this.usecBase.chances.mods.mod_equipment = 50;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_outdoor;
                 this.usecBase.chances.mods.mod_equipment_000 = 0;
                 this.usecBase.chances.mods.mod_equipment = 0;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConf.pmc_types == true) {
@@ -745,7 +754,6 @@ export class Bots {
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
             this.usecBase.chances.mods.mod_nvg = 60;
             this.usecBase.chances.mods.mod_flashlight = 100;
             this.usecBase.chances.mods.mod_equipment_000 = 20;
@@ -753,23 +761,30 @@ export class Bots {
         } else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 80;
                 this.usecBase.chances.mods.mod_equipment_000 = 50;
                 this.usecBase.chances.mods.mod_equipment = 50;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.usecBase.inventory.equipment.Headwear = usecLO.usecLO3.inventory.Headwear_cqb;
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 85;
                 this.usecBase.chances.mods.mod_equipment = 85;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_outdoor;
                 this.usecBase.chances.mods.mod_equipment_000 = 0;
                 this.usecBase.chances.mods.mod_equipment = 0;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.usecBase.inventory.equipment.Headwear = usecLO.usecLO3.inventory.Headwear_cqb;
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConf.pmc_types == true) {
@@ -805,7 +820,6 @@ export class Bots {
             this.usecBase.chances.mods.mod_equipment_000 = 0;
             this.usecBase.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
             this.usecBase.chances.mods.mod_nvg = 65;
             this.usecBase.chances.mods.mod_flashlight = 100;
             this.usecBase.chances.mods.mod_equipment_000 = 20;
@@ -813,23 +827,30 @@ export class Bots {
         } else {
             this.usecBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 60;
                 this.usecBase.chances.mods.mod_equipment = 60;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.usecBase.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_cqb;
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
                 this.usecBase.chances.mods.mod_flashlight = 100;
                 this.usecBase.chances.mods.mod_equipment_000 = 80;
                 this.usecBase.chances.mods.mod_equipment = 80;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_outdoor;
                 this.usecBase.chances.mods.mod_equipment_000 = 25;
                 this.usecBase.chances.mods.mod_equipment = 25;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.usecBase.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_cqb;
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_outdoor;
         }
 
 
@@ -933,7 +954,6 @@ export class Bots {
             this.bearBase.chances.mods.mod_equipment_000 = 0;
             this.bearBase.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_cqb;
             this.bearBase.chances.mods.mod_nvg = 25;
             this.bearBase.chances.mods.mod_flashlight = 60;
             this.bearBase.chances.mods.mod_equipment_000 = 20;
@@ -941,21 +961,27 @@ export class Bots {
         } else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_urban;
                 this.bearBase.chances.mods.mod_equipment_000 = 45;
                 this.bearBase.chances.mods.mod_equipment = 45;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_cqb;
                 this.bearBase.chances.mods.mod_equipment_000 = 70;
                 this.bearBase.chances.mods.mod_equipment = 70;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_outdoor;
                 this.bearBase.chances.mods.mod_equipment_000 = 20;
                 this.bearBase.chances.mods.mod_equipment = 20;
             }
+        }
 
+        if (RaidInfoTracker.mapType === "urban") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConf.pmc_types == true) {
@@ -992,7 +1018,6 @@ export class Bots {
             this.bearBase.chances.mods.mod_equipment = 0;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_cqb;
             this.bearBase.chances.mods.mod_nvg = 50;
             this.bearBase.chances.mods.mod_flashlight = 100;
             this.bearBase.chances.mods.mod_equipment_000 = 30;
@@ -1000,20 +1025,27 @@ export class Bots {
         } else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_urban;
                 this.bearBase.chances.mods.mod_equipment_000 = 70;
                 this.bearBase.chances.mods.mod_equipment = 70;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_cqb;
                 this.bearBase.chances.mods.mod_equipment_000 = 100;
                 this.bearBase.chances.mods.mod_equipment = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_outdoor;
                 this.bearBase.chances.mods.mod_equipment_000 = 20;
                 this.bearBase.chances.mods.mod_equipment = 20;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConf.pmc_types == true) {
@@ -1051,7 +1083,6 @@ export class Bots {
             this.bearBase.chances.mods.mod_equipment = 0;
             this.bearBase.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
             this.bearBase.chances.mods.mod_nvg = 50;
             this.bearBase.chances.mods.mod_flashlight = 100;
             this.bearBase.chances.mods.mod_equipment_000 = 40;
@@ -1059,20 +1090,27 @@ export class Bots {
         } else {
             this.bearBase.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_urban;
                 this.bearBase.chances.mods.mod_equipment_000 = 100;
                 this.bearBase.chances.mods.mod_equipment = 100;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
                 this.bearBase.chances.mods.mod_equipment_000 = 100;
                 this.bearBase.chances.mods.mod_equipment = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
                 this.bearBase.chances.mods.mod_equipment_000 = 20;
                 this.bearBase.chances.mods.mod_equipment = 20;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.bearBase.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         for (let map in this.botConf.pmc.pmcType.sptbear) {
@@ -1129,23 +1167,30 @@ export class Bots {
             this.raiderBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_urban;
                 this.raiderBase.chances.mods.mod_equipment_000 = 50;
                 this.raiderBase.chances.mods.mod_equipment = 50;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 50;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_cqb;
                 this.raiderBase.chances.mods.mod_equipment_000 = 80;
                 this.raiderBase.chances.mods.mod_equipment = 80;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_outdoor;
-                this.raiderBase.chances.mods.mod_equipment_000 *= 0.5;
+            if (RaidInfoTracker.mapType === "outdoor") {               
+                 this.raiderBase.chances.mods.mod_equipment_000 *= 0.5;
                 this.raiderBase.chances.mods.mod_equipment *= 0.5;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 0;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         BotTierTracker.raiderTier = 1;
@@ -1183,23 +1228,30 @@ export class Bots {
             this.raiderBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_urban;
                 this.raiderBase.chances.mods.mod_equipment_000 = 70;
                 this.raiderBase.chances.mods.mod_equipment = 70;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 60;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_cqb;
                 this.raiderBase.chances.mods.mod_equipment_000 = 90;
                 this.raiderBase.chances.mods.mod_equipment = 90;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_outdoor;
                 this.raiderBase.chances.mods.mod_equipment_000 *= 0.5;
                 this.raiderBase.chances.mods.mod_equipment *= 0.5;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 0;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         BotTierTracker.raiderTier = 2;
@@ -1238,23 +1290,30 @@ export class Bots {
             this.raiderBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["pmcbot"].nvgIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_urban;
                 this.raiderBase.chances.mods.mod_equipment_000 = 100;
                 this.raiderBase.chances.mods.mod_equipment = 100;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 80;
             }
             if (RaidInfoTracker.mapType === "cqb") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_cqb;
                 this.raiderBase.chances.mods.mod_equipment_000 = 100;
                 this.raiderBase.chances.mods.mod_equipment = 100;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_outdoor;
                 this.raiderBase.chances.mods.mod_equipment_000 *= 0.5;
                 this.raiderBase.chances.mods.mod_equipment *= 0.5;
                 this.botConf.equipment["pmcbot"].lightLaserIsActiveChancePercent = 0;
             }
+        }
+
+        if (RaidInfoTracker.mapType === "urban") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_urban;
+        }
+        if (RaidInfoTracker.mapType === "cqb") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_cqb;
+        }
+        if (RaidInfoTracker.mapType === "outdoor") {
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         BotTierTracker.raiderTier = 3;
@@ -1291,12 +1350,10 @@ export class Bots {
             this.rogueBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
-                // this.rogueBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.rogueLO1.inventory.FirstPrimaryWeapon_urban;
                 this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 100;
                 this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                // this.rogueBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.rogueLO1.inventory.FirstPrimaryWeapon_outdoor;
                 this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 30;
                 this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 0;
             }
@@ -1336,12 +1393,10 @@ export class Bots {
             this.rogueBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
-                // this.rogueBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.rogueLO2.inventory.FirstPrimaryWeapon_urban;
                 this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 100;
                 this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                // this.rogueBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.rogueLO2.inventory.FirstPrimaryWeapon_outdoor;
                 this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 30;
                 this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 0;
             }
@@ -1380,12 +1435,10 @@ export class Bots {
             this.rogueBase.chances.mods.mod_nvg = 0;
             this.botConf.equipment["exusec"].nvgIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
-                // this.rogueBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.rogueLO3.inventory.FirstPrimaryWeapon_urban;
                 this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 100;
                 this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 100;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
-                // this.rogueBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.rogueLO3.inventory.FirstPrimaryWeapon_outdoor;
                 this.botConf.equipment["exusec"].faceShieldIsActiveChancePercent = 30;
                 this.botConf.equipment["exusec"].lightLaserIsActiveChancePercent = 0;
             }

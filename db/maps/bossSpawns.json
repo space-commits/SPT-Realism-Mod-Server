@@ -121,7 +121,7 @@
         {
             "BossName": "pmcBot",
             "BossChance": 25,
-            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "pmcBot",
@@ -133,7 +133,7 @@
         {
             "BossName": "exUsec",
             "BossChance": 25,
-            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -148,7 +148,7 @@
         {
             "BossName": "bossKnight",
             "BossChance": 20,
-            "BossZone": "ZoneBrige,ZoneCrossRoad,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCustoms",
+            "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -233,7 +233,7 @@
         {
             "BossName": "sectantPriest",
             "BossChance": 25,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS",
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
@@ -260,14 +260,14 @@
         {
             "BotPreset": "easy",
             "BotSide": "Savage",
-            "SpawnPoints": "ZoneCrossRoad",
+            "SpawnPoints": "ZoneCustoms",
             "WildSpawnType": "assault",
             "isPlayers": false,
             "number": 1,
-            "slots_max": 4,
-            "slots_min": 1,
+            "slots_max": 5,
+            "slots_min": 2,
             "time_max": 30,
-            "time_min": 20
+            "time_min": 1
         },
         {
             "BotPreset": "normal",
@@ -279,7 +279,7 @@
             "slots_max": 6,
             "slots_min": 2,
             "time_max": 60,
-            "time_min": 30
+            "time_min": 1
         },
         {
             "BotPreset": "hard",
@@ -291,7 +291,7 @@
             "slots_max": 4,
             "slots_min": 1,
             "time_max": 31,
-            "time_min": 30
+            "time_min": 1
         },
         {
             "BotPreset": "normal",
@@ -302,8 +302,8 @@
             "number": 4,
             "slots_max": 4,
             "slots_min": 1,
-            "time_max": 380,
-            "time_min": 350
+            "time_max": 30,
+            "time_min": 1
         },
         {
             "BotPreset": "normal",
@@ -314,8 +314,8 @@
             "number": 5,
             "slots_max": 4,
             "slots_min": 1,
-            "time_max": 410,
-            "time_min": 400
+            "time_max": 30,
+            "time_min": 1
         },
         {
             "BotPreset": "normal",
@@ -326,8 +326,8 @@
             "number": 6,
             "slots_max": 4,
             "slots_min": 1,
-            "time_max": 600,
-            "time_min": 420
+            "time_max": 30,
+            "time_min": 1
         },
         {
             "BotPreset": "hard",
@@ -351,7 +351,7 @@
             "slots_max": 1,
             "slots_min": 0,
             "time_max": 50,
-            "time_min": 5
+            "time_min": 1
         },
         {
             "BotPreset": "hard",
@@ -363,7 +363,7 @@
             "slots_max": 1,
             "slots_min": 0,
             "time_max": 30,
-            "time_min": 5
+            "time_min": 1
         },
         {
             "BotPreset": "easy",
@@ -374,8 +374,8 @@
             "number": 10,
             "slots_max": 4,
             "slots_min": 1,
-            "time_max": 350,
-            "time_min": 301
+            "time_max": 30,
+            "time_min": 1
         },
         {
             "BotPreset": "normal",
@@ -387,7 +387,7 @@
             "slots_max": 1,
             "slots_min": 0,
             "time_max": 3,
-            "time_min": 2
+            "time_min": 1
         },
         {
             "BotPreset": "easy",
@@ -399,7 +399,7 @@
             "slots_max": 1,
             "slots_min": 0,
             "time_max": 4,
-            "time_min": 2
+            "time_min": 1
         },
         {
             "BotPreset": "hard",
@@ -410,8 +410,20 @@
             "number": 14,
             "slots_max": 4,
             "slots_min": 1,
-            "time_max": 550,
-            "time_min": 500
+            "time_max": 60,
+            "time_min": 1
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "ZoneCustoms",
+            "WildSpawnType": "assault",
+            "isPlayers": true,
+            "number": 14,
+            "slots_max": 5,
+            "slots_min": 2,
+            "time_max": 300,
+            "time_min": 100
         },
         {
             "BotPreset": "hard",
@@ -422,8 +434,8 @@
             "number": 15,
             "slots_max": 4,
             "slots_min": 0,
-            "time_max": 740,
-            "time_min": 700
+            "time_max": 300,
+            "time_min": 100
         },
         {
             "BotPreset": "normal",
@@ -530,13 +542,13 @@
             "number": 24,
             "slots_max": 5,
             "slots_min": 1,
-            "time_max": 20,
-            "time_min": 0
+            "time_max": 500,
+            "time_min": 300
         },
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
-            "SpawnPoints": "ZoneCrossRoad",
+            "SpawnPoints": "ZoneCustoms",
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 25,

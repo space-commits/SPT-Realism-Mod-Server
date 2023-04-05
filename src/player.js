@@ -221,7 +221,7 @@ class Player {
             this.globalDB.Health.Effects.Dehydration.DefaultDelay = 60;
         }
         if (this.modConfig.realistic_ballistics == true) {
-            this.globalDB.LegsOverdamage *= 1.85;
+            this.globalDB.LegsOverdamage *= 1.95;
             this.globalDB.HandsOverdamage *= 0.7;
             this.globalDB.StomachOverdamage *= 1.85;
         }

@@ -64,6 +64,19 @@
         "MinKE": 2000,
         "MinPen": 50
     },
+    "62a61c988ec41a51b34758d5": {
+        "ItemID": "62a61c988ec41a51b34758d5",
+        "Name": "Item_equipment_glasses_oakley",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "Unclassified",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50
+    },
     "5c0d32fcd174af02a1659c75": {
         "ItemID": "5c0d32fcd174af02a1659c75",
         "Name": "item_equipment_glasses_proximity",

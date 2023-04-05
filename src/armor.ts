@@ -695,10 +695,18 @@ export class Armor {
             }
             //oakley SIM
             if (serverItem._id === "5c1a1cc52e221602b3136e3d") {
-                serverItem._props.Durability = 15;
+                serverItem._props.Durability = 17;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 1;
                 serverItem._props.BluntThroughput = 0.30;
+                serverItem._props.ArmorMaterial = 'Glass';
+            }
+            //oakley SIM
+            if (serverItem._id === "62a61c988ec41a51b34758d5") {
+                serverItem._props.Durability = 15;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 1;
+                serverItem._props.BluntThroughput = 0.32;
                 serverItem._props.ArmorMaterial = 'Glass';
             }
             //pyramex

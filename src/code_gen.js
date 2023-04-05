@@ -10,6 +10,7 @@ const helmetTemplates = require("../db/templates/gear/" + `${presetPath}` + "/he
 const armorVestsTemplates = require("../db/templates/gear/" + `${presetPath}` + "/armorVestsTemplates.json");
 const armorMasksTemplates = require("../db/templates/gear/" + `${presetPath}` + "/armorMasksTemplates.json");
 const chestrigTemplates = require("../db/templates/gear/" + `${presetPath}` + "/chestrigTemplates.json");
+const headsetTemplates = require("../db/templates/gear/" + `${presetPath}` + "/headsetTemplates.json");
 const ammoTemplates = require("../db/templates/ammo/ammoTemplates.json");
 const MuzzleDeviceTemplates = require("../db/templates/attatchments/" + `${presetPath}` + "/MuzzleDeviceTemplates.json");
 const BarrelTemplates = require("../db/templates/attatchments/" + `${presetPath}` + "/BarrelTemplates.json");
@@ -58,19 +59,22 @@ class CodeGen {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._parent === enums_1.ParentClasses.CHESTRIG && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "armor", this.assignJSONToArmor, null, false);
+                this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "gear", this.assignJSONToArmor, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "armor", this.assignJSONToArmor, null, false);
+                this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "gear", this.assignJSONToArmor, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.HEADWEAR && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "armor", this.assignJSONToArmor, null, false);
+                this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "gear", this.assignJSONToArmor, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.ARMORVEST && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "armor", this.assignJSONToArmor, null, false);
+                this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "gear", this.assignJSONToArmor, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.CHESTRIG && serverItem._props.armorClass === 0) {
                 this.itemWriteToFile(chestrigTemplates, "chestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+            }
+            if (serverItem._parent === enums_1.ParentClasses.HEADSET) {
+                this.itemWriteToFile(headsetTemplates, "headsetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
             }
         }
     }
@@ -219,6 +223,7 @@ class CodeGen {
     }
     assignJSONToArmor(serverItem, fileItem) {
         if (fileItem) {
+            fileItem.dB = 0;
             fileItem;
             return fileItem;
         }
@@ -235,6 +240,7 @@ class CodeGen {
         let HasStomachArmor = false;
         let HasHitSecondaryArmor = false;
         let HasNeckArmor = false;
+        let dB = 0;
         let item = {
             ItemID,
             Name,
@@ -248,7 +254,8 @@ class CodeGen {
             HasSideArmor,
             HasStomachArmor,
             HasHitSecondaryArmor,
-            HasNeckArmor
+            HasNeckArmor,
+            dB
         };
         return item;
     }

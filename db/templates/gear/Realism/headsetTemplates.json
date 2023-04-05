@@ -1,0 +1,65 @@
+{
+    "5645bcc04bdc2d363b8b4572": {
+        "ItemID": "5645bcc04bdc2d363b8b4572",
+        "Name": "headphones",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "dB": "20"
+    },
+    "5aa2ba71e5b5b000137b758f": {
+        "ItemID": "5aa2ba71e5b5b000137b758f",
+        "Name": "headphones_MSA",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "dB": "19"
+    },
+    "5a16b9fffcdbcb0176308b34": {
+        "ItemID": "5a16b9fffcdbcb0176308b34",
+        "Name": "helmet_ops_core_rac_headset",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "dB": "22"
+    },
+    "628e4e576d783146b124c64d": {
+        "ItemID": "628e4e576d783146b124c64d",
+        "Name": "item_equipment_headset_comtacIV",
+        "AllowADS": true,
+        "LoyaltyLevel": 5,
+        "dB": "21"
+    },
+    "5b432b965acfc47a8774094e": {
+        "ItemID": "5b432b965acfc47a8774094e",
+        "Name": "item_equipment_headset_gsh01",
+        "AllowADS": true,
+        "LoyaltyLevel": 1,
+        "dB": "20"
+    },
+    "6033fa48ffd42c541047f728": {
+        "ItemID": "6033fa48ffd42c541047f728",
+        "Name": "item_equipment_headset_m32",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "dB": "22"
+    },
+    "5c165d832e2216398b5a7e36": {
+        "ItemID": "5c165d832e2216398b5a7e36",
+        "Name": "item_equipment_headset_tactical_sport",
+        "AllowADS": true,
+        "LoyaltyLevel": 1,
+        "dB": "20"
+    },
+    "5e4d34ca86f774264f758330": {
+        "ItemID": "5e4d34ca86f774264f758330",
+        "Name": "item_equipment_headset_walkers_razor",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "dB": "23"
+    },
+    "5f60cd6cf2bcbb675b00dac6": {
+        "ItemID": "5f60cd6cf2bcbb675b00dac6",
+        "Name": "item_equipment_headset_xcel",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "dB": "26"
+    }
+}

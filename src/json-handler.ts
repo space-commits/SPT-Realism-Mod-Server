@@ -14,6 +14,7 @@ const helmetTemplates = require("../db/templates/gear/" + `${gearPath}` + "/helm
 const armorVestsTemplates = require("../db/templates/gear/" + `${gearPath}` + "/armorVestsTemplates.json");
 const armorMasksTemplates = require("../db/templates/gear/" + `${gearPath}` + "/armorMasksTemplates.json");
 const chestrigTemplates = require("../db/templates/gear/" + `${gearPath}` + "/chestrigTemplates.json");
+const headsetTemplates = require("../db/templates/gear/" + `${gearPath}` + "/headsetTemplates.json");
 
 const ammoTemplates = require("../db/templates/ammo/ammoTemplates.json");
 
@@ -108,6 +109,9 @@ export class JsonHandler {
             if (serverItem._parent === ParentClasses.CHESTRIG) {
                 this.callHelper(chestrigTemplates, serverItem, this.armorPusherHelper);
             }
+            if (serverItem._parent === ParentClasses.HEADSET) {
+                this.callHelper(headsetTemplates, serverItem, this.armorPusherHelper);
+            }
 
         }
     }
@@ -126,7 +130,7 @@ export class JsonHandler {
             var serverConfItems = serverItem._props.ConflictingItems;
             var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "Unclassified", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1", fileItem?.ReloadSpeedMulti || "1",
                 fileItem?.MinVelocity || "500", fileItem.MinKE || "2000", fileItem.MinPen || "50", fileItem.HasBypassedArmor || "false", fileItem.HasSideArmor || "false", fileItem.HasStomachArmor || "false",
-                fileItem?.HasHitSecondaryArmor || "false", fileItem?.HasNeckArmor || "false"];
+                fileItem?.HasHitSecondaryArmor || "false", fileItem?.HasNeckArmor || "false",  fileItem?.dB || "0"];
 
             var combinedArr = armorPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;

@@ -2506,7 +2506,7 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.907
+        "Weight": 0.453
     },
     "622f140da5958f63c67f1735": {
         "ItemID": "622f140da5958f63c67f1735",
@@ -2526,7 +2526,7 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.454
+        "Weight": 0.354
     },
     "5c5db6ee2e221600113fba54": {
         "ItemID": "5c5db6ee2e221600113fba54",

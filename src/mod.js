@@ -920,7 +920,6 @@ class Main {
                 logger.warning("Realism Mod: Bots Are In Test Mode");
             }
             if (config.bot_testing == false) {
-                this.getBotTier(pmcData, bots, helper);
                 if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 15) {
                     bots.botConfig1();
                 }
@@ -930,6 +929,7 @@ class Main {
                 if (pmcData.Info.Level >= 26) {
                     bots.botConfig3();
                 }
+                this.getBotTier(pmcData, bots, helper);
                 if (config.logEverything == true) {
                     logger.info("Realism Mod: Bot Tiers Have Been Set");
                 }
