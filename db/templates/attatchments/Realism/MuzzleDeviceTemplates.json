@@ -3502,7 +3502,7 @@
         "Name": "muzzle_glock_carver_custom_decelerator_3_port_gen_3_9x19",
         "ModType": "",
         "VerticalRecoil": -25,
-        "HorizontalRecoil": 0,
+        "HorizontalRecoil": -10,
         "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": -5,
@@ -3518,15 +3518,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.063,
-        "Loudness": 35
+        "Loudness": 45
     },
     "5a7ad0c451dfba0013379712": {
         "ItemID": "5a7ad0c451dfba0013379712",
         "Name": "muzzle_glock_carver_custom_4_port_gen_3_9x19",
         "ModType": "",
-        "VerticalRecoil": -30,
-        "HorizontalRecoil": 0,
-        "Dispersion": -15,
+        "VerticalRecoil": -35,
+        "HorizontalRecoil": -10,
+        "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": -7.5,
         "SemiROF": -7.5,
@@ -3541,14 +3541,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.046,
-        "Loudness": 45
+        "Loudness": 55
     },
     "5a7b32a2e899ef00135e345a": {
         "ItemID": "5a7b32a2e899ef00135e345a",
         "Name": "muzzle_glock_strike_industries_g4_slide_compensator_9x19",
         "ModType": "",
         "VerticalRecoil": -20,
-        "HorizontalRecoil": -30,
+        "HorizontalRecoil": -5,
         "Dispersion": -5,
         "CameraRecoil": 0,
         "AutoROF": 0,
@@ -3578,15 +3578,15 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.105,
-        "Loudness": 55
+        "Loudness": 30
     },
     "5a7ad1fb51dfba0013379715": {
         "ItemID": "5a7ad1fb51dfba0013379715",
         "Name": "muzzle_glock_lone_wolf_compensator_9_9x19",
         "ModType": "",
-        "VerticalRecoil": -15,
-        "HorizontalRecoil": -10,
-        "Dispersion": -10,
+        "VerticalRecoil": -10,
+        "HorizontalRecoil": 0,
+        "Dispersion": -20,
         "CameraRecoil": 0,
         "AutoROF": -2.5,
         "SemiROF": -2.5,
@@ -3601,7 +3601,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.036,
-        "Loudness": 35
+        "Loudness": 30
     },
     "5a705e128dc32e000d46d258": {
         "ItemID": "5a705e128dc32e000d46d258",
@@ -3638,8 +3638,8 @@
         "ItemID": "5a70366c8dc32e001207fb06",
         "Name": "muzzle_glock_double_diamond_9x19",
         "ModType": "",
-        "VerticalRecoil": -35,
-        "HorizontalRecoil": 0,
+        "VerticalRecoil": -15,
+        "HorizontalRecoil": -20,
         "Dispersion": 0,
         "CameraRecoil": 0,
         "AutoROF": -9,

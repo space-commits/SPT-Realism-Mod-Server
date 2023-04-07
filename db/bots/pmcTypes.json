@@ -1,13 +1,12 @@
 {
     "pmcTypeTimmy": {
-        "pmcTypeDay":{
+        "pmcTypeDay": {
             "sptbear": {
                 "factory4_day": {
                     "bossSanitar": 10,
                     "bossTagilla": 2,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 1,
@@ -20,7 +19,6 @@
                     "bossTagilla": 5,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 2,
                     "bossKilla": 1,
@@ -46,7 +44,6 @@
                     "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 1,
@@ -139,7 +136,6 @@
                     "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 1,
@@ -152,7 +148,6 @@
                     "bossTagilla": 2,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 1,
@@ -178,7 +173,6 @@
                     "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 10,
@@ -266,14 +260,13 @@
                 }
             }
         },
-        "pmcTypeNight":{
+        "pmcTypeNight": {
             "sptbear": {
                 "factory4_day": {
                     "bossSanitar": 10,
                     "bossTagilla": 2,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 1,
@@ -286,7 +279,6 @@
                     "bossTagilla": 5,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 2,
                     "bossKilla": 1,
@@ -312,7 +304,6 @@
                     "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 10,
@@ -405,7 +396,6 @@
                     "bossTagilla": 2,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 1,
@@ -418,7 +408,6 @@
                     "bossTagilla": 5,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 1,
@@ -444,7 +433,6 @@
                     "bossTagilla": 2,
                     "bossBully": 10,
                     "gifter": 1,
-                    "followerKojaniy": 0,
                     "assault": 20,
                     "sectantPriest": 1,
                     "bossKilla": 10,
@@ -533,7 +521,7 @@
             }
         }
     },
-    "BotTypes2":{
+    "BotTypes2": {
         "pmcTypeDay": {
             "sptbear": {
                 "factory4_day": {
@@ -548,8 +536,7 @@
                     "cursedAssault": 3,
                     "followerBigPipe": 10,
                     "bossBully": 1,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "factory4_night": {
                     "bossKilla": 7,
@@ -563,23 +550,17 @@
                     "cursedAssault": 3,
                     "followerBigPipe": 7,
                     "bossBully": 15,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "laboratory": {
                     "bossKilla": 10,
-                    "bossSanitar": 0,
-                    "bossTagilla": 0,
                     "pmcBot": 15,
                     "assault": 10,
                     "exUsec": 5,
-                    "followerBirdEye": 0,
                     "bossKnight": 10,
                     "cursedAssault": 5,
                     "followerBigPipe": 10,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "bigmap": {
                     "bossKilla": 7,
@@ -592,9 +573,7 @@
                     "bossKnight": 7,
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "interchange": {
                     "bossKilla": 7,
@@ -607,9 +586,7 @@
                     "bossKnight": 7,
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "rezervbase": {
                     "bossKilla": 7,
@@ -622,9 +599,7 @@
                     "bossKnight": 7,
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "tarkovstreets": {
                     "bossKilla": 7,
@@ -637,9 +612,7 @@
                     "bossKnight": 7,
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "woods": {
                     "bossKilla": 5,
@@ -700,9 +673,8 @@
                     "cursedAssault": 3,
                     "followerBigPipe": 5,
                     "bossBully": 2,
-                    "gifter": 1,
-                    "followerKojaniy": 0
-                }, 
+                    "gifter": 1
+                },
                 "factory4_night": {
                     "bossKilla": 5,
                     "bossSanitar": 5,
@@ -715,23 +687,17 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 5,
                     "bossBully": 10,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "laboratory": {
                     "bossKilla": 7,
-                    "bossSanitar": 0,
-                    "bossTagilla": 0,
                     "pmcBot": 15,
                     "assault": 10,
                     "exUsec": 10,
-                    "followerBirdEye": 0,
                     "bossKnight": 7,
                     "cursedAssault": 7,
                     "followerBigPipe": 7,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "bigmap": {
                     "bossKilla": 5,
@@ -744,8 +710,7 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "rezervbase": {
                     "bossKilla": 5,
@@ -758,9 +723,7 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "tarkovstreets": {
                     "bossKilla": 5,
@@ -773,9 +736,7 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "interchange": {
                     "bossKilla": 5,
@@ -788,9 +749,7 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "woods": {
                     "bossKilla": 3,
@@ -803,7 +762,6 @@
                     "bossKnight": 3,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
                     "gifter": 1,
                     "followerKojaniy": 15
                 },
@@ -818,7 +776,6 @@
                     "bossKnight": 3,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
                     "gifter": 1,
                     "followerKojaniy": 15
                 },
@@ -833,7 +790,6 @@
                     "bossKnight": 3,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
                     "gifter": 1,
                     "followerKojaniy": 15
                 }
@@ -853,8 +809,7 @@
                     "cursedAssault": 3,
                     "followerBigPipe": 5,
                     "bossBully": 2,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "factory4_night": {
                     "bossKilla": 5,
@@ -868,23 +823,17 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 5,
                     "bossBully": 10,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "laboratory": {
                     "bossKilla": 7,
-                    "bossSanitar": 0,
-                    "bossTagilla": 0,
                     "pmcBot": 15,
                     "assault": 10,
                     "exUsec": 5,
-                    "followerBirdEye": 0,
                     "bossKnight": 7,
                     "cursedAssault": 7,
                     "followerBigPipe": 7,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "bigmap": {
                     "bossKilla": 5,
@@ -944,7 +893,7 @@
                     "followerBigPipe": 7,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy":5
+                    "followerKojaniy": 5
                 },
                 "woods": {
                     "bossKilla": 3,
@@ -1005,8 +954,7 @@
                     "cursedAssault": 3,
                     "followerBigPipe": 5,
                     "bossBully": 2,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "factory4_night": {
                     "bossKilla": 5,
@@ -1020,23 +968,17 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 5,
                     "bossBully": 5,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "laboratory": {
                     "bossKilla": 7,
-                    "bossSanitar": 0,
-                    "bossTagilla": 0,
                     "pmcBot": 15,
                     "assault": 10,
                     "exUsec": 10,
-                    "followerBirdEye": 0,
                     "bossKnight": 7,
                     "cursedAssault": 7,
                     "followerBigPipe": 7,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "bigmap": {
                     "bossKilla": 5,
@@ -1146,7 +1088,7 @@
             }
         }
     },
-    "BotTypes3":{
+    "BotTypes3": {
         "pmcTypeDay": {
             "sptbear": {
                 "factory4_day": {
@@ -1161,8 +1103,7 @@
                     "cursedAssault": 6,
                     "followerBigPipe": 15,
                     "bossBully": 1,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "factory4_night": {
                     "bossKilla": 15,
@@ -1176,23 +1117,17 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "laboratory": {
                     "bossKilla": 15,
-                    "bossSanitar": 0,
-                    "bossTagilla": 0,
                     "pmcBot": 15,
                     "assault": 5,
                     "exUsec": 5,
-                    "followerBirdEye": 0,
                     "bossKnight": 15,
                     "cursedAssault": 15,
                     "followerBigPipe": 15,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "bigmap": {
                     "bossKilla": 15,
@@ -1205,9 +1140,7 @@
                     "bossKnight": 15,
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "interchange": {
                     "bossKilla": 15,
@@ -1220,9 +1153,7 @@
                     "bossKnight": 15,
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "rezervbase": {
                     "bossKilla": 15,
@@ -1235,9 +1166,7 @@
                     "bossKnight": 15,
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "tarkovstreets": {
                     "bossKilla": 15,
@@ -1250,9 +1179,7 @@
                     "bossKnight": 15,
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "woods": {
                     "bossKilla": 10,
@@ -1313,9 +1240,8 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 10,
                     "bossBully": 2,
-                    "gifter": 1,
-                    "followerKojaniy": 0
-                }, 
+                    "gifter": 1
+                },
                 "factory4_night": {
                     "bossKilla": 10,
                     "bossSanitar": 10,
@@ -1328,23 +1254,17 @@
                     "cursedAssault": 4,
                     "followerBigPipe": 10,
                     "bossBully": 10,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "laboratory": {
                     "bossKilla": 15,
-                    "bossSanitar": 0,
-                    "bossTagilla": 0,
                     "pmcBot": 15,
                     "assault": 5,
                     "exUsec": 10,
-                    "followerBirdEye": 0,
                     "bossKnight": 15,
                     "cursedAssault": 15,
                     "followerBigPipe": 15,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "bigmap": {
                     "bossKilla": 5,
@@ -1357,8 +1277,7 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 15,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "rezervbase": {
                     "bossKilla": 5,
@@ -1371,9 +1290,7 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "tarkovstreets": {
                     "bossKilla": 5,
@@ -1386,9 +1303,7 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "interchange": {
                     "bossKilla": 5,
@@ -1401,9 +1316,7 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "woods": {
                     "bossKilla": 3,
@@ -1416,7 +1329,6 @@
                     "bossKnight": 3,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
                     "gifter": 1,
                     "followerKojaniy": 10
                 },
@@ -1431,7 +1343,6 @@
                     "bossKnight": 3,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
                     "gifter": 1,
                     "followerKojaniy": 10
                 },
@@ -1446,7 +1357,6 @@
                     "bossKnight": 3,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "bossBully": 0,
                     "gifter": 1,
                     "followerKojaniy": 10
                 }
@@ -1466,8 +1376,7 @@
                     "cursedAssault": 6,
                     "followerBigPipe": 15,
                     "bossBully": 1,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "factory4_night": {
                     "bossKilla": 15,
@@ -1481,23 +1390,17 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "laboratory": {
                     "bossKilla": 15,
-                    "bossSanitar": 0,
-                    "bossTagilla": 0,
                     "pmcBot": 15,
                     "assault": 5,
                     "exUsec": 5,
-                    "followerBirdEye": 0,
                     "bossKnight": 15,
                     "cursedAssault": 15,
                     "followerBigPipe": 15,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "bigmap": {
                     "bossKilla": 10,
@@ -1511,8 +1414,7 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
                     "bossBully": 15,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "interchange": {
                     "bossKilla": 15,
@@ -1526,8 +1428,7 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "rezervbase": {
                     "bossKilla": 15,
@@ -1541,8 +1442,7 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "tarkovstreets": {
                     "bossKilla": 15,
@@ -1556,8 +1456,7 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "woods": {
                     "bossKilla": 5,
@@ -1618,8 +1517,7 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 10,
                     "bossBully": 2,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "factory4_night": {
                     "bossKilla": 10,
@@ -1633,23 +1531,17 @@
                     "cursedAssault": 4,
                     "followerBigPipe": 10,
                     "bossBully": 10,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "laboratory": {
                     "bossKilla": 15,
-                    "bossSanitar": 0,
-                    "bossTagilla": 0,
                     "pmcBot": 15,
                     "assault": 5,
                     "exUsec": 10,
-                    "followerBirdEye": 0,
                     "bossKnight": 15,
                     "cursedAssault": 15,
                     "followerBigPipe": 15,
-                    "bossBully": 0,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "bigmap": {
                     "bossKilla": 10,
@@ -1663,8 +1555,7 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
                     "bossBully": 20,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "interchange": {
                     "bossKilla": 10,
@@ -1678,8 +1569,7 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
                     "bossBully": 20,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "rezervbase": {
                     "bossKilla": 10,
@@ -1693,8 +1583,7 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
                     "bossBully": 20,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "tarkovstreets": {
                     "bossKilla": 10,
@@ -1708,8 +1597,7 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
                     "bossBully": 20,
-                    "gifter": 1,
-                    "followerKojaniy": 0
+                    "gifter": 1
                 },
                 "woods": {
                     "bossKilla": 2,

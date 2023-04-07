@@ -9,14 +9,14 @@
     "maxBotCap": {
         "factory4_day": 15,
         "factory4_night": 15,
-        "customs": 30,
+        "bigmap": 30,
         "woods": 30,
         "shoreline": 30,
         "lighthouse": 20,
-        "reservebase": 25,
+        "rezervbase": 25,
         "interchange": 25,
         "laboratory": 20,
-        "streets of tarkov": 30,
+        "tarkovstreets": 30,
         "default": 25
     },
     "lootNValue1": {

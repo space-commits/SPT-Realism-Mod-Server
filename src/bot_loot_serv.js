@@ -45,12 +45,12 @@ var EquipmentSlots;
     EquipmentSlots["SCABBARD"] = "Scabbard";
 })(EquipmentSlots = exports.EquipmentSlots || (exports.EquipmentSlots = {}));
 class BotLooGen extends BotLootGenerator_1.BotLootGenerator {
-    genLoot(sessionId, templateInventory, itemCounts, isPmc, botRole, botInventory, equipmentChances, botLevel) {
+    genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel) {
         const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
         const pmcLootGenerator = tsyringe_1.container.resolve("PMCLootGenerator");
         const ragfairPriceService = tsyringe_1.container.resolve("RagfairPriceService");
-        const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
-        const lootPool = templateInventory.items;
+        const itemCounts = botJsonTemplate.generation.items;
+        const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
         const nValue = this.getBotLootNValue(isPmc);
         const looseLootMin = itemCounts.looseLoot.min;
         const looseLootMax = itemCounts.looseLoot.max;
@@ -89,39 +89,39 @@ class BotLooGen extends BotLootGenerator_1.BotLootGenerator {
         const porcketGrenadeCount = grenadeTally >= itemCounts.grenades.max ? 0 : this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
         grenadeTally += porcketGrenadeCount;
         // Special items
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.SPECIAL, lootPool), [EquipmentSlots.POCKETS, EquipmentSlots.BACKPACK, EquipmentSlots.TACTICAL_VEST], specialLootItemCount, botInventory, botRole);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.SPECIAL, botJsonTemplate), [EquipmentSlots.POCKETS, EquipmentSlots.BACKPACK, EquipmentSlots.TACTICAL_VEST], specialLootItemCount, botInventory, botRole);
         ///////////////////////////////////////Meds//////////////////////////////////
         //Vest Meds
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_HEALING_ITEMS, lootPool), [EquipmentSlots.TACTICAL_VEST], vestHealingItemCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_HEALING_ITEMS, botJsonTemplate), [EquipmentSlots.TACTICAL_VEST], vestHealingItemCount, botInventory, botRole, false, 0, isPmc);
         //Vest Drugs
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_DRUG_ITEMS, lootPool), [EquipmentSlots.TACTICAL_VEST], vestDrugItemCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_DRUG_ITEMS, botJsonTemplate), [EquipmentSlots.TACTICAL_VEST], vestDrugItemCount, botInventory, botRole, false, 0, isPmc);
         //Vest Stims
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_STIM_ITEMS, lootPool), [EquipmentSlots.TACTICAL_VEST], vestStimItemCount, botInventory, botRole, true, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_STIM_ITEMS, botJsonTemplate), [EquipmentSlots.TACTICAL_VEST], vestStimItemCount, botInventory, botRole, true, 0, isPmc);
         //Pocket Meds
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_HEALING_ITEMS, lootPool), [EquipmentSlots.POCKETS], pocketHealingItemCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_HEALING_ITEMS, botJsonTemplate), [EquipmentSlots.POCKETS], pocketHealingItemCount, botInventory, botRole, false, 0, isPmc);
         //Pocket Drugs
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_DRUG_ITEMS, lootPool), [EquipmentSlots.POCKETS], pocketDrugItemCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_DRUG_ITEMS, botJsonTemplate), [EquipmentSlots.POCKETS], pocketDrugItemCount, botInventory, botRole, false, 0, isPmc);
         //Pocket Stims
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_STIM_ITEMS, lootPool), [EquipmentSlots.POCKETS], pocketStimItemCount, botInventory, botRole, true, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_STIM_ITEMS, botJsonTemplate), [EquipmentSlots.POCKETS], pocketStimItemCount, botInventory, botRole, true, 0, isPmc);
         //Bag Meds
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_HEALING_ITEMS, lootPool), [EquipmentSlots.BACKPACK], bagHealingItemCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_HEALING_ITEMS, botJsonTemplate), [EquipmentSlots.BACKPACK], bagHealingItemCount, botInventory, botRole, false, 0, isPmc);
         //Bag Drugs
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_DRUG_ITEMS, lootPool), [EquipmentSlots.BACKPACK], bagDrugItemCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_DRUG_ITEMS, botJsonTemplate), [EquipmentSlots.BACKPACK], bagDrugItemCount, botInventory, botRole, false, 0, isPmc);
         //Bag Stims
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_STIM_ITEMS, lootPool), [EquipmentSlots.BACKPACK], bagStimItemCount, botInventory, botRole, true, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_STIM_ITEMS, botJsonTemplate), [EquipmentSlots.BACKPACK], bagStimItemCount, botInventory, botRole, true, 0, isPmc);
         /////////////////////////////////////////////////////////////////////////////////
         // Grenades
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, lootPool), [EquipmentSlots.TACTICAL_VEST], vestGrenadeCount, botInventory, botRole, false, 0, isPmc);
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, lootPool), [EquipmentSlots.POCKETS], porcketGrenadeCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, botJsonTemplate), [EquipmentSlots.TACTICAL_VEST], vestGrenadeCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, botJsonTemplate), [EquipmentSlots.POCKETS], porcketGrenadeCount, botInventory, botRole, false, 0, isPmc);
         if (isPmc && this.randomUtil.getChance100(this.botConfig.pmc.looseWeaponInBackpackChancePercent)) {
-            this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", templateInventory, equipmentChances.mods, botRole, isPmc, botLevel);
+            this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", botJsonTemplate.inventory, botJsonTemplate.chances.mods, botRole, isPmc, botLevel);
         }
         // Backpack
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, lootPool), [EquipmentSlots.BACKPACK], bagLootItemCount, botInventory, botRole, true, this.botConfig.pmc.maxBackpackLootTotalRub, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, botJsonTemplate), [EquipmentSlots.BACKPACK], bagLootItemCount, botInventory, botRole, true, this.botConfig.pmc.maxBackpackLootTotalRub, isPmc);
         // Vest
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST, lootPool), [EquipmentSlots.TACTICAL_VEST], vestLootCount, botInventory, botRole, true, this.botConfig.pmc.maxVestLootTotalRub, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST, botJsonTemplate), [EquipmentSlots.TACTICAL_VEST], vestLootCount, botInventory, botRole, true, this.botConfig.pmc.maxVestLootTotalRub, isPmc);
         // Pockets
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET, lootPool), [EquipmentSlots.POCKETS], pocketLootCount, botInventory, botRole, true, this.botConfig.pmc.maxPocketLootTotalRub, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET, botJsonTemplate), [EquipmentSlots.POCKETS], pocketLootCount, botInventory, botRole, true, this.botConfig.pmc.maxPocketLootTotalRub, isPmc);
     }
 }
 exports.BotLooGen = BotLooGen;
@@ -152,10 +152,10 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
     clearCache() {
         this.myLootCache = {};
     }
-    getLootCache(botRole, isPmc, lootType, lootPool) {
+    getLootCache(botRole, isPmc, lootType, botJsonTemplate) {
         if (!this.myBotRoleExistsInCache(botRole)) {
             this.myInitCacheForBotRole(botRole);
-            this.myAddLootToCache(botRole, isPmc, lootPool);
+            this.myAddLootToCache(botRole, isPmc, botJsonTemplate);
         }
         switch (lootType) {
             case MyLootCacheType.SPECIAL:
@@ -195,12 +195,13 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
                 break;
         }
     }
-    myAddLootToCache(botRole, isPmc, lootPool) {
+    myAddLootToCache(botRole, isPmc, botJsonTemplate) {
         const specialLootTemplates = [];
         const backpackLootTemplates = [];
         const pocketLootTemplates = [];
         const vestLootTemplates = [];
         const combinedPoolTemplates = [];
+        const lootPool = botJsonTemplate.inventory.items;
         for (const [slot, pool] of Object.entries(lootPool)) {
             if (!pool || !pool.length) {
                 continue;
