@@ -3684,7 +3684,6 @@
         "HorizontalRecoil": -2,
         "Dispersion": -1,
         "AimSpeed": 0,
-        "Length": 0,
         "Ergonomics": 15,
         "Accuracy": 30,
         "HasShoulderContact": false,

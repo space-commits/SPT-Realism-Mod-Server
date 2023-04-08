@@ -562,7 +562,7 @@ class Ammo {
                 serverItem._props.PenetrationPower = 22;
                 serverItem._props.ArmorDamage = 20;
                 serverItem._props.ProjectileCount = 10;
-                serverItem._props.Damage = 12;
+                serverItem._props.Damage = 14;
                 serverItem._props.InitialSpeed = 270;
                 serverItem._props.RicochetChance = 0.35;
                 serverItem._props.FragmentationChance = 0.05;
@@ -586,14 +586,15 @@ class Ammo {
             if (serverItem._id === "5f647f31b6238e5dd066e196") {
                 serverItem._props.PenetrationPower = 35;
                 serverItem._props.ArmorDamage = 10;
-                serverItem._props.Damage = 14;
+                serverItem._props.ProjectileCount = 10;
+                serverItem._props.Damage = 12;
                 serverItem._props.InitialSpeed = 375;
                 serverItem._props.RicochetChance = 0.35;
                 serverItem._props.FragmentationChance = 0;
                 serverItem._props.BulletMassGram = 3.38;
                 serverItem._props.HeavyBleedingDelta = 0.5;
                 serverItem._props.LightBleedingDelta = 0.9;
-                serverItem._props.ammoAccr = 50;
+                serverItem._props.ammoAccr = 30;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 serverItem._props.BallisticCoeficient = 0.020;

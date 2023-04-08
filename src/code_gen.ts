@@ -452,7 +452,7 @@ export class CodeGen {
         let ModMalfunctionChance = 0;
         let ReloadSpeed = 0;
         let AimSpeed = 0;
-        let Length = 0;
+        let Convergence = 0;
         let CanCycleSubs = false;
         let RecoilAngle = 0;
         let StockAllowADS = false;
@@ -501,7 +501,8 @@ export class CodeGen {
                 Weight,
                 ModShotDispersion,
                 Loudness,
-                MalfChance
+                MalfChance,
+                Convergence
             };
             return item;
         }
@@ -516,7 +517,7 @@ export class CodeGen {
                 AutoROF,
                 SemiROF,
                 ModMalfunctionChance,
-                Length,
+                Convergence,
                 Accuracy,
                 CenterOfImpact,
                 HeatFactor,
@@ -700,7 +701,6 @@ export class CodeGen {
                 Dispersion,
                 AimSpeed,
                 ChamberSpeed,
-                Length,
                 Ergonomics,
                 Accuracy,
                 HeatFactor,
@@ -736,7 +736,6 @@ export class CodeGen {
                 ReloadSpeed,
                 AimSpeed,
                 ChamberSpeed,
-                Length,
                 CanCycleSubs,
                 Ergonomics,
                 Accuracy,
