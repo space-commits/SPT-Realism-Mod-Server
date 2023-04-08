@@ -71,7 +71,7 @@ export class Traders {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private helper: Helper) { }
 
     itemDB = this.tables.templates.items;
-    
+
 
     public loadTraderTweaks() {
 
@@ -106,7 +106,7 @@ export class Traders {
     }
 
     public loadTraderRefreshTimes() {
-        for (let trader in this.traderConf.updateTime){
+        for (let trader in this.traderConf.updateTime) {
             this.traderConf.updateTime[trader].seconds = modConfig.trader_refresh_time;
         }
     }
@@ -183,13 +183,18 @@ export class Traders {
         this.assortNestedItemPusher(ragmId, "5aa7cfc0e5b5b00015693143", { "5a16b8a9fcdbcb00165aa6ca": "mod_nvg", "5a16b93dfcdbcbcae6687261": "mod_nvg", "57235b6f24597759bf5a30f1": "mod_nvg" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.3);
 
         //mechanic//
-        //guns
-        if (this.modConf.recoil_attachment_overhaul == true) {
-            this.assortItemPusher(mechId, "mechOPSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(mechId, "mechSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
-            this.assortItemPusher(mechId, "mechSTM9v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 20000);
-        }
 
+        if (this.modConf.recoil_attachment_overhaul == true) {
+            //guns
+            this.assortItemPusher(mechId, "mechOPSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 12500);
+            this.assortItemPusher(mechId, "mechSKSv1", 1, "5449016a4bdc2d6f028b456f", 1, false, 10000);
+            this.assortItemPusher(mechId, "mechSTM9v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 15000);
+            this.assortItemPusher(mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
+            //attachments
+            this.assortItemPusher(mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+
+        }
         //scopes
         this.assortNestedItemPusher(mechId, "616584766ef05c2ce828ef57", { "5c7d560b2e22160bc12c6139": "mod_scope", "5c7d55de2e221644f31bff68": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25);
         this.assortNestedItemPusher(mechId, "58d39d3d86f77445bb794ae7", { "58d39b0386f77443380bf13c": "mod_scope", "58d399e486f77442e0016fe7": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
@@ -201,6 +206,13 @@ export class Traders {
         this.assortNestedItemPusher(mechId, "5b2389515acfc4771e1be0c0", { "5b2388675acfc4771e1be0be": "mod_scope_000" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.1);
         this.assortNestedItemPusher(mechId, "5a37ca54c4a282000d72296a", { "5b3b99475acfc432ff4dcbee": "mod_scope_000" }, 1, "5449016a4bdc2d6f028b456f", 4, true, undefined, 1.1, { "58d268fc86f774111273f8c2": "mod_scope_001" });
         this.assortNestedItemPusher(mechId, "618bab21526131765025ab3f", { "618ba27d9008e4636a67f61d": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 4, true, undefined, 1.1, { "618ba92152ecee1505530bd3": "mod_mount", "5a32aa8bc4a2826c6e06d737": "mod_scope" });
+        //skier//
+        //guns
+        if (this.modConf.recoil_attachment_overhaul == true) {
+            this.assortItemPusher(skierId, "Skier209", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
+        }
+
+
     }
 
     private assortNestedItemPusher(trader: string, itemId: string, nestedChildItems: Record<string, string>, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbook: boolean, price: number = 0, priceMulti: number = 1, secondaryChildItems?: Record<string, string>,) {
@@ -278,7 +290,7 @@ export class Traders {
 
         price *= priceMulti;
 
-        if(loyalLvl === 5 && modConfig.randomize_trader_ll != true ){
+        if (loyalLvl === 5 && modConfig.randomize_trader_ll != true) {
             loyalLvl = 4;
         }
 
@@ -341,14 +353,14 @@ export class RandomizeTraderAssort {
                             assortItems[item].upd.UnlimitedCount = false;
                         }
                     }
-                    if(modConfig.randomize_trader_prices == true || modConfig.adjust_trader_prices){
+                    if (modConfig.randomize_trader_prices == true || modConfig.adjust_trader_prices) {
                         if (this.tables.traders[trader]?.assort?.barter_scheme) {
                             let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
                             if (barter !== undefined) {
                                 let randNum = this.helper.pickRandNumOneInTen();
                                 this.setAndRandomizeCost(randNum, itemTemplId, barter, true);
                             }
-    
+
                         }
                     }
                 }

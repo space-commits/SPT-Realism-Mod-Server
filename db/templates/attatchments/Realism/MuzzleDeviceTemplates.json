@@ -5,7 +5,7 @@
         "ModType": "",
         "VerticalRecoil": -6,
         "HorizontalRecoil": -10,
-        "Dispersion": -10,
+        "Dispersion": -20,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -28,7 +28,7 @@
         "ModType": "",
         "VerticalRecoil": -6,
         "HorizontalRecoil": -5,
-        "Dispersion": -5,
+        "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -51,7 +51,7 @@
         "ModType": "",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -5,
-        "Dispersion": -6,
+        "Dispersion": -18,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -89,7 +89,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.07,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5fbc22ccf24b94483f726483": {
         "ItemID": "5fbc22ccf24b94483f726483",
@@ -112,7 +113,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "615d8e9867085e45ef1409c6": {
         "ItemID": "615d8e9867085e45ef1409c6",
@@ -135,7 +137,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5c4eec9b2e2216398b5aaba2": {
         "ItemID": "5c4eec9b2e2216398b5aaba2",
@@ -158,7 +161,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5e01e9e273d8eb11426f5bc3": {
         "ItemID": "5e01e9e273d8eb11426f5bc3",
@@ -181,7 +185,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.18,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5cf67cadd7f00c065a5abab7": {
         "ItemID": "5cf67cadd7f00c065a5abab7",
@@ -204,7 +209,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.055,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5fc4b97bab884124df0cd5e3": {
         "ItemID": "5fc4b97bab884124df0cd5e3",
@@ -229,7 +235,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.141,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5926e16e86f7742f5a0f7ecb": {
         "ItemID": "5926e16e86f7742f5a0f7ecb",
@@ -252,7 +259,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.08,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5a0abb6e1526d8000a025282": {
         "ItemID": "5a0abb6e1526d8000a025282",
@@ -275,7 +283,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5b363e1b5acfc4771e1c5e80": {
         "ItemID": "5b363e1b5acfc4771e1c5e80",
@@ -298,7 +307,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5b363dea5acfc4771e1c5e7e": {
         "ItemID": "5b363dea5acfc4771e1c5e7e",
@@ -321,7 +331,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.13,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5f2aa43ba9b91d26f20ae6d2": {
         "ItemID": "5f2aa43ba9b91d26f20ae6d2",
@@ -344,7 +355,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.091,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5cf67a1bd7f00c06585fb6f3": {
         "ItemID": "5cf67a1bd7f00c06585fb6f3",
@@ -367,7 +379,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5cf79389d7f00c10941a0c4d": {
         "ItemID": "5cf79389d7f00c10941a0c4d",
@@ -390,7 +403,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.09,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5cf79599d7f00c10875d9212": {
         "ItemID": "5cf79599d7f00c10875d9212",
@@ -413,7 +427,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.07,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5de8f237bbaf010b10528a70": {
         "ItemID": "5de8f237bbaf010b10528a70",
@@ -436,7 +451,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.14,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5c7954d52e221600106f4cc7": {
         "ItemID": "5c7954d52e221600106f4cc7",
@@ -459,7 +475,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "59bffc1f86f77435b128b872": {
         "ItemID": "59bffc1f86f77435b128b872",
@@ -482,7 +499,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.14,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5fc4b992187fea44d52edaa9": {
         "ItemID": "5fc4b992187fea44d52edaa9",
@@ -505,7 +523,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.135,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5e21ca18e4d47f0da15e77dd": {
         "ItemID": "5e21ca18e4d47f0da15e77dd",
@@ -528,7 +547,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5c0000c00db834001a6697fc": {
         "ItemID": "5c0000c00db834001a6697fc",
@@ -551,7 +571,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.091,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5fbbc34106bde7524f03cbe9": {
         "ItemID": "5fbbc34106bde7524f03cbe9",
@@ -574,7 +595,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5fb6548dd1409e5ca04b54f9": {
         "ItemID": "5fb6548dd1409e5ca04b54f9",
@@ -597,7 +619,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5de6556a205ddc616a6bc4f7": {
         "ItemID": "5de6556a205ddc616a6bc4f7",
@@ -620,7 +643,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5a6b592c8dc32e00094b97bf": {
         "ItemID": "5a6b592c8dc32e00094b97bf",
@@ -643,7 +667,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5d270ca28abbc31ee25ee821": {
         "ItemID": "5d270ca28abbc31ee25ee821",
@@ -666,7 +691,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5cadc390ae921500126a77f1": {
         "ItemID": "5cadc390ae921500126a77f1",
@@ -689,7 +715,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5a6b59a08dc32e000b452fb7": {
         "ItemID": "5a6b59a08dc32e000b452fb7",
@@ -712,7 +739,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "628120621d5df4475f46a335": {
         "ItemID": "628120621d5df4475f46a335",
@@ -735,7 +763,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5d270b3c8abbc3105335cfb8": {
         "ItemID": "5d270b3c8abbc3105335cfb8",
@@ -758,7 +787,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5ab3afb2d8ce87001660304d": {
         "ItemID": "5ab3afb2d8ce87001660304d",
@@ -781,7 +811,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5a6b585a8dc32e5a9c28b4f1": {
         "ItemID": "5a6b585a8dc32e5a9c28b4f1",
@@ -804,7 +835,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "576167ab2459773cad038c43": {
         "ItemID": "576167ab2459773cad038c43",
@@ -827,7 +859,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.07,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "612e0e04568c120fdd294258": {
         "ItemID": "612e0e04568c120fdd294258",
@@ -850,7 +883,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "6194f1f918a3974e5e7421e4": {
         "ItemID": "6194f1f918a3974e5e7421e4",
@@ -873,7 +907,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "587de5ba2459771c0f1e8a58": {
         "ItemID": "587de5ba2459771c0f1e8a58",
@@ -896,7 +931,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5f2aa4464b50c14bcf07acdb": {
         "ItemID": "5f2aa4464b50c14bcf07acdb",
@@ -919,7 +955,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "59e8a00d86f7742ad93b569c": {
         "ItemID": "59e8a00d86f7742ad93b569c",
@@ -942,7 +979,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.01,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5c0fafb6d174af02a96260ba": {
         "ItemID": "5c0fafb6d174af02a96260ba",
@@ -950,7 +988,7 @@
         "ModType": "",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -6,
-        "Dispersion": -5,
+        "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -965,15 +1003,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 0
     },
     "5cc82796e24e8d000f5859a8": {
         "ItemID": "5cc82796e24e8d000f5859a8",
         "Name": "muzzle_p90_fn_p90_std_57x28",
         "ModType": "muzzle_supp_adapter",
-        "VerticalRecoil": -9,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -6,
-        "Dispersion": -3,
+        "Dispersion": -6,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -988,7 +1027,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 9
+        "Loudness": 9,
+        "Convergence": 9
     },
     "5c48a2a42e221602b66d1e07": {
         "ItemID": "5c48a2a42e221602b66d1e07",
@@ -996,7 +1036,7 @@
         "ModType": "",
         "VerticalRecoil": -6,
         "HorizontalRecoil": -9,
-        "Dispersion": -6,
+        "Dispersion": -12,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1011,7 +1051,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.2,
-        "Loudness": 5
+        "Loudness": 5,
+        "Convergence": 0
     },
     "5dcbe965e4ed22586443a79d": {
         "ItemID": "5dcbe965e4ed22586443a79d",
@@ -1019,7 +1060,7 @@
         "ModType": "",
         "VerticalRecoil": -6,
         "HorizontalRecoil": -9,
-        "Dispersion": -6,
+        "Dispersion": -12,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1034,7 +1075,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.2,
-        "Loudness": 5
+        "Loudness": 5,
+        "Convergence": 0
     },
     "5a0d716f1526d8000d26b1e2": {
         "ItemID": "5a0d716f1526d8000d26b1e2",
@@ -1042,7 +1084,7 @@
         "ModType": "",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -10,
-        "Dispersion": -7,
+        "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1057,13 +1099,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.05,
-        "Loudness": 5
+        "Loudness": 5,
+        "Convergence": 0
     },
     "5f2aa4559b44de6b1b4e68d1": {
         "ItemID": "5f2aa4559b44de6b1b4e68d1",
         "Name": "muzzle_all_kel_tec_rfb_std_762x51",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -5,
         "CameraRecoil": 0,
@@ -1080,7 +1123,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": 6
+        "Loudness": 6,
+        "Convergence": 7
     },
     "58949dea86f77409483e16a8": {
         "ItemID": "58949dea86f77409483e16a8",
@@ -1088,7 +1132,7 @@
         "ModType": "",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -6,
-        "Dispersion": -5,
+        "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1103,7 +1147,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.063,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 0
     },
     "544a38634bdc2d58388b4568": {
         "ItemID": "544a38634bdc2d58388b4568",
@@ -1111,7 +1156,7 @@
         "ModType": "",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -6,
-        "Dispersion": -5,
+        "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1126,15 +1171,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.059,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 0
     },
     "56ea8180d2720bf2698b456a": {
         "ItemID": "56ea8180d2720bf2698b456a",
         "Name": "muzzle_ar15_kac_qd_compensator_556x45",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -4,
-        "Dispersion": -2,
+        "Dispersion": -4,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1149,7 +1195,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.063,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 5
     },
     "5ba26acdd4351e003562908e": {
         "ItemID": "5ba26acdd4351e003562908e",
@@ -1157,7 +1204,7 @@
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -6,
-        "Dispersion": -3,
+        "Dispersion": -6,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1172,15 +1219,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.08,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 0
     },
     "5dfa3cd1b33c0951220c079b": {
         "ItemID": "5dfa3cd1b33c0951220c079b",
         "Name": "muzzle_ar10_kac_qdc_flash_supressor_kit_762x51",
         "ModType": "muzzle_supp_adapter",
-        "VerticalRecoil": -6,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
-        "Dispersion": -9,
+        "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1195,7 +1243,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 6
+        "Loudness": 6,
+        "Convergence": 3
     },
     "61713308d92c473c770214a0": {
         "ItemID": "61713308d92c473c770214a0",
@@ -1203,7 +1252,7 @@
         "ModType": "",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -10,
-        "Dispersion": -7,
+        "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1218,7 +1267,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.122,
-        "Loudness": 6
+        "Loudness": 6,
+        "Convergence": 0
     },
     "5fbbc3324e8a554c40648348": {
         "ItemID": "5fbbc3324e8a554c40648348",
@@ -1226,7 +1276,7 @@
         "ModType": "",
         "VerticalRecoil": -6,
         "HorizontalRecoil": -9,
-        "Dispersion": -7,
+        "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1241,14 +1291,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": 11
+        "Loudness": 11,
+        "Convergence": 0
     },
     "560e620e4bdc2d724b8b456b": {
         "ItemID": "560e620e4bdc2d724b8b456b",
         "Name": "muzzle_sv-98_izhmash_std_762x54r",
         "ModType": "",
-        "VerticalRecoil": -5,
-        "HorizontalRecoil": -6,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -7,
         "Dispersion": -6,
         "CameraRecoil": 0,
         "AutoROF": 0,
@@ -1264,7 +1315,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.105,
-        "Loudness": 9
+        "Loudness": 9,
+        "Convergence": 0
     },
     "5c471bfc2e221602b21d4e17": {
         "ItemID": "5c471bfc2e221602b21d4e17",
@@ -1272,7 +1324,7 @@
         "ModType": "",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -6,
-        "Dispersion": -6,
+        "Dispersion": -12,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1287,13 +1339,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.08,
-        "Loudness": 8
+        "Loudness": 8,
+        "Convergence": 0
     },
     "615d8df08004cc50514c3236": {
         "ItemID": "615d8df08004cc50514c3236",
         "Name": "muzzle_mp5_b&t_mp5_qd_muzzle_brake_9x19",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -5,
         "CameraRecoil": 0,
@@ -1310,16 +1363,17 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.128,
-        "Loudness": 22
+        "Loudness": 22,
+        "Convergence": 10
     },
     "5c07c5ed0db834001b73571c": {
         "ItemID": "5c07c5ed0db834001b73571c",
         "Name": "muzzle_mp5_hk_noveske_style_3_lug_9x19",
         "ModType": "",
-        "VerticalRecoil": -6,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -9,
-        "CameraRecoil": 0,
+        "CameraRecoil": -10,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -1333,7 +1387,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.38,
-        "Loudness": 11
+        "Loudness": 11,
+        "Convergence": 0
     },
     "622f0ee47762f55aaa68ac87": {
         "ItemID": "622f0ee47762f55aaa68ac87",
@@ -1341,7 +1396,7 @@
         "ModType": "",
         "VerticalRecoil": -4,
         "HorizontalRecoil": -6,
-        "Dispersion": -5,
+        "Dispersion": -9,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1356,7 +1411,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.05,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 0
     },
     "622f128cec80d870d349b4e8": {
         "ItemID": "622f128cec80d870d349b4e8",
@@ -1364,7 +1420,7 @@
         "ModType": "",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -9,
-        "Dispersion": -6,
+        "Dispersion": -11,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1379,7 +1435,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "Loudness": 5
+        "Loudness": 5,
+        "Convergence": 0
     },
     "622f07cfae33bc505b2c4dd5": {
         "ItemID": "622f07cfae33bc505b2c4dd5",
@@ -1387,7 +1444,7 @@
         "ModType": "",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -6,
-        "Dispersion": -5,
+        "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1402,7 +1459,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.063,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 0
     },
     "5fb65424956329274326f316": {
         "ItemID": "5fb65424956329274326f316",
@@ -1410,7 +1468,7 @@
         "ModType": "",
         "VerticalRecoil": -6,
         "HorizontalRecoil": -9,
-        "Dispersion": -7,
+        "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1425,13 +1483,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": 11
+        "Loudness": 11,
+        "Convergence": 0
     },
     "5b7d68af5acfc400170e30c3": {
         "ItemID": "5b7d68af5acfc400170e30c3",
         "Name": "muzzle_fal_ds_arms_austrian_style_muzzle_brake_long_762x51",
         "ModType": "",
-        "VerticalRecoil": -5,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -12,
         "CameraRecoil": 0,
@@ -1448,15 +1507,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 7
+        "Loudness": 7,
+        "Convergence": 5
     },
     "626a74340be03179a165e30c": {
         "ItemID": "626a74340be03179a165e30c",
         "Name": "muzzle_ar15_yankee_hill_phantom_aggressive_end_flash_hider_556x45",
         "ModType": "",
-        "VerticalRecoil": -3,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -6,
-        "Dispersion": -6,
+        "Dispersion": -7,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1471,7 +1531,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.063,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 6
     },
     "618178aa1cb55961fa0fdc80": {
         "ItemID": "618178aa1cb55961fa0fdc80",
@@ -1479,7 +1540,7 @@
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -7,
-        "Dispersion": -7,
+        "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1494,13 +1555,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.16,
-        "Loudness": 10
+        "Loudness": 10,
+        "Convergence": 0
     },
     "5addbb6e5acfc408fb1393fd": {
         "ItemID": "5addbb6e5acfc408fb1393fd",
         "Name": "muzzle_m1a_springfield_armory_national_match_flash_suppressor_762x51",
         "ModType": "",
-        "VerticalRecoil": -5,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -7,
         "CameraRecoil": 0,
@@ -1517,13 +1579,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.14,
-        "Loudness": 6
+        "Loudness": 6,
+        "Convergence": 5
     },
     "5beec3420db834001b095429": {
         "ItemID": "5beec3420db834001b095429",
         "Name": "muzzle_rpk16_izhmash_rpk16_std_545x39",
         "ModType": "",
-        "VerticalRecoil": -9,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -9,
         "Dispersion": -5,
         "CameraRecoil": 0,
@@ -1540,7 +1603,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.09,
-        "Loudness": 12
+        "Loudness": 12,
+        "Convergence": 9
     },
     "618407a850224f204c1da549": {
         "ItemID": "618407a850224f204c1da549",
@@ -1548,7 +1612,7 @@
         "ModType": "",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -6,
-        "Dispersion": -5,
+        "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1563,15 +1627,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.15,
-        "Loudness": 8
+        "Loudness": 8,
+        "Convergence": 0
     },
     "615d8e2f1cb55961fa0fd9a4": {
         "ItemID": "615d8e2f1cb55961fa0fd9a4",
         "Name": "muzzle_ar15_hk_blitz_flash_hider_556x45",
         "ModType": "",
-        "VerticalRecoil": -7,
+        "VerticalRecoil": -5,
         "HorizontalRecoil": -7,
-        "Dispersion": -7,
+        "Dispersion": -17,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1586,13 +1651,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.085,
-        "Loudness": 16
+        "Loudness": 16,
+        "Convergence": 0
     },
     "626667e87379c44d557b7550": {
         "ItemID": "626667e87379c44d557b7550",
         "Name": "muzzle_ar15_kac_qdc_3_prong_flash_eliminator_556x45",
         "ModType": "muzzle_supp_adapter",
-        "VerticalRecoil": -7,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -6,
         "Dispersion": -5,
         "CameraRecoil": 0,
@@ -1609,13 +1675,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.065,
-        "Loudness": 10
+        "Loudness": 10,
+        "Convergence": 7
     },
     "5c6d710d2e22165df16b81e7": {
         "ItemID": "5c6d710d2e22165df16b81e7",
         "Name": "muzzle_ar15_surefire_warcomp_556_556x45",
         "ModType": "muzzle_supp_adapter",
-        "VerticalRecoil": -7,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -6,
         "Dispersion": -6,
         "CameraRecoil": 0,
@@ -1628,41 +1695,19 @@
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
         "Velocity": 0,
-        "RecoilAngle": 8,
+        "RecoilAngle": 10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": 16
+        "Loudness": 18,
+        "Convergence": 7
     },
     "5c7fb51d2e2216001219ce11": {
         "ItemID": "5c7fb51d2e2216001219ce11",
         "Name": "muzzle_ar15_surefire_sf3p_flash_hider_556x45",
         "ModType": "muzzle_supp_adapter",
-        "VerticalRecoil": -5,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -9,
-        "Dispersion": -6,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.064,
-        "Loudness": 15
-    },
-    "5ea172e498dacb342978818e": {
-        "ItemID": "5ea172e498dacb342978818e",
-        "Name": "muzzle_ar15_surefire_sf4p_fh556rc_flash_hider_556x45",
-        "ModType": "muzzle_supp_adapter",
-        "VerticalRecoil": -5,
-        "HorizontalRecoil": -6,
         "Dispersion": -9,
         "CameraRecoil": 0,
         "AutoROF": 0,
@@ -1677,8 +1722,33 @@
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
+        "Weight": 0.064,
+        "Loudness": 12,
+        "Convergence": 5
+    },
+    "5ea172e498dacb342978818e": {
+        "ItemID": "5ea172e498dacb342978818e",
+        "Name": "muzzle_ar15_surefire_sf4p_fh556rc_flash_hider_556x45",
+        "ModType": "muzzle_supp_adapter",
+        "VerticalRecoil": -5,
+        "HorizontalRecoil": -6,
+        "Dispersion": -18,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
         "Weight": 0.06,
-        "Loudness": 15
+        "Loudness": 14,
+        "Convergence": 0
     },
     "5c7e5f112e221600106f4ede": {
         "ItemID": "5c7e5f112e221600106f4ede",
@@ -1686,7 +1756,7 @@
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -7,
-        "Dispersion": -6,
+        "Dispersion": -12,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1701,7 +1771,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.122,
-        "Loudness": 14
+        "Loudness": 11,
+        "Convergence": 0
     },
     "5a34fd2bc4a282329a73b4c5": {
         "ItemID": "5a34fd2bc4a282329a73b4c5",
@@ -1709,7 +1780,7 @@
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -7,
-        "Dispersion": -6,
+        "Dispersion": -12,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1724,7 +1795,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.122,
-        "Loudness": 14
+        "Loudness": 11,
+        "Convergence": 0
     },
     "609269c3b0e443224b421cc1": {
         "ItemID": "609269c3b0e443224b421cc1",
@@ -1732,7 +1804,7 @@
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -6,
-        "Dispersion": -6,
+        "Dispersion": -13,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1747,13 +1819,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.14,
-        "Loudness": 15
+        "Loudness": 10,
+        "Convergence": 0
     },
     "5b7d693d5acfc43bca706a3d": {
         "ItemID": "5b7d693d5acfc43bca706a3d",
         "Name": "muzzle_ar10_2a_x3_titanium_compensator_762x51",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -9,
         "CameraRecoil": 0,
@@ -1770,7 +1843,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "Loudness": 20
+        "Loudness": 20,
+        "Convergence": 10
     },
     "5b3a16655acfc40016387a2a": {
         "ItemID": "5b3a16655acfc40016387a2a",
@@ -1778,7 +1852,7 @@
         "ModType": "",
         "VerticalRecoil": -6,
         "HorizontalRecoil": -7,
-        "Dispersion": -7,
+        "Dispersion": -20,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1793,7 +1867,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.128,
-        "Loudness": 15
+        "Loudness": 20,
+        "Convergence": 0
     },
     "5b099b7d5acfc400186331e4": {
         "ItemID": "5b099b7d5acfc400186331e4",
@@ -1801,7 +1876,7 @@
         "ModType": "",
         "VerticalRecoil": -3,
         "HorizontalRecoil": -7,
-        "Dispersion": -6,
+        "Dispersion": -12,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1816,7 +1891,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": 12
+        "Loudness": 12,
+        "Convergence": 0
     },
     "5addbba15acfc400185c2854": {
         "ItemID": "5addbba15acfc400185c2854",
@@ -1824,7 +1900,7 @@
         "ModType": "",
         "VerticalRecoil": -5,
         "HorizontalRecoil": -7,
-        "Dispersion": -8,
+        "Dispersion": -17,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1839,15 +1915,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "Loudness": 15
+        "Loudness": 14,
+        "Convergence": 0
     },
     "5addbbb25acfc40015621bd9": {
         "ItemID": "5addbbb25acfc40015621bd9",
         "Name": "muzzle_m14_yankee_hill_phantom_qd_flash_hider_762x51",
         "ModType": "",
         "VerticalRecoil": -5,
-        "HorizontalRecoil": -7,
-        "Dispersion": -8,
+        "HorizontalRecoil": -10,
+        "Dispersion": -15,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1862,15 +1939,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.07,
-        "Loudness": 15
+        "Loudness": 15,
+        "Convergence": 0
     },
     "5fbcbcf593164a5b6278efb2": {
         "ItemID": "5fbcbcf593164a5b6278efb2",
         "Name": "muzzle_base_sig_flash_hider_762x51",
         "ModType": "sig_taper_brake",
-        "VerticalRecoil": -3,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -3,
-        "Dispersion": -3,
+        "Dispersion": -6,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1885,7 +1963,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.07,
-        "Loudness": 7
+        "Loudness": 7,
+        "Convergence": 3
     },
     "5fbcbd02900b1d5091531dd3": {
         "ItemID": "5fbcbd02900b1d5091531dd3",
@@ -1893,7 +1972,7 @@
         "ModType": "sig_taper_brake",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
-        "Dispersion": -8,
+        "Dispersion": -12,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1908,7 +1987,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": 16
+        "Loudness": 18,
+        "Convergence": 0
     },
     "5fbcbd10ab884124df0cd563": {
         "ItemID": "5fbcbd10ab884124df0cd563",
@@ -1916,7 +1996,7 @@
         "ModType": "sig_taper_brake",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -12,
+        "Dispersion": -18,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1931,15 +2011,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.095,
-        "Loudness": 22
+        "Loudness": 24,
+        "Convergence": 0
     },
     "6130c43c67085e45ef1405a1": {
         "ItemID": "6130c43c67085e45ef1405a1",
         "Name": "muzzle_ar10_kac_qdc_muzzle_brake_kit_762x51",
         "ModType": "muzzle_supp_adapter",
-        "VerticalRecoil": -6,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
-        "Dispersion": -12,
+        "Dispersion": -24,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1954,7 +2035,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.145,
-        "Loudness": 23
+        "Loudness": 23,
+        "Convergence": 0
     },
     "5f633f791b231926f2329f13": {
         "ItemID": "5f633f791b231926f2329f13",
@@ -1962,7 +2044,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -20,
-        "Dispersion": -30,
+        "Dispersion": -10,
         "CameraRecoil": -20,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -1977,14 +2059,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.085,
-        "Loudness": 70
+        "Loudness": 70,
+        "Convergence": 30
     },
     "5d026791d7ad1a04a067ea63": {
         "ItemID": "5d026791d7ad1a04a067ea63",
         "Name": "muzzle_ar10_fortis_red_brake_762x51",
         "ModType": "",
-        "VerticalRecoil": -5,
-        "HorizontalRecoil": -24,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -30,
         "Dispersion": -10,
         "CameraRecoil": 0,
         "AutoROF": 0,
@@ -2000,15 +2083,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.108,
-        "Loudness": 39
+        "Loudness": 39,
+        "Convergence": 5
     },
     "5a9ea27ca2750c00137fa672": {
         "ItemID": "5a9ea27ca2750c00137fa672",
         "Name": "muzzle_ak_spike_tactical_ak_dynacomp_762x39",
         "ModType": "",
-        "VerticalRecoil": -3,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
-        "Dispersion": -12,
+        "Dispersion": -24,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2023,14 +2107,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.076,
-        "Loudness": 27
+        "Loudness": 27,
+        "Convergence": 3
     },
     "5c4ee3d62e2216152006f302": {
         "ItemID": "5c4ee3d62e2216152006f302",
         "Name": "muzzle_sv-98_srw_dtk_jet_mk2_762x54r",
         "ModType": "",
-        "VerticalRecoil": -12,
-        "HorizontalRecoil": -7,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -14,
         "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
@@ -2046,13 +2131,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.46,
-        "Loudness": 33
+        "Loudness": 33,
+        "Convergence": 12
     },
     "5998597786f77414ea6da093": {
         "ItemID": "5998597786f77414ea6da093",
         "Name": "muzzle_pp-19-01_izhmash_vityaz_std_9x19",
         "ModType": "",
-        "VerticalRecoil": -12,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -9,
         "Dispersion": -9,
         "CameraRecoil": 0,
@@ -2069,15 +2155,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.07,
-        "Loudness": 30
+        "Loudness": 30,
+        "Convergence": 12
     },
     "5649ab884bdc2ded0b8b457f": {
         "ItemID": "5649ab884bdc2ded0b8b457f",
         "Name": "muzzle_ak_zenit_dtk1_762x39_545x39",
         "ModType": "",
-        "VerticalRecoil": -12,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -12,
+        "Dispersion": -20,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2092,13 +2179,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.123,
-        "Loudness": 34
+        "Loudness": 40,
+        "Convergence": 12
     },
     "5cc9a96cd7f00c011c04e04a": {
         "ItemID": "5cc9a96cd7f00c011c04e04a",
         "Name": "muzzle_ak74_srvv_mbr_jet_545_545x39",
         "ModType": "",
-        "VerticalRecoil": -13,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -14,
         "CameraRecoil": 0,
@@ -2115,16 +2203,17 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 34
+        "Loudness": 34,
+        "Convergence": 13
     },
     "612e0e55a112697a4b3a66e7": {
         "ItemID": "612e0e55a112697a4b3a66e7",
         "Name": "muzzle_ar15_taa_zk_23_muzzle_brake_556x45",
         "ModType": "",
-        "VerticalRecoil": -15,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Dispersion": -6,
-        "CameraRecoil": 0,
+        "Dispersion": 0,
+        "CameraRecoil": -12,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2138,16 +2227,17 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.028,
-        "Loudness": 21
+        "Loudness": 21,
+        "Convergence": 15
     },
     "612e0e3c290d254f5e6b291d": {
         "ItemID": "612e0e3c290d254f5e6b291d",
         "Name": "muzzle_ar10_taa_zk_38_muzzle_brake_762x51",
         "ModType": "",
-        "VerticalRecoil": -15,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Dispersion": -6,
-        "CameraRecoil": 0,
+        "Dispersion": 0,
+        "CameraRecoil": -12,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2161,15 +2251,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.035,
-        "Loudness": 21
+        "Loudness": 21,
+        "Convergence": 15
     },
     "5bbdb8bdd4351e4502011460": {
         "ItemID": "5bbdb8bdd4351e4502011460",
         "Name": "muzzle_ar10_odin_works_atlas_7_muzzle_brake_762x51",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -7,
-        "Dispersion": -22,
+        "HorizontalRecoil": -10,
+        "Dispersion": -24,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2184,13 +2275,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "Loudness": 29
+        "Loudness": 29,
+        "Convergence": 0
     },
     "5c7951452e221644f31bfd5c": {
         "ItemID": "5c7951452e221644f31bfd5c",
         "Name": "muzzle_ak_venom_antidote_muzzle_brake_multi",
         "ModType": "",
-        "VerticalRecoil": -22,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -15,
         "CameraRecoil": 0,
@@ -2207,7 +2299,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.096,
-        "Loudness": 37
+        "Loudness": 37,
+        "Convergence": 22
     },
     "5cff9e5ed7ad1a09407397d4": {
         "ItemID": "5cff9e5ed7ad1a09407397d4",
@@ -2215,7 +2308,7 @@
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
-        "Dispersion": -15,
+        "Dispersion": -20,
         "CameraRecoil": -10,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2230,7 +2323,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.109,
-        "Loudness": 40
+        "Loudness": 40,
+        "Convergence": 0
     },
     "5d1f819086f7744b355c219b": {
         "ItemID": "5d1f819086f7744b355c219b",
@@ -2238,7 +2332,7 @@
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
-        "Dispersion": -15,
+        "Dispersion": -20,
         "CameraRecoil": -10,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2253,13 +2347,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.109,
-        "Loudness": 40
+        "Loudness": 40,
+        "Convergence": 0
     },
     "5c878ebb2e2216001219d48a": {
         "ItemID": "5c878ebb2e2216001219d48a",
         "Name": "muzzle_ak_lantac_dgnak47b_muzzle_brake_762x39",
         "ModType": "",
-        "VerticalRecoil": -8,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -12,
         "CameraRecoil": 0,
@@ -2276,13 +2371,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.09,
-        "Loudness": 30
+        "Loudness": 30,
+        "Convergence": 12
     },
     "5c878e9d2e2216000f201903": {
         "ItemID": "5c878e9d2e2216000f201903",
         "Name": "muzzle_ar10_lantac_dgn762b_muzzle_brake_762x51",
         "ModType": "",
-        "VerticalRecoil": -8,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -12,
         "CameraRecoil": 0,
@@ -2299,7 +2395,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.09,
-        "Loudness": 30
+        "Loudness": 30,
+        "Convergence": 12
     },
     "612e0cfc8004cc50514c2d9e": {
         "ItemID": "612e0cfc8004cc50514c2d9e",
@@ -2307,7 +2404,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
-        "Dispersion": -10,
+        "Dispersion": -20,
         "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2322,16 +2419,17 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.141,
-        "Loudness": 40
+        "Loudness": 40,
+        "Convergence": 0
     },
     "612e0d3767085e45ef14057f": {
         "ItemID": "612e0d3767085e45ef14057f",
         "Name": "muzzle_all_awc_psr_muzzle_brake_762x51",
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -20,
-        "Dispersion": -15,
-        "CameraRecoil": -10,
+        "HorizontalRecoil": -15,
+        "Dispersion": -20,
+        "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2345,7 +2443,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.165,
-        "Loudness": 45
+        "Loudness": 40,
+        "Convergence": 0
     },
     "612e0d81290d254f5e6b291a": {
         "ItemID": "612e0d81290d254f5e6b291a",
@@ -2353,8 +2452,8 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
-        "Dispersion": -10,
-        "CameraRecoil": -20,
+        "Dispersion": -20,
+        "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2368,13 +2467,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.177,
-        "Loudness": 45
+        "Loudness": 40,
+        "Convergence": 0
     },
     "5cf6935bd7f00c06585fb791": {
         "ItemID": "5cf6935bd7f00c06585fb791",
         "Name": "muzzle_all_taccom_carbine_brake_multi",
         "ModType": "",
-        "VerticalRecoil": -20,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -10,
         "CameraRecoil": 0,
@@ -2391,16 +2491,17 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.079,
-        "Loudness": 30
+        "Loudness": 30,
+        "Convergence": 20
     },
     "5888996c24597754281f9419": {
         "ItemID": "5888996c24597754281f9419",
         "Name": "muzzle_dvl-10_lobaev_dvl-10_m2_std_308",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -20,
+        "HorizontalRecoil": -30,
         "Dispersion": -20,
-        "CameraRecoil": -20,
+        "CameraRecoil": -30,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2414,15 +2515,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.098,
-        "Loudness": 60
+        "Loudness": 60,
+        "Convergence": 0
     },
     "5cc9ad73d7f00c000e2579d4": {
         "ItemID": "5cc9ad73d7f00c000e2579d4",
         "Name": "muzzle_ak_srvv_mbrfhmb_762_762x39",
         "ModType": "",
-        "VerticalRecoil": -7,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -10,
+        "Dispersion": -20,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2437,16 +2539,17 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 27
+        "Loudness": 27,
+        "Convergence": 7
     },
     "5cdd7685d7f00c000f260ed2": {
         "ItemID": "5cdd7685d7f00c000f260ed2",
         "Name": "muzzle_ar10_keeno_arms_shrewd_muzzle_brake_762x51",
         "ModType": "",
-        "VerticalRecoil": -7,
+        "VerticalRecoil": -5,
         "HorizontalRecoil": -15,
-        "Dispersion": -10,
-        "CameraRecoil": -5,
+        "Dispersion": -15,
+        "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2460,13 +2563,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "Loudness": 37
+        "Loudness": 37,
+        "Convergence": 0
     },
     "59e61eb386f77440d64f5daf": {
         "ItemID": "59e61eb386f77440d64f5daf",
         "Name": "muzzle_ak_molot_vepr_km_vpo_136_762x39",
         "ModType": "",
-        "VerticalRecoil": -15,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -2483,13 +2587,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.02,
-        "Loudness": 15
+        "Loudness": 15,
+        "Convergence": 10
     },
     "59d64fc686f774171b243fe2": {
         "ItemID": "59d64fc686f774171b243fe2",
         "Name": "muzzle_ak_izhmash_akm_std_762x39",
         "ModType": "",
-        "VerticalRecoil": -15,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -2506,7 +2611,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.02,
-        "Loudness": 15
+        "Loudness": 15,
+        "Convergence": 10
     },
     "5ac72e615acfc43f67248aa0": {
         "ItemID": "5ac72e615acfc43f67248aa0",
@@ -2514,7 +2620,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -12,
+        "Dispersion": -6,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2529,7 +2635,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 22
+        "Loudness": 22,
+        "Convergence": 5
     },
     "5ac7655e5acfc40016339a19": {
         "ItemID": "5ac7655e5acfc40016339a19",
@@ -2537,7 +2644,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -12,
+        "Dispersion": -6,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2552,7 +2659,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 22
+        "Loudness": 22,
+        "Convergence": 5
     },
     "5ac72e7d5acfc40016339a02": {
         "ItemID": "5ac72e7d5acfc40016339a02",
@@ -2560,7 +2668,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -12,
+        "Dispersion": -6,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2575,7 +2683,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 22
+        "Loudness": 22,
+        "Convergence": 5
     },
     "5649aa744bdc2ded0b8b457e": {
         "ItemID": "5649aa744bdc2ded0b8b457e",
@@ -2583,7 +2692,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -12,
+        "Dispersion": -6,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2598,7 +2707,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 22
+        "Loudness": 22,
+        "Convergence": 5
     },
     "57dc324a24597759501edc20": {
         "ItemID": "57dc324a24597759501edc20",
@@ -2606,7 +2716,7 @@
         "ModType": "booster",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
-        "Dispersion": -10,
+        "Dispersion": -15,
         "CameraRecoil": 0,
         "AutoROF": 4.5,
         "SemiROF": 4.5,
@@ -2621,7 +2731,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 18
+        "Loudness": 18,
+        "Convergence": 0
     },
     "5ac72e725acfc400180ae701": {
         "ItemID": "5ac72e725acfc400180ae701",
@@ -2629,7 +2740,7 @@
         "ModType": "booster",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
-        "Dispersion": -10,
+        "Dispersion": -15,
         "CameraRecoil": 0,
         "AutoROF": 4.5,
         "SemiROF": 4.5,
@@ -2644,7 +2755,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 18
+        "Loudness": 18,
+        "Convergence": 0
     },
     "5ac72e945acfc43f3b691116": {
         "ItemID": "5ac72e945acfc43f3b691116",
@@ -2652,7 +2764,7 @@
         "ModType": "booster",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
-        "Dispersion": -10,
+        "Dispersion": -15,
         "CameraRecoil": 0,
         "AutoROF": 4.5,
         "SemiROF": 4.5,
@@ -2667,7 +2779,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 18
+        "Loudness": 18,
+        "Convergence": 0
     },
     "5ac72e895acfc43b321d4bd5": {
         "ItemID": "5ac72e895acfc43b321d4bd5",
@@ -2675,7 +2788,7 @@
         "ModType": "booster",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -8,
-        "Dispersion": -10,
+        "Dispersion": -15,
         "CameraRecoil": 0,
         "AutoROF": 4.5,
         "SemiROF": 4.5,
@@ -2690,7 +2803,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 18
+        "Loudness": 18,
+        "Convergence": 0
     },
     "5f633f68f5750b524b45f112": {
         "ItemID": "5f633f68f5750b524b45f112",
@@ -2698,7 +2812,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -20,
-        "Dispersion": -30,
+        "Dispersion": -10,
         "CameraRecoil": -20,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2713,13 +2827,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.08,
-        "Loudness": 70
+        "Loudness": 70,
+        "Convergence": 30
     },
     "5f6372e2865db925d54f3869": {
         "ItemID": "5f6372e2865db925d54f3869",
         "Name": "muzzle_ar15_ferfrans_muzzle_brake_556x45",
         "ModType": "",
-        "VerticalRecoil": -8,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -12,
         "CameraRecoil": 0,
@@ -2736,13 +2851,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.15,
-        "Loudness": 30
+        "Loudness": 30,
+        "Convergence": 8
     },
     "5a7c147ce899ef00150bd8b8": {
         "ItemID": "5a7c147ce899ef00150bd8b8",
         "Name": "muzzle_ar15_vendetta_precision_vp_09_556x45",
         "ModType": "",
-        "VerticalRecoil": -8,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -14,
         "CameraRecoil": -10,
@@ -2759,13 +2875,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.2,
-        "Loudness": 32
+        "Loudness": 32,
+        "Convergence": 9
     },
     "5caf17c9ae92150b30006be1": {
         "ItemID": "5caf17c9ae92150b30006be1",
         "Name": "muzzle_ash12_ckib_ash12_std_127x55",
         "ModType": "",
-        "VerticalRecoil": -25,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -18,
         "CameraRecoil": 0,
@@ -2782,13 +2899,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.15,
-        "Loudness": 43
+        "Loudness": 50,
+        "Convergence": 25
     },
     "5d02676dd7ad1a049e54f6dc": {
         "ItemID": "5d02676dd7ad1a049e54f6dc",
         "Name": "muzzle_ar15_nordic_corvette_compensator_556x45",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -6,
         "Dispersion": -9,
         "CameraRecoil": -11,
@@ -2805,13 +2923,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.125,
-        "Loudness": 36
+        "Loudness": 36,
+        "Convergence": 15
     },
     "5d02677ad7ad1a04a15c0f95": {
         "ItemID": "5d02677ad7ad1a04a15c0f95",
         "Name": "muzzle_ar10_nordic_corvette_compensator_762x51",
         "ModType": "",
-        "VerticalRecoil": -7,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -10,
         "CameraRecoil": -12,
@@ -2828,7 +2947,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.125,
-        "Loudness": 36
+        "Loudness": 36,
+        "Convergence": 15
     },
     "5998598e86f7740b3f498a86": {
         "ItemID": "5998598e86f7740b3f498a86",
@@ -2836,7 +2956,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -5,
+        "Dispersion": -10,
         "CameraRecoil": -5,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2851,13 +2971,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.07,
-        "Loudness": 20
+        "Loudness": 20,
+        "Convergence": 0
     },
     "60337f5dce399e10262255d1": {
         "ItemID": "60337f5dce399e10262255d1",
         "Name": "muzzle_all_stmarms_stm9_muzzle_brake_9x19",
         "ModType": "",
-        "VerticalRecoil": -30,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -2874,13 +2995,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.084,
-        "Loudness": 30
+        "Loudness": 50,
+        "Convergence": 30
     },
     "5cf6937cd7f00c056c53fb39": {
         "ItemID": "5cf6937cd7f00c056c53fb39",
         "Name": "muzzle_ar15_bulletec_st_6012_muzzle_brake_556x45",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -30,
         "Dispersion": 0,
         "CameraRecoil": -15,
@@ -2893,17 +3015,18 @@
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.96,
         "Velocity": 0,
-        "RecoilAngle": 7,
+        "RecoilAngle": 8,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.125,
-        "Loudness": 55
+        "Loudness": 55,
+        "Convergence": 8
     },
     "5df35e7f2a78646d96665dd4": {
         "ItemID": "5df35e7f2a78646d96665dd4",
         "Name": "muzzle_t5000_orsis_t5000m_std_762x51",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -30,
         "Dispersion": 0,
         "CameraRecoil": -20,
@@ -2920,15 +3043,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.098,
-        "Loudness": 65
+        "Loudness": 65,
+        "Convergence": 25
     },
     "615d8f5dd92c473c770212ef": {
         "ItemID": "615d8f5dd92c473c770212ef",
         "Name": "muzzle_ak_hexagon_reactor_muzzle_brake_545x39",
         "ModType": "",
-        "VerticalRecoil": -7,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -6,
-        "Dispersion": -14,
+        "Dispersion": -17,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2943,13 +3067,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.095,
-        "Loudness": 27
+        "Loudness": 27,
+        "Convergence": 7
     },
     "6065c6e7132d4d12c81fd8e1": {
         "ItemID": "6065c6e7132d4d12c81fd8e1",
         "Name": "muzzle_ar10_cmmg_sv_brake_compensator_762x51",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -12,
         "CameraRecoil": 0,
@@ -2966,14 +3091,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.08,
-        "Loudness": 32
+        "Loudness": 32,
+        "Convergence": 10
     },
     "5d440625a4b9361eec4ae6c5": {
         "ItemID": "5d440625a4b9361eec4ae6c5",
         "Name": "muzzle_ar15_thunder_beast_223cb_muzzle_brake_556x45",
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -15,
+        "HorizontalRecoil": -25,
         "Dispersion": -10,
         "CameraRecoil": -8,
         "AutoROF": 0,
@@ -2989,14 +3115,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.109,
-        "Loudness": 33
+        "Loudness": 33,
+        "Convergence": 0
     },
     "5d443f8fa4b93678dd4a01aa": {
         "ItemID": "5d443f8fa4b93678dd4a01aa",
         "Name": "muzzle_ar10_thunder_beast_30cb_muzzle_brake_762x51",
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -15,
+        "HorizontalRecoil": -25,
         "Dispersion": -10,
         "CameraRecoil": -8,
         "AutoROF": 0,
@@ -3012,13 +3139,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.109,
-        "Loudness": 33
+        "Loudness": 33,
+        "Convergence": 0
     },
     "5bc5a35cd4351e450201232f": {
         "ItemID": "5bc5a35cd4351e450201232f",
         "Name": "muzzle_mosin_witt_machine_custom_clamp_on_muzzle_brake_762x54r",
         "ModType": "",
-        "VerticalRecoil": -12,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -30,
         "Dispersion": 0,
         "CameraRecoil": -30,
@@ -3035,13 +3163,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.17,
-        "Loudness": 72
+        "Loudness": 72,
+        "Convergence": 20
     },
     "5bbdb83fd4351e44f824c44b": {
         "ItemID": "5bbdb83fd4351e44f824c44b",
         "Name": "muzzle_mosin_tacfire_tanker_style_762x54r",
         "ModType": "",
-        "VerticalRecoil": -15,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -28,
         "CameraRecoil": -20,
@@ -3058,13 +3187,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.25,
-        "Loudness": 63
+        "Loudness": 63,
+        "Convergence": 15
     },
     "5bc5a351d4351e003477a414": {
         "ItemID": "5bc5a351d4351e003477a414",
         "Name": "muzzle_mosin_tpp_clamp_on_muzzle_brake_762x54r",
         "ModType": "",
-        "VerticalRecoil": -25,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -20,
         "CameraRecoil": -5,
@@ -3081,16 +3211,17 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.19,
-        "Loudness": 50
+        "Loudness": 50,
+        "Convergence": 30
     },
     "5c78f2882e22165df16b832e": {
         "ItemID": "5c78f2882e22165df16b832e",
         "Name": "muzzle_ar15_sai_jail_break_556x45",
         "ModType": "",
-        "VerticalRecoil": -2,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -2,
         "Dispersion": -2,
-        "CameraRecoil": -10,
+        "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -3104,13 +3235,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": -15
+        "Loudness": -15,
+        "Convergence": 2
     },
     "5aafa1c2e5b5b00015042a56": {
         "ItemID": "5aafa1c2e5b5b00015042a56",
         "Name": "muzzle_m1a_springfield_armory_socom_16_762x51",
         "ModType": "",
-        "VerticalRecoil": -12,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -4,
         "CameraRecoil": 0,
@@ -3127,13 +3259,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.13,
-        "Loudness": 16
+        "Loudness": 16,
+        "Convergence": 12
     },
     "607ffb988900dc2d9a55b6e4": {
         "ItemID": "607ffb988900dc2d9a55b6e4",
         "Name": "muzzle_ar10_surefire_procomp_762_muzzle_brake_762x51",
         "ModType": "",
-        "VerticalRecoil": -7,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
         "Dispersion": -13,
         "CameraRecoil": 0,
@@ -3150,13 +3283,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.097,
-        "Loudness": 34
+        "Loudness": 34,
+        "Convergence": 7
     },
     "628a66b41d5e41750e314f34": {
         "ItemID": "628a66b41d5e41750e314f34",
         "Name": "muzzle_ar10_dead_air_silencers_keymount_muzzle_brake_762x51",
         "ModType": "",
-        "VerticalRecoil": -12,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -20,
         "Dispersion": -5,
         "CameraRecoil": 0,
@@ -3173,7 +3307,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 37
+        "Loudness": 37,
+        "Convergence": 12
     },
     "62812081d23f207deb0ab216": {
         "ItemID": "62812081d23f207deb0ab216",
@@ -3181,7 +3316,7 @@
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -30,
-        "Dispersion": -10,
+        "Dispersion": -20,
         "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3196,15 +3331,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.23,
-        "Loudness": 55
+        "Loudness": 55,
+        "Convergence": 0
     },
     "5addbb825acfc408fb139400": {
         "ItemID": "5addbb825acfc408fb139400",
         "Name": "muzzle_m14_jp_enterprises_tactical_compensator_762x51",
         "ModType": "",
-        "VerticalRecoil": -15,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
-        "Dispersion": 0,
+        "Dispersion": -5,
         "CameraRecoil": -10,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3219,7 +3355,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.13,
-        "Loudness": 40
+        "Loudness": 45,
+        "Convergence": 22
     },
     "5fc23636016cce60e8341b05": {
         "ItemID": "5fc23636016cce60e8341b05",
@@ -3227,7 +3364,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -20,
-        "Dispersion": -20,
+        "Dispersion": -25,
         "CameraRecoil": -20,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3242,13 +3379,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "Loudness": 60
+        "Loudness": 60,
+        "Convergence": 0
     },
     "5cdd7693d7f00c0010373aa5": {
         "ItemID": "5cdd7693d7f00c0010373aa5",
         "Name": "muzzle_ar10_precision_armament_m11_severe_duty_muzzle_brake_762x51",
         "ModType": "",
-        "VerticalRecoil": -17,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": -20,
@@ -3265,13 +3403,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "Loudness": 37
+        "Loudness": 37,
+        "Convergence": 17
     },
     "5addbb945acfc4001a5fc44e": {
         "ItemID": "5addbb945acfc4001a5fc44e",
         "Name": "muzzle_m14_smith_enterprise_good_iron_muzzle_brake_762x51",
         "ModType": "",
-        "VerticalRecoil": -25,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -3288,13 +3427,40 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.14,
-        "Loudness": 40
+        "Loudness": 40,
+        "Convergence": 22
+    },
+    "63ac5c9658d0485fc039f0b8": {
+        "ItemID": "63ac5c9658d0485fc039f0b8",
+        "Name": "muzzle_ar15_alientech_gubich_muzzle_brake_556x45",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -40,
+        "Dispersion": 0,
+        "CameraRecoil": -30,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 2,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.085,
+        "ModShotDispersion": 0,
+        "Loudness": 60,
+        "MalfChance": 0,
+        "Convergence": -10
     },
     "5f6339d53ada5942720e2dc3": {
         "ItemID": "5f6339d53ada5942720e2dc3",
         "Name": "muzzle_ferfrans_ferfrans_crd_556x45",
         "ModType": "",
-        "VerticalRecoil": -1,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -1,
         "Dispersion": -1,
         "CameraRecoil": -15,
@@ -3311,7 +3477,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.14,
-        "Loudness": -18
+        "Loudness": -18,
+        "Convergence": 1
     },
     "5cf78496d7f00c065703d6ca": {
         "ItemID": "5cf78496d7f00c065703d6ca",
@@ -3334,7 +3501,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.03,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5cf78720d7f00c06595bc93e": {
         "ItemID": "5cf78720d7f00c06595bc93e",
@@ -3343,7 +3511,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
-        "CameraRecoil": -15,
+        "CameraRecoil": -20,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -3357,7 +3525,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.176,
-        "Loudness": -20
+        "Loudness": -20,
+        "Convergence": 0
     },
     "615d8eb350224f204c1da1cf": {
         "ItemID": "615d8eb350224f204c1da1cf",
@@ -3380,7 +3549,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.21,
-        "Loudness": -25
+        "Loudness": -25,
+        "Convergence": 0
     },
     "62669bccdb9ebb4daa44cd14": {
         "ItemID": "62669bccdb9ebb4daa44cd14",
@@ -3403,7 +3573,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.221,
-        "Loudness": -25
+        "Loudness": -25,
+        "Convergence": 0
     },
     "5cc9b815d7f00c000e2579d6": {
         "ItemID": "5cc9b815d7f00c000e2579d6",
@@ -3411,7 +3582,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -5,
+        "Dispersion": -7.5,
         "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3426,7 +3597,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
-        "Loudness": -15
+        "Loudness": -15,
+        "Convergence": 0
     },
     "5943eeeb86f77412d6384f6b": {
         "ItemID": "5943eeeb86f77412d6384f6b",
@@ -3434,7 +3606,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -10,
+        "Dispersion": -15,
         "CameraRecoil": -10,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3449,7 +3621,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.19,
-        "Loudness": -12
+        "Loudness": -12,
+        "Convergence": 0
     },
     "5943ee5a86f77413872d25ec": {
         "ItemID": "5943ee5a86f77413872d25ec",
@@ -3457,7 +3630,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
-        "Dispersion": -10,
+        "Dispersion": -15,
         "CameraRecoil": -10,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3472,7 +3645,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.2,
-        "Loudness": -12
+        "Loudness": -12,
+        "Convergence": 0
     },
     "56ea6fafd2720b844b8b4593": {
         "ItemID": "56ea6fafd2720b844b8b4593",
@@ -3481,7 +3655,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
-        "CameraRecoil": -20,
+        "CameraRecoil": -25,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": -24,
@@ -3495,13 +3669,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.204,
-        "Loudness": -22
+        "Loudness": -22,
+        "Convergence": 0
     },
     "5a7037338dc32e000d46d257": {
         "ItemID": "5a7037338dc32e000d46d257",
         "Name": "muzzle_glock_carver_custom_decelerator_3_port_gen_3_9x19",
         "ModType": "",
-        "VerticalRecoil": -25,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -10,
         "CameraRecoil": 0,
@@ -3518,13 +3693,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.063,
-        "Loudness": 45
+        "Loudness": 45,
+        "Convergence": 25
     },
     "5a7ad0c451dfba0013379712": {
         "ItemID": "5a7ad0c451dfba0013379712",
         "Name": "muzzle_glock_carver_custom_4_port_gen_3_9x19",
         "ModType": "",
-        "VerticalRecoil": -35,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -10,
         "CameraRecoil": 0,
@@ -3541,13 +3717,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.046,
-        "Loudness": 55
+        "Loudness": 55,
+        "Convergence": 35
     },
     "5a7b32a2e899ef00135e345a": {
         "ItemID": "5a7b32a2e899ef00135e345a",
         "Name": "muzzle_glock_strike_industries_g4_slide_compensator_9x19",
         "ModType": "",
-        "VerticalRecoil": -20,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -5,
         "Dispersion": -5,
         "CameraRecoil": 0,
@@ -3578,13 +3755,14 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.105,
-        "Loudness": 30
+        "Loudness": 30,
+        "Convergence": 20
     },
     "5a7ad1fb51dfba0013379715": {
         "ItemID": "5a7ad1fb51dfba0013379715",
         "Name": "muzzle_glock_lone_wolf_compensator_9_9x19",
         "ModType": "",
-        "VerticalRecoil": -10,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -20,
         "CameraRecoil": 0,
@@ -3601,15 +3779,16 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.036,
-        "Loudness": 30
+        "Loudness": 30,
+        "Convergence": 10
     },
     "5a705e128dc32e000d46d258": {
         "ItemID": "5a705e128dc32e000d46d258",
         "Name": "muzzle_glock_lone_wolf_alphawolf_bullnosed_9x19",
         "ModType": "",
-        "VerticalRecoil": -7,
-        "HorizontalRecoil": -7,
-        "Dispersion": 0,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -14,
+        "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3632,13 +3811,14 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 14
+        "Loudness": 14,
+        "Convergence": 7
     },
     "5a70366c8dc32e001207fb06": {
         "ItemID": "5a70366c8dc32e001207fb06",
         "Name": "muzzle_glock_double_diamond_9x19",
         "ModType": "",
-        "VerticalRecoil": -15,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -20,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -3655,13 +3835,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.063,
-        "Loudness": 35
+        "Loudness": 35,
+        "Convergence": 15
     },
     "5bffd7ed0db834001d23ebf9": {
         "ItemID": "5bffd7ed0db834001d23ebf9",
         "Name": "muzzle_tt_pm_laser_dtk_tt",
         "ModType": "",
-        "VerticalRecoil": -20,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -3680,13 +3861,14 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.036,
-        "Loudness": 20
+        "Loudness": 20,
+        "Convergence": 20
     },
     "5ef61964ec7f42238c31e0c1": {
         "ItemID": "5ef61964ec7f42238c31e0c1",
         "Name": "muzzle_m1911_anarchy_outdoors_1911_muzzle_brake_1143x23",
         "ModType": "",
-        "VerticalRecoil": -20,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -3705,13 +3887,14 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.105,
-        "Loudness": 20
+        "Loudness": 20,
+        "Convergence": 20
     },
     "5c6beec32e221601da3578f2": {
         "ItemID": "5c6beec32e221601da3578f2",
         "Name": "muzzle_p226_tj_compensator_9x19",
         "ModType": "",
-        "VerticalRecoil": -12,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -3736,7 +3919,8 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.036,
-        "Loudness": 12
+        "Loudness": 12,
+        "Convergence": 12
     },
     "619d36da53b4d42ee724fae4": {
         "ItemID": "619d36da53b4d42ee724fae4",
@@ -3759,13 +3943,14 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "59fb137a86f7740adb646af1": {
         "ItemID": "59fb137a86f7740adb646af1",
         "Name": "muzzle_saiga12_css_monster_caw_large_12g",
         "ModType": "",
-        "VerticalRecoil": -20,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": -30,
@@ -3783,13 +3968,14 @@
         "Ergonomics": 0,
         "Weight": 0.34,
         "ModShotDispersion": -5,
-        "Loudness": 45
+        "Loudness": 45,
+        "Convergence": 20
     },
     "560838c94bdc2d77798b4569": {
         "ItemID": "560838c94bdc2d77798b4569",
         "Name": "muzzle_12g_remington_tactical_12",
         "ModType": "",
-        "VerticalRecoil": -5,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -5,
         "Dispersion": -5,
         "CameraRecoil": -5,
@@ -3807,13 +3993,14 @@
         "Ergonomics": 0,
         "Weight": 0.101,
         "ModShotDispersion": 20,
-        "Loudness": 20
+        "Loudness": 20,
+        "Convergence": 5
     },
     "58272d7f2459774f6311ddfd": {
         "ItemID": "58272d7f2459774f6311ddfd",
         "Name": "muzzle_12g_red_heat_gk-02_12g",
         "ModType": "",
-        "VerticalRecoil": -30,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": 0,
         "CameraRecoil": 0,
@@ -3831,7 +4018,8 @@
         "Ergonomics": 0,
         "Weight": 0.233,
         "ModShotDispersion": -10,
-        "Loudness": 40
+        "Loudness": 40,
+        "Convergence": 30
     },
     "5c0111ab0db834001966914d": {
         "ItemID": "5c0111ab0db834001966914d",
@@ -3855,7 +4043,8 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "ModShotDispersion": 20,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "58889c7324597754281f9439": {
         "ItemID": "58889c7324597754281f9439",
@@ -3878,14 +4067,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.105,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "5abcc328d8ce8700194394f3": {
         "ItemID": "5abcc328d8ce8700194394f3",
         "Name": "silencer_apb_toz_apb_std_9x18pm",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 2,
@@ -3901,14 +4091,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.49,
-        "Loudness": -30
+        "Loudness": -30,
+        "Convergence": 0
     },
     "58aeac1b86f77457c419f475": {
         "ItemID": "58aeac1b86f77457c419f475",
         "Name": "silencer_sig_mpx_sd_9x19",
         "ModType": "",
         "VerticalRecoil": -5,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 0,
@@ -3924,14 +4115,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.6,
-        "Loudness": -70
+        "Loudness": -70,
+        "Convergence": 0
     },
     "5c7e8fab2e22165df16b889b": {
         "ItemID": "5c7e8fab2e22165df16b889b",
         "Name": "silencer_all_aac_illusion_9_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -8,
         "CameraRecoil": -5,
         "AutoROF": 0,
@@ -3947,14 +4139,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.294,
-        "Loudness": -37
+        "Loudness": -37,
+        "Convergence": 0
     },
     "6171367e1cb55961fa0fdb36": {
         "ItemID": "6171367e1cb55961fa0fdb36",
         "Name": "silencer_bt_b&t_g28_sd_762x51",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -11,
         "CameraRecoil": -20,
         "AutoROF": 1.9,
@@ -3970,14 +4163,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.46,
-        "Loudness": -47
+        "Loudness": -47,
+        "Convergence": 0
     },
     "5f63407e1b231926f2329f15": {
         "ItemID": "5f63407e1b231926f2329f15",
         "Name": "silencer_vepr_rotor43_762x51",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -11,
         "CameraRecoil": -20,
         "AutoROF": 1.5,
@@ -3993,14 +4187,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.9,
-        "Loudness": -20
+        "Loudness": -20,
+        "Convergence": 0
     },
     "5a9fbb84a2750c00137fa685": {
         "ItemID": "5a9fbb84a2750c00137fa685",
         "Name": "silencer_all_rotor_43_v2_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -6,
         "CameraRecoil": -10,
         "AutoROF": 2.25,
@@ -4016,14 +4211,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.57,
-        "Loudness": -18
+        "Loudness": -18,
+        "Convergence": 0
     },
     "5e01ea19e9dc277128008c0b": {
         "ItemID": "5e01ea19e9dc277128008c0b",
         "Name": "silencer_base_rotor43_svd_dtk_762x54",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -9,
+        "HorizontalRecoil": -4.5,
         "Dispersion": -9,
         "CameraRecoil": -18,
         "AutoROF": 1.7,
@@ -4039,14 +4235,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.81,
-        "Loudness": -22
+        "Loudness": -22,
+        "Convergence": 0
     },
     "5a9fbb74a2750c0032157181": {
         "ItemID": "5a9fbb74a2750c0032157181",
         "Name": "silencer_all_rotor_43_v2_366TKM",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -6,
         "CameraRecoil": -10,
         "AutoROF": 2.3,
@@ -4062,14 +4259,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.57,
-        "Loudness": -15
+        "Loudness": -15,
+        "Convergence": 0
     },
     "5a9fb739a2750c003215717f": {
         "ItemID": "5a9fb739a2750c003215717f",
         "Name": "silencer_all_rotor_43_v1_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -4,
+        "HorizontalRecoil": -2,
         "Dispersion": -3,
         "CameraRecoil": -5,
         "AutoROF": 0,
@@ -4085,14 +4283,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.49,
-        "Loudness": -23
+        "Loudness": -23,
+        "Convergence": 0
     },
     "5a9fbacda2750c00141e080f": {
         "ItemID": "5a9fbacda2750c00141e080f",
         "Name": "silencer_all_rotor_43_v2_762x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -6,
         "CameraRecoil": -10,
         "AutoROF": 2.25,
@@ -4108,14 +4307,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.57,
-        "Loudness": -17
+        "Loudness": -17,
+        "Convergence": 0
     },
     "5a34fe59c4a282000b1521a2": {
         "ItemID": "5a34fe59c4a282000b1521a2",
         "Name": "silencer_ar10_aac_762_sdn_6_762x51",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -13,
+        "HorizontalRecoil": -7,
         "Dispersion": -8,
         "CameraRecoil": -25,
         "AutoROF": 2.3,
@@ -4131,14 +4331,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.567,
-        "Loudness": -57
+        "Loudness": -57,
+        "Convergence": 0
     },
     "5ba26ae8d4351e00367f9bdb": {
         "ItemID": "5ba26ae8d4351e00367f9bdb",
         "Name": "silencer_mp7_bt_rotex_2_46x30",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -15,
         "CameraRecoil": -10,
         "AutoROF": 1.1,
@@ -4154,14 +4355,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.607,
-        "Loudness": -40
+        "Loudness": -40,
+        "Convergence": 0
     },
     "57c44dd02459772d2e0ae249": {
         "ItemID": "57c44dd02459772d2e0ae249",
         "Name": "silencer_val_tochmash_std_9x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -5,
         "CameraRecoil": -8,
         "AutoROF": 0,
@@ -4177,14 +4379,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.496,
-        "Loudness": -30
+        "Loudness": -30,
+        "Convergence": 0
     },
     "57838c962459774a1651ec63": {
         "ItemID": "57838c962459774a1651ec63",
         "Name": "silencer_vss_tochmash_std_9x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -5,
         "CameraRecoil": -8,
         "AutoROF": 0,
@@ -4200,14 +4403,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.496,
-        "Loudness": -35
+        "Loudness": -35,
+        "Convergence": 0
     },
     "5cff9e84d7ad1a049e54ed55": {
         "ItemID": "5cff9e84d7ad1a049e54ed55",
         "Name": "silencer_wave_dd_wave_qd_supressor_multi",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -15,
+        "HorizontalRecoil": -7.5,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 1.85,
@@ -4223,14 +4427,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.488,
-        "Loudness": -52
+        "Loudness": -52,
+        "Convergence": 0
     },
     "59fb257e86f7742981561852": {
         "ItemID": "59fb257e86f7742981561852",
         "Name": "silencer_akm_zenit_dtk-4m_762x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -7,
         "CameraRecoil": -12,
         "AutoROF": 0.9,
@@ -4246,14 +4451,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.354,
-        "Loudness": -19
+        "Loudness": -19,
+        "Convergence": 0
     },
     "63877c99e785640d436458ea": {
         "ItemID": "63877c99e785640d436458ea",
         "Name": "silencer_base_awc_thor_psr_xl_multi",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -11,
+        "HorizontalRecoil": -6,
         "Dispersion": -11,
         "CameraRecoil": -15,
         "AutoROF": 2,
@@ -4270,14 +4476,15 @@
         "Ergonomics": -28,
         "Weight": 0.737,
         "ModShotDispersion": 0,
-        "Loudness": -64
+        "Loudness": -64,
+        "Convergence": 0
     },
     "5c7955c22e221644f31bfd5e": {
         "ItemID": "5c7955c22e221644f31bfd5e",
         "Name": "silencer_base_gemtech_one_multi",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -12,
         "CameraRecoil": -15,
         "AutoROF": 2.2,
@@ -4293,14 +4500,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.46,
-        "Loudness": -60
+        "Loudness": -60,
+        "Convergence": 0
     },
     "56e05b06d2720bb2668b4586": {
         "ItemID": "56e05b06d2720bb2668b4586",
         "Name": "silencer_pb_tochmash_std_9x18pm",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -3,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 1.7,
@@ -4316,14 +4524,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.131,
-        "Loudness": -50
+        "Loudness": -50,
+        "Convergence": 0
     },
     "57dbb57e2459774673234890": {
         "ItemID": "57dbb57e2459774673234890",
         "Name": "silencer_kac_nt-4_556x45_fde",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 2.15,
@@ -4339,14 +4548,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.68,
-        "Loudness": -40
+        "Loudness": -40,
+        "Convergence": 0
     },
     "57da93632459771cb65bf83f": {
         "ItemID": "57da93632459771cb65bf83f",
         "Name": "silencer_kac_nt-4_556x45_blk",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 2.35,
@@ -4362,14 +4572,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.68,
-        "Loudness": -40
+        "Loudness": -40,
+        "Convergence": 0
     },
     "626673016f1edc06f30cf6d5": {
         "ItemID": "626673016f1edc06f30cf6d5",
         "Name": "silencer_qdc_kac_qdc_suppressor_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -15,
         "CameraRecoil": -5,
         "AutoROF": 1.4,
@@ -4387,14 +4598,15 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.453,
-        "Loudness": -50
+        "Loudness": -50,
+        "Convergence": 0
     },
     "55d617094bdc2d89028b4568": {
         "ItemID": "55d617094bdc2d89028b4568",
         "Name": "silencer_kac_qdc_65x35",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -12,
+        "HorizontalRecoil": -6,
         "Dispersion": -19,
         "CameraRecoil": -10,
         "AutoROF": 2.2,
@@ -4417,7 +4629,7 @@
         "Name": "silencer_all_sig_srd_9_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -6,
+        "HorizontalRecoil": -3,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 0,
@@ -4433,14 +4645,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.255,
-        "Loudness": -44
+        "Loudness": -44,
+        "Convergence": 0
     },
     "5e208b9842457a4a7a33d074": {
         "ItemID": "5e208b9842457a4a7a33d074",
         "Name": "silencer_ak_hexagon_dtkp_762x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 2.3,
@@ -4456,14 +4669,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.412,
-        "Loudness": -40
+        "Loudness": -40,
+        "Convergence": 0
     },
     "615d8f8567085e45ef1409ca": {
         "ItemID": "615d8f8567085e45ef1409ca",
         "Name": "silencer_hex_hexagon_wafflemaker_suppressor_545x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -3,
         "Dispersion": -13,
         "CameraRecoil": -10,
         "AutoROF": 1.15,
@@ -4483,14 +4697,15 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.29,
-        "Loudness": -30
+        "Loudness": -30,
+        "Convergence": 0
     },
     "593d489686f7745c6255d58a": {
         "ItemID": "593d489686f7745c6255d58a",
         "Name": "silencer_akm_hexagon_akm_762x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -9,
         "CameraRecoil": -10,
         "AutoROF": 2.3,
@@ -4506,14 +4721,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.462,
-        "Loudness": -35
+        "Loudness": -35,
+        "Convergence": 0
     },
     "593d493f86f7745e6b2ceb22": {
         "ItemID": "593d493f86f7745e6b2ceb22",
         "Name": "silencer_ak74_hexagon_ak74_545x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -9,
         "CameraRecoil": -10,
         "AutoROF": 2.25,
@@ -4529,14 +4745,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.462,
-        "Loudness": -33
+        "Loudness": -33,
+        "Convergence": 0
     },
     "593d490386f7745ee97a1555": {
         "ItemID": "593d490386f7745ee97a1555",
         "Name": "silencer_sks_hexagon_sks_762x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -6,
+        "HorizontalRecoil": -4,
         "Dispersion": -9,
         "CameraRecoil": -10,
         "AutoROF": 1.5,
@@ -4552,14 +4769,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.462,
-        "Loudness": -32
+        "Loudness": -32,
+        "Convergence": 0
     },
     "55d6190f4bdc2d87028b4567": {
         "ItemID": "55d6190f4bdc2d87028b4567",
         "Name": "silencer_socom_surefire_socom556_mini_monster_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2,
         "Dispersion": -8,
         "CameraRecoil": -5,
         "AutoROF": 1.15,
@@ -4575,14 +4793,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.413,
-        "Loudness": -42
+        "Loudness": -42,
+        "Convergence": 0
     },
     "55d614004bdc2d86028b4568": {
         "ItemID": "55d614004bdc2d86028b4568",
         "Name": "silencer_socom_surefire_socom556_monster_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -9,
+        "HorizontalRecoil": -5,
         "Dispersion": -7,
         "CameraRecoil": -6,
         "AutoROF": 1.5,
@@ -4598,14 +4817,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.496,
-        "Loudness": -47
+        "Loudness": -47,
+        "Convergence": 0
     },
     "59bffbb386f77435b379b9c2": {
         "ItemID": "59bffbb386f77435b379b9c2",
         "Name": "silencer_mount_silencerco_hybrid_46_multi",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -15,
+        "HorizontalRecoil": -7.5,
         "Dispersion": -11,
         "CameraRecoil": -16,
         "AutoROF": 1.9,
@@ -4621,14 +4841,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.49,
-        "Loudness": -50
+        "Loudness": -50,
+        "Convergence": 0
     },
     "5fbe760793164a5b6278efc8": {
         "ItemID": "5fbe760793164a5b6278efc8",
         "Name": "silencer_base_sig_srd_762_qd_762x51",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -7,
         "CameraRecoil": -10,
         "AutoROF": 1.5,
@@ -4644,14 +4865,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.46,
-        "Loudness": -46
+        "Loudness": -46,
+        "Convergence": 0
     },
     "5fbe7618d6fa9c00c571bb6c": {
         "ItemID": "5fbe7618d6fa9c00c571bb6c",
         "Name": "silencer_all_sig_srd_762_762x51",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -6,
+        "HorizontalRecoil": -3,
         "Dispersion": -10,
         "CameraRecoil": -10,
         "AutoROF": 1.9,
@@ -4667,14 +4889,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.46,
-        "Loudness": -44
+        "Loudness": -44,
+        "Convergence": 0
     },
     "5ea17bbc09aa976f2e7a51cd": {
         "ItemID": "5ea17bbc09aa976f2e7a51cd",
         "Name": "silencer_socom_surefire_socom556_rc2_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -3,
+        "HorizontalRecoil": -2,
         "Dispersion": -9,
         "CameraRecoil": -10,
         "AutoROF": 1.5,
@@ -4690,14 +4913,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.482,
-        "Loudness": -48
+        "Loudness": -48,
+        "Convergence": 0
     },
     "602a97060ddce744014caf6f": {
         "ItemID": "602a97060ddce744014caf6f",
         "Name": "silencer_all_izhmash_pl15_std_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -7,
         "CameraRecoil": -15,
         "AutoROF": 0,
@@ -4713,14 +4937,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.293,
-        "Loudness": -38
+        "Loudness": -38,
+        "Convergence": 0
     },
     "5cebec00d7f00c065c53522a": {
         "ItemID": "5cebec00d7f00c065c53522a",
         "Name": "silencer_p90_fn_p90_attenuator_57x28",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -3,
         "Dispersion": -15,
         "CameraRecoil": -10,
         "AutoROF": 1,
@@ -4736,14 +4961,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.354,
-        "Loudness": -37
+        "Loudness": -37,
+        "Convergence": 0
     },
     "57f3c8cc2459773ec4480328": {
         "ItemID": "57f3c8cc2459773ec4480328",
         "Name": "silencer_pp-91-01_zmz_kedr_b_std_9x18pm",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -10,
         "CameraRecoil": -10,
         "AutoROF": 1.5,
@@ -4759,7 +4985,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.13,
-        "Loudness": -45
+        "Loudness": -45,
+        "Convergence": 0
     },
     "5caf187cae92157c28402e43": {
         "ItemID": "5caf187cae92157c28402e43",
@@ -4782,7 +5009,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.7,
-        "Loudness": -48
+        "Loudness": -48,
+        "Convergence": 0
     },
     "57ffb0e42459777d047111c5": {
         "ItemID": "57ffb0e42459777d047111c5",
@@ -4805,7 +5033,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.7,
-        "Loudness": -40
+        "Loudness": -40,
+        "Convergence": 0
     },
     "5a0d63621526d8dba31fe3bf": {
         "ItemID": "5a0d63621526d8dba31fe3bf",
@@ -4828,7 +5057,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.435,
-        "Loudness": -44
+        "Loudness": -44,
+        "Convergence": 0
     },
     "5b86a0e586f7745b600ccb23": {
         "ItemID": "5b86a0e586f7745b600ccb23",
@@ -4851,14 +5081,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.1,
-        "Loudness": -30
+        "Loudness": -30,
+        "Convergence": 0
     },
     "5c4eecc32e221602b412b440": {
         "ItemID": "5c4eecc32e221602b412b440",
         "Name": "silencer_sv98_izhmash_silencer_std_762x54",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -10,
         "CameraRecoil": -15,
         "AutoROF": 0,
@@ -4874,14 +5105,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.27,
-        "Loudness": -39
+        "Loudness": -39,
+        "Convergence": 0
     },
     "5a7ad74e51dfba0015068f45": {
         "ItemID": "5a7ad74e51dfba0015068f45",
         "Name": "silencer_glock_fischer_development_fd917_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -6,
+        "HorizontalRecoil": -5,
         "Dispersion": -12,
         "CameraRecoil": -8,
         "AutoROF": 1.5,
@@ -4910,14 +5142,15 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.35,
-        "Loudness": -38
+        "Loudness": -38,
+        "Convergence": 0
     },
     "5a32a064c4a28200741e22de": {
         "ItemID": "5a32a064c4a28200741e22de",
         "Name": "silencer_all_silencerco_osprey_9_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -3,
         "Dispersion": -15,
         "CameraRecoil": -8,
         "AutoROF": 0,
@@ -4933,14 +5166,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.27,
-        "Loudness": -47
+        "Loudness": -47,
+        "Convergence": 0
     },
     "571a28e524597720b4066567": {
         "ItemID": "571a28e524597720b4066567",
         "Name": "silencer_tt_custom_noname_762x25tt",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -3,
+        "HorizontalRecoil": -2,
         "Dispersion": -5,
         "CameraRecoil": -5,
         "AutoROF": 2.5,
@@ -4956,14 +5190,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.332,
-        "Loudness": -22
+        "Loudness": -22,
+        "Convergence": 0
     },
     "5d44064fa4b9361e4f6eb8b5": {
         "ItemID": "5d44064fa4b9361e4f6eb8b5",
         "Name": "silencer_tbac_thunder_beast_ultra_5_762x51",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -5,
         "CameraRecoil": -8,
         "AutoROF": 1.12,
@@ -4979,14 +5214,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.21,
-        "Loudness": -41
+        "Loudness": -41,
+        "Convergence": 0
     },
     "5d3ef698a4b9361182109872": {
         "ItemID": "5d3ef698a4b9361182109872",
         "Name": "silencer_57_gemtech_sfn_57_57x28",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -3,
         "Dispersion": -10,
         "CameraRecoil": -15,
         "AutoROF": 0.75,
@@ -5002,14 +5238,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.15,
-        "Loudness": -44
+        "Loudness": -44,
+        "Convergence": 0
     },
     "62811fa609427b40ab14e765": {
         "ItemID": "62811fa609427b40ab14e765",
         "Name": "silencer_ai_accuracy_international_tactical_sound_moderator_86x70",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -15,
+        "HorizontalRecoil": -7,
         "Dispersion": -10,
         "CameraRecoil": -15,
         "AutoROF": 0,
@@ -5025,14 +5262,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.665,
-        "Loudness": -40
+        "Loudness": -40,
+        "Convergence": 0
     },
     "59bfc5c886f7743bf6794e62": {
         "ItemID": "59bfc5c886f7743bf6794e62",
         "Name": "silencer_pp-19-01_izhmash_vityaz_std_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -3,
         "Dispersion": -5,
         "CameraRecoil": -10,
         "AutoROF": 1.18,
@@ -5048,14 +5286,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.53,
-        "Loudness": -38
+        "Loudness": -38,
+        "Convergence": 0
     },
     "5dfa3d2b0dee1b22f862eade": {
         "ItemID": "5dfa3d2b0dee1b22f862eade",
         "Name": "silencer_qdc_kac_prs_qdc_762x51",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -12,
+        "HorizontalRecoil": -6,
         "Dispersion": -19,
         "CameraRecoil": -10,
         "AutoROF": 1.9,
@@ -5071,14 +5310,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.59,
-        "Loudness": -51
+        "Loudness": -51,
+        "Convergence": 0
     },
     "5de8f2d5b74cd90030650c72": {
         "ItemID": "5de8f2d5b74cd90030650c72",
         "Name": "silencer_mp9_bt_supressor_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 1,
@@ -5094,14 +5334,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.29,
-        "Loudness": -42
+        "Loudness": -42,
+        "Convergence": 0
     },
     "5a33a8ebc4a282000c5a950d": {
         "ItemID": "5a33a8ebc4a282000c5a950d",
         "Name": "silencer_all_alpha_dog_alpha_9_9x19",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -14,
         "CameraRecoil": -10,
         "AutoROF": 0,
@@ -5117,14 +5358,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.29,
-        "Loudness": -44
+        "Loudness": -44,
+        "Convergence": 0
     },
     "6130c4d51cb55961fa0fd49f": {
         "ItemID": "6130c4d51cb55961fa0fd49f",
         "Name": "silencer_ump_b&t_ump_45_1143x23",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -6,
+        "HorizontalRecoil": -3,
         "Dispersion": -8,
         "CameraRecoil": -14,
         "AutoROF": 1,
@@ -5140,14 +5382,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.453,
-        "Loudness": -48
+        "Loudness": -48,
+        "Convergence": 0
     },
     "564caa3d4bdc2d17108b458e": {
         "ItemID": "564caa3d4bdc2d17108b458e",
         "Name": "silencer_ak74_spectehnika_tgpa_545x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -9,
         "CameraRecoil": -10,
         "AutoROF": 2.25,
@@ -5163,14 +5406,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.7,
-        "Loudness": -30
+        "Loudness": -30,
+        "Convergence": 0
     },
     "5fc4b9b17283c4046c5814d7": {
         "ItemID": "5fc4b9b17283c4046c5814d7",
         "Name": "silencer_base_silencerco_omega_45k_1143x23",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -6,
+        "HorizontalRecoil": -3,
         "Dispersion": -12,
         "CameraRecoil": -8,
         "AutoROF": 0,
@@ -5186,14 +5430,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.27,
-        "Loudness": -50
+        "Loudness": -50,
+        "Convergence": 0
     },
     "60926df0132d4d12c81fd9df": {
         "ItemID": "60926df0132d4d12c81fd9df",
         "Name": "silencer_asr_silencerco_saker_556_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
+        "HorizontalRecoil": -2.5,
         "Dispersion": -8,
         "CameraRecoil": -10,
         "AutoROF": 1.12,
@@ -5209,7 +5454,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.51,
-        "Loudness": -46
+        "Loudness": -46,
+        "Convergence": 0
     },
     "5926d33d86f77410de68ebc0": {
         "ItemID": "5926d33d86f77410de68ebc0",
@@ -5232,14 +5478,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.496,
-        "Loudness": -65
+        "Loudness": -65,
+        "Convergence": 0
     },
     "5a27b6bec4a282000e496f78": {
         "ItemID": "5a27b6bec4a282000e496f78",
         "Name": "silencer_sr1mp_tochmash_sr1mp_std_9x21",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -6,
+        "HorizontalRecoil": -4,
         "Dispersion": -10,
         "CameraRecoil": -10,
         "AutoROF": 2.25,
@@ -5255,14 +5502,15 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.49,
-        "Loudness": -41
+        "Loudness": -41,
+        "Convergence": 0
     },
     "59c0ec5b86f77435b128bfca": {
         "ItemID": "59c0ec5b86f77435b128bfca",
         "Name": "silencer_12g_hexagon_12k",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -10,
         "CameraRecoil": -13,
         "AutoROF": 1.5,
@@ -5279,14 +5527,15 @@
         "Ergonomics": 0,
         "Weight": 0.493,
         "ModShotDispersion": 5,
-        "Loudness": -31
+        "Loudness": -31,
+        "Convergence": 0
     },
     "5b363dd25acfc4001a598fd2": {
         "ItemID": "5b363dd25acfc4001a598fd2",
         "Name": "silencer_base_silencerco_salvo_12g",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -12,
         "CameraRecoil": -10,
         "AutoROF": 1.85,
@@ -5307,16 +5556,17 @@
         "Ergonomics": 0,
         "Weight": 0.97,
         "ModShotDispersion": 10,
-        "Loudness": -37
+        "Loudness": -37,
+        "Convergence": 0
     },
     "54490a4d4bdc2dbc018b4573": {
         "ItemID": "54490a4d4bdc2dbc018b4573",
         "Name": "silencer_silencerco_sparrow_22lr",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
-        "Dispersion": -5,
-        "CameraRecoil": -5,
+        "HorizontalRecoil": -2,
+        "Dispersion": -2,
+        "CameraRecoil": -2,
         "AutoROF": 1,
         "SemiROF": 1,
         "ModMalfunctionChance": -10,
@@ -5336,7 +5586,7 @@
         "ItemID": "630f291b9f66a28b37094bb8",
         "Name": "muzzle_aug_steyr_a3_muzzle_brake_556x45",
         "ModType": "barrel_2slot",
-        "VerticalRecoil": -9,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -3,
         "Dispersion": -7,
         "CameraRecoil": -2,
@@ -5354,13 +5604,14 @@
         "Ergonomics": 0,
         "Weight": 0.074,
         "ModShotDispersion": 0,
-        "Loudness": 16
+        "Loudness": 16,
+        "Convergence": 11
     },
     "630f2872911356c17d06abc5": {
         "ItemID": "630f2872911356c17d06abc5",
         "Name": "muzzle_aug_steyr_a1_closed_flash_hider_556x45",
         "ModType": "barrel_2slot",
-        "VerticalRecoil": -6,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -5,
         "Dispersion": -5,
         "CameraRecoil": 0,
@@ -5378,13 +5629,14 @@
         "Ergonomics": 0,
         "Weight": 0.063,
         "ModShotDispersion": 0,
-        "Loudness": 4
+        "Loudness": 4,
+        "Convergence": 6
     },
     "630f28f0cadb1fe05e06f004": {
         "ItemID": "630f28f0cadb1fe05e06f004",
         "Name": "muzzle_aug_steyr_a3_closed_flash_hider_556x45",
         "ModType": "barrel_2slot",
-        "VerticalRecoil": -6,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -5.5,
         "Dispersion": -5.5,
         "CameraRecoil": 0,
@@ -5402,7 +5654,8 @@
         "Ergonomics": 0,
         "Weight": 0.064,
         "ModShotDispersion": 0,
-        "Loudness": 5
+        "Loudness": 5,
+        "Convergence": 6
     },
     "630f27f04f3f6281050b94d7": {
         "ItemID": "630f27f04f3f6281050b94d7",
@@ -5426,14 +5679,15 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "ModShotDispersion": 0,
-        "Loudness": 0
+        "Loudness": 0,
+        "Convergence": 0
     },
     "634eba08f69c710e0108d386": {
         "ItemID": "634eba08f69c710e0108d386",
         "Name": "silencer_aug_aseutra_sl7i_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -8,
         "CameraRecoil": -8,
         "AutoROF": 1.8,
@@ -5452,14 +5706,15 @@
         "Ergonomics": 0,
         "Weight": 0.494,
         "ModShotDispersion": 0,
-        "Loudness": -38
+        "Loudness": -38,
+        "Convergence": 0
     },
     "630f2982cdb9e392db0cbcc7": {
         "ItemID": "630f2982cdb9e392db0cbcc7",
         "Name": "silencer_aug_reflex_suppressor_t4aug_ranger_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -10,
         "CameraRecoil": -10,
         "AutoROF": 2.3,
@@ -5479,13 +5734,14 @@
         "Ergonomics": 0,
         "Weight": 0.38,
         "ModShotDispersion": 0,
-        "Loudness": -42
+        "Loudness": -42,
+        "Convergence": 0
     },
     "6386120cd6baa055ad1e201c": {
         "ItemID": "6386120cd6baa055ad1e201c",
         "Name": "muzzle_ar15_griffin_gatelok_hammer_comp_556x45",
         "ModType": "",
-        "VerticalRecoil": -4,
+        "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -6,
         "CameraRecoil": 0,
@@ -5503,14 +5759,15 @@
         "Ergonomics": -1,
         "Weight": 0.068,
         "ModShotDispersion": 0,
-        "Loudness": 5
+        "Loudness": 5,
+        "Convergence": 4
     },
     "638612b607dfed1ccb7206ba": {
         "ItemID": "638612b607dfed1ccb7206ba",
         "Name": "silencer_sdqd_griffin_m4sd_k_silencer_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
+        "HorizontalRecoil": -4,
         "Dispersion": -10,
         "CameraRecoil": -10,
         "AutoROF": 1.8,
@@ -5529,7 +5786,8 @@
         "Ergonomics": 0,
         "Weight": 0.397,
         "ModShotDispersion": 0,
-        "Loudness": -43
+        "Loudness": -43,
+        "Convergence": 0
     },
     "62e2a754b6c0ee2f230cee0f": {
         "ItemID": "62e2a754b6c0ee2f230cee0f",
@@ -5553,14 +5811,15 @@
         "Ergonomics": 5,
         "Weight": 0.087,
         "ModShotDispersion": 0,
-        "Loudness": -5
+        "Loudness": -5,
+        "Convergence": 0
     },
     "62e2a7138e1ac9380579c122": {
         "ItemID": "62e2a7138e1ac9380579c122",
         "Name": "silencer_sr2m_tochmash_suppressor_9x21",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -8,
         "CameraRecoil": -5,
         "AutoROF": 1.8,
@@ -5577,7 +5836,8 @@
         "Ergonomics": 0,
         "Weight": 0.575,
         "ModShotDispersion": 0,
-        "Loudness": -28
+        "Loudness": -28,
+        "Convergence": 0
     },
     "5580239d4bdc2de7118b4583": {
         "ItemID": "5580239d4bdc2de7118b4583",

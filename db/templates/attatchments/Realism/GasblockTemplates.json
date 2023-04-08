@@ -354,7 +354,7 @@
     "56eabcd4d2720b66698b4574": {
         "ItemID": "56eabcd4d2720b66698b4574",
         "Name": "gas_block_ar15_dd_mk12_low_profile",
-        "ModType": "gasblock_upgassed",
+        "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -373,7 +373,7 @@
     "5d00ec68d7ad1a04a067e5be": {
         "ItemID": "5d00ec68d7ad1a04a067e5be",
         "Name": "gas_block_ar15_jp_jpgs5b",
-        "ModType": "gasblock_downgassed",
+        "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -25,
         "CameraRecoil": -20,
@@ -388,7 +388,8 @@
         "DurabilityBurnModificator": 0.7,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.064
+        "Weight": 0.064,
+        "Convergence": 15
     },
     "56ea8d2fd2720b7c698b4570": {
         "ItemID": "56ea8d2fd2720b7c698b4570",

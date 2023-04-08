@@ -666,6 +666,7 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
 
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
+            itemCloning.createCustomAttachments();
         }
 
         // codegen.attTemplatesCodeGen();
