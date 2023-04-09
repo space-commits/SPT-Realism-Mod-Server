@@ -762,7 +762,8 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "DurabilityBurnModificator": 1.05
+        "DurabilityBurnModificator": 1.05,
+        "Convergence": 5
     },
     "5c793fb92e221644f31bfb64": {
         "ItemID": "5c793fb92e221644f31bfb64",
@@ -783,7 +784,8 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "DurabilityBurnModificator": 1.05
+        "DurabilityBurnModificator": 1.05,
+        "Convergence": 5
     },
     "606587e18900dc2d9a55b65f": {
         "ItemID": "606587e18900dc2d9a55b65f",
@@ -867,7 +869,8 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.086,
-        "DurabilityBurnModificator": 1.1
+        "DurabilityBurnModificator": 1.1,
+        "Convergence": 5
     },
     "5ef1ba28c64c5d0dfc0571a5": {
         "ItemID": "5ef1ba28c64c5d0dfc0571a5",

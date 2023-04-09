@@ -1688,8 +1688,8 @@ export class Armor {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if ((serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG) && serverItem?._props.armorClass != null && serverItem?._props.ArmorMaterial !== "ArmoredSteel" && serverItem?._props.ArmorMaterial !== "Titan") {
-                if (serverItem._props.armorClass >= 4 && serverItem._props.armorClass <= 5) {
-                    serverItem._props.BluntThroughput *= 1;
+                if (serverItem._props.armorClass >= 3 && serverItem._props.armorClass <= 5) {
+                    serverItem._props.BluntThroughput *= 1.15;
                 }
                 if (serverItem._props.armorClass >= 6 && serverItem._props.armorClass <= 7) {
                     serverItem._props.BluntThroughput *= 1;

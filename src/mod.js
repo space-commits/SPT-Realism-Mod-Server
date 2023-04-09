@@ -106,13 +106,16 @@ class Main {
         const locationGenerator = container.resolve("LocationGenerator");
         const lootGenerator = container.resolve("LootGenerator");
         const itemBaseClassService = container.resolve("ItemBaseClassService");
+        const durabilityLimitsHelper = container.resolve("DurabilityLimitsHelper");
+        const appContext = container.resolve("ApplicationContext");
         const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new bot_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
-        const _botModGen = new bot_gen_1.BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
+        const _botModGen = new bot_gen_1.BotEquipGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const botLootGen = new bot_loot_serv_1.BotLooGen(logger, hashUtil, randomUtil, itemHelper, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new bot_gen_1.GenBotLvl(logger, randomUtil, databaseServer);
         const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer);
+        const myBotGenHelper = new bot_gen_1.BotGenHelper(logger, randomUtil, databaseServer, durabilityLimitsHelper, itemHelper, appContext, localisationService, configServer);
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
         const router = container.resolve("DynamicRouterModService");
@@ -149,6 +152,11 @@ class Main {
             container.afterResolution("BotLevelGenerator", (_t, result) => {
                 result.generateBotLevel = (levelDetails, botGenerationDetails, bot) => {
                     return genBotLvl.genBotLvl(levelDetails, botGenerationDetails, bot);
+                };
+            }, { frequency: "Always" });
+            container.afterResolution("BotGeneratorHelper", (_t, result) => {
+                result.generateExtraPropertiesForItem = (itemTemplate, botRole = null) => {
+                    return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
                 };
             }, { frequency: "Always" });
         }

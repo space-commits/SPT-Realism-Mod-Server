@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotGenHelper = exports.CheckRequired = exports.BotWepGen = exports.GenBotLvl = void 0;
+exports.BotEquipGenHelper = exports.BotGenHelper = exports.CheckRequired = exports.BotWepGen = exports.GenBotLvl = void 0;
 const BotWeaponGenerator_1 = require("C:/snapshot/project/obj/generators/BotWeaponGenerator");
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const helper_1 = require("./helper");
@@ -9,6 +9,8 @@ const BotGeneratorHelper_1 = require("C:/snapshot/project/obj/helpers/BotGenerat
 const BotLevelGenerator_1 = require("C:/snapshot/project/obj/generators/BotLevelGenerator");
 const InventoryMagGen_1 = require("C:/snapshot/project/obj/generators/weapongen/InventoryMagGen");
 const enums_1 = require("./enums");
+const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
+const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
 const modConfig = require("../config/config.json");
 class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
     genBotLvl(levelDetails, botGenerationDetails, bot) {
@@ -71,7 +73,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         const botHelper = tsyringe_1.container.resolve("BotHelper");
         const botEquipmentModPoolService = tsyringe_1.container.resolve("BotEquipmentModPoolService");
         const itemBaseClassService = tsyringe_1.container.resolve("ItemBaseClassService");
-        const _botModGen = new BotGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
+        const _botModGen = new BotEquipGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
         const modPool = botTemplateInventory.mods;
         const weaponItemTemplate = this.itemHelper.getItem(weaponTpl)[1];
         if (!weaponItemTemplate) {
@@ -147,6 +149,10 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         return true;
     }
     getPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole) {
+        const logger = tsyringe_1.container.resolve("WinstonLogger");
+        const durabilityLimitsHelper = tsyringe_1.container.resolve("DurabilityLimitsHelper");
+        const appContext = tsyringe_1.container.resolve("ApplicationContext");
+        const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, this.itemHelper, appContext, this.localisationService, this.configServer);
         const tierChecker = new helper_1.BotTierTracker();
         const tier = tierChecker.getTier(botRole);
         if (modConfig.logEverything == true) {
@@ -201,7 +207,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                     ...parentItem, ...{
                         "parentId": weaponParentId,
                         "slotId": equipmentSlot,
-                        ...this.botGeneratorHelper.generateExtraPropertiesForItem(itemTemplate, botRole)
+                        ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole)
                     }
                 };
                 weaponMods.push(...preset._items);
@@ -224,7 +230,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                     ...parentItem, ...{
                         "parentId": weaponParentId,
                         "slotId": equipmentSlot,
-                        ...this.botGeneratorHelper.generateExtraPropertiesForItem(itemTemplate, botRole)
+                        ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole)
                     }
                 };
                 weaponMods.push(...preset._items);
@@ -249,7 +255,70 @@ class CheckRequired {
     }
 }
 exports.CheckRequired = CheckRequired;
-class BotGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
+class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
+    myGenerateExtraPropertiesForItem(itemTemplate, botRole = null) {
+        // Get raid settings, if no raid, default to day
+        const raidSettings = this.applicationContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION)?.getValue();
+        const raidIsNight = raidSettings?.timeVariant === "PAST";
+        const itemProperties = {};
+        if (itemTemplate._props.MaxDurability) {
+            if (itemTemplate._props.weapClass) // Is weapon
+             {
+                itemProperties.Repairable = this.generateWeaponRepairableProperties(itemTemplate, botRole);
+            }
+            else if (itemTemplate._props.armorClass) // Is armor
+             {
+                itemProperties.Repairable = this.generateArmorRepairableProperties(itemTemplate, botRole);
+            }
+        }
+        if (itemTemplate._props.HasHinge) {
+            itemProperties.Togglable = { On: true };
+        }
+        if (itemTemplate._props.Foldable) {
+            itemProperties.Foldable = { Folded: false };
+        }
+        if (itemTemplate._props.weapFireType?.length) {
+            if (itemTemplate._props.weapFireType.includes("fullauto")) {
+                itemProperties.FireMode = { FireMode: "fullauto" };
+            }
+            else {
+                itemProperties.FireMode = { FireMode: this.randomUtil.getArrayValue(itemTemplate._props.weapFireType) };
+            }
+        }
+        if (itemTemplate._props.MaxHpResource) {
+            itemProperties.MedKit = { HpResource: itemTemplate._props.MaxHpResource };
+        }
+        if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
+            itemProperties.FoodDrink = { HpPercent: itemTemplate._props.MaxResource };
+        }
+        if (itemTemplate._parent === BaseClasses_1.BaseClasses.FLASHLIGHT) {
+            // Get chance from botconfig for bot type
+            const lightLaserActiveChance = this.getBotEquipmentSettingFromConfig(botRole, "lightIsActiveDayChancePercent", 25);
+            itemProperties.Light = { IsActive: (this.randomUtil.getChance100(lightLaserActiveChance)), SelectedMode: 0 };
+        }
+        else if (itemTemplate._parent === BaseClasses_1.BaseClasses.TACTICAL_COMBO) {
+            // Get chance from botconfig for bot type, use 50% if no value found
+            const lightLaserActiveChance = this.getBotEquipmentSettingFromConfig(botRole, "laserIsActiveChancePercent", 50);
+            itemProperties.Light = { IsActive: (this.randomUtil.getChance100(lightLaserActiveChance)), SelectedMode: 0 };
+        }
+        if (itemTemplate._parent === BaseClasses_1.BaseClasses.NIGHTVISION) {
+            // Get chance from botconfig for bot type
+            const nvgActiveChance = this.getBotEquipmentSettingFromConfig(botRole, "nvgIsActiveChanceDayPercent", 15);
+            itemProperties.Togglable = { On: (this.randomUtil.getChance100(nvgActiveChance)) };
+        }
+        // Togglable face shield
+        if (itemTemplate._props.HasHinge && itemTemplate._props.FaceShieldComponent) {
+            // Get chance from botconfig for bot type, use 75% if no value found
+            const faceShieldActiveChance = this.getBotEquipmentSettingFromConfig(botRole, "faceShieldIsActiveChancePercent", 75);
+            itemProperties.Togglable = { On: (this.randomUtil.getChance100(faceShieldActiveChance)) };
+        }
+        return Object.keys(itemProperties).length
+            ? { upd: itemProperties }
+            : {};
+    }
+}
+exports.BotGenHelper = BotGenHelper;
+class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
     myShouldModBeSpawned(itemSlot, modSlot, modSpawnChances, checkRequired) {
         const modSpawnChance = checkRequired.checkRequired(itemSlot) || this.getAmmoContainers().includes(modSlot)
             ? 100
@@ -423,4 +492,4 @@ class BotGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
         return weapon;
     }
 }
-exports.BotGenHelper = BotGenHelper;
+exports.BotEquipGenHelper = BotEquipGenHelper;

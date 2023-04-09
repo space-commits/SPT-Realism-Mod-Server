@@ -19,7 +19,7 @@ import { BotGeneratorHelper } from "@spt-aki/helpers/BotGeneratorHelper";
 import { WeightedRandomHelper } from "@spt-aki/helpers/WeightedRandomHelper";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { Chances, IBotType, Inventory, ItemMinMax, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { Item, Upd } from "@spt-aki/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
 import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
@@ -87,7 +87,7 @@ import { Meds } from "./meds";
 import { Player } from "./player"
 import { WeaponsGlobals } from "./weapons_globals"
 import { Bots } from "./bots";
-import { BotGenHelper, BotWepGen, GenBotLvl } from "./bot_gen";
+import { BotEquipGenHelper, BotGenHelper, BotWepGen, GenBotLvl } from "./bot_gen";
 import { BotLooGen } from "./bot_loot_serv";
 import { _Items } from "./items";
 import { CodeGen } from "./code_gen";
@@ -109,6 +109,7 @@ import { OldAmmo } from "./ammo_old";
 import { OldArmor } from "./armor_old";
 import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
 import { ItemBaseClassService } from "@spt-aki/services/ItemBaseClassService";
+import { DurabilityLimitsHelper } from "@spt-aki/helpers/DurabilityLimitsHelper";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -173,15 +174,18 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
         const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
         const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
         const itemBaseClassService = container.resolve<ItemBaseClassService>("ItemBaseClassService");
+        const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
+        const appContext = container.resolve<ApplicationContext>("ApplicationContext");
 
 
         const ragFairCallback = new RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
-        const _botModGen = new BotGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
+        const _botModGen = new BotEquipGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
         const botLootGen = new BotLooGen(logger, hashUtil, randomUtil, itemHelper, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
         const genBotLvl = new GenBotLvl(logger, randomUtil, databaseServer);
         const airdropController = new AirdropLootgen(jsonUtil, hashUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer)
+        const myBotGenHelper = new BotGenHelper(logger, randomUtil, databaseServer, durabilityLimitsHelper, itemHelper, appContext, localisationService, configServer);
 
         const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
@@ -229,6 +233,12 @@ class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiL
             container.afterResolution("BotLevelGenerator", (_t, result: BotLevelGenerator) => {
                 result.generateBotLevel = (levelDetails: MinMax, botGenerationDetails: BotGenerationDetails, bot: IBotBase): IRandomisedBotLevelResult => {
                     return genBotLvl.genBotLvl(levelDetails, botGenerationDetails, bot);
+                }
+            }, { frequency: "Always" });
+
+            container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
+                result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null):{ upd?: Upd }  => {
+                    return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
                 }
             }, { frequency: "Always" });
         }

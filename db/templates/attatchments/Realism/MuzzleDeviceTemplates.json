@@ -2227,8 +2227,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.028,
-        "Loudness": 21,
-        "Convergence": 15
+        "Loudness": 31,
+        "Convergence": 22
     },
     "612e0e3c290d254f5e6b291d": {
         "ItemID": "612e0e3c290d254f5e6b291d",
@@ -2251,8 +2251,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.035,
-        "Loudness": 21,
-        "Convergence": 15
+        "Loudness": 31,
+        "Convergence": 22
     },
     "5bbdb8bdd4351e4502011460": {
         "ItemID": "5bbdb8bdd4351e4502011460",
@@ -2860,7 +2860,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Dispersion": -14,
+        "Dispersion": -18,
         "CameraRecoil": -10,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -2876,7 +2876,7 @@
         "Ergonomics": 0,
         "Weight": 0.2,
         "Loudness": 32,
-        "Convergence": 9
+        "Convergence": 11
     },
     "5caf17c9ae92150b30006be1": {
         "ItemID": "5caf17c9ae92150b30006be1",
@@ -3435,7 +3435,7 @@
         "Name": "muzzle_ar15_alientech_gubich_muzzle_brake_556x45",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -40,
+        "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": -30,
         "AutoROF": 0,
@@ -3452,9 +3452,9 @@
         "Ergonomics": 0,
         "Weight": 0.085,
         "ModShotDispersion": 0,
-        "Loudness": 60,
+        "Loudness": 75,
         "MalfChance": 0,
-        "Convergence": -10
+        "Convergence": 40
     },
     "5f6339d53ada5942720e2dc3": {
         "ItemID": "5f6339d53ada5942720e2dc3",

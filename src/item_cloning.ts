@@ -28,6 +28,7 @@ export class ItemCloning {
         this.addToHandbook("TIER1MEDKIT", "5b47574386f77428ca22b338", 10000);
         this.addToLocale("TIER1MEDKIT", "Makeshift Medical Kit", "TIER1", "A makeshift medical kit used for healing minor wounds that have been already stabilized in the field. Not suitable for use in the field.");
         this.addToHideout(this.crafts.Tier1Medkit);
+
         //Tier 2 Medkit
         this.cloneMedicalItem(
             "5755356824597772cb798962",
@@ -43,6 +44,7 @@ export class ItemCloning {
         this.addToHandbook("TIER2MEDKIT", "5b47574386f77428ca22b338", 20000);
         this.addToLocale("TIER2MEDKIT", "Improved Makeshift Medical Kit", "TIER2", "An improved makeshift medical kit used for healing wounds that have been already stabilized in the field. Not suitable for use in the field.");
         this.addToHideout(this.crafts.Tier2Medkit);
+
         //Tier 3 Medkit
         this.cloneMedicalItem(
             "5755356824597772cb798962",
@@ -58,6 +60,7 @@ export class ItemCloning {
         this.addToHandbook("TIER3MEDKIT", "5b47574386f77428ca22b338", 30000);
         this.addToLocale("TIER3MEDKIT", "High-Grade Makeshift Medical Kit", "TIER3", "A high-grade makeshift medical kit used for healing more severe wounds that have been already stabilized in the field. Not suitable for use in the field.");
         this.addToHideout(this.crafts.Tier3Medkit);
+        
         //SuperMedkit (for bots)
         // this.cloneMedicalItem(
         //     "590c678286f77426c9660122",

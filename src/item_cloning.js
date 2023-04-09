@@ -47,17 +47,17 @@ class ItemCloning {
         //Mechanic custom SKS
         this.cloneWeapons("574d967124597745970e7c94", "mechSKSv1", "violet");
         this.addToHandbook("mechSKSv1", "5b5f78e986f77447ed5636b1", 12500);
-        this.addToLocale("mechSKSv1", "Mechanic's Custom SKS", "Mech SKS", "Mechanic has done custom work to this SKS: the trigger components have been polished and the springs lightened for a lighter and cleaner trigger pull. The gas system has been modified to make the rifle softer shooting, at the expense of reliability. Lightening cuts have reduced the weight of the rifle as well as improving balance. \n\nSoviet semi-automatic carbine designed by Sergei Simonov for 7.62x39 cartridge and known abroad as SKS-45. Immensely popular both in CIS countries and in the West, this weapon is still in active service in some countries in form of various copies and modifications. This particular specimen comes from extended storage warehouses of Tula Arms Plant and haven't yet undergone the civilian weapon normalization procedure.");
+        this.addToLocale("mechSKSv1", "Mechanic's Custom SKS", "Mech SKS", "Mechanic has done custom work to this SKS: the trigger components have been polished and the springs lightened for a lighter and cleaner trigger pull. The gas system has been modified to make the rifle softer shooting, at the expense of reliability. Lightening cuts have reduced the weight of the rifle as well as improving balance.");
         this.addToMastering("mechSKSv1", "SKS");
         //Mechanic custom OP-SKS
         this.cloneWeapons("587e02ff24597743df3deaeb", "mechOPSKSv1", "violet");
         this.addToHandbook("mechOPSKSv1", "5b5f78e986f77447ed5636b1", 15000);
-        this.addToLocale("mechOPSKSv1", "Mechanic's Custom OP-SKS", "Mech OP-SKS", "Mechanic has done custom work to this OP-SKS: the trigger components have been polished and the springs lightened for a lighter and cleaner trigger pull. The gas system has been modified to make the rifle softer shooting, at the expense of reliability. Lightening cuts have reduced the weight of the rifle as well as improving balance. The rifle has also been accuraized as much as an SKS can be. \n\nMolot OP-SKS Carbine is designed for loading with 7.62x39 - the most popular ammunition. The weight and dimensions make the carbine ergonomic for shooters of any age and height. It has been used for all types of traditional Russian hunting for more than 50 years. Tested on predators in Africa, Southeast Asia, Central America, Middle East..");
+        this.addToLocale("mechOPSKSv1", "Mechanic's Custom OP-SKS", "Mech OP-SKS", "Mechanic has done custom work to this OP-SKS: the trigger components have been polished and the springs lightened for a lighter and cleaner trigger pull. The gas system has been modified to make the rifle softer shooting, at the expense of reliability. Lightening cuts have reduced the weight of the rifle as well as improving balance. The rifle has also been accuraized as much as an SKS can be.");
         this.addToMastering("mechOPSKSv1", "SKS");
         //Mechanic custom STM
         this.cloneWeapons("60339954d62c9b14ed777c06", "mechSTM9v1", "violet");
         this.addToHandbook("mechSTM9v1", "5b5f796a86f774093f2ed3c0", 15000);
-        this.addToLocale("mechSTM9v1", "Mechanic's Custom STM-9", "Mech STM-9", "Mechanic has done custom work to this STM-9: a device that allows the STM to fire in full auto has been installed. However, due to the makeshift nature of the modifcation, it is now only capable of full auto fire and reliability has been decreased.   \n\nA PCC carbine with excellent performance already \"out of the box\". Designed with the participation of world bronze medalist in Semi-Auto Rifle Vadim Mikhailov. Accuracy, speed, comfort of recoil.");
+        this.addToLocale("mechSTM9v1", "Mechanic's Custom STM-9", "Mech STM-9", "Mechanic has done custom work to this STM-9: a device that allows the STM to fire in full auto has been installed. However, due to the makeshift nature of the modifcation, it is now only capable of full auto fire and reliability has been decreased.");
         this.addToMastering("mechSTM9v1", "M4");
         //Mechanic custom Saiga12k
         this.cloneWeapons("576165642459773c7a400233", "mechSaiga12v1", "violet");
@@ -78,7 +78,7 @@ class ItemCloning {
     createCustomAttachments() {
         //Mechanic custom ar15 260mm barrel
         this.cloneAttachments("55d35ee94bdc2d61338b4568", "mechAR15_260mm", "violet");
-        this.addToHandbook("mechAR15_260mm", "", 15000);
+        this.addToHandbook("mechAR15_260mm", "5b5f75c686f774094242f19f", 10000);
         this.addToLocale("mechAR15_260mm", "Mechanic's Custom 260mm AR-15 Barrel", "Mech AR 260mm", "Mechanic imported a batch of barrel blanks from overseas before the conflict began, and has started putting them to use. This 260mm barrel has a precisiely machined crown, increasing precision. Most significantly, the gasport is not enlarged as most short AR-15 barrels typically do. This means reduced recoil and durability burn, at the expense of reduced realiabilty due to the short dwell time. To effecitvely use this barrel it should be paired with attachments that increase reliability.");
     }
     addToMastering(id, masteringCat) {
