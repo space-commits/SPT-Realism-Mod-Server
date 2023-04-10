@@ -130,7 +130,7 @@ export class JsonHandler {
             var serverConfItems = serverItem._props.ConflictingItems;
             var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "Unclassified", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1", fileItem?.ReloadSpeedMulti || "1",
                 fileItem?.MinVelocity || "500", fileItem.MinKE || "2000", fileItem.MinPen || "50", fileItem.HasBypassedArmor || "false", fileItem.HasSideArmor || "false", fileItem.HasStomachArmor || "false",
-                fileItem?.HasHitSecondaryArmor || "false", fileItem?.HasNeckArmor || "false",  fileItem?.dB || "0"];
+                fileItem?.HasHitSecondaryArmor || "false", fileItem?.HasNeckArmor || "false",  fileItem?.dB || "1"];
 
             var combinedArr = armorPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;

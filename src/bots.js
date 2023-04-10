@@ -481,8 +481,8 @@ class Bots {
         }
         if (this.modConf.pmc_difficulty == true) {
             this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;
+            ;
         }
-        
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
         }
