@@ -492,10 +492,11 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
         trader.base.refreshTraderRagfairOffers = true;
         //have to manually update ragfair trader offers otherwise trader offers get bugged on ragfair
-        const traders = tsyringe_1.container.resolve("RagfairServer").getUpdateableTraders();
-        for (let traderID in traders) {
-            this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
-        }
+        // const tables = container.resolve<DatabaseServer>("DatabaseServer").getTables();
+        // const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
+        // const tieredFlea = new TieredFlea(tables);
+        // const arrays = new Arrays(tables);
+        // tieredFlea.updateFlea(this.logger, ragfairOfferGenerator, container, arrays, ProfileTracker.level);
     }
     getDirtyTraderAssorts(trader) {
         const tables = this.databaseServer.getTables();

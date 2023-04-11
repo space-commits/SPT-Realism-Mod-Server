@@ -146,6 +146,10 @@ export class Helper {
     }
 }
 
+export class ProfileTracker{
+    static level: number = 1;
+}
+
 export class ConfigChecker {
     static dllIsPresent: boolean = false;
 }

@@ -612,6 +612,9 @@ class Bots {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.pmcTypeTimmy.pmcTypeNight.sptusec;
             }
         }
+        if (this.modConf.dynamic_loot_bots === true) {
+            this.usecBase.inventory.items = usecLO.usecLO1.inventory.dynamic_looting;
+        }
         helper_1.BotTierTracker.usecTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
@@ -672,6 +675,9 @@ class Bots {
             if (helper_1.RaidInfoTracker.TOD === "night") {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
             }
+        }
+        if (this.modConf.dynamic_loot_bots === true) {
+            this.usecBase.inventory.items = usecLO.usecLO2.inventory.dynamic_looting;
         }
         helper_1.BotTierTracker.usecTier = 2;
         if (this.modConf.logEverything == true) {
@@ -735,6 +741,9 @@ class Bots {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
             }
         }
+        if (this.modConf.dynamic_loot_bots === true) {
+            this.usecBase.inventory.items = usecLO.usecLO3.inventory.dynamic_looting;
+        }
         helper_1.BotTierTracker.usecTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
@@ -788,6 +797,9 @@ class Bots {
         }
         if (helper_1.RaidInfoTracker.mapType === "outdoor") {
             this.usecBase.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_outdoor;
+        }
+        if (this.modConf.dynamic_loot_bots === true) {
+            this.usecBase.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
         }
         if (this.modConf.pmc_types == true) {
             for (let map in this.botConf.pmc.pmcType.sptusec) {
@@ -848,6 +860,9 @@ class Bots {
                 this.bearBase.chances.mods.mod_equipment_000 = 20;
                 this.bearBase.chances.mods.mod_equipment = 20;
             }
+        }
+        if (this.modConf.dynamic_loot_bots === true) {
+            this.bearBase.inventory.items = bearLO.bearLO1.inventory.dynamic_looting;
         }
         if (this.modConf.pmc_types == true) {
             if (helper_1.RaidInfoTracker.TOD === "day") {
@@ -917,6 +932,9 @@ class Bots {
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
         }
+        if (this.modConf.dynamic_loot_bots === true) {
+            this.bearBase.inventory.items = bearLO.bearLO2.inventory.dynamic_looting;
+        }
         helper_1.BotTierTracker.bearTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
@@ -977,6 +995,9 @@ class Bots {
             if (helper_1.RaidInfoTracker.TOD === "night") {
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
+        }
+        if (this.modConf.dynamic_loot_bots === true) {
+            this.bearBase.inventory.items = bearLO.bearLO3.inventory.dynamic_looting;
         }
         helper_1.BotTierTracker.bearTier = 3;
         if (this.modConf.logEverything == true) {
@@ -1045,6 +1066,9 @@ class Bots {
             if (helper_1.RaidInfoTracker.TOD === "night") {
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
             }
+        }
+        if (this.modConf.dynamic_loot_bots === true) {
+            this.bearBase.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
         }
         helper_1.BotTierTracker.bearTier = 4;
         if (this.modConf.logEverything == true) {

@@ -23,6 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Main = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
 ;
@@ -201,6 +202,7 @@ class Main {
                     let level = 1;
                     if (pmcData?.Info?.Level !== undefined) {
                         level = pmcData.Info.Level;
+                        helper_1.ProfileTracker.level = level;
                     }
                     try {
                         if (modConfig.backup_profiles == true) {
@@ -238,7 +240,7 @@ class Main {
                         }
                         clientValidateCount += 1;
                         if (modConfig.tiered_flea == true) {
-                            this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
+                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
                         }
                         if (modConfig.boss_spawns == true) {
                             this.setBossSpawnChance(postLoadTables.locations, level);
@@ -401,7 +403,7 @@ class Main {
                     }
                     try {
                         if (modConfig.tiered_flea == true) {
-                            this.updateFlea(logger, tieredFlea, ragfairOfferGenerator, container, arrays, level);
+                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
                         }
                         player.correctNegativeHP(pmcData);
                         if (modConfig.realistic_player_health == true) {
@@ -643,62 +645,6 @@ class Main {
         }
         if (modConfig.logEverything == true) {
             logger.info("Realism Mod: Profile Checked");
-        }
-    }
-    fleaHelper(fetchTier, ragfairOfferGen, container) {
-        const offers = container.resolve("RagfairOfferService").getOffers();
-        const traders = container.resolve("RagfairServer").getUpdateableTraders();
-        for (let o in offers) {
-            container.resolve("RagfairOfferService").removeOfferById(offers[o]._id);
-        }
-        fetchTier();
-        ragfairOfferGen.generateDynamicOffers();
-        for (let traderID in traders) {
-            ragfairOfferGen.generateFleaOffersForTrader(traders[traderID]);
-        }
-    }
-    updateFlea(logger, flea, ragfairOfferGen, container, arrays, level) {
-        if (level === undefined) {
-            this.fleaHelper(flea.flea0.bind(flea), ragfairOfferGen, container);
-            logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
-        }
-        if (level !== undefined) {
-            if (level >= 0 && level < 5) {
-                this.fleaHelper(flea.flea0.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism mod: Fleamarket Locked At Tier 0");
-            }
-            if (level >= 5 && level < 10) {
-                this.fleaHelper(flea.flea1.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
-            }
-            if (level >= 10 && level < 15) {
-                this.fleaHelper(flea.flea2.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
-            }
-            if (level >= 15 && level < 20) {
-                this.fleaHelper(flea.flea3.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
-            }
-            if (level >= 20 && level < 25) {
-                this.fleaHelper(flea.flea4.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
-            }
-            if (level >= 25 && level < 30) {
-                this.fleaHelper(flea.flea5.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
-            }
-            if (level >= 30 && level < 35) {
-                this.fleaHelper(flea.flea6.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
-            }
-            if (level >= 35 && level < 40) {
-                this.fleaHelper(flea.flea7.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Tier 7 Unlocked");
-            }
-            if (level >= 40) {
-                this.fleaHelper(flea.fleaFullUnlock.bind(flea), ragfairOfferGen, container);
-                logger.info("Realism Mod: Fleamarket Unlocked");
-            }
         }
     }
     setBossSpawnChance(mapDB, level) {
@@ -949,4 +895,5 @@ class Main {
         }
     }
 }
+exports.Main = Main;
 module.exports = { mod: new Main() };

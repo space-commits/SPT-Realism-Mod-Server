@@ -3,6 +3,11 @@ import { ILogger } from "../types/models/spt/utils/ILogger";
 import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
 import { RagfairOfferHolder } from "@spt-aki/utils/RagfairOfferHolder";
 import { ParentClasses } from "./enums";
+import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
+import { RagfairServer } from "@spt-aki/servers/RagfairServer";
+import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
+import { DependencyContainer } from "tsyringe";
+import { Arrays } from "./arrays";
 
 const custFleaConfig = require("../db/traders/ragfair/flea_config.json");
 
@@ -100,6 +105,67 @@ export class TieredFlea {
 
     private itemDB = this.tables.templates.items;
 
+    private fleaHelper(fetchTier: Function, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer) {
+
+        const offers = container.resolve<RagfairOfferService>("RagfairOfferService").getOffers();
+        const traders = container.resolve<RagfairServer>("RagfairServer").getUpdateableTraders();
+
+        for (let o in offers) {
+            container.resolve<RagfairOfferService>("RagfairOfferService").removeOfferById(offers[o]._id);
+        }
+
+        fetchTier();
+        ragfairOfferGen.generateDynamicOffers();
+        for (let traderID in traders) {
+            ragfairOfferGen.generateFleaOffersForTrader(traders[traderID]);
+        }
+    }
+
+    public updateFlea(logger: ILogger, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays, level: number) {
+
+        if (level === undefined) {
+            this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
+            logger.info("Realism Mod: Fleamarket Tier Set To Default  (tier 0)");
+        }
+        if (level !== undefined) {
+            if (level >= 0 && level < 5) {
+                this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
+                logger.info("Realism mod: Fleamarket Locked At Tier 0");
+            }
+            if (level >= 5 && level < 10) {
+                this.fleaHelper(this.flea1.bind(this), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
+            }
+            if (level >= 10 && level < 15) {
+                this.fleaHelper(this.flea2.bind(this), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
+            }
+            if (level >= 15 && level < 20) {
+                this.fleaHelper(this.flea3.bind(this), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
+            }
+            if (level >= 20 && level < 25) {
+                this.fleaHelper(this.flea4.bind(this), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
+            }
+            if (level >= 25 && level < 30) {
+                this.fleaHelper(this.flea5.bind(this), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
+            }
+            if (level >= 30 && level < 35) {
+                this.fleaHelper(this.flea6.bind(this), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
+            }
+            if (level >= 35 && level < 40) {
+                this.fleaHelper(this.flea7.bind(this), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Tier 7 Unlocked");
+            }
+            if (level >= 40) {
+                this.fleaHelper(this.fleaFullUnlock.bind(this), ragfairOfferGen, container);
+                logger.info("Realism Mod: Fleamarket Unlocked");
+            }
+        }
+    }
 
     public flea0() {
         this.canSellAll(false);

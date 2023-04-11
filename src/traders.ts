@@ -7,13 +7,17 @@ import { Arrays } from "./arrays";
 import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { EventTracker, Helper } from "./helper";
+import { EventTracker, Helper, ProfileTracker } from "./helper";
 import { Calibers, ParentClasses } from "./enums";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";
 import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
 import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
+import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
+import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
+import { TieredFlea } from "./fleamarket";
+
 
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;
@@ -591,11 +595,12 @@ export class TraderRefresh extends TraderAssortHelper {
         trader.base.refreshTraderRagfairOffers = true;
 
         //have to manually update ragfair trader offers otherwise trader offers get bugged on ragfair
-        const traders = container.resolve<RagfairServer>("RagfairServer").getUpdateableTraders();
+        // const tables = container.resolve<DatabaseServer>("DatabaseServer").getTables();
+        // const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
+        // const tieredFlea = new TieredFlea(tables);
+        // const arrays = new Arrays(tables);
+        // tieredFlea.updateFlea(this.logger, ragfairOfferGenerator, container, arrays, ProfileTracker.level);
 
-        for (let traderID in traders) {
-            this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
-        }
     }
 
     private getDirtyTraderAssorts(trader: ITrader): Item[] {

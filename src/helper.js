@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.Helper = void 0;
+exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.ProfileTracker = exports.Helper = void 0;
 const fs = require('fs');
 const modConfig = require("../config/config.json");
 class Helper {
@@ -115,6 +115,10 @@ class Helper {
     }
 }
 exports.Helper = Helper;
+class ProfileTracker {
+}
+exports.ProfileTracker = ProfileTracker;
+ProfileTracker.level = 1;
 class ConfigChecker {
 }
 exports.ConfigChecker = ConfigChecker;
