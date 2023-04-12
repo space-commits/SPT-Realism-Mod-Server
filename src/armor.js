@@ -19,7 +19,7 @@ class Armor {
         this.armMat.Aramid.Destructibility = 0.24;
         this.armMat.Aramid.MaxRepairDegradation = 0.32;
         this.armMat.Aramid.MinRepairDegradation = 0.04;
-        this.armMat.Ceramic.Destructibility = 0.20;
+        this.armMat.Ceramic.Destructibility = 0.18;
         this.armMat.Ceramic.MaxRepairDegradation = 0.88;
         this.armMat.Ceramic.MinRepairDegradation = 0.68;
         this.armMat.Combined.Destructibility = 0.16;
@@ -171,7 +171,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.025;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
@@ -183,7 +183,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.025;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
@@ -195,7 +195,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -2;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -2;
-                serverItem._props.BluntThroughput = 0.05;
+                serverItem._props.BluntThroughput = 0.025;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 8.1;
             }
@@ -479,7 +479,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -6;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.03;
+                serverItem._props.BluntThroughput = 0.015;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 10.3;
             }
@@ -552,7 +552,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -8;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -9;
-                serverItem._props.BluntThroughput = 0.025;
+                serverItem._props.BluntThroughput = 0.0125;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 9.9;
             }
@@ -576,7 +576,7 @@ class Armor {
                 serverItem._props.speedPenaltyPercent = -4;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -7;
-                serverItem._props.BluntThroughput = 0.04;
+                serverItem._props.BluntThroughput = 0.02;
                 serverItem._props.ArmorMaterial = 'ArmoredSteel';
                 serverItem._props.Weight = 9.1;
             }
