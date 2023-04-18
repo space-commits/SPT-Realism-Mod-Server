@@ -318,7 +318,7 @@
         "DurabilityBurnModificator": 1,
         "Velocity": 8,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 5,
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0
@@ -413,7 +413,7 @@
         "DurabilityBurnModificator": 0.98,
         "Velocity": 5,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 5,
         "Weight": 2.2,
         "ShotgunDispersion": 0.94,
         "Loudness": 0
@@ -502,7 +502,7 @@
         "DurabilityBurnModificator": 0.89,
         "Velocity": -6.5,
         "ConflictingItems": [],
-        "Ergonomics": 0,
+        "Ergonomics": 5,
         "Weight": 1.5,
         "ShotgunDispersion": 0.8,
         "Loudness": 0

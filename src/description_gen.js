@@ -8,7 +8,12 @@ class DescriptionGen {
         this.itemDB = this.tables.templates.items;
     }
     descriptionGen() {
-        let locale = this.tables.locales.global["en"];
+        for (let lang in this.tables.locales.global) {
+            this.descriptionGenHelper(lang);
+        }
+    }
+    descriptionGenHelper(lang) {
+        let locale = this.tables.locales.global[lang];
         for (let templateItem in this.itemDB) {
             let item = this.itemDB[templateItem];
             if (item._parent === enums_1.ParentClasses.AMMO && item._props.ammoHear === 1) {

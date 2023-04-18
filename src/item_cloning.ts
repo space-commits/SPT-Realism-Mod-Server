@@ -9,8 +9,6 @@ export class ItemCloning {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private jsonUtil: JsonUtil, private medItems, private crafts) { }
 
     private itemDB = this.tables.templates.items;
-    private locales = this.tables.locales.global["en"];
-
 
     public createCustomMedItems() {
         //Tier 1 Medkit
@@ -60,7 +58,7 @@ export class ItemCloning {
         this.addToHandbook("TIER3MEDKIT", "5b47574386f77428ca22b338", 30000);
         this.addToLocale("TIER3MEDKIT", "High-Grade Makeshift Medical Kit", "TIER3", "A high-grade makeshift medical kit used for healing more severe wounds that have been already stabilized in the field. Not suitable for use in the field.");
         this.addToHideout(this.crafts.Tier3Medkit);
-        
+
         //SuperMedkit (for bots)
         // this.cloneMedicalItem(
         //     "590c678286f77426c9660122",
@@ -120,6 +118,31 @@ export class ItemCloning {
         this.cloneAttachments("55d35ee94bdc2d61338b4568", "mechAR15_260mm", "violet");
         this.addToHandbook("mechAR15_260mm", "5b5f75c686f774094242f19f", 10000);
         this.addToLocale("mechAR15_260mm", "Mechanic's Custom 260mm AR-15 Barrel", "Mech AR 260mm", "Mechanic imported a batch of barrel blanks from overseas before the conflict began, and has started putting them to use. This 260mm barrel has a precisiely machined crown, increasing precision. Most significantly, the gasport is not enlarged as most short AR-15 barrels typically do. This means reduced recoil and durability burn, at the expense of reduced realiabilty due to the short dwell time. To effecitvely use this barrel it should be paired with attachments that increase reliability.");
+        this.pushAttToFilters("55d35ee94bdc2d61338b4568", "mechAR15_260mm");
+
+        //366 AKM Muzzle Break Compensator
+        this.cloneAttachments("59e61eb386f77440d64f5daf", "mechSlant_366", "violet");
+        this.addToHandbook("mechSlant_366", "5b5f724c86f774093f2ecf15", 1000);
+        this.addToLocale("mechSlant_366", "Mechanic's Custom .366 AKM-Style Muzzle Brake", ".366 TKM Brake", "Mechanic bored out this brake to accomodate .366 TKM.");
+        this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechSlant_366");
+
+        //366 Spikes Tactical Comp
+        this.cloneAttachments("5a9ea27ca2750c00137fa672", "mechSpikes_366", "violet");
+        this.addToHandbook("mechSpikes_366", "5b5f724c86f774093f2ecf15", 6000);
+        this.addToLocale("mechSpikes_366", "Mechanic's Custom .366 TKM Spikes Tactical Dynacomp", ".366 TKM Dynacomp", "Mechanic bored out this compensator to accomodate .366 TKM.");
+        this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechSpikes_366");
+
+        //366 Zenit DTK Comp
+        this.cloneAttachments("5649ab884bdc2ded0b8b457f", "mechDTK_366", "violet");
+        this.addToHandbook("mechDTK_366", "5b5f724c86f774093f2ecf15", 8000);
+        this.addToLocale("mechDTK_366", "Mechanic's Custom .366 TKM Zenit DTK-1", ".366 TKM DTK-1", "Mechanic bored out this compensator to accomodate .366 TKM.");
+        this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechDTK_366");
+
+        //366 JMAC Comp
+        this.cloneAttachments("5f633f68f5750b524b45f112", "mechJMAC_366", "violet");
+        this.addToHandbook("mechJMAC_366", "5b5f724c86f774093f2ecf15", 16000);
+        this.addToLocale("mechJMAC_366", "Mechanic's Custom .366 TKM JMac RRD-4C", ".366 TKM RRD-4C", "Mechanic bored out this compensator to accomodate .366 TKM.");
+        this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechJMAC_366");
     }
 
     private addToMastering(id: string, masteringCat: string) {
@@ -127,6 +150,20 @@ export class ItemCloning {
         for (let cat in mastering) {
             if (mastering[cat].Name === masteringCat) {
                 mastering[cat].Templates.push(id);
+            }
+        }
+    }
+
+    private pushAttToFilters(orignalId: string, newID: string) {
+        var itemDB = this.tables.templates.items;
+        for (let item in itemDB) {
+            for (let slot in itemDB[item]._props.Slots) {
+                if (itemDB[item]._props.Slots[slot]._props?.filters !== undefined && itemDB[item]._props.Slots[slot]._props.filters[0].Filter.includes(orignalId)) {
+                    itemDB[item]._props.Slots[slot]._props.filters[0].Filter.push(newID);
+                }
+            }
+            if (itemDB[item]._props?.ConflictingItems !== undefined && itemDB[item]._props.ConflictingItems.includes(orignalId)) {
+                itemDB[item]._props.ConflictingItems.push(newID);
             }
         }
     }
@@ -182,10 +219,13 @@ export class ItemCloning {
         const nameId = `${id}` + " Name";
         const shortnameId = `${id}` + " ShortName";
         const descriptionId = `${id}` + " Description";
+        const locales = this.tables.locales.global;
 
-        this.locales[nameId] = name;
-        this.locales[shortnameId] = shortname;
-        this.locales[descriptionId] = description;
+        for (let lang in locales) {
+            locales[lang][nameId] = name;
+            locales[lang][shortnameId] = shortname;
+            locales[lang][descriptionId] = description;
+        }
     }
 
     private cloneItem(itemtoClone: string, newitemID: string) {

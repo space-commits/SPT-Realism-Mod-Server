@@ -161,13 +161,11 @@ class Main {
                 };
             }, { frequency: "Always" });
         }
-        if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            container.afterResolution("TraderAssortHelper", (_t, result) => {
-                result.resetExpiredTrader = (trader) => {
-                    return traderRefersh.myResetExpiredTrader(trader);
-                };
-            }, { frequency: "Always" });
-        }
+        container.afterResolution("TraderAssortHelper", (_t, result) => {
+            result.resetExpiredTrader = (trader) => {
+                return traderRefersh.myResetExpiredTrader(trader);
+            };
+        }, { frequency: "Always" });
         if (modConfig.randomize_trader_stock == true) {
             container.afterResolution("RagfairCallbacks", (_t, result) => {
                 result.search = (url, info, sessionID) => {
@@ -239,6 +237,10 @@ class Main {
                             randomizeTraderAssort.adjustTraderStockAtServerStart();
                         }
                         clientValidateCount += 1;
+                        const traders = container.resolve("RagfairServer").getUpdateableTraders();
+                        for (let traderID in traders) {
+                            ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
+                        }
                         if (modConfig.tiered_flea == true) {
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
                         }

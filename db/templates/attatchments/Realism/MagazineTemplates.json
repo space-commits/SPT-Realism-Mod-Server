@@ -1328,7 +1328,7 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "Ergonomics": 0,
-        "MagMalfunctionChance": 0.75,
+        "MagMalfunctionChance": 0.5,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],

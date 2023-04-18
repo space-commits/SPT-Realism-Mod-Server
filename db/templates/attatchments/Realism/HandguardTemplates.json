@@ -183,7 +183,7 @@
         "Dispersion": 0,
         "AimSpeed": 0,
         "ChamberSpeed": 0,
-        "Ergonomics": 0,
+        "Ergonomics": 4,
         "Accuracy": 0,
         "HeatFactor": 1,
         "CoolFactor": 1,
@@ -199,7 +199,7 @@
         "Dispersion": -2,
         "AimSpeed": 0,
         "ChamberSpeed": 0,
-        "Ergonomics": 7,
+        "Ergonomics": 10,
         "Accuracy": 10,
         "HeatFactor": 1,
         "CoolFactor": 1,
@@ -739,7 +739,7 @@
     "5ae30db85acfc408fb139a05": {
         "ItemID": "5ae30db85acfc408fb139a05",
         "Name": "handguard_ar15_colt_m4_length_std",
-        "ModType": "",
+        "ModType": "", 
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
@@ -966,7 +966,7 @@
         "HeatFactor": 0.98,
         "CoolFactor": 1.033,
         "ConflictingItems": [],
-        "Weight": 0.4
+        "Weight": 0.299
     },
     "638f1ff84822287cad04be9d": {
         "ItemID": "638f1ff84822287cad04be9d",
@@ -981,7 +981,7 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "ConflictingItems": [],
-        "Weight": 0.12
+        "Weight": 0.099
     },
     "588b56d02459771481110ae2": {
         "ItemID": "588b56d02459771481110ae2",
@@ -996,7 +996,7 @@
         "HeatFactor": 0.98,
         "CoolFactor": 1.033,
         "ConflictingItems": [],
-        "Weight": 0.4
+        "Weight": 0.299
     },
     "6396aaa9a52ace83df0840ab": {
         "ItemID": "6396aaa9a52ace83df0840ab",
@@ -1011,7 +1011,7 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "ConflictingItems": [],
-        "Weight": 0.12
+        "Weight": 0.099
     },
     "5ea16acdfadf1d18c87b0784": {
         "ItemID": "5ea16acdfadf1d18c87b0784",
@@ -1199,7 +1199,7 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 11,
+        "Ergonomics": 0,
         "Accuracy": 15,
         "HeatFactor": 0.944,
         "CoolFactor": 1.079,
@@ -1209,7 +1209,7 @@
             "56ea8d2fd2720b7c698b4570",
             "55d35ee94bdc2d61338b4568"
         ],
-        "Weight": 0.502
+        "Weight": 0.375
     },
     "638f2003bbd47aeb9e0ff637": {
         "ItemID": "638f2003bbd47aeb9e0ff637",
@@ -1224,7 +1224,7 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "ConflictingItems": [],
-        "Weight": 0.15
+        "Weight": 0.125
     },
     "5a329052c4a28200741e22d3": {
         "ItemID": "5a329052c4a28200741e22d3",

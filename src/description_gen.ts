@@ -4,16 +4,22 @@ import { ParentClasses } from "./enums";
 export class DescriptionGen {
 
     constructor(private tables: IDatabaseTables) { }
-  
+
     private itemDB = this.tables.templates.items;
 
+
     public descriptionGen() {
-        let locale = this.tables.locales.global["en"];
+        for (let lang in this.tables.locales.global) { 
+            this.descriptionGenHelper(lang);
+        }
+    }
+
+    private descriptionGenHelper(lang: string) {
+        let locale = this.tables.locales.global[lang];
         for (let templateItem in this.itemDB) {
             let item = this.itemDB[templateItem];
 
-            if(item._parent === ParentClasses.AMMO && item._props.ammoHear === 1)
-            {
+            if (item._parent === ParentClasses.AMMO && item._props.ammoHear === 1) {
                 locale[`${templateItem}` + " Description"] = "This ammunition is subsonic and is in a calibre that requires special attachments or modifications in order to be cycled reliably." + `\n\n${locale[`${templateItem}` + " Description"]}`;
             }
             if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
@@ -27,7 +33,7 @@ export class DescriptionGen {
                 if ((item._parent === ParentClasses.SILENCER || item._parent === ParentClasses.FLASH_HIDER || item._parent === ParentClasses.COMPENSATOR) && item._props.ConflictingItems[8] !== "0") {
                     locale[`${templateItem}` + " Description"] = "The malfunction reduction of this muzzle attachment does not affect manually operated firearms such as bolt action rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if ( item._props.ConflictingItems[13] === "true") {
+                if (item._props.ConflictingItems[13] === "true") {
                     locale[`${templateItem}` + " Description"] = "This attachment allows the reliable cycling of subsonic ammunition." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "gasblock_upgassed") {
@@ -42,7 +48,7 @@ export class DescriptionGen {
                 if (modType === "booster") {
                     locale[`${templateItem}` + " Description"] = "This muzzle device is a booster. It gives the full firerate, malfunction and durabiltiy burn stats on short barreled rifles, and a reduced amount on longer barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "muzzle_supp_adapter" || modType ===  "sig_taper_brake" || modType ===  "barrel_2slot") {
+                if (modType === "muzzle_supp_adapter" || modType === "sig_taper_brake" || modType === "barrel_2slot") {
                     locale[`${templateItem}` + " Description"] = "This muzzle device is an adapter, it will lose all its stats except accuracy if a suppressor is attached to it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "shot_pump_grip_adapt") {
@@ -77,7 +83,7 @@ export class DescriptionGen {
                         locale[`${templateItem}` + " Description"] = "This faceshield does NOT allow the use of sights while using a stock in the extended/unfolded position, unless the weapon/stock allows it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
                 }
-                if(item._parent === ParentClasses.ARMOREDEQUIPMENT || item._parent === ParentClasses.HEADWEAR || item._parent === ParentClasses.FACECOVER){
+                if (item._parent === ParentClasses.ARMOREDEQUIPMENT || item._parent === ParentClasses.HEADWEAR || item._parent === ParentClasses.FACECOVER) {
                     if (item._props.ConflictingItems[1] === "false") {
                         locale[`${templateItem}` + " Description"] = "This gear item blocks the use of sights while using a stock in the extended/unfolded position, unless the weapon/stock allows it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }

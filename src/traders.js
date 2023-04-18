@@ -161,6 +161,10 @@ class Traders {
             this.assortItemPusher(mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
             //attachments
             this.assortItemPusher(mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(mechId, "mechSlant_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
+            this.assortItemPusher(mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
+            this.assortItemPusher(mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(mechId, "mechJMAC_366", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
         }
         //scopes
         this.assortNestedItemPusher(mechId, "616584766ef05c2ce828ef57", { "5c7d560b2e22160bc12c6139": "mod_scope", "5c7d55de2e221644f31bff68": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25);
@@ -488,15 +492,19 @@ class RagCallback extends RagfairCallbacks_1.RagfairCallbacks {
 exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     myResetExpiredTrader(trader) {
-        trader.assort.items = this.getDirtyTraderAssorts(trader);
+        if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
+            trader.assort.items = this.getDirtyTraderAssorts(trader);
+        }
+        else {
+            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+        }
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
         trader.base.refreshTraderRagfairOffers = true;
-        //have to manually update ragfair trader offers otherwise trader offers get bugged on ragfair
-        // const tables = container.resolve<DatabaseServer>("DatabaseServer").getTables();
-        // const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
-        // const tieredFlea = new TieredFlea(tables);
-        // const arrays = new Arrays(tables);
-        // tieredFlea.updateFlea(this.logger, ragfairOfferGenerator, container, arrays, ProfileTracker.level);
+        //seems like manually refreshing ragfair is necessary. 
+        const traders = tsyringe_1.container.resolve("RagfairServer").getUpdateableTraders();
+        for (let traderID in traders) {
+            this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
+        }
     }
     getDirtyTraderAssorts(trader) {
         const tables = this.databaseServer.getTables();

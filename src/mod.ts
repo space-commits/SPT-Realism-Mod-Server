@@ -243,14 +243,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             }, { frequency: "Always" });
         }
 
+        container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
+            result.resetExpiredTrader = (trader: ITrader): void => {
+                return traderRefersh.myResetExpiredTrader(trader);
+            }
+        }, { frequency: "Always" });
 
-        if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
-                result.resetExpiredTrader = (trader: ITrader): void => {
-                    return traderRefersh.myResetExpiredTrader(trader);
-                }
-            }, { frequency: "Always" });
-        }
 
         if (modConfig.randomize_trader_stock == true) {
             container.afterResolution("RagfairCallbacks", (_t, result: RagfairCallbacks) => {
@@ -344,6 +342,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             }
                             clientValidateCount += 1;
 
+                            const traders = container.resolve<RagfairServer>("RagfairServer").getUpdateableTraders();
+                            for (let traderID in traders) {
+                                ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
+                            }
+                
                             if (modConfig.tiered_flea == true) {
                                 tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
                             }
@@ -573,7 +576,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             "pmc"
         );
     }
-
+ 
     private backupProfile(profileData: IAkiProfile, logger: ILogger) {
         const profileFileData = JSON.stringify(profileData, null, 4)
         var index = 0;

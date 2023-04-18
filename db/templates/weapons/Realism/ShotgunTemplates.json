@@ -183,7 +183,7 @@
         "OperationType": "manual",
         "WeapAccuracy": 0,
         "BaseTorque": 2.5,
-        "HasShoulderContact": false,
+        "HasShoulderContact": true,
         "Ergonomics": 88,
         "VerticalRecoil": 300,
         "HorizontalRecoil": 400,

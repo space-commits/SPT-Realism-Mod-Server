@@ -515,7 +515,7 @@
                 "569668774bdc2da2298b4568": 100
             }
         },
-        "isUsec": 50,
+        "isUsec": 49,
         "difficulty": "Hard",
         "maxBackpackLootTotalRub": 75000,
         "maxPocketLootTotalRub": 25000,
@@ -551,7 +551,7 @@
                 "569668774bdc2da2298b4568": 200
             }
         },
-        "isUsec": 50,
+        "isUsec": 49,
         "difficulty": "Hard",
         "maxBackpackLootTotalRub": 90000,
         "maxPocketLootTotalRub": 35000,
@@ -587,7 +587,7 @@
                 "569668774bdc2da2298b4568": 300
             }
         },
-        "isUsec": 50,
+        "isUsec": 49,
         "difficulty": "Impossible",
         "maxBackpackLootTotalRub": 150000,
         "maxPocketLootTotalRub": 50000,
