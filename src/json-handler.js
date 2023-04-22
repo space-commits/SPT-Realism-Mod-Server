@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonHandler = void 0;
-const enums_1 = require("./enums");
 const helper_1 = require("./helper");
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;
@@ -14,6 +13,7 @@ const armorVestsTemplates = require("../db/templates/gear/" + `${gearPath}` + "/
 const armorMasksTemplates = require("../db/templates/gear/" + `${gearPath}` + "/armorMasksTemplates.json");
 const chestrigTemplates = require("../db/templates/gear/" + `${gearPath}` + "/chestrigTemplates.json");
 const headsetTemplates = require("../db/templates/gear/" + `${gearPath}` + "/headsetTemplates.json");
+const cosmeticsTemplates = require("../db/templates/gear/" + `${gearPath}` + "/cosmeticsTemplates.json");
 const ammoTemplates = require("../db/templates/ammo/ammoTemplates.json");
 const MuzzleDeviceTemplates = require("../db/templates/attatchments/" + `${attPath}` + "/MuzzleDeviceTemplates.json");
 const BarrelTemplates = require("../db/templates/attatchments/" + `${attPath}` + "/BarrelTemplates.json");
@@ -95,12 +95,9 @@ class JsonHandler {
                 this.callHelper(helmetTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(armorVestsTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(armorMasksTemplates, serverItem, this.armorPusherHelper);
-            }
-            if (serverItem._parent === enums_1.ParentClasses.CHESTRIG) {
                 this.callHelper(chestrigTemplates, serverItem, this.armorPusherHelper);
-            }
-            if (serverItem._parent === enums_1.ParentClasses.HEADSET) {
                 this.callHelper(headsetTemplates, serverItem, this.armorPusherHelper);
+                this.callHelper(cosmeticsTemplates, serverItem, this.armorPusherHelper);
             }
         }
     }
@@ -113,9 +110,9 @@ class JsonHandler {
     armorPusherHelper(serverItem, fileItem) {
         if (serverItem._id === fileItem.ItemID) {
             var serverConfItems = serverItem._props.ConflictingItems;
-            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass || "Unclassified", fileItem?.CanSpall || "false", fileItem?.SpallReduction || "1", fileItem?.ReloadSpeedMulti || "1",
-                fileItem?.MinVelocity || "500", fileItem.MinKE || "2000", fileItem.MinPen || "50", fileItem.HasBypassedArmor || "false", fileItem.HasSideArmor || "false", fileItem.HasStomachArmor || "false",
-                fileItem?.HasHitSecondaryArmor || "false", fileItem?.HasNeckArmor || "false", fileItem?.dB || "1"];
+            var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
+                fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
+                fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false", fileItem?.dB?.toString() || "1"];
             var combinedArr = armorPropertyValues.concat(serverConfItems);
             serverItem._props.ConflictingItems = combinedArr;
         }

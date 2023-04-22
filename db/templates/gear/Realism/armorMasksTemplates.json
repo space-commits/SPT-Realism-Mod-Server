@@ -10,7 +10,8 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "BlocksMouth": true
     },
     "603409c80ca681766b6a0fb2": {
         "ItemID": "603409c80ca681766b6a0fb2",

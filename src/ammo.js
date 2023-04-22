@@ -66,9 +66,9 @@ class Ammo {
             //7mm Buckshot
             if (serverItem._id === "560d5e524bdc2d25448b4571") {
                 serverItem._props.PenetrationPower = 18;
-                serverItem._props.ArmorDamage = 20;
+                serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 12;
-                serverItem._props.Damage = 15;
+                serverItem._props.Damage = 12;
                 serverItem._props.InitialSpeed = 415;
                 serverItem._props.RicochetChance = 0.28;
                 serverItem._props.FragmentationChance = 0.22;
@@ -89,9 +89,9 @@ class Ammo {
             //8.5mm Buckshot "Magnum"
             if (serverItem._id === "5d6e6806a4b936088465b17e") {
                 serverItem._props.PenetrationPower = 17;
-                serverItem._props.ArmorDamage = 20;
+                serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 9;
-                serverItem._props.Damage = 15;
+                serverItem._props.Damage = 19;
                 serverItem._props.InitialSpeed = 385;
                 serverItem._props.RicochetChance = 0.24;
                 serverItem._props.FragmentationChance = 0;
@@ -112,9 +112,9 @@ class Ammo {
             //6.5mm Buckshot "Express"
             if (serverItem._id === "5d6e67fba4b9361bc73bc779") {
                 serverItem._props.PenetrationPower = 25;
-                serverItem._props.ArmorDamage = 20;
+                serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 15;
-                serverItem._props.Damage = 15;
+                serverItem._props.Damage = 10;
                 serverItem._props.InitialSpeed = 430;
                 serverItem._props.RicochetChance = 0.22;
                 serverItem._props.FragmentationChance = 0;

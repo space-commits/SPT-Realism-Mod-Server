@@ -11,6 +11,7 @@ const armorVestsTemplates = require("../db/templates/gear/" + `${presetPath}` + 
 const armorMasksTemplates = require("../db/templates/gear/" + `${presetPath}` + "/armorMasksTemplates.json");
 const chestrigTemplates = require("../db/templates/gear/" + `${presetPath}` + "/chestrigTemplates.json");
 const headsetTemplates = require("../db/templates/gear/" + `${presetPath}` + "/headsetTemplates.json");
+const cosmeticsTemplates = require("../db/templates/gear/" + `${presetPath}` + "/cosmeticsTemplates.json");
 const ammoTemplates = require("../db/templates/ammo/ammoTemplates.json");
 const MuzzleDeviceTemplates = require("../db/templates/attatchments/" + `${presetPath}` + "/MuzzleDeviceTemplates.json");
 const BarrelTemplates = require("../db/templates/attatchments/" + `${presetPath}` + "/BarrelTemplates.json");
@@ -59,22 +60,25 @@ class CodeGen {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._parent === enums_1.ParentClasses.CHESTRIG && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "gear", this.assignJSONToArmor, null, false);
+                this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "gear", this.assignJSONToArmor, null, false);
+                this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.HEADWEAR && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "gear", this.assignJSONToArmor, null, false);
+                this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.ARMORVEST && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "gear", this.assignJSONToArmor, null, false);
+                this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.CHESTRIG && serverItem._props.armorClass === 0) {
                 this.itemWriteToFile(chestrigTemplates, "chestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
             }
             if (serverItem._parent === enums_1.ParentClasses.HEADSET) {
                 this.itemWriteToFile(headsetTemplates, "headsetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+            }
+            if ((serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER) && serverItem._props.armorClass <= 1) {
+                this.itemWriteToFile(cosmeticsTemplates, "cosmeticsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
             }
         }
     }
@@ -221,44 +225,6 @@ class CodeGen {
         };
         return item;
     }
-    assignJSONToArmor(serverItem, fileItem) {
-        if (fileItem) {
-            fileItem.dB = 0;
-            fileItem;
-            return fileItem;
-        }
-        let ItemID = serverItem._id;
-        let Name = serverItem._name;
-        let AllowADS = true;
-        let LoyaltyLevel = 2;
-        let ArmorClass = "";
-        let CanSpall = false;
-        let SpallReduction = 1;
-        let ReloadSpeedMulti = 1;
-        let HasBypassedArmor = false;
-        let HasSideArmor = false;
-        let HasStomachArmor = false;
-        let HasHitSecondaryArmor = false;
-        let HasNeckArmor = false;
-        let dB = 0;
-        let item = {
-            ItemID,
-            Name,
-            AllowADS,
-            LoyaltyLevel,
-            ArmorClass,
-            CanSpall,
-            SpallReduction,
-            ReloadSpeedMulti,
-            HasBypassedArmor,
-            HasSideArmor,
-            HasStomachArmor,
-            HasHitSecondaryArmor,
-            HasNeckArmor,
-            dB
-        };
-        return item;
-    }
     assignJSONToGear(serverItem, fileItem) {
         if (fileItem) {
             fileItem;
@@ -272,15 +238,21 @@ class CodeGen {
         let MinPen = 50;
         let MinVelocity = 500;
         let MinKE = 2000;
+        let ArmorClass = "";
+        let CanSpall = false;
+        let SpallReduction = 1;
+        let BlocksMouth = false;
+        let HasSideArmor = false;
+        let HasStomachArmor = false;
+        let HasNeckArmor = false;
+        let dB = 0;
         let item = {
             ItemID,
             Name,
             AllowADS,
             LoyaltyLevel,
             ReloadSpeedMulti,
-            MinPen,
-            MinVelocity,
-            MinKE
+            BlocksMouth
         };
         return item;
     }
