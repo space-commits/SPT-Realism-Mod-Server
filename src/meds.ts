@@ -102,6 +102,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "trnqt");
                 serverItem._props.ConflictingItems.splice(2, 0, "trnqt");
+                serverItem._props.ConflictingItems.splice(3, 0, "0.4"); // trqnt damage per tick
             }
             //Esmarch
             if (serverItem._id === "5e831507ea0a7c419c2f9bd9") {
@@ -112,6 +113,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "trnqt");
                 serverItem._props.ConflictingItems.splice(2, 0, "trnqt");
+                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
             }
             //Calok
             if (serverItem._id === "5e8488fa988a8701445df1e4") {
@@ -120,8 +122,9 @@ export class Meds {
                 serverItem._props.effects_health = this.medItems.calok.effects_health;
                 serverItem._props.medUseTime = this.medItems.calok.medUseTime;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "trnqt");
-                serverItem._props.ConflictingItems.splice(2, 0, "clot");
+                serverItem._props.ConflictingItems.splice(1, 0, "trnqt"); // med type
+                serverItem._props.ConflictingItems.splice(2, 0, "clot"); // heavy bleed heal type
+                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
             }
             ///Splints///
             //Immobilizing Splint
@@ -150,6 +153,7 @@ export class Meds {
             //AI-2
             if (serverItem._id === "5755356824597772cb798962") {
                 serverItem._props.MaxHpResource = this.medItems["AI-2"].MaxHpResource;
+                serverItem._props.StimulatorBuffs = this.medItems["AI-2"].StimulatorBuffs;
                 serverItem._props.effects_damage = this.medItems["AI-2"].effects_damage;
                 serverItem._props.effects_health = this.medItems["AI-2"].effects_health;
                 serverItem._props.medUseTime = this.medItems["AI-2"].medUseTime;
@@ -178,7 +182,8 @@ export class Meds {
                 serverItem._props.hpResourceRate = 0;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "trnqt");
+                serverItem._props.ConflictingItems.splice(2, 0, "trnqt"); 
+                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
             }
             //IFAK
             if (serverItem._id === "590c678286f77426c9660122") {
@@ -189,7 +194,8 @@ export class Meds {
                 serverItem._props.hpResourceRate = 0;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "clot");
+                serverItem._props.ConflictingItems.splice(2, 0, "combo");
+                serverItem._props.ConflictingItems.splice(3, 0, "0.4"); // trqnt damage per tick
             }
             //AFAK
             if (serverItem._id === "60098ad7c2240c0fe85c570a") {
@@ -201,6 +207,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "clot");
+                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
             }
             //Grizzly
             if (serverItem._id === "590c657e86f77412b013051d") {
@@ -211,7 +218,8 @@ export class Meds {
                 serverItem._props.hpResourceRate = 0;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "clot");
+                serverItem._props.ConflictingItems.splice(2, 0, "combo");
+                serverItem._props.ConflictingItems.splice(3, 0, "0.4"); // trqnt damage per tick
             }
             ///Smeary stuff///
             //Vaseline
@@ -223,7 +231,7 @@ export class Meds {
                 serverItem._props.effects_health = this.medItems.vaseline.effects_health;
                 serverItem._props.medUseTime = this.medItems.vaseline.medUseTime;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "drug");
+                serverItem._props.ConflictingItems.splice(1, 0, "vas");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
             }
             //GoldenStar
@@ -243,23 +251,23 @@ export class Meds {
             if (serverItem._id === "5d02778e86f774203e7dedbe") {
                 serverItem._parent = "5448f3a14bdc2d27728b4569";
                 serverItem._props.MaxHpResource = this.medItems.cms.MaxHpResource;
-                serverItem._props.StimulatorBuffs = this.medItems.cms.StimulatorBuffs;
                 serverItem._props.effects_damage = this.medItems.cms.effects_damage;
                 serverItem._props.medUseTime = this.medItems.cms.medUseTime;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "surg");
-                serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(2, 0, "surg");
+                serverItem._props.ConflictingItems.splice(3, 0, "0.4"); // hp restore per tick
             }
             //Surv12
             if (serverItem._id === "5d02797c86f774203f38e30a") {
                 serverItem._parent = "5448f3a14bdc2d27728b4569";
                 serverItem._props.MaxHpResource = this.medItems.surv12.MaxHpResource;
-                serverItem._props.StimulatorBuffs = this.medItems.surv12.StimulatorBuffs;
                 serverItem._props.effects_damage = this.medItems.surv12.effects_damage;
                 serverItem._props.medUseTime = this.medItems.surv12.medUseTime;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "surg");
-                serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(2, 0, "surg");
+                serverItem._props.ConflictingItems.splice(3, 0, "0.5"); // hp restore per tick
             }
         }
         if (this.modConf.logEverything == true) {

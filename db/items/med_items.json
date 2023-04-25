@@ -429,8 +429,8 @@
                 "delay": 0,
                 "duration": 0,
                 "fadeOut": 0,
-                "healthPenaltyMin": 7,
-                "healthPenaltyMax": 20
+                "healthPenaltyMin": 20,
+                "healthPenaltyMax": 40
             },
             "LightBleeding": {
                 "delay": 0,
@@ -464,8 +464,8 @@
                 "delay": 0,
                 "duration": 0,
                 "fadeOut": 0,
-                "healthPenaltyMin": 5,
-                "healthPenaltyMax": 25
+                "healthPenaltyMin": 25,
+                "healthPenaltyMax": 45
             },
             "LightBleeding": {
                 "delay": 0,

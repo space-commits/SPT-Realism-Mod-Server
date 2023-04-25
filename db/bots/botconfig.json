@@ -524,7 +524,7 @@
         "chanceSameSideIsHostilePercent": 95,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 25,
+                "min": 20,
                 "max": 40
             },
             "cursedassault": {
@@ -560,7 +560,7 @@
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 23,
+                "min": 18,
                 "max": 40
             },
             "cursedassault": {
@@ -596,7 +596,7 @@
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 20,
+                "min": 15,
                 "max": 40
             },
             "cursedassault": {
