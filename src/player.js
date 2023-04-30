@@ -149,9 +149,9 @@ class Player {
         }
         if (this.modConfig.movement_changes == true) {
             this.globalDB.WalkSpeed["x"] = 0.6;
-            this.globalDB.WalkSpeed["y"] = 0.83;
+            this.globalDB.WalkSpeed["y"] = 0.86;
             this.globalDB.SprintSpeed["x"] = 0.03;
-            this.globalDB.SprintSpeed["y"] = 0.41;
+            this.globalDB.SprintSpeed["y"] = 0.45;
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight

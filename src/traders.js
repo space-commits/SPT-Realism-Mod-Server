@@ -307,7 +307,7 @@ class RandomizeTraderAssort {
                 if (this.tables.traders[trader].assort?.loyal_level_items !== undefined) {
                     let ll = this.tables.traders[trader].assort.loyal_level_items;
                     for (let lvl in ll) {
-                        this.randomizeLL(ll, lvl);
+                        this.randomizeLL(ll, lvl, this.logger);
                     }
                 }
             }
@@ -474,11 +474,15 @@ class RandomizeTraderAssort {
             barter.count = cost * 0.6;
         }
     }
-    randomizeLL(ll, i) {
+    randomizeLL(ll, i, logger) {
+        logger.warning("Randomizing LL");
         let level = ll[i];
         let randNum = this.helper.pickRandNumOneInTen();
         if (randNum <= 2) {
             ll[i] = Math.max(1, level - 1);
+        }
+        if (level === 5) {
+            ll[i] = 4;
         }
     }
 }
@@ -493,7 +497,8 @@ exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     myResetExpiredTrader(trader) {
         if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            trader.assort.items = this.getDirtyTraderAssorts(trader);
+            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+            trader.assort.items = this.modifyTraderAssorts(trader, this.logger);
         }
         else {
             trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
@@ -506,7 +511,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
         }
     }
-    getDirtyTraderAssorts(trader) {
+    modifyTraderAssorts(trader, logger) {
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new arrays_1.Arrays(tables);
@@ -516,7 +521,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;
             for (let lvl in ll) {
-                randomTraderAss.randomizeLL(ll, lvl);
+                randomTraderAss.randomizeLL(ll, lvl, logger);
             }
         }
         for (let i in assortItems) {
@@ -537,12 +542,17 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
                 if (barter !== undefined) {
-                    let randNum = helper.pickRandNumOneInTen();
-                    randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
+                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
+                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
+                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
                 }
             }
         }
         return assortItems;
+    }
+    randomizePrices(randomTraderAss, helper, itemTemplId, barter) {
+        let randNum = helper.pickRandNumOneInTen();
+        randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
     }
 }
 exports.TraderRefresh = TraderRefresh;
