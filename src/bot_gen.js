@@ -7,8 +7,6 @@ const helper_1 = require("./helper");
 const BotEquipmentModGenerator_1 = require("C:/snapshot/project/obj/generators/BotEquipmentModGenerator");
 const BotGeneratorHelper_1 = require("C:/snapshot/project/obj/helpers/BotGeneratorHelper");
 const BotLevelGenerator_1 = require("C:/snapshot/project/obj/generators/BotLevelGenerator");
-const InventoryMagGen_1 = require("C:/snapshot/project/obj/generators/weapongen/InventoryMagGen");
-const enums_1 = require("./enums");
 const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
 const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
 const modConfig = require("../config/config.json");
@@ -37,34 +35,6 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
 }
 exports.GenBotLvl = GenBotLvl;
 class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
-    magGen(generatedWeaponResult, magCounts, inventory, botRole) {
-        const weaponMods = generatedWeaponResult.weapon;
-        const weaponTemplate = generatedWeaponResult.weaponTemplate;
-        const ammoTpl = generatedWeaponResult.chosenAmmoTpl;
-        const magazineTpl = this.getMagazineTplFromWeaponTemplate(weaponMods, weaponTemplate, botRole);
-        if (weaponTemplate._props.weapClass === enums_1.ParentClasses.PISTOL) {
-            magCounts.min = Math.max(1, Math.round(magCounts.min * 0.5));
-            magCounts.max = Math.max(2, Math.round(magCounts.max * 0.5));
-        }
-        const magTemplate = this.itemHelper.getItem(magazineTpl)[1];
-        if (!magTemplate) {
-            this.logger.error(this.localisationService.getText("bot-unable_to_find_magazine_item", magazineTpl));
-            return;
-        }
-        const ammoTemplate = this.itemHelper.getItem(ammoTpl)[1];
-        if (!ammoTemplate) {
-            this.logger.error(this.localisationService.getText("bot-unable_to_find_ammo_item", ammoTpl));
-            return;
-        }
-        // Has an UBGL
-        if (generatedWeaponResult.chosenUbglAmmoTpl) {
-            this.addUbglGrenadesToBotInventory(weaponMods, generatedWeaponResult, inventory);
-        }
-        const inventoryMagGenModel = new InventoryMagGen_1.InventoryMagGen(magCounts, magTemplate, weaponTemplate, ammoTemplate, inventory);
-        this.inventoryMagGenComponents.find(v => v.canHandleInventoryMagGen(inventoryMagGenModel)).process(inventoryMagGenModel);
-        // Add x stacks of bullets to SecuredContainer (bots use a magic mag packing skill to reload instantly)
-        this.addAmmoToSecureContainer(this.botConfig.secureContainerAmmoStackCount, ammoTpl, ammoTemplate._props.StackMaxSize, inventory);
-    }
     botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel) {
         const probabilityHelper = tsyringe_1.container.resolve("ProbabilityHelper");
         const profileHelper = tsyringe_1.container.resolve("ProfileHelper");

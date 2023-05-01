@@ -44,6 +44,7 @@ export class Bots {
     birdeyeBase = this.botDB["followerbirdeye"];
     killaBase = this.botDB["bosskilla"];
     tagillaBase = this.botDB["bosstagilla"];
+    reshallaBase = this.botDB["bossBully"];
 
     botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
     botConfPMC = this.botConf.pmc;
@@ -654,7 +655,7 @@ export class Bots {
         this.usecBase.inventory.items = usecLO.usecLO1.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO1.inventory.mods;
         this.usecBase.chances = usecLO.usecLO1.chances;
-        this.usecBase.generation = this.modConf.med_changes === true ? usecLO.usecLO1.generation_med_changes : usecLO.usecLO1.generation;
+        this.usecBase.generation = usecLO.usecLO1.generation;
         this.usecBase.appearance.body = usecLO.usecLO1.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO1.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO1.experience.level;
@@ -712,7 +713,7 @@ export class Bots {
         this.usecBase.inventory.items = usecLO.usecLO2.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO2.inventory.mods;
         this.usecBase.chances = usecLO.usecLO2.chances;
-        this.usecBase.generation = this.modConf.med_changes === true ? usecLO.usecLO2.generation_med_changes : usecLO.usecLO2.generation;
+        this.usecBase.generation = usecLO.usecLO2.generation;
         this.usecBase.appearance.body = usecLO.usecLO2.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO2.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO2.experience.level;
@@ -781,7 +782,7 @@ export class Bots {
         this.usecBase.inventory.items = usecLO.usecLO3.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO3.inventory.mods;
         this.usecBase.chances = usecLO.usecLO3.chances;
-        this.usecBase.generation = this.modConf.med_changes === true ? usecLO.usecLO3.generation_med_changes : usecLO.usecLO3.generation;
+        this.usecBase.generation = usecLO.usecLO3.generation;
         this.usecBase.appearance.body = usecLO.usecLO3.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO3.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO3.experience.level;
@@ -850,7 +851,7 @@ export class Bots {
         this.usecBase.inventory.items = usecLO.usecLO4.inventory.items;
         this.usecBase.inventory.mods = usecLO.usecLO4.inventory.mods;
         this.usecBase.chances = usecLO.usecLO4.chances;
-        this.usecBase.generation = this.modConf.med_changes === true ? usecLO.usecLO4.generation_med_changes : usecLO.usecLO4.generation;
+        this.usecBase.generation = usecLO.usecLO4.generation;
         this.usecBase.appearance.body = usecLO.usecLO4.appearance.body;
         this.usecBase.appearance.feet = usecLO.usecLO4.appearance.feet;
         this.usecBase.experience.level = usecLO.usecLO4.experience.level;
@@ -934,7 +935,7 @@ export class Bots {
         this.bearBase.inventory.items = bearLO.bearLO1.inventory.items;
         this.bearBase.inventory.mods = bearLO.bearLO1.inventory.mods;
         this.bearBase.chances = bearLO.bearLO1.chances;
-        this.bearBase.generation = this.modConf.med_changes === true ? bearLO.bearLO1.generation_med_changes : bearLO.bearLO1.generation;
+        this.bearBase.generation = bearLO.bearLO1.generation;
         this.bearBase.appearance.body = bearLO.bearLO1.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO1.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO1.experience.level;
@@ -992,7 +993,7 @@ export class Bots {
         this.bearBase.inventory.items = bearLO.bearLO2.inventory.items;
         this.bearBase.inventory.mods = bearLO.bearLO2.inventory.mods;
         this.bearBase.chances = bearLO.bearLO2.chances;
-        this.bearBase.generation = this.modConf.med_changes === true ? bearLO.bearLO2.generation_med_changes : bearLO.bearLO2.generation;
+        this.bearBase.generation = bearLO.bearLO2.generation;
         this.bearBase.appearance.body = bearLO.bearLO2.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO2.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO2.experience.level;
@@ -1059,7 +1060,7 @@ export class Bots {
         this.bearBase.inventory.items = bearLO.bearLO3.inventory.items;
         this.bearBase.inventory.mods = bearLO.bearLO3.inventory.mods;
         this.bearBase.chances = bearLO.bearLO3.chances;
-        this.bearBase.generation = this.modConf.med_changes === true ? bearLO.bearLO3.generation_med_changes : bearLO.bearLO3.generation;
+        this.bearBase.generation = bearLO.bearLO3.generation;
         this.bearBase.appearance.body = bearLO.bearLO3.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO3.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO3.experience.level;
@@ -1127,7 +1128,7 @@ export class Bots {
         this.bearBase.inventory.items = bearLO.bearLO4.inventory.items;
         this.bearBase.inventory.mods = bearLO.bearLO4.inventory.mods;
         this.bearBase.chances = bearLO.bearLO4.chances;
-        this.bearBase.generation = this.modConf.med_changes === true ? bearLO.bearLO4.generation_med_changes : bearLO.bearLO4.generation;
+        this.bearBase.generation = bearLO.bearLO4.generation;
         this.bearBase.appearance.body = bearLO.bearLO4.appearance.body;
         this.bearBase.appearance.feet = bearLO.bearLO4.appearance.feet;
         this.bearBase.experience.level = bearLO.bearLO4.experience.level;
@@ -2263,6 +2264,10 @@ export class Bots {
         this.knightBase.inventory.equipment.Headwear = {}
         this.knightBase.chances.equipment.Headwear = 0;
         this.knightBase.chances.equipment.FaceCover = 100;
+
+        this.reshallaBase.inventory.equipment.SecondPrimaryWeapon = { "5b3b713c5acfc4330140bd8d" : 1}
+
+
     }
 
 

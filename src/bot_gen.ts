@@ -70,44 +70,6 @@ export class GenBotLvl extends BotLevelGenerator {
 
 export class BotWepGen extends BotWeaponGenerator {
 
-    public magGen(generatedWeaponResult: GenerateWeaponResult, magCounts: MinMax, inventory: PmcInventory, botRole: string) {
-
-        const weaponMods = generatedWeaponResult.weapon;
-        const weaponTemplate = generatedWeaponResult.weaponTemplate;
-        const ammoTpl = generatedWeaponResult.chosenAmmoTpl;
-        const magazineTpl = this.getMagazineTplFromWeaponTemplate(weaponMods, weaponTemplate, botRole);
-
-        if (weaponTemplate._props.weapClass === ParentClasses.PISTOL) {
-            magCounts.min = Math.max(1, Math.round(magCounts.min * 0.5));
-            magCounts.max = Math.max(2, Math.round(magCounts.max * 0.5));
-        }
-
-        const magTemplate = this.itemHelper.getItem(magazineTpl)[1];
-        if (!magTemplate) {
-            this.logger.error(this.localisationService.getText("bot-unable_to_find_magazine_item", magazineTpl));
-
-            return;
-        }
-
-        const ammoTemplate = this.itemHelper.getItem(ammoTpl)[1];
-        if (!ammoTemplate) {
-            this.logger.error(this.localisationService.getText("bot-unable_to_find_ammo_item", ammoTpl));
-
-            return;
-        }
-
-        // Has an UBGL
-        if (generatedWeaponResult.chosenUbglAmmoTpl) {
-            this.addUbglGrenadesToBotInventory(weaponMods, generatedWeaponResult, inventory);
-        }
-
-        const inventoryMagGenModel = new InventoryMagGen(magCounts, magTemplate, weaponTemplate, ammoTemplate, inventory);
-        this.inventoryMagGenComponents.find(v => v.canHandleInventoryMagGen(inventoryMagGenModel)).process(inventoryMagGenModel);
-
-        // Add x stacks of bullets to SecuredContainer (bots use a magic mag packing skill to reload instantly)
-        this.addAmmoToSecureContainer(this.botConfig.secureContainerAmmoStackCount, ammoTpl, ammoTemplate._props.StackMaxSize, inventory);
-    }
-
     public botWepGen(sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number): GenerateWeaponResult {
 
         const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");

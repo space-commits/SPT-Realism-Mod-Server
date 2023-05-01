@@ -1125,7 +1125,7 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 3.5,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08
@@ -1138,7 +1138,7 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 3.5,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08

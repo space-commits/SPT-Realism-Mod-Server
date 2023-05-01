@@ -132,14 +132,6 @@ class Main {
             }
         ], "RealismMod");
         if (modConfig.bot_changes == true) {
-            container.afterResolution("BotWeaponGenerator", (_t, result) => {
-                result.generateWeaponByTpl = (sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel) => {
-                    return _botWepGen.botWepGen(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel);
-                };
-                result.addExtraMagazinesToInventory = (generatedWeaponResult, magCounts, inventory, botRole) => {
-                    return _botWepGen.magGen(generatedWeaponResult, magCounts, inventory, botRole);
-                };
-            }, { frequency: "Always" });
             container.afterResolution("BotEquipmentModGenerator", (_t, result) => {
                 result.generateModsForWeapon = (sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole) => {
                     return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
