@@ -9,6 +9,9 @@ import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
 import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
 import { container, inject } from "tsyringe";
+import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { InventoryHelper } from "@spt-aki/helpers/InventoryHelper";
+import { FindSlotResult } from "@spt-aki/helpers/ContainerHelper";
 
 export class MyBotLootCache {
     specialItems: ITemplateItem[]
@@ -299,8 +302,6 @@ export class BotLooGen extends BotLootGenerator {
             this.botConfig.pmc.maxPocketLootTotalRub,
             isPmc);
     }
-
-
 }
 
 export class MyLootCache extends BotLootCacheService {
@@ -448,7 +449,8 @@ export class MyLootCache extends BotLootCacheService {
         //vest
         const vestHealingItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent === BaseClasses.MEDKIT);
+            && template._parent === BaseClasses.MEDKIT
+            || template._parent === BaseClasses.MEDICAL);
 
         const vestDrugItems = vestLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
@@ -461,7 +463,8 @@ export class MyLootCache extends BotLootCacheService {
         //pocket
         const pocketHealingItems = pocketLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent === BaseClasses.MEDKIT);
+            && template._parent === BaseClasses.MEDKIT
+            || template._parent === BaseClasses.MEDICAL);
 
         const pocketDrugItems = pocketLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
@@ -474,7 +477,8 @@ export class MyLootCache extends BotLootCacheService {
         //bag
         const bagHealingItems = backpackLootTemplates.filter(template =>
             this.isMedicalItem(template._props)
-            && template._parent === BaseClasses.MEDKIT);
+            && template._parent === BaseClasses.MEDKIT
+            || template._parent === BaseClasses.MEDICAL);
 
         const bagDrugItems = backpackLootTemplates.filter(template =>
             this.isMedicalItem(template._props)

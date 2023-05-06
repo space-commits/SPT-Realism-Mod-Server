@@ -244,21 +244,24 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
         /////////////////////Meds//////////////////////////////
         //vest
         const vestHealingItems = vestLootTemplates.filter(template => this.isMedicalItem(template._props)
-            && template._parent === BaseClasses_1.BaseClasses.MEDKIT);
+            && template._parent === BaseClasses_1.BaseClasses.MEDKIT
+            || template._parent === BaseClasses_1.BaseClasses.MEDICAL);
         const vestDrugItems = vestLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.DRUGS);
         const vestStimItems = vestLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.STIMULATOR);
         //pocket
         const pocketHealingItems = pocketLootTemplates.filter(template => this.isMedicalItem(template._props)
-            && template._parent === BaseClasses_1.BaseClasses.MEDKIT);
+            && template._parent === BaseClasses_1.BaseClasses.MEDKIT
+            || template._parent === BaseClasses_1.BaseClasses.MEDICAL);
         const pocketDrugItems = pocketLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.DRUGS);
         const pocketStimItems = pocketLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.STIMULATOR);
         //bag
         const bagHealingItems = backpackLootTemplates.filter(template => this.isMedicalItem(template._props)
-            && template._parent === BaseClasses_1.BaseClasses.MEDKIT);
+            && template._parent === BaseClasses_1.BaseClasses.MEDKIT
+            || template._parent === BaseClasses_1.BaseClasses.MEDICAL);
         const bagDrugItems = backpackLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.DRUGS);
         const bagStimItems = backpackLootTemplates.filter(template => this.isMedicalItem(template._props)

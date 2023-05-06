@@ -177,9 +177,9 @@ export class Player {
         if (this.modConfig.movement_changes == true) {
 
             this.globalDB.WalkSpeed["x"] = 0.6;
-            this.globalDB.WalkSpeed["y"] = 0.85;
+            this.globalDB.WalkSpeed["y"] = 0.87;
             this.globalDB.SprintSpeed["x"] = 0.05;
-            this.globalDB.SprintSpeed["y"] = 0.42;
+            this.globalDB.SprintSpeed["y"] = 0.45;
 
             this.globalDB.Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB.Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
