@@ -327,7 +327,7 @@
         "ArmorClass": "XSAPI",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
+        "ReloadSpeedMulti": 1.14,
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,

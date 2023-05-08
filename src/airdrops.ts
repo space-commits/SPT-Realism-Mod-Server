@@ -1,20 +1,13 @@
 
 import { IAirdropConfig } from "@spt-aki/models/spt/config/IAirdropConfig";
 import { ILogger } from "../types/models/spt/utils/ILogger";
-import { LootGenerator } from "@spt-aki/generators/LootGenerator";
-import { DependencyContainer } from "tsyringe";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
-import { LootRequest } from "@spt-aki/models/spt/services/LootRequest";
 import { LootItem } from "@spt-aki/models/spt/services/LootItem";
 import { MinMax } from "@spt-aki/models/common/MinMax";
 import { ParentClasses } from "./enums";
 import { Preset } from "@spt-aki/models/eft/common/IGlobals";
 import { LocationController } from "@spt-aki/controllers/LocationController";
-import { RandomUtil } from "@spt-aki/utils/RandomUtil";
-import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
-import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
-import { container, inject } from "tsyringe";
-import { Helper, RaidInfoTracker } from "./helper";
+import { Utils, RaidInfoTracker } from "./utils";
 import { Arrays } from "./arrays";
 
 
@@ -50,7 +43,7 @@ export class AirdropLootgen extends LocationController {
         const modConfig = require("../config/config.json");
         const tables = this.databaseServer.getTables();
         const arrays = new Arrays(tables);
-        const helper = new Helper(tables, arrays);
+        const helper = new Utils(tables, arrays);
         let weights = [];
 
         if (RaidInfoTracker.TOD === "day") {
@@ -73,7 +66,7 @@ export class AirdropLootgen extends LocationController {
     }
 
 
-    private updateAirdropsLootPools(modConfig, helper: Helper, weights: Array<number>) {
+    private updateAirdropsLootPools(modConfig, helper: Utils, weights: Array<number>) {
 
 
         const airdropLoot = require("../db/airdrops/airdrop_loot.json");
@@ -116,7 +109,7 @@ export class AirdropLootgen extends LocationController {
     }
 
 
-    private createRandomAirdropLoot(options: AirdropLootRequest, helper: Helper): LootItem[] {
+    private createRandomAirdropLoot(options: AirdropLootRequest, helper: Utils): LootItem[] {
         const result: LootItem[] = [];
 
         const itemTypeCounts = this.initItemLimitCounter(options.itemLimits);
@@ -145,7 +138,7 @@ export class AirdropLootgen extends LocationController {
         return result;
     }
 
-    private findAndAddRandomItemToAirdropLoot(items: [string, ITemplateItem][], itemTypeCounts: Record<string, { current: number; max: number; }>, options: AirdropLootRequest, result: LootItem[], helper: Helper): boolean {
+    private findAndAddRandomItemToAirdropLoot(items: [string, ITemplateItem][], itemTypeCounts: Record<string, { current: number; max: number; }>, options: AirdropLootRequest, result: LootItem[], helper: Utils): boolean {
         const randomItem = helper.getArrayValue(items)[1];
 
         const itemLimitCount = itemTypeCounts[randomItem._parent];
@@ -189,7 +182,7 @@ export class AirdropLootgen extends LocationController {
         return true;
     }
 
-    private getRandomisedStackCountAirdrop(item: ITemplateItem, options: AirdropLootRequest, helper: Helper): number {
+    private getRandomisedStackCountAirdrop(item: ITemplateItem, options: AirdropLootRequest, helper: Utils): number {
         let min = item._props.StackMinRandom;
         let max = item._props.StackMaxSize;
 

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonHandler = void 0;
-const helper_1 = require("./helper");
+const utils_1 = require("./utils");
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
@@ -118,7 +118,7 @@ class JsonHandler {
         }
     }
     modPusherHelper(serverItem, fileItem) {
-        if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && helper_1.ConfigChecker.dllIsPresent == true) {
+        if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) {
             if (serverItem._id === fileItem.ItemID) {
                 var serverConfItems = serverItem._props.ConflictingItems;
                 if (serverConfItems[0] !== "SPTRM") {
@@ -166,7 +166,7 @@ class JsonHandler {
                 if (modConfig.realistic_ballistics == true) {
                     serverItem._props.Velocity = fileItem.Velocity;
                 }
-                if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && helper_1.ConfigChecker.dllIsPresent == true) {
+                if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
                     serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
                     serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;

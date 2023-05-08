@@ -1,4 +1,34 @@
 {
+    "HNDGRD_TYPE64_ITSELF_00C": {
+        "ItemID": "HNDGRD_TYPE64_ITSELF_00C",
+        "Name": "handguard_type64_m_lok_c",
+        "ModType": "",
+        "VerticalRecoil": -2.5,
+        "HorizontalRecoil": -2.5,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 10,
+        "Accuracy": 4,
+        "HeatFactor": 0.985,
+        "CoolFactor": 1.055,
+        "ConflictingItems": [],
+        "Weight": 0.17
+    },
+    "HNDGRD_TYPE64_ITSELF_00L": {
+        "ItemID": "HNDGRD_TYPE64_ITSELF_00L",
+        "Name": "handguard_type64_m_lok_l",
+        "ModType": "",
+        "VerticalRecoil": -3,
+        "HorizontalRecoil": -3,
+        "Dispersion": -1,
+        "AimSpeed": 0,
+        "Ergonomics": 13,
+        "Accuracy": 7,
+        "HeatFactor": 0.95,
+        "CoolFactor": 1.07,
+        "ConflictingItems": [],
+        "Weight": 0.2
+    },
     "handguard_vepr12_molot": {
         "ItemID": "handguard_vepr12_molot",
         "Name": "handguard_vepr12_molot",

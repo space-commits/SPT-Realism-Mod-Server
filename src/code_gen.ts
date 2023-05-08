@@ -2,7 +2,7 @@ import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";
-import { Helper } from "./helper";
+import { Utils } from "./helutilsper";
 import { ParentClasses } from "./enums";
 
 
@@ -52,9 +52,9 @@ const GrenadeLauncherTemplates = require("../db/templates/weapons/" + `${presetP
 
 
 
-export class CodeGen {
+export class JsonGen {
 
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private helper: Helper, private arrays: Arrays) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private helper: Utils, private arrays: Arrays) { }
 
     globalDB = this.tables.globals.config;
     itemDB = this.tables.templates.items;

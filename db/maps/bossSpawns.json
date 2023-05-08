@@ -120,7 +120,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 25,
+            "BossChance": 20,
             "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -132,7 +132,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 25,
+            "BossChance": 20,
             "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -147,7 +147,7 @@
         },
         {
             "BossName": "bossKnight",
-            "BossChance": 20,
+            "BossChance": 15,
             "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -182,7 +182,7 @@
         },
         {
             "BossName": "bossSanitar",
-            "BossChance": 15,
+            "BossChance": 10,
             "BossZone": "ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -195,7 +195,7 @@
         },
         {
             "BossName": "bossGluhar",
-            "BossChance": 15,
+            "BossChance": 10,
             "BossZone": "ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -272,7 +272,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 20,
+            "BossChance": 15,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -333,7 +333,7 @@
         },
         {
             "BossName": "bossKilla",
-            "BossChance": 15,
+            "BossChance": 10,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -358,7 +358,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 25,
+            "BossChance": 20,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -370,7 +370,7 @@
         },
         {
             "BossName": "bossKnight",
-            "BossChance": 10,
+            "BossChance": 7,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -433,7 +433,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 25,
+            "BossChance": 20,
             "BossZone": "ZonePowerStation,ZoneTrucks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -445,7 +445,7 @@
         },
         {
             "BossName": "bossBully",
-            "BossChance": 15,
+            "BossChance": 10,
             "BossZone": "ZonePowerStation,ZoneTrucks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -709,7 +709,7 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2,3",
-            "Time": 3,
+            "Time": 1,
             "TriggerId": "raider_simple_patroling",
             "TriggerName": "interactObject",
             "Supports": null,
@@ -758,7 +758,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 35,
+            "BossChance": 30,
             "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZoneForestTruck,ZoneForestSpawn",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -849,7 +849,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 40,
+            "BossChance": 25,
             "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneMiniHouse,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -864,7 +864,7 @@
         },
         {
             "BossName": "bossKnight",
-            "BossChance": 30,
+            "BossChance": 25,
             "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneMiniHouse,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",

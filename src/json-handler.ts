@@ -1,7 +1,7 @@
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ParentClasses } from "./enums";
-import { ConfigChecker } from "./helper";
+import { ConfigChecker } from "./utils";
 
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;

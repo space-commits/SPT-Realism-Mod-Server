@@ -130,8 +130,8 @@ export class BotLooGen extends BotLootGenerator {
 
         const vestGrenadeCount = this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
         grenadeTally += vestGrenadeCount;
-        const porcketGrenadeCount = grenadeTally >= itemCounts.grenades.max ? 0 : this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
-        grenadeTally += porcketGrenadeCount;
+        const pocketGrenadeCount = grenadeTally >= itemCounts.grenades.max ? 0 : this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
+        grenadeTally += pocketGrenadeCount;
 
         // Special items
         this.addLootFromPool(
@@ -257,7 +257,7 @@ export class BotLooGen extends BotLootGenerator {
         this.addLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, botJsonTemplate),
             [EquipmentSlots.POCKETS],
-            porcketGrenadeCount,
+            pocketGrenadeCount,
             botInventory,
             botRole,
             false,

@@ -32,7 +32,7 @@ const armor_1 = require("./armor");
 const attatchment_base_1 = require("./attatchment_base");
 const attatchment_stats_1 = require("./attatchment_stats");
 const fleamarket_1 = require("./fleamarket");
-const helper_1 = require("./helper");
+const utils_1 = require("./utils");
 const arrays_1 = require("./arrays");
 const meds_1 = require("./meds");
 const player_1 = require("./player");
@@ -109,6 +109,10 @@ class Main {
         const itemBaseClassService = container.resolve("ItemBaseClassService");
         const durabilityLimitsHelper = container.resolve("DurabilityLimitsHelper");
         const appContext = container.resolve("ApplicationContext");
+        const botInventoryGenerator = container.resolve("BotInventoryGenerator");
+        const botLevelGenerator = container.resolve("BotLevelGenerator");
+        const botDifficultyHelper = container.resolve("BotDifficultyHelper");
+        const seasonalEventService = container.resolve("SeasonalEventService");
         const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const _botWepGen = new bot_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
@@ -117,6 +121,7 @@ class Main {
         const genBotLvl = new bot_gen_1.GenBotLvl(logger, randomUtil, databaseServer);
         const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer);
         const myBotGenHelper = new bot_gen_1.BotGenHelper(logger, randomUtil, databaseServer, durabilityLimitsHelper, itemHelper, appContext, localisationService, configServer);
+        const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, configServer);
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
         const router = container.resolve("DynamicRouterModService");
@@ -132,26 +137,36 @@ class Main {
             }
         ], "RealismMod");
         if (modConfig.bot_changes == true) {
-            container.afterResolution("BotEquipmentModGenerator", (_t, result) => {
-                result.generateModsForWeapon = (sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole) => {
-                    return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
+            container.afterResolution("BotGenerator", (_t, result) => {
+                result.prepareAndGenerateBots = (sessionId, botGenerationDetails) => {
+                    return botGen.myPrepareAndGenerateBots(sessionId, botGenerationDetails);
                 };
             }, { frequency: "Always" });
-            container.afterResolution("BotLootGenerator", (_t, result) => {
-                result.generateLoot = (sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel) => {
-                    return botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
-                };
-            }, { frequency: "Always" });
-            container.afterResolution("BotLevelGenerator", (_t, result) => {
-                result.generateBotLevel = (levelDetails, botGenerationDetails, bot) => {
-                    return genBotLvl.genBotLvl(levelDetails, botGenerationDetails, bot);
-                };
-            }, { frequency: "Always" });
-            container.afterResolution("BotGeneratorHelper", (_t, result) => {
-                result.generateExtraPropertiesForItem = (itemTemplate, botRole = null) => {
-                    return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
-                };
-            }, { frequency: "Always" });
+            // container.afterResolution("BotWeaponGenerator", (_t, result: BotWeaponGenerator) => {
+            //     result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number): GenerateWeaponResult => {
+            //         return _botWepGen.myGenerateWeaponByTpl(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel);
+            //     }
+            // }, { frequency: "Always" });
+            // container.afterResolution("BotEquipmentModGenerator", (_t, result: BotEquipmentModGenerator) => {
+            //     result.generateModsForWeapon = (sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string, botLevel: number, modLimits: BotModLimits, botEquipmentRole: string): Item[] => {
+            //         return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
+            //     }
+            // }, { frequency: "Always" });
+            // container.afterResolution("BotLootGenerator", (_t, result: BotLootGenerator) => {
+            //     result.generateLoot = (sessionId: string, botJsonTemplate: IBotType, isPmc: boolean, botRole: string, botInventory: PmcInventory, botLevel: number): void => {
+            //         return botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
+            //     }
+            // }, { frequency: "Always" });
+            // container.afterResolution("BotLevelGenerator", (_t, result: BotLevelGenerator) => {
+            //     result.generateBotLevel = (levelDetails: MinMax, botGenerationDetails: BotGenerationDetails, bot: IBotBase): IRandomisedBotLevelResult => {
+            //         return genBotLvl.genBotLvl(levelDetails, botGenerationDetails, bot);
+            //     }
+            // }, { frequency: "Always" });
+            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
+            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: Upd } => {
+            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
+            //     }
+            // }, { frequency: "Always" });
         }
         container.afterResolution("TraderAssortHelper", (_t, result) => {
             result.resetExpiredTrader = (trader) => {
@@ -182,9 +197,9 @@ class Main {
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const postLoadTables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadTables);
-                    const helper = new helper_1.Helper(postLoadTables, arrays);
+                    const utils = new utils_1.Utils(postLoadTables, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, helper);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
@@ -192,7 +207,7 @@ class Main {
                     let level = 1;
                     if (pmcData?.Info?.Level !== undefined) {
                         level = pmcData.Info.Level;
-                        helper_1.ProfileTracker.level = level;
+                        utils_1.ProfileTracker.level = level;
                     }
                     try {
                         if (modConfig.backup_profiles == true) {
@@ -205,16 +220,16 @@ class Main {
                             player.setPlayerHealth(pmcData, scavData);
                             if (hydroProp !== undefined) {
                                 if (modConfig.revert_med_changes == true && modConfig.med_changes == false) {
-                                    this.revertMeds(pmcData, helper);
-                                    this.revertMeds(scavData, helper);
+                                    this.revertMeds(pmcData, utils);
+                                    this.revertMeds(scavData, utils);
                                     modConfig.revert_med_changes = false;
-                                    helper.saveToJSONFile(modConfig, 'config/config.json');
+                                    utils.saveToJSONFile(modConfig, 'config/config.json');
                                     logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                 }
-                                this.checkProfile(pmcData, pmcData.Info.Experience, helper, player, logger);
-                                this.checkProfile(scavData, pmcData.Info.Experience, helper, player, logger);
+                                this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
+                                this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
                                 if (modConfig.med_changes == false) {
-                                    helper.removeCustomItems(pmcData);
+                                    utils.removeCustomItems(pmcData);
                                     pmcData.Health.Hydration.Maximum = player.defaultHydration;
                                     pmcData.Health.Energy.Maximum = player.defaultEnergy;
                                     if (pmcData.Health.Energy.Current > pmcData.Health.Energy.Maximum) {
@@ -259,13 +274,13 @@ class Main {
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const postLoadtables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadtables);
-                    const helper = new helper_1.Helper(postLoadtables, arrays);
-                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, medItems, helper);
+                    const utils = new utils_1.Utils(postLoadtables, arrays);
+                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     try {
-                        this.checkProfile(pmcData, pmcData.Info.Experience, helper, player, logger);
-                        this.checkProfile(scavData, scavData.Info.Experience, helper, player, logger);
+                        this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
+                        this.checkProfile(scavData, scavData.Info.Experience, utils, player, logger);
                         if (modConfig.realistic_player_health == true) {
                             player.correctNewHealth(pmcData, scavData);
                         }
@@ -293,12 +308,12 @@ class Main {
                         const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
                         const arrays = new arrays_1.Arrays(postLoadTables);
-                        const helper = new helper_1.Helper(postLoadTables, arrays);
-                        const bots = new bots_1.Bots(logger, postLoadTables, configServer, modConfig, arrays, helper);
+                        const utils = new utils_1.Utils(postLoadTables, arrays);
+                        const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const time = weatherController.generate().time;
-                        helper_1.RaidInfoTracker.mapName = matchInfoStartOff.location;
+                        utils_1.RaidInfoTracker.mapName = matchInfoStartOff.location;
                         let realTime = "";
                         let mapType = "";
                         if (matchInfoStartOff.timeVariant === "PAST") {
@@ -341,19 +356,19 @@ class Main {
                                 mapType = "urban";
                             }
                         }
-                        helper_1.RaidInfoTracker.TOD = getTOD(realTime);
-                        helper_1.RaidInfoTracker.mapType = mapType;
+                        utils_1.RaidInfoTracker.TOD = getTOD(realTime);
+                        utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.pmc_types == true) {
-                            if (helper_1.RaidInfoTracker.TOD === "day") {
+                            if (utils_1.RaidInfoTracker.TOD === "day") {
                                 botConf.pmc.pmcType = pmcTypes.BotTypes2.pmcTypeDay;
                             }
-                            if (helper_1.RaidInfoTracker.TOD === "night") {
+                            if (utils_1.RaidInfoTracker.TOD === "night") {
                                 botConf.pmc.pmcType = pmcTypes.BotTypes2.pmcTypeNight;
                             }
                         }
                         if (modConfig.bot_changes) {
-                            this.updateBots(pmcData, logger, modConfig, bots, helper);
-                            if (helper_1.EventTracker.isChristmas == true) {
+                            this.updateBots(pmcData, logger, modConfig, bots, utils);
+                            if (utils_1.EventTracker.isChristmas == true) {
                                 logger.warning("====== Giving Bots Christmas Presents, Don't Be A Scrooge! ======");
                                 seasonalEvents.giveBotsChristmasPresents();
                             }
@@ -387,8 +402,8 @@ class Main {
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
-                    const helper = new helper_1.Helper(postLoadTables, arrays);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, helper);
+                    const utils = new utils_1.Utils(postLoadTables, arrays);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     let level = 1;
@@ -477,23 +492,23 @@ class Main {
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const arrays = new arrays_1.Arrays(tables);
-        const helper = new helper_1.Helper(tables, arrays);
+        const utils = new utils_1.Utils(tables, arrays);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const oldAmmo = new ammo_old_1.OldAmmo(logger, tables, modConfig);
         const oldArmor = new armor_old_1.OldArmor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
         const attachStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig, arrays);
-        const bots = new bots_1.Bots(logger, tables, configServer, modConfig, arrays, helper);
+        const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new player_1.Player(logger, tables, modConfig, custProfile, medItems, helper);
+        const player = new player_1.Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
-        const codegen = new code_gen_1.CodeGen(logger, tables, modConfig, helper, arrays);
+        const codegen = new code_gen_1.JsonGen(logger, tables, modConfig, utils, arrays);
         const custFleaConf = new fleamarket_1.FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
         const quests = new quests_1.Quests(logger, tables, modConfig);
-        const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, helper);
+        const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Maps(logger, tables, modConfig);
         const gear = new gear_1.Gear(arrays, tables);
@@ -565,7 +580,7 @@ class Main {
         if (modConfig.trader_repair_changes == true) {
             traders.loadTraderRepairs();
         }
-        if (modConfig.recoil_attachment_overhaul && helper_1.ConfigChecker.dllIsPresent == true) {
+        if (modConfig.recoil_attachment_overhaul && utils_1.ConfigChecker.dllIsPresent == true) {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
             attachStats.loadAttStats();
@@ -604,13 +619,13 @@ class Main {
     dllChecker(logger, modConfig) {
         const realismdll = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
         if (fs.existsSync(realismdll)) {
-            helper_1.ConfigChecker.dllIsPresent = true;
+            utils_1.ConfigChecker.dllIsPresent = true;
             if (modConfig.recoil_attachment_overhaul == false) {
                 logger.error("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
             }
         }
         else {
-            helper_1.ConfigChecker.dllIsPresent = false;
+            utils_1.ConfigChecker.dllIsPresent = false;
             if (modConfig.recoil_attachment_overhaul == true) {
                 logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
             }
@@ -621,7 +636,7 @@ class Main {
     }
     checkForEvents(logger, seasonalEventsService) {
         const isChristmasActive = seasonalEventsService.christmasEventEnabled();
-        helper_1.EventTracker.isChristmas = isChristmasActive;
+        utils_1.EventTracker.isChristmas = isChristmasActive;
         if (isChristmasActive == true) {
             logger.warning("Merry Christmas!");
         }
@@ -667,13 +682,13 @@ class Main {
             this.bossSpawnHelper(mapDB, 1);
         }
         if (level >= 40 && level < 45) {
-            this.bossSpawnHelper(mapDB, 1.1);
+            this.bossSpawnHelper(mapDB, 1.05);
         }
         if (level >= 45 && level < 50) {
-            this.bossSpawnHelper(mapDB, 1.2);
+            this.bossSpawnHelper(mapDB, 1.1);
         }
         if (level > 50) {
-            this.bossSpawnHelper(mapDB, 1.3);
+            this.bossSpawnHelper(mapDB, 1.2);
         }
     }
     bossSpawnHelper(mapDB, chanceMulti) {
@@ -695,8 +710,6 @@ class Main {
     }
     getBotTier(pmcData, bots, helper) {
         this.setBotTier(pmcData, "scav", bots, helper);
-        this.setBotTier(pmcData, "bear", bots, helper);
-        this.setBotTier(pmcData, "usec", bots, helper);
         this.setBotTier(pmcData, "raider", bots, helper);
         this.setBotTier(pmcData, "rogue", bots, helper);
         this.setBotTier(pmcData, "goons", bots, helper);
@@ -814,42 +827,12 @@ class Main {
                 bots.scavLoad3();
             }
         }
-        if (type === "usec") {
-            if (tier == 1) {
-                bots.usecLoad1();
-            }
-            if (tier == 2) {
-                bots.usecLoad2();
-            }
-            if (tier == 3) {
-                bots.usecLoad3();
-            }
-            if (tier == 4) {
-                bots.usecLoad4();
-            }
-        }
-        if (type === "bear") {
-            if (tier == 1) {
-                bots.bearLoad1();
-            }
-            if (tier == 2) {
-                bots.bearLoad2();
-            }
-            if (tier == 3) {
-                bots.bearLoad3();
-            }
-            if (tier == 4) {
-                bots.bearLoad4();
-            }
-        }
     }
     updateBots(pmcData, logger, config, bots, helper) {
         var property = pmcData?.Info?.Level;
         if (property === undefined) {
             bots.botConfig1();
             bots.scavLoad1();
-            bots.usecLoad1();
-            bots.bearLoad1();
             bots.rogueLoad1();
             bots.raiderLoad1();
             bots.goonsLoad1();

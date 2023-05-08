@@ -4,13 +4,13 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 import { ParentClasses } from "./enums";
-import { Helper } from "./helper";
+import { Utils } from "./helper";
 
 const botHealth = require("../db/bots/botHealth.json");
 
 
 export class Player {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private custProfile, private medItems, private helper: Helper) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private custProfile, private medItems, private helper: Utils) { }
 
     private globalDB = this.tables.globals.config;
 
@@ -157,7 +157,7 @@ export class Player {
         this.globalDB.Stamina.OxygenCapacity *= 1.3;
         this.globalDB.Stamina.OxygenRestoration *= 2.1;
 
-        this.globalDB.Stamina.AimDrainRate = 0.35;
+        this.globalDB.Stamina.AimDrainRate = 0.25;
         this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.05;
         this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.3;
         this.globalDB.Stamina.AimConsumptionByPose["z"] = 1; //standing

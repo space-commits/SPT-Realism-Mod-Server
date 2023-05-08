@@ -2190,6 +2190,34 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0
     },
+    "MAGZIN_TYPE64_ITSELF_DEF": {
+        "ItemID": "MAGZIN_TYPE64_ITSELF_DEF",
+        "Name": "magazine_type64_default",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0,
+        "LoadUnloadModifier": 20,
+        "CheckTimeModifier": 20,
+        "ConflictingItems": [],
+        "Weight": 0.31,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
+    "MAGZIN_TYPE64_ITSELF_PLY": {
+        "ItemID": "MAGZIN_TYPE64_ITSELF_PLY",
+        "Name": "magazine_type64_poly",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0.15,
+        "LoadUnloadModifier": 10,
+        "CheckTimeModifier": 10,
+        "ConflictingItems": [],
+        "Weight": 0.2,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
     "5ea034eb5aad6446a939737b": {
         "ItemID": "5ea034eb5aad6446a939737b",
         "Name": "mag_ppsh_zis_std_762x25_35",

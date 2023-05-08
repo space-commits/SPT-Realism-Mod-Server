@@ -1,4 +1,36 @@
 {
+    "RECIVR_TYPE64_ITSELF_DEF": {
+        "ItemID": "RECIVR_TYPE64_ITSELF_DEF",
+        "Name": "reciever_type64_default",
+        "ModType": "",
+        "ModMalfunctionChance": 0,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 0.97,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.09,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "ChamberSpeed": 0
+    },
+    "RECIVR_TYPE64_ITSELF_LSG": {
+        "ItemID": "RECIVR_TYPE64_ITSELF_LSG",
+        "Name": "reciever_type64_lsg",
+        "ModType": "",
+        "ModMalfunctionChance": 0,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 0.97,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.07,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "ChamberSpeed": 0
+    },
     "receiver_vepr12_molot": {
         "ItemID": "receiver_vepr12_molot",
         "Name": "receiver_vepr12_molot",
