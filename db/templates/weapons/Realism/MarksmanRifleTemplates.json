@@ -316,7 +316,7 @@
         "WeapAccuracy": 0,
         "BaseTorque": 6,
         "HasShoulderContact": true,
-        "Ergonomics": 80,
+        "Ergonomics": 83,
         "VerticalRecoil": 125,
         "HorizontalRecoil": 320,
         "Dispersion": 23,

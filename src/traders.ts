@@ -589,11 +589,10 @@ export class TraderRefresh extends TraderAssortHelper {
 
     public myResetExpiredTrader(trader: ITrader) {
 
+        trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+
         if(modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true){
             trader.assort.items = this.getDirtyTraderAssorts(trader);
-        }
-        else{
-            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
         }
 
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
@@ -612,7 +611,7 @@ export class TraderRefresh extends TraderAssortHelper {
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new Arrays(tables);
-        const helper = new Utils(tables, arrays);
+        const utils = new Utils(tables, arrays);
 
         var assortItems = trader.assort.items;
         var assortBarters = trader.assort.barter_scheme;
@@ -641,11 +640,17 @@ export class TraderRefresh extends TraderAssortHelper {
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
                 if (barter !== undefined) {
-                    let randNum = helper.pickRandNumOneInTen();
-                    randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
+                    this.randomizePricesOnRefresh(utils, itemTemplId, barter, randomTraderAss);
+                    this.randomizePricesOnRefresh(utils, itemTemplId, barter, randomTraderAss);
+                    this.randomizePricesOnRefresh(utils, itemTemplId, barter, randomTraderAss);
                 }
             }
         }
         return assortItems;
+    }
+
+    private randomizePricesOnRefresh(utils: Utils, itemTemplId: string, barter: IBarterScheme[][], randomTraderAss: RandomizeTraderAssort){
+        let randNum = utils.pickRandNumOneInTen();
+        randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
     }
 }

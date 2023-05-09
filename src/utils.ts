@@ -165,8 +165,6 @@ export class RaidInfoTracker {
 }
 
 export class BotTierTracker {
-    static usecTier: number = 1;
-    static bearTier: number = 1;
     static scavTier: number = 1;
     static rogueTier: number = 1;
     static raiderTier: number = 1;
@@ -176,12 +174,6 @@ export class BotTierTracker {
 
 
     public getTier(botType: string): number {
-        if (botType === "sptusec") {
-            return BotTierTracker.usecTier;
-        }
-        if (botType === "sptbear") {
-            return BotTierTracker.bearTier;
-        }
         if (botType === "assault") {
             return BotTierTracker.scavTier;
         }
@@ -200,5 +192,6 @@ export class BotTierTracker {
         if (botType === "bosstagilla") {
             return BotTierTracker.tagillaTier;
         }
+        return 0;
     }
 }

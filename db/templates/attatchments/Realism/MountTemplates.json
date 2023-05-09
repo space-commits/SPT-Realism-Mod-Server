@@ -1023,15 +1023,6 @@
         "ConflictingItems": [],
         "Weight": 0.015
     },
-    "5a398b75c4a282000a51a266": {
-        "ItemID": "5a398b75c4a282000a51a266",
-        "Name": "helmet_ops_core_picatinny_rail_adapter",
-        "ModType": "",
-        "Ergonomics": 0,
-        "Accuracy": 0,
-        "ConflictingItems": [],
-        "Weight": 0.02
-    },
     "58d2664f86f7747fec5834f6": {
         "ItemID": "58d2664f86f7747fec5834f6",
         "Name": "mount_all_leupold_deltapoint_weaver",
@@ -1040,15 +1031,6 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.045
-    },
-    "5a398ab9c4a282000c5a9842": {
-        "ItemID": "5a398ab9c4a282000c5a9842",
-        "Name": "helmet_ops_core_single_clamp_rail_adapter",
-        "ModType": "",
-        "Ergonomics": 0,
-        "Accuracy": 0,
-        "ConflictingItems": [],
-        "Weight": 0.02
     },
     "5d024f5cd7ad1a04a067e91a": {
         "ItemID": "5d024f5cd7ad1a04a067e91a",

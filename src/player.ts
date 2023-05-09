@@ -4,7 +4,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 import { ParentClasses } from "./enums";
-import { Utils } from "./helper";
+import { Utils } from "./utils";
 
 const botHealth = require("../db/bots/botHealth.json");
 

@@ -95,8 +95,6 @@ import { LootGenerator } from "@spt-aki/generators/LootGenerator";
 import { OldAmmo } from "./ammo_old";
 import { OldArmor } from "./armor_old";
 import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
-import { ItemBaseClassService } from "@spt-aki/services/ItemBaseClassService";
-import { DurabilityLimitsHelper } from "@spt-aki/helpers/DurabilityLimitsHelper";
 import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
 import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
 import { BotGenerator } from "@spt-aki/generators/BotGenerator";
@@ -108,8 +106,6 @@ const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
-
-const pmcTypes = require("../db/bots/pmcTypes.json");
 
 var clientValidateCount = 0;
 
@@ -463,15 +459,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
-                            if (modConfig.pmc_types == true) {
-                                if (RaidInfoTracker.TOD === "day") {
-                                    botConf.pmc.pmcType = pmcTypes.BotTypes2.pmcTypeDay;
-                                }
-                                if (RaidInfoTracker.TOD === "night") {
-                                    botConf.pmc.pmcType = pmcTypes.BotTypes2.pmcTypeNight;
-                                }
-                            }
-
                             if (modConfig.bot_changes) {
                                 this.updateBots(pmcData, logger, modConfig, bots, utils);
                                 if (EventTracker.isChristmas == true) {
@@ -481,8 +468,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             }
 
                             if (matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory") {
-                                botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
-                                botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
+                                botConf.pmc.convertIntoPmcChance["pmcbot"].min = 0;
+                                botConf.pmc.convertIntoPmcChance["pmcbot"].max = 0;
+                                botConf.pmc.convertIntoPmcChance["assault"].min = 100;
+                                botConf.pmc.convertIntoPmcChance["assault"].max = 100;
                             }
 
                             if (modConfig.logEverything == true) {
@@ -690,9 +679,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             maps.openZonesFix();
         }
 
-        if (modConfig.boss_spawns == true) {
-            maps.loadSpawnChanges();
-        }
+        maps.loadSpawnChanges();
 
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();
