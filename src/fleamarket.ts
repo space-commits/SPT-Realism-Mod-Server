@@ -629,7 +629,8 @@ export class TieredFlea {
             if (this.itemDB[i]._parent === "55818afb4bdc2dde698b456d" ||
                 this.itemDB[i]._parent === "5a74651486f7744e73386dd1" ||
                 this.itemDB[i]._parent === "55818a6f4bdc2db9688b456b" ||
-                this.itemDB[i]._parent === "55818a304bdc2db5418b457d") {
+                this.itemDB[i]._parent === "55818a304bdc2db5418b457d" ||
+                "56ea9461d2720b67698b456f") {
                 this.itemDB[i]._props.CanSellOnRagfair = bool
             }
         }
@@ -682,7 +683,6 @@ export class TieredFlea {
             }
         }
     }
-
 
     private canSellMuzzleDevices(bool) {
         for (let i in this.itemDB) {

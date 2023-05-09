@@ -241,9 +241,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             }, { frequency: "Always" });
         }
 
-
-
-
         staticRouterModService.registerStaticRouter(
             "CheckProfile",
             [

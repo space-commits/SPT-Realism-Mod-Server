@@ -151,7 +151,7 @@ export class Traders {
     private setLL(file) {
         for (let item in file) {
             let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
-            let itemID = file[item].ItemID;
+            let itemID = file[item].ItemID; 
             for (let trader in this.tables.traders) {
                 if (this.tables.traders[trader].assort?.items !== undefined) {
                     for (let item in this.tables.traders[trader].assort.items) {
@@ -374,7 +374,7 @@ export class RandomizeTraderAssort {
                 if (this.tables.traders[trader].assort?.loyal_level_items !== undefined) {
                     let ll = this.tables.traders[trader].assort.loyal_level_items;
                     for (let lvl in ll) {
-                        this.randomizeLL(ll, lvl);
+                        this.randomizeLL(ll, lvl, this.logger);
                     }
                 }
             }
@@ -568,11 +568,15 @@ export class RandomizeTraderAssort {
         }
     }
 
-    public randomizeLL(ll: Record<string, number>, i: string) {
+    public randomizeLL(ll: Record<string, number>, i: string, logger: ILogger) {
+        logger.warning("Randomizing LL");
         let level = ll[i];
         let randNum = this.helper.pickRandNumOneInTen();
         if (randNum <= 2) {
             ll[i] = Math.max(1, level - 1);
+        }
+        if(level === 5){
+            ll[i] = 4;
         }
     }
 }
@@ -592,7 +596,8 @@ export class TraderRefresh extends TraderAssortHelper {
         trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
 
         if(modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true){
-            trader.assort.items = this.getDirtyTraderAssorts(trader);
+            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+            trader.assort.items = this.modifyTraderAssorts(trader, this.logger);
         }
 
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
@@ -606,7 +611,7 @@ export class TraderRefresh extends TraderAssortHelper {
         }
     }
 
-    private getDirtyTraderAssorts(trader: ITrader): Item[] {
+    private modifyTraderAssorts(trader: ITrader, logger: ILogger): Item[] {
 
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
@@ -619,7 +624,7 @@ export class TraderRefresh extends TraderAssortHelper {
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;
             for (let lvl in ll) {
-                randomTraderAss.randomizeLL(ll, lvl);
+                randomTraderAss.randomizeLL(ll, lvl, logger);
             }
         }
         for (let i in assortItems) {
@@ -640,17 +645,18 @@ export class TraderRefresh extends TraderAssortHelper {
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
                 if (barter !== undefined) {
-                    this.randomizePricesOnRefresh(utils, itemTemplId, barter, randomTraderAss);
-                    this.randomizePricesOnRefresh(utils, itemTemplId, barter, randomTraderAss);
-                    this.randomizePricesOnRefresh(utils, itemTemplId, barter, randomTraderAss);
+                    //roll randomization of prices several times for better potential spread of prices
+                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
+                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
+                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
                 }
             }
         }
         return assortItems;
     }
 
-    private randomizePricesOnRefresh(utils: Utils, itemTemplId: string, barter: IBarterScheme[][], randomTraderAss: RandomizeTraderAssort){
-        let randNum = utils.pickRandNumOneInTen();
+    private randomizePrices(randomTraderAss: RandomizeTraderAssort, helper: Helper, itemTemplId: string, barter: IBarterScheme[][]): void{
+        let randNum = helper.pickRandNumOneInTen();
         randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
     }
 }

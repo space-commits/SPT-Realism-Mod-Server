@@ -259,7 +259,7 @@
         },
         {
             "BossName": "bossKilla",
-            "BossChance": 15,
+            "BossChance": 10,
             "BossZone": "BotZone",
             "BossPlayer": false,
             "BossDifficult": "normal",
