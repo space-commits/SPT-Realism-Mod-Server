@@ -311,7 +311,7 @@
             }
         },
         "StimulatorBuffs": "Buffs_salewa",
-        "MaxHpResource": 7,
+        "MaxHpResource": 8,
         "medUseTime": 12,
         "hpResourceRate": 0
     },
@@ -328,7 +328,7 @@
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 3
             }
         },
         "StimulatorBuffs": "Buffs_IFAK",
@@ -376,17 +376,17 @@
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 4
+                "cost": 3
             },
             "Fracture": {
                 "delay": 10,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 4
+                "cost": 3
             }
         },
         "StimulatorBuffs": "Buffs_grizzly",
-        "MaxHpResource": 12,
+        "MaxHpResource": 21,
         "medUseTime": 15,
         "hpResourceRate": 0
     },

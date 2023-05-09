@@ -7,16 +7,13 @@ import { Arrays } from "./arrays";
 import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { EventTracker, Helper, ProfileTracker } from "./helper";
+import { EventTracker, Utils, ProfileTracker } from "./utils";
 import { Calibers, ParentClasses } from "./enums";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";
 import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
 import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
-import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
-import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
-import { TieredFlea } from "./fleamarket";
 
 
 const modConfig = require("../config/config.json");
@@ -72,7 +69,7 @@ const ragmId = "5ac3b934156ae10c4430e83c";
 const jaegId = "5c0647fdd443bc2504c2d371";
 
 export class Traders {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private helper: Helper) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private helper: Utils) { }
 
     itemDB = this.tables.templates.items;
 
@@ -340,7 +337,7 @@ export class RandomizeTraderAssort {
     private tables = this.databaseServer.getTables();
     private itemDB = this.tables.templates.items;
     private arrays = new Arrays(this.tables);
-    private helper = new Helper(this.tables, this.arrays);
+    private helper = new Utils(this.tables, this.arrays);
 
     public adjustTraderStockAtServerStart() {
         if (EventTracker.isChristmas == true) {
@@ -596,12 +593,11 @@ export class TraderRefresh extends TraderAssortHelper {
 
     public myResetExpiredTrader(trader: ITrader) {
 
+        trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+
         if(modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true){
             trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
             trader.assort.items = this.modifyTraderAssorts(trader, this.logger);
-        }
-        else{
-            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
         }
 
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
@@ -620,7 +616,7 @@ export class TraderRefresh extends TraderAssortHelper {
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new Arrays(tables);
-        const helper = new Helper(tables, arrays);
+        const utils = new Utils(tables, arrays);
 
         var assortItems = trader.assort.items;
         var assortBarters = trader.assort.barter_scheme;

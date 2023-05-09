@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CodeGen = void 0;
+exports.JsonGen = void 0;
 const enums_1 = require("./enums");
 const modConfig = require("../config/config.json");
 const presetPath = "Realism";
@@ -38,7 +38,7 @@ const SMGTemplates = require("../db/templates/weapons/" + `${presetPath}` + "/SM
 const SniperRifleTemplates = require("../db/templates/weapons/" + `${presetPath}` + "/SniperRifleTemplates.json");
 const SpecialWeaponTemplates = require("../db/templates/weapons/" + `${presetPath}` + "/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../db/templates/weapons/" + `${presetPath}` + "/GrenadeLauncherTemplates.json");
-class CodeGen {
+class JsonGen {
     constructor(logger, tables, modConf, helper, arrays) {
         this.logger = logger;
         this.tables = tables;
@@ -678,4 +678,4 @@ class CodeGen {
         }
     }
 }
-exports.CodeGen = CodeGen;
+exports.JsonGen = JsonGen;

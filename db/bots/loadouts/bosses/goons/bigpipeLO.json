@@ -179,38 +179,6 @@
                 }
             }
         },
-        "generation_med_changes": {
-            "items": {
-                "drugs": {
-                    "max": 2,
-                    "min": 1
-                },
-                "grenades": {
-                    "max": 2,
-                    "min": 1
-                },
-                "healing": {
-                    "max": 2,
-                    "min": 1
-                },
-                "looseLoot": {
-                    "max": 6,
-                    "min": 2
-                },
-                "magazines": {
-                    "max": 5,
-                    "min": 3
-                },
-                "specialItems": {
-                    "max": 1,
-                    "min": 1
-                },
-                "stims": {
-                    "max": 1,
-                    "min": 1
-                }
-            }
-        },
         "chances": {
             "equipment": {
                 "ArmBand": 0,
@@ -433,38 +401,6 @@
                 }
             }
         },
-        "generation_med_changes": {
-            "items": {
-                "drugs": {
-                    "max": 2,
-                    "min": 1
-                },
-                "grenades": {
-                    "max": 2,
-                    "min": 1
-                },
-                "healing": {
-                    "max": 2,
-                    "min": 1
-                },
-                "looseLoot": {
-                    "max": 6,
-                    "min": 4
-                },
-                "magazines": {
-                    "max": 6,
-                    "min": 4
-                },
-                "specialItems": {
-                    "max": 0,
-                    "min": 0
-                },
-                "stims": {
-                    "max": 2,
-                    "min": 1
-                }
-            }
-        },
         "chances": {
             "equipment": {
                 "ArmBand": 0,
@@ -656,38 +592,6 @@
             }
         },
         "generation": {
-            "items": {
-                "drugs": {
-                    "max": 2,
-                    "min": 1
-                },
-                "grenades": {
-                    "max": 2,
-                    "min": 1
-                },
-                "healing": {
-                    "max": 3,
-                    "min": 1
-                },
-                "looseLoot": {
-                    "max": 6,
-                    "min": 3
-                },
-                "magazines": {
-                    "max": 6,
-                    "min": 3
-                },
-                "specialItems": {
-                    "max": 0,
-                    "min": 0
-                },
-                "stims": {
-                    "max": 3,
-                    "min": 1
-                }
-            }
-        },
-        "generation_med_changes": {
             "items": {
                 "drugs": {
                     "max": 2,

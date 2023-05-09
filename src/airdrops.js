@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AirdropLootRequest = exports.AirdropLootgen = exports.Airdrops = void 0;
 const enums_1 = require("./enums");
 const LocationController_1 = require("C:/snapshot/project/obj/controllers/LocationController");
-const helper_1 = require("./helper");
+const utils_1 = require("./utils");
 const arrays_1 = require("./arrays");
 class Airdrops {
     constructor(logger, modConfig, airConf) {
@@ -33,12 +33,12 @@ class AirdropLootgen extends LocationController_1.LocationController {
         const modConfig = require("../config/config.json");
         const tables = this.databaseServer.getTables();
         const arrays = new arrays_1.Arrays(tables);
-        const helper = new helper_1.Helper(tables, arrays);
+        const helper = new utils_1.Utils(tables, arrays);
         let weights = [];
-        if (helper_1.RaidInfoTracker.TOD === "day") {
+        if (utils_1.RaidInfoTracker.TOD === "day") {
             weights = [65, 65, 40, 40, 40, 20, 15, 15, 1];
         }
-        if (helper_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.TOD === "night") {
             weights = [10, 10, 15, 15, 20, 85, 75, 70, 1];
         }
         const airdropLoot = this.updateAirdropsLootPools(modConfig, helper, weights);

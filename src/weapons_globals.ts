@@ -2,7 +2,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { IRepairConfig } from "@spt-aki/models/spt/config/IRepairConfig";
 import { ILogger } from "../types/models/spt/utils/ILogger";
 import { ParentClasses } from "./enums";
-import { ConfigChecker } from "./helper";
+import { ConfigChecker } from "./utils";
 
 const mastering = require("../db/items/mastering.json");
 

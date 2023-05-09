@@ -2761,7 +2761,7 @@ export class Ammo {
             }
             // BP
             if (serverItem._id === "59e0d99486f7744a32234762") {
-                serverItem._props.PenetrationPower = 64;
+                serverItem._props.PenetrationPower = 65;
                 serverItem._props.ArmorDamage = 19;
                 serverItem._props.Damage = 95;
                 serverItem._props.InitialSpeed = 740;
@@ -3108,7 +3108,7 @@ export class Ammo {
             //// 5.56x45 ////
             // Warmage -
             if (serverItem._id === "5c0d5ae286f7741e46554302") {
-                serverItem._props.PenetrationPower = 60;
+                serverItem._props.PenetrationPower = 56;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.Damage = 130;
                 serverItem._props.InitialSpeed = 983;
@@ -3131,7 +3131,7 @@ export class Ammo {
             }
             // 55 HP -
             if (serverItem._id === "59e6927d86f77411da468256") {
-                serverItem._props.PenetrationPower = 50;
+                serverItem._props.PenetrationPower = 51;
                 serverItem._props.ArmorDamage = 14;
                 serverItem._props.Damage = 110;
                 serverItem._props.InitialSpeed = 976;
@@ -3177,7 +3177,7 @@ export class Ammo {
             }
             // Mk 318 Mod 0 (SOST) -
             if (serverItem._id === "60194943740c5d77f6705eea") {
-                serverItem._props.PenetrationPower = 65;
+                serverItem._props.PenetrationPower = 64;
                 serverItem._props.ArmorDamage = 17;
                 serverItem._props.Damage = 79;
                 serverItem._props.InitialSpeed = 927;
@@ -3246,7 +3246,7 @@ export class Ammo {
             }
             // M855 -
             if (serverItem._id === "54527a984bdc2d4e668b4567") {
-                serverItem._props.PenetrationPower = 65;
+                serverItem._props.PenetrationPower = 66;
                 serverItem._props.ArmorDamage = 17;
                 serverItem._props.Damage = 60;
                 serverItem._props.InitialSpeed = 902;
@@ -3315,7 +3315,7 @@ export class Ammo {
             }
             // M995 -
             if (serverItem._id === "59e690b686f7746c9f75e848") {
-                serverItem._props.PenetrationPower = 84;
+                serverItem._props.PenetrationPower = 83;
                 serverItem._props.ArmorDamage = 18;
                 serverItem._props.Damage = 59;
                 serverItem._props.InitialSpeed = 980;
@@ -3338,7 +3338,7 @@ export class Ammo {
             }
             // SSA AP -
             if (serverItem._id === "601949593ae8f707c4608daa") {
-                serverItem._props.PenetrationPower = 95;
+                serverItem._props.PenetrationPower = 90;
                 serverItem._props.ArmorDamage = 2172;
                 serverItem._props.Damage = 56;
                 serverItem._props.InitialSpeed = 1013;
@@ -3419,7 +3419,7 @@ export class Ammo {
                 serverItem._props.HeavyBleedingDelta = 0.5;
                 serverItem._props.LightBleedingDelta = 1;
                 serverItem._props.ProjectileCount = 20;
-                serverItem._props.ammoAccr = 50;
+                serverItem._props.ammoAccr = 90;
             }
             //M381(HE) grenade
             if (serverItem._id === "5ede474b0c226a66f5402622") {

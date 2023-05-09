@@ -4,7 +4,7 @@ exports.TraderRefresh = exports.RagCallback = exports.RandomizeTraderAssort = ex
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const arrays_1 = require("./arrays");
 const TraderAssortHelper_1 = require("C:/snapshot/project/obj/helpers/TraderAssortHelper");
-const helper_1 = require("./helper");
+const utils_1 = require("./utils");
 const enums_1 = require("./enums");
 const RagfairCallbacks_1 = require("C:/snapshot/project/obj/callbacks/RagfairCallbacks");
 const modConfig = require("../config/config.json");
@@ -272,10 +272,10 @@ class RandomizeTraderAssort {
         this.tables = this.databaseServer.getTables();
         this.itemDB = this.tables.templates.items;
         this.arrays = new arrays_1.Arrays(this.tables);
-        this.helper = new helper_1.Helper(this.tables, this.arrays);
+        this.helper = new utils_1.Utils(this.tables, this.arrays);
     }
     adjustTraderStockAtServerStart() {
-        if (helper_1.EventTracker.isChristmas == true) {
+        if (utils_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
         }
         for (let trader in this.tables.traders) {
@@ -434,7 +434,7 @@ class RandomizeTraderAssort {
                     barter[0][0].count = cost * modConfig.rand_cost_discount;
                 }
             }
-            if (helper_1.EventTracker.isChristmas == true) {
+            if (utils_1.EventTracker.isChristmas == true) {
                 barter[0][0].count = cost * 0.6;
             }
         }
@@ -515,7 +515,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new arrays_1.Arrays(tables);
-        const helper = new helper_1.Helper(tables, arrays);
+        const helper = new utils_1.Utils(tables, arrays);
         var assortItems = trader.assort.items;
         var assortBarters = trader.assort.barter_scheme;
         if (modConfig.randomize_trader_ll == true) {

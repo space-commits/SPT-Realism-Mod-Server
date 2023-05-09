@@ -2,7 +2,7 @@ import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";
-import { Helper } from "./helper";
+import { Utils } from "./utils";
 import { ParentClasses } from "./enums";
 
 
@@ -52,9 +52,9 @@ const GrenadeLauncherTemplates = require("../db/templates/weapons/" + `${presetP
 
 
 
-export class CodeGen {
+export class JsonGen {
 
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private helper: Helper, private arrays: Arrays) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private utils: Utils, private arrays: Arrays) { }
 
     globalDB = this.tables.globals.config;
     itemDB = this.tables.templates.items;
@@ -229,10 +229,10 @@ export class CodeGen {
         filePathObj[index] = funJsonAssign(serverItem, fileItem, id);
 
         if(usePreset == true){
-            this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
+            this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
         }
         else{
-            this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
+            this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
         }
     }
 

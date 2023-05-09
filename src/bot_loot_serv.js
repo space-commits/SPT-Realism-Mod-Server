@@ -86,8 +86,8 @@ class BotLooGen extends BotLootGenerator_1.BotLootGenerator {
         stimTally += bagStimItemCount;
         const vestGrenadeCount = this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
         grenadeTally += vestGrenadeCount;
-        const porcketGrenadeCount = grenadeTally >= itemCounts.grenades.max ? 0 : this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
-        grenadeTally += porcketGrenadeCount;
+        const pocketGrenadeCount = grenadeTally >= itemCounts.grenades.max ? 0 : this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
+        grenadeTally += pocketGrenadeCount;
         // Special items
         this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.SPECIAL, botJsonTemplate), [EquipmentSlots.POCKETS, EquipmentSlots.BACKPACK, EquipmentSlots.TACTICAL_VEST], specialLootItemCount, botInventory, botRole);
         ///////////////////////////////////////Meds//////////////////////////////////
@@ -112,7 +112,7 @@ class BotLooGen extends BotLootGenerator_1.BotLootGenerator {
         /////////////////////////////////////////////////////////////////////////////////
         // Grenades
         this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, botJsonTemplate), [EquipmentSlots.TACTICAL_VEST], vestGrenadeCount, botInventory, botRole, false, 0, isPmc);
-        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, botJsonTemplate), [EquipmentSlots.POCKETS], porcketGrenadeCount, botInventory, botRole, false, 0, isPmc);
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, botJsonTemplate), [EquipmentSlots.POCKETS], pocketGrenadeCount, botInventory, botRole, false, 0, isPmc);
         if (isPmc && this.randomUtil.getChance100(this.botConfig.pmc.looseWeaponInBackpackChancePercent)) {
             this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", botJsonTemplate.inventory, botJsonTemplate.chances.mods, botRole, isPmc, botLevel);
         }
@@ -244,21 +244,24 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
         /////////////////////Meds//////////////////////////////
         //vest
         const vestHealingItems = vestLootTemplates.filter(template => this.isMedicalItem(template._props)
-            && template._parent === BaseClasses_1.BaseClasses.MEDKIT);
+            && template._parent === BaseClasses_1.BaseClasses.MEDKIT
+            || template._parent === BaseClasses_1.BaseClasses.MEDICAL);
         const vestDrugItems = vestLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.DRUGS);
         const vestStimItems = vestLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.STIMULATOR);
         //pocket
         const pocketHealingItems = pocketLootTemplates.filter(template => this.isMedicalItem(template._props)
-            && template._parent === BaseClasses_1.BaseClasses.MEDKIT);
+            && template._parent === BaseClasses_1.BaseClasses.MEDKIT
+            || template._parent === BaseClasses_1.BaseClasses.MEDICAL);
         const pocketDrugItems = pocketLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.DRUGS);
         const pocketStimItems = pocketLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.STIMULATOR);
         //bag
         const bagHealingItems = backpackLootTemplates.filter(template => this.isMedicalItem(template._props)
-            && template._parent === BaseClasses_1.BaseClasses.MEDKIT);
+            && template._parent === BaseClasses_1.BaseClasses.MEDKIT
+            || template._parent === BaseClasses_1.BaseClasses.MEDICAL);
         const bagDrugItems = backpackLootTemplates.filter(template => this.isMedicalItem(template._props)
             && template._parent === BaseClasses_1.BaseClasses.DRUGS);
         const bagStimItems = backpackLootTemplates.filter(template => this.isMedicalItem(template._props)
