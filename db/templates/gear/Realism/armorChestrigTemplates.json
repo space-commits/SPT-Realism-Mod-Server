@@ -28,7 +28,7 @@
         "MinKE": 2000,
         "MinPen": 50,
         "HasSideArmor": true,
-        "HasStomachArmor": false,
+        "HasStomachArmor": true,
         "HasNeckArmor": false
     },
     "5c0e3eb886f7742015526062": {
