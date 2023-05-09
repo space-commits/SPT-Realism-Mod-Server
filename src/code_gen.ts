@@ -2,7 +2,7 @@ import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "./arrays";
-import { Utils } from "./helutilsper";
+import { Utils } from "./utils";
 import { ParentClasses } from "./enums";
 
 
