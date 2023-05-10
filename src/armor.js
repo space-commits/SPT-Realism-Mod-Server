@@ -1030,13 +1030,13 @@ class Armor {
             if (serverItem._id === "5d6d3716a4b9361bc8618872") {
                 serverItem._props.Durability = 20;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
+                serverItem._props.armorClass = 5;
                 serverItem._props.speedPenaltyPercent = -1.7;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -1.7;
                 serverItem._props.BluntThroughput = 0.2;
                 serverItem._props.DeafStrength = "High";
-                serverItem._props.ArmorMaterial = 'UHMWPE';
+                serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3.4;
             }
             //// Class 5 ////
@@ -1460,7 +1460,7 @@ class Armor {
             if (serverItem._id === "5d6d3be5a4b9361bc73bc763") {
                 serverItem._props.Durability = 60;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
+                serverItem._props.armorClass = 5;
                 serverItem._props.speedPenaltyPercent = -0.6;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.6;
