@@ -1026,7 +1026,7 @@ export class Ammo {
             }
             //PSO gzh
             if (serverItem._id === "58864a4f2459770fcc257101") {
-                serverItem._props.PenetrationPower = 24;
+                serverItem._props.PenetrationPower = 23;
                 serverItem._props.ArmorDamage = 14;
                 serverItem._props.Damage = 38;
                 serverItem._props.InitialSpeed = 340;
@@ -1049,7 +1049,7 @@ export class Ammo {
             }
             //Luger CCI
             if (serverItem._id === "5a3c16fe86f77452b62de32a") {
-                serverItem._props.PenetrationPower = 23;
+                serverItem._props.PenetrationPower = 22;
                 serverItem._props.ArmorDamage = 13;
                 serverItem._props.Damage = 60;
                 serverItem._props.InitialSpeed = 457;
@@ -1072,7 +1072,7 @@ export class Ammo {
             }
             //Green Tracer
             if (serverItem._id === "5c3df7d588a4501f290594e5") {
-                serverItem._props.PenetrationPower = 23;
+                serverItem._props.PenetrationPower = 21;
                 serverItem._props.ArmorDamage = 14;
                 serverItem._props.Damage = 36;
                 serverItem._props.InitialSpeed = 365;

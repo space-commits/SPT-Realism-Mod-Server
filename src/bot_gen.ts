@@ -88,33 +88,33 @@ export class BotGen extends BotGenerator {
         return (["usec", "sptusec"].includes(botRole.toLowerCase()));
     }
 
-    private getBotTier(helper: Utils): number {
+    private getBotTier(utils: Utils): number {
         const level = ProfileTracker.level;
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (level >= 0 && level < 5) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds1);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         if (level >= 5 && level < 10) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds2);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
         if (level >= 10 && level < 15) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds3);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
         if (level >= 15 && level < 20) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds4);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
         if (level >= 20 && level < 25) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds5);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
         if (level >= 25 && level < 30) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds6);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
         if (level >= 30 && level < 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds7);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
         if (level >= 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
         }
         return tier;
     }

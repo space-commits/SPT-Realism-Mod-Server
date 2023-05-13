@@ -39,7 +39,6 @@ const player_1 = require("./player");
 const weapons_globals_1 = require("./weapons_globals");
 const bots_1 = require("./bots");
 const bot_gen_1 = require("./bot_gen");
-const bot_loot_serv_1 = require("./bot_loot_serv");
 const items_1 = require("./items");
 const code_gen_1 = require("./code_gen");
 const quests_1 = require("./quests");
@@ -61,7 +60,6 @@ const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
-const pmcTypes = require("../db/bots/pmcTypes.json");
 var clientValidateCount = 0;
 class Main {
     preAkiLoad(container) {
@@ -84,21 +82,9 @@ class Main {
         const traderAssortService = container.resolve("TraderAssortService");
         const traderHelper = container.resolve("TraderHelper");
         const fenceService = container.resolve("FenceService");
-        const itemHelper = container.resolve("ItemHelper");
-        const botWeaponGeneratorHelper = container.resolve("BotWeaponGeneratorHelper");
-        const probabilityHelper = container.resolve("ProbabilityHelper");
         const botEquipmentFilterService = container.resolve("BotEquipmentFilterService");
-        const itemFilterService = container.resolve("ItemFilterService");
-        const botGeneratorHelper = container.resolve("BotGeneratorHelper");
-        const inventoryMagGenComponents = container.resolveAll("InventoryMagGen");
         const traderPurchasePefrsisterService = container.resolve("TraderPurchasePersisterService");
-        const botEquipmentModGenerator = container.resolve("BotEquipmentModGenerator");
-        const botWeaponModLimitService = container.resolve("BotWeaponModLimitService");
         const botHelper = container.resolve("BotHelper");
-        const botEquipmentModPoolService = container.resolve("BotEquipmentModPoolService");
-        const handbookHelper = container.resolve("HandbookHelper");
-        const botWeaponGenerator = container.resolve("BotWeaponGenerator");
-        const botLootCacheService = container.resolve("BotLootCacheService");
         const httpResponse = container.resolve("HttpResponseUtil");
         const ragfairServer = container.resolve("RagfairServer");
         const ragfairController = container.resolve("RagfairController");
@@ -106,21 +92,13 @@ class Main {
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
         const locationGenerator = container.resolve("LocationGenerator");
         const lootGenerator = container.resolve("LootGenerator");
-        const itemBaseClassService = container.resolve("ItemBaseClassService");
-        const durabilityLimitsHelper = container.resolve("DurabilityLimitsHelper");
-        const appContext = container.resolve("ApplicationContext");
         const botInventoryGenerator = container.resolve("BotInventoryGenerator");
         const botLevelGenerator = container.resolve("BotLevelGenerator");
         const botDifficultyHelper = container.resolve("BotDifficultyHelper");
         const seasonalEventService = container.resolve("SeasonalEventService");
         const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
-        const _botWepGen = new bot_gen_1.BotWepGen(jsonUtil, logger, hashUtil, databaseServer, itemHelper, weightedRandomHelper, botGeneratorHelper, randomUtil, configServer, botWeaponGeneratorHelper, botWeaponModLimitService, botEquipmentModGenerator, localisationService, inventoryMagGenComponents);
-        const _botModGen = new bot_gen_1.BotEquipGenHelper(logger, jsonUtil, hashUtil, randomUtil, probabilityHelper, databaseServer, itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, botWeaponModLimitService, botHelper, botGeneratorHelper, botWeaponGeneratorHelper, localisationService, botEquipmentModPoolService, configServer);
-        const botLootGen = new bot_loot_serv_1.BotLooGen(logger, hashUtil, randomUtil, itemHelper, databaseServer, handbookHelper, botGeneratorHelper, botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, localisationService, configServer);
-        const genBotLvl = new bot_gen_1.GenBotLvl(logger, randomUtil, databaseServer);
         const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer);
-        const myBotGenHelper = new bot_gen_1.BotGenHelper(logger, randomUtil, databaseServer, durabilityLimitsHelper, itemHelper, appContext, localisationService, configServer);
         const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, configServer);
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
@@ -358,14 +336,6 @@ class Main {
                         }
                         utils_1.RaidInfoTracker.TOD = getTOD(realTime);
                         utils_1.RaidInfoTracker.mapType = mapType;
-                        if (modConfig.pmc_types == true) {
-                            if (utils_1.RaidInfoTracker.TOD === "day") {
-                                botConf.pmc.pmcType = pmcTypes.BotTypes2.pmcTypeDay;
-                            }
-                            if (utils_1.RaidInfoTracker.TOD === "night") {
-                                botConf.pmc.pmcType = pmcTypes.BotTypes2.pmcTypeNight;
-                            }
-                        }
                         if (modConfig.bot_changes) {
                             this.updateBots(pmcData, logger, modConfig, bots, utils);
                             if (utils_1.EventTracker.isChristmas == true) {
@@ -374,8 +344,10 @@ class Main {
                             }
                         }
                         if (matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory") {
-                            botConf.pmc.convertIntoPmcChance["pmcbot"].min = 15;
-                            botConf.pmc.convertIntoPmcChance["pmcbot"].max = 25;
+                            botConf.pmc.convertIntoPmcChance["pmcbot"].min = 0;
+                            botConf.pmc.convertIntoPmcChance["pmcbot"].max = 0;
+                            botConf.pmc.convertIntoPmcChance["assault"].min = 100;
+                            botConf.pmc.convertIntoPmcChance["assault"].max = 100;
                         }
                         if (modConfig.logEverything == true) {
                             logger.warning("Map Name star off = " + matchInfoStartOff.location);
@@ -541,9 +513,7 @@ class Main {
         if (modConfig.open_zones_fix == true) {
             maps.openZonesFix();
         }
-        if (modConfig.boss_spawns == true) {
-            maps.loadSpawnChanges();
-        }
+        maps.loadSpawnChanges();
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();
         }
@@ -631,8 +601,8 @@ class Main {
             }
         }
     }
-    revertMeds(pmcData, helper) {
-        helper.revertMedItems(pmcData);
+    revertMeds(pmcData, utils) {
+        utils.revertMedItems(pmcData);
     }
     checkForEvents(logger, seasonalEventsService) {
         const isChristmasActive = seasonalEventsService.christmasEventEnabled();
@@ -641,8 +611,8 @@ class Main {
             logger.warning("Merry Christmas!");
         }
     }
-    checkProfile(pmcData, pmcEXP, helper, player, logger) {
-        helper.correctItemResources(pmcData, pmcEXP);
+    checkProfile(pmcData, pmcEXP, utils, player, logger) {
+        utils.correctItemResources(pmcData, pmcEXP);
         if (modConfig.med_changes == true) {
             pmcData.Health.Hydration.Maximum = player.hydration;
             pmcData.Health.Energy.Maximum = player.energy;
@@ -716,32 +686,32 @@ class Main {
         this.setBotTier(pmcData, "killa", bots, helper);
         this.setBotTier(pmcData, "tagilla", bots, helper);
     }
-    setBotTier(pmcData, type, bots, helper) {
+    setBotTier(pmcData, type, bots, utils) {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds1);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds2);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds3);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds4);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds5);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds6);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds7);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
         if (pmcData.Info.Level >= 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
         }
         if (type === "tagilla") {
             if (tier == 1) {

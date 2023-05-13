@@ -135,12 +135,6 @@ RaidInfoTracker.mapType = "";
 RaidInfoTracker.mapName = "";
 class BotTierTracker {
     getTier(botType) {
-        if (botType === "sptusec") {
-            return BotTierTracker.usecTier;
-        }
-        if (botType === "sptbear") {
-            return BotTierTracker.bearTier;
-        }
         if (botType === "assault") {
             return BotTierTracker.scavTier;
         }
@@ -159,11 +153,10 @@ class BotTierTracker {
         if (botType === "bosstagilla") {
             return BotTierTracker.tagillaTier;
         }
+        return 0;
     }
 }
 exports.BotTierTracker = BotTierTracker;
-BotTierTracker.usecTier = 1;
-BotTierTracker.bearTier = 1;
 BotTierTracker.scavTier = 1;
 BotTierTracker.rogueTier = 1;
 BotTierTracker.raiderTier = 1;

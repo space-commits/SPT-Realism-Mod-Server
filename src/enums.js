@@ -94,6 +94,7 @@ var ParentClasses;
     ParentClasses["REPAIRKITS"] = "616eb7aea207f41933308f46";
     ParentClasses["COMPASS"] = "5f4fbaaca5573a5ac31db429";
     ParentClasses["HEADSET"] = "5645bcb74bdc2ded0b8b4578";
+    ParentClasses["GASBLOCK"] = "56ea9461d2720b67698b456f";
 })(ParentClasses = exports.ParentClasses || (exports.ParentClasses = {}));
 var Calibers;
 (function (Calibers) {

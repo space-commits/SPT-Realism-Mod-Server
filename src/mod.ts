@@ -785,8 +785,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
     }
 
-    private revertMeds(pmcData: IPmcData, helper: Utils) {
-        helper.revertMedItems(pmcData);
+    private revertMeds(pmcData: IPmcData, utils: Utils) {
+        utils.revertMedItems(pmcData);
     }
 
     private checkForEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
@@ -797,8 +797,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
     }
 
-    private checkProfile(pmcData: IPmcData, pmcEXP: number, helper: Utils, player: Player, logger: ILogger) {
-        helper.correctItemResources(pmcData, pmcEXP);
+    private checkProfile(pmcData: IPmcData, pmcEXP: number, utils: Utils, player: Player, logger: ILogger) {
+        utils.correctItemResources(pmcData, pmcEXP);
         if (modConfig.med_changes == true) {
             pmcData.Health.Hydration.Maximum = player.hydration;
             pmcData.Health.Energy.Maximum = player.energy;
@@ -879,32 +879,32 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         this.setBotTier(pmcData, "tagilla", bots, helper);
     }
 
-    private setBotTier(pmcData: IPmcData, type: string, bots: BotLoader, helper: Utils) {
+    private setBotTier(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds1);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds2);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds3);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds4);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds5);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds6);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds7);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
         if (pmcData.Info.Level >= 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
         }
 
         if (type === "tagilla") {

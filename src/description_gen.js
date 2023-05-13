@@ -30,7 +30,7 @@ class DescriptionGen {
                 if ((item._parent === enums_1.ParentClasses.SILENCER || item._parent === enums_1.ParentClasses.FLASH_HIDER || item._parent === enums_1.ParentClasses.COMPENSATOR) && item._props.ConflictingItems[8] !== "0") {
                     locale[`${templateItem}` + " Description"] = "The malfunction reduction of this muzzle attachment does not affect manually operated firearms such as bolt action rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (item._props.ConflictingItems[13] === "true") {
+                if (item._props.ConflictingItems[13] === "true" && (item._parent === enums_1.ParentClasses.SILENCER || item._parent === enums_1.ParentClasses.GASBLOCK)) {
                     locale[`${templateItem}` + " Description"] = "This attachment allows the reliable cycling of subsonic ammunition." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "gasblock_upgassed") {
@@ -55,7 +55,7 @@ class DescriptionGen {
                     locale[`${templateItem}` + " Description"] = "This adapater changes the recoil profile of the weapon by raising or lowering the stock in line with the barrel. It will not impart any stats unless a stock is attached. If it has a pistol grip slot, the pistol grip provides a bonus to ergo, recoil and chamber/pump/bolt speed stats if attached." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "hydraulic_buffer") {
-                    locale[`${templateItem}` + " Description"] = "This hydraulic buffer loses all its stats if not places on a shotgun, sniper rifle or assault carbine." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                    locale[`${templateItem}` + " Description"] = "This hydraulic buffer loses all its stats recoil reduction stats if not places on a shotgun, sniper rifle or assault carbine. The malfunction chance stat only applies to non-manually operated firearms." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "buffer") {
                     locale[`${templateItem}` + " Description"] = "This buffer tube loses its recoil, firerate and durability burn stats if not placed on a weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." + `\n\n${locale[`${templateItem}` + " Description"]}`;

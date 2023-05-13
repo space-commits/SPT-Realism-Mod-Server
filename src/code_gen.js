@@ -39,11 +39,11 @@ const SniperRifleTemplates = require("../db/templates/weapons/" + `${presetPath}
 const SpecialWeaponTemplates = require("../db/templates/weapons/" + `${presetPath}` + "/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../db/templates/weapons/" + `${presetPath}` + "/GrenadeLauncherTemplates.json");
 class JsonGen {
-    constructor(logger, tables, modConf, helper, arrays) {
+    constructor(logger, tables, modConf, utils, arrays) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.helper = helper;
+        this.utils = utils;
         this.arrays = arrays;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
@@ -204,10 +204,10 @@ class JsonGen {
         let fileItem = filePathObj[index];
         filePathObj[index] = funJsonAssign(serverItem, fileItem, id);
         if (usePreset == true) {
-            this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
+            this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
         }
         else {
-            this.helper.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
+            this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
         }
     }
     assignJSONToAmmo(serverItem, fileItem) {

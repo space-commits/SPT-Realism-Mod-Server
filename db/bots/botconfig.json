@@ -97,7 +97,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 90,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -111,7 +111,7 @@
                 "minLimitPercent": 5
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 90,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -181,7 +181,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 90,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -255,7 +255,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 85,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -269,7 +269,7 @@
                 "minLimitPercent": 5
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 85,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -283,7 +283,7 @@
                 "minLimitPercent": 5
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 90,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 0,
@@ -334,12 +334,12 @@
         },
         "sectantwarrior": {
             "armor": {
-                "maxDelta": 10,
+                "maxDelta": 15,
                 "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 85,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -408,12 +408,12 @@
         },
         "assault": {
             "armor": {
-                "maxDelta": 10,
+                "maxDelta": 15,
                 "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 80,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -427,7 +427,7 @@
                 "minLimitPercent": 5
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 80,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -441,7 +441,7 @@
                 "minLimitPercent": 5
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 85,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 0,
@@ -483,7 +483,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 90,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
@@ -492,12 +492,12 @@
         },
         "sectantwarrior": {
             "armor": {
-                "maxDelta": 10,
+                "maxDelta": 15,
                 "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 85,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,

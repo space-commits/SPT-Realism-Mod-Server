@@ -245,7 +245,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(1, 0, "drug");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
             }
-            ///Surgery///
+            ///Surgery/
             //CMS
             if (serverItem._id === "5d02778e86f774203e7dedbe") {
                 serverItem._parent = "5448f3a14bdc2d27728b4569";

@@ -195,7 +195,7 @@
         "ItemID": "57616a9e2459773c7a400234",
         "Name": "mag_saiga12_izhmash_Sb5_12x76_5",
         "ModType": "",
-        "ReloadSpeed": 5,
+        "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0.05,
         "LoadUnloadModifier": -15,
