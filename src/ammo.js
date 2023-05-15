@@ -919,7 +919,6 @@ class Ammo {
             if (serverItem._id === "573719df2459775a626ccbc2") {
                 serverItem._props.PenetrationPower = 35;
                 serverItem._props.ArmorDamage = 19;
-                serverItem._props.ProjectileCount = 0;
                 serverItem._props.Damage = 30;
                 serverItem._props.InitialSpeed = 480;
                 serverItem._props.RicochetChance = 0.44;
@@ -3275,7 +3274,6 @@ class Ammo {
                 serverItem._props.BulletMassGram = 24;
                 serverItem._props.HeavyBleedingDelta = 0.5;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ProjectileCount = 20;
                 serverItem._props.ammoAccr = 90;
             }
             //M381(HE) grenade

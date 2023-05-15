@@ -532,8 +532,8 @@ class Main {
         bots.botDifficulty();
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
-            meds.loadMeds();
             // bots.botMeds();
+            meds.loadMeds();
         }
         if (modConfig.old_ballistics == true && modConfig.realistic_ballistics == false) {
             oldAmmo.loadAmmoStatsOld();

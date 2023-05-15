@@ -2,7 +2,7 @@
     "mount_l85a2_rail": {
         "ItemID": "mount_l85a2_rail",
         "Name": "mount_l85a2_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -29,7 +29,7 @@
     "mount_famas_optic_rail": {
         "ItemID": "mount_famas_optic_rail",
         "Name": "mount_famas_optic_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -38,7 +38,7 @@
     "57c69dd424597774c03b7bbc": {
         "ItemID": "57c69dd424597774c03b7bbc",
         "Name": "mount_all_lobaev_dvl_std",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -47,9 +47,9 @@
     "5c86592b2e2216000e69e77c": {
         "ItemID": "5c86592b2e2216000e69e77c",
         "Name": "mount_all_iea_kh_f_34mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.199
     },
@@ -65,7 +65,7 @@
     "5a33b652c4a28232996e407c": {
         "ItemID": "5a33b652c4a28232996e407c",
         "Name": "mount_all_trijicon_ac32062",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -89,34 +89,34 @@
     "5eeb2ff5ea4f8b73c827350b": {
         "ItemID": "5eeb2ff5ea4f8b73c827350b",
         "Name": "mount_590_bat_rb7m",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -6,
         "ConflictingItems": [],
         "Weight": 0.45
     },
     "616584766ef05c2ce828ef57": {
         "ItemID": "616584766ef05c2ce828ef57",
         "Name": "mount_all_aimpoint_qrp2_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -2,
         "ConflictingItems": [],
         "Weight": 0.098
     },
     "5649a2464bdc2d91118b45a8": {
         "ItemID": "5649a2464bdc2d91118b45a8",
         "Name": "mount_all_ncstar_mpr45",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -15,
         "ConflictingItems": [],
         "Weight": 0.04
     },
     "59db7eed86f77461f8380365": {
         "ItemID": "59db7eed86f77461f8380365",
         "Name": "mount_all_trijicon_ta51",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -125,7 +125,7 @@
     "5a33bab6c4a28200741e22f8": {
         "ItemID": "5a33bab6c4a28200741e22f8",
         "Name": "mount_acog_trijicon_rm35",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -134,9 +134,9 @@
     "57ffaea724597779f52b3a4d": {
         "ItemID": "57ffaea724597779f52b3a4d",
         "Name": "mount_all_zenit_b12",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -10,
         "ConflictingItems": [],
         "Weight": 0.087
     },
@@ -154,18 +154,18 @@
     "5dfe14f30b92095fd441edaf": {
         "ItemID": "5dfe14f30b92095fd441edaf",
         "Name": "mount_7mm_etmi_019",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Weight": 0.053
     },
     "5926dad986f7741f82604363": {
         "ItemID": "5926dad986f7741f82604363",
         "Name": "mount_hk_mfi_universal",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Weight": 0.071
     },
@@ -181,16 +181,16 @@
     "57ffb0062459777a045af529": {
         "ItemID": "57ffb0062459777a045af529",
         "Name": "mount_all_zenit_b18",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -16,
         "ConflictingItems": [],
         "Weight": 0.053
     },
     "57a3459f245977764a01f703": {
         "ItemID": "57a3459f245977764a01f703",
         "Name": "mount_vss_zenit_b3",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -199,16 +199,16 @@
     "616554fe50224f204c1da2aa": {
         "ItemID": "616554fe50224f204c1da2aa",
         "Name": "mount_all_aimpoint_h2_weaver",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -2,
         "ConflictingItems": [],
         "Weight": 0.015
     },
     "55d48a634bdc2d8b2f8b456a": {
         "ItemID": "55d48a634bdc2d8b2f8b456a",
         "Name": "mount_all_custom_top_rail_13",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -217,7 +217,7 @@
     "5d0a29fed7ad1a002769ad08": {
         "ItemID": "5d0a29fed7ad1a002769ad08",
         "Name": "mount_all_kmz_1p69_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -243,34 +243,34 @@
         "Name": "mount_svd_caa_drg_l_1",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.075
     },
     "622b3c081b89c677a33bcda6": {
         "ItemID": "622b3c081b89c677a33bcda6",
         "Name": "mount_g36_hk_std",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -18,
         "ConflictingItems": [],
         "Weight": 0.312
     },
     "5c7d55f52e221644f31bff6a": {
         "ItemID": "5c7d55f52e221644f31bff6a",
         "Name": "mount_all_aimpoint_lrp_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 2,
         "ConflictingItems": [],
         "Weight": 0.075
     },
     "5a37ca54c4a282000d72296a": {
         "ItemID": "5a37ca54c4a282000d72296a",
         "Name": "mount_all_jp_enterprises_ftsm_30mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 6,
         "ConflictingItems": [],
         "Weight": 0.194
     },
@@ -295,7 +295,7 @@
     "58d39d3d86f77445bb794ae7": {
         "ItemID": "58d39d3d86f77445bb794ae7",
         "Name": "mount_all_aimpoint_h1_t1_weaver",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -304,7 +304,7 @@
     "5a1ead28fcdbcb001912fa9f": {
         "ItemID": "5a1ead28fcdbcb001912fa9f",
         "Name": "mount_all_unv_dloc_ird",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -322,9 +322,9 @@
     "61f804acfcba9556ea304cb8": {
         "ItemID": "61f804acfcba9556ea304cb8",
         "Name": "mount_mp18_izhmash_ris",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Weight": 0.12
     },
@@ -340,16 +340,16 @@
     "5a7893c1c585673f2b5c374d": {
         "ItemID": "5a7893c1c585673f2b5c374d",
         "Name": "mount_870_utg_mtu028sg",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -14,
         "ConflictingItems": [],
         "Weight": 0.1
     },
     "5a33b2c9c4a282000c5a9511": {
         "ItemID": "5a33b2c9c4a282000c5a9511",
         "Name": "mount_all_trijicon_rm33",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -358,9 +358,9 @@
     "5dff77c759400025ea5150cf": {
         "ItemID": "5dff77c759400025ea5150cf",
         "Name": "mount_all_utg_rings_25_4mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -20,
         "ConflictingItems": [],
         "Weight": 0.19
     },
@@ -385,7 +385,7 @@
     "5a7ad4af51dfba0013379717": {
         "ItemID": "5a7ad4af51dfba0013379717",
         "Name": "mount_glock_aimtech_base_glock",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 12,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -412,16 +412,16 @@
     "5a27bad7c4a282000b15184b": {
         "ItemID": "5a27bad7c4a282000b15184b",
         "Name": "mount_sr1mp_tochmash_std_4_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -11,
         "ConflictingItems": [],
         "Weight": 0.04
     },
     "593d1fa786f7746da62d61ac": {
         "ItemID": "593d1fa786f7746da62d61ac",
         "Name": "mount_sks_utg_socom_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -430,16 +430,16 @@
     "622efdf8ec80d870d349b4e5": {
         "ItemID": "622efdf8ec80d870d349b4e5",
         "Name": "mount_base_hensoldt_top_rail",
-        "ModType": "",
-        "Ergonomics": 8,
-        "Accuracy": 0,
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Weight": 0.015
     },
     "5d0a29ead7ad1a0026013f27": {
         "ItemID": "5d0a29ead7ad1a0026013f27",
         "Name": "mount_dovetail_kmz_1p59_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -460,16 +460,16 @@
     "5a9fc7e6a2750c0032157184": {
         "ItemID": "5a9fc7e6a2750c0032157184",
         "Name": "mount_vss_zenit_b3_combo",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -17,
         "ConflictingItems": [],
         "Weight": 0.08
     },
     "625ed7c64d9b6612df732146": {
         "ItemID": "625ed7c64d9b6612df732146",
         "Name": "mount_m3_benelli_sport_top_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -478,9 +478,9 @@
     "5a27b281c4a28200741e1e52": {
         "ItemID": "5a27b281c4a28200741e1e52",
         "Name": "mount_sr1mp_tochmash_std_1_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.04
     },
@@ -505,27 +505,27 @@
     "591ee00d86f774592f7b841e": {
         "ItemID": "591ee00d86f774592f7b841e",
         "Name": "mount_dovetail_aksion_kobra",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -18,
         "ConflictingItems": [],
         "Weight": 0.043
     },
     "5bc5a372d4351e44f824d17f": {
         "ItemID": "5bc5a372d4351e44f824d17f",
         "Name": "mount_mosin_aim_sports_mng",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -12,
         "ConflictingItems": [],
         "Weight": 0.074
     },
     "5bbdb811d4351e45020113c7": {
         "ItemID": "5bbdb811d4351e45020113c7",
         "Name": "mount_mosin_aim_sports_tri_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -21,
         "ConflictingItems": [
             "5d024f5cd7ad1a04a067e91a",
             "5b3f7c005acfc4704b4a1de8"
@@ -553,7 +553,7 @@
     "5b3f7c005acfc4704b4a1de8": {
         "ItemID": "5b3f7c005acfc4704b4a1de8",
         "Name": "mount_kochetov_progress_pu_base",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -562,7 +562,7 @@
     "5b3f7bf05acfc433000ecf6b": {
         "ItemID": "5b3f7bf05acfc433000ecf6b",
         "Name": "mount_mosin_kochetov_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -571,9 +571,9 @@
     "5e569a2e56edd02abe09f280": {
         "ItemID": "5e569a2e56edd02abe09f280",
         "Name": "mount_dovetail_caa_xd_rgl",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 8,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "57486e672459770abd687134",
@@ -595,7 +595,7 @@
     "609a4b4fe2ff132951242d04": {
         "ItemID": "609a4b4fe2ff132951242d04",
         "Name": "mount_dovetail_arbalet_vpo_102",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -613,9 +613,9 @@
     "5c90c3622e221601da359851": {
         "ItemID": "5c90c3622e221601da359851",
         "Name": "mount_dovetail_zenit_b13v",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 10,
         "ConflictingItems": [
             "5c82342f2e221644f31c060e",
             "576fd4ec2459777f0b518431",
@@ -655,9 +655,9 @@
     "5addc00b5acfc4001669f144": {
         "ItemID": "5addc00b5acfc4001669f144",
         "Name": "mount_m14_vltor_casv_14_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.096
     },
@@ -673,7 +673,7 @@
     "57ee59b42459771c7b045da5": {
         "ItemID": "57ee59b42459771c7b045da5",
         "Name": "mount_pp-91_rotor_43_kedr_ris",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -682,9 +682,9 @@
     "5c61a40d2e2216001403158d": {
         "ItemID": "5c61a40d2e2216001403158d",
         "Name": "mount_dovetail_zenit_b13",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 12,
         "ConflictingItems": [
             "5c82342f2e221644f31c060e",
             "576fd4ec2459777f0b518431",
@@ -704,7 +704,7 @@
     "57acb6222459771ec34b5cb0": {
         "ItemID": "57acb6222459771ec34b5cb0",
         "Name": "mount_dovetail_pilad_043_02",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -713,9 +713,9 @@
     "5addbffe5acfc4001714dfac": {
         "ItemID": "5addbffe5acfc4001714dfac",
         "Name": "mount_m14_sage_m14dcsb_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 8,
         "ConflictingItems": [],
         "Weight": 0.22
     },
@@ -731,34 +731,34 @@
     "587e08ee245977446b4410cf": {
         "ItemID": "587e08ee245977446b4410cf",
         "Name": "mount_sks_molot_op_sks_std",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -2,
         "ConflictingItems": [],
         "Weight": 0.02
     },
     "5addbfd15acfc40015621bde": {
         "ItemID": "5addbfd15acfc40015621bde",
         "Name": "mount_m14_amega_mounts_mini_scout_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -6,
         "ConflictingItems": [],
         "Weight": 0.18
     },
     "5b2389515acfc4771e1be0c0": {
         "ItemID": "5b2389515acfc4771e1be0c0",
         "Name": "mount_all_burris_ar_p_e_p_r_30mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": -5,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Weight": 0.246
     },
     "577d128124597739d65d0e56": {
         "ItemID": "577d128124597739d65d0e56",
         "Name": "mount_all_burris_fast_fire_weaver",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -796,7 +796,7 @@
     "615d8d878004cc50514c3233": {
         "ItemID": "615d8d878004cc50514c3233",
         "Name": "mount_all_b&t_acro_nar_mount_39mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -807,16 +807,16 @@
     "5cc7012ae4a949001252b43e": {
         "ItemID": "5cc7012ae4a949001252b43e",
         "Name": "mount_p90_fn_effen_90_side_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.05
     },
     "622b3d5cf9cfc87d675d2de9": {
         "ItemID": "622b3d5cf9cfc87d675d2de9",
         "Name": "mount_g36_hk_extendable_folding_sight",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 10,
         "ConflictingItems": [],
@@ -825,9 +825,9 @@
     "618b9643526131765025ab35": {
         "ItemID": "618b9643526131765025ab35",
         "Name": "mount_all_geissele_super_precision_30mm",
-        "ModType": "",
-        "Ergonomics": 0.5,
-        "Accuracy": 0,
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": 9,
         "ConflictingItems": [
             "5ae30bad5acfc400185c2dc4"
         ],
@@ -890,7 +890,7 @@
     "618a75c9a3884f56c957ca1b": {
         "ItemID": "618a75c9a3884f56c957ca1b",
         "Name": "mount_dovetail_npz_1p78_1_mount_std",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -922,7 +922,7 @@
     "5a32aa0cc4a28232996e405f": {
         "ItemID": "5a32aa0cc4a28232996e405f",
         "Name": "mount_p226_trijicon_rm50",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -931,9 +931,9 @@
     "5d7b6bafa4b93652786f4c76": {
         "ItemID": "5d7b6bafa4b93652786f4c76",
         "Name": "mount_57_fn_mk2_rmr_dovetail_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -4,
         "ConflictingItems": [],
         "Weight": 0.12
     },
@@ -951,14 +951,14 @@
         "Name": "mount_12g_mesa_tactical_magazine_clamp",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.087
     },
     "60785ce5132d4d12c81fd918": {
         "ItemID": "60785ce5132d4d12c81fd918",
         "Name": "mount_mp155_kalashnikov_ultima_top_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "HeatFactor": 1.02,
@@ -969,9 +969,9 @@
     "5a7ad55551dfba0015068f42": {
         "ItemID": "5a7ad55551dfba0015068f42",
         "Name": "mount_glock_aimtech_tiger_shark_glock",
-        "ModType": "",
-        "Ergonomics": 0,
-        "Accuracy": 0,
+        "ModType": "mount",
+        "Ergonomics": -10,
+        "Accuracy": 10,
         "ConflictingItems": [
             "5a7ad4af51dfba0013379717",
             "5a7b4900e899ef197b331a2a"
@@ -981,16 +981,16 @@
     "58d39b0386f77443380bf13c": {
         "ItemID": "58d39b0386f77443380bf13c",
         "Name": "mount_base_aimpoint_h1_t1_spacer",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -1,
         "ConflictingItems": [],
         "Weight": 0.015
     },
     "5b3b6dc75acfc47a8773fb1e": {
         "ItemID": "5b3b6dc75acfc47a8773fb1e",
         "Name": "mount_all_armasight_un_nv_ir_qd_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1017,16 +1017,16 @@
     "5b31163c5acfc400153b71cb": {
         "ItemID": "5b31163c5acfc400153b71cb",
         "Name": "mount_all_sig_romeo_4_base_weaver",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.015
     },
     "58d2664f86f7747fec5834f6": {
         "ItemID": "58d2664f86f7747fec5834f6",
         "Name": "mount_all_leupold_deltapoint_weaver",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1035,7 +1035,7 @@
     "5d024f5cd7ad1a04a067e91a": {
         "ItemID": "5d024f5cd7ad1a04a067e91a",
         "Name": "mount_kochetov_arbalet_patriot_k_w",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1088,7 +1088,7 @@
     "5de6558e9f98ac2bc65950fc": {
         "ItemID": "5de6558e9f98ac2bc65950fc",
         "Name": "mount_vpo215_molot_vpo_215_top_rail_std",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1131,9 +1131,9 @@
     "5b3a08b25acfc4001754880c": {
         "ItemID": "5b3a08b25acfc4001754880c",
         "Name": "mount_p226_sig_sauer_bridge_mount",
-        "ModType": "",
-        "Ergonomics": -5,
-        "Accuracy": 0,
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.12
     },
@@ -1154,7 +1154,7 @@
         "HorizontalRecoil": -2,
         "Dispersion": -3,
         "Ergonomics": 16,
-        "Accuracy": 0,
+        "Accuracy": 7,
         "ConflictingItems": [
             "61816dfa6ef05c2ce828f1ad",
             "6183fc15d3a39d50044c13e9",
@@ -1174,16 +1174,16 @@
     "5a7b4900e899ef197b331a2a": {
         "ItemID": "5a7b4900e899ef197b331a2a",
         "Name": "mount_glock_um_tactical_um3_sight_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": -12,
-        "Accuracy": 0,
+        "Accuracy": -10,
         "ConflictingItems": [],
         "Weight": 0.12
     },
     "5df35e970b92095fd441e4d2": {
         "ItemID": "5df35e970b92095fd441e4d2",
         "Name": "mount_t5000_orsis_scope_mount_rail_std",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1199,7 +1199,7 @@
     "5c6162682e22160010261a2b": {
         "ItemID": "5c6162682e22160010261a2b",
         "Name": "mount_toz-106_noname_dovetail_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1217,7 +1217,7 @@
     "5cc7015ae4a949001152b4c6": {
         "ItemID": "5cc7015ae4a949001152b4c6",
         "Name": "mount_p90_fn_receiver_top_rail_std",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1226,9 +1226,9 @@
     "5c7d560b2e22160bc12c6139": {
         "ItemID": "5c7d560b2e22160bc12c6139",
         "Name": "mount_base_aimpoint_standart_spacer",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -1,
         "ConflictingItems": [],
         "Weight": 0.025
     },
@@ -1253,9 +1253,9 @@
     "5dff8db859400025ea5150d4": {
         "ItemID": "5dff8db859400025ea5150d4",
         "Name": "mount_dovetail_sag_svd_low_sidemount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 8,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "6113d6c3290d254f5e6b27db",
@@ -1303,9 +1303,9 @@
     "61714b2467085e45ef140b2c": {
         "ItemID": "61714b2467085e45ef140b2c",
         "Name": "mount_all_recknagel_era_tac_aimpoint_t1_sunshade_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 2,
         "ConflictingItems": [
             "5ae30bad5acfc400185c2dc4"
         ],
@@ -1314,7 +1314,7 @@
     "5cde7b43d7f00c000d36b93e": {
         "ItemID": "5cde7b43d7f00c000d36b93e",
         "Name": "mount_m700_abarms_mod_x_scope_mount_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1330,18 +1330,18 @@
     "5addbfbb5acfc400194dbcf7": {
         "ItemID": "5addbfbb5acfc400194dbcf7",
         "Name": "mount_m14_ultimak_m8_forward_optic_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -12,
         "ConflictingItems": [],
         "Weight": 0.19
     },
     "5bfebc530db834001d23eb65": {
         "ItemID": "5bfebc530db834001d23eb65",
         "Name": "mount_m700_weaver_extended_multi_slot_base",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "57486e672459770abd687134",
@@ -1355,18 +1355,18 @@
     "5ab24ef9e5b5b00fe93c9209": {
         "ItemID": "5ab24ef9e5b5b00fe93c9209",
         "Name": "mount_m1a_springfield_armory_socom_16_upper",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": -10,
+        "Accuracy": -20,
         "ConflictingItems": [],
         "Weight": 0.096
     },
     "5a966ec8a2750c00171b3f36": {
         "ItemID": "5a966ec8a2750c00171b3f36",
         "Name": "mount_mp5_bt_mounting_rail_nar_low_profile_long",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 10,
         "ConflictingItems": [
             "5926d2be86f774134d668e4e"
         ],
@@ -1375,9 +1375,9 @@
     "5bfebc5e0db834001a6694e5": {
         "ItemID": "5bfebc5e0db834001a6694e5",
         "Name": "mount_m700_remington_integral_scope_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 10,
         "ConflictingItems": [],
         "Weight": 0.246
     },
@@ -1402,9 +1402,9 @@
     "5c61627a2e22160012542c55": {
         "ItemID": "5c61627a2e22160012542c55",
         "Name": "mount_dovetail_noname_toz106_angled_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "57486e672459770abd687134",
@@ -1418,9 +1418,9 @@
     "5c064c400db834001d23f468": {
         "ItemID": "5c064c400db834001d23f468",
         "Name": "mount_all_larue_picatinny_raiser_qd_lt101",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Weight": 0.11
     },
@@ -1445,9 +1445,9 @@
     "618ba92152ecee1505530bd3": {
         "ItemID": "618ba92152ecee1505530bd3",
         "Name": "mount_geissele_reptilia_rof_90_trijicon_30mm_ddc",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -1,
         "ConflictingItems": [],
         "Weight": 0.02
     },
@@ -1472,9 +1472,9 @@
     "618bab21526131765025ab3f": {
         "ItemID": "618bab21526131765025ab3f",
         "Name": "mount_all_geissele_super_precision_30mm_ddc",
-        "ModType": "",
-        "Ergonomics": 0.5,
-        "Accuracy": 0,
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": 9,
         "ConflictingItems": [
             "5ae30bad5acfc400185c2dc4"
         ],
@@ -1483,9 +1483,9 @@
     "5c1cdd302e221602b3137250": {
         "ItemID": "5c1cdd302e221602b3137250",
         "Name": "mount_all_primary_arms_compact_scope_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": -10,
+        "Accuracy": -12,
         "ConflictingItems": [],
         "Weight": 0.11
     },
@@ -1510,7 +1510,7 @@
     "5f2aa49f9b44de6b1b4e68d4": {
         "ItemID": "5f2aa49f9b44de6b1b4e68d4",
         "Name": "mount_rfb_ket_tec_rfb_scope_mount_std",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1553,7 +1553,7 @@
     "615d8da4d3a39d50044c10e8": {
         "ItemID": "615d8da4d3a39d50044c10e8",
         "Name": "mount_glock_tango_down_aam_01_acro_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1571,16 +1571,16 @@
     "618b9682a3884f56c957ca78": {
         "ItemID": "618b9682a3884f56c957ca78",
         "Name": "mount_geissele_reptilia_rof_90_trijicon_30mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -1,
         "ConflictingItems": [],
         "Weight": 0.02
     },
     "5addbfe15acfc4001a5fc58b": {
         "ItemID": "5addbfe15acfc4001a5fc58b",
         "Name": "mount_m14_arms_18_low_profile_scope_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1593,7 +1593,7 @@
     "618b9671d14d6d5ab879c5ea": {
         "ItemID": "618b9671d14d6d5ab879c5ea",
         "Name": "mount_geissele_geissele_super_precision_top_ring_cap_30mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0.5,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1602,7 +1602,7 @@
     "5b3b99265acfc4704b4a1afb": {
         "ItemID": "5b3b99265acfc4704b4a1afb",
         "Name": "mount_all_nightforce_x_treme_duty_ultralite_30mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1620,7 +1620,7 @@
     "62811f461d5df4475f46a332": {
         "ItemID": "62811f461d5df4475f46a332",
         "Name": "mount_all_accuracy_international_ax50_scope_mount_34mm_pb",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1629,18 +1629,18 @@
     "6171407e50224f204c1da3c5": {
         "ItemID": "6171407e50224f204c1da3c5",
         "Name": "mount_all_recknagel_era_tac_one_piece_mount_30mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 9,
         "ConflictingItems": [],
         "Weight": 0.25
     },
     "61713cc4d8e3106d9806c109": {
         "ItemID": "61713cc4d8e3106d9806c109",
         "Name": "mount_all_recknagel_era_tac_one_piece_mount_34mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 9,
         "ConflictingItems": [],
         "Weight": 0.25
     },
@@ -1665,25 +1665,25 @@
     "5aa66a9be5b5b0214e506e89": {
         "ItemID": "5aa66a9be5b5b0214e506e89",
         "Name": "mount_all_nightforce_x_treme_duty_ultralite_one_piece_magmount_34mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 9,
         "ConflictingItems": [],
         "Weight": 0.226
     },
     "5aa66c72e5b5b00016327c93": {
         "ItemID": "5aa66c72e5b5b00016327c93",
         "Name": "mount_all_nightforce_x_treme_duty_ultralite_one_piece_magmount_multimount_34mm",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 7,
         "ConflictingItems": [],
         "Weight": 0.25
     },
     "618ba91477b82356f91ae0e8": {
         "ItemID": "618ba91477b82356f91ae0e8",
         "Name": "mount_geissele_geissele_super_precision_top_ring_cap_30mm_ddc",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1714,7 +1714,7 @@
         "Name": "mount_keymod_strike_industries_bridge_rail_section",
         "ModType": "",
         "Ergonomics": 0,
-        "Accuracy": 4,
+        "Accuracy": 0,
         "ConflictingItems": [
             "59984ab886f7743e98271174"
         ],
@@ -1741,7 +1741,7 @@
     "628120c21d5df4475f46a337": {
         "ItemID": "628120c21d5df4475f46a337",
         "Name": "mount_keyslot_accuracy_international_at_x_forend_rail_pb",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1750,9 +1750,9 @@
     "5addbfef5acfc400185c2857": {
         "ItemID": "5addbfef5acfc400185c2857",
         "Name": "mount_m14_leapers_utg_4_point_locking_deluxe_scope_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": -15,
         "ConflictingItems": [
             "5addbffe5acfc4001714dfac",
             "5addc00b5acfc4001669f144",
@@ -1764,7 +1764,7 @@
     "5ef5d994dfbc9f3c660ded95": {
         "ItemID": "5ef5d994dfbc9f3c660ded95",
         "Name": "mount_m1911_weigand_weig_a_tinny_1911_scope_mount",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": -10,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1811,9 +1811,9 @@
     "5e569a0156edd02abe09f27d": {
         "ItemID": "5e569a0156edd02abe09f27d",
         "Name": "mount_svd_izhmash_svd_modernized_kit_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
-        "Accuracy": 0,
+        "Accuracy": 8,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "6113d6c3290d254f5e6b27db",
@@ -1839,8 +1839,8 @@
     "62e281349ecd3f493f6df954": {
         "ItemID": "62e281349ecd3f493f6df954",
         "Name": "mount_sr2m_zenit_b17",
-        "ModType": "",
-        "Ergonomics": -1,
+        "ModType": "mount",
+        "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.04
@@ -1848,9 +1848,9 @@
     "638db77630c4240f9e06f8b6": {
         "ItemID": "638db77630c4240f9e06f8b6",
         "Name": "mount_dovetail_sag_bit_bracket",
-        "ModType": "",
-        "Ergonomics": -1,
-        "Accuracy": 0,
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": 7,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "6113d6c3290d254f5e6b27db",
@@ -1898,7 +1898,7 @@
     "62e7c8f91cd3fde4d503d690": {
         "ItemID": "62e7c8f91cd3fde4d503d690",
         "Name": "mount_aug_steyr_aug_a3_m1_long_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1907,7 +1907,7 @@
     "62ebba1fb658e07ef9082b5a": {
         "ItemID": "62ebba1fb658e07ef9082b5a",
         "Name": "mount_aug_steyr_aug_a3_m1_short_rail",
-        "ModType": "",
+        "ModType": "mount",
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],

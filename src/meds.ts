@@ -7,7 +7,7 @@ export class Meds {
     private globalDB = this.tables.globals.config;
     private itemDB = this.tables.templates.items;
     private buffDB = this.globalDB.Health.Effects.Stimulator.Buffs;
-    
+
 
     public loadMeds() {
 
@@ -182,7 +182,7 @@ export class Meds {
                 serverItem._props.hpResourceRate = 0;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo"); 
+                serverItem._props.ConflictingItems.splice(2, 0, "combo");
                 serverItem._props.ConflictingItems.splice(3, 0, "1.2"); // trqnt damage per tick
             }
             //IFAK
