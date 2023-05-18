@@ -69,8 +69,11 @@ class DescriptionGen {
                 if (modType === "foregrip_adapter") {
                     locale[`${templateItem}` + " Description"] = "This adapter will lose its negative ergo stat if a grip is attached to it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "scope") {
-                    locale[`${templateItem}` + " Description"] = "ADS speed modifier only applies when this sight is in use." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                if (modType === "sight") {
+                    locale[`${templateItem}` + " Description"] = "ADS speed and accuracy modifiers only apply when this sight is in use." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
+                if (modType === "mount") {
+                    locale[`${templateItem}` + " Description"] = "Accuracy modifier only applies when the sight mounted to it is in use." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if ((item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR || item._parent === enums_1.ParentClasses.FACECOVER) && item._props.HasHinge == true) {
                     if (item._props.ConflictingItems[1] === "true") {

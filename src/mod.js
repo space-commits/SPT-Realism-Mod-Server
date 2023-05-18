@@ -495,6 +495,7 @@ class Main {
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.gearTemplatesCodeGen();
+        // codegen.ammoTemplatesCodeGen();
         if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
             ammo.loadAmmoStats();
             armor.loadArmor();

@@ -2,182 +2,218 @@
     "5656eb674bdc2d35148b457c": {
         "ItemID": "5656eb674bdc2d35148b457c",
         "Name": "40 VOG-25",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5e81f423763d9f754677bf2e": {
         "ItemID": "5e81f423763d9f754677bf2e",
         "Name": "patron_1143x23_acp",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5efb0cabfb3e451d70735af5": {
         "ItemID": "5efb0cabfb3e451d70735af5",
         "Name": "patron_1143x23_acp_ap",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5efb0fc6aeb21837e749c801": {
         "ItemID": "5efb0fc6aeb21837e749c801",
         "Name": "patron_1143x23_acp_hydra_shok",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5efb0d4f4bc50b58e81710f3": {
         "ItemID": "5efb0d4f4bc50b58e81710f3",
         "Name": "patron_1143x23_acp_lasermatch_fmj",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5ea2a8e200685063ec28c05a": {
         "ItemID": "5ea2a8e200685063ec28c05a",
         "Name": "patron_1143x23_rip",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5cde8864d7f00c0010373be1": {
         "ItemID": "5cde8864d7f00c0010373be1",
         "Name": "patron_127x108",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5d2f2ab648f03550091993ca": {
         "ItemID": "5d2f2ab648f03550091993ca",
         "Name": "patron_127x108_bzt",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5cadf6ddae9215051e1c23b2": {
         "ItemID": "5cadf6ddae9215051e1c23b2",
         "Name": "patron_127x55_ps12",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5cadf6e5ae921500113bb973": {
         "ItemID": "5cadf6e5ae921500113bb973",
         "Name": "patron_127x55_ps12a",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5cadf6eeae921500134b2799": {
         "ItemID": "5cadf6eeae921500134b2799",
         "Name": "patron_127x55_ps12b",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "560d5e524bdc2d25448b4571": {
         "ItemID": "560d5e524bdc2d25448b4571",
         "Name": "patron_12x70_buckshot",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e6772a4b936088465b17c": {
         "ItemID": "5d6e6772a4b936088465b17c",
         "Name": "patron_12x70_buckshot_525",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e67fba4b9361bc73bc779": {
         "ItemID": "5d6e67fba4b9361bc73bc779",
         "Name": "patron_12x70_buckshot_65",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5d6e6806a4b936088465b17e": {
         "ItemID": "5d6e6806a4b936088465b17e",
         "Name": "patron_12x70_buckshot_85",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5d6e68dea4b9361bcc29e659": {
         "ItemID": "5d6e68dea4b9361bcc29e659",
         "Name": "patron_12x70_dual_sabot_slug",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e6911a4b9361bd5780d52": {
         "ItemID": "5d6e6911a4b9361bd5780d52",
         "Name": "patron_12x70_flechette",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5c0d591486f7744c505b416f": {
         "ItemID": "5c0d591486f7744c505b416f",
         "Name": "patron_12x70_rip",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "58820d1224597753c90aeb13": {
         "ItemID": "58820d1224597753c90aeb13",
         "Name": "patron_12x70_slug",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e68c4a4b9361b93413f79": {
         "ItemID": "5d6e68c4a4b9361b93413f79",
         "Name": "patron_12x70_slug_50_bmg_m17_traccer",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e68a8a4b9360b6c0d54e2": {
         "ItemID": "5d6e68a8a4b9360b6c0d54e2",
         "Name": "patron_12x70_slug_ap_20",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5d6e68e6a4b9361c140bcfe0": {
         "ItemID": "5d6e68e6a4b9361c140bcfe0",
         "Name": "patron_12x70_slug_ftx_custom_lite",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5d6e6869a4b9361c140bcfde": {
         "ItemID": "5d6e6869a4b9361c140bcfde",
         "Name": "patron_12x70_slug_grizzly_40",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5d6e68b3a4b9361bca7e50b5": {
         "ItemID": "5d6e68b3a4b9361bca7e50b5",
         "Name": "patron_12x70_slug_hp_copper",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5d6e6891a4b9361bd473feea": {
         "ItemID": "5d6e6891a4b9361bd473feea",
         "Name": "patron_12x70_slug_poleva_3",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5d6e689ca4b9361bc8618956": {
         "ItemID": "5d6e689ca4b9361bc8618956",
         "Name": "patron_12x70_slug_poleva_6u",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5d6e68d1a4b93622fe60e845": {
         "ItemID": "5d6e68d1a4b93622fe60e845",
         "Name": "patron_12x70_slug_superformance",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5a38ebd9c4a282000d722a5b": {
         "ItemID": "5a38ebd9c4a282000d722a5b",
         "Name": "patron_20x70_buckshot",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e695fa4b936359b35d852": {
         "ItemID": "5d6e695fa4b936359b35d852",
         "Name": "patron_20x70_buckshot_56",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e69b9a4b9361bc8618958": {
         "ItemID": "5d6e69b9a4b9361bc8618958",
         "Name": "patron_20x70_buckshot_62",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e69c7a4b9360b6c0d54e4": {
         "ItemID": "5d6e69c7a4b9360b6c0d54e4",
         "Name": "patron_20x70_buckshot_73",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e6a5fa4b93614ec501745": {
         "ItemID": "5d6e6a5fa4b93614ec501745",
         "Name": "patron_20x70_slug_broadhead",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e6a53a4b9361bd473feec": {
         "ItemID": "5d6e6a53a4b9361bd473feec",
         "Name": "patron_20x70_slug_poleva_3",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e6a42a4b9364f07165f52": {
         "ItemID": "5d6e6a42a4b9364f07165f52",
         "Name": "patron_20x70_slug_poleva_6u",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5d6e6a05a4b93618084f58d0": {
         "ItemID": "5d6e6a05a4b93618084f58d0",
         "Name": "patron_20x70_slug_star",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5e85aa1a988a8701445df1f5": {
         "ItemID": "5e85aa1a988a8701445df1f5",
         "Name": "patron_23x75_barricade",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5e85aac65505fa48730d8af2": {
         "ItemID": "5e85aac65505fa48730d8af2",
@@ -187,17 +223,20 @@
     "5e85a9a6eacf8c039e4e2ac1": {
         "ItemID": "5e85a9a6eacf8c039e4e2ac1",
         "Name": "patron_23x75_shrapnel_10",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5f647f31b6238e5dd066e196": {
         "ItemID": "5f647f31b6238e5dd066e196",
         "Name": "patron_23x75_shrapnel_25",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5e85a9f4add9fe03027d9bf1": {
         "ItemID": "5e85a9f4add9fe03027d9bf1",
         "Name": "patron_23x75_star",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5f647fd3f6e4ab66c82faed6": {
         "ItemID": "5f647fd3f6e4ab66c82faed6",
@@ -207,77 +246,92 @@
     "62389aaba63f32501b1b444f": {
         "ItemID": "62389aaba63f32501b1b444f",
         "Name": "patron_26x75_green",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "62389ba9a63f32501b1b4451": {
         "ItemID": "62389ba9a63f32501b1b4451",
         "Name": "patron_26x75_red",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "62389bc9423ed1685422dc57": {
         "ItemID": "62389bc9423ed1685422dc57",
         "Name": "patron_26x75_white",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "62389be94d5d474bf712e709": {
         "ItemID": "62389be94d5d474bf712e709",
         "Name": "patron_26x75_yellow",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5d70e500a4b9364de70d38ce": {
         "ItemID": "5d70e500a4b9364de70d38ce",
         "Name": "patron_30x29_vog_30",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "59e655cb86f77411dc52a77b": {
         "ItemID": "59e655cb86f77411dc52a77b",
         "Name": "patron_366_TKM_EKO",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "59e6542b86f77411dc52a77a": {
         "ItemID": "59e6542b86f77411dc52a77a",
         "Name": "patron_366_TKM_FMJ",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "59e6658b86f77411d949b250": {
         "ItemID": "59e6658b86f77411d949b250",
         "Name": "patron_366_TKM_Geksa",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5f0596629e22f464da6bbdd9": {
         "ItemID": "5f0596629e22f464da6bbdd9",
         "Name": "patron_366_custom_ap",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5ede474b0c226a66f5402622": {
         "ItemID": "5ede474b0c226a66f5402622",
         "Name": "patron_40x46_m381",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5ede475b549eed7c6d5c18fb": {
         "ItemID": "5ede475b549eed7c6d5c18fb",
         "Name": "patron_40x46_m386",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5ede4739e0350d05467f73e8": {
         "ItemID": "5ede4739e0350d05467f73e8",
         "Name": "patron_40x46_m406",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5f0c892565703e5c461894e9": {
         "ItemID": "5f0c892565703e5c461894e9",
         "Name": "patron_40x46_m433",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5ede47405b097655935d7d16": {
         "ItemID": "5ede47405b097655935d7d16",
         "Name": "patron_40x46_m441",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5ede475339ee016e8c534742": {
         "ItemID": "5ede475339ee016e8c534742",
         "Name": "patron_40x46_m576",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5ede47641cf3836a88318df1": {
         "ItemID": "5ede47641cf3836a88318df1",
@@ -287,831 +341,997 @@
     "5ba26812d4351e003201fef1": {
         "ItemID": "5ba26812d4351e003201fef1",
         "Name": "patron_46x30_action_sx",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5ba26835d4351e0035628ff5": {
         "ItemID": "5ba26835d4351e0035628ff5",
         "Name": "patron_46x30_ap_sx",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5ba2678ad4351e44f824b344": {
         "ItemID": "5ba2678ad4351e44f824b344",
         "Name": "patron_46x30_fmj_sx",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5ba26844d4351e00334c9475": {
         "ItemID": "5ba26844d4351e00334c9475",
         "Name": "patron_46x30_subsonic_sx",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5c0d5e4486f77478390952fe": {
         "ItemID": "5c0d5e4486f77478390952fe",
         "Name": "patron_545x39_7n39",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "61962b617c6c7b169525f168": {
         "ItemID": "61962b617c6c7b169525f168",
         "Name": "patron_545x39_7n40",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "56dfef82d2720bbd668b4567": {
         "ItemID": "56dfef82d2720bbd668b4567",
         "Name": "patron_545x39_BP",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "56dff026d2720bb8668b4567": {
         "ItemID": "56dff026d2720bb8668b4567",
         "Name": "patron_545x39_BS",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "56dff061d2720bb5668b4567": {
         "ItemID": "56dff061d2720bb5668b4567",
         "Name": "patron_545x39_BT",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "56dff0bed2720bb0668b4567": {
         "ItemID": "56dff0bed2720bb0668b4567",
         "Name": "patron_545x39_FMJ",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "56dff216d2720bbd668b4568": {
         "ItemID": "56dff216d2720bbd668b4568",
         "Name": "patron_545x39_HP",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "56dff2ced2720bb4668b4567": {
         "ItemID": "56dff2ced2720bb4668b4567",
         "Name": "patron_545x39_PP",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "56dff338d2720bbd668b4569": {
         "ItemID": "56dff338d2720bbd668b4569",
         "Name": "patron_545x39_PRS",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "56dff3afd2720bba668b4567": {
         "ItemID": "56dff3afd2720bba668b4567",
         "Name": "patron_545x39_PS",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "56dff421d2720b5f5a8b4567": {
         "ItemID": "56dff421d2720b5f5a8b4567",
         "Name": "patron_545x39_SP",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "56dff4a2d2720bbd668b456a": {
         "ItemID": "56dff4a2d2720bbd668b456a",
         "Name": "patron_545x39_T",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "56dff4ecd2720b5f5a8b4568": {
         "ItemID": "56dff4ecd2720b5f5a8b4568",
         "Name": "patron_545x39_US",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "59e6920f86f77411d82aa167": {
         "ItemID": "59e6920f86f77411d82aa167",
         "Name": "patron_556x45_55_FMJ",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "59e6927d86f77411da468256": {
         "ItemID": "59e6927d86f77411da468256",
         "Name": "patron_556x45_55_HP",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "54527a984bdc2d4e668b4567": {
         "ItemID": "54527a984bdc2d4e668b4567",
         "Name": "patron_556x45_M855",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "54527ac44bdc2d36668b4567": {
         "ItemID": "54527ac44bdc2d36668b4567",
         "Name": "patron_556x45_M855A1",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "59e68f6f86f7746c9f75e846": {
         "ItemID": "59e68f6f86f7746c9f75e846",
         "Name": "patron_556x45_M856",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "59e6906286f7746c9f75e847": {
         "ItemID": "59e6906286f7746c9f75e847",
         "Name": "patron_556x45_M856A1",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "59e690b686f7746c9f75e848": {
         "ItemID": "59e690b686f7746c9f75e848",
         "Name": "patron_556x45_M995",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "59e6918f86f7746c9f75e849": {
         "ItemID": "59e6918f86f7746c9f75e849",
         "Name": "patron_556x45_MK_255_Mod_0",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "60194943740c5d77f6705eea": {
         "ItemID": "60194943740c5d77f6705eea",
         "Name": "patron_556x45_mk_318_mod_0",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "601949593ae8f707c4608daa": {
         "ItemID": "601949593ae8f707c4608daa",
         "Name": "patron_556x45_ssa_ap",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5c0d5ae286f7741e46554302": {
         "ItemID": "5c0d5ae286f7741e46554302",
         "Name": "patron_556x45_varmageddon",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5cc80f53e4a949000e1ea4f8": {
         "ItemID": "5cc80f53e4a949000e1ea4f8",
         "Name": "patron_57x28_l191",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5cc86832d7f00c000d3a6e6c": {
         "ItemID": "5cc86832d7f00c000d3a6e6c",
         "Name": "patron_57x28_r37f",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5cc86840d7f00c002412c56c": {
         "ItemID": "5cc86840d7f00c002412c56c",
         "Name": "patron_57x28_r37x",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5cc80f67e4a949035e43bbba": {
         "ItemID": "5cc80f67e4a949035e43bbba",
         "Name": "patron_57x28_sb193",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5cc80f38e4a949001152b560": {
         "ItemID": "5cc80f38e4a949001152b560",
         "Name": "patron_57x28_ss190",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5cc80f8fe4a949033b0224a2": {
         "ItemID": "5cc80f8fe4a949033b0224a2",
         "Name": "patron_57x28_ss197sr",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5cc80f79e4a949033c7343b2": {
         "ItemID": "5cc80f79e4a949033c7343b2",
         "Name": "patron_57x28_ss198lf",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "6241c316234b593b5676b637": {
         "ItemID": "6241c316234b593b5676b637",
         "Name": "patron_6mm_airsoft",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5735ff5c245977640e39ba7e": {
         "ItemID": "5735ff5c245977640e39ba7e",
         "Name": "patron_762x25tt_FMJ43",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5c3df7d588a4501f290594e5": {
         "ItemID": "5c3df7d588a4501f290594e5",
         "Name": "patron_9x19_GT",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573601b42459776410737435": {
         "ItemID": "573601b42459776410737435",
         "Name": "patron_762x25tt_LRN",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "573602322459776445391df1": {
         "ItemID": "573602322459776445391df1",
         "Name": "patron_762x25tt_LRNPC",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5736026a245977644601dc61": {
         "ItemID": "5736026a245977644601dc61",
         "Name": "patron_762x25tt_P_Gl",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573603562459776430731618": {
         "ItemID": "573603562459776430731618",
         "Name": "patron_762x25tt_Pst_gzh",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "573603c924597764442bd9cb": {
         "ItemID": "573603c924597764442bd9cb",
         "Name": "patron_762x25tt_T_Gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5735fdcd2459776445391d61": {
         "ItemID": "5735fdcd2459776445391d61",
         "Name": "patron_762x25tt_akbs",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5fbe3ffdf8b6a877a729ea82": {
         "ItemID": "5fbe3ffdf8b6a877a729ea82",
         "Name": "patron_762x35_blackout",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5fd20ff893a8961fc660a954": {
         "ItemID": "5fd20ff893a8961fc660a954",
         "Name": "patron_762x35_blackout_ap",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "619636be6db0f2477964e710": {
         "ItemID": "619636be6db0f2477964e710",
         "Name": "patron_762x35_m62",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "6196364158ef8c428c287d9f": {
         "ItemID": "6196364158ef8c428c287d9f",
         "Name": "patron_762x35_vmax",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "6196365d58ef8c428c287da1": {
         "ItemID": "6196365d58ef8c428c287da1",
         "Name": "patron_762x35_whisper",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "59e0d99486f7744a32234762": {
         "ItemID": "59e0d99486f7744a32234762",
         "Name": "patron_762x39_BP",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "59e4d3d286f774176a36250a": {
         "ItemID": "59e4d3d286f774176a36250a",
         "Name": "patron_762x39_HP",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5656d7c34bdc2d9d198b4587": {
         "ItemID": "5656d7c34bdc2d9d198b4587",
         "Name": "patron_762x39_PS",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "59e4cf5286f7741778269d8a": {
         "ItemID": "59e4cf5286f7741778269d8a",
         "Name": "patron_762x39_T45M",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "59e4d24686f7741776641ac7": {
         "ItemID": "59e4d24686f7741776641ac7",
         "Name": "patron_762x39_US",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "601aa3d2b2bcb34913271e6d": {
         "ItemID": "601aa3d2b2bcb34913271e6d",
         "Name": "patron_762x39_mai_ap",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5a6086ea4f39f99cd479502f": {
         "ItemID": "5a6086ea4f39f99cd479502f",
         "Name": "patron_762x51_M61",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5a608bf24f39f98ffc77720e": {
         "ItemID": "5a608bf24f39f98ffc77720e",
         "Name": "patron_762x51_M62",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "58dd3ad986f77403051cba8f": {
         "ItemID": "58dd3ad986f77403051cba8f",
         "Name": "patron_762x51_M80",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5e023e53d4353e3302577c4c": {
         "ItemID": "5e023e53d4353e3302577c4c",
         "Name": "patron_762x51_bpz_fmj",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5efb0c1bd79ff02a1f5e68d9": {
         "ItemID": "5efb0c1bd79ff02a1f5e68d9",
         "Name": "patron_762x51_m993",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5e023e6e34d52a55c3304f71": {
         "ItemID": "5e023e6e34d52a55c3304f71",
         "Name": "patron_762x51_tpz_sp",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5e023e88277cce2b522ff2b1": {
         "ItemID": "5e023e88277cce2b522ff2b1",
         "Name": "patron_762x51_ultra_nosler",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5e023d34e8a400319a28ed44": {
         "ItemID": "5e023d34e8a400319a28ed44",
         "Name": "patron_762x54r_7bt1",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5e023d48186a883be655e551": {
         "ItemID": "5e023d48186a883be655e551",
         "Name": "patron_762x54r_7n37",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5e023cf8186a883be655e54f": {
         "ItemID": "5e023cf8186a883be655e54f",
         "Name": "patron_762x54r_t46m",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "59e77a2386f7742ee578960a": {
         "ItemID": "59e77a2386f7742ee578960a",
         "Name": "patron_762х54R_7N1",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5887431f2459777e1612938f": {
         "ItemID": "5887431f2459777e1612938f",
         "Name": "patron_762х54R_LPS_Gzh",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "560d61e84bdc2da74d8b4571": {
         "ItemID": "560d61e84bdc2da74d8b4571",
         "Name": "patron_762х54R_SNB",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5fc382a9d724d907e2077dab": {
         "ItemID": "5fc382a9d724d907e2077dab",
         "Name": "patron_86x70_lapua_ap",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5fc275cf85fd526b824a571a": {
         "ItemID": "5fc275cf85fd526b824a571a",
         "Name": "patron_86x70_lapua_magnum",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5fc382c1016cce60e8341b20": {
         "ItemID": "5fc382c1016cce60e8341b20",
         "Name": "patron_86x70_lapua_magnum_upz",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5fc382b6d6fa9c00c571bbc3": {
         "ItemID": "5fc382b6d6fa9c00c571bbc3",
         "Name": "patron_86x70_lapua_tac_x",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "573718ba2459775a75491131": {
         "ItemID": "573718ba2459775a75491131",
         "Name": "patron_9x18pm_BZT_gzh",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "573719df2459775a626ccbc2": {
         "ItemID": "573719df2459775a626ccbc2",
         "Name": "patron_9x18pm_PBM",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57371aab2459775a77142f22": {
         "ItemID": "57371aab2459775a77142f22",
         "Name": "patron_9x18pm_PMM",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57371b192459775a9f58a5e0": {
         "ItemID": "57371b192459775a9f58a5e0",
         "Name": "patron_9x18pm_PPE_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57371e4124597760ff7b25f1": {
         "ItemID": "57371e4124597760ff7b25f1",
         "Name": "patron_9x18pm_PPT_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57371eb62459776125652ac1": {
         "ItemID": "57371eb62459776125652ac1",
         "Name": "patron_9x18pm_PRS_gs",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57371f8d24597761006c6a81": {
         "ItemID": "57371f8d24597761006c6a81",
         "Name": "patron_9x18pm_PSO_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737201124597760fc4431f1": {
         "ItemID": "5737201124597760fc4431f1",
         "Name": "patron_9x18pm_PST_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737207f24597760ff7b25f2": {
         "ItemID": "5737207f24597760ff7b25f2",
         "Name": "patron_9x18pm_PSV",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57371f2b24597761224311f1": {
         "ItemID": "57371f2b24597761224311f1",
         "Name": "patron_9x18pm_PS_gs_PPO",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573719762459775a626ccbc1": {
         "ItemID": "573719762459775a626ccbc1",
         "Name": "patron_9x18pm_P_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573720e02459776143012541": {
         "ItemID": "573720e02459776143012541",
         "Name": "patron_9x18pm_RG028_gzh",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57372140245977611f70ee91": {
         "ItemID": "57372140245977611f70ee91",
         "Name": "patron_9x18pm_SP7_gzh",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5737218f245977612125ba51": {
         "ItemID": "5737218f245977612125ba51",
         "Name": "patron_9x18pm_SP8_gzh",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5efb0da7a29a85116f6ea05f": {
         "ItemID": "5efb0da7a29a85116f6ea05f",
         "Name": "patron_9x19_7n31",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "58864a4f2459770fcc257101": {
         "ItemID": "58864a4f2459770fcc257101",
         "Name": "patron_9x19_PSO_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "56d59d3ad2720bdb418b4577": {
         "ItemID": "56d59d3ad2720bdb418b4577",
         "Name": "patron_9x19_PST_gzh",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5c925fa22e221601da359b7b": {
         "ItemID": "5c925fa22e221601da359b7b",
         "Name": "patron_9x19_ap_63",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5a3c16fe86f77452b62de32a": {
         "ItemID": "5a3c16fe86f77452b62de32a",
         "Name": "patron_9x19_luger_cci",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5efb0e16aeb21837e749c7ff": {
         "ItemID": "5efb0e16aeb21837e749c7ff",
         "Name": "patron_9x19_quakemaker",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5c0d56a986f774449d5de529": {
         "ItemID": "5c0d56a986f774449d5de529",
         "Name": "patron_9x19_rip",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5a269f97c4a282000b151807": {
         "ItemID": "5a269f97c4a282000b151807",
         "Name": "patron_9x21_sp10",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5a26abfac4a28232980eabff": {
         "ItemID": "5a26abfac4a28232980eabff",
         "Name": "patron_9x21_sp11",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5a26ac06c4a282000c5a90a8": {
         "ItemID": "5a26ac06c4a282000c5a90a8",
         "Name": "patron_9x21_sp12",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5a26ac0ec4a28200741e1e18": {
         "ItemID": "5a26ac0ec4a28200741e1e18",
         "Name": "patron_9x21_sp13",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "62330b3ed4dc74626d570b95": {
         "ItemID": "62330b3ed4dc74626d570b95",
         "Name": "patron_9x33r_fmj",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "62330bfadc5883093563729b": {
         "ItemID": "62330bfadc5883093563729b",
         "Name": "patron_9x33r_hp",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "62330c18744e5e31df12f516": {
         "ItemID": "62330c18744e5e31df12f516",
         "Name": "patron_9x33r_jhp",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "62330c40bdd19b369e1e53d1": {
         "ItemID": "62330c40bdd19b369e1e53d1",
         "Name": "patron_9x33r_sp",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5c0d688c86f77413ae3407b2": {
         "ItemID": "5c0d688c86f77413ae3407b2",
         "Name": "patron_9x39_bp",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "61962d879bb3d20b0946d385": {
         "ItemID": "61962d879bb3d20b0946d385",
         "Name": "patron_9x39_pab9",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57a0dfb82459774d3078b56c": {
         "ItemID": "57a0dfb82459774d3078b56c",
         "Name": "patron_9x39_sp5",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57a0e5022459774d1673f889": {
         "ItemID": "57a0e5022459774d1673f889",
         "Name": "patron_9x39_sp6",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5c0d668f86f7747ccb7f13b2": {
         "ItemID": "5c0d668f86f7747ccb7f13b2",
         "Name": "patron_9x39_spp",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "624c0570c9b794431568f5d5": {
         "ItemID": "624c0570c9b794431568f5d5",
         "Name": "patron_rsp_green",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "624c09cfbc2e27219346d955": {
         "ItemID": "624c09cfbc2e27219346d955",
         "Name": "patron_rsp_red",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "624c09da2cec124eb67c1046": {
         "ItemID": "624c09da2cec124eb67c1046",
         "Name": "patron_rsp_white",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "624c09e49b98e019a3315b66": {
         "ItemID": "624c09e49b98e019a3315b66",
         "Name": "patron_rsp_yellow",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5943d9c186f7745a13413ac9": {
         "ItemID": "5943d9c186f7745a13413ac9",
         "Name": "shrapnel",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5996f6d686f77467977ba6cc": {
         "ItemID": "5996f6d686f77467977ba6cc",
         "Name": "shrapnel_F1",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5996f6cb86f774678763a6ca": {
         "ItemID": "5996f6cb86f774678763a6ca",
         "Name": "shrapnel_RGD5",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5996f6fc86f7745e585b4de3": {
         "ItemID": "5996f6fc86f7745e585b4de3",
         "Name": "shrapnel_m67",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "635267f063651329f75a4ee8": {
         "ItemID": "635267f063651329f75a4ee8",
         "Name": "patron_26x75_acidgreen",
-        "LoyaltyLevel": 4
+        "LoyaltyLevel": 4,
+        "Price": 0
     },
     "5649ed104bdc2d3d1c8b458b": {
         "ItemID": "5649ed104bdc2d3d1c8b458b",
         "Name": "ammo_box_762x39_20_PS",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372ebf2459776862260582": {
         "ItemID": "57372ebf2459776862260582",
         "Name": "item_ammo_box_545x39_30_PS",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737292724597765e5728562": {
         "ItemID": "5737292724597765e5728562",
         "Name": "item_ammo_box_545x39_120_BP",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57372e73245977685d4159b4": {
         "ItemID": "57372e73245977685d4159b4",
         "Name": "item_ammo_box_545x39_120_PS",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372bd3245977670b7cd243": {
         "ItemID": "57372bd3245977670b7cd243",
         "Name": "item_ammo_box_545x39_30_BS",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "57372ee1245977685d4159b5": {
         "ItemID": "57372ee1245977685d4159b5",
         "Name": "item_ammo_box_545x39_120_T",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372d1b2459776862260581": {
         "ItemID": "57372d1b2459776862260581",
         "Name": "item_ammo_box_545x39_120_PP",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "560d75f54bdc2da74d8b4573": {
         "ItemID": "560d75f54bdc2da74d8b4573",
         "Name": "ammo_box_762x54r_xx_SNB",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5c1127d0d174af29be75cf68": {
         "ItemID": "5c1127d0d174af29be75cf68",
         "Name": "item_ammo_box_12g_rip_5",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737287724597765e1625ae2": {
         "ItemID": "5737287724597765e1625ae2",
         "Name": "item_ammo_box_9x18pm_RG028_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372deb245977685d4159b3": {
         "ItemID": "57372deb245977685d4159b3",
         "Name": "item_ammo_box_545x39_120_PRS",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372f7d245977699b53e301": {
         "ItemID": "57372f7d245977699b53e301",
         "Name": "item_ammo_box_545x39_120_US",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372c89245977685d4159b1": {
         "ItemID": "57372c89245977685d4159b1",
         "Name": "item_ammo_box_545x39_30_BT",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57372b832459776701014e41": {
         "ItemID": "57372b832459776701014e41",
         "Name": "item_ammo_box_545x39_120_BS",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5447ac644bdc2d6c208b4567": {
         "ItemID": "5447ac644bdc2d6c208b4567",
         "Name": "ammo_box_556x45_xx_m193ball",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573728cc24597765cc785b5d": {
         "ItemID": "573728cc24597765cc785b5d",
         "Name": "item_ammo_box_9x18pm_SP7_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372db0245977685d4159b2": {
         "ItemID": "57372db0245977685d4159b2",
         "Name": "item_ammo_box_545x39_30_PP",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372f5c24597769917c0131": {
         "ItemID": "57372f5c24597769917c0131",
         "Name": "item_ammo_box_545x39_30_T",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573728f324597765e5728561": {
         "ItemID": "573728f324597765e5728561",
         "Name": "item_ammo_box_9x18pm_SP8_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737330a2459776af32363a1": {
         "ItemID": "5737330a2459776af32363a1",
         "Name": "item_ammo_box_545x39_30_bpz_fmj",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5739d41224597779c3645501": {
         "ItemID": "5739d41224597779c3645501",
         "Name": "item_ammo_box_9x19_default",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573733c72459776b0b7b51b0": {
         "ItemID": "573733c72459776b0b7b51b0",
         "Name": "item_ammo_box_545x39_30_bpz_sp",
-        "LoyaltyLevel": 12
+        "LoyaltyLevel": 12,
+        "Price": 0
     },
     "5c1127bdd174af44217ab8b9": {
         "ItemID": "5c1127bdd174af44217ab8b9",
         "Name": "item_ammo_box_9x19_rip_20",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573722e82459776104581c21": {
         "ItemID": "573722e82459776104581c21",
         "Name": "item_ammo_box_9x18pm_16_BZT_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5c1260dc86f7746b106e8748": {
         "ItemID": "5c1260dc86f7746b106e8748",
         "Name": "item_ammo_box_9x39_7n12_8",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737256c2459776125652acd": {
         "ItemID": "5737256c2459776125652acd",
         "Name": "item_ammo_box_9x18pm_16_PMM",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372ac324597767001bc261": {
         "ItemID": "57372ac324597767001bc261",
         "Name": "item_ammo_box_545x39_30_BP",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57372c21245977670937c6c2": {
         "ItemID": "57372c21245977670937c6c2",
         "Name": "item_ammo_box_545x39_120_BT",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57372e4a24597768553071c2": {
         "ItemID": "57372e4a24597768553071c2",
         "Name": "item_ammo_box_545x39_30_PRS",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737266524597761006c6a8c": {
         "ItemID": "5737266524597761006c6a8c",
         "Name": "item_ammo_box_9x18pm_16_PRS_gs",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737300424597769942d5a01": {
         "ItemID": "5737300424597769942d5a01",
         "Name": "item_ammo_box_545x39_30_US",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737339e2459776af261abeb": {
         "ItemID": "5737339e2459776af261abeb",
         "Name": "item_ammo_box_545x39_30_bpz_hp",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5c1262a286f7743f8a69aab2": {
         "ItemID": "5c1262a286f7743f8a69aab2",
         "Name": "item_ammo_box_545x39_7N39_30",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "5737250c2459776125652acc": {
         "ItemID": "5737250c2459776125652acc",
         "Name": "item_ammo_box_9x18pm_16_PBM",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573725b0245977612125bae2": {
         "ItemID": "573725b0245977612125bae2",
         "Name": "item_ammo_box_9x18pm_16_PPE_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737260b24597761224311f2": {
         "ItemID": "5737260b24597761224311f2",
         "Name": "item_ammo_box_9x18pm_16_PPT_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737273924597765dd374461": {
         "ItemID": "5737273924597765dd374461",
         "Name": "item_ammo_box_9x18pm_16_PSO_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573727c624597765cc785b5b": {
         "ItemID": "573727c624597765cc785b5b",
         "Name": "item_ammo_box_9x18pm_16_PST_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5737280e24597765cc785b5c": {
         "ItemID": "5737280e24597765cc785b5c",
         "Name": "item_ammo_box_9x18pm_16_PSV",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "573724b42459776125652ac2": {
         "ItemID": "573724b42459776125652ac2",
         "Name": "item_ammo_box_9x18pm_16_P_gzh",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372a7f24597766fe0de0c1": {
         "ItemID": "57372a7f24597766fe0de0c1",
         "Name": "item_ammo_box_545x39_120_BP_damaged",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "57372d4c245977685a3da2a1": {
         "ItemID": "57372d4c245977685a3da2a1",
         "Name": "item_ammo_box_545x39_120_PP_damaged",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372e1924597768553071c1": {
         "ItemID": "57372e1924597768553071c1",
         "Name": "item_ammo_box_545x39_120_PRS_damaged",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372e94245977685648d3e1": {
         "ItemID": "57372e94245977685648d3e1",
         "Name": "item_ammo_box_545x39_120_PS_damaged",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372f2824597769a270a191": {
         "ItemID": "57372f2824597769a270a191",
         "Name": "item_ammo_box_545x39_120_T_damaged",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372fc52459776998772ca1": {
         "ItemID": "57372fc52459776998772ca1",
         "Name": "item_ammo_box_545x39_120_US_damaged",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "5c11279ad174af029d64592b": {
         "ItemID": "5c11279ad174af029d64592b",
         "Name": "item_ammo_box_556x45_varmageddon_20",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "573726d824597765d96be361": {
         "ItemID": "573726d824597765d96be361",
         "Name": "item_ammo_box_9x18pm_16_PS_gs_PPO",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5c12619186f7743f871c8a32": {
         "ItemID": "5c12619186f7743f871c8a32",
         "Name": "item_ammo_box_9x39_7n9_8",
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "57372bad245977670b7cd242": {
         "ItemID": "57372bad245977670b7cd242",
         "Name": "item_ammo_box_545x39_120_BS_damaged",
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "57372c56245977685e584582": {
         "ItemID": "57372c56245977685e584582",
         "Name": "item_ammo_box_545x39_120_BT_damaged",
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "Price": 0
     }
 }

@@ -14,16 +14,10 @@ import { IAirdropConfig } from "@spt-aki/models/spt/config/IAirdropConfig";
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
 import { RandomUtil } from "@spt-aki/utils/RandomUtil";
 import { HashUtil } from "@spt-aki/utils/HashUtil";
-import { BotGeneratorHelper } from "@spt-aki/helpers/BotGeneratorHelper";
 import { WeightedRandomHelper } from "@spt-aki/helpers/WeightedRandomHelper";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
-import { ProbabilityHelper } from "@spt-aki/helpers/ProbabilityHelper";
 import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
 import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
-import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
-import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
-import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen";
 import { DynamicRouterModService } from "@spt-aki/services/mod/dynamicRouter/DynamicRouterModService"
 import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
 import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod";
@@ -46,8 +40,6 @@ import { PaymentHelper } from "@spt-aki/helpers/PaymentHelper";
 import { ITrader, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrader";
 import { TraderPurchasePersisterService } from "@spt-aki/services/TraderPurchasePersisterService";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";;
-import { BotEquipmentModGenerator } from "@spt-aki/generators/BotEquipmentModGenerator";
-import { BotModLimits, BotWeaponModLimitService } from "@spt-aki/services/BotWeaponModLimitService";
 import { BotHelper } from "@spt-aki/helpers/BotHelper";
 import { IBotBase, Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
 import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
@@ -98,6 +90,8 @@ import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
 import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
 import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
 import { BotGenerator } from "@spt-aki/generators/BotGenerator";
+import { ParentClasses } from "./enums";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -651,6 +645,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.gearTemplatesCodeGen();
+        // codegen.ammoTemplatesCodeGen();
 
 
         if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
@@ -764,7 +759,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         items.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
-        weaponsGlobals.loadGlobalWeps();
+        weaponsGlobals.loadGlobalWeps();        
+
     }
 
     public postAkiLoad(container: DependencyContainer) {

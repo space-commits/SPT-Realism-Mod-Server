@@ -62,7 +62,7 @@ export class JsonGen {
     public ammoTemplatesCodeGen() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if (serverItem._parent === ParentClasses.AMMO || ParentClasses.AMMO_BOX) {
+            if (serverItem._parent === ParentClasses.AMMO || serverItem._parent === ParentClasses.AMMO_BOX) {
                 this.itemWriteToFile(ammoTemplates, "ammoTemplates", i, serverItem, "ammo", this.assignJSONToAmmo);
             }
         }
@@ -72,26 +72,26 @@ export class JsonGen {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._parent === ParentClasses.CHESTRIG && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+                this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
             if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+                this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
             if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+                this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
             if (serverItem._parent === ParentClasses.ARMORVEST && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+                this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
             if (serverItem._parent === ParentClasses.CHESTRIG && serverItem._props.armorClass === 0) {
-                this.itemWriteToFile(chestrigTemplates, "chestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+                this.itemWriteToFile(chestrigTemplates, "chestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
             if (serverItem._parent === ParentClasses.HEADSET) {
-                this.itemWriteToFile(headsetTemplates, "headsetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+                this.itemWriteToFile(headsetTemplates, "headsetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
             if((serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) && serverItem._props.armorClass <= 1)
             {
-                this.itemWriteToFile(cosmeticsTemplates, "cosmeticsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, false);
+                this.itemWriteToFile(cosmeticsTemplates, "cosmeticsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
         }
     }
@@ -240,6 +240,7 @@ export class JsonGen {
 
         if (fileItem) {
             fileItem;
+            fileItem.Price = 0;
             return fileItem;
         }
 
@@ -260,6 +261,7 @@ export class JsonGen {
 
         if (fileItem) {
             fileItem;
+            fileItem.Price = 0;
             return fileItem;
         }
 
@@ -279,6 +281,7 @@ export class JsonGen {
         let HasStomachArmor = false;
         let HasNeckArmor = false;
         let dB = 0;
+        let Price = 0;
 
         let item = {
             ItemID,
@@ -286,7 +289,8 @@ export class JsonGen {
             AllowADS,
             LoyaltyLevel,
             ReloadSpeedMulti,
-            BlocksMouth
+            BlocksMouth,
+            Price
         };
 
         return item;
@@ -343,7 +347,7 @@ export class JsonGen {
         let IsManuallyOperated = false;
         let BaseChamberCheckSpeed = 1;
         let BaseFixSpeed = 1;
-
+       
         let item = {
             ItemID,
             Name,
@@ -403,6 +407,8 @@ export class JsonGen {
             //     fileItem.VerticalRecoil = serverItem._props.Recoil;
             //     fileItem.HorizontalRecoil = serverItem._props.Recoil;
             //    }
+            fileItem.Price = 0;
+            fileItem.LoyaltyLevel = 0;
             return fileItem;
         }
 
@@ -442,6 +448,8 @@ export class JsonGen {
         let ShotgunDispersion = serverItem._props.ShotgunDispersion;
         let Loudness = serverItem._props.Loudness;
         let MalfChance = 0;
+        let Price = 0;
+        let LoyaltyLevel = 1;
 
         if (ID === "muzzle") {
             let item = {
@@ -468,7 +476,9 @@ export class JsonGen {
                 ModShotDispersion,
                 Loudness,
                 MalfChance,
-                Convergence
+                Convergence,
+                Price,
+                LoyaltyLevel
             };
             return item;
         }

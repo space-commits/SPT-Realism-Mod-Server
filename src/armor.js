@@ -14,26 +14,12 @@ class Armor {
     loadArmor() {
         //Armor Destructibility values
         this.armMat.Glass.Destructibility = 0.6;
-        this.armMat.Glass.MaxRepairDegradation = 0.71;
-        this.armMat.Glass.MinRepairDegradation = 0.39;
         this.armMat.Aramid.Destructibility = 0.24;
-        this.armMat.Aramid.MaxRepairDegradation = 0.27;
-        this.armMat.Aramid.MinRepairDegradation = 0.04;
         this.armMat.Ceramic.Destructibility = 0.18;
-        this.armMat.Ceramic.MaxRepairDegradation = 0.75;
-        this.armMat.Ceramic.MinRepairDegradation = 0.57;
         this.armMat.Combined.Destructibility = 0.16;
-        this.armMat.Combined.MaxRepairDegradation = 0.51;
-        this.armMat.Combined.MinRepairDegradation = 0.4;
         this.armMat.UHMWPE.Destructibility = 0.13;
-        this.armMat.UHMWPE.MaxRepairDegradation = 0.68;
-        this.armMat.UHMWPE.MinRepairDegradation = 0.35;
         this.armMat.Titan.Destructibility = 0.06;
-        this.armMat.Titan.MaxRepairDegradation = 0.4;
-        this.armMat.Titan.MinRepairDegradation = 0.14;
         this.armMat.ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represetns loss of anti-spall coating
-        this.armMat.ArmoredSteel.MaxRepairDegradation = 0.2;
-        this.armMat.ArmoredSteel.MinRepairDegradation = 0.06;
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             ////////Body Armor//////////

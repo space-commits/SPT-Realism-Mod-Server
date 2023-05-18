@@ -11,7 +11,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "BlocksMouth": true
+        "BlocksMouth": true,
+        "Price": 0
     },
     "603409c80ca681766b6a0fb2": {
         "ItemID": "603409c80ca681766b6a0fb2",
@@ -24,7 +25,8 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "Price": 0
     },
     "5b432be65acfc433000ed01f": {
         "ItemID": "5b432be65acfc433000ed01f",
@@ -37,7 +39,8 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "Price": 0
     },
     "59e770b986f7742cbd762754": {
         "ItemID": "59e770b986f7742cbd762754",
@@ -50,7 +53,8 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "Price": 0
     },
     "5c1a1cc52e221602b3136e3d": {
         "ItemID": "5c1a1cc52e221602b3136e3d",
@@ -63,7 +67,8 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "Price": 0
     },
     "62a61c988ec41a51b34758d5": {
         "ItemID": "62a61c988ec41a51b34758d5",
@@ -76,7 +81,8 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "Price": 0
     },
     "5c0d32fcd174af02a1659c75": {
         "ItemID": "5c0d32fcd174af02a1659c75",
@@ -89,7 +95,8 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "Price": 0
     },
     "5d5fca1ea4b93635fd598c07": {
         "ItemID": "5d5fca1ea4b93635fd598c07",
@@ -102,6 +109,7 @@
         "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
-        "MinPen": 50
+        "MinPen": 50,
+        "Price": 0
     }
 }
