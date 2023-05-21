@@ -47,9 +47,9 @@ export class Quests {
 
                 let id = this.questDB[quest]._id;
 
-                let desc = this.locales[id +" Description"];
+                let desc = this.locales[id +" description"];
 
-                this.locales[id +" Description"] =  `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
+                this.locales[id +" description"] =  `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
 
             }
         }

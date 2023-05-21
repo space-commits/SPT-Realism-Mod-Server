@@ -137,7 +137,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5ac4c50d5acfc40019262e87": {
         "ItemID": "5ac4c50d5acfc40019262e87",
@@ -151,7 +152,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5b46238386f7741a693bcf9c": {
         "ItemID": "5b46238386f7741a693bcf9c",
@@ -165,7 +167,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5f60c85b58eff926626a60f7": {
         "ItemID": "5f60c85b58eff926626a60f7",
@@ -179,7 +182,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5aa7e3abe5b5b000171d064d": {
         "ItemID": "5aa7e3abe5b5b000171d064d",
@@ -193,7 +197,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5ca2113f86f7740b2547e1d2": {
         "ItemID": "5ca2113f86f7740b2547e1d2",
@@ -207,7 +212,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5d6d3829a4b9361bc8618943": {
         "ItemID": "5d6d3829a4b9361bc8618943",
@@ -221,7 +227,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5c0e842486f77443a74d2976": {
         "ItemID": "5c0e842486f77443a74d2976",
@@ -235,7 +242,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5aa7e373e5b5b000137b76f0": {
         "ItemID": "5aa7e373e5b5b000137b76f0",
@@ -249,7 +257,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5a16b7e1fcdbcb00165aa6c9": {
         "ItemID": "5a16b7e1fcdbcb00165aa6c9",
@@ -263,7 +272,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5a16b672fcdbcb001912fa83": {
         "ItemID": "5a16b672fcdbcb001912fa83",
@@ -291,7 +301,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5e01f37686f774773c6f6c15": {
         "ItemID": "5e01f37686f774773c6f6c15",
@@ -305,7 +316,8 @@
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "BlocksMouth": true
     },
     "5ea058e01dbce517f324b3e2": {
         "ItemID": "5ea058e01dbce517f324b3e2",

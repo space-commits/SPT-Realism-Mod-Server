@@ -292,7 +292,7 @@ export class Player {
             this.debuffMul(health.Wound.ThresholdMax, mult);
 
             health.LightBleeding.HealthLoopTime = 10;
-            health.LightBleeding.DamageHealth = 0.5;
+            health.LightBleeding.DamageHealth = 0.65;
 
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.Threshold /= mult
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult)

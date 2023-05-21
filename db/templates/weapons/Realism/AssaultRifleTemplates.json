@@ -1179,13 +1179,13 @@
         "AutoROF": 650,
         "SemiROF": 400,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 0.98,
         "BaseChamberSpeedMulti": 0.9,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.95,
-        "BaseFixSpeed": 0.95
+        "BaseFixSpeed": 0.94
     },
     "618428466ef05c2ce828f218": {
         "ItemID": "618428466ef05c2ce828f218",
@@ -1223,13 +1223,13 @@
         "AutoROF": 650,
         "SemiROF": 400,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 0.98,
         "BaseChamberSpeedMulti": 0.9,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.95,
-        "BaseFixSpeed": 0.95
+        "BaseFixSpeed": 0.94
     },
     "6183afd850224f204c1da514": {
         "ItemID": "6183afd850224f204c1da514",
@@ -1267,13 +1267,13 @@
         "AutoROF": 600,
         "SemiROF": 400,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 0.98,
         "BaseChamberSpeedMulti": 0.9,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.95,
-        "BaseFixSpeed": 0.95
+        "BaseFixSpeed": 0.94
     },
     "6165ac306ef05c2ce828ef74": {
         "ItemID": "6165ac306ef05c2ce828ef74",
@@ -1311,13 +1311,13 @@
         "AutoROF": 600,
         "SemiROF": 400,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 0.98,
         "BaseChamberSpeedMulti": 0.9,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.95,
-        "BaseFixSpeed": 0.95
+        "BaseFixSpeed": 0.94
     },
     "5c488a752e221602b412af63": {
         "ItemID": "5c488a752e221602b412af63",
@@ -1611,7 +1611,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.68,
+        "RecoilDamping": 0.72,
         "RecoilHandDamping": 0.68,
         "WeaponAllowADS": false,
         "Weight": 1.114,

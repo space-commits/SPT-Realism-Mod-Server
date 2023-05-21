@@ -101,7 +101,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "trnqt");
                 serverItem._props.ConflictingItems.splice(2, 0, "trnqt");
-                serverItem._props.ConflictingItems.splice(3, 0, "1"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.5"); // trqnt damage per tick
             }
             //Esmarch
             if (serverItem._id === "5e831507ea0a7c419c2f9bd9") {
@@ -112,7 +112,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "trnqt");
                 serverItem._props.ConflictingItems.splice(2, 0, "trnqt");
-                serverItem._props.ConflictingItems.splice(3, 0, "1.2"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.8"); // trqnt damage per tick
             }
             //Calok
             if (serverItem._id === "5e8488fa988a8701445df1e4") {
@@ -171,6 +171,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             //Salewa
             if (serverItem._id === "544fb45d4bdc2dee738b4568") {
@@ -182,7 +183,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "1.2"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.8"); // trqnt damage per tick
             }
             //IFAK
             if (serverItem._id === "590c678286f77426c9660122") {
@@ -194,7 +195,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "1"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.5"); // trqnt damage per tick
             }
             //AFAK
             if (serverItem._id === "60098ad7c2240c0fe85c570a") {
@@ -218,7 +219,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "1"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.5"); // trqnt damage per tick
             }
             ///Smeary stuff///
             //Vaseline
@@ -255,7 +256,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "surg");
                 serverItem._props.ConflictingItems.splice(2, 0, "surg");
-                serverItem._props.ConflictingItems.splice(3, 0, "1.25"); // hp restore per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "1"); // hp restore per tick
             }
             //Surv12
             if (serverItem._id === "5d02797c86f774203f38e30a") {
@@ -266,7 +267,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "surg");
                 serverItem._props.ConflictingItems.splice(2, 0, "surg");
-                serverItem._props.ConflictingItems.splice(3, 0, "1.5"); // hp restore per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "1.3"); // hp restore per tick
             }
         }
         if (this.modConf.logEverything == true) {

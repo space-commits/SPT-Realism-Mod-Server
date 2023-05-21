@@ -40,8 +40,8 @@ class Quests {
                 conditions._props.durability.compareMethod = "<=";
                 conditions._props.durability.value = 200;
                 let id = this.questDB[quest]._id;
-                let desc = this.locales[id + " Description"];
-                this.locales[id + " Description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
+                let desc = this.locales[id + " description"];
+                this.locales[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
             }
         }
         if (this.modConf.logEverything == true) {
