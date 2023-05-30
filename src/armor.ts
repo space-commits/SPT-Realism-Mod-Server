@@ -14,32 +14,19 @@ export class Armor {
 
         //Armor Destructibility values
         this.armMat.Glass.Destructibility = 0.6;
-        this.armMat.Glass.MaxRepairDegradation = 0.84;
-        this.armMat.Glass.MinRepairDegradation = 0.46;
 
         this.armMat.Aramid.Destructibility = 0.24;
-        this.armMat.Aramid.MaxRepairDegradation = 0.32;
-        this.armMat.Aramid.MinRepairDegradation = 0.04;
 
         this.armMat.Ceramic.Destructibility = 0.18;
-        this.armMat.Ceramic.MaxRepairDegradation = 0.88;
-        this.armMat.Ceramic.MinRepairDegradation = 0.68;
-
+        
         this.armMat.Combined.Destructibility = 0.16;
-        this.armMat.Combined.MaxRepairDegradation = 0.6;
-        this.armMat.Combined.MinRepairDegradation = 0.4;
 
         this.armMat.UHMWPE.Destructibility = 0.13;
-        this.armMat.UHMWPE.MaxRepairDegradation = 0.8;
-        this.armMat.UHMWPE.MinRepairDegradation = 0.48;
 
         this.armMat.Titan.Destructibility = 0.06;
-        this.armMat.Titan.MaxRepairDegradation = 0.48;
-        this.armMat.Titan.MinRepairDegradation = 0.16;
 
         this.armMat.ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represetns loss of anti-spall coating
-        this.armMat.ArmoredSteel.MaxRepairDegradation = 0.24;
-        this.armMat.ArmoredSteel.MinRepairDegradation = 0.08;
+
 
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
@@ -991,7 +978,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -0.45;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.45;
-                serverItem._props.BluntThroughput = 0.18;
+                serverItem._props.BluntThroughput = 0.17;
                 serverItem._props.DeafStrength = "None";
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 0.9;
@@ -1004,7 +991,7 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -0.45;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.45;
-                serverItem._props.BluntThroughput = 0.18;
+                serverItem._props.BluntThroughput = 0.17;
                 serverItem._props.DeafStrength = "None";
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 0.9;
@@ -1030,23 +1017,10 @@ export class Armor {
                 serverItem._props.speedPenaltyPercent = -0.56;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.56;
-                serverItem._props.BluntThroughput = 0.175;
+                serverItem._props.BluntThroughput = 0.15;
                 serverItem._props.DeafStrength = "None";
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 1.12;
-            }
-            //BNTI LSHZ
-            if (serverItem._id === "5d6d3716a4b9361bc8618872") {
-                serverItem._props.Durability = 20;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
-                serverItem._props.speedPenaltyPercent = -1.7;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -1.7;
-                serverItem._props.BluntThroughput = 0.2;
-                serverItem._props.DeafStrength = "High";
-                serverItem._props.ArmorMaterial = 'UHMWPE';
-                serverItem._props.Weight = 3.4;
             }
             //// Class 5 ////
             //Ronin
@@ -1067,6 +1041,19 @@ export class Armor {
                     "Jaws",
                     "Nape"
                 ]
+            }
+            //BNTI LSHZ
+            if (serverItem._id === "5d6d3716a4b9361bc8618872") {
+                serverItem._props.Durability = 60;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 5;
+                serverItem._props.speedPenaltyPercent = -1.7;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -1.7;
+                serverItem._props.BluntThroughput = 0.13;
+                serverItem._props.DeafStrength = "High";
+                serverItem._props.ArmorMaterial = 'Aramid';
+                serverItem._props.Weight = 3.4;
             }
             //ZSh
             if (serverItem._id === "5aa7e454e5b5b0214e506fa2") {
@@ -1276,7 +1263,7 @@ export class Armor {
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 2.6;
             }
-            //Class 8
+            //// Class 8 ////
             //Vulkan-5
             if (serverItem._id === "5ca20ee186f774799474abc2") {
                 serverItem._props.Durability = 35;
@@ -1465,11 +1452,12 @@ export class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 0.3;
             }
+            //// Class 5 ////
             //LSHZ-2DTM Aventail
             if (serverItem._id === "5d6d3be5a4b9361bc73bc763") {
-                serverItem._props.Durability = 60;
+                serverItem._props.Durability = 40;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
+                serverItem._props.armorClass = 5;
                 serverItem._props.speedPenaltyPercent = -0.6;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.6;
@@ -1477,7 +1465,6 @@ export class Armor {
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 1.2;
             }
-            //// Class 5 ////
             //LSHZ Visor
             if (serverItem._id === "5d6d3829a4b9361bc8618943") {
                 serverItem._props.Durability = 20;
@@ -1703,16 +1690,16 @@ export class Armor {
             }
             if ((serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) && serverItem?._props.armorClass != null) {
                 if (serverItem._props.armorClass === 3) {
-                    serverItem._props.BluntThroughput *= 2;//1.15
+                    serverItem._props.BluntThroughput *= 1.45;//1.15
                 }
                 if (serverItem._props.armorClass === 4) {
-                    serverItem._props.BluntThroughput *= 2.88;//1.35
+                    serverItem._props.BluntThroughput *= 2.08;//1.35
                 }
                 if (serverItem._props.armorClass === 5) {
-                    serverItem._props.BluntThroughput *= 3.08;//1.45
+                    serverItem._props.BluntThroughput *= 2.21;//1.45
                 }
                 if (serverItem._props.armorClass >= 6) {
-                    serverItem._props.BluntThroughput *= 1.9;//1.25
+                    serverItem._props.BluntThroughput *= 1.36;//1.25
                 }
             }
             if ((serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) && serverItem?._props.armorClass != null && serverItem?._props.ArmorMaterial !== "Glass") {

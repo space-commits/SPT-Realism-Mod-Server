@@ -14,16 +14,10 @@ import { IAirdropConfig } from "@spt-aki/models/spt/config/IAirdropConfig";
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
 import { RandomUtil } from "@spt-aki/utils/RandomUtil";
 import { HashUtil } from "@spt-aki/utils/HashUtil";
-import { BotGeneratorHelper } from "@spt-aki/helpers/BotGeneratorHelper";
 import { WeightedRandomHelper } from "@spt-aki/helpers/WeightedRandomHelper";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
-import { ProbabilityHelper } from "@spt-aki/helpers/ProbabilityHelper";
 import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
 import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
-import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
-import { BotWeaponGeneratorHelper } from "@spt-aki/helpers/BotWeaponGeneratorHelper";
-import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen";
 import { DynamicRouterModService } from "@spt-aki/services/mod/dynamicRouter/DynamicRouterModService"
 import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
 import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod";
@@ -46,8 +40,6 @@ import { PaymentHelper } from "@spt-aki/helpers/PaymentHelper";
 import { ITrader, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrader";
 import { TraderPurchasePersisterService } from "@spt-aki/services/TraderPurchasePersisterService";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";;
-import { BotEquipmentModGenerator } from "@spt-aki/generators/BotEquipmentModGenerator";
-import { BotModLimits, BotWeaponModLimitService } from "@spt-aki/services/BotWeaponModLimitService";
 import { BotHelper } from "@spt-aki/helpers/BotHelper";
 import { IBotBase, Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
 import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
@@ -81,7 +73,7 @@ import { JsonGen } from "./code_gen";
 import { Quests } from "./quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { AirdropLootgen, Airdrops } from "./airdrops";
-import { Maps } from "./maps";
+import { Spawns } from "./maps";
 import { Gear } from "./gear";
 import { SeasonalEventsHandler } from "./seasonalevents";
 import { ItemCloning } from "./item_cloning";
@@ -98,6 +90,8 @@ import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
 import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
 import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
 import { BotGenerator } from "@spt-aki/generators/BotGenerator";
+import { ParentClasses } from "./enums";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -635,7 +629,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
-        const maps = new Maps(logger, tables, modConfig);
+        const maps = new Spawns(logger, tables, modConfig);
         const gear = new Gear(arrays, tables);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);
@@ -651,6 +645,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
         // codegen.gearTemplatesCodeGen();
+        // codegen.ammoTemplatesCodeGen();
 
 
         if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
@@ -702,9 +697,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
-            meds.loadMeds();
             // bots.botMeds();
+            meds.loadMeds();
         }
+
 
         if (modConfig.old_ballistics == true && modConfig.realistic_ballistics == false) {
             oldAmmo.loadAmmoStatsOld();
@@ -763,7 +759,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         items.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
-        weaponsGlobals.loadGlobalWeps();
+        weaponsGlobals.loadGlobalWeps();        
+
     }
 
     public postAkiLoad(container: DependencyContainer) {
@@ -785,8 +782,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
     }
 
-    private revertMeds(pmcData: IPmcData, helper: Utils) {
-        helper.revertMedItems(pmcData);
+    private revertMeds(pmcData: IPmcData, utils: Utils) {
+        utils.revertMedItems(pmcData);
     }
 
     private checkForEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
@@ -797,8 +794,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
     }
 
-    private checkProfile(pmcData: IPmcData, pmcEXP: number, helper: Utils, player: Player, logger: ILogger) {
-        helper.correctItemResources(pmcData, pmcEXP);
+    private checkProfile(pmcData: IPmcData, pmcEXP: number, utils: Utils, player: Player, logger: ILogger) {
+        utils.correctItemResources(pmcData, pmcEXP);
         if (modConfig.med_changes == true) {
             pmcData.Health.Hydration.Maximum = player.hydration;
             pmcData.Health.Energy.Maximum = player.energy;
@@ -879,32 +876,32 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         this.setBotTier(pmcData, "tagilla", bots, helper);
     }
 
-    private setBotTier(pmcData: IPmcData, type: string, bots: BotLoader, helper: Utils) {
+    private setBotTier(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds1);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds2);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds3);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds4);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds5);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds6);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds7);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
         if (pmcData.Info.Level >= 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
         }
 
         if (type === "tagilla") {

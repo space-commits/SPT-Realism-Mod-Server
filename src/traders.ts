@@ -69,7 +69,7 @@ const ragmId = "5ac3b934156ae10c4430e83c";
 const jaegId = "5c0647fdd443bc2504c2d371";
 
 export class Traders {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private helper: Utils) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private utils: Utils) { }
 
     itemDB = this.tables.templates.items;
 
@@ -151,7 +151,7 @@ export class Traders {
     private setLL(file) {
         for (let item in file) {
             let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
-            let itemID = file[item].ItemID; 
+            let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
                 if (this.tables.traders[trader].assort?.items !== undefined) {
                     for (let item in this.tables.traders[trader].assort.items) {
@@ -223,7 +223,7 @@ export class Traders {
     private assortNestedItemPusher(trader: string, itemId: string, nestedChildItems: Record<string, string>, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbook: boolean, price: number = 0, priceMulti: number = 1, secondaryChildItems?: Record<string, string>,) {
 
         let assort = this.tables.traders[trader].assort;
-        let assortId = this.helper.genId();
+        let assortId = this.utils.genId();
         let parent = assortId;
         let idArr = [];
 
@@ -245,7 +245,7 @@ export class Traders {
 
 
         for (let key in nestedChildItems) {
-            let id = this.helper.genId();
+            let id = this.utils.genId();
             assort.items.push(
                 {
                     "_id": id,
@@ -259,7 +259,7 @@ export class Traders {
 
         if (secondaryChildItems !== undefined) {
             for (let key in secondaryChildItems) {
-                let id = this.helper.genId();
+                let id = this.utils.genId();
                 assort.items.push(
                     {
                         "_id": id,
@@ -276,7 +276,7 @@ export class Traders {
     private assortItemPusher(trader: string, itemId: string, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbookPrice: boolean, price: number = 0, priceMulti: number = 1) {
 
         let assort = this.tables.traders[trader].assort;
-        let assortId = this.helper.genId();
+        let assortId = this.utils.genId();
 
         if (useHandbookPrice == true) {
             price += this.handBookPriceLookup(itemId);
@@ -337,7 +337,7 @@ export class RandomizeTraderAssort {
     private tables = this.databaseServer.getTables();
     private itemDB = this.tables.templates.items;
     private arrays = new Arrays(this.tables);
-    private helper = new Utils(this.tables, this.arrays);
+    private utils = new Utils(this.tables, this.arrays);
 
     public adjustTraderStockAtServerStart() {
         if (EventTracker.isChristmas == true) {
@@ -362,7 +362,7 @@ export class RandomizeTraderAssort {
                         if (this.tables.traders[trader]?.assort?.barter_scheme) {
                             let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
                             if (barter !== undefined) {
-                                let randNum = this.helper.pickRandNumOneInTen();
+                                let randNum = this.utils.pickRandNumOneInTen();
                                 this.setAndRandomizeCost(randNum, itemTemplId, barter, true);
                             }
 
@@ -464,7 +464,7 @@ export class RandomizeTraderAssort {
     private randomizeAmmoStock(assortItemParent: string, item: Item) {
 
         if (assortItemParent === ParentClasses.AMMO) {
-            let randNum = this.helper.pickRandNumOneInTen();
+            let randNum = this.utils.pickRandNumOneInTen();
             if (randNum <= 4) {
                 item.upd.StackObjectsCount = 0;
             }
@@ -500,13 +500,13 @@ export class RandomizeTraderAssort {
 
     private randomizeAmmoStockHelper(item: Item, caliber: string, min: number, max: number) {
         if (this.itemDB[item._tpl]._props.Caliber === caliber) {
-            item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+            item.upd.StackObjectsCount = this.utils.pickRandNumInRange(min, max);
         }
     }
 
     private randomizeStock(assortItemParent: string, catParent: string, item: Item, min: number, max: number) {
         if (assortItemParent === catParent) {
-            item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+            item.upd.StackObjectsCount = this.utils.pickRandNumInRange(min, max);
         }
     }
 
@@ -569,13 +569,12 @@ export class RandomizeTraderAssort {
     }
 
     public randomizeLL(ll: Record<string, number>, i: string, logger: ILogger) {
-        logger.warning("Randomizing LL");
         let level = ll[i];
-        let randNum = this.helper.pickRandNumOneInTen();
+        let randNum = this.utils.pickRandNumOneInTen();
         if (randNum <= 2) {
             ll[i] = Math.max(1, level - 1);
         }
-        if(level === 5){
+        if (level === 5) {
             ll[i] = 4;
         }
     }
@@ -589,14 +588,17 @@ export class RagCallback extends RagfairCallbacks {
     }
 }
 
+
 export class TraderRefresh extends TraderAssortHelper {
+
+    pristineAssorts: Record<string, ITraderAssort>;
 
     public myResetExpiredTrader(trader: ITrader) {
 
-        trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+        const traderId = trader.base._id;
+        trader.assort =   this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
 
-        if(modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true){
-            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+        if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
             trader.assort.items = this.modifyTraderAssorts(trader, this.logger);
         }
 
@@ -605,10 +607,8 @@ export class TraderRefresh extends TraderAssortHelper {
         trader.base.refreshTraderRagfairOffers = true;
 
         //seems like manually refreshing ragfair is necessary. 
-        const traders = container.resolve<RagfairServer>("RagfairServer").getUpdateableTraders();
-        for (let traderID in traders) {
-            this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
-        }
+        this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
+
     }
 
     private modifyTraderAssorts(trader: ITrader, logger: ILogger): Item[] {
@@ -646,17 +646,17 @@ export class TraderRefresh extends TraderAssortHelper {
                 let barter = assortBarters[itemId];
                 if (barter !== undefined) {
                     //roll randomization of prices several times for better potential spread of prices
-                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
-                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
-                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
+                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
+                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
+                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
                 }
             }
         }
         return assortItems;
     }
 
-    private randomizePrices(randomTraderAss: RandomizeTraderAssort, helper: Helper, itemTemplId: string, barter: IBarterScheme[][]): void{
-        let randNum = helper.pickRandNumOneInTen();
+    private randomizePricesAtRefresh(randomTraderAss: RandomizeTraderAssort, utils: Utils, itemTemplId: string, barter: IBarterScheme[][]): void {
+        let randNum = utils.pickRandNumOneInTen();
         randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
     }
 }

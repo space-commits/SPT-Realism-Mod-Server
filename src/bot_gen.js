@@ -38,7 +38,6 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
         if (level < expTable.length - 1) {
             exp += this.randomUtil.getInt(0, expTable[level].exp - 1);
         }
-        this.logger.warning("genBotLvl bot level = " + level);
         return { level, exp };
     }
 }
@@ -47,33 +46,33 @@ class BotGen extends BotGenerator_1.BotGenerator {
     isBotUSEC(botRole) {
         return (["usec", "sptusec"].includes(botRole.toLowerCase()));
     }
-    getBotTier(helper) {
+    getBotTier(utils) {
         const level = utils_1.ProfileTracker.level;
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (level >= 0 && level < 5) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds1);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         if (level >= 5 && level < 10) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds2);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
         if (level >= 10 && level < 15) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds3);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
         if (level >= 15 && level < 20) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds4);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
         if (level >= 20 && level < 25) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds5);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
         if (level >= 25 && level < 30) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds6);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
         if (level >= 30 && level < 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds7);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
         if (level >= 35) {
-            tier = helper.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
         }
         return tier;
     }
@@ -95,22 +94,23 @@ class BotGen extends BotGenerator_1.BotGenerator {
                 : botGenerationDetails.role));
             const botRole = botGenerationDetails.role.toLowerCase();
             const isPMC = this.botHelper.isBotPmc(botRole);
+            let pmcTier = 1;
             if (isPMC) {
-                var pmcTier = this.getBotTier(utils);
+                pmcTier = this.getBotTier(utils);
                 const isUSEC = this.isBotUSEC(botRole);
+                const changeDiffi = modConfig.pmc_difficulty;
                 if (modConfig.bot_testing == true) {
                     pmcTier = modConfig.bot_test_tier;
                 }
-                this.logger.warning("=================");
-                this.logger.warning("bot " + botRole);
-                this.logger.warning("tier " + pmcTier);
-                this.logger.warning("===========");
                 if (pmcTier === 1) {
                     if (isUSEC) {
                         botLoader.usecLoad1(botJsonTemplate);
                     }
                     else {
                         botLoader.bearLoad1(botJsonTemplate);
+                    }
+                    if (changeDiffi == true) {
+                        bot.Info.Settings.BotDifficulty = "normal";
                     }
                 }
                 if (pmcTier === 2) {
@@ -120,6 +120,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
                     else {
                         botLoader.bearLoad2(botJsonTemplate);
                     }
+                    if (changeDiffi == true) {
+                        bot.Info.Settings.BotDifficulty = "normal";
+                    }
                 }
                 if (pmcTier === 3) {
                     if (isUSEC) {
@@ -127,6 +130,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
                     }
                     else {
                         botLoader.bearLoad3(botJsonTemplate);
+                    }
+                    if (changeDiffi == true) {
+                        bot.Info.Settings.BotDifficulty = "hard";
                     }
                 }
                 if (pmcTier === 4) {
@@ -136,18 +142,27 @@ class BotGen extends BotGenerator_1.BotGenerator {
                     else {
                         botLoader.bearLoad4(botJsonTemplate);
                     }
+                    if (changeDiffi == true) {
+                        bot.Info.Settings.BotDifficulty = "impossible";
+                    }
                 }
-                botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = { "5a38e6bac4a2826c6e06d79b": 0 };
-                botJsonTemplate.inventory.equipment.Holster = { "5448bd6b4bdc2dfc2f8b4569": 0 };
                 if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
+                    botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = {};
+                    botJsonTemplate.inventory.equipment.Holster = {};
+                }
+                if (modConfig.logEverything == true) {
+                    this.logger.warning("=================");
+                    this.logger.warning("bot " + botRole);
+                    this.logger.warning("tier " + pmcTier);
+                    this.logger.warning("===========");
                 }
             }
-            bot = this.myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails);
+            bot = this.myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier);
             output.push(bot);
         }
         return output;
     }
-    myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails) {
+    myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier) {
         const botWeaponGenerator = tsyringe_1.container.resolve("BotWeaponGenerator");
         const botLootGenerator = tsyringe_1.container.resolve("BotLootGenerator");
         const botGeneratorHelper = tsyringe_1.container.resolve("BotGeneratorHelper");
@@ -177,7 +192,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         bot.Customization.Body = this.weightedRandomHelper.getWeightedInventoryItem(botJsonTemplate.appearance.body);
         bot.Customization.Feet = this.weightedRandomHelper.getWeightedInventoryItem(botJsonTemplate.appearance.feet);
         bot.Customization.Hands = this.randomUtil.getArrayValue(botJsonTemplate.appearance.hands);
-        bot.Inventory = botInvGen.myGenerateInventory(sessionId, botJsonTemplate, botRole, botGenerationDetails.isPmc, botLevel.level);
+        bot.Inventory = botInvGen.myGenerateInventory(sessionId, botJsonTemplate, botRole, botGenerationDetails.isPmc, botLevel.level, pmcTier);
         if (this.botHelper.isBotPmc(botRole)) {
             this.getRandomisedGameVersionAndCategory(bot.Info);
             bot = this.generateDogtag(bot);
@@ -191,7 +206,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
 }
 exports.BotGen = BotGen;
 class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
-    myGenerateInventory(sessionId, botJsonTemplate, botRole, isPmc, botLevel) {
+    myGenerateInventory(sessionId, botJsonTemplate, botRole, isPmc, botLevel, pmcTier) {
         const botLootCacheService = tsyringe_1.container.resolve("BotLootCacheService");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
         const handbookHelper = tsyringe_1.container.resolve("HandbookHelper");
@@ -204,27 +219,27 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         const botInventory = this.generateInventoryBase();
         this.myGenerateAndAddEquipmentToBot(templateInventory, equipmentChances, botRole, botInventory, botLevel);
         // Roll weapon spawns and generate a weapon for each roll that passed
-        this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel);
+        this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
         botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
         return botInventory;
     }
-    myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel) {
+    myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier) {
         const weaponSlotsToFill = this.getDesiredWeaponsForBot(equipmentChances);
         for (const weaponSlot of weaponSlotsToFill) {
             // Add weapon to bot if true and bot json has something to put into the slot
             if (weaponSlot.shouldSpawn && Object.keys(templateInventory.equipment[weaponSlot.slot]).length) {
-                this.myAddWeaponAndMagazinesToInventory(sessionId, weaponSlot, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel);
+                this.myAddWeaponAndMagazinesToInventory(sessionId, weaponSlot, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
             }
         }
     }
-    myAddWeaponAndMagazinesToInventory(sessionId, weaponSlot, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel) {
+    myAddWeaponAndMagazinesToInventory(sessionId, weaponSlot, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier) {
         const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
         const botWeaponGeneratorHelper = tsyringe_1.container.resolve("BotWeaponGeneratorHelper");
         const inventoryMagGenComponents = tsyringe_1.container.resolveAll("InventoryMagGen");
         const botWeaponModLimitService = tsyringe_1.container.resolve("BotWeaponModLimitService");
         const botWepGen = new BotWepGen(jsonUtil, this.logger, this.hashUtil, this.databaseServer, itemHelper, this.weightedRandomHelper, this.botGeneratorHelper, this.randomUtil, this.configServer, botWeaponGeneratorHelper, botWeaponModLimitService, this.botEquipmentModGenerator, this.localisationService, inventoryMagGenComponents);
-        const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.mods, botRole, isPmc, botLevel);
+        const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.mods, botRole, isPmc, botLevel, pmcTier);
         botInventory.items.push(...generatedWeapon.weapon);
         this.botWeaponGenerator.addExtraMagazinesToInventory(generatedWeapon, itemGenerationLimitsMinMax.items.magazines, botInventory, botRole);
     }
@@ -307,11 +322,11 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
 }
 exports.BotInvGen = BotInvGen;
 class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
-    myGenerateRandomWeapon(sessionId, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel) {
+    myGenerateRandomWeapon(sessionId, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel, pmcTier) {
         const weaponTpl = this.pickWeightedWeaponTplFromPool(equipmentSlot, botTemplateInventory);
-        return this.myGenerateWeaponByTpl(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel);
+        return this.myGenerateWeaponByTpl(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel, pmcTier);
     }
-    myGenerateWeaponByTpl(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel) {
+    myGenerateWeaponByTpl(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel, pmcTier) {
         const probabilityHelper = tsyringe_1.container.resolve("ProbabilityHelper");
         const profileHelper = tsyringe_1.container.resolve("ProfileHelper");
         const botEquipmentFilterService = tsyringe_1.container.resolve("BotEquipmentFilterService");
@@ -344,7 +359,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         // Use weapon preset from globals.json if weapon isnt valid
         if (!this.myIsWeaponValid(weaponWithModsArray)) {
             // Weapon is bad, fall back to weapons preset
-            weaponWithModsArray = this.getPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, weaponItemTemplate, botRole);
+            weaponWithModsArray = this.myGetPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, weaponItemTemplate, botRole, pmcTier);
         }
         // Fill existing magazines to full and sync ammo type
         for (const magazine of weaponWithModsArray.filter(x => x.slotId === this.modMagazineSlotId)) {
@@ -383,7 +398,9 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                 const slotName = modSlot._name;
                 const weaponSlotItem = weaponItemArray.find(x => x.parentId === mod._id && x.slotId === slotName);
                 if (!weaponSlotItem) {
-                    this.logger.info(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
+                    if (modConfig.logEverything == true) {
+                        this.logger.info(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
+                    }
                     return false;
                 }
                 if (!allowedTpls.includes(weaponSlotItem._tpl)) {
@@ -394,13 +411,16 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         }
         return true;
     }
-    getPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole) {
+    myGetPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole, pmcTier) {
         const logger = tsyringe_1.container.resolve("WinstonLogger");
         const durabilityLimitsHelper = tsyringe_1.container.resolve("DurabilityLimitsHelper");
         const appContext = tsyringe_1.container.resolve("ApplicationContext");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, this.itemHelper, appContext, this.localisationService, this.configServer);
         const tierChecker = new utils_1.BotTierTracker();
-        const tier = tierChecker.getTier(botRole);
+        let tier = tierChecker.getTier(botRole);
+        if (tier === 0) {
+            tier = pmcTier;
+        }
         if (modConfig.logEverything == true) {
             this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
             this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
@@ -458,7 +478,9 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                 };
                 weaponMods.push(...preset._items);
             }
-            this.logger.info(`Realism Mod: Preset was Fetched. Working as intended, do not report as issue.`);
+            if (modConfig.logEverything == true) {
+                this.logger.info(`Realism Mod: Preset was Fetched. Working as intended, do not report as issue.`);
+            }
         }
         catch {
             this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);

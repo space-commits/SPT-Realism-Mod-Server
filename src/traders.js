@@ -48,13 +48,13 @@ const mechId = "5a7c2eca46aef81a7ca2145d";
 const ragmId = "5ac3b934156ae10c4430e83c";
 const jaegId = "5c0647fdd443bc2504c2d371";
 class Traders {
-    constructor(logger, tables, modConf, traderConf, array, helper) {
+    constructor(logger, tables, modConf, traderConf, array, utils) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
         this.traderConf = traderConf;
         this.array = array;
-        this.helper = helper;
+        this.utils = utils;
         this.itemDB = this.tables.templates.items;
     }
     loadTraderTweaks() {
@@ -185,7 +185,7 @@ class Traders {
     }
     assortNestedItemPusher(trader, itemId, nestedChildItems, buyRestriction, saleCurrency, loyalLvl, useHandbook, price = 0, priceMulti = 1, secondaryChildItems) {
         let assort = this.tables.traders[trader].assort;
-        let assortId = this.helper.genId();
+        let assortId = this.utils.genId();
         let parent = assortId;
         let idArr = [];
         if (useHandbook == true) {
@@ -202,7 +202,7 @@ class Traders {
         }
         this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
         for (let key in nestedChildItems) {
-            let id = this.helper.genId();
+            let id = this.utils.genId();
             assort.items.push({
                 "_id": id,
                 "_tpl": key,
@@ -213,7 +213,7 @@ class Traders {
         }
         if (secondaryChildItems !== undefined) {
             for (let key in secondaryChildItems) {
-                let id = this.helper.genId();
+                let id = this.utils.genId();
                 assort.items.push({
                     "_id": id,
                     "_tpl": key,
@@ -226,7 +226,7 @@ class Traders {
     }
     assortItemPusher(trader, itemId, buyRestriction, saleCurrency, loyalLvl, useHandbookPrice, price = 0, priceMulti = 1) {
         let assort = this.tables.traders[trader].assort;
-        let assortId = this.helper.genId();
+        let assortId = this.utils.genId();
         if (useHandbookPrice == true) {
             price += this.handBookPriceLookup(itemId);
         }
@@ -272,7 +272,7 @@ class RandomizeTraderAssort {
         this.tables = this.databaseServer.getTables();
         this.itemDB = this.tables.templates.items;
         this.arrays = new arrays_1.Arrays(this.tables);
-        this.helper = new utils_1.Utils(this.tables, this.arrays);
+        this.utils = new utils_1.Utils(this.tables, this.arrays);
     }
     adjustTraderStockAtServerStart() {
         if (utils_1.EventTracker.isChristmas == true) {
@@ -296,7 +296,7 @@ class RandomizeTraderAssort {
                         if (this.tables.traders[trader]?.assort?.barter_scheme) {
                             let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
                             if (barter !== undefined) {
-                                let randNum = this.helper.pickRandNumOneInTen();
+                                let randNum = this.utils.pickRandNumOneInTen();
                                 this.setAndRandomizeCost(randNum, itemTemplId, barter, true);
                             }
                         }
@@ -378,7 +378,7 @@ class RandomizeTraderAssort {
     }
     randomizeAmmoStock(assortItemParent, item) {
         if (assortItemParent === enums_1.ParentClasses.AMMO) {
-            let randNum = this.helper.pickRandNumOneInTen();
+            let randNum = this.utils.pickRandNumOneInTen();
             if (randNum <= 4) {
                 item.upd.StackObjectsCount = 0;
             }
@@ -412,12 +412,12 @@ class RandomizeTraderAssort {
     }
     randomizeAmmoStockHelper(item, caliber, min, max) {
         if (this.itemDB[item._tpl]._props.Caliber === caliber) {
-            item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+            item.upd.StackObjectsCount = this.utils.pickRandNumInRange(min, max);
         }
     }
     randomizeStock(assortItemParent, catParent, item, min, max) {
         if (assortItemParent === catParent) {
-            item.upd.StackObjectsCount = this.helper.pickRandNumInRange(min, max);
+            item.upd.StackObjectsCount = this.utils.pickRandNumInRange(min, max);
         }
     }
     setAndRandomizeCost(randNum, itemTemplId, barter, setBasePrice) {
@@ -475,9 +475,8 @@ class RandomizeTraderAssort {
         }
     }
     randomizeLL(ll, i, logger) {
-        logger.warning("Randomizing LL");
         let level = ll[i];
-        let randNum = this.helper.pickRandNumOneInTen();
+        let randNum = this.utils.pickRandNumOneInTen();
         if (randNum <= 2) {
             ll[i] = Math.max(1, level - 1);
         }
@@ -496,26 +495,21 @@ class RagCallback extends RagfairCallbacks_1.RagfairCallbacks {
 exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     myResetExpiredTrader(trader) {
+        const traderId = trader.base._id;
+        trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
         if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
             trader.assort.items = this.modifyTraderAssorts(trader, this.logger);
-        }
-        else {
-            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
         }
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
         trader.base.refreshTraderRagfairOffers = true;
         //seems like manually refreshing ragfair is necessary. 
-        const traders = tsyringe_1.container.resolve("RagfairServer").getUpdateableTraders();
-        for (let traderID in traders) {
-            this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
-        }
+        this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
     }
     modifyTraderAssorts(trader, logger) {
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new arrays_1.Arrays(tables);
-        const helper = new utils_1.Utils(tables, arrays);
+        const utils = new utils_1.Utils(tables, arrays);
         var assortItems = trader.assort.items;
         var assortBarters = trader.assort.barter_scheme;
         if (modConfig.randomize_trader_ll == true) {
@@ -542,16 +536,17 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
                 if (barter !== undefined) {
-                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
-                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
-                    this.randomizePrices(randomTraderAss, helper, itemTemplId, barter);
+                    //roll randomization of prices several times for better potential spread of prices
+                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
+                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
+                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
                 }
             }
         }
         return assortItems;
     }
-    randomizePrices(randomTraderAss, helper, itemTemplId, barter) {
-        let randNum = helper.pickRandNumOneInTen();
+    randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter) {
+        let randNum = utils.pickRandNumOneInTen();
         randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
     }
 }

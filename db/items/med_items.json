@@ -300,14 +300,13 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0,
-                "cost": 0
+                "fadeOut": 0
             },
             "HeavyBleeding": {
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 3
+                "cost": 2
             }
         },
         "StimulatorBuffs": "Buffs_salewa",
@@ -321,14 +320,13 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0,
-                "cost": 0
+                "fadeOut": 0
             },
             "HeavyBleeding": {
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 3
+                "cost": 2
             }
         },
         "StimulatorBuffs": "Buffs_IFAK",
@@ -342,14 +340,13 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0,
-                "cost": 0
+                "fadeOut": 0
             },
             "HeavyBleeding": {
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 3
+                "cost": 2
             },
             "Fracture": {
                 "delay": 10,
@@ -369,14 +366,13 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0,
-                "cost": 1
+                "fadeOut": 0
             },
             "HeavyBleeding": {
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 3
+                "cost": 2
             },
             "Fracture": {
                 "delay": 10,
@@ -387,7 +383,7 @@
         },
         "StimulatorBuffs": "Buffs_grizzly",
         "MaxHpResource": 21,
-        "medUseTime": 15,
+        "medUseTime": 10,
         "hpResourceRate": 0
     },
     "vaseline": {
@@ -435,14 +431,12 @@
             "LightBleeding": {
                 "delay": 0,
                 "duration": 0,
-                "fadeOut": 0,
-                "cost": 1
+                "fadeOut": 0
             },
             "HeavyBleeding": {
                 "delay": 0,
                 "duration": 0,
-                "fadeOut": 0,
-                "cost": 1
+                "fadeOut": 0
             }
         },
         "StimulatorBuffs": "Buffs_cms",
@@ -470,14 +464,12 @@
             "LightBleeding": {
                 "delay": 0,
                 "duration": 0,
-                "fadeOut": 0,
-                "cost": 1
+                "fadeOut": 0
             },
             "HeavyBleeding": {
                 "delay": 0,
                 "duration": 0,
-                "fadeOut": 0,
-                "cost": 1
+                "fadeOut": 0
             }
         },
         "StimulatorBuffs": "Buffs_surv12",

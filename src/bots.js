@@ -21,13 +21,13 @@ const USECNames = require("../db/bots/names/USECNames.json");
 const bearNames = require("../db/bots/names/bearNames.json");
 const pmcTypes = require("../db/bots/pmcTypes.json");
 class BotLoader {
-    constructor(logger, tables, configServ, modConf, arrays, helper) {
+    constructor(logger, tables, configServ, modConf, arrays, utils) {
         this.logger = logger;
         this.tables = tables;
         this.configServ = configServ;
         this.modConf = modConf;
         this.arrays = arrays;
-        this.helper = helper;
+        this.utils = utils;
         this.globalDB = this.tables.globals.config;
         this.itemDB = this.tables.templates.items;
         this.botDB = this.tables.bots.types;
@@ -114,11 +114,10 @@ class BotLoader {
         }
     }
     botDifficulty() {
-        if (this.modConf.pmc_difficulty == true) {
-            this.botConfPMC.useDifficultyOverride = true;
-            this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;
-            ;
-        }
+        // if (this.modConf.pmc_difficulty == true) {
+        //     this.botConfPMC.useDifficultyOverride = true;
+        //     this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;;
+        // }
         if (this.modConf.boss_difficulty == true) {
             for (let i in this.mapDB) {
                 if (this.mapDB[i].base?.BossLocationSpawn !== undefined) {
@@ -344,9 +343,15 @@ class BotLoader {
                 this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConf.pmc_difficulty == true) {
-            this.botConfPMC.difficulty = rmBotConfig.pmc1.difficulty;
-            ;
+        if (this.modConf.pmc_types == true) {
+            if (utils_1.RaidInfoTracker.TOD === "day") {
+                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
+                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
+            }
+            if (utils_1.RaidInfoTracker.TOD === "night") {
+                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
+                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
+            }
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig1 loaded");
@@ -408,9 +413,15 @@ class BotLoader {
                 this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConf.pmc_difficulty == true) {
-            this.botConfPMC.difficulty = rmBotConfig.pmc2.difficulty;
-            ;
+        if (this.modConf.pmc_types == true) {
+            if (utils_1.RaidInfoTracker.TOD === "day") {
+                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
+                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
+            }
+            if (utils_1.RaidInfoTracker.TOD === "night") {
+                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
+                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
+            }
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("boatConfig2 loaded");
@@ -472,9 +483,15 @@ class BotLoader {
                 this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConf.pmc_difficulty == true) {
-            this.botConfPMC.difficulty = rmBotConfig.pmc3.difficulty;
-            ;
+        if (this.modConf.pmc_types == true) {
+            if (utils_1.RaidInfoTracker.TOD === "day") {
+                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
+                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
+            }
+            if (utils_1.RaidInfoTracker.TOD === "night") {
+                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
+                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
+            }
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig3 loaded");
@@ -597,18 +614,9 @@ class BotLoader {
                 botJsonTemplate.chances.mods.mod_equipment = 10;
             }
         }
-        if (this.modConf.pmc_types == true) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.pmcTypeTimmy.pmcTypeDay.sptusec;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.pmcTypeTimmy.pmcTypeNight.sptusec;
-            }
-        }
         if (this.modConf.dynamic_loot_bots === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.dynamic_looting;
         }
-        utils_1.BotTierTracker.usecTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
         }
@@ -661,18 +669,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.pmc_types == true) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
-            }
-        }
         if (this.modConf.dynamic_loot_bots === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.dynamic_looting;
         }
-        utils_1.BotTierTracker.usecTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
         }
@@ -726,18 +725,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.pmc_types == true) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
-            }
-        }
         if (this.modConf.dynamic_loot_bots === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.dynamic_looting;
         }
-        utils_1.BotTierTracker.usecTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
         }
@@ -794,15 +784,6 @@ class BotLoader {
         if (this.modConf.dynamic_loot_bots === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
         }
-        if (this.modConf.pmc_types == true) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
-            }
-        }
-        utils_1.BotTierTracker.usecTier = 4;
         if (this.modConf.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
         }
@@ -848,15 +829,6 @@ class BotLoader {
         if (this.modConf.dynamic_loot_bots === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO1.inventory.dynamic_looting;
         }
-        if (this.modConf.pmc_types == true) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.pmcTypeTimmy.pmcTypeDay.sptbear;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.pmcTypeTimmy.pmcTypeNight.sptbear;
-            }
-        }
-        utils_1.BotTierTracker.bearTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
         }
@@ -908,18 +880,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.pmc_types == true) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
-            }
-        }
         if (this.modConf.dynamic_loot_bots === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO2.inventory.dynamic_looting;
         }
-        utils_1.BotTierTracker.bearTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
         }
@@ -972,18 +935,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.pmc_types == true) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
-            }
-        }
         if (this.modConf.dynamic_loot_bots === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO3.inventory.dynamic_looting;
         }
-        utils_1.BotTierTracker.bearTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
         }
@@ -1047,7 +1001,6 @@ class BotLoader {
         if (this.modConf.dynamic_loot_bots === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
         }
-        utils_1.BotTierTracker.bearTier = 4;
         if (this.modConf.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
         }
@@ -1358,7 +1311,7 @@ class BotLoader {
         this.knightBase.chances = knightLO.knightLO1.chances;
         this.knightBase.generation = knightLO.knightLO1.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        const randNum = this.helper.pickRandNumOneInTen();
+        const randNum = this.utils.pickRandNumOneInTen();
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO1.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO1.inventory.equipment;
         this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO1.inventory.items;
@@ -1514,7 +1467,7 @@ class BotLoader {
         this.knightBase.chances = knightLO.knightLO2.chances;
         this.knightBase.generation = knightLO.knightLO2.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        const randNum = this.helper.pickRandNumOneInTen();
+        const randNum = this.utils.pickRandNumOneInTen();
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO2.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO2.inventory.equipment;
         this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO2.inventory.items;
@@ -1670,7 +1623,7 @@ class BotLoader {
         this.knightBase.chances = knightLO.knightLO3.chances;
         this.knightBase.generation = knightLO.knightLO3.generation;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
-        const randNum = this.helper.pickRandNumOneInTen();
+        const randNum = this.utils.pickRandNumOneInTen();
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO3.inventory.Ammo;
         this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO3.inventory.equipment;
         this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO3.inventory.items;
@@ -1882,7 +1835,7 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO1.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO1.generation;
-        const randnum = this.helper.pickRandNumOneInTen();
+        const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 8) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
             this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;
@@ -1918,7 +1871,7 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO2.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO2.generation;
-        const randnum = this.helper.pickRandNumOneInTen();
+        const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 5) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
             this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;
@@ -1954,7 +1907,7 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO3.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO3.generation;
-        const randnum = this.helper.pickRandNumOneInTen();
+        const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 3) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
             this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;

@@ -28,11 +28,12 @@ export class _Items {
 
         if (this.modConfig.remove_inraid_restrictions == true) {
             this.globalDB.RestrictionsInRaid = [];
-            for (let item in this.itemDB) {
-                if (this.itemDB[item]?._props?.DiscardLimit !== undefined) {
-                    this.itemDB[item]._props.DiscardLimit = -1;
-                }
-            }
+            this.globalDB.DiscardLimitsEnabled = false;
+            // for (let item in this.itemDB) {
+            //     if (this.itemDB[item]?._props?.DiscardLimit !== undefined) {
+            //         this.itemDB[item]._props.DiscardLimit = -1;
+            //     }
+            // }
             if (this.modConfig.logEverything == true) {
                 this.logger.info("In-Raid Restrictions Removed");
             }

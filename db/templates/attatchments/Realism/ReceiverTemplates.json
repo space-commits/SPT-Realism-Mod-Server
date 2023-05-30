@@ -1,40 +1,8 @@
 {
-    "RECIVR_TYPE64_ITSELF_DEF": {
-        "ItemID": "RECIVR_TYPE64_ITSELF_DEF",
-        "Name": "reciever_type64_default",
-        "ModType": "",
-        "ModMalfunctionChance": 0,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.09,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
-    },
-    "RECIVR_TYPE64_ITSELF_LSG": {
-        "ItemID": "RECIVR_TYPE64_ITSELF_LSG",
-        "Name": "reciever_type64_lsg",
-        "ModType": "",
-        "ModMalfunctionChance": 0,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 0.97,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.07,
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
-    },
     "receiver_vepr12_molot": {
         "ItemID": "receiver_vepr12_molot",
         "Name": "receiver_vepr12_molot",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
         "Accuracy": 0,
         "HeatFactor": 1,
@@ -77,7 +45,9 @@
         "Weight": 0.16,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 5
+        "ChamberSpeed": 5,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "60228924961b8d75ee233c32": {
         "ItemID": "60228924961b8d75ee233c32",
@@ -93,7 +63,9 @@
         "Weight": 0.16,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 34
+        "ChamberSpeed": 34,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "56d5a407d2720bb3418b456b": {
         "ItemID": "56d5a407d2720bb3418b456b",
@@ -109,14 +81,16 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 22
+        "ChamberSpeed": 22,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0125fc0db834001a669aa3": {
         "ItemID": "5c0125fc0db834001a669aa3",
         "Name": "reciever_p226_sig_legion_full_size",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 5,
         "HeatFactor": 0.96,
         "CoolFactor": 1.062,
         "DurabilityBurnModificator": 0.99,
@@ -125,14 +99,16 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 30
+        "ChamberSpeed": 30,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c010a700db834001d23ef5d": {
         "ItemID": "5c010a700db834001d23ef5d",
         "Name": "reciever_p226_sig_emperor_scorpion",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 7,
         "HeatFactor": 0.954,
         "CoolFactor": 1.065,
         "DurabilityBurnModificator": 0.98,
@@ -141,14 +117,16 @@
         "Weight": 0.22,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 30
+        "ChamberSpeed": 30,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0009510db834001966907f": {
         "ItemID": "5c0009510db834001966907f",
         "Name": "reciever_p226_sig_stainless_elite",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 4,
         "HeatFactor": 0.957,
         "CoolFactor": 1.065,
         "DurabilityBurnModificator": 0.98,
@@ -157,14 +135,16 @@
         "Weight": 0.22,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 30
+        "ChamberSpeed": 30,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5bffe7c50db834001d23ece1": {
         "ItemID": "5bffe7c50db834001d23ece1",
         "Name": "reciever_p226_axelson_tactical_mk25",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 6,
         "HeatFactor": 0.95,
         "CoolFactor": 1.065,
         "DurabilityBurnModificator": 0.97,
@@ -173,7 +153,9 @@
         "Weight": 0.24,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 36
+        "ChamberSpeed": 36,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cadc55cae921500103bb3be": {
         "ItemID": "5cadc55cae921500103bb3be",
@@ -189,14 +171,16 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 24
+        "ChamberSpeed": 24,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6194f5722d2c397d6600348f": {
         "ItemID": "6194f5722d2c397d6600348f",
         "Name": "reciever_usp_hk_expert",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 10,
         "HeatFactor": 0.958,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 1,
@@ -209,7 +193,9 @@
         "Weight": 0.44,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 22
+        "ChamberSpeed": 22,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6193d382ed0429009f543e65": {
         "ItemID": "6193d382ed0429009f543e65",
@@ -225,14 +211,16 @@
         "Weight": 0.409,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 24
+        "ChamberSpeed": 24,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6194f41f9fb0c665d5490e75": {
         "ItemID": "6194f41f9fb0c665d5490e75",
         "Name": "reciever_usp_hk_tactical",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 4,
         "HeatFactor": 0.956,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.99,
@@ -241,14 +229,16 @@
         "Weight": 0.472,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 24
+        "ChamberSpeed": 24,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6194f5d418a3974e5e7421ef": {
         "ItemID": "6194f5d418a3974e5e7421ef",
         "Name": "reciever_usp_hk_elite",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 5,
+        "Accuracy": 12,
         "HeatFactor": 0.95,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.98,
@@ -263,14 +253,16 @@
         "Weight": 0.55,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 18
+        "ChamberSpeed": 18,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6194f5a318a3974e5e7421eb": {
         "ItemID": "6194f5a318a3974e5e7421eb",
         "Name": "reciever_usp_hk_match",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 8,
         "HeatFactor": 0.958,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.98,
@@ -279,7 +271,9 @@
         "Weight": 0.45,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 24
+        "ChamberSpeed": 24,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5e81edc13397a21db957f6a1": {
         "ItemID": "5e81edc13397a21db957f6a1",
@@ -295,14 +289,16 @@
         "Weight": 0.41,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 14
+        "ChamberSpeed": 14,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5f3e7823ddc4f03b010e2045": {
         "ItemID": "5f3e7823ddc4f03b010e2045",
         "Name": "reciever_m1911_colt_m45a1_std",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 5,
         "HeatFactor": 0.954,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 1,
@@ -311,14 +307,16 @@
         "Weight": 0.47,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 30
+        "ChamberSpeed": 30,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a7033908dc32e000a311392": {
         "ItemID": "5a7033908dc32e000a311392",
         "Name": "reciever_glock_lone_wolf_alphawolf_custom_pat_5",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 8,
         "HeatFactor": 0.948,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.98,
@@ -327,14 +325,16 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 26
+        "ChamberSpeed": 26,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a71e22f8dc32e00094b97f4": {
         "ItemID": "5a71e22f8dc32e00094b97f4",
         "Name": "reciever_glock_zev_tech_hex_rmr_cut_gen_3",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 6,
         "HeatFactor": 0.944,
         "CoolFactor": 1.063,
         "DurabilityBurnModificator": 0.96,
@@ -343,14 +343,16 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 24
+        "ChamberSpeed": 24,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a71e4f48dc32e001207fb26": {
         "ItemID": "5a71e4f48dc32e001207fb26",
         "Name": "reciever_glock_zev_tech_spartan_rmr_cut_gen_3",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 6,
         "HeatFactor": 0.983,
         "CoolFactor": 1.074,
         "DurabilityBurnModificator": 0.95,
@@ -359,14 +361,16 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 36
+        "ChamberSpeed": 36,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a9685b1a2750c0032157104": {
         "ItemID": "5a9685b1a2750c0032157104",
         "Name": "reciever_glock_gspc_moto_slide_cut",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 5,
         "HeatFactor": 0.978,
         "CoolFactor": 1.078,
         "DurabilityBurnModificator": 0.98,
@@ -375,14 +379,16 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 29
+        "ChamberSpeed": 29,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a6f5f078dc32e00094b97dd": {
         "ItemID": "5a6f5f078dc32e00094b97dd",
         "Name": "reciever_glock_gspc_viper_slide_cut",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 7,
         "HeatFactor": 0.975,
         "CoolFactor": 1.083,
         "DurabilityBurnModificator": 0.98,
@@ -391,14 +397,16 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 17
+        "ChamberSpeed": 17,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a702d198dc32e000b452fc3": {
         "ItemID": "5a702d198dc32e000b452fc3",
         "Name": "reciever_glock_lone_wolf_alphawolf",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 7,
         "HeatFactor": 0.962,
         "CoolFactor": 1.06,
         "DurabilityBurnModificator": 0.99,
@@ -407,14 +415,16 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 27
+        "ChamberSpeed": 27,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "615d8dbd290d254f5e6b2ed6": {
         "ItemID": "615d8dbd290d254f5e6b2ed6",
         "Name": "reciever_glock_glock_17_mos_slide",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 5,
         "HeatFactor": 1.058,
         "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
@@ -423,14 +433,16 @@
         "Weight": 0.325,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 24
+        "ChamberSpeed": 24,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "63075cc5962d0247b029dc2a": {
         "ItemID": "63075cc5962d0247b029dc2a",
         "Name": "reciever_glock_glock_19x_std",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 4,
         "HeatFactor": 1.058,
         "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
@@ -439,7 +451,9 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 22
+        "ChamberSpeed": 22,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a6f5e048dc32e00094b97da": {
         "ItemID": "5a6f5e048dc32e00094b97da",
@@ -455,7 +469,9 @@
         "Weight": 0.355,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 18
+        "ChamberSpeed": 18,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b1faa0f5acfc40dc528aeb5": {
         "ItemID": "5b1faa0f5acfc40dc528aeb5",
@@ -471,14 +487,16 @@
         "Weight": 0.32,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 18
+        "ChamberSpeed": 18,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a7afa25e899ef00135e31b0": {
         "ItemID": "5a7afa25e899ef00135e31b0",
         "Name": "reciever_glock_polymer80_ps9",
         "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": 5,
         "HeatFactor": 1.048,
         "CoolFactor": 0.986,
         "DurabilityBurnModificator": 0.97,
@@ -487,7 +505,9 @@
         "Weight": 0.355,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 30
+        "ChamberSpeed": 30,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "602e63fb6335467b0c5ac94d": {
         "ItemID": "602e63fb6335467b0c5ac94d",
@@ -503,7 +523,9 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5df8e4080b92095fd441e594": {
         "ItemID": "5df8e4080b92095fd441e594",
@@ -519,7 +541,9 @@
         "Weight": 0.65,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5fc278107283c4046c581489": {
         "ItemID": "5fc278107283c4046c581489",
@@ -535,7 +559,9 @@
         "Weight": 0.45,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "606587a88900dc2d9a55b659": {
         "ItemID": "606587a88900dc2d9a55b659",
@@ -551,7 +577,9 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5bb20d53d4351e4502010a69": {
         "ItemID": "5bb20d53d4351e4502010a69",
@@ -567,7 +595,9 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "61713a8fd92c473c770214a4": {
         "ItemID": "61713a8fd92c473c770214a4",
@@ -583,7 +613,9 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59bfe68886f7746004266202": {
         "ItemID": "59bfe68886f7746004266202",
@@ -599,7 +631,9 @@
         "Weight": 0.246,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d4405aaa4b9361e6a4e6bd3": {
         "ItemID": "5d4405aaa4b9361e6a4e6bd3",
@@ -615,7 +649,9 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0e2f26d174af02a9625114": {
         "ItemID": "5c0e2f26d174af02a9625114",
@@ -631,7 +667,9 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d355e64bdc2d962f8b4569": {
         "ItemID": "55d355e64bdc2d962f8b4569",
@@ -647,7 +685,9 @@
         "Weight": 0.2495,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c07a8770db8340023300450": {
         "ItemID": "5c07a8770db8340023300450",
@@ -663,12 +703,14 @@
         "Weight": 0.212,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5beec91a0db834001961942d": {
         "ItemID": "5beec91a0db834001961942d",
         "Name": "reciever_rpk16_izhmash_rpk16_std",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
         "Accuracy": 0,
         "HeatFactor": 1,
@@ -679,7 +721,9 @@
         "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "628a665a86cbd9750d2ff5e5": {
         "ItemID": "628a665a86cbd9750d2ff5e5",
@@ -695,12 +739,14 @@
         "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "628b9be6cff66b70c002b14c": {
         "ItemID": "628b9be6cff66b70c002b14c",
         "Name": "reciever_ak_sag_ak545_std",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
         "Accuracy": 0,
         "HeatFactor": 1,
@@ -711,7 +757,9 @@
         "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c471bd12e221602b4129c3a": {
         "ItemID": "5c471bd12e221602b4129c3a",
@@ -727,7 +775,9 @@
         "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5dfce88fe9dc277128008b2e": {
         "ItemID": "5dfce88fe9dc277128008b2e",
@@ -745,12 +795,14 @@
         "Weight": 0.05,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59985a6c86f77414ec448d17": {
         "ItemID": "59985a6c86f77414ec448d17",
         "Name": "reciever_pp-19-01_izhmash_vityaz_sn",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
         "Accuracy": 0,
         "HeatFactor": 1,
@@ -772,7 +824,9 @@
         "Weight": 0.136,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c503d0a2e221602b542b7ef": {
         "ItemID": "5c503d0a2e221602b542b7ef",
@@ -788,7 +842,9 @@
         "Weight": 0.12,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57c44f4f2459772d2c627113": {
         "ItemID": "57c44f4f2459772d2c627113",
@@ -804,7 +860,9 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59985a8086f77414ec448d1a": {
         "ItemID": "59985a8086f77414ec448d1a",
@@ -820,7 +878,9 @@
         "Weight": 0.136,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "578395402459774a256959b5": {
         "ItemID": "578395402459774a256959b5",
@@ -836,7 +896,9 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57616c112459773cce774d66": {
         "ItemID": "57616c112459773cce774d66",
@@ -852,7 +914,9 @@
         "Weight": 0.12,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57dc334d245977597164366f": {
         "ItemID": "57dc334d245977597164366f",
@@ -875,7 +939,9 @@
         "Weight": 0.136,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5839a7742459773cf9693481": {
         "ItemID": "5839a7742459773cf9693481",
@@ -898,7 +964,9 @@
         "Weight": 0.142,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59d6507c86f7741b846413a2": {
         "ItemID": "59d6507c86f7741b846413a2",
@@ -914,7 +982,9 @@
         "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59e6449086f7746c9f75e822": {
         "ItemID": "59e6449086f7746c9f75e822",
@@ -930,7 +1000,9 @@
         "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ac50da15acfc4001718d287": {
         "ItemID": "5ac50da15acfc4001718d287",
@@ -946,7 +1018,9 @@
         "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5649af094bdc2df8348b4586": {
         "ItemID": "5649af094bdc2df8348b4586",
@@ -962,12 +1036,14 @@
         "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5649af884bdc2d1b2b8b4589": {
         "ItemID": "5649af884bdc2d1b2b8b4589",
         "Name": "reciever_ak_zenit_b33",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
         "Accuracy": 15,
         "HeatFactor": 1,
@@ -1023,14 +1099,16 @@
         "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d2c76ed48f03532f2136169": {
         "ItemID": "5d2c76ed48f03532f2136169",
         "Name": "reciever_ak_akademia_bastion",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
-        "Accuracy": -8,
+        "Accuracy": -12,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
@@ -1060,14 +1138,16 @@
         "Weight": 0.237,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d2c772c48f0355d95672c25": {
         "ItemID": "5d2c772c48f0355d95672c25",
         "Name": "reciever_ak_texas_weapon_systems_dog_leg_rail_gen_3",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
-        "Accuracy": -5,
+        "Accuracy": -8,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
@@ -1097,14 +1177,16 @@
         "Weight": 0.195,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d2c770c48f0354b4a07c100": {
         "ItemID": "5d2c770c48f0354b4a07c100",
         "Name": "reciever_ak_fab_defence_pdc",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
-        "Accuracy": -2,
+        "Accuracy": -4,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
@@ -1127,7 +1209,9 @@
         "Weight": 0.202,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cf7acfcd7f00c1084477cf2": {
         "ItemID": "5cf7acfcd7f00c1084477cf2",
@@ -1143,7 +1227,9 @@
         "Weight": 0.31,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cc70102e4a949035e43ba74": {
         "ItemID": "5cc70102e4a949035e43ba74",
@@ -1159,7 +1245,9 @@
         "Weight": 0.31,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5926c0df86f77462f647f764": {
         "ItemID": "5926c0df86f77462f647f764",
@@ -1175,7 +1263,9 @@
         "Weight": 0.588,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5926f2e086f7745aae644231": {
         "ItemID": "5926f2e086f7745aae644231",
@@ -1192,7 +1282,9 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "Velocity": -21
+        "Velocity": -21,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d2f261548f03576f500e7b7": {
         "ItemID": "5d2f261548f03576f500e7b7",
@@ -1208,7 +1300,9 @@
         "Weight": 0.45,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5de8e67c4a9f347bc92edbd7": {
         "ItemID": "5de8e67c4a9f347bc92edbd7",
@@ -1224,7 +1318,9 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5e0090f7e9dc277128008b93": {
         "ItemID": "5e0090f7e9dc277128008b93",
@@ -1240,7 +1336,9 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cc700ede4a949033c734315": {
         "ItemID": "5cc700ede4a949033c734315",
@@ -1256,7 +1354,9 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ea03e5009aa976f2e7a514b": {
         "ItemID": "5ea03e5009aa976f2e7a514b",
@@ -1272,7 +1372,9 @@
         "Weight": 1.1,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5894a5b586f77426d2590767": {
         "ItemID": "5894a5b586f77426d2590767",
@@ -1288,7 +1390,9 @@
         "Weight": 0.488,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5fbcc3e4d6fa9c00c571bb58": {
         "ItemID": "5fbcc3e4d6fa9c00c571bb58",
@@ -1304,7 +1408,9 @@
         "Weight": 0.488,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6165aeedfaa1272e431521e3": {
         "ItemID": "6165aeedfaa1272e431521e3",
@@ -1320,7 +1426,9 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6165adcdd3a39d50044c120f": {
         "ItemID": "6165adcdd3a39d50044c120f",
@@ -1336,7 +1444,9 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "618405198004cc50514c3594": {
         "ItemID": "618405198004cc50514c3594",
@@ -1352,7 +1462,9 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "618426d96c780c1e710c9b9f": {
         "ItemID": "618426d96c780c1e710c9b9f",
@@ -1368,7 +1480,9 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b7d6c105acfc40015109a5f": {
         "ItemID": "5b7d6c105acfc40015109a5f",
@@ -1384,14 +1498,16 @@
         "Weight": 0.175,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b099bb25acfc400186331e8": {
         "ItemID": "5b099bb25acfc400186331e8",
         "Name": "reciever_sa58_ds_arms_extreme_duty_scope_mount_extended",
-        "ModType": "",
+        "ModType": "mount",
         "ModMalfunctionChance": 0,
-        "Accuracy": 0,
+        "Accuracy": -13,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
@@ -1400,7 +1516,9 @@
         "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62811fbf09427b40ab14e767": {
         "ItemID": "62811fbf09427b40ab14e767",
@@ -1416,7 +1534,9 @@
         "Weight": 0.38,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "628120415631d45211793c99": {
         "ItemID": "628120415631d45211793c99",
@@ -1448,7 +1568,9 @@
         "Weight": 0.31,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62e7c72df68e7a0676050c77": {
         "ItemID": "62e7c72df68e7a0676050c77",
@@ -1461,7 +1583,9 @@
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.794
+        "Weight": 0.794,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62e27a7865f0b1592a49e17b": {
         "ItemID": "62e27a7865f0b1592a49e17b",
@@ -1474,6 +1598,8 @@
         "DurabilityBurnModificator": 0.97,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.168
+        "Weight": 0.168,
+        "Price": 0,
+        "LoyaltyLevel": 0
     }
 }

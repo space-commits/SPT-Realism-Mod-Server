@@ -13,7 +13,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "61bcc89aef0f505f0c6cd0fc": {
         "ItemID": "61bcc89aef0f505f0c6cd0fc",
@@ -29,7 +30,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "5c0e3eb886f7742015526062": {
         "ItemID": "5c0e3eb886f7742015526062",
@@ -45,7 +47,8 @@
         "MinPen": 50,
         "HasSideArmor": false,
         "HasStomachArmor": true,
-        "HasNeckArmor": true
+        "HasNeckArmor": true,
+        "Price": 0
     },
     "5ab8dced86f774646209ec87": {
         "ItemID": "5ab8dced86f774646209ec87",
@@ -61,7 +64,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "5c0e446786f7742013381639": {
         "ItemID": "5c0e446786f7742013381639",
@@ -77,7 +81,8 @@
         "MinPen": 50,
         "HasSideArmor": false,
         "HasStomachArmor": true,
-        "HasNeckArmor": true
+        "HasNeckArmor": true,
+        "Price": 0
     },
     "5d5d87f786f77427997cfaef": {
         "ItemID": "5d5d87f786f77427997cfaef",
@@ -93,7 +98,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "5d5d646386f7742797261fd9": {
         "ItemID": "5d5d646386f7742797261fd9",
@@ -109,7 +115,8 @@
         "MinPen": 50,
         "HasSideArmor": false,
         "HasStomachArmor": true,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "544a5caa4bdc2d1a388b4568": {
         "ItemID": "544a5caa4bdc2d1a388b4568",
@@ -125,7 +132,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": true,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "628d0618d1ba6e4fa07ce5a4": {
         "ItemID": "628d0618d1ba6e4fa07ce5a4",
@@ -141,7 +149,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": true,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "5e4ac41886f77406a511c9a8": {
         "ItemID": "5e4ac41886f77406a511c9a8",
@@ -157,7 +166,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "5c0e746986f7741453628fe5": {
         "ItemID": "5c0e746986f7741453628fe5",
@@ -166,14 +176,15 @@
         "LoyaltyLevel": 3,
         "ArmorClass": "NIJ III",
         "CanSpall": true,
-        "SpallReduction": 0.20,
+        "SpallReduction": 0.2,
         "ReloadSpeedMulti": 0.89,
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "628dc750b910320f4c27a732": {
         "ItemID": "628dc750b910320f4c27a732",
@@ -189,7 +200,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": true,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "61bc85697113f767765c7fe7": {
         "ItemID": "61bc85697113f767765c7fe7",
@@ -205,7 +217,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "609e860ebd219504d8507525": {
         "ItemID": "609e860ebd219504d8507525",
@@ -221,7 +234,8 @@
         "MinPen": 50,
         "HasSideArmor": false,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "628b9784bcf6e2659e09b8a2": {
         "ItemID": "628b9784bcf6e2659e09b8a2",
@@ -237,7 +251,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "628b9c7d45122232a872358f": {
         "ItemID": "628b9c7d45122232a872358f",
@@ -253,7 +268,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "5b44cad286f77402a54ae7e5": {
         "ItemID": "5b44cad286f77402a54ae7e5",
@@ -269,7 +285,8 @@
         "MinPen": 50,
         "HasSideArmor": false,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "60a3c70cde5f453f634816a3": {
         "ItemID": "60a3c70cde5f453f634816a3",
@@ -285,7 +302,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": true
+        "HasNeckArmor": true,
+        "Price": 0
     },
     "60a3c68c37ea821725773ef5": {
         "ItemID": "60a3c68c37ea821725773ef5",
@@ -301,7 +319,8 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": true
+        "HasNeckArmor": true,
+        "Price": 0
     },
     "628cd624459354321c4b7fa2": {
         "ItemID": "628cd624459354321c4b7fa2",
@@ -317,7 +336,8 @@
         "MinPen": 50,
         "HasSideArmor": false,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     },
     "639343fce101f4caa40a4ef3": {
         "ItemID": "639343fce101f4caa40a4ef3",
@@ -333,6 +353,7 @@
         "MinPen": 50,
         "HasSideArmor": true,
         "HasStomachArmor": false,
-        "HasNeckArmor": false
+        "HasNeckArmor": false,
+        "Price": 0
     }
 }

@@ -2,33 +2,37 @@
     "57ac965c24597706be5f975c": {
         "ItemID": "57ac965c24597706be5f975c",
         "Name": "scope_all_elcan_specter_dr_1-4",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -14,
-        "Accuracy": 0,
+        "Accuracy": 13,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.64,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57aca93d2459771f2c7e26db": {
         "ItemID": "57aca93d2459771f2c7e26db",
         "Name": "scope_all_elcan_specter_dr_1-4_fde",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -14,
-        "Accuracy": 0,
+        "Accuracy": 13,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.64,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "544a3f024bdc2d1d388b4568": {
         "ItemID": "544a3f024bdc2d1d388b4568",
         "Name": "scope_all_elcan_spectre_os4x",
-        "ModType": "scope",
-        "AimSpeed": 0,
-        "Accuracy": 0,
+        "ModType": "sight",
+        "AimSpeed": -14,
+        "Accuracy": 10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.528,
@@ -38,9 +42,9 @@
     "5dfe6104585a0c3e995c7b82": {
         "ItemID": "5dfe6104585a0c3e995c7b82",
         "Name": "scope_all_ncstar_advance_dual_optic_3_9x_42",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -23,
-        "Accuracy": 0,
+        "Accuracy": -40,
         "ConflictingItems": [
             "5894a73486f77426d259076c",
             "5894a81786f77427140b8347"
@@ -48,50 +52,58 @@
         "Ergonomics": 0,
         "Weight": 0.595,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "544a3a774bdc2d3a388b4567": {
         "ItemID": "544a3a774bdc2d3a388b4567",
         "Name": "scope_all_leupold_mark4_hamr",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -9,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.411,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d2dc3e548f035404a1a4798": {
         "ItemID": "5d2dc3e548f035404a1a4798",
         "Name": "scope_all_monstrum_compact_prism_scope_2x32",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -3.5,
-        "Accuracy": 0,
+        "Accuracy": 10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.425,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57adff4f24597737f373b6e6": {
         "ItemID": "57adff4f24597737f373b6e6",
         "Name": "scope_all_sig_bravo4_4x30",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.419,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "626bb8532c923541184624b4": {
         "ItemID": "626bb8532c923541184624b4",
         "Name": "scope_all_swampfox_trihawk_prism_scope_3x30",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -5,
-        "Accuracy": 0,
+        "Accuracy": 12,
         "ConflictingItems": [
             "5ae30bad5acfc400185c2dc4",
             "5beec9450db83400970084fd",
@@ -100,376 +112,438 @@
         "Ergonomics": 0,
         "Weight": 0.436,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0517910db83400232ffee5": {
         "ItemID": "5c0517910db83400232ffee5",
         "Name": "scope_all_valday_ps320",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -16,
-        "Accuracy": 0,
+        "Accuracy": -20,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.57,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c1cdd512e22161b267d91ae": {
         "ItemID": "5c1cdd512e22161b267d91ae",
         "Name": "scope_base_primary_arms_compact_prism_scope_2,5x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -4,
-        "Accuracy": 0,
+        "Accuracy": 11,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.322,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c05293e0db83400232fff80": {
         "ItemID": "5c05293e0db83400232fff80",
         "Name": "scope_base_trijicon_acog_ta01nsn_4x32",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -12.5,
-        "Accuracy": 0,
+        "Accuracy": 15,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.396,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c052a900db834001a66acbd": {
         "ItemID": "5c052a900db834001a66acbd",
         "Name": "scope_base_trijicon_acog_ta01nsn_4x32_tan",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -12.5,
-        "Accuracy": 0,
+        "Accuracy": 15,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.396,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59db7e1086f77448be30ddf3": {
         "ItemID": "59db7e1086f77448be30ddf3",
         "Name": "scope_base_trijicon_acog_ta11_3,5x35",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -12.5,
-        "Accuracy": 0,
+        "Accuracy": 13,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.396,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "622b4d7df9cfc87d675d2ded": {
         "ItemID": "622b4d7df9cfc87d675d2ded",
         "Name": "scope_g36_hensoldt_hkv_carry_handle_3x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -18,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.198,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "622b4f54dc8dcc0ba8742f85": {
         "ItemID": "622b4f54dc8dcc0ba8742f85",
         "Name": "scope_g36_hensoldt_hkv_single_optic_carry_handle_1,5x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -16,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.192,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "609b9e31506cf869cf3eaf41": {
         "ItemID": "609b9e31506cf869cf3eaf41",
         "Name": "scope_7mm_vomz_target_ring",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 0,
-        "Accuracy": 0,
+        "Accuracy": -24,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.21,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "591c4efa86f7741030027726": {
         "ItemID": "591c4efa86f7741030027726",
         "Name": "scope_all_aksion_ekp_8_18",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -13.5,
-        "Accuracy": 0,
+        "Accuracy": -19,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.273,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "570fd79bd2720bc7458b4583": {
         "ItemID": "570fd79bd2720bc7458b4583",
         "Name": "scope_all_ekb_okp7",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
-        "Accuracy": 0,
+        "Accuracy": -28,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.255,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "570fd6c2d2720bc6458b457f": {
         "ItemID": "570fd6c2d2720bc6458b457f",
         "Name": "scope_all_eotech_553",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 15,
-        "Accuracy": 0,
+        "Accuracy": 4,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.349,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "558022b54bdc2dac148b458d": {
         "ItemID": "558022b54bdc2dac148b458d",
         "Name": "scope_all_eotech_exps3",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 17,
-        "Accuracy": 0,
+        "Accuracy": 8,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.317,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c07dd120db834001c39092d": {
         "ItemID": "5c07dd120db834001c39092d",
         "Name": "scope_all_eotech_hhs_1",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 5,
-        "Accuracy": 0,
+        "Accuracy": 6,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.635,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0a2cec0db834001b7ce47d": {
         "ItemID": "5c0a2cec0db834001b7ce47d",
         "Name": "scope_all_eotech_hhs_1_tan",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 5,
-        "Accuracy": 0,
+        "Accuracy": 6,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.635,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "58491f3324597764bc48fa02": {
         "ItemID": "58491f3324597764bc48fa02",
         "Name": "scope_all_eotech_xps3-0",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 16,
-        "Accuracy": 0,
+        "Accuracy": 7,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.255,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "584924ec24597768f12ae244": {
         "ItemID": "584924ec24597768f12ae244",
         "Name": "scope_all_eotech_xps3-2",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 16,
-        "Accuracy": 0,
+        "Accuracy": 7,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.255,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b30b0dc5acfc400153b7124": {
         "ItemID": "5b30b0dc5acfc400153b7124",
         "Name": "scope_all_holosun_hs401g5",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -4,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.36,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6165ac8c290d254f5e6b2f6c": {
         "ItemID": "6165ac8c290d254f5e6b2f6c",
         "Name": "scope_all_leapers_utg_38_ita_1x30",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -22,
-        "Accuracy": 0,
+        "Accuracy": -60,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.227,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6284bd5f95250a29bc628a30": {
         "ItemID": "6284bd5f95250a29bc628a30",
         "Name": "scope_all_milkor_m2a1_reflex_sight",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -13.5,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.6,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "60a23797a37c940de7062d02": {
         "ItemID": "60a23797a37c940de7062d02",
         "Name": "scope_all_sig_romeo_8t",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 13,
-        "Accuracy": 0,
+        "Accuracy": 8,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.388,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d2da1e948f035477b1ce2ba": {
         "ItemID": "5d2da1e948f035477b1ce2ba",
         "Name": "scope_all_trijicon_srs_02",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 8,
-        "Accuracy": 0,
+        "Accuracy": 7,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.39,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0505e00db834001b735073": {
         "ItemID": "5c0505e00db834001b735073",
         "Name": "scope_all_valday_1p87",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 0,
-        "Accuracy": 0,
+        "Accuracy": -20,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.297,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "609a63b6e2ff132951242d09": {
         "ItemID": "609a63b6e2ff132951242d09",
         "Name": "scope_all_valday_krechet",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
-        "Accuracy": 0,
+        "Accuracy": -30,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.35,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "584984812459776a704a82a6": {
         "ItemID": "584984812459776a704a82a6",
         "Name": "scope_all_vomz_pilad_p1x42_weaver",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -12.5,
-        "Accuracy": 0,
+        "Accuracy": -36,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.16,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59f9d81586f7744c7506ee62": {
         "ItemID": "59f9d81586f7744c7506ee62",
         "Name": "scope_all_vortex_razor_amg_uh-1",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 14,
-        "Accuracy": 0,
+        "Accuracy": 5,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.334,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "570fd721d2720bc5458b4596": {
         "ItemID": "570fd721d2720bc5458b4596",
         "Name": "scope_all_walther_mrs",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -22,
-        "Accuracy": 0,
+        "Accuracy": -50,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.113,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "61659f79d92c473c770213ee": {
         "ItemID": "61659f79d92c473c770213ee",
         "Name": "scope_base_aimpoint_pro",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 12,
-        "Accuracy": 0,
+        "Accuracy": 12,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.27,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c7d55de2e221644f31bff68": {
         "ItemID": "5c7d55de2e221644f31bff68",
         "Name": "scope_base_aimpooint_comp_m4",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 12,
-        "Accuracy": 0,
+        "Accuracy": 10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.37,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "622efbcb99f4ea1a4d6c9a15": {
         "ItemID": "622efbcb99f4ea1a4d6c9a15",
         "Name": "scope_base_hensoldt_hkv_red_dot_sight",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
-        "Accuracy": 0,
+        "Accuracy": -10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.227,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5947db3f86f77447880cf76f": {
         "ItemID": "5947db3f86f77447880cf76f",
         "Name": "scope_dovetail_aksion_ekp_8_02",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -13.5,
-        "Accuracy": 0,
+        "Accuracy": -38,
         "ConflictingItems": [
             "5827272a24597748c74bdeea"
         ],
         "Ergonomics": 0,
         "Weight": 0.273,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6113d6c3290d254f5e6b27db": {
         "ItemID": "6113d6c3290d254f5e6b27db",
         "Name": "scope_dovetail_belomo_pk_aa",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
-        "Accuracy": 0,
+        "Accuracy": -34,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "57486e672459770abd687134",
@@ -502,26 +576,30 @@
         "Ergonomics": 0,
         "Weight": 0.45,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57486e672459770abd687134": {
         "ItemID": "57486e672459770abd687134",
         "Name": "scope_dovetail_ekb_okp7_dovetail",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
-        "Accuracy": 0,
+        "Accuracy": -28,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.295,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "618a5d5852ecee1505530b2a": {
         "ItemID": "618a5d5852ecee1505530b2a",
         "Name": "scope_dovetail_npz_pk_1",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -12.5,
-        "Accuracy": 0,
+        "Accuracy": -26,
         "ConflictingItems": [
             "5c82342f2e221644f31c060e",
             "576fd4ec2459777f0b518431",
@@ -538,122 +616,142 @@
         "Ergonomics": 0,
         "Weight": 0.52,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cebec38d7f00c00110a652a": {
         "ItemID": "5cebec38d7f00c00110a652a",
         "Name": "scope_p90_fn_ring_sight_std",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -12,
-        "Accuracy": 0,
+        "Accuracy": -10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.297,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57ae0171245977343c27bfcf": {
         "ItemID": "57ae0171245977343c27bfcf",
         "Name": "scope_all_belomo_pk_06",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -7.5,
-        "Accuracy": 0,
+        "Accuracy": -34,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.09,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "616442e4faa1272e43152193": {
         "ItemID": "616442e4faa1272e43152193",
         "Name": "scope_base_aimpoint_acro_p1",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 10,
-        "Accuracy": 0,
+        "Accuracy": 9,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "61657230d92c473c770213d7": {
         "ItemID": "61657230d92c473c770213d7",
         "Name": "scope_base_aimpoint_micro_h2",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 9,
-        "Accuracy": 0,
+        "Accuracy": 10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.094,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "58d399e486f77442e0016fe7": {
         "ItemID": "58d399e486f77442e0016fe7",
         "Name": "scope_base_aimpoint_micro_t1",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 9,
-        "Accuracy": 0,
+        "Accuracy": 12,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.084,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "577d141e24597739c5255e01": {
         "ItemID": "577d141e24597739c5255e01",
         "Name": "scope_base_burris_fast_fire_3",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 5,
-        "Accuracy": 0,
+        "Accuracy": -3,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.025,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "58d268fc86f774111273f8c2": {
         "ItemID": "58d268fc86f774111273f8c2",
         "Name": "scope_base_leupold_deltapoint",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 6,
-        "Accuracy": 0,
+        "Accuracy": -4,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.053,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b3116595acfc40019476364": {
         "ItemID": "5b3116595acfc40019476364",
         "Name": "scope_base_sig_romeo_4",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 7,
-        "Accuracy": 0,
+        "Accuracy": -2,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.089,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a32aa8bc4a2826c6e06d737": {
         "ItemID": "5a32aa8bc4a2826c6e06d737",
         "Name": "scope_base_trijicon_rmr",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 7,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.025,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5dff772da3651922b360bf91": {
         "ItemID": "5dff772da3651922b360bf91",
         "Name": "scope_25_4mm_vomz_pilad_4x32m",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -18,
-        "Accuracy": 0,
+        "Accuracy": -15,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -683,14 +781,16 @@
         "Ergonomics": 0,
         "Weight": 0.31,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "618a75f0bd321d49084cd399": {
         "ItemID": "618a75f0bd321d49084cd399",
         "Name": "scope_base_npz_1p78_1_2,8x24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
-        "Accuracy": 0,
+        "Accuracy": -7,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "6113d6c3290d254f5e6b27db",
@@ -703,14 +803,16 @@
         "Ergonomics": 0,
         "Weight": 0.6,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cf638cbd7f00c06595bc936": {
         "ItemID": "5cf638cbd7f00c06595bc936",
         "Name": "scope_dovetail_npz_1p29_4x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -20,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [
             "5c82342f2e221644f31c060e",
             "576fd4ec2459777f0b518431",
@@ -723,14 +825,16 @@
         "Ergonomics": 0,
         "Weight": 0.795,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b3f7c1c5acfc40dc5296b1d": {
         "ItemID": "5b3f7c1c5acfc40dc5296b1d",
         "Name": "scope_base_progress_pu_3,5x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -14.5,
-        "Accuracy": 0,
+        "Accuracy": -16,
         "ConflictingItems": [
             "5894a73486f77426d259076c",
             "5894a81786f77427140b8347"
@@ -738,14 +842,16 @@
         "Ergonomics": 0,
         "Weight": 0.4,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "576fd4ec2459777f0b518431": {
         "ItemID": "576fd4ec2459777f0b518431",
         "Name": "scope_dovetail_belomo_pso_1m2-1_4×24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -16,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "6113d6c3290d254f5e6b27db",
@@ -758,14 +864,16 @@
         "Ergonomics": 0,
         "Weight": 0.6,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c82343a2e221644f31c0611": {
         "ItemID": "5c82343a2e221644f31c0611",
         "Name": "scope_dovetail_belomo_pso_1m2_4x24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -16,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [
             "5947db3f86f77447880cf76f",
             "6113d6c3290d254f5e6b27db",
@@ -778,14 +886,16 @@
         "Ergonomics": 0,
         "Weight": 0.6,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c82342f2e221644f31c060e": {
         "ItemID": "5c82342f2e221644f31c060e",
         "Name": "scope_dovetail_belomo_pso_1_4x24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -16,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [
             "5827272a24597748c74bdeea",
             "58272b392459774b4c7b3ccd",
@@ -798,14 +908,16 @@
         "Ergonomics": 0,
         "Weight": 0.6,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d0a3a58d7ad1a669c15ca14": {
         "ItemID": "5d0a3a58d7ad1a669c15ca14",
         "Name": "scope_base_kmz_1p59_3_10x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -16,
-        "Accuracy": 0,
+        "Accuracy": -14,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -827,14 +939,16 @@
         "Ergonomics": 0,
         "Weight": 0.94,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d0a3e8cd7ad1a6f6a3d35bd": {
         "ItemID": "5d0a3e8cd7ad1a6f6a3d35bd",
         "Name": "scope_base_kmz_1p69_3_10x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
-        "Accuracy": 0,
+        "Accuracy": -14,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -856,14 +970,16 @@
         "Ergonomics": 0,
         "Weight": 0.94,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b2388675acfc4771e1be0be": {
         "ItemID": "5b2388675acfc4771e1be0be",
         "Name": "scope_30mm_burris_fullfield_tac30_1_4x24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -7.5,
-        "Accuracy": 0,
+        "Accuracy": 13,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -884,14 +1000,16 @@
         "Ergonomics": 0,
         "Weight": 0.48,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b3b99475acfc432ff4dcbee": {
         "ItemID": "5b3b99475acfc432ff4dcbee",
         "Name": "scope_30mm_eotech_vudu_1_6x24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -11,
-        "Accuracy": 0,
+        "Accuracy": 15,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -912,14 +1030,16 @@
         "Ergonomics": 0,
         "Weight": 0.57,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "618ba27d9008e4636a67f61d": {
         "ItemID": "618ba27d9008e4636a67f61d",
         "Name": "scope_30mm_razor_hd_gen_2_1_6x24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -9,
-        "Accuracy": 0,
+        "Accuracy": 18,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -940,50 +1060,58 @@
         "Ergonomics": 0,
         "Weight": 0.57,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "617151c1d92c473c770214ab": {
         "ItemID": "617151c1d92c473c770214ab",
         "Name": "scope_30mm_s&b_pm_ii_1_8x24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -14.5,
-        "Accuracy": 0,
+        "Accuracy": 15,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.639,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "544a3d0a4bdc2d1b388b4567": {
         "ItemID": "544a3d0a4bdc2d1b388b4567",
         "Name": "scope_all_nightforce_nxs_2,5-10x24",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -18,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.51,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "61714eec290d254f5e6b2ffc": {
         "ItemID": "61714eec290d254f5e6b2ffc",
         "Name": "scope_34mm_s&b_pm_ii_3_12x50",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -21.5,
-        "Accuracy": 0,
+        "Accuracy": 20,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.92,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "56ea70acd2720b844b8b4594": {
         "ItemID": "56ea70acd2720b844b8b4594",
         "Name": "scope_34mm_hensoldt_zf_4_16x56_ff",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -29,
-        "Accuracy": 0,
+        "Accuracy": 23,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -1004,14 +1132,16 @@
         "Ergonomics": 0,
         "Weight": 0.9,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a37cb10c4a282329a73b4e7": {
         "ItemID": "5a37cb10c4a282329a73b4e7",
         "Name": "scope_30mm_leupold_mark4_lr_6,5_20x50",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -36,
-        "Accuracy": 0,
+        "Accuracy": 21,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -1032,14 +1162,16 @@
         "Ergonomics": 0,
         "Weight": 0.62,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57c5ac0824597754771e88a9": {
         "ItemID": "57c5ac0824597754771e88a9",
         "Name": "scope_30mm_march_tactical_3-24x42",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -43,
-        "Accuracy": 0,
+        "Accuracy": 24,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -1060,26 +1192,30 @@
         "Ergonomics": 0,
         "Weight": 0.64,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62850c28da09541f43158cca": {
         "ItemID": "62850c28da09541f43158cca",
         "Name": "scope_34mm_s&b_pm_ii_5_25x56",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -45,
-        "Accuracy": 0,
+        "Accuracy": 25,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 1.08,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5aa66be6e5b5b0214e506e97": {
         "ItemID": "5aa66be6e5b5b0214e506e97",
         "Name": "scope_34mm_nightforce_atacr_7_35x56",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -49,
-        "Accuracy": 0,
+        "Accuracy": 23,
         "ConflictingItems": [
             "591c4efa86f7741030027726",
             "570fd79bd2720bc7458b4583",
@@ -1100,26 +1236,30 @@
         "Ergonomics": 0,
         "Weight": 1.113,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b3b6e495acfc4330140bd88": {
         "ItemID": "5b3b6e495acfc4330140bd88",
         "Name": "scope_base_armasight_vulcan_gen3_bravo_mg_3,5x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -10,
-        "Accuracy": 0,
+        "Accuracy": -4,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.9,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a7c74b3e899ef0014332c29": {
         "ItemID": "5a7c74b3e899ef0014332c29",
         "Name": "scope_dovetail_npz_nspum_3,5x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -10,
-        "Accuracy": 0,
+        "Accuracy": -30,
         "ConflictingItems": [
             "57ac965c24597706be5f975c",
             "57aca93d2459771f2c7e26db",
@@ -1164,96 +1304,114 @@
         "Ergonomics": 0,
         "Weight": 1.9,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "606f2696f2cb2e02a42aceb1": {
         "ItemID": "606f2696f2cb2e02a42aceb1",
         "Name": "tactical_mp155_kalashnikov_ultima_camera",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -4.5,
-        "Accuracy": 0,
+        "Accuracy": -10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.21,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "609bab8b455afd752b2e6138": {
         "ItemID": "609bab8b455afd752b2e6138",
         "Name": "scope_all_torrey_pines_logic_t12_w_30hz",
         "ModType": "",
         "AimSpeed": -13.5,
-        "Accuracy": 0,
+        "Accuracy": -20,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.063,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d1b5e94d7ad1a2b865a96b0": {
         "ItemID": "5d1b5e94d7ad1a2b865a96b0",
         "Name": "scope_all_flir_rs32_225_9x_35_60hz",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -19.5,
-        "Accuracy": 0,
+        "Accuracy": -7,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.45,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a1eaa87fcdbcb001865f75e": {
         "ItemID": "5a1eaa87fcdbcb001865f75e",
         "Name": "scope_base_trijicon_reap-ir",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -13.5,
-        "Accuracy": 0,
+        "Accuracy": -5,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.58,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d53f4b7a4b936793d58c780": {
         "ItemID": "5d53f4b7a4b936793d58c780",
         "Name": "scope_ags_npz_pag17_2,7x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.51,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62ebd290c427473eff0baafb": {
         "ItemID": "62ebd290c427473eff0baafb",
         "Name": "scope_aug_steyr_rail_optic_1,5x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 0,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.624
+        "Weight": 0.624,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62ea7c793043d74a0306e19f": {
         "ItemID": "62ea7c793043d74a0306e19f",
         "Name": "scope_aug_steyr_stg77_optic_1,5x",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": 0,
-        "Accuracy": 0,
+        "Accuracy": -8,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 1.22
+        "Weight": 1.22,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62ff9920fe938a24c90c10d2": {
         "ItemID": "62ff9920fe938a24c90c10d2",
         "Name": "scope_sr2m_tochmash_kp_sr2",
-        "ModType": "scope",
+        "ModType": "sight",
         "AimSpeed": -12,
-        "Accuracy": 0,
+        "Accuracy": -22,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.27
+        "Weight": 0.27,
+        "Price": 0,
+        "LoyaltyLevel": 0
     }
 }

@@ -1304,8 +1304,8 @@
           "max": 7
         },
         "magazines": {
-          "min": 0,
-          "max": 4
+          "min": 1,
+          "max": 3
         },
         "grenades": {
           "min": 0,
@@ -1369,7 +1369,6 @@
         },
         "Caliber762x39": {
           "59e4d3d286f774176a36250a": 3,
-          "59e0d99486f7744a32234762": 0,
           "59e4cf5286f7741778269d8a": 10
         },
         "Caliber762x51": {
@@ -2913,7 +2912,7 @@
         },
         "magazines": {
           "min": 1,
-          "max": 4
+          "max": 3
         },
         "grenades": {
           "min": 0,
@@ -4863,7 +4862,7 @@
         },
         "magazines": {
           "min": 2,
-          "max": 5
+          "max": 4
         },
         "grenades": {
           "min": 0,

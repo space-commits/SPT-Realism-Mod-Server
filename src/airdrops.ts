@@ -16,12 +16,12 @@ export class Airdrops {
     constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
 
     public loadAirdrops() {
-        this.airConf.airdropChancePercent.bigmap = 15;
-        this.airConf.airdropChancePercent.woods = 20;
-        this.airConf.airdropChancePercent.lighthouse = 20;
-        this.airConf.airdropChancePercent.shoreline = 20;
-        this.airConf.airdropChancePercent.interchange = 10;
-        this.airConf.airdropChancePercent.reserve = 10;
+        this.airConf.airdropChancePercent.bigmap = 10;
+        this.airConf.airdropChancePercent.woods = 15;
+        this.airConf.airdropChancePercent.lighthouse = 15;
+        this.airConf.airdropChancePercent.shoreline = 15;
+        this.airConf.airdropChancePercent.interchange = 5;
+        this.airConf.airdropChancePercent.reserve = 5;
         this.airConf.airdropChancePercent.tarkovStreets = 15;
 
         this.airConf.planeVolume = 0.2;
@@ -43,7 +43,7 @@ export class AirdropLootgen extends LocationController {
         const modConfig = require("../config/config.json");
         const tables = this.databaseServer.getTables();
         const arrays = new Arrays(tables);
-        const helper = new Utils(tables, arrays);
+        const utils = new Utils(tables, arrays);
         let weights = [];
 
         if (RaidInfoTracker.TOD === "day") {
@@ -52,7 +52,7 @@ export class AirdropLootgen extends LocationController {
         if (RaidInfoTracker.TOD === "night") {
             weights = [10, 10, 15, 15, 20, 85, 75, 70, 1];
         }
-        const airdropLoot = this.updateAirdropsLootPools(modConfig, helper, weights);
+        const airdropLoot = this.updateAirdropsLootPools(modConfig, utils, weights);
 
         const options: AirdropLootRequest = {
             presetCount: airdropLoot.presetCount,
@@ -62,17 +62,17 @@ export class AirdropLootgen extends LocationController {
             itemStackLimits: airdropLoot.itemStackLimits
         };
 
-        return this.createRandomAirdropLoot(options, helper);
+        return this.createRandomAirdropLoot(options, utils);
     }
 
 
-    private updateAirdropsLootPools(modConfig, helper: Utils, weights: Array<number>) {
+    private updateAirdropsLootPools(modConfig, utils: Utils, weights: Array<number>) {
 
 
         const airdropLoot = require("../db/airdrops/airdrop_loot.json");
 
         var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
-        var loot = helper.probabilityWeighter(airdropLootArr, weights);
+        var loot = utils.probabilityWeighter(airdropLootArr, weights);
         if (loot === "medical_loot") {
             return airdropLoot.medical_loot;
         }
@@ -109,7 +109,7 @@ export class AirdropLootgen extends LocationController {
     }
 
 
-    private createRandomAirdropLoot(options: AirdropLootRequest, helper: Utils): LootItem[] {
+    private createRandomAirdropLoot(options: AirdropLootRequest, utils: Utils): LootItem[] {
         const result: LootItem[] = [];
 
         const itemTypeCounts = this.initItemLimitCounter(options.itemLimits);
@@ -120,17 +120,17 @@ export class AirdropLootgen extends LocationController {
         // Get items from items.json that are in the whitelist
         const items = Object.entries(tables.templates.items).filter(x => options.itemWhitelist.includes(x[1]._id));
 
-        const randomisedItemCount = helper.getInt(options.itemCount.min, options.itemCount.max);
+        const randomisedItemCount = utils.getInt(options.itemCount.min, options.itemCount.max);
         for (let index = 0; index < randomisedItemCount; index++) {
-            if (!this.findAndAddRandomItemToAirdropLoot(items, itemTypeCounts, options, result, helper)) {
+            if (!this.findAndAddRandomItemToAirdropLoot(items, itemTypeCounts, options, result, utils)) {
                 index--;
             }
         }
 
         const globalDefaultPresets = Object.entries(tables.globals.ItemPresets).filter(x => x[1]._encyclopedia !== undefined);
-        const randomisedPresetCount = helper.getInt(options.presetCount.min, options.presetCount.max);
+        const randomisedPresetCount = utils.getInt(options.presetCount.min, options.presetCount.max);
         for (let index = 0; index < randomisedPresetCount; index++) {
-            if (!this.findAndAddRandomPresetToAirdropLoot(globalDefaultPresets, itemTypeCounts, options.itemWhitelist, result, helper)) {
+            if (!this.findAndAddRandomPresetToAirdropLoot(globalDefaultPresets, itemTypeCounts, options.itemWhitelist, result, utils)) {
                 index--;
             }
         }
@@ -138,8 +138,8 @@ export class AirdropLootgen extends LocationController {
         return result;
     }
 
-    private findAndAddRandomItemToAirdropLoot(items: [string, ITemplateItem][], itemTypeCounts: Record<string, { current: number; max: number; }>, options: AirdropLootRequest, result: LootItem[], helper: Utils): boolean {
-        const randomItem = helper.getArrayValue(items)[1];
+    private findAndAddRandomItemToAirdropLoot(items: [string, ITemplateItem][], itemTypeCounts: Record<string, { current: number; max: number; }>, options: AirdropLootRequest, result: LootItem[], utils: Utils): boolean {
+        const randomItem = utils.getArrayValue(items)[1];
 
         const itemLimitCount = itemTypeCounts[randomItem._parent];
 
@@ -167,7 +167,7 @@ export class AirdropLootgen extends LocationController {
 
         // Special case - handle items that need a stackcount > 1
         if (randomItem._props.StackMaxSize > 1) {
-            newLootItem.stackCount = this.getRandomisedStackCountAirdrop(randomItem, options, helper);
+            newLootItem.stackCount = this.getRandomisedStackCountAirdrop(randomItem, options, utils);
         }
 
         newLootItem.tpl = randomItem._id;
@@ -182,7 +182,7 @@ export class AirdropLootgen extends LocationController {
         return true;
     }
 
-    private getRandomisedStackCountAirdrop(item: ITemplateItem, options: AirdropLootRequest, helper: Utils): number {
+    private getRandomisedStackCountAirdrop(item: ITemplateItem, options: AirdropLootRequest, utils: Utils): number {
         let min = item._props.StackMinRandom;
         let max = item._props.StackMaxSize;
 
@@ -191,12 +191,12 @@ export class AirdropLootgen extends LocationController {
             max = options.itemStackLimits[item._id].max;
         }
 
-        return helper.getInt(min, max);
+        return utils.getInt(min, max);
     }
 
-    private findAndAddRandomPresetToAirdropLoot(globalDefaultPresets: [string, Preset][], itemTypeCounts: Record<string, { current: number; max: number; }>, itemWhitelist: string[], result: LootItem[], helper): boolean {
+    private findAndAddRandomPresetToAirdropLoot(globalDefaultPresets: [string, Preset][], itemTypeCounts: Record<string, { current: number; max: number; }>, itemWhitelist: string[], result: LootItem[], utils: Utils): boolean {
         // Choose random preset and get details from item.json using encyclopedia value (encyclopedia === tplId)
-        const randomPreset = helper.getArrayValue(globalDefaultPresets)[1];
+        const randomPreset = utils.getArrayValue(globalDefaultPresets)[1];
         const itemDetails = this.databaseServer.getTables().templates.items[randomPreset._encyclopedia];
 
         // Skip non-whitelisted items

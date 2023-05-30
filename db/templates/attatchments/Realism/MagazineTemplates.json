@@ -4,7 +4,7 @@
         "Name": "mag_vepr12_molot_8",
         "ModType": "",
         "ReloadSpeed": 0,
-        "Ergonomics": -3.5,
+        "Ergonomics": -2,
         "MagMalfunctionChance": 1,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
@@ -84,14 +84,16 @@
         "Name": "mag_msgl_milkor_cylinder_mag_std_40x46_6",
         "ModType": "",
         "ReloadSpeed": -15,
-        "Ergonomics": -10,
+        "Ergonomics": 0,
         "MagMalfunctionChance": 0,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.8,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "60dc519adf4c47305f6d410d": {
         "ItemID": "60dc519adf4c47305f6d410d",
@@ -105,7 +107,9 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "624c3074dbbd335e8e6becf3": {
         "ItemID": "624c3074dbbd335e8e6becf3",
@@ -119,7 +123,9 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "619f54a1d25cbd424731fb99": {
         "ItemID": "619f54a1d25cbd424731fb99",
@@ -133,7 +139,9 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "61a4cda622af7f4f6a3ce617": {
         "ItemID": "61a4cda622af7f4f6a3ce617",
@@ -161,7 +169,9 @@
         "ConflictingItems": [],
         "Weight": 0.095,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a38ed75c4a28232996e40c6": {
         "ItemID": "5a38ed75c4a28232996e40c6",
@@ -175,7 +185,9 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c6161fb2e221600113fbde5": {
         "ItemID": "5c6161fb2e221600113fbde5",
@@ -189,47 +201,55 @@
         "ConflictingItems": [],
         "Weight": 0.13,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57616a9e2459773c7a400234": {
         "ItemID": "57616a9e2459773c7a400234",
         "Name": "mag_saiga12_izhmash_Sb5_12x76_5",
         "ModType": "",
-        "ReloadSpeed": 5,
+        "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0.05,
         "LoadUnloadModifier": -15,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.19
+        "Weight": 0.19,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a966f51a2750c00156aacf6": {
         "ItemID": "5a966f51a2750c00156aacf6",
         "Name": "mag_saiga12_pro_mag_sai_02_12x76_10",
         "ModType": "",
         "ReloadSpeed": -12,
-        "Ergonomics": -5,
+        "Ergonomics": -2.5,
         "MagMalfunctionChance": 3,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.21,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cf8f3b0d7f00c00217872ef": {
         "ItemID": "5cf8f3b0d7f00c00217872ef",
         "Name": "mag_saiga12_maxrounds_powermag_20_12x76_20",
         "ModType": "",
         "ReloadSpeed": -25,
-        "Ergonomics": -20,
+        "Ergonomics": -8,
         "MagMalfunctionChance": 7,
         "LoadUnloadModifier": 15,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.66,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a7882dcc5856700177af662": {
         "ItemID": "5a7882dcc5856700177af662",
@@ -243,7 +263,9 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "56deee15d2720bee328b4567": {
         "ItemID": "56deee15d2720bee328b4567",
@@ -257,7 +279,9 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5882163e24597758206fee8c": {
         "ItemID": "5882163e24597758206fee8c",
@@ -269,9 +293,11 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.93,
+        "Weight": 0.11,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "625ff2ccb8c587128c1a01dd": {
         "ItemID": "625ff2ccb8c587128c1a01dd",
@@ -285,7 +311,9 @@
         "ConflictingItems": [],
         "Weight": 0.085,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6076c87f232e5a31c233d50e": {
         "ItemID": "6076c87f232e5a31c233d50e",
@@ -299,7 +327,9 @@
         "ConflictingItems": [],
         "Weight": 0.124,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d484b44bdc2d1d4e8b456d": {
         "ItemID": "55d484b44bdc2d1d4e8b456d",
@@ -313,7 +343,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5882163824597757561aa922": {
         "ItemID": "5882163824597757561aa922",
@@ -327,7 +359,9 @@
         "ConflictingItems": [],
         "Weight": 0.124,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6259bdcabd28e4721447a2aa": {
         "ItemID": "6259bdcabd28e4721447a2aa",
@@ -341,7 +375,9 @@
         "ConflictingItems": [],
         "Weight": 0.227,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a78830bc5856700137e4c90": {
         "ItemID": "5a78830bc5856700137e4c90",
@@ -355,7 +391,9 @@
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5882163224597757561aa920": {
         "ItemID": "5882163224597757561aa920",
@@ -369,7 +407,9 @@
         "ConflictingItems": [],
         "Weight": 0.156,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d485804bdc2d8c2f8b456b": {
         "ItemID": "55d485804bdc2d8c2f8b456b",
@@ -383,7 +423,9 @@
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "56deeefcd2720bc8328b4568": {
         "ItemID": "56deeefcd2720bc8328b4568",
@@ -397,7 +439,9 @@
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5e87080c81c4ed43e83cefda": {
         "ItemID": "5e87080c81c4ed43e83cefda",
@@ -411,7 +455,9 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "625ff2eb9f5537057932257d": {
         "ItemID": "625ff2eb9f5537057932257d",
@@ -429,7 +475,9 @@
         ],
         "Weight": 0.255,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a78832ec5856700155a6ca3": {
         "ItemID": "5a78832ec5856700155a6ca3",
@@ -443,7 +491,9 @@
         "ConflictingItems": [],
         "Weight": 0.4,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "625ff3046d721f05d93bf2ee": {
         "ItemID": "625ff3046d721f05d93bf2ee",
@@ -461,7 +511,9 @@
         ],
         "Weight": 0.299,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "625ff31daaaa8c1130599f64": {
         "ItemID": "625ff31daaaa8c1130599f64",
@@ -479,7 +531,9 @@
         ],
         "Weight": 0.34,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5f647d9f8499b57dc40ddb93": {
         "ItemID": "5f647d9f8499b57dc40ddb93",
@@ -493,7 +547,9 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5caf1109ae9215753c44119f": {
         "ItemID": "5caf1109ae9215753c44119f",
@@ -507,7 +563,9 @@
         "ConflictingItems": [],
         "Weight": 0.4,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5caf1041ae92157c28402e3f": {
         "ItemID": "5caf1041ae92157c28402e3f",
@@ -521,7 +579,9 @@
         "ConflictingItems": [],
         "Weight": 0.28,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5fc23426900b1d5091531e15": {
         "ItemID": "5fc23426900b1d5091531e15",
@@ -535,7 +595,9 @@
         "ConflictingItems": [],
         "Weight": 0.6,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "559ba5b34bdc2d1f1a8b4582": {
         "ItemID": "559ba5b34bdc2d1f1a8b4582",
@@ -549,7 +611,9 @@
         "ConflictingItems": [],
         "Weight": 0.115,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c471c442e221602b542a6f8": {
         "ItemID": "5c471c442e221602b542a6f8",
@@ -563,7 +627,9 @@
         "ConflictingItems": [],
         "Weight": 0.112,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c88f24b2e22160bc12c69a6": {
         "ItemID": "5c88f24b2e22160bc12c69a6",
@@ -577,7 +643,9 @@
         "ConflictingItems": [],
         "Weight": 0.112,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ae0973a5acfc4001562206c": {
         "ItemID": "5ae0973a5acfc4001562206c",
@@ -593,7 +661,9 @@
         ],
         "Weight": 0.4,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5bae13ded4351e44f824bf38": {
         "ItemID": "5bae13ded4351e44f824bf38",
@@ -615,7 +685,9 @@
         ],
         "Weight": 0.227,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5888988e24597752fe43a6fa": {
         "ItemID": "5888988e24597752fe43a6fa",
@@ -629,7 +701,9 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5bfea7ad0db834001c38f1ee": {
         "ItemID": "5bfea7ad0db834001c38f1ee",
@@ -643,7 +717,9 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ce69cbad7f00c00b61c5098": {
         "ItemID": "5ce69cbad7f00c00b61c5098",
@@ -657,7 +733,9 @@
         "ConflictingItems": [],
         "Weight": 0.09,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d25a4a98abbc30b917421a4": {
         "ItemID": "5d25a4a98abbc30b917421a4",
@@ -671,7 +749,9 @@
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5bfeaa0f0db834001b734927": {
         "ItemID": "5bfeaa0f0db834001b734927",
@@ -685,7 +765,9 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d25af8f8abbc3055079fec5": {
         "ItemID": "5d25af8f8abbc3055079fec5",
@@ -699,7 +781,9 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d25a7b88abbc3054f3e60bc": {
         "ItemID": "5d25a7b88abbc3054f3e60bc",
@@ -713,7 +797,9 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d25a6538abbc306c62e630d": {
         "ItemID": "5d25a6538abbc306c62e630d",
@@ -727,7 +813,9 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d25a6a48abbc306c62e6310": {
         "ItemID": "5d25a6a48abbc306c62e6310",
@@ -741,7 +829,9 @@
         "ConflictingItems": [],
         "Weight": 0.6,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cf12a15d7f00c05464b293f": {
         "ItemID": "5cf12a15d7f00c05464b293f",
@@ -755,7 +845,9 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5df8f535bb49d91fb446d6b0": {
         "ItemID": "5df8f535bb49d91fb446d6b0",
@@ -769,7 +861,9 @@
         "ConflictingItems": [],
         "Weight": 0.41,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5df8f541c41b2312ea3335e3": {
         "ItemID": "5df8f541c41b2312ea3335e3",
@@ -783,7 +877,9 @@
         "ConflictingItems": [],
         "Weight": 0.52,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a3501acc4a282000d72293a": {
         "ItemID": "5a3501acc4a282000d72293a",
@@ -797,7 +893,9 @@
         "ConflictingItems": [],
         "Weight": 0.35,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "617130016c780c1e710c9a24": {
         "ItemID": "617130016c780c1e710c9a24",
@@ -811,7 +909,9 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "617131a4568c120fdd29482d": {
         "ItemID": "617131a4568c120fdd29482d",
@@ -825,7 +925,9 @@
         "ConflictingItems": [],
         "Weight": 0.16,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c503ac82e221602b21d6e9a": {
         "ItemID": "5c503ac82e221602b21d6e9a",
@@ -839,7 +941,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c503ad32e2216398b5aada2": {
         "ItemID": "5c503ad32e2216398b5aada2",
@@ -853,7 +957,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5aaf8a0be5b5b00015693243": {
         "ItemID": "5aaf8a0be5b5b00015693243",
@@ -867,35 +973,41 @@
         "ConflictingItems": [],
         "Weight": 0.226,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5addcce35acfc4001a5fc635": {
         "ItemID": "5addcce35acfc4001a5fc635",
         "Name": "mag_m14_triple_k_m14_magazine_762x51_30",
         "ModType": "",
         "ReloadSpeed": -5,
-        "Ergonomics": -5,
+        "Ergonomics": -2,
         "MagMalfunctionChance": 0.75,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.34,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5addccf45acfc400185c2989": {
         "ItemID": "5addccf45acfc400185c2989",
         "Name": "mag_m14_x_products_drum_magazine_m14_762x51_50",
         "ModType": "",
         "ReloadSpeed": -14,
-        "Ergonomics": -13,
+        "Ergonomics": -4,
         "MagMalfunctionChance": 2.5,
         "LoadUnloadModifier": 40,
         "CheckTimeModifier": 15,
         "ConflictingItems": [],
         "Weight": 0.7,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "628120f210e26c1f344e6558": {
         "ItemID": "628120f210e26c1f344e6558",
@@ -916,7 +1028,9 @@
         ],
         "Weight": 0.5,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "628120fd5631d45211793c9f": {
         "ItemID": "628120fd5631d45211793c9f",
@@ -942,7 +1056,9 @@
         ],
         "Weight": 0.4,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "618168dc8004cc50514c34fc": {
         "ItemID": "618168dc8004cc50514c34fc",
@@ -956,7 +1072,9 @@
         "ConflictingItems": [],
         "Weight": 0.33,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6183d53f1cb55961fa0fdcda": {
         "ItemID": "6183d53f1cb55961fa0fdcda",
@@ -970,7 +1088,9 @@
         "ConflictingItems": [],
         "Weight": 0.35,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5df25b6c0b92095fd441e4cf": {
         "ItemID": "5df25b6c0b92095fd441e4cf",
@@ -984,7 +1104,9 @@
         "ConflictingItems": [],
         "Weight": 0.35,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b7bef1e5acfc43d82528402": {
         "ItemID": "5b7bef1e5acfc43d82528402",
@@ -998,7 +1120,9 @@
         "ConflictingItems": [],
         "Weight": 0.27,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b099ac65acfc400186331e1": {
         "ItemID": "5b099ac65acfc400186331e1",
@@ -1012,7 +1136,9 @@
         "ConflictingItems": [],
         "Weight": 0.35,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b7c2d1d5acfc43d1028532a": {
         "ItemID": "5b7c2d1d5acfc43d1028532a",
@@ -1026,7 +1152,9 @@
         "ConflictingItems": [],
         "Weight": 0.29,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b7bef5d5acfc43bca7067a3": {
         "ItemID": "5b7bef5d5acfc43bca7067a3",
@@ -1034,69 +1162,79 @@
         "ModType": "",
         "ReloadSpeed": -5,
         "Ergonomics": 0,
-        "MagMalfunctionChance": 0.75,
+        "MagMalfunctionChance": 0.5,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.49,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b7d37845acfc400170e2f87": {
         "ItemID": "5b7d37845acfc400170e2f87",
         "Name": "mag_fal_sarco_fal_l1a1_orig_762x51_30",
         "ModType": "",
         "ReloadSpeed": -2.5,
-        "Ergonomics": -5,
-        "MagMalfunctionChance": 0.6,
+        "Ergonomics": -4,
+        "MagMalfunctionChance": 0.3,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.49,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b7bef9c5acfc43d102852ec": {
         "ItemID": "5b7bef9c5acfc43d102852ec",
         "Name": "mag_fal_x_products_x_fal_762x51_50",
         "ModType": "",
         "ReloadSpeed": -14,
-        "Ergonomics": -13,
+        "Ergonomics": -4,
         "MagMalfunctionChance": 1.25,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],
         "Weight": 0.7,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "544a37c44bdc2d25388b4567": {
         "ItemID": "544a37c44bdc2d25388b4567",
         "Name": "mag_stanag_surefire_mag5_556x45_60",
         "ModType": "",
-        "ReloadSpeed": -10,
-        "Ergonomics": -10,
+        "ReloadSpeed": -8,
+        "Ergonomics": -2,
         "MagMalfunctionChance": 2,
         "LoadUnloadModifier": 20,
         "CheckTimeModifier": 25,
         "ConflictingItems": [],
         "Weight": 0.18,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c6592372e221600133e47d7": {
         "ItemID": "5c6592372e221600133e47d7",
         "Name": "mag_stanag_surefire_mag5_556x45_100",
         "ModType": "",
         "ReloadSpeed": -22,
-        "Ergonomics": -20,
+        "Ergonomics": -10,
         "MagMalfunctionChance": 2.7,
         "LoadUnloadModifier": 30,
         "CheckTimeModifier": 30,
         "ConflictingItems": [],
         "Weight": 0.27,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c05413a0db834001c390617": {
         "ItemID": "5c05413a0db834001c390617",
@@ -1110,7 +1248,9 @@
         "ConflictingItems": [],
         "Weight": 0.32,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d1340b3d7ad1a0b52682ed7": {
         "ItemID": "5d1340b3d7ad1a0b52682ed7",
@@ -1124,21 +1264,25 @@
         "ConflictingItems": [],
         "Weight": 0.138,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d1340bdd7ad1a0e8d245aab": {
         "ItemID": "5d1340bdd7ad1a0e8d245aab",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_40_fde",
         "ModType": "",
         "ReloadSpeed": -2,
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "MagMalfunctionChance": 0.0075,
         "LoadUnloadModifier": 10,
         "CheckTimeModifier": 15,
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55802d5f4bdc2dac148b458e": {
         "ItemID": "55802d5f4bdc2dac148b458e",
@@ -1152,7 +1296,9 @@
         "ConflictingItems": [],
         "Weight": 0.138,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d1340cad7ad1a0b0b249869": {
         "ItemID": "5d1340cad7ad1a0b0b249869",
@@ -1166,7 +1312,9 @@
         "ConflictingItems": [],
         "Weight": 0.138,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c6d46132e221601da357d56": {
         "ItemID": "5c6d46132e221601da357d56",
@@ -1180,35 +1328,41 @@
         "ConflictingItems": [],
         "Weight": 0.138,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "544a378f4bdc2d30388b4567": {
         "ItemID": "544a378f4bdc2d30388b4567",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_40",
         "ModType": "",
         "ReloadSpeed": -2,
-        "Ergonomics": 0,
+        "Ergonomics": -2,
         "MagMalfunctionChance": 0.025,
         "LoadUnloadModifier": 10,
         "CheckTimeModifier": 15,
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59c1383d86f774290a37e0ca": {
         "ItemID": "59c1383d86f774290a37e0ca",
         "Name": "mag_stanag_magpul_pmag_d-60_556x45_60",
         "ModType": "",
         "ReloadSpeed": -11,
-        "Ergonomics": -12,
+        "Ergonomics": -2,
         "MagMalfunctionChance": 0.5,
         "LoadUnloadModifier": 60,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],
         "Weight": 0.58,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5aaa5e60e5b5b000140293d6": {
         "ItemID": "5aaa5e60e5b5b000140293d6",
@@ -1222,7 +1376,9 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5448c1d04bdc2dff2f8b4569": {
         "ItemID": "5448c1d04bdc2dff2f8b4569",
@@ -1236,7 +1392,9 @@
         "ConflictingItems": [],
         "Weight": 0.125,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5aaa5dfee5b5b000140293d3": {
         "ItemID": "5aaa5dfee5b5b000140293d3",
@@ -1250,7 +1408,9 @@
         "ConflictingItems": [],
         "Weight": 0.138,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "61840d85568c120fdd2962a5": {
         "ItemID": "61840d85568c120fdd2962a5",
@@ -1264,7 +1424,9 @@
         "ConflictingItems": [],
         "Weight": 0.117,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c6d450c2e221600114c997d": {
         "ItemID": "5c6d450c2e221600114c997d",
@@ -1278,7 +1440,9 @@
         "ConflictingItems": [],
         "Weight": 0.16,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c6d42cb2e2216000e69d7d1": {
         "ItemID": "5c6d42cb2e2216000e69d7d1",
@@ -1292,7 +1456,9 @@
         "ConflictingItems": [],
         "Weight": 0.17,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "61840bedd92c473c77021635": {
         "ItemID": "61840bedd92c473c77021635",
@@ -1306,7 +1472,9 @@
         "ConflictingItems": [],
         "Weight": 0.117,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62307b7b10d2321fa8741921": {
         "ItemID": "62307b7b10d2321fa8741921",
@@ -1320,7 +1488,9 @@
         "ConflictingItems": [],
         "Weight": 0.14,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d4887d4bdc2d962f8b4570": {
         "ItemID": "55d4887d4bdc2d962f8b4570",
@@ -1334,7 +1504,9 @@
         "ConflictingItems": [],
         "Weight": 0.117,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "587df3a12459772c28142567": {
         "ItemID": "587df3a12459772c28142567",
@@ -1348,35 +1520,41 @@
         "ConflictingItems": [],
         "Weight": 0.185,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "61695095d92c473c7702147a": {
         "ItemID": "61695095d92c473c7702147a",
         "Name": "mag_sks_kci_drum_762x39_75",
         "ModType": "",
         "ReloadSpeed": -20,
-        "Ergonomics": -20,
+        "Ergonomics": -8,
         "MagMalfunctionChance": 3,
         "LoadUnloadModifier": 35,
         "CheckTimeModifier": 35,
         "ConflictingItems": [],
         "Weight": 1.043,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c5970672e221602b21d7855": {
         "ItemID": "5c5970672e221602b21d7855",
         "Name": "mag_sks_promag_aalvx35_762x39_35",
         "ModType": "",
         "ReloadSpeed": -10,
-        "Ergonomics": -3,
+        "Ergonomics": -1.5,
         "MagMalfunctionChance": 1.5,
         "LoadUnloadModifier": 20,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],
         "Weight": 0.197,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "587df583245977373c4f1129": {
         "ItemID": "587df583245977373c4f1129",
@@ -1390,7 +1568,9 @@
         "ConflictingItems": [],
         "Weight": 0.112,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0548ae0db834001966a3c2": {
         "ItemID": "5c0548ae0db834001966a3c2",
@@ -1404,7 +1584,9 @@
         "ConflictingItems": [],
         "Weight": 0.45,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ac66c5d5acfc4001718d314": {
         "ItemID": "5ac66c5d5acfc4001718d314",
@@ -1418,7 +1600,9 @@
         "ConflictingItems": [],
         "Weight": 0.215,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5e21a3c67e40bd02257a008a": {
         "ItemID": "5e21a3c67e40bd02257a008a",
@@ -1432,7 +1616,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a0060fc86f7745793204432": {
         "ItemID": "5a0060fc86f7745793204432",
@@ -1446,7 +1632,9 @@
         "ConflictingItems": [],
         "Weight": 0.17,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6272874a6c47bd74f92e2087": {
         "ItemID": "6272874a6c47bd74f92e2087",
@@ -1460,21 +1648,25 @@
         "ConflictingItems": [],
         "Weight": 0.156,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b1fb3e15acfc4001637f068": {
         "ItemID": "5b1fb3e15acfc4001637f068",
         "Name": "mag_ak_izhmash_rpk_std_bakelite_762x39_40",
         "ModType": "",
         "ReloadSpeed": -2.5,
-        "Ergonomics": -7,
+        "Ergonomics": -2.5,
         "MagMalfunctionChance": 0.1,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],
         "Weight": 0.32,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59d6272486f77466146386ff": {
         "ItemID": "59d6272486f77466146386ff",
@@ -1488,35 +1680,41 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59e5f5a486f7746c530b3ce2": {
         "ItemID": "59e5f5a486f7746c530b3ce2",
         "Name": "mag_ak_izhmash_rpk_std_61_sector_762x39_40",
         "ModType": "",
         "ReloadSpeed": -2.5,
-        "Ergonomics": 0,
+        "Ergonomics": -2.5,
         "MagMalfunctionChance": 0.255,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],
         "Weight": 0.46,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c6175362e221600133e3b94": {
         "ItemID": "5c6175362e221600133e3b94",
         "Name": "mag_ak_promag_ak_a_16_drum_762x39_73",
         "ModType": "",
         "ReloadSpeed": -20,
-        "Ergonomics": -21,
+        "Ergonomics": -8.5,
         "MagMalfunctionChance": 0.17,
         "LoadUnloadModifier": 60,
         "CheckTimeModifier": 15,
         "ConflictingItems": [],
         "Weight": 0.72,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ac66bea5acfc43b321d4aec": {
         "ItemID": "5ac66bea5acfc43b321d4aec",
@@ -1530,7 +1728,9 @@
         "ConflictingItems": [],
         "Weight": 0.215,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59d625f086f774661516605d": {
         "ItemID": "59d625f086f774661516605d",
@@ -1544,7 +1744,9 @@
         "ConflictingItems": [],
         "Weight": 0.37,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59e5d83b86f7745aed03d262": {
         "ItemID": "59e5d83b86f7745aed03d262",
@@ -1558,7 +1760,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5b1fd4e35acfc40018633c39": {
         "ItemID": "5b1fd4e35acfc40018633c39",
@@ -1572,21 +1776,25 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cfe8010d7ad1a59283b14c6": {
         "ItemID": "5cfe8010d7ad1a59283b14c6",
         "Name": "mag_ak_x_products_x_47_drum_762x39_50",
         "ModType": "",
         "ReloadSpeed": -12,
-        "Ergonomics": -13,
+        "Ergonomics": -4,
         "MagMalfunctionChance": 2,
         "LoadUnloadModifier": 15,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],
         "Weight": 0.7,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59fafc9386f774067d462453": {
         "ItemID": "59fafc9386f774067d462453",
@@ -1600,7 +1808,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59fafc5086f7740dbe19f6c3": {
         "ItemID": "59fafc5086f7740dbe19f6c3",
@@ -1614,7 +1824,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a01c29586f77474660c694c": {
         "ItemID": "5a01c29586f77474660c694c",
@@ -1628,35 +1840,41 @@
         "ConflictingItems": [],
         "Weight": 0.37,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cbdc23eae9215001136a407": {
         "ItemID": "5cbdc23eae9215001136a407",
         "Name": "mag_ak_molot_rpk_drum_762x39_75",
         "ModType": "",
         "ReloadSpeed": -20,
-        "Ergonomics": -18,
+        "Ergonomics": -7.5,
         "MagMalfunctionChance": 4,
         "LoadUnloadModifier": 90,
         "CheckTimeModifier": 30,
         "ConflictingItems": [],
         "Weight": 0.9,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d482194bdc2d1d4e8b456b": {
         "ItemID": "55d482194bdc2d1d4e8b456b",
         "Name": "mag_ak74_izhmash_6L31_545x39_60",
         "ModType": "",
         "ReloadSpeed": -7,
-        "Ergonomics": -10,
+        "Ergonomics": -2,
         "MagMalfunctionChance": 2,
         "LoadUnloadModifier": 85,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "564ca99c4bdc2d16268b4589": {
         "ItemID": "564ca99c4bdc2d16268b4589",
@@ -1670,35 +1888,41 @@
         "ConflictingItems": [],
         "Weight": 0.215,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "564ca9df4bdc2d35148b4569": {
         "ItemID": "564ca9df4bdc2d35148b4569",
         "Name": "mag_ak74_izhmash_6L18_545x39_45",
         "ModType": "",
         "ReloadSpeed": -2.5,
-        "Ergonomics": -7,
+        "Ergonomics": -2.5,
         "MagMalfunctionChance": 0.075,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 15,
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d481904bdc2d8c2f8b456a": {
         "ItemID": "55d481904bdc2d8c2f8b456a",
         "Name": "mag_ak74_izhmash_6L26_545x39_45",
         "ModType": "",
         "ReloadSpeed": -2.5,
-        "Ergonomics": -7,
+        "Ergonomics": -2.5,
         "MagMalfunctionChance": 0.075,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 15,
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cbdaf89ae9215000e5b9c94": {
         "ItemID": "5cbdaf89ae9215000e5b9c94",
@@ -1712,7 +1936,9 @@
         "ConflictingItems": [],
         "Weight": 0.215,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5bed61680db834001d2c45ab": {
         "ItemID": "5bed61680db834001d2c45ab",
@@ -1726,7 +1952,9 @@
         "ConflictingItems": [],
         "Weight": 0.19,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d480c04bdc2d1d4e8b456a": {
         "ItemID": "55d480c04bdc2d1d4e8b456a",
@@ -1740,7 +1968,9 @@
         "ConflictingItems": [],
         "Weight": 0.215,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d4837c4bdc2d1d4e8b456c": {
         "ItemID": "55d4837c4bdc2d1d4e8b456c",
@@ -1754,7 +1984,9 @@
         "ConflictingItems": [],
         "Weight": 0.112,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5aaa4194e5b5b055d06310a5": {
         "ItemID": "5aaa4194e5b5b055d06310a5",
@@ -1768,21 +2000,25 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5bed625c0db834001c062946": {
         "ItemID": "5bed625c0db834001c062946",
         "Name": "mag_ak_izhmash_rpk16_drum_545x39_95",
         "ModType": "",
         "ReloadSpeed": -18,
-        "Ergonomics": -18,
+        "Ergonomics": -8,
         "MagMalfunctionChance": 2.5,
         "LoadUnloadModifier": 90,
         "CheckTimeModifier": 25,
         "ConflictingItems": [],
         "Weight": 0.68,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57838f0b2459774a256959b2": {
         "ItemID": "57838f0b2459774a256959b2",
@@ -1796,7 +2032,9 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57838f9f2459774a150289a0": {
         "ItemID": "57838f9f2459774a150289a0",
@@ -1810,7 +2048,9 @@
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a9e81fba2750c00164f6b11": {
         "ItemID": "5a9e81fba2750c00164f6b11",
@@ -1824,7 +2064,9 @@
         "ConflictingItems": [],
         "Weight": 0.45,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ba264f6d4351e0034777d52": {
         "ItemID": "5ba264f6d4351e0034777d52",
@@ -1838,7 +2080,9 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ba2657ed4351e0035628ff2": {
         "ItemID": "5ba2657ed4351e0035628ff2",
@@ -1852,7 +2096,9 @@
         "ConflictingItems": [],
         "Weight": 0.15,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ba26586d4351e44f824b340": {
         "ItemID": "5ba26586d4351e44f824b340",
@@ -1866,7 +2112,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a718b548dc32e000d46d262": {
         "ItemID": "5a718b548dc32e000d46d262",
@@ -1880,7 +2128,9 @@
         "ConflictingItems": [],
         "Weight": 0.096,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a718da68dc32e000d46d264": {
         "ItemID": "5a718da68dc32e000d46d264",
@@ -1894,7 +2144,9 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a7ad2e851dfba0016153692": {
         "ItemID": "5a7ad2e851dfba0016153692",
@@ -1908,21 +2160,25 @@
         "ConflictingItems": [],
         "Weight": 0.15,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a718f958dc32e00094b97e7": {
         "ItemID": "5a718f958dc32e00094b97e7",
         "Name": "mag_glock_sgmt_glock_drum_50_9x19_50",
         "ModType": "",
         "ReloadSpeed": -18,
-        "Ergonomics": -11,
+        "Ergonomics": -6,
         "MagMalfunctionChance": 1.25,
         "LoadUnloadModifier": -10,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],
         "Weight": 0.6,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d2f213448f0355009199284": {
         "ItemID": "5d2f213448f0355009199284",
@@ -1936,7 +2192,9 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5926c3b286f774640d189b6b": {
         "ItemID": "5926c3b286f774640d189b6b",
@@ -1950,21 +2208,25 @@
         "ConflictingItems": [],
         "Weight": 0.17,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a351711c4a282000b1521a4": {
         "ItemID": "5a351711c4a282000b1521a4",
         "Name": "mag_mp5_x_products_x_5_9x19_50",
         "ModType": "",
         "ReloadSpeed": -10,
-        "Ergonomics": -10,
+        "Ergonomics": -3,
         "MagMalfunctionChance": 1.25,
         "LoadUnloadModifier": 30,
         "CheckTimeModifier": 15,
         "ConflictingItems": [],
         "Weight": 0.64,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5de8e8dafd6b4e6e2276dc32": {
         "ItemID": "5de8e8dafd6b4e6e2276dc32",
@@ -1978,7 +2240,9 @@
         "ConflictingItems": [],
         "Weight": 0.06,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5de8ea8ffd6b4e6e2276dc35": {
         "ItemID": "5de8ea8ffd6b4e6e2276dc35",
@@ -1992,7 +2256,9 @@
         "ConflictingItems": [],
         "Weight": 0.067,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5de8eaadbbaf010b10528a6d": {
         "ItemID": "5de8eaadbbaf010b10528a6d",
@@ -2006,7 +2272,9 @@
         "ConflictingItems": [],
         "Weight": 0.072,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5de8eac42a78646d96665d91": {
         "ItemID": "5de8eac42a78646d96665d91",
@@ -2020,7 +2288,9 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cadc2e0ae9215051e1c21e7": {
         "ItemID": "5cadc2e0ae9215051e1c21e7",
@@ -2034,7 +2304,9 @@
         "ConflictingItems": [],
         "Weight": 0.082,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "576a5ed62459771e9c2096cb": {
         "ItemID": "576a5ed62459771e9c2096cb",
@@ -2048,7 +2320,9 @@
         "ConflictingItems": [],
         "Weight": 0.105,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5448c12b4bdc2d02308b456f": {
         "ItemID": "5448c12b4bdc2d02308b456f",
@@ -2062,21 +2336,25 @@
         "ConflictingItems": [],
         "Weight": 0.044,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "55d485be4bdc2d962f8b456f": {
         "ItemID": "55d485be4bdc2d962f8b456f",
         "Name": "mag_pm_custom_9x18pm_84",
         "ModType": "",
         "ReloadSpeed": -20,
-        "Ergonomics": -20,
+        "Ergonomics": -10,
         "MagMalfunctionChance": 10,
         "LoadUnloadModifier": 25,
         "CheckTimeModifier": 25,
         "ConflictingItems": [],
         "Weight": 0.364,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "571a29dc2459771fb2755a6a": {
         "ItemID": "571a29dc2459771fb2755a6a",
@@ -2090,7 +2368,9 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6193d338de3cdf1d2614a6fc": {
         "ItemID": "6193d338de3cdf1d2614a6fc",
@@ -2104,7 +2384,9 @@
         "ConflictingItems": [],
         "Weight": 0.099,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6193d3149fb0c665d5490e32": {
         "ItemID": "6193d3149fb0c665d5490e32",
@@ -2118,7 +2400,9 @@
         "ConflictingItems": [],
         "Weight": 0.092,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cc70093e4a949033c734312": {
         "ItemID": "5cc70093e4a949033c734312",
@@ -2132,7 +2416,9 @@
         "ConflictingItems": [],
         "Weight": 0.45,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c5db6552e2216001026119d": {
         "ItemID": "5c5db6552e2216001026119d",
@@ -2146,7 +2432,9 @@
         "ConflictingItems": [],
         "Weight": 0.14,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5894a05586f774094708ef75": {
         "ItemID": "5894a05586f774094708ef75",
@@ -2160,7 +2448,9 @@
         "ConflictingItems": [],
         "Weight": 0.17,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c5db6652e221600113fba51": {
         "ItemID": "5c5db6652e221600113fba51",
@@ -2174,21 +2464,25 @@
         "ConflictingItems": [],
         "Weight": 0.3,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c5db6742e2216000f1b2852": {
         "ItemID": "5c5db6742e2216000f1b2852",
         "Name": "mag_mpx_f5_mpx_drum_9x19_50",
         "ModType": "",
         "ReloadSpeed": -10,
-        "Ergonomics": -10,
+        "Ergonomics": -5,
         "MagMalfunctionChance": 1.25,
         "LoadUnloadModifier": 30,
         "CheckTimeModifier": 15,
         "ConflictingItems": [],
         "Weight": 0.65,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "MAGZIN_TYPE64_ITSELF_DEF": {
         "ItemID": "MAGZIN_TYPE64_ITSELF_DEF",
@@ -2230,21 +2524,25 @@
         "ConflictingItems": [],
         "Weight": 0.38,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ea034f65aad6446a939737e": {
         "ItemID": "5ea034f65aad6446a939737e",
         "Name": "mag_ppsh_zis_std_762x25_71",
         "ModType": "",
         "ReloadSpeed": -15,
-        "Ergonomics": -10,
+        "Ergonomics": -5,
         "MagMalfunctionChance": 1,
         "LoadUnloadModifier": 35,
         "CheckTimeModifier": 30,
         "ConflictingItems": [],
         "Weight": 0.9,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "59f99a7d86f7745b134aa97b": {
         "ItemID": "59f99a7d86f7745b134aa97b",
@@ -2258,7 +2556,9 @@
         "ConflictingItems": [],
         "Weight": 0.105,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5a17fb03fcdbcbcae668728f": {
         "ItemID": "5a17fb03fcdbcbcae668728f",
@@ -2272,7 +2572,9 @@
         "ConflictingItems": [],
         "Weight": 0.044,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "56d59948d2720bb7418b4582": {
         "ItemID": "56d59948d2720bb7418b4582",
@@ -2286,7 +2588,9 @@
         "ConflictingItems": [],
         "Weight": 0.096,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c920e902e221644f31c3c99": {
         "ItemID": "5c920e902e221644f31c3c99",
@@ -2300,7 +2604,9 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5fc3e466187fea44d52eda90": {
         "ItemID": "5fc3e466187fea44d52eda90",
@@ -2314,7 +2620,9 @@
         "ConflictingItems": [],
         "Weight": 0.17,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5fb651b52b1b027b1f50bcff": {
         "ItemID": "5fb651b52b1b027b1f50bcff",
@@ -2328,7 +2636,9 @@
         "ConflictingItems": [],
         "Weight": 0.096,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5fb651dc85f90547f674b6f4": {
         "ItemID": "5fb651dc85f90547f674b6f4",
@@ -2342,7 +2652,9 @@
         "ConflictingItems": [],
         "Weight": 0.18,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5e81c4ca763d9f754677befa": {
         "ItemID": "5e81c4ca763d9f754677befa",
@@ -2356,7 +2668,9 @@
         "ConflictingItems": [],
         "Weight": 0.16,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5ef3448ab37dfd6af863525c": {
         "ItemID": "5ef3448ab37dfd6af863525c",
@@ -2370,7 +2684,9 @@
         "ConflictingItems": [],
         "Weight": 0.24,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "599860ac86f77436b225ed1a": {
         "ItemID": "599860ac86f77436b225ed1a",
@@ -2384,7 +2700,9 @@
         "ConflictingItems": [],
         "Weight": 0.17,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d3eb5eca4b9363b1f22f8e4": {
         "ItemID": "5d3eb5eca4b9363b1f22f8e4",
@@ -2398,7 +2716,9 @@
         "ConflictingItems": [],
         "Weight": 0.088,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57d14e1724597714010c3f4b": {
         "ItemID": "57d14e1724597714010c3f4b",
@@ -2412,7 +2732,9 @@
         "ConflictingItems": [],
         "Weight": 0.103,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "57d1519e24597714373db79d": {
         "ItemID": "57d1519e24597714373db79d",
@@ -2426,7 +2748,9 @@
         "ConflictingItems": [],
         "Weight": 0.128,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "602286df23506e50807090c6": {
         "ItemID": "602286df23506e50807090c6",
@@ -2440,7 +2764,9 @@
         "ConflictingItems": [],
         "Weight": 0.096,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5de653abf76fdc1ce94a5a2a": {
         "ItemID": "5de653abf76fdc1ce94a5a2a",
@@ -2454,7 +2780,9 @@
         "ConflictingItems": [],
         "Weight": 0.2,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5f3e77b26cda304dcc634057": {
         "ItemID": "5f3e77b26cda304dcc634057",
@@ -2468,7 +2796,9 @@
         "ConflictingItems": [],
         "Weight": 0.14,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5998529a86f774647f44f421": {
         "ItemID": "5998529a86f774647f44f421",
@@ -2482,7 +2812,9 @@
         "ConflictingItems": [],
         "Weight": 0.17,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0673fb0db8340023300271": {
         "ItemID": "5c0673fb0db8340023300271",
@@ -2496,7 +2828,9 @@
         "ConflictingItems": [],
         "Weight": 0.085,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5c0672ed0db834001b7353f3": {
         "ItemID": "5c0672ed0db834001b7353f3",
@@ -2510,7 +2844,9 @@
         "ConflictingItems": [],
         "Weight": 0.109,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "633ec6ee025b096d320a3b15": {
         "ItemID": "633ec6ee025b096d320a3b15",
@@ -2522,7 +2858,9 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.23
+        "Weight": 0.23,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62e153bcdb1a5c41971c1b5b": {
         "ItemID": "62e153bcdb1a5c41971c1b5b",
@@ -2534,7 +2872,9 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.17
+        "Weight": 0.17,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "633a98eab8b0506e48497c1a": {
         "ItemID": "633a98eab8b0506e48497c1a",
@@ -2546,7 +2886,9 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.13
+        "Weight": 0.13,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "630e1adbbd357927e4007c09": {
         "ItemID": "630e1adbbd357927e4007c09",
@@ -2558,7 +2900,9 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.1
+        "Weight": 0.1,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "62e7c98b550c8218d602cbb4": {
         "ItemID": "62e7c98b550c8218d602cbb4",
@@ -2570,7 +2914,9 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.13
+        "Weight": 0.13,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "630e295c984633f1fb0e7c30": {
         "ItemID": "630e295c984633f1fb0e7c30",
@@ -2582,7 +2928,9 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.142
+        "Weight": 0.142,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "630769c4962d0247b029dc60": {
         "ItemID": "630769c4962d0247b029dc60",
@@ -2594,7 +2942,9 @@
         "LoadUnloadModifier": -10,
         "CheckTimeModifier": -30,
         "ConflictingItems": [],
-        "Weight": 0.112
+        "Weight": 0.112,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "630767c37d50ff5e8a1ea71a": {
         "ItemID": "630767c37d50ff5e8a1ea71a",
@@ -2606,7 +2956,9 @@
         "LoadUnloadModifier": -10,
         "CheckTimeModifier": -30,
         "ConflictingItems": [],
-        "Weight": 0.14
+        "Weight": 0.14,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "63076701a987397c0816d21b": {
         "ItemID": "63076701a987397c0816d21b",
@@ -2618,7 +2970,9 @@
         "LoadUnloadModifier": -10,
         "CheckTimeModifier": -20,
         "ConflictingItems": [],
-        "Weight": 0.106
+        "Weight": 0.106,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5d52d479a4b936793d58c76b": {
         "ItemID": "5d52d479a4b936793d58c76b",
@@ -2630,30 +2984,36 @@
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.088
+        "Weight": 0.088,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "5cffa483d7ad1a049e54ef1c": {
         "ItemID": "5cffa483d7ad1a049e54ef1c",
         "Name": "mag_utes_ckib_nsv_belt_127x108_100",
         "ModType": "",
         "ReloadSpeed": 0,
-        "Ergonomics": -1,
+        "Ergonomics": 0,
         "MagMalfunctionChance": 0,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.1
+        "Weight": 0.1,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "6241c2c2117ad530666a5108": {
         "ItemID": "6241c2c2117ad530666a5108",
         "Name": "mag_stanag_maopul_pmag_airsoft_6_30_fde",
         "ModType": "",
         "ReloadSpeed": 0,
-        "Ergonomics": -3,
+        "Ergonomics": 0,
         "MagMalfunctionChance": 0.04,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
-        "Weight": 0.138
+        "Weight": 0.05,
+        "Price": 0,
+        "LoyaltyLevel": 0
     }
 }
