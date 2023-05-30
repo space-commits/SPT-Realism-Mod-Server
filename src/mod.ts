@@ -73,7 +73,7 @@ import { JsonGen } from "./code_gen";
 import { Quests } from "./quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
 import { AirdropLootgen, Airdrops } from "./airdrops";
-import { Maps } from "./maps";
+import { Spawns } from "./maps";
 import { Gear } from "./gear";
 import { SeasonalEventsHandler } from "./seasonalevents";
 import { ItemCloning } from "./item_cloning";
@@ -629,7 +629,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
-        const maps = new Maps(logger, tables, modConfig);
+        const maps = new Spawns(logger, tables, modConfig);
         const gear = new Gear(arrays, tables);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);

@@ -482,7 +482,7 @@ class Main {
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
-        const maps = new maps_1.Maps(logger, tables, modConfig);
+        const maps = new maps_1.Spawns(logger, tables, modConfig);
         const gear = new gear_1.Gear(arrays, tables);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);

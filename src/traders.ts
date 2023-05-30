@@ -151,7 +151,7 @@ export class Traders {
     private setLL(file) {
         for (let item in file) {
             let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
-            let itemID = file[item].ItemID; 
+            let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
                 if (this.tables.traders[trader].assort?.items !== undefined) {
                     for (let item in this.tables.traders[trader].assort.items) {
@@ -574,7 +574,7 @@ export class RandomizeTraderAssort {
         if (randNum <= 2) {
             ll[i] = Math.max(1, level - 1);
         }
-        if(level === 5){
+        if (level === 5) {
             ll[i] = 4;
         }
     }
@@ -588,14 +588,17 @@ export class RagCallback extends RagfairCallbacks {
     }
 }
 
+
 export class TraderRefresh extends TraderAssortHelper {
+
+    pristineAssorts: Record<string, ITraderAssort>;
 
     public myResetExpiredTrader(trader: ITrader) {
 
-        trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+        const traderId = trader.base._id;
+        trader.assort =   this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
 
-        if(modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true){
-            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+        if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
             trader.assort.items = this.modifyTraderAssorts(trader, this.logger);
         }
 
@@ -604,10 +607,8 @@ export class TraderRefresh extends TraderAssortHelper {
         trader.base.refreshTraderRagfairOffers = true;
 
         //seems like manually refreshing ragfair is necessary. 
-        const traders = container.resolve<RagfairServer>("RagfairServer").getUpdateableTraders();
-        for (let traderID in traders) {
-            this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
-        }
+        this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
+
     }
 
     private modifyTraderAssorts(trader: ITrader, logger: ILogger): Item[] {
@@ -654,7 +655,7 @@ export class TraderRefresh extends TraderAssortHelper {
         return assortItems;
     }
 
-    private randomizePricesAtRefresh(randomTraderAss: RandomizeTraderAssort, utils: Utils, itemTemplId: string, barter: IBarterScheme[][]): void{
+    private randomizePricesAtRefresh(randomTraderAss: RandomizeTraderAssort, utils: Utils, itemTemplId: string, barter: IBarterScheme[][]): void {
         let randNum = utils.pickRandNumOneInTen();
         randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
     }

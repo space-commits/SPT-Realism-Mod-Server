@@ -102,7 +102,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "trnqt");
                 serverItem._props.ConflictingItems.splice(2, 0, "trnqt");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.5"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
             }
             //Esmarch
             if (serverItem._id === "5e831507ea0a7c419c2f9bd9") {
@@ -196,7 +196,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.5"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
             }
             //AFAK
             if (serverItem._id === "60098ad7c2240c0fe85c570a") {
@@ -220,7 +220,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.5"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
             }
             ///Smeary stuff///
             //Vaseline
@@ -257,7 +257,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "surg");
                 serverItem._props.ConflictingItems.splice(2, 0, "surg");
-                serverItem._props.ConflictingItems.splice(3, 0, "1"); // hp restore per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.85"); // hp restore per tick
             }
             //Surv12
             if (serverItem._id === "5d02797c86f774203f38e30a") {
@@ -268,7 +268,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "surg");
                 serverItem._props.ConflictingItems.splice(2, 0, "surg");
-                serverItem._props.ConflictingItems.splice(3, 0, "1.3"); // hp restore per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.95"); // hp restore per tick
             }
         }
         if (this.modConf.logEverything == true) {
