@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Maps = void 0;
+exports.Spawns = void 0;
 const botZones = require("../db/maps/spawnZones.json");
 const bossSpawns = require("../db/maps/bossSpawns.json");
 const spawnWaves = require("../db/maps/spawnWaves.json");
-class Maps {
+class Spawns {
     constructor(logger, tables, modConf) {
         this.logger = logger;
         this.tables = tables;
@@ -48,4 +48,4 @@ class Maps {
         }
     }
 }
-exports.Maps = Maps;
+exports.Spawns = Spawns;

@@ -6,7 +6,7 @@ const botZones = require("../db/maps/spawnZones.json");
 const bossSpawns = require("../db/maps/bossSpawns.json");
 const spawnWaves = require("../db/maps/spawnWaves.json");
 
-export class Maps {
+export class Spawns {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
 

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonHandler = void 0;
+const enums_1 = require("./enums");
 const utils_1 = require("./utils");
 const modConfig = require("../config/config.json");
 const weapPath = modConfig.weap_preset;
@@ -96,8 +97,10 @@ class JsonHandler {
                 this.callHelper(armorVestsTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(armorMasksTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(chestrigTemplates, serverItem, this.armorPusherHelper);
-                this.callHelper(headsetTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(cosmeticsTemplates, serverItem, this.armorPusherHelper);
+            }
+            if (serverItem._parent === enums_1.ParentClasses.HEADSET) {
+                this.callHelper(headsetTemplates, serverItem, this.armorPusherHelper);
             }
         }
     }

@@ -107,8 +107,10 @@ export class JsonHandler {
                 this.callHelper(armorVestsTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(armorMasksTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(chestrigTemplates, serverItem, this.armorPusherHelper);
-                this.callHelper(headsetTemplates, serverItem, this.armorPusherHelper);
                 this.callHelper(cosmeticsTemplates, serverItem, this.armorPusherHelper);
+            }
+            if (serverItem._parent === ParentClasses.HEADSET){
+                this.callHelper(headsetTemplates, serverItem, this.armorPusherHelper);
             }
         }
     }

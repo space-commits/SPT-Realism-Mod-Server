@@ -36,7 +36,7 @@
         "SemiROF": 450,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 0.6,
+        "BaseChamberSpeedMulti": 0.75,
         "MinChamberSpeed": 0.47,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": true,

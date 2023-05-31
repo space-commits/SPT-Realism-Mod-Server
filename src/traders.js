@@ -495,18 +495,15 @@ class RagCallback extends RagfairCallbacks_1.RagfairCallbacks {
 exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     myResetExpiredTrader(trader) {
-        trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
+        const traderId = trader.base._id;
+        trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
         if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            trader.assort.items = this.getPristineTraderAssorts(trader.base._id);
             trader.assort.items = this.modifyTraderAssorts(trader, this.logger);
         }
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
         trader.base.refreshTraderRagfairOffers = true;
         //seems like manually refreshing ragfair is necessary. 
-        const traders = tsyringe_1.container.resolve("RagfairServer").getUpdateableTraders();
-        for (let traderID in traders) {
-            this.ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
-        }
+        this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
     }
     modifyTraderAssorts(trader, logger) {
         const tables = this.databaseServer.getTables();
