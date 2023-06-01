@@ -9,6 +9,7 @@ export class ItemCloning {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private jsonUtil: JsonUtil, private medItems, private crafts) { }
 
     private itemDB = this.tables.templates.items;
+    private questDB = this.tables.templates.quests;
 
     public createCustomMedItems() {
         //Tier 1 Medkit
@@ -81,36 +82,42 @@ export class ItemCloning {
         this.addToHandbook("mechSKSv1", "5b5f78e986f77447ed5636b1", 12500);
         this.addToLocale("mechSKSv1", "Mechanic's Custom SKS", "Mech SKS", "Mechanic has done custom work to this SKS: the trigger components have been polished and the springs lightened for a lighter and cleaner trigger pull. The gas system has been modified to make the rifle softer shooting, at the expense of reliability. Lightening cuts have reduced the weight of the rifle as well as improving balance.");
         this.addToMastering("mechSKSv1", "SKS");
+        this.addCustomWeapsToQuests("", "mechSKSv1");
 
         //Mechanic custom OP-SKS
         this.cloneWeapons("587e02ff24597743df3deaeb", "mechOPSKSv1", "violet");
         this.addToHandbook("mechOPSKSv1", "5b5f78e986f77447ed5636b1", 15000);
         this.addToLocale("mechOPSKSv1", "Mechanic's Custom OP-SKS", "Mech OP-SKS", "Mechanic has done custom work to this OP-SKS: the trigger components have been polished and the springs lightened for a lighter and cleaner trigger pull. The gas system has been modified to make the rifle softer shooting, at the expense of reliability. Lightening cuts have reduced the weight of the rifle as well as improving balance. The rifle has also been accuraized as much as an SKS can be.");
         this.addToMastering("mechOPSKSv1", "SKS");
+        this.addCustomWeapsToQuests("587e02ff24597743df3deaeb", "mechOPSKSv1");
 
         //Mechanic custom STM
         this.cloneWeapons("60339954d62c9b14ed777c06", "mechSTM9v1", "violet");
         this.addToHandbook("mechSTM9v1", "5b5f796a86f774093f2ed3c0", 15000);
         this.addToLocale("mechSTM9v1", "Mechanic's Custom STM-9", "Mech STM-9", "Mechanic has done custom work to this STM-9: a device that allows the STM to fire in full auto has been installed. However, due to the makeshift nature of the modifcation, it is now only capable of full auto fire and reliability has been decreased.");
         this.addToMastering("mechSTM9v1", "M4");
+        this.addCustomWeapsToQuests("60339954d62c9b14ed777c06", "mechSTM9v1");
 
         //Mechanic custom Saiga12k
         this.cloneWeapons("576165642459773c7a400233", "mechSaiga12v1", "violet");
         this.addToHandbook("mechSaiga12v1", "5b5f794b86f77409407a7f92", 15000);
         this.addToLocale("mechSaiga12v1", "Mechanic's Custom Saiga 12k", "Mech Saiga12", "Mechanic has done custom work to this Saiga 12k: the guide rails have been polished, making the action cycle more smoothly which aids with recoil and reliability. The feedramp has been polished, further increasing reliability. The gas system and recoil spring have been modified, further reducing recoil.");
         this.addToMastering("mechSaiga12v1", "AKM");
+        this.addCustomWeapsToQuests("576165642459773c7a400233", "mechSaiga12v1");
 
         //Mechanic custom Benelli M3
         this.cloneWeapons("6259b864ebedf17603599e88", "mechM3v1", "violet");
         this.addToHandbook("mechM3v1", "5b5f794b86f77409407a7f92", 20000);
         this.addToLocale("mechM3v1", "Mechanic's Custom Benelli M3", "Mech M3", "Mechanic has done custom work to this Benelli M3: the loading port has been modifed to make reloading easier and faster. The bolt carrier and trigger has been polished to allow smoother cycling and a faster rate of fire, which also makes manipulating the chamber faster. The recoil spring has been lightened to further increase the rate of fire. The gas system has also been modified to reduce the felt recoil and durability burn, at the cost of reliability.");
         this.addToMastering("mechM3v1", "MP153");
+        this.addCustomWeapsToQuests("6259b864ebedf17603599e88", "mechM3v1");
 
         //Skier .366 Vepr
         this.cloneWeapons("59e6687d86f77411d949b251", "Skier209", "orange");
         this.addToHandbook("Skier209", "5b5f78e986f77447ed5636b1", 10000);
         this.addToLocale("Skier209", "Skier's Custom VPO-209", "Skier VPO-209", "Skier has crudely modified this VPO-209 to fire fully automatic. Due to the makeshift nature of this modification, the rifle is now full auto only and reliability is reduced.");
         this.addToMastering("Skier209", "AKM");
+        this.addCustomWeapsToQuests("59e6687d86f77411d949b251", "Skier209");
     }
 
     public createCustomAttachments() {
@@ -145,6 +152,20 @@ export class ItemCloning {
         this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechJMAC_366");
     }
 
+
+    private addCustomWeapsToQuests(targetWeap: string, weapToAdd: string){
+        for (let quest in this.questDB) {
+            let conditions = this.questDB[quest].conditions.AvailableForFinish[0];   
+            if(conditions._parent === "CounterCreator"){
+                let killConditions = conditions._props.counter.conditions[0]
+                if(killConditions._parent === "Kills" && killConditions._props?.weapon !== undefined){
+                    if( killConditions._props.weapon.includes(targetWeap)){
+                        killConditions._props.weapon.push(weapToAdd);
+                    }
+                }
+            }
+        }
+    }
     private addToMastering(id: string, masteringCat: string) {
         let mastering = this.tables.globals.config.Mastering;
         for (let cat in mastering) {
