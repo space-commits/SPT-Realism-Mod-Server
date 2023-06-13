@@ -1576,12 +1576,12 @@
         "SemiROF": 410,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 0.88,
-        "BaseChamberSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1.2,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.2,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1.4,
-        "BaseFixSpeed": 1.2
+        "BaseChamberCheckSpeed": 1.6,
+        "BaseFixSpeed": 1.3
     },
     "5447a9cd4bdc2dbd208b4567": {
         "ItemID": "5447a9cd4bdc2dbd208b4567",
@@ -1620,11 +1620,11 @@
         "SemiROF": 400,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.88,
-        "BaseChamberSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1.15,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.25,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1.4,
-        "BaseFixSpeed": 1.2
+        "BaseChamberCheckSpeed": 1.6,
+        "BaseFixSpeed": 1.3
     }
 }
