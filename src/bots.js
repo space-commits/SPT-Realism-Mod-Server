@@ -42,7 +42,7 @@ class BotLoader {
         this.birdeyeBase = this.botDB["followerbirdeye"];
         this.killaBase = this.botDB["bosskilla"];
         this.tagillaBase = this.botDB["bosstagilla"];
-        this.reshallaBase = this.botDB["bossBully"];
+        this.reshallaBase = this.botDB["bossbully"];
         this.botConf = this.configServ.getConfig(ConfigTypes_1.ConfigTypes.BOT);
         this.botConfPMC = this.botConf.pmc;
     }
