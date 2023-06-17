@@ -310,7 +310,7 @@
             }
         },
         "StimulatorBuffs": "Buffs_salewa",
-        "MaxHpResource": 8,
+        "MaxHpResource": 10,
         "medUseTime": 12,
         "hpResourceRate": 0
     },

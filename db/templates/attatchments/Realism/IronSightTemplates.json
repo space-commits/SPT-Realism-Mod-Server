@@ -1,4 +1,28 @@
 {
+    "imi_uzi_sight_front": {
+        "ItemID": "imi_uzi_sight_front",
+        "Name": "IMI Uzi Sight Front",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.07,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
+    "imi_uzi_sight_rear": {
+        "ItemID": "imi_uzi_sight_rear",
+        "Name": "IMI Uzi Sight Rear",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.08,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
     "sight_rear_molot_vepr12": {
         "ItemID": "sight_rear_molot_vepr12",
         "Name": "sight_rear_molot_vepr12",
