@@ -44,7 +44,7 @@ export class BotLoader {
     birdeyeBase = this.botDB["followerbirdeye"];
     killaBase = this.botDB["bosskilla"];
     tagillaBase = this.botDB["bosstagilla"];
-    reshallaBase = this.botDB["bossBully"];
+    reshallaBase = this.botDB["bossbully"];
 
     botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
     botConfPMC = this.botConf.pmc;

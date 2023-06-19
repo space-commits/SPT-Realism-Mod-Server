@@ -293,7 +293,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.94,
+        "ReloadSpeedMulti": 1,
         "Price": 0
     },
     "60a6220e953894617404b00a": {
@@ -304,7 +304,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
+        "ReloadSpeedMulti": 1.05,
         "Price": 0
     }
 }

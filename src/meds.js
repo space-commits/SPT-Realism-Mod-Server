@@ -32,6 +32,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "pills");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             //Ibuprofen
             if (serverItem._id === "5af0548586f7743a532b7e99") {
@@ -44,6 +45,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "pills");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             //Morphine
             if (serverItem._id === "544fb3f34bdc2d03748b456a") {
@@ -56,6 +58,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "drug");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             ///Medicines///
             //Augmentin
@@ -69,6 +72,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "pills");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             ///Bandages///
             //Aeseptic Bandage
@@ -80,6 +84,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "bndg");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             //Army Bandage
             if (serverItem._id === "5751a25924597722c463c472") {
@@ -90,6 +95,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "bndg");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             ///Tourniquets///
             //CAT
@@ -136,6 +142,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "splint");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             //Alu Splint
             if (serverItem._id === "5af0454c86f7746bf20992e8") {
@@ -147,6 +154,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "splint");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             ///Medkits///
             //AI-2
@@ -160,6 +168,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "drug");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             //CAR
             if (serverItem._id === "590c661e86f7741e566b646a") {
@@ -233,6 +242,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "vas");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             //GoldenStar
             if (serverItem._id === "5751a89d24597722aa0e8db0") {
@@ -245,6 +255,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "drug");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "1");
             }
             ///Surgery/
             //CMS

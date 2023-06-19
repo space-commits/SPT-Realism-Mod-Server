@@ -254,14 +254,14 @@
         "DurabilityBurnRatio": 0.38,
         "AutoROF": 800,
         "SemiROF": 370,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 2,  
         "BaseReloadSpeedMulti": 0.88,
-        "BaseChamberSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1.1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.25,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1.4,
-        "BaseFixSpeed": 1.2
+        "BaseChamberCheckSpeed": 1.55,
+        "BaseFixSpeed": 1.25
     },
     "5d43021ca4b9362eab4b5e25": {
         "ItemID": "5d43021ca4b9362eab4b5e25",
@@ -300,12 +300,12 @@
         "SemiROF": 500,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 0.95,
-        "BaseChamberSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1.2,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.25,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1.45,
-        "BaseFixSpeed": 1.25
+        "BaseChamberCheckSpeed": 1.7,
+        "BaseFixSpeed": 1.35
     },
     "59e6152586f77473dc057aa1": {
         "ItemID": "59e6152586f77473dc057aa1",

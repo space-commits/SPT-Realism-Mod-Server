@@ -1,4 +1,16 @@
 {
+    "imi_uzi_30rnd_magazine": {
+        "ItemID": "imi_uzi_30rnd_magazine",
+        "Name": "IMI Uzi 30-Round 9x19PARA Magazine",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0.02,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.1
+    },
     "mag_vepr12_molot_8": {
         "ItemID": "mag_vepr12_molot_8",
         "Name": "mag_vepr12_molot_8",
@@ -83,7 +95,7 @@
         "ItemID": "627bce33f21bc425b06ab967",
         "Name": "mag_msgl_milkor_cylinder_mag_std_40x46_6",
         "ModType": "",
-        "ReloadSpeed": -15,
+        "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
         "LoadUnloadModifier": 0,
@@ -99,7 +111,7 @@
         "ItemID": "60dc519adf4c47305f6d410d",
         "Name": "mag_mc255_ckib_mc255_cylinder_std_12g_5",
         "ModType": "",
-        "ReloadSpeed": -10,
+        "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
         "LoadUnloadModifier": 0,
@@ -115,7 +127,7 @@
         "ItemID": "624c3074dbbd335e8e6becf3",
         "Name": "mag_rhino_chiappa_rhino_cylinder_9x19",
         "ModType": "",
-        "ReloadSpeed": 10,
+        "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
         "LoadUnloadModifier": 0,
@@ -131,7 +143,7 @@
         "ItemID": "619f54a1d25cbd424731fb99",
         "Name": "mag_rhino_chiappa_rhino_cylinder_9x33r_6",
         "ModType": "",
-        "ReloadSpeed": 10,
+        "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
         "LoadUnloadModifier": 0,
@@ -147,7 +159,7 @@
         "ItemID": "61a4cda622af7f4f6a3ce617",
         "Name": "mag_rhino_chiappa_rhino_speedloader_9x33R_6",
         "ModType": "",
-        "ReloadSpeed": 0,
+        "ReloadSpeed": 25,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
         "LoadUnloadModifier": 0,
@@ -254,7 +266,7 @@
     "5a7882dcc5856700177af662": {
         "ItemID": "5a7882dcc5856700177af662",
         "Name": "mag_870_remington_magazie_cap_12g_4",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": 5,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -270,7 +282,7 @@
     "56deee15d2720bee328b4567": {
         "ItemID": "56deee15d2720bee328b4567",
         "Name": "mag_mr153_izhmeh_12g_4",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": 5,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -286,7 +298,7 @@
     "5882163e24597758206fee8c": {
         "ItemID": "5882163e24597758206fee8c",
         "Name": "mag_mr153_izhmeh_12g_5",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": 4,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -302,7 +314,7 @@
     "625ff2ccb8c587128c1a01dd": {
         "ItemID": "625ff2ccb8c587128c1a01dd",
         "Name": "mag_m3_benelli_magazine_cap_12g_5",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": 5,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -318,7 +330,7 @@
     "6076c87f232e5a31c233d50e": {
         "ItemID": "6076c87f232e5a31c233d50e",
         "Name": "mag_mp155_kalashnikov_12g_6",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -334,7 +346,7 @@
     "55d484b44bdc2d1d4e8b456d": {
         "ItemID": "55d484b44bdc2d1d4e8b456d",
         "Name": "mag_mr133_izhmeh_12g_6",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -350,7 +362,7 @@
     "5882163824597757561aa922": {
         "ItemID": "5882163824597757561aa922",
         "Name": "mag_mr153_izhmeh_12g_6",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -366,7 +378,7 @@
     "6259bdcabd28e4721447a2aa": {
         "ItemID": "6259bdcabd28e4721447a2aa",
         "Name": "mag_m3_benelli_std_12g_7",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -2,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -382,7 +394,7 @@
     "5a78830bc5856700137e4c90": {
         "ItemID": "5a78830bc5856700137e4c90",
         "Name": "mag_870_remington_magazie_extension_12g_7",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -2,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -398,7 +410,7 @@
     "5882163224597757561aa920": {
         "ItemID": "5882163224597757561aa920",
         "Name": "mag_mr153_izhmeh_12g_7",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -3,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -414,7 +426,7 @@
     "55d485804bdc2d8c2f8b456b": {
         "ItemID": "55d485804bdc2d8c2f8b456b",
         "Name": "mag_mr133_izhmeh_12g_8",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -5,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -430,7 +442,7 @@
     "56deeefcd2720bc8328b4568": {
         "ItemID": "56deeefcd2720bc8328b4568",
         "Name": "mag_mr153_izhmeh_12g_8",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -5,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -446,7 +458,7 @@
     "5e87080c81c4ed43e83cefda": {
         "ItemID": "5e87080c81c4ed43e83cefda",
         "Name": "mag_590_mossberg_magazie_cap_12g_8",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -4,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -462,7 +474,7 @@
     "625ff2eb9f5537057932257d": {
         "ItemID": "625ff2eb9f5537057932257d",
         "Name": "mag_m3_benelli_magazine_extension_12g_9",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -6,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -482,7 +494,7 @@
     "5a78832ec5856700155a6ca3": {
         "ItemID": "5a78832ec5856700155a6ca3",
         "Name": "mag_870_remington_magazie_extension_12g_10",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -7,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -498,7 +510,7 @@
     "625ff3046d721f05d93bf2ee": {
         "ItemID": "625ff3046d721f05d93bf2ee",
         "Name": "mag_m3_benelli_magazine_extension_12g_11",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -8,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -518,7 +530,7 @@
     "625ff31daaaa8c1130599f64": {
         "ItemID": "625ff31daaaa8c1130599f64",
         "Name": "mag_m3_benelli_magazine_extension_12g_13",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -10,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,
@@ -538,7 +550,7 @@
     "5f647d9f8499b57dc40ddb93": {
         "ItemID": "5f647d9f8499b57dc40ddb93",
         "Name": "mag_ks23_toz_ks23_std_23x75_3",
-        "ModType": "",
+        "ModType": "shotTube",
         "ReloadSpeed": -5,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0,

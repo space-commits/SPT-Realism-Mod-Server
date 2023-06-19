@@ -206,7 +206,7 @@ class Main {
                                 }
                                 this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
                                 this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
-                                if (modConfig.med_changes == false) {
+                                if (modConfig.med_changes == false && modConfig.revert_hp == true) {
                                     utils.removeCustomItems(pmcData);
                                     pmcData.Health.Hydration.Maximum = player.defaultHydration;
                                     pmcData.Health.Energy.Maximum = player.defaultEnergy;
@@ -592,7 +592,7 @@ class Main {
         if (fs.existsSync(realismdll)) {
             utils_1.ConfigChecker.dllIsPresent = true;
             if (modConfig.recoil_attachment_overhaul == false) {
-                logger.error("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, plugin will disable itself.");
+                logger.error("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
             }
         }
         else {

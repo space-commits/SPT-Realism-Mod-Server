@@ -310,7 +310,7 @@
             }
         },
         "StimulatorBuffs": "Buffs_salewa",
-        "MaxHpResource": 8,
+        "MaxHpResource": 10,
         "medUseTime": 12,
         "hpResourceRate": 0
     },
@@ -352,7 +352,7 @@
                 "delay": 10,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 3
+                "cost": 2
             }
         },
         "StimulatorBuffs": "Buffs_AFAK",
@@ -378,7 +378,7 @@
                 "delay": 10,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 3
+                "cost": 2
             }
         },
         "StimulatorBuffs": "Buffs_grizzly",
