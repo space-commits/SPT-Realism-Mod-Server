@@ -153,6 +153,9 @@ class BotTierTracker {
         if (botType === "bosstagilla") {
             return BotTierTracker.tagillaTier;
         }
+        if (botType === "bosssanitar") {
+            return BotTierTracker.sanitarTier;
+        }
         return 0;
     }
 }
@@ -163,3 +166,4 @@ BotTierTracker.raiderTier = 1;
 BotTierTracker.goonsTier = 1;
 BotTierTracker.killaTier = 1;
 BotTierTracker.tagillaTier = 1;
+BotTierTracker.sanitarTier = 1;

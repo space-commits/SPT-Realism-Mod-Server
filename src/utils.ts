@@ -171,7 +171,7 @@ export class BotTierTracker {
     static goonsTier: number = 1;
     static killaTier: number = 1;
     static tagillaTier: number = 1;
-
+    static sanitarTier: number = 1;
 
     public getTier(botType: string): number {
         if (botType === "assault") {
@@ -191,6 +191,9 @@ export class BotTierTracker {
         }
         if (botType === "bosstagilla") {
             return BotTierTracker.tagillaTier;
+        }
+        if (botType === "bosssanitar") {
+            return BotTierTracker.sanitarTier;
         }
         return 0;
     }

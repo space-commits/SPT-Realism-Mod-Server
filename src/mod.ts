@@ -874,36 +874,48 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         this.setBotTier(pmcData, "goons", bots, helper);
         this.setBotTier(pmcData, "killa", bots, helper);
         this.setBotTier(pmcData, "tagilla", bots, helper);
+        this.setBotTier(pmcData, "sanitar", bots, helper);
     }
 
     private setBotTier(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
+            tier = utils.probabilityWeighter(tierArray, [100, 0 ,0]);
         }
         if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
+            tier = utils.probabilityWeighter(tierArray, [80, 20, 0]);
         }
         if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
+            tier = utils.probabilityWeighter(tierArray, [70, 20, 10]);
         }
         if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
+            tier = utils.probabilityWeighter(tierArray, [50, 40, 10]);
         }
         if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
+            tier = utils.probabilityWeighter(tierArray, [40, 40, 20]);
         }
         if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
+            tier = utils.probabilityWeighter(tierArray, [30, 40, 30]);
         }
         if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
+            tier = utils.probabilityWeighter(tierArray, [20, 30, 50]);
         }
         if (pmcData.Info.Level >= 35) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+            tier = utils.probabilityWeighter(tierArray, [10, 30, 60]);
         }
 
+        if (type === "sanitar") {
+            if (tier == 1) {
+                bots.sanitarLoad1();
+            }
+            if (tier == 2) {
+                bots.sanitarLoad3();
+            }
+            if (tier == 3) {
+                bots.sanitarLoad3();
+            }
+        }
         if (type === "tagilla") {
             if (tier == 1) {
                 bots.tagillaLoad1();
@@ -912,9 +924,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 bots.tagillaLoad2();
             }
             if (tier == 3) {
-                bots.tagillaLoad2();
-            }
-            if (tier == 4) {
                 bots.tagillaLoad3();
             }
         }
@@ -926,9 +935,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 bots.killaLoad2();
             }
             if (tier == 3) {
-                bots.killaLoad2();
-            }
-            if (tier == 4) {
                 bots.killaLoad3();
             }
         }
@@ -940,9 +946,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 bots.goonsLoad2();
             }
             if (tier == 3) {
-                bots.goonsLoad2();
-            }
-            if (tier == 4) {
                 bots.goonsLoad3();
             }
         }
@@ -954,9 +957,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 bots.raiderLoad2();
             }
             if (tier == 3) {
-                bots.raiderLoad2();
-            }
-            if (tier == 4) {
                 bots.raiderLoad3();
             }
         }
@@ -968,9 +968,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 bots.rogueLoad2();
             }
             if (tier == 3) {
-                bots.rogueLoad2();
-            }
-            if (tier == 4) {
                 bots.rogueLoad3();
             }
         }
@@ -982,9 +979,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 bots.scavLoad2();
             }
             if (tier == 3) {
-                bots.scavLoad3();
-            }
-            if (tier == 4) {
                 bots.scavLoad3();
             }
         }

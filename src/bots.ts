@@ -18,6 +18,8 @@ const bigpipeLO = require("../db/bots/loadouts/bosses/goons/bigpipeLO.json");
 const birdeyeLO = require("../db/bots/loadouts/bosses/goons/birdeyeLO.json");
 const killaLO = require("../db/bots/loadouts/bosses/killaLO.json");
 const tagillaLO = require("../db/bots/loadouts/bosses/tagillaLO.json");
+const saniLO = require("../db/bots/loadouts/bosses/sanitar/sanitarLO.json");
+const saniFollowerLO = require("../db/bots/loadouts/bosses/sanitar/sanitarfollowerLO.json");
 const scavLootLimitCat = require("../db/bots/loadouts/scavs/scavLootLimitCat.json");
 const PMCLootLimitCat = require("../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
 const botHealth = require("../db/bots/botHealth.json");
@@ -45,6 +47,8 @@ export class BotLoader {
     killaBase = this.botDB["bosskilla"];
     tagillaBase = this.botDB["bosstagilla"];
     reshallaBase = this.botDB["bossbully"];
+    saniBase = this.botDB["bosssanitar"];
+    saniFollowerBase = this.botDB["followersanitar"];
 
     botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
     botConfPMC = this.botConf.pmc;
@@ -259,6 +263,7 @@ export class BotLoader {
             this.goonsLoad1();
             this.killaLoad1();
             this.tagillaLoad1();
+            this.sanitarLoad1();
             this.logger.warning("Tier 1 Test Selected");
         }
 
@@ -270,6 +275,7 @@ export class BotLoader {
             this.goonsLoad2();
             this.killaLoad2();
             this.tagillaLoad2();
+            this.sanitarLoad2();
             this.logger.warning("Tier 2 Test Selected");
         }
 
@@ -281,6 +287,7 @@ export class BotLoader {
             this.goonsLoad3();
             this.killaLoad3();
             this.tagillaLoad3();
+            this.sanitarLoad3();
             this.logger.warning("Tier 3 Test Selected");
         }
 
@@ -292,6 +299,7 @@ export class BotLoader {
             this.goonsLoad3();
             this.killaLoad3();
             this.tagillaLoad3();
+            this.sanitarLoad3();
             this.logger.warning("Tier 4 Test Selected");
         }
 
@@ -2071,11 +2079,14 @@ export class BotLoader {
             this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 0;
             this.tagillaBase.inventory.equipment.FaceCover["60a7ad3a0c5cb24b0134664a"] = 0;
             this.tagillaBase.chances.equipment.FaceCover = 0;
+            this.tagillaBase.chances.equipment.Headwear = 100;
         } else {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 0;
             this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 1;
             this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 1;
             this.tagillaBase.inventory.equipment.FaceCover["60a7ad3a0c5cb24b0134664a"] = 1;
+            this.tagillaBase.chances.equipment.FaceCover = 100;
+            this.tagillaBase.chances.equipment.Headwear = 100;
         }
 
         if (RaidInfoTracker.mapName === "factory4_night") {
@@ -2174,12 +2185,132 @@ export class BotLoader {
             this.logger.info("tagillaLoad3 loaded");
         }
     }
+    
+    public sanitarLoad1() {
+        this.saniBase.inventory.Ammo = saniLO.sanitarLO1.inventory.Ammo;
+        this.saniBase.inventory.equipment = saniLO.sanitarLO1.inventory.equipment;
+        this.saniBase.inventory.items = saniLO.sanitarLO1.inventory.items;
+        this.saniBase.inventory.mods = saniLO.sanitarLO1.inventory.mods;
+        this.saniBase.chances = saniLO.sanitarLO1.chances;
+        this.saniBase.generation = saniLO.sanitarLO1.generation;
+
+        this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO1.inventory.Ammo;
+        this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO1.inventory.equipment;
+        this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO1.inventory.items;
+        this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO1.inventory.mods;
+        this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO1.chances;
+        this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO1.generation;
+
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 60;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 60;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 60;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 60;
+        }
+        else {
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 10;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 10;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 10;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 10;
+            if (RaidInfoTracker.mapType === "cqb") {
+                this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
+                this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 90;
+                this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 90;
+                this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 90;
+            }
+        }
+
+        BotTierTracker.sanitarTier = 1;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("saintarLoad1 loaded");
+        }
+    }
+    public sanitarLoad2() {
+        this.saniBase.inventory.Ammo = saniLO.sanitarLO2.inventory.Ammo;
+        this.saniBase.inventory.equipment = saniLO.sanitarLO2.inventory.equipment;
+        this.saniBase.inventory.items = saniLO.sanitarLO2.inventory.items;
+        this.saniBase.inventory.mods = saniLO.sanitarLO2.inventory.mods;
+        this.saniBase.chances = saniLO.sanitarLO2.chances;
+        this.saniBase.generation = saniLO.sanitarLO2.generation;
+
+        this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO2.inventory.Ammo;
+        this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO2.inventory.equipment;
+        this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO2.inventory.items;
+        this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO2.inventory.mods;
+        this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO2.chances;
+        this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO2.generation;
+
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 60;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 60;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 60;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 60;
+        }
+        else {
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 10;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 10;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 10;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 10;
+            if (RaidInfoTracker.mapType === "cqb") {
+                this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
+                this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 90;
+                this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 90;
+                this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 90;
+            }
+        }
+
+        BotTierTracker.sanitarTier = 2;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("saintarLoad2 loaded");
+        }
+    }
+
+    public sanitarLoad3() {
+        this.saniBase.inventory.Ammo = saniLO.sanitarLO3.inventory.Ammo;
+        this.saniBase.inventory.equipment = saniLO.sanitarLO3.inventory.equipment;
+        this.saniBase.inventory.items = saniLO.sanitarLO3.inventory.items;
+        this.saniBase.inventory.mods = saniLO.sanitarLO3.inventory.mods;
+        this.saniBase.chances = saniLO.sanitarLO3.chances;
+        this.saniBase.generation = saniLO.sanitarLO3.generation;
+
+        this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO3.inventory.Ammo;
+        this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO3.inventory.equipment;
+        this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO3.inventory.items;
+        this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO3.inventory.mods;
+        this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO3.chances;
+        this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO3.generation;
+
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 60;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 60;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 60;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 60;
+        }
+        else {
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 10;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 10;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 10;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 10;
+            if (RaidInfoTracker.mapType === "cqb") {
+                this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
+                this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 90;
+                this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 90;
+                this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 90;
+            }
+        }
+
+        BotTierTracker.sanitarTier = 3;
+        if (this.modConf.logEverything == true) {
+            this.logger.info("sanitarLoad3 loaded");
+        }
+    }
 
     public forceBossItems() {
 
         this.tagillaBase.inventory.equipment.Headwear = { "60a7acf20c5cb24b01346648": 1 }
         this.tagillaBase.inventory.equipment.FaceCover = { "60a7ad2a2198820d95707a2e": 1, "60a7ad3a0c5cb24b0134664a": 1 }
         this.tagillaBase.chances.equipment.FaceCover = 100;
+        this.tagillaBase.chances.equipment.Headwear = 100;
 
         this.bigpipeBase.inventory.equipment.Headwear = { "628e4dd1f477aa12234918aa": 1 }
         this.bigpipeBase.inventory.equipment.FaceCover = { "62a61bbf8ec41a51b34758d2": 1 }

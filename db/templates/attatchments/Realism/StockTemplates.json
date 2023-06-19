@@ -4329,7 +4329,7 @@
         "Dispersion": -7,
         "CameraRecoil": -16,
         "AimSpeed": 0,
-        "Ergonomics": 18,
+        "Ergonomics": 20,
         "Accuracy": -30,
         "HasShoulderContact": true,
         "BlocksFolding": false,
