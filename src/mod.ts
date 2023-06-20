@@ -41,7 +41,7 @@ import { ITrader, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrade
 import { TraderPurchasePersisterService } from "@spt-aki/services/TraderPurchasePersisterService";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";;
 import { BotHelper } from "@spt-aki/helpers/BotHelper";
-import { IBotBase, Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
+import { IBotBase, Inventory, Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
 import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
@@ -55,43 +55,45 @@ import { IPostAkiLoadModAsync } from "@spt-aki/models/external/IPostAkiLoadModAs
 import { LootItem } from "@spt-aki/models/spt/services/LootItem";
 import { LocationController } from "@spt-aki/controllers/LocationController";
 
-import { Ammo } from "./ammo";
-import { Armor } from "./armor";
-import { AttatchmentBase as AttachmentBase } from "./attatchment_base";
-import { AttatchmentStats as AttachmentStats } from "./attatchment_stats";
-import { FleamarketConfig, TieredFlea, FleamarketGlobal } from "./fleamarket";
-import { ConfigChecker, EventTracker, Utils, ProfileTracker, RaidInfoTracker } from "./utils"
-import { Arrays } from "./arrays"
-import { Meds } from "./meds";
-import { Player } from "./player"
-import { WeaponsGlobals } from "./weapons_globals"
-import { BotLoader } from "./bots";
-import { BotEquipGenHelper, BotGen, BotGenHelper, BotWepGen, GenBotLvl } from "./bot_gen";
-import { BotLooGen } from "./bot_loot_serv";
-import { _Items } from "./items";
-import { JsonGen } from "./code_gen";
-import { Quests } from "./quests";
-import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders";
-import { AirdropLootgen, Airdrops } from "./airdrops";
-import { Spawns } from "./maps";
-import { Gear } from "./gear";
-import { SeasonalEventsHandler } from "./seasonalevents";
-import { ItemCloning } from "./item_cloning";
+import { Ammo } from "./ballistics/ammo";
+import { Armor } from "./ballistics/armor";
+import { AttatchmentBase as AttachmentBase } from "./weapons/attatchment_base";
+import { FleamarketConfig, TieredFlea, FleamarketGlobal } from "./traders/fleamarket";
+import { ConfigChecker, EventTracker, Utils, ProfileTracker, RaidInfoTracker } from "./utils/utils"
+import { Arrays } from "./utils/arrays"
+import { Meds } from "./items/meds";
+import { Player } from "./player/player"
+import { WeaponsGlobals } from "./weapons/weapons_globals"
+import { BotLoader } from "./bots/bots";
+import { BotEquipGenHelper, BotGen, BotGenHelper, BotWepGen, GenBotLvl } from "./bots/bot_gen";
+import { BotLooGen } from "./bots/bot_loot_serv";
+import { _Items } from "./items/items";
+import { JsonGen } from "./json/code_gen";
+import { Quests } from "./traders/quests";
+import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
+import { AirdropLootgen, Airdrops } from "./misc/airdrops";
+import { Spawns } from "./bots/maps";
+import { Gear } from "./items/gear";
+import { SeasonalEventsHandler } from "./misc/seasonalevents";
+import { ItemCloning } from "./items/item_cloning";
 import * as _path from 'path';
-import { DescriptionGen } from "./description_gen";
-import { JsonHandler } from "./json-handler";
+import { DescriptionGen } from "./json/description_gen";
+import { JsonHandler } from "./json/json-handler";
 import { info } from "console";
 import { url } from "inspector";
 import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
 import { LootGenerator } from "@spt-aki/generators/LootGenerator";
-import { OldAmmo } from "./ammo_old";
-import { OldArmor } from "./armor_old";
+import { OldAmmo } from "./ballistics/ammo_old";
+import { OldArmor } from "./ballistics/armor_old";
 import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
 import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
 import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
 import { BotGenerator } from "@spt-aki/generators/BotGenerator";
-import { ParentClasses } from "./enums";
+import { ParentClasses } from "./utils/enums";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
+import { ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
+import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponResult";
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -180,12 +182,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                     return botGen.myPrepareAndGenerateBots(sessionId, botGenerationDetails);
                 }
             }, { frequency: "Always" });
-
-            // container.afterResolution("BotWeaponGenerator", (_t, result: BotWeaponGenerator) => {
-            //     result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number): GenerateWeaponResult => {
-            //         return _botWepGen.myGenerateWeaponByTpl(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel);
-            //     }
-            // }, { frequency: "Always" });
 
             // container.afterResolution("BotEquipmentModGenerator", (_t, result: BotEquipmentModGenerator) => {
             //     result.generateModsForWeapon = (sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string, botLevel: number, modLimits: BotModLimits, botEquipmentRole: string): Item[] => {
@@ -617,7 +613,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const oldAmmo = new OldAmmo(logger, tables, modConfig);
         const oldArmor = new OldArmor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig);
-        const attachStats = new AttachmentStats(logger, tables, modConfig, arrays);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const items = new _Items(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
@@ -725,7 +720,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         if (modConfig.recoil_attachment_overhaul && ConfigChecker.dllIsPresent == true) {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
-            attachStats.loadAttStats();
             ammo.grenadeTweaks();
         }
 

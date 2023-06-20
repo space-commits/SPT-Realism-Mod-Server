@@ -27,32 +27,31 @@ exports.Main = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
 ;
-const ammo_1 = require("./ammo");
-const armor_1 = require("./armor");
-const attatchment_base_1 = require("./attatchment_base");
-const attatchment_stats_1 = require("./attatchment_stats");
-const fleamarket_1 = require("./fleamarket");
-const utils_1 = require("./utils");
-const arrays_1 = require("./arrays");
-const meds_1 = require("./meds");
-const player_1 = require("./player");
-const weapons_globals_1 = require("./weapons_globals");
-const bots_1 = require("./bots");
-const bot_gen_1 = require("./bot_gen");
-const items_1 = require("./items");
-const code_gen_1 = require("./code_gen");
-const quests_1 = require("./quests");
-const traders_1 = require("./traders");
-const airdrops_1 = require("./airdrops");
-const maps_1 = require("./maps");
-const gear_1 = require("./gear");
-const seasonalevents_1 = require("./seasonalevents");
-const item_cloning_1 = require("./item_cloning");
+const ammo_1 = require("./ballistics/ammo");
+const armor_1 = require("./ballistics/armor");
+const attatchment_base_1 = require("./weapons/attatchment_base");
+const fleamarket_1 = require("./traders/fleamarket");
+const utils_1 = require("./utils/utils");
+const arrays_1 = require("./utils/arrays");
+const meds_1 = require("./items/meds");
+const player_1 = require("./player/player");
+const weapons_globals_1 = require("./weapons/weapons_globals");
+const bots_1 = require("./bots/bots");
+const bot_gen_1 = require("./bots/bot_gen");
+const items_1 = require("./items/items");
+const code_gen_1 = require("./json/code_gen");
+const quests_1 = require("./traders/quests");
+const traders_1 = require("./traders/traders");
+const airdrops_1 = require("./misc/airdrops");
+const maps_1 = require("./bots/maps");
+const gear_1 = require("./items/gear");
+const seasonalevents_1 = require("./misc/seasonalevents");
+const item_cloning_1 = require("./items/item_cloning");
 const _path = __importStar(require("path"));
-const description_gen_1 = require("./description_gen");
-const json_handler_1 = require("./json-handler");
-const ammo_old_1 = require("./ammo_old");
-const armor_old_1 = require("./armor_old");
+const description_gen_1 = require("./json/description_gen");
+const json_handler_1 = require("./json/json-handler");
+const ammo_old_1 = require("./ballistics/ammo_old");
+const armor_old_1 = require("./ballistics/armor_old");
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -120,11 +119,6 @@ class Main {
                     return botGen.myPrepareAndGenerateBots(sessionId, botGenerationDetails);
                 };
             }, { frequency: "Always" });
-            // container.afterResolution("BotWeaponGenerator", (_t, result: BotWeaponGenerator) => {
-            //     result.generateWeaponByTpl = (sessionId: string, weaponTpl: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number): GenerateWeaponResult => {
-            //         return _botWepGen.myGenerateWeaponByTpl(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel);
-            //     }
-            // }, { frequency: "Always" });
             // container.afterResolution("BotEquipmentModGenerator", (_t, result: BotEquipmentModGenerator) => {
             //     result.generateModsForWeapon = (sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string, botLevel: number, modLimits: BotModLimits, botEquipmentRole: string): Item[] => {
             //         return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
@@ -470,7 +464,6 @@ class Main {
         const oldAmmo = new ammo_old_1.OldAmmo(logger, tables, modConfig);
         const oldArmor = new armor_old_1.OldArmor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig);
-        const attachStats = new attatchment_stats_1.AttatchmentStats(logger, tables, modConfig, arrays);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
@@ -554,7 +547,6 @@ class Main {
         if (modConfig.recoil_attachment_overhaul && utils_1.ConfigChecker.dllIsPresent == true) {
             ammo.loadAmmoFirerateChanges();
             quests.fixMechancicQuests();
-            attachStats.loadAttStats();
             ammo.grenadeTweaks();
         }
         if (modConfig.headset_changes) {
