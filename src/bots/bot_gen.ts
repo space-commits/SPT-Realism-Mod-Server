@@ -593,7 +593,7 @@ export class BotWepGen extends BotWeaponGenerator {
         var weaponPresets = [];
         try {
             let preset;
-            let presetFile = require(`../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
+            let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
             for (let presetObj in presetFile) {
                 if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                     let presetTier = presetFile[presetObj]._name.slice(0, 1);
