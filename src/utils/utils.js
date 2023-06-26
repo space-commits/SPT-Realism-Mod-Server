@@ -153,7 +153,7 @@ class BotTierTracker {
         if (botType === "bosstagilla") {
             return BotTierTracker.tagillaTier;
         }
-        if (botType === "bosssanitar") {
+        if (botType === "bosssanitar" || botType === "followersanitar") {
             return BotTierTracker.sanitarTier;
         }
         return 0;

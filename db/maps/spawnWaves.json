@@ -420,7 +420,7 @@
             "slots_max": 1,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 300
         },
         {
             "BotPreset": "hard",
@@ -432,7 +432,7 @@
             "slots_max": 6,
             "slots_min": 0,
             "time_max": 120,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -444,7 +444,7 @@
             "slots_max": 6,
             "slots_min": 0,
             "time_max": 120,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -456,7 +456,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -468,7 +468,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -480,7 +480,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -492,7 +492,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -504,7 +504,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 120,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -516,7 +516,7 @@
             "slots_max": 4,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -528,7 +528,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -540,7 +540,7 @@
             "slots_max": 4,
             "slots_min": 0,
             "time_max": 120,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -552,7 +552,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -564,7 +564,7 @@
             "slots_max": 4,
             "slots_min": 0,
             "time_max": 120,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -576,7 +576,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 120,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -588,7 +588,7 @@
             "slots_max": 4,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -600,7 +600,7 @@
             "slots_max": 5,
             "slots_min": 0,
             "time_max": 120,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -612,7 +612,7 @@
             "slots_max": 2,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",
@@ -624,7 +624,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "normal",
@@ -636,7 +636,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 300,
-            "time_min": 1
+            "time_min": 120
         },
         {
             "BotPreset": "hard",

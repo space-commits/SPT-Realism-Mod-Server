@@ -187,6 +187,20 @@
                 "minDelta": 5,
                 "minLimitPercent": 15
             }
+        },
+        "arenafighterevent": {
+            "armor": {
+                "maxDelta": 10,
+                "minDelta": 0,
+                "minLimitPercent": 15
+            },
+            "weapon": {
+                "lowestMax": 80,
+                "highestMax": 100,
+                "maxDelta": 10,
+                "minDelta": 0,
+                "minLimitPercent": 15
+            }
         }
     },
     "durability2": {
@@ -345,6 +359,20 @@
                 "minDelta": 5,
                 "minLimitPercent": 15
             }
+        },
+        "arenafighterevent": {
+            "armor": {
+                "maxDelta": 10,
+                "minDelta": 0,
+                "minLimitPercent": 15
+            },
+            "weapon": {
+                "lowestMax": 80,
+                "highestMax": 100,
+                "maxDelta": 10,
+                "minDelta": 0,
+                "minLimitPercent": 15
+            }
         }
     },
     "durability3": {
@@ -501,6 +529,20 @@
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 5,
+                "minLimitPercent": 15
+            }
+        },
+        "arenafighterevent": {
+            "armor": {
+                "maxDelta": 10,
+                "minDelta": 0,
+                "minLimitPercent": 15
+            },
+            "weapon": {
+                "lowestMax": 80,
+                "highestMax": 100,
+                "maxDelta": 10,
+                "minDelta": 0,
                 "minLimitPercent": 15
             }
         }

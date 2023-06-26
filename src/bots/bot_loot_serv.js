@@ -61,7 +61,7 @@ class BotLooGen extends BotLootGenerator_1.BotLootGenerator {
         var grenadeTally = 0;
         const bagLootItemCount = this.getRandomisedCount(looseLootMin, looseLootMax, nValue);
         lootTally += bagLootItemCount;
-        const pocketLootCount = lootTally >= looseLootMax ? 0 : this.getRandomisedCount(1, 4, nValue);
+        const pocketLootCount = lootTally >= looseLootMax ? 0 : this.getRandomisedCount(looseLootMin, looseLootMax, nValue);
         lootTally += pocketLootCount;
         const vestLootCount = lootTally >= looseLootMax ? 0 : this.getRandomisedCount(Math.round(looseLootMin / 2), Math.round(looseLootMax / 2), nValue); // Count is half what loose loot min/max is
         lootTally += vestLootCount;
@@ -78,11 +78,11 @@ class BotLooGen extends BotLootGenerator_1.BotLootGenerator {
         drugTally += pocketDrugItemCount;
         const pocketStimItemCount = stimTally >= itemCounts.stims.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.stims.min / 2)), Math.max(1, Math.round(itemCounts.stims.max / 2)), 3);
         stimTally += pocketStimItemCount;
-        const bagHealingItemCount = healingTally >= itemCounts.healing.max ? 0 : this.getRandomisedCount(0, 1, 3);
+        const bagHealingItemCount = healingTally >= itemCounts.healing.max ? 0 : this.getRandomisedCount(itemCounts.healing.min, itemCounts.healing.max, 3);
         healingTally += bagHealingItemCount;
-        const bagDrugItemCount = drugTally >= itemCounts.drugs.max ? 0 : this.getRandomisedCount(0, 1, 3);
+        const bagDrugItemCount = drugTally >= itemCounts.drugs.max ? 0 : this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3);
         drugTally += bagDrugItemCount;
-        const bagStimItemCount = stimTally >= itemCounts.stims.max ? 0 : this.getRandomisedCount(0, 1, 3);
+        const bagStimItemCount = stimTally >= itemCounts.stims.max ? 0 : this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
         stimTally += bagStimItemCount;
         const vestGrenadeCount = this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
         grenadeTally += vestGrenadeCount;

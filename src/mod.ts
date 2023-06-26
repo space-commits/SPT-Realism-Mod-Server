@@ -182,30 +182,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                     return botGen.myPrepareAndGenerateBots(sessionId, botGenerationDetails);
                 }
             }, { frequency: "Always" });
-
-            // container.afterResolution("BotEquipmentModGenerator", (_t, result: BotEquipmentModGenerator) => {
-            //     result.generateModsForWeapon = (sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string, botLevel: number, modLimits: BotModLimits, botEquipmentRole: string): Item[] => {
-            //         return _botModGen.botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
-            //     }
-            // }, { frequency: "Always" });
-
-            // container.afterResolution("BotLootGenerator", (_t, result: BotLootGenerator) => {
-            //     result.generateLoot = (sessionId: string, botJsonTemplate: IBotType, isPmc: boolean, botRole: string, botInventory: PmcInventory, botLevel: number): void => {
-            //         return botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
-            //     }
-            // }, { frequency: "Always" });
-
-            // container.afterResolution("BotLevelGenerator", (_t, result: BotLevelGenerator) => {
-            //     result.generateBotLevel = (levelDetails: MinMax, botGenerationDetails: BotGenerationDetails, bot: IBotBase): IRandomisedBotLevelResult => {
-            //         return genBotLvl.genBotLvl(levelDetails, botGenerationDetails, bot);
-            //     }
-            // }, { frequency: "Always" });
-
-            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
-            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: Upd } => {
-            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
-            //     }
-            // }, { frequency: "Always" });
         }
 
         container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
@@ -612,7 +588,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const armor = new Armor(logger, tables, modConfig);
         const oldAmmo = new OldAmmo(logger, tables, modConfig);
         const oldArmor = new OldArmor(logger, tables, modConfig);
-        const attachBase = new AttachmentBase(logger, tables, arrays, modConfig);
+        const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const items = new _Items(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);

@@ -112,11 +112,6 @@
                 "Pockets": [
                     "5751a89d24597722aa0e8db0",
                     "5755383e24597772cb798966",
-                    "60098af40accd37ef2175f27",
-                    "5e831507ea0a7c419c2f9bd9",
-                    "5751a25924597722c463c472",
-                    "5e8488fa988a8701445df1e4",
-                    "590c678286f77426c9660122",
                     "544fb3f34bdc2d03748b456a",
                     "5ed515e03a40a50460332579",
                     "637b620db7afa97bfc3d7009",
@@ -157,7 +152,7 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 2,
+                    "max": 4,
                     "min": 1
                 },
                 "grenades": {
@@ -165,12 +160,12 @@
                     "min": 0
                 },
                 "healing": {
-                    "max": 2,
+                    "max": 6,
                     "min": 1
                 },
                 "looseLoot": {
-                    "max": 3,
-                    "min": 0
+                    "max": 4,
+                    "min": 1
                 },
                 "magazines": {
                     "max": 2,
@@ -181,7 +176,7 @@
                     "min": 1
                 },
                 "stims": {
-                    "max": 2,
+                    "max": 3,
                     "min": 0
                 }
             }
@@ -344,12 +339,6 @@
                 "Pockets": [
                     "5751a89d24597722aa0e8db0",
                     "5755383e24597772cb798966",
-                    "60098af40accd37ef2175f27",
-                    "5e831507ea0a7c419c2f9bd9",
-                    "5751a25924597722c463c472",
-                    "5e8488fa988a8701445df1e4",
-                    "590c678286f77426c9660122",
-                    "60098ad7c2240c0fe85c570a",
                     "544fb3f34bdc2d03748b456a",
                     "5ed515e03a40a50460332579",
                     "637b620db7afa97bfc3d7009",
@@ -397,7 +386,7 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 3,
+                    "max": 4,
                     "min": 1
                 },
                 "grenades": {
@@ -405,12 +394,12 @@
                     "min": 0
                 },
                 "healing": {
-                    "max": 3,
-                    "min": 1
+                    "max": 7,
+                    "min": 2
                 },
                 "looseLoot": {
-                    "max": 3,
-                    "min": 0
+                    "max": 5,
+                    "min": 1
                 },
                 "magazines": {
                     "max": 2,
@@ -421,7 +410,7 @@
                     "min": 1
                 },
                 "stims": {
-                    "max": 2,
+                    "max": 3,
                     "min": 1
                 }
             }
@@ -435,7 +424,7 @@
                 "Eyewear": 0,
                 "FaceCover": 15,
                 "FirstPrimaryWeapon": 100,
-                "Headwear": 25,
+                "Headwear": 15,
                 "Holster": 0,
                 "Pockets": 100,
                 "Scabbard": 0,
@@ -588,12 +577,6 @@
                 "Pockets": [
                     "5751a89d24597722aa0e8db0",
                     "5755383e24597772cb798966",
-                    "60098af40accd37ef2175f27",
-                    "5e831507ea0a7c419c2f9bd9",
-                    "5751a25924597722c463c472",
-                    "5e8488fa988a8701445df1e4",
-                    "590c678286f77426c9660122",
-                    "60098ad7c2240c0fe85c570a",
                     "544fb3f34bdc2d03748b456a",
                     "5ed515e03a40a50460332579",
                     "637b620db7afa97bfc3d7009",
@@ -650,23 +633,23 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 4,
-                    "min": 1
+                    "max": 5,
+                    "min": 2
                 },
                 "grenades": {
-                    "max": 2,
+                    "max": 1,
                     "min": 0
                 },
                 "healing": {
-                    "max": 4,
-                    "min": 1
+                    "max": 8,
+                    "min": 2
                 },
                 "looseLoot": {
-                    "max": 3,
-                    "min": 0
+                    "max": 5,
+                    "min": 2
                 },
                 "magazines": {
-                    "max": 3,
+                    "max": 2,
                     "min": 1
                 },
                 "specialItems": {
@@ -688,7 +671,7 @@
                 "Eyewear": 0,
                 "FaceCover": 25,
                 "FirstPrimaryWeapon": 100,
-                "Headwear": 0,
+                "Headwear": 25,
                 "Holster": 0,
                 "Pockets": 100,
                 "Scabbard": 0,

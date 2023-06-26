@@ -74,6 +74,8 @@ class BotLoader {
         this.botConf.equipment["followerbirdeye"] = botEquipmentTempalte;
         this.botConf.equipment["bosskilla"] = botEquipmentTempalte;
         this.botConf.equipment["bosstagilla"] = botEquipmentTempalte;
+        this.botConf.equipment["bosssanitar"] = botEquipmentTempalte;
+        this.botConf.equipment["followersanitar"] = botEquipmentTempalte;
         this.botConf.equipment["pmc"].weaponModLimits.scopeLimit = 100;
         this.botConf.equipment["pmc"].weaponModLimits.lightLaserLimit = 2;
         this.botConf.equipment["pmc"].randomisation = [];
@@ -526,6 +528,9 @@ class BotLoader {
                 this.botConf.equipment["assault"].laserIsActiveChancePercent = 70;
             }
         }
+        if (this.modConf.dynamic_loot_scavs === true) {
+            this.scavBase.inventory.items = scavLO.scavLO1.inventory.items.dynamic_looting;
+        }
         utils_1.BotTierTracker.scavTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("scavLoad1 loaded");
@@ -552,6 +557,9 @@ class BotLoader {
                 this.botConf.equipment["assault"].laserIsActiveChancePercent = 80;
             }
         }
+        if (this.modConf.dynamic_loot_scavs === true) {
+            this.scavBase.inventory.items = scavLO.scavLO2.inventory.items.dynamic_looting;
+        }
         utils_1.BotTierTracker.scavTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("scavLoad2 loaded");
@@ -577,6 +585,9 @@ class BotLoader {
                 this.botConf.equipment["assault"].lightIsActiveDayChancePercent = 90;
                 this.botConf.equipment["assault"].laserIsActiveChancePercent = 90;
             }
+        }
+        if (this.modConf.dynamic_loot_scavs === true) {
+            this.scavBase.inventory.items = scavLO.scavLO3.inventory.items.dynamic_looting;
         }
         utils_1.BotTierTracker.scavTier = 3;
         if (this.modConf.logEverything == true) {
@@ -622,7 +633,7 @@ class BotLoader {
                 botJsonTemplate.chances.mods.mod_equipment = 10;
             }
         }
-        if (this.modConf.dynamic_loot_bots === true) {
+        if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.dynamic_looting;
         }
         if (this.modConf.logEverything == true) {
@@ -677,7 +688,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.dynamic_loot_bots === true) {
+        if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.dynamic_looting;
         }
         if (this.modConf.logEverything == true) {
@@ -733,7 +744,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.dynamic_loot_bots === true) {
+        if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.dynamic_looting;
         }
         if (this.modConf.logEverything == true) {
@@ -789,7 +800,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.dynamic_loot_bots === true) {
+        if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
         }
         if (this.modConf.logEverything == true) {
@@ -834,7 +845,7 @@ class BotLoader {
                 botJsonTemplate.chances.mods.mod_equipment = 20;
             }
         }
-        if (this.modConf.dynamic_loot_bots === true) {
+        if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO1.inventory.dynamic_looting;
         }
         if (this.modConf.logEverything == true) {
@@ -888,7 +899,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.dynamic_loot_bots === true) {
+        if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO2.inventory.dynamic_looting;
         }
         if (this.modConf.logEverything == true) {
@@ -943,7 +954,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConf.dynamic_loot_bots === true) {
+        if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO3.inventory.dynamic_looting;
         }
         if (this.modConf.logEverything == true) {
@@ -1006,7 +1017,7 @@ class BotLoader {
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
             }
         }
-        if (this.modConf.dynamic_loot_bots === true) {
+        if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
         }
         if (this.modConf.logEverything == true) {
@@ -1961,16 +1972,16 @@ class BotLoader {
         this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO1.chances;
         this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO1.generation;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 60;
-            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 60;
-            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 60;
-            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 60;
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 0;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 0;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 0;
         }
         else {
-            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 10;
-            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 10;
-            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 10;
-            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 10;
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 25;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 25;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 25;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 25;
             if (utils_1.RaidInfoTracker.mapType === "cqb") {
                 this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
                 this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 90;
@@ -1978,6 +1989,7 @@ class BotLoader {
                 this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 90;
             }
         }
+        this.botConf.equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
         utils_1.BotTierTracker.sanitarTier = 1;
         if (this.modConf.logEverything == true) {
             this.logger.info("saintarLoad1 loaded");
@@ -1997,16 +2009,16 @@ class BotLoader {
         this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO2.chances;
         this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO2.generation;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 60;
-            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 60;
-            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 60;
-            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 60;
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 0;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 0;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 0;
         }
         else {
-            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 10;
-            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 10;
-            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 10;
-            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 10;
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 25;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 25;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 25;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 25;
             if (utils_1.RaidInfoTracker.mapType === "cqb") {
                 this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
                 this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 90;
@@ -2014,6 +2026,7 @@ class BotLoader {
                 this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 90;
             }
         }
+        this.botConf.equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
         utils_1.BotTierTracker.sanitarTier = 2;
         if (this.modConf.logEverything == true) {
             this.logger.info("saintarLoad2 loaded");
@@ -2033,16 +2046,16 @@ class BotLoader {
         this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO3.chances;
         this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO3.generation;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 60;
-            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 60;
-            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 60;
-            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 60;
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 0;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 0;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 0;
         }
         else {
-            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 10;
-            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 10;
-            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 10;
-            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 10;
+            this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 25;
+            this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 25;
+            this.botConf.equipment["followersanitar"].lightIsActiveDayChancePercent = 25;
+            this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 25;
             if (utils_1.RaidInfoTracker.mapType === "cqb") {
                 this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
                 this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 90;
@@ -2050,6 +2063,7 @@ class BotLoader {
                 this.botConf.equipment["followersanitar"].laserIsActiveChancePercent = 90;
             }
         }
+        this.botConf.equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
         utils_1.BotTierTracker.sanitarTier = 3;
         if (this.modConf.logEverything == true) {
             this.logger.info("sanitarLoad3 loaded");

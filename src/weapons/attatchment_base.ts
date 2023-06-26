@@ -1,14 +1,99 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { Utils } from "src/utils/utils";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { Arrays } from "../utils/arrays";
 
 export class AttatchmentBase {
 
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private arrays: Arrays, private modConf) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private arrays: Arrays, private modConf, private utils: Utils) { }
 
     private itemDB = this.tables.templates.items;
 
     public loadAttCompat() {
+
+        const stocksArr = [
+            "5fc2369685fd526b824a5713",
+            "606587d11246154cad35d635",
+            "602e620f9b513876d4338d9a",
+            "5a9eb32da2750c00171b3f9c",
+            "5bfe86df0db834001b734685",
+            "55d4ae6c4bdc2d8b2f8b456e",
+            "5c87a07c2e2216001219d4a2",
+            "5bb20e70d4351e0035629f8f",
+            "5beec8c20db834001d2c465c",
+            "5fbbaa86f9986c4cff3fe5f6",
+            "5fce16961f152d4312622bc9",
+            "5ae30c9a5acfc408fb139a03",
+            "5d135e83d7ad1a21b83f42d8",
+            "5d135ecbd7ad1a21c176542e",
+            "56eabf3bd2720b75698b4569",
+            "58d2946386f774496974c37e",
+            "58d2946c86f7744e271174b5",
+            "58d2947686f774485c6a1ee5",
+            "58d2947e86f77447aa070d53",
+            "5d44069ca4b9361ebd26fc37",
+            "5d4406a8a4b9361e4f6eb8b7",
+            "5947c73886f7747701588af5",
+            "5c793fde2e221601da358614",
+            "5b39f8db5acfc40016387a1b",
+            "628a85ee6b1d481ff772e9d5"
+        ];
+
+        const buffertubes = [
+            "5649be884bdc2d79388b4577",
+            "5c0faeddd174af02a962601f",
+            "5c793fb92e221644f31bfb64",
+            "5c793fc42e221600114ca25d"
+        ];
+
+        const slots = [
+            "mod_stock_000",
+            "mod_stock_004",
+            "mod_stock_002",
+            "mod_stock_001",
+        ];
+
+        let stockSlot = {
+            "_name": "name",
+            "_id": "id",
+            "_parent": "parent",
+            "_props": {
+                "filters": [
+                    {
+                        "Shift": 0,
+                        "Filter": []
+                    }
+                ]
+            },
+            "_required": false,
+            "_mergeSlotWithChildren": true,
+            "_proto": "55d30c4c4bdc2db4468b457e"
+        };
+
+        for (let bf in buffertubes) {
+            this.itemDB[buffertubes[bf]]._props.Slots = [];
+            for (let slot in slots) {
+                let newStockSlot = { ...stockSlot };
+                newStockSlot._name = slots[slot];
+                newStockSlot._id = this.utils.genId();
+                newStockSlot._parent = buffertubes[bf];
+                newStockSlot._props.filters[0].Filter = stocksArr;
+                if (slots[slot] === "mod_stock_000") {
+                    newStockSlot._mergeSlotWithChildren = true;
+                }
+                else {
+                    newStockSlot._mergeSlotWithChildren = false;
+                }
+                this.itemDB[buffertubes[bf]]._props.Slots.push(newStockSlot);
+            }
+        }
+        for (let stock in stocksArr) {
+            this.itemDB[stocksArr[stock]]._props.ConflictingItems = stocksArr;
+        }
+
+
+
+
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._parent === "55818a104bdc2db9688b4569") {
@@ -30,7 +115,7 @@ export class AttatchmentBase {
                     }
                 }
             }
-            
+
             if (serverItem._parent === "55818a304bdc2db5418b457d") {
                 for (let slot in serverItem._props.Slots) {
                     if (serverItem._props.Slots[slot]._name === "mod_sight_rear") {
@@ -188,7 +273,7 @@ export class AttatchmentBase {
                     serverItem._props.Slots[3]._botRequired = serverItem._props.Slots[3]._required;
                     serverItem._props.Slots[3]._botRequired = true;
                 }
-                if(serverItem._id === "5a16b93dfcdbcbcae6687261"){
+                if (serverItem._id === "5a16b93dfcdbcbcae6687261") {
                     serverItem._props.Slots[0]._botRequired = serverItem._props.Slots[0]._required;
                     serverItem._props.Slots[0]._botRequired = true;
                 }
