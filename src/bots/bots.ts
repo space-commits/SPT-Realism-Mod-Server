@@ -56,6 +56,10 @@ export class BotLoader {
 
     public loadBots() {
 
+        if(this.modConf.dynamic_loot_pmcs == true){
+            this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
+        }
+
         const botEquipmentTempalte = {
             "lightIsActiveDayChancePercent": 50,
             "lightIsActiveNightChancePercent": 50,
@@ -610,7 +614,9 @@ export class BotLoader {
         }
 
         if (this.modConf.dynamic_loot_scavs === true) {
-            this.scavBase.inventory.items = scavLO.scavLO1.inventory.items.dynamic_looting;
+            this.scavBase.inventory.items = scavLO.scavLO1.inventory.dynamic_looting;
+            this.saniBase.generation.items.looseLoot.min = 0;
+            this.saniBase.generation.items.looseLoot.max = 1;
         }
 
         BotTierTracker.scavTier = 1;
@@ -643,7 +649,9 @@ export class BotLoader {
         }
 
         if (this.modConf.dynamic_loot_scavs === true) {
-            this.scavBase.inventory.items = scavLO.scavLO2.inventory.items.dynamic_looting;
+            this.scavBase.inventory.items = scavLO.scavLO2.inventory.dynamic_looting;
+            this.saniBase.generation.items.looseLoot.min = 0;
+            this.saniBase.generation.items.looseLoot.max = 2;
         }
 
         BotTierTracker.scavTier = 2;
@@ -676,7 +684,9 @@ export class BotLoader {
         }
 
         if (this.modConf.dynamic_loot_scavs === true) {
-            this.scavBase.inventory.items = scavLO.scavLO3.inventory.items.dynamic_looting;
+            this.scavBase.inventory.items = scavLO.scavLO3.inventory.dynamic_looting;
+            this.saniBase.generation.items.looseLoot.min = 0;
+            this.saniBase.generation.items.looseLoot.max = 3;
         }
 
         BotTierTracker.scavTier = 3;
@@ -726,6 +736,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.looseLoot.min = 0;
+            botJsonTemplate.generation.items.looseLoot.max = 1;
         }
 
         if (this.modConf.logEverything == true) {
@@ -785,6 +797,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.looseLoot.min = 0;
+            botJsonTemplate.generation.items.looseLoot.max = 2;
         }
 
         if (this.modConf.logEverything == true) {
@@ -844,6 +858,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.looseLoot.min = 0;
+            botJsonTemplate.generation.items.looseLoot.max = 2;
         }
 
         if (this.modConf.logEverything == true) {
@@ -905,6 +921,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.looseLoot.min = 0;
+            botJsonTemplate.generation.items.looseLoot.max = 3;
         }
 
         if (this.modConf.logEverything == true) {
@@ -954,6 +972,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO1.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.looseLoot.min = 0;
+            botJsonTemplate.generation.items.looseLoot.max = 1;
         }
 
         if (this.modConf.logEverything == true) {
@@ -1011,6 +1031,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO2.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.looseLoot.min = 0;
+            botJsonTemplate.generation.items.looseLoot.max = 2;
         }
 
         if (this.modConf.logEverything == true) {
@@ -1069,6 +1091,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO3.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.looseLoot.min = 0;
+            botJsonTemplate.generation.items.looseLoot.max = 2;
         }
 
         if (this.modConf.logEverything == true) {
@@ -1136,6 +1160,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.looseLoot.min = 0;
+            botJsonTemplate.generation.items.looseLoot.max = 3;
         }
 
         if (this.modConf.logEverything == true) {

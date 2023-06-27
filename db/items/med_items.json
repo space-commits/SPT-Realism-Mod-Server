@@ -43,7 +43,7 @@
         },
         "MaxHpResource": 260,
         "medUseTime": 1200,
-        "hpResourceRate": 0.001
+        "hpResourceRate": 200
     },
     "TIER2MEDKIT": {
         "effects_health": {},
@@ -69,7 +69,7 @@
         },
         "MaxHpResource": 380,
         "medUseTime": 1200,
-        "hpResourceRate": 0.001
+        "hpResourceRate": 200
     },
     "TIER3MEDKIT": {
         "effects_health": {},
@@ -95,7 +95,7 @@
         },
         "MaxHpResource": 510,
         "medUseTime": 1200,
-        "hpResourceRate": 0.001
+        "hpResourceRate": 200
     },
     "analgin": {
         "effects_health": {},
@@ -277,7 +277,7 @@
         },
         "StimulatorBuffs": "Buffs_AI-2",
         "MaxHpResource": 3,
-        "medUseTime": 6.5,
+        "medUseTime": 3.5,
         "hpResourceRate": 0
     },
     "CAR": {
@@ -291,7 +291,7 @@
         },
         "StimulatorBuffs": "",
         "MaxHpResource": 4,
-        "medUseTime": 12,
+        "medUseTime": 9,
         "hpResourceRate": 0
     },
     "salewa": {
@@ -311,7 +311,7 @@
         },
         "StimulatorBuffs": "Buffs_salewa",
         "MaxHpResource": 10,
-        "medUseTime": 12,
+        "medUseTime": 8,
         "hpResourceRate": 0
     },
     "IFAK": {
@@ -331,7 +331,7 @@
         },
         "StimulatorBuffs": "Buffs_IFAK",
         "MaxHpResource": 6,
-        "medUseTime": 8,
+        "medUseTime": 6,
         "hpResourceRate": 0
     },
     "AFAK": {
@@ -357,7 +357,7 @@
         },
         "StimulatorBuffs": "Buffs_AFAK",
         "MaxHpResource": 7,
-        "medUseTime": 9.5,
+        "medUseTime": 7.5,
         "hpResourceRate": 0
     },
     "grizzly": {
