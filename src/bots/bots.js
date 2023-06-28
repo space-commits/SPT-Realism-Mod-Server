@@ -51,6 +51,9 @@ class BotLoader {
         this.botConfPMC = this.botConf.pmc;
     }
     loadBots() {
+        if (this.modConf.dynamic_loot_pmcs == true) {
+            this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
+        }
         const botEquipmentTempalte = {
             "lightIsActiveDayChancePercent": 50,
             "lightIsActiveNightChancePercent": 50,
