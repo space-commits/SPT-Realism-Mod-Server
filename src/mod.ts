@@ -106,8 +106,7 @@ const modConfig = require("../config/config.json");
 var clientValidateCount = 0;
 
 export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiLoadModAsync {
-
-    private path: { resolve: (arg0: string) => any; };
+    private path;
     private modLoader: PreAkiModLoader;
 
     public preAkiLoad(container: DependencyContainer): void {

@@ -4,3 +4,4 @@ ProfileBackups/
 dist/
 src/*.js
 src/**/*.js
+mod.zip
