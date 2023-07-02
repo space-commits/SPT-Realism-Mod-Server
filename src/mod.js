@@ -47,7 +47,7 @@ const maps_1 = require("./bots/maps");
 const gear_1 = require("./items/gear");
 const seasonalevents_1 = require("./misc/seasonalevents");
 const item_cloning_1 = require("./items/item_cloning");
-const _path = __importStar(require("path"));
+const path = __importStar(require("path"));
 const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
 const ammo_old_1 = require("./ballistics/ammo_old");
@@ -382,14 +382,14 @@ class Main {
         var index = 0;
         if (index == 0) {
             index = 1;
-            var modPath = _path.join(__dirname, '..');
+            var modPath = path.join(__dirname, '..');
             var profileFolderPath = modPath + "/ProfileBackups/";
             var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
             if (fs.existsSync(profileFilePath)) {
                 this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
             }
             else {
-                fs.mkdir(_path.join(profileFolderPath, profileData.info.id), (err) => {
+                fs.mkdir(path.join(profileFolderPath, profileData.info.id), (err) => {
                     if (err) {
                         return console.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
@@ -560,7 +560,7 @@ class Main {
         this.modLoader = container.resolve("PreAkiModLoader");
     }
     dllChecker(logger, modConfig) {
-        const realismdll = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+        const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
         if (fs.existsSync(realismdll)) {
             utils_1.ConfigChecker.dllIsPresent = true;
             if (modConfig.recoil_attachment_overhaul == false) {

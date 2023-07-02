@@ -65,8 +65,7 @@ import { Meds } from "./items/meds";
 import { Player } from "./player/player"
 import { WeaponsGlobals } from "./weapons/weapons_globals"
 import { BotLoader } from "./bots/bots";
-import { BotEquipGenHelper, BotGen, BotGenHelper, BotWepGen, GenBotLvl } from "./bots/bot_gen";
-import { BotLooGen } from "./bots/bot_loot_serv";
+import { BotGen } from "./bots/bot_gen";
 import { _Items } from "./items/items";
 import { JsonGen } from "./json/code_gen";
 import { Quests } from "./traders/quests";
@@ -76,11 +75,9 @@ import { Spawns } from "./bots/maps";
 import { Gear } from "./items/gear";
 import { SeasonalEventsHandler } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
-import * as _path from 'path';
+import * as path from 'path';
 import { DescriptionGen } from "./json/description_gen";
 import { JsonHandler } from "./json/json-handler";
-import { info } from "console";
-import { url } from "inspector";
 import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
 import { LootGenerator } from "@spt-aki/generators/LootGenerator";
 import { OldAmmo } from "./ballistics/ammo_old";
@@ -89,11 +86,7 @@ import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
 import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
 import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
 import { BotGenerator } from "@spt-aki/generators/BotGenerator";
-import { ParentClasses } from "./utils/enums";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
-import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
-import { ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
-import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponResult";
+
 
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
@@ -513,7 +506,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         var index = 0;
         if (index == 0) {
             index = 1;
-            var modPath = _path.join(__dirname, '..');
+            var modPath = path.join(__dirname, '..');
             var profileFolderPath = modPath + "/ProfileBackups/";
             var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
 
@@ -523,7 +516,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
             } else {
 
-                fs.mkdir(_path.join(profileFolderPath, profileData.info.id), (err) => {
+                fs.mkdir(path.join(profileFolderPath, profileData.info.id), (err) => {
                     if (err) {
                         return console.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
@@ -738,7 +731,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
     }
 
     private dllChecker(logger: ILogger, modConfig: any) {
-        const realismdll = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+        const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
         if (fs.existsSync(realismdll)) {
             ConfigChecker.dllIsPresent = true;
             if (modConfig.recoil_attachment_overhaul == false) {

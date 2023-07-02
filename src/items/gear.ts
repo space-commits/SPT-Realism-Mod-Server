@@ -51,7 +51,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -30;
                 serverItem._props.DryVolume = -48;
-                serverItem._props.AmbientVolume = -3;
+                serverItem._props.AmbientVolume = -1.5;
             }
 
             //GSSH
@@ -61,7 +61,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -31;
                 serverItem._props.DryVolume = -50;
-                serverItem._props.AmbientVolume = -3;
+                serverItem._props.AmbientVolume = -1.5;
             }
 
             //Peltor ComTac 2
@@ -71,7 +71,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -33;
                 serverItem._props.DryVolume = -52;
-                serverItem._props.AmbientVolume = -3.5;
+                serverItem._props.AmbientVolume = -1.75;
             }
 
             //Peltor Sport
@@ -81,7 +81,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -34;
                 serverItem._props.DryVolume = -54;
-                serverItem._props.AmbientVolume = -3.5;
+                serverItem._props.AmbientVolume = -1.75;
             }
 
             //Peltor ComTac 4
@@ -91,7 +91,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -36;
                 serverItem._props.DryVolume = -56;
-                serverItem._props.AmbientVolume = -3;
+                serverItem._props.AmbientVolume = -1.5;
             }
 
             //Opsmen Earmor M32
@@ -101,7 +101,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -37;
                 serverItem._props.DryVolume = -58;
-                serverItem._props.AmbientVolume = -4;
+                serverItem._props.AmbientVolume = -2;
             }
 
             //FAST RAC
@@ -111,7 +111,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -37;
                 serverItem._props.DryVolume = -58;
-                serverItem._props.AmbientVolume = -4;
+                serverItem._props.AmbientVolume = -2;
             }
 
             //Walker Razor Digital Headset
@@ -121,7 +121,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -39;
                 serverItem._props.DryVolume = -60;
-                serverItem._props.AmbientVolume = -4.5;
+                serverItem._props.AmbientVolume = -2.25;
             }
 
             //Walker XCEL 500BT
@@ -131,7 +131,7 @@ export class Gear {
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -41;
                 serverItem._props.DryVolume = -62;
-                serverItem._props.AmbientVolume = -5;
+                serverItem._props.AmbientVolume = -2.25;
             }
         }
 
