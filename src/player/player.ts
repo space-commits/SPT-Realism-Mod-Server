@@ -6,8 +6,9 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { Utils } from "../utils/utils";
 
-const botHealth = require("../../db/bots/botHealth.json");
-
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const botHealth = require(path.join(baseFolderPath, 'db', 'bots', 'botHealth.json'));
 
 export class Player {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private custProfile, private medItems, private helper: Utils) { }
@@ -33,7 +34,6 @@ export class Player {
     public defaultHydro = this.tables.templates.profiles.Standard.bear.character.Health.Hydration.Maximum
     public defaultEnergy = this.tables.templates.profiles.Standard.bear.character.Health.Energy.Maximum
     public defaultTemp = this.tables.templates.profiles.Standard.bear.character.Health.Temperature.Maximum
-
 
     public correctNegativeHP(pmcData: IPmcData) {
         for (let part in pmcData.Health.BodyParts) {
@@ -92,7 +92,6 @@ export class Player {
         this.logger.info("Realism Mod: New Profile Health Has Been Adjusted");
     }
 
-
     private setPlayerHealthHelper(playerData: IPmcData, setMax: boolean, setReal: boolean, setMaxCurr: boolean = false) {
 
         var head = playerData.Health.BodyParts["Head"].Health;
@@ -150,7 +149,6 @@ export class Player {
             }
         }
     }
-
 
     public loadPlayerStats() {
 
@@ -255,13 +253,11 @@ export class Player {
             this.globalDB.Stamina.SafeHeightOverweight = 1.7;
         }
 
-
         if (this.modConfig.no_fall_damage == true) {
             this.globalDB.Health.Falling.DamagePerMeter = 0;
             this.globalDB.Health.Falling.SafeHeight = 1000;
             this.globalDB.Stamina.SafeHeightOverweight = 10000;
         }
-
 
         if (this.modConfig.med_changes == true) {
             this.globalDB.Health.Effects.Existence.EnergyDamage = 1;
@@ -273,7 +269,6 @@ export class Player {
             this.globalDB.Health.Effects.Dehydration.DamageOnStrongDehydration = 0.5;
             this.globalDB.Health.Effects.Dehydration.DefaultDelay = 60;
         }
-
 
         if (this.modConfig.realistic_ballistics == true) {
 

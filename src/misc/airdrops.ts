@@ -10,7 +10,9 @@ import { LocationController } from "@spt-aki/controllers/LocationController";
 import { Utils, RaidInfoTracker } from "../utils/utils";
 import { Arrays } from "../utils/arrays";
 
-
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const modConfig = require(path.join(baseFolderPath, 'config', 'config.json'));
 
 export class Airdrops {
     constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
@@ -29,7 +31,6 @@ export class Airdrops {
         this.airConf.airdropMinStartTimeSeconds = 300;
         this.airConf.airdropMaxStartTimeSeconds = 1200;
 
-
         if (this.modConfig.logEverything == true) {
             this.logger.info("Airdrops Loaded");
         }
@@ -38,9 +39,7 @@ export class Airdrops {
 
 export class AirdropLootgen extends LocationController {
 
-
     public myGetAirdropLoot(): LootItem[] {
-        const modConfig = require("../../config/config.json");
         const tables = this.databaseServer.getTables();
         const arrays = new Arrays(tables);
         const utils = new Utils(tables, arrays);
@@ -65,10 +64,7 @@ export class AirdropLootgen extends LocationController {
         return this.createRandomAirdropLoot(options, utils);
     }
 
-
     private updateAirdropsLootPools(modConfig, utils: Utils, weights: Array<number>) {
-
-
         const airdropLoot = require("../../db/airdrops/airdrop_loot.json");
 
         var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
@@ -108,14 +104,12 @@ export class AirdropLootgen extends LocationController {
 
     }
 
-
     private createRandomAirdropLoot(options: AirdropLootRequest, utils: Utils): LootItem[] {
         const result: LootItem[] = [];
 
         const itemTypeCounts = this.initItemLimitCounter(options.itemLimits);
 
         const tables = this.databaseServer.getTables();
-
 
         // Get items from items.json that are in the whitelist
         const items = Object.entries(tables.templates.items).filter(x => options.itemWhitelist.includes(x[1]._id));
@@ -152,7 +146,6 @@ export class AirdropLootgen extends LocationController {
             return false;
         }
 
-
         if (itemLimitCount && itemLimitCount.current >= itemLimitCount.max) {
             return false;
         }
@@ -163,7 +156,6 @@ export class AirdropLootgen extends LocationController {
             isPreset: false,
             stackCount: 1
         };
-
 
         // Special case - handle items that need a stackcount > 1
         if (randomItem._props.StackMaxSize > 1) {
@@ -247,7 +239,6 @@ export class AirdropLootgen extends LocationController {
         return itemTypeCounts;
     }
 
-
 }
 
 export class AirdropLootRequest {
@@ -257,6 +248,3 @@ export class AirdropLootRequest {
     itemLimits: Record<string, number>;
     itemStackLimits: Record<string, MinMax>;
 }
-
-
-

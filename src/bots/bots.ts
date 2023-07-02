@@ -7,26 +7,27 @@ import { BotTierTracker, Utils, RaidInfoTracker } from "../utils/utils";
 import { Arrays } from "../utils/arrays";
 import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
 
-
-const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
-const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
-const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
-const raiderLO = require("../../db/bots/loadouts/raiders_rogues/raiderLO.json");
-const rogueLO = require("../../db/bots/loadouts/raiders_rogues/rogueLO.json");
-const knightLO = require("../../db/bots/loadouts/bosses/goons/knightLO.json");
-const bigpipeLO = require("../../db/bots/loadouts/bosses/goons/bigpipeLO.json");
-const birdeyeLO = require("../../db/bots/loadouts/bosses/goons/birdeyeLO.json");
-const killaLO = require("../../db/bots/loadouts/bosses/killaLO.json");
-const tagillaLO = require("../../db/bots/loadouts/bosses/tagillaLO.json");
-const saniLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarLO.json");
-const saniFollowerLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarfollowerLO.json");
-const scavLootLimitCat = require("../../db/bots/loadouts/scavs/scavLootLimitCat.json");
-const PMCLootLimitCat = require("../../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
-const botHealth = require("../../db/bots/botHealth.json");
-const rmBotConfig = require("../../db/bots/botconfig.json");
-const USECNames = require("../../db/bots/names/USECNames.json");
-const bearNames = require("../../db/bots/names/bearNames.json");
-const pmcTypes = require("../../db/bots/pmcTypes.json");
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const scavLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'scavs', 'scavLO.json'));
+const usecLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'PMCs', 'usecLO.json'));
+const bearLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'PMCs', 'bearLO.json'));
+const raiderLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'raiders_rogues', 'raiderLO.json'));
+const rogueLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'raiders_rogues', 'rogueLO.json'));
+const knightLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'bosses', 'goons', 'knightLO.json'));
+const bigpipeLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'bosses', 'goons', 'bigpipeLO.json'));
+const birdeyeLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'bosses', 'goons', 'birdeyeLO.json'));
+const killaLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'bosses', 'killaLO.json'));
+const tagillaLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'bosses', 'tagillaLO.json'));
+const saniLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'bosses', 'sanitar', 'sanitarLO.json'));
+const saniFollowerLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'bosses', 'sanitar', 'sanitarfollowerLO.json'));
+const scavLootLimitCat = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'scavs', 'scavLootLimitCat.json'));
+const PMCLootLimitCat = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'PMCs', 'PMCLootLimitCat.json'));
+const botHealth = require(path.join(baseFolderPath, 'db', 'bots', 'botHealth.json'));
+const rmBotConfig = require(path.join(baseFolderPath, 'db', 'bots', 'botconfig.json'));
+const USECNames = require(path.join(baseFolderPath, 'db', 'bots', 'names', 'USECNames.json'));
+const bearNames = require(path.join(baseFolderPath, 'db', 'bots', 'names', 'bearNames.json'));
+const pmcTypes = require(path.join(baseFolderPath, 'db', 'bots', 'pmcTypes.json'));
 
 export class BotLoader {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private configServ: ConfigServer, private modConf, private arrays: Arrays, private utils: Utils) { }
@@ -52,7 +53,6 @@ export class BotLoader {
 
     botConf = this.configServ.getConfig<IBotConfig>(ConfigTypes.BOT);
     botConfPMC = this.botConf.pmc;
-
 
     public loadBots() {
 
@@ -94,8 +94,6 @@ export class BotLoader {
         this.botConf.equipment["pmc"].weightingAdjustments = [];
         this.botConf.equipment["pmc"].clothing = [];
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-
-
 
         if (this.modConf.logEverything == true) {
             this.logger.info("Bots Loaded");
@@ -418,7 +416,6 @@ export class BotLoader {
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
         }
-
 
         if (this.modConf.logEverything == true) {
             this.logger.info("botConfig1 loaded");
@@ -756,7 +753,6 @@ export class BotLoader {
         botJsonTemplate.appearance.feet = usecLO.usecLO2.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO2.experience.level;
 
-
         if (RaidInfoTracker.TOD === "night") {
             botJsonTemplate.chances.mods.mod_nvg = 25;
             botJsonTemplate.chances.mods.mod_flashlight = 60;
@@ -878,7 +874,6 @@ export class BotLoader {
         botJsonTemplate.appearance.feet = usecLO.usecLO4.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO4.experience.level;
 
-
         if (RaidInfoTracker.TOD === "night") {
             botJsonTemplate.chances.mods.mod_nvg = 70;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
@@ -929,7 +924,6 @@ export class BotLoader {
             this.logger.info("usecLoad4 loaded");
         }
     }
-
 
     public bearLoad1(botJsonTemplate: IBotType) {
         botJsonTemplate.inventory.Ammo = bearLO.bearLO1.inventory.Ammo;
@@ -1354,7 +1348,6 @@ export class BotLoader {
         }
     }
 
-
     public rogueLoad1() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO1.inventory.Ammo;
         this.rogueBase.inventory.equipment = rogueLO.rogueLO1.inventory.equipment;
@@ -1396,7 +1389,6 @@ export class BotLoader {
             this.logger.info("rogueLoad1 loaded");
         }
     }
-
 
     public rogueLoad2() {
         this.rogueBase.inventory.Ammo = rogueLO.rogueLO2.inventory.Ammo;
@@ -1647,7 +1639,6 @@ export class BotLoader {
             }
         }
 
-
         if (RaidInfoTracker.mapType === "cqb") {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_cqb;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
@@ -1658,7 +1649,6 @@ export class BotLoader {
         if (RaidInfoTracker.mapType === "outdoor") {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_outdoor;
         }
-
 
         BotTierTracker.goonsTier = 1;
         if (this.modConf.logEverything == true) {
@@ -2367,12 +2357,5 @@ export class BotLoader {
 
         this.reshallaBase.inventory.equipment.SecondPrimaryWeapon = { "5b3b713c5acfc4330140bd8d": 1 }
 
-
     }
-
-
-
 }
-
-
-

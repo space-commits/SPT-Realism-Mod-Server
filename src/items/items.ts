@@ -1,5 +1,3 @@
-
-
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";

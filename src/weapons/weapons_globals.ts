@@ -4,14 +4,15 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { ConfigChecker } from "../utils/utils";
 
-const mastering = require("../../db/items/mastering.json");
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const mastering = require(path.join(baseFolderPath, 'db', 'items', 'mastering.json'));
 
 export class WeaponsGlobals {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
     private globalDB = this.tables.globals.config;
     private itemDB = this.tables.templates.items;
-
 
     public loadGlobalMalfChanges(){
         

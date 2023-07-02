@@ -76,7 +76,6 @@ import { Spawns } from "./bots/maps";
 import { Gear } from "./items/gear";
 import { SeasonalEventsHandler } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
-import * as _path from 'path';
 import { DescriptionGen } from "./json/description_gen";
 import { JsonHandler } from "./json/json-handler";
 import { info } from "console";
@@ -95,18 +94,20 @@ import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
 import { ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
 import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponResult";
 
-const fs = require('fs');
-const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
-const medItems = require("../db/items/med_items.json");
-const crafts = require("../db/items/hideout_crafts.json");
-const buffs = require("../db/items/buffs.json");
-const custProfile = require("../db/profile/profile.json");
-const modConfig = require("../config/config.json");
+import * as fs from 'fs-extra';
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..');
+const custFleaBlacklist = require(path.join(baseFolderPath, 'db', 'traders', 'ragfair', 'blacklist.json'));
+const medItems = require(path.join(baseFolderPath, 'db', 'items', 'med_items.json'));
+const crafts = require(path.join(baseFolderPath, 'db', 'items', 'hideout_crafts.json'));
+const buffs = require(path.join(baseFolderPath, 'db', 'items', 'buffs.json'));
+const custProfile = require(path.join(baseFolderPath, 'db', 'profile', 'profile.json'));
+const configJsonPath = path.join(baseFolderPath, 'config', 'config.json');
+const modConfig = require(configJsonPath);
 
 var clientValidateCount = 0;
 
 export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiLoadModAsync {
-    private path;
     private modLoader: PreAkiModLoader;
 
     public preAkiLoad(container: DependencyContainer): void {
@@ -152,12 +153,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const airdropController = new AirdropLootgen(jsonUtil, hashUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer)
         const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, configServer);
-  
+
         const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
 
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
-        this.path = require("path");
 
         router.registerDynamicRouter(
             "loadResources",
@@ -165,9 +165,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 {
                     url: "/RealismMod/GetInfo",
                     action: (url, info, sessionId, output) => {
-                        const parsedPath = __dirname.split("\\");
-                        const folderName = parsedPath[parsedPath.length - 2];
-                        return jsonUtil.serialize(this.path.resolve(this.modLoader.getModPath(`${folderName}`)));
+                        const folderName = path.basename(path.resolve(__dirname));
+                        return jsonUtil.serialize(path.resolve(this.modLoader.getModPath(`${folderName}`)));
                     }
                 }
             ],
@@ -254,7 +253,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                         this.revertMeds(pmcData, utils);
                                         this.revertMeds(scavData, utils);
                                         modConfig.revert_med_changes = false;
-                                        utils.saveToJSONFile(modConfig, 'config/config.json');
+                                        logger.info(`Realist Mod: Saving config json to ${configJsonPath}`);
+                                        utils.saveToJSONFile(modConfig, configJsonPath);
                                         logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                     }
 
@@ -323,9 +323,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
 
-
                         try {
-
                             this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
                             this.checkProfile(scavData, scavData.Info.Experience, utils, player, logger);
 
@@ -372,7 +370,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             RaidInfoTracker.mapName = matchInfoStartOff.location;
                             let realTime = "";
                             let mapType = "";
-
 
                             if (matchInfoStartOff.timeVariant === "PAST") {
                                 realTime = getTime(time, 12);
@@ -490,7 +487,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                 player.setNewScavHealth(scavData);
                             }
 
-
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Updated at Raid End");
                             }
@@ -506,45 +502,38 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             "pmc"
         );
     }
- 
+
     private backupProfile(profileData: IAkiProfile, logger: ILogger) {
         const profileFileData = JSON.stringify(profileData, null, 4)
         var index = 0;
         if (index == 0) {
             index = 1;
-            var modPath = _path.join(__dirname, '..');
-            var profileFolderPath = modPath + "/ProfileBackups/";
-            var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
+            const profileFolderPath = path.join(baseFolderPath, 'ProfileBackups');
+            const profileFilePath = path.join(profileFolderPath, profileData.info.id);
 
             if (fs.existsSync(profileFilePath)) {
-
                 this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
-
             } else {
-
-                fs.mkdir(_path.join(profileFolderPath, profileData.info.id), (err) => {
+                fs.mkdir(profileFilePath, (err) => {
                     if (err) {
                         return console.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
                     logger.log("Realism Mod: Backup path does not exist, creating folder....", "magenta");
-
                 });
-
                 this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
             }
         }
     }
 
+    private profileBackupHelper(profileFileData: string, profilePath: string, profileData: IAkiProfile, logger: ILogger) {
+        const date = new Date();
+        const time = date.toLocaleTimeString();
+        const edit_time = time.replaceAll(" ", "_");
+        const edit_time2 = edit_time.replaceAll(":", "-");
+        const day = date.toISOString().slice(0, 10);
+        const combinedTime = "_" + day + "_" + edit_time2;
 
-    private profileBackupHelper(profileFileData: string, pathforProfile: string, profileData: IAkiProfile, logger: ILogger) {
-        var date = new Date();
-        var time = date.toLocaleTimeString();
-        var edit_time = time.replaceAll(" ", "_");
-        var edit_time2 = edit_time.replaceAll(":", "-");
-        var day = date.toISOString().slice(0, 10);
-        var combinedTime = "_" + day + "_" + edit_time2;
-
-        var backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json";
+        const backupName = path.join(profilePath, profileData.info.id + combinedTime + ".json");
         fs.writeFile(backupName, profileFileData, {
             encoding: "utf8",
             flag: "w",
@@ -557,8 +546,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             }
         });
     }
-
-
 
     public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
         const logger = container.resolve<ILogger>("WinstonLogger");
@@ -617,7 +604,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         // codegen.gearTemplatesCodeGen();
         // codegen.ammoTemplatesCodeGen();
 
-
         if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
             ammo.loadAmmoStats();
             armor.loadArmor();
@@ -670,7 +656,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             // bots.botMeds();
             meds.loadMeds();
         }
-
 
         if (modConfig.old_ballistics == true && modConfig.realistic_ballistics == false) {
             oldAmmo.loadAmmoStatsOld();
@@ -737,7 +722,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
     }
 
     private dllChecker(logger: ILogger, modConfig: any) {
-        const realismdll = _path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+        const realismdll = path.join(baseFolderPath, '..', '..', '..', 'BepInEx', 'plugins', 'RealismMod.dll');
         if (fs.existsSync(realismdll)) {
             ConfigChecker.dllIsPresent = true;
             if (modConfig.recoil_attachment_overhaul == false) {
@@ -778,8 +763,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             logger.info("Realism Mod: Profile Checked");
         }
     }
-
-
 
     private setBossSpawnChance(mapDB: ILocations, level: number) {
 
@@ -953,7 +936,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
     }
 
-
     private updateBots(pmcData: IPmcData, logger: ILogger, config, bots: BotLoader, helper: Utils) {
 
         var property = pmcData?.Info?.Level;
@@ -1001,5 +983,3 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 }
 
 module.exports = { mod: new Main() }
-
-

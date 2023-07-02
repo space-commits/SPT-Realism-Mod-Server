@@ -5,52 +5,50 @@ import { Arrays } from "../utils/arrays";
 import { Utils } from "../utils/utils";
 import { ParentClasses } from "../utils/enums";
 
-
-const modConfig = require("../../config/config.json");
-
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
 const presetPath = "Realism";
 
+const gearTemplatesPath = path.join(baseFolderPath, 'db', 'templates', 'gear');
+const armorComponentsTemplates = require(path.join(gearTemplatesPath, presetPath, 'armorComponentsTemplates.json'));
+const armorChestrigTemplates = require(path.join(gearTemplatesPath, presetPath, 'armorChestrigTemplates.json'));
+const helmetTemplates = require(path.join(gearTemplatesPath, presetPath, 'helmetTemplates.json'));
+const armorVestsTemplates = require(path.join(gearTemplatesPath, presetPath, 'armorVestsTemplates.json'));
+const armorMasksTemplates = require(path.join(gearTemplatesPath, presetPath, 'armorMasksTemplates.json'));
+const chestrigTemplates = require(path.join(gearTemplatesPath, presetPath, 'chestrigTemplates.json'));
+const headsetTemplates = require(path.join(gearTemplatesPath, presetPath, 'headsetTemplates.json'));
+const cosmeticsTemplates = require(path.join(gearTemplatesPath, presetPath, 'cosmeticsTemplates.json'));
 
-const armorComponentsTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/armorComponentsTemplates.json");
-const armorChestrigTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/armorChestrigTemplates.json");
-const helmetTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/helmetTemplates.json");
-const armorVestsTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/armorVestsTemplates.json");
-const armorMasksTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/armorMasksTemplates.json");
-const chestrigTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/chestrigTemplates.json");
-const headsetTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/headsetTemplates.json");
-const cosmeticsTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/cosmeticsTemplates.json");
+const ammoTemplates = require(path.join(baseFolderPath, 'db', 'templates', 'ammo', 'ammoTemplates.json'));
 
+const attatchmentsTemplatesPath = path.join(baseFolderPath, 'db', 'templates', 'attatchments')
+const MuzzleDeviceTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'MuzzleDeviceTemplates.json'));
+const BarrelTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'BarrelTemplates.json'));
+const MountTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'MountTemplates.json'));
+const ReceiverTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'ReceiverTemplates.json'));
+const StockTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'StockTemplates.json'));
+const ChargingHandleTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'ChargingHandleTemplates.json'));
+const ScopeTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'ScopeTemplates.json'));
+const IronSightTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'IronSightTemplates.json'));
+const MagazineTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'MagazineTemplates.json'));
+const AuxiliaryModTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'AuxiliaryModTemplates.json'));
+const ForegripTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'ForegripTemplates.json'));
+const PistolGripTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'PistolGripTemplates.json'));
+const GasblockTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'GasblockTemplates.json'));
+const HandguardTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'HandguardTemplates.json'));
+const FlashlightLaserTemplates = require(path.join(attatchmentsTemplatesPath, presetPath, 'FlashlightLaserTemplates.json'));
 
-const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
-
-const MuzzleDeviceTemplates = require("../../db/templates/attatchments/"+`${presetPath}`+"/MuzzleDeviceTemplates.json");
-const BarrelTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/BarrelTemplates.json");
-const MountTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/MountTemplates.json");
-const ReceiverTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/ReceiverTemplates.json");
-const StockTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/StockTemplates.json");
-const ChargingHandleTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/ChargingHandleTemplates.json");
-const ScopeTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/ScopeTemplates.json");
-const IronSightTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/IronSightTemplates.json");
-const MagazineTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/MagazineTemplates.json");
-const AuxiliaryModTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/AuxiliaryModTemplates.json");
-const ForegripTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/ForegripTemplates.json");
-const PistolGripTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/PistolGripTemplates.json");
-const GasblockTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/GasblockTemplates.json");
-const HandguardTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/HandguardTemplates.json");
-const FlashlightLaserTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/FlashlightLaserTemplates.json");
-
-const AssaultRifleTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/AssaultRifleTemplates.json");
-const AssaultCarbineTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/AssaultCarbineTemplates.json");
-const MachinegunTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/MachinegunTemplates.json");
-const MarksmanRifleTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/MarksmanRifleTemplates.json");
-const PistolTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/PistolTemplates.json");
-const ShotgunTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/ShotgunTemplates.json");
-const SMGTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/SMGTemplates.json");
-const SniperRifleTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/SniperRifleTemplates.json");
-const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/SpecialWeaponTemplates.json");
-const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/GrenadeLauncherTemplates.json");
-
-
+const weaponsTemplatesPath = path.join(baseFolderPath, 'db', 'templates', 'weapons');
+const AssaultRifleTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'AssaultRifleTemplates.json'));
+const AssaultCarbineTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'AssaultCarbineTemplates.json'));
+const MachinegunTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'MachinegunTemplates.json'));
+const MarksmanRifleTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'MarksmanRifleTemplates.json'));
+const PistolTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'PistolTemplates.json'));
+const ShotgunTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'ShotgunTemplates.json'));
+const SMGTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'SMGTemplates.json'));
+const SniperRifleTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'SniperRifleTemplates.json'));
+const SpecialWeaponTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'SpecialWeaponTemplates.json'));
+const GrenadeLauncherTemplates = require(path.join(weaponsTemplatesPath, presetPath, 'GrenadeLauncherTemplates.json'));
 
 export class JsonGen {
 
@@ -95,7 +93,6 @@ export class JsonGen {
             }
         }
     }
-    
 
     public weapTemplatesCodeGen() {
         for (let i in this.itemDB) {
@@ -114,7 +111,6 @@ export class JsonGen {
                     this.itemWriteToFile(MachinegunTemplates, "MachinegunTemplates", i, serverItem, "weapons", this.assignJSONToWeap, null, true)
                 }
                 if (serverItem._props.weapClass === "marksmanRifle") {
-
                     this.itemWriteToFile(MarksmanRifleTemplates, "MarksmanRifleTemplates", i, serverItem, "weapons", this.assignJSONToWeap, null, true)
                 }
                 if (serverItem._props.weapClass === "sniperRifle") {
@@ -347,7 +343,6 @@ export class JsonGen {
         let IsManuallyOperated = false;
         let BaseChamberCheckSpeed = 1;
         let BaseFixSpeed = 1;
-       
         let item = {
             ItemID,
             Name,
@@ -393,10 +388,7 @@ export class JsonGen {
             BaseFixSpeed
         };
         return item;
-
     }
-
-
 
     private assignJSONToMod(serverItem: ITemplateItem, fileItem: any, ID: string) {
 
@@ -601,7 +593,6 @@ export class JsonGen {
                 DurabilityBurnModificator,
                 Weight,
                 MalfChance
-
             };
             return item;
         }

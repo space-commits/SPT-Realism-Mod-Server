@@ -15,50 +15,50 @@ import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyR
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 
-
-const modConfig = require("../../config/config.json");
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const modConfig = require(path.join(baseFolderPath, 'config', 'config.json'));
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
 const gearPath = modConfig.gear_preset;
 
-const AssaultRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/AssaultRifleTemplates.json");
-const AssaultCarbineTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/AssaultCarbineTemplates.json");
-const MachinegunTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/MachinegunTemplates.json");
-const MarksmanRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/MarksmanRifleTemplates.json");
-const PistolTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/PistolTemplates.json");
-const ShotgunTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/ShotgunTemplates.json");
-const SMGTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SMGTemplates.json");
-const SniperRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SniperRifleTemplates.json");
-const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SpecialWeaponTemplates.json");
-const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
+const weaponTemplatesPath = path.join(baseFolderPath, 'db', 'templates', 'weapons');
+const AssaultRifleTemplates = require(path.join(weaponTemplatesPath, weapPath, 'AssaultRifleTemplates.json'));
+const AssaultCarbineTemplates = require(path.join(weaponTemplatesPath, weapPath, 'AssaultCarbineTemplates.json'));
+const MachinegunTemplates = require(path.join(weaponTemplatesPath, weapPath, 'MachinegunTemplates.json'));
+const MarksmanRifleTemplates = require(path.join(weaponTemplatesPath, weapPath, 'MarksmanRifleTemplates.json'));
+const PistolTemplates = require(path.join(weaponTemplatesPath, weapPath, 'PistolTemplates.json'));
+const ShotgunTemplates = require(path.join(weaponTemplatesPath, weapPath, 'ShotgunTemplates.json'));
+const SMGTemplates = require(path.join(weaponTemplatesPath, weapPath, 'SMGTemplates.json'));
+const SniperRifleTemplates = require(path.join(weaponTemplatesPath, weapPath, 'SniperRifleTemplates.json'));
+const SpecialWeaponTemplates = require(path.join(weaponTemplatesPath, weapPath, 'SpecialWeaponTemplates.json'));
+const GrenadeLauncherTemplates = require(path.join(weaponTemplatesPath, weapPath, 'GrenadeLauncherTemplates.json'));
 
-const armorComponentsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorComponentsTemplates.json");
-const armorChestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorChestrigTemplates.json");
-const helmetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/helmetTemplates.json");
-const armorVestsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorVestsTemplates.json");
-const armorMasksTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorMasksTemplates.json");
-const chestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/chestrigTemplates.json");
-const headsetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/headsetTemplates.json");
+const gearTemplatesPath = path.join(baseFolderPath, 'db', 'templates', 'gear');
+const armorComponentsTemplates = require(path.join(gearTemplatesPath, gearPath, 'armorComponentsTemplates.json'));
+const armorChestrigTemplates = require(path.join(gearTemplatesPath, gearPath, 'armorChestrigTemplates.json'));
+const helmetTemplates = require(path.join(gearTemplatesPath, gearPath, 'helmetTemplates.json'));
+const armorVestsTemplates = require(path.join(gearTemplatesPath, gearPath, 'armorVestsTemplates.json'));
+const armorMasksTemplates = require(path.join(gearTemplatesPath, gearPath, 'armorMasksTemplates.json'));
+const chestrigTemplates = require(path.join(gearTemplatesPath, gearPath, 'chestrigTemplates.json'));
+const headsetTemplates = require(path.join(gearTemplatesPath, gearPath, 'headsetTemplates.json'));
 
-const ammoDB = require("../../db/templates/ammo/ammoTemplates.json");
+const ammoDB = require(path.join(baseFolderPath, 'db', 'templates', 'ammo', 'ammoTemplates.json'));
 
 const weapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
 const gearTemlplatesArr = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates, chestrigTemplates, headsetTemplates];
 
-const traderRepairs = require("../../db/traders/repair/traderRepair.json");
+const traderRepairs = require(path.join(baseFolderPath, 'db', 'traders', 'repair', 'traderRepair.json'));
 
-const fenceLimits = require("../../db/traders/fence/fenceLimits.json");
+const fenceLimits = require(path.join(baseFolderPath, 'db', 'traders', 'fence', 'fenceLimits.json'));
 
 // const sellCatPrap = require("../../db/traders/prapor/sell_categories.json");
-const sellCatThera = require("../../db/traders/therapist/sell_categories.json");
-const sellCatSkier = require("../../db/traders/skier/sell_categories.json");
+const sellCatThera = require(path.join(baseFolderPath, 'db', 'traders', 'therapist', 'sell_categories.json'));
+const sellCatSkier = require(path.join(baseFolderPath, 'db', 'traders', 'skier', 'sell_categories.json'));
 // const sellCatPK = require("../../db/traders/pk/sell_categories.json");
-const sellCatMech = require("../../db/traders/mechanic/sell_categories.json");
+const sellCatMech = require(path.join(baseFolderPath, 'db', 'traders', 'mechanic', 'sell_categories.json'));
 // const sellCatRag = require("../../db/traders/ragman/sell_categories.json");
 // const sellCatJaeg = require("../../db/traders/jaeger/sell_categories.json");
-
-
-
 
 const prapId = "54cb50c76803fa8b248b4571";
 const theraId = "54cb57776803fa99248b456e";
@@ -73,10 +73,7 @@ export class Traders {
 
     itemDB = this.tables.templates.items;
 
-
     public loadTraderTweaks() {
-
-
         // this.tables.traders['54cb50c76803fa8b248b4571'].base.sell_category = sellCatPrap;
         this.tables.traders[theraId].base.sell_category = sellCatThera.sell_category;
         this.tables.traders[skierId].base.sell_category = sellCatSkier.sell_category;
@@ -127,7 +124,6 @@ export class Traders {
             this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 2
         }
     }
-
 
     public setLoyaltyLevels() {
         this.loyaltyLevelHelper(ammoDB, false);
@@ -216,8 +212,6 @@ export class Traders {
         if (this.modConf.recoil_attachment_overhaul == true) {
             this.assortItemPusher(skierId, "Skier209", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
         }
-
-
     }
 
     private assortNestedItemPusher(trader: string, itemId: string, nestedChildItems: Record<string, string>, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbook: boolean, price: number = 0, priceMulti: number = 1, secondaryChildItems?: Record<string, string>,) {
@@ -242,7 +236,6 @@ export class Traders {
         }
 
         this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
-
 
         for (let key in nestedChildItems) {
             let id = this.utils.genId();
@@ -323,11 +316,9 @@ export class Traders {
                 ]
             ];
 
-
         assort.loyal_level_items[assortId] = loyalLvl;
     }
 }
-
 
 export class RandomizeTraderAssort {
 
@@ -365,7 +356,6 @@ export class RandomizeTraderAssort {
                                 let randNum = this.utils.pickRandNumOneInTen();
                                 this.setAndRandomizeCost(randNum, itemTemplId, barter, true);
                             }
-
                         }
                     }
                 }
@@ -378,7 +368,6 @@ export class RandomizeTraderAssort {
                     }
                 }
             }
-
         }
     }
 
@@ -587,7 +576,6 @@ export class RagCallback extends RagfairCallbacks {
         return this.httpResponse.getBody(this.ragfairController.getOffers(sessionID, info));
     }
 }
-
 
 export class TraderRefresh extends TraderAssortHelper {
 

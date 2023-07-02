@@ -134,6 +134,5 @@ export class Gear {
                 serverItem._props.AmbientVolume = -5;
             }
         }
-
     }
 }

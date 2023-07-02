@@ -3,13 +3,14 @@ import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { Arrays } from "./arrays";
 
-const fs = require('fs');
-const modConfig = require("../../config/config.json");
+import * as fs from 'fs-extra';
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const modConfig = require(path.join(baseFolderPath, 'config', 'config.json'));
 
 export class Utils {
 
     constructor(private tables: IDatabaseTables, private arrays: Arrays) { }
-
 
     private itemDB = this.tables.templates.items;
     private medItems = this.arrays.stashMeds;
@@ -20,7 +21,7 @@ export class Utils {
         max = Math.floor(max);
         return (max > min) ? Math.floor(Math.random() * (max - min + 1) + min) : min;
     }
-    
+
     public getArrayValue<T>(arr: T[]): T
     {
         return arr[this.getInt(0, arr.length - 1)];
@@ -74,9 +75,6 @@ export class Utils {
             }
         }
     }
-
-
-
 
     public probabilityWeighter(items: any, weights: number[]) {
 

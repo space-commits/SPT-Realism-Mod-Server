@@ -3520,7 +3520,6 @@ export class Ammo {
             //Kedr-B
             if (serverItem._id === "57f3c6bd24597738e730fa2f") {
 
-
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
                 }
@@ -3534,14 +3533,12 @@ export class Ammo {
             //Makarov
             if (serverItem._id === "5448bd6b4bdc2dfc2f8b4569") {
 
-
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
                 }
             }
             //Makarov threaded
             if (serverItem._id === "579204f224597773d619e051") {
-
 
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
@@ -3556,7 +3553,6 @@ export class Ammo {
             }
             //APS
             if (serverItem._id === "5a17f98cfcdbcb0980087290") {
-
 
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;

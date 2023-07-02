@@ -46,9 +46,11 @@ import { EquipmentSlots } from "@spt-aki/models/enums/EquipmentSlots";
 import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 
-const modConfig = require("../../config/config.json");
-const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
-const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const modConfig = require(path.join(baseFolderPath, 'config', 'config.json'));
+const usecLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'PMCs', 'usecLO.json'));
+const bearLO = require(path.join(baseFolderPath, 'db', 'bots', 'loadouts', 'PMCs', 'bearLO.json'));
 
 export class GenBotLvl extends BotLevelGenerator {
 
@@ -120,13 +122,13 @@ export class BotGen extends BotGenerator {
     }
 
     public myPrepareAndGenerateBots(sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase[] {
-     
+
         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables = postLoadDBServer.getTables();
         const arrays = new Arrays(tables);
         const utils = new Utils(tables, arrays);
         const botLoader = new BotLoader(this.logger, tables, this.configServer, modConfig, arrays, utils);
-     
+
         const output: IBotBase[] = [];
         for (let i = 0; i < botGenerationDetails.botCountToGenerate; i++) {
             let bot = this.getCloneOfBotBase();
@@ -135,13 +137,11 @@ export class BotGen extends BotGenerator {
             bot.Info.Side = botGenerationDetails.side;
             bot.Info.Settings.BotDifficulty = botGenerationDetails.botDifficulty;
 
-
             // Get raw json data for bot (Cloned)
             const botJsonTemplate = this.jsonUtil.clone(this.botHelper.getBotTemplate(
                 (botGenerationDetails.isPmc)
                     ? bot.Info.Side
                     : botGenerationDetails.role));
-
 
             const botRole = botGenerationDetails.role.toLowerCase();
             const isPMC = this.botHelper.isBotPmc(botRole);
@@ -199,7 +199,7 @@ export class BotGen extends BotGenerator {
                     }
                     if(changeDiffi == true){
                         bot.Info.Settings.BotDifficulty = "impossible";                    }
-   
+
                 }
 
                 if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
@@ -236,10 +236,8 @@ export class BotGen extends BotGenerator {
         const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseServer);
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseServer, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
 
-
         const botRole = botGenerationDetails.role.toLowerCase();
         const botLevel = genBotLvl.genBotLvl(botJsonTemplate.experience.level, botGenerationDetails, bot);
-
 
         if (!botGenerationDetails.isPlayerScav)
         {
@@ -281,8 +279,6 @@ export class BotGen extends BotGenerator {
 
         return bot;
     }
-
-
 }
 
 export class BotInvGen extends BotInventoryGenerator{
@@ -395,7 +391,6 @@ export class BotInvGen extends BotInventoryGenerator{
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, itemHelper, appContext, this.localisationService, this.configServer);
 
-
         const spawnChance = ([EquipmentSlots.POCKETS, EquipmentSlots.SECURED_CONTAINER] as string[]).includes(equipmentSlot)
             ? 100
             : spawnChances.equipment[equipmentSlot];
@@ -456,7 +451,6 @@ export class BotInvGen extends BotInventoryGenerator{
 }
 
 export class BotWepGen extends BotWeaponGenerator {
-
 
     public myGenerateRandomWeapon(sessionId: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number, pmcTier: number): GenerateWeaponResult
     {
@@ -768,7 +762,6 @@ export class BotGenHelper extends BotGeneratorHelper {
     }
 }
 
-
 export class BotEquipGenHelper extends BotEquipmentModGenerator {
 
     private myShouldModBeSpawned(itemSlot: Slot, modSlot: string, modSpawnChances: ModsChances, checkRequired: CheckRequired): boolean {
@@ -958,7 +951,6 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
             const modId = this.hashUtil.generate();
             weapon.push(this.createModItem(modId, modToAddTemplate._id, weaponParentId, modSlot, modToAddTemplate, botRole));
 
-
             // I first thought we could use the recursive generateModsForItems as previously for cylinder magazines.
             // However, the recurse doesnt go over the slots of the parent mod but over the modPool which is given by the bot config
             // where we decided to keep cartridges instead of camoras. And since a CylinderMagazine only has one cartridge entry and
@@ -986,9 +978,6 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
                 }
             }
         }
-
         return weapon;
     }
 }
-
-

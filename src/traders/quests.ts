@@ -8,8 +8,6 @@ export class Quests {
     private questDB = this.tables.templates.quests;
     private locales = this.tables.locales.global["en"];
 
-
-
     public removeFIRQuestRequire() {
         for (let quest in this.questDB) {
             let availForFin = this.questDB[quest].conditions.AvailableForFinish;

@@ -8,7 +8,6 @@ export class Meds {
     private itemDB = this.tables.templates.items;
     private buffDB = this.globalDB.Health.Effects.Stimulator.Buffs;
 
-
     public loadMeds() {
 
         //Adjust Thermal stim to compensate for lower base temp
@@ -20,8 +19,6 @@ export class Meds {
 
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-
-
             ///Custom///
             if (serverItem._id === "SUPERBOTMEDKIT") {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
@@ -337,6 +334,4 @@ export class Meds {
             this.logger.info("Meds loaded");
         }
     }
-
-
 }

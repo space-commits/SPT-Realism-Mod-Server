@@ -1,14 +1,14 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 
-
-const botZones = require("../../db/maps/spawnZones.json");
-const bossSpawns = require("../../db/maps/bossSpawns.json");
-const spawnWaves = require("../../db/maps/spawnWaves.json");
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const botZones = require(path.join(baseFolderPath, 'db', 'maps', 'spawnZones.json'));
+const bossSpawns = require(path.join(baseFolderPath, 'db', 'maps', 'bossSpawns.json'));
+const spawnWaves = require(path.join(baseFolderPath, 'db', 'maps', 'spawnWaves.json'));
 
 export class Spawns {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
-
 
     public loadSpawnChanges() {
 
@@ -42,9 +42,8 @@ export class Spawns {
             this.logger.info("Map Spawn Changes Loaded");
         }
     }
-    
-    public openZonesFix() {
 
+    public openZonesFix() {
         for (let location in botZones.zones) {
             this.tables.locations[location].base.OpenZones = botZones.zones[location];
         }
@@ -52,7 +51,5 @@ export class Spawns {
         if (this.modConf.logEverything == true) {
             this.logger.info("OpenZones Fix Enabled");
         }
-
     }
-
 }

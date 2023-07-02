@@ -27,7 +27,6 @@ export class Armor {
 
         this.armMat.ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represetns loss of anti-spall coating
 
-
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             ////////Body Armor//////////
@@ -1305,7 +1304,6 @@ export class Armor {
                 serverItem._props.ArmorMaterial = 'Glass';
                 serverItem._props.Weight = 0.35;
             }
-
             //// Class 2 ////
             //Caiman Fixed Arm Visor
             if (serverItem._id === "5f60bf4558eff926626a60f2") {
@@ -1607,7 +1605,6 @@ export class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 0.45;
             }
-
             //Diamond Age Armor Plate
             if (serverItem._id === "5ea18c84ecf1982c7712d9a2") {
                 serverItem._props.Durability = 31;
@@ -1620,7 +1617,6 @@ export class Armor {
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 0.99;
             }
-
             //Buff Helemts
             if (serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) {
                 if (this.modConf.buff_helmets == true && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
@@ -1635,7 +1631,6 @@ export class Armor {
                     }
                 }
             }
-
             //Set min/max armor durability for spawns
             if (serverItem._parent === ParentClasses.CHESTRIG ||
                 serverItem._parent === ParentClasses.ARMORVEST ||

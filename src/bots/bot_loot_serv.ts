@@ -20,7 +20,6 @@ export class MyBotLootCache {
     vestGrenadeItems: ITemplateItem[]
     pocketGrenadeItems: ITemplateItem[]
 
-
     vestHealingItems: ITemplateItem[]
     vestDrugItems: ITemplateItem[]
     vestStimItems: ITemplateItem[]
@@ -260,7 +259,6 @@ export class BotLooGen extends BotLootGenerator {
             0,
             isPmc);
 
-
         if (isPmc && this.randomUtil.getChance100(this.botConfig.pmc.looseWeaponInBackpackChancePercent)) {
             this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", botJsonTemplate.inventory, botJsonTemplate.chances.mods, botRole, isPmc, botLevel);
         }
@@ -302,7 +300,6 @@ export class BotLooGen extends BotLootGenerator {
 
 export class MyLootCache extends BotLootCacheService {
 
-
     private myLootCache: Record<string, MyBotLootCache>;
 
     private myBotRoleExistsInCache(botRole: string): boolean {
@@ -338,9 +335,7 @@ export class MyLootCache extends BotLootCacheService {
         this.myLootCache = {};
     }
 
-
     public getLootCache(botRole: string, isPmc: boolean, lootType: MyLootCacheType, botJsonTemplate: IBotType): ITemplateItem[] {
-
 
         if (!this.myBotRoleExistsInCache(botRole)) {
             this.myInitCacheForBotRole(botRole)
@@ -439,7 +434,6 @@ export class MyLootCache extends BotLootCacheService {
         const specialLootItems = specialLootTemplates.filter(template =>
             !this.isBulletOrGrenade(template._props)
             && !this.isMagazine(template._props));
-
 
         /////////////////////Meds//////////////////////////////
         //vest

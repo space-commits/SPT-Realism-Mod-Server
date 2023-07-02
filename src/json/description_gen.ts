@@ -7,7 +7,6 @@ export class DescriptionGen {
 
     private itemDB = this.tables.templates.items;
 
-
     public descriptionGen() {
         for (let lang in this.tables.locales.global) { 
             this.descriptionGenHelper(lang);

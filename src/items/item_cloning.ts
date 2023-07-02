@@ -1,5 +1,3 @@
-
-
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
@@ -152,7 +150,6 @@ export class ItemCloning {
         this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechJMAC_366");
     }
 
-
     private addCustomWeapsToQuests(targetWeap: string, weapToAdd: string){
         for (let quest in this.questDB) {
             let conditions = this.questDB[quest].conditions.AvailableForFinish[0];   
@@ -198,7 +195,6 @@ export class ItemCloning {
         }
     }
 
-
     private cloneWeapons(itemToClone: string, newItemID: string, color: string) {
         this.cloneItem(itemToClone, newItemID);
         let itemID = this.itemDB[newItemID];
@@ -207,7 +203,6 @@ export class ItemCloning {
             this.logger.info("Item " + itemID._id + " Added");
         }
     }
-
 
     private cloneMedicalItem(itemToClone: string, newItemID: string, maxHpResource: number, medUseTime: number, hpResourceRate: number, prefabePath: string, usePrefabPath: string, color: string, effectsDamage: JSON) {
         this.cloneItem(itemToClone, newItemID);
@@ -262,5 +257,4 @@ export class ItemCloning {
             craft
         );
     }
-
 }

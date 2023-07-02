@@ -9,7 +9,9 @@ import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
 import { DependencyContainer } from "tsyringe";
 import { Arrays } from "../utils/arrays";
 
-const custFleaConfig = require("../../db/traders/ragfair/flea_config.json");
+import path from 'path';
+const baseFolderPath = path.resolve(__dirname, '..', '..');
+const custFleaConfig = require(path.join(baseFolderPath, 'db', 'traders', 'ragfair', 'flea_config.json'));
 
 export class FleamarketGlobal {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig) { }
@@ -27,7 +29,6 @@ export class FleamarketGlobal {
     }
 }
 
-
 export class FleamarketConfig {
 
     constructor(private logger: ILogger, private fleaConf: IRagfairConfig, private modConfig, private custFleaBlacklist) { }
@@ -40,7 +41,6 @@ export class FleamarketConfig {
         //     this.fleaConf.dynamic.blacklist.custom = this.custFleaBlacklist.blacklist.custom;
         // }
 
-
         if (this.modConfig.disable_flea_blacklist == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = false;
             this.fleaConf.dynamic.blacklist.custom = [];
@@ -50,11 +50,7 @@ export class FleamarketConfig {
         //     this.fleaConf.dynamic.blacklist.custom.push("TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");
         // }
 
-
-
         if (this.modConfig.flea_changes == true) {
-
-
             this.fleaConf.dynamic.condition = custFleaConfig.condition;
 
             this.fleaConf.sell.chance.base = 45;

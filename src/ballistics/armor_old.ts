@@ -81,7 +81,6 @@ export class OldArmor {
                 serverItem._props.BluntThroughput = 0.25;
                 serverItem._props.ArmorMaterial = 'Aramid';
                 serverItem._props.Weight = 3;
-
             }
             //// Class 5////
             //6B2 Flora
@@ -132,7 +131,6 @@ export class OldArmor {
                 serverItem._props.BluntThroughput = 0.13;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 5.2;
-
             }
             //Kirasa
             if (serverItem._id === "5b44d22286f774172b0c9de8") {
@@ -415,7 +413,6 @@ export class OldArmor {
                 serverItem._props.BluntThroughput = 0.33;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 9.5;
-
             }
             //// ARMORED RIGS ////
             //// Class 5 ////
@@ -1269,7 +1266,6 @@ export class OldArmor {
                 serverItem._props.ArmorMaterial = 'Glass';
                 serverItem._props.Weight = 0.35;
             }
-
             //// Class 2 ////
             //Caiman Fixed Arm Visor
             if (serverItem._id === "5f60bf4558eff926626a60f2") {
@@ -1571,7 +1567,6 @@ export class OldArmor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 0.45;
             }
-
             if (serverItem._id === "5ea18c84ecf1982c7712d9a2") {
                 serverItem._props.Durability = 30;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -1583,7 +1578,6 @@ export class OldArmor {
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 0.99;
             }
-
             //Buff Helemts
             if (serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) {
                 if (this.modConf.buff_helmets == true && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
@@ -1599,7 +1593,6 @@ export class OldArmor {
                     }
                 }
             }
-
             //Set min/max armor durability for spawns
             if (serverItem._parent === ParentClasses.CHESTRIG ||
                 serverItem._parent === ParentClasses.ARMORVEST ||
