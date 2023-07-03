@@ -136,7 +136,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
         const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
         const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-    
+
         const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
         const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
         const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
@@ -146,7 +146,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const airdropController = new AirdropLootgen(jsonUtil, hashUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer)
         const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, configServer);
-  
+
         const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
 
@@ -277,7 +277,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             for (let traderID in traders) {
                                 ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
                             }
-                
+
                             if (modConfig.tiered_flea == true) {
                                 tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
                             }
@@ -415,7 +415,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
-                            if (modConfig.bot_changes) {
+                            if (modConfig.bot_changes == true) {
                                 this.updateBots(pmcData, logger, modConfig, bots, utils);
                                 if (EventTracker.isChristmas == true) {
                                     logger.warning("====== Giving Bots Christmas Presents, Don't Be A Scrooge! ======");
@@ -500,7 +500,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             "pmc"
         );
     }
- 
+
     private backupProfile(profileData: IAkiProfile, logger: ILogger) {
         const profileFileData = JSON.stringify(profileData, null, 4)
         var index = 0;
@@ -648,6 +648,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         if (modConfig.increased_bot_cap == true) {
             bots.increaseBotCap();
         }
+        else if (modConfig.bot_changes == true) {
+            bots.increasePerformance();
+        }
 
         if (modConfig.bot_names == true) {
             bots.botNames();
@@ -722,7 +725,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         items.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
-        weaponsGlobals.loadGlobalWeps();        
+        weaponsGlobals.loadGlobalWeps();
 
     }
 
@@ -844,7 +847,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-            tier = utils.probabilityWeighter(tierArray, [100, 0 ,0]);
+            tier = utils.probabilityWeighter(tierArray, [100, 0, 0]);
         }
         if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
             tier = utils.probabilityWeighter(tierArray, [80, 20, 0]);

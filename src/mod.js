@@ -310,7 +310,7 @@ class Main {
                         }
                         utils_1.RaidInfoTracker.TOD = getTOD(realTime);
                         utils_1.RaidInfoTracker.mapType = mapType;
-                        if (modConfig.bot_changes) {
+                        if (modConfig.bot_changes == true) {
                             this.updateBots(pmcData, logger, modConfig, bots, utils);
                             if (utils_1.EventTracker.isChristmas == true) {
                                 logger.warning("====== Giving Bots Christmas Presents, Don't Be A Scrooge! ======");
@@ -496,6 +496,9 @@ class Main {
         }
         if (modConfig.increased_bot_cap == true) {
             bots.increaseBotCap();
+        }
+        else if (modConfig.bot_changes == true) {
+            bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {
             bots.botNames();

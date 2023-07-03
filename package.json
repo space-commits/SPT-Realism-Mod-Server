@@ -1,6 +1,6 @@
 {
-    "name": "SPT Realism Mod",
-    "version": "0.8.7",
+    "name": "SPT Realism Mod - TEST RELEASE",
+    "version": "0.8.8",
     "main": "src/mod.js",
     "license": "CC BY-NC-SA",
     "author": "Fontaine",

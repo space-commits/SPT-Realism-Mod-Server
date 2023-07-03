@@ -159,7 +159,14 @@ export class BotLoader {
     }
 
     public increaseBotCap() {
-        this.botConf.maxBotCap = rmBotConfig.maxBotCap
+        this.botConf.maxBotCap = rmBotConfig.maxBotCapHigh;
+        this.botConf.presetBatch = rmBotConfig.presetBatch;
+    }
+
+    
+    public increasePerformance() {
+        this.botConf.maxBotCap = rmBotConfig.maxBotCapLow;
+        this.botConf.presetBatch = rmBotConfig.presetBatch;
     }
 
     public setBotHealth() {

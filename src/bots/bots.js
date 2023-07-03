@@ -139,7 +139,12 @@ class BotLoader {
         }
     }
     increaseBotCap() {
-        this.botConf.maxBotCap = rmBotConfig.maxBotCap;
+        this.botConf.maxBotCap = rmBotConfig.maxBotCapHigh;
+        this.botConf.presetBatch = rmBotConfig.presetBatch;
+    }
+    increasePerformance() {
+        this.botConf.maxBotCap = rmBotConfig.maxBotCapLow;
+        this.botConf.presetBatch = rmBotConfig.presetBatch;
     }
     setBotHealth() {
         for (let bot in this.arrays.botArr) {

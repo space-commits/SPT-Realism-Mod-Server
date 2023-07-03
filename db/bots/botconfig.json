@@ -1,4 +1,39 @@
 {
+    "presetBatch": {
+        "assault": 50,
+        "bossBully": 5,
+        "bossGluhar": 5,
+        "bossKilla": 5,
+        "bossKojaniy": 5,
+        "bossSanitar": 5,
+        "bossTagilla": 5,
+        "bossKnight": 5,
+        "bossZryachiy": 5,
+        "bossTest": 5,
+        "cursedAssault": 10,
+        "followerBully": 10,
+        "followerGluharAssault": 10,
+        "followerGluharScout": 10,
+        "followerGluharSecurity": 10,
+        "followerGluharSnipe": 10,
+        "followerKojaniy": 10,
+        "followerSanitar": 5,
+        "followerTagilla": 5,
+        "followerBirdEye": 5,
+        "followerBigPipe": 5,
+        "followerZryachiy": 10,
+        "followerTest": 10,
+        "marksman": 10,
+        "pmcBot": 30,
+        "sectantPriest": 5,
+        "sectantWarrior": 10,
+        "gifter": 5,
+        "test": 5,
+        "exUsec": 30,
+        "arenaFighterEvent": 10,
+        "sptUsec": 50,
+        "sptBear": 50
+    },
     "cartridgeBlacklist": [],
     "blacklist": [
         "5fca13ca637ee0341a484f46",
@@ -6,7 +41,7 @@
         "59f32bb586f774757e1e8442",
         "6087e570b998180e9f76dc24"
     ],
-    "maxBotCap": {
+    "maxBotCapHigh": {
         "factory4_day": 15,
         "factory4_night": 15,
         "bigmap": 30,
@@ -18,6 +53,19 @@
         "laboratory": 20,
         "tarkovstreets": 30,
         "default": 25
+    },
+    "maxBotCapLow": {
+        "factory4_day": 12,
+        "factory4_night": 12,
+        "bigmap": 18,
+        "woods": 20,
+        "shoreline": 20,
+        "lighthouse": 20,
+        "rezervbase": 16,
+        "interchange": 16,
+        "laboratory": 16,
+        "tarkovstreets": 18,
+        "default": 15
     },
     "lootNValue1": {
         "scav": 3.2,
