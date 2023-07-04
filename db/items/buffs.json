@@ -3,8 +3,8 @@
         {
             "BuffType": "MaxStamina",
             "Chance": 1,
-            "Delay": 60,
-            "Duration": 300,
+            "Delay": 25,
+            "Duration": 600,
             "Value": -5,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -12,8 +12,8 @@
         {
             "BuffType": "StaminaRate",
             "Chance": 1,
-            "Delay": 60,
-            "Duration": 300,
+            "Delay": 25,
+            "Duration": 600,
             "Value": -0.02,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -21,8 +21,8 @@
         {
             "BuffType": "HydrationRate",
             "Chance": 1,
-            "Delay": 60,
-            "Duration": 300,
+            "Delay": 25,
+            "Duration": 600,
             "Value": -0.02,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -30,8 +30,8 @@
         {
             "BuffType": "EnergyRate",
             "Chance": 1,
-            "Delay": 60,
-            "Duration": 300,
+            "Delay": 25,
+            "Duration": 600,
             "Value": -0.02,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -41,8 +41,8 @@
         {
             "BuffType": "MaxStamina",
             "Chance": 1,
-            "Delay": 45,
-            "Duration": 220,
+            "Delay": 40,
+            "Duration": 300,
             "Value": -4,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -51,7 +51,7 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 45,
-            "Duration": 220,
+            "Duration": 300,
             "Value": -0.015,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -59,8 +59,8 @@
         {
             "BuffType": "HydrationRate",
             "Chance": 1,
-            "Delay": 45,
-            "Duration": 220,
+            "Delay": 40,
+            "Duration": 300,
             "Value": -0.025,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -68,8 +68,8 @@
         {
             "BuffType": "EnergyRate",
             "Chance": 1,
-            "Delay": 45,
-            "Duration": 220,
+            "Delay": 40,
+            "Duration": 300,
             "Value": -0.015,
             "AbsoluteValue": true,
             "SkillName": ""
@@ -79,7 +79,7 @@
         {
             "BuffType": "MaxStamina",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -10,
             "AbsoluteValue": true,
@@ -88,7 +88,7 @@
         {
             "BuffType": "StaminaRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -0.03,
             "AbsoluteValue": true,
@@ -97,7 +97,7 @@
         {
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -20,
             "AbsoluteValue": true,
@@ -106,7 +106,7 @@
         {
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -20,
             "AbsoluteValue": true,
@@ -115,7 +115,7 @@
         {
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -25,
             "AbsoluteValue": true,
@@ -124,7 +124,7 @@
         {
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -25,
             "AbsoluteValue": true,
@@ -133,7 +133,7 @@
         {
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -25,
             "AbsoluteValue": true,
@@ -142,7 +142,7 @@
         {
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -35,
             "AbsoluteValue": true,
@@ -151,7 +151,7 @@
         {
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -35,
             "AbsoluteValue": true,
@@ -160,7 +160,7 @@
         {
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -35,
             "AbsoluteValue": true,
@@ -169,7 +169,7 @@
         {
             "BuffType": "HydrationRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -0.03,
             "AbsoluteValue": true,
@@ -178,7 +178,7 @@
         {
             "BuffType": "EnergyRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 15,
             "Duration": 780,
             "Value": -0.025,
             "AbsoluteValue": true,

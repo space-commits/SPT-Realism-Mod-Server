@@ -2415,7 +2415,7 @@
         "Name": "muzzle_ak_zenit_dtk1_762x39_545x39",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
+        "HorizontalRecoil": -5,
         "Dispersion": -20,
         "CameraRecoil": 0,
         "AutoROF": 0,
@@ -2432,7 +2432,7 @@
         "Ergonomics": 0,
         "Weight": 0.123,
         "Loudness": 40,
-        "Convergence": 15,
+        "Convergence": 20,
         "Price": 0,
         "LoyaltyLevel": 0
     },

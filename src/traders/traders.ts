@@ -76,7 +76,6 @@ export class Traders {
 
     public loadTraderTweaks() {
 
-
         // this.tables.traders['54cb50c76803fa8b248b4571'].base.sell_category = sellCatPrap;
         this.tables.traders[theraId].base.sell_category = sellCatThera.sell_category;
         this.tables.traders[skierId].base.sell_category = sellCatSkier.sell_category;
@@ -85,17 +84,20 @@ export class Traders {
         // this.tables.traders['5ac3b934156ae10c4430e83c'].base.sell_category = sellCatRag;
         // this.tables.traders['5c0647fdd443bc2504c2d371'].base.sell_category = sellCatJaeg;
 
-        this.traderConf.fence.discountOptions.assortSize = 10;
-        this.traderConf.fence.discountOptions.presetPriceMult = 2.2;
-        this.traderConf.fence.discountOptions.itemPriceMult = 1.8;
-        this.traderConf.fence.maxPresetsPercent = 4;
-        this.traderConf.fence.partialRefreshChangePercent = 50;
-        this.traderConf.fence.discountOptions.assortSize = 10;
-        this.traderConf.fence.assortSize = 30;
-        this.traderConf.fence.itemPriceMult = 2;
-        this.traderConf.fence.presetPriceMult = 2.5;
-        this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
-        this.traderConf.fence.blacklist = fenceLimits.blacklist;
+        if(modConfig.nerf_fence == true){
+            this.traderConf.fence.discountOptions.assortSize = 10;
+            this.traderConf.fence.discountOptions.presetPriceMult = 2.2;
+            this.traderConf.fence.discountOptions.itemPriceMult = 1.8;
+            this.traderConf.fence.maxPresetsPercent = 4;
+            this.traderConf.fence.partialRefreshChangePercent = 50;
+            this.traderConf.fence.discountOptions.assortSize = 10;
+            this.traderConf.fence.assortSize = 30;
+            this.traderConf.fence.itemPriceMult = 2;
+            this.traderConf.fence.presetPriceMult = 2.5;
+            this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
+            this.traderConf.fence.blacklist = fenceLimits.blacklist;
+    
+        }
 
         this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
         this.tables.globals.config.Health.HealPrice.EnergyPointPrice = 30;

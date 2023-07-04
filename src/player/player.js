@@ -203,7 +203,7 @@ class Player {
         }
         if (this.modConfig.fall_damage_changes == true) {
             this.globalDB.Health.Falling.DamagePerMeter = 11.5;
-            this.globalDB.Health.Falling.SafeHeight = 2;
+            this.globalDB.Health.Falling.SafeHeight = 2.1;
             this.globalDB.Stamina.SafeHeightOverweight = 1.7;
         }
         if (this.modConfig.no_fall_damage == true) {

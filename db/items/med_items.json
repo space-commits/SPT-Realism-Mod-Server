@@ -99,12 +99,7 @@
     },
     "analgin": {
         "effects_health": {},
-        "effects_damage": {
-            "Pain": {
-                "delay": 60,
-                "duration": 300
-            }
-        },
+        "effects_damage": {},
         "StimulatorBuffs": "Buffs_analgin",
         "MaxHpResource": 10,
         "medUseTime": 4,
@@ -112,12 +107,7 @@
     },
     "ibuprofen": {
         "effects_health": {},
-        "effects_damage": {
-            "Pain": {
-                "delay": 45,
-                "duration": 220
-            }
-        },
+        "effects_damage": { },
         "StimulatorBuffs": "Buffs_ibuprofen",
         "MaxHpResource": 15,
         "medUseTime": 6,
@@ -126,19 +116,34 @@
     "morphine": {
         "effects_health": {},
         "effects_damage": {
-            "Pain": {
-                "delay": 10,
-                "duration": 720
-            },
             "Contusion": {
-                "delay": 10,
-                "duration": 720,
+                "delay": 15,
+                "duration": 900,
                 "fadeOut": 0
             }
         },
         "StimulatorBuffs": "Buffs_morphine",
         "MaxHpResource": 1,
         "medUseTime": 3,
+        "hpResourceRate": 0
+    },
+    "AI-2": {
+        "effects_health": {},
+        "effects_damage": {
+            "RadExposure": {
+                "delay": 10,
+                "duration": 300,
+                "fadeOut": 0
+            },
+            "Contusion": {
+                "delay": 10,
+                "duration": 300,
+                "fadeOut": 0
+            }
+        },
+        "StimulatorBuffs": "Buffs_AI-2",
+        "MaxHpResource": 3,
+        "medUseTime": 3.5,
         "hpResourceRate": 0
     },
     "augmentin": {
@@ -255,29 +260,6 @@
         "StimulatorBuffs": "Buffs_alu",
         "MaxHpResource": 2,
         "medUseTime": 3,
-        "hpResourceRate": 0
-    },
-    "AI-2": {
-        "effects_health": {},
-        "effects_damage": {
-            "RadExposure": {
-                "delay": 10,
-                "duration": 600,
-                "fadeOut": 0
-            },
-            "Pain": {
-                "delay": 10,
-                "duration": 400
-            },
-            "Contusion": {
-                "delay": 10,
-                "duration": 400,
-                "fadeOut": 0
-            }
-        },
-        "StimulatorBuffs": "Buffs_AI-2",
-        "MaxHpResource": 3,
-        "medUseTime": 3.5,
         "hpResourceRate": 0
     },
     "CAR": {
