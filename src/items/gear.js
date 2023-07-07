@@ -78,7 +78,7 @@ class Gear {
             }
             //Peltor ComTac 4
             if (serverItem._id === "628e4e576d783146b124c64d") {
-                serverItem._props.Distortion = 0.5;
+                serverItem._props.Distortion = 0.05;
                 serverItem._props.Resonance = 0.5;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -36;

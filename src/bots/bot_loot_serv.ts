@@ -76,6 +76,17 @@ export const enum EquipmentSlots {
 
 export class BotLooGen extends BotLootGenerator {
 
+    private myGetBotLootNValue(botRole: string, isPmc: boolean): number {
+        if (isPmc) {
+            return this.botConfig.lootNValue["pmc"];
+        }
+        if (botRole === "assault" || botRole === "marksman") {
+            return this.botConfig.lootNValue["scav"];
+        }
+        return 2;
+    }
+
+
     public genLoot(sessionId: string, botJsonTemplate: IBotType, isPmc: boolean, botRole: string, botInventory: PmcInventory, botLevel: number): void {
 
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
@@ -85,7 +96,7 @@ export class BotLooGen extends BotLootGenerator {
 
         const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
 
-        const nValue = this.getBotLootNValue(isPmc);
+        const nValue = this.myGetBotLootNValue(botRole, isPmc);
         const looseLootMin = itemCounts.looseLoot.min;
         const looseLootMax = itemCounts.looseLoot.max;
 

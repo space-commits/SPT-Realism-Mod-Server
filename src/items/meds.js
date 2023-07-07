@@ -66,8 +66,9 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(5, 0, "600"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
                 serverItem._props.ConflictingItems.splice(7, 0, "120"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.7"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.6"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "25"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "2"); // strength
             }
             //Ibuprofen
             if (serverItem._id === "5af0548586f7743a532b7e99") {
@@ -85,8 +86,9 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
                 serverItem._props.ConflictingItems.splice(7, 0, "70"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.6"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "40"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "1"); // strength
             }
             //Morphine
             if (serverItem._id === "544fb3f34bdc2d03748b456a") {
@@ -104,8 +106,9 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(5, 0, "900"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
                 serverItem._props.ConflictingItems.splice(7, 0, "270"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.8"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.75"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "3"); // strength
             }
             ///Medicines///
             //Augmentin
@@ -260,8 +263,9 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period
                 serverItem._props.ConflictingItems.splice(7, 0, "135"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.75"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.7"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "10"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "3"); // strength
             }
             //CAR
             if (serverItem._id === "590c661e86f7741e566b646a") {
