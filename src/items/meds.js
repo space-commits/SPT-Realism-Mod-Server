@@ -269,6 +269,7 @@ class Meds {
             }
             //CAR
             if (serverItem._id === "590c661e86f7741e566b646a") {
+                serverItem._parent = "5448f3ac4bdc2dce718b4569";
                 serverItem._props.MaxHpResource = this.medItems.CAR.MaxHpResource;
                 serverItem._props.effects_damage = this.medItems.CAR.effects_damage;
                 serverItem._props.effects_health = this.medItems.CAR.effects_health;
@@ -303,6 +304,7 @@ class Meds {
             }
             //IFAK
             if (serverItem._id === "590c678286f77426c9660122") {
+                serverItem._parent = "5448f3ac4bdc2dce718b4569";
                 serverItem._props.MaxHpResource = this.medItems.IFAK.MaxHpResource;
                 serverItem._props.effects_damage = this.medItems.IFAK.effects_damage;
                 serverItem._props.effects_health = this.medItems.IFAK.effects_health;
@@ -320,6 +322,7 @@ class Meds {
             }
             //AFAK
             if (serverItem._id === "60098ad7c2240c0fe85c570a") {
+                serverItem._parent = "5448f3ac4bdc2dce718b4569";
                 serverItem._props.MaxHpResource = this.medItems.AFAK.MaxHpResource;
                 serverItem._props.effects_damage = this.medItems.AFAK.effects_damage;
                 serverItem._props.effects_health = this.medItems.AFAK.effects_health;
@@ -337,6 +340,7 @@ class Meds {
             }
             //Grizzly
             if (serverItem._id === "590c657e86f77412b013051d") {
+                serverItem._parent = "5448f3ac4bdc2dce718b4569";
                 serverItem._props.MaxHpResource = this.medItems.grizzly.MaxHpResource;
                 serverItem._props.effects_damage = this.medItems.grizzly.effects_damage;
                 serverItem._props.effects_health = this.medItems.grizzly.effects_health;

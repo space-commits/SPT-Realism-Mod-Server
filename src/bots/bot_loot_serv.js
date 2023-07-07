@@ -45,13 +45,22 @@ var EquipmentSlots;
     EquipmentSlots["SCABBARD"] = "Scabbard";
 })(EquipmentSlots = exports.EquipmentSlots || (exports.EquipmentSlots = {}));
 class BotLooGen extends BotLootGenerator_1.BotLootGenerator {
+    myGetBotLootNValue(botRole, isPmc) {
+        if (isPmc) {
+            return this.botConfig.lootNValue["pmc"];
+        }
+        if (botRole === "assault" || botRole === "marksman") {
+            return this.botConfig.lootNValue["scav"];
+        }
+        return 2;
+    }
     genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel) {
         const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
         const pmcLootGenerator = tsyringe_1.container.resolve("PMCLootGenerator");
         const ragfairPriceService = tsyringe_1.container.resolve("RagfairPriceService");
         const itemCounts = botJsonTemplate.generation.items;
         const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
-        const nValue = this.getBotLootNValue(isPmc);
+        const nValue = this.myGetBotLootNValue(botRole, isPmc);
         const looseLootMin = itemCounts.looseLoot.min;
         const looseLootMax = itemCounts.looseLoot.max;
         var healingTally = 0;
