@@ -287,6 +287,7 @@ class Meds {
             }
             //Salewa
             if (serverItem._id === "544fb45d4bdc2dee738b4568") {
+                serverItem._parent = "5448f3ac4bdc2dce718b4569";
                 serverItem._props.MaxHpResource = this.medItems.salewa.MaxHpResource;
                 serverItem._props.effects_damage = this.medItems.salewa.effects_damage;
                 serverItem._props.effects_health = this.medItems.salewa.effects_health;

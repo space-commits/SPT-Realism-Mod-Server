@@ -622,8 +622,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_scavs === true) {
             this.scavBase.inventory.items = scavLO.scavLO1.inventory.dynamic_looting;
-            this.saniBase.generation.items.looseLoot.min = 0;
-            this.saniBase.generation.items.looseLoot.max = 1;
+            this.scavBase.generation.items.looseLoot.min = 0;
+            this.scavBase.generation.items.looseLoot.max = 1;
         }
 
         BotTierTracker.scavTier = 1;
@@ -657,8 +657,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_scavs === true) {
             this.scavBase.inventory.items = scavLO.scavLO2.inventory.dynamic_looting;
-            this.saniBase.generation.items.looseLoot.min = 0;
-            this.saniBase.generation.items.looseLoot.max = 2;
+            this.scavBase.generation.items.looseLoot.min = 0;
+            this.scavBase.generation.items.looseLoot.max = 2;
         }
 
         BotTierTracker.scavTier = 2;
@@ -692,8 +692,8 @@ export class BotLoader {
 
         if (this.modConf.dynamic_loot_scavs === true) {
             this.scavBase.inventory.items = scavLO.scavLO3.inventory.dynamic_looting;
-            this.saniBase.generation.items.looseLoot.min = 0;
-            this.saniBase.generation.items.looseLoot.max = 3;
+            this.scavBase.generation.items.looseLoot.min = 0;
+            this.scavBase.generation.items.looseLoot.max = 3;
         }
 
         BotTierTracker.scavTier = 3;
