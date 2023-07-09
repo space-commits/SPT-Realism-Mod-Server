@@ -10,7 +10,6 @@ const modConfig = require("../../config/config.json");
 
 const presetPath = "Realism";
 
-
 const armorComponentsTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/armorChestrigTemplates.json");
 const helmetTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/helmetTemplates.json");
@@ -19,7 +18,7 @@ const armorMasksTemplates = require("../../db/templates/gear/" + `${presetPath}`
 const chestrigTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/chestrigTemplates.json");
 const headsetTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/headsetTemplates.json");
 const cosmeticsTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/cosmeticsTemplates.json");
-
+const bagTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/bagTemplates.json");
 
 const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
 
@@ -92,6 +91,10 @@ export class JsonGen {
             if((serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) && serverItem._props.armorClass <= 1)
             {
                 this.itemWriteToFile(cosmeticsTemplates, "cosmeticsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+            }
+            if((serverItem._parent === ParentClasses.BACKPACK))
+            {
+                this.itemWriteToFile(bagTemplates, "bagTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
         }
     }
@@ -261,7 +264,6 @@ export class JsonGen {
 
         if (fileItem) {
             fileItem;
-            fileItem.Price = 0;
             return fileItem;
         }
 
@@ -282,15 +284,17 @@ export class JsonGen {
         let HasNeckArmor = false;
         let dB = 0;
         let Price = 0;
+        let Comfort = 1;
 
         let item = {
             ItemID,
             Name,
             AllowADS,
             LoyaltyLevel,
+            Price,
             ReloadSpeedMulti,
-            BlocksMouth,
-            Price
+            Comfort
+
         };
 
         return item;
@@ -395,8 +399,6 @@ export class JsonGen {
         return item;
 
     }
-
-
 
     private assignJSONToMod(serverItem: ITemplateItem, fileItem: any, ID: string) {
 

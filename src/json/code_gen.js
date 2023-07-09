@@ -12,6 +12,7 @@ const armorMasksTemplates = require("../../db/templates/gear/" + `${presetPath}`
 const chestrigTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/chestrigTemplates.json");
 const headsetTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/headsetTemplates.json");
 const cosmeticsTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/cosmeticsTemplates.json");
+const bagTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/bagTemplates.json");
 const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
 const MuzzleDeviceTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/MuzzleDeviceTemplates.json");
 const BarrelTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/BarrelTemplates.json");
@@ -79,6 +80,9 @@ class JsonGen {
             }
             if ((serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER) && serverItem._props.armorClass <= 1) {
                 this.itemWriteToFile(cosmeticsTemplates, "cosmeticsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+            }
+            if ((serverItem._parent === enums_1.ParentClasses.BACKPACK)) {
+                this.itemWriteToFile(bagTemplates, "bagTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
             }
         }
     }
@@ -229,7 +233,6 @@ class JsonGen {
     assignJSONToGear(serverItem, fileItem) {
         if (fileItem) {
             fileItem;
-            fileItem.Price = 0;
             return fileItem;
         }
         let ItemID = serverItem._id;
@@ -249,14 +252,15 @@ class JsonGen {
         let HasNeckArmor = false;
         let dB = 0;
         let Price = 0;
+        let Comfort = 1;
         let item = {
             ItemID,
             Name,
             AllowADS,
             LoyaltyLevel,
+            Price,
             ReloadSpeedMulti,
-            BlocksMouth,
-            Price
+            Comfort
         };
         return item;
     }

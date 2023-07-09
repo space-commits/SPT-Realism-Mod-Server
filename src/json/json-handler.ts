@@ -16,6 +16,8 @@ const armorMasksTemplates = require("../../db/templates/gear/" + `${gearPath}` +
 const chestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/chestrigTemplates.json");
 const headsetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/headsetTemplates.json");
 const cosmeticsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/cosmeticsTemplates.json");
+const bagTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/bagTemplates.json");
+
 
 const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
 
@@ -109,8 +111,11 @@ export class JsonHandler {
                 this.callHelper(chestrigTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(cosmeticsTemplates, serverItem, this.gearPusherHelper);
             }
-            if (serverItem._parent === ParentClasses.HEADSET){
+            if (serverItem._parent === ParentClasses.HEADSET) {
                 this.callHelper(headsetTemplates, serverItem, this.gearPusherHelper);
+            }
+            if (serverItem._parent === ParentClasses.BACKPACK) {
+                this.callHelper(bagTemplates, serverItem, this.gearPusherHelper);
             }
         }
     }
@@ -128,7 +133,7 @@ export class JsonHandler {
             var serverConfItems = serverItem._props.ConflictingItems;
             var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
-                fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false",  fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1];
+                fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1];
 
             var combinedArr = armorPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;

@@ -132,8 +132,8 @@ class Player {
     }
     loadPlayerStats() {
         if (this.modConfig.realistic_ballistics == true || this.modConfig.med_changes == true || this.modConfig.realistic_ballistics == true) {
-            this.globalDB.Stamina.OxygenCapacity *= 1.3;
-            this.globalDB.Stamina.OxygenRestoration *= 2.1;
+            this.globalDB.Stamina.OxygenCapacity = 525;
+            this.globalDB.Stamina.OxygenRestoration = 8.4;
             this.globalDB.Stamina.AimDrainRate = 0.25;
             this.globalDB.Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB.Stamina.AimConsumptionByPose["y"] = 0.3;
@@ -223,9 +223,9 @@ class Player {
             this.globalDB.Health.Effects.Dehydration.DefaultDelay = 60;
         }
         if (this.modConfig.realistic_ballistics == true) {
-            this.globalDB.LegsOverdamage *= 2;
-            this.globalDB.HandsOverdamage *= 0.8;
-            this.globalDB.StomachOverdamage *= 1.85;
+            this.globalDB.LegsOverdamage = 2;
+            this.globalDB.HandsOverdamage = 0.56;
+            this.globalDB.StomachOverdamage = 2.8;
         }
         if (this.modConfig.realistic_player_health == true) {
             const health = this.globalDB.Health.Effects;

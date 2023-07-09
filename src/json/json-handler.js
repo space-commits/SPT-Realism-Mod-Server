@@ -15,6 +15,7 @@ const armorMasksTemplates = require("../../db/templates/gear/" + `${gearPath}` +
 const chestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/chestrigTemplates.json");
 const headsetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/headsetTemplates.json");
 const cosmeticsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/cosmeticsTemplates.json");
+const bagTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/bagTemplates.json");
 const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
 const MuzzleDeviceTemplates = require("../../db/templates/attatchments/" + `${attPath}` + "/MuzzleDeviceTemplates.json");
 const BarrelTemplates = require("../../db/templates/attatchments/" + `${attPath}` + "/BarrelTemplates.json");
@@ -101,6 +102,9 @@ class JsonHandler {
             }
             if (serverItem._parent === enums_1.ParentClasses.HEADSET) {
                 this.callHelper(headsetTemplates, serverItem, this.gearPusherHelper);
+            }
+            if (serverItem._parent === enums_1.ParentClasses.BACKPACK) {
+                this.callHelper(bagTemplates, serverItem, this.gearPusherHelper);
             }
         }
     }

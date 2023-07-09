@@ -15,7 +15,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.88
     },
     "61bcc89aef0f505f0c6cd0fc": {
         "ItemID": "61bcc89aef0f505f0c6cd0fc",
@@ -33,7 +33,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.83
     },
     "5c0e3eb886f7742015526062": {
         "ItemID": "5c0e3eb886f7742015526062",
@@ -51,7 +51,7 @@
         "HasStomachArmor": true,
         "HasNeckArmor": true,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 1.05
     },
     "5ab8dced86f774646209ec87": {
         "ItemID": "5ab8dced86f774646209ec87",
@@ -69,7 +69,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.87
     },
     "5c0e446786f7742013381639": {
         "ItemID": "5c0e446786f7742013381639",
@@ -87,7 +87,7 @@
         "HasStomachArmor": true,
         "HasNeckArmor": true,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 1.05
     },
     "5d5d87f786f77427997cfaef": {
         "ItemID": "5d5d87f786f77427997cfaef",
@@ -105,7 +105,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.88
     },
     "5d5d646386f7742797261fd9": {
         "ItemID": "5d5d646386f7742797261fd9",
@@ -123,7 +123,7 @@
         "HasStomachArmor": true,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 1.07
     },
     "544a5caa4bdc2d1a388b4568": {
         "ItemID": "544a5caa4bdc2d1a388b4568",
@@ -141,7 +141,7 @@
         "HasStomachArmor": true,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.93
     },
     "628d0618d1ba6e4fa07ce5a4": {
         "ItemID": "628d0618d1ba6e4fa07ce5a4",
@@ -177,7 +177,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.85
     },
     "5c0e746986f7741453628fe5": {
         "ItemID": "5c0e746986f7741453628fe5",
@@ -195,7 +195,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.9
     },
     "628dc750b910320f4c27a732": {
         "ItemID": "628dc750b910320f4c27a732",
@@ -213,7 +213,7 @@
         "HasStomachArmor": true,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.96
     },
     "61bc85697113f767765c7fe7": {
         "ItemID": "61bc85697113f767765c7fe7",
@@ -231,7 +231,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.82
     },
     "609e860ebd219504d8507525": {
         "ItemID": "609e860ebd219504d8507525",
@@ -249,7 +249,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.86
     },
     "628b9784bcf6e2659e09b8a2": {
         "ItemID": "628b9784bcf6e2659e09b8a2",
@@ -267,7 +267,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.81
     },
     "628b9c7d45122232a872358f": {
         "ItemID": "628b9c7d45122232a872358f",
@@ -285,7 +285,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.82
     },
     "5b44cad286f77402a54ae7e5": {
         "ItemID": "5b44cad286f77402a54ae7e5",
@@ -303,7 +303,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.82
     },
     "60a3c70cde5f453f634816a3": {
         "ItemID": "60a3c70cde5f453f634816a3",
@@ -321,7 +321,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": true,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.92
     },
     "60a3c68c37ea821725773ef5": {
         "ItemID": "60a3c68c37ea821725773ef5",
@@ -339,7 +339,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": true,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.92
     },
     "628cd624459354321c4b7fa2": {
         "ItemID": "628cd624459354321c4b7fa2",
@@ -357,7 +357,7 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.8
     },
     "639343fce101f4caa40a4ef3": {
         "ItemID": "639343fce101f4caa40a4ef3",
@@ -375,6 +375,6 @@
         "HasStomachArmor": false,
         "HasNeckArmor": false,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.8
     }
 }
