@@ -476,7 +476,7 @@ class Main {
         }
         jsonHand.pushModsToServer();
         jsonHand.pushWeaponsToServer();
-        jsonHand.pushArmorToServer();
+        jsonHand.pushGearToServer();
         descGen.descriptionGen();
         if (modConfig.armor_mouse_penalty == true) {
             armor.armorMousePenalty();

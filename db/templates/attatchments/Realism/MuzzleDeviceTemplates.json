@@ -3881,7 +3881,7 @@
         "Accuracy": 2,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
+        "DurabilityBurnModificator": 1, 
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
@@ -3890,7 +3890,7 @@
         "ModShotDispersion": 0,
         "Loudness": 75,
         "MalfChance": 0,
-        "Convergence": 45,
+        "Convergence": 35,
         "Price": 0,
         "LoyaltyLevel": 0
     },

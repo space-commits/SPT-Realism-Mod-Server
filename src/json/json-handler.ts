@@ -97,20 +97,20 @@ export class JsonHandler {
         }
     }
 
-    public pushArmorToServer() {
+    public pushGearToServer() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
             if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass !== undefined) {
-                this.callHelper(armorChestrigTemplates, serverItem, this.armorPusherHelper);
-                this.callHelper(armorComponentsTemplates, serverItem, this.armorPusherHelper);
-                this.callHelper(helmetTemplates, serverItem, this.armorPusherHelper);
-                this.callHelper(armorVestsTemplates, serverItem, this.armorPusherHelper);
-                this.callHelper(armorMasksTemplates, serverItem, this.armorPusherHelper);
-                this.callHelper(chestrigTemplates, serverItem, this.armorPusherHelper);
-                this.callHelper(cosmeticsTemplates, serverItem, this.armorPusherHelper);
+                this.callHelper(armorChestrigTemplates, serverItem, this.gearPusherHelper);
+                this.callHelper(armorComponentsTemplates, serverItem, this.gearPusherHelper);
+                this.callHelper(helmetTemplates, serverItem, this.gearPusherHelper);
+                this.callHelper(armorVestsTemplates, serverItem, this.gearPusherHelper);
+                this.callHelper(armorMasksTemplates, serverItem, this.gearPusherHelper);
+                this.callHelper(chestrigTemplates, serverItem, this.gearPusherHelper);
+                this.callHelper(cosmeticsTemplates, serverItem, this.gearPusherHelper);
             }
             if (serverItem._parent === ParentClasses.HEADSET){
-                this.callHelper(headsetTemplates, serverItem, this.armorPusherHelper);
+                this.callHelper(headsetTemplates, serverItem, this.gearPusherHelper);
             }
         }
     }
@@ -122,13 +122,13 @@ export class JsonHandler {
         }
     }
 
-    private armorPusherHelper(serverItem: any, fileItem: any) {
+    private gearPusherHelper(serverItem: any, fileItem: any) {
         if (serverItem._id === fileItem.ItemID) {
 
             var serverConfItems = serverItem._props.ConflictingItems;
             var armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
-                fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false",  fileItem?.dB?.toString() || "1"];
+                fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false",  fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1];
 
             var combinedArr = armorPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;
