@@ -59,7 +59,7 @@ class Meds {
                 serverItem._props.effects_health = this.medItems.analgin.effects_health;
                 serverItem._props.medUseTime = this.medItems.analgin.medUseTime;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "pills");
+                serverItem._props.ConflictingItems.splice(1, 0, "pillspain");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
                 serverItem._props.ConflictingItems.splice(3, 0, "1");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
@@ -79,7 +79,7 @@ class Meds {
                 serverItem._props.effects_health = this.medItems.ibuprofen.effects_health;
                 serverItem._props.medUseTime = this.medItems.ibuprofen.medUseTime;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "pills");
+                serverItem._props.ConflictingItems.splice(1, 0, "pillspain");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
                 serverItem._props.ConflictingItems.splice(3, 0, "1");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
@@ -99,7 +99,7 @@ class Meds {
                 serverItem._props.effects_health = this.medItems.morphine.effects_health;
                 serverItem._props.medUseTime = this.medItems.morphine.medUseTime;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "drug");
+                serverItem._props.ConflictingItems.splice(1, 0, "drugpain");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
                 serverItem._props.ConflictingItems.splice(3, 0, "1");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
@@ -256,7 +256,7 @@ class Meds {
                 serverItem._props.medUseTime = this.medItems["AI-2"].medUseTime;
                 serverItem._props.hpResourceRate = 0;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "drug");
+                serverItem._props.ConflictingItems.splice(1, 0, "drugpain");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
                 serverItem._props.ConflictingItems.splice(3, 0, "1");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");

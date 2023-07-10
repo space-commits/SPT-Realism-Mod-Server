@@ -2276,7 +2276,7 @@
         "Ergonomics": 0,
         "Weight": 0.085,
         "Loudness": 70,
-        "Convergence": 45,
+        "Convergence": 40,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -3186,7 +3186,7 @@
         "Ergonomics": 0,
         "Weight": 0.08,
         "Loudness": 70,
-        "Convergence": 45,
+        "Convergence": 40,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -3212,7 +3212,7 @@
         "Ergonomics": 0,
         "Weight": 0.08,
         "Loudness": 70,
-        "Convergence": 45,
+        "Convergence": 40,
         "Price": 0,
         "LoyaltyLevel": 0
     },

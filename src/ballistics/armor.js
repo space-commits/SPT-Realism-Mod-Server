@@ -506,7 +506,7 @@ class Armor {
                 serverItem._props.Weight = 8.4;
             }
             //// Class 8 ////  
-            //MK4A Assault
+            //Osprey MK4A Assault
             if (serverItem._id === "60a3c70cde5f453f634816a3") {
                 serverItem._props.Durability = 105;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -518,7 +518,7 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 10;
             }
-            //MK4A Protection
+            //Osprey MK4A Protection
             if (serverItem._id === "60a3c68c37ea821725773ef5") {
                 serverItem._props.Durability = 100;
                 serverItem._props.MaxDurability = serverItem._props.Durability;

@@ -109,7 +109,7 @@
         "effects_health": {},
         "effects_damage": { },
         "StimulatorBuffs": "Buffs_ibuprofen",
-        "MaxHpResource": 15,
+        "MaxHpResource": 25,
         "medUseTime": 6,
         "hpResourceRate": 0
     },
