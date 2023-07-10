@@ -1,0 +1,308 @@
+{
+    "5b44c6ae86f7742d1627baea": {
+        "ItemID": "5b44c6ae86f7742d1627baea",
+        "Name": "item_equipment_backpack_betav2",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.9
+    },
+    "56e335e4d2720b6c058b456d": {
+        "ItemID": "56e335e4d2720b6c058b456d",
+        "Name": "backpack_wild",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1
+    },
+    "5f5e45cc5021ce62144be7aa": {
+        "ItemID": "5f5e45cc5021ce62144be7aa",
+        "Name": "item_equipment_backpack_redfox",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1
+    },
+    "60a2828e8689911a226117f9": {
+        "ItemID": "60a2828e8689911a226117f9",
+        "Name": "item_equipment_backpack_pillbox",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.85
+    },
+    "618cfae774bb2d036a049e7c": {
+        "ItemID": "618cfae774bb2d036a049e7c",
+        "Name": "item_equipment_backpack_lbt1476a",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.94
+    },
+    "5c0e774286f77468413cc5b2": {
+        "ItemID": "5c0e774286f77468413cc5b2",
+        "Name": "item_equipment_backpack_blackjack",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.89
+    },
+    "56e33634d2720bd8058b456b": {
+        "ItemID": "56e33634d2720bd8058b456b",
+        "Name": "forward_backpack",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.1
+    },
+    "618bb76513f5097c8d5aa2d5": {
+        "ItemID": "618bb76513f5097c8d5aa2d5",
+        "Name": "item_equipment_backpack_gr99t20",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.94
+    },
+    "6034d2d697633951dc245ea6": {
+        "ItemID": "6034d2d697633951dc245ea6",
+        "Name": "item_equipment_backpack_g2_gunslinger",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.85
+    },
+    "60a272cc93ef783291411d8e": {
+        "ItemID": "60a272cc93ef783291411d8e",
+        "Name": "item_equipment_backpack_drawbridge",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.8
+    },
+    "5e4abc6786f77406812bd572": {
+        "ItemID": "5e4abc6786f77406812bd572",
+        "Name": "item_equipment_backpack_medpack",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.9
+    },
+    "6038d614d10cbf667352dd44": {
+        "ItemID": "6038d614d10cbf667352dd44",
+        "Name": "item_equipment_backpack_Takedown_sling_multicam",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1
+    },
+    "56e33680d2720be2748b4576": {
+        "ItemID": "56e33680d2720be2748b4576",
+        "Name": "tactical_backpack",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.05
+    },
+    "639346cc1c8f182ad90c8972": {
+        "ItemID": "639346cc1c8f182ad90c8972",
+        "Name": "item_equipment_backpack_trooper_35",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.9
+    },
+    "6034d103ca006d2dca39b3f0": {
+        "ItemID": "6034d103ca006d2dca39b3f0",
+        "Name": "item_equipment_backpack_takedown_sling",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1
+    },
+    "5f5e46b96bdad616ad46d613": {
+        "ItemID": "5f5e46b96bdad616ad46d613",
+        "Name": "item_equipment_backpack_f4terminator",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.87
+    },
+    "5f5e467b0bc58666c37e7821": {
+        "ItemID": "5f5e467b0bc58666c37e7821",
+        "Name": "item_equipment_backpack_f5switchblade",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.95
+    },
+    "5e9dcf5986f7746c417435b3": {
+        "ItemID": "5e9dcf5986f7746c417435b3",
+        "Name": "item_equipment_backpack_daypack14",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.96
+    },
+    "5d5d940f86f7742797262046": {
+        "ItemID": "5d5d940f86f7742797262046",
+        "Name": "item_equipment_backpack_mech",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.89
+    },
+    "5ca20d5986f774331e7c9602": {
+        "ItemID": "5ca20d5986f774331e7c9602",
+        "Name": "item_equipment_backpack_wartech",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.98
+    },
+    "544a5cde4bdc2d39388b456b": {
+        "ItemID": "544a5cde4bdc2d39388b456b",
+        "Name": "standartBackpack",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.96
+    },
+    "628e1ffc83ec92260c0f437f": {
+        "ItemID": "628e1ffc83ec92260c0f437f",
+        "Name": "item_equipment_backpack_gr99_t30",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.94
+    },
+    "628bc7fb408e2b2e9c0801b1": {
+        "ItemID": "628bc7fb408e2b2e9c0801b1",
+        "Name": "item_equipment_backpack_boss_birdeye",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.88
+    },
+    "5c0e805e86f774683f3dd637": {
+        "ItemID": "5c0e805e86f774683f3dd637",
+        "Name": "item_equipment_backpack_paratus",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.83
+    },
+    "62a1b7fbc30cfa1d366af586": {
+        "ItemID": "62a1b7fbc30cfa1d366af586",
+        "Name": "item_equipment_backpack_gr99_t30_multicam",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.94
+    },
+    "619cf0335771dd3c390269ae": {
+        "ItemID": "619cf0335771dd3c390269ae",
+        "Name": "item_equipment_backpack_gr99t20_multicam",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.94
+    },
+    "5e997f0b86f7741ac73993e2": {
+        "ItemID": "5e997f0b86f7741ac73993e2",
+        "Name": "backpack_sanitar_medbag",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.08
+    },
+    "545cdae64bdc2d39198b4568": {
+        "ItemID": "545cdae64bdc2d39198b4568",
+        "Name": "bigBackpack",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.95
+    },
+    "5ab8f04f86f774585f4237d8": {
+        "ItemID": "5ab8f04f86f774585f4237d8",
+        "Name": "backpack_molle",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.04
+    },
+    "61b9e1aaef9a1b5d6a79899a": {
+        "ItemID": "61b9e1aaef9a1b5d6a79899a",
+        "Name": "backpack_pilgrim_red",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.84
+    },
+    "5ab8ee7786f7742d8f33f0b9": {
+        "ItemID": "5ab8ee7786f7742d8f33f0b9",
+        "Name": "backpack_vkboarmy",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.06
+    },
+    "5df8a4d786f77412672a1e3b": {
+        "ItemID": "5df8a4d786f77412672a1e3b",
+        "Name": "backpack_Raid_6SH118",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.89
+    },
+    "59e763f286f7742ee57895da": {
+        "ItemID": "59e763f286f7742ee57895da",
+        "Name": "backpack_pilgrim",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.84
+    },
+    "5ab8ebf186f7742d8b372e80": {
+        "ItemID": "5ab8ebf186f7742d8b372e80",
+        "Name": "backpack_sso_attack2",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.87
+    }
+}

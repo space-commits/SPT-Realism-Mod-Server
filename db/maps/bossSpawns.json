@@ -1,7 +1,7 @@
 {
     "StreetsBossLocationSpawn": [
         {
-            "BossChance": 15,
+            "BossChance": 20,
             "BossDifficult": "normal",
             "BossEscortAmount": "0",
             "BossEscortDifficult": "normal",
@@ -53,21 +53,21 @@
             "TriggerName": ""
         },
         {
-            "BossName": "bossSanitar",
-            "BossChance": 10,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
-            "BossPlayer": false,
+            "BossChance": 15,
             "BossDifficult": "normal",
-            "BossEscortType": "followerSanitar",
+            "BossEscortAmount": "3,4",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3",
-            "Time": -1,
+            "BossEscortType": "followerSanitar",
+            "BossName": "bossSanitar",
+            "BossPlayer": false,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "RandomTimeSpawn": false,
             "Supports": null,
-            "RandomTimeSpawn": false
+            "Time": -1
         },
         {
             "BossName": "bossBully",
-            "BossChance": 15,
+            "BossChance": 20,
             "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -107,11 +107,24 @@
     "CustomsBossLocationSpawn": [
         {
             "BossName": "bossBully",
-            "BossChance": 35,
+            "BossChance": 40,
             "BossZone": "ZoneScavBase, ZoneDormitory, ZoneGasStation",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "followerBully",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "sectantPriest",
+            "BossChance": 25,
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "4",
             "Time": -1,
@@ -129,6 +142,19 @@
             "BossEscortAmount": "3,3,3,3,3,3,4,5",
             "Time": -1,
             "RandomTimeSpawn": false
+        },
+        {
+            "BossChance": 40,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "3,4",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "arenaFighterEvent",
+            "BossName": "arenaFighterEvent",
+            "BossPlayer": false,
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1
         },
         {
             "BossName": "exUsec",
@@ -181,17 +207,17 @@
             "RandomTimeSpawn": true
         },
         {
-            "BossName": "bossSanitar",
             "BossChance": 10,
-            "BossZone": "ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
-            "BossPlayer": false,
             "BossDifficult": "normal",
-            "BossEscortType": "followerSanitar",
+            "BossEscortAmount": "3,4",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3",
-            "Time": -1,
+            "BossEscortType": "followerSanitar",
+            "BossName": "bossSanitar",
+            "BossPlayer": false,
+            "BossZone": "ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
+            "RandomTimeSpawn": false,
             "Supports": null,
-            "RandomTimeSpawn": false
+            "Time": -1
         },
         {
             "BossName": "bossGluhar",
@@ -228,19 +254,6 @@
                     "BossEscortAmount": "2"
                 }
             ],
-            "RandomTimeSpawn": false
-        },
-        {
-            "BossName": "sectantPriest",
-            "BossChance": 25,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "sectantWarrior",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
-            "Time": -1,
-            "Supports": null,
             "RandomTimeSpawn": false
         }
     ],
@@ -404,11 +417,10 @@
             "RandomTimeSpawn": true
         }
     ],
-    
     "InterchangeBossLocationSpawn": [
         {
             "BossName": "bossKilla",
-            "BossChance": 35,
+            "BossChance": 40,
             "BossZone": "ZoneCenterBot,ZoneCenter,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -616,11 +628,10 @@
             "RandomTimeSpawn": true
         }
     ],
-    
     "ReserveBossLocationSpawn": [
         {
             "BossName": "bossGluhar",
-            "BossChance": 35,
+            "BossChance": 40,
             "BossZone": "ZoneRailStrorage,ZonePTOR1,ZonePTOR2,ZoneBarrack,ZoneSubStorage",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -718,17 +729,17 @@
     ],
     "ShorelineBossLocationSpawn": [
         {
-            "BossName": "bossSanitar",
-            "BossChance": 40,
-            "BossZone": "ZonePort,ZoneSanatorium1,ZoneGreenHouses,ZoneSanatorium2",
-            "BossPlayer": false,
+            "BossChance": 45,
             "BossDifficult": "normal",
-            "BossEscortType": "followerSanitar",
+            "BossEscortAmount": "3,4",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3",
-            "Time": -1,
+            "BossEscortType": "followerSanitar",
+            "BossName": "bossSanitar",
+            "BossPlayer": false,
+            "BossZone": "ZonePort,ZoneGreenHouses,ZoneSanatorium1,ZoneSanatorium2",
+            "RandomTimeSpawn": false,
             "Supports": null,
-            "RandomTimeSpawn": false
+            "Time": -1
         },
         {
             "BossName": "sectantPriest",
@@ -755,6 +766,19 @@
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
+        },
+        {
+            "BossChance": 40,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "3,4",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "arenaFighterEvent",
+            "BossName": "arenaFighterEvent",
+            "BossPlayer": false,
+            "BossZone": "ZoneStartVillage,ZoneGasStation,ZoneForestGasStation,ZonePowerStation",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1
         },
         {
             "BossName": "exUsec",
@@ -896,21 +920,34 @@
                 }
             ],
             "RandomTimeSpawn": true
+        },
+        {
+            "BossChance": 30,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "3,4",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "arenaFighterEvent",
+            "BossName": "arenaFighterEvent",
+            "BossPlayer": false,
+            "BossZone": "ZoneMiniHouse,ZoneClearVill,ZoneRoad,ZoneBrokenVill,ZoneScavBase2",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1
         }
     ],
     "LabsBossLocationSpawn": [
         {
-            "BossName": "bossSanitar",
-            "BossChance": 25,
-            "BossZone": "BotZoneFloor2",
-            "BossPlayer": false,
+            "BossChance": 10,
             "BossDifficult": "normal",
-            "BossEscortType": "followerSanitar",
+            "BossEscortAmount": "3,4",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2",
-            "Time": -1,
+            "BossEscortType": "followerSanitar",
+            "BossName": "bossSanitar",
+            "BossPlayer": false,
+            "BossZone": "BotZoneFloor2",
+            "RandomTimeSpawn": false,
             "Supports": null,
-            "RandomTimeSpawn": false
+            "Time": -1
         },
         {
             "BossName": "bossTagilla",
