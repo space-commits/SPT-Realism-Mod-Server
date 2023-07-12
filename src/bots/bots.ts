@@ -380,7 +380,7 @@ export class BotLoader {
         this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
 
         //set loot N value
-        this.botConf.lootNValue = rmBotConfig.lootNValue1;
+        // this.botConf.lootNValue = rmBotConfig.lootNValue1;
 
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
 
@@ -464,7 +464,7 @@ export class BotLoader {
         this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
 
         //set loot N value
-        this.botConf.lootNValue = rmBotConfig.lootNValue2;
+        // this.botConf.lootNValue = rmBotConfig.lootNValue2;
 
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
 
@@ -547,7 +547,7 @@ export class BotLoader {
         this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
 
         //set loot N value
-        this.botConf.lootNValue = rmBotConfig.lootNValue3;
+        // this.botConf.lootNValue = rmBotConfig.lootNValue3;
 
         this.botConf.itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
 
