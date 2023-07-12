@@ -6,7 +6,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.9
+        "Comfort": 0.84
     },
     "56e335e4d2720b6c058b456d": {
         "ItemID": "56e335e4d2720b6c058b456d",
@@ -15,7 +15,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1
+        "Comfort": 0.98
     },
     "5f5e45cc5021ce62144be7aa": {
         "ItemID": "5f5e45cc5021ce62144be7aa",
@@ -24,7 +24,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1
+        "Comfort": 1.02
     },
     "60a2828e8689911a226117f9": {
         "ItemID": "60a2828e8689911a226117f9",
@@ -33,7 +33,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.85
+        "Comfort": 0.79
     },
     "618cfae774bb2d036a049e7c": {
         "ItemID": "618cfae774bb2d036a049e7c",
@@ -42,7 +42,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.94
+        "Comfort": 0.88
     },
     "5c0e774286f77468413cc5b2": {
         "ItemID": "5c0e774286f77468413cc5b2",
@@ -51,7 +51,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.89
+        "Comfort": 0.83
     },
     "56e33634d2720bd8058b456b": {
         "ItemID": "56e33634d2720bd8058b456b",
@@ -60,7 +60,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.1
+        "Comfort": 1.2
     },
     "618bb76513f5097c8d5aa2d5": {
         "ItemID": "618bb76513f5097c8d5aa2d5",
@@ -69,7 +69,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.94
+        "Comfort": 0.88
     },
     "6034d2d697633951dc245ea6": {
         "ItemID": "6034d2d697633951dc245ea6",
@@ -78,7 +78,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.85
+        "Comfort": 0.79
     },
     "60a272cc93ef783291411d8e": {
         "ItemID": "60a272cc93ef783291411d8e",
@@ -87,7 +87,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.8
+        "Comfort": 0.74
     },
     "5e4abc6786f77406812bd572": {
         "ItemID": "5e4abc6786f77406812bd572",
@@ -96,7 +96,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.9
+        "Comfort": 0.83
     },
     "6038d614d10cbf667352dd44": {
         "ItemID": "6038d614d10cbf667352dd44",
@@ -105,7 +105,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1
+        "Comfort": 1.05
     },
     "56e33680d2720be2748b4576": {
         "ItemID": "56e33680d2720be2748b4576",
@@ -114,7 +114,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.05
+        "Comfort": 1.12
     },
     "639346cc1c8f182ad90c8972": {
         "ItemID": "639346cc1c8f182ad90c8972",
@@ -123,7 +123,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.9
+        "Comfort": 0.84
     },
     "6034d103ca006d2dca39b3f0": {
         "ItemID": "6034d103ca006d2dca39b3f0",
@@ -132,7 +132,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1
+        "Comfort": 1.05
     },
     "5f5e46b96bdad616ad46d613": {
         "ItemID": "5f5e46b96bdad616ad46d613",
@@ -141,7 +141,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.87
+        "Comfort": 0.8
     },
     "5f5e467b0bc58666c37e7821": {
         "ItemID": "5f5e467b0bc58666c37e7821",
@@ -150,7 +150,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.95
+        "Comfort": 0.89
     },
     "5e9dcf5986f7746c417435b3": {
         "ItemID": "5e9dcf5986f7746c417435b3",
@@ -159,7 +159,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.96
+        "Comfort": 0.9
     },
     "5d5d940f86f7742797262046": {
         "ItemID": "5d5d940f86f7742797262046",
@@ -168,7 +168,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.89
+        "Comfort": 0.82
     },
     "5ca20d5986f774331e7c9602": {
         "ItemID": "5ca20d5986f774331e7c9602",
@@ -177,7 +177,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.98
+        "Comfort": 0.91
     },
     "544a5cde4bdc2d39388b456b": {
         "ItemID": "544a5cde4bdc2d39388b456b",
@@ -186,7 +186,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.96
+        "Comfort": 0.89
     },
     "628e1ffc83ec92260c0f437f": {
         "ItemID": "628e1ffc83ec92260c0f437f",
@@ -195,7 +195,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.94
+        "Comfort": 0.89
     },
     "628bc7fb408e2b2e9c0801b1": {
         "ItemID": "628bc7fb408e2b2e9c0801b1",
@@ -204,7 +204,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.88
+        "Comfort": 0.81
     },
     "5c0e805e86f774683f3dd637": {
         "ItemID": "5c0e805e86f774683f3dd637",
@@ -213,7 +213,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.83
+        "Comfort": 0.77
     },
     "62a1b7fbc30cfa1d366af586": {
         "ItemID": "62a1b7fbc30cfa1d366af586",
@@ -222,7 +222,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.94
+        "Comfort": 0.89
     },
     "619cf0335771dd3c390269ae": {
         "ItemID": "619cf0335771dd3c390269ae",
@@ -231,7 +231,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.94
+        "Comfort": 0.88
     },
     "5e997f0b86f7741ac73993e2": {
         "ItemID": "5e997f0b86f7741ac73993e2",
@@ -240,7 +240,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.08
+        "Comfort": 1.16
     },
     "545cdae64bdc2d39198b4568": {
         "ItemID": "545cdae64bdc2d39198b4568",
@@ -249,7 +249,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.95
+        "Comfort": 0.87
     },
     "5ab8f04f86f774585f4237d8": {
         "ItemID": "5ab8f04f86f774585f4237d8",
@@ -258,7 +258,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.04
+        "Comfort": 1.08
     },
     "61b9e1aaef9a1b5d6a79899a": {
         "ItemID": "61b9e1aaef9a1b5d6a79899a",
@@ -267,7 +267,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.84
+        "Comfort": 0.75
     },
     "5ab8ee7786f7742d8f33f0b9": {
         "ItemID": "5ab8ee7786f7742d8f33f0b9",
@@ -276,7 +276,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.06
+        "Comfort": 1.15
     },
     "5df8a4d786f77412672a1e3b": {
         "ItemID": "5df8a4d786f77412672a1e3b",
@@ -285,7 +285,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.89
+        "Comfort": 0.82
     },
     "59e763f286f7742ee57895da": {
         "ItemID": "59e763f286f7742ee57895da",
@@ -294,7 +294,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.84
+        "Comfort": 0.75
     },
     "5ab8ebf186f7742d8b372e80": {
         "ItemID": "5ab8ebf186f7742d8b372e80",
@@ -303,6 +303,6 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.87
+        "Comfort": 0.8
     }
 }

@@ -162,11 +162,9 @@ export class JsonHandler {
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Loudness = fileItem.Loudness;
 
-
                     if (modConfig.realistic_ballistics == true) {
                         serverItem._props.Velocity = fileItem.Velocity;
                     }
-
 
                     if (fileItem.ModType === "Stock") {
                         serverItem._parent = "55818a594bdc2db9688b456a";
