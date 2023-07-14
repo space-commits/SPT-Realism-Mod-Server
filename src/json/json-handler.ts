@@ -156,11 +156,15 @@ export class JsonHandler {
                     serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
                     serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
                     serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
-                    serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
                     serverItem._props.BlocksFolding = fileItem.BlocksFolding;
                     serverItem._props.Weight = fileItem.Weight;
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Loudness = fileItem.Loudness;
+
+                    var isScope: boolean = serverItem._id === ParentClasses.COLLIMATOR|| serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE  || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
+                    if(isScope != true){
+                        serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
+                    }
 
                     if (modConfig.realistic_ballistics == true) {
                         serverItem._props.Velocity = fileItem.Velocity;

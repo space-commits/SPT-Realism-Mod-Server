@@ -497,7 +497,7 @@ class Main {
         if (modConfig.increased_bot_cap == true) {
             bots.increaseBotCap();
         }
-        else if (modConfig.bot_changes == true) {
+        else if (modConfig.spawn_waves == true) {
             bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {
