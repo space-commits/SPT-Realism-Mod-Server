@@ -3,9 +3,11 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
-import { BotTierTracker, Utils, RaidInfoTracker } from "../utils/utils";
+import { BotTierTracker, Utils, RaidInfoTracker, ModTracker } from "../utils/utils";
 import { Arrays } from "../utils/arrays";
 import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
+import { ParentClasses } from "../utils/enums";
+import { kill } from "process";
 
 
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
@@ -56,7 +58,7 @@ export class BotLoader {
 
     public loadBots() {
 
-        if(this.modConf.dynamic_loot_pmcs == true){
+        if (this.modConf.dynamic_loot_pmcs == true) {
             this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
         }
 
@@ -163,7 +165,7 @@ export class BotLoader {
         this.botConf.presetBatch = rmBotConfig.presetBatch;
     }
 
-    
+
     public increasePerformance() {
         this.botConf.maxBotCap = rmBotConfig.maxBotCapLow;
         this.botConf.presetBatch = rmBotConfig.presetBatch;
@@ -415,7 +417,7 @@ export class BotLoader {
             }
         }
 
-        if (this.modConf.pmc_types == true) {
+        if (this.modConf.pmc_types == true && ModTracker.sainPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
@@ -498,7 +500,7 @@ export class BotLoader {
             }
         }
 
-        if (this.modConf.pmc_types == true) {
+        if (this.modConf.pmc_types == true && ModTracker.sainPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
@@ -581,7 +583,7 @@ export class BotLoader {
             }
         }
 
-        if (this.modConf.pmc_types == true) {
+        if (this.modConf.pmc_types == true && ModTracker.sainPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
@@ -1154,15 +1156,6 @@ export class BotLoader {
         }
         if (RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
-        }
-
-        if (this.modConf.pmc_types == true) {
-            if (RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
-            }
-            if (RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
-            }
         }
 
         if (this.modConf.dynamic_loot_pmcs === true) {

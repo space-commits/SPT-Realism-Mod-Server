@@ -3338,7 +3338,7 @@ export class Ammo {
             // SSA AP -
             if (serverItem._id === "601949593ae8f707c4608daa") {
                 serverItem._props.PenetrationPower = 90;
-                serverItem._props.ArmorDamage = 2172;
+                serverItem._props.ArmorDamage = 21;
                 serverItem._props.Damage = 56;
                 serverItem._props.InitialSpeed = 1013;
                 serverItem._props.RicochetChance = 0.29;

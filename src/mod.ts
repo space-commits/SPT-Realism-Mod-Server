@@ -59,7 +59,7 @@ import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
 import { AttatchmentBase as AttachmentBase } from "./weapons/attatchment_base";
 import { FleamarketConfig, TieredFlea, FleamarketGlobal } from "./traders/fleamarket";
-import { ConfigChecker, EventTracker, Utils, ProfileTracker, RaidInfoTracker } from "./utils/utils"
+import { ConfigChecker, EventTracker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
 import { Arrays } from "./utils/arrays"
 import { Meds } from "./items/meds";
 import { Player } from "./player/player"
@@ -599,6 +599,17 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables);
 
+        const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
+        const activeMods = preAkiModLoader.getImportedModDetails();
+        for (const modname in activeMods) {
+            if(modname.includes("Jiro-BatterySystem")){
+                ModTracker.batteryModPresent = true;
+            }
+            if(modname.includes("Solarint-SAIN-ServerMod")){
+                ModTracker.sainPresent = true;
+            }
+        }
+
         this.dllChecker(logger, modConfig);
 
         if (modConfig.recoil_attachment_overhaul == true) {
@@ -833,17 +844,17 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
     }
 
-    private getBotTier(pmcData, bots: BotLoader, helper: Utils) {
-        this.setBotTier(pmcData, "scav", bots, helper);
-        this.setBotTier(pmcData, "raider", bots, helper);
-        this.setBotTier(pmcData, "rogue", bots, helper);
-        this.setBotTier(pmcData, "goons", bots, helper);
-        this.setBotTier(pmcData, "killa", bots, helper);
-        this.setBotTier(pmcData, "tagilla", bots, helper);
-        this.setBotTier(pmcData, "sanitar", bots, helper);
+    private setBotTier(pmcData, bots: BotLoader, helper: Utils) {
+        this.setBotTierHelper(pmcData, "scav", bots, helper);
+        this.setBotTierHelper(pmcData, "raider", bots, helper);
+        this.setBotTierHelper(pmcData, "rogue", bots, helper);
+        this.setBotTierHelper(pmcData, "goons", bots, helper);
+        this.setBotTierHelper(pmcData, "killa", bots, helper);
+        this.setBotTierHelper(pmcData, "tagilla", bots, helper);
+        this.setBotTierHelper(pmcData, "sanitar", bots, helper);
     }
 
-    private setBotTier(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
+    private setBotTierHelper(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
@@ -985,7 +996,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 if (pmcData.Info.Level >= 26) {
                     bots.botConfig3();
                 }
-                this.getBotTier(pmcData, bots, helper);
+                this.setBotTier(pmcData, bots, helper);
                 if (config.logEverything == true) {
                     logger.info("Realism Mod: Bot Tiers Have Been Set");
                 }

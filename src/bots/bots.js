@@ -361,7 +361,7 @@ class BotLoader {
                 this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConf.pmc_types == true) {
+        if (this.modConf.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
@@ -431,7 +431,7 @@ class BotLoader {
                 this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConf.pmc_types == true) {
+        if (this.modConf.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
@@ -501,7 +501,7 @@ class BotLoader {
                 this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConf.pmc_types == true) {
+        if (this.modConf.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
                 this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
                 this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
@@ -1036,14 +1036,6 @@ class BotLoader {
         }
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
-        }
-        if (this.modConf.pmc_types == true) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
-            }
         }
         if (this.modConf.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;

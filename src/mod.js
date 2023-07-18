@@ -460,6 +460,16 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables);
+        const preAkiModLoader = container.resolve("PreAkiModLoader");
+        const activeMods = preAkiModLoader.getImportedModDetails();
+        for (const modname in activeMods) {
+            if (modname.includes("Jiro-BatterySystem")) {
+                utils_1.ModTracker.batteryModPresent = true;
+            }
+            if (modname.includes("Solarint-SAIN-ServerMod")) {
+                utils_1.ModTracker.sainPresent = true;
+            }
+        }
         this.dllChecker(logger, modConfig);
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
@@ -654,16 +664,16 @@ class Main {
             }
         }
     }
-    getBotTier(pmcData, bots, helper) {
-        this.setBotTier(pmcData, "scav", bots, helper);
-        this.setBotTier(pmcData, "raider", bots, helper);
-        this.setBotTier(pmcData, "rogue", bots, helper);
-        this.setBotTier(pmcData, "goons", bots, helper);
-        this.setBotTier(pmcData, "killa", bots, helper);
-        this.setBotTier(pmcData, "tagilla", bots, helper);
-        this.setBotTier(pmcData, "sanitar", bots, helper);
+    setBotTier(pmcData, bots, helper) {
+        this.setBotTierHelper(pmcData, "scav", bots, helper);
+        this.setBotTierHelper(pmcData, "raider", bots, helper);
+        this.setBotTierHelper(pmcData, "rogue", bots, helper);
+        this.setBotTierHelper(pmcData, "goons", bots, helper);
+        this.setBotTierHelper(pmcData, "killa", bots, helper);
+        this.setBotTierHelper(pmcData, "tagilla", bots, helper);
+        this.setBotTierHelper(pmcData, "sanitar", bots, helper);
     }
-    setBotTier(pmcData, type, bots, utils) {
+    setBotTierHelper(pmcData, type, bots, utils) {
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
@@ -801,7 +811,7 @@ class Main {
                 if (pmcData.Info.Level >= 26) {
                     bots.botConfig3();
                 }
-                this.getBotTier(pmcData, bots, helper);
+                this.setBotTier(pmcData, bots, helper);
                 if (config.logEverything == true) {
                     logger.info("Realism Mod: Bot Tiers Have Been Set");
                 }

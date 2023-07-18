@@ -123,13 +123,13 @@
         "AutoROF": 700,
         "SemiROF": 345,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 1.15,
+        "BaseChamberSpeedMulti": 1.15,
         "MinChamberSpeed": 0.7,
-        "MaxChamberSpeed": 1.5,
+        "MaxChamberSpeed": 1.9,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1.5,
-        "BaseFixSpeed": 1.5
+        "BaseChamberCheckSpeed": 1.7,
+        "BaseFixSpeed": 1.7
     },
     "6176aca650224f204c1da3fb": {
         "ItemID": "6176aca650224f204c1da3fb",

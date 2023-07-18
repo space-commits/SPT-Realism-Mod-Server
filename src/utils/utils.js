@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.ProfileTracker = exports.Utils = void 0;
+exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
 const path = __importStar(require("path"));
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
@@ -139,6 +139,11 @@ class Utils {
     }
 }
 exports.Utils = Utils;
+class ModTracker {
+}
+exports.ModTracker = ModTracker;
+ModTracker.batteryModPresent = false;
+ModTracker.sainPresent = false;
 class ProfileTracker {
 }
 exports.ProfileTracker = ProfileTracker;
