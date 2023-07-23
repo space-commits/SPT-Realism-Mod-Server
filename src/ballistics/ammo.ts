@@ -16,10 +16,10 @@ export class Ammo {
             //// 12ga ////
             //Flechette
             if (serverItem._id === "5d6e6911a4b9361bd5780d52") {
-                serverItem._props.PenetrationPower = 1;
+                serverItem._props.PenetrationPower = 5;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.ProjectileCount = 20;
-                serverItem._props.Damage = 7;
+                serverItem._props.Damage = 8;
                 serverItem._props.InitialSpeed = 320;
                 serverItem._props.BallisticCoeficient = 0.013;
                 serverItem._props.RicochetChance = 0.45;
@@ -44,7 +44,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 8;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 24;
-                serverItem._props.Damage = 6;
+                serverItem._props.Damage = 7;
                 serverItem._props.InitialSpeed = 330;
                 serverItem._props.RicochetChance = 0.35;
                 serverItem._props.FragmentationChance = 0.25;
@@ -68,7 +68,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 18;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 12;
-                serverItem._props.Damage = 14;
+                serverItem._props.Damage = 15;
                 serverItem._props.InitialSpeed = 415;
                 serverItem._props.RicochetChance = 0.28;
                 serverItem._props.FragmentationChance = 0.22;
@@ -92,7 +92,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 17;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 9;
-                serverItem._props.Damage = 23;
+                serverItem._props.Damage = 25;
                 serverItem._props.InitialSpeed = 385;
                 serverItem._props.RicochetChance = 0.24;
                 serverItem._props.FragmentationChance = 0;
@@ -101,7 +101,7 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 0.9;
                 serverItem._props.ammoAccr = 0;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 20;
+                serverItem._props.ammoRec = 25;
 
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.15;
@@ -116,7 +116,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 25;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 15;
-                serverItem._props.Damage = 12;
+                serverItem._props.Damage = 13;
                 serverItem._props.InitialSpeed = 430;
                 serverItem._props.RicochetChance = 0.22;
                 serverItem._props.FragmentationChance = 0;
@@ -139,7 +139,7 @@ export class Ammo {
             if (serverItem._id === "5d6e68c4a4b9361b93413f79") {
                 serverItem._props.PenetrationPower = 20;
                 serverItem._props.ArmorDamage = 13;
-                serverItem._props.Damage = 115;
+                serverItem._props.Damage = 127;
                 serverItem._props.InitialSpeed = 410;
                 serverItem._props.RicochetChance = 0.17;
                 serverItem._props.FragmentationChance = 0.3;
@@ -162,7 +162,7 @@ export class Ammo {
             if (serverItem._id === "58820d1224597753c90aeb13") {
                 serverItem._props.PenetrationPower = 19;
                 serverItem._props.ArmorDamage = 14;
-                serverItem._props.Damage = 150;
+                serverItem._props.Damage = 165;
                 serverItem._props.InitialSpeed = 380;
                 serverItem._props.RicochetChance = 0.15;
                 serverItem._props.FragmentationChance = 0;
@@ -186,7 +186,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 20;
                 serverItem._props.ArmorDamage = 14;
                 serverItem._props.ProjectileCount = 2;
-                serverItem._props.Damage = 70;
+                serverItem._props.Damage = 77;
                 serverItem._props.InitialSpeed = 415;
                 serverItem._props.RicochetChance = 0.25;
                 serverItem._props.FragmentationChance = 0;
@@ -209,7 +209,7 @@ export class Ammo {
             if (serverItem._id === "5d6e6891a4b9361bd473feea") {
                 serverItem._props.PenetrationPower = 21;
                 serverItem._props.ArmorDamage = 15;
-                serverItem._props.Damage = 170;
+                serverItem._props.Damage = 187;
                 serverItem._props.InitialSpeed = 410;
                 serverItem._props.RicochetChance = 0.14;
                 serverItem._props.FragmentationChance = 0;
@@ -232,7 +232,7 @@ export class Ammo {
             if (serverItem._id === "5d6e6869a4b9361c140bcfde") {
                 serverItem._props.PenetrationPower = 22;
                 serverItem._props.ArmorDamage = 16;
-                serverItem._props.Damage = 190;
+                serverItem._props.Damage = 209;
                 serverItem._props.InitialSpeed = 395;
                 serverItem._props.RicochetChance = 0.15;
                 serverItem._props.FragmentationChance = 0;
@@ -255,7 +255,7 @@ export class Ammo {
             if (serverItem._id === "5c0d591486f7744c505b416f") {
                 serverItem._props.PenetrationPower = 24;
                 serverItem._props.ArmorDamage = 18;
-                serverItem._props.Damage = 165;
+                serverItem._props.Damage = 182;
                 serverItem._props.InitialSpeed = 435;
                 serverItem._props.RicochetChance = 0.2;
                 serverItem._props.FragmentationChance = 0.15;
@@ -278,7 +278,7 @@ export class Ammo {
             if (serverItem._id === "5d6e689ca4b9361bc8618956") {
                 serverItem._props.PenetrationPower = 33;
                 serverItem._props.ArmorDamage = 16;
-                serverItem._props.Damage = 155;
+                serverItem._props.Damage = 170;
                 serverItem._props.InitialSpeed = 430;
                 serverItem._props.RicochetChance = 0.22;
                 serverItem._props.FragmentationChance = 0;
@@ -301,7 +301,7 @@ export class Ammo {
             if (serverItem._id === "5d6e68b3a4b9361bca7e50b5") {
                 serverItem._props.PenetrationPower = 43;
                 serverItem._props.ArmorDamage = 17;
-                serverItem._props.Damage = 165;
+                serverItem._props.Damage = 180;
                 serverItem._props.InitialSpeed = 442;
                 serverItem._props.RicochetChance = 0.15;
                 serverItem._props.FragmentationChance = 0;
@@ -324,7 +324,7 @@ export class Ammo {
             if (serverItem._id === "5d6e68e6a4b9361c140bcfe0") {
                 serverItem._props.PenetrationPower = 50;
                 serverItem._props.ArmorDamage = 14;
-                serverItem._props.Damage = 140;
+                serverItem._props.Damage = 154;
                 serverItem._props.InitialSpeed = 480;
                 serverItem._props.RicochetChance = 0.25;
                 serverItem._props.FragmentationChance = 0;
@@ -347,7 +347,7 @@ export class Ammo {
             if (serverItem._id === "5d6e68d1a4b93622fe60e845") {
                 serverItem._props.PenetrationPower = 50;
                 serverItem._props.ArmorDamage = 16;
-                serverItem._props.Damage = 170;
+                serverItem._props.Damage = 188;
                 serverItem._props.InitialSpeed = 594;
                 serverItem._props.RicochetChance = 0.15;
                 serverItem._props.FragmentationChance = 0;
@@ -395,7 +395,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 8;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 15;
-                serverItem._props.Damage = 8;
+                serverItem._props.Damage = 9;
                 serverItem._props.InitialSpeed = 340;
                 serverItem._props.RicochetChance = 0.33;
                 serverItem._props.FragmentationChance = 0.12;
@@ -419,7 +419,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 12;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 12;
-                serverItem._props.Damage = 11;
+                serverItem._props.Damage = 12;
                 serverItem._props.InitialSpeed = 410;
                 serverItem._props.RicochetChance = 0.3;
                 serverItem._props.FragmentationChance = 0.15;
@@ -443,7 +443,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 14;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 10;
-                serverItem._props.Damage = 15;
+                serverItem._props.Damage = 16;
                 serverItem._props.InitialSpeed = 475;
                 serverItem._props.RicochetChance = 0.26;
                 serverItem._props.FragmentationChance = 0.2;
@@ -467,7 +467,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 12;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 9;
-                serverItem._props.Damage = 18;
+                serverItem._props.Damage = 19;
                 serverItem._props.InitialSpeed = 430;
                 serverItem._props.RicochetChance = 0.24;
                 serverItem._props.FragmentationChance = 0.17;
@@ -490,7 +490,7 @@ export class Ammo {
             if (serverItem._id === "5d6e6a05a4b93618084f58d0") {
                 serverItem._props.PenetrationPower = 12;
                 serverItem._props.ArmorDamage = 15;
-                serverItem._props.Damage = 160;
+                serverItem._props.Damage = 176;
                 serverItem._props.InitialSpeed = 415;
                 serverItem._props.RicochetChance = 0.2;
                 serverItem._props.FragmentationChance = 0.1;
@@ -513,7 +513,7 @@ export class Ammo {
             if (serverItem._id === "5d6e6a5fa4b93614ec501745") {
                 serverItem._props.PenetrationPower = 17;
                 serverItem._props.ArmorDamage = 17;
-                serverItem._props.Damage = 170;
+                serverItem._props.Damage = 187;
                 serverItem._props.InitialSpeed = 405;
                 serverItem._props.RicochetChance = 0.18;
                 serverItem._props.FragmentationChance = 0;
@@ -536,7 +536,7 @@ export class Ammo {
             if (serverItem._id === "5d6e6a53a4b9361bd473feec") {
                 serverItem._props.PenetrationPower = 20;
                 serverItem._props.ArmorDamage = 16;
-                serverItem._props.Damage = 155;
+                serverItem._props.Damage = 170;
                 serverItem._props.InitialSpeed = 425;
                 serverItem._props.RicochetChance = 0.15;
                 serverItem._props.FragmentationChance = 0;
@@ -559,7 +559,7 @@ export class Ammo {
             if (serverItem._id === "5d6e6a42a4b9364f07165f52") {
                 serverItem._props.PenetrationPower = 32;
                 serverItem._props.ArmorDamage = 15;
-                serverItem._props.Damage = 135;
+                serverItem._props.Damage = 148;
                 serverItem._props.InitialSpeed = 445;
                 serverItem._props.RicochetChance = 0.25;
                 serverItem._props.FragmentationChance = 0;
@@ -584,7 +584,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 22;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 12;
-                serverItem._props.Damage = 19;
+                serverItem._props.Damage = 20;
                 serverItem._props.InitialSpeed = 270;
                 serverItem._props.RicochetChance = 0.35;
                 serverItem._props.FragmentationChance = 0.05;
@@ -610,7 +610,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 35;
                 serverItem._props.ArmorDamage = 15;
                 serverItem._props.ProjectileCount = 12;
-                serverItem._props.Damage = 17;
+                serverItem._props.Damage = 18;
                 serverItem._props.InitialSpeed = 375;
                 serverItem._props.RicochetChance = 0.35;
                 serverItem._props.FragmentationChance = 0;
@@ -635,7 +635,7 @@ export class Ammo {
             if (serverItem._id === "5e85aa1a988a8701445df1f5") {
                 serverItem._props.PenetrationPower = 60;
                 serverItem._props.ArmorDamage = 15;
-                serverItem._props.Damage = 300;
+                serverItem._props.Damage = 330;
                 serverItem._props.InitialSpeed = 420;
                 serverItem._props.RicochetChance = 0.2;
                 serverItem._props.FragmentationChance = 0;
@@ -644,13 +644,13 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 1;
                 serverItem._props.ammoAccr = 0;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 40;
+                serverItem._props.ammoRec = 50;
 
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 6.8;
+                    serverItem._props.DurabilityBurnModificator = 10;
                     serverItem._props.HeatFactor = 1.58;
                 }
             }
@@ -1169,7 +1169,7 @@ export class Ammo {
             if (serverItem._id === "5a26ac06c4a282000c5a90a8") {
                 serverItem._props.PenetrationPower = 39;
                 serverItem._props.ArmorDamage = 17;
-                serverItem._props.Damage = 62;
+                serverItem._props.Damage = 67;
                 serverItem._props.InitialSpeed = 415;
                 serverItem._props.RicochetChance = 0.1;
                 serverItem._props.FragmentationChance = 0.25;
@@ -1215,7 +1215,7 @@ export class Ammo {
             if (serverItem._id === "5a269f97c4a282000b151807") {
                 serverItem._props.PenetrationPower = 52;
                 serverItem._props.ArmorDamage = 18;
-                serverItem._props.Damage = 51;
+                serverItem._props.Damage = 53;
                 serverItem._props.InitialSpeed = 420;
                 serverItem._props.RicochetChance = 0.45;
                 serverItem._props.FragmentationChance = 0.13;
@@ -1238,7 +1238,7 @@ export class Ammo {
             if (serverItem._id === "5a26ac0ec4a28200741e1e18") {
                 serverItem._props.PenetrationPower = 58;
                 serverItem._props.ArmorDamage = 19;
-                serverItem._props.Damage = 47;
+                serverItem._props.Damage = 51;
                 serverItem._props.InitialSpeed = 400;
                 serverItem._props.RicochetChance = 0.4;
                 serverItem._props.FragmentationChance = 0.1;

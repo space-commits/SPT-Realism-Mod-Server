@@ -1,5 +1,5 @@
 {
-    "customs_quest_keys" : [
+    "customs_quest_keys": [
         "59387a4986f77401cc236e62",
         "5938603e86f77435642354f4",
         "5938504186f7740991483f30",
@@ -12,10 +12,10 @@
         "5913611c86f77479e0084092",
         "593962ca86f774068014d9af"
     ],
-    "woods_quest_keys" : [
+    "woods_quest_keys": [
         "591afe0186f77431bd616a11"
     ],
-    "shoreline_quest_keys" : [
+    "shoreline_quest_keys": [
         "5a0eb6ac86f7743124037a28",
         "5a0ea79b86f7741d4a35298e",
         "5a0dc95c86f77452440fc675",
@@ -29,12 +29,12 @@
         "5a145d7b86f7744cbb6f4a13",
         "5a0eee1486f77402aa773226"
     ],
-    "interchange_quest_keys" : [
+    "interchange_quest_keys": [
         "5ad5cfbd86f7742c825d6104",
         "5ad5db3786f7743568421cce",
         "5ad7247386f7747487619dc3"
     ],
-    "reserve_quest_keys" : [
+    "reserve_quest_keys": [
         "5d947d4e86f774447b415895",
         "5d80c6c586f77440351beef1",
         "5d80ccac86f77470841ff452",
@@ -43,8 +43,12 @@
         "5d947d3886f774447b415893",
         "5d9f1fa686f774726974a992"
     ],
-    "lighthouse_quest_keys" : [
+    "lighthouse_quest_keys": [
         "62987c658081af308d7558c6",
         "62987da96188c076bc0d8c51"
-    ]
+    ],
+    "keys": {
+        "key1IDhere": 1,
+        "key2IDhere": 1
+    }
 }

@@ -390,13 +390,11 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                     for (let slot in item._props.Slots) {
                         if (item._props.Slots[slot]._name === "mod_equipment") {
                             let batteryId = item._props.Slots[slot]._props.filters[0].Filter[0];
-                            let itemTemplate = this.itemHelper.getItem(batteryId)[1];
                             let batteryItem = {
                                 _id: this.hashUtil.generate(),
                                 _tpl: batteryId,
                                 parentId: weaponWithModsArray[i]._id,
                                 slotId: "mod_equipment",
-                                ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole)
                             };
                             weaponWithModsArray.push(batteryItem);
                         }
@@ -560,10 +558,6 @@ class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
         const raidSettings = this.applicationContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION)?.getValue();
         const raidIsNight = raidSettings?.timeVariant === "PAST";
         const itemProperties = {};
-        if (itemTemplate._id === "5672cb124bdc2d1a0f8b4568" || itemTemplate._id === "5672cb304bdc2dc2088b456a" || itemTemplate._id === "590a358486f77429692b2790") {
-            this.logger.warning("battery");
-            itemProperties.Resource = { UnitsConsumed: 69, Value: 100 };
-        }
         if (itemTemplate._props.MaxDurability) {
             if (itemTemplate._props.weapClass) // Is weapon
              {

@@ -80,8 +80,6 @@ import { DescriptionGen } from "./json/description_gen";
 import { JsonHandler } from "./json/json-handler";
 import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
 import { LootGenerator } from "@spt-aki/generators/LootGenerator";
-import { OldAmmo } from "./ballistics/ammo_old";
-import { OldArmor } from "./ballistics/armor_old";
 import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
 import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
 import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
@@ -623,7 +621,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         // codegen.ammoTemplatesCodeGen();
 
 
-        if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
+        if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
@@ -677,13 +675,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             itemCloning.createCustomMedItems();
             // bots.botMeds();
             meds.loadMeds();
-        }
-
-
-        if (modConfig.old_ballistics == true && modConfig.realistic_ballistics == false) {
-            oldAmmo.loadAmmoStatsOld();
-            oldArmor.loadArmorOld();
-            bots.setBotHealth();
         }
 
         bots.botHpMulti();

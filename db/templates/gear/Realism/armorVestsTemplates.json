@@ -361,7 +361,7 @@
         "Name": "item_equipment_armor_redut_t",
         "AllowADS": true,
         "LoyaltyLevel": 5,
-        "ArmorClass": "GOST 6",
+        "ArmorClass": "GOST 5",
         "CanSpall": true,
         "SpallReduction": 0.24,
         "ReloadSpeedMulti": 1,
