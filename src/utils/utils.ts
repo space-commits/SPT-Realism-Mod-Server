@@ -144,6 +144,13 @@ export class Utils {
     }
 }
 
+
+export class ModTracker{
+    static batteryModPresent: boolean = false;
+    static sainPresent: boolean = false;
+}
+
+
 export class ProfileTracker{
     static level: number = 1;
 }

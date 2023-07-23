@@ -57,14 +57,14 @@ class WeaponsGlobals {
             }
         }
         if (this.modConf.legacy_recoil_changes == true || this.modConf.recoil_attachment_overhaul) {
-            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.67;
-            this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.7;
+            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.75;
+            this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.85;
             this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.65;
-            this.globalDB.Aiming.RecoilYIntensityByPose["y"] = 1.2;
+            this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.85;
+            this.globalDB.Aiming.RecoilYIntensityByPose["y"] = 1.15;
             this.globalDB.Aiming.RecoilYIntensityByPose["z"] = 1;
-            this.globalDB.Aiming.RecoilZIntensityByPose["x"] = 0.5;
-            this.globalDB.Aiming.RecoilZIntensityByPose["y"] = 1.35;
+            this.globalDB.Aiming.RecoilZIntensityByPose["x"] = 0.7;
+            this.globalDB.Aiming.RecoilZIntensityByPose["y"] = 1.3;
             this.globalDB.Aiming.RecoilZIntensityByPose["z"] = 1;
             this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.05;
             this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.4;

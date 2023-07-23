@@ -249,6 +249,7 @@ class Meds {
             ///Medkits///
             //AI-2
             if (serverItem._id === "5755356824597772cb798962") {
+                serverItem._parent = "5448f3a14bdc2d27728b4569";
                 serverItem._props.MaxHpResource = this.medItems["AI-2"].MaxHpResource;
                 serverItem._props.StimulatorBuffs = this.medItems["AI-2"].StimulatorBuffs;
                 serverItem._props.effects_damage = this.medItems["AI-2"].effects_damage;

@@ -166,7 +166,7 @@ export class JsonHandler {
                         serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
                     }
 
-                    if (modConfig.realistic_ballistics == true) {
+                    if (modConfig.realistic_ballistics == true && isScope != true) {
                         serverItem._props.Velocity = fileItem.Velocity;
                     }
 

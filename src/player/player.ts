@@ -252,9 +252,9 @@ export class Player {
         }
 
         if (this.modConfig.fall_damage_changes == true) {
-            this.globalDB.Health.Falling.DamagePerMeter = 11.5;
+            this.globalDB.Health.Falling.DamagePerMeter = 11;
             this.globalDB.Health.Falling.SafeHeight = 2.1;
-            this.globalDB.Stamina.SafeHeightOverweight = 1.7;
+            this.globalDB.Stamina.SafeHeightOverweight = 1.9;
         }
 
 
@@ -279,9 +279,9 @@ export class Player {
 
         if (this.modConfig.realistic_ballistics == true) {
 
-            this.globalDB.LegsOverdamage = 2;
-            this.globalDB.HandsOverdamage = 0.56;
-            this.globalDB.StomachOverdamage = 2.8;
+            this.globalDB.LegsOverdamage = 1.8; // 2
+            this.globalDB.HandsOverdamage = 0.5; //0.56
+            this.globalDB.StomachOverdamage = 2.8; //2.8
         }
 
         if (this.modConfig.realistic_player_health == true) {
@@ -299,7 +299,7 @@ export class Player {
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.Threshold /= mult
             this.globalDB.Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult)
 
-            this.debuffMul(health.Fracture.FallingProbability, 1);
+            this.debuffMul(health.Fracture.FallingProbability, 0.95);
             this.debuffMul(health.HeavyBleeding.Probability, 1.55);
             this.debuffMul(health.LightBleeding.Probability, 2.1);
             this.debuffMul(health.Wound.ThresholdMax, mult);
