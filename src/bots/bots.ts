@@ -6,9 +6,6 @@ import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
 import { BotTierTracker, Utils, RaidInfoTracker, ModTracker } from "../utils/utils";
 import { Arrays } from "../utils/arrays";
 import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
-import { ParentClasses } from "../utils/enums";
-import { kill } from "process";
-
 
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");

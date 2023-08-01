@@ -23,6 +23,9 @@ export class Meds {
 
 
             ///Custom///
+            if (serverItem._id === "SJ0") {
+                serverItem._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
+            }
             if (serverItem._id === "SUPERBOTMEDKIT") {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");

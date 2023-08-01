@@ -9,7 +9,7 @@ import { GenerateWeaponResult } from "@spt-aki/models/spt/bots/GenerateWeaponRes
 import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
 import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
 import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
-import { Preset } from "@spt-aki/models/eft/common/IGlobals";
+import { IPreset } from "@spt-aki/models/eft/common/IGlobals";
 import { BotTierTracker, Utils, ProfileTracker, ModTracker } from "../utils/utils";
 import { BotEquipmentModGenerator } from "@spt-aki/generators/BotEquipmentModGenerator";
 import { BotModLimits, BotWeaponModLimitService } from "@spt-aki/services/BotWeaponModLimitService";
@@ -661,7 +661,7 @@ export class BotWepGen extends BotWeaponGenerator {
         catch {
             this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
             this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
-            let preset: Preset;
+            let preset: IPreset;
             for (const presetObj of Object.values(this.databaseServer.getTables().globals.ItemPresets)) {
                 if (presetObj._items[0]._tpl === weaponTpl) {
                     preset = this.jsonUtil.clone(presetObj);

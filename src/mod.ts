@@ -84,6 +84,7 @@ import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
 import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
 import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
 import { BotGenerator } from "@spt-aki/generators/BotGenerator";
+import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootResult";
 
 
 const fs = require('fs');
@@ -192,7 +193,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         if (modConfig.airdrop_changes == true) {
             container.afterResolution("LocationController", (_t, result: LocationController) => {
-                result.getAirdropLoot = (): LootItem[] => {
+                result.getAirdropLoot = (): IAirdropLootResult => {
                     return airdropController.myGetAirdropLoot();
                 }
             }, { frequency: "Always" });

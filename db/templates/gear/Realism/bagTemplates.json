@@ -51,7 +51,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.83
+        "Comfort": 0.8
     },
     "56e33634d2720bd8058b456b": {
         "ItemID": "56e33634d2720bd8058b456b",
@@ -204,7 +204,7 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.81
+        "Comfort": 0.85
     },
     "5c0e805e86f774683f3dd637": {
         "ItemID": "5c0e805e86f774683f3dd637",

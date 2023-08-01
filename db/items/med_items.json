@@ -97,6 +97,14 @@
         "medUseTime": 1200,
         "hpResourceRate": 200
     },
+    "SJ0": {
+        "effects_health": {},
+        "effects_damage": {},
+        "MaxHpResource": 0,
+        "medUseTime": 2,
+        "hpResourceRate": 0,
+        "StimulatorBuffs": "Buffs_SJ0"
+    },
     "analgin": {
         "effects_health": {},
         "effects_damage": {},

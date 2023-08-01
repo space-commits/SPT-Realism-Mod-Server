@@ -95,7 +95,7 @@ var ParentClasses;
     ParentClasses["COMPASS"] = "5f4fbaaca5573a5ac31db429";
     ParentClasses["HEADSET"] = "5645bcb74bdc2ded0b8b4578";
     ParentClasses["GASBLOCK"] = "56ea9461d2720b67698b456f";
-})(ParentClasses = exports.ParentClasses || (exports.ParentClasses = {}));
+})(ParentClasses || (exports.ParentClasses = ParentClasses = {}));
 var Calibers;
 (function (Calibers) {
     Calibers["_9x19mm"] = "Caliber9x19PARA";
@@ -123,4 +123,4 @@ var Calibers;
     Calibers["_12ga"] = "Caliber12g";
     Calibers["_20ga"] = "Caliber20g";
     Calibers["_23x75mm"] = "Caliber23x75";
-})(Calibers = exports.Calibers || (exports.Calibers = {}));
+})(Calibers || (exports.Calibers = Calibers = {}));
