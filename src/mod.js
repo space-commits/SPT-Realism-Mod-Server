@@ -50,8 +50,6 @@ const item_cloning_1 = require("./items/item_cloning");
 const path = __importStar(require("path"));
 const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
-const ammo_old_1 = require("./ballistics/ammo_old");
-const armor_old_1 = require("./ballistics/armor_old");
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -441,8 +439,6 @@ class Main {
         const utils = new utils_1.Utils(tables, arrays);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
-        const oldAmmo = new ammo_old_1.OldAmmo(logger, tables, modConfig);
-        const oldArmor = new armor_old_1.OldArmor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
@@ -479,7 +475,7 @@ class Main {
         // codegen.weapTemplatesCodeGen();
         // codegen.gearTemplatesCodeGen();
         // codegen.ammoTemplatesCodeGen();
-        if (modConfig.realistic_ballistics == true && modConfig.old_ballistics == false) {
+        if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
@@ -521,11 +517,6 @@ class Main {
             itemCloning.createCustomMedItems();
             // bots.botMeds();
             meds.loadMeds();
-        }
-        if (modConfig.old_ballistics == true && modConfig.realistic_ballistics == false) {
-            oldAmmo.loadAmmoStatsOld();
-            oldArmor.loadArmorOld();
-            bots.setBotHealth();
         }
         bots.botHpMulti();
         custFleaConf.loadFleaConfig();
