@@ -31,8 +31,10 @@
         "test": 5,
         "exUsec": 30,
         "arenaFighterEvent": 10,
+        "arenaFighter": 10,
         "sptUsec": 50,
-        "sptBear": 50
+        "sptBear": 50,
+        "crazyAssaultEvent": 10
     },
     "cartridgeBlacklist": [],
     "blacklist": [

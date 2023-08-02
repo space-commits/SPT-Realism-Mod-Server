@@ -142,14 +142,12 @@ class Traders {
         }
     }
     addItemsToAssorts() {
-        //therapist//
         if (this.modConf.med_changes == true) {
-            this.assortItemPusher(theraId, "TIER1MEDKIT", 1, "5449016a4bdc2d6f028b456f", 1, false, 25000);
+            //therapist//
+            this.assortItemPusher(theraId, "TIER1MEDKIT", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
             this.assortItemPusher(theraId, "TIER2MEDKIT", 1, "5449016a4bdc2d6f028b456f", 3, false, 50000);
             this.assortItemPusher(theraId, "TIER3MEDKIT", 1, "5449016a4bdc2d6f028b456f", 4, false, 75000);
-        }
-        //Skier//
-        if (this.modConf.med_changes == true) {
+            //Skier//
             this.assortItemPusher(skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
         }
         //ragman//

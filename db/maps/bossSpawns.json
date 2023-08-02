@@ -144,19 +144,6 @@
             "RandomTimeSpawn": false
         },
         {
-            "BossChance": 40,
-            "BossDifficult": "normal",
-            "BossEscortAmount": "3,4",
-            "BossEscortDifficult": "normal",
-            "BossEscortType": "arenaFighterEvent",
-            "BossName": "arenaFighterEvent",
-            "BossPlayer": false,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
-            "RandomTimeSpawn": false,
-            "Supports": null,
-            "Time": -1
-        },
-        {
             "BossName": "exUsec",
             "BossChance": 20,
             "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
@@ -255,6 +242,19 @@
                 }
             ],
             "RandomTimeSpawn": false
+        },
+        {
+            "BossChance": 40,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "3,4",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "arenaFighterEvent",
+            "BossName": "arenaFighterEvent",
+            "BossPlayer": false,
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1
         }
     ],
     "FactoryDayBossLocationSpawn": [
@@ -626,6 +626,21 @@
                 }
             ],
             "RandomTimeSpawn": true
+        },
+        {
+            "BossChance": 50,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "2",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "crazyAssaultEvent",
+            "BossName": "crazyAssaultEvent",
+            "BossPlayer": false,
+            "BossZone": "Zone_OldHouse",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": ""
         }
     ],
     "ReserveBossLocationSpawn": [
@@ -768,19 +783,6 @@
             "RandomTimeSpawn": false
         },
         {
-            "BossChance": 40,
-            "BossDifficult": "normal",
-            "BossEscortAmount": "3,4",
-            "BossEscortDifficult": "normal",
-            "BossEscortType": "arenaFighterEvent",
-            "BossName": "arenaFighterEvent",
-            "BossPlayer": false,
-            "BossZone": "ZoneStartVillage,ZoneGasStation,ZoneForestGasStation,ZonePowerStation",
-            "RandomTimeSpawn": false,
-            "Supports": null,
-            "Time": -1
-        },
-        {
             "BossName": "exUsec",
             "BossChance": 30,
             "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZoneForestTruck,ZoneForestSpawn",
@@ -842,6 +844,32 @@
                 }
             ],
             "RandomTimeSpawn": true
+        },
+        {
+            "BossChance": 50,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "2",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "crazyAssaultEvent",
+            "BossName": "crazyAssaultEvent",
+            "BossPlayer": false,
+            "BossZone": "ZoneForestTruck",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1
+        },
+        {
+            "BossChance": 40,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "3,4",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "arenaFighterEvent",
+            "BossName": "arenaFighterEvent",
+            "BossPlayer": false,
+            "BossZone": "ZoneStartVillage,ZoneGasStation,ZoneForestGasStation,ZonePowerStation",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1
         }
     ],
     "WoodsBossLocationSpawn": [

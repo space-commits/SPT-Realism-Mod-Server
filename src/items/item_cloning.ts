@@ -69,11 +69,11 @@ export class ItemCloning {
             this.medItems.SJ0.hpResourceRate,
             "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle",
             "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle",
-            "orange",
+            "blue",
             this.medItems.SJ0.effects_damage
         );
         this.addToHandbook("SJ0", "5b47574386f77428ca22b33a", 30000);
-        this.addToLocale("SJ0", "SJ0 TGLabs Combat Stimulant Injector", "SJ0", "TerraGroup Labs' first attempt at a combat stimulant with regenerative properties. Despite reports of initial trials being promising, in-theatre testing by USEC operatives proved disasterous due to extensive unreported side-effects. The stimulant was later recalled, but shady characters in Tarkov managed to get their hands on significant quanities of the product and still peddle it to this day, often resusing old Adrenaline injector casings.");
+        this.addToLocale("SJ0", "SJ0 TGLabs Combat Stimulant Injector", "SJ0", "TerraGroup Labs' first attempt at a combat stimulant with regenerative properties. Despite reports of initial trials being promising, in-theatre testing by USEC operatives proved disasterous due to extensive unreported side-effects. The stimulant was later recalled for disposal, but shady characters in the Tarkov region managed to intercept significant quanities of the product and still peddle it to this day, often resusing old Adrenaline injector casings or whatver they can get their hands on.");
         // this.addToHideout(this.crafts.Tier3Medkit);
 
         //SuperMedkit (for bots)
