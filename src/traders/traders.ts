@@ -84,7 +84,7 @@ export class Traders {
         // this.tables.traders['5ac3b934156ae10c4430e83c'].base.sell_category = sellCatRag;
         // this.tables.traders['5c0647fdd443bc2504c2d371'].base.sell_category = sellCatJaeg;
 
-        if(modConfig.nerf_fence == true){
+        if (modConfig.nerf_fence == true) {
             this.traderConf.fence.discountOptions.assortSize = 10;
             this.traderConf.fence.discountOptions.presetPriceMult = 2.2;
             this.traderConf.fence.discountOptions.itemPriceMult = 1.8;
@@ -96,7 +96,7 @@ export class Traders {
             this.traderConf.fence.presetPriceMult = 2.5;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
             this.traderConf.fence.blacklist = fenceLimits.blacklist;
-    
+
         }
 
         this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
@@ -172,11 +172,14 @@ export class Traders {
     }
 
     public addItemsToAssorts() {
-        //therapist//
+   
         if (this.modConf.med_changes == true) {
-            this.assortItemPusher(theraId, "TIER1MEDKIT", 1, "5449016a4bdc2d6f028b456f", 1, false, 25000);
+            //therapist//
+            this.assortItemPusher(theraId, "TIER1MEDKIT", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
             this.assortItemPusher(theraId, "TIER2MEDKIT", 1, "5449016a4bdc2d6f028b456f", 3, false, 50000);
             this.assortItemPusher(theraId, "TIER3MEDKIT", 1, "5449016a4bdc2d6f028b456f", 4, false, 75000);
+            //Skier//
+            this.assortItemPusher(skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
         }
 
         //ragman//
@@ -598,7 +601,7 @@ export class TraderRefresh extends TraderAssortHelper {
     public myResetExpiredTrader(trader: ITrader) {
 
         const traderId = trader.base._id;
-        trader.assort =   this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
+        trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
 
         if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
             trader.assort.items = this.modifyTraderAssorts(trader, this.logger);

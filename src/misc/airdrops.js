@@ -5,6 +5,7 @@ const enums_1 = require("../utils/enums");
 const LocationController_1 = require("C:/snapshot/project/obj/controllers/LocationController");
 const utils_1 = require("../utils/utils");
 const arrays_1 = require("../utils/arrays");
+const AirdropType_1 = require("C:/snapshot/project/obj/models/enums/AirdropType");
 class Airdrops {
     constructor(logger, modConfig, airConf) {
         this.logger = logger;
@@ -49,7 +50,7 @@ class AirdropLootgen extends LocationController_1.LocationController {
             itemLimits: airdropLoot.itemLimits,
             itemStackLimits: airdropLoot.itemStackLimits
         };
-        return this.createRandomAirdropLoot(options, utils);
+        return { dropType: AirdropType_1.AirdropTypeEnum.MIXED, loot: this.createRandomAirdropLoot(options, utils) };
     }
     updateAirdropsLootPools(modConfig, utils, weights) {
         const airdropLoot = require("../../db/airdrops/airdrop_loot.json");

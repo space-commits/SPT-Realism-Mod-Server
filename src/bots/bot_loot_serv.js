@@ -26,7 +26,7 @@ var MyLootCacheType;
     MyLootCacheType["BAG_HEALING_ITEMS"] = "BagHealingItems";
     MyLootCacheType["BAG_DRUG_ITEMS"] = "BagDrugItems";
     MyLootCacheType["BAG_STIM_ITEMS"] = "BagStimItems";
-})(MyLootCacheType = exports.MyLootCacheType || (exports.MyLootCacheType = {}));
+})(MyLootCacheType || (exports.MyLootCacheType = MyLootCacheType = {}));
 var EquipmentSlots;
 (function (EquipmentSlots) {
     EquipmentSlots["HEADWEAR"] = "Headwear";
@@ -43,7 +43,7 @@ var EquipmentSlots;
     EquipmentSlots["SECOND_PRIMARY_WEAPON"] = "SecondPrimaryWeapon";
     EquipmentSlots["HOLSTER"] = "Holster";
     EquipmentSlots["SCABBARD"] = "Scabbard";
-})(EquipmentSlots = exports.EquipmentSlots || (exports.EquipmentSlots = {}));
+})(EquipmentSlots || (exports.EquipmentSlots = EquipmentSlots = {}));
 class BotLooGen extends BotLootGenerator_1.BotLootGenerator {
     myGetBotLootNValue(botRole, isPmc) {
         if (isPmc) {

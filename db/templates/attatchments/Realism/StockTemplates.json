@@ -322,7 +322,7 @@
         "Dispersion": 0,
         "CameraRecoil": 0,
         "AimSpeed": 0,
-        "Ergonomics": 3,
+        "Ergonomics": 0,
         "Accuracy": 0,
         "HasShoulderContact": false,
         "BlocksFolding": false,

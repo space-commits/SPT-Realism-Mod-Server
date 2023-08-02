@@ -209,30 +209,6 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 9.8;
             }
-            //Redut-M
-            if (serverItem._id === "5ca2151486f774244a3b8d30") {
-                serverItem._props.Durability = 100;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 8;
-                serverItem._props.speedPenaltyPercent = -10;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -10;
-                serverItem._props.BluntThroughput = 0.1;
-                serverItem._props.ArmorMaterial = 'Titan';
-                serverItem._props.Weight = 13.5;
-            }
-            //Redut-T5
-            if (serverItem._id === "5ca21c6986f77479963115a7") {
-                serverItem._props.Durability = 125;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 8;
-                serverItem._props.speedPenaltyPercent = -12;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -12;
-                serverItem._props.BluntThroughput = 0.08;
-                serverItem._props.ArmorMaterial = 'Titan';
-                serverItem._props.Weight = 16.5;
-            }
             //// Class 9////
             ///////////////////////////////////
             //6B13 Digital
@@ -271,6 +247,7 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 12;
             }
+            //////////////////////////////
             //THOR Integrated Carrier
             if (serverItem._id === "60a283193cb70855c43a381d") {
                 serverItem._props.Durability = 130;
@@ -330,6 +307,30 @@ class Armor {
                 serverItem._props.BluntThroughput = 0.1;
                 serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 10;
+            }
+            //Redut-M
+            if (serverItem._id === "5ca2151486f774244a3b8d30") {
+                serverItem._props.Durability = 100;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 9;
+                serverItem._props.speedPenaltyPercent = -10;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -10;
+                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.ArmorMaterial = 'Titan';
+                serverItem._props.Weight = 13.5;
+            }
+            //Redut-T5
+            if (serverItem._id === "5ca21c6986f77479963115a7") {
+                serverItem._props.Durability = 125;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 9;
+                serverItem._props.speedPenaltyPercent = -12;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -12;
+                serverItem._props.BluntThroughput = 0.08;
+                serverItem._props.ArmorMaterial = 'Titan';
+                serverItem._props.Weight = 16.5;
             }
             //// Class 10////
             //Gen 4 Full

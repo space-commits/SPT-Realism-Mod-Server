@@ -17,17 +17,22 @@ class ItemCloning {
         this.cloneMedicalItem("5755356824597772cb798962", "TIER1MEDKIT", this.medItems.TIER1MEDKIT.MaxHpResource, this.medItems.TIER1MEDKIT.medUseTime, this.medItems.TIER1MEDKIT.hpResourceRate, "assets/content/items/barter/item_barter_meds_tools/item_barter_meds_tools.bundle", "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle", "yellow ", this.medItems.TIER1MEDKIT.effects_damage);
         this.addToHandbook("TIER1MEDKIT", "5b47574386f77428ca22b338", 10000);
         this.addToLocale("TIER1MEDKIT", "Makeshift Medical Kit", "TIER1", "A makeshift medical kit used for healing minor wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        this.addToHideout(this.crafts.Tier1Medkit);
+        // this.addToHideout(this.crafts.Tier1Medkit);
         //Tier 2 Medkit
         this.cloneMedicalItem("5755356824597772cb798962", "TIER2MEDKIT", this.medItems.TIER2MEDKIT.MaxHpResource, this.medItems.TIER2MEDKIT.medUseTime, this.medItems.TIER2MEDKIT.hpResourceRate, "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_loot.bundle", "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle", "blue", this.medItems.TIER2MEDKIT.effects_damage);
         this.addToHandbook("TIER2MEDKIT", "5b47574386f77428ca22b338", 20000);
         this.addToLocale("TIER2MEDKIT", "Improved Makeshift Medical Kit", "TIER2", "An improved makeshift medical kit used for healing wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        this.addToHideout(this.crafts.Tier2Medkit);
+        // this.addToHideout(this.crafts.Tier2Medkit);
         //Tier 3 Medkit
         this.cloneMedicalItem("5755356824597772cb798962", "TIER3MEDKIT", this.medItems.TIER3MEDKIT.MaxHpResource, this.medItems.TIER3MEDKIT.medUseTime, this.medItems.TIER3MEDKIT.hpResourceRate, "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_loot.bundle", "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_container.bundle", "violet", this.medItems.TIER3MEDKIT.effects_damage);
         this.addToHandbook("TIER3MEDKIT", "5b47574386f77428ca22b338", 30000);
         this.addToLocale("TIER3MEDKIT", "High-Grade Makeshift Medical Kit", "TIER3", "A high-grade makeshift medical kit used for healing more severe wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        this.addToHideout(this.crafts.Tier3Medkit);
+        // this.addToHideout(this.crafts.Tier3Medkit);
+        //Makeshift Regen
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "SJ0", this.medItems.SJ0.MaxHpResource, this.medItems.SJ0.medUseTime, this.medItems.SJ0.hpResourceRate, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", this.medItems.SJ0.effects_damage);
+        this.addToHandbook("SJ0", "5b47574386f77428ca22b33a", 30000);
+        this.addToLocale("SJ0", "SJ0 TGLabs Combat Stimulant Injector", "SJ0", "TerraGroup Labs' first attempt at a combat stimulant with regenerative properties. Despite reports of initial trials being promising, in-theatre testing by USEC operatives proved disasterous due to extensive unreported side-effects. The stimulant was later recalled for disposal, but shady characters in the Tarkov region managed to intercept significant quanities of the product and still peddle it to this day, often resusing old Adrenaline injector casings or whatver they can get their hands on.");
+        // this.addToHideout(this.crafts.Tier3Medkit);
         //SuperMedkit (for bots)
         // this.cloneMedicalItem(
         //     "590c678286f77426c9660122",

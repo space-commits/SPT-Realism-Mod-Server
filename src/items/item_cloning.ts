@@ -26,7 +26,7 @@ export class ItemCloning {
         );
         this.addToHandbook("TIER1MEDKIT", "5b47574386f77428ca22b338", 10000);
         this.addToLocale("TIER1MEDKIT", "Makeshift Medical Kit", "TIER1", "A makeshift medical kit used for healing minor wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        this.addToHideout(this.crafts.Tier1Medkit);
+        // this.addToHideout(this.crafts.Tier1Medkit);
 
         //Tier 2 Medkit
         this.cloneMedicalItem(
@@ -42,7 +42,7 @@ export class ItemCloning {
         );
         this.addToHandbook("TIER2MEDKIT", "5b47574386f77428ca22b338", 20000);
         this.addToLocale("TIER2MEDKIT", "Improved Makeshift Medical Kit", "TIER2", "An improved makeshift medical kit used for healing wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        this.addToHideout(this.crafts.Tier2Medkit);
+        // this.addToHideout(this.crafts.Tier2Medkit);
 
         //Tier 3 Medkit
         this.cloneMedicalItem(
@@ -58,7 +58,23 @@ export class ItemCloning {
         );
         this.addToHandbook("TIER3MEDKIT", "5b47574386f77428ca22b338", 30000);
         this.addToLocale("TIER3MEDKIT", "High-Grade Makeshift Medical Kit", "TIER3", "A high-grade makeshift medical kit used for healing more severe wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        this.addToHideout(this.crafts.Tier3Medkit);
+        // this.addToHideout(this.crafts.Tier3Medkit);
+
+        //Makeshift Regen
+        this.cloneMedicalItem(
+            "5c10c8fd86f7743d7d706df3",
+            "SJ0",
+            this.medItems.SJ0.MaxHpResource,
+            this.medItems.SJ0.medUseTime,
+            this.medItems.SJ0.hpResourceRate,
+            "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle",
+            "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle",
+            "blue",
+            this.medItems.SJ0.effects_damage
+        );
+        this.addToHandbook("SJ0", "5b47574386f77428ca22b33a", 30000);
+        this.addToLocale("SJ0", "SJ0 TGLabs Combat Stimulant Injector", "SJ0", "TerraGroup Labs' first attempt at a combat stimulant with regenerative properties. Despite reports of initial trials being promising, in-theatre testing by USEC operatives proved disasterous due to extensive unreported side-effects. The stimulant was later recalled for disposal, but shady characters in the Tarkov region managed to intercept significant quanities of the product and still peddle it to this day, often resusing old Adrenaline injector casings or whatver they can get their hands on.");
+        // this.addToHideout(this.crafts.Tier3Medkit);
 
         //SuperMedkit (for bots)
         // this.cloneMedicalItem(
@@ -153,13 +169,13 @@ export class ItemCloning {
     }
 
 
-    private addCustomWeapsToQuests(targetWeap: string, weapToAdd: string){
+    private addCustomWeapsToQuests(targetWeap: string, weapToAdd: string) {
         for (let quest in this.questDB) {
-            let conditions = this.questDB[quest].conditions.AvailableForFinish[0];   
-            if(conditions._parent === "CounterCreator"){
+            let conditions = this.questDB[quest].conditions.AvailableForFinish[0];
+            if (conditions._parent === "CounterCreator") {
                 let killConditions = conditions._props.counter.conditions[0]
-                if(killConditions._parent === "Kills" && killConditions._props?.weapon !== undefined){
-                    if( killConditions._props.weapon.includes(targetWeap)){
+                if (killConditions._parent === "Kills" && killConditions._props?.weapon !== undefined) {
+                    if (killConditions._props.weapon.includes(targetWeap)) {
                         killConditions._props.weapon.push(weapToAdd);
                     }
                 }
@@ -209,7 +225,7 @@ export class ItemCloning {
     }
 
 
-    private cloneMedicalItem(itemToClone: string, newItemID: string, maxHpResource: number, medUseTime: number, hpResourceRate: number, prefabePath: string, usePrefabPath: string, color: string, effectsDamage: JSON) {
+    private cloneMedicalItem(itemToClone: string, newItemID: string, maxHpResource: number, medUseTime: number, hpResourceRate: number, prefabePath: string, usePrefabPath: string, color: string, effectsDamage: any) {
         this.cloneItem(itemToClone, newItemID);
         let itemID = this.itemDB[newItemID];
         itemID._props.MaxHpResource = maxHpResource;

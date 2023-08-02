@@ -5,10 +5,12 @@ import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { LootItem } from "@spt-aki/models/spt/services/LootItem";
 import { MinMax } from "@spt-aki/models/common/MinMax";
 import { ParentClasses } from "../utils/enums";
-import { Preset } from "@spt-aki/models/eft/common/IGlobals";
+import { IPreset } from "@spt-aki/models/eft/common/IGlobals";
 import { LocationController } from "@spt-aki/controllers/LocationController";
 import { Utils, RaidInfoTracker } from "../utils/utils";
 import { Arrays } from "../utils/arrays";
+import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootResult";
+import { AirdropTypeEnum } from "@spt-aki/models/enums/AirdropType";
 
 
 
@@ -39,7 +41,7 @@ export class Airdrops {
 export class AirdropLootgen extends LocationController {
 
 
-    public myGetAirdropLoot(): LootItem[] {
+    public myGetAirdropLoot(): IAirdropLootResult {
         const modConfig = require("../../config/config.json");
         const tables = this.databaseServer.getTables();
         const arrays = new Arrays(tables);
@@ -62,7 +64,7 @@ export class AirdropLootgen extends LocationController {
             itemStackLimits: airdropLoot.itemStackLimits
         };
 
-        return this.createRandomAirdropLoot(options, utils);
+        return { dropType: AirdropTypeEnum.MIXED, loot: this.createRandomAirdropLoot(options, utils) };
     }
 
 
@@ -194,7 +196,7 @@ export class AirdropLootgen extends LocationController {
         return utils.getInt(min, max);
     }
 
-    private findAndAddRandomPresetToAirdropLoot(globalDefaultPresets: [string, Preset][], itemTypeCounts: Record<string, { current: number; max: number; }>, itemWhitelist: string[], result: LootItem[], utils: Utils): boolean {
+    private findAndAddRandomPresetToAirdropLoot(globalDefaultPresets: [string, IPreset][], itemTypeCounts: Record<string, { current: number; max: number; }>, itemWhitelist: string[], result: LootItem[], utils: Utils): boolean {
         // Choose random preset and get details from item.json using encyclopedia value (encyclopedia === tplId)
         const randomPreset = utils.getArrayValue(globalDefaultPresets)[1];
         const itemDetails = this.databaseServer.getTables().templates.items[randomPreset._encyclopedia];
