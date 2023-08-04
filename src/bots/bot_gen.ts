@@ -249,7 +249,7 @@ export class BotGen extends BotGenerator {
             this.botEquipmentFilterService.filterBotEquipment(botJsonTemplate, botLevel.level, botGenerationDetails);
         }
 
-        bot.Info.Nickname = this.generateBotNickname(botJsonTemplate, botGenerationDetails.isPlayerScav, botRole);
+        bot.Info.Nickname = this.generateBotNickname(botJsonTemplate, botGenerationDetails.isPlayerScav, botRole, sessionId);
 
         const skipChristmasItems = !this.seasonalEventService.christmasEventEnabled();
         if (skipChristmasItems) {

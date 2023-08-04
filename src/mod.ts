@@ -355,6 +355,13 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
 
+                            if (typeof botConf.pmc.allPMCsHavePlayerNameWithRandomPrefixChance !== 'undefined') {
+                                logger.info("Hotfix 2 or later");
+                            }
+                            else {
+                                logger.info("Hotfix 1 or earlier");
+                            }
+
                             const arrays = new Arrays(postLoadTables);
                             const utils = new Utils(postLoadTables, arrays);
                             const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
@@ -595,14 +602,22 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables);
+        const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
+
+        if (typeof botConf.pmc.allPMCsHavePlayerNameWithRandomPrefixChance === 'undefined') {
+            logger.error("===============================================================================================================================================================");
+            logger.error("Realism Mod: WARNING, YOU ARE ARE NOT USING THE LATEST VERSION OF SPT 3.6.0, MAKE SURE TO DOWNLOAD LATEST SPT BUILD WITH HOTFIX 2! OTHERWISE MOD WILL NOT WORK!");
+            logger.error("===============================================================================================================================================================");
+            return;
+        }
 
         const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
         const activeMods = preAkiModLoader.getImportedModDetails();
         for (const modname in activeMods) {
-            if(modname.includes("Jiro-BatterySystem")){
+            if (modname.includes("Jiro-BatterySystem")) {
                 ModTracker.batteryModPresent = true;
             }
-            if(modname.includes("Solarint-SAIN-ServerMod")){
+            if (modname.includes("Solarint-SAIN-ServerMod")) {
                 ModTracker.sainPresent = true;
             }
         }
