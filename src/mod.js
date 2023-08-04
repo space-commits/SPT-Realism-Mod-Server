@@ -257,12 +257,6 @@ class Main {
                         const seasonalEventsService = container.resolve("SeasonalEventService");
                         const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
-                        if (typeof botConf.pmc.allPMCsHavePlayerNameWithRandomPrefixChance !== 'undefined') {
-                            logger.info("Hotfix 2 or later");
-                        }
-                        else {
-                            logger.info("Hotfix 1 or earlier");
-                        }
                         const arrays = new arrays_1.Arrays(postLoadTables);
                         const utils = new utils_1.Utils(postLoadTables, arrays);
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);

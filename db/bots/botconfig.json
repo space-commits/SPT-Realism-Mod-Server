@@ -630,6 +630,18 @@
             "exusec": {
                 "min": 0,
                 "max": 0
+            },
+            "arenafighter": {
+                "min": 0,
+                "max": 0
+            },
+            "arenafighterevent": {
+                "min": 0,
+                "max": 0
+            },
+            "crazyassaultevent": {
+                "min": 0,
+                "max": 0
             }
         }
     },
@@ -664,6 +676,18 @@
                 "max": 0
             },
             "exusec": {
+                "min": 0,
+                "max": 0
+            },
+            "arenafighter": {
+                "min": 0,
+                "max": 0
+            },
+            "arenafighterevent": {
+                "min": 0,
+                "max": 0
+            },
+            "crazyassaultevent": {
                 "min": 0,
                 "max": 0
             }
@@ -702,6 +726,18 @@
             "exusec": {
                 "min": 0,
                 "max": 0
+            },
+            "arenafighter": {
+                "min": 0,
+                "max": 0
+            },
+            "arenafighterevent": {
+                "min": 0,
+                "max": 0
+            },
+            "crazyassaultevent": {
+                "min": 0,
+                "max": 0
             }
         }
     },
@@ -722,6 +758,18 @@
             "exusec": {
                 "min": 100,
                 "max": 100
+            },
+            "arenafighter": {
+                "min": 100,
+                "max": 100
+            },
+            "arenafighterevent": {
+                "min": 100,
+                "max": 100
+            },
+            "crazyassaultevent": {
+                "min": 100,
+                "max": 100
             }
         }
     },
@@ -740,6 +788,18 @@
                 "max": 0
             },
             "exusec": {
+                "min": 0,
+                "max": 0
+            },
+            "arenafighter": {
+                "min": 0,
+                "max": 0
+            },
+            "arenafighterevent": {
+                "min": 0,
+                "max": 0
+            },
+            "crazyassaultevent": {
                 "min": 0,
                 "max": 0
             }

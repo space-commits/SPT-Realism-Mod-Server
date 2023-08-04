@@ -354,14 +354,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                             const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
-
-                            if (typeof botConf.pmc.allPMCsHavePlayerNameWithRandomPrefixChance !== 'undefined') {
-                                logger.info("Hotfix 2 or later");
-                            }
-                            else {
-                                logger.info("Hotfix 1 or earlier");
-                            }
-
+                            
                             const arrays = new Arrays(postLoadTables);
                             const utils = new Utils(postLoadTables, arrays);
                             const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);

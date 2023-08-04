@@ -12,7 +12,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossSanitar": 10,
@@ -24,7 +27,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossSanitar": 10,
@@ -37,7 +43,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossSanitar": 10,
@@ -49,7 +58,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossSanitar": 10,
@@ -62,7 +74,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossSanitar": 10,
@@ -75,7 +90,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossSanitar": 10,
@@ -88,7 +106,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossSanitar": 10,
@@ -101,7 +122,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossSanitar": 10,
@@ -114,7 +138,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossSanitar": 10,
@@ -127,7 +154,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             },
             "sptusec": {
@@ -141,7 +171,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossSanitar": 10,
@@ -153,7 +186,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossSanitar": 10,
@@ -166,7 +202,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossSanitar": 10,
@@ -178,7 +217,10 @@
                     "bossKilla": 10,
                     "bossKnight": 10,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 10
+                    "followerBigPipe": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossSanitar": 10,
@@ -191,7 +233,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossSanitar": 10,
@@ -204,7 +249,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossSanitar": 10,
@@ -217,7 +265,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossSanitar": 10,
@@ -230,7 +281,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossSanitar": 10,
@@ -243,7 +297,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossSanitar": 10,
@@ -256,7 +313,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             }
         },
@@ -272,7 +332,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossSanitar": 10,
@@ -284,7 +347,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossSanitar": 15,
@@ -297,7 +363,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossSanitar": 10,
@@ -309,7 +378,10 @@
                     "bossKilla": 10,
                     "bossKnight": 10,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 10
+                    "followerBigPipe": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossSanitar": 15,
@@ -322,7 +394,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossSanitar": 15,
@@ -335,7 +410,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossSanitar": 15,
@@ -348,7 +426,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossSanitar": 15,
@@ -361,7 +442,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossSanitar": 15,
@@ -374,7 +458,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossSanitar": 15,
@@ -387,7 +474,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             },
             "sptusec": {
@@ -401,7 +491,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossSanitar": 10,
@@ -413,7 +506,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossSanitar": 15,
@@ -426,7 +522,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossSanitar": 10,
@@ -438,7 +537,10 @@
                     "bossKilla": 10,
                     "bossKnight": 10,
                     "followerBirdEye": 1,
-                    "followerBigPipe": 10
+                    "followerBigPipe": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossSanitar": 15,
@@ -451,7 +553,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossSanitar": 15,
@@ -464,7 +569,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossSanitar": 15,
@@ -477,7 +585,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossSanitar": 15,
@@ -490,7 +601,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossSanitar": 15,
@@ -503,7 +617,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossSanitar": 15,
@@ -516,7 +633,10 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
-                    "followerBigPipe": 1
+                    "followerBigPipe": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             }
         }
@@ -536,7 +656,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
                     "bossBully": 1,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossKilla": 7,
@@ -550,7 +673,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
                     "bossBully": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossKilla": 10,
@@ -560,7 +686,10 @@
                     "bossKnight": 10,
                     "cursedAssault": 10,
                     "followerBigPipe": 10,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossKilla": 7,
@@ -573,7 +702,10 @@
                     "bossKnight": 7,
                     "cursedAssault": 0,
                     "followerBigPipe": 7,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossKilla": 7,
@@ -586,7 +718,10 @@
                     "bossKnight": 7,
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossKilla": 7,
@@ -599,7 +734,10 @@
                     "bossKnight": 7,
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossKilla": 7,
@@ -612,7 +750,10 @@
                     "bossKnight": 7,
                     "cursedAssault": 1,
                     "followerBigPipe": 7,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossKilla": 5,
@@ -627,7 +768,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 5,
                     "gifter": 1,
-                    "followerKojaniy": 5
+                    "followerKojaniy": 5,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossKilla": 5,
@@ -642,7 +786,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 5,
                     "gifter": 1,
-                    "followerKojaniy": 5
+                    "followerKojaniy": 5,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossKilla": 5,
@@ -657,7 +804,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 5,
                     "gifter": 1,
-                    "followerKojaniy": 5
+                    "followerKojaniy": 5,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             },
             "sptusec": {
@@ -673,7 +823,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
                     "bossBully": 2,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossKilla": 5,
@@ -687,7 +840,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
                     "bossBully": 10,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossKilla": 7,
@@ -697,7 +853,10 @@
                     "bossKnight": 7,
                     "cursedAssault": 10,
                     "followerBigPipe": 7,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossKilla": 5,
@@ -710,7 +869,10 @@
                     "bossKnight": 5,
                     "cursedAssault": 0,
                     "followerBigPipe": 7,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossKilla": 5,
@@ -723,7 +885,10 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossKilla": 5,
@@ -736,7 +901,10 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossKilla": 5,
@@ -749,7 +917,10 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossKilla": 3,
@@ -763,7 +934,10 @@
                     "cursedAssault": 0,
                     "followerBigPipe": 5,
                     "gifter": 1,
-                    "followerKojaniy": 7
+                    "followerKojaniy": 7,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossKilla": 3,
@@ -777,7 +951,10 @@
                     "cursedAssault": 0,
                     "followerBigPipe": 5,
                     "gifter": 1,
-                    "followerKojaniy": 7
+                    "followerKojaniy": 7,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossKilla": 3,
@@ -791,7 +968,10 @@
                     "cursedAssault": 0,
                     "followerBigPipe": 5,
                     "gifter": 1,
-                    "followerKojaniy": 7
+                    "followerKojaniy": 7,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             }
         },
@@ -809,7 +989,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
                     "bossBully": 2,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossKilla": 5,
@@ -823,7 +1006,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
                     "bossBully": 10,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossKilla": 7,
@@ -833,7 +1019,10 @@
                     "bossKnight": 7,
                     "cursedAssault": 10,
                     "followerBigPipe": 7,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossKilla": 5,
@@ -848,7 +1037,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossKilla": 7,
@@ -863,7 +1055,10 @@
                     "followerBigPipe": 7,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossKilla": 7,
@@ -878,7 +1073,10 @@
                     "followerBigPipe": 7,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossKilla": 7,
@@ -893,7 +1091,10 @@
                     "followerBigPipe": 7,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossKilla": 3,
@@ -908,7 +1109,10 @@
                     "followerBigPipe": 3,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossKilla": 3,
@@ -923,7 +1127,10 @@
                     "followerBigPipe": 3,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossKilla": 3,
@@ -938,7 +1145,10 @@
                     "followerBigPipe": 3,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             },
             "sptusec": {
@@ -954,7 +1164,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
                     "bossBully": 2,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossKilla": 5,
@@ -968,7 +1181,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 5,
                     "bossBully": 5,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossKilla": 7,
@@ -978,7 +1194,10 @@
                     "bossKnight": 7,
                     "cursedAssault": 10,
                     "followerBigPipe": 7,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossKilla": 5,
@@ -993,7 +1212,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 20,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossKilla": 5,
@@ -1008,7 +1230,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 20,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossKilla": 5,
@@ -1023,7 +1248,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 20,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossKilla": 5,
@@ -1038,7 +1266,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 20,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossKilla": 2,
@@ -1053,7 +1284,10 @@
                     "followerBigPipe": 2,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossKilla": 2,
@@ -1068,7 +1302,10 @@
                     "followerBigPipe": 2,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossKilla": 2,
@@ -1083,7 +1320,10 @@
                     "followerBigPipe": 2,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             }
         }
@@ -1103,7 +1343,10 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 1,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossKilla": 15,
@@ -1117,7 +1360,10 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossKilla": 15,
@@ -1127,7 +1373,10 @@
                     "bossKnight": 15,
                     "cursedAssault": 15,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossKilla": 15,
@@ -1140,7 +1389,10 @@
                     "bossKnight": 15,
                     "cursedAssault": 1,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossKilla": 15,
@@ -1153,7 +1405,10 @@
                     "bossKnight": 15,
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossKilla": 15,
@@ -1166,7 +1421,10 @@
                     "bossKnight": 15,
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossKilla": 15,
@@ -1179,7 +1437,10 @@
                     "bossKnight": 15,
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossKilla": 10,
@@ -1194,7 +1455,10 @@
                     "followerBigPipe": 10,
                     "bossBully": 5,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossKilla": 10,
@@ -1209,7 +1473,10 @@
                     "followerBigPipe": 10,
                     "bossBully": 5,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossKilla": 10,
@@ -1224,7 +1491,10 @@
                     "followerBigPipe": 10,
                     "bossBully": 5,
                     "gifter": 1,
-                    "followerKojaniy": 2
+                    "followerKojaniy": 2,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             },
             "sptusec": {
@@ -1240,7 +1510,10 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 10,
                     "bossBully": 2,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossKilla": 10,
@@ -1254,7 +1527,10 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 10,
                     "bossBully": 10,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossKilla": 15,
@@ -1264,7 +1540,10 @@
                     "bossKnight": 15,
                     "cursedAssault": 15,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossKilla": 5,
@@ -1277,7 +1556,10 @@
                     "bossKnight": 5,
                     "cursedAssault": 1,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossKilla": 5,
@@ -1290,7 +1572,10 @@
                     "bossKnight": 5,
                     "cursedAssault": 2,
                     "followerBigPipe": 10,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossKilla": 5,
@@ -1303,7 +1588,10 @@
                     "bossKnight": 5,
                     "cursedAssault": 2,
                     "followerBigPipe": 10,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossKilla": 5,
@@ -1316,7 +1604,10 @@
                     "bossKnight": 5,
                     "cursedAssault": 2,
                     "followerBigPipe": 10,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossKilla": 3,
@@ -1330,7 +1621,10 @@
                     "cursedAssault": 0,
                     "followerBigPipe": 5,
                     "gifter": 1,
-                    "followerKojaniy": 5
+                    "followerKojaniy": 5,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossKilla": 3,
@@ -1344,7 +1638,10 @@
                     "cursedAssault": 0,
                     "followerBigPipe": 5,
                     "gifter": 1,
-                    "followerKojaniy": 5
+                    "followerKojaniy": 5,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossKilla": 3,
@@ -1358,7 +1655,10 @@
                     "cursedAssault": 0,
                     "followerBigPipe": 5,
                     "gifter": 1,
-                    "followerKojaniy": 5
+                    "followerKojaniy": 5,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             }
         },
@@ -1376,7 +1676,10 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 1,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossKilla": 15,
@@ -1390,7 +1693,10 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossKilla": 15,
@@ -1400,7 +1706,10 @@
                     "bossKnight": 15,
                     "cursedAssault": 15,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossKilla": 10,
@@ -1414,7 +1723,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
                     "bossBully": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossKilla": 15,
@@ -1428,7 +1740,10 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossKilla": 15,
@@ -1442,7 +1757,10 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossKilla": 15,
@@ -1456,7 +1774,10 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 15,
                     "bossBully": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossKilla": 5,
@@ -1471,7 +1792,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 7
+                    "followerKojaniy": 7,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossKilla": 5,
@@ -1486,7 +1810,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 7
+                    "followerKojaniy": 7,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossKilla": 5,
@@ -1501,7 +1828,10 @@
                     "followerBigPipe": 5,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 7
+                    "followerKojaniy": 7,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             },
             "sptusec": {
@@ -1517,7 +1847,10 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 10,
                     "bossBully": 2,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "factory4_night": {
                     "bossKilla": 10,
@@ -1531,7 +1864,10 @@
                     "cursedAssault": 5,
                     "followerBigPipe": 10,
                     "bossBully": 10,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "laboratory": {
                     "bossKilla": 15,
@@ -1541,7 +1877,10 @@
                     "bossKnight": 15,
                     "cursedAssault": 15,
                     "followerBigPipe": 15,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "bigmap": {
                     "bossKilla": 10,
@@ -1555,7 +1894,10 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 10,
                     "bossBully": 20,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "interchange": {
                     "bossKilla": 10,
@@ -1569,7 +1911,10 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 10,
                     "bossBully": 20,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "rezervbase": {
                     "bossKilla": 10,
@@ -1583,7 +1928,10 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 10,
                     "bossBully": 20,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "tarkovstreets": {
                     "bossKilla": 10,
@@ -1597,7 +1945,10 @@
                     "cursedAssault": 2,
                     "followerBigPipe": 10,
                     "bossBully": 20,
-                    "gifter": 1
+                    "gifter": 1,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "woods": {
                     "bossKilla": 2,
@@ -1612,7 +1963,10 @@
                     "followerBigPipe": 2,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "lighthouse": {
                     "bossKilla": 2,
@@ -1627,7 +1981,10 @@
                     "followerBigPipe": 2,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 },
                 "shoreline": {
                     "bossKilla": 2,
@@ -1642,7 +1999,10 @@
                     "followerBigPipe": 2,
                     "bossBully": 15,
                     "gifter": 1,
-                    "followerKojaniy": 10
+                    "followerKojaniy": 10,
+                    "arenafighter": 0,
+                    "arenafighterevent": 0,
+                    "crazyassaultevent": 0
                 }
             }
         }
