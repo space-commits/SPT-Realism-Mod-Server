@@ -29,7 +29,7 @@ export class Airdrops {
         this.airConf.planeVolume = 0.2;
 
         this.airConf.airdropMinStartTimeSeconds = 300;
-        this.airConf.airdropMaxStartTimeSeconds = 1200;
+        this.airConf.airdropMaxStartTimeSeconds = 2400;
 
 
         if (this.modConfig.logEverything == true) {
@@ -61,7 +61,8 @@ export class AirdropLootgen extends LocationController {
             itemCount: airdropLoot.itemCount,
             itemWhitelist: airdropLoot.itemWhitelist,
             itemLimits: airdropLoot.itemLimits,
-            itemStackLimits: airdropLoot.itemStackLimits
+            itemStackLimits: airdropLoot.itemStackLimits,
+            weaponCrateCount: airdropLoot.weaponCrateCount
         };
 
         return { dropType: AirdropTypeEnum.MIXED, loot: this.createRandomAirdropLoot(options, utils) };
@@ -132,8 +133,26 @@ export class AirdropLootgen extends LocationController {
         const globalDefaultPresets = Object.entries(tables.globals.ItemPresets).filter(x => x[1]._encyclopedia !== undefined);
         const randomisedPresetCount = utils.getInt(options.presetCount.min, options.presetCount.max);
         for (let index = 0; index < randomisedPresetCount; index++) {
-            if (!this.findAndAddRandomPresetToAirdropLoot(globalDefaultPresets, itemTypeCounts, options.itemWhitelist, result, utils)) {
+            if (!this.findAndAddRandomWeaponPresetToAirdropLoot(globalDefaultPresets, itemTypeCounts, options.itemWhitelist, result, utils)) {
                 index--;
+            }
+        }
+
+        const desiredWeaponCrateCount = this.randomUtil.getInt(options.weaponCrateCount.min, options.weaponCrateCount.max);
+        if (desiredWeaponCrateCount > 0)
+        {
+            // Get list of all sealed containers from db
+            const sealedWeaponContainerPool = Object.values(tables.templates.items).filter(x => x._name.includes("event_container_airdrop"));
+            for (let index = 0; index < desiredWeaponCrateCount; index++)
+            {
+                // Choose one at random + add to results array
+                const chosenSealedContainer = this.randomUtil.getArrayValue(sealedWeaponContainerPool);
+                result.push({
+                    id: this.hashUtil.generate(),
+                    tpl: chosenSealedContainer._id,
+                    isPreset: false,
+                    stackCount: 1
+                });
             }
         }
 
@@ -196,7 +215,7 @@ export class AirdropLootgen extends LocationController {
         return utils.getInt(min, max);
     }
 
-    private findAndAddRandomPresetToAirdropLoot(globalDefaultPresets: [string, IPreset][], itemTypeCounts: Record<string, { current: number; max: number; }>, itemWhitelist: string[], result: LootItem[], utils: Utils): boolean {
+    private findAndAddRandomWeaponPresetToAirdropLoot(globalDefaultPresets: [string, IPreset][], itemTypeCounts: Record<string, { current: number; max: number; }>, itemWhitelist: string[], result: LootItem[], utils: Utils): boolean {
         // Choose random preset and get details from item.json using encyclopedia value (encyclopedia === tplId)
         const randomPreset = utils.getArrayValue(globalDefaultPresets)[1];
         const itemDetails = this.databaseServer.getTables().templates.items[randomPreset._encyclopedia];
@@ -258,6 +277,7 @@ export class AirdropLootRequest {
     itemWhitelist: string[];
     itemLimits: Record<string, number>;
     itemStackLimits: Record<string, MinMax>;
+    weaponCrateCount: MinMax;
 }
 
 
