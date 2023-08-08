@@ -616,7 +616,7 @@
         "chanceSameSideIsHostilePercent": 95,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 20,
+                "min": 30,
                 "max": 45
             },
             "cursedassault": {
@@ -640,8 +640,8 @@
                 "max": 0
             },
             "crazyassaultevent": {
-                "min": 0,
-                "max": 0
+                "min": 5,
+                "max": 30
             }
         }
     },
@@ -664,7 +664,7 @@
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 17,
+                "min": 27,
                 "max": 45
             },
             "cursedassault": {
@@ -688,8 +688,8 @@
                 "max": 0
             },
             "crazyassaultevent": {
-                "min": 0,
-                "max": 0
+                "min": 5,
+                "max": 30
             }
         }
     },
@@ -712,7 +712,7 @@
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 15,
+                "min": 25,
                 "max": 45
             },
             "cursedassault": {
@@ -736,8 +736,8 @@
                 "max": 0
             },
             "crazyassaultevent": {
-                "min": 0,
-                "max": 0
+                "min": 5,
+                "max": 30
             }
         }
     },

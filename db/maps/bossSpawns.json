@@ -1,6 +1,19 @@
 {
     "StreetsBossLocationSpawn": [
         {
+            "BossName": "bossBully",
+            "BossChance": 25,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
             "BossChance": 20,
             "BossDifficult": "normal",
             "BossEscortAmount": "0",
@@ -66,19 +79,6 @@
             "Time": -1
         },
         {
-            "BossName": "bossBully",
-            "BossChance": 20,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "followerBully",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
-            "Time": -1,
-            "Supports": null,
-            "RandomTimeSpawn": false
-        },
-        {
             "BossName": "pmcBot",
             "BossChance": 30,
             "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
@@ -107,7 +107,7 @@
     "CustomsBossLocationSpawn": [
         {
             "BossName": "bossBully",
-            "BossChance": 40,
+            "BossChance": 50,
             "BossZone": "ZoneScavBase, ZoneDormitory, ZoneGasStation",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -161,7 +161,7 @@
         {
             "BossName": "bossKnight",
             "BossChance": 15,
-            "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
+            "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
@@ -457,7 +457,7 @@
         },
         {
             "BossName": "bossBully",
-            "BossChance": 10,
+            "BossChance": 15,
             "BossZone": "ZonePowerStation,ZoneTrucks",
             "BossPlayer": false,
             "BossDifficult": "normal",

@@ -6,6 +6,7 @@ const LocationController_1 = require("C:/snapshot/project/obj/controllers/Locati
 const utils_1 = require("../utils/utils");
 const arrays_1 = require("../utils/arrays");
 const AirdropType_1 = require("C:/snapshot/project/obj/models/enums/AirdropType");
+const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 class Airdrops {
     constructor(logger, modConfig, airConf) {
         this.logger = logger;
@@ -31,6 +32,7 @@ class Airdrops {
 exports.Airdrops = Airdrops;
 class AirdropLootgen extends LocationController_1.LocationController {
     myGetAirdropLoot() {
+        const randomUtil = tsyringe_1.container.resolve("RandomUtil");
         const modConfig = require("../../config/config.json");
         const tables = this.databaseServer.getTables();
         const arrays = new arrays_1.Arrays(tables);
@@ -51,7 +53,7 @@ class AirdropLootgen extends LocationController_1.LocationController {
             itemStackLimits: airdropLoot.itemStackLimits,
             weaponCrateCount: airdropLoot.weaponCrateCount
         };
-        return { dropType: AirdropType_1.AirdropTypeEnum.MIXED, loot: this.createRandomAirdropLoot(options, utils) };
+        return { dropType: AirdropType_1.AirdropTypeEnum.MIXED, loot: this.createRandomAirdropLoot(options, utils, randomUtil) };
     }
     updateAirdropsLootPools(modConfig, utils, weights) {
         const airdropLoot = require("../../db/airdrops/airdrop_loot.json");
@@ -90,7 +92,7 @@ class AirdropLootgen extends LocationController_1.LocationController {
         }
         return airdropLoot.provisions_loot;
     }
-    createRandomAirdropLoot(options, utils) {
+    createRandomAirdropLoot(options, utils, randomUtil) {
         const result = [];
         const itemTypeCounts = this.initItemLimitCounter(options.itemLimits);
         const tables = this.databaseServer.getTables();
@@ -109,13 +111,13 @@ class AirdropLootgen extends LocationController_1.LocationController {
                 index--;
             }
         }
-        const desiredWeaponCrateCount = this.randomUtil.getInt(options.weaponCrateCount.min, options.weaponCrateCount.max);
+        const desiredWeaponCrateCount = randomUtil.getInt(options.weaponCrateCount.min, options.weaponCrateCount.max);
         if (desiredWeaponCrateCount > 0) {
             // Get list of all sealed containers from db
             const sealedWeaponContainerPool = Object.values(tables.templates.items).filter(x => x._name.includes("event_container_airdrop"));
             for (let index = 0; index < desiredWeaponCrateCount; index++) {
                 // Choose one at random + add to results array
-                const chosenSealedContainer = this.randomUtil.getArrayValue(sealedWeaponContainerPool);
+                const chosenSealedContainer = randomUtil.getArrayValue(sealedWeaponContainerPool);
                 result.push({
                     id: this.hashUtil.generate(),
                     tpl: chosenSealedContainer._id,
@@ -130,7 +132,7 @@ class AirdropLootgen extends LocationController_1.LocationController {
         const randomItem = utils.getArrayValue(items)[1];
         const itemLimitCount = itemTypeCounts[randomItem._parent];
         if (itemLimitCount === undefined || itemLimitCount === null || itemLimitCount.current === undefined || itemLimitCount.current === null || itemLimitCount.max === undefined || itemLimitCount.max === null) {
-            this.logger.error("No Item Limit Found For Item: " + randomItem._id + " Of Category " + randomItem._parent);
+            this.logger.warning("No Item Limit Found For Item: " + randomItem._id + " Of Category " + randomItem._parent);
             return false;
         }
         if (randomItem._parent === enums_1.ParentClasses.SNIPER_RIFLE || randomItem._parent === enums_1.ParentClasses.MARKSMAN_RIFLE || randomItem._parent === enums_1.ParentClasses.ASSAULT_RIFLE || randomItem._parent === enums_1.ParentClasses.ASSAULT_CARBINE || randomItem._parent === enums_1.ParentClasses.SHOTGUN || randomItem._parent === enums_1.ParentClasses.PISTOL || randomItem._parent === enums_1.ParentClasses.SMG) {

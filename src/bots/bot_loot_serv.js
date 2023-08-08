@@ -35,6 +35,7 @@ var EquipmentSlots;
     EquipmentSlots["ARMOR_VEST"] = "ArmorVest";
     EquipmentSlots["EYEWEAR"] = "Eyewear";
     EquipmentSlots["ARM_BAND"] = "ArmBand";
+    EquipmentSlots[EquipmentSlots[3] = void 0] = 3;
     EquipmentSlots["TACTICAL_VEST"] = "TacticalVest";
     EquipmentSlots["POCKETS"] = "Pockets";
     EquipmentSlots["BACKPACK"] = "Backpack";

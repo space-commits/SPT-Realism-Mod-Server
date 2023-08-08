@@ -145,19 +145,19 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "healing": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "looseLoot": {
-                    "max": 4,
+                    "max": 5,
                     "min": 2
                 },
                 "magazines": {
@@ -169,7 +169,7 @@
                     "min": 0
                 },
                 "stims": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 }
             }
@@ -366,7 +366,7 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
@@ -374,12 +374,12 @@
                     "min": 1
                 },
                 "healing": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "looseLoot": {
                     "max": 5,
-                    "min": 2
+                    "min": 3
                 },
                 "magazines": {
                     "max": 5,
@@ -390,7 +390,7 @@
                     "min": 0
                 },
                 "stims": {
-                    "max": 2,
+                    "max": 3,
                     "min": 1
                 }
             }
@@ -593,7 +593,7 @@
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
@@ -601,12 +601,12 @@
                     "min": 1
                 },
                 "healing": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "looseLoot": {
                     "max": 6,
-                    "min": 2
+                    "min": 3
                 },
                 "magazines": {
                     "max": 6,
@@ -617,7 +617,7 @@
                     "min": 0
                 },
                 "stims": {
-                    "max": 3,
+                    "max": 4,
                     "min": 1
                 }
             }

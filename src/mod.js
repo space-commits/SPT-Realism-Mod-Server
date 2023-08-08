@@ -535,13 +535,15 @@ class Main {
         if (modConfig.trader_repair_changes == true) {
             traders.loadTraderRepairs();
         }
-        if (modConfig.recoil_attachment_overhaul && utils_1.ConfigChecker.dllIsPresent == true) {
-            ammo.loadAmmoFirerateChanges();
-            quests.fixMechancicQuests();
-            ammo.grenadeTweaks();
-        }
-        if (modConfig.headset_changes) {
-            gear.loadHeadsetTweaks();
+        if (utils_1.ConfigChecker.dllIsPresent == true) {
+            if (modConfig.recoil_attachment_overhaul) {
+                ammo.loadAmmoFirerateChanges();
+                quests.fixMechancicQuests();
+                ammo.grenadeTweaks();
+            }
+            if (modConfig.headset_changes) {
+                gear.loadHeadsetTweaks();
+            }
         }
         if (modConfig.remove_quest_fir_req == true) {
             quests.removeFIRQuestRequire();
