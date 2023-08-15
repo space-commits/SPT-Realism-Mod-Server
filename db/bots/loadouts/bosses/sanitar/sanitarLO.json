@@ -1,4 +1,50 @@
 {
+    "health": {
+        "Hydration": {
+            "min": 100,
+            "max": 100
+        },
+        "Energy": {
+            "min": 100,
+            "max": 100
+        },
+        "Temperature": {
+            "min": 28,
+            "max": 28
+        },
+        "BodyParts": [
+            {
+                "Head": {
+                    "min": 22,
+                    "max": 22
+                },
+                "Chest": {
+                    "min": 135,
+                    "max": 135
+                },
+                "Stomach": {
+                    "min": 135,
+                    "max": 135
+                },
+                "LeftArm": {
+                    "min": 70,
+                    "max": 70
+                },
+                "RightArm": {
+                    "min": 70,
+                    "max": 70
+                },
+                "LeftLeg": {
+                    "min": 70,
+                    "max": 70
+                },
+                "RightLeg": {
+                    "min": 70,
+                    "max": 70
+                }
+            }
+        ]
+    },
     "sanitarLO1": {
         "inventory": {
             "Ammo": {

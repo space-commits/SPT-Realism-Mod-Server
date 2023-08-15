@@ -106,17 +106,17 @@
     ],
     "CustomsBossLocationSpawn": [
         {
-            "BossName": "bossBully",
             "BossChance": 50,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneGasStation",
-            "BossPlayer": false,
             "BossDifficult": "normal",
-            "BossEscortType": "followerBully",
-            "BossEscortDifficult": "normal",
             "BossEscortAmount": "4",
-            "Time": -1,
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossName": "bossBully",
+            "BossPlayer": false,
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneGasStation, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
+            "RandomTimeSpawn": false,
             "Supports": null,
-            "RandomTimeSpawn": false
+            "Time": -1
         },
         {
             "BossName": "sectantPriest",
@@ -127,7 +127,7 @@
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "4",
-            "Time": -1,
+            "Time": 10,
             "Supports": null,
             "RandomTimeSpawn": false
         },
@@ -140,7 +140,7 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "3,3,3,3,3,3,4,5",
-            "Time": -1,
+            "Time": 10,
             "RandomTimeSpawn": false
         },
         {
@@ -152,7 +152,7 @@
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "3,3,3,3,3,3,4,5",
-            "Time": -1,
+            "Time": 10,
             "TriggerId": "",
             "TriggerName": "",
             "Supports": null,
@@ -167,7 +167,7 @@
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2",
-            "Time": -1,
+            "Time": 10,
             "Supports": [
                 {
                     "BossEscortType": "followerBigPipe",
@@ -204,7 +204,7 @@
             "BossZone": "ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "RandomTimeSpawn": false,
             "Supports": null,
-            "Time": -1
+            "Time": 10
         },
         {
             "BossName": "bossGluhar",
@@ -215,7 +215,7 @@
             "BossEscortType": "followerGluharAssault",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "0",
-            "Time": -1,
+            "Time": 10,
             "TriggerId": "",
             "TriggerName": "",
             "Supports": [
@@ -254,7 +254,7 @@
             "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
             "RandomTimeSpawn": false,
             "Supports": null,
-            "Time": -1
+            "Time": 10
         }
     ],
     "FactoryDayBossLocationSpawn": [

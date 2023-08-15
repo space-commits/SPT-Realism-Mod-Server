@@ -208,6 +208,10 @@ export class AirdropLootgen extends LocationController {
         let min = item._props.StackMinRandom;
         let max = item._props.StackMaxSize;
 
+        if(item._parent === "5485a8684bdc2da71d8b4567"){
+            min = max / 2;           
+        }
+
         if (options.itemStackLimits[item._id]) {
             min = options.itemStackLimits[item._id].min;
             max = options.itemStackLimits[item._id].max;

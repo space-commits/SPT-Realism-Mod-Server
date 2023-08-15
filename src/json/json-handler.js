@@ -44,9 +44,11 @@ const SniperRifleTemplates = require("../../db/templates/weapons/" + `${weapPath
 const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
 class JsonHandler {
-    constructor(tables) {
+    constructor(tables, logger) {
         this.tables = tables;
+        this.logger = logger;
         this.itemDB = this.tables.templates.items;
+        this.loggerz = this.logger;
     }
     pushModsToServer() {
         for (let i in this.itemDB) {
@@ -164,8 +166,8 @@ class JsonHandler {
         }
     }
     weapPusherHelper(serverItem, fileItem) {
+        let serverConfItems = serverItem._props.ConflictingItems;
         if (serverItem._id === fileItem.ItemID) {
-            var serverConfItems = serverItem._props.ConflictingItems;
             if (serverConfItems[0] !== "SPTRM") {
                 if (modConfig.malf_changes == true) {
                     serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
@@ -201,14 +203,26 @@ class JsonHandler {
                     if (fileItem.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
                     }
-                    var weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
+                    let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
                         fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.65", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
                         fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1"
                     ];
-                    var combinedArr = weapPropertyValues.concat(serverConfItems);
+                    let combinedArr = weapPropertyValues.concat(serverConfItems);
                     serverItem._props.ConflictingItems = combinedArr;
                 }
             }
+        }
+        else if ((serverConfItems[0] !== "SPTRM" && modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) && (serverItem._parent == enums_1.ParentClasses.SMG || serverItem._parent == enums_1.ParentClasses.ASSAULT_CARBINE || serverItem.parent == enums_1.ParentClasses.ASSAULT_RIFLE || serverItem._parent == enums_1.ParentClasses.MARKSMAN_RIFLE || serverItem._parent == enums_1.ParentClasses.SNIPER_RIFLE || serverItem._parent == enums_1.ParentClasses.PISTOL || serverItem._parent == enums_1.ParentClasses.SHOTGUN || serverItem._parent == enums_1.ParentClasses.MACHINE_GUN)) {
+            serverItem._props.Ergonomics = 80;
+            serverItem._props.RecoilForceUp *= 0.4;
+            serverItem._props.RecoilForceBack *= 0.5;
+            serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
+            serverItem._props.Convergence *= 5;
+            serverItem._props.RecoilAngle = 80;
+            serverItem._props.CameraRecoil *= 0.5;
+            let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1"];
+            let combinedArr = weapPropertyValues.concat(serverConfItems);
+            serverItem._props.ConflictingItems = combinedArr;
         }
     }
 }

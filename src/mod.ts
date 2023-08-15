@@ -215,6 +215,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const utils = new Utils(postLoadTables, arrays);
                         const tieredFlea = new TieredFlea(postLoadTables);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
+                        const maps = new Spawns(logger, postLoadTables, modConfig);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -281,7 +282,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                 tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
                             }
                             if (modConfig.boss_spawns == true) {
-                                this.setBossSpawnChance(postLoadTables.locations, level);
+                                maps.setBossSpawnChance(postLoadTables.locations, level);
                             }
 
                             if (modConfig.logEverything == true) {
@@ -415,7 +416,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             RaidInfoTracker.mapType = mapType;
 
                             if (modConfig.bot_changes == true) {
-                                this.updateBots(pmcData, logger, modConfig, bots, utils);
+                                bots.updateBots(pmcData, logger, modConfig, bots, utils);
                                 if (EventTracker.isChristmas == true) {
                                     logger.warning("====== Giving Bots Christmas Presents, Don't Be A Scrooge! ======");
                                     seasonalEvents.giveBotsChristmasPresents();
@@ -594,7 +595,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const gear = new Gear(arrays, tables);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);
-        const jsonHand = new JsonHandler(tables);
+        const jsonHand = new JsonHandler(tables, logger);
 
         const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
         const activeMods = preAkiModLoader.getImportedModDetails();
@@ -774,226 +775,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
         if (modConfig.logEverything == true) {
             logger.info("Realism Mod: Profile Checked");
-        }
-    }
-
-
-
-    private setBossSpawnChance(mapDB: ILocations, level: number) {
-
-        if (level >= 0 && level < 5) {
-            this.bossSpawnHelper(mapDB, 0.05);
-        }
-        if (level >= 5 && level < 10) {
-            this.bossSpawnHelper(mapDB, 0.1);
-        }
-        if (level >= 10 && level < 15) {
-            this.bossSpawnHelper(mapDB, 0.2);
-        }
-        if (level >= 15 && level < 20) {
-            this.bossSpawnHelper(mapDB, 0.4);
-        }
-        if (level >= 20 && level < 25) {
-            this.bossSpawnHelper(mapDB, 0.5);
-        }
-        if (level >= 25 && level < 30) {
-            this.bossSpawnHelper(mapDB, 0.7);
-        }
-        if (level >= 30 && level < 35) {
-            this.bossSpawnHelper(mapDB, 0.9);
-        }
-        if (level >= 35 && level < 40) {
-            this.bossSpawnHelper(mapDB, 1);
-        }
-        if (level >= 40 && level < 45) {
-            this.bossSpawnHelper(mapDB, 1.05);
-        }
-        if (level >= 45 && level < 50) {
-            this.bossSpawnHelper(mapDB, 1.1);
-        }
-        if (level > 50) {
-            this.bossSpawnHelper(mapDB, 1.2);
-        }
-    }
-
-    private bossSpawnHelper(mapDB: ILocations, chanceMulti: number) {
-        for (let i in mapDB) {
-            if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
-                for (let k in mapDB[i].base.BossLocationSpawn) {
-                    let chance = mapDB[i].base.BossLocationSpawn[k].BossChance;
-                    if (mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
-                        chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
-                        mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(10, Math.min(chance, 100));
-                    }
-                    else {
-                        chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                        mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(1, Math.min(chance, 100));
-                    }
-                }
-            }
-        }
-    }
-
-    private setBotTier(pmcData, bots: BotLoader, helper: Utils) {
-        this.setBotTierHelper(pmcData, "scav", bots, helper);
-        this.setBotTierHelper(pmcData, "raider", bots, helper);
-        this.setBotTierHelper(pmcData, "rogue", bots, helper);
-        this.setBotTierHelper(pmcData, "goons", bots, helper);
-        this.setBotTierHelper(pmcData, "killa", bots, helper);
-        this.setBotTierHelper(pmcData, "tagilla", bots, helper);
-        this.setBotTierHelper(pmcData, "sanitar", bots, helper);
-    }
-
-    private setBotTierHelper(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
-        var tier = 1;
-        var tierArray = [1, 2, 3, 4];
-        if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
-            tier = utils.probabilityWeighter(tierArray, [100, 0, 0]);
-        }
-        if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = utils.probabilityWeighter(tierArray, [80, 20, 0]);
-        }
-        if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = utils.probabilityWeighter(tierArray, [70, 20, 10]);
-        }
-        if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
-            tier = utils.probabilityWeighter(tierArray, [50, 40, 10]);
-        }
-        if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
-            tier = utils.probabilityWeighter(tierArray, [40, 40, 20]);
-        }
-        if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = utils.probabilityWeighter(tierArray, [30, 40, 30]);
-        }
-        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
-            tier = utils.probabilityWeighter(tierArray, [20, 30, 50]);
-        }
-        if (pmcData.Info.Level >= 35) {
-            tier = utils.probabilityWeighter(tierArray, [10, 30, 60]);
-        }
-
-        if (type === "sanitar") {
-            if (tier == 1) {
-                bots.sanitarLoad1();
-            }
-            if (tier == 2) {
-                bots.sanitarLoad3();
-            }
-            if (tier == 3) {
-                bots.sanitarLoad3();
-            }
-        }
-        if (type === "tagilla") {
-            if (tier == 1) {
-                bots.tagillaLoad1();
-            }
-            if (tier == 2) {
-                bots.tagillaLoad2();
-            }
-            if (tier == 3) {
-                bots.tagillaLoad3();
-            }
-        }
-        if (type === "killa") {
-            if (tier == 1) {
-                bots.killaLoad1();
-            }
-            if (tier == 2) {
-                bots.killaLoad2();
-            }
-            if (tier == 3) {
-                bots.killaLoad3();
-            }
-        }
-        if (type === "goons") {
-            if (tier == 1) {
-                bots.goonsLoad1();
-            }
-            if (tier == 2) {
-                bots.goonsLoad2();
-            }
-            if (tier == 3) {
-                bots.goonsLoad3();
-            }
-        }
-        if (type === "raider") {
-            if (tier == 1) {
-                bots.raiderLoad1();
-            }
-            if (tier == 2) {
-                bots.raiderLoad2();
-            }
-            if (tier == 3) {
-                bots.raiderLoad3();
-            }
-        }
-        if (type === "rogue") {
-            if (tier == 1) {
-                bots.rogueLoad1();
-            }
-            if (tier == 2) {
-                bots.rogueLoad2();
-            }
-            if (tier == 3) {
-                bots.rogueLoad3();
-            }
-        }
-        if (type === "scav") {
-            if (tier == 1) {
-                bots.scavLoad1();
-            }
-            if (tier == 2) {
-                bots.scavLoad2();
-            }
-            if (tier == 3) {
-                bots.scavLoad3();
-            }
-        }
-    }
-
-
-    private updateBots(pmcData: IPmcData, logger: ILogger, config, bots: BotLoader, helper: Utils) {
-
-        var property = pmcData?.Info?.Level;
-        if (property === undefined) {
-            bots.botConfig1();
-            bots.scavLoad1();
-            bots.rogueLoad1();
-            bots.raiderLoad1();
-            bots.goonsLoad1();
-            bots.killaLoad1();
-            bots.tagillaLoad1();
-            if (modConfig.force_boss_items == true) {
-                bots.forceBossItems();
-            }
-            logger.info("Realism Mod: Bots Have Been Set To Default (Tier 1)");
-            if (config.logEverything == true) {
-                logger.info("Realism Mod: Bots Have Been Reconfigured");
-            }
-        }
-        if (property !== undefined) {
-            if (config.bot_testing == true) {
-                bots.botTest(config.bot_test_tier);
-                logger.warning("Realism Mod: Bots Are In Test Mode");
-            }
-            if (config.bot_testing == false) {
-                if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 15) {
-                    bots.botConfig1();
-                }
-                if (pmcData.Info.Level >= 16 && pmcData.Info.Level < 25) {
-                    bots.botConfig2();
-                }
-                if (pmcData.Info.Level >= 26) {
-                    bots.botConfig3();
-                }
-                this.setBotTier(pmcData, bots, helper);
-                if (config.logEverything == true) {
-                    logger.info("Realism Mod: Bot Tiers Have Been Set");
-                }
-            }
-            if (modConfig.force_boss_items == true) {
-                bots.forceBossItems();
-            }
         }
     }
 }

@@ -1,4 +1,28 @@
 {
+    "64119d90dcf48d656f0aa275": {
+        "ItemID": "64119d90dcf48d656f0aa275",
+        "Name": "sight_rear_svt40_toz_svt40_std",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.025,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
+    "64119d672c6d6f921a0929fb": {
+        "ItemID": "64119d672c6d6f921a0929fb",
+        "Name": "sight_front_svt40_toz_std",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.07,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
     "imi_uzi_sight_front": {
         "ItemID": "imi_uzi_sight_front",
         "Name": "IMI Uzi Sight Front",
@@ -208,6 +232,36 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.025,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "649ec2cec93611967b03495e": {
+        "ItemID": "649ec2cec93611967b03495e",
+        "Name": "sight_rear_ak_izhmash_ak12_rear_sight_std",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.15,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "649ec2da59cbb3c813042dca": {
+        "ItemID": "649ec2da59cbb3c813042dca",
+        "Name": "sight_rear_all_izhmash_ak12_rear_sight_base",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "5b3b99265acfc4704b4a1afb"
+        ],
+        "Ergonomics": 0,
+        "Weight": 0.05,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Price": 0,

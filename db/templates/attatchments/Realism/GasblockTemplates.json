@@ -62,6 +62,27 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "649ec107961514b22506b10c": {
+        "ItemID": "649ec107961514b22506b10c",
+        "Name": "gas_block_ak12_izhmash_ak12_std",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 0.99,
+        "CoolFactor": 1.005,
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.12,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "59c6633186f7740cf0493bb9": {
         "ItemID": "59c6633186f7740cf0493bb9",
         "Name": "gas_block_ak_izhmash_ak74_std",
