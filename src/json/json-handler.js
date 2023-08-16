@@ -89,6 +89,36 @@ class JsonHandler {
                 this.callHelper(GrenadeLauncherTemplates, serverItem, this.weapPusherHelper);
             }
         }
+        //catch any modded weapons not in templates
+        for (let j in this.itemDB) {
+            let serverItem = this.itemDB[j];
+            let serverConfItems = serverItem._props.ConflictingItems;
+            if ((serverConfItems !== undefined && serverConfItems.length > 0 && serverConfItems[0] !== "SPTRM" && modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) && (serverItem._parent == enums_1.ParentClasses.SMG || serverItem._parent == enums_1.ParentClasses.ASSAULT_CARBINE || serverItem.parent == enums_1.ParentClasses.ASSAULT_RIFLE || serverItem._parent == enums_1.ParentClasses.MARKSMAN_RIFLE || serverItem._parent == enums_1.ParentClasses.SNIPER_RIFLE || serverItem._parent == enums_1.ParentClasses.PISTOL || serverItem._parent == enums_1.ParentClasses.SHOTGUN || serverItem._parent == enums_1.ParentClasses.MACHINE_GUN)) {
+                if (serverItem._parent == enums_1.ParentClasses.PISTOL) {
+                    serverItem._props.Ergonomics = 70;
+                    serverItem._props.RecoilForceUp *= 0.8;
+                    serverItem._props.RecoilForceBack *= 0.8;
+                    serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
+                    serverItem._props.Convergence *= 5;
+                    serverItem._props.RecoilAngle = 90;
+                    let weapPropertyValues = ["SPTRM", "undefined", "0", "false", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1"];
+                    let combinedArr = weapPropertyValues.concat(serverConfItems);
+                    serverItem._props.ConflictingItems = combinedArr;
+                }
+                else {
+                    serverItem._props.Ergonomics = 80;
+                    serverItem._props.RecoilForceUp *= 0.4;
+                    serverItem._props.RecoilForceBack *= 0.5;
+                    serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
+                    serverItem._props.Convergence *= 5;
+                    serverItem._props.RecoilAngle = 80;
+                    serverItem._props.CameraRecoil *= 0.5;
+                    let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1"];
+                    let combinedArr = weapPropertyValues.concat(serverConfItems);
+                    serverItem._props.ConflictingItems = combinedArr;
+                }
+            }
+        }
     }
     pushGearToServer() {
         for (let i in this.itemDB) {
@@ -166,8 +196,8 @@ class JsonHandler {
         }
     }
     weapPusherHelper(serverItem, fileItem) {
-        let serverConfItems = serverItem._props.ConflictingItems;
         if (serverItem._id === fileItem.ItemID) {
+            let serverConfItems = serverItem._props.ConflictingItems;
             if (serverConfItems[0] !== "SPTRM") {
                 if (modConfig.malf_changes == true) {
                     serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
@@ -211,18 +241,6 @@ class JsonHandler {
                     serverItem._props.ConflictingItems = combinedArr;
                 }
             }
-        }
-        else if ((serverConfItems[0] !== "SPTRM" && modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) && (serverItem._parent == enums_1.ParentClasses.SMG || serverItem._parent == enums_1.ParentClasses.ASSAULT_CARBINE || serverItem.parent == enums_1.ParentClasses.ASSAULT_RIFLE || serverItem._parent == enums_1.ParentClasses.MARKSMAN_RIFLE || serverItem._parent == enums_1.ParentClasses.SNIPER_RIFLE || serverItem._parent == enums_1.ParentClasses.PISTOL || serverItem._parent == enums_1.ParentClasses.SHOTGUN || serverItem._parent == enums_1.ParentClasses.MACHINE_GUN)) {
-            serverItem._props.Ergonomics = 80;
-            serverItem._props.RecoilForceUp *= 0.4;
-            serverItem._props.RecoilForceBack *= 0.5;
-            serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-            serverItem._props.Convergence *= 5;
-            serverItem._props.RecoilAngle = 80;
-            serverItem._props.CameraRecoil *= 0.5;
-            let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1"];
-            let combinedArr = weapPropertyValues.concat(serverConfItems);
-            serverItem._props.ConflictingItems = combinedArr;
         }
     }
 }
