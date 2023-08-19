@@ -79,7 +79,7 @@ export class Utils {
 
 
 
-    public probabilityWeighter(items: any, weights: number[]) {
+    public probabilityWeighter(items: any, weights: number[]): number {
 
         function add(a, b) { return a + b; }
 

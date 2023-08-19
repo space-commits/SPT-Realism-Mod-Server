@@ -487,7 +487,6 @@ export class BotLoader {
         }
     }
 
-
     public updateBots(pmcData: IPmcData, logger: ILogger, config, bots: BotLoader, helper: Utils) {
         var property = pmcData?.Info?.Level;
         if (property === undefined) {
@@ -573,12 +572,12 @@ export class BotLoader {
 
         if (RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 80;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 80;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
             this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 80;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
         } else {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 0;
@@ -655,12 +654,12 @@ export class BotLoader {
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 25;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 25;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 100;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 100;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
         } else {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 0;
@@ -737,12 +736,12 @@ export class BotLoader {
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 25;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 25;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 0;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 100;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 100;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
         } else {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 0;

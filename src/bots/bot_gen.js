@@ -51,29 +51,41 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const level = utils_1.ProfileTracker.level;
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
-        if (level >= 0 && level < 5) {
+        if (level <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
-        if (level >= 5 && level < 10) {
+        else if (level <= 10) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
-        if (level >= 10 && level < 15) {
+        else if (level <= 15) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
-        if (level >= 15 && level < 20) {
+        else if (level <= 20) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
-        if (level >= 20 && level < 25) {
+        else if (level <= 25) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
-        if (level >= 25 && level < 30) {
+        else if (level <= 30) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
-        if (level >= 30 && level < 35) {
+        else if (level <= 35) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
-        if (level >= 35) {
+        else if (level > 35) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+        }
+        return tier;
+    }
+    botTierMapFactor(tier, utils) {
+        if (utils_1.RaidInfoTracker.mapName === "Laboratory" || utils_1.RaidInfoTracker.mapName === "laboratory") {
+            tier = Math.min(tier + 2, 4);
+        }
+        else if (utils_1.RaidInfoTracker.mapName === "RezervBase" || utils_1.RaidInfoTracker.mapName === "ReserveBase" || utils_1.RaidInfoTracker.mapName === "rezervbase" || utils_1.RaidInfoTracker.mapName === "Streets of Tarkov" || utils_1.RaidInfoTracker.mapName === "factory4_night" || utils_1.RaidInfoTracker.TOD === "night") {
+            tier = Math.min(tier + 1, 4);
+        }
+        else if (utils.pickRandNumOneInTen() <= 2 && (utils_1.RaidInfoTracker.mapName === "shoreline" || utils_1.RaidInfoTracker.mapName === "Shoreline" || utils_1.RaidInfoTracker.mapName === "lighthouse" || utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "Interchange" || utils_1.RaidInfoTracker.mapName === "interchange")) {
+            tier = Math.min(tier + 1, 4);
         }
         return tier;
     }
@@ -97,7 +109,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
             const isPMC = this.botHelper.isBotPmc(botRole);
             let pmcTier = 1;
             if (isPMC) {
-                pmcTier = this.getBotTier(utils);
+                pmcTier = this.botTierMapFactor(this.getBotTier(utils), utils);
                 const isUSEC = this.isBotUSEC(botRole);
                 const changeDiffi = modConfig.pmc_difficulty;
                 if (modConfig.bot_testing == true) {
@@ -155,6 +167,8 @@ class BotGen extends BotGenerator_1.BotGenerator {
                     this.logger.warning("=================");
                     this.logger.warning("bot " + botRole);
                     this.logger.warning("tier " + pmcTier);
+                    this.logger.warning("map " + utils_1.RaidInfoTracker.mapName);
+                    this.logger.warning("TOD " + utils_1.RaidInfoTracker.TOD);
                     this.logger.warning("===========");
                 }
             }

@@ -514,13 +514,13 @@ class BotLoader {
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 80;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 80;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
         }
         else if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
             this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 80;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
         }
         else {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
@@ -583,13 +583,13 @@ class BotLoader {
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 25;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 25;
         }
         else if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 100;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 100;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
         }
         else {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
@@ -652,13 +652,13 @@ class BotLoader {
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 25;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 25;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 0;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
         }
         else if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
-            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 100;
-            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 100;
+            this.botConf.equipment["pmc"].lightIsActiveDayChancePercent = 50;
+            this.botConf.equipment["pmc"].laserIsActiveChancePercent = 50;
         }
         else {
             this.botConf.equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
@@ -677,16 +677,7 @@ class BotLoader {
                 this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
-            }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
-            }
-        }
+        this.botConf.pmc.pmcType = pmcTypes.zombies;
         if (this.modConfig.logEverything == true) {
             this.logger.info("botConfig3 loaded");
         }
