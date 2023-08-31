@@ -78,13 +78,17 @@ class BotGen extends BotGenerator_1.BotGenerator {
         return tier;
     }
     botTierMapFactor(tier, utils) {
+        let rndNum = utils.pickRandNumOneInTen();
         if (utils_1.RaidInfoTracker.mapName === "Laboratory" || utils_1.RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 4);
         }
-        else if (utils_1.RaidInfoTracker.mapName === "RezervBase" || utils_1.RaidInfoTracker.mapName === "ReserveBase" || utils_1.RaidInfoTracker.mapName === "rezervbase" || utils_1.RaidInfoTracker.mapName === "Streets of Tarkov" || utils_1.RaidInfoTracker.mapName === "factory4_night" || utils_1.RaidInfoTracker.TOD === "night") {
+        else if (rndNum <= 4 && (utils_1.RaidInfoTracker.mapName === "RezervBase" || utils_1.RaidInfoTracker.mapName === "ReserveBase" || utils_1.RaidInfoTracker.mapName === "rezervbase" || utils_1.RaidInfoTracker.mapName === "Streets of Tarkov" || utils_1.RaidInfoTracker.mapName === "factory4_night" || utils_1.RaidInfoTracker.TOD === "night")) {
             tier = Math.min(tier + 1, 4);
         }
-        else if (utils.pickRandNumOneInTen() <= 2 && (utils_1.RaidInfoTracker.mapName === "shoreline" || utils_1.RaidInfoTracker.mapName === "Shoreline" || utils_1.RaidInfoTracker.mapName === "lighthouse" || utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "Interchange" || utils_1.RaidInfoTracker.mapName === "interchange")) {
+        else if (rndNum <= 2 && (utils_1.RaidInfoTracker.mapName === "shoreline" || utils_1.RaidInfoTracker.mapName === "Shoreline" || utils_1.RaidInfoTracker.mapName === "lighthouse" || utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "Interchange" || utils_1.RaidInfoTracker.mapName === "interchange")) {
+            tier = Math.min(tier + 1, 4);
+        }
+        else if (rndNum <= 1 && (utils_1.RaidInfoTracker.mapName === "bigmap" || utils_1.RaidInfoTracker.mapName === "Customs")) {
             tier = Math.min(tier + 1, 4);
         }
         return tier;

@@ -430,7 +430,7 @@
             }
         },
         "StimulatorBuffs": "Buffs_cms",
-        "MaxHpResource": 2,
+        "MaxHpResource": 4,
         "medUseTime": 16,
         "hpResourceRate": 0
     },
@@ -463,7 +463,7 @@
             }
         },
         "StimulatorBuffs": "Buffs_surv12",
-        "MaxHpResource": 4,
+        "MaxHpResource": 8,
         "medUseTime": 20,
         "hpResourceRate": 0
     }

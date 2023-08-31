@@ -176,12 +176,21 @@ class BotLoader {
         this.setBotHPHelper(this.arrays.standardBotHPArr);
         if (this.modConfig.realistic_boss_health == true) {
             this.setBotHPHelper(this.arrays.bossBotArr);
+            this.knightBase.health = knightLO.health;
+            this.bigpipeBase.health = bigpipeLO.health;
+            this.birdeyeBase.health = birdeyeLO.health;
+            this.killaBase.health = killaLO.health;
+            this.tagillaBase.health = tagillaLO.health;
+            this.saniBase.health = saniLO.health;
+            this.reshBase.health = reshLO.health;
         }
         if (this.modConfig.realistic_boss_follower_health == true) {
             this.setBotHPHelper(this.arrays.bossFollowerArr);
+            this.saniFollowerBase.health = saniFollowerLO.health;
         }
         if (this.modConfig.realistic_raider_rogue_health == true) {
             this.setBotHPHelper(this.arrays.rogueRaiderList);
+            this.raiderBase.health = raiderLO.health;
         }
         if (this.modConfig.realistic_cultist_health == true) {
             this.setBotHPHelper(this.arrays.cultistArr);
@@ -677,7 +686,16 @@ class BotLoader {
                 this.botConf.equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        this.botConf.pmc.pmcType = pmcTypes.zombies;
+        if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
+            if (utils_1.RaidInfoTracker.TOD === "day") {
+                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
+                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
+            }
+            if (utils_1.RaidInfoTracker.TOD === "night") {
+                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
+                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
+            }
+        }
         if (this.modConfig.logEverything == true) {
             this.logger.info("botConfig3 loaded");
         }
@@ -1224,7 +1242,6 @@ class BotLoader {
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
         this.raiderBase.appearance.voice = raiderLO.appearance.voice;
-        this.raiderBase.health = raiderLO.health;
         this.botConf.equipment["pmcbot"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.raiderBase.chances.mods.mod_nvg = 40;
@@ -1285,7 +1302,6 @@ class BotLoader {
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
         this.raiderBase.appearance.voice = raiderLO.appearance.voice;
-        this.raiderBase.health = raiderLO.health;
         this.botConf.equipment["pmcbot"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.raiderBase.chances.mods.mod_nvg = 60;
@@ -1346,7 +1362,6 @@ class BotLoader {
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
         this.raiderBase.appearance.voice = raiderLO.appearance.voice;
-        this.raiderBase.health = raiderLO.health;
         this.botConf.equipment["pmcbot"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.raiderBase.chances.mods.mod_nvg = 80;
@@ -1537,9 +1552,6 @@ class BotLoader {
         this.birdeyeBase.chances = birdeyeLO.birdeyeLO1.chances;
         this.birdeyeBase.generation = birdeyeLO.birdeyeLO1.generation;
         this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
-        this.knightBase.health = knightLO.health;
-        this.bigpipeBase.health = bigpipeLO.health;
-        this.birdeyeBase.health = birdeyeLO.health;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             if (randNum >= 6) {
                 this.knightBase.chances.equipment.Headwear = 100;
@@ -1699,9 +1711,6 @@ class BotLoader {
         this.birdeyeBase.chances = birdeyeLO.birdeyeLO2.chances;
         this.birdeyeBase.generation = birdeyeLO.birdeyeLO2.generation;
         this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
-        this.knightBase.health = knightLO.health;
-        this.bigpipeBase.health = bigpipeLO.health;
-        this.birdeyeBase.health = birdeyeLO.health;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             if (randNum >= 4) {
                 this.knightBase.chances.equipment.Headwear = 100;
@@ -1861,9 +1870,6 @@ class BotLoader {
         this.birdeyeBase.chances = birdeyeLO.birdeyeLO3.chances;
         this.birdeyeBase.generation = birdeyeLO.birdeyeLO3.generation;
         this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
-        this.knightBase.health = knightLO.health;
-        this.bigpipeBase.health = bigpipeLO.health;
-        this.birdeyeBase.health = birdeyeLO.health;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             if (randNum >= 3) {
                 this.knightBase.chances.equipment.Headwear = 100;
@@ -2007,7 +2013,6 @@ class BotLoader {
         this.killaBase.inventory.mods = killaLO.killaLO1.inventory.mods;
         this.killaBase.chances = killaLO.killaLO1.chances;
         this.killaBase.generation = killaLO.killaLO1.generation;
-        this.killaBase.health = killaLO.health;
         if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.killaBase.chances.mods.mod_flashlight = 60;
             this.botConf.equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
@@ -2027,7 +2032,6 @@ class BotLoader {
         this.killaBase.inventory.mods = killaLO.killaLO2.inventory.mods;
         this.killaBase.chances = killaLO.killaLO2.chances;
         this.killaBase.generation = killaLO.killaLO2.generation;
-        this.killaBase.health = killaLO.health;
         if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.killaBase.chances.mods.mod_flashlight = 60;
             this.botConf.equipment["bosskilla"].lightIsActiveDayChancePercent = 50;
@@ -2047,7 +2051,6 @@ class BotLoader {
         this.killaBase.inventory.mods = killaLO.killaLO3.inventory.mods;
         this.killaBase.chances = killaLO.killaLO3.chances;
         this.killaBase.generation = killaLO.killaLO3.generation;
-        this.killaBase.health = killaLO.health;
         if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.killaBase.chances.mods.mod_flashlight = 60;
             this.botConf.equipment["bosskilla"].lightIsActiveDayChancePercent = 25;
@@ -2067,7 +2070,6 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO1.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO1.generation;
-        this.tagillaBase.health = tagillaLO.health;
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 8) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -2107,7 +2109,6 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO2.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO2.generation;
-        this.tagillaBase.health = tagillaLO.health;
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 5) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -2144,7 +2145,6 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO3.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
         this.tagillaBase.generation = tagillaLO.tagillaLO3.generation;
-        this.tagillaBase.health = tagillaLO.health;
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 3) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -2181,7 +2181,6 @@ class BotLoader {
         this.saniBase.inventory.mods = saniLO.sanitarLO1.inventory.mods;
         this.saniBase.chances = saniLO.sanitarLO1.chances;
         this.saniBase.generation = saniLO.sanitarLO1.generation;
-        this.saniBase.health = saniLO.health;
         this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO1.inventory.Ammo;
         this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO1.inventory.equipment;
         this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO1.inventory.items;
@@ -2219,7 +2218,6 @@ class BotLoader {
         this.saniBase.inventory.mods = saniLO.sanitarLO2.inventory.mods;
         this.saniBase.chances = saniLO.sanitarLO2.chances;
         this.saniBase.generation = saniLO.sanitarLO2.generation;
-        this.saniBase.health = saniLO.health;
         this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO2.inventory.Ammo;
         this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO2.inventory.equipment;
         this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO2.inventory.items;
@@ -2257,7 +2255,6 @@ class BotLoader {
         this.saniBase.inventory.mods = saniLO.sanitarLO3.inventory.mods;
         this.saniBase.chances = saniLO.sanitarLO3.chances;
         this.saniBase.generation = saniLO.sanitarLO3.generation;
-        this.saniBase.health = saniLO.health;
         this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO3.inventory.Ammo;
         this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO3.inventory.equipment;
         this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO3.inventory.items;
@@ -2295,7 +2292,6 @@ class BotLoader {
         this.reshBase.inventory.mods = reshLO.reshallaLO1.inventory.mods;
         this.reshBase.chances = reshLO.reshallaLO1.chances;
         this.reshBase.generation = reshLO.reshallaLO1.generation;
-        this.reshBase.health = reshLO.health;
         this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO1.inventory.Ammo;
         this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO1.inventory.equipment;
         this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO1.inventory.items;
@@ -2333,7 +2329,6 @@ class BotLoader {
         this.reshBase.inventory.mods = reshLO.reshallaLO2.inventory.mods;
         this.reshBase.chances = reshLO.reshallaLO2.chances;
         this.reshBase.generation = reshLO.reshallaLO2.generation;
-        this.reshBase.health = reshLO.health;
         this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO2.inventory.Ammo;
         this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO2.inventory.equipment;
         this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO2.inventory.items;
@@ -2371,7 +2366,6 @@ class BotLoader {
         this.reshBase.inventory.mods = reshLO.reshallaLO3.inventory.mods;
         this.reshBase.chances = reshLO.reshallaLO3.chances;
         this.reshBase.generation = reshLO.reshallaLO3.generation;
-        this.reshBase.health = reshLO.health;
         this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO3.inventory.Ammo;
         this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO3.inventory.equipment;
         this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO3.inventory.items;

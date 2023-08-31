@@ -785,7 +785,7 @@ export class Armor {
                 serverItem._props.armorClass = 1;
                 serverItem._props.speedPenaltyPercent = -0.225;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.225;;
+                serverItem._props.weaponErgonomicPenalty = -0.225;
                 serverItem._props.BluntThroughput = 0.22;
                 serverItem._props.DeafStrength = "None";
                 serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -925,7 +925,7 @@ export class Armor {
                 serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.75;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.75
+                serverItem._props.weaponErgonomicPenalty = -0.75;
                 serverItem._props.BluntThroughput = 0.07;
                 serverItem._props.DeafStrength = "Low";
                 serverItem._props.ArmorMaterial = 'Combined';
@@ -1433,7 +1433,7 @@ export class Armor {
                 serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.6;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.6;;
+                serverItem._props.weaponErgonomicPenalty = -0.6;
                 serverItem._props.BluntThroughput = 0;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'Combined';

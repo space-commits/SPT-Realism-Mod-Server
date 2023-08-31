@@ -3728,7 +3728,7 @@
             },
             {
                 "_id": "c830bf27c50f58b265867dcd",
-                "_tpl": "5998597786f77414ea6da093",
+                "_tpl": "59bfc5c886f7743bf6794e62",
                 "parentId": "ac990455ee55bc50364c6318",
                 "slotId": "mod_muzzle"
             },
@@ -3760,6 +3760,12 @@
                 "_tpl": "59ccd11386f77428f24a488f",
                 "parentId": "ac990455ee55bc50364c6318",
                 "slotId": "mod_gas_block"
+            },
+            {
+                "_id": "95d72be6491710eaf1c1bf11",
+                "_tpl": "5a0c59791526d8dba737bba7",
+                "parentId": "d8a894604ae9135715090b10",
+                "slotId": "mod_stock"
             },
             {
                 "_id": "f7a918c610678ec8a1655356",
