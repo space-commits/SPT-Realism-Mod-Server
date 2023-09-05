@@ -62,16 +62,16 @@ class Meds {
                 serverItem._props.effects_health = this.medItems.analgin.effects_health;
                 serverItem._props.medUseTime = this.medItems.analgin.medUseTime;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "pillspain");
-                serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
-                serverItem._props.ConflictingItems.splice(4, 0, "true");
+                serverItem._props.ConflictingItems.splice(1, 0, "pillspain"); // med type
+                serverItem._props.ConflictingItems.splice(2, 0, "none"); // heavy bleed heal type
+                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(4, 0, "true"); //can be used in raid
                 serverItem._props.ConflictingItems.splice(5, 0, "600"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
                 serverItem._props.ConflictingItems.splice(7, 0, "120"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.6"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "25"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "2"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "8"); // strength
             }
             //Ibuprofen
             if (serverItem._id === "5af0548586f7743a532b7e99") {
@@ -84,14 +84,14 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "pillspain");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
                 serverItem._props.ConflictingItems.splice(7, 0, "70"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "40"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "1"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "4"); // strength
             }
             //Morphine
             if (serverItem._id === "544fb3f34bdc2d03748b456a") {
@@ -104,14 +104,14 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "drugpain");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "900"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
                 serverItem._props.ConflictingItems.splice(7, 0, "270"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.75"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "3"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "14"); // strength
             }
             ///Medicines///
             //Augmentin
@@ -125,7 +125,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "pills");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "none");
                 serverItem._props.ConflictingItems.splice(6, 0, "none");
@@ -142,7 +142,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "bndg");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
                 serverItem._props.ConflictingItems.splice(6, 0, "");
@@ -158,7 +158,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "bndg");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
                 serverItem._props.ConflictingItems.splice(6, 0, "");
@@ -225,7 +225,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "splint");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
                 serverItem._props.ConflictingItems.splice(6, 0, "");
@@ -242,7 +242,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "splint");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
                 serverItem._props.ConflictingItems.splice(6, 0, "");
@@ -262,14 +262,14 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "drugpain");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period
                 serverItem._props.ConflictingItems.splice(7, 0, "135"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.7"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "10"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "3"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
             }
             //CAR
             if (serverItem._id === "590c661e86f7741e566b646a") {
@@ -373,7 +373,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "vas");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
                 serverItem._props.ConflictingItems.splice(6, 0, "");
@@ -391,7 +391,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "drug");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "1");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
                 serverItem._props.ConflictingItems.splice(6, 0, "");

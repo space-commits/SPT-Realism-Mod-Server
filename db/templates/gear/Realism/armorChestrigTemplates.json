@@ -259,7 +259,7 @@
         "ArmorClass": "ESAPI (Rev. G)",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.87,
+        "ReloadSpeedMulti": 1,
         "MinVelocity": 500,
         "MinKE": 2000,
         "MinPen": 50,

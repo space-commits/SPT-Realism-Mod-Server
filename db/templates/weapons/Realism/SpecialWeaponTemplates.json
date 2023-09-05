@@ -13,7 +13,7 @@
         "Dispersion": 35,
         "CameraRecoil": 0.04,
         "CameraSnap": 3.5,
-        "Convergence": 1,
+        "Convergence": 4,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.1771,
         "HeatFactorGun": 1,

@@ -73,14 +73,14 @@ export class Armor {
             //// Class 5////
             //6B2 Flora
             if (serverItem._id === "5df8a2ca86f7740bfe6df777") {
-                serverItem._props.Durability = 130;
+                serverItem._props.Durability = 85;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 5;
                 serverItem._props.speedPenaltyPercent = -5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
                 serverItem._props.BluntThroughput = 0.35;
-                serverItem._props.ArmorMaterial = 'Aramid';
+                serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 5.4;
             }
             //Kirasa
@@ -785,7 +785,7 @@ export class Armor {
                 serverItem._props.armorClass = 1;
                 serverItem._props.speedPenaltyPercent = -0.225;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.225;;
+                serverItem._props.weaponErgonomicPenalty = -0.225;
                 serverItem._props.BluntThroughput = 0.22;
                 serverItem._props.DeafStrength = "None";
                 serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -925,7 +925,7 @@ export class Armor {
                 serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.75;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.75
+                serverItem._props.weaponErgonomicPenalty = -0.75;
                 serverItem._props.BluntThroughput = 0.07;
                 serverItem._props.DeafStrength = "Low";
                 serverItem._props.ArmorMaterial = 'Combined';
@@ -1433,7 +1433,7 @@ export class Armor {
                 serverItem._props.armorClass = 4;
                 serverItem._props.speedPenaltyPercent = -0.6;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -0.6;;
+                serverItem._props.weaponErgonomicPenalty = -0.6;
                 serverItem._props.BluntThroughput = 0;
                 serverItem._props.DeafStrength = "High";
                 serverItem._props.ArmorMaterial = 'Combined';

@@ -185,6 +185,9 @@ class BotTierTracker {
         if (botType === "bosssanitar" || botType === "followersanitar") {
             return BotTierTracker.sanitarTier;
         }
+        if (botType === "bossbully" || botType === "followerbully") {
+            return BotTierTracker.reshallaTier;
+        }
         return 0;
     }
 }
@@ -196,3 +199,4 @@ BotTierTracker.goonsTier = 1;
 BotTierTracker.killaTier = 1;
 BotTierTracker.tagillaTier = 1;
 BotTierTracker.sanitarTier = 1;
+BotTierTracker.reshallaTier = 1;

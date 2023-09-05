@@ -165,23 +165,6 @@
         "ConflictingItems": [],
         "Weight": 0.305
     },
-    "handguard_ak12": {
-        "ItemID": "handguard_ak12",
-        "Name": "handguard_ak12",
-        "ModType": "",
-        "VerticalRecoil": -1,
-        "HorizontalRecoil": -1,
-        "Dispersion": -1,
-        "AimSpeed": 0,
-        "Ergonomics": 4,
-        "Accuracy": -8,
-        "HeatFactor": 1.038,
-        "CoolFactor": 0.963,
-        "ConflictingItems": [],
-        "Weight": 0.167,
-        "Price": 0,
-        "LoyaltyLevel": 0
-    },
     "handguard_ak12_s12": {
         "ItemID": "handguard_ak12_s12",
         "Name": "handguard_ak12_s12",
@@ -2008,6 +1991,23 @@
             "5c471bd12e221602b4129c3a"
         ],
         "Weight": 0.89,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "649ec127c93611967b034957": {
+        "ItemID": "649ec127c93611967b034957",
+        "Name": "handguard_ak12_izhmash_ak12_std",
+        "ModType": "",
+        "VerticalRecoil": -1,
+        "HorizontalRecoil": -1,
+        "Dispersion": -1,
+        "AimSpeed": 0,
+        "Ergonomics": 5,
+        "Accuracy": -8,
+        "HeatFactor": 1.03,
+        "CoolFactor": 0.97,
+        "ConflictingItems": [],
+        "Weight": 0.134,
         "Price": 0,
         "LoyaltyLevel": 0
     },

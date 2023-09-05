@@ -45,6 +45,9 @@ export class FleamarketConfig {
             this.fleaConf.dynamic.blacklist.enableBsgList = false;
             this.fleaConf.dynamic.blacklist.custom = [];
         }
+        else {
+            this.fleaConf.dynamic.blacklist.enableBsgList = true;
+        }
 
         // if (this.modConfig.med_changes == true) {
         //     this.fleaConf.dynamic.blacklist.custom.push("TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");

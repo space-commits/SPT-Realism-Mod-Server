@@ -1,21 +1,19 @@
 {
-    "receiver_ak12": {
-        "ItemID": "receiver_ak12",
-        "Name": "receiver_ak12",
-        "ModType": "mount",
+    "64119cdbdcf48d656f0aa272": {
+        "ItemID": "64119cdbdcf48d656f0aa272",
+        "Name": "reciever_svt40_toz_svt40_std",
+        "ModType": "",
         "ModMalfunctionChance": 0,
-        "Accuracy": -9,
+        "Accuracy": 0,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 0.97,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.215,
+        "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "ChamberSpeed": 0
     },
     "receiver_ak15": {
         "ItemID": "receiver_ak15",
@@ -769,6 +767,24 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.212,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "ChamberSpeed": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "649ec2f3961514b22506b111": {
+        "ItemID": "649ec2f3961514b22506b111",
+        "Name": "reciever_ak12_izhmash_ak12_std",
+        "ModType": "mount",
+        "ModMalfunctionChance": 0,
+        "Accuracy": -9,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 0.97,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,

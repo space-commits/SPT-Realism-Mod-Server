@@ -1,6 +1,19 @@
 {
     "StreetsBossLocationSpawn": [
         {
+            "BossName": "bossBully",
+            "BossChance": 25,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
             "BossChance": 20,
             "BossDifficult": "normal",
             "BossEscortAmount": "0",
@@ -66,19 +79,6 @@
             "Time": -1
         },
         {
-            "BossName": "bossBully",
-            "BossChance": 20,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "followerBully",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
-            "Time": -1,
-            "Supports": null,
-            "RandomTimeSpawn": false
-        },
-        {
             "BossName": "pmcBot",
             "BossChance": 30,
             "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
@@ -106,17 +106,17 @@
     ],
     "CustomsBossLocationSpawn": [
         {
-            "BossName": "bossBully",
-            "BossChance": 40,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneGasStation",
-            "BossPlayer": false,
+            "BossChance": 50,
             "BossDifficult": "normal",
-            "BossEscortType": "followerBully",
-            "BossEscortDifficult": "normal",
             "BossEscortAmount": "4",
-            "Time": -1,
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossName": "bossBully",
+            "BossPlayer": false,
+            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneGasStation, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
+            "RandomTimeSpawn": false,
             "Supports": null,
-            "RandomTimeSpawn": false
+            "Time": -1
         },
         {
             "BossName": "sectantPriest",
@@ -127,7 +127,7 @@
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "4",
-            "Time": -1,
+            "Time": 10,
             "Supports": null,
             "RandomTimeSpawn": false
         },
@@ -140,7 +140,7 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "3,3,3,3,3,3,4,5",
-            "Time": -1,
+            "Time": 10,
             "RandomTimeSpawn": false
         },
         {
@@ -152,7 +152,7 @@
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "3,3,3,3,3,3,4,5",
-            "Time": -1,
+            "Time": 10,
             "TriggerId": "",
             "TriggerName": "",
             "Supports": null,
@@ -161,13 +161,13 @@
         {
             "BossName": "bossKnight",
             "BossChance": 15,
-            "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneGasStation,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
+            "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2",
-            "Time": -1,
+            "Time": 10,
             "Supports": [
                 {
                     "BossEscortType": "followerBigPipe",
@@ -204,7 +204,7 @@
             "BossZone": "ZoneCustoms, ZoneOldAZS, ZoneBlockPost, ZoneTankSquare",
             "RandomTimeSpawn": false,
             "Supports": null,
-            "Time": -1
+            "Time": 10
         },
         {
             "BossName": "bossGluhar",
@@ -215,7 +215,7 @@
             "BossEscortType": "followerGluharAssault",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "0",
-            "Time": -1,
+            "Time": 10,
             "TriggerId": "",
             "TriggerName": "",
             "Supports": [
@@ -254,7 +254,7 @@
             "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
             "RandomTimeSpawn": false,
             "Supports": null,
-            "Time": -1
+            "Time": 10
         }
     ],
     "FactoryDayBossLocationSpawn": [
@@ -457,7 +457,7 @@
         },
         {
             "BossName": "bossBully",
-            "BossChance": 10,
+            "BossChance": 15,
             "BossZone": "ZonePowerStation,ZoneTrucks",
             "BossPlayer": false,
             "BossDifficult": "normal",

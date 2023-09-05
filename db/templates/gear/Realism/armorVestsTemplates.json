@@ -293,7 +293,7 @@
         "Name": "item_equipment_armor_kirasa",
         "AllowADS": true,
         "LoyaltyLevel": 1,
-        "ArmorClass": "GOST P 50744-95",
+        "ArmorClass": "GOST 2",
         "CanSpall": true,
         "SpallReduction": 0.28,
         "ReloadSpeedMulti": 1,

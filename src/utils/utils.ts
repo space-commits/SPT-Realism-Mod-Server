@@ -79,7 +79,7 @@ export class Utils {
 
 
 
-    public probabilityWeighter(items: any, weights: number[]) {
+    public probabilityWeighter(items: any, weights: number[]): number {
 
         function add(a, b) { return a + b; }
 
@@ -177,6 +177,7 @@ export class BotTierTracker {
     static killaTier: number = 1;
     static tagillaTier: number = 1;
     static sanitarTier: number = 1;
+    static reshallaTier: number = 1;
 
     public getTier(botType: string): number {
         if (botType === "assault") {
@@ -199,6 +200,9 @@ export class BotTierTracker {
         }
         if (botType === "bosssanitar" || botType === "followersanitar") {
             return BotTierTracker.sanitarTier;
+        }
+        if (botType === "bossbully" || botType === "followerbully") {
+            return BotTierTracker.reshallaTier;
         }
         return 0;
     }

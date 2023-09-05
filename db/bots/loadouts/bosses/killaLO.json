@@ -1,4 +1,50 @@
 {
+    "health": {
+        "Hydration": {
+            "min": 100,
+            "max": 100
+        },
+        "Energy": {
+            "min": 100,
+            "max": 100
+        },
+        "Temperature": {
+            "min": 32,
+            "max": 32
+        },
+        "BodyParts": [
+            {
+                "Head": {
+                    "min": 20,
+                    "max": 20
+                },
+                "Chest": {
+                    "min": 125,
+                    "max": 125
+                },
+                "Stomach": {
+                    "min": 125,
+                    "max": 125
+                },
+                "LeftArm": {
+                    "min": 75,
+                    "max": 75
+                },
+                "RightArm": {
+                    "min": 75,
+                    "max": 75
+                },
+                "LeftLeg": {
+                    "min": 80,
+                    "max": 80
+                },
+                "RightLeg": {
+                    "min": 80,
+                    "max": 80
+                }
+            }
+        ]
+    },
     "killaLO1": {
         "inventory": {
             "Ammo": {
@@ -137,27 +183,27 @@
             "mods": {
                 "5c0e874186f7745dc7616606": {
                     "mod_equipment": [
-                      "5c0e842486f77443a74d2976"
+                        "5c0e842486f77443a74d2976"
                     ]
-                  }
+                }
             }
         },
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "healing": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "looseLoot": {
-                    "max": 4,
+                    "max": 5,
                     "min": 2
                 },
                 "magazines": {
@@ -169,7 +215,7 @@
                     "min": 0
                 },
                 "stims": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 }
             }
@@ -358,15 +404,15 @@
             "mods": {
                 "5c0e874186f7745dc7616606": {
                     "mod_equipment": [
-                      "5c0e842486f77443a74d2976"
+                        "5c0e842486f77443a74d2976"
                     ]
-                  }
+                }
             }
         },
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
@@ -374,12 +420,12 @@
                     "min": 1
                 },
                 "healing": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "looseLoot": {
                     "max": 5,
-                    "min": 2
+                    "min": 3
                 },
                 "magazines": {
                     "max": 5,
@@ -390,7 +436,7 @@
                     "min": 0
                 },
                 "stims": {
-                    "max": 2,
+                    "max": 3,
                     "min": 1
                 }
             }
@@ -585,15 +631,15 @@
             "mods": {
                 "5c0e874186f7745dc7616606": {
                     "mod_equipment": [
-                      "5c0e842486f77443a74d2976"
+                        "5c0e842486f77443a74d2976"
                     ]
-                  }
+                }
             }
         },
         "generation": {
             "items": {
                 "drugs": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "grenades": {
@@ -601,12 +647,12 @@
                     "min": 1
                 },
                 "healing": {
-                    "max": 1,
+                    "max": 2,
                     "min": 1
                 },
                 "looseLoot": {
                     "max": 6,
-                    "min": 2
+                    "min": 3
                 },
                 "magazines": {
                     "max": 6,
@@ -617,7 +663,7 @@
                     "min": 0
                 },
                 "stims": {
-                    "max": 3,
+                    "max": 4,
                     "min": 1
                 }
             }

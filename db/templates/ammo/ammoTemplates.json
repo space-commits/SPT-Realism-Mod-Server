@@ -605,7 +605,7 @@
     "5fbe3ffdf8b6a877a729ea82": {
         "ItemID": "5fbe3ffdf8b6a877a729ea82",
         "Name": "patron_762x35_blackout",
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5fd20ff893a8961fc660a954": {
@@ -1328,10 +1328,136 @@
         "LoyaltyLevel": 3,
         "Price": 0
     },
-    "57372c56245977685e584582": {
-        "ItemID": "57372c56245977685e584582",
-        "Name": "item_ammo_box_545x39_120_BT_damaged",
+    "64b7af434b75259c590fa893": {
+        "ItemID": "64b7af434b75259c590fa893",
+        "Name": "patron_762x39_pp",
+        "LoyaltyLevel": 3,
+        "Price": 0
+    },
+    "64b7af5a8532cf95ee0a0dbd": {
+        "ItemID": "64b7af5a8532cf95ee0a0dbd",
+        "Name": "patron_762x39_fmj",
         "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64b7af734b75259c590fa895": {
+        "ItemID": "64b7af734b75259c590fa895",
+        "Name": "patron_762x39_sp",
+        "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64b8f7c241772715af0f9c3d": {
+        "ItemID": "64b8f7c241772715af0f9c3d",
+        "Name": "patron_762x54r_bthp",
+        "LoyaltyLevel": 4,
+        "Price": 0
+    },
+    "64b8f7b5389d7ffd620ccba2": {
+        "ItemID": "64b8f7b5389d7ffd620ccba2",
+        "Name": "patron_762x54r_btsp",
+        "LoyaltyLevel": 3,
+        "Price": 0
+    },
+    "64b8f7968532cf95ee0a0dbf": {
+        "ItemID": "64b8f7968532cf95ee0a0dbf",
+        "Name": "patron_762x54r_fmj",
+        "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64b8ee384b75259c590fa89b": {
+        "ItemID": "64b8ee384b75259c590fa89b",
+        "Name": "patron_12x70_piranha",
+        "LoyaltyLevel": 1,
+        "Price": 0
+    },
+    "64b7bbb74b75259c590fa897": {
+        "ItemID": "64b7bbb74b75259c590fa897",
+        "Name": "patron_9x19_m882",
+        "LoyaltyLevel": 1,
+        "Price": 0
+    },
+    "64b8725c4b75259c590fa899": {
+        "ItemID": "64b8725c4b75259c590fa899",
+        "Name": "patron_762x35_cbj",
+        "LoyaltyLevel": 4,
+        "Price": 0
+    },
+    "64b6979341772715af0f9c39": {
+        "ItemID": "64b6979341772715af0f9c39",
+        "Name": "patron_46x30_JSP",
+        "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64aceab0426a303417060654": {
+        "ItemID": "64aceab0426a303417060654",
+        "Name": "item_ammo_box_762x54R_20_SPBT",
+        "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64aceaecc4eda9354b0226b6": {
+        "ItemID": "64aceaecc4eda9354b0226b6",
+        "Name": "item_ammo_box_46x30_40_JSP",
+        "LoyaltyLevel": 1,
+        "Price": 0
+    },
+    "64aceac0c4eda9354b0226b3": {
+        "ItemID": "64aceac0c4eda9354b0226b3",
+        "Name": "item_ammo_box_762x54R_20_FMJ",
+        "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64acea2c03378853630da53e": {
+        "ItemID": "64acea2c03378853630da53e",
+        "Name": "item_ammo_box_762x39_20_HP",
+        "LoyaltyLevel": 3,
+        "Price": 0
+    },
+    "64ace9d9b5bf5e95f50a4c1d": {
+        "ItemID": "64ace9d9b5bf5e95f50a4c1d",
+        "Name": "item_ammo_box_762x39_20_FMJ",
+        "LoyaltyLevel": 1,
+        "Price": 0
+    },
+    "64acea09c4eda9354b0226ad": {
+        "ItemID": "64acea09c4eda9354b0226ad",
+        "Name": "item_ammo_box_762x39_20_T",
+        "LoyaltyLevel": 1,
+        "Price": 0
+    },
+    "64acea16c4eda9354b0226b0": {
+        "ItemID": "64acea16c4eda9354b0226b0",
+        "Name": "item_ammo_box_762x39_20_BP",
+        "LoyaltyLevel": 3,
+        "Price": 0
+    },
+    "64acee6903378853630da544": {
+        "ItemID": "64acee6903378853630da544",
+        "Name": "item_ammo_box_762x54R_20_HPBT",
+        "LoyaltyLevel": 3,
+        "Price": 0
+    },
+    "64ace9ff03378853630da538": {
+        "ItemID": "64ace9ff03378853630da538",
+        "Name": "item_ammo_box_762x39_20_SP",
+        "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64aceafcb5bf5e95f50a4c20": {
+        "ItemID": "64aceafcb5bf5e95f50a4c20",
+        "Name": "item_ammo_box_9x19_50_FMJ",
+        "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64ace9f9c4eda9354b0226aa": {
+        "ItemID": "64ace9f9c4eda9354b0226aa",
+        "Name": "item_ammo_box_762x39_20_PP",
+        "LoyaltyLevel": 2,
+        "Price": 0
+    },
+    "64acea0d03378853630da53b": {
+        "ItemID": "64acea0d03378853630da53b",
+        "Name": "item_ammo_box_762x39_20_US",
+        "LoyaltyLevel": 1,
         "Price": 0
     }
 }

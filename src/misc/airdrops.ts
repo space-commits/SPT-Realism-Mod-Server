@@ -11,6 +11,8 @@ import { Utils, RaidInfoTracker } from "../utils/utils";
 import { Arrays } from "../utils/arrays";
 import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootResult";
 import { AirdropTypeEnum } from "@spt-aki/models/enums/AirdropType";
+import { RandomUtil } from "@spt-aki/utils/RandomUtil";
+import { container } from "tsyringe";
 
 
 
@@ -42,6 +44,7 @@ export class AirdropLootgen extends LocationController {
 
 
     public myGetAirdropLoot(): IAirdropLootResult {
+        const randomUtil = container.resolve<RandomUtil>("RandomUtil");
         const modConfig = require("../../config/config.json");
         const tables = this.databaseServer.getTables();
         const arrays = new Arrays(tables);
@@ -65,15 +68,13 @@ export class AirdropLootgen extends LocationController {
             weaponCrateCount: airdropLoot.weaponCrateCount
         };
 
-        return { dropType: AirdropTypeEnum.MIXED, loot: this.createRandomAirdropLoot(options, utils) };
+        return { dropType: AirdropTypeEnum.MIXED, loot: this.createRandomAirdropLoot(options, utils, randomUtil) };
     }
 
 
     private updateAirdropsLootPools(modConfig, utils: Utils, weights: Array<number>) {
 
-
         const airdropLoot = require("../../db/airdrops/airdrop_loot.json");
-
         var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
         var loot = utils.probabilityWeighter(airdropLootArr, weights);
         if (loot === "medical_loot") {
@@ -112,7 +113,7 @@ export class AirdropLootgen extends LocationController {
     }
 
 
-    private createRandomAirdropLoot(options: AirdropLootRequest, utils: Utils): LootItem[] {
+    private createRandomAirdropLoot(options: AirdropLootRequest, utils: Utils, randomUtil: RandomUtil): LootItem[] {
         const result: LootItem[] = [];
 
         const itemTypeCounts = this.initItemLimitCounter(options.itemLimits);
@@ -138,7 +139,7 @@ export class AirdropLootgen extends LocationController {
             }
         }
 
-        const desiredWeaponCrateCount = this.randomUtil.getInt(options.weaponCrateCount.min, options.weaponCrateCount.max);
+        const desiredWeaponCrateCount = randomUtil.getInt(options.weaponCrateCount.min, options.weaponCrateCount.max);
         if (desiredWeaponCrateCount > 0)
         {
             // Get list of all sealed containers from db
@@ -146,7 +147,7 @@ export class AirdropLootgen extends LocationController {
             for (let index = 0; index < desiredWeaponCrateCount; index++)
             {
                 // Choose one at random + add to results array
-                const chosenSealedContainer = this.randomUtil.getArrayValue(sealedWeaponContainerPool);
+                const chosenSealedContainer = randomUtil.getArrayValue(sealedWeaponContainerPool);
                 result.push({
                     id: this.hashUtil.generate(),
                     tpl: chosenSealedContainer._id,
@@ -165,7 +166,7 @@ export class AirdropLootgen extends LocationController {
         const itemLimitCount = itemTypeCounts[randomItem._parent];
 
         if (itemLimitCount === undefined || itemLimitCount === null || itemLimitCount.current === undefined || itemLimitCount.current === null || itemLimitCount.max === undefined || itemLimitCount.max === null) {
-            this.logger.error("No Item Limit Found For Item: " + randomItem._id + " Of Category " + randomItem._parent);
+            this.logger.warning("No Item Limit Found For Item: " + randomItem._id + " Of Category " + randomItem._parent);
             return false;
         }
 
@@ -206,6 +207,10 @@ export class AirdropLootgen extends LocationController {
     private getRandomisedStackCountAirdrop(item: ITemplateItem, options: AirdropLootRequest, utils: Utils): number {
         let min = item._props.StackMinRandom;
         let max = item._props.StackMaxSize;
+
+        if(item._parent === "5485a8684bdc2da71d8b4567"){
+            min = max / 2;           
+        }
 
         if (options.itemStackLimits[item._id]) {
             min = options.itemStackLimits[item._id].min;

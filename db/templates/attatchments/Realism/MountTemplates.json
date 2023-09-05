@@ -1,4 +1,13 @@
 {
+    "641dc35e19604f20c800be18": {
+        "ItemID": "mount_svt40_toz_tokarev_pu_base",
+        "Name": "mount_svt40_toz_tokarev_pu_base",
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.02
+    },
     "mount_l85a2_rail": {
         "ItemID": "mount_l85a2_rail",
         "Name": "mount_l85a2_rail",

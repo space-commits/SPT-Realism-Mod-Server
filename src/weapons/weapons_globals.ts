@@ -86,7 +86,7 @@ export class WeaponsGlobals {
             this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.15;
             this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.7;
 
-            this.globalDB.Aiming.RecoilCrank = true;
+            this.globalDB.Aiming.RecoilCrank = this.modConf.recoil_crank;
         }
 
         if (this.modConf.legacy_recoil_changes == true && this.modConf.recoil_attachment_overhaul != true && ConfigChecker.dllIsPresent != true) {

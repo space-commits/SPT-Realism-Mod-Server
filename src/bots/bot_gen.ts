@@ -10,7 +10,7 @@ import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
 import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
 import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
 import { IPreset } from "@spt-aki/models/eft/common/IGlobals";
-import { BotTierTracker, Utils, ProfileTracker, ModTracker } from "../utils/utils";
+import { BotTierTracker, Utils, ProfileTracker, ModTracker, RaidInfoTracker } from "../utils/utils";
 import { BotEquipmentModGenerator } from "@spt-aki/generators/BotEquipmentModGenerator";
 import { BotModLimits, BotWeaponModLimitService } from "@spt-aki/services/BotWeaponModLimitService";
 import { __String } from "typescript";
@@ -96,29 +96,46 @@ export class BotGen extends BotGenerator {
         const level = ProfileTracker.level;
         var tier = 1;
         var tierArray = [1, 2, 3, 4];
-        if (level >= 0 && level < 5) {
+        if (level <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
-        if (level >= 5 && level < 10) {
+        else if (level <= 10) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
-        if (level >= 10 && level < 15) {
+        else if (level <= 15) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
-        if (level >= 15 && level < 20) {
+        else if (level <= 20) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
-        if (level >= 20 && level < 25) {
+        else if (level <= 25) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
-        if (level >= 25 && level < 30) {
+        else if (level <= 30) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
-        if (level >= 30 && level < 35) {
+        else if (level <= 35) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
-        if (level >= 35) {
+        else if (level > 35) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+        }
+        return tier;
+    }
+
+    private botTierMapFactor(tier: number, utils: Utils): number {
+        let rndNum = utils.pickRandNumOneInTen();
+        if (RaidInfoTracker.mapName === "Laboratory" || RaidInfoTracker.mapName === "laboratory") {
+            tier = Math.min(tier + 2, 4);
+        }
+        else if (rndNum <= 4 && (RaidInfoTracker.mapName === "RezervBase" || RaidInfoTracker.mapName === "ReserveBase" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "Streets of Tarkov" || RaidInfoTracker.mapName === "factory4_night" || RaidInfoTracker.TOD === "night")) {
+            tier = Math.min(tier + 1, 4);
+        }
+        else if (rndNum <= 2 && (RaidInfoTracker.mapName === "shoreline" || RaidInfoTracker.mapName === "Shoreline" || RaidInfoTracker.mapName === "lighthouse" || RaidInfoTracker.mapName === "Lighthouse" || RaidInfoTracker.mapName === "Interchange" || RaidInfoTracker.mapName === "interchange")) {
+            tier = Math.min(tier + 1, 4);
+        }
+        else if (rndNum <= 1 && (RaidInfoTracker.mapName === "bigmap" || RaidInfoTracker.mapName === "Customs")) {
+            tier = Math.min(tier + 1, 4);
         }
         return tier;
     }
@@ -153,7 +170,8 @@ export class BotGen extends BotGenerator {
             let pmcTier = 1;
             if (isPMC) {
 
-                pmcTier = this.getBotTier(utils);
+                pmcTier = this.botTierMapFactor(this.getBotTier(utils), utils);
+
                 const isUSEC = this.isBotUSEC(botRole);
                 const changeDiffi = modConfig.pmc_difficulty;
 
@@ -215,10 +233,10 @@ export class BotGen extends BotGenerator {
                     this.logger.warning("=================");
                     this.logger.warning("bot " + botRole);
                     this.logger.warning("tier " + pmcTier);
+                    this.logger.warning("map " + RaidInfoTracker.mapName);
+                    this.logger.warning("TOD " + RaidInfoTracker.TOD);
                     this.logger.warning("===========");
                 }
-
-
             }
 
             bot = this.myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier);

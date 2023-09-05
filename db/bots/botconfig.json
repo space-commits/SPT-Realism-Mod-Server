@@ -69,17 +69,44 @@
         "tarkovstreets": 16,
         "default": 15
     },
-    "lootNValue1": {
-        "scav": 3.2,
-        "pmc": 3.15
-    },
-    "lootNValue2": {
-        "scav": 3.3,
-        "pmc": 2.5
-    },
-    "lootNValue3": {
-        "scav": 3.5,
-        "pmc": 2.4
+    "lootNValue": {
+        "scav": 3,
+        "pmc": 2.5,
+        "assault": 3,
+        "marksman": 3,
+        "arenafighterevent": 2.5,
+        "arenafighter": 2.5,
+        "crazyassaultevent": 3,
+        "bossbully": 2,
+        "sptbear": 2.5,
+        "sptusec": 2.5,
+        "bossgluhar": 2,
+        "bosskilla": 2,
+        "bossknight": 2,
+        "bosskojaniy": 2,
+        "bosssanitar": 2,
+        "bosstagilla": 2,
+        "bosstest": 2,
+        "bosszryachiy": 2,
+        "cursedassault": 2,
+        "exusec": 2,
+        "followerbigpipe": 2,
+        "followerbirdeye": 2,
+        "followerbully": 2,
+        "followergluharassault": 2,
+        "followergluharscout": 2,
+        "followergluharsecurity": 2,
+        "followergluharsnipe": 2,
+        "followerkojaniy": 2,
+        "followersanitar": 2,
+        "followertagilla": 2,
+        "followertest": 2,
+        "followerzryachiy": 2,
+        "gifter": 2,
+        "pmcbot": 2,
+        "sectantpriest": 2,
+        "sectantwarrior": 2,
+        "test": 2
     },
     "durability1": {
         "default": {
@@ -616,7 +643,7 @@
         "chanceSameSideIsHostilePercent": 95,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 20,
+                "min": 30,
                 "max": 45
             },
             "cursedassault": {
@@ -640,8 +667,8 @@
                 "max": 0
             },
             "crazyassaultevent": {
-                "min": 0,
-                "max": 0
+                "min": 5,
+                "max": 30
             }
         }
     },
@@ -664,7 +691,7 @@
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 17,
+                "min": 27,
                 "max": 45
             },
             "cursedassault": {
@@ -688,8 +715,8 @@
                 "max": 0
             },
             "crazyassaultevent": {
-                "min": 0,
-                "max": 0
+                "min": 5,
+                "max": 30
             }
         }
     },
@@ -712,7 +739,7 @@
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 15,
+                "min": 25,
                 "max": 45
             },
             "cursedassault": {
@@ -736,8 +763,8 @@
                 "max": 0
             },
             "crazyassaultevent": {
-                "min": 0,
-                "max": 0
+                "min": 5,
+                "max": 30
             }
         }
     },

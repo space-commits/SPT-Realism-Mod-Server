@@ -1,4 +1,50 @@
 {
+    "health": {
+        "Hydration": {
+            "min": 100,
+            "max": 100
+        },
+        "Energy": {
+            "min": 100,
+            "max": 100
+        },
+        "Temperature": {
+            "min": 30,
+            "max": 30
+        },
+        "BodyParts": [
+            {
+                "Head": {
+                    "min": 20,
+                    "max": 20
+                },
+                "Chest": {
+                    "min": 135,
+                    "max": 135
+                },
+                "Stomach": {
+                    "min": 130,
+                    "max": 130
+                },
+                "LeftArm": {
+                    "min": 75,
+                    "max": 75
+                },
+                "RightArm": {
+                    "min": 75,
+                    "max": 75
+                },
+                "LeftLeg": {
+                    "min": 60,
+                    "max": 60
+                },
+                "RightLeg": {
+                    "min": 65,
+                    "max": 65
+                }
+            }
+        ]
+    },
     "knightLO1": {
         "inventory": {
             "Ammo": {

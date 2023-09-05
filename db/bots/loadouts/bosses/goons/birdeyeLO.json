@@ -1,4 +1,50 @@
 {
+    "health": {
+        "Hydration": {
+            "min": 100,
+            "max": 100
+        },
+        "Energy": {
+            "min": 100,
+            "max": 100
+        },
+        "Temperature": {
+            "min": 28,
+            "max": 28
+        },
+        "BodyParts": [
+            {
+                "Head": {
+                    "min": 20,
+                    "max": 20
+                },
+                "Chest": {
+                    "min": 125,
+                    "max": 125
+                },
+                "Stomach": {
+                    "min": 125,
+                    "max": 125
+                },
+                "LeftArm": {
+                    "min": 65,
+                    "max": 65
+                },
+                "RightArm": {
+                    "min": 65,
+                    "max": 65
+                },
+                "LeftLeg": {
+                    "min": 65,
+                    "max": 65
+                },
+                "RightLeg": {
+                    "min": 65,
+                    "max": 65
+                }
+            }
+        ]
+    },
     "birdeyeLO1": {
         "inventory": {
             "Ammo": {
@@ -212,7 +258,7 @@
                 "Holster": 100,
                 "Pockets": 100,
                 "Scabbard": 0,
-                "SecondPrimaryWeapon": 40,
+                "SecondPrimaryWeapon": 100,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -456,7 +502,7 @@
                 "Holster": 100,
                 "Pockets": 100,
                 "Scabbard": 0,
-                "SecondPrimaryWeapon": 60,
+                "SecondPrimaryWeapon": 100,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -706,7 +752,7 @@
                 "Holster": 100,
                 "Pockets": 100,
                 "Scabbard": 0,
-                "SecondPrimaryWeapon": 80,
+                "SecondPrimaryWeapon": 100,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
