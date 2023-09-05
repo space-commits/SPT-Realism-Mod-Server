@@ -344,23 +344,20 @@ export class BotLoader {
             this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
         }
 
-        if (this.modConfig.all_scavs == true && this.modConfig.all_PMCs == false) {
+        if (this.modConfig.all_scavs == true) {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.scavTest.convertIntoPmcChance
             this.logger.warning("All Scavs");
         }
-
-        if (this.modConfig.all_scavs == false && this.modConfig.all_PMCs == true) {
+        if (this.modConfig.all_PMCs == true) {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance
             this.logger.warning("All PMCs");
         }
-
-        if (this.modConfig.all_USEC == false && this.modConfig.all_bear == true) {
+        if (this.modConfig.all_bear == true) {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance
             this.botConfPMC.isUsec = 0;
             this.logger.warning("All Bear");
         }
-
-        if (this.modConfig.all_bear == false && this.modConfig.all_USEC == true) {
+        if (this.modConfig.all_USEC == true) {
             this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance
             this.botConfPMC.isUsec = 100;
             this.logger.warning("All USEC");

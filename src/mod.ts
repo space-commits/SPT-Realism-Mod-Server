@@ -559,7 +559,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables = databaseServer.getTables();
-        const jsonHand = new JsonHandler(tables);
+        const jsonHand = new JsonHandler(tables, logger);
         jsonHand.pushWeaponsToServer();
         jsonHand.pushModsToServer();
     }

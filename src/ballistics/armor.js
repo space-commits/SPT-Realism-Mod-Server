@@ -64,14 +64,14 @@ class Armor {
             //// Class 5////
             //6B2 Flora
             if (serverItem._id === "5df8a2ca86f7740bfe6df777") {
-                serverItem._props.Durability = 130;
+                serverItem._props.Durability = 85;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 5;
                 serverItem._props.speedPenaltyPercent = -5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -5;
                 serverItem._props.BluntThroughput = 0.35;
-                serverItem._props.ArmorMaterial = 'Aramid';
+                serverItem._props.ArmorMaterial = 'Titan';
                 serverItem._props.Weight = 5.4;
             }
             //Kirasa

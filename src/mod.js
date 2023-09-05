@@ -422,7 +422,7 @@ class Main {
         const logger = container.resolve("WinstonLogger");
         const databaseServer = container.resolve("DatabaseServer");
         const tables = databaseServer.getTables();
-        const jsonHand = new json_handler_1.JsonHandler(tables);
+        const jsonHand = new json_handler_1.JsonHandler(tables, logger);
         jsonHand.pushWeaponsToServer();
         jsonHand.pushModsToServer();
     }
