@@ -121,7 +121,7 @@ export class JsonHandler {
                         serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
                         serverItem._props.Convergence *= 5;
                         serverItem._props.RecoilAngle = 90;
-                        let weapPropertyValues = ["SPTRM", "undefined", "0", "false", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1"];
+                        let weapPropertyValues = ["SPTRM", "undefined", "0", "false", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
                         let combinedArr = weapPropertyValues.concat(serverConfItems)
                         serverItem._props.ConflictingItems = combinedArr;
                     }
@@ -133,7 +133,7 @@ export class JsonHandler {
                         serverItem._props.Convergence *= 5;
                         serverItem._props.RecoilAngle = 80;
                         serverItem._props.CameraRecoil *= 0.5;
-                        let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1"];
+                        let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
                         let combinedArr = weapPropertyValues.concat(serverConfItems)
                         serverItem._props.ConflictingItems = combinedArr;
                     }
@@ -250,16 +250,18 @@ export class JsonHandler {
 
                 if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
+
                     serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
-                    serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                    serverItem._props.HeatFactor = fileItem.HeatFactor;
                     serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;
                     serverItem._props.RecolDispersion = fileItem.Dispersion;
                     serverItem._props.CameraRecoil = fileItem.CameraRecoil;
-                    serverItem._props.CameraSnap = fileItem.CameraSnap;
+
                     serverItem._props.Convergence = fileItem.Convergence;
-                    serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
                     serverItem._props.RecoilAngle = fileItem.RecoilAngle;
+
+                    serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
+                    serverItem._props.HeatFactor = fileItem.HeatFactor;
+                    serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
                     serverItem._props.AllowOverheat = fileItem.AllowOverheat;
                     serverItem._props.HipAccuracyRestorationDelay = fileItem.HipAccuracyRestorationDelay;
                     serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
@@ -275,8 +277,8 @@ export class JsonHandler {
                     }
 
                     let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
-                        fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.65", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
-                        fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1"
+                        fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.7", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
+                        fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1", fileItem?.CameraSnap?.toString() || "0.1"
                     ];
 
                     let combinedArr = weapPropertyValues.concat(serverConfItems)

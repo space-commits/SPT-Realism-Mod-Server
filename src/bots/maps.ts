@@ -10,40 +10,40 @@ const spawnWaves = require("../../db/maps/spawnWaves.json");
 export class Spawns {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
-    public setBossSpawnChance(mapDB: ILocations, level: number) {
 
-        if (level >= 0 && level < 5) {
-            this.bossSpawnHelper(mapDB, 0.05);
-        }
-        if (level >= 5 && level < 10) {
+    public setBossSpawnChance(mapDB: ILocations, level: number) {
+        if (level <= 5) {
             this.bossSpawnHelper(mapDB, 0.1);
         }
-        if (level >= 10 && level < 15) {
+        else if (level <= 10) {
             this.bossSpawnHelper(mapDB, 0.2);
         }
-        if (level >= 15 && level < 20) {
-            this.bossSpawnHelper(mapDB, 0.4);
+        else if (level <= 15) {
+            this.bossSpawnHelper(mapDB, 0.3);
         }
-        if (level >= 20 && level < 25) {
+        else if (level <= 20) {
             this.bossSpawnHelper(mapDB, 0.5);
         }
-        if (level >= 25 && level < 30) {
+        else if (level <= 25) {
+            this.bossSpawnHelper(mapDB, 0.6);
+        }
+        else if (level <= 30) {
             this.bossSpawnHelper(mapDB, 0.7);
         }
-        if (level >= 30 && level < 35) {
+        else  if (level <= 35) {
             this.bossSpawnHelper(mapDB, 0.9);
         }
-        if (level >= 35 && level < 40) {
+        else if (level <= 40) {
+            this.bossSpawnHelper(mapDB, 0.95);
+        }
+        else  if (level <= 45) {
             this.bossSpawnHelper(mapDB, 1);
         }
-        if (level >= 40 && level < 45) {
+        else  if (level <= 50) {
             this.bossSpawnHelper(mapDB, 1.05);
         }
-        if (level >= 45 && level < 50) {
-            this.bossSpawnHelper(mapDB, 1.1);
-        }
-        if (level > 50) {
-            this.bossSpawnHelper(mapDB, 1.2);
+        else if (level > 50) {
+            this.bossSpawnHelper(mapDB, 0.7);
         }
     }
 
