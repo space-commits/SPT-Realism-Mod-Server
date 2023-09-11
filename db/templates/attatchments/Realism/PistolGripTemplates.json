@@ -469,6 +469,36 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "646371779f5f0ea59a04c204": {
+        "ItemID": "646371779f5f0ea59a04c204",
+        "Name": "pistolgrip_pkm_zid_pk_std",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 2.5,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.09,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "64cbad529f7cf7f75c077fd5": {
+        "ItemID": "64cbad529f7cf7f75c077fd5",
+        "Name": "pistolgrip_pkm_zid_pk_black",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 2.5,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.09,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "5649ad3f4bdc2df8348b4585": {
         "ItemID": "5649ad3f4bdc2df8348b4585",
         "Name": "pistolgrip_ak_izhmash_ak74_bakelit",

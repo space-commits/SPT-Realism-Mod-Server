@@ -1,4 +1,16 @@
 {
+    "6492fb8253acae0af00a29b6": {
+        "ItemID": "6492fb8253acae0af00a29b6",
+        "Name": "sight_rear_pk_zid_pk_std",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.025,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0
+    },
     "64119d90dcf48d656f0aa275": {
         "ItemID": "64119d90dcf48d656f0aa275",
         "Name": "sight_rear_svt40_toz_svt40_std",

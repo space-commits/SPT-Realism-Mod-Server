@@ -1,4 +1,20 @@
 {
+    "646372518610c40fc20204e8": {
+        "ItemID": "646372518610c40fc20204e8",
+        "Name": "mag_pkm_zid_pk_std_762x54r_100",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 1.5,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "6422e1ea3c0f06190302161a": {
         "ItemID": "6422e1ea3c0f06190302161a",
         "Name": "mag_svt40_toz_svt40_std_762x54r_10",
