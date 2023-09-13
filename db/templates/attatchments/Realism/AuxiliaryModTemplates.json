@@ -843,10 +843,29 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "6464d870bb2c580352070cc4": {
+        "ItemID": "6464d870bb2c580352070cc4",
+        "Name": "bipod_pkm_zid_pk_std",
+        "ModType": "bipod",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "AimSpeed": 0,
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "Accuracy": 20,
+        "ConflictingItems": [],
+        "FixSpeed": 0,
+        "Weight": 0.47,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "5888961624597754281f93f3": {
         "ItemID": "5888961624597754281f93f3",
         "Name": "bipod_all_harris_hbr",
-        "ModType": "",
+        "ModType": "bipod",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
@@ -865,7 +884,7 @@
     "622b397c9a3d4327e41843b6": {
         "ItemID": "622b397c9a3d4327e41843b6",
         "Name": "bipod_g36_hk_std",
-        "ModType": "",
+        "ModType": "bipod",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
@@ -884,7 +903,7 @@
     "56ea8222d2720b69698b4567": {
         "ItemID": "56ea8222d2720b69698b4567",
         "Name": "bipod_sv-98_izhmash_bipod_std",
-        "ModType": "",
+        "ModType": "bipod",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,

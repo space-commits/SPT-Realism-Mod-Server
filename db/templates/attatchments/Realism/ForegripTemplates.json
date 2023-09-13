@@ -231,7 +231,7 @@
         "ModType": "",
         "VerticalRecoil": -2,
         "HorizontalRecoil": -2,
-        "Dispersion": -1.5,
+        "Dispersion": -2.5,
         "AimSpeed": 0,
         "Ergonomics": 8,
         "Accuracy": 0,

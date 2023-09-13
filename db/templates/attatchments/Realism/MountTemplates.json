@@ -1,4 +1,22 @@
 {
+    "6492c6dd60fdb10a020621a2": {
+        "ItemID": "6492c6dd60fdb10a020621a2",
+        "Name": "mount_pk_zenit_b50_rack_16mm",
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.125
+    },
+    "6492c8bba6e68e06fb0bae87": {
+        "ItemID": "6492c8bba6e68e06fb0bae87",
+        "Name": "mount_pk_zenit_b50_rack_66mm",
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.135
+    },
     "641dc35e19604f20c800be18": {
         "ItemID": "mount_svt40_toz_tokarev_pu_base",
         "Name": "mount_svt40_toz_tokarev_pu_base",
