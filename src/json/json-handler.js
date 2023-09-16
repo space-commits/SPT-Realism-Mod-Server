@@ -104,23 +104,24 @@ class JsonHandler {
                     }
                     if (serverItem._parent == enums_1.ParentClasses.PISTOL) {
                         serverItem._props.Ergonomics = 70;
-                        serverItem._props.RecoilForceUp *= 0.8;
-                        serverItem._props.RecoilForceBack *= 0.8;
+                        serverItem._props.RecoilForceUp *= 0.5;
+                        serverItem._props.RecoilForceBack *= 1.5;
                         serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-                        serverItem._props.Convergence *= 5;
+                        serverItem._props.Convergence *= 4;
                         serverItem._props.RecoilAngle = 90;
+                        serverItem._props.CameraRecoil = 0.01;
                         let weapPropertyValues = ["SPTRM", "undefined", "0", "false", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
                         let combinedArr = weapPropertyValues.concat(serverConfItems);
                         serverItem._props.ConflictingItems = combinedArr;
                     }
                     else {
                         serverItem._props.Ergonomics = 80;
-                        serverItem._props.RecoilForceUp *= 0.4;
-                        serverItem._props.RecoilForceBack *= 0.5;
+                        serverItem._props.RecoilForceUp *= 0.5;
+                        serverItem._props.RecoilForceBack *= 0.3;
                         serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-                        serverItem._props.Convergence *= 5;
-                        serverItem._props.RecoilAngle = 80;
-                        serverItem._props.CameraRecoil *= 0.5;
+                        serverItem._props.Convergence *= 10;
+                        serverItem._props.RecoilAngle = 90;
+                        serverItem._props.CameraRecoil *= 0.9;
                         let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
                         let combinedArr = weapPropertyValues.concat(serverConfItems);
                         serverItem._props.ConflictingItems = combinedArr;

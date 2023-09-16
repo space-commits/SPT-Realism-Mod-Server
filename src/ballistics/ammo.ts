@@ -3500,7 +3500,7 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1;
                 }
             }
-            // M856A1 -
+            // M856A1
             if (serverItem._id === "59e6906286f7746c9f75e847") {
                 serverItem._props.PenetrationPower = 63;
                 serverItem._props.ArmorDamage = 16;
@@ -3523,7 +3523,7 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1;
                 }
             }
-            // M855A1 -
+            // M855A1 
             if (serverItem._id === "54527ac44bdc2d36668b4567") {
                 serverItem._props.PenetrationPower = 75;
                 serverItem._props.ArmorDamage = 19;
@@ -3546,7 +3546,7 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
-            // M995 -
+            // M995 
             if (serverItem._id === "59e690b686f7746c9f75e848") {
                 serverItem._props.PenetrationPower = 83;
                 serverItem._props.ArmorDamage = 18;
@@ -3569,7 +3569,7 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1.06;
                 }
             }
-            // SSA AP -
+            // SSA AP 
             if (serverItem._id === "601949593ae8f707c4608daa") {
                 serverItem._props.PenetrationPower = 90;
                 serverItem._props.ArmorDamage = 21;
