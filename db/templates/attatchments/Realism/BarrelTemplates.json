@@ -385,7 +385,7 @@
     "622b3858034a3e17ad0b81f5": {
         "ItemID": "622b3858034a3e17ad0b81f5",
         "Name": "barrel_g36_hk_318mm_556x45",
-        "ModType": "",
+        "ModType": "short_barrel",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
@@ -1109,7 +1109,7 @@
     "5c6d85e02e22165df16b81f4": {
         "ItemID": "5c6d85e02e22165df16b81f4",
         "Name": "barrel_416_hk_264mm_556x45",
-        "ModType": "",
+        "ModType": "short_barrel",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 5,
         "AutoROF": 1.5,
@@ -1151,7 +1151,7 @@
     "5bb20d92d4351e00853263eb": {
         "ItemID": "5bb20d92d4351e00853263eb",
         "Name": "barrel_416_hk_279mm_556x45",
-        "ModType": "",
+        "ModType": "short_barrel",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 3,
         "AutoROF": 1,
@@ -1669,12 +1669,12 @@
     "60658776f2cb2e02a42ace2b": {
         "ItemID": "60658776f2cb2e02a42ace2b",
         "Name": "barrel_mk47_cmmg_254mm_762x39",
-        "ModType": "",
+        "ModType": "short_barrel",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
-        "ModMalfunctionChance": 0,
+        "ModMalfunctionChance": 20,
         "Convergence": 0,
         "Accuracy": 0,
         "CenterOfImpact": 0.034,
@@ -1748,7 +1748,7 @@
     "6183fc15d3a39d50044c13e9": {
         "ItemID": "6183fc15d3a39d50044c13e9",
         "Name": "barrel_mk16_fn_254mm_556x45",
-        "ModType": "",
+        "ModType": "short_barrel",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 5,
         "AutoROF": 1.5,
@@ -1773,7 +1773,7 @@
     "618168b350224f204c1da4d8": {
         "ItemID": "618168b350224f204c1da4d8",
         "Name": "barrel_mk17_fn_330mm_762x51",
-        "ModType": "",
+        "ModType": "short_barrel",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 7,
         "AutoROF": 2,
@@ -1919,7 +1919,7 @@
     "622b379bf9cfc87d675d2de5": {
         "ItemID": "622b379bf9cfc87d675d2de5",
         "Name": "barrel_g36_hk_228mm_556x45",
-        "ModType": "",
+        "ModType": "short_barrel",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 5,
         "AutoROF": 1.5,
