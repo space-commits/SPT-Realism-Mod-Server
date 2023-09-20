@@ -18,7 +18,7 @@ export class Armor {
         this.armMat.Aramid.Destructibility = 0.24;
 
         this.armMat.Ceramic.Destructibility = 0.18;
-        
+
         this.armMat.Combined.Destructibility = 0.16;
 
         this.armMat.UHMWPE.Destructibility = 0.13;
@@ -1722,13 +1722,15 @@ export class Armor {
     public armorMousePenalty() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if ((serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG || serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT) && serverItem._props?.speedPenaltyPercent != null) {
-                if (this.modConf.armor_mouse_penalty == true) {
-                    serverItem._props.mousePenalty = -serverItem._props.Weight;
-                }
-                else {
-                    serverItem._props.mousePenalty = 0;
-                }
+            if ((serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.HEADWEAR
+                || serverItem._parent === ParentClasses.FACECOVER || serverItem._parent === ParentClasses.ARMOREDEQUIPMENT
+                || serverItem._parent === ParentClasses.BACKPACK || serverItem._parent === ParentClasses.CHESTRIG)
+                && serverItem._props?.speedPenaltyPercent != null) {
+                serverItem._props.mousePenalty = 0;
+            }
+            if (serverItem._parent === ParentClasses.BACKPACK) {
+                serverItem._props.speedPenaltyPercent = 0;
+                serverItem._props.weaponErgonomicPenalty = 0;
             }
         }
         if (this.modConf.logEverything == true) {

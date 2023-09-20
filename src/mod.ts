@@ -631,10 +631,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         jsonHand.pushGearToServer();
         descGen.descriptionGen();
 
-        if (modConfig.armor_mouse_penalty == true) {
-            armor.armorMousePenalty();
-        }
-
+        armor.armorMousePenalty();
+        
         if (modConfig.headgear_conflicts == true) {
             gear.loadGearConflicts();
         }

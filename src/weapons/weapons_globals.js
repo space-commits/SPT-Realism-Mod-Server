@@ -50,7 +50,7 @@ class WeaponsGlobals {
             this.globalDB.Mastering = mastering.Mastering;
         }
         if (this.modConf.recoil_attachment_overhaul == true) {
-            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.8;
+            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 1.1;
             this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.9;
             this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
             this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.9;

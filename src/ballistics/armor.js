@@ -1700,13 +1700,15 @@ class Armor {
     armorMousePenalty() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG || serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) && serverItem._props?.speedPenaltyPercent != null) {
-                if (this.modConf.armor_mouse_penalty == true) {
-                    serverItem._props.mousePenalty = -serverItem._props.Weight;
-                }
-                else {
-                    serverItem._props.mousePenalty = 0;
-                }
+            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.HEADWEAR
+                || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT
+                || serverItem._parent === enums_1.ParentClasses.BACKPACK || serverItem._parent === enums_1.ParentClasses.CHESTRIG)
+                && serverItem._props?.speedPenaltyPercent != null) {
+                serverItem._props.mousePenalty = 0;
+            }
+            if (serverItem._parent === enums_1.ParentClasses.BACKPACK) {
+                serverItem._props.speedPenaltyPercent = 0;
+                serverItem._props.weaponErgonomicPenalty = 0;
             }
         }
         if (this.modConf.logEverything == true) {
