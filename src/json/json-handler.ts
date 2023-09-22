@@ -101,19 +101,19 @@ export class JsonHandler {
             }
         }
         //catch any modded weapons not in templates
-        if(modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true){
+        if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
             for (let j in this.itemDB) {
                 let serverItem = this.itemDB[j];
                 let serverConfItems = serverItem._props.ConflictingItems;
                 if (serverItem._parent == ParentClasses.SMG || serverItem._parent == ParentClasses.ASSAULT_CARBINE || serverItem._parent == ParentClasses.ASSAULT_RIFLE || serverItem._parent == ParentClasses.MARKSMAN_RIFLE || serverItem._parent == ParentClasses.SNIPER_RIFLE || serverItem._parent == ParentClasses.PISTOL || serverItem._parent == ParentClasses.SHOTGUN || serverItem._parent == ParentClasses.MACHINE_GUN) {
-                        if(serverConfItems !== undefined && serverConfItems.length > 0 &&  serverConfItems[0] === "SPTRM"){
+                    if (serverConfItems !== undefined && serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
                         continue;
                     }
-                    if(serverConfItems === undefined){
+                    if (serverConfItems === undefined) {
                         serverItem._props.ConflictingItems = [];
                         serverConfItems = serverItem._props.ConflictingItems;
                     }
-                                 
+
                     if (serverItem._parent == ParentClasses.PISTOL) {
                         serverItem._props.Ergonomics = 70;
                         serverItem._props.RecoilForceUp *= 0.5;
@@ -138,7 +138,6 @@ export class JsonHandler {
                         let combinedArr = weapPropertyValues.concat(serverConfItems)
                         serverItem._props.ConflictingItems = combinedArr;
                     }
-    
                 }
             }
         }
@@ -186,8 +185,8 @@ export class JsonHandler {
     }
 
     private modPusherHelper(serverItem: any, fileItem: any) {
-
         if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
+
             if (serverItem._id === fileItem.ItemID) {
                 var serverConfItems = serverItem._props.ConflictingItems;
                 if (serverConfItems[0] !== "SPTRM") {
@@ -222,7 +221,7 @@ export class JsonHandler {
                     var modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
                         fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
                         fileItem?.Convergence?.toString() || "0", fileItem?.CanCycleSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0",
-                        fileItem?.ModShotDispersion?.toString() || "0"];
+                        fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0"];
 
                     var combinedArr = modPropertyValues.concat(serverConfItems)
                     serverItem._props.ConflictingItems = combinedArr;

@@ -599,6 +599,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
         const activeMods = preAkiModLoader.getImportedModDetails();
+        
         for (const modname in activeMods) {
             if (modname.includes("Jiro-BatterySystem")) {
                 ModTracker.batteryModPresent = true;
@@ -630,7 +631,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         jsonHand.pushWeaponsToServer();
         jsonHand.pushGearToServer();
         descGen.descriptionGen();
-
+    
         armor.armorMousePenalty();
         
         if (modConfig.headgear_conflicts == true) {

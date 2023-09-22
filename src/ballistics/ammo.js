@@ -276,7 +276,7 @@ class Ammo {
                 serverItem._props.Damage = 182;
                 serverItem._props.InitialSpeed = 435;
                 serverItem._props.RicochetChance = 0.2;
-                serverItem._props.FragmentationChance = 0.15;
+                serverItem._props.FragmentationChance = 0.2;
                 serverItem._props.BulletMassGram = 19.6;
                 serverItem._props.HeavyBleedingDelta = 0.9;
                 serverItem._props.LightBleedingDelta = 1;
@@ -284,7 +284,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 22;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0;
+                    serverItem._props.MalfMisfireChance = 1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.7;
@@ -969,10 +969,10 @@ class Ammo {
             if (serverItem._id === "5c0d56a986f774449d5de529") {
                 serverItem._props.PenetrationPower = 35;
                 serverItem._props.ArmorDamage = 19;
-                serverItem._props.Damage = 62;
+                serverItem._props.Damage = 60;
                 serverItem._props.InitialSpeed = 385;
                 serverItem._props.RicochetChance = 0.22;
-                serverItem._props.FragmentationChance = 0.05;
+                serverItem._props.FragmentationChance = 0.25;
                 serverItem._props.BulletMassGram = 5.96;
                 serverItem._props.HeavyBleedingDelta = 0.27;
                 serverItem._props.LightBleedingDelta = 0.59;
@@ -1262,7 +1262,7 @@ class Ammo {
                 serverItem._props.Damage = 63;
                 serverItem._props.InitialSpeed = 292;
                 serverItem._props.RicochetChance = 0.2;
-                serverItem._props.FragmentationChance = 0.1;
+                serverItem._props.FragmentationChance = 0.3;
                 serverItem._props.BulletMassGram = 10.5;
                 serverItem._props.HeavyBleedingDelta = 0.3;
                 serverItem._props.LightBleedingDelta = 0.65;
