@@ -46,6 +46,12 @@ class WeaponsGlobals {
         }
     }
     loadGlobalWeps() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === enums_1.ParentClasses.KNIFE) {
+                serverItem._props.DeflectionConsumption /= 5;
+            }
+        }
         if (this.modConf.mastery_changes == true) {
             this.globalDB.Mastering = mastering.Mastering;
         }

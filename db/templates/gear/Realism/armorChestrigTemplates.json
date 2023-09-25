@@ -158,6 +158,7 @@
         "HasSideArmor": true,
         "HasStomachArmor": true,
         "HasNeckArmor": false,
+        "HasExtraArmor": true,
         "Price": 0,
         "Comfort": 1
     },

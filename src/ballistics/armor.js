@@ -322,7 +322,7 @@ class Armor {
             }
             //Redut-T5
             if (serverItem._id === "5ca21c6986f77479963115a7") {
-                serverItem._props.Durability = 125;
+                serverItem._props.Durability = 135;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 9;
                 serverItem._props.speedPenaltyPercent = -12;
