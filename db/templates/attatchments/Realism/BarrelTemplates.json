@@ -547,7 +547,7 @@
         "AutoROF": 1.5,
         "SemiROF": 2.5,
         "CameraRecoil": 5,
-        "ModMalfunctionChance": 500,
+        "ModMalfunctionChance": 100,
         "Convergence": 0,
         "Accuracy": 0,
         "CenterOfImpact": 0.019,

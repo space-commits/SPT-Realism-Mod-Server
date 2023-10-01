@@ -66,7 +66,7 @@ import { Player } from "./player/player"
 import { WeaponsGlobals } from "./weapons/weapons_globals"
 import { BotLoader } from "./bots/bots";
 import { BotGen } from "./bots/bot_gen";
-import { _Items } from "./items/items";
+import { ItemsClass } from "./items/items";
 import { JsonGen } from "./json/code_gen";
 import { Quests } from "./traders/quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
@@ -581,7 +581,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const items = new _Items(logger, tables, modConfig, inventoryConf);
+        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
@@ -592,7 +592,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Spawns(logger, tables, modConfig);
-        const gear = new Gear(arrays, tables);
+        const gear = new Gear(arrays, tables, logger);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables, logger);
@@ -614,6 +614,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
+            itemsClass.addCustomItems();
         }
 
         // codegen.attTemplatesCodeGen();
@@ -723,7 +724,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         attachBase.loadAttCompat();
 
-        items.loadItemsRestrictions();
+        itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();

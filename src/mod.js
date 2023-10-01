@@ -442,7 +442,7 @@ class Main {
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const items = new items_1._Items(logger, tables, modConfig, inventoryConf);
+        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
@@ -453,7 +453,7 @@ class Main {
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Spawns(logger, tables, modConfig);
-        const gear = new gear_1.Gear(arrays, tables);
+        const gear = new gear_1.Gear(arrays, tables, logger);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
@@ -471,6 +471,7 @@ class Main {
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
+            itemsClass.addCustomItems();
         }
         // codegen.attTemplatesCodeGen();
         // codegen.weapTemplatesCodeGen();
@@ -556,7 +557,7 @@ class Main {
             attachBase.loadAttRequirements();
         }
         attachBase.loadAttCompat();
-        items.loadItemsRestrictions();
+        itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();

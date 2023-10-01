@@ -213,6 +213,7 @@
         "HasSideArmor": true,
         "HasStomachArmor": true,
         "HasNeckArmor": false,
+        "HasExtraArmor": true,
         "Price": 0,
         "Comfort": 0.9
     },
@@ -321,6 +322,7 @@
         "HasSideArmor": true,
         "HasStomachArmor": false,
         "HasNeckArmor": true,
+        "HasExtraArmor": true,
         "Price": 0,
         "Comfort": 0.86
     },
@@ -339,6 +341,7 @@
         "HasSideArmor": true,
         "HasStomachArmor": false,
         "HasNeckArmor": true,
+        "HasExtraArmor": true,
         "Price": 0,
         "Comfort": 0.86
     },

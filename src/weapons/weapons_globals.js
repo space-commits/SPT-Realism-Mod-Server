@@ -50,6 +50,8 @@ class WeaponsGlobals {
             let serverItem = this.itemDB[i];
             if (serverItem._parent === enums_1.ParentClasses.KNIFE) {
                 serverItem._props.DeflectionConsumption /= 5;
+                serverItem._props.SlashPenetration += 1;
+                serverItem._props.StabPenetration += 3;
             }
         }
         if (this.modConf.mastery_changes == true) {
