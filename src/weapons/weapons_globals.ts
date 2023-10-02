@@ -13,8 +13,8 @@ export class WeaponsGlobals {
     private itemDB = this.tables.templates.items;
 
 
-    public loadGlobalMalfChanges(){
-        
+    public loadGlobalMalfChanges() {
+
         this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
         this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
         this.globalDB.Overheat.MaxCOIIncreaseMult = 4;
@@ -45,23 +45,29 @@ export class WeaponsGlobals {
                 serverItem._props.RepairComplexity = 0;
                 // serverItem._props.BaseMalfunctionChance *= 1;
             }
-            if( serverItem._parent === ParentClasses.REPAIRKITS)
-            {
+            if (serverItem._parent === ParentClasses.REPAIRKITS) {
                 serverItem._props.RepairQuality = 0;
             }
-
         }
     }
 
     public loadGlobalWeps() {
 
-        if(this.modConf.mastery_changes == true){
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === ParentClasses.KNIFE) {
+                serverItem._props.DeflectionConsumption /= 5;
+                serverItem._props.SlashPenetration += 1;
+                serverItem._props.StabPenetration += 3;
+            }
+        }
+
+        if (this.modConf.mastery_changes == true) {
             this.globalDB.Mastering = mastering.Mastering;
         }
 
-        if(this.modConf.recoil_attachment_overhaul == true)
-        {
-            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.8;
+        if (this.modConf.recoil_attachment_overhaul == true) {
+            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 1.1;
             this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.9;
             this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
 
@@ -77,7 +83,7 @@ export class WeaponsGlobals {
             this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.7;
 
             this.globalDB.Aiming.AimProceduralIntensity = 1;
-            
+
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }

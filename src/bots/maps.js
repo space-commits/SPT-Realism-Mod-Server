@@ -42,7 +42,7 @@ class Spawns {
             this.bossSpawnHelper(mapDB, 1.05);
         }
         else if (level > 50) {
-            this.bossSpawnHelper(mapDB, 0.7);
+            this.bossSpawnHelper(mapDB, 1.1);
         }
     }
     bossSpawnHelper(mapDB, chanceMulti) {

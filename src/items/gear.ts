@@ -1,10 +1,11 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 
 import { Arrays } from "../utils/arrays";
 import { ParentClasses } from "../utils/enums";
 
 export class Gear {
-    constructor(private arrays: Arrays, private tables: IDatabaseTables) { }
+    constructor(private arrays: Arrays, private tables: IDatabaseTables, private logger: ILogger) { }
 
     itemDB = this.tables.templates.items;
 
@@ -35,6 +36,17 @@ export class Gear {
                 if (this.itemDB[item]._id === confHats[hat]) {
                     let confItems = this.itemDB[item]._props.ConflictingItems;
                     this.itemDB[item]._props.ConflictingItems = confMasks.concat(confItems);
+                }
+            }
+        }
+
+        for (let item in this.itemDB) {
+            if (this.itemDB[item]._parent === ParentClasses.HEADWEAR) {
+                for(let c in this.itemDB[item]._props.ConflictingItems){
+                    let confItem = this.itemDB[item]._props.ConflictingItems[c];
+                    if( this.itemDB[confItem] !== undefined && this.itemDB[confItem]._parent === ParentClasses.HEADSET){
+                        this.itemDB[item]._props.ConflictingItems[c] = "";
+                    }                    
                 }
             }
         }

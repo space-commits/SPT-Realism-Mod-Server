@@ -148,6 +148,30 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 6;
             }
+            //Kura Kulon (camo)
+            if (serverItem._id === "64be79e2bf8412471d0d9bcc") {
+                serverItem._props.Durability = 80;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 7;
+                serverItem._props.speedPenaltyPercent = -3;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -2.5;
+                serverItem._props.BluntThroughput = 0.11;
+                serverItem._props.ArmorMaterial = 'Ceramic';
+                serverItem._props.Weight = 11.1;
+            }
+            //Kura Kulon
+            if (serverItem._id === "64be79c487d1510151095552") {
+                serverItem._props.Durability = 80;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 7;
+                serverItem._props.speedPenaltyPercent = -3;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -2.5;
+                serverItem._props.BluntThroughput = 0.11;
+                serverItem._props.ArmorMaterial = 'Ceramic';
+                serverItem._props.Weight = 11.1;
+            }
             //// Class 8////
             //Black Slick
             if (serverItem._id === "5e4abb5086f77406975c9342") {
@@ -248,6 +272,18 @@ class Armor {
                 serverItem._props.Weight = 12;
             }
             //////////////////////////////
+            //OTV
+            if (serverItem._id === "64abd93857958b4249003418") {
+                serverItem._props.Durability = 85;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 9;
+                serverItem._props.speedPenaltyPercent = -2.5;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -2.5;
+                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.ArmorMaterial = 'Combined';
+                serverItem._props.Weight = 7.4;
+            }
             //THOR Integrated Carrier
             if (serverItem._id === "60a283193cb70855c43a381d") {
                 serverItem._props.Durability = 130;
@@ -322,7 +358,7 @@ class Armor {
             }
             //Redut-T5
             if (serverItem._id === "5ca21c6986f77479963115a7") {
-                serverItem._props.Durability = 125;
+                serverItem._props.Durability = 135;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 9;
                 serverItem._props.speedPenaltyPercent = -12;
@@ -445,18 +481,6 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 7.9;
             }
-            //S&S Precision PlateFrame plate carrier (Goons Edition)
-            if (serverItem._id === "628b9784bcf6e2659e09b8a2") {
-                serverItem._props.Durability = 90;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 8;
-                serverItem._props.speedPenaltyPercent = -3;
-                serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -3;
-                serverItem._props.BluntThroughput = 0.15;
-                serverItem._props.ArmorMaterial = 'UHMWPE';
-                serverItem._props.Weight = 6;
-            }
             //TV-110
             if (serverItem._id === "5c0e746986f7741453628fe5") {
                 serverItem._props.Durability = 115;
@@ -505,7 +529,43 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 8.4;
             }
+            //Wartech tv115
+            if (serverItem._id === "64a536392d2c4e6e970f4121") {
+                serverItem._props.Durability = 90;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 7;
+                serverItem._props.speedPenaltyPercent = -2.4;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -2.4;
+                serverItem._props.BluntThroughput = 0.14;
+                serverItem._props.ArmorMaterial = 'UHMWPE';
+                serverItem._props.Weight = 4.5;
+            }
+            //Eagle MBSS
+            if (serverItem._id === "64a5366719bab53bd203bf33") {
+                serverItem._props.Durability = 90;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 7;
+                serverItem._props.speedPenaltyPercent = -3;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -3;
+                serverItem._props.BluntThroughput = 0.12;
+                serverItem._props.ArmorMaterial = 'UHMWPE';
+                serverItem._props.Weight = 5.2;
+            }
             //// Class 8 ////  
+            //S&S Precision PlateFrame plate carrier (Goons Edition)
+            if (serverItem._id === "628b9784bcf6e2659e09b8a2") {
+                serverItem._props.Durability = 90;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = 8;
+                serverItem._props.speedPenaltyPercent = -3;
+                serverItem._props.mousePenalty = 0;
+                serverItem._props.weaponErgonomicPenalty = -3;
+                serverItem._props.BluntThroughput = 0.15;
+                serverItem._props.ArmorMaterial = 'Combined';
+                serverItem._props.Weight = 6;
+            }
             //Osprey MK4A Assault
             if (serverItem._id === "60a3c70cde5f453f634816a3") {
                 serverItem._props.Durability = 105;
@@ -1700,13 +1760,15 @@ class Armor {
     armorMousePenalty() {
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
-            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG || serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) && serverItem._props?.speedPenaltyPercent != null) {
-                if (this.modConf.armor_mouse_penalty == true) {
-                    serverItem._props.mousePenalty = -serverItem._props.Weight;
-                }
-                else {
-                    serverItem._props.mousePenalty = 0;
-                }
+            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.HEADWEAR
+                || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT
+                || serverItem._parent === enums_1.ParentClasses.BACKPACK || serverItem._parent === enums_1.ParentClasses.CHESTRIG)
+                && serverItem._props?.speedPenaltyPercent != null) {
+                serverItem._props.mousePenalty = 0;
+            }
+            if (serverItem._parent === enums_1.ParentClasses.BACKPACK) {
+                serverItem._props.speedPenaltyPercent = 0;
+                serverItem._props.weaponErgonomicPenalty = 0;
             }
         }
         if (this.modConf.logEverything == true) {

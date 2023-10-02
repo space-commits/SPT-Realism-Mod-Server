@@ -1511,6 +1511,37 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "63d114019e35b334d82302f7": {
+        "ItemID": "63d114019e35b334d82302f7",
+        "Name": "mount_dovetail_sag_ak_sidemount",
+        "ModType": "mount",
+        "Ergonomics": 0,
+        "Accuracy": 8,
+        "ConflictingItems": [
+            "5e569a0156edd02abe09f27d",
+            "6113d6c3290d254f5e6b27db",
+            "5c82342f2e221644f31c060e",
+            "576fd4ec2459777f0b518431",
+            "5c82343a2e221644f31c0611",
+            "5dff8db859400025ea5150d4",
+            "6389f1dfc879ce63f72fc43e",
+            "5d2c770c48f0354b4a07c100",
+            "5649af884bdc2d1b2b8b4589",
+            "5d2c76ed48f03532f2136169",
+            "5649d9a14bdc2d79388b4580",
+            "5dfcd0e547101c39625f66f9",
+            "5827272a24597748c74bdeea",
+            "5a957c3fa2750c00137fa5f7",
+            "5f6331e097199b7db2128dc2",
+            "5d2c772c48f0355d95672c25",
+            "58272b392459774b4c7b3ccd",
+            "5f63418ef5750b524b45f116",
+            "58272b842459774abc128d50"
+        ],
+        "Weight": 0.165,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "5dff8db859400025ea5150d4": {
         "ItemID": "5dff8db859400025ea5150d4",
         "Name": "mount_dovetail_sag_svd_low_sidemount",

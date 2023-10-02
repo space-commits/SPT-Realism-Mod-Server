@@ -3,9 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Gear = void 0;
 const enums_1 = require("../utils/enums");
 class Gear {
-    constructor(arrays, tables) {
+    constructor(arrays, tables, logger) {
         this.arrays = arrays;
         this.tables = tables;
+        this.logger = logger;
         this.itemDB = this.tables.templates.items;
     }
     loadGearConflicts() {
@@ -33,6 +34,16 @@ class Gear {
                 if (this.itemDB[item]._id === confHats[hat]) {
                     let confItems = this.itemDB[item]._props.ConflictingItems;
                     this.itemDB[item]._props.ConflictingItems = confMasks.concat(confItems);
+                }
+            }
+        }
+        for (let item in this.itemDB) {
+            if (this.itemDB[item]._parent === enums_1.ParentClasses.HEADWEAR) {
+                for (let c in this.itemDB[item]._props.ConflictingItems) {
+                    let confItem = this.itemDB[item]._props.ConflictingItems[c];
+                    if (this.itemDB[confItem] !== undefined && this.itemDB[confItem]._parent === enums_1.ParentClasses.HEADSET) {
+                        this.itemDB[item]._props.ConflictingItems[c] = "";
+                    }
                 }
             }
         }

@@ -46,11 +46,19 @@ class WeaponsGlobals {
         }
     }
     loadGlobalWeps() {
+        for (let i in this.itemDB) {
+            let serverItem = this.itemDB[i];
+            if (serverItem._parent === enums_1.ParentClasses.KNIFE) {
+                serverItem._props.DeflectionConsumption /= 5;
+                serverItem._props.SlashPenetration += 1;
+                serverItem._props.StabPenetration += 3;
+            }
+        }
         if (this.modConf.mastery_changes == true) {
             this.globalDB.Mastering = mastering.Mastering;
         }
         if (this.modConf.recoil_attachment_overhaul == true) {
-            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 0.8;
+            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 1.1;
             this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.9;
             this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
             this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.9;

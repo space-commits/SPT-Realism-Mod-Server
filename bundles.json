@@ -1,0 +1,56 @@
+{
+  "manifest": [
+    {
+      "key": "mosin_bayonet.bundle",
+			"dependencyKeys": [
+				"cubemaps",
+				"shaders",
+				"assets/commonassets/physics/physicsmaterials.bundle",
+				"assets/systems/effects/smoke.bundle"
+      ]
+    },
+    {
+      "key": "m9_bayonet.bundle",
+			"dependencyKeys": [
+				"cubemaps",
+				"shaders",
+				"assets/commonassets/physics/physicsmaterials.bundle",
+				"assets/systems/effects/smoke.bundle"
+      ]
+    },
+    {
+      "key": "6kh4_bayonet.bundle",
+			"dependencyKeys": [
+				"cubemaps",
+				"shaders",
+				"assets/commonassets/physics/physicsmaterials.bundle",
+				"assets/systems/effects/smoke.bundle"
+      ]
+    },    {
+      "key": "ak74_gt.bundle",
+			"dependencyKeys": [
+				"cubemaps",
+				"shaders"
+      ]
+    },    {
+      "key": "akm_gt.bundle",
+			"dependencyKeys": [
+				"cubemaps",
+				"shaders"
+      ]
+    },    {
+      "key": "vepr_136_gt.bundle",
+			"dependencyKeys": [
+				"cubemaps",
+				"shaders"
+      ]
+    },
+    {
+      "key": "m4_gas_block.bundle",
+			"dependencyKeys": [
+				"cubemaps",
+				"shaders"
+      ]
+    }
+  ]
+}

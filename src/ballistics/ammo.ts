@@ -285,7 +285,7 @@ export class Ammo {
                 serverItem._props.Damage = 182;
                 serverItem._props.InitialSpeed = 435;
                 serverItem._props.RicochetChance = 0.2;
-                serverItem._props.FragmentationChance = 0.15;
+                serverItem._props.FragmentationChance = 0.2;
                 serverItem._props.BulletMassGram = 19.6;
                 serverItem._props.HeavyBleedingDelta = 0.9;
                 serverItem._props.LightBleedingDelta = 1;
@@ -294,7 +294,7 @@ export class Ammo {
                 serverItem._props.ammoRec = 22;
 
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0;
+                    serverItem._props.MalfMisfireChance = 1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2.7;
@@ -1009,10 +1009,10 @@ export class Ammo {
             if (serverItem._id === "5c0d56a986f774449d5de529") {
                 serverItem._props.PenetrationPower = 35;
                 serverItem._props.ArmorDamage = 19;
-                serverItem._props.Damage = 62;
+                serverItem._props.Damage = 60;
                 serverItem._props.InitialSpeed = 385;
                 serverItem._props.RicochetChance = 0.22;
-                serverItem._props.FragmentationChance = 0.05;
+                serverItem._props.FragmentationChance = 0.25;
                 serverItem._props.BulletMassGram = 5.96;
                 serverItem._props.HeavyBleedingDelta = 0.27;
                 serverItem._props.LightBleedingDelta = 0.59;
@@ -1315,7 +1315,7 @@ export class Ammo {
                 serverItem._props.Damage = 63;
                 serverItem._props.InitialSpeed = 292;
                 serverItem._props.RicochetChance = 0.2;
-                serverItem._props.FragmentationChance = 0.1;
+                serverItem._props.FragmentationChance = 0.3;
                 serverItem._props.BulletMassGram = 10.5;
                 serverItem._props.HeavyBleedingDelta = 0.3;
                 serverItem._props.LightBleedingDelta = 0.65;
@@ -2680,7 +2680,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 10.6;
                 serverItem._props.HeavyBleedingDelta = 0.75;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ammoAccr = 15;
+                serverItem._props.ammoAccr = 18;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
 
@@ -2703,7 +2703,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 11.34;
                 serverItem._props.HeavyBleedingDelta = 0.42;
                 serverItem._props.LightBleedingDelta = 0.89;
-                serverItem._props.ammoAccr = -20;
+                serverItem._props.ammoAccr = -17;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 8;
 
@@ -2726,7 +2726,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 10.8;
                 serverItem._props.HeavyBleedingDelta = 0.65;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ammoAccr = -25;
+                serverItem._props.ammoAccr = -20;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 14;
 
@@ -2749,7 +2749,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 9.2;
                 serverItem._props.HeavyBleedingDelta = 0.4;
                 serverItem._props.LightBleedingDelta = 0.85;
-                serverItem._props.ammoAccr = -12;
+                serverItem._props.ammoAccr = 0;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
                 serverItem._props.RepairSpeed = 0;
@@ -2773,7 +2773,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 9.52;
                 serverItem._props.HeavyBleedingDelta = 0.4;
                 serverItem._props.LightBleedingDelta = 0.85;
-                serverItem._props.ammoAccr = -10;
+                serverItem._props.ammoAccr = -8;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 2;
 
@@ -2796,7 +2796,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 9.75;
                 serverItem._props.HeavyBleedingDelta = 0.35;
                 serverItem._props.LightBleedingDelta = 0.75;
-                serverItem._props.ammoAccr = -15;
+                serverItem._props.ammoAccr = -10;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
 
@@ -2819,7 +2819,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 8.2;
                 serverItem._props.HeavyBleedingDelta = 0.33;
                 serverItem._props.LightBleedingDelta = 0.7;
-                serverItem._props.ammoAccr = -8;
+                serverItem._props.ammoAccr = -15;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 18;
 
@@ -3500,7 +3500,7 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1;
                 }
             }
-            // M856A1 -
+            // M856A1
             if (serverItem._id === "59e6906286f7746c9f75e847") {
                 serverItem._props.PenetrationPower = 63;
                 serverItem._props.ArmorDamage = 16;
@@ -3523,7 +3523,7 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1;
                 }
             }
-            // M855A1 -
+            // M855A1 
             if (serverItem._id === "54527ac44bdc2d36668b4567") {
                 serverItem._props.PenetrationPower = 75;
                 serverItem._props.ArmorDamage = 19;
@@ -3546,7 +3546,7 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
-            // M995 -
+            // M995 
             if (serverItem._id === "59e690b686f7746c9f75e848") {
                 serverItem._props.PenetrationPower = 83;
                 serverItem._props.ArmorDamage = 18;
@@ -3569,7 +3569,7 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1.06;
                 }
             }
-            // SSA AP -
+            // SSA AP 
             if (serverItem._id === "601949593ae8f707c4608daa") {
                 serverItem._props.PenetrationPower = 90;
                 serverItem._props.ArmorDamage = 21;
