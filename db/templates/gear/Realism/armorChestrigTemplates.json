@@ -380,5 +380,41 @@
         "HasNeckArmor": false,
         "Price": 0,
         "Comfort": 0.78
+    },
+    "64a536392d2c4e6e970f4121": {
+        "ItemID": "64a536392d2c4e6e970f4121",
+        "Name": "item_equipment_rig_tv115",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "GOST 3A",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1.1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false,
+        "Price": 0,
+        "Comfort": 0.79
+    },
+    "64a5366719bab53bd203bf33": {
+        "ItemID": "64a5366719bab53bd203bf33",
+        "Name": "item_equipment_rig_MBSS",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "NIJ III",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "MinVelocity": 500,
+        "MinKE": 2000,
+        "MinPen": 50,
+        "HasSideArmor": false,
+        "HasStomachArmor": false,
+        "HasNeckArmor": false,
+        "Price": 0,
+        "Comfort": 0.81
     }
 }

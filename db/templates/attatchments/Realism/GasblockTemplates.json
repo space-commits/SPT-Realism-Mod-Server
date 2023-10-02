@@ -429,6 +429,27 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "63d3ce281fe77d0f2801859e": {
+        "ItemID": "63d3ce281fe77d0f2801859e",
+        "Name": "gas_block_ar15_ba_lo_pro",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": -1,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 0.99,
+        "CoolFactor": 1.005,
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.05,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "5d00ec68d7ad1a04a067e5be": {
         "ItemID": "5d00ec68d7ad1a04a067e5be",
         "Name": "gas_block_ar15_jp_jpgs5b",

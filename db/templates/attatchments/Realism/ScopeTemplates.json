@@ -256,6 +256,34 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "6477772ea8a38bb2050ed4db": {
+        "ItemID": "6477772ea8a38bb2050ed4db",
+        "Name": "scope_all_sig_sauer_romeo7_1x30",
+        "ModType": "sight",
+        "AimSpeed": -5,
+        "Accuracy": -2,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.354,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "64785e7c19d732620e045e15": {
+        "ItemID": "64785e7c19d732620e045e15",
+        "Name": "scope_all_elcan_specter_hco",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.433,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "570fd6c2d2720bc6458b457f": {
         "ItemID": "570fd6c2d2720bc6458b457f",
         "Name": "scope_all_eotech_553",

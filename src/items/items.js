@@ -114,7 +114,10 @@ class ItemsClass {
                 "5d440b93a4b9364276578d4b",
                 "mechAR15_260mm",
                 "55d35ee94bdc2d61338b4568",
-                "6357c98711fb55120211f7e1"
+                "6357c98711fb55120211f7e1",
+                "638612b607dfed1ccb7206ba",
+                "57dbb57e2459774673234890",
+                "57da93632459771cb65bf83f"
             ];
         for (let i in this.itemDB["55d3632e4bdc2d972f8b4569"]._props.Slots[0]._props.filters[0].Filter) {
             let item = this.itemDB["55d3632e4bdc2d972f8b4569"]._props.Slots[0]._props.filters[0].Filter[i];

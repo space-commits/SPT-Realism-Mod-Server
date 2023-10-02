@@ -9,7 +9,7 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.88,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.8
     },
     "5c0e6a1586f77404597b4965": {
         "ItemID": "5c0e6a1586f77404597b4965",
@@ -271,7 +271,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.9,
+        "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.2
     },
@@ -323,16 +323,28 @@
         "Price": 0,
         "Comfort": 0.76
     },
-    "60a6220e953894617404b00a": {
-        "ItemID": "60a6220e953894617404b00a",
-        "Name": "item_equipment_rig_sprofi_mk2_smg",
+    "64be7095047e826eae02b0c1": {
+        "ItemID": "64be7095047e826eae02b0c1",
+        "Name": "item_equipment_rig_rscr_zulu",
         "AllowADS": true,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 3,
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1.05,
+        "ReloadSpeedMulti": 1.15,
         "Price": 0,
-        "Comfort": 0.77
+        "Comfort": 0.9
+    },
+    "64be7110bf597ba84a0a41ea": {
+        "ItemID": "64be7110bf597ba84a0a41ea",
+        "Name": "item_equipment_rig_chicom",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 0.85,
+        "Price": 0,
+        "Comfort": 0.8
     }
 }

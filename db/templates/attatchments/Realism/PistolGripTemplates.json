@@ -409,6 +409,21 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "63f4da90f31d4a33b87bd054": {
+        "ItemID": "63f4da90f31d4a33b87bd054",
+        "Name": "pistolgrip_ak_mft_engage_ak47_pistol_grip",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 5,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.12,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "5f6341043ada5942720e2dc5": {
         "ItemID": "5f6341043ada5942720e2dc5",
         "Name": "pistolgrip_ak_aeroknox_scorpius",
@@ -769,6 +784,21 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "63f5feead259b42f0b4d6d0f": {
+        "ItemID": "63f5feead259b42f0b4d6d0f",
+        "Name": "pistolgrip_ar15_aeroknox_orion_grip",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 3,
+        "Accuracy": 3.5,
+        "ConflictingItems": [],
+        "Weight": 0.08,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "59db3b0886f77429d72fb895": {
         "ItemID": "59db3b0886f77429d72fb895",
         "Name": "pistolgrip_ar15_stark_ar_rifle_grip_fde",
@@ -777,7 +807,7 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 1.5,
+        "Ergonomics": 2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
@@ -792,7 +822,7 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 1.5,
+        "Ergonomics": 2,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,

@@ -177,8 +177,8 @@ class JsonHandler {
                     serverItem._props.HeatFactor = fileItem.HeatFactor;
                     serverItem._props.CoolFactor = fileItem.CoolFactor;
                     serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
-                    serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
-                    serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
+                    // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
+                    // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
                     serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
                     serverItem._props.BlocksFolding = fileItem.BlocksFolding;
                     serverItem._props.Weight = fileItem.Weight;

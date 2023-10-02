@@ -1121,6 +1121,30 @@
         "Price": 0,
         "LoyaltyLevel": 0
     },
+    "63f4ba71f31d4a33b87bd046": {
+        "ItemID": "63f4ba71f31d4a33b87bd046",
+        "Name": "handguard_ar15_aeroknox_ax15_4_m_lok",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -1,
+        "Dispersion": -1,
+        "AimSpeed": 0,
+        "Ergonomics": 3,
+        "Accuracy": -5,
+        "HeatFactor": 1.05,
+        "CoolFactor": 1,
+        "ConflictingItems": [
+            "55d3632e4bdc2d972f8b4569",
+            "5d440b93a4b9364276578d4b",
+            "5d440b9fa4b93601354d480c",
+            "5c0e2f94d174af029f650d56",
+            "63d3ce0446bd475bcb50f55f",
+            "63d3d44a2a49307baf09386d"
+        ],
+        "Weight": 0.103,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "5d00e0cbd7ad1a6c6566a42d": {
         "ItemID": "5d00e0cbd7ad1a6c6566a42d",
         "Name": "handguard_ar15_strike_industries_viper",
@@ -1800,6 +1824,31 @@
             "603372d154072b51b239f9e1"
         ],
         "Weight": 0.22,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "640b20359ab20e15ee445fa9": {
+        "ItemID": "640b20359ab20e15ee445fa9",
+        "Name": "handguard_ar15_aeroknox_ax15_15,8_m_lok",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -5,
+        "Dispersion": -2,
+        "AimSpeed": 0,
+        "Ergonomics": 13,
+        "Accuracy": 12,
+        "HeatFactor": 0.97,
+        "CoolFactor": 1.145,
+        "ConflictingItems": [
+            "5a34fbadc4a28200741e230a",
+            "5ae30e795acfc408fb139a0b",
+            "56ea8d2fd2720b7c698b4570",
+            "55d35ee94bdc2d61338b4568",
+            "55d3632e4bdc2d972f8b4569",
+            "63d3ce0446bd475bcb50f55f",
+            "63d3d44a2a49307baf09386d"
+        ],
+        "Weight": 0.343,
         "Price": 0,
         "LoyaltyLevel": 0
     },
