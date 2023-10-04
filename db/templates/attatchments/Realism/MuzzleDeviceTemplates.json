@@ -24,8 +24,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 60,
-        "MeleePen": 17
+        "MeleeDamage": 66,
+        "MeleePen": 27
     },
     "m9_bayonet": {
         "ItemID": "m9_bayonet",
@@ -52,8 +52,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 45,
-        "MeleePen": 10
+        "MeleeDamage": 55,
+        "MeleePen": 20
     },
     "6kh4_bayonet": {
         "ItemID": "6kh4_bayonet",
@@ -80,8 +80,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 40,
-        "MeleePen": 12
+        "MeleeDamage": 52,
+        "MeleePen": 22
     },
     "imi_uzi_thread": {
         "ItemID": "imi_uzi_thread",
