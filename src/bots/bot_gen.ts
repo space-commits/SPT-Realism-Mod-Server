@@ -117,8 +117,11 @@ export class BotGen extends BotGenerator {
         else if (level <= 35) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
-        else if (level > 35) {
+        else if (level <= 40) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
+        }
+        else if (level > 40) {
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds9);
         }
         return tier;
     }

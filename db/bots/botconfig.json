@@ -57,16 +57,16 @@
         "default": 25
     },
     "maxBotCapLow": {
-        "factory4_day": 12,
-        "factory4_night": 12,
-        "bigmap": 18,
-        "woods": 18,
-        "shoreline": 18,
-        "lighthouse": 14,
-        "rezervbase": 16,
-        "interchange": 16,
-        "laboratory": 16,
-        "tarkovstreets": 16,
+        "factory4_day": 10,
+        "factory4_night": 10,
+        "bigmap": 16,
+        "woods": 16,
+        "shoreline": 16,
+        "lighthouse": 13,
+        "rezervbase": 15,
+        "interchange": 14,
+        "laboratory": 15,
+        "tarkovstreets": 15,
         "default": 15
     },
     "lootNValue": {
