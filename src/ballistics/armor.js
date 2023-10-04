@@ -1315,7 +1315,7 @@ class Armor {
             //// Class 8 ////
             //Vulkan-5
             if (serverItem._id === "5ca20ee186f774799474abc2") {
-                serverItem._props.Durability = 35;
+                serverItem._props.Durability = 30;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 8;
                 serverItem._props.speedPenaltyPercent = -2.25;
@@ -1323,7 +1323,7 @@ class Armor {
                 serverItem._props.weaponErgonomicPenalty = -2.25;
                 serverItem._props.BluntThroughput = 0.08;
                 serverItem._props.DeafStrength = "High";
-                serverItem._props.ArmorMaterial = 'UHMWPE';
+                serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 4.5;
             }
             //// Helmet Accesories ////

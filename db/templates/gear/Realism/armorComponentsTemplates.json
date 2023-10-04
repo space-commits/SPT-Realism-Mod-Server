@@ -205,7 +205,7 @@
         "Name": "item_equipment_helmet_vulkan_shield",
         "AllowADS": false,
         "LoyaltyLevel": 4,
-        "ArmorClass": "GOST 2A",
+        "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,

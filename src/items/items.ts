@@ -35,10 +35,8 @@ export class ItemsClass {
             }
         }
 
-
         this.itemDB["5ae09bff5acfc4001562219d"]._props.Slots[2]._props.filters[0].Filter.push("mosin_bayonet");
         this.itemDB["5bfd4cbe0db834001b73449f"]._props.Slots[2]._props.filters[0].Filter.push("mosin_bayonet");
-
 
         this.itemDB["59c6633186f7740cf0493bb9"]._props.Prefab.path = "ak74_gt.bundle"
         this.itemDB["59c6633186f7740cf0493bb9"]._props.Slots.push({
@@ -116,7 +114,6 @@ export class ItemsClass {
             "_proto": "55d30c4c4bdc2db4468b457e",
             "_required": false
         }
-
 
         this.itemDB["m9_bayonet"]._props.ConflictingItems =
             [
