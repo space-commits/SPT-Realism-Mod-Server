@@ -3148,7 +3148,7 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 22,
-        "Convergence": 10,
+        "Convergence": 7,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -3174,7 +3174,7 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 24,
-        "Convergence": 11,
+        "Convergence": 9,
         "Price": 0,
         "LoyaltyLevel": 0,
         "MeleeDamage": 4
@@ -3201,7 +3201,7 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 22,
-        "Convergence": 10,
+        "Convergence": 7,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -3227,7 +3227,7 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 22,
-        "Convergence": 10,
+        "Convergence": 7,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -3253,7 +3253,7 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 22,
-        "Convergence": 10,
+        "Convergence": 7,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -3670,7 +3670,7 @@
         "Ergonomics": 0,
         "Weight": 0.095,
         "Loudness": 27,
-        "Convergence": 9,
+        "Convergence": 12,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -3939,8 +3939,8 @@
         "Name": "muzzle_all_accuracy_international_tactical_muzzle_brake_86x70",
         "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -30,
-        "Dispersion": -20,
+        "HorizontalRecoil": -20,
+        "Dispersion": -15,
         "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -3956,7 +3956,7 @@
         "Ergonomics": 0,
         "Weight": 0.23,
         "Loudness": 55,
-        "Convergence": 0,
+        "Convergence": 15,
         "Price": 0,
         "LoyaltyLevel": 0
     },
