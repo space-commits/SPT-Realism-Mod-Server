@@ -2081,7 +2081,7 @@
     "6405ff6bd4578826ec3e377a": {
         "ItemID": "6405ff6bd4578826ec3e377a",
         "Name": "muzzle_ar15_aeroknox_butterfly_muzzle_brake_556x45",
-        "ModType": "muzzle_supp_adapter",
+        "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": -15,
