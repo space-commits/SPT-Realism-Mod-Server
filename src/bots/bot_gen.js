@@ -13,7 +13,7 @@ const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVa
 const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
 const arrays_1 = require("../utils/arrays");
 const bots_1 = require("./bots");
-const bot_loot_serv_1 = require("./bot_loot_serv");
+// import { BotLooGen } from "./bot_loot_serv";
 const EquipmentSlots_1 = require("C:/snapshot/project/obj/models/enums/EquipmentSlots");
 const enums_1 = require("../utils/enums");
 const modConfig = require("../../config/config.json");
@@ -191,12 +191,13 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const localisationService = tsyringe_1.container.resolve("LocalisationService");
         const botEquipmentModPoolService = tsyringe_1.container.resolve("BotEquipmentModPoolService");
         const botEquipmentModGenerator = tsyringe_1.container.resolve("BotEquipmentModGenerator");
+        const itemHelper = tsyringe_1.container.resolve("ItemHelper");
         const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseServer);
-        const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseServer, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
+        const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseServer, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
         const botRole = botGenerationDetails.role.toLowerCase();
         const botLevel = genBotLvl.genBotLvl(botJsonTemplate.experience.level, botGenerationDetails, bot);
         if (!botGenerationDetails.isPlayerScav) {
-            this.botEquipmentFilterService.filterBotEquipment(botJsonTemplate, botLevel.level, botGenerationDetails);
+            this.botEquipmentFilterService.filterBotEquipment(sessionId, botJsonTemplate, botLevel.level, botGenerationDetails);
         }
         bot.Info.Nickname = this.generateBotNickname(botJsonTemplate, botGenerationDetails.isPlayerScav, botRole, sessionId);
         const skipChristmasItems = !this.seasonalEventService.christmasEventEnabled();
@@ -233,7 +234,7 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
         const handbookHelper = tsyringe_1.container.resolve("HandbookHelper");
         const botWeaponGeneratorHelper = tsyringe_1.container.resolve("BotWeaponGeneratorHelper");
-        const botLootGen = new bot_loot_serv_1.BotLooGen(this.logger, this.hashUtil, this.randomUtil, itemHelper, this.databaseServer, handbookHelper, this.botGeneratorHelper, this.botWeaponGenerator, botWeaponGeneratorHelper, botLootCacheService, this.localisationService, this.configServer);
+        // const botLootGen = new BotLooGen(this.logger, this.hashUtil, this.randomUtil, itemHelper, this.databaseServer, handbookHelper, this.botGeneratorHelper, this.botWeaponGenerator, botWeaponGeneratorHelper, this.weightedRandomHelper, botLootCacheService, this.localisationService, this.configServer);
         const templateInventory = botJsonTemplate.inventory;
         const equipmentChances = botJsonTemplate.chances;
         const itemGenerationLimitsMinMax = botJsonTemplate.generation;
@@ -242,7 +243,8 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         this.myGenerateAndAddEquipmentToBot(templateInventory, equipmentChances, botRole, botInventory, botLevel);
         // Roll weapon spawns and generate a weapon for each roll that passed
         this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
-        botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
+        this.botLootGenerator.generateLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
+        // botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
         return botInventory;
     }
     myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier) {
@@ -260,7 +262,8 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         const botWeaponGeneratorHelper = tsyringe_1.container.resolve("BotWeaponGeneratorHelper");
         const inventoryMagGenComponents = tsyringe_1.container.resolveAll("InventoryMagGen");
         const botWeaponModLimitService = tsyringe_1.container.resolve("BotWeaponModLimitService");
-        const botWepGen = new BotWepGen(jsonUtil, this.logger, this.hashUtil, this.databaseServer, itemHelper, this.weightedRandomHelper, this.botGeneratorHelper, this.randomUtil, this.configServer, botWeaponGeneratorHelper, botWeaponModLimitService, this.botEquipmentModGenerator, this.localisationService, inventoryMagGenComponents);
+        const repairService = tsyringe_1.container.resolve("RepairService");
+        const botWepGen = new BotWepGen(jsonUtil, this.logger, this.hashUtil, this.databaseServer, itemHelper, this.weightedRandomHelper, this.botGeneratorHelper, this.randomUtil, this.configServer, botWeaponGeneratorHelper, botWeaponModLimitService, this.botEquipmentModGenerator, this.localisationService, repairService, inventoryMagGenComponents);
         const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.mods, botRole, isPmc, botLevel, pmcTier);
         botInventory.items.push(...generatedWeapon.weapon);
         this.botWeaponGenerator.addExtraMagazinesToInventory(generatedWeapon, itemGenerationLimitsMinMax.items.magazines, botInventory, botRole);
@@ -360,7 +363,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         const appContext = tsyringe_1.container.resolve("ApplicationContext");
         const tables = this.databaseServer.getTables();
         const myBotGenHelper = new BotGenHelper(this.logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, this.itemHelper, appContext, this.localisationService, this.configServer);
-        const _botModGen = new BotEquipGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemBaseClassService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
+        const _botModGen = new BotEquipGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
         const arrays = new arrays_1.Arrays(tables);
         const utils = new utils_1.Utils(tables, arrays);
         const modPool = botTemplateInventory.mods;
@@ -660,7 +663,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
             }
             return false;
         }
-        if (!(itemSlot._props.filters[0].Filter.includes(modToAdd[1]._id) || this.itemBaseClassService.itemHasBaseClass(modToAdd[1]._id, itemSlot._props.filters[0].Filter))) {
+        if (!(itemSlot._props.filters[0].Filter.includes(modToAdd[1]._id) || this.itemHelper.isOfBaseclasses(modToAdd[1]._id, itemSlot._props.filters[0].Filter))) {
             this.logger.error(this.localisationService.getText("bot-mod_not_in_slot_filter_list", { modId: modToAdd[1]._id, modSlot: modSlot, parentName: parentTemplate._name }));
             return false;
         }
@@ -769,7 +772,14 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
             // If item is a mount for scopes, set scope chance to 100%, this helps fix empty mounts appearing on weapons
             if (this.modSlotCanHoldScope(modSlot, modToAddTemplate._parent)) {
                 // mod_mount was picked to be added to weapon, force scope chance to ensure its filled
-                this.setScopeSpawnChancesToFull(modSpawnChances);
+                const scopeSlots = [
+                    "mod_scope",
+                    "mod_scope_000",
+                    "mod_scope_001",
+                    "mod_scope_002",
+                    "mod_scope_003"
+                ];
+                this.adjustSlotSpawnChances(modSpawnChances, scopeSlots, 100);
                 // Hydrate pool of mods that fit into mount as its a randomisable slot
                 if (isRandomisableSlot) {
                     // Add scope mods to modPool dictionary to ensure the mount has a scope in the pool to pick

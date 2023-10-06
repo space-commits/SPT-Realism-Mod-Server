@@ -85,6 +85,8 @@ import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator
 import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
 import { BotGenerator } from "@spt-aki/generators/BotGenerator";
 import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootResult";
+import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
+import { RagfairTaxService } from "@spt-aki/services/RagfairTaxService";
 
 
 const fs = require('fs');
@@ -131,6 +133,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const httpResponse = container.resolve<HttpResponseUtil>("HttpResponseUtil");
         const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
         const ragfairController = container.resolve<RagfairController>("RagfairController");
+        const ragfairTaxServ = container.resolve<RagfairTaxService>("RagfairTaxService");
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
         const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
@@ -141,9 +144,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
         const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
 
-        const ragFairCallback = new RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
+        const ragFairCallback = new RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, ragfairTaxServ, configServer);
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
-        const airdropController = new AirdropLootgen(jsonUtil, hashUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer)
+        const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer)
         const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
 
         const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
@@ -355,6 +358,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                             const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
+                            const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
 
                             const arrays = new Arrays(postLoadTables);
                             const utils = new Utils(postLoadTables, arrays);
@@ -424,10 +428,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             }
 
                             if (matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory") {
-                                botConf.pmc.convertIntoPmcChance["pmcbot"].min = 0;
-                                botConf.pmc.convertIntoPmcChance["pmcbot"].max = 0;
-                                botConf.pmc.convertIntoPmcChance["assault"].min = 100;
-                                botConf.pmc.convertIntoPmcChance["assault"].max = 100;
+                                pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
+                                pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
+                                pmcConf.convertIntoPmcChance["assault"].min = 100;
+                                pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
 
                             if (modConfig.logEverything == true) {

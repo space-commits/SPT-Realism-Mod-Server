@@ -77,10 +77,11 @@ export class FleamarketConfig {
             this.fleaConf.dynamic.offerItemCount.min = 0;
             this.fleaConf.dynamic.offerItemCount.max = 2;
 
-            this.fleaConf.dynamic.price.min = 1.3;
-            this.fleaConf.dynamic.price.max = 2;
-            this.fleaConf.dynamic.presetPrice.min = 1.3;
-            this.fleaConf.dynamic.presetPrice.max = 2;
+            //changed in 13.5, can't be arsed updating rn
+            // this.fleaConf.dynamic.price.min = 1.3;
+            // this.fleaConf.dynamic.price.max = 2;
+            // this.fleaConf.dynamic.presetPrice.min = 1.3;
+            // this.fleaConf.dynamic.presetPrice.max = 2;
 
             this.fleaConf.dynamic.endTimeSeconds.min = 600;
             this.fleaConf.dynamic.endTimeSeconds.max = 3600;
