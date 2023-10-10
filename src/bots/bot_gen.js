@@ -477,10 +477,11 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             tier = pmcTier;
         }
         if (modConfig.logEverything == true) {
-            this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
-            this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
-            this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
         }
+        this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
+        this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
+        this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
+        this.logger.info(`Weapon ID: ${weaponTpl}, ${this.databaseServer.getTables().templates.items[weaponTpl]._name}`);
         var weaponMods = [];
         var weaponPresets = [];
         try {
@@ -510,9 +511,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
             if (modConfig.logEverything == true) {
                 this.logger.warning("Choices:");
-            }
-            for (let i in weaponPresets) {
-                if (modConfig.logEverything == true) {
+                for (let i in weaponPresets) {
                     this.logger.warning(weaponPresets[i]._name);
                 }
             }

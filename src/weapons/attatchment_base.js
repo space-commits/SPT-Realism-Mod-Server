@@ -114,6 +114,14 @@ class AttatchmentBase {
                     }
                 }
             }
+            if (serverItem._id === "64748cb8de82c85eaf0a273a" || serverItem._id === "5580223e4bdc2d1c128b457f") {
+                serverItem._props.Slots[0]._props.filters[0].Filter = [
+                    "5580169d4bdc2d9d138b4585",
+                    "55d447bb4bdc2d892f8b456f",
+                    "611a30addbdd8440277441dc",
+                    "64748d02d1c009260702b526"
+                ];
+            }
             let cantedMountConfWeaps = ["5926bb2186f7744b1c6c6e60", "5d2f0d8048f0356c925bc3b0", "5e00903ae9dc277128008b87", "5de7bd7bfd6b4e6e2276dc25"];
             for (let item in cantedMountConfWeaps) {
                 if (serverItem._id === cantedMountConfWeaps[item]) {

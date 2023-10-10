@@ -621,6 +621,7 @@ export class BotWepGen extends BotWeaponGenerator {
             this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
             this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
             this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
+            this.logger.info(`Weapon ID: ${weaponTpl}, ${this.databaseServer.getTables().templates.items[weaponTpl]._name}`);
         }
 
         var weaponMods = [];
@@ -637,9 +638,7 @@ export class BotWepGen extends BotWeaponGenerator {
                         if (modConfig.logEverything == true) {
                             this.logger.warning(`Found A Preset Within Tier`);
                         }
-
                     }
-
                 }
             }
             if (weaponPresets.length == 0) {
@@ -653,17 +652,16 @@ export class BotWepGen extends BotWeaponGenerator {
                     }
                 }
             }
+
             if (modConfig.logEverything == true) {
                 this.logger.warning("Choices:");
-            }
-
-            for (let i in weaponPresets) {
-                if (modConfig.logEverything == true) {
+                for (let i in weaponPresets) {
                     this.logger.warning(weaponPresets[i]._name);
                 }
             }
 
-            let randomPreset = weaponPresets[Math.floor(Math.random() * weaponPresets.length)]
+            let randomPreset = weaponPresets[Math.floor(Math.random() * weaponPresets.length)];
+
             if (modConfig.logEverything == true) {
                 this.logger.warning("Chose:");
                 this.logger.warning(randomPreset._name);
@@ -1010,8 +1008,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
             }
 
             // If stock mod can take a sub stock mod, force spawn chance to be 100% to ensure stock gets added
-            if (modSlot === "mod_stock" && modToAddTemplate._props.Slots.find(x => x._name === "mod_stock"))
-            {
+            if (modSlot === "mod_stock" && modToAddTemplate._props.Slots.find(x => x._name === "mod_stock")) {
                 // Stock mod can take additional stocks, could be a locking device, force 100% chance
                 modSpawnChances.mod_stock = 100;
             }

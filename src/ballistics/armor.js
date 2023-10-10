@@ -529,7 +529,7 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 8.4;
             }
-            //Wartech tv115
+            //Wartech tv115 (bear)
             if (serverItem._id === "64a536392d2c4e6e970f4121") {
                 serverItem._props.Durability = 90;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -541,7 +541,7 @@ class Armor {
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 4.5;
             }
-            //Eagle MBSS
+            //Eagle MBSS (usec)
             if (serverItem._id === "64a5366719bab53bd203bf33") {
                 serverItem._props.Durability = 90;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
