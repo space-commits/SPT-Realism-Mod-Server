@@ -6,6 +6,250 @@ export class Arrays {
 
     private botDB = this.tables.bots.types;
 
+    public pmcLootGen = {
+        "items": {
+            "specialItems": {
+                "weights": {
+                    "0": 1
+                },
+                "whitelist": []
+            },
+            "healing": {
+                "weights": {
+                    "1": 3,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "drugs": {
+                "weights": {
+                    "0": 1,
+                    "1": 3,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "stims": {
+                "weights": {
+                    "0": 10,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "backpackLoot": {
+                "weights": {
+                    "0": 1,
+                    "1": 5,
+                    "2": 8,
+                    "3": 10,
+                    "4": 8,
+                    "5": 2,
+                    "6": 1
+                },
+                "whitelist": []
+            },
+            "pocketLoot": {
+                "weights": {
+                    "0": 5,
+                    "1": 7,
+                    "2": 3,
+                    "3": 1
+                },
+                "whitelist": []
+            },
+            "vestLoot": {
+                "weights": {
+                    "0": 5,
+                    "1": 3,
+                    "2": 1,
+                    "3": 1
+                },
+                "whitelist": []
+            },
+            "magazines": {
+                "weights": {
+                    "3": 4,
+                    "4": 4,
+                    "5": 2,
+                    "6": 1
+                },
+                "whitelist": []
+            },
+            "grenades": {
+                "weights": {
+                    "0": 5,
+                    "1": 5,
+                    "2": 2,
+                    "3": 1
+                },
+                "whitelist": []
+            }
+        }
+    }
+    public scavLootGen = {
+        "items": {
+            "specialItems": {
+                "weights": {
+                    "0": 5,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "healing": {
+                "weights": {
+                    "0": 7,
+                    "1": 2,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "drugs": {
+                "weights": {
+                    "0": 5,
+                    "1": 3,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "stims": {
+                "weights": {
+                    "0": 10,
+                    "1": 2
+                },
+                "whitelist": []
+            },
+            "backpackLoot": {
+                "weights": {
+                    "0": 5,
+                    "1": 10,
+                    "2": 8,
+                    "3": 6,
+                    "4": 2,
+                    "5": 1,
+                    "6": 1
+                },
+                "whitelist": []
+            },
+            "pocketLoot": {
+                "weights": {
+                    "0": 4,
+                    "1": 6,
+                    "2": 2,
+                    "3": 1
+                },
+                "whitelist": []
+            },
+            "vestLoot": {
+                "weights": {
+                    "0": 8,
+                    "1": 4,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "magazines": {
+                "weights": {
+                    "0": 2,
+                    "1": 10,
+                    "2": 6,
+                    "3": 2,
+                    "4": 1
+                },
+                "whitelist": []
+            },
+            "grenades": {
+                "weights": {
+                    "0": 10,
+                    "1": 2
+                },
+                "whitelist": []
+            }
+        }
+    }
+    public bossLootGen = {
+        "items": {
+            "specialItems": {
+                "weights": {
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "healing": {
+                "weights": {
+                    "1": 1,
+                    "2": 3,
+                    "3": 1
+                },
+                "whitelist": []
+            },
+            "drugs": {
+                "weights": {
+                    "1": 4,
+                    "2": 2,
+                    "3": 1
+                },
+                "whitelist": []
+            },
+            "stims": {
+                "weights": {
+                    "0": 1,
+                    "1": 5,
+                    "2": 2,
+                    "3": 1
+                },
+                "whitelist": []
+            },
+            "backpackLoot": {
+                "weights": {
+                    "2": 2,
+                    "3": 5,
+                    "4": 10,
+                    "5": 5,
+                    "6": 2,
+                    "7": 1
+                },
+                "whitelist": []
+            },
+            "pocketLoot": {
+                "weights": {
+                    "1": 1,
+                    "2": 4,
+                    "3": 5,
+                    "4": 3,
+                    "5": 2
+                },
+                "whitelist": []
+            },
+            "vestLoot": {
+                "weights": {
+                    "0": 4,
+                    "1": 2,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "magazines": {
+                "weights": {
+                    "3": 4,
+                    "4": 4,
+                    "5": 2,
+                    "6": 1
+                },
+                "whitelist": []
+            },
+            "grenades": {
+                "weights": {
+                    "0": 2,
+                    "1": 5,
+                    "2": 3,
+                    "3": 1
+                },
+                "whitelist": []
+            }
+        }
+    }
+
     public outdoorMaps = [
         "shoreline",
         "Shoreline",
@@ -164,7 +408,8 @@ export class Arrays {
         this.botDB["followerbigpipe"],
         this.botDB["followerbirdeye"],
         this.botDB["sectantpriest"],
-        this.botDB["bosszryachiy"]
+        this.botDB["bosszryachiy"],
+        this.botDB["bossboar"],
     ];
 
     public bossFollowerArr = [
@@ -176,12 +421,9 @@ export class Arrays {
         this.botDB["followerkojaniy"],
         this.botDB["followersanitar"],
         this.botDB["followertagilla"],
-        this.botDB["followerzryachiy"], 
-    ];
-
-    public pmcList = [
-        this.botDB["usec"],
-        this.botDB["bear"],
+        this.botDB["followerzryachiy"],
+        this.botDB["followerboar"],
+        this.botDB["bossboarsniper"]
     ];
 
     public rogueRaiderList = [
@@ -214,36 +456,9 @@ export class Arrays {
         this.botDB["sectantwarrior"],
         this.botDB["pmcbot"],
         this.botDB["exusec"],
-        this.botDB["followerzryachiy"]
-    ];
-
-    public nonScavBotArr = [
-        this.botDB["followerbully"],
-        this.botDB["followergluharassault"],
-        this.botDB["followergluharscout"],
-        this.botDB["followergluharsecurity"],
-        this.botDB["followergluharsnipe"],
-        this.botDB["followerkojaniy"],
-        this.botDB["followersanitar"],
-        this.botDB["followertagilla"],
-        this.botDB["usec"],
-        this.botDB["bear"],
-        this.botDB["sectantwarrior"],
-        this.botDB["sectantpriest"],
-        this.botDB["marksman"],
-        this.botDB["bosstagilla"],
-        this.botDB["bosssanitar"],
-        this.botDB["bosskojaniy"],
-        this.botDB["bosskilla"],
-        this.botDB["bossgluhar"],
-        this.botDB["bossbully"],
-        this.botDB["pmcbot"],
-        this.botDB["exusec"],
-        this.botDB["bossknight"],
-        this.botDB["followerbigpipe"],
-        this.botDB["followerbirdeye"],
-        this.botDB["followerbirdeye"],
-        this.botDB["bosszryachiy"]
+        this.botDB["followerzryachiy"],
+        this.botDB["bossboarsniper"],
+        this.botDB["followerboar"]
     ];
 
     public botArr = [
@@ -274,7 +489,10 @@ export class Arrays {
         this.botDB["followerbigpipe"],
         this.botDB["followerbirdeye"],
         this.botDB["bosszryachiy"],
-        this.botDB["followerzryachiy"]
+        this.botDB["followerzryachiy"],
+        this.botDB["bossboarsniper"],
+        this.botDB["followerboar"],
+        this.botDB["bossboar"]
     ];
 
     public modTypes = {

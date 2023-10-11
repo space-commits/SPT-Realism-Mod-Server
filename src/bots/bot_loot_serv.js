@@ -55,24 +55,35 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
         const vestLootCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
         const specialLootItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
         const grenadeCount = this.weightedRandomHelper.getWeightedValue(itemCounts.grenades.weights);
-        const vestHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
-        const pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.healing.weights);
-        const bagHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights);
-        const vestDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
-        const pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.drugs.weights);
-        const bagDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights);
-        const vestStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
-        const pocketStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.stims.weights);
-        const bagStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights);
+        var vestHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
+        var pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.healing.weights);
+        var bagHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights);
+        var vestDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
+        var pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.drugs.weights);
+        var bagDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights);
+        var vestStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
+        var pocketStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.stims.weights);
+        var bagStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights);
+        if (botRole.toLocaleLowerCase() === "assault" || botRole.toLocaleLowerCase() === "marskman") {
+            vestHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+            pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.healing.weights);
+            bagHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+            vestDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+            pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.drugs.weights);
+            bagDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+            vestStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+            pocketStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.stims.weights);
+            bagStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+        }
         const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);
         // Forced pmc healing loot
         if (isPmc && this.pmcConfig.forceHealingItemsIntoSecure) {
             this.addForcedMedicalItemsToPmcSecure(botInventory, botRole);
         }
         if (containersBotHasAvailable.includes(EquipmentSlots_1.EquipmentSlots.BACKPACK)) {
-            if (isPmc && this.randomUtil.getChance100(this.pmcConfig.looseWeaponInBackpackChancePercent)) {
-                this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", botJsonTemplate.inventory, botJsonTemplate.chances.mods, botRole, isPmc, botLevel);
-            }
+            // if (isPmc && this.randomUtil.getChance100(this.pmcConfig.looseWeaponInBackpackChancePercent)) {
+            //     this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", botJsonTemplate.inventory, botJsonTemplate.chances.mods, botRole, isPmc, botLevel);
+            // }
             // Backpack Loot
             this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.BACKPACK], bagItemCount, botInventory, botRole, true, this.pmcConfig.maxBackpackLootTotalRub, isPmc);
             //Bag Meds

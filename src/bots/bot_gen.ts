@@ -509,7 +509,7 @@ export class BotWepGen extends BotWeaponGenerator {
         }
 
         // Use weapon preset from globals.json if weapon isnt valid
-        if (!this.isWeaponValid(weaponWithModsArray)) {
+        if (!this.myisWeaponValid(weaponWithModsArray)) {
             // Weapon is bad, fall back to weapons preset
             weaponWithModsArray = this.myGetPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, weaponItemTemplate, botRole, pmcTier);
         }
@@ -567,7 +567,7 @@ export class BotWepGen extends BotWeaponGenerator {
         };
     }
 
-    public override isWeaponValid(weaponItemArray: Item[]): boolean {
+    public myisWeaponValid(weaponItemArray: Item[]): boolean {
         const _checkRequired = new CheckRequired();
         for (const mod of weaponItemArray) {
             const modDbTemplate = this.itemHelper.getItem(mod._tpl)[1];
@@ -590,13 +590,11 @@ export class BotWepGen extends BotWeaponGenerator {
                     if (modConfig.logEverything == true) {
                         this.logger.info(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
                     }
-
                     return false;
                 }
 
                 if (!allowedTpls.includes(weaponSlotItem._tpl)) {
                     this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modDbTemplate._name, weaponTpl: weaponSlotItem._tpl }));
-
                     return false;
                 }
             }

@@ -34,7 +34,10 @@
         "arenaFighter": 10,
         "sptUsec": 50,
         "sptBear": 50,
-        "crazyAssaultEvent": 10
+        "crazyAssaultEvent": 10,
+        "bossBoar": 5,
+        "followerBoar": 15,
+        "bossBoarSniper": 5
     },
     "cartridgeBlacklist": [],
     "blacklist": [
@@ -106,7 +109,10 @@
         "pmcbot": 2,
         "sectantpriest": 2,
         "sectantwarrior": 2,
-        "test": 2
+        "test": 2,
+        "bossboar": 3,
+        "bossboarsniper": 3,
+        "followerboar": 4
     },
     "durability1": {
         "default": {

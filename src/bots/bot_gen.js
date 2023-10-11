@@ -384,7 +384,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             weaponWithModsArray = _botModGen.botModGen(sessionId, weaponWithModsArray, modPool, weaponWithModsArray[0]._id, weaponItemTemplate, modChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole);
         }
         // Use weapon preset from globals.json if weapon isnt valid
-        if (!this.isWeaponValid(weaponWithModsArray)) {
+        if (!this.myisWeaponValid(weaponWithModsArray)) {
             // Weapon is bad, fall back to weapons preset
             weaponWithModsArray = this.myGetPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, weaponItemTemplate, botRole, pmcTier);
         }
@@ -436,7 +436,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             weaponTemplate: weaponItemTemplate
         };
     }
-    isWeaponValid(weaponItemArray) {
+    myisWeaponValid(weaponItemArray) {
         const _checkRequired = new CheckRequired();
         for (const mod of weaponItemArray) {
             const modDbTemplate = this.itemHelper.getItem(mod._tpl)[1];
@@ -477,11 +477,11 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             tier = pmcTier;
         }
         if (modConfig.logEverything == true) {
+            this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
+            this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
+            this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
+            this.logger.info(`Weapon ID: ${weaponTpl}, ${this.databaseServer.getTables().templates.items[weaponTpl]._name}`);
         }
-        this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
-        this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
-        this.logger.info(`Realism Mod: Fetching Custom Preset For ${botRole} At Tier ${tier}`);
-        this.logger.info(`Weapon ID: ${weaponTpl}, ${this.databaseServer.getTables().templates.items[weaponTpl]._name}`);
         var weaponMods = [];
         var weaponPresets = [];
         try {

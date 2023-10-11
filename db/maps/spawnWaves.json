@@ -1,5 +1,5 @@
 {
-    "StreetsWaves":[
+    "StreetsWaves": [
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
@@ -33,8 +33,8 @@
             "number": 2,
             "slots_max": 5,
             "slots_min": 0,
-            "time_max": 10,
-            "time_min": 1
+            "time_max": 120,
+            "time_min": 60
         },
         {
             "BotPreset": "hard",
@@ -373,7 +373,7 @@
             "time_min": 600
         }
     ],
-    "ShorelineWaves":[
+    "ShorelineWaves": [
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
