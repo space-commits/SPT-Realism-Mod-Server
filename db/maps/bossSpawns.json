@@ -774,7 +774,7 @@
     ],
     "ShorelineBossLocationSpawn": [
         {
-            "BossChance": 45,
+            "BossChance": 50,
             "BossDifficult": "normal",
             "BossEscortAmount": "3,4",
             "BossEscortDifficult": "normal",
@@ -821,7 +821,7 @@
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "3,3,3,4,4,5",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "",
             "TriggerName": "",
             "Supports": null,
@@ -836,7 +836,7 @@
             "BossEscortType": "followerKojaniy",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2,2,2,2,2,2,3,3,3,4",
-            "Time": -1,
+            "Time": 1,
             "Supports": null,
             "RandomTimeSpawn": false
         },
@@ -849,7 +849,7 @@
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2",
-            "Time": -1,
+            "Time": 1,
             "Supports": [
                 {
                     "BossEscortType": "followerBigPipe",
@@ -886,7 +886,7 @@
             "BossZone": "ZoneForestTruck",
             "RandomTimeSpawn": false,
             "Supports": null,
-            "Time": -1
+            "Time": 5
         },
         {
             "BossChance": 20,
@@ -899,7 +899,7 @@
             "BossZone": "ZoneStartVillage,ZoneGasStation,ZoneForestGasStation,ZonePowerStation",
             "RandomTimeSpawn": false,
             "Supports": null,
-            "Time": -1
+            "Time": 5
         }
     ],
     "WoodsBossLocationSpawn": [

@@ -64,12 +64,12 @@
         "factory4_night": 10,
         "bigmap": 16,
         "woods": 16,
-        "shoreline": 16,
+        "shoreline": 15,
         "lighthouse": 13,
-        "rezervbase": 15,
+        "rezervbase": 14,
         "interchange": 14,
         "laboratory": 15,
-        "tarkovstreets": 15,
+        "tarkovstreets": 12,
         "default": 15
     },
     "lootNValue": {

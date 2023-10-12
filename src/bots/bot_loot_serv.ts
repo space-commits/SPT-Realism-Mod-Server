@@ -89,17 +89,17 @@ export class BotLootGen extends BotLootGenerator {
         const specialLootItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
         const grenadeCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.grenades.weights);
 
-        var vestHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
-        var pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.healing.weights);
-        var bagHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
+        var vestHealingItemCount = 1;
+        var pocketHealingItemCount = 1;
+        var bagHealingItemCount = 1;
 
-        var vestDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
-        var pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.drugs.weights);
-        var bagDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
+        var vestDrugItemCount = 1;
+        var pocketDrugItemCount = 1;
+        var bagDrugItemCount = 1;
 
-        var vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
-        var pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
-        var bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
+        var vestStimItemCount = 1;
+        var pocketStimItemCount = 1;
+        var bagStimItemCount = 1;
 
         if(botRole.toLocaleLowerCase() === "assault" || botRole.toLocaleLowerCase() === "marskman")
         {
@@ -114,6 +114,20 @@ export class BotLootGen extends BotLootGenerator {
             vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
             pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
             bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
+        }
+        else
+        {
+            vestHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
+            pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.healing.weights);
+            bagHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
+    
+            vestDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
+            pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.drugs.weights);
+            bagDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
+    
+            vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
+            pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
+            bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
         }
 
         const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);

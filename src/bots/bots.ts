@@ -64,6 +64,8 @@ export class BotLoader {
             this.botConfPMC.looseWeaponInBackpackChancePercent = 0;
         }
 
+        this.setDefaultLootOdds();
+
         const botEquipmentTempalte = {
             "weaponModLimits": {
                 "scopeLimit": 2,
@@ -176,6 +178,13 @@ export class BotLoader {
     public increasePerformance() {
         this.botConf.maxBotCap = rmBotConfig.maxBotCapLow;
         this.botConf.presetBatch = rmBotConfig.presetBatch;
+    }
+
+    public setDefaultLootOdds(){
+        for (let b in this.arrays.botArr) {
+            let bot = this.arrays.botArr[b];
+            bot.generation = this.arrays.pmcLootGen;
+        }
     }
 
     public setBotHealth() {

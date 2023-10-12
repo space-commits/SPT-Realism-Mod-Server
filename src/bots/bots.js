@@ -58,6 +58,7 @@ class BotLoader {
         if (this.modConfig.dynamic_loot_pmcs == true) {
             this.botConfPMC.looseWeaponInBackpackChancePercent = 0;
         }
+        this.setDefaultLootOdds();
         const botEquipmentTempalte = {
             "weaponModLimits": {
                 "scopeLimit": 2,
@@ -156,6 +157,12 @@ class BotLoader {
     increasePerformance() {
         this.botConf.maxBotCap = rmBotConfig.maxBotCapLow;
         this.botConf.presetBatch = rmBotConfig.presetBatch;
+    }
+    setDefaultLootOdds() {
+        for (let b in this.arrays.botArr) {
+            let bot = this.arrays.botArr[b];
+            bot.generation = this.arrays.pmcLootGen;
+        }
     }
     setBotHealth() {
         for (let bot in this.arrays.botArr) {
