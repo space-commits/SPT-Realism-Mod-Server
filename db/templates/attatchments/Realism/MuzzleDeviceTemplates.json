@@ -24,8 +24,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 66,
-        "MeleePen": 27
+        "MeleeDamage": 112,
+        "MeleePen": 22
     },
     "m9_bayonet": {
         "ItemID": "m9_bayonet",
@@ -52,8 +52,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 55,
-        "MeleePen": 20
+        "MeleeDamage": 65,
+        "MeleePen": 17
     },
     "6kh4_bayonet": {
         "ItemID": "6kh4_bayonet",
@@ -80,8 +80,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 52,
-        "MeleePen": 22
+        "MeleeDamage": 70,
+        "MeleePen": 15
     },
     "imi_uzi_thread": {
         "ItemID": "imi_uzi_thread",
@@ -2155,7 +2155,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 7
+        "MeleeDamage": 10,
+        "MeleePen": 8
     },
     "5b099b7d5acfc400186331e4": {
         "ItemID": "5b099b7d5acfc400186331e4",
@@ -2520,7 +2521,8 @@
         "Convergence": 20,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 6.5
+        "MeleeDamage": 8.5,
+        "MeleePen": 7
     },
     "5649ab884bdc2ded0b8b457f": {
         "ItemID": "5649ab884bdc2ded0b8b457f",
@@ -2547,7 +2549,8 @@
         "Convergence": 20,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 6
+        "MeleeDamage": 8.5,
+        "MeleePen": 7
     },
     "mechDTK_366": {
         "ItemID": "mechDTK_366",
@@ -2574,7 +2577,8 @@
         "Convergence": 20,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 6
+        "MeleeDamage": 8.5,
+        "MeleePen": 7
     },
     "5cc9a96cd7f00c011c04e04a": {
         "ItemID": "5cc9a96cd7f00c011c04e04a",
@@ -2627,7 +2631,8 @@
         "Convergence": 25,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 6
+        "MeleeDamage": 9,
+        "MeleePen": 6
     },
     "612e0e3c290d254f5e6b291d": {
         "ItemID": "612e0e3c290d254f5e6b291d",
@@ -2654,7 +2659,8 @@
         "Convergence": 25,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 6
+        "MeleeDamage": 8,
+        "MeleePen": 6
     },
     "5bbdb8bdd4351e4502011460": {
         "ItemID": "5bbdb8bdd4351e4502011460",
@@ -2784,8 +2790,7 @@
         "Loudness": 30,
         "Convergence": 15,
         "Price": 0,
-        "LoyaltyLevel": 0,
-        "MeleeDamage": 0
+        "LoyaltyLevel": 0
     },
     "5c878e9d2e2216000f201903": {
         "ItemID": "5c878e9d2e2216000f201903",
@@ -2994,7 +2999,7 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 2
+        "MeleeDamage": 3
     },
     "59e61eb386f77440d64f5daf": {
         "ItemID": "59e61eb386f77440d64f5daf",
@@ -3177,7 +3182,7 @@
         "Convergence": 9,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 4
+        "MeleeDamage": 7
     },
     "5ac7655e5acfc40016339a19": {
         "ItemID": "5ac7655e5acfc40016339a19",
@@ -3464,7 +3469,8 @@
         "Convergence": 14,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 2
+        "MeleeDamage": 4,
+        "MeleePen": 5
     },
     "5caf17c9ae92150b30006be1": {
         "ItemID": "5caf17c9ae92150b30006be1",
@@ -4273,7 +4279,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 3
+        "MeleeDamage": 4,
+        "MeleePen": 5
     },
     "5943ee5a86f77413872d25ec": {
         "ItemID": "5943ee5a86f77413872d25ec",
@@ -4300,7 +4307,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 3
+        "MeleeDamage": 4,
+        "MeleePen": 5
     },
     "56ea6fafd2720b844b8b4593": {
         "ItemID": "56ea6fafd2720b844b8b4593",
@@ -4649,7 +4657,9 @@
         "Convergence": 30,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 8
+        "MeleeDamage": 12,
+        "MeleePen": 8
+        
     },
     "560838c94bdc2d77798b4569": {
         "ItemID": "560838c94bdc2d77798b4569",
@@ -5615,7 +5625,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 5
+        "MeleeDamage": 9,
+        "MeleePen": 9
     },
     "55d614004bdc2d86028b4568": {
         "ItemID": "55d614004bdc2d86028b4568",
@@ -5642,7 +5653,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 5
+        "MeleeDamage": 9,
+        "MeleePen": 9
     },
     "59bffbb386f77435b379b9c2": {
         "ItemID": "59bffbb386f77435b379b9c2",
@@ -5721,7 +5733,8 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 0,
-        "MeleeDamage": 6
+        "MeleeDamage": 8,
+        "MeleePen": 7
     },
     "5ea17bbc09aa976f2e7a51cd": {
         "ItemID": "5ea17bbc09aa976f2e7a51cd",

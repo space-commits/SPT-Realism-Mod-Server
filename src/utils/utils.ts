@@ -77,27 +77,18 @@ export class Utils {
     }
 
 
-
-
-    public probabilityWeighter(items: any, weights: number[]): number {
-
+    public probabilityWeighter(items: any, weights: number[]): any {
         function add(a, b) { return a + b; }
-
-        var botTiers = items;
         var totalWeight = weights.reduce(add, 0);
-
         var weighedElems = [];
         var currentElem = 0;
-
-        while (currentElem < botTiers.length) {
+        while (currentElem < items.length) {
             for (let i = 0; i < weights[currentElem]; i++)
-                weighedElems[weighedElems.length] = botTiers[currentElem];
+                weighedElems[weighedElems.length] = items[currentElem];
             currentElem++;
         }
-
         var randomTier = Math.floor(Math.random() * totalWeight);
         return weighedElems[randomTier];
-
     }
 
     public removeCustomItems(playerData: IPmcData) {

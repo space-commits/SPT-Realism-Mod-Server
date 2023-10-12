@@ -147,7 +147,7 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 22,
+        "ChamberSpeed": 16,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -165,7 +165,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 30,
+        "ChamberSpeed": 25,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -183,7 +183,7 @@
         "Weight": 0.22,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 30,
+        "ChamberSpeed": 286,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -201,7 +201,7 @@
         "Weight": 0.22,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 30,
+        "ChamberSpeed": 26,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -219,7 +219,7 @@
         "Weight": 0.24,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 36,
+        "ChamberSpeed": 34,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -295,7 +295,7 @@
         "Weight": 0.472,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 24,
+        "ChamberSpeed": 25,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -463,7 +463,7 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 17,
+        "ChamberSpeed": 14,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -517,7 +517,7 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 22,
+        "ChamberSpeed": 20,
         "Price": 0,
         "LoyaltyLevel": 0
     },
@@ -535,7 +535,7 @@
         "Weight": 0.355,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 18,
+        "ChamberSpeed": 16,
         "Price": 0,
         "LoyaltyLevel": 0
     },

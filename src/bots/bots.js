@@ -52,26 +52,32 @@ class BotLoader {
         this.reshBase = this.botDB["bossbully"];
         this.reshFollowerBase = this.botDB["followerbully"];
         this.botConf = this.configServ.getConfig(ConfigTypes_1.ConfigTypes.BOT);
-        this.botConfPMC = this.botConf.pmc;
+        this.botConfPMC = this.configServ.getConfig(ConfigTypes_1.ConfigTypes.PMC);
     }
     loadBots() {
         if (this.modConfig.dynamic_loot_pmcs == true) {
-            this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
+            this.botConfPMC.looseWeaponInBackpackChancePercent = 0;
         }
+        this.setDefaultLootOdds();
         const botEquipmentTempalte = {
+            "weaponModLimits": {
+                "scopeLimit": 2,
+                "lightLaserLimit": 2
+            },
             "lightIsActiveDayChancePercent": 50,
             "lightIsActiveNightChancePercent": 50,
             "laserIsActiveChancePercent": 50,
             "faceShieldIsActiveChancePercent": 100,
             "nvgIsActiveChanceNightPercent": 50,
             "nvgIsActiveChanceDayPercent": 50,
+            "weightingAdjustmentsByPlayerLevel": [],
+            "weightingAdjustmentsByBotLevel": [],
             "weaponSightWhitelist": {},
             "randomisation": [],
-            "weaponModLimits": {},
             "clothing": [],
             "weightingAdjustments": [],
             "blacklist": [],
-            "whitelist": []
+            "whitelist": [],
         };
         this.botConf.equipment["assault"] = botEquipmentTempalte;
         this.botConf.equipment["pmcbot"] = botEquipmentTempalte;
@@ -89,8 +95,8 @@ class BotLoader {
         this.botConf.equipment["pmc"].weaponModLimits.lightLaserLimit = 2;
         this.botConf.equipment["pmc"].randomisation = [];
         this.botConf.equipment["pmc"].blacklist = [];
-        this.botConf.equipment["pmc"].weightingAdjustments = [];
-        this.botConf.equipment["pmc"].clothing = [];
+        this.botConf.equipment["pmc"].weightingAdjustmentsByBotLevel = [];
+        this.botConf.equipment["pmc"].weightingAdjustmentsByPlayerLevel = [];
         this.botConf.equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (this.modConfig.logEverything == true) {
             this.logger.info("Bots Loaded");
@@ -151,6 +157,12 @@ class BotLoader {
     increasePerformance() {
         this.botConf.maxBotCap = rmBotConfig.maxBotCapLow;
         this.botConf.presetBatch = rmBotConfig.presetBatch;
+    }
+    setDefaultLootOdds() {
+        for (let b in this.arrays.botArr) {
+            let bot = this.arrays.botArr[b];
+            bot.generation = this.arrays.pmcLootGen;
+        }
     }
     setBotHealth() {
         for (let bot in this.arrays.botArr) {
@@ -303,23 +315,23 @@ class BotLoader {
                 bot.inventory.equipment.Holster = [];
                 // bot.inventory.equipment.Backpack = [];
             }
-            this.botConf.pmc.looseWeaponInBackpackChancePercent = 0;
+            this.botConfPMC.looseWeaponInBackpackChancePercent = 0;
         }
         if (this.modConfig.all_scavs == true) {
-            this.botConf.pmc.convertIntoPmcChance = rmBotConfig.scavTest.convertIntoPmcChance;
+            this.botConfPMC.convertIntoPmcChance = rmBotConfig.scavTest.convertIntoPmcChance;
             this.logger.warning("All Scavs");
         }
         if (this.modConfig.all_PMCs == true) {
-            this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
+            this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
             this.logger.warning("All PMCs");
         }
         if (this.modConfig.all_bear == true) {
-            this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
+            this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
             this.botConfPMC.isUsec = 0;
             this.logger.warning("All Bear");
         }
         if (this.modConfig.all_USEC == true) {
-            this.botConf.pmc.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
+            this.botConfPMC.convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
             this.botConfPMC.isUsec = 100;
             this.logger.warning("All USEC");
         }
@@ -550,12 +562,12 @@ class BotLoader {
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
+                this.botConfPMC.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
+                this.botConfPMC.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
             }
             if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
+                this.botConfPMC.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
+                this.botConfPMC.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
         }
         if (this.modConfig.logEverything == true) {
@@ -619,12 +631,12 @@ class BotLoader {
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
+                this.botConfPMC.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
+                this.botConfPMC.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
             }
             if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
+                this.botConfPMC.pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
+                this.botConfPMC.pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
         }
         if (this.modConfig.logEverything == true) {
@@ -688,12 +700,12 @@ class BotLoader {
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
+                this.botConfPMC.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
+                this.botConfPMC.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
             }
             if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConf.pmc.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
-                this.botConf.pmc.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
+                this.botConfPMC.pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
+                this.botConfPMC.pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
             }
         }
         if (this.modConfig.logEverything == true) {
@@ -706,7 +718,7 @@ class BotLoader {
         this.scavBase.inventory.items = scavLO.scavLO1.inventory.items;
         this.scavBase.inventory.mods = scavLO.scavLO1.inventory.mods;
         this.scavBase.chances = scavLO.scavLO1.chances;
-        this.scavBase.generation = scavLO.scavLO1.generation;
+        this.scavBase.generation = this.arrays.scavLootGen;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 40;
@@ -723,8 +735,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_scavs === true) {
             this.scavBase.inventory.items = scavLO.scavLO1.inventory.dynamic_looting;
-            this.scavBase.generation.items.looseLoot.min = 0;
-            this.scavBase.generation.items.looseLoot.max = 1;
+            this.scavBase.generation.items.backpackLoot.weights = { "0": 1 };
+            this.scavBase.generation.items.vestLoot.weights = { "0": 1 };
+            this.scavBase.generation.items.pocketLoot.weights = { "0": 1 };
         }
         utils_1.BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {
@@ -737,7 +750,7 @@ class BotLoader {
         this.scavBase.inventory.items = scavLO.scavLO2.inventory.items;
         this.scavBase.inventory.mods = scavLO.scavLO2.inventory.mods;
         this.scavBase.chances = scavLO.scavLO2.chances;
-        this.scavBase.generation = scavLO.scavLO2.generation;
+        this.scavBase.generation = this.arrays.scavLootGen;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit2;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 60;
@@ -754,8 +767,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_scavs === true) {
             this.scavBase.inventory.items = scavLO.scavLO2.inventory.dynamic_looting;
-            this.scavBase.generation.items.looseLoot.min = 0;
-            this.scavBase.generation.items.looseLoot.max = 2;
+            this.scavBase.generation.items.backpackLoot.weights = { "0": 1 };
+            this.scavBase.generation.items.vestLoot.weights = { "0": 1 };
+            this.scavBase.generation.items.pocketLoot.weights = { "0": 1 };
         }
         utils_1.BotTierTracker.scavTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -768,7 +782,7 @@ class BotLoader {
         this.scavBase.inventory.items = scavLO.scavLO3.inventory.items;
         this.scavBase.inventory.mods = scavLO.scavLO3.inventory.mods;
         this.scavBase.chances = scavLO.scavLO3.chances;
-        this.scavBase.generation = scavLO.scavLO3.generation;
+        this.scavBase.generation = this.arrays.scavLootGen;
         this.botConf.itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit3;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 80;
@@ -785,8 +799,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_scavs === true) {
             this.scavBase.inventory.items = scavLO.scavLO3.inventory.dynamic_looting;
-            this.scavBase.generation.items.looseLoot.min = 0;
-            this.scavBase.generation.items.looseLoot.max = 3;
+            this.scavBase.generation.items.backpackLoot.weights = { "0": 1 };
+            this.scavBase.generation.items.vestLoot.weights = { "0": 1 };
+            this.scavBase.generation.items.pocketLoot.weights = { "0": 1 };
         }
         utils_1.BotTierTracker.scavTier = 3;
         if (this.modConfig.logEverything == true) {
@@ -799,7 +814,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.items;
         botJsonTemplate.inventory.mods = usecLO.usecLO1.inventory.mods;
         botJsonTemplate.chances = usecLO.usecLO1.chances;
-        botJsonTemplate.generation = usecLO.usecLO1.generation;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = usecLO.usecLO1.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO1.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO1.experience.level;
@@ -834,8 +849,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.looseLoot.min = 0;
-            botJsonTemplate.generation.items.looseLoot.max = 1;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
@@ -847,7 +863,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.items;
         botJsonTemplate.inventory.mods = usecLO.usecLO2.inventory.mods;
         botJsonTemplate.chances = usecLO.usecLO2.chances;
-        botJsonTemplate.generation = usecLO.usecLO2.generation;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = usecLO.usecLO2.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO2.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO2.experience.level;
@@ -891,8 +907,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.looseLoot.min = 0;
-            botJsonTemplate.generation.items.looseLoot.max = 2;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
@@ -904,7 +921,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.items;
         botJsonTemplate.inventory.mods = usecLO.usecLO3.inventory.mods;
         botJsonTemplate.chances = usecLO.usecLO3.chances;
-        botJsonTemplate.generation = usecLO.usecLO3.generation;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = usecLO.usecLO3.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO3.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO3.experience.level;
@@ -949,8 +966,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.looseLoot.min = 0;
-            botJsonTemplate.generation.items.looseLoot.max = 2;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
@@ -962,7 +980,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
         botJsonTemplate.inventory.mods = usecLO.usecLO4.inventory.mods;
         botJsonTemplate.chances = usecLO.usecLO4.chances;
-        botJsonTemplate.generation = usecLO.usecLO4.generation;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = usecLO.usecLO4.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO4.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO4.experience.level;
@@ -1007,8 +1025,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.looseLoot.min = 0;
-            botJsonTemplate.generation.items.looseLoot.max = 3;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
@@ -1020,7 +1039,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = bearLO.bearLO1.inventory.items;
         botJsonTemplate.inventory.mods = bearLO.bearLO1.inventory.mods;
         botJsonTemplate.chances = bearLO.bearLO1.chances;
-        botJsonTemplate.generation = bearLO.bearLO1.generation;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = bearLO.bearLO1.appearance.body;
         botJsonTemplate.appearance.feet = bearLO.bearLO1.appearance.feet;
         botJsonTemplate.experience.level = bearLO.bearLO1.experience.level;
@@ -1054,8 +1073,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO1.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.looseLoot.min = 0;
-            botJsonTemplate.generation.items.looseLoot.max = 1;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
@@ -1067,7 +1087,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = bearLO.bearLO2.inventory.items;
         botJsonTemplate.inventory.mods = bearLO.bearLO2.inventory.mods;
         botJsonTemplate.chances = bearLO.bearLO2.chances;
-        botJsonTemplate.generation = bearLO.bearLO2.generation;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = bearLO.bearLO2.appearance.body;
         botJsonTemplate.appearance.feet = bearLO.bearLO2.appearance.feet;
         botJsonTemplate.experience.level = bearLO.bearLO2.experience.level;
@@ -1110,8 +1130,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO2.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.looseLoot.min = 0;
-            botJsonTemplate.generation.items.looseLoot.max = 2;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
@@ -1123,7 +1144,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = bearLO.bearLO3.inventory.items;
         botJsonTemplate.inventory.mods = bearLO.bearLO3.inventory.mods;
         botJsonTemplate.chances = bearLO.bearLO3.chances;
-        botJsonTemplate.generation = bearLO.bearLO3.generation;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = bearLO.bearLO3.appearance.body;
         botJsonTemplate.appearance.feet = bearLO.bearLO3.appearance.feet;
         botJsonTemplate.experience.level = bearLO.bearLO3.experience.level;
@@ -1167,8 +1188,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO3.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.looseLoot.min = 0;
-            botJsonTemplate.generation.items.looseLoot.max = 2;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
@@ -1180,7 +1202,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.items;
         botJsonTemplate.inventory.mods = bearLO.bearLO4.inventory.mods;
         botJsonTemplate.chances = bearLO.bearLO4.chances;
-        botJsonTemplate.generation = bearLO.bearLO4.generation;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = bearLO.bearLO4.appearance.body;
         botJsonTemplate.appearance.feet = bearLO.bearLO4.appearance.feet;
         botJsonTemplate.experience.level = bearLO.bearLO4.experience.level;
@@ -1224,8 +1246,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.looseLoot.min = 0;
-            botJsonTemplate.generation.items.looseLoot.max = 3;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
@@ -1237,7 +1260,7 @@ class BotLoader {
         this.raiderBase.inventory.items = raiderLO.raiderLO1.inventory.items;
         this.raiderBase.inventory.mods = raiderLO.raiderLO1.inventory.mods;
         this.raiderBase.chances = raiderLO.raiderLO1.chances;
-        this.raiderBase.generation = raiderLO.raiderLO1.generation;
+        this.raiderBase.generation = this.arrays.pmcLootGen;
         this.raiderBase.appearance.body = raiderLO.appearance.body;
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
@@ -1297,7 +1320,7 @@ class BotLoader {
         this.raiderBase.inventory.items = raiderLO.raiderLO2.inventory.items;
         this.raiderBase.inventory.mods = raiderLO.raiderLO2.inventory.mods;
         this.raiderBase.chances = raiderLO.raiderLO2.chances;
-        this.raiderBase.generation = raiderLO.raiderLO2.generation;
+        this.raiderBase.generation = this.arrays.pmcLootGen;
         this.raiderBase.appearance.body = raiderLO.appearance.body;
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
@@ -1357,7 +1380,7 @@ class BotLoader {
         this.raiderBase.inventory.items = raiderLO.raiderLO3.inventory.items;
         this.raiderBase.inventory.mods = raiderLO.raiderLO3.inventory.mods;
         this.raiderBase.chances = raiderLO.raiderLO3.chances;
-        this.raiderBase.generation = raiderLO.raiderLO3.generation;
+        this.raiderBase.generation = this.arrays.pmcLootGen;
         this.raiderBase.appearance.body = raiderLO.appearance.body;
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
@@ -1418,7 +1441,7 @@ class BotLoader {
         this.rogueBase.inventory.mods = rogueLO.rogueLO1.inventory.mods;
         ;
         this.rogueBase.chances = rogueLO.rogueLO1.chances;
-        this.rogueBase.generation = rogueLO.rogueLO1.generation;
+        this.rogueBase.generation = this.arrays.pmcLootGen;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
@@ -1457,7 +1480,7 @@ class BotLoader {
         this.rogueBase.inventory.items = rogueLO.rogueLO2.inventory.items;
         this.rogueBase.inventory.mods = rogueLO.rogueLO2.inventory.mods;
         this.rogueBase.chances = rogueLO.rogueLO2.chances;
-        this.rogueBase.generation = rogueLO.rogueLO2.generation;
+        this.rogueBase.generation = this.arrays.pmcLootGen;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
@@ -1496,7 +1519,7 @@ class BotLoader {
         this.rogueBase.inventory.items = rogueLO.rogueLO3.inventory.items;
         this.rogueBase.inventory.mods = rogueLO.rogueLO3.inventory.mods;
         this.rogueBase.chances = rogueLO.rogueLO3.chances;
-        this.rogueBase.generation = rogueLO.rogueLO3.generation;
+        this.rogueBase.generation = this.arrays.pmcLootGen;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
@@ -1535,7 +1558,7 @@ class BotLoader {
         this.knightBase.inventory.items = knightLO.knightLO1.inventory.items;
         this.knightBase.inventory.mods = knightLO.knightLO1.inventory.mods;
         this.knightBase.chances = knightLO.knightLO1.chances;
-        this.knightBase.generation = knightLO.knightLO1.generation;
+        this.knightBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
         const randNum = this.utils.pickRandNumOneInTen();
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO1.inventory.Ammo;
@@ -1543,14 +1566,14 @@ class BotLoader {
         this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO1.inventory.items;
         this.bigpipeBase.inventory.mods = bigpipeLO.bigpipeLO1.inventory.mods;
         this.bigpipeBase.chances = bigpipeLO.bigpipeLO1.chances;
-        this.bigpipeBase.generation = bigpipeLO.bigpipeLO1.generation;
+        this.bigpipeBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
         this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO1.inventory.Ammo;
         this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO1.inventory.equipment;
         this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO1.inventory.items;
         this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO1.inventory.mods;
         this.birdeyeBase.chances = birdeyeLO.birdeyeLO1.chances;
-        this.birdeyeBase.generation = birdeyeLO.birdeyeLO1.generation;
+        this.birdeyeBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             if (randNum >= 6) {
@@ -1694,7 +1717,7 @@ class BotLoader {
         this.knightBase.inventory.items = knightLO.knightLO2.inventory.items;
         this.knightBase.inventory.mods = knightLO.knightLO2.inventory.mods;
         this.knightBase.chances = knightLO.knightLO2.chances;
-        this.knightBase.generation = knightLO.knightLO2.generation;
+        this.knightBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
         const randNum = this.utils.pickRandNumOneInTen();
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO2.inventory.Ammo;
@@ -1702,14 +1725,14 @@ class BotLoader {
         this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO2.inventory.items;
         this.bigpipeBase.inventory.mods = bigpipeLO.bigpipeLO2.inventory.mods;
         this.bigpipeBase.chances = bigpipeLO.bigpipeLO2.chances;
-        this.bigpipeBase.generation = bigpipeLO.bigpipeLO2.generation;
+        this.bigpipeBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
         this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO2.inventory.Ammo;
         this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO2.inventory.equipment;
         this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO2.inventory.items;
         this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO2.inventory.mods;
         this.birdeyeBase.chances = birdeyeLO.birdeyeLO2.chances;
-        this.birdeyeBase.generation = birdeyeLO.birdeyeLO2.generation;
+        this.birdeyeBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             if (randNum >= 4) {
@@ -1853,7 +1876,7 @@ class BotLoader {
         this.knightBase.inventory.items = knightLO.knightLO3.inventory.items;
         this.knightBase.inventory.mods = knightLO.knightLO3.inventory.mods;
         this.knightBase.chances = knightLO.knightLO3.chances;
-        this.knightBase.generation = knightLO.knightLO3.generation;
+        this.knightBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
         const randNum = this.utils.pickRandNumOneInTen();
         this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO3.inventory.Ammo;
@@ -1861,14 +1884,14 @@ class BotLoader {
         this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO3.inventory.items;
         this.bigpipeBase.inventory.mods = bigpipeLO.bigpipeLO3.inventory.mods;
         this.bigpipeBase.chances = bigpipeLO.bigpipeLO3.chances;
-        this.bigpipeBase.generation = bigpipeLO.bigpipeLO3.generation;
+        this.bigpipeBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
         this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO3.inventory.Ammo;
         this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO3.inventory.equipment;
         this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO3.inventory.items;
         this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO3.inventory.mods;
         this.birdeyeBase.chances = birdeyeLO.birdeyeLO3.chances;
-        this.birdeyeBase.generation = birdeyeLO.birdeyeLO3.generation;
+        this.birdeyeBase.generation = this.arrays.bossLootGen;
         this.botConf.equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             if (randNum >= 3) {
@@ -2012,7 +2035,7 @@ class BotLoader {
         this.killaBase.inventory.items = killaLO.killaLO1.inventory.items;
         this.killaBase.inventory.mods = killaLO.killaLO1.inventory.mods;
         this.killaBase.chances = killaLO.killaLO1.chances;
-        this.killaBase.generation = killaLO.killaLO1.generation;
+        this.killaBase.generation = this.arrays.bossLootGen;
         if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.killaBase.chances.mods.mod_flashlight = 60;
             this.botConf.equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
@@ -2031,7 +2054,7 @@ class BotLoader {
         this.killaBase.inventory.items = killaLO.killaLO2.inventory.items;
         this.killaBase.inventory.mods = killaLO.killaLO2.inventory.mods;
         this.killaBase.chances = killaLO.killaLO2.chances;
-        this.killaBase.generation = killaLO.killaLO2.generation;
+        this.killaBase.generation = this.arrays.bossLootGen;
         if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.killaBase.chances.mods.mod_flashlight = 60;
             this.botConf.equipment["bosskilla"].lightIsActiveDayChancePercent = 50;
@@ -2050,7 +2073,7 @@ class BotLoader {
         this.killaBase.inventory.items = killaLO.killaLO3.inventory.items;
         this.killaBase.inventory.mods = killaLO.killaLO3.inventory.mods;
         this.killaBase.chances = killaLO.killaLO3.chances;
-        this.killaBase.generation = killaLO.killaLO3.generation;
+        this.killaBase.generation = this.arrays.bossLootGen;
         if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.killaBase.chances.mods.mod_flashlight = 60;
             this.botConf.equipment["bosskilla"].lightIsActiveDayChancePercent = 25;
@@ -2069,7 +2092,7 @@ class BotLoader {
         this.tagillaBase.inventory.items = tagillaLO.tagillaLO1.inventory.items;
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO1.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
-        this.tagillaBase.generation = tagillaLO.tagillaLO1.generation;
+        this.tagillaBase.generation = this.arrays.bossLootGen;
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 8) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -2108,7 +2131,7 @@ class BotLoader {
         this.tagillaBase.inventory.items = tagillaLO.tagillaLO2.inventory.items;
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO2.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
-        this.tagillaBase.generation = tagillaLO.tagillaLO2.generation;
+        this.tagillaBase.generation = this.arrays.bossLootGen;
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 5) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -2144,7 +2167,7 @@ class BotLoader {
         this.tagillaBase.inventory.items = tagillaLO.tagillaLO3.inventory.items;
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO3.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
-        this.tagillaBase.generation = tagillaLO.tagillaLO3.generation;
+        this.tagillaBase.generation = this.arrays.bossLootGen;
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 3) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -2180,13 +2203,13 @@ class BotLoader {
         this.saniBase.inventory.items = saniLO.sanitarLO1.inventory.items;
         this.saniBase.inventory.mods = saniLO.sanitarLO1.inventory.mods;
         this.saniBase.chances = saniLO.sanitarLO1.chances;
-        this.saniBase.generation = saniLO.sanitarLO1.generation;
+        this.saniBase.generation = this.arrays.bossLootGen;
         this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO1.inventory.Ammo;
         this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO1.inventory.equipment;
         this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO1.inventory.items;
         this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO1.inventory.mods;
         this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO1.chances;
-        this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO1.generation;
+        this.saniFollowerBase.generation = this.arrays.pmcLootGen;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
             this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 0;
@@ -2217,13 +2240,13 @@ class BotLoader {
         this.saniBase.inventory.items = saniLO.sanitarLO2.inventory.items;
         this.saniBase.inventory.mods = saniLO.sanitarLO2.inventory.mods;
         this.saniBase.chances = saniLO.sanitarLO2.chances;
-        this.saniBase.generation = saniLO.sanitarLO2.generation;
+        this.saniBase.generation = this.arrays.bossLootGen;
         this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO2.inventory.Ammo;
         this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO2.inventory.equipment;
         this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO2.inventory.items;
         this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO2.inventory.mods;
         this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO2.chances;
-        this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO2.generation;
+        this.saniFollowerBase.generation = this.arrays.pmcLootGen;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
             this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 0;
@@ -2254,13 +2277,13 @@ class BotLoader {
         this.saniBase.inventory.items = saniLO.sanitarLO3.inventory.items;
         this.saniBase.inventory.mods = saniLO.sanitarLO3.inventory.mods;
         this.saniBase.chances = saniLO.sanitarLO3.chances;
-        this.saniBase.generation = saniLO.sanitarLO3.generation;
+        this.saniBase.generation = this.arrays.bossLootGen;
         this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO3.inventory.Ammo;
         this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO3.inventory.equipment;
         this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO3.inventory.items;
         this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO3.inventory.mods;
         this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO3.chances;
-        this.saniFollowerBase.generation = saniFollowerLO.sanitarfollowerLO3.generation;
+        this.saniFollowerBase.generation = this.arrays.pmcLootGen;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
             this.botConf.equipment["bosssanitar"].laserIsActiveChancePercent = 0;
@@ -2291,13 +2314,13 @@ class BotLoader {
         this.reshBase.inventory.items = reshLO.reshallaLO1.inventory.items;
         this.reshBase.inventory.mods = reshLO.reshallaLO1.inventory.mods;
         this.reshBase.chances = reshLO.reshallaLO1.chances;
-        this.reshBase.generation = reshLO.reshallaLO1.generation;
+        this.reshBase.generation = this.arrays.bossLootGen;
         this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO1.inventory.Ammo;
         this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO1.inventory.equipment;
         this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO1.inventory.items;
         this.reshFollowerBase.inventory.mods = reshFollowerLO.reshallafollowerLO1.inventory.mods;
         this.reshFollowerBase.chances = reshFollowerLO.reshallafollowerLO1.chances;
-        this.reshFollowerBase.generation = reshFollowerLO.reshallafollowerLO1.generation;
+        this.reshFollowerBase.generation = this.arrays.pmcLootGen;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["bossbully"].lightIsActiveDayChancePercent = 25;
             this.botConf.equipment["bossbully"].laserIsActiveChancePercent = 25;
@@ -2328,13 +2351,13 @@ class BotLoader {
         this.reshBase.inventory.items = reshLO.reshallaLO2.inventory.items;
         this.reshBase.inventory.mods = reshLO.reshallaLO2.inventory.mods;
         this.reshBase.chances = reshLO.reshallaLO2.chances;
-        this.reshBase.generation = reshLO.reshallaLO2.generation;
+        this.reshBase.generation = this.arrays.bossLootGen;
         this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO2.inventory.Ammo;
         this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO2.inventory.equipment;
         this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO2.inventory.items;
         this.reshFollowerBase.inventory.mods = reshFollowerLO.reshallafollowerLO2.inventory.mods;
         this.reshFollowerBase.chances = reshFollowerLO.reshallafollowerLO2.chances;
-        this.reshFollowerBase.generation = reshFollowerLO.reshallafollowerLO2.generation;
+        this.reshFollowerBase.generation = this.arrays.pmcLootGen;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["bossbully"].lightIsActiveDayChancePercent = 12;
             this.botConf.equipment["bossbully"].laserIsActiveChancePercent = 12;
@@ -2365,13 +2388,13 @@ class BotLoader {
         this.reshBase.inventory.items = reshLO.reshallaLO3.inventory.items;
         this.reshBase.inventory.mods = reshLO.reshallaLO3.inventory.mods;
         this.reshBase.chances = reshLO.reshallaLO3.chances;
-        this.reshBase.generation = reshLO.reshallaLO3.generation;
+        this.reshBase.generation = this.arrays.bossLootGen;
         this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO3.inventory.Ammo;
         this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO3.inventory.equipment;
         this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO3.inventory.items;
         this.reshFollowerBase.inventory.mods = reshFollowerLO.reshallafollowerLO3.inventory.mods;
         this.reshFollowerBase.chances = reshFollowerLO.reshallafollowerLO3.chances;
-        this.reshFollowerBase.generation = reshFollowerLO.reshallafollowerLO3.generation;
+        this.reshFollowerBase.generation = this.arrays.pmcLootGen;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf.equipment["bossbully"].lightIsActiveDayChancePercent = 0;
             this.botConf.equipment["bossbully"].laserIsActiveChancePercent = 0;

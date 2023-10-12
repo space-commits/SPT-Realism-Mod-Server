@@ -45,11 +45,11 @@ class FleamarketConfig {
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.condition = custFleaConfig.condition;
             this.fleaConf.sell.chance.base = 45;
-            this.fleaConf.sell.time.base = 30;
-            this.fleaConf.sell.time.min = 10;
-            this.fleaConf.sell.time.max = 30;
-            this.fleaConf.sell.reputation.gain = 0.0000007;
-            this.fleaConf.sell.reputation.loss = 0.0000007;
+            this.fleaConf.sell.time.base = 5;
+            this.fleaConf.sell.time.min = 0;
+            this.fleaConf.sell.time.max = 1;
+            this.fleaConf.sell.reputation.gain = 0.0000009;
+            this.fleaConf.sell.reputation.loss = 0.0000009;
             this.fleaConf.dynamic.currencies = {
                 "5449016a4bdc2d6f028b456f": 20,
                 "5696686a4bdc2da3298b456a": 40,
@@ -57,10 +57,12 @@ class FleamarketConfig {
             };
             this.fleaConf.dynamic.offerItemCount.min = 0;
             this.fleaConf.dynamic.offerItemCount.max = 2;
-            this.fleaConf.dynamic.price.min = 1.3;
-            this.fleaConf.dynamic.price.max = 2;
-            this.fleaConf.dynamic.presetPrice.min = 1.3;
-            this.fleaConf.dynamic.presetPrice.max = 2;
+            this.fleaConf.dynamic.priceRanges.default.min = 1.3;
+            this.fleaConf.dynamic.priceRanges.default.max = 2;
+            this.fleaConf.dynamic.priceRanges.preset.min = 1.3;
+            this.fleaConf.dynamic.priceRanges.preset.max = 2;
+            this.fleaConf.dynamic.priceRanges.pack.min = 1.3;
+            this.fleaConf.dynamic.priceRanges.pack.max = 2;
             this.fleaConf.dynamic.endTimeSeconds.min = 600;
             this.fleaConf.dynamic.endTimeSeconds.max = 3600;
             this.fleaConf.dynamic.nonStackableCount.min = 1;

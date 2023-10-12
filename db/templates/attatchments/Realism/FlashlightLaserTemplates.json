@@ -1,4 +1,16 @@
 {
+    "644a3df63b0b6f03e101e065": {
+        "ItemID": "644a3df63b0b6f03e101e065",
+        "Name": "tactical_all_bemeyers_mawl_c1_plus",
+        "ModType": "",
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.286,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "59d790f486f77403cb06aec6": {
         "ItemID": "59d790f486f77403cb06aec6",
         "Name": "flashlight_armytek_predator_pro_v3_xhp35_hi",

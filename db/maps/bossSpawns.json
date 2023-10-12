@@ -1,9 +1,39 @@
 {
     "StreetsBossLocationSpawn": [
         {
+            "BossChance": 35,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "6",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "followerBoar",
+            "BossName": "bossBoar",
+            "BossPlayer": false,
+            "BossZone": "ZoneCarShowroom",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": ""
+        },
+        {
+            "BossChance": 100,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "1,2",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "bossBoarSniper",
+            "BossName": "bossBoarSniper",
+            "BossPlayer": false,
+            "BossZone": "ZoneCarShowroom_main_roof",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": 99999,
+            "TriggerId": "BossBoarBorn",
+            "TriggerName": "botEvent"
+        },
+        {
             "BossName": "bossBully",
-            "BossChance": 25,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossChance": 20,
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "followerBully",
@@ -14,14 +44,14 @@
             "RandomTimeSpawn": false
         },
         {
-            "BossChance": 20,
+            "BossChance": 15,
             "BossDifficult": "normal",
             "BossEscortAmount": "0",
             "BossEscortDifficult": "normal",
             "BossEscortType": "followerGluharAssault",
             "BossName": "bossGluhar",
             "BossPlayer": false,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "RandomTimeSpawn": false,
             "Supports": [
                 {
@@ -58,7 +88,7 @@
             "BossEscortType": "pmcBot",
             "BossName": "bossKilla",
             "BossPlayer": false,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "RandomTimeSpawn": false,
             "Supports": null,
             "Time": -1,
@@ -73,7 +103,7 @@
             "BossEscortType": "followerSanitar",
             "BossName": "bossSanitar",
             "BossPlayer": false,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "RandomTimeSpawn": false,
             "Supports": null,
             "Time": -1
@@ -81,7 +111,7 @@
         {
             "BossName": "pmcBot",
             "BossChance": 30,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "pmcBot",
@@ -93,7 +123,7 @@
         {
             "BossName": "sectantPriest",
             "BossChance": 30,
-            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCarShowroom,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
+            "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
@@ -744,7 +774,7 @@
     ],
     "ShorelineBossLocationSpawn": [
         {
-            "BossChance": 45,
+            "BossChance": 50,
             "BossDifficult": "normal",
             "BossEscortAmount": "3,4",
             "BossEscortDifficult": "normal",
@@ -791,7 +821,7 @@
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "3,3,3,4,4,5",
-            "Time": -1,
+            "Time": 1,
             "TriggerId": "",
             "TriggerName": "",
             "Supports": null,
@@ -806,7 +836,7 @@
             "BossEscortType": "followerKojaniy",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2,2,2,2,2,2,3,3,3,4",
-            "Time": -1,
+            "Time": 1,
             "Supports": null,
             "RandomTimeSpawn": false
         },
@@ -819,7 +849,7 @@
             "BossEscortType": "exUsec",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2",
-            "Time": -1,
+            "Time": 1,
             "Supports": [
                 {
                     "BossEscortType": "followerBigPipe",
@@ -856,7 +886,7 @@
             "BossZone": "ZoneForestTruck",
             "RandomTimeSpawn": false,
             "Supports": null,
-            "Time": -1
+            "Time": 5
         },
         {
             "BossChance": 20,
@@ -869,7 +899,7 @@
             "BossZone": "ZoneStartVillage,ZoneGasStation,ZoneForestGasStation,ZonePowerStation",
             "RandomTimeSpawn": false,
             "Supports": null,
-            "Time": -1
+            "Time": 5
         }
     ],
     "WoodsBossLocationSpawn": [

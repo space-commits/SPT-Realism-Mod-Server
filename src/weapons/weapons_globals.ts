@@ -59,6 +59,8 @@ export class WeaponsGlobals {
                 serverItem._props.DeflectionConsumption /= 5;
                 serverItem._props.SlashPenetration += 1;
                 serverItem._props.StabPenetration += 3;
+                serverItem._props.Unlootable = false;
+                serverItem._props.UnlootableFromSide = [];
             }
         }
 

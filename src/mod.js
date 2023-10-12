@@ -85,6 +85,7 @@ class Main {
         const httpResponse = container.resolve("HttpResponseUtil");
         const ragfairServer = container.resolve("RagfairServer");
         const ragfairController = container.resolve("RagfairController");
+        const ragfairTaxServ = container.resolve("RagfairTaxService");
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
         const locationGenerator = container.resolve("LocationGenerator");
@@ -93,9 +94,9 @@ class Main {
         const botLevelGenerator = container.resolve("BotLevelGenerator");
         const botDifficultyHelper = container.resolve("BotDifficultyHelper");
         const seasonalEventService = container.resolve("SeasonalEventService");
-        const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, configServer);
+        const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, ragfairTaxServ, configServer);
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
-        const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer);
+        const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer);
         const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
@@ -258,6 +259,7 @@ class Main {
                         const seasonalEventsService = container.resolve("SeasonalEventService");
                         const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
+                        const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.Arrays(postLoadTables);
                         const utils = new utils_1.Utils(postLoadTables, arrays);
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
@@ -317,10 +319,10 @@ class Main {
                             }
                         }
                         if (matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory") {
-                            botConf.pmc.convertIntoPmcChance["pmcbot"].min = 0;
-                            botConf.pmc.convertIntoPmcChance["pmcbot"].max = 0;
-                            botConf.pmc.convertIntoPmcChance["assault"].min = 100;
-                            botConf.pmc.convertIntoPmcChance["assault"].max = 100;
+                            pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
+                            pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
+                            pmcConf.convertIntoPmcChance["assault"].min = 100;
+                            pmcConf.convertIntoPmcChance["assault"].max = 100;
                         }
                         if (modConfig.logEverything == true) {
                             logger.warning("Map Name star off = " + matchInfoStartOff.location);
