@@ -1278,7 +1278,7 @@
         "ModType": "Stock",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -12,
-        "Dispersion": -12,
+        "Dispersion": -14,
         "CameraRecoil": -7.5,
         "AimSpeed": 0,
         "Ergonomics": 10,

@@ -66,7 +66,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "pillspain"); // med type
                 serverItem._props.ConflictingItems.splice(2, 0, "none"); // heavy bleed heal type
-                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tickred 
                 serverItem._props.ConflictingItems.splice(4, 0, "true"); //can be used in raid
                 serverItem._props.ConflictingItems.splice(5, 0, "600"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
