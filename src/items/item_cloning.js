@@ -2,6 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemCloning = void 0;
 class ItemCloning {
+    logger;
+    tables;
+    modConfig;
+    jsonUtil;
+    medItems;
+    crafts;
     constructor(logger, tables, modConfig, jsonUtil, medItems, crafts) {
         this.logger = logger;
         this.tables = tables;
@@ -9,8 +15,12 @@ class ItemCloning {
         this.jsonUtil = jsonUtil;
         this.medItems = medItems;
         this.crafts = crafts;
-        this.itemDB = this.tables.templates.items;
-        this.questDB = this.tables.templates.quests;
+    }
+    itemDB() {
+        return this.tables.templates.items;
+    }
+    questDB() {
+        return this.tables.templates.quests;
     }
     createCustomMedItems() {
         //Tier 1 Medkit
@@ -135,21 +145,20 @@ class ItemCloning {
         }
     }
     pushAttToFilters(orignalId, newID) {
-        var itemDB = this.tables.templates.items;
-        for (let item in itemDB) {
-            for (let slot in itemDB[item]._props.Slots) {
-                if (itemDB[item]._props.Slots[slot]._props?.filters !== undefined && itemDB[item]._props.Slots[slot]._props.filters[0].Filter.includes(orignalId)) {
-                    itemDB[item]._props.Slots[slot]._props.filters[0].Filter.push(newID);
+        for (let item in this.itemDB()) {
+            for (let slot in this.itemDB()[item]._props.Slots) {
+                if (this.itemDB()[item]._props.Slots[slot]._props?.filters !== undefined && this.itemDB()[item]._props.Slots[slot]._props.filters[0].Filter.includes(orignalId)) {
+                    this.itemDB()[item]._props.Slots[slot]._props.filters[0].Filter.push(newID);
                 }
             }
-            if (itemDB[item]._props?.ConflictingItems !== undefined && itemDB[item]._props.ConflictingItems.includes(orignalId)) {
-                itemDB[item]._props.ConflictingItems.push(newID);
+            if (this.itemDB()[item]._props?.ConflictingItems !== undefined && this.itemDB()[item]._props.ConflictingItems.includes(orignalId)) {
+                this.itemDB()[item]._props.ConflictingItems.push(newID);
             }
         }
     }
     cloneAttachments(itemToClone, newItemID, color) {
         this.cloneItem(itemToClone, newItemID);
-        let itemID = this.itemDB[newItemID];
+        let itemID = this.itemDB()[newItemID];
         itemID._props.BackgroundColor = color;
         if (this.modConfig.logEverything == true) {
             this.logger.info("Item " + itemID._id + " Added");
@@ -157,7 +166,7 @@ class ItemCloning {
     }
     cloneWeapons(itemToClone, newItemID, color) {
         this.cloneItem(itemToClone, newItemID);
-        let itemID = this.itemDB[newItemID];
+        let itemID = this.itemDB()[newItemID];
         itemID._props.BackgroundColor = color;
         if (this.modConfig.logEverything == true) {
             this.logger.info("Item " + itemID._id + " Added");
@@ -165,7 +174,7 @@ class ItemCloning {
     }
     cloneMedicalItem(itemToClone, newItemID, maxHpResource, medUseTime, hpResourceRate, prefabePath, usePrefabPath, color, effectsDamage) {
         this.cloneItem(itemToClone, newItemID);
-        let itemID = this.itemDB[newItemID];
+        let itemID = this.itemDB()[newItemID];
         itemID._props.MaxHpResource = maxHpResource;
         itemID._props.medUseTime = medUseTime;
         itemID._props.hpResourceRate = hpResourceRate;
@@ -197,10 +206,10 @@ class ItemCloning {
         }
     }
     cloneItem(itemtoClone, newitemID) {
-        this.itemDB[newitemID] = this.jsonUtil.clone(this.itemDB[itemtoClone]);
-        this.itemDB[newitemID]._id = newitemID;
+        this.itemDB()[newitemID] = this.jsonUtil.clone(this.itemDB()[itemtoClone]);
+        this.itemDB()[newitemID]._id = newitemID;
         if (this.modConfig.logEverything == true) {
-            this.logger.info(this.itemDB[itemtoClone]._name + " cloned");
+            this.logger.info(this.itemDB()[itemtoClone]._name + " cloned");
         }
     }
     addToHideout(craft) {

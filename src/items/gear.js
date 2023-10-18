@@ -3,26 +3,31 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Gear = void 0;
 const enums_1 = require("../utils/enums");
 class Gear {
+    arrays;
+    tables;
+    logger;
     constructor(arrays, tables, logger) {
         this.arrays = arrays;
         this.tables = tables;
         this.logger = logger;
-        this.itemDB = this.tables.templates.items;
+    }
+    itemDB() {
+        return this.tables.templates.items;
     }
     loadGearConflicts() {
         var confMasks = this.arrays.conflMasks;
         var confHats = this.arrays.conflHats;
         var confNVG = this.arrays.conflNVGomponents;
         var armorCompArr = [];
-        for (let item in this.itemDB) {
-            let serverItem = this.itemDB[item];
+        for (let item in this.itemDB()) {
+            let serverItem = this.itemDB()[item];
             if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {
                 armorCompArr.push(serverItem._id);
             }
         }
         for (let nvg in confNVG) {
-            for (let item in this.itemDB) {
-                let serverItem = this.itemDB[item];
+            for (let item in this.itemDB()) {
+                let serverItem = this.itemDB()[item];
                 if (serverItem._id === confNVG[nvg]) {
                     let confItems = serverItem._props.ConflictingItems;
                     serverItem._props.ConflictingItems = confItems.concat(armorCompArr);
@@ -30,27 +35,27 @@ class Gear {
             }
         }
         for (let hat in confHats) {
-            for (let item in this.itemDB) {
-                if (this.itemDB[item]._id === confHats[hat]) {
-                    let confItems = this.itemDB[item]._props.ConflictingItems;
-                    this.itemDB[item]._props.ConflictingItems = confMasks.concat(confItems);
+            for (let item in this.itemDB()) {
+                if (this.itemDB()[item]._id === confHats[hat]) {
+                    let confItems = this.itemDB()[item]._props.ConflictingItems;
+                    this.itemDB()[item]._props.ConflictingItems = confMasks.concat(confItems);
                 }
             }
         }
-        for (let item in this.itemDB) {
-            if (this.itemDB[item]._parent === enums_1.ParentClasses.HEADWEAR) {
-                for (let c in this.itemDB[item]._props.ConflictingItems) {
-                    let confItem = this.itemDB[item]._props.ConflictingItems[c];
-                    if (this.itemDB[confItem] !== undefined && this.itemDB[confItem]._parent === enums_1.ParentClasses.HEADSET) {
-                        this.itemDB[item]._props.ConflictingItems[c] = "";
+        for (let item in this.itemDB()) {
+            if (this.itemDB()[item]._parent === enums_1.ParentClasses.HEADWEAR) {
+                for (let c in this.itemDB()[item]._props.ConflictingItems) {
+                    let confItem = this.itemDB()[item]._props.ConflictingItems[c];
+                    if (this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === enums_1.ParentClasses.HEADSET) {
+                        this.itemDB()[item]._props.ConflictingItems[c] = "";
                     }
                 }
             }
         }
     }
     loadHeadsetTweaks() {
-        for (let item in this.itemDB) {
-            let serverItem = this.itemDB[item];
+        for (let item in this.itemDB()) {
+            let serverItem = this.itemDB()[item];
             //Sordin
             if (serverItem._id === "5aa2ba71e5b5b000137b758f") {
                 serverItem._props.Distortion = 0.1;

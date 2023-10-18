@@ -298,9 +298,8 @@ export class BotLootGen extends BotLootGenerator {
 }
 
 export class MyLootCache extends BotLootCacheService {
-
-
-    private myLootCache: Record<string, MyBotLootCache>;
+    
+    protected myLootCache: Record<string, MyBotLootCache> = {};
 
     private myBotRoleExistsInCache(botRole: string): boolean {
         return !!this.myLootCache[botRole];
@@ -332,6 +331,7 @@ export class MyLootCache extends BotLootCacheService {
 
     public override clearCache(): void {
         this.myLootCache = {};
+        this.lootCache = {};
     }
 
 

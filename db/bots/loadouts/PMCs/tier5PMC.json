@@ -7,30 +7,6 @@
                 "min": 46
             }
         },
-        "appearance": {
-            "body": {
-                "5fcf63da5c287f01f22bf245": 1,
-                "618109c96d7ca35d076b3363": 1,
-                "5fd3e9f71b735718c25cd9f8": 1,
-                "637b945722e2a933ed0e33c8": 1,
-                "5d1f56e486f7744bce0ee9ed": 1,
-                "5e4bb35286f77406a511c9bc": 1,
-                "5e9da17386f774054b6f79a3": 1
-            },
-            "feet": {
-                "5fcf940bce1ba36a513bb9cc": 1,
-                "6295e944e9de5e7b3751c4da": 1,
-                "5d1f592286f7743f8362bcdb": 1,
-                "6033a3fee29c9f6c9b14e74e": 1,
-                "637ba17aa10a96c2b605dbc2": 1,
-                "5d1f590486f7744bcd13459e": 1,
-                "5d1f591186f7744bcc048755": 1,
-                "617c02e24013b06b0b78df80": 1,
-                "5d1f593286f7743014162044": 1,
-                "5df8a08886f7740bfe6df775": 1,
-                "5f5e40a06760b4138443b341": 1
-            }
-        },
         "inventory": {
             "Ammo": {
                 "Caliber12g": {
@@ -242,7 +218,7 @@
                 "5dcbd56fdbd3d91b3e5468d5": 1,
                 "6183afd850224f204c1da514": 1,
                 "5b0bbe4e5acfc40dc528a72d": 1,
-                "623063e994fc3f7b302a9 696": 1,
+                "5447a9cd4bdc2dbd208b4567": 1,
                 "5bb2475ed4351e00853264e3": 1,
                 "5fbcc1d9016cce60e8341ab3": 1,
                 "606587252535c57a13424cfd": 1,
@@ -466,15 +442,15 @@
             "equipment": {
                 "Headwear": 100,
                 "Earpiece": 70,
-                "FaceCover": 70,
+                "FaceCover": 100,
                 "ArmorVest": 100,
-                "Eyewear": 70,
+                "Eyewear": 100,
                 "ArmBand": 100,
                 "TacticalVest": 100,
-                "Backpack": 90,
+                "Backpack": 100,
                 "FirstPrimaryWeapon": 100,
                 "SecondPrimaryWeapon": 0,
-                "Holster": 40,
+                "Holster": 100,
                 "Scabbard": 100,
                 "Pockets": 100,
                 "SecuredContainer": 100
@@ -524,38 +500,6 @@
                 "mod_catch": 100,
                 "mod_bipod": 100,
                 "mod_barrel": 100
-            }
-        },
-        "generation": {
-            "items": {
-                "specialItems": {
-                    "min": 0,
-                    "max": 0
-                },
-                "healing": {
-                    "min": 1,
-                    "max": 2
-                },
-                "drugs": {
-                    "min": 0,
-                    "max": 1
-                },
-                "stims": {
-                    "min": 0,
-                    "max": 2
-                },
-                "looseLoot": {
-                    "min": 1,
-                    "max": 10
-                },
-                "magazines": {
-                    "min": 3,
-                    "max": 5
-                },
-                "grenades": {
-                    "min": 1,
-                    "max": 2
-                }
             }
         }
     }

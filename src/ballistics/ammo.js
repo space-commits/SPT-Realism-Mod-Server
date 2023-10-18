@@ -3,17 +3,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Ammo = void 0;
 const enums_1 = require("../utils/enums");
 class Ammo {
+    logger;
+    tables;
+    modConf;
     constructor(logger, tables, modConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.globalDB = this.tables.globals.config;
-        this.itemDB = this.tables.templates.items;
+    }
+    globalDB() {
+        return this.tables.globals.config;
+    }
+    itemDB() {
+        return this.tables.templates.items;
     }
     loadAmmoStats() {
-        this.globalDB.Ballistic.GlobalDamageDegradationCoefficient = 0.7;
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        this.globalDB().Ballistic.GlobalDamageDegradationCoefficient = 0.7;
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             //// AMMO ////
             //// 12ga ////
             //Piranha
@@ -3565,8 +3572,8 @@ class Ammo {
         }
     }
     loadAmmoFirerateChanges() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === enums_1.ParentClasses.AMMO) {
                 serverItem._props.casingMass = Math.min(1.05, (serverItem._props.ammoRec / 500) + 1);
             }
@@ -3576,9 +3583,9 @@ class Ammo {
         }
     }
     loadAmmoMalfChanges() {
-        const _9x18AmmoArr = this.itemDB["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        const _9x18AmmoArr = this.itemDB()["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === enums_1.ParentClasses.AMMO) {
                 if (serverItem._props?.DurabilityBurnModificator !== undefined) {
                     var duraBurn = Math.max(1, serverItem._props.DurabilityBurnModificator * 0.55);

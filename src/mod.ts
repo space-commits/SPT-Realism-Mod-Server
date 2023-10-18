@@ -218,7 +218,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const utils = new Utils(postLoadTables, arrays);
                         const tieredFlea = new TieredFlea(postLoadTables);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
-                        const maps = new Spawns(logger, postLoadTables, modConfig);
+                        const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -285,7 +285,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                 tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
                             }
                             if (modConfig.boss_spawns == true) {
-                                maps.setBossSpawnChance(postLoadTables.locations, level);
+                                maps.setBossSpawnChance(level);
                             }
 
                             if (modConfig.logEverything == true) {
@@ -357,9 +357,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const weatherController = container.resolve<WeatherController>("WeatherController");
                             const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                             const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
-                            const botConf = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
-
                             const arrays = new Arrays(postLoadTables);
                             const utils = new Utils(postLoadTables, arrays);
                             const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
@@ -595,7 +593,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
-        const maps = new Spawns(logger, tables, modConfig);
+        const maps = new Spawns(logger, tables, modConfig, tables.locations);
         const gear = new Gear(arrays, tables, logger);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables);

@@ -56,13 +56,13 @@ const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${weap
 export class JsonHandler {
     constructor(private tables: IDatabaseTables, private logger: ILogger) { }
 
-    itemDB = this.tables.templates.items;
-    loggerz = this.logger;
-
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
 
     public pushModsToServer() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
                 this.callHelper(MuzzleDeviceTemplates, serverItem, this.modPusherHelper);
                 this.callHelper(BarrelTemplates, serverItem, this.modPusherHelper);
@@ -85,8 +85,8 @@ export class JsonHandler {
     }
 
     public pushWeaponsToServer() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._props.RecolDispersion) {
                 this.callHelper(AssaultRifleTemplates, serverItem, this.weapPusherHelper);
                 this.callHelper(AssaultCarbineTemplates, serverItem, this.weapPusherHelper);
@@ -102,8 +102,8 @@ export class JsonHandler {
         }
         //catch any modded weapons not in templates
         if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
-            for (let j in this.itemDB) {
-                let serverItem = this.itemDB[j];
+            for (let j in this.itemDB()) {
+                let serverItem = this.itemDB()[j];
                 let serverConfItems = serverItem._props.ConflictingItems;
                 if (serverItem._parent == ParentClasses.SMG || serverItem._parent == ParentClasses.ASSAULT_CARBINE || serverItem._parent == ParentClasses.ASSAULT_RIFLE || serverItem._parent == ParentClasses.MARKSMAN_RIFLE || serverItem._parent == ParentClasses.SNIPER_RIFLE || serverItem._parent == ParentClasses.PISTOL || serverItem._parent == ParentClasses.SHOTGUN || serverItem._parent == ParentClasses.MACHINE_GUN) {
                     if (serverConfItems !== undefined && serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
@@ -144,8 +144,8 @@ export class JsonHandler {
     }
 
     public pushGearToServer() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass !== undefined) {
                 this.callHelper(armorChestrigTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(armorComponentsTemplates, serverItem, this.gearPusherHelper);

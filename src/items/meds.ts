@@ -1,27 +1,33 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
 
 export class Meds {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private medItems, private buffs) { }
 
-    private globalDB = this.tables.globals.config;
-    private itemDB = this.tables.templates.items;
-    private buffDB = this.globalDB.Health.Effects.Stimulator.Buffs;
-
+    globalDB(): IConfig {
+        return this.tables.globals.config;
+    }
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
+    buffDB(): any {
+        return this.globalDB().Health.Effects.Stimulator.Buffs;
+    }
 
     public loadMeds() {
 
         //Adjust Thermal stim to compensate for lower base temp
-        this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
+        this.globalDB().Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
 
         for (const buffName in this.buffs) {
-            this.buffDB[buffName] = this.buffs[buffName]
+            this.buffDB()[buffName] = this.buffs[buffName]
         }
 
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-
-
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            
             ///Custom///
             if (serverItem._id === "SJ0") {
                 serverItem._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;

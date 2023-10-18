@@ -3,9 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DescriptionGen = void 0;
 const enums_1 = require("../utils/enums");
 class DescriptionGen {
+    tables;
     constructor(tables) {
         this.tables = tables;
-        this.itemDB = this.tables.templates.items;
+    }
+    itemDB() {
+        return this.tables.templates.items;
     }
     descriptionGen() {
         for (let lang in this.tables.locales.global) {
@@ -14,8 +17,8 @@ class DescriptionGen {
     }
     descriptionGenHelper(lang) {
         let locale = this.tables.locales.global[lang];
-        for (let templateItem in this.itemDB) {
-            let item = this.itemDB[templateItem];
+        for (let templateItem in this.itemDB()) {
+            let item = this.itemDB()[templateItem];
             if (item._parent === enums_1.ParentClasses.AMMO && item._props.ammoHear === 1) {
                 locale[`${templateItem}` + " Description"] = "This ammunition is subsonic and is in a calibre that requires special attachments or modifications in order to be cycled reliably." + `\n\n${locale[`${templateItem}` + " Description"]}`;
             }

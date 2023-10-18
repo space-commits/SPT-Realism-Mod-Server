@@ -1,12 +1,14 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ParentClasses } from "../utils/enums";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 export class DescriptionGen {
 
     constructor(private tables: IDatabaseTables) { }
 
-    private itemDB = this.tables.templates.items;
-
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
 
     public descriptionGen() {
         for (let lang in this.tables.locales.global) { 
@@ -16,8 +18,8 @@ export class DescriptionGen {
 
     private descriptionGenHelper(lang: string) {
         let locale = this.tables.locales.global[lang];
-        for (let templateItem in this.itemDB) {
-            let item = this.itemDB[templateItem];
+        for (let templateItem in this.itemDB()) {
+            let item = this.itemDB()[templateItem];
 
             if (item._parent === ParentClasses.AMMO && item._props.ammoHear === 1) {
                 locale[`${templateItem}` + " Description"] = "This ammunition is subsonic and is in a calibre that requires special attachments or modifications in order to be cycled reliably." + `\n\n${locale[`${templateItem}` + " Description"]}`;

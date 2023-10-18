@@ -3,27 +3,32 @@ import { IRepairConfig } from "@spt-aki/models/spt/config/IRepairConfig";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { ConfigChecker } from "../utils/utils";
+import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 const mastering = require("../../db/items/mastering.json");
 
 export class WeaponsGlobals {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
-    private globalDB = this.tables.globals.config;
-    private itemDB = this.tables.templates.items;
-
-
+    globalDB(): IConfig {
+        return this.tables.globals.config;
+    }
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
+    
     public loadGlobalMalfChanges() {
 
-        this.globalDB.Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
-        this.globalDB.Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
-        this.globalDB.Overheat.MaxCOIIncreaseMult = 4;
-        this.globalDB.Overheat.FirerateReduceMinMult = 1;
-        this.globalDB.Overheat.FirerateOverheatBorder = 120;
-        this.globalDB.Overheat.AutoshotChance = 0.4;
-        this.globalDB.Overheat.OverheatProblemsStart = 70;
-        this.globalDB.Overheat.MinWearOnOverheat = 0.2;
-        this.globalDB.Overheat.MaxWearOnOverheat = 0.4;
+        this.globalDB().Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
+        this.globalDB().Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
+        this.globalDB().Overheat.MaxCOIIncreaseMult = 4;
+        this.globalDB().Overheat.FirerateReduceMinMult = 1;
+        this.globalDB().Overheat.FirerateOverheatBorder = 120;
+        this.globalDB().Overheat.AutoshotChance = 0.4;
+        this.globalDB().Overheat.OverheatProblemsStart = 70;
+        this.globalDB().Overheat.MinWearOnOverheat = 0.2;
+        this.globalDB().Overheat.MaxWearOnOverheat = 0.4;
 
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];
@@ -65,26 +70,26 @@ export class WeaponsGlobals {
         }
 
         if (this.modConf.mastery_changes == true) {
-            this.globalDB.Mastering = mastering.Mastering;
+            this.globalDB().Mastering = mastering.Mastering;
         }
 
         if (this.modConf.recoil_attachment_overhaul == true) {
-            this.globalDB.Aiming.RecoilXIntensityByPose["x"] = 1.1;
-            this.globalDB.Aiming.RecoilXIntensityByPose["y"] = 0.9;
-            this.globalDB.Aiming.RecoilXIntensityByPose["z"] = 1;
+            this.globalDB().Aiming.RecoilXIntensityByPose["x"] = 1.1;
+            this.globalDB().Aiming.RecoilXIntensityByPose["y"] = 0.9;
+            this.globalDB().Aiming.RecoilXIntensityByPose["z"] = 1;
 
-            this.globalDB.Aiming.RecoilYIntensityByPose["x"] = 0.9;
-            this.globalDB.Aiming.RecoilYIntensityByPose["y"] = 1.1;
-            this.globalDB.Aiming.RecoilYIntensityByPose["z"] = 1;
+            this.globalDB().Aiming.RecoilYIntensityByPose["x"] = 0.9;
+            this.globalDB().Aiming.RecoilYIntensityByPose["y"] = 1.1;
+            this.globalDB().Aiming.RecoilYIntensityByPose["z"] = 1;
 
-            this.globalDB.Aiming.RecoilZIntensityByPose["x"] = 0.75;
-            this.globalDB.Aiming.RecoilZIntensityByPose["y"] = 1.2;
-            this.globalDB.Aiming.RecoilZIntensityByPose["z"] = 1;
+            this.globalDB().Aiming.RecoilZIntensityByPose["x"] = 0.75;
+            this.globalDB().Aiming.RecoilZIntensityByPose["y"] = 1.2;
+            this.globalDB().Aiming.RecoilZIntensityByPose["z"] = 1;
 
-            this.globalDB.Aiming.ProceduralIntensityByPose["x"] = 0.15;
-            this.globalDB.Aiming.ProceduralIntensityByPose["y"] = 0.7;
+            this.globalDB().Aiming.ProceduralIntensityByPose["x"] = 0.15;
+            this.globalDB().Aiming.ProceduralIntensityByPose["y"] = 0.7;
 
-            this.globalDB.Aiming.AimProceduralIntensity = 1;
+            this.globalDB().Aiming.AimProceduralIntensity = 1;
 
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");

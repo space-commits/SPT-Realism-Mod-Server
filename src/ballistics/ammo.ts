@@ -1,17 +1,24 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
+import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 export class Ammo {
+    
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
-    private globalDB = this.tables.globals.config;
-    private itemDB = this.tables.templates.items;
+    globalDB(): IConfig {
+        return this.tables.globals.config;
+    }
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
 
     public loadAmmoStats() {
-        this.globalDB.Ballistic.GlobalDamageDegradationCoefficient = 0.7;
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        this.globalDB().Ballistic.GlobalDamageDegradationCoefficient = 0.7;
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             //// AMMO ////
             //// 12ga ////
             //Piranha
@@ -32,7 +39,7 @@ export class Ammo {
                 serverItem._props.ammoRec = -15;
                 serverItem._props.Tracer = true;
                 serverItem._props.TracerColor = "grey"
-      
+
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.7;
                     serverItem._props.MisfireChance = 0;
@@ -3720,8 +3727,8 @@ export class Ammo {
     }
 
     public loadAmmoFirerateChanges() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === ParentClasses.AMMO) {
                 serverItem._props.casingMass = Math.min(1.05, (serverItem._props.ammoRec / 500) + 1);
             }
@@ -3732,10 +3739,10 @@ export class Ammo {
     }
 
     public loadAmmoMalfChanges() {
-        const _9x18AmmoArr = this.itemDB["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
+        const _9x18AmmoArr = this.itemDB()["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
 
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === ParentClasses.AMMO) {
 
                 if (serverItem._props?.DurabilityBurnModificator !== undefined) {

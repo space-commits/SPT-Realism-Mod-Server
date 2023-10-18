@@ -2,13 +2,20 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AttatchmentBase = void 0;
 class AttatchmentBase {
+    logger;
+    tables;
+    arrays;
+    modConf;
+    utils;
     constructor(logger, tables, arrays, modConf, utils) {
         this.logger = logger;
         this.tables = tables;
         this.arrays = arrays;
         this.modConf = modConf;
         this.utils = utils;
-        this.itemDB = this.tables.templates.items;
+    }
+    itemDB() {
+        return this.tables.templates.items;
     }
     loadAttCompat() {
         const stocksArr = [
@@ -67,7 +74,7 @@ class AttatchmentBase {
             "_proto": "55d30c4c4bdc2db4468b457e"
         };
         for (let bf in buffertubes) {
-            this.itemDB[buffertubes[bf]]._props.Slots = [];
+            this.itemDB()[buffertubes[bf]]._props.Slots = [];
             for (let slot in slots) {
                 let newStockSlot = { ...stockSlot };
                 newStockSlot._name = slots[slot];
@@ -80,14 +87,14 @@ class AttatchmentBase {
                 else {
                     newStockSlot._mergeSlotWithChildren = false;
                 }
-                this.itemDB[buffertubes[bf]]._props.Slots.push(newStockSlot);
+                this.itemDB()[buffertubes[bf]]._props.Slots.push(newStockSlot);
             }
         }
         for (let stock in stocksArr) {
-            this.itemDB[stocksArr[stock]]._props.ConflictingItems = stocksArr;
+            this.itemDB()[stocksArr[stock]]._props.ConflictingItems = stocksArr;
         }
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === "55818a104bdc2db9688b4569") {
                 for (let slot in serverItem._props.Slots) {
                     if (serverItem._props.Slots[slot]._name === "mod_scope" || serverItem._props.Slots[slot]._name === "mod_tactical") {
@@ -142,8 +149,8 @@ class AttatchmentBase {
     }
     loadAttRequirements() {
         if (this.modConf.bot_changes == true) {
-            for (let i in this.itemDB) {
-                let serverItem = this.itemDB[i];
+            for (let i in this.itemDB()) {
+                let serverItem = this.itemDB()[i];
                 if (serverItem._id === "5b31163c5acfc400153b71cb"
                     || serverItem._id === "58d2664f86f7747fec5834f6"
                     || serverItem._id === "5c7d55f52e221644f31bff6a"

@@ -3,25 +3,34 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Armor = void 0;
 const enums_1 = require("../utils/enums");
 class Armor {
+    logger;
+    tables;
+    modConf;
     constructor(logger, tables, modConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.globalDB = this.tables.globals.config;
-        this.itemDB = this.tables.templates.items;
-        this.armMat = this.globalDB.ArmorMaterials;
+    }
+    globalDB() {
+        return this.tables.globals.config;
+    }
+    itemDB() {
+        return this.tables.templates.items;
+    }
+    armMat() {
+        return this.globalDB().ArmorMaterials;
     }
     loadArmor() {
         //Armor Destructibility values
-        this.armMat.Glass.Destructibility = 0.6;
-        this.armMat.Aramid.Destructibility = 0.24;
-        this.armMat.Ceramic.Destructibility = 0.18;
-        this.armMat.Combined.Destructibility = 0.16;
-        this.armMat.UHMWPE.Destructibility = 0.13;
-        this.armMat.Titan.Destructibility = 0.06;
-        this.armMat.ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represetns loss of anti-spall coating
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        this.armMat().Glass.Destructibility = 0.6;
+        this.armMat().Aramid.Destructibility = 0.24;
+        this.armMat().Ceramic.Destructibility = 0.18;
+        this.armMat().Combined.Destructibility = 0.16;
+        this.armMat().UHMWPE.Destructibility = 0.13;
+        this.armMat().Titan.Destructibility = 0.06;
+        this.armMat().ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represetns loss of anti-spall coating
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             ////////Body Armor//////////
             //// Class 3////
             //Module-3M bodyarmor
@@ -1669,7 +1678,8 @@ class Armor {
             }
             //Buff Helemts
             if (serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) {
-                if (this.modConf.buff_helmets == true && serverItem._props.armorClass < 10 && serverItem._props.armorClass > 0) {
+                let armorLevl = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass);
+                if (this.modConf.buff_helmets == true && armorLevl < 10 && armorLevl > 0) {
                     serverItem._props.armorClass = +serverItem._props.armorClass + 1;
                     if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) {
                         serverItem._props.Durability *= 1.25;
@@ -1698,58 +1708,65 @@ class Armor {
         }
     }
     assignArmorZones() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG) && serverItem?._props?.armorClass != null && serverItem?._props?.armorClass > 0) {
-                if (serverItem._props.armorZone.includes("LeftArm") || serverItem._props.armorZone.includes("RightArm")) {
-                    serverItem._props.armorZone = ["Chest", "Stomach", "LeftArm", "RightArm"];
-                }
-                else {
-                    serverItem._props.armorZone = ["Chest", "Stomach"];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            if (serverItem?._props?.armorClass != undefined) {
+                let armorLevl = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass);
+                if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG) && armorLevl > 0) {
+                    if (serverItem._props.armorZone.includes("LeftArm") || serverItem._props.armorZone.includes("RightArm")) {
+                        serverItem._props.armorZone = ["Chest", "Stomach", "LeftArm", "RightArm"];
+                    }
+                    else {
+                        serverItem._props.armorZone = ["Chest", "Stomach"];
+                    }
                 }
             }
         }
     }
     armorBluntMulti() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG) && serverItem?._props.armorClass != null && serverItem?._props.ArmorMaterial !== "ArmoredSteel" && serverItem?._props.ArmorMaterial !== "Titan") {
-                if (serverItem._props.armorClass >= 3 && serverItem._props.armorClass <= 5) {
-                    serverItem._props.BluntThroughput *= 1;
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            if (serverItem?._props?.armorClass != undefined) {
+                let armorLevl = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass);
+                if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG) && serverItem?._props.armorClass != null && serverItem?._props.ArmorMaterial !== "ArmoredSteel" && serverItem?._props.ArmorMaterial !== "Titan") {
+                    if (armorLevl >= 3 && armorLevl <= 5) {
+                        this.logger.warning("Armor above 3 below 5: " + serverItem._id + " " + serverItem._name);
+                        serverItem._props.BluntThroughput *= 1;
+                    }
+                    if (armorLevl >= 6 && armorLevl <= 7) {
+                        serverItem._props.BluntThroughput *= 1;
+                    }
+                    if (serverItem._props.armorClass === 8) {
+                        serverItem._props.BluntThroughput *= 1;
+                    }
+                    if (armorLevl >= 9) {
+                        serverItem._props.BluntThroughput *= 1;
+                    }
                 }
-                if (serverItem._props.armorClass >= 6 && serverItem._props.armorClass <= 7) {
-                    serverItem._props.BluntThroughput *= 1;
+                if ((serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER) && serverItem?._props.armorClass != null) {
+                    if (armorLevl === 3) {
+                        serverItem._props.BluntThroughput *= 1.45; //1.15
+                    }
+                    if (armorLevl === 4) {
+                        serverItem._props.BluntThroughput *= 2.08; //1.35
+                    }
+                    if (armorLevl === 5) {
+                        serverItem._props.BluntThroughput *= 2.21; //1.45
+                    }
+                    if (armorLevl >= 6) {
+                        serverItem._props.BluntThroughput *= 1.36; //1.25
+                    }
                 }
-                if (serverItem._props.armorClass === 8) {
-                    serverItem._props.BluntThroughput *= 1;
-                }
-                if (serverItem._props.armorClass >= 9) {
-                    serverItem._props.BluntThroughput *= 1;
-                }
-            }
-            if ((serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER) && serverItem?._props.armorClass != null) {
-                if (serverItem._props.armorClass === 3) {
-                    serverItem._props.BluntThroughput *= 1.45; //1.15
-                }
-                if (serverItem._props.armorClass === 4) {
-                    serverItem._props.BluntThroughput *= 2.08; //1.35
-                }
-                if (serverItem._props.armorClass === 5) {
-                    serverItem._props.BluntThroughput *= 2.21; //1.45
-                }
-                if (serverItem._props.armorClass >= 6) {
-                    serverItem._props.BluntThroughput *= 1.36; //1.25
-                }
-            }
-            if ((serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) && serverItem?._props.armorClass != null && serverItem?._props.ArmorMaterial !== "Glass") {
-                if (serverItem._props.armorClass === 3) {
-                    serverItem._props.BluntThroughput *= 1.2;
-                }
-                if (serverItem._props.armorClass === 4) {
-                    serverItem._props.BluntThroughput *= 1.3;
-                }
-                if (serverItem._props.armorClass >= 8) {
-                    serverItem._props.BluntThroughput *= 1.4;
+                if ((serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT) && serverItem?._props.armorClass != null && serverItem?._props.ArmorMaterial !== "Glass") {
+                    if (armorLevl === 3) {
+                        serverItem._props.BluntThroughput *= 1.2;
+                    }
+                    if (armorLevl === 4) {
+                        serverItem._props.BluntThroughput *= 1.3;
+                    }
+                    if (armorLevl >= 8) {
+                        serverItem._props.BluntThroughput *= 1.4;
+                    }
                 }
             }
         }
@@ -1758,8 +1775,8 @@ class Armor {
         }
     }
     armorMousePenalty() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.HEADWEAR
                 || serverItem._parent === enums_1.ParentClasses.FACECOVER || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT
                 || serverItem._parent === enums_1.ParentClasses.BACKPACK || serverItem._parent === enums_1.ParentClasses.CHESTRIG)
@@ -1776,8 +1793,8 @@ class Armor {
         }
     }
     assignArmorPenRequirements() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem?._props?.armorClass !== undefined) {
                 if (serverItem._props.ArmorMaterial === "Glass") {
                     if (serverItem._props.armorClass === 1) {

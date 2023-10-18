@@ -1,10 +1,143 @@
+import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 
 export class Arrays {
 
-    constructor(private tables: IDatabaseTables) { }
+    public bossBotArr: IBotType[];
+    public botArr: IBotType[];
+    public midBotHPArr: IBotType[];
+    public cultistArr: IBotType[];
+    public standardBotHPArr: IBotType[];
+    public bossFollowerArr: IBotType[];
+    public rogueRaiderList: IBotType[];
 
-    private botDB = this.tables.bots.types;
+    constructor(private tables: IDatabaseTables) {
+        var botDB = this.tables.bots.types;
+
+        this.bossBotArr = [
+            botDB["bosssanitar"],
+            botDB["bosskojaniy"],
+            botDB["bosskilla"],
+            botDB["bossgluhar"],
+            botDB["bossbully"],
+            botDB["bossknight"],
+            botDB["bosstagilla"],
+            botDB["followerbigpipe"],
+            botDB["followerbirdeye"],
+            botDB["sectantpriest"],
+            botDB["bosszryachiy"],
+            botDB["bossboar"],
+        ];
+
+        this.bossFollowerArr = [
+            botDB["followerbully"],
+            botDB["followergluharassault"],
+            botDB["followergluharscout"],
+            botDB["followergluharsecurity"],
+            botDB["followergluharsnipe"],
+            botDB["followerkojaniy"],
+            botDB["followersanitar"],
+            botDB["followertagilla"],
+            botDB["followerzryachiy"],
+            botDB["followerboar"],
+            botDB["bossboarsniper"]
+        ];
+
+        this.rogueRaiderList = [
+            botDB["followerbully"],
+            botDB["followergluharassault"],
+            botDB["followergluharscout"],
+            botDB["followergluharsecurity"],
+            botDB["followergluharsnipe"],
+            botDB["followerkojaniy"],
+            botDB["followersanitar"],
+            botDB["followertagilla"],
+            botDB["followerzryachiy"],
+            botDB["followerboar"],
+            botDB["bossboarsniper"]
+        ];
+
+        this.cultistArr = [
+            botDB["followerbully"],
+            botDB["followergluharassault"],
+            botDB["followergluharscout"],
+            botDB["followergluharsecurity"],
+            botDB["followergluharsnipe"],
+            botDB["followerkojaniy"],
+            botDB["followersanitar"],
+            botDB["followertagilla"],
+            botDB["followerzryachiy"],
+            botDB["followerboar"],
+            botDB["bossboarsniper"]
+        ];
+
+
+        this.standardBotHPArr = [
+            botDB["followerbully"],
+            botDB["followergluharassault"],
+            botDB["followergluharscout"],
+            botDB["followergluharsecurity"],
+            botDB["followergluharsnipe"],
+            botDB["followerkojaniy"],
+            botDB["followersanitar"],
+            botDB["followertagilla"],
+            botDB["followerzryachiy"],
+            botDB["followerboar"],
+            botDB["bossboarsniper"]
+        ];
+
+        this.midBotHPArr = [
+            botDB["followerbully"],
+            botDB["followergluharassault"],
+            botDB["followergluharscout"],
+            botDB["followergluharsecurity"],
+            botDB["followergluharsnipe"],
+            botDB["followerkojaniy"],
+            botDB["followersanitar"],
+            botDB["followertagilla"],
+            botDB["sectantwarrior"],
+            botDB["pmcbot"],
+            botDB["exusec"],
+            botDB["followerzryachiy"],
+            botDB["bossboarsniper"],
+            botDB["followerboar"]
+        ];
+
+        this.botArr = [
+            botDB["followerbully"],
+            botDB["followergluharassault"],
+            botDB["followergluharscout"],
+            botDB["followergluharsecurity"],
+            botDB["followergluharsnipe"],
+            botDB["followerkojaniy"],
+            botDB["followersanitar"],
+            botDB["followertagilla"],
+            botDB["usec"],
+            botDB["bear"],
+            botDB["sectantwarrior"],
+            botDB["sectantpriest"],
+            botDB["assault"],
+            botDB["marksman"],
+            botDB["cursedassault"],
+            botDB["bosstagilla"],
+            botDB["bosssanitar"],
+            botDB["bosskojaniy"],
+            botDB["bosskilla"],
+            botDB["bossgluhar"],
+            botDB["bossbully"],
+            botDB["pmcbot"],
+            botDB["exusec"],
+            botDB["bossknight"],
+            botDB["followerbigpipe"],
+            botDB["followerbirdeye"],
+            botDB["bosszryachiy"],
+            botDB["followerzryachiy"],
+            botDB["bossboarsniper"],
+            botDB["followerboar"],
+            botDB["bossboar"]
+        ];
+
+    }
 
     public pmcLootGen = {
         "items": {
@@ -396,104 +529,6 @@ export class Arrays {
         Holster: "Holster",
         Scabbard: "Scabbard"
     };
-
-    public bossBotArr = [
-        this.botDB["bosssanitar"],
-        this.botDB["bosskojaniy"],
-        this.botDB["bosskilla"],
-        this.botDB["bossgluhar"],
-        this.botDB["bossbully"],
-        this.botDB["bossknight"],
-        this.botDB["bosstagilla"],
-        this.botDB["followerbigpipe"],
-        this.botDB["followerbirdeye"],
-        this.botDB["sectantpriest"],
-        this.botDB["bosszryachiy"],
-        this.botDB["bossboar"],
-    ];
-
-    public bossFollowerArr = [
-        this.botDB["followerbully"],
-        this.botDB["followergluharassault"],
-        this.botDB["followergluharscout"],
-        this.botDB["followergluharsecurity"],
-        this.botDB["followergluharsnipe"],
-        this.botDB["followerkojaniy"],
-        this.botDB["followersanitar"],
-        this.botDB["followertagilla"],
-        this.botDB["followerzryachiy"],
-        this.botDB["followerboar"],
-        this.botDB["bossboarsniper"]
-    ];
-
-    public rogueRaiderList = [
-        this.botDB["pmcbot"],
-        this.botDB["exusec"],
-    ];
-
-    public cultistArr = [
-        this.botDB["sectantwarrior"],
-        this.botDB["sectantpriest"],
-    ];
-
-    public standardBotHPArr = [
-        this.botDB["marksman"],
-        this.botDB["usec"],
-        this.botDB["bear"],
-        this.botDB["cursedassault"],
-        this.botDB["assault"]
-    ];
-
-    public midBotHPArr = [
-        this.botDB["followerbully"],
-        this.botDB["followergluharassault"],
-        this.botDB["followergluharscout"],
-        this.botDB["followergluharsecurity"],
-        this.botDB["followergluharsnipe"],
-        this.botDB["followerkojaniy"],
-        this.botDB["followersanitar"],
-        this.botDB["followertagilla"],
-        this.botDB["sectantwarrior"],
-        this.botDB["pmcbot"],
-        this.botDB["exusec"],
-        this.botDB["followerzryachiy"],
-        this.botDB["bossboarsniper"],
-        this.botDB["followerboar"]
-    ];
-
-    public botArr = [
-        this.botDB["followerbully"],
-        this.botDB["followergluharassault"],
-        this.botDB["followergluharscout"],
-        this.botDB["followergluharsecurity"],
-        this.botDB["followergluharsnipe"],
-        this.botDB["followerkojaniy"],
-        this.botDB["followersanitar"],
-        this.botDB["followertagilla"],
-        this.botDB["usec"],
-        this.botDB["bear"],
-        this.botDB["sectantwarrior"],
-        this.botDB["sectantpriest"],
-        this.botDB["assault"],
-        this.botDB["marksman"],
-        this.botDB["cursedassault"],
-        this.botDB["bosstagilla"],
-        this.botDB["bosssanitar"],
-        this.botDB["bosskojaniy"],
-        this.botDB["bosskilla"],
-        this.botDB["bossgluhar"],
-        this.botDB["bossbully"],
-        this.botDB["pmcbot"],
-        this.botDB["exusec"],
-        this.botDB["bossknight"],
-        this.botDB["followerbigpipe"],
-        this.botDB["followerbirdeye"],
-        this.botDB["bosszryachiy"],
-        this.botDB["followerzryachiy"],
-        this.botDB["bossboarsniper"],
-        this.botDB["followerboar"],
-        this.botDB["bossboar"]
-    ];
 
     public modTypes = {
         "FlashHider": "550aa4bf4bdc2dd6348b456b",
