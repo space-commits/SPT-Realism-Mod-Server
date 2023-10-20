@@ -2,12 +2,19 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Quests = void 0;
 class Quests {
+    logger;
+    tables;
+    modConf;
     constructor(logger, tables, modConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.questDB = this.tables.templates.quests;
-        this.locales = this.tables.locales.global["en"];
+    }
+    localesEN() {
+        return this.tables.locales.global["en"];
+    }
+    questDB() {
+        return this.tables.templates.quests;
     }
     removeFIRQuestRequire() {
         for (let quest in this.questDB) {
@@ -37,15 +44,15 @@ class Quests {
         conditions[num]._props.durability.value = 200;
     }
     fixMechancicQuests() {
-        for (let quest in this.questDB) {
-            if (this.questDB[quest].QuestName.includes("Gunsmith")) {
-                let conditions = this.questDB[quest].conditions.AvailableForFinish;
+        for (let quest in this.questDB()) {
+            if (this.questDB()[quest].QuestName.includes("Gunsmith")) {
+                let conditions = this.questDB()[quest].conditions.AvailableForFinish;
                 for (let i = 0; i < conditions.length; i++) {
                     this.changeGunsmishRequirements(conditions, i);
                 }
-                let id = this.questDB[quest]._id;
-                let desc = this.locales[id + " description"];
-                this.locales[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
+                let id = this.questDB()[quest]._id;
+                let desc = this.localesEN()[id + " description"];
+                this.localesEN()[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
             }
         }
         if (this.modConf.logEverything == true) {

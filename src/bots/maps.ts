@@ -8,57 +8,57 @@ const bossSpawns = require("../../db/maps/bossSpawns.json");
 const spawnWaves = require("../../db/maps/spawnWaves.json");
 
 export class Spawns {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private mapDB: ILocations) { }
 
 
-    public setBossSpawnChance(mapDB: ILocations, level: number) {
+    public setBossSpawnChance(level: number) {
         if (level <= 5) {
-            this.bossSpawnHelper(mapDB, 0.1);
+            this.bossSpawnHelper(0.1);
         }
         else if (level <= 10) {
-            this.bossSpawnHelper(mapDB, 0.2);
+            this.bossSpawnHelper(0.2);
         }
         else if (level <= 15) {
-            this.bossSpawnHelper(mapDB, 0.3);
+            this.bossSpawnHelper(0.3);
         }
         else if (level <= 20) {
-            this.bossSpawnHelper(mapDB, 0.5);
+            this.bossSpawnHelper(0.5);
         }
         else if (level <= 25) {
-            this.bossSpawnHelper(mapDB, 0.6);
+            this.bossSpawnHelper(0.6);
         }
         else if (level <= 30) {
-            this.bossSpawnHelper(mapDB, 0.7);
+            this.bossSpawnHelper(0.7);
         }
-        else  if (level <= 35) {
-            this.bossSpawnHelper(mapDB, 0.9);
+        else if (level <= 35) {
+            this.bossSpawnHelper(0.9);
         }
         else if (level <= 40) {
-            this.bossSpawnHelper(mapDB, 0.95);
+            this.bossSpawnHelper(0.95);
         }
-        else  if (level <= 45) {
-            this.bossSpawnHelper(mapDB, 1);
+        else if (level <= 45) {
+            this.bossSpawnHelper(1);
         }
-        else  if (level <= 50) {
-            this.bossSpawnHelper(mapDB, 1.05);
+        else if (level <= 50) {
+            this.bossSpawnHelper(1.05);
         }
         else if (level > 50) {
-            this.bossSpawnHelper(mapDB, 1.1);
+            this.bossSpawnHelper(1.1);
         }
     }
 
-    private bossSpawnHelper(mapDB: ILocations, chanceMulti: number) {
-        for (let i in mapDB) {
-            if (i !== "lighthouse" && i !== "laboratory" && mapDB[i].base?.BossLocationSpawn !== undefined) {
-                for (let k in mapDB[i].base.BossLocationSpawn) {
-                    let chance = mapDB[i].base.BossLocationSpawn[k].BossChance;
-                    if (mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
-                        chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
-                        mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(10, Math.min(chance, 100));
+    private bossSpawnHelper(chanceMulti: number) {
+        for (let i in this.mapDB) {
+            if (i !== "lighthouse" && i !== "laboratory" && this.mapDB[i].base?.BossLocationSpawn !== undefined) {
+                for (let k in this.mapDB[i].base.BossLocationSpawn) {
+                    let chance = this.mapDB[i].base.BossLocationSpawn[k].BossChance;
+                    if (this.mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && this.mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
+                        chance = Math.round(this.mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
+                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(10, Math.min(chance, 100));
                     }
                     else {
-                        chance = Math.round(mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                        mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(1, Math.min(chance, 100));
+                        chance = Math.round(this.mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
+                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(1, Math.min(chance, 100));
                     }
                 }
             }
@@ -67,7 +67,7 @@ export class Spawns {
 
     public loadSpawnChanges() {
 
-        if(this.modConf.boss_spawns == true){
+        if (this.modConf.boss_spawns == true) {
             this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;
             this.tables.locations.factory4_day.base.BossLocationSpawn = bossSpawns.FactoryDayBossLocationSpawn;
             this.tables.locations.factory4_night.base.BossLocationSpawn = bossSpawns.FactoryNightBossLocationSpawn;
@@ -77,10 +77,10 @@ export class Spawns {
             this.tables.locations.lighthouse.base.BossLocationSpawn = bossSpawns.LighthouseBossLocationSpawn;
             this.tables.locations.laboratory.base.BossLocationSpawn = bossSpawns.LabsBossLocationSpawn;
             this.tables.locations.woods.base.BossLocationSpawn = bossSpawns.WoodsBossLocationSpawn;
-            this.tables.locations.tarkovstreets.base.BossLocationSpawn = bossSpawns.StreetsBossLocationSpawn;  
+            this.tables.locations.tarkovstreets.base.BossLocationSpawn = bossSpawns.StreetsBossLocationSpawn;
         }
 
-        if(this.modConf.spawn_waves == true){
+        if (this.modConf.spawn_waves == true) {
             this.tables.locations.bigmap.base.waves = spawnWaves.CustomsWaves;
             this.tables.locations.lighthouse.base.waves = spawnWaves.LighthouseWaves;
             this.tables.locations.factory4_day.base.waves = spawnWaves.FactoryWaves;
@@ -97,7 +97,7 @@ export class Spawns {
             this.logger.info("Map Spawn Changes Loaded");
         }
     }
-    
+
     public openZonesFix() {
 
         for (let location in botZones.zones) {

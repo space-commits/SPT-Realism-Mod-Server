@@ -1,34 +1,10 @@
 {
     "usecLO4": {
         "experience": {
-            "aggressorBonus": 0.02,
+            "aggressorBonus": 0.04,
             "level": {
                 "max": 70,
                 "min": 46
-            }
-        },
-        "appearance": {
-            "body": {
-                "5fcf63da5c287f01f22bf245": 1,
-                "618109c96d7ca35d076b3363": 1,
-                "5fd3e9f71b735718c25cd9f8": 1,
-                "637b945722e2a933ed0e33c8": 1,
-                "5d1f56e486f7744bce0ee9ed": 1,
-                "5e4bb35286f77406a511c9bc": 1,
-                "5e9da17386f774054b6f79a3": 1
-            },
-            "feet": {
-                "5fcf940bce1ba36a513bb9cc": 1,
-                "6295e944e9de5e7b3751c4da": 1,
-                "5d1f592286f7743f8362bcdb": 1,
-                "6033a3fee29c9f6c9b14e74e": 1,
-                "637ba17aa10a96c2b605dbc2": 1,
-                "5d1f590486f7744bcd13459e": 1,
-                "5d1f591186f7744bcc048755": 1,
-                "617c02e24013b06b0b78df80": 1,
-                "5d1f593286f7743014162044": 1,
-                "5df8a08886f7740bfe6df775": 1,
-                "5f5e40a06760b4138443b341": 1
             }
         },
         "inventory": {
@@ -188,29 +164,14 @@
                     "5ba26844d4351e00334c9475": 1
                 }
             },
-            "FirstPrimaryWeapon_cqb": {},
-            "FirstPrimaryWeapon_urban": {},
-            "FirstPrimaryWeapon_outdoor": {
-                "5df24cf80dee1b22f862e9bc": 1,
-                "55801eed4bdc2d89578b4588": 1,
-                "5bfea6e90db834001b7347f3": 1,
-                "627e14b21713922ded6f2c15": 1,
-                "588892092459774ac91d4b11": 1,
-                "5fc22d7c187fea44d52eda44": 1,
-                "5a367e5dc4a282000e49738f": 1,
-                "5df8ce05b11454561e39243b": 1,
-                "5c46fbd72e2216398b5a8c9c": 1,
-                "57c44b372459772d2b39b8ce": 1,
-                "6176aca650224f204c1da3fb": 1,
+            "FirstPrimaryWeapon_cqb": {
                 "5dcbd56fdbd3d91b3e5468d5": 1,
-                "6165ac306ef05c2ce828ef74": 1,
                 "6183afd850224f204c1da514": 1,
                 "5b0bbe4e5acfc40dc528a72d": 1,
                 "623063e994fc3f7b302a9696": 1,
                 "5bb2475ed4351e00853264e3": 1,
                 "5fbcc1d9016cce60e8341ab3": 1,
                 "606587252535c57a13424cfd": 1,
-                "628a60ae6b1d481ff772e9c8": 1,
                 "5ac66d725acfc43b321d4b60": 1,
                 "5beed0f50db834001c062b12": 1,
                 "64ca3d3954fc657e230529cc": 1,
@@ -219,7 +180,56 @@
                 "62e14904c2699c0ec93adc47": 1,
                 "58948c8e86f77409493f7266": 1,
                 "5fc3f2d5900b1d5091531e57": 1,
-                "5fb64bc92b1b027b1f50bcf2": 1,
+                "5bd70322209c4d00d7167b8f": 1,
+                "5cc82d76e24e8d00134b4b83": 1,
+                "5cadfbf7ae92152ac412eeef": 1,
+                "5e848cc2988a8701445df1e8": 1
+            },
+            "FirstPrimaryWeapon_urban": {
+                "5a367e5dc4a282000e49738f": 1,
+                "6176aca650224f204c1da3fb": 1,
+                "5dcbd56fdbd3d91b3e5468d5": 1,
+                "6183afd850224f204c1da514": 1,
+                "5b0bbe4e5acfc40dc528a72d": 1,
+                "623063e994fc3f7b302a9696": 1,
+                "5bb2475ed4351e00853264e3": 1,
+                "5fbcc1d9016cce60e8341ab3": 1,
+                "606587252535c57a13424cfd": 1,
+                "5ac66d725acfc43b321d4b60": 1,
+                "5beed0f50db834001c062b12": 1,
+                "64ca3d3954fc657e230529cc": 1,
+                "6259b864ebedf17603599e88": 1,
+                "576165642459773c7a400233": 1,
+                "62e14904c2699c0ec93adc47": 1,
+                "58948c8e86f77409493f7266": 1,
+                "5fc3f2d5900b1d5091531e57": 1,
+                "5bd70322209c4d00d7167b8f": 1,
+                "5cc82d76e24e8d00134b4b83": 1,
+                "5cadfbf7ae92152ac412eeef": 1,
+                "5e848cc2988a8701445df1e8": 1
+            },
+            "FirstPrimaryWeapon_outdoor": {
+                "5df24cf80dee1b22f862e9bc": 1,
+                "627e14b21713922ded6f2c15": 1,
+                "588892092459774ac91d4b11": 1,
+                "5fc22d7c187fea44d52eda44": 1,
+                "5a367e5dc4a282000e49738f": 1,
+                "6176aca650224f204c1da3fb": 1,
+                "5dcbd56fdbd3d91b3e5468d5": 1,
+                "6183afd850224f204c1da514": 1,
+                "5b0bbe4e5acfc40dc528a72d": 1,
+                "5447a9cd4bdc2dbd208b4567": 1,
+                "5bb2475ed4351e00853264e3": 1,
+                "5fbcc1d9016cce60e8341ab3": 1,
+                "606587252535c57a13424cfd": 1,
+                "5ac66d725acfc43b321d4b60": 1,
+                "5beed0f50db834001c062b12": 1,
+                "64ca3d3954fc657e230529cc": 1,
+                "6259b864ebedf17603599e88": 1,
+                "576165642459773c7a400233": 1,
+                "62e14904c2699c0ec93adc47": 1,
+                "58948c8e86f77409493f7266": 1,
+                "5fc3f2d5900b1d5091531e57": 1,
                 "5bd70322209c4d00d7167b8f": 1,
                 "5cc82d76e24e8d00134b4b83": 1,
                 "5cadfbf7ae92152ac412eeef": 1,
@@ -432,15 +442,15 @@
             "equipment": {
                 "Headwear": 100,
                 "Earpiece": 70,
-                "FaceCover": 70,
+                "FaceCover": 100,
                 "ArmorVest": 100,
-                "Eyewear": 70,
+                "Eyewear": 100,
                 "ArmBand": 100,
                 "TacticalVest": 100,
-                "Backpack": 90,
+                "Backpack": 100,
                 "FirstPrimaryWeapon": 100,
                 "SecondPrimaryWeapon": 0,
-                "Holster": 40,
+                "Holster": 100,
                 "Scabbard": 100,
                 "Pockets": 100,
                 "SecuredContainer": 100
@@ -490,38 +500,6 @@
                 "mod_catch": 100,
                 "mod_bipod": 100,
                 "mod_barrel": 100
-            }
-        },
-        "generation": {
-            "items": {
-                "specialItems": {
-                    "min": 0,
-                    "max": 0
-                },
-                "healing": {
-                    "min": 1,
-                    "max": 2
-                },
-                "drugs": {
-                    "min": 0,
-                    "max": 1
-                },
-                "stims": {
-                    "min": 0,
-                    "max": 2
-                },
-                "looseLoot": {
-                    "min": 1,
-                    "max": 10
-                },
-                "magazines": {
-                    "min": 3,
-                    "max": 5
-                },
-                "grenades": {
-                    "min": 1,
-                    "max": 2
-                }
             }
         }
     }

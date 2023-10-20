@@ -48,6 +48,12 @@ const mechId = "5a7c2eca46aef81a7ca2145d";
 const ragmId = "5ac3b934156ae10c4430e83c";
 const jaegId = "5c0647fdd443bc2504c2d371";
 class Traders {
+    logger;
+    tables;
+    modConf;
+    traderConf;
+    array;
+    utils;
     constructor(logger, tables, modConf, traderConf, array, utils) {
         this.logger = logger;
         this.tables = tables;
@@ -55,7 +61,9 @@ class Traders {
         this.traderConf = traderConf;
         this.array = array;
         this.utils = utils;
-        this.itemDB = this.tables.templates.items;
+    }
+    itemDB() {
+        return this.tables.templates.items;
     }
     loadTraderTweaks() {
         // this.tables.traders['54cb50c76803fa8b248b4571'].base.sell_category = sellCatPrap;
@@ -129,7 +137,7 @@ class Traders {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
-                            if (this.itemDB[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
+                            if (this.itemDB()[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
                                 this.tables.traders[trader].assort.loyal_level_items[id] = Math.max(1, loyaltyLvl - 1);
                             }
                             else {
@@ -274,14 +282,13 @@ class Traders {
 }
 exports.Traders = Traders;
 class RandomizeTraderAssort {
-    constructor() {
-        this.databaseServer = tsyringe_1.container.resolve("DatabaseServer");
-        this.logger = tsyringe_1.container.resolve("WinstonLogger");
-        this.tables = this.databaseServer.getTables();
-        this.itemDB = this.tables.templates.items;
-        this.arrays = new arrays_1.Arrays(this.tables);
-        this.utils = new utils_1.Utils(this.tables, this.arrays);
-    }
+    constructor() { }
+    databaseServer = tsyringe_1.container.resolve("DatabaseServer");
+    logger = tsyringe_1.container.resolve("WinstonLogger");
+    tables = this.databaseServer.getTables();
+    itemDB = this.tables.templates.items;
+    arrays = new arrays_1.Arrays(this.tables);
+    utils = new utils_1.Utils(this.tables, this.arrays);
     adjustTraderStockAtServerStart() {
         if (utils_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
@@ -510,6 +517,7 @@ class RagCallback extends RagfairCallbacks_1.RagfairCallbacks {
 }
 exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
+    pristineAssorts;
     myResetExpiredTrader(trader) {
         const traderId = trader.base._id;
         trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));

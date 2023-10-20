@@ -1,14 +1,16 @@
-import { AvailableForConditions } from "@spt-aki/models/eft/common/tables/IQuest";
+import { AvailableForConditions, IQuest } from "@spt-aki/models/eft/common/tables/IQuest";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 
 export class Quests {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
 
-    private questDB = this.tables.templates.quests;
-    private locales = this.tables.locales.global["en"];
-
-
+    localesEN(): Record<string, string> {
+        return this.tables.locales.global["en"];
+    }
+    questDB(): Record<string, IQuest> {
+        return this.tables.templates.quests;
+    }
 
     public removeFIRQuestRequire() {
         for (let quest in this.questDB) {
@@ -42,19 +44,19 @@ export class Quests {
 
     public fixMechancicQuests() {
 
-        for (let quest in this.questDB) {
-            if (this.questDB[quest].QuestName.includes("Gunsmith")) {
-                let conditions = this.questDB[quest].conditions.AvailableForFinish;
+        for (let quest in this.questDB()) {
+            if (this.questDB()[quest].QuestName.includes("Gunsmith")) {
+                let conditions = this.questDB()[quest].conditions.AvailableForFinish;
 
-                for (let i = 0; i < conditions.length; i++){
+                for (let i = 0; i < conditions.length; i++) {
                     this.changeGunsmishRequirements(conditions, i);
                 }
-                
-                let id = this.questDB[quest]._id;
 
-                let desc = this.locales[id + " description"];
+                let id = this.questDB()[quest]._id;
 
-                this.locales[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
+                let desc = this.localesEN()[id + " description"];
+
+                this.localesEN()[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
 
             }
         }

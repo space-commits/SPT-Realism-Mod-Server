@@ -3,11 +3,14 @@ import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 
 import { Arrays } from "../utils/arrays";
 import { ParentClasses } from "../utils/enums";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 export class Gear {
     constructor(private arrays: Arrays, private tables: IDatabaseTables, private logger: ILogger) { }
 
-    itemDB = this.tables.templates.items;
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
 
     public loadGearConflicts() {
 
@@ -16,15 +19,15 @@ export class Gear {
         var confNVG = this.arrays.conflNVGomponents
         var armorCompArr = [];
 
-        for (let item in this.itemDB) {
-            let serverItem = this.itemDB[item];
+        for (let item in this.itemDB()) {
+            let serverItem = this.itemDB()[item];
             if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {
                 armorCompArr.push(serverItem._id);
             }
         }
         for (let nvg in confNVG) {
-            for (let item in this.itemDB) {
-                let serverItem = this.itemDB[item];
+            for (let item in this.itemDB()) {
+                let serverItem = this.itemDB()[item];
                 if (serverItem._id === confNVG[nvg]) {
                     let confItems = serverItem._props.ConflictingItems;
                     serverItem._props.ConflictingItems = confItems.concat(armorCompArr)
@@ -32,20 +35,20 @@ export class Gear {
             }
         }
         for (let hat in confHats) {
-            for (let item in this.itemDB) {
-                if (this.itemDB[item]._id === confHats[hat]) {
-                    let confItems = this.itemDB[item]._props.ConflictingItems;
-                    this.itemDB[item]._props.ConflictingItems = confMasks.concat(confItems);
+            for (let item in this.itemDB()) {
+                if (this.itemDB()[item]._id === confHats[hat]) {
+                    let confItems = this.itemDB()[item]._props.ConflictingItems;
+                    this.itemDB()[item]._props.ConflictingItems = confMasks.concat(confItems);
                 }
             }
         }
 
-        for (let item in this.itemDB) {
-            if (this.itemDB[item]._parent === ParentClasses.HEADWEAR) {
-                for(let c in this.itemDB[item]._props.ConflictingItems){
-                    let confItem = this.itemDB[item]._props.ConflictingItems[c];
-                    if( this.itemDB[confItem] !== undefined && this.itemDB[confItem]._parent === ParentClasses.HEADSET){
-                        this.itemDB[item]._props.ConflictingItems[c] = "";
+        for (let item in this.itemDB()) {
+            if (this.itemDB()[item]._parent === ParentClasses.HEADWEAR) {
+                for(let c in this.itemDB()[item]._props.ConflictingItems){
+                    let confItem = this.itemDB()[item]._props.ConflictingItems[c];
+                    if( this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === ParentClasses.HEADSET){
+                        this.itemDB()[item]._props.ConflictingItems[c] = "";
                     }                    
                 }
             }
@@ -53,9 +56,9 @@ export class Gear {
     }
 
     public loadHeadsetTweaks() {
-        for (let item in this.itemDB) {
-            let serverItem = this.itemDB[item];
-
+        for (let item in this.itemDB()) {
+            let serverItem = this.itemDB()[item];
+            
             //Sordin
             if (serverItem._id === "5aa2ba71e5b5b000137b758f") {
                 serverItem._props.Distortion = 0.1;
@@ -72,7 +75,7 @@ export class Gear {
                 serverItem._props.Resonance = 3;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -31;
-                serverItem._props.DryVolume = -50;
+                serverItem._props.DryVolume = -49;
                 serverItem._props.AmbientVolume = -1.5;
             }
 
@@ -82,7 +85,7 @@ export class Gear {
                 serverItem._props.Resonance = 2;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -33;
-                serverItem._props.DryVolume = -52;
+                serverItem._props.DryVolume = -50;
                 serverItem._props.AmbientVolume = -1.75;
             }
 
@@ -92,7 +95,7 @@ export class Gear {
                 serverItem._props.Resonance = 2.5;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -34;
-                serverItem._props.DryVolume = -54;
+                serverItem._props.DryVolume = -51;
                 serverItem._props.AmbientVolume = -1.75;
             }
 
@@ -102,18 +105,8 @@ export class Gear {
                 serverItem._props.Resonance = 0.5;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -36;
-                serverItem._props.DryVolume = -56;
+                serverItem._props.DryVolume = -52;
                 serverItem._props.AmbientVolume = -1.5;
-            }
-
-            //Opsmen Earmor M32
-            if (serverItem._id === "6033fa48ffd42c541047f728") {
-                serverItem._props.Distortion = 0.2;
-                serverItem._props.Resonance = 1.5;
-                serverItem._props.CompressorAttack = 1;
-                serverItem._props.CompressorTreshold = -37;
-                serverItem._props.DryVolume = -58;
-                serverItem._props.AmbientVolume = -2;
             }
 
             //FAST RAC
@@ -122,7 +115,17 @@ export class Gear {
                 serverItem._props.Resonance = 1;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -37;
-                serverItem._props.DryVolume = -58;
+                serverItem._props.DryVolume = -53;
+                serverItem._props.AmbientVolume = -2;
+            }
+
+            //Opsmen Earmor M32
+            if (serverItem._id === "6033fa48ffd42c541047f728") {
+                serverItem._props.Distortion = 0.2;
+                serverItem._props.Resonance = 1.5;
+                serverItem._props.CompressorAttack = 1;
+                serverItem._props.CompressorTreshold = -37;
+                serverItem._props.DryVolume = -54;
                 serverItem._props.AmbientVolume = -2;
             }
 
@@ -132,7 +135,7 @@ export class Gear {
                 serverItem._props.Resonance = 1;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -39;
-                serverItem._props.DryVolume = -60;
+                serverItem._props.DryVolume = -55;
                 serverItem._props.AmbientVolume = -2.25;
             }
 
@@ -142,7 +145,7 @@ export class Gear {
                 serverItem._props.Resonance = 1;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -41;
-                serverItem._props.DryVolume = -62;
+                serverItem._props.DryVolume = -56;
                 serverItem._props.AmbientVolume = -2.25;
             }
         }

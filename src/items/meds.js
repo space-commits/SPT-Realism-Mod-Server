@@ -2,24 +2,35 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Meds = void 0;
 class Meds {
+    logger;
+    tables;
+    modConf;
+    medItems;
+    buffs;
     constructor(logger, tables, modConf, medItems, buffs) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
         this.medItems = medItems;
         this.buffs = buffs;
-        this.globalDB = this.tables.globals.config;
-        this.itemDB = this.tables.templates.items;
-        this.buffDB = this.globalDB.Health.Effects.Stimulator.Buffs;
+    }
+    globalDB() {
+        return this.tables.globals.config;
+    }
+    itemDB() {
+        return this.tables.templates.items;
+    }
+    buffDB() {
+        return this.globalDB().Health.Effects.Stimulator.Buffs;
     }
     loadMeds() {
         //Adjust Thermal stim to compensate for lower base temp
-        this.globalDB.Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
+        this.globalDB().Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
         for (const buffName in this.buffs) {
-            this.buffDB[buffName] = this.buffs[buffName];
+            this.buffDB()[buffName] = this.buffs[buffName];
         }
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             ///Custom///
             if (serverItem._id === "SJ0") {
                 serverItem._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
@@ -64,7 +75,7 @@ class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "pillspain"); // med type
                 serverItem._props.ConflictingItems.splice(2, 0, "none"); // heavy bleed heal type
-                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tickred 
                 serverItem._props.ConflictingItems.splice(4, 0, "true"); //can be used in raid
                 serverItem._props.ConflictingItems.splice(5, 0, "600"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period

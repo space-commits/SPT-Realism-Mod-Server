@@ -59,6 +59,8 @@ const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
 var clientValidateCount = 0;
 class Main {
+    path;
+    modLoader;
     preAkiLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const jsonUtil = container.resolve("JsonUtil");
@@ -151,7 +153,7 @@ class Main {
                     const utils = new utils_1.Utils(postLoadTables, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
-                    const maps = new maps_1.Spawns(logger, postLoadTables, modConfig);
+                    const maps = new maps_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
@@ -204,7 +206,7 @@ class Main {
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
                         }
                         if (modConfig.boss_spawns == true) {
-                            maps.setBossSpawnChance(postLoadTables.locations, level);
+                            maps.setBossSpawnChance(level);
                         }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
@@ -258,7 +260,6 @@ class Main {
                         const weatherController = container.resolve("WeatherController");
                         const seasonalEventsService = container.resolve("SeasonalEventService");
                         const matchInfoStartOff = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
-                        const botConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.Arrays(postLoadTables);
                         const utils = new utils_1.Utils(postLoadTables, arrays);
@@ -454,7 +455,7 @@ class Main {
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
-        const maps = new maps_1.Spawns(logger, tables, modConfig);
+        const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations);
         const gear = new gear_1.Gear(arrays, tables, logger);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);

@@ -28,11 +28,17 @@ const path = __importStar(require("path"));
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
 class Utils {
+    tables;
+    arrays;
     constructor(tables, arrays) {
         this.tables = tables;
         this.arrays = arrays;
-        this.itemDB = this.tables.templates.items;
-        this.medItems = this.arrays.stashMeds;
+    }
+    itemDB() {
+        return this.tables.templates.items;
+    }
+    medItems() {
+        return this.arrays.stashMeds;
     }
     getInt(min, max) {
         min = Math.ceil(min);
@@ -46,9 +52,9 @@ class Utils {
         if (playerData?.Inventory !== undefined) {
             for (let i in playerData.Inventory.items) {
                 if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
-                    for (let j in this.medItems) {
-                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]) {
-                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                    for (let j in this.medItems()) {
+                        if (playerData.Inventory.items[i]._tpl === this.medItems()[j]) {
+                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB()[this.medItems()[j]]._props.MaxHpResource;
                         }
                     }
                 }
@@ -69,17 +75,17 @@ class Utils {
         }
     }
     correctMedicalRes(profileItem, pmcEXP) {
-        for (let j in this.medItems) {
-            if (profileItem._tpl === this.medItems[j]) {
-                if ((profileItem.upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
-                    profileItem.upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+        for (let j in this.medItems()) {
+            if (profileItem._tpl === this.medItems()[j]) {
+                if ((profileItem.upd.MedKit.HpResource > this.itemDB()[this.medItems()[j]]._props.MaxHpResource) || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
+                    profileItem.upd.MedKit.HpResource = this.itemDB()[this.medItems()[j]]._props.MaxHpResource;
                 }
             }
         }
     }
     correctDuraHelper(profileItem, pmcEXP) {
-        for (let j in this.itemDB) {
-            let serverItem = this.itemDB[j];
+        for (let j in this.itemDB()) {
+            let serverItem = this.itemDB()[j];
             if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
                 profileItem.upd.Repairable.Durability = serverItem._props.Durability;
                 profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;
@@ -139,29 +145,37 @@ class Utils {
 }
 exports.Utils = Utils;
 class ModTracker {
+    static batteryModPresent = false;
+    static sainPresent = false;
 }
 exports.ModTracker = ModTracker;
-ModTracker.batteryModPresent = false;
-ModTracker.sainPresent = false;
 class ProfileTracker {
+    static level = 1;
 }
 exports.ProfileTracker = ProfileTracker;
-ProfileTracker.level = 1;
 class ConfigChecker {
+    static dllIsPresent = false;
 }
 exports.ConfigChecker = ConfigChecker;
-ConfigChecker.dllIsPresent = false;
 class EventTracker {
+    static isChristmas = false;
 }
 exports.EventTracker = EventTracker;
-EventTracker.isChristmas = false;
 class RaidInfoTracker {
+    static TOD = "";
+    static mapType = "";
+    static mapName = "";
 }
 exports.RaidInfoTracker = RaidInfoTracker;
-RaidInfoTracker.TOD = "";
-RaidInfoTracker.mapType = "";
-RaidInfoTracker.mapName = "";
 class BotTierTracker {
+    static scavTier = 1;
+    static rogueTier = 1;
+    static raiderTier = 1;
+    static goonsTier = 1;
+    static killaTier = 1;
+    static tagillaTier = 1;
+    static sanitarTier = 1;
+    static reshallaTier = 1;
     getTier(botType) {
         if (botType === "assault") {
             return BotTierTracker.scavTier;
@@ -191,11 +205,3 @@ class BotTierTracker {
     }
 }
 exports.BotTierTracker = BotTierTracker;
-BotTierTracker.scavTier = 1;
-BotTierTracker.rogueTier = 1;
-BotTierTracker.raiderTier = 1;
-BotTierTracker.goonsTier = 1;
-BotTierTracker.killaTier = 1;
-BotTierTracker.tagillaTier = 1;
-BotTierTracker.sanitarTier = 1;
-BotTierTracker.reshallaTier = 1;

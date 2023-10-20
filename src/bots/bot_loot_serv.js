@@ -7,6 +7,21 @@ const BotLootGenerator_1 = require("C:/snapshot/project/obj/generators/BotLootGe
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const EquipmentSlots_1 = require("C:/snapshot/project/obj/models/enums/EquipmentSlots");
 class MyBotLootCache {
+    specialItems;
+    backpackLoot;
+    pocketLoot;
+    vestLoot;
+    combinedPoolLoot;
+    grenadeItems;
+    vestHealingItems;
+    vestDrugItems;
+    vestStimItems;
+    pocketHealingItems;
+    pocketDrugItems;
+    pocketStimItems;
+    bagHealingItems;
+    bagDrugItems;
+    bagStimItems;
 }
 exports.MyBotLootCache = MyBotLootCache;
 var MyLootCacheType;
@@ -130,6 +145,7 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
 }
 exports.BotLootGen = BotLootGen;
 class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
+    myLootCache = {};
     myBotRoleExistsInCache(botRole) {
         return !!this.myLootCache[botRole];
     }
@@ -154,6 +170,7 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
     }
     clearCache() {
         this.myLootCache = {};
+        this.lootCache = {};
     }
     getLootCache(botRole, isPmc, lootType, botJsonTemplate) {
         if (!this.myBotRoleExistsInCache(botRole)) {

@@ -4,12 +4,18 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
 import { IHideoutProduction } from "@spt-aki/models/eft/hideout/IHideoutProduction";
+import { IQuest } from "@spt-aki/models/eft/common/tables/IQuest";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 export class ItemCloning {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private jsonUtil: JsonUtil, private medItems, private crafts) { }
 
-    private itemDB = this.tables.templates.items;
-    private questDB = this.tables.templates.quests;
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
+    questDB(): Record<string, IQuest>{
+        return this.tables.templates.quests;
+    }
 
     public createCustomMedItems() {
         //Tier 1 Medkit
@@ -192,22 +198,21 @@ export class ItemCloning {
     }
 
     private pushAttToFilters(orignalId: string, newID: string) {
-        var itemDB = this.tables.templates.items;
-        for (let item in itemDB) {
-            for (let slot in itemDB[item]._props.Slots) {
-                if (itemDB[item]._props.Slots[slot]._props?.filters !== undefined && itemDB[item]._props.Slots[slot]._props.filters[0].Filter.includes(orignalId)) {
-                    itemDB[item]._props.Slots[slot]._props.filters[0].Filter.push(newID);
+        for (let item in this.itemDB()) {
+            for (let slot in this.itemDB()[item]._props.Slots) {
+                if (this.itemDB()[item]._props.Slots[slot]._props?.filters !== undefined && this.itemDB()[item]._props.Slots[slot]._props.filters[0].Filter.includes(orignalId)) {
+                    this.itemDB()[item]._props.Slots[slot]._props.filters[0].Filter.push(newID);
                 }
             }
-            if (itemDB[item]._props?.ConflictingItems !== undefined && itemDB[item]._props.ConflictingItems.includes(orignalId)) {
-                itemDB[item]._props.ConflictingItems.push(newID);
+            if (this.itemDB()[item]._props?.ConflictingItems !== undefined && this.itemDB()[item]._props.ConflictingItems.includes(orignalId)) {
+                this.itemDB()[item]._props.ConflictingItems.push(newID);
             }
         }
     }
 
     private cloneAttachments(itemToClone: string, newItemID: string, color: string) {
         this.cloneItem(itemToClone, newItemID);
-        let itemID = this.itemDB[newItemID];
+        let itemID = this.itemDB()[newItemID];
         itemID._props.BackgroundColor = color;
         if (this.modConfig.logEverything == true) {
             this.logger.info("Item " + itemID._id + " Added");
@@ -217,7 +222,7 @@ export class ItemCloning {
 
     private cloneWeapons(itemToClone: string, newItemID: string, color: string) {
         this.cloneItem(itemToClone, newItemID);
-        let itemID = this.itemDB[newItemID];
+        let itemID = this.itemDB()[newItemID];
         itemID._props.BackgroundColor = color;
         if (this.modConfig.logEverything == true) {
             this.logger.info("Item " + itemID._id + " Added");
@@ -227,7 +232,7 @@ export class ItemCloning {
 
     private cloneMedicalItem(itemToClone: string, newItemID: string, maxHpResource: number, medUseTime: number, hpResourceRate: number, prefabePath: string, usePrefabPath: string, color: string, effectsDamage: any) {
         this.cloneItem(itemToClone, newItemID);
-        let itemID = this.itemDB[newItemID];
+        let itemID = this.itemDB()[newItemID];
         itemID._props.MaxHpResource = maxHpResource;
         itemID._props.medUseTime = medUseTime;
         itemID._props.hpResourceRate = hpResourceRate;
@@ -266,10 +271,10 @@ export class ItemCloning {
     }
 
     private cloneItem(itemtoClone: string, newitemID: string) {
-        this.itemDB[newitemID] = this.jsonUtil.clone(this.itemDB[itemtoClone])
-        this.itemDB[newitemID]._id = newitemID;
+        this.itemDB()[newitemID] = this.jsonUtil.clone(this.itemDB()[itemtoClone])
+        this.itemDB()[newitemID]._id = newitemID;
         if (this.modConfig.logEverything == true) {
-            this.logger.info(this.itemDB[itemtoClone]._name + " cloned");
+            this.logger.info(this.itemDB()[itemtoClone]._name + " cloned");
         }
     }
 

@@ -14,6 +14,7 @@ import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestDa
 import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 
 const modConfig = require("../../config/config.json");
@@ -71,9 +72,9 @@ const jaegId = "5c0647fdd443bc2504c2d371";
 export class Traders {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private utils: Utils) { }
 
-    itemDB = this.tables.templates.items;
-
-
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
     public loadTraderTweaks() {
 
         // this.tables.traders['54cb50c76803fa8b248b4571'].base.sell_category = sellCatPrap;
@@ -159,7 +160,7 @@ export class Traders {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
-                            if (this.itemDB[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== ParentClasses.MONEY) {
+                            if (this.itemDB()[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== ParentClasses.MONEY) {
                                 this.tables.traders[trader].assort.loyal_level_items[id] = Math.max(1, loyaltyLvl - 1);
                             } else {
                                 this.tables.traders[trader].assort.loyal_level_items[id] = Math.min(4, loyaltyLvl);

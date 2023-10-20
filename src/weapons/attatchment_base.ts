@@ -2,12 +2,15 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { Utils } from "src/utils/utils";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { Arrays } from "../utils/arrays";
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 export class AttatchmentBase {
 
     constructor(private logger: ILogger, private tables: IDatabaseTables, private arrays: Arrays, private modConf, private utils: Utils) { }
 
-    private itemDB = this.tables.templates.items;
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
 
     public loadAttCompat() {
 
@@ -71,7 +74,7 @@ export class AttatchmentBase {
         };
 
         for (let bf in buffertubes) {
-            this.itemDB[buffertubes[bf]]._props.Slots = [];
+            this.itemDB()[buffertubes[bf]]._props.Slots = [];
             for (let slot in slots) {
                 let newStockSlot = { ...stockSlot };
                 newStockSlot._name = slots[slot];
@@ -84,15 +87,15 @@ export class AttatchmentBase {
                 else {
                     newStockSlot._mergeSlotWithChildren = false;
                 }
-                this.itemDB[buffertubes[bf]]._props.Slots.push(newStockSlot);
+                this.itemDB()[buffertubes[bf]]._props.Slots.push(newStockSlot);
             }
         }
         for (let stock in stocksArr) {
-            this.itemDB[stocksArr[stock]]._props.ConflictingItems = stocksArr;
+            this.itemDB()[stocksArr[stock]]._props.ConflictingItems = stocksArr;
         }
 
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === "55818a104bdc2db9688b4569") {
                 for (let slot in serverItem._props.Slots) {
                     if (serverItem._props.Slots[slot]._name === "mod_scope" || serverItem._props.Slots[slot]._name === "mod_tactical") {
@@ -155,8 +158,8 @@ export class AttatchmentBase {
 
     public loadAttRequirements() {
         if (this.modConf.bot_changes == true) {
-            for (let i in this.itemDB) {
-                let serverItem = this.itemDB[i];
+            for (let i in this.itemDB()) {
+                let serverItem = this.itemDB()[i];
                 if (serverItem._id === "5b31163c5acfc400153b71cb"
                     || serverItem._id === "58d2664f86f7747fec5834f6"
                     || serverItem._id === "5c7d55f52e221644f31bff6a"

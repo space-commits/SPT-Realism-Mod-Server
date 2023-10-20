@@ -4,7 +4,7 @@ import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { Arrays } from "../utils/arrays";
 import { Utils } from "../utils/utils";
 import { ParentClasses } from "../utils/enums";
-
+import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
 
 const modConfig = require("../../config/config.json");
 
@@ -22,7 +22,7 @@ const bagTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/ba
 
 const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
 
-const MuzzleDeviceTemplates = require("../../db/templates/attatchments/"+`${presetPath}`+"/MuzzleDeviceTemplates.json");
+const MuzzleDeviceTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/MuzzleDeviceTemplates.json");
 const BarrelTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/BarrelTemplates.json");
 const MountTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/MountTemplates.json");
 const ReceiverTemplates = require("../../db/templates/attatchments/" + `${presetPath}` + "/ReceiverTemplates.json");
@@ -50,17 +50,17 @@ const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${preset
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/GrenadeLauncherTemplates.json");
 
 
-
 export class JsonGen {
 
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private utils: Utils, private arrays: Arrays) { }
 
-    globalDB = this.tables.globals.config;
-    itemDB = this.tables.templates.items;
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
 
     public ammoTemplatesCodeGen() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === ParentClasses.AMMO || serverItem._parent === ParentClasses.AMMO_BOX) {
                 this.itemWriteToFile(ammoTemplates, "ammoTemplates", i, serverItem, "ammo", this.assignJSONToAmmo);
             }
@@ -68,41 +68,42 @@ export class JsonGen {
     }
 
     public gearTemplatesCodeGen() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
-            if (serverItem._parent === ParentClasses.CHESTRIG && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
-            }
-            if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
-            }
-            if (serverItem._parent === ParentClasses.HEADWEAR && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
-            }
-            if (serverItem._parent === ParentClasses.ARMORVEST && serverItem._props.armorClass > 0) {
-                this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
-            }
-            if (serverItem._parent === ParentClasses.CHESTRIG && serverItem._props.armorClass === 0) {
-                this.itemWriteToFile(chestrigTemplates, "chestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
-            }
-            if (serverItem._parent === ParentClasses.HEADSET) {
-                this.itemWriteToFile(headsetTemplates, "headsetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
-            }
-            if((serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) && serverItem._props.armorClass <= 1)
-            {
-                this.itemWriteToFile(cosmeticsTemplates, "cosmeticsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
-            }
-            if((serverItem._parent === ParentClasses.BACKPACK))
-            {
-                this.itemWriteToFile(bagTemplates, "bagTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            if (serverItem?._props?.armorClass != undefined) {
+                let armorLevl: number = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass as string);
+                if (serverItem._parent === ParentClasses.CHESTRIG && armorLevl > 0) {
+                    this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+                }
+                if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT && armorLevl > 0) {
+                    this.itemWriteToFile(armorComponentsTemplates, "armorComponentsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+                }
+                if (serverItem._parent === ParentClasses.HEADWEAR && armorLevl > 0) {
+                    this.itemWriteToFile(helmetTemplates, "helmetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+                }
+                if (serverItem._parent === ParentClasses.ARMORVEST && armorLevl > 0) {
+                    this.itemWriteToFile(armorVestsTemplates, "armorVestsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+                }
+                if (serverItem._parent === ParentClasses.CHESTRIG && armorLevl === 0) {
+                    this.itemWriteToFile(chestrigTemplates, "chestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+                }
+                if (serverItem._parent === ParentClasses.HEADSET) {
+                    this.itemWriteToFile(headsetTemplates, "headsetTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+                }
+                if ((serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) && armorLevl <= 1) {
+                    this.itemWriteToFile(cosmeticsTemplates, "cosmeticsTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+                }
+                if ((serverItem._parent === ParentClasses.BACKPACK)) {
+                    this.itemWriteToFile(bagTemplates, "bagTemplates", i, serverItem, "gear", this.assignJSONToGear, null, true);
+                }
             }
         }
     }
-    
+
 
     public weapTemplatesCodeGen() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._props.RecolDispersion) {
                 if (serverItem._props.weapClass === "assaultCarbine") {
                     this.itemWriteToFile(AssaultCarbineTemplates, "AssaultCarbineTemplates", i, serverItem, "weapons", this.assignJSONToWeap, null, true)
@@ -140,8 +141,8 @@ export class JsonGen {
     }
 
     public attTemplatesCodeGen() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
                 for (let value in this.arrays.modTypes) {
                     if (serverItem._parent === this.arrays.modTypes[value]) {
@@ -231,10 +232,10 @@ export class JsonGen {
 
         filePathObj[index] = funJsonAssign(serverItem, fileItem, id);
 
-        if(usePreset == true){
+        if (usePreset == true) {
             this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
         }
-        else{
+        else {
             this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
         }
     }
@@ -351,7 +352,7 @@ export class JsonGen {
         let IsManuallyOperated = false;
         let BaseChamberCheckSpeed = 1;
         let BaseFixSpeed = 1;
-       
+
         let item = {
             ItemID,
             Name,

@@ -3,6 +3,7 @@ import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { Arrays } from "./arrays";
 import * as path from 'path';
+import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
@@ -12,9 +13,13 @@ export class Utils {
     constructor(private tables: IDatabaseTables, private arrays: Arrays) { }
 
 
-    private itemDB = this.tables.templates.items;
-    private medItems = this.arrays.stashMeds;
-
+    itemDB(): Record<string, ITemplateItem> {
+        return this.tables.templates.items;
+    }
+    medItems(): string[] {
+        return this.arrays.stashMeds;
+    }
+    
     public getInt(min: number, max: number): number
     {
         min = Math.ceil(min);
@@ -31,9 +36,9 @@ export class Utils {
         if (playerData?.Inventory !== undefined) {
             for (let i in playerData.Inventory.items) {
                 if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
-                    for (let j in this.medItems) {
-                        if (playerData.Inventory.items[i]._tpl === this.medItems[j]) {
-                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+                    for (let j in this.medItems()) {
+                        if (playerData.Inventory.items[i]._tpl === this.medItems()[j]) {
+                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB()[this.medItems()[j]]._props.MaxHpResource;
                         }
                     }
                 }
@@ -56,19 +61,19 @@ export class Utils {
     }
 
     private correctMedicalRes(profileItem: Item, pmcEXP: number) {
-        for (let j in this.medItems) {
+        for (let j in this.medItems()) {
 
-            if (profileItem._tpl === this.medItems[j]) {
-                if ((profileItem.upd.MedKit.HpResource > this.itemDB[this.medItems[j]]._props.MaxHpResource) || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
-                    profileItem.upd.MedKit.HpResource = this.itemDB[this.medItems[j]]._props.MaxHpResource;
+            if (profileItem._tpl === this.medItems()[j]) {
+                if ((profileItem.upd.MedKit.HpResource > this.itemDB()[this.medItems()[j]]._props.MaxHpResource) || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
+                    profileItem.upd.MedKit.HpResource = this.itemDB()[this.medItems()[j]]._props.MaxHpResource;
                 }
             }
         }
     }
 
     private correctDuraHelper(profileItem: Item,  pmcEXP: number) {
-        for (let j in this.itemDB) {
-            let serverItem = this.itemDB[j]
+        for (let j in this.itemDB()) {
+            let serverItem = this.itemDB()[j]
             if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
                 profileItem.upd.Repairable.Durability = serverItem._props.Durability;
                 profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;

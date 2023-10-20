@@ -44,15 +44,18 @@ const SniperRifleTemplates = require("../../db/templates/weapons/" + `${weapPath
 const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
 class JsonHandler {
+    tables;
+    logger;
     constructor(tables, logger) {
         this.tables = tables;
         this.logger = logger;
-        this.itemDB = this.tables.templates.items;
-        this.loggerz = this.logger;
+    }
+    itemDB() {
+        return this.tables.templates.items;
     }
     pushModsToServer() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
                 this.callHelper(MuzzleDeviceTemplates, serverItem, this.modPusherHelper);
                 this.callHelper(BarrelTemplates, serverItem, this.modPusherHelper);
@@ -74,8 +77,8 @@ class JsonHandler {
         }
     }
     pushWeaponsToServer() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._props.RecolDispersion) {
                 this.callHelper(AssaultRifleTemplates, serverItem, this.weapPusherHelper);
                 this.callHelper(AssaultCarbineTemplates, serverItem, this.weapPusherHelper);
@@ -91,8 +94,8 @@ class JsonHandler {
         }
         //catch any modded weapons not in templates
         if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) {
-            for (let j in this.itemDB) {
-                let serverItem = this.itemDB[j];
+            for (let j in this.itemDB()) {
+                let serverItem = this.itemDB()[j];
                 let serverConfItems = serverItem._props.ConflictingItems;
                 if (serverItem._parent == enums_1.ParentClasses.SMG || serverItem._parent == enums_1.ParentClasses.ASSAULT_CARBINE || serverItem._parent == enums_1.ParentClasses.ASSAULT_RIFLE || serverItem._parent == enums_1.ParentClasses.MARKSMAN_RIFLE || serverItem._parent == enums_1.ParentClasses.SNIPER_RIFLE || serverItem._parent == enums_1.ParentClasses.PISTOL || serverItem._parent == enums_1.ParentClasses.SHOTGUN || serverItem._parent == enums_1.ParentClasses.MACHINE_GUN) {
                     if (serverConfItems !== undefined && serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
@@ -131,8 +134,8 @@ class JsonHandler {
         }
     }
     pushGearToServer() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass !== undefined) {
                 this.callHelper(armorChestrigTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(armorComponentsTemplates, serverItem, this.gearPusherHelper);

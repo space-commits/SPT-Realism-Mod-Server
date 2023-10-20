@@ -8,6 +8,9 @@ const arrays_1 = require("../utils/arrays");
 const AirdropType_1 = require("C:/snapshot/project/obj/models/enums/AirdropType");
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 class Airdrops {
+    logger;
+    modConfig;
+    airConf;
     constructor(logger, modConfig, airConf) {
         this.logger = logger;
         this.modConfig = modConfig;
@@ -216,5 +219,11 @@ class AirdropLootgen extends LocationController_1.LocationController {
 }
 exports.AirdropLootgen = AirdropLootgen;
 class AirdropLootRequest {
+    presetCount;
+    itemCount;
+    itemWhitelist;
+    itemLimits;
+    itemStackLimits;
+    weaponCrateCount;
 }
 exports.AirdropLootRequest = AirdropLootRequest;
