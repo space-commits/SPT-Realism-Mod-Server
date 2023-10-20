@@ -75,7 +75,7 @@ export class Gear {
                 serverItem._props.Resonance = 3;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -31;
-                serverItem._props.DryVolume = -50;
+                serverItem._props.DryVolume = -49;
                 serverItem._props.AmbientVolume = -1.5;
             }
 
@@ -85,7 +85,7 @@ export class Gear {
                 serverItem._props.Resonance = 2;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -33;
-                serverItem._props.DryVolume = -52;
+                serverItem._props.DryVolume = -50;
                 serverItem._props.AmbientVolume = -1.75;
             }
 
@@ -95,7 +95,7 @@ export class Gear {
                 serverItem._props.Resonance = 2.5;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -34;
-                serverItem._props.DryVolume = -54;
+                serverItem._props.DryVolume = -51;
                 serverItem._props.AmbientVolume = -1.75;
             }
 
@@ -105,18 +105,8 @@ export class Gear {
                 serverItem._props.Resonance = 0.5;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -36;
-                serverItem._props.DryVolume = -56;
+                serverItem._props.DryVolume = -52;
                 serverItem._props.AmbientVolume = -1.5;
-            }
-
-            //Opsmen Earmor M32
-            if (serverItem._id === "6033fa48ffd42c541047f728") {
-                serverItem._props.Distortion = 0.2;
-                serverItem._props.Resonance = 1.5;
-                serverItem._props.CompressorAttack = 1;
-                serverItem._props.CompressorTreshold = -37;
-                serverItem._props.DryVolume = -58;
-                serverItem._props.AmbientVolume = -2;
             }
 
             //FAST RAC
@@ -125,7 +115,17 @@ export class Gear {
                 serverItem._props.Resonance = 1;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -37;
-                serverItem._props.DryVolume = -58;
+                serverItem._props.DryVolume = -53;
+                serverItem._props.AmbientVolume = -2;
+            }
+
+            //Opsmen Earmor M32
+            if (serverItem._id === "6033fa48ffd42c541047f728") {
+                serverItem._props.Distortion = 0.2;
+                serverItem._props.Resonance = 1.5;
+                serverItem._props.CompressorAttack = 1;
+                serverItem._props.CompressorTreshold = -37;
+                serverItem._props.DryVolume = -54;
                 serverItem._props.AmbientVolume = -2;
             }
 
@@ -135,7 +135,7 @@ export class Gear {
                 serverItem._props.Resonance = 1;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -39;
-                serverItem._props.DryVolume = -60;
+                serverItem._props.DryVolume = -55;
                 serverItem._props.AmbientVolume = -2.25;
             }
 
@@ -145,7 +145,7 @@ export class Gear {
                 serverItem._props.Resonance = 1;
                 serverItem._props.CompressorAttack = 1;
                 serverItem._props.CompressorTreshold = -41;
-                serverItem._props.DryVolume = -62;
+                serverItem._props.DryVolume = -56;
                 serverItem._props.AmbientVolume = -2.25;
             }
         }

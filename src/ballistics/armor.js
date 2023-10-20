@@ -1730,7 +1730,6 @@ class Armor {
                 let armorLevl = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass);
                 if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG) && serverItem?._props.armorClass != null && serverItem?._props.ArmorMaterial !== "ArmoredSteel" && serverItem?._props.ArmorMaterial !== "Titan") {
                     if (armorLevl >= 3 && armorLevl <= 5) {
-                        this.logger.warning("Armor above 3 below 5: " + serverItem._id + " " + serverItem._name);
                         serverItem._props.BluntThroughput *= 1;
                     }
                     if (armorLevl >= 6 && armorLevl <= 7) {
