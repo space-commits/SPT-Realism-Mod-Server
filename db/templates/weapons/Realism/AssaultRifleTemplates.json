@@ -1228,7 +1228,7 @@
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1.5,
+        "BaseChamberCheckSpeed": 1.4,
         "BaseFixSpeed": 1.9
     },
     "6184055050224f204c1da540": {
@@ -1330,8 +1330,8 @@
         "Ergonomics": 80,
         "VerticalRecoil": 110,
         "HorizontalRecoil": 203,
-        "Dispersion": 21,
-        "CameraRecoil": 0.08,
+        "Dispersion": 22,
+        "CameraRecoil": 0.09,
         "CameraSnap": 0.5,
         "Convergence": 13,
         "RecoilAngle": 90,
@@ -1374,8 +1374,8 @@
         "Ergonomics": 80,
         "VerticalRecoil": 110,
         "HorizontalRecoil": 203,
-        "Dispersion": 21,
-        "CameraRecoil": 0.08,
+        "Dispersion": 22,
+        "CameraRecoil": 0.09,
         "CameraSnap": 0.5,
         "Convergence": 13,
         "RecoilAngle": 90,
@@ -1531,12 +1531,12 @@
         "AutoROF": 650,
         "SemiROF": 330,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 3,
+        "BaseReloadSpeedMulti": 2.5,
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.8,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 4.5,
+        "BaseChamberCheckSpeed": 4,
         "BaseFixSpeed": 3.5
     },
     "623063e994fc3f7b302a9696": {
@@ -1639,9 +1639,9 @@
         "VerticalRecoil": 75,
         "HorizontalRecoil": 160,
         "Dispersion": 16,
-        "CameraRecoil": 0.084,
+        "CameraRecoil": 0.08,
         "CameraSnap": 0.1,
-        "Convergence": 22.5,
+        "Convergence": 21,
         "RecoilAngle": 87,
         "BaseMalfunctionChance": 0.085,
         "HeatFactorGun": 0.21,
@@ -1710,9 +1710,9 @@
         "BaseReloadSpeedMulti": 1,
         "BaseChamberSpeedMulti": 1.5,
         "MinChamberSpeed": 0.7,
-        "MaxChamberSpeed": 1.4,
+        "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.5,
-        "BaseFixSpeed": 1.3
+        "BaseFixSpeed": 1.25
     }
 }

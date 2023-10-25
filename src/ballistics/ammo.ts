@@ -616,9 +616,9 @@ export class Ammo {
             //Shrap 10
             if (serverItem._id === "5e85a9a6eacf8c039e4e2ac1") {
                 serverItem._props.PenetrationPower = 22;
-                serverItem._props.ArmorDamage = 15;
+                serverItem._props.ArmorDamage = 18;
                 serverItem._props.ProjectileCount = 12;
-                serverItem._props.Damage = 20;
+                serverItem._props.Damage = 21;
                 serverItem._props.InitialSpeed = 270;
                 serverItem._props.RicochetChance = 0.35;
                 serverItem._props.FragmentationChance = 0.05;
@@ -642,9 +642,9 @@ export class Ammo {
             //Shrap 25
             if (serverItem._id === "5f647f31b6238e5dd066e196") {
                 serverItem._props.PenetrationPower = 35;
-                serverItem._props.ArmorDamage = 15;
+                serverItem._props.ArmorDamage = 18;
                 serverItem._props.ProjectileCount = 12;
-                serverItem._props.Damage = 18;
+                serverItem._props.Damage = 19;
                 serverItem._props.InitialSpeed = 375;
                 serverItem._props.RicochetChance = 0.35;
                 serverItem._props.FragmentationChance = 0;
@@ -2712,7 +2712,7 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 0.89;
                 serverItem._props.ammoAccr = -17;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 8;
+                serverItem._props.ammoRec = 6;
 
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 1.1;
@@ -2735,7 +2735,7 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 1;
                 serverItem._props.ammoAccr = -20;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 14;
+                serverItem._props.ammoRec = 8;
 
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 1.2;
@@ -2828,7 +2828,7 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 0.7;
                 serverItem._props.ammoAccr = -15;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 18;
+                serverItem._props.ammoRec = 13;
 
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.15;
@@ -3532,7 +3532,7 @@ export class Ammo {
             }
             // M855A1 
             if (serverItem._id === "54527ac44bdc2d36668b4567") {
-                serverItem._props.PenetrationPower = 75;
+                serverItem._props.PenetrationPower = 74;
                 serverItem._props.ArmorDamage = 19;
                 serverItem._props.Damage = 78;
                 serverItem._props.InitialSpeed = 942;

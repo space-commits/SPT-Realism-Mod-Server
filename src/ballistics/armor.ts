@@ -688,7 +688,7 @@ export class Armor {
                 serverItem._props.armorClass = 9;
                 serverItem._props.speedPenaltyPercent = -8;
                 serverItem._props.mousePenalty = 0;
-                serverItem._props.weaponErgonomicPenalty = -16;
+                serverItem._props.weaponErgonomicPenalty = -9;
                 serverItem._props.BluntThroughput = 0.09;
                 serverItem._props.ArmorMaterial = 'Combined';
                 serverItem._props.Weight = 9;

@@ -466,6 +466,19 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         }
         return true;
     }
+    reformatPreset(presetFile, presetObj) {
+        if (presetFile[presetObj].hasOwnProperty("root")) {
+            presetFile[presetObj] =
+                {
+                    "_id": presetFile[presetObj].id,
+                    "_type": "Preset",
+                    "_changeWeaponName": false,
+                    "_name": presetFile[presetObj].name,
+                    "_parent": presetFile[presetObj].root,
+                    "_items": presetFile[presetObj].items
+                };
+        }
+    }
     myGetPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole, pmcTier) {
         const logger = tsyringe_1.container.resolve("WinstonLogger");
         const durabilityLimitsHelper = tsyringe_1.container.resolve("DurabilityLimitsHelper");
@@ -488,6 +501,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             let preset;
             let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
             for (let presetObj in presetFile) {
+                this.reformatPreset(presetFile, presetObj);
                 if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                     let presetTier = presetFile[presetObj]._name.slice(0, 1);
                     let pTierNum = Number(presetTier);
@@ -501,6 +515,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
             if (weaponPresets.length == 0) {
                 for (let presetObj in presetFile) {
+                    this.reformatPreset(presetFile, presetObj);
                     if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                         weaponPresets.push(presetFile[presetObj]);
                         if (modConfig.logEverything == true) {

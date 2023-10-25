@@ -602,6 +602,21 @@ export class BotWepGen extends BotWeaponGenerator {
         return true;
     }
 
+    private reformatPreset(presetFile, presetObj)
+    {
+        if(presetFile[presetObj].hasOwnProperty("root")){
+            presetFile[presetObj] = 
+            {
+                "_id": presetFile[presetObj].id,
+                "_type": "Preset",
+                "_changeWeaponName": false,
+                "_name": presetFile[presetObj].name,
+                "_parent": presetFile[presetObj].root,
+                "_items": presetFile[presetObj].items
+            }
+        }
+    }
+
     private myGetPresetWeaponMods(weaponTpl: string, equipmentSlot: string, weaponParentId: string, itemTemplate: ITemplateItem, botRole: string, pmcTier: number): Item[] {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
@@ -625,9 +640,12 @@ export class BotWepGen extends BotWeaponGenerator {
         var weaponMods = [];
         var weaponPresets = [];
         try {
-            let preset;
+            let preset: IPreset;
             let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
             for (let presetObj in presetFile) {
+
+                this.reformatPreset(presetFile, presetObj);
+
                 if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                     let presetTier = presetFile[presetObj]._name.slice(0, 1);
                     let pTierNum = Number(presetTier);
@@ -639,14 +657,18 @@ export class BotWepGen extends BotWeaponGenerator {
                     }
                 }
             }
+
+            //failed to get a preset within the same tier as PMC, so we loop again and ignore the tier requirement.
             if (weaponPresets.length == 0) {
                 for (let presetObj in presetFile) {
+
+                    this.reformatPreset(presetFile, presetObj);
+
                     if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                         weaponPresets.push(presetFile[presetObj]);
                         if (modConfig.logEverything == true) {
                             this.logger.warning(`Found a preset outside of tier`);
                         }
-
                     }
                 }
             }
@@ -667,7 +689,7 @@ export class BotWepGen extends BotWeaponGenerator {
 
             preset = this.jsonUtil.clone(randomPreset);
             if (preset) {
-                const parentItem = preset._items[0];
+                const parentItem: Item = preset._items[0];
                 preset._items[0] = {
                     ...parentItem, ...{
                         "parentId": weaponParentId,
@@ -692,7 +714,7 @@ export class BotWepGen extends BotWeaponGenerator {
                 }
             }
             if (preset) {
-                const parentItem = preset._items[0];
+                const parentItem: Item = preset._items[0];
                 preset._items[0] = {
                     ...parentItem, ...{
                         "parentId": weaponParentId,
