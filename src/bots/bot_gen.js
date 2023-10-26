@@ -50,7 +50,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
     getBotTier(utils) {
         const level = utils_1.ProfileTracker.level;
         var tier = 1;
-        var tierArray = [1, 2, 3, 4];
+        var tierArray = [1, 2, 3, 4, 5];
         if (level <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
@@ -83,16 +83,16 @@ class BotGen extends BotGenerator_1.BotGenerator {
     botTierMapFactor(tier, utils) {
         let rndNum = utils.pickRandNumOneInTen();
         if (utils_1.RaidInfoTracker.mapName === "Laboratory" || utils_1.RaidInfoTracker.mapName === "laboratory") {
-            tier = Math.min(tier + 2, 4);
+            tier = Math.min(tier + 2, 5);
         }
         else if (rndNum <= 4 && (utils_1.RaidInfoTracker.mapName === "RezervBase" || utils_1.RaidInfoTracker.mapName === "ReserveBase" || utils_1.RaidInfoTracker.mapName === "rezervbase" || utils_1.RaidInfoTracker.mapName === "Streets of Tarkov" || utils_1.RaidInfoTracker.mapName === "factory4_night" || utils_1.RaidInfoTracker.TOD === "night")) {
-            tier = Math.min(tier + 1, 4);
+            tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 2 && (utils_1.RaidInfoTracker.mapName === "shoreline" || utils_1.RaidInfoTracker.mapName === "Shoreline" || utils_1.RaidInfoTracker.mapName === "lighthouse" || utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "Interchange" || utils_1.RaidInfoTracker.mapName === "interchange")) {
-            tier = Math.min(tier + 1, 4);
+            tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 1 && (utils_1.RaidInfoTracker.mapName === "bigmap" || utils_1.RaidInfoTracker.mapName === "Customs")) {
-            tier = Math.min(tier + 1, 4);
+            tier = Math.min(tier + 1, 5);
         }
         return tier;
     }
@@ -163,11 +163,23 @@ class BotGen extends BotGenerator_1.BotGenerator {
                         botLoader.bearLoad4(botJsonTemplate);
                     }
                     if (changeDiffi == true) {
+                        bot.Info.Settings.BotDifficulty = "hard";
+                    }
+                }
+                if (pmcTier === 5) {
+                    if (isUSEC) {
+                        botLoader.usecLoad5(botJsonTemplate);
+                    }
+                    else {
+                        botLoader.bearLoad5(botJsonTemplate);
+                    }
+                    if (changeDiffi == true) {
                         bot.Info.Settings.BotDifficulty = "impossible";
                     }
                 }
                 if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
                     botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = {};
+                    botJsonTemplate.inventory.equipment.SecondPrimaryWeapon = {};
                     botJsonTemplate.inventory.equipment.Holster = {};
                 }
                 if (modConfig.logEverything == true) {
@@ -468,6 +480,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     }
     reformatPreset(presetFile, presetObj) {
         if (presetFile[presetObj].hasOwnProperty("root")) {
+            presetFile[presetObj] = presetFile[presetFile[presetObj].name];
             presetFile[presetObj] =
                 {
                     "_id": presetFile[presetObj].id,
@@ -485,10 +498,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         const appContext = tsyringe_1.container.resolve("ApplicationContext");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, this.itemHelper, appContext, this.localisationService, this.configServer);
         const tierChecker = new utils_1.BotTierTracker();
-        let tier = tierChecker.getTier(botRole);
-        if (tier === 0) {
-            tier = pmcTier;
-        }
+        let tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : tierChecker.getTier(botRole);
         if (modConfig.logEverything == true) {
             this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
             this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
@@ -499,7 +509,9 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         var weaponPresets = [];
         try {
             let preset;
-            let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
+            var botName = tier === 5 ? "tier5pmc" : botRole;
+            var presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
+            // presetFile = tier === 5 ? presetFile.tier5PMCPresets : presetFile;
             for (let presetObj in presetFile) {
                 this.reformatPreset(presetFile, presetObj);
                 if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
@@ -513,6 +525,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                     }
                 }
             }
+            //failed to get a preset within the same tier as PMC, so we loop again and ignore the tier requirement.
             if (weaponPresets.length == 0) {
                 for (let presetObj in presetFile) {
                     this.reformatPreset(presetFile, presetObj);

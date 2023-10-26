@@ -201,7 +201,7 @@ class BotTierTracker {
         if (botType === "bossbully" || botType === "followerbully") {
             return BotTierTracker.reshallaTier;
         }
-        return 0;
+        return 2;
     }
 }
 exports.BotTierTracker = BotTierTracker;

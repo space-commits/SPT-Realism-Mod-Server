@@ -95,7 +95,7 @@ export class BotGen extends BotGenerator {
     private getBotTier(utils: Utils): number {
         const level = ProfileTracker.level;
         var tier = 1;
-        var tierArray = [1, 2, 3, 4];
+        var tierArray = [1, 2, 3, 4, 5];
         if (level <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
@@ -129,16 +129,16 @@ export class BotGen extends BotGenerator {
     private botTierMapFactor(tier: number, utils: Utils): number {
         let rndNum = utils.pickRandNumOneInTen();
         if (RaidInfoTracker.mapName === "Laboratory" || RaidInfoTracker.mapName === "laboratory") {
-            tier = Math.min(tier + 2, 4);
+            tier = Math.min(tier + 2, 5);
         }
         else if (rndNum <= 4 && (RaidInfoTracker.mapName === "RezervBase" || RaidInfoTracker.mapName === "ReserveBase" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "Streets of Tarkov" || RaidInfoTracker.mapName === "factory4_night" || RaidInfoTracker.TOD === "night")) {
-            tier = Math.min(tier + 1, 4);
+            tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 2 && (RaidInfoTracker.mapName === "shoreline" || RaidInfoTracker.mapName === "Shoreline" || RaidInfoTracker.mapName === "lighthouse" || RaidInfoTracker.mapName === "Lighthouse" || RaidInfoTracker.mapName === "Interchange" || RaidInfoTracker.mapName === "interchange")) {
-            tier = Math.min(tier + 1, 4);
+            tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 1 && (RaidInfoTracker.mapName === "bigmap" || RaidInfoTracker.mapName === "Customs")) {
-            tier = Math.min(tier + 1, 4);
+            tier = Math.min(tier + 1, 5);
         }
         return tier;
     }
@@ -222,12 +222,24 @@ export class BotGen extends BotGenerator {
                         botLoader.bearLoad4(botJsonTemplate);
                     }
                     if (changeDiffi == true) {
+                        bot.Info.Settings.BotDifficulty = "hard";
+                    }
+                }
+                if (pmcTier === 5) {
+                    if (isUSEC) {
+                        botLoader.usecLoad5(botJsonTemplate);
+                    }
+                    else {
+                        botLoader.bearLoad5(botJsonTemplate);
+                    }
+                    if (changeDiffi == true) {
                         bot.Info.Settings.BotDifficulty = "impossible";
                     }
                 }
 
                 if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
                     botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = {};
+                    botJsonTemplate.inventory.equipment.SecondPrimaryWeapon = {};
                     botJsonTemplate.inventory.equipment.Holster = {};
                 }
 
@@ -605,6 +617,9 @@ export class BotWepGen extends BotWeaponGenerator {
     private reformatPreset(presetFile, presetObj)
     {
         if(presetFile[presetObj].hasOwnProperty("root")){
+
+            presetFile[presetObj] = presetFile[presetFile[presetObj].name]
+
             presetFile[presetObj] = 
             {
                 "_id": presetFile[presetObj].id,
@@ -625,10 +640,7 @@ export class BotWepGen extends BotWeaponGenerator {
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, this.itemHelper, appContext, this.localisationService, this.configServer);
 
         const tierChecker = new BotTierTracker();
-        let tier = tierChecker.getTier(botRole);
-        if (tier === 0) {
-            tier = pmcTier;
-        }
+        let tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : tierChecker.getTier(botRole);
 
         if (modConfig.logEverything == true) {
             this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
@@ -641,7 +653,10 @@ export class BotWepGen extends BotWeaponGenerator {
         var weaponPresets = [];
         try {
             let preset: IPreset;
-            let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botRole}Presets.json`);
+            var botName = tier === 5 ? "tier5pmc"  : botRole;
+            var presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
+            // presetFile = tier === 5 ? presetFile.tier5PMCPresets : presetFile;
+
             for (let presetObj in presetFile) {
 
                 this.reformatPreset(presetFile, presetObj);
