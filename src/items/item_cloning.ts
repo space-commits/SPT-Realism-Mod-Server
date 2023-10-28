@@ -256,7 +256,8 @@ export class ItemCloning {
             }
         );
     }
-    private addToLocale(id: string, name: string, shortname: string, description: string) {
+    
+    public addToLocale(id: string, name: string, shortname: string, description: string) {
 
         const nameId = `${id}` + " Name";
         const shortnameId = `${id}` + " ShortName";

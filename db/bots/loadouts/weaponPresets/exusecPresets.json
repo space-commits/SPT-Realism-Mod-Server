@@ -1,4 +1,126 @@
 {
+    "3RogueM4v4": {
+        "id": "80e54ec49a27e266cb54c24b",
+        "name": "3RogueM4v4",
+        "root": "01cac007bb0c4d007d4b7ef1",
+        "items": [
+            {
+                "_id": "01cac007bb0c4d007d4b7ef1",
+                "_tpl": "5447a9cd4bdc2dbd208b4567",
+                "upd": {
+                    "Repairable": {
+                        "MaxDurability": 100,
+                        "Durability": 100
+                    },
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "eb9e9c96533a686bf4f07bec",
+                "_tpl": "55d4b9964bdc2d1d4e8b456e",
+                "parentId": "01cac007bb0c4d007d4b7ef1",
+                "slotId": "mod_pistol_grip"
+            },
+            {
+                "_id": "38be9f26e725606fa42960fa",
+                "_tpl": "55d4887d4bdc2d962f8b4570",
+                "parentId": "01cac007bb0c4d007d4b7ef1",
+                "slotId": "mod_magazine"
+            },
+            {
+                "_id": "b457052833d5f432678c3bb5",
+                "_tpl": "55d355e64bdc2d962f8b4569",
+                "parentId": "01cac007bb0c4d007d4b7ef1",
+                "slotId": "mod_reciever"
+            },
+            {
+                "_id": "7c30024307d1dc6c05a39f56",
+                "_tpl": "5649be884bdc2d79388b4577",
+                "parentId": "01cac007bb0c4d007d4b7ef1",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "63f5c1c9064e66338a47c92a",
+                "_tpl": "55d44fd14bdc2d962f8b456e",
+                "parentId": "01cac007bb0c4d007d4b7ef1",
+                "slotId": "mod_charge"
+            },
+            {
+                "_id": "22b2ba0d11fcce73852e986b",
+                "_tpl": "570fd6c2d2720bc6458b457f",
+                "parentId": "b457052833d5f432678c3bb5",
+                "slotId": "mod_scope",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0
+                    }
+                }
+            },
+            {
+                "_id": "496bf5f89a8bedde57d6f9a1",
+                "_tpl": "55d3632e4bdc2d972f8b4569",
+                "parentId": "b457052833d5f432678c3bb5",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "93d9d75b1064bc4e393aedb6",
+                "_tpl": "55d459824bdc2d892f8b4573",
+                "parentId": "b457052833d5f432678c3bb5",
+                "slotId": "mod_handguard"
+            },
+            {
+                "_id": "8494a421ba45bb5769945b8e",
+                "_tpl": "55d4ae6c4bdc2d8b2f8b456e",
+                "parentId": "7c30024307d1dc6c05a39f56",
+                "slotId": "mod_stock_000"
+            },
+            {
+                "_id": "ce1fcbc2db51a7a04c5c0a56",
+                "_tpl": "56ea8180d2720bf2698b456a",
+                "parentId": "496bf5f89a8bedde57d6f9a1",
+                "slotId": "mod_muzzle"
+            },
+            {
+                "_id": "a668e947cd39837400483267",
+                "_tpl": "5ae30e795acfc408fb139a0b",
+                "parentId": "496bf5f89a8bedde57d6f9a1",
+                "slotId": "mod_gas_block"
+            },
+            {
+                "_id": "d65d38f0138df6ca867764f3",
+                "_tpl": "6357c98711fb55120211f7e1",
+                "parentId": "496bf5f89a8bedde57d6f9a1",
+                "slotId": "mod_launcher"
+            },
+            {
+                "_id": "611e35ce5be8f6846b4bd831",
+                "_tpl": "5d10b49bd7ad1a1a560708b0",
+                "parentId": "93d9d75b1064bc4e393aedb6",
+                "slotId": "mod_tactical",
+                "upd": {
+                    "Light": {
+                        "IsActive": true,
+                        "SelectedMode": 0
+                    }
+                }
+            },
+            {
+                "_id": "b320188a98e8cf4fa5391a3b",
+                "_tpl": "57da93632459771cb65bf83f",
+                "parentId": "ce1fcbc2db51a7a04c5c0a56",
+                "slotId": "mod_muzzle"
+            }
+        ],
+        "type": "weapon"
+    },
     "1RogueMK16v1": {
         "_id": "b1bc77971b56dbd61e9db1cd",
         "_name": "1RogueMK16v1",
@@ -1069,7 +1191,6 @@
                 "_id": "d0ce3be15dd66583889e6d38",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1196,7 +1317,6 @@
                 "_id": "31c96d8b8b00379e24dcce78",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1329,7 +1449,6 @@
                 "_id": "9a59542933fef5e3c5be3a44",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1456,7 +1575,6 @@
                 "_id": "4ed0e81cbcca07b5f264659f",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1601,7 +1719,6 @@
                 "_id": "9729b385d58a66cff896357a",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1734,7 +1851,6 @@
                 "_id": "f1c9af0bf4e76d1cea384287",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-
                     "FireMode": {
                         "FireMode": "single"
                     }
@@ -1873,7 +1989,6 @@
                 "_id": "cdf36d00081ebb6735553402",
                 "_tpl": "5447a9cd4bdc2dbd208b4567",
                 "upd": {
-
                     "FireMode": {
                         "FireMode": "single"
                     }

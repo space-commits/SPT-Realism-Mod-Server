@@ -37,12 +37,11 @@ export class ItemsClass {
             this.handbook().push(item);
         }
 
-        for (const localeID in this.locales) {
+        for (const localeID in this.locales()) {
             for (const [itemId, template] of Object.entries(myLocales.templates)) {
                 for (const [key, value] of Object.entries(template)) {
-                    this.locales[localeID][`${itemId} ${key}`] = value;
+                    this.locales()[localeID][`${itemId} ${key}`] = value;
                 }
-
             }
         }
 
