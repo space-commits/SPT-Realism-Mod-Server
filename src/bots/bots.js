@@ -1112,7 +1112,7 @@ class BotLoader {
             botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
-            this.logger.info("usecLoad4 loaded");
+            this.logger.info("usecLoad5 loaded");
         }
     }
     bearLoad1(botJsonTemplate) {
@@ -1390,7 +1390,7 @@ class BotLoader {
             botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
         }
         if (this.modConfig.logEverything == true) {
-            this.logger.info("bearLoad4 loaded");
+            this.logger.info("bearLoad5 loaded");
         }
     }
     raiderLoad1() {
@@ -2182,6 +2182,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapName === "Interchange" || utils_1.RaidInfoTracker.mapName === "interchange") {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 0;
         }
+        else {
+            this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
+        }
         utils_1.BotTierTracker.killaTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("killaLoad1 loaded");
@@ -2198,8 +2201,11 @@ class BotLoader {
             this.killaBase.chances.mods.mod_flashlight = 60;
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 50;
         }
-        if (utils_1.RaidInfoTracker.mapName === "Interchange" || utils_1.RaidInfoTracker.mapName === "interchange") {
+        else if (utils_1.RaidInfoTracker.mapName === "Interchange" || utils_1.RaidInfoTracker.mapName === "interchange") {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 0;
+        }
+        else {
+            this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
         utils_1.BotTierTracker.killaTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -2219,6 +2225,9 @@ class BotLoader {
         }
         if (utils_1.RaidInfoTracker.mapName === "Interchange" || utils_1.RaidInfoTracker.mapName === "interchange") {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 0;
+        }
+        else {
+            this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
         utils_1.BotTierTracker.killaTier = 3;
         if (this.modConfig.logEverything == true) {

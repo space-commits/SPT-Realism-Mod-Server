@@ -356,7 +356,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
                             const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
-                            const matchInfoStartOff = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
+                            const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new Arrays(postLoadTables);
                             const utils = new Utils(postLoadTables, arrays);
@@ -365,15 +365,15 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const pmcData = profileHelper.getPmcProfile(sessionID);
 
                             const time = weatherController.generate().time;
-                            RaidInfoTracker.mapName = matchInfoStartOff.location;
+                            RaidInfoTracker.mapName = matchInfo.location;
                             let realTime = "";
                             let mapType = "";
 
 
-                            if (matchInfoStartOff.timeVariant === "PAST") {
+                            if (matchInfo.timeVariant === "PAST") {
                                 realTime = getTime(time, 12);
                             }
-                            if (matchInfoStartOff.timeVariant === "CURR") {
+                            if (matchInfo.timeVariant === "CURR") {
                                 realTime = time;
                             }
 
@@ -389,7 +389,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             function getTOD(time) {
                                 let TOD = "";
                                 let [h, m] = time.split(':');
-                                if ((matchInfoStartOff.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (matchInfoStartOff.location === "factory4_day" || matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory")) {
+                                if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (matchInfo.location === "factory4_day" || matchInfo.location === "Laboratory" || matchInfo.location === "laboratory")) {
                                     TOD = "day";
                                 }
                                 else {
@@ -399,17 +399,17 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             }
 
                             for (let map in arrays.cqbMaps) {
-                                if (arrays.cqbMaps[map] === matchInfoStartOff.location) {
+                                if (arrays.cqbMaps[map] === matchInfo.location) {
                                     mapType = "cqb";
                                 }
                             }
                             for (let map in arrays.outdoorMaps) {
-                                if (arrays.outdoorMaps[map] === matchInfoStartOff.location) {
+                                if (arrays.outdoorMaps[map] === matchInfo.location) {
                                     mapType = "outdoor";
                                 }
                             }
                             for (let map in arrays.urbanMaps) {
-                                if (arrays.urbanMaps[map] === matchInfoStartOff.location) {
+                                if (arrays.urbanMaps[map] === matchInfo.location) {
                                     mapType = "urban";
                                 }
                             }
@@ -425,19 +425,17 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                 }
                             }
 
-                            if (matchInfoStartOff.location === "Laboratory" || matchInfoStartOff.location === "laboratory") {
+                            if (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory") {
                                 pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
                                 pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
                                 pmcConf.convertIntoPmcChance["assault"].min = 100;
                                 pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
 
-                            if (modConfig.logEverything == true) {
-                                logger.warning("Map Name star off = " + matchInfoStartOff.location);
-                                logger.warning("Map Type  = " + mapType);
-                                logger.warning("Time " + time);
-                                logger.warning("Time of Day = " + getTOD(realTime));
-                            }
+                            logger.warning("Map Name = " + matchInfo.location);
+                            logger.warning("Map Type  = " + mapType);
+                            logger.warning("Time " + time);
+                            logger.warning("Time of Day = " + getTOD(realTime));
 
                             return HttpResponse.nullResponse();
                         }

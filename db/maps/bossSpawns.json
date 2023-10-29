@@ -1040,7 +1040,7 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2,3,4",
-            "Time": 1,
+            "Time": 5,
             "TriggerId": "",
             "TriggerName": "",
             "RandomTimeSpawn": false
@@ -1054,7 +1054,7 @@
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "2,3,4",
-            "Time": 1,
+            "Time": 5,
             "TriggerId": "",
             "TriggerName": "",
             "RandomTimeSpawn": false

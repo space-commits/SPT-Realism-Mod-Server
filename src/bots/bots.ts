@@ -370,7 +370,7 @@ export class BotLoader {
             this.reshallaLoad3();
             this.logger.warning(`Tier ${tier} Test Selected`);
         }
-        
+
 
         if (this.modConfig.bot_test_weps_enabled == false) {
             this.arrays.botArr.forEach(removeWeps);
@@ -618,18 +618,18 @@ export class BotLoader {
         if (RaidInfoTracker.TOD === "night") {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
+            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 75;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
         } else {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 30;
-                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 30;
+                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
             }
             if (RaidInfoTracker.mapType === "cqb") {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 80;
@@ -699,12 +699,12 @@ export class BotLoader {
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (RaidInfoTracker.TOD === "night") {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
-            this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 25;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 25;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
-            this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
+            this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 15;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+        } else if (RaidInfoTracker.mapName === "factory4_night") {
+            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 75;
+            this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
         } else {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
@@ -782,11 +782,11 @@ export class BotLoader {
         if (RaidInfoTracker.TOD === "night") {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 25;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
+            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 75;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
         } else {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
@@ -1222,7 +1222,7 @@ export class BotLoader {
         }
 
         if (this.modConfig.logEverything == true) {
-            this.logger.info("usecLoad4 loaded");
+            this.logger.info("usecLoad5 loaded");
         }
     }
 
@@ -1516,7 +1516,7 @@ export class BotLoader {
         }
 
         if (this.modConfig.logEverything == true) {
-            this.logger.info("bearLoad4 loaded");
+            this.logger.info("bearLoad5 loaded");
         }
     }
 
@@ -2413,6 +2413,9 @@ export class BotLoader {
         if (RaidInfoTracker.mapName === "Interchange" || RaidInfoTracker.mapName === "interchange") {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 0;
         }
+        else {
+            this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
+        }
 
         BotTierTracker.killaTier = 1;
         if (this.modConfig.logEverything == true) {
@@ -2432,8 +2435,11 @@ export class BotLoader {
             this.killaBase.chances.mods.mod_flashlight = 60;
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 50;
         }
-        if (RaidInfoTracker.mapName === "Interchange" || RaidInfoTracker.mapName === "interchange") {
+        else if (RaidInfoTracker.mapName === "Interchange" || RaidInfoTracker.mapName === "interchange") {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 0;
+        }
+        else {
+            this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
 
         BotTierTracker.killaTier = 2;
@@ -2456,6 +2462,9 @@ export class BotLoader {
         }
         if (RaidInfoTracker.mapName === "Interchange" || RaidInfoTracker.mapName === "interchange") {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 0;
+        }
+        else {
+            this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
 
         BotTierTracker.killaTier = 3;

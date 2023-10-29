@@ -5795,7 +5795,6 @@
           "mod_magazine": [
             "5caf1109ae9215753c44119f",
             "5caf1041ae92157c28402e3f",
-            "5caf1041ae92157c28402e3f",
             "5caf1041ae92157c28402e3f"
           ],
           "mod_muzzle": [
@@ -6713,15 +6712,15 @@
       "equipment": {
         "Headwear": 100,
         "Earpiece": 70,
-        "FaceCover": 70,
+        "FaceCover": 80,
         "ArmorVest": 100,
-        "Eyewear": 70,
+        "Eyewear": 90,
         "ArmBand": 100,
         "TacticalVest": 100,
-        "Backpack": 90,
+        "Backpack": 95,
         "FirstPrimaryWeapon": 100,
         "SecondPrimaryWeapon": 0,
-        "Holster": 40,
+        "Holster": 50,
         "Scabbard": 100,
         "Pockets": 100,
         "SecuredContainer": 100
