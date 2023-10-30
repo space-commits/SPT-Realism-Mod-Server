@@ -266,7 +266,9 @@ class Main {
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
-                        const time = weatherController.generate().time;
+                        const time = weatherController.generate().time; //apparently regenerates weather?
+                        // const time = weatherController.getCurrentInRaidTime; //better way?
+                        // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
                         utils_1.RaidInfoTracker.mapName = matchInfo.location;
                         let realTime = "";
                         let mapType = "";

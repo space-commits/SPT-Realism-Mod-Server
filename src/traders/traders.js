@@ -161,6 +161,7 @@ class Traders {
         //jaeger
         this.assortItemPusher(jaegId, "mosin_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 5000);
         this.assortItemPusher(jaegId, "6kh4_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+        // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
         this.assortItemPusher(jaegId, "m9_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         //ragman//
         this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
@@ -239,6 +240,39 @@ class Traders {
                 assortId = id;
             }
         }
+    }
+    assortBarterPusher(trader, itemId, buyRestriction, barters, loyalLvl) {
+        let assort = this.tables.traders[trader].assort;
+        let assortId = this.utils.genId();
+        this.assortBarterHelper(assort, assortId, barters, loyalLvl, itemId, buyRestriction);
+    }
+    assortBarterHelper(assort, assortId, barters, loyalLvl, itemId, buyRestriction) {
+        if (loyalLvl === 5 && modConfig.randomize_trader_ll != true) {
+            loyalLvl = 4;
+        }
+        assort.items.push({
+            "_id": assortId,
+            "_tpl": itemId,
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "BuyRestrictionMax": buyRestriction,
+                "BuyRestrictionCurrent": 0,
+                "StackObjectsCount": 1
+            }
+        });
+        let barterItems = [];
+        for (let barter in barters) {
+            barterItems.push({
+                "count": 1,
+                "_tpl": barters[barter]
+            });
+        }
+        assort.barter_scheme[assortId] =
+            [
+                barterItems
+            ];
+        assort.loyal_level_items[assortId] = loyalLvl;
     }
     assortItemPusher(trader, itemId, buyRestriction, saleCurrency, loyalLvl, useHandbookPrice, price = 0, priceMulti = 1) {
         let assort = this.tables.traders[trader].assort;

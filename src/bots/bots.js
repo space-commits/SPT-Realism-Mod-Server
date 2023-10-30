@@ -563,12 +563,12 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
         }
         else if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
+            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 75;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
         }
         else {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
@@ -576,7 +576,7 @@ class BotLoader {
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             if (utils_1.RaidInfoTracker.mapType === "urban") {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 30;
-                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 30;
+                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
             }
             if (utils_1.RaidInfoTracker.mapType === "cqb") {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 80;
@@ -631,13 +631,13 @@ class BotLoader {
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
-            this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 25;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 25;
+            this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 15;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
         }
         else if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
+            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 75;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
         }
         else {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
@@ -701,12 +701,12 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.TOD === "night") {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 25;
         }
         else if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 50;
+            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 75;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
         }
         else {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
@@ -1067,8 +1067,8 @@ class BotLoader {
         botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
         botJsonTemplate.chances = tier5LO.tier5LO.chances;
         botJsonTemplate.generation = this.arrays.pmcLootGen;
-        botJsonTemplate.appearance.body = usecLO.usecLO4.appearance.body;
-        botJsonTemplate.appearance.feet = usecLO.usecLO4.appearance.feet;
+        botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_usec.body;
+        botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_usec.feet;
         botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
@@ -1343,8 +1343,8 @@ class BotLoader {
         botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
         botJsonTemplate.chances = tier5LO.tier5LO.chances;
         botJsonTemplate.generation = this.arrays.pmcLootGen;
-        botJsonTemplate.appearance.body = bearLO.bearLO4.appearance.body;
-        botJsonTemplate.appearance.feet = bearLO.bearLO4.appearance.feet;
+        botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_bear.body;
+        botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_bear.feet;
         botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
         if (utils_1.RaidInfoTracker.TOD === "night") {

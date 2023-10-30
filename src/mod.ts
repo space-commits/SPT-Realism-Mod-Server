@@ -364,7 +364,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const seasonalEvents = new SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
                             const pmcData = profileHelper.getPmcProfile(sessionID);
 
-                            const time = weatherController.generate().time;
+                            const time = weatherController.generate().time; //apparently regenerates weather?
+                            // const time = weatherController.getCurrentInRaidTime; //better way?
+                            // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
                             RaidInfoTracker.mapName = matchInfo.location;
                             let realTime = "";
                             let mapType = "";

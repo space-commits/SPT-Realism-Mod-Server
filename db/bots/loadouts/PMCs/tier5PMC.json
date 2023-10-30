@@ -7,6 +7,51 @@
                 "min": 46
             }
         },
+        "appearance_bear": {
+            "body": {
+                "5d1f565786f7743f8362bcd5": 10,
+                "5fce3e0cfe40296c1d5fd782": 10,
+                "5d1f568486f7744bca3f0b98": 10,
+                "5d1f566d86f7744bcd13459a": 10,
+                "5df89f1f86f77412631087ea": 10,
+                "5e9d9fa986f774054d6b89f2": 10,
+                "5e4bb31586f7740695730568": 10,
+                "5f5e401747344c2e4f6c42c5": 10
+            },
+            "feet": {
+                "5f5e40400bc58666c37e7819": 1,
+                "5e4bb39386f774067f79de05": 1,
+                "5e9dc97c86f774054c19ac9a": 1,
+                "5d1f58ab86f7743014162042": 1,
+                "5d1f58cb86f7744bca3f0b9a": 1,
+                "5fce3e965a9f8c40685693bc": 1,
+                "6377315993a3b4967208e437": 1
+            }
+        },
+        "appearance_usec": {
+            "body": {
+                "5fcf63da5c287f01f22bf245": 10,
+                "618109c96d7ca35d076b3363": 10,
+                "5fd3e9f71b735718c25cd9f8": 10,
+                "637b945722e2a933ed0e33c8": 10,
+                "5d1f56e486f7744bce0ee9ed": 10,
+                "5e4bb35286f77406a511c9bc": 10,
+                "5e9da17386f774054b6f79a3": 10
+            },
+            "feet": {
+                "5fcf940bce1ba36a513bb9cc": 1,
+                "6295e944e9de5e7b3751c4da": 1,
+                "5d1f592286f7743f8362bcdb": 1,
+                "6033a3fee29c9f6c9b14e74e": 1,
+                "637ba17aa10a96c2b605dbc2": 1,
+                "5d1f590486f7744bcd13459e": 1,
+                "5d1f591186f7744bcc048755": 1,
+                "617c02e24013b06b0b78df80": 1,
+                "5d1f593286f7743014162044": 1,
+                "5df8a08886f7740bfe6df775": 1,
+                "5f5e40a06760b4138443b341": 1
+            }
+        },
         "inventory": {
             "Ammo": {
                 "Caliber1143x23ACP": {
@@ -417,13 +462,23 @@
                 }
             },
             "mods": {
+                "5ea18c84ecf1982c7712d9a2": {
+                    "mod_nvg": [
+                        "5c0558060db834001b735271",
+                        "5a16b8a9fcdbcb00165aa6ca"
+                    ]
+                },
+                "5ea17ca01412a1425304d1c0": {
+                    "mod_nvg": [
+                        "5ea18c84ecf1982c7712d9a2"
+                    ]
+                },
                 "61bca7cda0eae612383adf57": {
                     "mod_nvg": [
                         "5c0558060db834001b735271",
                         "5a16b8a9fcdbcb00165aa6ca"
                     ],
                     "mod_equipment_000": [
-                        "5a16b672fcdbcb001912fa83",
                         "5a16b7e1fcdbcb00165aa6c9"
                     ],
                     "mod_mount": [
@@ -452,7 +507,6 @@
                         "5a16b8a9fcdbcb00165aa6ca"
                     ],
                     "mod_equipment_000": [
-                        "5a16b672fcdbcb001912fa83",
                         "5a16b7e1fcdbcb00165aa6c9"
                     ],
                     "mod_mount": [
@@ -465,7 +519,6 @@
                         "5c0558060db834001b735271"
                     ],
                     "mod_equipment_000": [
-                        "5a16b672fcdbcb001912fa83",
                         "5a16badafcdbcb001865f72d",
                         "5a16b7e1fcdbcb00165aa6c9"
                     ],
@@ -542,7 +595,6 @@
                         "5c0558060db834001b735271"
                     ],
                     "mod_equipment_000": [
-                        "5a16b672fcdbcb001912fa83",
                         "5a16b7e1fcdbcb00165aa6c9"
                     ],
                     "mod_equipment_001": [
@@ -559,7 +611,6 @@
                         "5c0558060db834001b735271"
                     ],
                     "mod_equipment_000": [
-                        "5a16b672fcdbcb001912fa83",
                         "5a16badafcdbcb001865f72d",
                         "5a16b7e1fcdbcb00165aa6c9"
                     ],
@@ -679,7 +730,7 @@
                         "5c1cd46f2e22164bef5cfedb"
                     ]
                 }
-            }   
+            }
         },
         "chances": {
             "equipment": {

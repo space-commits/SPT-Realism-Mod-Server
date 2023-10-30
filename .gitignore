@@ -3,3 +3,4 @@ types/
 ProfileBackups/
 
 *.py
+*.zip

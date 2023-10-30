@@ -1197,7 +1197,7 @@
         "HasShoulderContact": false,
         "Ergonomics": 80,
         "VerticalRecoil": 123,
-        "HorizontalRecoil": 180,
+        "HorizontalRecoil": 190,
         "Dispersion": 26,
         "CameraRecoil": 0.1,
         "CameraSnap": 0.5,

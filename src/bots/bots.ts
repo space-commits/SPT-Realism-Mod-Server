@@ -1174,8 +1174,8 @@ export class BotLoader {
         botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
         botJsonTemplate.chances = tier5LO.tier5LO.chances;
         botJsonTemplate.generation = this.arrays.pmcLootGen;
-        botJsonTemplate.appearance.body = usecLO.usecLO4.appearance.body;
-        botJsonTemplate.appearance.feet = usecLO.usecLO4.appearance.feet;
+        botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_usec.body;
+        botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_usec.feet;
         botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
 
         if (RaidInfoTracker.TOD === "night") {
@@ -1467,8 +1467,8 @@ export class BotLoader {
         botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
         botJsonTemplate.chances = tier5LO.tier5LO.chances;
         botJsonTemplate.generation = this.arrays.pmcLootGen;
-        botJsonTemplate.appearance.body = bearLO.bearLO4.appearance.body;
-        botJsonTemplate.appearance.feet = bearLO.bearLO4.appearance.feet;
+        botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_bear.body;
+        botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_bear.feet
         botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
 

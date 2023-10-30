@@ -25,9 +25,6 @@ import { MinMax } from "@spt-aki/models/common/MinMax";
 import { IRandomisedBotLevelResult } from "@spt-aki/models/eft/bot/IRandomisedBotLevelResult";
 import { IBotBase, Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
-import { ItemBaseClassService } from "@spt-aki/services/ItemBaseClassService";
-import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
-import { IGetRaidConfigurationRequestData } from "@spt-aki/models/eft/match/IGetRaidConfigurationRequestData";
 import { BaseClasses } from "@spt-aki/models/enums/BaseClasses";
 import { DurabilityLimitsHelper } from "@spt-aki/helpers/DurabilityLimitsHelper";
 import { ApplicationContext } from "@spt-aki/context/ApplicationContext";
@@ -993,7 +990,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
         const appContext = container.resolve<ApplicationContext>("ApplicationContext");
         const myBotGenHelper = new BotGenHelper(this.logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, this.itemHelper, appContext, this.localisationService, this.configServer);
-        
+
         return {
             "_id": modId,
             "_tpl": modTpl,
