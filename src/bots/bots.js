@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotLoader = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const utils_1 = require("../utils/utils");
+const seasonalevents_1 = require("../misc/seasonalevents");
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
@@ -1062,49 +1063,10 @@ class BotLoader {
     }
     usecLoad5(botJsonTemplate) {
         botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
         botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
-        botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
-        botJsonTemplate.chances = tier5LO.tier5LO.chances;
-        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_usec.body;
         botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_usec.feet;
-        botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
-        if (utils_1.RaidInfoTracker.TOD === "night") {
-            botJsonTemplate.chances.mods.mod_nvg = 100;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 0;
-            botJsonTemplate.chances.mods.mod_equipment = 0;
-        }
-        else if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
-            botJsonTemplate.chances.mods.mod_nvg = 100;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 50;
-            botJsonTemplate.chances.mods.mod_equipment = 50;
-        }
-        else {
-            botJsonTemplate.chances.mods.mod_nvg = 0;
-            if (utils_1.RaidInfoTracker.mapType === "urban") {
-                botJsonTemplate.chances.mods.mod_equipment_000 = 60;
-                botJsonTemplate.chances.mods.mod_equipment = 60;
-            }
-            if (utils_1.RaidInfoTracker.mapType === "cqb") {
-                botJsonTemplate.chances.mods.mod_equipment_000 = 100;
-                botJsonTemplate.chances.mods.mod_equipment = 100;
-            }
-            if (utils_1.RaidInfoTracker.mapType === "outdoor") {
-                botJsonTemplate.chances.mods.mod_equipment_000 = 25;
-                botJsonTemplate.chances.mods.mod_equipment = 25;
-            }
-        }
-        if (utils_1.RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_urban;
-        }
-        if (utils_1.RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_cqb;
-        }
-        if (utils_1.RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_outdoor;
-        }
+        this.tier5PMCLoad(botJsonTemplate);
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
@@ -1337,16 +1299,28 @@ class BotLoader {
         }
     }
     bearLoad5(botJsonTemplate) {
-        botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
         botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.items;
-        botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
-        botJsonTemplate.chances = tier5LO.tier5LO.chances;
-        botJsonTemplate.generation = this.arrays.pmcLootGen;
         botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_bear.body;
         botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_bear.feet;
-        botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
+        this.tier5PMCLoad(botJsonTemplate);
+        if (this.modConfig.dynamic_loot_pmcs === true) {
+            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
+            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
+            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
+        }
+        if (this.modConfig.logEverything == true) {
+            this.logger.info("bearLoad5 loaded");
+        }
+    }
+    tier5PMCLoad(botJsonTemplate) {
+        botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
+        botJsonTemplate.generation = this.arrays.pmcLootGen;
+        botJsonTemplate.chances = tier5LO.tier5LO.chances;
+        botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
+        botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
         if (utils_1.RaidInfoTracker.TOD === "night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
@@ -1357,40 +1331,34 @@ class BotLoader {
             botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 50;
             botJsonTemplate.chances.mods.mod_equipment = 50;
+            botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_night;
         }
         else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (utils_1.RaidInfoTracker.mapType === "urban") {
                 botJsonTemplate.chances.mods.mod_equipment_000 = 60;
                 botJsonTemplate.chances.mods.mod_equipment = 60;
+                botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
             }
             if (utils_1.RaidInfoTracker.mapType === "cqb") {
                 botJsonTemplate.chances.mods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.mods.mod_equipment = 100;
+                botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
             }
             if (utils_1.RaidInfoTracker.mapType === "outdoor") {
                 botJsonTemplate.chances.mods.mod_equipment_000 = 25;
                 botJsonTemplate.chances.mods.mod_equipment = 25;
             }
         }
+        //don't want TOD to be a factor
         if (utils_1.RaidInfoTracker.mapType === "urban") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_urban;
         }
         if (utils_1.RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_cqb;
         }
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_outdoor;
-        }
-        if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
-            botJsonTemplate.generation.items.vestLoot.weights = { "0": 1 };
-            botJsonTemplate.generation.items.pocketLoot.weights = { "0": 1 };
-        }
-        if (this.modConfig.logEverything == true) {
-            this.logger.info("bearLoad5 loaded");
         }
     }
     raiderLoad1() {
@@ -2241,6 +2209,9 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO1.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
         this.tagillaBase.generation = this.arrays.bossLootGen;
+        if (seasonalevents_1.EventTracker.isHalloween) {
+            this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 };
+        }
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 8) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -2280,6 +2251,9 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO2.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
         this.tagillaBase.generation = this.arrays.bossLootGen;
+        if (seasonalevents_1.EventTracker.isHalloween) {
+            this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 };
+        }
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 5) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
@@ -2316,6 +2290,9 @@ class BotLoader {
         this.tagillaBase.inventory.mods = tagillaLO.tagillaLO3.inventory.mods;
         this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
         this.tagillaBase.generation = this.arrays.bossLootGen;
+        if (seasonalevents_1.EventTracker.isHalloween) {
+            this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 };
+        }
         const randnum = this.utils.pickRandNumOneInTen();
         if (randnum >= 3) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;

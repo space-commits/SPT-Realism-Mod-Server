@@ -59,7 +59,7 @@ import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
 import { AttatchmentBase as AttachmentBase } from "./weapons/attatchment_base";
 import { FleamarketConfig, TieredFlea, FleamarketGlobal } from "./traders/fleamarket";
-import { ConfigChecker, EventTracker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
+import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
 import { Arrays } from "./utils/arrays"
 import { Meds } from "./items/meds";
 import { Player } from "./player/player"
@@ -73,7 +73,7 @@ import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./tr
 import { AirdropLootgen, Airdrops } from "./misc/airdrops";
 import { Spawns } from "./bots/maps";
 import { Gear } from "./items/gear";
-import { SeasonalEventsHandler } from "./misc/seasonalevents";
+import { EventTracker, SeasonalEventsHandler } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
 import * as path from 'path';
 import { DescriptionGen } from "./json/description_gen";
@@ -355,13 +355,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
-                            const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new Arrays(postLoadTables);
                             const utils = new Utils(postLoadTables, arrays);
                             const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
-                            const seasonalEvents = new SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
                             const pmcData = profileHelper.getPmcProfile(sessionID);
 
                             const time = weatherController.generate().time; //apparently regenerates weather?
@@ -421,10 +419,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
                             if (modConfig.bot_changes == true) {
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
-                                if (EventTracker.isChristmas == true) {
-                                    logger.warning("====== Giving Bots Christmas Presents, Don't Be A Scrooge! ======");
-                                    seasonalEvents.giveBotsChristmasPresents();
-                                }
                             }
 
                             if (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory") {
@@ -666,7 +660,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             bots.botNames();
         }
 
-        if (modConfig.guarantee_boss_spawn == true) {
+        if (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween) {
             bots.forceBossSpawns();
         }
 
@@ -758,9 +752,14 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
     private checkForEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
         const isChristmasActive = seasonalEventsService.christmasEventEnabled();
+        const isHalloweenActive = seasonalEventsService.halloweenEventEnabled();
         EventTracker.isChristmas = isChristmasActive;
+        EventTracker.isHalloween = isHalloweenActive;
         if (isChristmasActive == true) {
             logger.warning("Merry Christmas!");
+        }
+        if (isHalloweenActive == true) {
+            logger.warning("Happy Halloween!");
         }
     }
 

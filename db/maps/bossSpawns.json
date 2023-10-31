@@ -995,7 +995,19 @@
     ],
     "LabsBossLocationSpawn": [
         {
-            "BossChance": 10,
+            "BossName": "bossTagilla",
+            "BossChance": 15,
+            "BossZone": "BotZoneFloor1",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "0",
+            "Time": -1,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossChance": 25,
             "BossDifficult": "normal",
             "BossEscortAmount": "3,4",
             "BossEscortDifficult": "normal",
@@ -1006,18 +1018,6 @@
             "RandomTimeSpawn": false,
             "Supports": null,
             "Time": -1
-        },
-        {
-            "BossName": "bossTagilla",
-            "BossChance": 25,
-            "BossZone": "BotZoneFloor1",
-            "BossPlayer": false,
-            "BossDifficult": "normal",
-            "BossEscortType": "followerBully",
-            "BossEscortDifficult": "normal",
-            "BossEscortAmount": "0",
-            "Time": -1,
-            "RandomTimeSpawn": false
         },
         {
             "BossName": "bossKilla",

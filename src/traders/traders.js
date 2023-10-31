@@ -7,6 +7,7 @@ const TraderAssortHelper_1 = require("C:/snapshot/project/obj/helpers/TraderAsso
 const utils_1 = require("../utils/utils");
 const enums_1 = require("../utils/enums");
 const RagfairCallbacks_1 = require("C:/snapshot/project/obj/callbacks/RagfairCallbacks");
+const seasonalevents_1 = require("../misc/seasonalevents");
 const modConfig = require("../../config/config.json");
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
@@ -324,7 +325,7 @@ class RandomizeTraderAssort {
     arrays = new arrays_1.Arrays(this.tables);
     utils = new utils_1.Utils(this.tables, this.arrays);
     adjustTraderStockAtServerStart() {
-        if (utils_1.EventTracker.isChristmas == true) {
+        if (seasonalevents_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
         }
         for (let trader in this.tables.traders) {
@@ -491,7 +492,7 @@ class RandomizeTraderAssort {
                     barter[0][0].count = cost * modConfig.rand_cost_discount;
                 }
             }
-            if (utils_1.EventTracker.isChristmas == true) {
+            if (seasonalevents_1.EventTracker.isChristmas == true) {
                 barter[0][0].count = cost * 0.6;
             }
         }

@@ -47,6 +47,7 @@ import { ParentClasses } from "../utils/enums";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { RepairService } from "@spt-aki/services/RepairService";
 import { basename } from "path";
+import { EventTracker, SeasonalEventsHandler } from "../misc/seasonalevents";
 
 const modConfig = require("../../config/config.json");
 const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
@@ -267,6 +268,7 @@ export class BotGen extends BotGenerator {
         const botEquipmentModPoolService = container.resolve<BotEquipmentModPoolService>("BotEquipmentModPoolService");
         const botEquipmentModGenerator = container.resolve<BotEquipmentModGenerator>("BotEquipmentModGenerator");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+        const seasonalEvents = new SeasonalEventsHandler();
 
         const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseServer);
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseServer, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
@@ -280,10 +282,20 @@ export class BotGen extends BotGenerator {
 
         bot.Info.Nickname = this.generateBotNickname(botJsonTemplate, botGenerationDetails.isPlayerScav, botRole, sessionId);
 
+        //SPT adds christmas and halloween stuff by default then removes it if not halloween or christams (ass-backwards)
+        //so until I modify all bot loadouts I have to keep this.
         const skipChristmasItems = !this.seasonalEventService.christmasEventEnabled();
         if (skipChristmasItems) {
             this.seasonalEventService.removeChristmasItemsFromBotInventory(botJsonTemplate.inventory, botGenerationDetails.role);
         }
+
+        if (EventTracker.isChristmas == true) {
+            seasonalEvents.giveBotsChristmasPresents(botJsonTemplate);
+        }
+        if (EventTracker.isHalloween == true) {
+            seasonalEvents.giveBotsHalloweenTreats(botJsonTemplate);
+        }
+
 
         bot.Info.Experience = botLevel.exp;
         bot.Info.Level = botLevel.level;

@@ -258,13 +258,11 @@ class Main {
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
-                        const seasonalEventsService = container.resolve("SeasonalEventService");
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.Arrays(postLoadTables);
                         const utils = new utils_1.Utils(postLoadTables, arrays);
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
-                        const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler(logger, postLoadTables, modConfig, arrays, seasonalEventsService);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const time = weatherController.generate().time; //apparently regenerates weather?
                         // const time = weatherController.getCurrentInRaidTime; //better way?
@@ -316,10 +314,6 @@ class Main {
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true) {
                             bots.updateBots(pmcData, logger, modConfig, bots, utils);
-                            if (utils_1.EventTracker.isChristmas == true) {
-                                logger.warning("====== Giving Bots Christmas Presents, Don't Be A Scrooge! ======");
-                                seasonalEvents.giveBotsChristmasPresents();
-                            }
                         }
                         if (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory") {
                             pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
@@ -512,7 +506,7 @@ class Main {
         if (modConfig.bot_names == true) {
             bots.botNames();
         }
-        if (modConfig.guarantee_boss_spawn == true) {
+        if (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween) {
             bots.forceBossSpawns();
         }
         bots.botDifficulty();
@@ -588,9 +582,14 @@ class Main {
     }
     checkForEvents(logger, seasonalEventsService) {
         const isChristmasActive = seasonalEventsService.christmasEventEnabled();
-        utils_1.EventTracker.isChristmas = isChristmasActive;
+        const isHalloweenActive = seasonalEventsService.halloweenEventEnabled();
+        seasonalevents_1.EventTracker.isChristmas = isChristmasActive;
+        seasonalevents_1.EventTracker.isHalloween = isHalloweenActive;
         if (isChristmasActive == true) {
             logger.warning("Merry Christmas!");
+        }
+        if (isHalloweenActive == true) {
+            logger.warning("Happy Halloween!");
         }
     }
     checkProfile(pmcData, pmcEXP, utils, player, logger) {

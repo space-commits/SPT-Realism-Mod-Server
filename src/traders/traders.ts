@@ -7,7 +7,7 @@ import { Arrays } from "../utils/arrays";
 import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { EventTracker, Utils, ProfileTracker } from "../utils/utils";
+import { Utils, ProfileTracker } from "../utils/utils";
 import { Calibers, ParentClasses } from "../utils/enums";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";
 import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
@@ -15,6 +15,7 @@ import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyR
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { EventTracker } from "../misc/seasonalevents";
 
 
 const modConfig = require("../../config/config.json");
