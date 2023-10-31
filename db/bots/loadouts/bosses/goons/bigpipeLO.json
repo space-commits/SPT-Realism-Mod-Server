@@ -238,7 +238,7 @@
                 "Holster": 50,
                 "Pockets": 100,
                 "Scabbard": 50,
-                "SecondPrimaryWeapon": 25,
+                "SecondPrimaryWeapon": 35,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -333,7 +333,7 @@
                     "57cd379a24597778e7682ecf": 1
                 },
                 "SecondPrimaryWeapon": {
-                    "5a7828548dc32e5a9c28b516": 5,
+                    "5a7828548dc32e5a9c28b516": 4,
                     "5e81ebcd8e146c7080625e15": 1,
                     "6275303a9f372d6ea97f9ec7": 1
                 },
@@ -460,7 +460,7 @@
                 "Holster": 70,
                 "Pockets": 100,
                 "Scabbard": 50,
-                "SecondPrimaryWeapon": 50,
+                "SecondPrimaryWeapon": 60,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
@@ -555,7 +555,7 @@
                     "57cd379a24597778e7682ecf": 1
                 },
                 "SecondPrimaryWeapon": {
-                    "5a7828548dc32e5a9c28b516": 5,
+                    "5a7828548dc32e5a9c28b516": 3,
                     "5e81ebcd8e146c7080625e15": 1,
                     "6275303a9f372d6ea97f9ec7": 1
                 },
@@ -682,7 +682,7 @@
                 "Holster": 85,
                 "Pockets": 100,
                 "Scabbard": 50,
-                "SecondPrimaryWeapon": 75,
+                "SecondPrimaryWeapon": 85,
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },

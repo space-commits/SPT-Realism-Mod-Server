@@ -7,7 +7,7 @@ import { Arrays } from "../utils/arrays";
 import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { EventTracker, Utils, ProfileTracker } from "../utils/utils";
+import { Utils, ProfileTracker } from "../utils/utils";
 import { Calibers, ParentClasses } from "../utils/enums";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";
 import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
@@ -15,6 +15,7 @@ import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyR
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { EventTracker } from "../misc/seasonalevents";
 
 
 const modConfig = require("../../config/config.json");
@@ -186,6 +187,7 @@ export class Traders {
         //jaeger
         this.assortItemPusher(jaegId, "mosin_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 5000);
         this.assortItemPusher(jaegId, "6kh4_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+        // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
         this.assortItemPusher(jaegId, "m9_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 7000);
 
         //ragman//
@@ -281,6 +283,56 @@ export class Traders {
                 assortId = id;
             }
         }
+    }
+
+    private assortBarterPusher(trader: string, itemId: string, buyRestriction: number, barters: string[], loyalLvl: number) {
+
+        let assort = this.tables.traders[trader].assort;
+        let assortId = this.utils.genId();
+
+        this.assortBarterHelper(assort, assortId, barters, loyalLvl, itemId, buyRestriction);
+
+    }
+
+    private assortBarterHelper(assort: ITraderAssort, assortId: string, barters: string[], loyalLvl: number, itemId: string, buyRestriction: number) {
+
+        if (loyalLvl === 5 && modConfig.randomize_trader_ll != true) {
+            loyalLvl = 4;
+        }
+
+        assort.items.push(
+            {
+                "_id": assortId,
+                "_tpl": itemId,
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "BuyRestrictionMax": buyRestriction,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 1
+                }
+            }
+        );
+
+        let barterItems = [];
+
+        for(let barter in barters){
+
+            barterItems.push(
+                {
+                    "count": 1,
+                    "_tpl": barters[barter]
+                }
+            );
+        }
+
+        assort.barter_scheme[assortId] =
+            [
+                barterItems
+            ];
+
+
+        assort.loyal_level_items[assortId] = loyalLvl;
     }
 
     private assortItemPusher(trader: string, itemId: string, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbookPrice: boolean, price: number = 0, priceMulti: number = 1) {

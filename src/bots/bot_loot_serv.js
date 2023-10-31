@@ -90,6 +90,17 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
             pocketStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.stims.weights);
             bagStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
         }
+        else if (botRole.toLocaleLowerCase() === "sptbear" || botRole.toLocaleLowerCase() === "sptusec") {
+            vestHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
+            pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.healing.weights);
+            bagHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights);
+            vestDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+            pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.drugs.weights);
+            bagDrugItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+            vestStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+            pocketStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.stims.weights);
+            bagStimItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights);
+        }
         else {
             vestHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
             pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue(itemCounts.healing.weights);

@@ -133,7 +133,8 @@ class Arrays {
         "items": {
             "specialItems": {
                 "weights": {
-                    "0": 1
+                    "0": 5,
+                    "1": 1
                 },
                 "whitelist": []
             },
@@ -203,7 +204,7 @@ class Arrays {
                 "weights": {
                     "0": 5,
                     "1": 5,
-                    "2": 2,
+                    "2": 3,
                     "3": 1
                 },
                 "whitelist": []
@@ -273,7 +274,6 @@ class Arrays {
             },
             "magazines": {
                 "weights": {
-                    "0": 2,
                     "1": 10,
                     "2": 6,
                     "3": 2,

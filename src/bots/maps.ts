@@ -1,6 +1,7 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILocations } from "@spt-aki/models/spt/server/ILocations";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { EventTracker } from "../misc/seasonalevents";
 
 
 const botZones = require("../../db/maps/spawnZones.json");

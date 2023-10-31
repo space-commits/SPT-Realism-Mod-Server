@@ -101,30 +101,41 @@ export class BotLootGen extends BotLootGenerator {
         var pocketStimItemCount = 1;
         var bagStimItemCount = 1;
 
-        if(botRole.toLocaleLowerCase() === "assault" || botRole.toLocaleLowerCase() === "marskman")
-        {
+        if (botRole.toLocaleLowerCase() === "assault" || botRole.toLocaleLowerCase() === "marskman") {
             vestHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
             pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.healing.weights);
             bagHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-    
+
             vestDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
             pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.drugs.weights);
             bagDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-    
+
             vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
             pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
             bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
         }
-        else
-        {
+        else if (botRole.toLocaleLowerCase() === "sptbear" || botRole.toLocaleLowerCase() === "sptusec") {
             vestHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
             pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.healing.weights);
             bagHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
-    
+
+            vestDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
+            pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.drugs.weights);
+            bagDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
+
+            vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
+            pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
+            bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
+        }
+        else {
+            vestHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
+            pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.healing.weights);
+            bagHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
+
             vestDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
             pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.drugs.weights);
             bagDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
-    
+
             vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
             pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
             bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
@@ -298,7 +309,7 @@ export class BotLootGen extends BotLootGenerator {
 }
 
 export class MyLootCache extends BotLootCacheService {
-    
+
     protected myLootCache: Record<string, MyBotLootCache> = {};
 
     private myBotRoleExistsInCache(botRole: string): boolean {

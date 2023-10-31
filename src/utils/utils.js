@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotTierTracker = exports.RaidInfoTracker = exports.EventTracker = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
+exports.BotTierTracker = exports.RaidInfoTracker = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
 const path = __importStar(require("path"));
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
@@ -157,10 +157,6 @@ class ConfigChecker {
     static dllIsPresent = false;
 }
 exports.ConfigChecker = ConfigChecker;
-class EventTracker {
-    static isChristmas = false;
-}
-exports.EventTracker = EventTracker;
 class RaidInfoTracker {
     static TOD = "";
     static mapType = "";
@@ -201,7 +197,7 @@ class BotTierTracker {
         if (botType === "bossbully" || botType === "followerbully") {
             return BotTierTracker.reshallaTier;
         }
-        return 0;
+        return 2;
     }
 }
 exports.BotTierTracker = BotTierTracker;

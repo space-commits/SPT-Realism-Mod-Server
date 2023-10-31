@@ -27,6 +27,27 @@ class ItemsClass {
     handbook() {
         return this.tables.templates.handbook.Items;
     }
+    createGTFilter(slotName, parentID) {
+        return {
+            "_id": slotName,
+            "_mergeSlotWithChildren": false,
+            "_name": "mod_muzzle",
+            "_parent": parentID,
+            "_props": {
+                "filters": [
+                    {
+                        "Filter": [
+                            "6kh4_bayonet",
+                            "6kh5_bayonet"
+                        ],
+                        "Shift": 0
+                    }
+                ]
+            },
+            "_proto": "55d30c4c4bdc2db4468b457e",
+            "_required": false
+        };
+    }
     addCustomItems() {
         for (const item in myTemplates) {
             this.itemDB()[item] = myTemplates[item];
@@ -34,72 +55,40 @@ class ItemsClass {
         for (const item of myHandbook.items) {
             this.handbook().push(item);
         }
-        for (const localeID in this.locales) {
+        for (const localeID in this.locales()) {
             for (const [itemId, template] of Object.entries(myLocales.templates)) {
                 for (const [key, value] of Object.entries(template)) {
-                    this.locales[localeID][`${itemId} ${key}`] = value;
+                    this.locales()[localeID][`${itemId} ${key}`] = value;
                 }
             }
         }
         this.itemDB()["5ae09bff5acfc4001562219d"]._props.Slots[2]._props.filters[0].Filter.push("mosin_bayonet");
         this.itemDB()["5bfd4cbe0db834001b73449f"]._props.Slots[2]._props.filters[0].Filter.push("mosin_bayonet");
+        // this.itemDB()["649ec107961514b22506b10c"]._props.Prefab.path = "ak12_gt.bundle"
+        // this.itemDB()["649ec107961514b22506b10c"]._props.Slots.push({
+        //     "_id": "ak74_slot0",
+        //     "_mergeSlotWithChildren": false,
+        //     "_name": "mod_muzzle",
+        //     "_parent": "649ec107961514b22506b10c",
+        //     "_props": {
+        //         "filters": [
+        //             {
+        //                 "Filter": [
+        //                     "6kh5_bayonet"
+        //                 ],
+        //                 "Shift": 0
+        //             }
+        //         ]
+        //     },
+        //     "_proto": "55d30c4c4bdc2db4468b457e",
+        //     "_required": false
+        // });
         this.itemDB()["59c6633186f7740cf0493bb9"]._props.Prefab.path = "ak74_gt.bundle";
-        this.itemDB()["59c6633186f7740cf0493bb9"]._props.Slots.push({
-            "_id": "ak74_slot0",
-            "_mergeSlotWithChildren": false,
-            "_name": "mod_muzzle",
-            "_parent": "59c6633186f7740cf0493bb9",
-            "_props": {
-                "filters": [
-                    {
-                        "Filter": [
-                            "6kh4_bayonet"
-                        ],
-                        "Shift": 0
-                    }
-                ]
-            },
-            "_proto": "55d30c4c4bdc2db4468b457e",
-            "_required": false
-        });
+        this.itemDB()["59c6633186f7740cf0493bb9"]._props.Slots.push(this.createGTFilter("a74_slot0", "59c6633186f7740cf0493bb9"));
         this.itemDB()["59d64ec286f774171d1e0a42"]._props.Prefab.path = "akm_gt.bundle";
-        this.itemDB()["59d64ec286f774171d1e0a42"]._props.Slots.push({
-            "_id": "akm_slot0",
-            "_mergeSlotWithChildren": false,
-            "_name": "mod_muzzle",
-            "_parent": "59d64ec286f774171d1e0a42",
-            "_props": {
-                "filters": [
-                    {
-                        "Filter": [
-                            "6kh4_bayonet"
-                        ],
-                        "Shift": 0
-                    }
-                ]
-            },
-            "_proto": "55d30c4c4bdc2db4468b457e",
-            "_required": false
-        });
+        this.itemDB()["59d64ec286f774171d1e0a42"]._props.Slots.push(this.createGTFilter("akm_slot0", "59d64ec286f774171d1e0a42"));
         this.itemDB()["59e649f986f77411d949b246"]._props.Prefab.path = "vepr_136_gt.bundle";
-        this.itemDB()["59e649f986f77411d949b246"]._props.Slots.push({
-            "_id": "akm_slot0",
-            "_mergeSlotWithChildren": false,
-            "_name": "mod_muzzle",
-            "_parent": "59d64ec286f774171d1e0a42",
-            "_props": {
-                "filters": [
-                    {
-                        "Filter": [
-                            "6kh4_bayonet"
-                        ],
-                        "Shift": 0
-                    }
-                ]
-            },
-            "_proto": "55d30c4c4bdc2db4468b457e",
-            "_required": false
-        });
+        this.itemDB()["59e649f986f77411d949b246"]._props.Slots.push(this.createGTFilter("vepr_slot0", "59e649f986f77411d949b246"));
         this.itemDB()["5ae30e795acfc408fb139a0b"]._props.Prefab.path = "m4_gas_block.bundle";
         this.itemDB()["5ae30e795acfc408fb139a0b"]._props.Slots[0] = {
             "_id": "m4_slot0",
@@ -144,30 +133,33 @@ class ItemsClass {
             "5ac72e7d5acfc40016339a02",
             "5649aa744bdc2ded0b8b457e",
         ];
-        this.itemDB()["6kh4_bayonet"]._props.ConflictingItems =
-            [
-                "62e7e7bbe6da9612f743f1e0",
-                "5ac66cb05acfc40198510a10",
-                "5ac66d725acfc43b321d4b60",
-                "5ac66d9b5acfc4001633997a"
-            ];
-        this.itemDB()["6kh4_bayonet"]._props.ConflictingItems = [];
+        var incompatibleWeapons = [
+            "62e7e7bbe6da9612f743f1e0",
+            "5ac66cb05acfc40198510a10",
+            "5ac66d725acfc43b321d4b60",
+            "5ac66d9b5acfc4001633997a"
+        ];
+        this.itemDB()["6kh4_bayonet"]._props.ConflictingItems = incompatibleWeapons;
+        // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems = incompatibleWeapons;
         for (let i in this.itemDB()["5bf3e03b0db834001d2c4a9c"]._props.Slots[2]._props.filters[0].Filter) {
             let item = this.itemDB()["5bf3e03b0db834001d2c4a9c"]._props.Slots[2]._props.filters[0].Filter[i];
             if (!allowedAKMuzzles.includes(item)) {
                 this.itemDB()["6kh4_bayonet"]._props.ConflictingItems.push(item);
+                // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
         }
         for (let i in this.itemDB()["59d6088586f774275f37482f"]._props.Slots[2]._props.filters[0].Filter) {
             let item = this.itemDB()["59d6088586f774275f37482f"]._props.Slots[2]._props.filters[0].Filter[i];
             if (!allowedAKMuzzles.includes(item)) {
                 this.itemDB()["6kh4_bayonet"]._props.ConflictingItems.push(item);
+                // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
         }
         for (let i in this.itemDB()["5ac66d2e5acfc43b321d4b53"]._props.Slots[2]._props.filters[0].Filter) {
             let item = this.itemDB()["5ac66d2e5acfc43b321d4b53"]._props.Slots[2]._props.filters[0].Filter[i];
             if (!allowedAKMuzzles.includes(item)) {
                 this.itemDB()["6kh4_bayonet"]._props.ConflictingItems.push(item);
+                // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
         }
     }

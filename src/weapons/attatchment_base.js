@@ -251,7 +251,8 @@ class AttatchmentBase {
                     || serverItem._id === "5c066ef40db834001966a595"
                     || serverItem._id === "5c11046cd174af02a012e42b"
                     || serverItem._id === "5c0695860db834001b735461"
-                    || serverItem._id === "5a16b8a9fcdbcb00165aa6ca") {
+                    || serverItem._id === "5a16b8a9fcdbcb00165aa6ca"
+                    || serverItem._id === "641dc35e19604f20c800be18") {
                     serverItem._props.Slots[0]._botRequired = serverItem._props.Slots[0]._required;
                     serverItem._props.Slots[0]._botRequired = true;
                 }

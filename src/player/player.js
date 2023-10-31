@@ -19,6 +19,15 @@ class Player {
     defaultHydro;
     defaultEnergy;
     defaultTemp;
+    headHealth;
+    chestHealth;
+    stomaHealth;
+    armHealth;
+    legHealth;
+    hydration = 110;
+    energy = 130;
+    tempCurr = 30;
+    tempMax = 30;
     constructor(logger, tables, modConfig, custProfile, medItems, helper) {
         this.logger = logger;
         this.tables = tables;
@@ -36,19 +45,15 @@ class Player {
         this.defaultHydro = healthTemplate.Hydration.Maximum;
         this.defaultEnergy = healthTemplate.Energy.Maximum;
         this.defaultTemp = healthTemplate.Temperature.Maximum;
+        this.headHealth = botHealth.health.BodyParts[0].Head.max * modConfig.player_hp_multi;
+        this.chestHealth = botHealth.health.BodyParts[0].Chest.max * modConfig.player_hp_multi;
+        this.stomaHealth = botHealth.health.BodyParts[0].Stomach.max * modConfig.player_hp_multi;
+        this.armHealth = botHealth.health.BodyParts[0].RightArm.max * modConfig.player_hp_multi;
+        this.legHealth = botHealth.health.BodyParts[0].RightLeg.max * modConfig.player_hp_multi;
     }
     globalDB() {
         return this.tables.globals.config;
     }
-    headHealth = botHealth.health.BodyParts[0].Head.max;
-    chestHealth = botHealth.health.BodyParts[0].Chest.max;
-    stomaHealth = botHealth.health.BodyParts[0].Stomach.max;
-    armHealth = botHealth.health.BodyParts[0].RightArm.max;
-    legHealth = botHealth.health.BodyParts[0].RightLeg.max;
-    hydration = 110;
-    energy = 130;
-    tempCurr = 30;
-    tempMax = 30;
     correctNegativeHP(pmcData) {
         for (let part in pmcData.Health.BodyParts) {
             if (pmcData.Health.BodyParts[part].Health.Current <= 0) {
@@ -64,9 +69,12 @@ class Player {
         this.setPlayerHealthHelper(scavData, true, true);
     }
     setPlayerHealth(pmcData, scavData) {
+        //revert to defaults
         if (this.modConfig.realistic_player_health == false && this.modConfig.revert_hp == true) {
+            //revert max HP
             this.setPlayerHealthHelper(pmcData, true, false);
             this.setPlayerHealthHelper(scavData, true, false);
+            //if our current HP exceeds what the max should be, revert current HP too
             if ((pmcData.Health.BodyParts["Chest"].Health.Current > pmcData.Health.BodyParts["Chest"].Health.Maximum) || (scavData.Health.BodyParts["Chest"].Health.Current > scavData.Health.BodyParts["Chest"].Health.Maximum)) {
                 this.setPlayerHealthHelper(pmcData, false, false);
                 this.setPlayerHealthHelper(scavData, false, false);
@@ -77,9 +85,12 @@ class Player {
                 this.logger.info("Realism Mod: Player Health Reverted To Vanilla Defaults");
             }
         }
+        //set realistic HP
         if (this.modConfig.realistic_player_health == true) {
+            //set our max HP to realistic values
             this.setPlayerHealthHelper(pmcData, true, true);
             this.setPlayerHealthHelper(scavData, true, true);
+            //if we have a new profile, or an existing profile where our HP has not been yet set realistically, also set the current HP to match max values
             if (pmcData.Info.Experience == 0 || (pmcData.Health.BodyParts["Head"].Health.Current > this.headHealth || scavData.Health.BodyParts["Head"].Health.Current > this.headHealth)) {
                 this.setPlayerHealthHelper(pmcData, false, true);
                 this.setPlayerHealthHelper(scavData, false, true);
@@ -103,6 +114,7 @@ class Player {
         var rightArm = playerData.Health.BodyParts["RightArm"].Health;
         var leftLeg = playerData.Health.BodyParts["LeftLeg"].Health;
         var rightLeg = playerData.Health.BodyParts["RightLeg"].Health;
+        //revert to defaults
         if (setReal == false) {
             playerData.Health.Temperature.Current = this.defaultTemp;
             playerData.Health.Temperature.Maximum = this.defaultTemp;
