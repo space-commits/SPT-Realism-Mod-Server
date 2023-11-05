@@ -72,7 +72,7 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0.67,
-        "RecoilHandDamping": 0.67,
+        "RecoilHandDamping": 0.66,
         "WeaponAllowADS": false,
         "Weight": 0.92,
         "DurabilityBurnRatio": 0.4,

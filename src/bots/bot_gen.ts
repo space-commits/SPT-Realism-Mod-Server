@@ -424,7 +424,6 @@ export class BotInvGen extends BotInventoryGenerator {
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, itemHelper, appContext, this.localisationService, this.configServer);
 
-
         const spawnChance = ([EquipmentSlots.POCKETS, EquipmentSlots.SECURED_CONTAINER] as string[]).includes(equipmentSlot)
             ? 100
             : spawnChances.equipment[equipmentSlot];
@@ -436,11 +435,12 @@ export class BotInvGen extends BotInventoryGenerator {
 
         const shouldSpawn = this.randomUtil.getChance100(spawnChance);
         if (Object.keys(equipmentPool).length && shouldSpawn) {
+
             const id = this.hashUtil.generate();
             const equipmentItemTpl = this.weightedRandomHelper.getWeightedValue<string>(equipmentPool);
-            const itemTemplate = this.databaseServer.getTables().templates.items[equipmentItemTpl];
+            const itemTemplate = this.itemHelper.getItem(equipmentItemTpl);
 
-            if (!itemTemplate) {
+            if (!itemTemplate[0]) {
                 this.logger.error(this.localisationService.getText("bot-missing_item_template", equipmentItemTpl));
                 this.logger.info(`EquipmentSlot -> ${equipmentSlot}`);
 
@@ -457,7 +457,7 @@ export class BotInvGen extends BotInventoryGenerator {
                 "_tpl": equipmentItemTpl,
                 "parentId": inventory.equipment,
                 "slotId": equipmentSlot,
-                ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole, itemTemplate._parent)
+                ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate[1], botRole, itemTemplate[1]._parent)
             };
 
             // use dynamic mod pool if enabled in config
@@ -467,7 +467,7 @@ export class BotInvGen extends BotInventoryGenerator {
             }
 
             if (typeof (modPool[equipmentItemTpl]) !== "undefined" || Object.keys(modPool[equipmentItemTpl] || {}).length > 0) {
-                const items = this.botEquipmentModGenerator.generateModsForEquipment([item], modPool, id, itemTemplate, spawnChances.mods, botRole);
+                const items = this.botEquipmentModGenerator.generateModsForEquipment([item], modPool, id, itemTemplate[1], spawnChances.mods, botRole);
                 inventory.items.push(...items);
             }
             else {
@@ -641,9 +641,9 @@ export class BotWepGen extends BotWeaponGenerator {
         }
     }
 
-     //if the weapon is a holstered and it has a light, set it to off. This prevents cases of holstered weapons giving away bots
-    private genExtraPropsForPreset(equipmentSlot: string, weaponTpl: string, preset: IPreset, botRole: string, tables: IDatabaseTables, myBotGenHelper: BotGenHelper ){
-        const isHolsteredWeapon: boolean = (equipmentSlot.toLowerCase() === "holster" && tables.templates.items[weaponTpl]._parent === BaseClasses.PISTOL) || equipmentSlot.toLowerCase() === "secondprimaryweapon" ;
+    //if the weapon is a holstered and it has a light, set it to off. This prevents cases of holstered weapons giving away bots
+    private genExtraPropsForPreset(equipmentSlot: string, weaponTpl: string, preset: IPreset, botRole: string, tables: IDatabaseTables, myBotGenHelper: BotGenHelper) {
+        const isHolsteredWeapon: boolean = (equipmentSlot.toLowerCase() === "holster" && tables.templates.items[weaponTpl]._parent === BaseClasses.PISTOL) || equipmentSlot.toLowerCase() === "secondprimaryweapon";
         const lightLaserActiveChance = myBotGenHelper.getLightOnChance(botRole);
         const isActive: boolean = isHolsteredWeapon ? false : (this.randomUtil.getChance100(lightLaserActiveChance));
 
@@ -801,7 +801,7 @@ export class CheckRequired {
 
 export class BotGenHelper extends BotGeneratorHelper {
 
-    public getLightOnChance(botRole: string): number{
+    public getLightOnChance(botRole: string): number {
 
         return this.getBotEquipmentSettingFromConfig(botRole, "lightIsActiveDayChancePercent", 25);
     }
@@ -850,9 +850,10 @@ export class BotGenHelper extends BotGeneratorHelper {
         }
 
         if (itemTemplate._parent === BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses.TACTICAL_COMBO) {
-            if (parentWeaponClass === BaseClasses.PISTOL && equipmentSlot.toLocaleLowerCase() === "holster") {
+            if ((parentWeaponClass === BaseClasses.PISTOL && equipmentSlot.toLocaleLowerCase() === "holster") || equipmentSlot.toLocaleLowerCase() === "secondprimaryweapon") {
                 // stops pistols in holster having lights on
                 itemProperties.Light = { IsActive: false, SelectedMode: 0 };
+                this.logger.warning("turning light off");
             }
             else {
                 // Get chance from botconfig for bot type
@@ -1099,7 +1100,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
                     "mod_muzzle_001"
                 ];
                 // Make chance of muzzle devices 95%, nearly certain but not guaranteed
-                this.adjustSlotSpawnChances(modSpawnChances, muzzleSlots, 95);
+                this.adjustSlotSpawnChances(modSpawnChances, muzzleSlots, 100);
             }
 
             // If front/rear sight are to be added, set opposite to 100% chance

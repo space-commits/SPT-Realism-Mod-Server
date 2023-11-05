@@ -1317,7 +1317,7 @@ class Ammo {
                 serverItem._props.BulletMassGram = 14.9;
                 serverItem._props.HeavyBleedingDelta = 0.24;
                 serverItem._props.LightBleedingDelta = 0.53;
-                serverItem._props.ammoAccr = 5;
+                serverItem._props.ammoAccr = 15;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -5;
                 if (this.modConf.malf_changes == true) {
@@ -1341,7 +1341,7 @@ class Ammo {
                 serverItem._props.LightBleedingDelta = 0.55;
                 serverItem._props.ammoAccr = 0;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 3;
+                serverItem._props.ammoRec = 0;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;

@@ -73,12 +73,6 @@ class SeasonalEventsHandler {
         "634959225289190e5e773b3b",
         "634959225289190e5e773b3b",
         "634959225289190e5e773b3b",
-        "634959225289190e5e773b3b",
-        "634959225289190e5e773b3b",
-        "634959225289190e5e773b3b",
-        "634959225289190e5e773b3b",
-        "634959225289190e5e773b3b",
-        "634959225289190e5e773b3b"
     ];
     giveBotsChristmasPresents(botJsonTemplate) {
         for (let item in this.christmasItems) {

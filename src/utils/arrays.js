@@ -41,43 +41,19 @@ class Arrays {
             botDB["bossboarsniper"]
         ];
         this.rogueRaiderList = [
-            botDB["followerbully"],
-            botDB["followergluharassault"],
-            botDB["followergluharscout"],
-            botDB["followergluharsecurity"],
-            botDB["followergluharsnipe"],
-            botDB["followerkojaniy"],
-            botDB["followersanitar"],
-            botDB["followertagilla"],
-            botDB["followerzryachiy"],
-            botDB["followerboar"],
-            botDB["bossboarsniper"]
+            botDB["pmcbot"],
+            botDB["exusec"]
         ];
         this.cultistArr = [
-            botDB["followerbully"],
-            botDB["followergluharassault"],
-            botDB["followergluharscout"],
-            botDB["followergluharsecurity"],
-            botDB["followergluharsnipe"],
-            botDB["followerkojaniy"],
-            botDB["followersanitar"],
-            botDB["followertagilla"],
-            botDB["followerzryachiy"],
-            botDB["followerboar"],
-            botDB["bossboarsniper"]
+            botDB["sectantwarrior"],
+            botDB["sectantpriest"]
         ];
         this.standardBotHPArr = [
-            botDB["followerbully"],
-            botDB["followergluharassault"],
-            botDB["followergluharscout"],
-            botDB["followergluharsecurity"],
-            botDB["followergluharsnipe"],
-            botDB["followerkojaniy"],
-            botDB["followersanitar"],
-            botDB["followertagilla"],
-            botDB["followerzryachiy"],
-            botDB["followerboar"],
-            botDB["bossboarsniper"]
+            botDB["usec"],
+            botDB["bear"],
+            botDB["assault"],
+            botDB["marksman"],
+            botDB["cursedassault"]
         ];
         this.midBotHPArr = [
             botDB["followerbully"],
@@ -93,7 +69,9 @@ class Arrays {
             botDB["exusec"],
             botDB["followerzryachiy"],
             botDB["bossboarsniper"],
-            botDB["followerboar"]
+            botDB["followerboar"],
+            botDB["pmcbot"],
+            botDB["exusec"]
         ];
         this.botArr = [
             botDB["followerbully"],

@@ -485,8 +485,7 @@
                 "5f60b34a41e30a4ab12a6947": {
                     "mod_nvg": [
                         "5c0558060db834001b735271",
-                        "5a16b8a9fcdbcb00165aa6ca",
-                        "5f60bf4558eff926626a60f2"
+                        "5a16b8a9fcdbcb00165aa6ca"
                     ],
                     "mod_equipment_000": [
                         "5f60c076f2bcbb675b00dac2"
@@ -623,7 +622,8 @@
                 },
                 "5e01ef6886f77445f643baa4": {
                     "mod_nvg": [
-                        "5c0558060db834001b735271"
+                        "5c0558060db834001b735271",
+                        "5a16b8a9fcdbcb00165aa6ca"
                     ],
                     "mod_equipment_000": [
                         "5e01f31d86f77465cf261343",

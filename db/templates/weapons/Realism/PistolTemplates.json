@@ -522,7 +522,7 @@
         "AutoROF": 30,
         "SemiROF": 400,
         "LoyaltyLevel": 3,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 1.15,
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.8,
         "MaxChamberSpeed": 1.5,

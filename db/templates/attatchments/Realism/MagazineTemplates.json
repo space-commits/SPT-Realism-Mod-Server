@@ -2720,7 +2720,7 @@
         "ItemID": "5c920e902e221644f31c3c99",
         "Name": "mag_p226_sig_extended_mag_9x19_20",
         "ModType": "",
-        "ReloadSpeed": -1,
+        "ReloadSpeed": 2,
         "Ergonomics": 0,
         "MagMalfunctionChance": 0.075,
         "LoadUnloadModifier": 0,

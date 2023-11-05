@@ -785,9 +785,9 @@ export class BotLoader {
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 25;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 75;
-            this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
+            this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
+            this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 25;
+            this.botConf().equipment["pmc"].laserIsActiveChancePercent = 100;
         } else {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
@@ -993,16 +993,15 @@ export class BotLoader {
         botJsonTemplate.experience.level = usecLO.usecLO2.experience.level;
 
 
-        if (RaidInfoTracker.TOD === "night") {
-            botJsonTemplate.chances.mods.mod_nvg = 40;
-            botJsonTemplate.chances.mods.mod_flashlight = 60;
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+            botJsonTemplate.chances.mods.mod_nvg = 50;
+            botJsonTemplate.chances.mods.mod_flashlight = 100;
+            botJsonTemplate.chances.mods.mod_mount = 100;
+            botJsonTemplate.chances.mods.mod_mount_000 = 100;
+            botJsonTemplate.chances.mods.mod_mount_001 = 100;
+            botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-            botJsonTemplate.chances.mods.mod_nvg = 50;
-            botJsonTemplate.chances.mods.mod_flashlight = 60;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 10;
-            botJsonTemplate.chances.mods.mod_equipment = 10;
         } else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -1054,16 +1053,18 @@ export class BotLoader {
         botJsonTemplate.appearance.feet = usecLO.usecLO3.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO3.experience.level;
 
-        if (RaidInfoTracker.TOD === "night") {
-            botJsonTemplate.chances.mods.mod_nvg = 60;
-            botJsonTemplate.chances.mods.mod_flashlight = 90;
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+            botJsonTemplate.chances.mods.mod_nvg = 65;
+            botJsonTemplate.chances.mods.mod_flashlight = 100;
+            botJsonTemplate.chances.mods.mod_mount = 100;
+            botJsonTemplate.chances.mods.mod_mount_000 = 100;
+            botJsonTemplate.chances.mods.mod_mount_001 = 100;
+            botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            botJsonTemplate.chances.mods.mod_nvg = 70;
-            botJsonTemplate.chances.mods.mod_flashlight = 100;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 20;
-            botJsonTemplate.chances.mods.mod_equipment = 20;
+            botJsonTemplate.chances.mods.mod_nvg = 100;
+
         } else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -1117,16 +1118,15 @@ export class BotLoader {
         botJsonTemplate.experience.level = usecLO.usecLO4.experience.level;
 
 
-        if (RaidInfoTracker.TOD === "night") {
-            botJsonTemplate.chances.mods.mod_nvg = 75;
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+            botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
+            botJsonTemplate.chances.mods.mod_mount = 100;
+            botJsonTemplate.chances.mods.mod_mount_000 = 100;
+            botJsonTemplate.chances.mods.mod_mount_001 = 100;
+            botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-            botJsonTemplate.chances.mods.mod_nvg = 85;
-            botJsonTemplate.chances.mods.mod_flashlight = 100;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 20;
-            botJsonTemplate.chances.mods.mod_equipment = 20;
         } else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -1169,14 +1169,14 @@ export class BotLoader {
     }
 
     public usecLoad5(botJsonTemplate: IBotType) {
-        
+
         botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
         botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
         botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_usec.body;
         botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_usec.feet;
 
         this.tier5PMCLoad(botJsonTemplate);
-    
+
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = { "0": 1 };
@@ -1253,16 +1253,15 @@ export class BotLoader {
         botJsonTemplate.experience.level = bearLO.bearLO2.experience.level;
         botJsonTemplate.appearance.voice = bearLO.LowTierVoice;
 
-        if (RaidInfoTracker.TOD === "night") {
-            botJsonTemplate.chances.mods.mod_nvg = 40;
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+            botJsonTemplate.chances.mods.mod_nvg = 50;
             botJsonTemplate.chances.mods.mod_flashlight = 80;
+            botJsonTemplate.chances.mods.mod_mount = 100;
+            botJsonTemplate.chances.mods.mod_mount_000 = 100;
+            botJsonTemplate.chances.mods.mod_mount_001 = 100;
+            botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-            botJsonTemplate.chances.mods.mod_nvg = 50;
-            botJsonTemplate.chances.mods.mod_flashlight = 60;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 20;
-            botJsonTemplate.chances.mods.mod_equipment = 20;
         } else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -1314,16 +1313,18 @@ export class BotLoader {
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
 
         if (RaidInfoTracker.TOD === "night") {
-            botJsonTemplate.chances.mods.mod_nvg = 55;
-            botJsonTemplate.chances.mods.mod_flashlight = 90;
+            botJsonTemplate.chances.mods.mod_nvg = 65;
+            botJsonTemplate.chances.mods.mod_flashlight = 100;
+            botJsonTemplate.chances.mods.mod_mount = 100;
+            botJsonTemplate.chances.mods.mod_mount_000 = 100;
+            botJsonTemplate.chances.mods.mod_mount_001 = 100;
+            botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
             botJsonTemplate.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            botJsonTemplate.chances.mods.mod_nvg = 60;
-            botJsonTemplate.chances.mods.mod_flashlight = 100;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 30;
-            botJsonTemplate.chances.mods.mod_equipment = 30;
+            botJsonTemplate.chances.mods.mod_nvg = 100;
+
         } else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -1374,17 +1375,17 @@ export class BotLoader {
         botJsonTemplate.experience.level = bearLO.bearLO4.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
 
-        if (RaidInfoTracker.TOD === "night") {
-            botJsonTemplate.chances.mods.mod_nvg = 65;
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
+            botJsonTemplate.chances.mods.mod_nvg = 100;
+            botJsonTemplate.chances.mods.mod_flashlight = 100;
+            botJsonTemplate.chances.mods.mod_mount = 100;
+            botJsonTemplate.chances.mods.mod_mount_000 = 100;
+            botJsonTemplate.chances.mods.mod_mount_001 = 100;
+            botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
             botJsonTemplate.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-            botJsonTemplate.chances.mods.mod_nvg = 70;
-            botJsonTemplate.chances.mods.mod_flashlight = 100;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 40;
-            botJsonTemplate.chances.mods.mod_equipment = 40;
         } else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -1444,7 +1445,7 @@ export class BotLoader {
         }
     }
 
-    private tier5PMCLoad(botJsonTemplate: IBotType){
+    private tier5PMCLoad(botJsonTemplate: IBotType) {
 
         botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
         botJsonTemplate.generation = this.arrays.pmcLootGen;
@@ -1453,15 +1454,10 @@ export class BotLoader {
         botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
         botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
 
-        if (RaidInfoTracker.TOD === "night") {
+        if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_night;
-        } else if (RaidInfoTracker.mapName === "factory4_night") {
-            botJsonTemplate.chances.mods.mod_nvg = 100;
-            botJsonTemplate.chances.mods.mod_equipment_000 = 50;
-            botJsonTemplate.chances.mods.mod_equipment = 50;
             botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_night;
         } else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
@@ -2454,8 +2450,8 @@ export class BotLoader {
         this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
         this.tagillaBase.generation = this.arrays.bossLootGen;
 
-        if(EventTracker.isHalloween){
-            this.tagillaBase.inventory.equipment.Scabbard = {"63495c500c297e20065a08b1" : 1}
+        if (EventTracker.isHalloween) {
+            this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 }
         }
 
         const randnum = this.utils.pickRandNumOneInTen();
@@ -2501,10 +2497,10 @@ export class BotLoader {
         this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
         this.tagillaBase.generation = this.arrays.bossLootGen;
 
-        if(EventTracker.isHalloween){
-            this.tagillaBase.inventory.equipment.Scabbard = {"63495c500c297e20065a08b1" : 1}
+        if (EventTracker.isHalloween) {
+            this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 }
         }
-        
+
         const randnum = this.utils.pickRandNumOneInTen();
 
         if (randnum >= 5) {
@@ -2545,8 +2541,8 @@ export class BotLoader {
         this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
         this.tagillaBase.generation = this.arrays.bossLootGen;
 
-        if(EventTracker.isHalloween){
-            this.tagillaBase.inventory.equipment.Scabbard = {"63495c500c297e20065a08b1" : 1}
+        if (EventTracker.isHalloween) {
+            this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 }
         }
 
         const randnum = this.utils.pickRandNumOneInTen();
