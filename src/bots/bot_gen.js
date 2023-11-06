@@ -17,8 +17,6 @@ const EquipmentSlots_1 = require("C:/snapshot/project/obj/models/enums/Equipment
 const enums_1 = require("../utils/enums");
 const seasonalevents_1 = require("../misc/seasonalevents");
 const modConfig = require("../../config/config.json");
-const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
-const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
 class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
     genBotLvl(levelDetails, botGenerationDetails, bot) {
         const expTable = this.databaseServer.getTables().globals.config.exp.level.exp_table;
@@ -47,7 +45,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
     isBotUSEC(botRole) {
         return (["usec", "sptusec"].includes(botRole.toLowerCase()));
     }
-    getBotTier(utils) {
+    getPMCTier(utils) {
         const level = utils_1.ProfileTracker.level;
         var tier = 1;
         var tierArray = [1, 2, 3, 4, 5];
@@ -116,7 +114,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
             const isPMC = this.botHelper.isBotPmc(botRole);
             let pmcTier = 1;
             if (isPMC) {
-                pmcTier = this.botTierMapFactor(this.getBotTier(utils), utils);
+                pmcTier = this.botTierMapFactor(this.getPMCTier(utils), utils);
                 const isUSEC = this.isBotUSEC(botRole);
                 const changeDiffi = modConfig.pmc_difficulty;
                 if (modConfig.bot_testing == true) {
@@ -249,19 +247,13 @@ class BotGen extends BotGenerator_1.BotGenerator {
 exports.BotGen = BotGen;
 class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
     myGenerateInventory(sessionId, botJsonTemplate, botRole, isPmc, botLevel, pmcTier) {
-        const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
         const botLootCacheService = tsyringe_1.container.resolve("BotLootCacheService");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
         const handbookHelper = tsyringe_1.container.resolve("HandbookHelper");
         const botWeaponGeneratorHelper = tsyringe_1.container.resolve("BotWeaponGeneratorHelper");
-        const inventoryMagGenComponents = tsyringe_1.container.resolveAll("InventoryMagGen");
-        const botWeaponModLimitService = tsyringe_1.container.resolve("BotWeaponModLimitService");
-        const repairService = tsyringe_1.container.resolve("RepairService");
         const botLootGen = new bot_loot_serv_1.BotLootGen(this.logger, this.hashUtil, this.randomUtil, itemHelper, this.databaseServer, handbookHelper, this.botGeneratorHelper, this.botWeaponGenerator, botWeaponGeneratorHelper, this.weightedRandomHelper, botLootCacheService, this.localisationService, this.configServer);
-        const botWepGen = new BotWepGen(jsonUtil, this.logger, this.hashUtil, this.databaseServer, itemHelper, this.weightedRandomHelper, this.botGeneratorHelper, this.randomUtil, this.configServer, botWeaponGeneratorHelper, botWeaponModLimitService, this.botEquipmentModGenerator, this.localisationService, repairService, inventoryMagGenComponents);
         const tables = this.databaseServer.getTables();
         const itemDb = tables.templates.items;
-        const arrays = new arrays_1.Arrays(tables);
         const templateInventory = botJsonTemplate.inventory;
         const equipmentChances = botJsonTemplate.chances;
         const itemGenerationLimitsMinMax = botJsonTemplate.generation;
@@ -270,31 +262,28 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         this.myGenerateAndAddEquipmentToBot(templateInventory, equipmentChances, botRole, botInventory, botLevel);
         // Roll weapon spawns and generate a weapon for each roll that passed
         this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
-        if (isPmc && pmcTier === 5) {
+        //if PMC has a bolt action rifle, ensure they get a proper secondary
+        if (isPmc && pmcTier >= 2) {
             let shouldGetSecondary = false;
             for (let item in botInventory.items) {
                 if (itemDb[botInventory.items[item]._tpl]._parent === BaseClasses_1.BaseClasses.SNIPER_RIFLE) {
-                    this.logger.warning("found sniper");
-                    this.logger.warning("primary = " + itemDb[botInventory.items[item]._tpl]._name);
                     shouldGetSecondary = true;
                 }
             }
             if (shouldGetSecondary) {
-                this.logger.warning("getting secondary");
                 this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, true);
             }
         }
-        // this.getSecondaryForSniper(sessionId, templateInventory, equipmentChances, botRole, isPmc, botLevel, pmcTier, botInventory, itemDb, botWepGen, itemGenerationLimitsMinMax);
-        botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
+        botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, pmcTier);
         return botInventory;
     }
     myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, getSecondary = false) {
         if (getSecondary) {
-            var slotty = {
+            var secondarySlot = {
                 slot: EquipmentSlots_1.EquipmentSlots.SECOND_PRIMARY_WEAPON,
                 shouldSpawn: true
             };
-            this.myAddWeaponAndMagazinesToInventory(sessionId, slotty, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, true);
+            this.myAddWeaponAndMagazinesToInventory(sessionId, secondarySlot, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, true);
         }
         else {
             const weaponSlotsToFill = this.getDesiredWeaponsForBot(equipmentChances);

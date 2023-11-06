@@ -1,6 +1,6 @@
 
 import { BotWeaponGenerator } from "@spt-aki/generators/BotWeaponGenerator";
-import { container, DependencyContainer } from "tsyringe";
+import { container } from "tsyringe";
 import { ITemplateItem, Slot } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { Chances, Generation, IBotType, Inventory, Mods, ModsChances } from "@spt-aki/models/eft/common/tables/IBotType";
 import { Item, Upd } from "@spt-aki/models/eft/common/tables/IItem";
@@ -42,18 +42,12 @@ import { BotLootGen } from "./bot_loot_serv";
 import { EquipmentSlots } from "@spt-aki/models/enums/EquipmentSlots";
 import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
 import { ParentClasses } from "../utils/enums";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { RepairService } from "@spt-aki/services/RepairService";
-import { basename } from "path";
 import { EventTracker, SeasonalEventsHandler } from "../misc/seasonalevents";
-import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
-import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
 
 const modConfig = require("../../config/config.json");
-const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
-const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
 
 export class GenBotLvl extends BotLevelGenerator {
 
@@ -93,7 +87,7 @@ export class BotGen extends BotGenerator {
         return (["usec", "sptusec"].includes(botRole.toLowerCase()));
     }
 
-    private getBotTier(utils: Utils): number {
+    private getPMCTier(utils: Utils): number {
         const level = ProfileTracker.level;
         var tier = 1;
         var tierArray = [1, 2, 3, 4, 5];
@@ -173,7 +167,7 @@ export class BotGen extends BotGenerator {
             let pmcTier = 1;
             if (isPMC) {
 
-                pmcTier = this.botTierMapFactor(this.getBotTier(utils), utils);
+                pmcTier = this.botTierMapFactor(this.getPMCTier(utils), utils);
 
                 const isUSEC = this.isBotUSEC(botRole);
                 const changeDiffi = modConfig.pmc_difficulty;
@@ -366,7 +360,7 @@ export class BotInvGen extends BotInventoryGenerator {
             }
         }
 
-        botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
+        botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, pmcTier);
 
         return botInventory;
     }
