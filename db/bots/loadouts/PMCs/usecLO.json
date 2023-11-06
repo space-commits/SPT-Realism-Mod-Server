@@ -1557,7 +1557,13 @@
           "59d6088586f774275f37482f": 4,
           "59e6152586f77473dc057aa1": 5
         },
-        "SecondPrimaryWeapon": {},
+        "SecondPrimaryWeapon": {
+          "5e00903ae9dc277128008b87": 1,
+          "5926bb2186f7744b1c6c6e60": 1,
+          "5fc3e272f8b6a877a729eac5": 1,
+          "5e870397991fd70db46995c8": 1,
+          "5a7828548dc32e5a9c28b516": 1
+        },
         "Holster": {
           "5e81c3cbac2bb513793cdc75": 3,
           "5f36a0e5fbf956000b716b65": 1,
@@ -3436,7 +3442,14 @@
           "5f5e467b0bc58666c37e7821": 1,
           "6038d614d10cbf667352dd44": 1
         },
-        "SecondPrimaryWeapon": {},
+        "SecondPrimaryWeapon": {
+          "5e00903ae9dc277128008b87": 3,
+          "5926bb2186f7744b1c6c6e60": 3,
+          "5fc3e272f8b6a877a729eac5": 3,
+          "5e870397991fd70db46995c8": 1,
+          "5a7828548dc32e5a9c28b516": 1,
+          "6259b864ebedf17603599e88": 1
+        },
         "Holster": {
           "5e81c3cbac2bb513793cdc75": 1,
           "5f36a0e5fbf956000b716b65": 4,
@@ -5626,10 +5639,11 @@
         "5926bb2186f7744b1c6c6e60": 4,
         "5fc3e272f8b6a877a729eac5": 4,
         "59d6088586f774275f37482f": 1,
-        "5e870397991fd70db46995c8": 2,
+        "5e870397991fd70db46995c8": 1,
         "628a60ae6b1d481ff772e9c8": 3,
         "618428466ef05c2ce828f218": 3,
-        "6259b864ebedf17603599e88": 5
+        "6259b864ebedf17603599e88": 5,
+        "5a7828548dc32e5a9c28b516": 1
       },
       "FirstPrimaryWeapon_urban": {
         "63171672192e68c5460cebc5": 3,
@@ -5760,7 +5774,14 @@
           "60a272cc93ef783291411d8e": 1,
           "6038d614d10cbf667352dd44": 1
         },
-        "SecondPrimaryWeapon": {},
+        "SecondPrimaryWeapon": {
+          "5e00903ae9dc277128008b87": 4,
+          "5926bb2186f7744b1c6c6e60": 4,
+          "5fc3e272f8b6a877a729eac5": 4,
+          "5e870397991fd70db46995c8": 1,
+          "6259b864ebedf17603599e88": 1,
+          "5a7828548dc32e5a9c28b516": 1
+        },
         "Holster": {
           "5e81c3cbac2bb513793cdc75": 4,
           "5f36a0e5fbf956000b716b65": 4,

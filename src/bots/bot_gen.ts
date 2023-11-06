@@ -48,6 +48,8 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { RepairService } from "@spt-aki/services/RepairService";
 import { basename } from "path";
 import { EventTracker, SeasonalEventsHandler } from "../misc/seasonalevents";
+import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
+import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
 
 const modConfig = require("../../config/config.json");
 const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
@@ -336,35 +338,60 @@ export class BotInvGen extends BotInventoryGenerator {
         const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
         const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
         const botLootGen = new BotLootGen(this.logger, this.hashUtil, this.randomUtil, itemHelper, this.databaseServer, handbookHelper, this.botGeneratorHelper, this.botWeaponGenerator, botWeaponGeneratorHelper, this.weightedRandomHelper, botLootCacheService, this.localisationService, this.configServer);
+        const tables = this.databaseServer.getTables();
+        const itemDb = tables.templates.items;
 
         const templateInventory = botJsonTemplate.inventory;
         const equipmentChances = botJsonTemplate.chances;
         const itemGenerationLimitsMinMax = botJsonTemplate.generation;
 
         // Generate base inventory with no items
-        const botInventory = this.generateInventoryBase();
+        var botInventory = this.generateInventoryBase();
 
         this.myGenerateAndAddEquipmentToBot(templateInventory, equipmentChances, botRole, botInventory, botLevel);
 
         // Roll weapon spawns and generate a weapon for each roll that passed
         this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
 
+        //if PMC has a bolt action rifle, ensure they get a proper secondary
+        if (isPmc && pmcTier >= 2) {
+            let shouldGetSecondary = false;
+            for (let item in botInventory.items) {
+                if (itemDb[botInventory.items[item]._tpl]._parent === BaseClasses.SNIPER_RIFLE) {
+                    shouldGetSecondary = true;
+                }
+            }
+            if (shouldGetSecondary) {
+                this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, true);
+            }
+        }
+
         botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
 
         return botInventory;
     }
 
-    private myGenerateAndAddWeaponsToBot(templateInventory: Inventory, equipmentChances: Chances, sessionId: string, botInventory: PmcInventory, botRole: string, isPmc: boolean, itemGenerationLimitsMinMax: Generation, botLevel: number, pmcTier: number): void {
-        const weaponSlotsToFill = this.getDesiredWeaponsForBot(equipmentChances);
-        for (const weaponSlot of weaponSlotsToFill) {
-            // Add weapon to bot if true and bot json has something to put into the slot
-            if (weaponSlot.shouldSpawn && Object.keys(templateInventory.equipment[weaponSlot.slot]).length) {
-                this.myAddWeaponAndMagazinesToInventory(sessionId, weaponSlot, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
+    private myGenerateAndAddWeaponsToBot(templateInventory: Inventory, equipmentChances: Chances, sessionId: string, botInventory: PmcInventory, botRole: string, isPmc: boolean, itemGenerationLimitsMinMax: Generation, botLevel: number, pmcTier: number, getSecondary: boolean = false): void {
+
+        if (getSecondary) {
+            var secondarySlot = {
+                slot: EquipmentSlots.SECOND_PRIMARY_WEAPON,
+                shouldSpawn: true
+            }
+            this.myAddWeaponAndMagazinesToInventory(sessionId, secondarySlot, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, true);
+        }
+        else {
+            const weaponSlotsToFill = this.getDesiredWeaponsForBot(equipmentChances);
+            for (const weaponSlot of weaponSlotsToFill) {
+                // Add weapon to bot if true and bot json has something to put into the slot
+                if (weaponSlot.shouldSpawn && Object.keys(templateInventory.equipment[weaponSlot.slot]).length) {
+                    this.myAddWeaponAndMagazinesToInventory(sessionId, weaponSlot, templateInventory, botInventory, equipmentChances, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
+                }
             }
         }
     }
 
-    private myAddWeaponAndMagazinesToInventory(sessionId: string, weaponSlot: { slot: EquipmentSlots; shouldSpawn: boolean; }, templateInventory: Inventory, botInventory: PmcInventory, equipmentChances: Chances, botRole: string, isPmc: boolean, itemGenerationLimitsMinMax: Generation, botLevel: number, pmcTier: number): void {
+    private myAddWeaponAndMagazinesToInventory(sessionId: string, weaponSlot: { slot: EquipmentSlots; shouldSpawn: boolean; }, templateInventory: Inventory, botInventory: PmcInventory, equipmentChances: Chances, botRole: string, isPmc: boolean, itemGenerationLimitsMinMax: Generation, botLevel: number, pmcTier: number, getSecondary: boolean = false): void {
 
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
@@ -375,7 +402,7 @@ export class BotInvGen extends BotInventoryGenerator {
 
         const botWepGen = new BotWepGen(jsonUtil, this.logger, this.hashUtil, this.databaseServer, itemHelper, this.weightedRandomHelper, this.botGeneratorHelper, this.randomUtil, this.configServer, botWeaponGeneratorHelper, botWeaponModLimitService, this.botEquipmentModGenerator, this.localisationService, repairService, inventoryMagGenComponents);
 
-        const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.mods, botRole, isPmc, botLevel, pmcTier);
+        const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.mods, botRole, isPmc, botLevel, pmcTier, getSecondary);
 
         botInventory.items.push(...generatedWeapon.weapon);
 
@@ -480,9 +507,15 @@ export class BotInvGen extends BotInventoryGenerator {
 export class BotWepGen extends BotWeaponGenerator {
 
 
-    public myGenerateRandomWeapon(sessionId: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number, pmcTier: number): GenerateWeaponResult {
+    public myGenerateRandomWeapon(sessionId: string, equipmentSlot: string, botTemplateInventory: Inventory, weaponParentId: string, modChances: ModsChances, botRole: string, isPmc: boolean, botLevel: number, pmcTier: number, getSecondary: boolean = false): GenerateWeaponResult {
+        var weaponTpl = "";
+        if (getSecondary) {
+            var weaponTpl = this.weightedRandomHelper.getWeightedValue<string>(botTemplateInventory.equipment["SecondPrimaryWeapon"]);
+        }
+        else {
+            var weaponTpl = this.pickWeightedWeaponTplFromPool(equipmentSlot, botTemplateInventory);
+        }
 
-        const weaponTpl = this.pickWeightedWeaponTplFromPool(equipmentSlot, botTemplateInventory);
         return this.myGenerateWeaponByTpl(sessionId, weaponTpl, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel, pmcTier);
     }
 
@@ -853,7 +886,6 @@ export class BotGenHelper extends BotGeneratorHelper {
             if ((parentWeaponClass === BaseClasses.PISTOL && equipmentSlot.toLocaleLowerCase() === "holster") || equipmentSlot.toLocaleLowerCase() === "secondprimaryweapon") {
                 // stops pistols in holster having lights on
                 itemProperties.Light = { IsActive: false, SelectedMode: 0 };
-                this.logger.warning("turning light off");
             }
             else {
                 // Get chance from botconfig for bot type

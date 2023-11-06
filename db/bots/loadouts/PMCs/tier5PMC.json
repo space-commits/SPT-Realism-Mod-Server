@@ -201,6 +201,7 @@
                 }
             },
             "FirstPrimaryWeapon_cqb": {
+                "62e14904c2699c0ec93adc47": 2,
                 "57c44b372459772d2b39b8ce": 5,
                 "59984ab886f7743e98271174": 5,
                 "583990e32459771419544dd2": 5,
@@ -225,10 +226,11 @@
                 "5fc3f2d5900b1d5091531e57": 5,
                 "5bd70322209c4d00d7167b8f": 5,
                 "5cc82d76e24e8d00134b4b83": 5,
-                "5cadfbf7ae92152ac412eeef": 1,
-                "5e848cc2988a8701445df1e8": 2
+                "5cadfbf7ae92152ac412eeef": 2,
+                "5e848cc2988a8701445df1e8": 3
             },
             "FirstPrimaryWeapon_urban": {
+                "62e14904c2699c0ec93adc47": 2,
                 "57c44b372459772d2b39b8ce": 5,
                 "59984ab886f7743e98271174": 2,
                 "583990e32459771419544dd2": 2,
@@ -255,14 +257,18 @@
                 "5fc3f2d5900b1d5091531e57": 2,
                 "5bd70322209c4d00d7167b8f": 2,
                 "5cc82d76e24e8d00134b4b83": 2,
-                "5cadfbf7ae92152ac412eeef": 1,
+                "5cadfbf7ae92152ac412eeef": 2,
                 "5e848cc2988a8701445df1e8": 1
             },
             "FirstPrimaryWeapon_outdoor": {
+                "5bfea6e90db834001b7347f3": 5,
+                "628b9c37a733087d0d7fe84b": 2,
+                "628b5638ad252a16da6dd245": 2,
+                "55801eed4bdc2d89578b4588": 5,
                 "57c44b372459772d2b39b8ce": 2,
                 "5aafa857e5b5b00018480968": 5,
-                "623063e994fc3f7b302a9696": 5,
-                "618428466ef05c2ce828f218": 5,
+                "623063e994fc3f7b302a9696": 4,
+                "618428466ef05c2ce828f218": 4,
                 "5ac66d9b5acfc4001633997a": 2,
                 "5df24cf80dee1b22f862e9bc": 5,
                 "627e14b21713922ded6f2c15": 1,
@@ -273,12 +279,12 @@
                 "5dcbd56fdbd3d91b3e5468d5": 5,
                 "6183afd850224f204c1da514": 5,
                 "5b0bbe4e5acfc40dc528a72d": 5,
-                "5447a9cd4bdc2dbd208b4567": 5,
-                "5bb2475ed4351e00853264e3": 5,
+                "5447a9cd4bdc2dbd208b4567": 4,
+                "5bb2475ed4351e00853264e3": 4,
                 "5fbcc1d9016cce60e8341ab3": 2,
                 "606587252535c57a13424cfd": 2,
                 "5ac66d2e5acfc43b321d4b53": 2,
-                "5644bd2b4bdc2d3b4c8b4572": 5,
+                "5644bd2b4bdc2d3b4c8b4572": 4,
                 "5beed0f50db834001c062b12": 3,
                 "64ca3d3954fc657e230529cc": 1,
                 "5cadfbf7ae92152ac412eeef": 1
@@ -429,7 +435,22 @@
                     "5ca20d5986f774331e7c9602": 1,
                     "544a5cde4bdc2d39388b456b": 1
                 },
-                "SecondPrimaryWeapon": {},
+                "SecondPrimaryWeapon": {
+                    "576165642459773c7a400233": 1,
+                    "5fbcc1d9016cce60e8341ab3": 1,
+                    "57c44b372459772d2b39b8ce": 1,
+                    "583990e32459771419544dd2": 2,
+                    "5ac66d9b5acfc4001633997a": 1,
+                    "628b9c37a733087d0d7fe84b": 1,
+                    "5926bb2186f7744b1c6c6e60": 5,
+                    "5bd70322209c4d00d7167b8f": 7,
+                    "58948c8e86f77409493f7266": 5,
+                    "59984ab886f7743e98271174": 5,
+                    "5cc82d76e24e8d00134b4b83": 5,
+                    "6259b864ebedf17603599e88": 2,
+                    "62e14904c2699c0ec93adc47": 7,
+                    "5fc3f2d5900b1d5091531e57": 5
+                },
                 "Holster": {
                     "5a7ae0c351dfba0017554310": 10,
                     "56d59856d2720bd8418b456a": 10,
@@ -740,7 +761,7 @@
                 "Backpack": 100,
                 "FirstPrimaryWeapon": 100,
                 "SecondPrimaryWeapon": 0,
-                "Holster": 70,
+                "Holster": 65,
                 "Scabbard": 100,
                 "Pockets": 100,
                 "SecuredContainer": 100

@@ -1562,7 +1562,14 @@
         "ArmBand": {
           "619bdd8886e01e16f839a99c": 1
         },
-        "SecondPrimaryWeapon": {},
+        "SecondPrimaryWeapon": {
+          "62e14904c2699c0ec93adc47": 1,
+          "57dc2fa62459775949412633": 1,
+          "5ea03f7400685063ec28bfa8": 1,
+          "56dee2bdd2720bc8328b4567": 1,
+          "576165642459773c7a400233": 1,
+          "59984ab886f7743e98271174": 1
+        },
         "Pockets": {
           "557ffd194bdc2d28148b457f": 1
         },
@@ -3228,7 +3235,16 @@
         "ArmBand": {
           "619bdd8886e01e16f839a99c": 1
         },
-        "SecondPrimaryWeapon": {},
+        "SecondPrimaryWeapon": {
+          "62e14904c2699c0ec93adc47": 3,
+          "57dc2fa62459775949412633": 3,
+          "56dee2bdd2720bc8328b4567": 1,
+          "576165642459773c7a400233": 2,
+          "59984ab886f7743e98271174": 3,
+          "57c44b372459772d2b39b8ce": 2,
+          "5ac66d9b5acfc4001633997a": 3,
+          "5ac66d725acfc43b321d4b60": 3
+        },
         "Pockets": {
           "557ffd194bdc2d28148b457f": 1
         },
@@ -4961,7 +4977,17 @@
         "ArmBand": {
           "619bdd8886e01e16f839a99c": 1
         },
-        "SecondPrimaryWeapon": {},
+        "SecondPrimaryWeapon": {
+          "62e14904c2699c0ec93adc47": 3,
+          "57dc2fa62459775949412633": 3,
+          "576165642459773c7a400233": 1,
+          "5ac66d015acfc400180ae6e4": 2,
+          "5ac66d725acfc43b321d4b60": 2,
+          "5ac66d9b5acfc4001633997a": 2,
+          "57c44b372459772d2b39b8ce": 2,
+          "59984ab886f7743e98271174": 3,
+          "628b9c37a733087d0d7fe84b": 1
+        },
         "Pockets": {
           "557ffd194bdc2d28148b457f": 1
         },

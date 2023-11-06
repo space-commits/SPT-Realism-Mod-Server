@@ -1654,25 +1654,25 @@ class Armor {
             //// Class 6 ////
             //SLAAP armor Plate
             if (serverItem._id === "5c0e66e2d174af02a96252f4") {
-                serverItem._props.Durability = 28;
+                serverItem._props.Durability = 32;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 7;
                 serverItem._props.speedPenaltyPercent = -0.75;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -0.75;
-                serverItem._props.BluntThroughput = 0.15;
+                serverItem._props.BluntThroughput = 0.135;
                 serverItem._props.ArmorMaterial = 'UHMWPE';
                 serverItem._props.Weight = 0.45;
             }
             //Diamond Age Armor Plate
             if (serverItem._id === "5ea18c84ecf1982c7712d9a2") {
-                serverItem._props.Durability = 31;
+                serverItem._props.Durability = 36;
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 7;
                 serverItem._props.speedPenaltyPercent = -0.5;
                 serverItem._props.mousePenalty = 0;
                 serverItem._props.weaponErgonomicPenalty = -3.2;
-                serverItem._props.BluntThroughput = 0.1;
+                serverItem._props.BluntThroughput = 0.09;
                 serverItem._props.ArmorMaterial = 'Ceramic';
                 serverItem._props.Weight = 0.99;
             }

@@ -584,6 +584,7 @@ class BotLoader {
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 80;
             }
             if (utils_1.RaidInfoTracker.mapType === "outdoor") {
+                this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 50;
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             }
@@ -653,6 +654,7 @@ class BotLoader {
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 100;
             }
             if (utils_1.RaidInfoTracker.mapType === "outdoor") {
+                this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 50;
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             }
@@ -722,6 +724,7 @@ class BotLoader {
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 100;
             }
             if (utils_1.RaidInfoTracker.mapType === "outdoor") {
+                this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 75;
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             }
@@ -1325,8 +1328,8 @@ class BotLoader {
         else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (utils_1.RaidInfoTracker.mapType === "urban") {
-                botJsonTemplate.chances.mods.mod_equipment_000 = 60;
-                botJsonTemplate.chances.mods.mod_equipment = 60;
+                botJsonTemplate.chances.mods.mod_equipment_000 = 100;
+                botJsonTemplate.chances.mods.mod_equipment = 100;
                 botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
             }
             if (utils_1.RaidInfoTracker.mapType === "cqb") {
