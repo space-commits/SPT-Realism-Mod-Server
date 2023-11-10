@@ -352,27 +352,22 @@ class Arrays {
     };
     outdoorMaps = [
         "shoreline",
-        "Shoreline",
         "woods",
-        "Woods",
-        "lighthouse",
-        "Lighthouse"
+        "lighthouse"
     ];
     urbanMaps = [
         "bigmap",
-        "Customs",
+        "customs",
         "rezervbase",
-        "RezervBase",
-        "ReserveBase",
-        "Streets of Tarkov"
+        "reservebase",
+        "streets of tarkov",
+        "tarkovstreets"
     ];
     cqbMaps = [
-        "Factory",
+        "factory",
         "factory4_night",
         "factory4_day",
-        "Laboratory",
         "laboratory",
-        "Interchange",
         "interchange"
     ];
     traderIDs = [

@@ -113,7 +113,7 @@ const botGenerations: BotGeneration = {
         3: killaLO.killaLO3.generation
     },
     "bossknight": {
-        1: knightLO.knightLO1.eneration,
+        1: knightLO.knightLO1.generation,
         2: knightLO.knightLO2.generation,
         3: knightLO.knightLO3.generation
     },
@@ -168,10 +168,9 @@ export class BotLootGen extends BotLootGenerator {
         const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
         const tierChecker = new BotTierTracker();
         let tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : tierChecker.getTier(botRole);
-
-        var itemCounts = botGenerations[botRole]?.[tier].items;
+       
+        var itemCounts = botGenerations[botRole]?.[tier]?.items;
         if (itemCounts === null || itemCounts === undefined) {
-            this.logger.logWithColor("UNDEFINED for bot " + botRole, LogTextColor.WHITE, LogBackgroundColor.RED);
             itemCounts = raiderLO.raiderLO3.generation.items;
         }
         const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);

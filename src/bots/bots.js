@@ -556,9 +556,11 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile1;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc1.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc1.isUsec;
-        this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
+        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
+            this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
+        }
         this.botConf().lootNValue = rmBotConfig.lootNValue;
-        this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
+        // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
@@ -626,9 +628,11 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile2;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc2.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc2.isUsec;
-        this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
+        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
+            this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
+        }
         this.botConf().lootNValue = rmBotConfig.lootNValue;
-        this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
+        // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
@@ -696,9 +700,11 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile3;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc3.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc3.isUsec;
-        this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
+        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
+            this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
+        }
         this.botConf().lootNValue = rmBotConfig.lootNValue;
-        this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
+        // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
@@ -751,7 +757,7 @@ class BotLoader {
         this.scavBase.inventory.mods = scavLO.scavLO1.inventory.mods;
         this.scavBase.chances = scavLO.scavLO1.chances;
         // this.scavBase.generation = this.arrays.scavLootGen;
-        this.botConf().itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
+        // this.botConf().itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit1;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 40;
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 100;
@@ -783,7 +789,7 @@ class BotLoader {
         this.scavBase.inventory.mods = scavLO.scavLO2.inventory.mods;
         this.scavBase.chances = scavLO.scavLO2.chances;
         // this.scavBase.generation = this.arrays.scavLootGen;
-        this.botConf().itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit2;
+        // this.botConf().itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit2;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 60;
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 90;
@@ -815,7 +821,7 @@ class BotLoader {
         this.scavBase.inventory.mods = scavLO.scavLO3.inventory.mods;
         this.scavBase.chances = scavLO.scavLO3.chances;
         // this.scavBase.generation = this.arrays.scavLootGen;
-        this.botConf().itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit3;
+        // this.botConf().itemSpawnLimits.assault = scavLootLimitCat.ScavLootLimit3;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.mods.mod_flashlight = 80;
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 60;
@@ -850,7 +856,7 @@ class BotLoader {
         botJsonTemplate.appearance.body = usecLO.usecLO1.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO1.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO1.experience.level;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier1_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier1_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night") {
             botJsonTemplate.chances.mods.mod_nvg = 20;
             botJsonTemplate.chances.mods.mod_flashlight = 40;
@@ -900,7 +906,7 @@ class BotLoader {
         botJsonTemplate.appearance.body = usecLO.usecLO2.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO2.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO2.experience.level;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier2_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier2_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 50;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
@@ -957,7 +963,7 @@ class BotLoader {
         botJsonTemplate.appearance.body = usecLO.usecLO3.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO3.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO3.experience.level;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier3_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier3_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 65;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
@@ -1018,7 +1024,7 @@ class BotLoader {
         botJsonTemplate.appearance.body = usecLO.usecLO4.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO4.appearance.feet;
         botJsonTemplate.experience.level = usecLO.usecLO4.experience.level;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier4_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier4_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
@@ -1093,7 +1099,7 @@ class BotLoader {
         botJsonTemplate.appearance.feet = bearLO.bearLO1.appearance.feet;
         botJsonTemplate.experience.level = bearLO.bearLO1.experience.level;
         botJsonTemplate.appearance.voice = bearLO.LowTierVoice;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier1_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier1_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night") {
             botJsonTemplate.chances.mods.mod_nvg = 20;
             botJsonTemplate.chances.mods.mod_flashlight = 70;
@@ -1142,7 +1148,7 @@ class BotLoader {
         botJsonTemplate.appearance.feet = bearLO.bearLO2.appearance.feet;
         botJsonTemplate.experience.level = bearLO.bearLO2.experience.level;
         botJsonTemplate.appearance.voice = bearLO.LowTierVoice;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier2_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier2_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 50;
             botJsonTemplate.chances.mods.mod_flashlight = 80;
@@ -1198,7 +1204,7 @@ class BotLoader {
         botJsonTemplate.appearance.feet = bearLO.bearLO3.appearance.feet;
         botJsonTemplate.experience.level = bearLO.bearLO3.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier3_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier3_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night") {
             botJsonTemplate.chances.mods.mod_nvg = 65;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
@@ -1258,7 +1264,7 @@ class BotLoader {
         botJsonTemplate.appearance.feet = bearLO.bearLO4.appearance.feet;
         botJsonTemplate.experience.level = bearLO.bearLO4.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier4_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier4_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
@@ -1328,7 +1334,7 @@ class BotLoader {
         botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
         botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
         botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
-        botJsonTemplate.inventory.items.Pockets.push(...keys.tier4_PMC_Keys);
+        botJsonTemplate.inventory.items.Backpack.push(...keys.tier4_PMC_Keys);
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;

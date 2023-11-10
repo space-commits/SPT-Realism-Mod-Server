@@ -13,7 +13,7 @@
     "experience": {
       "aggressorBonus": 0.02,
       "level": {
-        "max": 10,
+        "max": 15,
         "min": 1
       }
     },
@@ -1284,8 +1284,8 @@
     "experience": {
       "aggressorBonus": 0.02,
       "level": {
-        "max": 20,
-        "min": 11
+        "max": 25,
+        "min": 10
       }
     },
     "appearance": {
@@ -3113,8 +3113,8 @@
     "experience": {
       "aggressorBonus": 0.02,
       "level": {
-        "max": 30,
-        "min": 21
+        "max": 40,
+        "min": 25
       }
     },
     "appearance": {
@@ -5182,10 +5182,10 @@
           "573476d324597737da2adc13",
           "56742c284bdc2d98058b456d",
           "5c1265fc86f7743f896a21c2",
-          "5d235b4d86f7742e017bc88a",
-          "5da743f586f7744014504f72"
+          "5d235b4d86f7742e017bc88a"
         ],
         "Backpack": [
+          "5da743f586f7744014504f72",
           "6389c70ca33d8c4cdf4932c6",
           "6389c8fb46b54c634724d847",
           "6389c92d52123d5dd17f8876",
@@ -5421,8 +5421,8 @@
     "experience": {
       "aggressorBonus": 0.02,
       "level": {
-        "max": 45,
-        "min": 31
+        "max": 55,
+        "min": 35
       }
     },
     "appearance": {
@@ -6918,7 +6918,14 @@
             "5c7e5f112e221600106f4ede",
             "5cff9e5ed7ad1a09407397d4",
             "5c7fb51d2e2216001219ce11",
-            "5c6d710d2e22165df16b81e7"
+            "5c6d710d2e22165df16b81e7",
+            "615d8e2f1cb55961fa0fd9a4",
+            "612e0cfc8004cc50514c2d9e",
+            "5cf6937cd7f00c056c53fb39",
+            "5cc9b815d7f00c000e2579d6",
+            "5943ee5a86f77413872d25ec",
+            "5a7c147ce899ef00150bd8b8",
+            "56ea6fafd2720b844b8b4593"
           ]
         },
         "Muzzle Devices": {},
@@ -6947,7 +6954,12 @@
           "mod_muzzle": [
             "5b7d693d5acfc43bca706a3d",
             "5a34fd2bc4a282329a73b4c5",
-            "5f2aa4559b44de6b1b4e68d1"
+            "5f2aa4559b44de6b1b4e68d1",
+            "5d02677ad7ad1a04a15c0f95",
+            "5d026791d7ad1a04a067ea63",
+            "607ffb988900dc2d9a55b6e4",
+            "5bbdb8bdd4351e4502011460",
+            "5d443f8fa4b93678dd4a01aa"
           ]
         },
         "5dfa3cd1b33c0951220c079b": {
@@ -7361,7 +7373,9 @@
             "570fd6c2d2720bc6458b457f",
             "5c7d55f52e221644f31bff6a",
             "57aca93d2459771f2c7e26db",
-            "59db7eed86f77461f8380365"
+            "59db7eed86f77461f8380365",
+            "5c07dd120db834001c39092d",
+            "5c0a2cec0db834001b7ce47d"
           ],
           "mod_sight_rear": [
             "5bc09a18d4351e003562b68e"
@@ -7390,7 +7404,8 @@
             "5b099ac65acfc400186331e1",
             "5b7d37845acfc400170e2f87",
             "5b7c2d1d5acfc43d1028532a",
-            "5b7bef5d5acfc43bca7067a3"
+            "5b7bef5d5acfc43bca7067a3",
+            "5b7bef9c5acfc43d102852ec"
           ],
           "mod_pistol_grip": [
             "5b7d679f5acfc4001a5c4024",
@@ -8097,13 +8112,7 @@
           "5c1265fc86f7743f896a21c2",
           "5d235b4d86f7742e017bc88a",
           "5bc9b720d4351e450201234b",
-          "5e2af37686f774755a234b65",
-          "5c1f79a086f7746ed066fb8f",
-          "5c1e2d1f86f77431e9280bee",
-          "5c1e2a1e86f77431ea0ea84c",
-          "5da743f586f7744014504f72",
-          "61aa5b7db225ac1ead7957c1",
-          "61aa5ba8018e9821b7368da9"
+          "5e2af37686f774755a234b65"
         ],
         "Backpack": [
           "6389c70ca33d8c4cdf4932c6",
@@ -8209,7 +8218,13 @@
           "5751435d24597720a27126d1",
           "5751496424597720a27126da",
           "544fb6cc4bdc2d34748b456e",
-          "57514643245977207f2c2d09"
+          "57514643245977207f2c2d09",
+          "5c1f79a086f7746ed066fb8f",
+          "5c1e2d1f86f77431e9280bee",
+          "5c1e2a1e86f77431ea0ea84c",
+          "5da743f586f7744014504f72",
+          "61aa5b7db225ac1ead7957c1",
+          "61aa5ba8018e9821b7368da9"
         ],
         "SecuredContainer": [],
         "SpecialLoot": []

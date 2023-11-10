@@ -144,6 +144,8 @@ export class Utils {
 export class ModTracker{
     static batteryModPresent: boolean = false;
     static sainPresent: boolean = false;
+    static swagPresent: boolean = false;
+    static qtbPresent: boolean = false;
 }
 
 

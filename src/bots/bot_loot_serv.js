@@ -7,8 +7,6 @@ const BotLootGenerator_1 = require("C:/snapshot/project/obj/generators/BotLootGe
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const EquipmentSlots_1 = require("C:/snapshot/project/obj/models/enums/EquipmentSlots");
 const utils_1 = require("../utils/utils");
-const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
-const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
@@ -93,7 +91,7 @@ const botGenerations = {
         3: killaLO.killaLO3.generation
     },
     "bossknight": {
-        1: knightLO.knightLO1.eneration,
+        1: knightLO.knightLO1.generation,
         2: knightLO.knightLO2.generation,
         3: knightLO.knightLO3.generation
     },
@@ -145,15 +143,10 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
         const ragfairPriceService = tsyringe_1.container.resolve("RagfairPriceService");
         const tierChecker = new utils_1.BotTierTracker();
         let tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : tierChecker.getTier(botRole);
-        this.logger.warning("=========");
-        this.logger.warning(botRole);
-        this.logger.warning(tier.toString());
-        var itemCounts = botGenerations[botRole]?.[tier].items;
+        var itemCounts = botGenerations[botRole]?.[tier]?.items;
         if (itemCounts === null || itemCounts === undefined) {
-            this.logger.logWithColor("UNDEFINED for bot " + botRole, LogTextColor_1.LogTextColor.WHITE, LogBackgroundColor_1.LogBackgroundColor.RED);
             itemCounts = raiderLO.raiderLO3.generation.items;
         }
-        this.logger.warning("=========");
         const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
         const nValue = this.getBotLootNValueByRole(botRole);
         const looseLootMin = itemCounts.looseLoot.min;

@@ -4,7 +4,7 @@
             "aggressorBonus": 0.04,
             "level": {
                 "max": 70,
-                "min": 46
+                "min": 45
             }
         },
         "appearance_bear": {

@@ -399,17 +399,17 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             }
 
                             for (let map in arrays.cqbMaps) {
-                                if (arrays.cqbMaps[map] === matchInfo.location) {
+                                if (arrays.cqbMaps[map].toLowerCase() === matchInfo.location) {
                                     mapType = "cqb";
                                 }
                             }
                             for (let map in arrays.outdoorMaps) {
-                                if (arrays.outdoorMaps[map] === matchInfo.location) {
+                                if (arrays.outdoorMaps[map].toLowerCase() === matchInfo.location) {
                                     mapType = "outdoor";
                                 }
                             }
                             for (let map in arrays.urbanMaps) {
-                                if (arrays.urbanMaps[map] === matchInfo.location) {
+                                if (arrays.urbanMaps[map].toLowerCase() === matchInfo.location) {
                                     mapType = "urban";
                                 }
                             }
@@ -421,7 +421,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
 
-                            if (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory") {
+                            if ((!ModTracker.qtbPresent && !ModTracker.swagPresent) && (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory")) {
                                 pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
                                 pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
                                 pmcConf.convertIntoPmcChance["assault"].min = 100;
@@ -603,6 +603,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             if (modname.includes("Solarint-SAIN-ServerMod")) {
                 ModTracker.sainPresent = true;
             }
+            if (modname.includes("QuestingBots")) {
+                ModTracker.qtbPresent = true;
+            }
+            if (modname.includes("SWAG")) {
+                ModTracker.sainPresent = true;
+            }
         }
 
         this.dllChecker(logger, modConfig);
@@ -639,7 +645,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             maps.openZonesFix();
         }
 
-        maps.loadSpawnChanges();
+        if(!ModTracker.qtbPresent && !ModTracker.swagPresent){
+            maps.loadSpawnChanges();
+        }
 
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();

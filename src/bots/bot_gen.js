@@ -246,6 +246,25 @@ class BotGen extends BotGenerator_1.BotGenerator {
 }
 exports.BotGen = BotGen;
 class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
+    tryGetPMCSecondary(botInventory, itemDb, templateInventory, equipmentChances, sessionId, botRole, isPmc, pmcTier, botLevel, itemGenerationLimitsMinMax) {
+        try {
+            let shouldGetSecondary = false;
+            if (botInventory.items !== undefined && botInventory.items !== null) {
+                for (let i in botInventory.items) {
+                    let item = itemDb[botInventory.items[i]._tpl];
+                    if (item !== undefined && item !== null && item?._parent !== undefined && item?._parent === BaseClasses_1.BaseClasses.SNIPER_RIFLE) {
+                        shouldGetSecondary = true;
+                    }
+                }
+            }
+            if (shouldGetSecondary) {
+                this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, true);
+            }
+        }
+        catch (error) {
+            this.logger.warning(`Realism Mod: Failed To Fetch Secondary Weapon For Bot ${botRole} at level ${pmcTier}, error code: ${error}`);
+        }
+    }
     myGenerateInventory(sessionId, botJsonTemplate, botRole, isPmc, botLevel, pmcTier) {
         const botLootCacheService = tsyringe_1.container.resolve("BotLootCacheService");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
@@ -264,15 +283,7 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
         //if PMC has a bolt action rifle, ensure they get a proper secondary
         if (isPmc && pmcTier >= 2) {
-            let shouldGetSecondary = false;
-            for (let item in botInventory.items) {
-                if (itemDb[botInventory.items[item]._tpl]._parent === BaseClasses_1.BaseClasses.SNIPER_RIFLE) {
-                    shouldGetSecondary = true;
-                }
-            }
-            if (shouldGetSecondary) {
-                this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, true);
-            }
+            this.tryGetPMCSecondary(botInventory, itemDb, templateInventory, equipmentChances, sessionId, botRole, isPmc, pmcTier, botLevel, itemGenerationLimitsMinMax);
         }
         botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, pmcTier);
         return botInventory;
@@ -576,7 +587,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                 if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
                     let presetTier = presetFile[presetObj]._name.slice(0, 1);
                     let pTierNum = Number(presetTier);
-                    if (pTierNum <= tier) {
+                    if (pTierNum > tier - 2) {
                         weaponPresets.push(presetFile[presetObj]);
                         if (modConfig.logEverything == true) {
                             this.logger.warning(`Found A Preset Within Tier`);
