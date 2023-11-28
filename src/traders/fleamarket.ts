@@ -83,8 +83,8 @@ export class FleamarketConfig {
 
             this.fleaConf.dynamic.priceRanges.default.min = 1.3;
             this.fleaConf.dynamic.priceRanges.default.max = 2;
-            this.fleaConf.dynamic.priceRanges.preset.min = 1.3;
-            this.fleaConf.dynamic.priceRanges.preset.max = 2;
+            this.fleaConf.dynamic.priceRanges.preset.min = 1.5;
+            this.fleaConf.dynamic.priceRanges.preset.max = 2.25;
             this.fleaConf.dynamic.priceRanges.pack.min = 1.3;
             this.fleaConf.dynamic.priceRanges.pack.max = 2;
 
@@ -139,7 +139,7 @@ export class TieredFlea {
             logger.info("Realism Mod: Fleamarket Tier Set To Default  (tier 0)");
         }
         if (level !== undefined) {
-            if (level <= 5) {
+            if (level < 5) {
                 this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
                 logger.info("Realism mod: Fleamarket Locked At Tier 0");
             }

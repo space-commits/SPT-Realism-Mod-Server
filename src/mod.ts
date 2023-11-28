@@ -87,6 +87,7 @@ import { BotGenerator } from "@spt-aki/generators/BotGenerator";
 import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootResult";
 import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
 import { RagfairTaxService } from "@spt-aki/services/RagfairTaxService";
+import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
 
 
 const fs = require('fs');
@@ -399,17 +400,17 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             }
 
                             for (let map in arrays.cqbMaps) {
-                                if (arrays.cqbMaps[map] === matchInfo.location) {
+                                if (arrays.cqbMaps[map] === matchInfo.location.toLowerCase()) {
                                     mapType = "cqb";
                                 }
                             }
                             for (let map in arrays.outdoorMaps) {
-                                if (arrays.outdoorMaps[map] === matchInfo.location) {
+                                if (arrays.outdoorMaps[map] === matchInfo.location.toLowerCase()) {
                                     mapType = "outdoor";
                                 }
                             }
                             for (let map in arrays.urbanMaps) {
-                                if (arrays.urbanMaps[map] === matchInfo.location) {
+                                if (arrays.urbanMaps[map] === matchInfo.location.toLowerCase()) {
                                     mapType = "urban";
                                 }
                             }
@@ -421,7 +422,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
 
-                            if (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory") {
+                            if ((!ModTracker.qtbPresent && !ModTracker.swagPresent) && (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory")) {
                                 pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
                                 pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
                                 pmcConf.convertIntoPmcChance["assault"].min = 100;
@@ -568,6 +569,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const tables = databaseServer.getTables();
         const AKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
+        const raidConf = configServer.getConfig<IInRaidConfig>(ConfigTypes.IN_RAID);
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
@@ -577,7 +579,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf);
+        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, AKIFleaConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
@@ -601,6 +603,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                 ModTracker.batteryModPresent = true;
             }
             if (modname.includes("Solarint-SAIN-ServerMod")) {
+                ModTracker.sainPresent = true;
+            }
+            if (modname.includes("QuestingBots")) {
+                ModTracker.qtbPresent = true;
+            }
+            if (modname.includes("SWAG")) {
                 ModTracker.sainPresent = true;
             }
         }
@@ -639,7 +647,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             maps.openZonesFix();
         }
 
-        maps.loadSpawnChanges();
+        if(!ModTracker.qtbPresent && !ModTracker.swagPresent){
+            maps.loadSpawnChanges();
+        }
 
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();

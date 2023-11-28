@@ -147,6 +147,8 @@ exports.Utils = Utils;
 class ModTracker {
     static batteryModPresent = false;
     static sainPresent = false;
+    static swagPresent = false;
+    static qtbPresent = false;
 }
 exports.ModTracker = ModTracker;
 class ProfileTracker {

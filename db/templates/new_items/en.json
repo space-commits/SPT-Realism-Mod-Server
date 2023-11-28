@@ -1,7 +1,7 @@
 {
 	"templates": {
 		"mosin_bayonet": {
-			"Name": "Mosin Nagant M1891/30  Bayonet",
+			"Name": "Mosin Nagant M1891/30 Bayonet",
 			"ShortName": "Mosin Bayonet",
 			"Description": " M1891/30 pattern bayonet used during WW2 by the Soviet Union. More effective against political prisoners than charging towards machine gun fire with."
 		},

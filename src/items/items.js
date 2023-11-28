@@ -9,11 +9,15 @@ class ItemsClass {
     tables;
     modConfig;
     inventoryConf;
-    constructor(logger, tables, modConfig, inventoryConf) {
+    raidConf;
+    fleaConf;
+    constructor(logger, tables, modConfig, inventoryConf, raidConf, fleaConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
         this.inventoryConf = inventoryConf;
+        this.raidConf = raidConf;
+        this.fleaConf = fleaConf;
     }
     globalDB() {
         return this.tables.globals.config;
@@ -175,6 +179,8 @@ class ItemsClass {
         }
         if (this.modConfig.remove_fir_req == true) {
             this.inventoryConf.newItemsMarkedFound = true;
+            this.raidConf.keepFiRSecureContainerOnDeath = true;
+            this.fleaConf.dynamic.purchasesAreFoundInRaid = true;
         }
         if (this.modConfig.remove_inraid_restrictions == true) {
             this.globalDB().RestrictionsInRaid = [];

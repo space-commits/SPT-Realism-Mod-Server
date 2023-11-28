@@ -10,6 +10,27 @@ import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
 import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
 import { container, inject } from "tsyringe";
 import { EquipmentSlots } from "@spt-aki/models/enums/EquipmentSlots";
+import { BotTierTracker } from "../utils/utils";
+import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
+import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
+
+const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
+const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
+const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
+const tier5LO = require("../../db/bots/loadouts/PMCs/tier5PMC.json");
+const raiderLO = require("../../db/bots/loadouts/raiders_rogues/raiderLO.json");
+const rogueLO = require("../../db/bots/loadouts/raiders_rogues/rogueLO.json");
+const knightLO = require("../../db/bots/loadouts/bosses/goons/knightLO.json");
+const bigpipeLO = require("../../db/bots/loadouts/bosses/goons/bigpipeLO.json");
+const birdeyeLO = require("../../db/bots/loadouts/bosses/goons/birdeyeLO.json");
+const killaLO = require("../../db/bots/loadouts/bosses/killaLO.json");
+const tagillaLO = require("../../db/bots/loadouts/bosses/tagillaLO.json");
+const saniLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarLO.json");
+const saniFollowerLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarfollowerLO.json");
+const reshLO = require("../../db/bots/loadouts/bosses/reshalla/reshallaLO.json");
+const reshFollowerLO = require("../../db/bots/loadouts/bosses/reshalla/reshallafollowerLO.json");
+
+const modConfig = require("../../config/config.json");
 
 export class MyBotLootCache {
     specialItems: ITemplateItem[]
@@ -18,7 +39,8 @@ export class MyBotLootCache {
     vestLoot: ITemplateItem[]
     combinedPoolLoot: ITemplateItem[]
 
-    grenadeItems: ITemplateItem[]
+    vestGrenadeItems: ITemplateItem[]
+    pocketGrenadeItems: ITemplateItem[]
 
     vestHealingItems: ITemplateItem[]
     vestDrugItems: ITemplateItem[]
@@ -40,7 +62,8 @@ export const enum MyLootCacheType {
     VEST = "Vest",
     COMBINED = "Combined",
 
-    GRENADES = "Grenades",
+    VEST_GRENADE_ITEMS = "VestGrenadeItems",
+    POCKET_GRENADE_ITEMS = "PocketGrenadeItems",
 
     VEST_HEALING_ITEMS = "VestHealingItems",
     VEST_DRUG_ITEMS = "VestDrugItems",
@@ -52,94 +75,156 @@ export const enum MyLootCacheType {
 
     BAG_HEALING_ITEMS = "BagHealingItems",
     BAG_DRUG_ITEMS = "BagDrugItems",
-    BAG_STIM_ITEMS = "BagStimItems",
+    BAG_STIM_ITEMS = "BagStimItems"
 }
 
-// export const enum EquipmentSlots {
-//     HEADWEAR = "Headwear",
-//     EARPIECE = "Earpiece",
-//     FACE_COVER = "FaceCover",
-//     ARMOR_VEST = "ArmorVest",
-//     EYEWEAR = "Eyewear",
-//     ARM_BAND = "ArmBand",
-//     TACTICAL_VEST = "TacticalVest",
-//     POCKETS = "Pockets",
-//     BACKPACK = "Backpack",
-//     SECURED_CONTAINER = "SecuredContainer",
-//     FIRST_PRIMARY_WEAPON = "FirstPrimaryWeapon",
-//     SECOND_PRIMARY_WEAPON = "SecondPrimaryWeapon",
-//     HOLSTER = "Holster",
-//     SCABBARD = "Scabbard"
-// }
+type BotGeneration = {
+    [botName: string]: {
+        [botTier: number]: any;
+    };
+};
+
+const botGenerations: BotGeneration = {
+    "assault": {
+        1: scavLO.scavLO1.generation,
+        2: scavLO.scavLO2.generation,
+        3: scavLO.scavLO3.generation
+    },
+    "sptusec": {
+        1: usecLO.usecLO1.generation,
+        2: usecLO.usecLO2.generation,
+        3: usecLO.usecLO3.generation,
+        4: usecLO.usecLO4.generation,
+        5: tier5LO.tier5LO.generation
+    },
+    "sptbear": {
+        1: bearLO.bearLO1.generation,
+        2: bearLO.bearLO2.generation,
+        3: bearLO.bearLO3.generation,
+        4: bearLO.bearLO4.generation,
+        5: tier5LO.tier5LO.generation
+    },
+    "bossbully": {
+        1: reshLO.reshallaLO1.generation,
+        2: reshLO.reshallaLO2.generation,
+        3: reshLO.reshallaLO3.generation
+    },
+    "bosskilla": {
+        1: killaLO.killaLO1.generation,
+        2: killaLO.killaLO2.generation,
+        3: killaLO.killaLO3.generation
+    },
+    "bossknight": {
+        1: knightLO.knightLO1.generation,
+        2: knightLO.knightLO2.generation,
+        3: knightLO.knightLO3.generation
+    },
+    "bosssanitar": {
+        1: saniLO.sanitarLO1.generation,
+        2: saniLO.sanitarLO2.generation,
+        3: saniLO.sanitarLO3.generation
+    },
+    "bosstagilla": {
+        1: tagillaLO.tagillaLO1.generation,
+        2: tagillaLO.tagillaLO2.generation,
+        3: tagillaLO.tagillaLO3.generation
+    },
+    "exusec": {
+        1: rogueLO.rogueLO1.generation,
+        2: rogueLO.rogueLO2.generation,
+        3: rogueLO.rogueLO3.generation
+    },
+    "pmcbot": {
+        1: raiderLO.raiderLO1.generation,
+        2: raiderLO.raiderLO2.generation,
+        3: raiderLO.raiderLO3.generation
+    },
+    "followerbigpipe": {
+        1: bigpipeLO.bigpipeLO1.generation,
+        2: bigpipeLO.bigpipeLO2.generation,
+        3: bigpipeLO.bigpipeLO3.generation
+    },
+    "followerbirdeye": {
+        1: birdeyeLO.birdeyeLO1.generation,
+        2: birdeyeLO.birdeyeLO2.generation,
+        3: birdeyeLO.birdeyeLO3.generation
+    },
+    "followerbully": {
+        1: reshFollowerLO.reshallafollowerLO1.generation,
+        2: reshFollowerLO.reshallafollowerLO2.generation,
+        3: reshFollowerLO.reshallafollowerLO3.generation
+    },
+    "followersanitar": {
+        1: saniFollowerLO.sanitarfollowerLO1.generation,
+        2: saniFollowerLO.sanitarfollowerLO2.generation,
+        3: saniFollowerLO.sanitarfollowerLO3.generation
+    }
+};
 
 export class BotLootGen extends BotLootGenerator {
 
-    public genLoot(sessionId: string, botJsonTemplate: IBotType, isPmc: boolean, botRole: string, botInventory: PmcInventory, botLevel: number): void {
+    public genLoot(sessionId: string, botJsonTemplate: IBotType, isPmc: boolean, botRole: string, botInventory: PmcInventory, pmcTier: number): void {
 
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
         const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
-        const itemCounts = botJsonTemplate.generation.items;
-
+        const tierChecker = new BotTierTracker();
+        let tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : tierChecker.getTier(botRole);
+       
+        var itemCounts = botGenerations[botRole]?.[tier]?.items;
+        if (itemCounts === null || itemCounts === undefined) {
+            itemCounts = raiderLO.raiderLO3.generation.items;
+        }
         const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
 
-        const bagItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.backpackLoot.weights);
-        const pocketLootCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
-        const vestLootCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
-        const specialLootItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-        const grenadeCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.grenades.weights);
+        const nValue = this.getBotLootNValueByRole(botRole);
 
-        var vestHealingItemCount = 1;
-        var pocketHealingItemCount = 1;
-        var bagHealingItemCount = 1;
-
-        var vestDrugItemCount = 1;
-        var pocketDrugItemCount = 1;
-        var bagDrugItemCount = 1;
-
-        var vestStimItemCount = 1;
-        var pocketStimItemCount = 1;
-        var bagStimItemCount = 1;
-
-        if (botRole.toLocaleLowerCase() === "assault" || botRole.toLocaleLowerCase() === "marskman") {
-            vestHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-            pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.healing.weights);
-            bagHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-
-            vestDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-            pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.drugs.weights);
-            bagDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-
-            vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-            pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
-            bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
+        if((modConfig.dynamic_loot_pmcs && (botRole === "sptbear" || botRole === "sptusec")) || (modConfig.dynamic_loot_scavs && botRole === "assault")){
+            itemCounts.looseLoot.min = 0;
+            itemCounts.looseLoot.max = 3;
         }
-        else if (botRole.toLocaleLowerCase() === "sptbear" || botRole.toLocaleLowerCase() === "sptusec") {
-            vestHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
-            pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.healing.weights);
-            bagHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
 
-            vestDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-            pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.drugs.weights);
-            bagDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
+        var healingTally = 0;
+        var stimTally = 0;
+        var drugTally = 0;
+        var lootTally = 0;
+        var grenadeTally = 0;
 
-            vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-            pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
-            bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.specialItems.weights);
-        }
-        else {
-            vestHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
-            pocketHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.healing.weights);
-            bagHealingItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
+        const bagItemCount = this.getRandomisedCount(itemCounts.looseLoot.min, itemCounts.looseLoot.max, nValue);
+        lootTally += bagItemCount;
+        const pocketLootCount = lootTally >= itemCounts.looseLoot.max ? 0 : this.getRandomisedCount(itemCounts.looseLoot.min, itemCounts.looseLoot.max, nValue);
+        lootTally += pocketLootCount;
+        const vestLootCount = lootTally >= itemCounts.looseLoot.max ? 0 : this.getRandomisedCount(Math.round(itemCounts.looseLoot.min / 2), Math.round(itemCounts.looseLoot.max / 2), nValue); // Count is half what loose loot min/max is
+        lootTally += vestLootCount;
+        const specialLootItemCount = this.getRandomisedCount(itemCounts.specialItems.min, itemCounts.specialItems.max, nValue);
 
-            vestDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
-            pocketDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.drugs.weights);
-            bagDrugItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
+        const vestHealingItemCount = this.getRandomisedCount(itemCounts.healing.min, itemCounts.healing.max, 3);
+        healingTally += vestHealingItemCount;
+        const vestDrugItemCount = this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3)
+        drugTally += vestDrugItemCount;
+        const vestStimItemCount = this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
+        stimTally += vestStimItemCount;
 
-            vestStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
-            pocketStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.stims.weights);
-            bagStimItemCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights);
-        }
+        const pocketHealingItemCount = healingTally >= itemCounts.healing.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.healing.min / 2)), Math.max(1, Math.round(itemCounts.healing.max / 2)), 3);
+        healingTally += pocketHealingItemCount;
+        const pocketDrugItemCount = drugTally >= itemCounts.drugs.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.drugs.min / 2)), Math.max(1, Math.round(itemCounts.drugs.max / 2)), 3)
+        drugTally += pocketDrugItemCount;
+        const pocketStimItemCount = stimTally >= itemCounts.stims.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.stims.min / 2)), Math.max(1, Math.round(itemCounts.stims.max / 2)), 3);
+        stimTally += pocketStimItemCount;
+
+        const bagHealingItemCount = healingTally >= itemCounts.healing.max ? 0 : this.getRandomisedCount(itemCounts.healing.min, itemCounts.healing.max, 3);
+        healingTally += bagHealingItemCount;
+        const bagDrugItemCount = drugTally >= itemCounts.drugs.max ? 0 : this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3);
+
+        drugTally += bagDrugItemCount;
+        const bagStimItemCount = stimTally >= itemCounts.stims.max ? 0 : this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
+        stimTally += bagStimItemCount;
+
+        const vestGrenadeCount = this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
+        grenadeTally += vestGrenadeCount;
+        const pocketGrenadeCount = grenadeTally >= itemCounts.grenades.max ? 0 : this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
+        grenadeTally += pocketGrenadeCount;
+
 
         const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);
 
@@ -242,6 +327,17 @@ export class BotLootGen extends BotLootGenerator {
                 this.pmcConfig.maxVestLootTotalRub,
                 isPmc);
 
+            //Vest Nades
+            this.addLootFromPool(
+                myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, botJsonTemplate),
+                [EquipmentSlots.TACTICAL_VEST],
+                vestGrenadeCount,
+                botInventory,
+                botRole,
+                false,
+                0,
+                isPmc);
+
         }
         // Pocket Loot
         this.addLootFromPool(
@@ -256,9 +352,9 @@ export class BotLootGen extends BotLootGenerator {
 
         // Grenades
         this.addLootFromPool(
-            myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.GRENADES, botJsonTemplate),
-            [EquipmentSlots.POCKETS, EquipmentSlots.BACKPACK, EquipmentSlots.TACTICAL_VEST],
-            grenadeCount,
+            myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, botJsonTemplate),
+            [EquipmentSlots.POCKETS],
+            pocketGrenadeCount,
             botInventory,
             botRole,
             false,
@@ -324,7 +420,8 @@ export class MyLootCache extends BotLootCacheService {
             combinedPoolLoot: [],
             specialItems: [],
 
-            grenadeItems: [],
+            vestGrenadeItems: [],
+            pocketGrenadeItems: [],
 
             vestHealingItems: [],
             vestDrugItems: [],
@@ -365,8 +462,10 @@ export class MyLootCache extends BotLootCacheService {
                 return this.myLootCache[botRole].vestLoot;
             case MyLootCacheType.COMBINED:
                 return this.myLootCache[botRole].combinedPoolLoot;
-            case MyLootCacheType.GRENADES:
-                return this.myLootCache[botRole].grenadeItems;
+            case MyLootCacheType.VEST_GRENADE_ITEMS:
+                return this.myLootCache[botRole].vestGrenadeItems;
+            case MyLootCacheType.POCKET_GRENADE_ITEMS:
+                return this.myLootCache[botRole].pocketGrenadeItems;
             case MyLootCacheType.VEST_HEALING_ITEMS:
                 return this.myLootCache[botRole].vestHealingItems;
             case MyLootCacheType.VEST_DRUG_ITEMS:
@@ -492,7 +591,9 @@ export class MyLootCache extends BotLootCacheService {
             && template._parent === BaseClasses.STIMULATOR);
         ///////////////////////////////////////////////////////
 
-        const grenadeItems = vestLootTemplates.filter(template =>
+        const vestGrenadeItems = vestLootTemplates.filter(template =>
+            this.isGrenade(template._props));
+        const pocketGrenadeItems = pocketLootTemplates.filter(template =>
             this.isGrenade(template._props));
 
         // Get loot items (excluding magazines, bullets, grenades and healing items)
@@ -530,7 +631,8 @@ export class MyLootCache extends BotLootCacheService {
         this.myLootCache[botRole].bagDrugItems = bagDrugItems;
         this.myLootCache[botRole].bagStimItems = bagStimItems;
 
-        this.myLootCache[botRole].grenadeItems = grenadeItems;
+        this.myLootCache[botRole].vestGrenadeItems = vestGrenadeItems;
+        this.myLootCache[botRole].pocketGrenadeItems = pocketGrenadeItems;
 
         this.myLootCache[botRole].specialItems = specialLootItems;
         this.myLootCache[botRole].backpackLoot = backpackLootItems;
