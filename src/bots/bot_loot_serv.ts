@@ -30,6 +30,8 @@ const saniFollowerLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarfol
 const reshLO = require("../../db/bots/loadouts/bosses/reshalla/reshallaLO.json");
 const reshFollowerLO = require("../../db/bots/loadouts/bosses/reshalla/reshallafollowerLO.json");
 
+const modConfig = require("../../config/config.json");
+
 export class MyBotLootCache {
     specialItems: ITemplateItem[]
     backpackLoot: ITemplateItem[]
@@ -176,8 +178,11 @@ export class BotLootGen extends BotLootGenerator {
         const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
 
         const nValue = this.getBotLootNValueByRole(botRole);
-        const looseLootMin = itemCounts.looseLoot.min;
-        const looseLootMax = itemCounts.looseLoot.max;
+
+        if((modConfig.dynamic_loot_pmcs && (botRole === "sptbear" || botRole === "sptusec")) || (modConfig.dynamic_loot_scavs && botRole === "assault")){
+            itemCounts.looseLoot.min = 0;
+            itemCounts.looseLoot.max = 3;
+        }
 
         var healingTally = 0;
         var stimTally = 0;
@@ -185,11 +190,11 @@ export class BotLootGen extends BotLootGenerator {
         var lootTally = 0;
         var grenadeTally = 0;
 
-        const bagItemCount = this.getRandomisedCount(looseLootMin, looseLootMax, nValue);
+        const bagItemCount = this.getRandomisedCount(itemCounts.looseLoot.min, itemCounts.looseLoot.max, nValue);
         lootTally += bagItemCount;
-        const pocketLootCount = lootTally >= looseLootMax ? 0 : this.getRandomisedCount(looseLootMin, looseLootMax, nValue);
+        const pocketLootCount = lootTally >= itemCounts.looseLoot.max ? 0 : this.getRandomisedCount(itemCounts.looseLoot.min, itemCounts.looseLoot.max, nValue);
         lootTally += pocketLootCount;
-        const vestLootCount = lootTally >= looseLootMax ? 0 : this.getRandomisedCount(Math.round(looseLootMin / 2), Math.round(looseLootMax / 2), nValue); // Count is half what loose loot min/max is
+        const vestLootCount = lootTally >= itemCounts.looseLoot.max ? 0 : this.getRandomisedCount(Math.round(itemCounts.looseLoot.min / 2), Math.round(itemCounts.looseLoot.max / 2), nValue); // Count is half what loose loot min/max is
         lootTally += vestLootCount;
         const specialLootItemCount = this.getRandomisedCount(itemCounts.specialItems.min, itemCounts.specialItems.max, nValue);
 

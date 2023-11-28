@@ -122,17 +122,22 @@ export class BotGen extends BotGenerator {
     }
 
     private botTierMapFactor(tier: number, utils: Utils): number {
+
+        const hightier: string[] = ["rezervbase", "reservebase", "tarkovstreets", "factory4_night"];
+        const midtier: string[] = ["shoreline", "lighthouse", "interchange", "factory4_night"];
+        const lowtier: string[] = ["bigmap", "customs", "tarkovstreets"];
+
         let rndNum = utils.pickRandNumOneInTen();
-        if (RaidInfoTracker.mapName === "Laboratory" || RaidInfoTracker.mapName === "laboratory") {
+        if (RaidInfoTracker.mapName.toLowerCase() === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 4 && (RaidInfoTracker.mapName === "RezervBase" || RaidInfoTracker.mapName === "ReserveBase" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "Streets of Tarkov" || RaidInfoTracker.mapName === "factory4_night" || RaidInfoTracker.TOD === "night")) {
+        else if (rndNum <= 4 && (hightier.includes(RaidInfoTracker.mapName.toLowerCase()) ||  RaidInfoTracker.TOD === "night")) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 2 && (RaidInfoTracker.mapName === "shoreline" || RaidInfoTracker.mapName === "Shoreline" || RaidInfoTracker.mapName === "lighthouse" || RaidInfoTracker.mapName === "Lighthouse" || RaidInfoTracker.mapName === "Interchange" || RaidInfoTracker.mapName === "interchange")) {
+        else if (rndNum <= 2 && midtier.includes(RaidInfoTracker.mapName.toLowerCase())) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 1 && (RaidInfoTracker.mapName === "bigmap" || RaidInfoTracker.mapName === "Customs")) {
+        else if (rndNum <= 1 && lowtier.includes(RaidInfoTracker.mapName.toLowerCase())) {
             tier = Math.min(tier + 1, 5);
         }
         return tier;
@@ -327,6 +332,7 @@ export class BotInvGen extends BotInventoryGenerator {
 
     private tryGetPMCSecondary(botInventory: PmcInventory, itemDb: Record<string, ITemplateItem>, templateInventory: Inventory, equipmentChances: Chances, sessionId: string, botRole: string, isPmc: boolean, pmcTier: number, botLevel: number, itemGenerationLimitsMinMax: Generation){
         try {
+
             let shouldGetSecondary = false;
             if(botInventory.items !== undefined && botInventory.items !== null){
                 for (let i in botInventory.items) {
@@ -365,7 +371,7 @@ export class BotInvGen extends BotInventoryGenerator {
         this.myGenerateAndAddEquipmentToBot(templateInventory, equipmentChances, botRole, botInventory, botLevel);
 
         // Roll weapon spawns and generate a weapon for each roll that passed
-        this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier);
+        this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, false);
 
         //if PMC has a bolt action rifle, ensure they get a proper secondary
         if (isPmc && pmcTier >= 2) {

@@ -3,16 +3,18 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";
+import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
 import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
 import { HandbookItem } from "@spt-aki/models/eft/common/tables/IHandbookBase";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
 
 const myTemplates = require("../../db/templates/new_items/items.json");
 const myLocales = require("../../db/templates/new_items/en.json");
 const myHandbook = require("../../db/templates/new_items/handbook.json");
 
 export class ItemsClass {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private inventoryConf: IInventoryConfig) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private inventoryConf: IInventoryConfig, private raidConf: IInRaidConfig, private fleaConf: IRagfairConfig) { }
 
     globalDB(): IConfig {
         return this.tables.globals.config;
@@ -196,6 +198,8 @@ export class ItemsClass {
 
         if (this.modConfig.remove_fir_req == true) {
             this.inventoryConf.newItemsMarkedFound = true;
+            this.raidConf.keepFiRSecureContainerOnDeath = true;
+            this.fleaConf.dynamic.purchasesAreFoundInRaid = true;
         }
 
         if (this.modConfig.remove_inraid_restrictions == true) {

@@ -560,6 +560,8 @@ class BotLoader {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         }
         this.botConf().lootNValue = rmBotConfig.lootNValue;
+        this.botConf().lootNValue.sptusec = 3;
+        this.botConf().lootNValue.sptbear = 3;
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
@@ -632,6 +634,8 @@ class BotLoader {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         }
         this.botConf().lootNValue = rmBotConfig.lootNValue;
+        this.botConf().lootNValue.sptusec = 2.75;
+        this.botConf().lootNValue.sptbear = 2.75;
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
@@ -704,6 +708,8 @@ class BotLoader {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         }
         this.botConf().lootNValue = rmBotConfig.lootNValue;
+        this.botConf().lootNValue.sptusec = 2.5;
+        this.botConf().lootNValue.sptbear = 2.5;
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
@@ -1335,6 +1341,7 @@ class BotLoader {
         botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
         botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
         botJsonTemplate.inventory.items.Backpack.push(...keys.tier4_PMC_Keys);
+        botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_urban;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;

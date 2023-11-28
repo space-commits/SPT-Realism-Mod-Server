@@ -296,17 +296,17 @@ class Main {
                             return TOD;
                         }
                         for (let map in arrays.cqbMaps) {
-                            if (arrays.cqbMaps[map].toLowerCase() === matchInfo.location) {
+                            if (arrays.cqbMaps[map] === matchInfo.location.toLowerCase()) {
                                 mapType = "cqb";
                             }
                         }
                         for (let map in arrays.outdoorMaps) {
-                            if (arrays.outdoorMaps[map].toLowerCase() === matchInfo.location) {
+                            if (arrays.outdoorMaps[map] === matchInfo.location.toLowerCase()) {
                                 mapType = "outdoor";
                             }
                         }
                         for (let map in arrays.urbanMaps) {
-                            if (arrays.urbanMaps[map].toLowerCase() === matchInfo.location) {
+                            if (arrays.urbanMaps[map] === matchInfo.location.toLowerCase()) {
                                 mapType = "urban";
                             }
                         }
@@ -430,6 +430,7 @@ class Main {
         const tables = databaseServer.getTables();
         const AKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
+        const raidConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.IN_RAID);
         const jsonUtil = container.resolve("JsonUtil");
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
@@ -439,7 +440,7 @@ class Main {
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf);
+        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, AKIFleaConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);

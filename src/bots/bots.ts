@@ -611,6 +611,8 @@ export class BotLoader {
         }
 
         this.botConf().lootNValue = rmBotConfig.lootNValue;
+        this.botConf().lootNValue.sptusec = 3;
+        this.botConf().lootNValue.sptbear = 3;
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
 
@@ -697,6 +699,8 @@ export class BotLoader {
         }
 
         this.botConf().lootNValue = rmBotConfig.lootNValue;
+        this.botConf().lootNValue.sptusec = 2.75;
+        this.botConf().lootNValue.sptbear = 2.75;
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
 
@@ -782,6 +786,8 @@ export class BotLoader {
         }
 
         this.botConf().lootNValue = rmBotConfig.lootNValue;
+        this.botConf().lootNValue.sptusec = 2.5;
+        this.botConf().lootNValue.sptbear = 2.5;
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
 
@@ -1470,6 +1476,7 @@ export class BotLoader {
         botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
         botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
         botJsonTemplate.inventory.items.Backpack.push(...keys.tier4_PMC_Keys);
+        botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_urban;
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
