@@ -96,7 +96,7 @@ class ItemCloning {
         this.addToMastering("Skier209", "AKM");
         this.addCustomWeapsToQuests("59e6687d86f77411d949b251", "Skier209");
         //add shotguns to inventory slot filters because BSG:
-        var defaultInventory = this.itemDB()["55d7217a4bdc2d86028b456d"]._props;
+        let defaultInventory = this.itemDB()["55d7217a4bdc2d86028b456d"]._props;
         defaultInventory.Slots[0]._props.filters[0].Filter.push("5447b6094bdc2dc3278b4567");
         defaultInventory.Slots[1]._props.filters[0].Filter.push("5447b6094bdc2dc3278b4567");
     }
@@ -221,3 +221,4 @@ class ItemCloning {
     }
 }
 exports.ItemCloning = ItemCloning;
+//# sourceMappingURL=item_cloning.js.map

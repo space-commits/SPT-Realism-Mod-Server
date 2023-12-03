@@ -2167,3 +2167,4 @@ class Armor {
     }
 }
 exports.Armor = Armor;
+//# sourceMappingURL=armor.js.map

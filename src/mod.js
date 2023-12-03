@@ -50,6 +50,7 @@ const item_cloning_1 = require("./items/item_cloning");
 const path = __importStar(require("path"));
 const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
+const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const fs = require('fs');
 const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
@@ -57,7 +58,7 @@ const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
-var clientValidateCount = 0;
+let clientValidateCount = 0;
 class Main {
     path;
     modLoader;
@@ -267,7 +268,7 @@ class Main {
                         const time = weatherController.generate().time; //apparently regenerates weather?
                         // const time = weatherController.getCurrentInRaidTime; //better way?
                         // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
-                        utils_1.RaidInfoTracker.mapName = matchInfo.location;
+                        utils_1.RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                         let realTime = "";
                         let mapType = "";
                         if (matchInfo.timeVariant === "PAST") {
@@ -287,7 +288,7 @@ class Main {
                         function getTOD(time) {
                             let TOD = "";
                             let [h, m] = time.split(':');
-                            if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (matchInfo.location === "factory4_day" || matchInfo.location === "Laboratory" || matchInfo.location === "laboratory")) {
+                            if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (utils_1.RaidInfoTracker.mapName === "factory4_day" || utils_1.RaidInfoTracker.mapName === "laboratory")) {
                                 TOD = "day";
                             }
                             else {
@@ -295,27 +296,21 @@ class Main {
                             }
                             return TOD;
                         }
-                        for (let map in arrays.cqbMaps) {
-                            if (arrays.cqbMaps[map] === matchInfo.location.toLowerCase()) {
-                                mapType = "cqb";
-                            }
+                        if (arrays.cqbMaps.includes(utils_1.RaidInfoTracker.mapName)) {
+                            mapType = "cqb";
                         }
-                        for (let map in arrays.outdoorMaps) {
-                            if (arrays.outdoorMaps[map] === matchInfo.location.toLowerCase()) {
-                                mapType = "outdoor";
-                            }
+                        if (arrays.outdoorMaps.includes(utils_1.RaidInfoTracker.mapName)) {
+                            mapType = "outdoor";
                         }
-                        for (let map in arrays.urbanMaps) {
-                            if (arrays.urbanMaps[map] === matchInfo.location.toLowerCase()) {
-                                mapType = "urban";
-                            }
+                        if (arrays.urbanMaps.includes(utils_1.RaidInfoTracker.mapName)) {
+                            mapType = "urban";
                         }
                         utils_1.RaidInfoTracker.TOD = getTOD(realTime);
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true) {
                             bots.updateBots(pmcData, logger, modConfig, bots, utils);
                         }
-                        if ((!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) && (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory")) {
+                        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent && utils_1.RaidInfoTracker.mapName === "laboratory") {
                             pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
                             pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
                             pmcConf.convertIntoPmcChance["assault"].min = 100;
@@ -375,12 +370,12 @@ class Main {
     }
     backupProfile(profileData, logger) {
         const profileFileData = JSON.stringify(profileData, null, 4);
-        var index = 0;
+        let index = 0;
         if (index == 0) {
             index = 1;
-            var modPath = path.join(__dirname, '..');
-            var profileFolderPath = modPath + "/ProfileBackups/";
-            var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
+            let modPath = path.join(__dirname, '..');
+            let profileFolderPath = modPath + "/ProfileBackups/";
+            let profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
             if (fs.existsSync(profileFilePath)) {
                 this.profileBackupHelper(profileFileData, profileFilePath, profileData, logger);
             }
@@ -396,13 +391,13 @@ class Main {
         }
     }
     profileBackupHelper(profileFileData, pathforProfile, profileData, logger) {
-        var date = new Date();
-        var time = date.toLocaleTimeString();
-        var edit_time = time.replaceAll(" ", "_");
-        var edit_time2 = edit_time.replaceAll(":", "-");
-        var day = date.toISOString().slice(0, 10);
-        var combinedTime = "_" + day + "_" + edit_time2;
-        var backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json";
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        let edit_time = time.replaceAll(" ", "_");
+        let edit_time2 = edit_time.replaceAll(":", "-");
+        let day = date.toISOString().slice(0, 10);
+        let combinedTime = "_" + day + "_" + edit_time2;
+        let backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json";
         fs.writeFile(backupName, profileFileData, {
             encoding: "utf8",
             flag: "w",
@@ -457,18 +452,31 @@ class Main {
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
         const preAkiModLoader = container.resolve("PreAkiModLoader");
         const activeMods = preAkiModLoader.getImportedModDetails();
+        let counts = Array(10).fill(0);
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        for (let i = 0; i < 100; i++) {
+            let num = getRandomNumber(1, 10);
+            counts[num - 1]++;
+        }
+        logger.warning("" + counts);
         for (const modname in activeMods) {
             if (modname.includes("Jiro-BatterySystem")) {
                 utils_1.ModTracker.batteryModPresent = true;
+                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("Solarint-SAIN-ServerMod")) {
                 utils_1.ModTracker.sainPresent = true;
+                logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("QuestingBots")) {
                 utils_1.ModTracker.qtbPresent = true;
+                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("SWAG")) {
                 utils_1.ModTracker.sainPresent = true;
+                logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
         }
         this.dllChecker(logger, modConfig);
@@ -619,3 +627,4 @@ class Main {
 }
 exports.Main = Main;
 module.exports = { mod: new Main() };
+//# sourceMappingURL=mod.js.map

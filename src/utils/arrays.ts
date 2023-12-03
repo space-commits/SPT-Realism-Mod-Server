@@ -12,7 +12,7 @@ export class Arrays {
     public rogueRaiderList: IBotType[];
 
     constructor(private tables: IDatabaseTables) {
-        var botDB = this.tables.bots.types;
+        let botDB = this.tables.bots.types;
 
         this.bossBotArr = [
             botDB["bosssanitar"],

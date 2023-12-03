@@ -130,14 +130,14 @@ class ItemsClass {
                 this.itemDB()["m9_bayonet"]._props.ConflictingItems.push(item);
             }
         }
-        var allowedAKMuzzles = [
+        let allowedAKMuzzles = [
             "mechSlant_366",
             "59d64fc686f774171b243fe2",
             "5ac7655e5acfc40016339a19",
             "5ac72e7d5acfc40016339a02",
             "5649aa744bdc2ded0b8b457e",
         ];
-        var incompatibleWeapons = [
+        let incompatibleWeapons = [
             "62e7e7bbe6da9612f743f1e0",
             "5ac66cb05acfc40198510a10",
             "5ac66d725acfc43b321d4b60",
@@ -200,3 +200,4 @@ class ItemsClass {
     }
 }
 exports.ItemsClass = ItemsClass;
+//# sourceMappingURL=items.js.map

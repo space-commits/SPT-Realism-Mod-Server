@@ -89,3 +89,4 @@ class WeaponsGlobals {
     }
 }
 exports.WeaponsGlobals = WeaponsGlobals;
+//# sourceMappingURL=weapons_globals.js.map

@@ -569,8 +569,8 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new arrays_1.Arrays(tables);
         const utils = new utils_1.Utils(tables, arrays);
-        var assortItems = trader.assort.items;
-        var assortBarters = trader.assort.barter_scheme;
+        let assortItems = trader.assort.items;
+        let assortBarters = trader.assort.barter_scheme;
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;
             for (let lvl in ll) {
@@ -610,3 +610,4 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     }
 }
 exports.TraderRefresh = TraderRefresh;
+//# sourceMappingURL=traders.js.map

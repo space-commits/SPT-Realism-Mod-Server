@@ -3746,8 +3746,8 @@ export class Ammo {
             if (serverItem._parent === ParentClasses.AMMO) {
 
                 if (serverItem._props?.DurabilityBurnModificator !== undefined) {
-                    var duraBurn = Math.max(1, serverItem._props.DurabilityBurnModificator * 0.55);
-                    var misfireChance = Math.max(0, serverItem._props.MalfMisfireChance *= 0.9);
+                    let duraBurn = Math.max(1, serverItem._props.DurabilityBurnModificator * 0.55);
+                    let misfireChance = Math.max(0, serverItem._props.MalfMisfireChance *= 0.9);
                     serverItem._props.DurabilityBurnModificator = duraBurn;
                     serverItem._props.MalfMisfireChance = misfireChance;
 

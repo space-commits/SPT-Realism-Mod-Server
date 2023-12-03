@@ -13,6 +13,9 @@ import { EquipmentSlots } from "@spt-aki/models/enums/EquipmentSlots";
 import { BotTierTracker } from "../utils/utils";
 import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
 import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
+import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { ItemAddedResult } from "@spt-aki/models/enums/ItemAddedResult";
+import { ParentClasses } from "../utils/enums";
 
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
@@ -170,7 +173,7 @@ export class BotLootGen extends BotLootGenerator {
         const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
         const tierChecker = new BotTierTracker();
         let tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : tierChecker.getTier(botRole);
-       
+
         var itemCounts = botGenerations[botRole]?.[tier]?.items;
         if (itemCounts === null || itemCounts === undefined) {
             itemCounts = raiderLO.raiderLO3.generation.items;
@@ -179,16 +182,16 @@ export class BotLootGen extends BotLootGenerator {
 
         const nValue = this.getBotLootNValueByRole(botRole);
 
-        if((modConfig.dynamic_loot_pmcs && (botRole === "sptbear" || botRole === "sptusec")) || (modConfig.dynamic_loot_scavs && botRole === "assault")){
+        if ((modConfig.dynamic_loot_pmcs && (botRole === "sptbear" || botRole === "sptusec")) || (modConfig.dynamic_loot_scavs && botRole === "assault")) {
             itemCounts.looseLoot.min = 0;
             itemCounts.looseLoot.max = 3;
         }
 
-        var healingTally = 0;
-        var stimTally = 0;
-        var drugTally = 0;
-        var lootTally = 0;
-        var grenadeTally = 0;
+        let healingTally = 0;
+        let stimTally = 0;
+        let drugTally = 0;
+        let lootTally = 0;
+        let grenadeTally = 0;
 
         const bagItemCount = this.getRandomisedCount(itemCounts.looseLoot.min, itemCounts.looseLoot.max, nValue);
         lootTally += bagItemCount;
@@ -238,7 +241,7 @@ export class BotLootGen extends BotLootGenerator {
             //     this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", botJsonTemplate.inventory, botJsonTemplate.chances.mods, botRole, isPmc, botLevel);
             // }
             // Backpack Loot
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, botJsonTemplate),
                 [EquipmentSlots.BACKPACK],
                 bagItemCount,
@@ -249,29 +252,29 @@ export class BotLootGen extends BotLootGenerator {
                 isPmc);
 
             //Bag Meds
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_HEALING_ITEMS, botJsonTemplate),
                 [EquipmentSlots.BACKPACK],
                 bagHealingItemCount,
                 botInventory,
                 botRole,
-                false,
+                true,
                 0,
                 isPmc);
 
             //Bag Drugs
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_DRUG_ITEMS, botJsonTemplate),
                 [EquipmentSlots.BACKPACK],
                 bagDrugItemCount,
                 botInventory,
                 botRole,
-                false,
+                true,
                 0,
                 isPmc);
 
             //Bag Stims
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_STIM_ITEMS, botJsonTemplate),
                 [EquipmentSlots.BACKPACK],
                 bagStimItemCount,
@@ -284,29 +287,29 @@ export class BotLootGen extends BotLootGenerator {
         }
         if (containersBotHasAvailable.includes(EquipmentSlots.TACTICAL_VEST)) {
             //Vest Meds
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_HEALING_ITEMS, botJsonTemplate),
                 [EquipmentSlots.TACTICAL_VEST],
                 vestHealingItemCount,
                 botInventory,
                 botRole,
-                false,
+                true,
                 0,
                 isPmc);
 
             //Vest Drugs
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_DRUG_ITEMS, botJsonTemplate),
                 [EquipmentSlots.TACTICAL_VEST],
                 vestDrugItemCount,
                 botInventory,
                 botRole,
-                false,
+                true,
                 0,
                 isPmc);
 
             //Vest Stims
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_STIM_ITEMS, botJsonTemplate),
                 [EquipmentSlots.TACTICAL_VEST],
                 vestStimItemCount,
@@ -317,7 +320,7 @@ export class BotLootGen extends BotLootGenerator {
                 isPmc);
 
             // Vest Loot
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST, botJsonTemplate),
                 [EquipmentSlots.TACTICAL_VEST],
                 vestLootCount,
@@ -328,19 +331,19 @@ export class BotLootGen extends BotLootGenerator {
                 isPmc);
 
             //Vest Nades
-            this.addLootFromPool(
+            this.myAddLootFromPool(
                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, botJsonTemplate),
                 [EquipmentSlots.TACTICAL_VEST],
                 vestGrenadeCount,
                 botInventory,
                 botRole,
-                false,
+                true,
                 0,
                 isPmc);
 
         }
         // Pocket Loot
-        this.addLootFromPool(
+        this.myAddLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET, botJsonTemplate),
             [EquipmentSlots.POCKETS],
             pocketLootCount,
@@ -351,18 +354,18 @@ export class BotLootGen extends BotLootGenerator {
             isPmc);
 
         // Grenades
-        this.addLootFromPool(
+        this.myAddLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, botJsonTemplate),
             [EquipmentSlots.POCKETS],
             pocketGrenadeCount,
             botInventory,
             botRole,
-            false,
+            true,
             0,
             isPmc);
 
         // Special items
-        this.addLootFromPool(
+        this.myAddLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.SPECIAL, botJsonTemplate),
             [EquipmentSlots.POCKETS, EquipmentSlots.BACKPACK, EquipmentSlots.TACTICAL_VEST],
             specialLootItemCount,
@@ -370,29 +373,29 @@ export class BotLootGen extends BotLootGenerator {
             botRole);
 
         //Pocket Meds
-        this.addLootFromPool(
+        this.myAddLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_HEALING_ITEMS, botJsonTemplate),
             [EquipmentSlots.POCKETS],
             pocketHealingItemCount,
             botInventory,
             botRole,
-            false,
+            true,
             0,
             isPmc);
 
         //Pocket Drugs
-        this.addLootFromPool(
+        this.myAddLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_DRUG_ITEMS, botJsonTemplate),
             [EquipmentSlots.POCKETS],
             pocketDrugItemCount,
             botInventory,
             botRole,
-            false,
+            true,
             0,
             isPmc);
 
         //Pocket Stims
-        this.addLootFromPool(
+        this.myAddLootFromPool(
             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_STIM_ITEMS, botJsonTemplate),
             [EquipmentSlots.POCKETS],
             pocketStimItemCount,
@@ -401,6 +404,83 @@ export class BotLootGen extends BotLootGenerator {
             true,
             0,
             isPmc);
+    }
+
+    private myAddLootFromPool(pool: ITemplateItem[], equipmentSlots: string[], totalItemCount: number, inventoryToAddItemsTo: PmcInventory, botRole: string, useLimits = false, totalValueLimitRub = 0, isPmc = false): void {
+        // Loot pool has items
+        if (pool.length) {
+            let currentTotalRub = 0;
+            const itemLimits: Record<string, number> = {};
+            const itemSpawnLimits: Record<string, Record<string, number>> = {};
+            let fitItemIntoContainerAttempts = 0;
+            for (let i = 0; i < totalItemCount; i++) {
+                const itemToAddTemplate = this.getRandomItemFromPoolByRole(pool, botRole);
+                const id = this.hashUtil.generate();
+                const itemsToAdd: Item[] = [{
+                    _id: id,
+                    _tpl: itemToAddTemplate._id,
+                    ...this.botGeneratorHelper.generateExtraPropertiesForItem(itemToAddTemplate)
+                }];
+
+                if (useLimits) {
+                    if (Object.keys(itemLimits).length === 0) {
+                        this.initItemLimitArray(isPmc, botRole, itemLimits);
+                    }
+
+                    if (!itemSpawnLimits[botRole]) {
+                        itemSpawnLimits[botRole] = this.getItemSpawnLimitsForBotType(isPmc, botRole);
+                    }
+
+                    if (itemToAddTemplate._parent === ParentClasses.KEYCARD || itemToAddTemplate._parent === ParentClasses.KEY_MECHANICAL)) {
+                        let randNum = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+                        if (randNum < 95) {
+                            i--;
+                            continue;
+                        }
+                    }
+
+                    if (this.itemHasReachedSpawnLimit(itemToAddTemplate, botRole, isPmc, itemLimits, itemSpawnLimits[botRole])) {
+                        i--;
+                        continue;
+                    }
+                }
+
+                // Fill ammo box
+                if (this.itemHelper.isOfBaseclass(itemToAddTemplate._id, BaseClasses.AMMO_BOX)) {
+                    this.itemHelper.addCartridgesToAmmoBox(itemsToAdd, itemToAddTemplate);
+                }
+                // make money a stack
+                else if (this.itemHelper.isOfBaseclass(itemToAddTemplate._id, BaseClasses.MONEY)) {
+                    this.randomiseMoneyStackSize(isPmc, itemToAddTemplate, itemsToAdd[0]);
+                }
+                // Make ammo a stack
+                else if (this.itemHelper.isOfBaseclass(itemToAddTemplate._id, BaseClasses.AMMO)) {
+                    this.randomiseAmmoStackSize(isPmc, itemToAddTemplate, itemsToAdd[0]);
+                }
+
+                // Attempt to add item to container(s)
+                const itemAddedResult = this.botWeaponGeneratorHelper.addItemWithChildrenToEquipmentSlot(equipmentSlots, id, itemToAddTemplate._id, itemsToAdd, inventoryToAddItemsTo);
+                if (itemAddedResult === ItemAddedResult.NO_SPACE) {
+                    fitItemIntoContainerAttempts++;
+                    if (fitItemIntoContainerAttempts >= 4) {
+                        this.logger.debug(`Failed to place item ${i} of ${totalItemCount} item into ${botRole} container: ${equipmentSlots}, ${fitItemIntoContainerAttempts} times, skipping`);
+
+                        break;
+                    }
+                }
+                else {
+                    fitItemIntoContainerAttempts = 0;
+                }
+
+                // Stop adding items to bots pool if rolling total is over total limit
+                if (totalValueLimitRub > 0 && itemAddedResult === ItemAddedResult.SUCCESS) {
+                    currentTotalRub += this.handbookHelper.getTemplatePrice(itemToAddTemplate._id);
+                    if (currentTotalRub > totalValueLimitRub) {
+                        break;
+                    }
+                }
+            }
+        }
     }
 }
 

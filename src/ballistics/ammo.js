@@ -3588,8 +3588,8 @@ class Ammo {
             let serverItem = this.itemDB()[i];
             if (serverItem._parent === enums_1.ParentClasses.AMMO) {
                 if (serverItem._props?.DurabilityBurnModificator !== undefined) {
-                    var duraBurn = Math.max(1, serverItem._props.DurabilityBurnModificator * 0.55);
-                    var misfireChance = Math.max(0, serverItem._props.MalfMisfireChance *= 0.9);
+                    let duraBurn = Math.max(1, serverItem._props.DurabilityBurnModificator * 0.55);
+                    let misfireChance = Math.max(0, serverItem._props.MalfMisfireChance *= 0.9);
                     serverItem._props.DurabilityBurnModificator = duraBurn;
                     serverItem._props.MalfMisfireChance = misfireChance;
                 }
@@ -3745,3 +3745,4 @@ class Ammo {
     }
 }
 exports.Ammo = Ammo;
+//# sourceMappingURL=ammo.js.map

@@ -94,20 +94,20 @@ class Utils {
     }
     probabilityWeighter(items, weights) {
         function add(a, b) { return a + b; }
-        var totalWeight = weights.reduce(add, 0);
-        var weighedElems = [];
-        var currentElem = 0;
+        let totalWeight = weights.reduce(add, 0);
+        let weighedElems = [];
+        let currentElem = 0;
         while (currentElem < items.length) {
             for (let i = 0; i < weights[currentElem]; i++)
                 weighedElems[weighedElems.length] = items[currentElem];
             currentElem++;
         }
-        var randomTier = Math.floor(Math.random() * totalWeight);
+        let randomTier = Math.floor(Math.random() * totalWeight);
         return weighedElems[randomTier];
     }
     removeCustomItems(playerData) {
         if (playerData?.Inventory !== undefined) {
-            for (var i = 0; i < playerData.Inventory.items.length; i++) {
+            for (let i = 0; i < playerData.Inventory.items.length; i++) {
                 if (playerData.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
                     playerData.Inventory.items[i]._tpl === "TIER2MEDKIT" ||
                     playerData.Inventory.items[i]._tpl === "TIER3MEDKIT" ||
@@ -134,10 +134,10 @@ class Utils {
         });
     }
     genId() {
-        var result = '';
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        var charactersLength = characters.length;
-        for (var i = 0; i < 24; i++) {
+        let result = '';
+        let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let charactersLength = characters.length;
+        for (let i = 0; i < 24; i++) {
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
         return result;
@@ -203,3 +203,4 @@ class BotTierTracker {
     }
 }
 exports.BotTierTracker = BotTierTracker;
+//# sourceMappingURL=utils.js.map

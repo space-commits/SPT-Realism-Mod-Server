@@ -75,8 +75,8 @@ export class AirdropLootgen extends LocationController {
     private updateAirdropsLootPools(modConfig, utils: Utils, weights: Array<number>) {
 
         const airdropLoot = require("../../db/airdrops/airdrop_loot.json");
-        var airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
-        var loot = utils.probabilityWeighter(airdropLootArr, weights);
+        let airdropLootArr = ["medical_loot", "provisions_loot", "materials_loot", "supplies_loot", "electronics_loot", "ammo_loot", "weapons_loot", "gear_loot", "tp"];
+        let loot = utils.probabilityWeighter(airdropLootArr, weights);
         if (loot === "medical_loot") {
             return airdropLoot.medical_loot;
         }
