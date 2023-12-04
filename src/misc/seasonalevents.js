@@ -94,3 +94,4 @@ class SeasonalEventsHandler {
     }
 }
 exports.SeasonalEventsHandler = SeasonalEventsHandler;
+//# sourceMappingURL=seasonalevents.js.map

@@ -35,7 +35,7 @@ class Player {
         this.custProfile = custProfile;
         this.medItems = medItems;
         this.helper = helper;
-        var healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
+        let healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
         this.defaultHeadHealth = healthTemplate.BodyParts.Head.Health.Maximum;
         this.defaultChestHealth = healthTemplate.BodyParts.Chest.Health.Maximum;
         this.defaultStomaHealth = healthTemplate.BodyParts.Stomach.Health.Maximum;
@@ -107,13 +107,13 @@ class Player {
         this.logger.info("Realism Mod: New Profile Health Has Been Adjusted");
     }
     setPlayerHealthHelper(playerData, setMax, setReal, setMaxCurr = false) {
-        var head = playerData.Health.BodyParts["Head"].Health;
-        var chest = playerData.Health.BodyParts["Chest"].Health;
-        var stomach = playerData.Health.BodyParts["Stomach"].Health;
-        var leftArm = playerData.Health.BodyParts["LeftArm"].Health;
-        var rightArm = playerData.Health.BodyParts["RightArm"].Health;
-        var leftLeg = playerData.Health.BodyParts["LeftLeg"].Health;
-        var rightLeg = playerData.Health.BodyParts["RightLeg"].Health;
+        let head = playerData.Health.BodyParts["Head"].Health;
+        let chest = playerData.Health.BodyParts["Chest"].Health;
+        let stomach = playerData.Health.BodyParts["Stomach"].Health;
+        let leftArm = playerData.Health.BodyParts["LeftArm"].Health;
+        let rightArm = playerData.Health.BodyParts["RightArm"].Health;
+        let leftLeg = playerData.Health.BodyParts["LeftLeg"].Health;
+        let rightLeg = playerData.Health.BodyParts["RightLeg"].Health;
         //revert to defaults
         if (setReal == false) {
             playerData.Health.Temperature.Current = this.defaultTemp;
@@ -345,3 +345,4 @@ class Player {
     }
 }
 exports.Player = Player;
+//# sourceMappingURL=player.js.map

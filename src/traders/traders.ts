@@ -688,8 +688,8 @@ export class TraderRefresh extends TraderAssortHelper {
         const arrays = new Arrays(tables);
         const utils = new Utils(tables, arrays);
 
-        var assortItems = trader.assort.items;
-        var assortBarters = trader.assort.barter_scheme;
+        let assortItems = trader.assort.items;
+        let assortBarters = trader.assort.barter_scheme;
 
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;

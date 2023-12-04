@@ -88,6 +88,7 @@ import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootRes
 import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
 import { RagfairTaxService } from "@spt-aki/services/RagfairTaxService";
 import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
+import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
 
 
 const fs = require('fs');
@@ -98,7 +99,7 @@ const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
 
-var clientValidateCount = 0;
+let clientValidateCount = 0;
 
 export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiLoadModAsync {
 
@@ -366,7 +367,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             const time = weatherController.generate().time; //apparently regenerates weather?
                             // const time = weatherController.getCurrentInRaidTime; //better way?
                             // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
-                            RaidInfoTracker.mapName = matchInfo.location;
+                            RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                             let realTime = "";
                             let mapType = "";
 
@@ -390,7 +391,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             function getTOD(time) {
                                 let TOD = "";
                                 let [h, m] = time.split(':');
-                                if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (matchInfo.location === "factory4_day" || matchInfo.location === "Laboratory" || matchInfo.location === "laboratory")) {
+                                if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (RaidInfoTracker.mapName === "factory4_day" || RaidInfoTracker.mapName === "laboratory")) {
                                     TOD = "day";
                                 }
                                 else {
@@ -399,20 +400,14 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                 return TOD;
                             }
 
-                            for (let map in arrays.cqbMaps) {
-                                if (arrays.cqbMaps[map] === matchInfo.location.toLowerCase()) {
-                                    mapType = "cqb";
-                                }
+                            if (arrays.cqbMaps.includes(RaidInfoTracker.mapName)) {
+                                mapType = "cqb";
                             }
-                            for (let map in arrays.outdoorMaps) {
-                                if (arrays.outdoorMaps[map] === matchInfo.location.toLowerCase()) {
-                                    mapType = "outdoor";
-                                }
+                            if (arrays.outdoorMaps.includes(RaidInfoTracker.mapName)) {
+                                mapType = "outdoor";
                             }
-                            for (let map in arrays.urbanMaps) {
-                                if (arrays.urbanMaps[map] === matchInfo.location.toLowerCase()) {
-                                    mapType = "urban";
-                                }
+                            if (arrays.urbanMaps.includes(RaidInfoTracker.mapName)) {
+                                mapType = "urban";
                             }
 
                             RaidInfoTracker.TOD = getTOD(realTime);
@@ -422,7 +417,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
 
-                            if ((!ModTracker.qtbPresent && !ModTracker.swagPresent) && (matchInfo.location === "Laboratory" || matchInfo.location === "laboratory")) {
+                            if (!ModTracker.qtbPresent && !ModTracker.swagPresent && RaidInfoTracker.mapName === "laboratory") {
                                 pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
                                 pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
                                 pmcConf.convertIntoPmcChance["assault"].min = 100;
@@ -500,12 +495,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
     private backupProfile(profileData: IAkiProfile, logger: ILogger) {
         const profileFileData = JSON.stringify(profileData, null, 4)
-        var index = 0;
+        let index = 0;
         if (index == 0) {
             index = 1;
-            var modPath = path.join(__dirname, '..');
-            var profileFolderPath = modPath + "/ProfileBackups/";
-            var profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
+            let modPath = path.join(__dirname, '..');
+            let profileFolderPath = modPath + "/ProfileBackups/";
+            let profileFilePath = modPath + "/ProfileBackups/" + profileData.info.id;
 
             if (fs.existsSync(profileFilePath)) {
 
@@ -528,14 +523,14 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
 
     private profileBackupHelper(profileFileData: string, pathforProfile: string, profileData: IAkiProfile, logger: ILogger) {
-        var date = new Date();
-        var time = date.toLocaleTimeString();
-        var edit_time = time.replaceAll(" ", "_");
-        var edit_time2 = edit_time.replaceAll(":", "-");
-        var day = date.toISOString().slice(0, 10);
-        var combinedTime = "_" + day + "_" + edit_time2;
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        let edit_time = time.replaceAll(" ", "_");
+        let edit_time2 = edit_time.replaceAll(":", "-");
+        let day = date.toISOString().slice(0, 10);
+        let combinedTime = "_" + day + "_" + edit_time2;
 
-        var backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json";
+        let backupName = pathforProfile + "/" + profileData.info.id + combinedTime + ".json";
         fs.writeFile(backupName, profileFileData, {
             encoding: "utf8",
             flag: "w",
@@ -597,19 +592,23 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
         const activeMods = preAkiModLoader.getImportedModDetails();
-        
+
         for (const modname in activeMods) {
             if (modname.includes("Jiro-BatterySystem")) {
                 ModTracker.batteryModPresent = true;
+                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
             }
             if (modname.includes("Solarint-SAIN-ServerMod")) {
                 ModTracker.sainPresent = true;
+                logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor.GREEN);
             }
             if (modname.includes("QuestingBots")) {
                 ModTracker.qtbPresent = true;
+                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor.GREEN);
             }
             if (modname.includes("SWAG")) {
                 ModTracker.sainPresent = true;
+                logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor.GREEN);
             }
         }
 
@@ -636,9 +635,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         jsonHand.pushWeaponsToServer();
         jsonHand.pushGearToServer();
         descGen.descriptionGen();
-    
+
         armor.armorMousePenalty();
-        
+
         if (modConfig.headgear_conflicts == true) {
             gear.loadGearConflicts();
         }
@@ -647,7 +646,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             maps.openZonesFix();
         }
 
-        if(!ModTracker.qtbPresent && !ModTracker.swagPresent){
+        if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
             maps.loadSpawnChanges();
         }
 

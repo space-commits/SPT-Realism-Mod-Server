@@ -35,7 +35,7 @@ export class Player {
 
     
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private custProfile, private medItems, private helper: Utils)  {
-        var healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
+        let healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
         this.defaultHeadHealth = healthTemplate.BodyParts.Head.Health.Maximum;
         this.defaultChestHealth = healthTemplate.BodyParts.Chest.Health.Maximum;
         this.defaultStomaHealth = healthTemplate.BodyParts.Stomach.Health.Maximum;
@@ -125,13 +125,13 @@ export class Player {
 
     private setPlayerHealthHelper(playerData: IPmcData, setMax: boolean, setReal: boolean, setMaxCurr: boolean = false) {
 
-        var head = playerData.Health.BodyParts["Head"].Health;
-        var chest = playerData.Health.BodyParts["Chest"].Health;
-        var stomach = playerData.Health.BodyParts["Stomach"].Health;
-        var leftArm = playerData.Health.BodyParts["LeftArm"].Health;
-        var rightArm = playerData.Health.BodyParts["RightArm"].Health;
-        var leftLeg = playerData.Health.BodyParts["LeftLeg"].Health;
-        var rightLeg = playerData.Health.BodyParts["RightLeg"].Health;
+        let head = playerData.Health.BodyParts["Head"].Health;
+        let chest = playerData.Health.BodyParts["Chest"].Health;
+        let stomach = playerData.Health.BodyParts["Stomach"].Health;
+        let leftArm = playerData.Health.BodyParts["LeftArm"].Health;
+        let rightArm = playerData.Health.BodyParts["RightArm"].Health;
+        let leftLeg = playerData.Health.BodyParts["LeftLeg"].Health;
+        let rightLeg = playerData.Health.BodyParts["RightLeg"].Health;
 
         //revert to defaults
         if (setReal == false) {

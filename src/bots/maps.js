@@ -106,3 +106,4 @@ class Spawns {
     }
 }
 exports.Spawns = Spawns;
+//# sourceMappingURL=maps.js.map

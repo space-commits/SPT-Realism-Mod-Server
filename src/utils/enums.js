@@ -124,3 +124,4 @@ var Calibers;
     Calibers["_20ga"] = "Caliber20g";
     Calibers["_23x75mm"] = "Caliber23x75";
 })(Calibers || (exports.Calibers = Calibers = {}));
+//# sourceMappingURL=enums.js.map

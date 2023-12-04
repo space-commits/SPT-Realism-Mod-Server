@@ -138,7 +138,7 @@ export class ItemsClass {
             }
         }
 
-        var allowedAKMuzzles =
+        let allowedAKMuzzles =
             [
                 "mechSlant_366",
                 "59d64fc686f774171b243fe2",
@@ -147,7 +147,7 @@ export class ItemsClass {
                 "5649aa744bdc2ded0b8b457e",
             ];
 
-        var incompatibleWeapons =
+        let incompatibleWeapons =
             [
                 "62e7e7bbe6da9612f743f1e0",
                 "5ac66cb05acfc40198510a10",

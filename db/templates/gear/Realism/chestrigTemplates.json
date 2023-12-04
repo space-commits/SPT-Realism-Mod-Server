@@ -7,7 +7,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.88,
+        "ReloadSpeedMulti": 0.96,
         "Price": 0,
         "Comfort": 0.8
     },
@@ -19,7 +19,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.75,
+        "ReloadSpeedMulti": 0.88,
         "Price": 0,
         "Comfort": 1.12
     },
@@ -31,7 +31,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.8,
+        "ReloadSpeedMulti": 0.9,
         "Price": 0,
         "Comfort": 0.87
     },
@@ -43,7 +43,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.86,
+        "ReloadSpeedMulti": 0.93,
         "Price": 0,
         "Comfort": 0.76
     },
@@ -57,7 +57,7 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.95
     },
     "572b7adb24597762ae139821": {
         "ItemID": "572b7adb24597762ae139821",
@@ -67,7 +67,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.77,
+        "ReloadSpeedMulti": 0.87,
         "Price": 0,
         "Comfort": 1.12
     },
@@ -79,7 +79,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.84,
+        "ReloadSpeedMulti": 0.90,
         "Price": 0,
         "Comfort": 0.77
     },
@@ -91,7 +91,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.87,
+        "ReloadSpeedMulti": 0.92,
         "Price": 0,
         "Comfort": 0.9
     },
@@ -115,7 +115,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.88,
+        "ReloadSpeedMulti": 0.94,
         "Price": 0,
         "Comfort": 0.8
     },
@@ -127,7 +127,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.87,
+        "ReloadSpeedMulti": 0.93,
         "Price": 0,
         "Comfort": 1
     },
@@ -151,7 +151,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.78,
+        "ReloadSpeedMulti": 0.89,
         "Price": 0,
         "Comfort": 1.05
     },
@@ -175,7 +175,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.85,
+        "ReloadSpeedMulti": 0.94,
         "Price": 0,
         "Comfort": 0.79
     },
@@ -187,7 +187,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.82,
+        "ReloadSpeedMulti": 0.91,
         "Price": 0,
         "Comfort": 0.9
     },
@@ -223,7 +223,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.84,
+        "ReloadSpeedMulti": 0.925,
         "Price": 0,
         "Comfort": 0.88
     },
@@ -237,7 +237,7 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.86,
         "Price": 0,
-        "Comfort": 0.77
+        "Comfort": 0.78
     },
     "5d5d85c586f774279a21cbdb": {
         "ItemID": "5d5d85c586f774279a21cbdb",
@@ -259,7 +259,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.85,
+        "ReloadSpeedMulti": 0.94,
         "Price": 0,
         "Comfort": 1
     },
@@ -283,7 +283,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.82,
+        "ReloadSpeedMulti": 0.91,
         "Price": 0,
         "Comfort": 1
     },
@@ -295,7 +295,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.8,
+        "ReloadSpeedMulti": 0.9,
         "Price": 0,
         "Comfort": 0.87
     },
@@ -307,9 +307,21 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.85,
+        "ReloadSpeedMulti": 0.94,
         "Price": 0,
         "Comfort": 0.79
+    },
+    "60a6220e953894617404b00a": {
+        "ItemID": "60a6220e953894617404b00a",
+        "Name": "item_equipment_rig_sprofi_recon",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1.05,
+        "Price": 0,
+        "Comfort": 0.76
     },
     "60a621c49c197e4e8c4455e6": {
         "ItemID": "60a621c49c197e4e8c4455e6",
@@ -343,7 +355,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.85,
+        "ReloadSpeedMulti": 0.9,
         "Price": 0,
         "Comfort": 0.8
     }

@@ -12,7 +12,7 @@ class Arrays {
     rogueRaiderList;
     constructor(tables) {
         this.tables = tables;
-        var botDB = this.tables.bots.types;
+        let botDB = this.tables.bots.types;
         this.bossBotArr = [
             botDB["bosssanitar"],
             botDB["bosskojaniy"],
@@ -554,3 +554,4 @@ class Arrays {
     ];
 }
 exports.Arrays = Arrays;
+//# sourceMappingURL=arrays.js.map

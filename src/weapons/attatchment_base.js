@@ -98,8 +98,8 @@ class AttatchmentBase {
             if (serverItem._parent === "55818a104bdc2db9688b4569") {
                 for (let slot in serverItem._props.Slots) {
                     if (serverItem._props.Slots[slot]._name === "mod_scope" || serverItem._props.Slots[slot]._name === "mod_tactical") {
-                        var serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
-                        var compatMods = [
+                        let serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
+                        let compatMods = [
                             "57fd23e32459772d0805bcf1",
                             "544909bb4bdc2d6f028b4577",
                             "5d10b49bd7ad1a1a560708b0",
@@ -115,8 +115,8 @@ class AttatchmentBase {
             if (serverItem._parent === "55818a304bdc2db5418b457d") {
                 for (let slot in serverItem._props.Slots) {
                     if (serverItem._props.Slots[slot]._name === "mod_sight_rear") {
-                        var serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
-                        var compatMods = ["5649a2464bdc2d91118b45a8"];
+                        let serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
+                        let compatMods = ["5649a2464bdc2d91118b45a8"];
                         serverItem._props.Slots[slot]._props.filters[0].Filter = compatMods.concat(serverArr);
                     }
                 }
@@ -285,3 +285,4 @@ class AttatchmentBase {
     }
 }
 exports.AttatchmentBase = AttatchmentBase;
+//# sourceMappingURL=attatchment_base.js.map
