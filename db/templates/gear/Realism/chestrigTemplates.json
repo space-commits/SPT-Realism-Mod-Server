@@ -57,7 +57,7 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
         "Price": 0,
-        "Comfort": 1
+        "Comfort": 0.95
     },
     "572b7adb24597762ae139821": {
         "ItemID": "572b7adb24597762ae139821",
@@ -79,9 +79,9 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.92,
+        "ReloadSpeedMulti": 0.90,
         "Price": 0,
-        "Comfort": 0.89
+        "Comfort": 0.77
     },
     "6034cf5fffd42c541047f72e": {
         "ItemID": "6034cf5fffd42c541047f72e",
@@ -237,7 +237,7 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.86,
         "Price": 0,
-        "Comfort": 0.88
+        "Comfort": 0.78
     },
     "5d5d85c586f774279a21cbdb": {
         "ItemID": "5d5d85c586f774279a21cbdb",
@@ -310,6 +310,18 @@
         "ReloadSpeedMulti": 0.94,
         "Price": 0,
         "Comfort": 0.79
+    },
+    "60a6220e953894617404b00a": {
+        "ItemID": "60a6220e953894617404b00a",
+        "Name": "item_equipment_rig_sprofi_recon",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1.05,
+        "Price": 0,
+        "Comfort": 0.76
     },
     "60a621c49c197e4e8c4455e6": {
         "ItemID": "60a621c49c197e4e8c4455e6",

@@ -242,13 +242,6 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
             let fitItemIntoContainerAttempts = 0;
             for (let i = 0; i < totalItemCount; i++) {
                 const itemToAddTemplate = this.getRandomItemFromPoolByRole(pool, botRole);
-                if (itemToAddTemplate._parent === enums_1.ParentClasses.KEYCARD || itemToAddTemplate._parent === enums_1.ParentClasses.KEY_MECHANICAL) {
-                    let randNum = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-                    if (randNum < 9) {
-                        i--;
-                        continue;
-                    }
-                }
                 const id = this.hashUtil.generate();
                 const itemsToAdd = [{
                         _id: id,
@@ -261,6 +254,15 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
                     }
                     if (!itemSpawnLimits[botRole]) {
                         itemSpawnLimits[botRole] = this.getItemSpawnLimitsForBotType(isPmc, botRole);
+                    }
+                    if (itemToAddTemplate._parent === enums_1.ParentClasses.KEYCARD || itemToAddTemplate._parent === enums_1.ParentClasses.KEY_MECHANICAL)
+                        ;
+                    {
+                        let randNum = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+                        if (randNum < 95) {
+                            i--;
+                            continue;
+                        }
                     }
                     if (this.itemHasReachedSpawnLimit(itemToAddTemplate, botRole, isPmc, itemLimits, itemSpawnLimits[botRole])) {
                         i--;

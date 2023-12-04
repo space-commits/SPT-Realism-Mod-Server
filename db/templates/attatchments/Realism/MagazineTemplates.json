@@ -2340,7 +2340,7 @@
         "ItemID": "5a351711c4a282000b1521a4",
         "Name": "mag_mp5_x_products_x_5_9x19_50",
         "ModType": "",
-        "ReloadSpeed": -10,
+        "ReloadSpeed": -7.5,
         "Ergonomics": -3,
         "MagMalfunctionChance": 0.8,
         "LoadUnloadModifier": 30,

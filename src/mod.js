@@ -452,15 +452,6 @@ class Main {
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
         const preAkiModLoader = container.resolve("PreAkiModLoader");
         const activeMods = preAkiModLoader.getImportedModDetails();
-        let counts = Array(10).fill(0);
-        function getRandomNumber(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-        for (let i = 0; i < 100; i++) {
-            let num = getRandomNumber(1, 10);
-            counts[num - 1]++;
-        }
-        logger.warning("" + counts);
         for (const modname in activeMods) {
             if (modname.includes("Jiro-BatterySystem")) {
                 utils_1.ModTracker.batteryModPresent = true;

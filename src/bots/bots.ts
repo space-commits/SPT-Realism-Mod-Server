@@ -1531,10 +1531,9 @@ export class BotLoader {
         botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
         botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
         botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
-        botJsonTemplate.inventory.items.Backpack.push(...keys.tier4_PMC_Keys);
-
+  
         if(this.modConfig.add_keys === true){
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.items.Backpack.push(...keys.tier4_PMC_Keys);
         }
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
