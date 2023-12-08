@@ -89,6 +89,7 @@ import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
 import { RagfairTaxService } from "@spt-aki/services/RagfairTaxService";
 import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
 import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
+import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentService";
 
 
 const fs = require('fs');
@@ -122,35 +123,15 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         const assortHelper = container.resolve<AssortHelper>("AssortHelper");
         const paymentHelper = container.resolve<PaymentHelper>("PaymentHelper");
-
         const mathUtil = container.resolve<MathUtil>("MathUtil");
         const timeUtil = container.resolve<TimeUtil>("TimeUtil");
         const traderAssortService = container.resolve<TraderAssortService>("TraderAssortService");
         const traderHelper = container.resolve<TraderHelper>("TraderHelper");
         const fenceService = container.resolve<FenceService>("FenceService");
-
-        const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
         const traderPurchasePefrsisterService = container.resolve<TraderPurchasePersisterService>("TraderPurchasePersisterService");
-        const botHelper = container.resolve<BotHelper>("BotHelper");
-        const httpResponse = container.resolve<HttpResponseUtil>("HttpResponseUtil");
-        const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
-        const ragfairController = container.resolve<RagfairController>("RagfairController");
-        const ragfairTaxServ = container.resolve<RagfairTaxService>("RagfairTaxService");
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
-        const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
-        const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-
-        const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
-        const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
-        const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
-        const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
-
-        const ragFairCallback = new RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, ragfairTaxServ, configServer);
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
-        const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer)
-        const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
-
         const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
 
@@ -173,7 +154,13 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         )
 
         if (modConfig.bot_changes == true) {
-
+            const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
+            const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
+            const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
+            const botHelper = container.resolve<BotHelper>("BotHelper");
+            const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
+            const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
+            const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
                 result.prepareAndGenerateBots = (sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase[] => {
                     return botGen.myPrepareAndGenerateBots(sessionId, botGenerationDetails);
@@ -189,6 +176,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
 
         if (modConfig.randomize_trader_stock == true) {
+            const httpResponse = container.resolve<HttpResponseUtil>("HttpResponseUtil");
+            const ragfairController = container.resolve<RagfairController>("RagfairController");
+            const ragfairTaxServ = container.resolve<RagfairTaxService>("RagfairTaxService");
+            const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
+            const ragFairCallback = new RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, ragfairTaxServ, configServer);
             container.afterResolution("RagfairCallbacks", (_t, result: RagfairCallbacks) => {
                 result.search = (url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult> => {
                     return ragFairCallback.mySearch(url, info, sessionID);
@@ -197,6 +189,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
 
         if (modConfig.airdrop_changes == true) {
+            const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
+            const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
+            const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
+            const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+            const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
+
             container.afterResolution("LocationController", (_t, result: LocationController) => {
                 result.getAirdropLoot = (): IAirdropLootResult => {
                     return airdropController.myGetAirdropLoot();

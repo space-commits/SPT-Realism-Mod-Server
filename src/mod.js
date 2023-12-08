@@ -82,25 +82,10 @@ class Main {
         const traderAssortService = container.resolve("TraderAssortService");
         const traderHelper = container.resolve("TraderHelper");
         const fenceService = container.resolve("FenceService");
-        const botEquipmentFilterService = container.resolve("BotEquipmentFilterService");
         const traderPurchasePefrsisterService = container.resolve("TraderPurchasePersisterService");
-        const botHelper = container.resolve("BotHelper");
-        const httpResponse = container.resolve("HttpResponseUtil");
-        const ragfairServer = container.resolve("RagfairServer");
-        const ragfairController = container.resolve("RagfairController");
-        const ragfairTaxServ = container.resolve("RagfairTaxService");
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
-        const locationGenerator = container.resolve("LocationGenerator");
-        const lootGenerator = container.resolve("LootGenerator");
-        const botInventoryGenerator = container.resolve("BotInventoryGenerator");
-        const botLevelGenerator = container.resolve("BotLevelGenerator");
-        const botDifficultyHelper = container.resolve("BotDifficultyHelper");
-        const seasonalEventService = container.resolve("SeasonalEventService");
-        const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, ragfairTaxServ, configServer);
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
-        const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, lootGenerator, databaseServer, timeUtil, configServer);
-        const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
         const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
         flea.loadFleaConfig();
         const router = container.resolve("DynamicRouterModService");
@@ -116,6 +101,13 @@ class Main {
             }
         ], "RealismMod");
         if (modConfig.bot_changes == true) {
+            const botLevelGenerator = container.resolve("BotLevelGenerator");
+            const botDifficultyHelper = container.resolve("BotDifficultyHelper");
+            const botInventoryGenerator = container.resolve("BotInventoryGenerator");
+            const botHelper = container.resolve("BotHelper");
+            const botEquipmentFilterService = container.resolve("BotEquipmentFilterService");
+            const seasonalEventService = container.resolve("SeasonalEventService");
+            const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
             container.afterResolution("BotGenerator", (_t, result) => {
                 result.prepareAndGenerateBots = (sessionId, botGenerationDetails) => {
                     return botGen.myPrepareAndGenerateBots(sessionId, botGenerationDetails);
@@ -128,6 +120,11 @@ class Main {
             };
         }, { frequency: "Always" });
         if (modConfig.randomize_trader_stock == true) {
+            const httpResponse = container.resolve("HttpResponseUtil");
+            const ragfairController = container.resolve("RagfairController");
+            const ragfairTaxServ = container.resolve("RagfairTaxService");
+            const ragfairServer = container.resolve("RagfairServer");
+            const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, ragfairTaxServ, configServer);
             container.afterResolution("RagfairCallbacks", (_t, result) => {
                 result.search = (url, info, sessionID) => {
                     return ragFairCallback.mySearch(url, info, sessionID);
@@ -135,6 +132,11 @@ class Main {
             }, { frequency: "Always" });
         }
         if (modConfig.airdrop_changes == true) {
+            const locationGenerator = container.resolve("LocationGenerator");
+            const lootGenerator = container.resolve("LootGenerator");
+            const raidTimeAdjustmentService = container.resolve("RaidTimeAdjustmentService");
+            const appContext = container.resolve("ApplicationContext");
+            const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, lootGenerator, databaseServer, timeUtil, configServer, appContext);
             container.afterResolution("LocationController", (_t, result) => {
                 result.getAirdropLoot = () => {
                     return airdropController.myGetAirdropLoot();
