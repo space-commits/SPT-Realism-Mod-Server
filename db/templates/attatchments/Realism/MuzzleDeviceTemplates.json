@@ -6379,7 +6379,7 @@
         "ItemID": "5926d33d86f77410de68ebc0",
         "Name": "silencer_hk_mp5_sd_std_9x19",
         "ModType": "",
-        "VerticalRecoil": -8,
+        "VerticalRecoil": -2,
         "HorizontalRecoil": -8,
         "Dispersion": -5,
         "CameraRecoil": -10,

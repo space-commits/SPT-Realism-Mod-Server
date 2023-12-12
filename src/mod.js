@@ -519,7 +519,9 @@ class Main {
         if (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween) {
             bots.forceBossSpawns();
         }
-        bots.botDifficulty();
+        if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {
+            bots.bossDifficulty();
+        }
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
             // bots.botMeds();
@@ -591,14 +593,12 @@ class Main {
         utils.revertMedItems(pmcData);
     }
     checkForEvents(logger, seasonalEventsService) {
-        const isChristmasActive = seasonalEventsService.christmasEventEnabled();
-        const isHalloweenActive = seasonalEventsService.halloweenEventEnabled();
-        seasonalevents_1.EventTracker.isChristmas = isChristmasActive;
-        seasonalevents_1.EventTracker.isHalloween = isHalloweenActive;
-        if (isChristmasActive == true) {
+        seasonalevents_1.EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        seasonalevents_1.EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        if (seasonalevents_1.EventTracker.isChristmas == true) {
             logger.warning("Merry Christmas!");
         }
-        if (isHalloweenActive == true) {
+        if (seasonalevents_1.EventTracker.isHalloween == true) {
             logger.warning("Happy Halloween!");
         }
     }

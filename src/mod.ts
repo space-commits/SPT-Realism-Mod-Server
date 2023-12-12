@@ -671,7 +671,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             bots.forceBossSpawns();
         }
 
-        bots.botDifficulty();
+        if (modConfig.boss_difficulty == true && !ModTracker.sainPresent) {
+            bots.bossDifficulty();
+        }
 
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
@@ -758,14 +760,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
     }
 
     private checkForEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
-        const isChristmasActive = seasonalEventsService.christmasEventEnabled();
-        const isHalloweenActive = seasonalEventsService.halloweenEventEnabled();
-        EventTracker.isChristmas = isChristmasActive;
-        EventTracker.isHalloween = isHalloweenActive;
-        if (isChristmasActive == true) {
+        EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        if (EventTracker.isChristmas == true) {
             logger.warning("Merry Christmas!");
         }
-        if (isHalloweenActive == true) {
+        if (EventTracker.isHalloween == true) {
             logger.warning("Happy Halloween!");
         }
     }

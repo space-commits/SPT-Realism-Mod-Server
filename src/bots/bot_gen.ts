@@ -175,7 +175,7 @@ export class BotGen extends BotGenerator {
                 pmcTier = this.botTierMapFactor(this.getPMCTier(utils), utils);
 
                 const isUSEC = this.isBotUSEC(botRole);
-                const changeDiffi = modConfig.pmc_difficulty;
+                const changeDiffi = modConfig.pmc_difficulty == true && ModTracker.sainPresent == false;
 
                 if (modConfig.bot_testing == true) {
                     pmcTier = modConfig.bot_test_tier;
@@ -283,12 +283,10 @@ export class BotGen extends BotGenerator {
 
         bot.Info.Nickname = this.generateBotNickname(botJsonTemplate, botGenerationDetails.isPlayerScav, botRole, sessionId);
 
-        //SPT adds christmas and halloween stuff by default then removes it if not halloween or christams (ass-backwards)
-        //so until I modify all bot loadouts I have to keep this.
-        const skipChristmasItems = !this.seasonalEventService.christmasEventEnabled();
-        if (skipChristmasItems) {
-            this.seasonalEventService.removeChristmasItemsFromBotInventory(botJsonTemplate.inventory, botGenerationDetails.role);
-        }
+        //SPT has christmas and halloween stuff in bot inventories by default then removes it if not halloween or christams
+        //so until I modify all bot loadouts I have to keep this, and then add christmas items manually to bots.
+        
+        this.seasonalEventService.removeChristmasItemsFromBotInventory(botJsonTemplate.inventory, botGenerationDetails.role);
 
         if (EventTracker.isChristmas == true) {
             seasonalEvents.giveBotsChristmasPresents(botJsonTemplate);

@@ -162,18 +162,12 @@ class BotLoader {
             this.logger.info("Bot Names Changed");
         }
     }
-    botDifficulty() {
-        // if (this.modConf.pmc_difficulty == true) {
-        //     this.botConfPMC().useDifficultyOverride = true;
-        //     this.botConfPMC().difficulty = rmBotConfig.pmc2.difficulty;;
-        // }
-        if (this.modConfig.boss_difficulty == true) {
-            for (let i in this.mapDB) {
-                if (this.mapDB[i].base?.BossLocationSpawn !== undefined) {
-                    for (let k in this.mapDB[i].base.BossLocationSpawn) {
-                        this.mapDB[i].base.BossLocationSpawn[k].BossDifficult = "hard";
-                        this.mapDB[i].base.BossLocationSpawn[k].BossEscortDifficult = "hard";
-                    }
+    bossDifficulty() {
+        for (let i in this.mapDB) {
+            if (this.mapDB[i].base?.BossLocationSpawn !== undefined) {
+                for (let k in this.mapDB[i].base.BossLocationSpawn) {
+                    this.mapDB[i].base.BossLocationSpawn[k].BossDifficult = "hard";
+                    this.mapDB[i].base.BossLocationSpawn[k].BossEscortDifficult = "hard";
                 }
             }
         }
