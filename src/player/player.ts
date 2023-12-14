@@ -356,9 +356,11 @@ export class Player {
 
     public playerProfiles(jsonUtil: JsonUtil) {
 
+        this.tables.locales.server["en"]["realism-profile"] = "Standard stash size, alpha container, limited resources and low cash. Intended as a more hardcore start.";
         this.tables.templates.profiles["Realism Mod"] = jsonUtil.clone(this.tables.templates.profiles["Standard"])
         this.tables.templates.profiles["Realism Mod"].bear.character.Inventory = this.custProfile.BearInventory;
         this.tables.templates.profiles["Realism Mod"].usec.character.Inventory = this.custProfile.USECInventory;
+        this.tables.templates.profiles["Realism Mod"].descriptionLocaleKey = "realism-profile";
 
         for (let profile in this.tables.templates.profiles){
             this.correctInventory(this.tables.templates.profiles[profile].bear.character.Inventory.items);

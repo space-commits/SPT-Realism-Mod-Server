@@ -43,7 +43,6 @@ export class Quests {
     }
 
     public fixMechancicQuests() {
-
         for (let quest in this.questDB()) {
             if (this.questDB()[quest].QuestName.includes("Gunsmith")) {
                 let conditions = this.questDB()[quest].conditions.AvailableForFinish;

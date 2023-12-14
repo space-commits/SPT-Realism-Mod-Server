@@ -14,24 +14,6 @@ class SeasonalEventsHandler {
         "5df8a72c86f77412640e2e83",
         "5df8a6a186f77412640e2e80",
         "5df8a6a186f77412640e2e80",
-        "5df8a77486f77412672a1e3f",
-        "5df8a72c86f77412640e2e83",
-        "5df8a72c86f77412640e2e83",
-        "5df8a72c86f77412640e2e83",
-        "5df8a6a186f77412640e2e80",
-        "5df8a6a186f77412640e2e80",
-        "5df8a77486f77412672a1e3f",
-        "5df8a72c86f77412640e2e83",
-        "5df8a72c86f77412640e2e83",
-        "5df8a72c86f77412640e2e83",
-        "5df8a6a186f77412640e2e80",
-        "5df8a6a186f77412640e2e80",
-        "5df8a77486f77412672a1e3f",
-        "5df8a72c86f77412640e2e83",
-        "5df8a72c86f77412640e2e83",
-        "5df8a72c86f77412640e2e83",
-        "5df8a6a186f77412640e2e80",
-        "5df8a6a186f77412640e2e80",
         "5df8a77486f77412672a1e3f"
     ];
     halloweenPocket = [
@@ -79,8 +61,8 @@ class SeasonalEventsHandler {
             botJsonTemplate.inventory.items.Backpack.push(this.christmasItems[item]);
             botJsonTemplate.inventory.items.Pockets.push(this.christmasItems[item]);
         }
-        botJsonTemplate.inventory.equipment.Headwear["5a43957686f7742a2c2f11b0"] = 5;
-        botJsonTemplate.inventory.equipment.Headwear["5a43943586f77416ad2f06e2"] = 5;
+        botJsonTemplate.inventory.equipment.Headwear["5a43957686f7742a2c2f11b0"] = 3;
+        botJsonTemplate.inventory.equipment.Headwear["5a43943586f77416ad2f06e2"] = 3;
     }
     giveBotsHalloweenTreats(botJsonTemplate) {
         for (let item in this.halloweenBag) {
