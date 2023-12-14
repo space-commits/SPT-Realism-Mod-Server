@@ -48,18 +48,8 @@ const weapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, Machin
 const gearTemlplatesArr = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates, chestrigTemplates, headsetTemplates];
 
 const traderRepairs = require("../../db/traders/repair/traderRepair.json");
-
 const fenceLimits = require("../../db/traders/fence/fenceLimits.json");
-
-// const sellCatPrap = require("../../db/traders/prapor/sell_categories.json");
-const sellCatThera = require("../../db/traders/therapist/sell_categories.json");
-const sellCatSkier = require("../../db/traders/skier/sell_categories.json");
-// const sellCatPK = require("../../db/traders/pk/sell_categories.json");
-const sellCatMech = require("../../db/traders/mechanic/sell_categories.json");
-// const sellCatRag = require("../../db/traders/ragman/sell_categories.json");
-// const sellCatJaeg = require("../../db/traders/jaeger/sell_categories.json");
-
-
+const buyCat = require("../../db/traders/buy_categories.json");
 
 
 const prapId = "54cb50c76803fa8b248b4571";
@@ -78,13 +68,25 @@ export class Traders {
     }
     public loadTraderTweaks() {
 
-        // this.tables.traders['54cb50c76803fa8b248b4571'].base.sell_category = sellCatPrap;
-        this.tables.traders[theraId].base.sell_category = sellCatThera.sell_category;
-        this.tables.traders[skierId].base.sell_category = sellCatSkier.sell_category;
-        // this.tables.traders['5935c25fb3acc3127c3d8cd9'].base.sell_category = sellCatPK;
-        this.tables.traders[mechId].base.sell_category = sellCatMech.sell_category;
-        // this.tables.traders['5ac3b934156ae10c4430e83c'].base.sell_category = sellCatRag;
-        // this.tables.traders['5c0647fdd443bc2504c2d371'].base.sell_category = sellCatJaeg;
+        if(modConfig.change_buy_categories){
+            this.tables.traders[pkId].base.items_buy.category = buyCat.peacekeeper;
+            this.tables.traders[ragmId].base.items_buy.category = buyCat.ragman;
+            this.tables.traders[jaegId].base.items_buy.category = buyCat.jaeger;
+            this.tables.traders[prapId].base.items_buy.category = buyCat.prapor;
+            this.tables.traders[theraId].base.items_buy.category = buyCat.therapist;
+            this.tables.traders[skierId].base.items_buy.category = buyCat.skier;
+            this.tables.traders[mechId].base.items_buy.category = buyCat.mechanic;
+        }
+
+        if(modConfig.change_buy_price){
+            let ll = 0;
+            for(let trader in this.tables.traders){
+                for(let i in this.tables.traders[trader].base.loyaltyLevels){
+                    ll++;
+                    this.tables.traders[trader].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(75 - (ll * 5)), 40);
+                }
+            }
+        }
 
         if (modConfig.nerf_fence == true) {
             this.traderConf.fence.discountOptions.assortSize = 10;
@@ -98,12 +100,13 @@ export class Traders {
             this.traderConf.fence.presetPriceMult = 2.5;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
             this.traderConf.fence.blacklist = fenceLimits.blacklist;
-
         }
 
-        this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
-        this.tables.globals.config.Health.HealPrice.EnergyPointPrice = 30;
-        this.tables.globals.config.Health.HealPrice.HydrationPointPrice = 30;
+        if(modConfig.change_heal_cost == true){
+            this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
+            this.tables.globals.config.Health.HealPrice.EnergyPointPrice = 30;
+            this.tables.globals.config.Health.HealPrice.HydrationPointPrice = 30;    
+        }
 
         if (this.modConf.logEverything == true) {
             this.logger.info("Traders Loaded");
@@ -403,7 +406,7 @@ export class RandomizeTraderAssort {
 
     public adjustTraderStockAtServerStart() {
         if (EventTracker.isChristmas == true) {
-            this.logger.warning("====== Christmas Sale, Everything 40% Off! ======");
+            this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
         }
 
         for (let trader in this.tables.traders) {
@@ -424,8 +427,7 @@ export class RandomizeTraderAssort {
                         if (this.tables.traders[trader]?.assort?.barter_scheme) {
                             let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
                             if (barter !== undefined) {
-                                let randNum = this.utils.pickRandNumOneInTen();
-                                this.setAndRandomizeCost(randNum, itemTemplId, barter, true);
+                                this.setAndRandomizeCost(this.utils, itemTemplId, barter, true);
                             }
 
                         }
@@ -580,9 +582,10 @@ export class RandomizeTraderAssort {
         }
     }
 
-    public setAndRandomizeCost(randNum: number, itemTemplId: string, barter: IBarterScheme[][], setBasePrice: boolean) {
+    public setAndRandomizeCost(utils: Utils, itemTemplId: string, barter: IBarterScheme[][], setBasePrice: boolean) {
 
         if (this.itemDB[barter[0][0]._tpl]._parent === ParentClasses.MONEY) {
+            let randNum = utils.pickRandNumOneInTen();
             let cost = barter[0][0].count;
             if (setBasePrice == true && modConfig.adjust_trader_prices == true) {
                 this.adjustPriceByCategory(barter[0][0], itemTemplId, cost);
@@ -591,12 +594,12 @@ export class RandomizeTraderAssort {
                 if (randNum >= 8) {
                     barter[0][0].count = cost * modConfig.rand_cost_increase;
                 }
-                if (randNum <= 3) {
+                else if (randNum <= 3) {
                     barter[0][0].count = cost * modConfig.rand_cost_discount;
                 }
             }
             if (EventTracker.isChristmas == true) {
-                barter[0][0].count = cost * 0.6;
+                barter[0][0].count =  barter[0][0].count * 0.9;
             }
         }
     }
@@ -726,7 +729,6 @@ export class TraderRefresh extends TraderAssortHelper {
     }
 
     private randomizePricesAtRefresh(randomTraderAss: RandomizeTraderAssort, utils: Utils, itemTemplId: string, barter: IBarterScheme[][]): void {
-        let randNum = utils.pickRandNumOneInTen();
-        randomTraderAss.setAndRandomizeCost(randNum, itemTemplId, barter, false);
+        randomTraderAss.setAndRandomizeCost(utils, itemTemplId, barter, false);
     }
 }

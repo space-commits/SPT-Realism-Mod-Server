@@ -52,7 +52,6 @@ const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
 const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const fs = require('fs');
-const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
@@ -86,7 +85,7 @@ class Main {
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
-        const flea = new fleamarket_1.FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
+        const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
         flea.loadFleaConfig();
         const router = container.resolve("DynamicRouterModService");
         this.path = require("path");
@@ -151,10 +150,11 @@ class Main {
                     const profileHelper = container.resolve("ProfileHelper");
                     const seasonalEventsService = container.resolve("SeasonalEventService");
                     const postLoadDBServer = container.resolve("DatabaseServer");
+                    const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const postLoadTables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const utils = new utils_1.Utils(postLoadTables, arrays);
-                    const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
+                    const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
                     const maps = new maps_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
@@ -339,8 +339,9 @@ class Main {
                     const postLoadTables = postLoadDBServer.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
+                    const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const arrays = new arrays_1.Arrays(postLoadTables);
-                    const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables);
+                    const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const utils = new utils_1.Utils(postLoadTables, arrays);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -425,7 +426,7 @@ class Main {
         const databaseServer = container.resolve("DatabaseServer");
         const configServer = container.resolve("ConfigServer");
         const tables = databaseServer.getTables();
-        const AKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
+        const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.IN_RAID);
         const jsonUtil = container.resolve("JsonUtil");
@@ -437,13 +438,13 @@ class Main {
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, AKIFleaConf);
+        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
-        const flea = new fleamarket_1.FleamarketGlobal(logger, tables, modConfig);
+        const flea = new fleamarket_1.FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
         const codegen = new code_gen_1.JsonGen(logger, tables, modConfig, utils, arrays);
-        const custFleaConf = new fleamarket_1.FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
+        const custFleaConf = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
@@ -551,9 +552,7 @@ class Main {
             quests.removeFIRQuestRequire();
         }
         //traders
-        if (modConfig.trader_changes == true) {
-            traders.loadTraderTweaks();
-        }
+        traders.loadTraderTweaks();
         if (modConfig.change_trader_ll == true) {
             traders.setLoyaltyLevels();
         }

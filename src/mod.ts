@@ -58,7 +58,7 @@ import { LocationController } from "@spt-aki/controllers/LocationController";
 import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
 import { AttatchmentBase as AttachmentBase } from "./weapons/attatchment_base";
-import { FleamarketConfig, TieredFlea, FleamarketGlobal } from "./traders/fleamarket";
+import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
 import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
 import { Arrays } from "./utils/arrays"
 import { Meds } from "./items/meds";
@@ -93,7 +93,6 @@ import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentS
 
 
 const fs = require('fs');
-const custFleaBlacklist = require("../db/traders/ragfair/blacklist.json");
 const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
@@ -132,7 +131,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
-        const flea = new FleamarketConfig(logger, fleaConf, modConfig, custFleaBlacklist);
+        const flea = new FleaChangesPreDBLoad(logger, fleaConf, modConfig);
         flea.loadFleaConfig();
 
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
@@ -213,10 +212,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
+                        const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const postLoadTables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadTables);
                         const utils = new Utils(postLoadTables, arrays);
-                        const tieredFlea = new TieredFlea(postLoadTables);
+                        const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
                         const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
@@ -449,8 +449,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const postLoadTables = postLoadDBServer.getTables();
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
+                        const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const arrays = new Arrays(postLoadTables);
-                        const tieredFlea = new TieredFlea(postLoadTables);
+                        const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const utils = new Utils(postLoadTables, arrays);
                         const player = new Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -560,7 +561,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
         const tables = databaseServer.getTables();
-        const AKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
+        const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig<IInRaidConfig>(ConfigTypes.IN_RAID);
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
@@ -572,13 +573,13 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, AKIFleaConf);
+        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
-        const flea = new FleamarketGlobal(logger, tables, modConfig);
+        const flea = new FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
         const codegen = new JsonGen(logger, tables, modConfig, utils, arrays);
-        const custFleaConf = new FleamarketConfig(logger, AKIFleaConf, modConfig, custFleaBlacklist);
+        const custFleaConf = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
@@ -590,6 +591,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
         const activeMods = preAkiModLoader.getImportedModDetails();
+
 
         for (const modname in activeMods) {
             if (modname.includes("Jiro-BatterySystem")) {
@@ -711,9 +713,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
 
         //traders
-        if (modConfig.trader_changes == true) {
-            traders.loadTraderTweaks();
-        }
+        traders.loadTraderTweaks();
+        
         if (modConfig.change_trader_ll == true) {
             traders.setLoyaltyLevels();
         }
