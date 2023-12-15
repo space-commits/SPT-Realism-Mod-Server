@@ -63,9 +63,9 @@ export class Gear {
             if (serverItem._id === "5aa2ba71e5b5b000137b758f") {
                 serverItem._props.Distortion = 0.1;
                 serverItem._props.Resonance = 1.5;
-                serverItem._props.DryVolume = -51;
+                serverItem._props.DryVolume = -48;
                 serverItem._props.AmbientVolume = -2.5;
-                serverItem._props.CompressorGain = 5;
+                serverItem._props.CompressorGain = 6;
                 serverItem._props.CompressorTreshold = -35;
             }
 
@@ -73,9 +73,9 @@ export class Gear {
             if (serverItem._id === "5b432b965acfc47a8774094e") {
                 serverItem._props.Distortion = 0.31;
                 serverItem._props.Resonance = 3;
-                serverItem._props.DryVolume = -52;
+                serverItem._props.DryVolume = -49;
                 serverItem._props.AmbientVolume = -3;
-                serverItem._props.CompressorGain = 5;
+                serverItem._props.CompressorGain = 6;
                 serverItem._props.CompressorTreshold = -35;
             }
 
@@ -83,9 +83,9 @@ export class Gear {
             if (serverItem._id === "5645bcc04bdc2d363b8b4572") {
                 serverItem._props.Distortion = 0.22;
                 serverItem._props.Resonance = 2;
-                serverItem._props.DryVolume = -53;
+                serverItem._props.DryVolume = -51;
                 serverItem._props.AmbientVolume = -3.75;
-                serverItem._props.CompressorGain = 6;
+                serverItem._props.CompressorGain = 7;
                 serverItem._props.CompressorTreshold = -35;
             }
 
@@ -93,7 +93,7 @@ export class Gear {
             if (serverItem._id === "5c165d832e2216398b5a7e36") {
                 serverItem._props.Distortion = 0.28;
                 serverItem._props.Resonance = 2.5;
-                serverItem._props.DryVolume = -54;
+                serverItem._props.DryVolume = -52;
                 serverItem._props.AmbientVolume = -3.5;
                 serverItem._props.CompressorGain = 7;
                 serverItem._props.CompressorTreshold = -35;
@@ -103,9 +103,9 @@ export class Gear {
             if (serverItem._id === "628e4e576d783146b124c64d") {
                 serverItem._props.Distortion = 0.05;
                 serverItem._props.Resonance = 1;
-                serverItem._props.DryVolume = -55;
+                serverItem._props.DryVolume = -54;
                 serverItem._props.AmbientVolume = -2;
-                serverItem._props.CompressorGain = 7;
+                serverItem._props.CompressorGain = 8;
                 serverItem._props.CompressorTreshold = -35;
             }
 

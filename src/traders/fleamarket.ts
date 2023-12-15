@@ -422,130 +422,130 @@ export class TieredFlea {
 
     private canSellContainer(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5795f317245977243854e041" || this.itemDB()[i]._parent === "5671435f4bdc2d96058b4569") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5795f317245977243854e041" || this.itemDB()[i]._parent === "5671435f4bdc2d96058b4569") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellPouch(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5448bf274bdc2dfc2f8b456a") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5448bf274bdc2dfc2f8b456a") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellMeds(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5448f39d4bdc2d0a728b4568"
+            else if (this.itemDB()[i]._parent === "5448f39d4bdc2d0a728b4568"
                 || this.itemDB()[i]._parent === "5448f3a14bdc2d27728b4569"
                 || this.itemDB()[i]._parent === "5448f3ac4bdc2dce718b4569"
             ) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellStims(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5448f3a64bdc2d60728b456a") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5448f3a64bdc2d60728b456a") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellFood(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._props.foodUseTime) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._props.foodUseTime) {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellArmor(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5448e54d4bdc2dcc718b4568"
+            else if (this.itemDB()[i]._parent === "5448e54d4bdc2dcc718b4568"
                 || this.itemDB()[i]._parent === "5448e5284bdc2dcb718b4567") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellHelmet(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5a341c4086f77401f2541505") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5a341c4086f77401f2541505") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellGear(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5b432be65acfc433000ed01f"
+            else if (this.itemDB()[i]._parent === "5b432be65acfc433000ed01f"
                 || this.itemDB()[i]._parent === "5a341c4686f77469e155819e"
                 || this.itemDB()[i]._parent === "5a341c4086f77401f2541505"
                 || this.itemDB()[i]._parent === "5645bcb74bdc2ded0b8b4578"
                 || this.itemDB()[i]._parent === "5448e5724bdc2ddf718b4568"
             ) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellBP(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5448e53e4bdc2d60728b4567") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5448e53e4bdc2d60728b4567") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellArm(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5b3f15d486f77432d0509248") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5b3f15d486f77432d0509248") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellHelmParts(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "57bef4c42459772e8d35a53b") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "57bef4c42459772e8d35a53b") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
@@ -553,32 +553,32 @@ export class TieredFlea {
 
     private canSellKeys(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5c99f98d86f7745c314214b3") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5c99f98d86f7745c314214b3") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellKeyCards(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5c164d2286f774194c5e69fa") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5c164d2286f774194c5e69fa") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellBarters(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "590c745b86f7743cc433c5f2"
+            else if (this.itemDB()[i]._parent === "590c745b86f7743cc433c5f2"
                 || this.itemDB()[i]._parent === "57864ada245977548638de91"
                 || this.itemDB()[i]._parent === "57864bb7245977548b3b66c2"
                 || this.itemDB()[i]._parent === "57864a66245977548f04a81f"
@@ -590,127 +590,127 @@ export class TieredFlea {
                 || this.itemDB()[i]._parent === "57864c8c245977548867e7f1"
 
             ) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellFuel(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5d650c3e815116009f6201d2") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5d650c3e815116009f6201d2") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellMounts(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818b224bdc2dde698b456f") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818b224bdc2dde698b456f") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellReddots(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818acf4bdc2dde698b456b" || this.itemDB()[i]._parent === "55818ad54bdc2ddc698b4569") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818acf4bdc2dde698b456b" || this.itemDB()[i]._parent === "55818ad54bdc2ddc698b4569") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellIrons(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818ac54bdc2d5b648b456e") {
+            else if (this.itemDB()[i]._parent === "55818ac54bdc2d5b648b456e") {
             }
         }
     }
 
     private canSellAssaultScopes(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818add4bdc2d5b648b456f") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818add4bdc2d5b648b456f") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellMagnifiedScopes(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818ae44bdc2dde698b456c") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818ae44bdc2dde698b456c") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellThermalScopes(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818aeb4bdc2ddc698b456a") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818aeb4bdc2ddc698b456a") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellNVGScopes(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._id === "5b3b6e495acfc4330140bd88" || this.itemDB()[i]._id === "5a7c74b3e899ef0014332c29") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._id === "5b3b6e495acfc4330140bd88" || this.itemDB()[i]._id === "5a7c74b3e899ef0014332c29") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellNVG(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5a2c3a9486f774688b05e574") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5a2c3a9486f774688b05e574") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellThermal(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5d21f59b6dbe99052b54ef83") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5d21f59b6dbe99052b54ef83") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellMagazines(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5448bc234bdc2d3c308b4569") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5448bc234bdc2d3c308b4569") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
@@ -718,179 +718,179 @@ export class TieredFlea {
 
     private canSellParts(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818afb4bdc2dde698b456d" ||
+            else if (this.itemDB()[i]._parent === "55818afb4bdc2dde698b456d" ||
                 this.itemDB()[i]._parent === "5a74651486f7744e73386dd1" ||
                 this.itemDB()[i]._parent === "55818a6f4bdc2db9688b456b" ||
                 this.itemDB()[i]._parent === "55818a304bdc2db5418b457d" ||
                 this.itemDB()[i]._parent === "56ea9461d2720b67698b456f") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellHandguards(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818a104bdc2db9688b4569") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818a104bdc2db9688b4569") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellBarrels(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "555ef6e44bdc2de9068b457e") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "555ef6e44bdc2de9068b457e") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellStocks(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818a594bdc2db9688b456a") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818a594bdc2db9688b456a") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellGrips(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818af64bdc2d5b648b4570" || this.itemDB()[i]._parent === "55818a684bdc2ddd698b456d") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818af64bdc2d5b648b4570" || this.itemDB()[i]._parent === "55818a684bdc2ddd698b456d") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellLights(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "55818b164bdc2ddc698b456c" || this.itemDB()[i]._parent === "55818b084bdc2d5b648b4571") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "55818b164bdc2ddc698b456c" || this.itemDB()[i]._parent === "55818b084bdc2d5b648b4571") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellSupps(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "550aa4cd4bdc2dd8348b456c") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "550aa4cd4bdc2dd8348b456c") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellMuzzleDevices(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "550aa4bf4bdc2dd6348b456b" || this.itemDB()[i]._parent === "550aa4dd4bdc2dc9348b4569") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "550aa4bf4bdc2dd6348b456b" || this.itemDB()[i]._parent === "550aa4dd4bdc2dc9348b4569") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellSpecWeap(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.SPECIAL_WEAPON) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === ParentClasses.SPECIAL_WEAPON) {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellFlare(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._id === "6217726288ed9f0845317459" || this.itemDB()[i]._id === "62178be9d0050232da3485d9" || this.itemDB()[i]._id === "62178c4d4ecf221597654e3d") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._id === "6217726288ed9f0845317459" || this.itemDB()[i]._id === "62178be9d0050232da3485d9" || this.itemDB()[i]._id === "62178c4d4ecf221597654e3d") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellNadeLauncher(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.GRENADE_LAUNCHER || this.itemDB()[i]._parent === "55818b014bdc2ddc698b456b") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === ParentClasses.GRENADE_LAUNCHER || this.itemDB()[i]._parent === "55818b014bdc2ddc698b456b") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellAR(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.ASSAULT_RIFLE || this.itemDB()[i]._parent === ParentClasses.MACHINE_GUN) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === ParentClasses.ASSAULT_RIFLE || this.itemDB()[i]._parent === ParentClasses.MACHINE_GUN) {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellDMR(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.MARKSMAN_RIFLE) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === ParentClasses.MARKSMAN_RIFLE) {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellSMG(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.SMG) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === ParentClasses.SMG) {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     private canSellMelee(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.KNIFE) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === ParentClasses.KNIFE) {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellSnip(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.SNIPER_RIFLE) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === ParentClasses.SNIPER_RIFLE) {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
@@ -898,45 +898,45 @@ export class TieredFlea {
 
     private canSellCarbine(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.ASSAULT_CARBINE) {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === ParentClasses.ASSAULT_CARBINE) {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellShotgun(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === ParentClasses.SHOTGUN
+            else if (this.itemDB()[i]._parent === ParentClasses.SHOTGUN
                 || this.itemDB()[i]._id === "60db29ce99594040e04c4a27") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellPistol(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if ((this.itemDB()[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB()[i]._parent === "617f1ef5e8b54b0998387733") && this.itemDB()[i]._id !== "6275303a9f372d6ea97f9ec7") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if ((this.itemDB()[i]._parent === "5447b5cf4bdc2d65278b4567" || this.itemDB()[i]._parent === "617f1ef5e8b54b0998387733") && this.itemDB()[i]._id !== "6275303a9f372d6ea97f9ec7") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellGrenades(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "543be6564bdc2df4348b4568") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "543be6564bdc2df4348b4568") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
@@ -944,55 +944,55 @@ export class TieredFlea {
 
     private canSellAmmo(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "543be5cb4bdc2deb348b4568"
+            else if (this.itemDB()[i]._parent === "543be5cb4bdc2deb348b4568"
                 || this.itemDB()[i]._parent === "5485a8684bdc2da71d8b4567") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
 
     private canSellInfo(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5448ecbe4bdc2d60728b4568") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "5448ecbe4bdc2d60728b4568") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     private canSellRepairKit(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "616eb7aea207f41933308f46") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "616eb7aea207f41933308f46") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     private canSellSpecial(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "5447e0e74bdc2d3c308b4567"
+            else if (this.itemDB()[i]._parent === "5447e0e74bdc2d3c308b4567"
                 || this.itemDB()[i]._parent === "5f4fbaaca5573a5ac31db429"
                 || this.itemDB()[i]._parent === "61605ddea09d851a0a0c1bbc") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
     private canSellMaps(bool: boolean) {
         for (let i in this.itemDB()) {
-            if(this.checkIfBanned){
-                continue;
+            if (this.checkIfBanned) {
+                this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            if (this.itemDB()[i]._parent === "567849dd4bdc2d150f8b456e") {
-                this.itemDB()[i]._props.CanSellOnRagfair = bool
+            else if (this.itemDB()[i]._parent === "567849dd4bdc2d150f8b456e") {
+                this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }
     }
