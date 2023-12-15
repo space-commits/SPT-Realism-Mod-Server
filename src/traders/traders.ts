@@ -68,7 +68,7 @@ export class Traders {
     }
     public loadTraderTweaks() {
 
-        if(modConfig.change_buy_categories){
+        if (modConfig.change_buy_categories == true) {
             this.tables.traders[pkId].base.items_buy.category = buyCat.peacekeeper;
             this.tables.traders[ragmId].base.items_buy.category = buyCat.ragman;
             this.tables.traders[jaegId].base.items_buy.category = buyCat.jaeger;
@@ -78,10 +78,10 @@ export class Traders {
             this.tables.traders[mechId].base.items_buy.category = buyCat.mechanic;
         }
 
-        if(modConfig.change_buy_price){
+        if (modConfig.change_buy_price == true) {
             let ll = 0;
-            for(let trader in this.tables.traders){
-                for(let i in this.tables.traders[trader].base.loyaltyLevels){
+            for (let trader in this.tables.traders) {
+                for (let i in this.tables.traders[trader].base.loyaltyLevels) {
                     ll++;
                     this.tables.traders[trader].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(75 - (ll * 5)), 40);
                 }
@@ -102,10 +102,10 @@ export class Traders {
             this.traderConf.fence.blacklist = fenceLimits.blacklist;
         }
 
-        if(modConfig.change_heal_cost == true){
+        if (modConfig.change_heal_cost == true) {
             this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
             this.tables.globals.config.Health.HealPrice.EnergyPointPrice = 30;
-            this.tables.globals.config.Health.HealPrice.HydrationPointPrice = 30;    
+            this.tables.globals.config.Health.HealPrice.HydrationPointPrice = 30;
         }
 
         if (this.modConf.logEverything == true) {
@@ -319,7 +319,7 @@ export class Traders {
 
         let barterItems = [];
 
-        for(let barter in barters){
+        for (let barter in barters) {
 
             barterItems.push(
                 {
@@ -535,7 +535,7 @@ export class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, Calibers._45ACP, 50 * modConfig.rand_stackable_modifier, 130 * modConfig.rand_stackable_modifier, 3);
             this.randomizeAmmoStockHelper(item, Calibers._357mag, 25 * modConfig.rand_stackable_modifier, 50 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, Calibers._46x30mm, 40 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 40 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4,  true, 50);
+            this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 40 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 50);
             this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 60 * modConfig.rand_stackable_modifier, 140 * modConfig.rand_stackable_modifier, 2);
             this.randomizeAmmoStockHelper(item, Calibers._366TKM, 60 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 3);
             this.randomizeAmmoStockHelper(item, Calibers._762x39mm, 50 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 55);
@@ -599,7 +599,7 @@ export class RandomizeTraderAssort {
                 }
             }
             if (EventTracker.isChristmas == true) {
-                barter[0][0].count =  barter[0][0].count * 0.9;
+                barter[0][0].count = barter[0][0].count * 0.9;
             }
         }
     }

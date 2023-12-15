@@ -61,7 +61,7 @@ class Traders {
         return this.tables.templates.items;
     }
     loadTraderTweaks() {
-        if (modConfig.change_buy_categories) {
+        if (modConfig.change_buy_categories == true) {
             this.tables.traders[pkId].base.items_buy.category = buyCat.peacekeeper;
             this.tables.traders[ragmId].base.items_buy.category = buyCat.ragman;
             this.tables.traders[jaegId].base.items_buy.category = buyCat.jaeger;
@@ -70,12 +70,12 @@ class Traders {
             this.tables.traders[skierId].base.items_buy.category = buyCat.skier;
             this.tables.traders[mechId].base.items_buy.category = buyCat.mechanic;
         }
-        if (modConfig.change_buy_price) {
+        if (modConfig.change_buy_price == true) {
             let ll = 0;
             for (let trader in this.tables.traders) {
                 for (let i in this.tables.traders[trader].base.loyaltyLevels) {
                     ll++;
-                    this.tables.traders[trader].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(70 - (ll * 5)), 40);
+                    this.tables.traders[trader].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(75 - (ll * 5)), 40);
                 }
             }
         }
