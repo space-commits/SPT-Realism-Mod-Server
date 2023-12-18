@@ -552,6 +552,7 @@ export class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier, 2 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
+            this.randomizeAmmoStockHelper(item, Calibers._338mag, 10 * modConfig.rand_stackable_modifier, 25 * modConfig.rand_stackable_modifier, 4);
         }
     }
 

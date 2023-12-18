@@ -604,8 +604,8 @@ export class BotLoader {
 
         if(this.modConfig.bot_loot_changes === true){
             this.botConf().lootNValue = rmBotConfig.lootNValue;
-            this.botConf().lootNValue.sptusec = 3;
-            this.botConf().lootNValue.sptbear = 3;
+            (this.botConf().lootNValue as any).sptusec = 3;
+            (this.botConf().lootNValue as any).sptbear = 3;
         }
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
@@ -694,8 +694,8 @@ export class BotLoader {
 
         if(this.modConfig.bot_loot_changes === true){
             this.botConf().lootNValue = rmBotConfig.lootNValue;
-            this.botConf().lootNValue.sptusec = 2.75;
-            this.botConf().lootNValue.sptbear = 2.75;
+            (this.botConf().lootNValue as any).sptusec = 2.75;
+            (this.botConf().lootNValue as any).sptbear = 2.75;
         }
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
@@ -783,8 +783,8 @@ export class BotLoader {
 
         if(this.modConfig.bot_loot_changes === true){
             this.botConf().lootNValue = rmBotConfig.lootNValue;
-            this.botConf().lootNValue.sptusec = 2.5;
-            this.botConf().lootNValue.sptbear = 2.5;
+            (this.botConf().lootNValue as any).sptusec = 2.5;
+            (this.botConf().lootNValue as any).sptbear = 2.5;
         }
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;

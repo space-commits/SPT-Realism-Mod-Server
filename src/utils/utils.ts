@@ -146,6 +146,7 @@ export class ModTracker{
     static sainPresent: boolean = false;
     static swagPresent: boolean = false;
     static qtbPresent: boolean = false;
+    static alpPresent: boolean = false;
 }
 
 

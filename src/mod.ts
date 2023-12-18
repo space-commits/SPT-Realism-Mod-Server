@@ -2,7 +2,7 @@ import { DependencyContainer } from "tsyringe";
 import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
 import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { ILogger } from "../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import type { StaticRouterModService } from "@spt-aki/services/mod/staticRouter/StaticRouterModService";
@@ -26,7 +26,6 @@ import { IGetRaidConfigurationRequestData } from "@spt-aki/models/eft/match/IGet
 import { WeatherController } from "@spt-aki/controllers/WeatherController";
 import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
 import { LocalisationService } from "@spt-aki/services/LocalisationService";
-import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
 import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";
 import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
 import { MathUtil } from "@spt-aki/utils/MathUtil";
@@ -37,7 +36,7 @@ import { TraderHelper } from "@spt-aki/helpers/TraderHelper";
 import { FenceService } from "@spt-aki/services/FenceService";
 import { TraderAssortService } from "@spt-aki/services/TraderAssortService";
 import { PaymentHelper } from "@spt-aki/helpers/PaymentHelper";
-import { ITrader, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrader";
+import { ITrader } from "@spt-aki/models/eft/common/tables/ITrader";
 import { TraderPurchasePersisterService } from "@spt-aki/services/TraderPurchasePersisterService";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";;
 import { BotHelper } from "@spt-aki/helpers/BotHelper";
@@ -45,14 +44,12 @@ import { IBotBase, Inventory, Inventory as PmcInventory } from "@spt-aki/models/
 import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
-import { ILocations } from "@spt-aki/models/spt/server/ILocations";
 import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
 import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairController } from "@spt-aki/controllers/RagfairController";
 import { IPostAkiLoadModAsync } from "@spt-aki/models/external/IPostAkiLoadModAsync";
-import { LootItem } from "@spt-aki/models/spt/services/LootItem";
 import { LocationController } from "@spt-aki/controllers/LocationController";
 
 import { Ammo } from "./ballistics/ammo";
@@ -90,6 +87,7 @@ import { RagfairTaxService } from "@spt-aki/services/RagfairTaxService";
 import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
 import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
 import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentService";
+import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
 
 
 const fs = require('fs');
@@ -99,7 +97,7 @@ const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
 
-let clientValidateCount = 0;
+let validatedClient = false;
 
 export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiLoadModAsync {
 
@@ -130,12 +128,14 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const traderPurchasePefrsisterService = container.resolve<TraderPurchasePersisterService>("TraderPurchasePersisterService");
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
+        const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
+        const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
+        this.path = require("path");
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const flea = new FleaChangesPreDBLoad(logger, fleaConf, modConfig);
-        flea.loadFleaConfig();
 
-        const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
-        this.path = require("path");
+        this.checkForMods(preAkiModLoader, logger, modConfig);
+        flea.loadFleaConfig();
 
         router.registerDynamicRouter(
             "loadResources",
@@ -152,7 +152,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             "RealismMod"
         )
 
-        if (modConfig.bot_changes == true) {
+        if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
             const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
             const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
@@ -213,6 +213,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
+                        const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
                         const postLoadTables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadTables);
                         const utils = new Utils(postLoadTables, arrays);
@@ -271,12 +272,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             }
                             this.checkForEvents(logger, seasonalEventsService);
 
-                            if (clientValidateCount === 0) {
+                            if (validatedClient == false) {
                                 randomizeTraderAssort.adjustTraderStockAtServerStart();
                             }
-                            clientValidateCount += 1;
+                            validatedClient = true;
 
-                            const traders = container.resolve<RagfairServer>("RagfairServer").getUpdateableTraders();
+                            const traders: string[] = (ragfairServer as any).getUpdateableTraders();
                             for (let traderID in traders) {
                                 ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
                             }
@@ -411,7 +412,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                             RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
-                            if (modConfig.bot_changes == true) {
+                            if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
 
@@ -589,29 +590,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables, logger);
 
-        const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
-        const activeMods = preAkiModLoader.getImportedModDetails();
-
-
-        for (const modname in activeMods) {
-            if (modname.includes("Jiro-BatterySystem")) {
-                ModTracker.batteryModPresent = true;
-                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
-            }
-            if (modname.includes("Solarint-SAIN-ServerMod")) {
-                ModTracker.sainPresent = true;
-                logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor.GREEN);
-            }
-            if (modname.includes("QuestingBots")) {
-                ModTracker.qtbPresent = true;
-                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor.GREEN);
-            }
-            if (modname.includes("SWAG")) {
-                ModTracker.sainPresent = true;
-                logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor.GREEN);
-            }
-        }
-
         this.dllChecker(logger, modConfig);
 
         if (modConfig.recoil_attachment_overhaul == true) {
@@ -654,7 +632,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             airdrop.loadAirdrops();
         }
 
-        if (modConfig.bot_changes == true) {
+        if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             bots.loadBots();
         }
 
@@ -724,7 +702,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         traders.loadTraderRefreshTimes();
         //
 
-        if (modConfig.bot_changes == true) {
+        if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
 
@@ -784,6 +762,39 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
         if (modConfig.logEverything == true) {
             logger.info("Realism Mod: Profile Checked");
+        }
+    }
+
+    private checkForMods(preAkiModLoader: PreAkiModLoader, logger: ILogger, modConf: any){
+        const activeMods = preAkiModLoader.getImportedModDetails();
+        for (const modname in activeMods) {
+            if (modname.includes("Jiro-BatterySystem")) {
+                ModTracker.batteryModPresent = true;
+                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
+            }
+            if (modname.includes("Solarint-SAIN-ServerMod")) {
+                ModTracker.sainPresent = true;
+                logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor.GREEN);
+            }
+            if (modname.includes("QuestingBots")) {
+                ModTracker.qtbPresent = true;
+                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor.GREEN);
+            }
+            if (modname.includes("SWAG")) {
+                ModTracker.sainPresent = true;
+                logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor.GREEN);
+            }
+            if (modname.includes("AlgorithmicLevelProgression")) {
+                ModTracker.alpPresent = true;
+                if(modConf.bot_changes == true){
+                    logger.logWithColor("===========================!============================", LogTextColor.WHITE, LogBackgroundColor.RED);
+                    logger.logWithColor("Realism: WARNING, ALP DETECTED! You have Realism's bot progression enabled already. Either uninstall ALP or disable Realism's bot changes!", LogTextColor.WHITE, LogBackgroundColor.RED);
+                    logger.logWithColor("===========================!============================", LogTextColor.WHITE, LogBackgroundColor.RED);
+                }
+                else{
+                    logger.logWithColor("Realism: ALP Detected, Making Adjustments", LogTextColor.GREEN);
+                }
+            }
         }
     }
 }

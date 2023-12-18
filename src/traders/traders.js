@@ -458,6 +458,7 @@ class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier, 2 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._338mag, 10 * modConfig.rand_stackable_modifier, 25 * modConfig.rand_stackable_modifier, 4);
         }
     }
     randomizeAmmoStockHelper(item, caliber, min, max, outOfStockChance, usePenFactor = false, penThreshold = 50) {

@@ -51,13 +51,14 @@ const path = __importStar(require("path"));
 const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
 const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
+const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
 const fs = require('fs');
 const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
 const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
-let clientValidateCount = 0;
+let validatedClient = false;
 class Main {
     path;
     modLoader;
@@ -84,11 +85,13 @@ class Main {
         const traderPurchasePefrsisterService = container.resolve("TraderPurchasePersisterService");
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
+        const router = container.resolve("DynamicRouterModService");
+        const preAkiModLoader = container.resolve("PreAkiModLoader");
+        this.path = require("path");
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
+        this.checkForMods(preAkiModLoader, logger, modConfig);
         flea.loadFleaConfig();
-        const router = container.resolve("DynamicRouterModService");
-        this.path = require("path");
         router.registerDynamicRouter("loadResources", [
             {
                 url: "/RealismMod/GetInfo",
@@ -99,7 +102,7 @@ class Main {
                 }
             }
         ], "RealismMod");
-        if (modConfig.bot_changes == true) {
+        if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             const botLevelGenerator = container.resolve("BotLevelGenerator");
             const botDifficultyHelper = container.resolve("BotDifficultyHelper");
             const botInventoryGenerator = container.resolve("BotInventoryGenerator");
@@ -151,6 +154,7 @@ class Main {
                     const seasonalEventsService = container.resolve("SeasonalEventService");
                     const postLoadDBServer = container.resolve("DatabaseServer");
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
+                    const ragfairServer = container.resolve("RagfairServer");
                     const postLoadTables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const utils = new utils_1.Utils(postLoadTables, arrays);
@@ -197,11 +201,11 @@ class Main {
                             }
                         }
                         this.checkForEvents(logger, seasonalEventsService);
-                        if (clientValidateCount === 0) {
+                        if (validatedClient == false) {
                             randomizeTraderAssort.adjustTraderStockAtServerStart();
                         }
-                        clientValidateCount += 1;
-                        const traders = container.resolve("RagfairServer").getUpdateableTraders();
+                        validatedClient = true;
+                        const traders = ragfairServer.getUpdateableTraders();
                         for (let traderID in traders) {
                             ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
                         }
@@ -309,7 +313,7 @@ class Main {
                         }
                         utils_1.RaidInfoTracker.TOD = getTOD(realTime);
                         utils_1.RaidInfoTracker.mapType = mapType;
-                        if (modConfig.bot_changes == true) {
+                        if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
                             bots.updateBots(pmcData, logger, modConfig, bots, utils);
                         }
                         if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent && utils_1.RaidInfoTracker.mapName === "laboratory") {
@@ -453,26 +457,6 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
-        const preAkiModLoader = container.resolve("PreAkiModLoader");
-        const activeMods = preAkiModLoader.getImportedModDetails();
-        for (const modname in activeMods) {
-            if (modname.includes("Jiro-BatterySystem")) {
-                utils_1.ModTracker.batteryModPresent = true;
-                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
-            }
-            if (modname.includes("Solarint-SAIN-ServerMod")) {
-                utils_1.ModTracker.sainPresent = true;
-                logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
-            }
-            if (modname.includes("QuestingBots")) {
-                utils_1.ModTracker.qtbPresent = true;
-                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
-            }
-            if (modname.includes("SWAG")) {
-                utils_1.ModTracker.sainPresent = true;
-                logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
-            }
-        }
         this.dllChecker(logger, modConfig);
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
@@ -505,7 +489,7 @@ class Main {
         if (modConfig.airdrop_changes == true) {
             airdrop.loadAirdrops();
         }
-        if (modConfig.bot_changes == true) {
+        if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }
         if (modConfig.increased_bot_cap == true) {
@@ -561,7 +545,7 @@ class Main {
         }
         traders.loadTraderRefreshTimes();
         //
-        if (modConfig.bot_changes == true) {
+        if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
         attachBase.loadAttCompat();
@@ -614,6 +598,38 @@ class Main {
         }
         if (modConfig.logEverything == true) {
             logger.info("Realism Mod: Profile Checked");
+        }
+    }
+    checkForMods(preAkiModLoader, logger, modConf) {
+        const activeMods = preAkiModLoader.getImportedModDetails();
+        for (const modname in activeMods) {
+            if (modname.includes("Jiro-BatterySystem")) {
+                utils_1.ModTracker.batteryModPresent = true;
+                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+            }
+            if (modname.includes("Solarint-SAIN-ServerMod")) {
+                utils_1.ModTracker.sainPresent = true;
+                logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+            }
+            if (modname.includes("QuestingBots")) {
+                utils_1.ModTracker.qtbPresent = true;
+                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+            }
+            if (modname.includes("SWAG")) {
+                utils_1.ModTracker.sainPresent = true;
+                logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+            }
+            if (modname.includes("AlgorithmicLevelProgression")) {
+                utils_1.ModTracker.alpPresent = true;
+                if (modConf.bot_changes == true) {
+                    logger.logWithColor("===========================!============================", LogTextColor_1.LogTextColor.WHITE, LogBackgroundColor_1.LogBackgroundColor.RED);
+                    logger.logWithColor("Realism: WARNING, ALP DETECTED! You have Realism's bot progression enabled already. Either uninstall ALP or disable Realism's bot changes!", LogTextColor_1.LogTextColor.WHITE, LogBackgroundColor_1.LogBackgroundColor.RED);
+                    logger.logWithColor("===========================!============================", LogTextColor_1.LogTextColor.WHITE, LogBackgroundColor_1.LogBackgroundColor.RED);
+                }
+                else {
+                    logger.logWithColor("Realism: ALP Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+                }
+            }
         }
     }
 }
