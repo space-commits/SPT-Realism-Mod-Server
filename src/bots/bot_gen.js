@@ -456,11 +456,12 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         for (const magazine of weaponWithModsArray.filter(x => x.slotId === this.modMagazineSlotId)) {
             this.fillExistingMagazines(weaponWithModsArray, magazine, ammoTpl);
         }
-        // Add cartridge to gun chamber if weapon has slot for it
-        if (weaponItemTemplate._props.Chambers?.length === 1
-            && weaponItemTemplate._props.Chambers[0]?._name === "patron_in_weapon"
+        // Add cartridge(s) to gun chamber(s)
+        if (weaponItemTemplate._props.Chambers?.length > 0
             && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
-            this.addCartridgeToChamber(weaponWithModsArray, ammoTpl, "patron_in_weapon");
+            // Guns have variety of possible Chamber ids, patron_in_weapon/patron_in_weapon_000/patron_in_weapon_001
+            const chamberSlotNames = weaponItemTemplate._props.Chambers.map(x => x._name);
+            this.addCartridgeToChamber(weaponWithModsArray, ammoTpl, chamberSlotNames);
         }
         // Fill UBGL if found
         const ubglMod = weaponWithModsArray.find(x => x.slotId === "mod_launcher");
@@ -925,7 +926,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
                 this.adjustSlotSpawnChances(modSpawnChances, muzzleSlots, 100);
             }
             // If front/rear sight are to be added, set opposite to 100% chance
-            if (this.modIsFrontOrRearSight(modSlot)) {
+            if (this.modIsFrontOrRearSight(modSlot, modToAddTemplate._id)) {
                 modSpawnChances.mod_sight_front = 100;
                 modSpawnChances.mod_sight_rear = 100;
             }

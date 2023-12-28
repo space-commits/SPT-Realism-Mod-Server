@@ -90,14 +90,14 @@ export class Traders {
 
         if (modConfig.nerf_fence == true) {
             this.traderConf.fence.discountOptions.assortSize = 10;
-            this.traderConf.fence.discountOptions.presetPriceMult = 2.2;
-            this.traderConf.fence.discountOptions.itemPriceMult = 1.8;
+            this.traderConf.fence.discountOptions.presetPriceMult = 2.5;
+            this.traderConf.fence.discountOptions.itemPriceMult = 2;
             this.traderConf.fence.maxPresetsPercent = 4;
             this.traderConf.fence.partialRefreshChangePercent = 50;
             this.traderConf.fence.discountOptions.assortSize = 10;
             this.traderConf.fence.assortSize = 30;
-            this.traderConf.fence.itemPriceMult = 2;
-            this.traderConf.fence.presetPriceMult = 2.5;
+            this.traderConf.fence.itemPriceMult = 1.8;
+            this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
             this.traderConf.fence.blacklist = fenceLimits.blacklist;
         }
@@ -448,7 +448,12 @@ export class RandomizeTraderAssort {
 
     public randomizeStockHelper(item: Item) {
 
-        let itemParent = this.itemDB[item._tpl]._parent;
+        let itemParent = this.itemDB[item._tpl]?._parent;
+        if (!itemParent) {
+            this.logger.warning(`Realism Mod: Unable to randomize stock for: ${item._tpl}, has no _parent / item does not exist in db`);
+
+            return;
+        }
 
         //ammo
         this.randomizeAmmoStock(itemParent, item);
@@ -514,7 +519,7 @@ export class RandomizeTraderAssort {
         this.randomizeStock(itemParent, ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier, 3 + modConfig.rand_stock_modifier);
 
         //money
-        this.randomizeStock(itemParent, ParentClasses.MONEY, item, 0 * modConfig.rand_stackable_modifier, 1500 * modConfig.rand_stackable_modifier);
+        this.randomizeStock(itemParent, ParentClasses.MONEY, item, 1500 * modConfig.rand_stackable_modifier, 150000 * modConfig.rand_stackable_modifier);
 
         //container
         this.randomizeStock(itemParent, ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
@@ -552,6 +557,7 @@ export class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier, 2 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
+            this.randomizeAmmoStockHelper(item, Calibers._338mag, 10 * modConfig.rand_stackable_modifier, 25 * modConfig.rand_stackable_modifier, 4);
         }
     }
 

@@ -149,6 +149,7 @@ class ModTracker {
     static sainPresent = false;
     static swagPresent = false;
     static qtbPresent = false;
+    static alpPresent = false;
 }
 exports.ModTracker = ModTracker;
 class ProfileTracker {

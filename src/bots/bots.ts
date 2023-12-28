@@ -111,6 +111,7 @@ export class BotLoader {
             "weightingAdjustments": [],
             "blacklist": [],
             "whitelist": [],
+            "forceStock": true
         }
 
         this.botConf().equipment["assault"] = botEquipmentTempalte;
@@ -604,8 +605,8 @@ export class BotLoader {
 
         if(this.modConfig.bot_loot_changes === true){
             this.botConf().lootNValue = rmBotConfig.lootNValue;
-            this.botConf().lootNValue.sptusec = 3;
-            this.botConf().lootNValue.sptbear = 3;
+            (this.botConf().lootNValue as any).sptusec = 3;
+            (this.botConf().lootNValue as any).sptbear = 3;
         }
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit1;
@@ -694,8 +695,8 @@ export class BotLoader {
 
         if(this.modConfig.bot_loot_changes === true){
             this.botConf().lootNValue = rmBotConfig.lootNValue;
-            this.botConf().lootNValue.sptusec = 2.75;
-            this.botConf().lootNValue.sptbear = 2.75;
+            (this.botConf().lootNValue as any).sptusec = 2.75;
+            (this.botConf().lootNValue as any).sptbear = 2.75;
         }
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit2;
@@ -783,8 +784,8 @@ export class BotLoader {
 
         if(this.modConfig.bot_loot_changes === true){
             this.botConf().lootNValue = rmBotConfig.lootNValue;
-            this.botConf().lootNValue.sptusec = 2.5;
-            this.botConf().lootNValue.sptbear = 2.5;
+            (this.botConf().lootNValue as any).sptusec = 2.5;
+            (this.botConf().lootNValue as any).sptbear = 2.5;
         }
 
         // this.botConf().itemSpawnLimits.pmc = PMCLootLimitCat.PMCLootLimit3;
@@ -1097,6 +1098,7 @@ export class BotLoader {
             botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
+            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO3.inventory.Headwear_night;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
             botJsonTemplate.chances.mods.mod_flashlight = 100;
@@ -1171,6 +1173,7 @@ export class BotLoader {
             botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
+            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_night;
         } else {
             botJsonTemplate.chances.mods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {

@@ -255,9 +255,7 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
                     if (!itemSpawnLimits[botRole]) {
                         itemSpawnLimits[botRole] = this.getItemSpawnLimitsForBotType(isPmc, botRole);
                     }
-                    if (itemToAddTemplate._parent === enums_1.ParentClasses.KEYCARD || itemToAddTemplate._parent === enums_1.ParentClasses.KEY_MECHANICAL)
-                        ;
-                    {
+                    if (itemToAddTemplate._parent === enums_1.ParentClasses.KEYCARD || itemToAddTemplate._parent === enums_1.ParentClasses.KEY_MECHANICAL) {
                         let randNum = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
                         if (randNum < 95) {
                             i--;
