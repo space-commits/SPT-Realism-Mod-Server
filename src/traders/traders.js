@@ -370,7 +370,11 @@ class RandomizeTraderAssort {
         }
     }
     randomizeStockHelper(item) {
-        let itemParent = this.itemDB[item._tpl]._parent;
+        let itemParent = this.itemDB[item._tpl]?._parent;
+        if (!itemParent) {
+            this.logger.warning(`Realism Mod: Unable to randomize stock for: ${item._tpl}, has no _parent / item does not exist in db`);
+            return;
+        }
         //ammo
         this.randomizeAmmoStock(itemParent, item);
         this.randomizeStock(itemParent, enums_1.ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);

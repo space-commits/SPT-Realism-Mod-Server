@@ -926,7 +926,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
                 this.adjustSlotSpawnChances(modSpawnChances, muzzleSlots, 100);
             }
             // If front/rear sight are to be added, set opposite to 100% chance
-            if (this.modIsFrontOrRearSight(modSlot)) {
+            if (this.modIsFrontOrRearSight(modSlot, modToAddTemplate._id)) {
                 modSpawnChances.mod_sight_front = 100;
                 modSpawnChances.mod_sight_rear = 100;
             }

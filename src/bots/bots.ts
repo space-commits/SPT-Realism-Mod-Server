@@ -111,6 +111,7 @@ export class BotLoader {
             "weightingAdjustments": [],
             "blacklist": [],
             "whitelist": [],
+            "forceStock": true
         }
 
         this.botConf().equipment["assault"] = botEquipmentTempalte;

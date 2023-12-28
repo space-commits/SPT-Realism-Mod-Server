@@ -106,6 +106,7 @@ class BotLoader {
             "weightingAdjustments": [],
             "blacklist": [],
             "whitelist": [],
+            "forceStock": true
         };
         this.botConf().equipment["assault"] = botEquipmentTempalte;
         this.botConf().equipment["pmcbot"] = botEquipmentTempalte;

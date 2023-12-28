@@ -14,6 +14,17 @@ export class AttatchmentBase {
 
     public loadAttCompat() {
 
+        const tacDevices = [
+            "57fd23e32459772d0805bcf1",
+            "544909bb4bdc2d6f028b4577",
+            "5d10b49bd7ad1a1a560708b0",
+            "5c06595c0db834001a66af6c",
+            "5a7b483fe899ef0016170d15",
+            "61605d88ffa6e502ac5e7eeb",
+            "5c5952732e2216398b5abda2",
+            "644a3df63b0b6f03e101e065"
+        ]
+
         const stocksArr = [
             "5fc2369685fd526b824a5713",
             "606587d11246154cad35d635",
@@ -40,6 +51,13 @@ export class AttatchmentBase {
             "5c793fde2e221601da358614",
             "5b39f8db5acfc40016387a1b",
             "628a85ee6b1d481ff772e9d5"
+        ];
+
+        const cantedMountConfWeaps: string[] = [
+            "5926bb2186f7744b1c6c6e60",
+            "5d2f0d8048f0356c925bc3b0",
+            "5e00903ae9dc277128008b87",
+            "5de7bd7bfd6b4e6e2276dc25"
         ];
 
         const buffertubes = [
@@ -96,22 +114,11 @@ export class AttatchmentBase {
 
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            if ( serverItem._id !== "62386b7153757417e93a4e9f" && serverItem._id !== "62386b2adf47d66e835094b2" && (serverItem._parent === "55818a104bdc2db9688b4569" || serverItem._parent === "55818a304bdc2db5418b457d")) {
+            if (serverItem._parent === "55818a104bdc2db9688b4569" || serverItem._parent === "55818a304bdc2db5418b457d" || serverItem._parent === "55818b224bdc2dde698b456f") {
                 for (let slot in serverItem._props.Slots) {
-                    if (serverItem._props.Slots[slot]._name === "mod_scope" || serverItem._props.Slots[slot]._name === "mod_tactical") {
-
-                        let serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
-                        let compatMods = [
-                            "57fd23e32459772d0805bcf1",
-                            "544909bb4bdc2d6f028b4577",
-                            "5d10b49bd7ad1a1a560708b0",
-                            "5c06595c0db834001a66af6c",
-                            "5a7b483fe899ef0016170d15",
-                            "61605d88ffa6e502ac5e7eeb",
-                            "5c5952732e2216398b5abda2"
-                        ];
-
-                        serverItem._props.Slots[slot]._props.filters[0].Filter = compatMods.concat(serverArr);
+                    let compatItems = serverItem._props.Slots[slot]._props.filters[0].Filter;
+                    if (compatItems.includes("5649a2464bdc2d91118b45a8")) {
+                        serverItem._props.Slots[slot]._props.filters[0].Filter = tacDevices.concat(tacDevices);
                     }
                 }
             }
@@ -135,7 +142,6 @@ export class AttatchmentBase {
                 ];
             }
 
-            let cantedMountConfWeaps: string[] = ["5926bb2186f7744b1c6c6e60", "5d2f0d8048f0356c925bc3b0", "5e00903ae9dc277128008b87", "5de7bd7bfd6b4e6e2276dc25"];
 
             for (let item in cantedMountConfWeaps) {
                 if (serverItem._id === cantedMountConfWeaps[item]) {
