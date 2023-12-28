@@ -578,9 +578,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
         const player = new Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
-        const flea = new FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
+        const fleaChangesPostDB = new FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
         const codegen = new JsonGen(logger, tables, modConfig, utils, arrays);
-        const custFleaConf = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
+        const fleaChangesPreDB = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
@@ -663,8 +663,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         bots.botHpMulti();
 
-        custFleaConf.loadFleaConfig();
-        flea.loadFleaGlobal();
+        fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
+        fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
 
         if (modConfig.malf_changes == true) {
             ammo.loadAmmoMalfChanges();

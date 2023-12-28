@@ -20,11 +20,13 @@ class FleaChangesPostDBLoad {
     loadFleaGlobal() {
         if (this.modConfig.tiered_flea == true) {
             this.globalDB().RagFair.minUserLevel = 1;
-        }
-        this.fleaConf.dynamic.blacklist.custom = [];
-        for (let i in this.tables.templates.items) {
-            if (this.tables.templates.items[i]._props.CanSellOnRagfair == false) {
-                this.fleaConf.dynamic.blacklist.custom.push(this.tables.templates.items[i]._id);
+            if (this.modConfig.disable_flea_blacklist == false) {
+                this.fleaConf.dynamic.blacklist.custom = [];
+                for (let i in this.tables.templates.items) {
+                    if (this.tables.templates.items[i]._props.CanSellOnRagfair == false) {
+                        this.fleaConf.dynamic.blacklist.custom.push(this.tables.templates.items[i]._id);
+                    }
+                }
             }
         }
     }
@@ -40,10 +42,6 @@ class FleaChangesPreDBLoad {
         this.modConfig = modConfig;
     }
     loadFleaConfig() {
-        // if (this.modConfig.flea_changes == true || this.modConfig.tiered_flea == true) {
-        //     this.fleaConf.dynamic.blacklist.enableBsgList = true;
-        //     this.fleaConf.dynamic.blacklist.custom = this.custFleaBlacklist.blacklist.custom;
-        // }
         if (this.modConfig.disable_flea_blacklist == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = false;
             this.fleaConf.dynamic.blacklist.custom = [];
@@ -51,17 +49,14 @@ class FleaChangesPreDBLoad {
         else if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = true;
         }
-        // if (this.modConfig.med_changes == true) {
-        //     this.fleaConf.dynamic.blacklist.custom.push("TIER1MEDKIT", "TIER2MEDKIT", "TIER3MEDKIT");
-        // }
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.condition = custFleaConfig.condition;
             this.fleaConf.sell.chance.base = 45;
-            this.fleaConf.sell.time.base = 2.5;
+            this.fleaConf.sell.time.base = 2;
             this.fleaConf.sell.time.min = 0;
-            this.fleaConf.sell.time.max = 1;
-            this.fleaConf.sell.reputation.gain = 0.0000009;
-            this.fleaConf.sell.reputation.loss = 0.0000009;
+            this.fleaConf.sell.time.max = 1.0;
+            this.fleaConf.sell.reputation.gain = 0.00001;
+            this.fleaConf.sell.reputation.loss = 0.000005;
             this.fleaConf.dynamic.currencies = {
                 "5449016a4bdc2d6f028b456f": 20,
                 "5696686a4bdc2da3298b456a": 40,

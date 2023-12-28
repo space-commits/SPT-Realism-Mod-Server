@@ -96,7 +96,7 @@ export class AttatchmentBase {
 
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            if (serverItem._parent === "55818a104bdc2db9688b4569") {
+            if ( serverItem._id !== "62386b7153757417e93a4e9f" && serverItem._id !== "62386b2adf47d66e835094b2" && (serverItem._parent === "55818a104bdc2db9688b4569" || serverItem._parent === "55818a304bdc2db5418b457d")) {
                 for (let slot in serverItem._props.Slots) {
                     if (serverItem._props.Slots[slot]._name === "mod_scope" || serverItem._props.Slots[slot]._name === "mod_tactical") {
 

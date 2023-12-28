@@ -988,6 +988,7 @@ class BotLoader {
             botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
+            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO3.inventory.Headwear_night;
         }
         else if (utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.mods.mod_nvg = 100;
@@ -1057,6 +1058,7 @@ class BotLoader {
             botJsonTemplate.chances.mods.mod_tactical = 100;
             botJsonTemplate.chances.mods.mod_equipment_000 = 0;
             botJsonTemplate.chances.mods.mod_equipment = 0;
+            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_night;
         }
         else {
             botJsonTemplate.chances.mods.mod_nvg = 0;

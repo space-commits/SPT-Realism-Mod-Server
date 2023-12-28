@@ -590,11 +590,12 @@ export class BotWepGen extends BotWeaponGenerator {
             this.fillExistingMagazines(weaponWithModsArray, magazine, ammoTpl);
         }
 
-        // Add cartridge to gun chamber if weapon has slot for it
-        if (weaponItemTemplate._props.Chambers?.length === 1
-            && weaponItemTemplate._props.Chambers[0]?._name === "patron_in_weapon"
+        // Add cartridge(s) to gun chamber(s)
+        if ( weaponItemTemplate._props.Chambers?.length > 0
             && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
-            this.addCartridgeToChamber(weaponWithModsArray, ammoTpl, "patron_in_weapon");
+           // Guns have variety of possible Chamber ids, patron_in_weapon/patron_in_weapon_000/patron_in_weapon_001
+           const chamberSlotNames = weaponItemTemplate._props.Chambers.map(x => x._name);
+           this.addCartridgeToChamber(weaponWithModsArray, ammoTpl, chamberSlotNames);
         }
 
         // Fill UBGL if found

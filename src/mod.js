@@ -446,9 +446,9 @@ class Main {
         const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
         const player = new player_1.Player(logger, tables, modConfig, custProfile, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
-        const flea = new fleamarket_1.FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
+        const fleaChangesPostDB = new fleamarket_1.FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
         const codegen = new code_gen_1.JsonGen(logger, tables, modConfig, utils, arrays);
-        const custFleaConf = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
+        const fleaChangesPreDB = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
@@ -513,8 +513,8 @@ class Main {
             meds.loadMeds();
         }
         bots.botHpMulti();
-        custFleaConf.loadFleaConfig();
-        flea.loadFleaGlobal();
+        fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
+        fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
         if (modConfig.malf_changes == true) {
             ammo.loadAmmoMalfChanges();
             weaponsGlobals.loadGlobalMalfChanges();
