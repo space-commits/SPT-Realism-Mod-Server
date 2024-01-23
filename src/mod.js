@@ -457,6 +457,8 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
+        armor.loadArmor();
+        armor.revertHelmetZones();
         // this.dllChecker(logger, modConfig);
         // if (modConfig.recoil_attachment_overhaul == true) {
         //     itemCloning.createCustomWeapons();

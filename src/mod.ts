@@ -590,6 +590,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables, logger);
 
+        armor.loadArmor();
+        armor.revertHelmetZones();
+
         // this.dllChecker(logger, modConfig);
 
         // if (modConfig.recoil_attachment_overhaul == true) {
