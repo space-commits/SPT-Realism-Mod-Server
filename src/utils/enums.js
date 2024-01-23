@@ -95,6 +95,10 @@ var ParentClasses;
     ParentClasses["COMPASS"] = "5f4fbaaca5573a5ac31db429";
     ParentClasses["HEADSET"] = "5645bcb74bdc2ded0b8b4578";
     ParentClasses["GASBLOCK"] = "56ea9461d2720b67698b456f";
+    ParentClasses["ARMOR_PLATE"] = "644120aa86ffbe10ee032b6f";
+    ParentClasses["BUILT_IN_ARMOR"] = "65649eb40bf0ed77b8044453";
+    ParentClasses["CULTIST_AMULET"] = "64b69b0c8f3be32ed22682f8";
+    ParentClasses["RADIO_TRANSMITTER"] = "62e9103049c018f425059f38";
 })(ParentClasses || (exports.ParentClasses = ParentClasses = {}));
 var Calibers;
 (function (Calibers) {

@@ -798,7 +798,7 @@ class BotLoader {
             this.scavBase.inventory.items = scavLO.scavLO2.inventory.items;
         }
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
-            this.scavBase.chances.mods.mod_flashlight = 60;
+            this.scavBase.chances.weaponMods.mod_flashlight = 60;
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 90;
             this.botConf().equipment["assault"].laserIsActiveChancePercent = 90;
         }

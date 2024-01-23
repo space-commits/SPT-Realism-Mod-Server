@@ -457,102 +457,102 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
-        this.dllChecker(logger, modConfig);
-        if (modConfig.recoil_attachment_overhaul == true) {
-            itemCloning.createCustomWeapons();
-            itemCloning.createCustomAttachments();
-            itemsClass.addCustomItems();
-        }
-        // codegen.attTemplatesCodeGen();
-        // codegen.weapTemplatesCodeGen();
-        // codegen.gearTemplatesCodeGen();
-        // codegen.ammoTemplatesCodeGen();
-        if (modConfig.realistic_ballistics == true) {
-            ammo.loadAmmoStats();
-            armor.loadArmor();
-            bots.setBotHealth();
-        }
-        jsonHand.pushModsToServer();
-        jsonHand.pushWeaponsToServer();
-        jsonHand.pushGearToServer();
-        descGen.descriptionGen();
-        armor.armorMousePenalty();
-        if (modConfig.headgear_conflicts == true) {
-            gear.loadGearConflicts();
-        }
-        if (modConfig.open_zones_fix == true) {
-            maps.openZonesFix();
-        }
-        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
-            maps.loadSpawnChanges();
-        }
-        if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdrops();
-        }
-        if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-            bots.loadBots();
-        }
-        if (modConfig.increased_bot_cap == true) {
-            bots.increaseBotCap();
-        }
-        else if (modConfig.spawn_waves == true) {
-            bots.increasePerformance();
-        }
-        if (modConfig.bot_names == true) {
-            bots.botNames();
-        }
-        if (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween) {
-            bots.forceBossSpawns();
-        }
-        if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {
-            bots.bossDifficulty();
-        }
-        if (modConfig.med_changes == true) {
-            itemCloning.createCustomMedItems();
-            // bots.botMeds();
-            meds.loadMeds();
-        }
-        bots.botHpMulti();
-        fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
-        fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
-        if (modConfig.malf_changes == true) {
-            ammo.loadAmmoMalfChanges();
-            weaponsGlobals.loadGlobalMalfChanges();
-        }
-        if (modConfig.trader_repair_changes == true) {
-            traders.loadTraderRepairs();
-        }
-        if (utils_1.ConfigChecker.dllIsPresent == true) {
-            if (modConfig.recoil_attachment_overhaul) {
-                ammo.loadAmmoFirerateChanges();
-                quests.fixMechancicQuests();
-                ammo.grenadeTweaks();
-            }
-            if (modConfig.headset_changes) {
-                gear.loadHeadsetTweaks();
-            }
-        }
-        if (modConfig.remove_quest_fir_req == true) {
-            quests.removeFIRQuestRequire();
-        }
-        //traders
-        traders.loadTraderTweaks();
-        if (modConfig.change_trader_ll == true) {
-            traders.setLoyaltyLevels();
-        }
-        if (modConfig.add_cust_trader_items == true) {
-            traders.addItemsToAssorts();
-        }
-        traders.loadTraderRefreshTimes();
-        //
-        if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-            attachBase.loadAttRequirements();
-        }
-        attachBase.loadAttCompat();
-        itemsClass.loadItemsRestrictions();
-        player.loadPlayerStats();
-        player.playerProfiles(jsonUtil);
-        weaponsGlobals.loadGlobalWeps();
+        // this.dllChecker(logger, modConfig);
+        // if (modConfig.recoil_attachment_overhaul == true) {
+        //     itemCloning.createCustomWeapons();
+        //     itemCloning.createCustomAttachments();
+        //     itemsClass.addCustomItems();
+        // }
+        // // codegen.attTemplatesCodeGen();
+        // // codegen.weapTemplatesCodeGen();
+        // // codegen.gearTemplatesCodeGen();
+        // // codegen.ammoTemplatesCodeGen();
+        // if (modConfig.realistic_ballistics == true) {
+        //     ammo.loadAmmoStats();
+        //     armor.loadArmor();
+        //     bots.setBotHealth();
+        // }
+        // jsonHand.pushModsToServer();
+        // jsonHand.pushWeaponsToServer();
+        // jsonHand.pushGearToServer();
+        // descGen.descriptionGen();
+        // armor.armorMousePenalty();
+        // if (modConfig.headgear_conflicts == true) {
+        //     gear.loadGearConflicts();
+        // }
+        // if (modConfig.open_zones_fix == true) {
+        //     maps.openZonesFix();
+        // }
+        // if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
+        //     maps.loadSpawnChanges();
+        // }
+        // if (modConfig.airdrop_changes == true) {
+        //     airdrop.loadAirdrops();
+        // }
+        // if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
+        //     bots.loadBots();
+        // }
+        // if (modConfig.increased_bot_cap == true) {
+        //     bots.increaseBotCap();
+        // }
+        // else if (modConfig.spawn_waves == true) {
+        //     bots.increasePerformance();
+        // }
+        // if (modConfig.bot_names == true) {
+        //     bots.botNames();
+        // }
+        // if (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween) {
+        //     bots.forceBossSpawns();
+        // }
+        // if (modConfig.boss_difficulty == true && !ModTracker.sainPresent) {
+        //     bots.bossDifficulty();
+        // }
+        // if (modConfig.med_changes == true) {
+        //     itemCloning.createCustomMedItems();
+        //     // bots.botMeds();
+        //     meds.loadMeds();
+        // }
+        // bots.botHpMulti();
+        // fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
+        // fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
+        // if (modConfig.malf_changes == true) {
+        //     ammo.loadAmmoMalfChanges();
+        //     weaponsGlobals.loadGlobalMalfChanges();
+        // }
+        // if (modConfig.trader_repair_changes == true) {
+        //     traders.loadTraderRepairs();
+        // }
+        // if (ConfigChecker.dllIsPresent == true) {
+        //     if (modConfig.recoil_attachment_overhaul) {
+        //         ammo.loadAmmoFirerateChanges();
+        //         // quests.fixMechancicQuests();
+        //         ammo.grenadeTweaks();
+        //     }
+        //     if (modConfig.headset_changes) {
+        //         gear.loadHeadsetTweaks();
+        //     }
+        // }
+        // if (modConfig.remove_quest_fir_req == true) {
+        //     quests.removeFIRQuestRequire();
+        // }
+        // //traders
+        // traders.loadTraderTweaks();
+        // if (modConfig.change_trader_ll == true) {
+        //     traders.setLoyaltyLevels();
+        // }
+        // if (modConfig.add_cust_trader_items == true) {
+        //     traders.addItemsToAssorts();
+        // }
+        // traders.loadTraderRefreshTimes();
+        // //
+        // if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
+        //     attachBase.loadAttRequirements();
+        // }
+        // attachBase.loadAttCompat();
+        // itemsClass.loadItemsRestrictions();
+        // player.loadPlayerStats();
+        // player.playerProfiles(jsonUtil);
+        // weaponsGlobals.loadGlobalWeps();
     }
     postAkiLoad(container) {
         this.modLoader = container.resolve("PreAkiModLoader");

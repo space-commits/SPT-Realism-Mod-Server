@@ -590,128 +590,128 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const descGen = new DescriptionGen(tables);
         const jsonHand = new JsonHandler(tables, logger);
 
-        this.dllChecker(logger, modConfig);
+        // this.dllChecker(logger, modConfig);
 
-        if (modConfig.recoil_attachment_overhaul == true) {
-            itemCloning.createCustomWeapons();
-            itemCloning.createCustomAttachments();
-            itemsClass.addCustomItems();
-        }
+        // if (modConfig.recoil_attachment_overhaul == true) {
+        //     itemCloning.createCustomWeapons();
+        //     itemCloning.createCustomAttachments();
+        //     itemsClass.addCustomItems();
+        // }
 
-        // codegen.attTemplatesCodeGen();
-        // codegen.weapTemplatesCodeGen();
-        // codegen.gearTemplatesCodeGen();
-        // codegen.ammoTemplatesCodeGen();
+        // // codegen.attTemplatesCodeGen();
+        // // codegen.weapTemplatesCodeGen();
+        // // codegen.gearTemplatesCodeGen();
+        // // codegen.ammoTemplatesCodeGen();
 
-        if (modConfig.realistic_ballistics == true) {
-            ammo.loadAmmoStats();
-            armor.loadArmor();
-            bots.setBotHealth();
-        }
+        // if (modConfig.realistic_ballistics == true) {
+        //     ammo.loadAmmoStats();
+        //     armor.loadArmor();
+        //     bots.setBotHealth();
+        // }
 
-        jsonHand.pushModsToServer();
-        jsonHand.pushWeaponsToServer();
-        jsonHand.pushGearToServer();
-        descGen.descriptionGen();
+        // jsonHand.pushModsToServer();
+        // jsonHand.pushWeaponsToServer();
+        // jsonHand.pushGearToServer();
+        // descGen.descriptionGen();
 
-        armor.armorMousePenalty();
+        // armor.armorMousePenalty();
 
-        if (modConfig.headgear_conflicts == true) {
-            gear.loadGearConflicts();
-        }
+        // if (modConfig.headgear_conflicts == true) {
+        //     gear.loadGearConflicts();
+        // }
 
-        if (modConfig.open_zones_fix == true) {
-            maps.openZonesFix();
-        }
+        // if (modConfig.open_zones_fix == true) {
+        //     maps.openZonesFix();
+        // }
 
-        if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
-            maps.loadSpawnChanges();
-        }
+        // if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
+        //     maps.loadSpawnChanges();
+        // }
 
-        if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdrops();
-        }
+        // if (modConfig.airdrop_changes == true) {
+        //     airdrop.loadAirdrops();
+        // }
 
-        if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-            bots.loadBots();
-        }
+        // if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
+        //     bots.loadBots();
+        // }
 
-        if (modConfig.increased_bot_cap == true) {
-            bots.increaseBotCap();
-        }
-        else if (modConfig.spawn_waves == true) {
-            bots.increasePerformance();
-        }
+        // if (modConfig.increased_bot_cap == true) {
+        //     bots.increaseBotCap();
+        // }
+        // else if (modConfig.spawn_waves == true) {
+        //     bots.increasePerformance();
+        // }
 
-        if (modConfig.bot_names == true) {
-            bots.botNames();
-        }
+        // if (modConfig.bot_names == true) {
+        //     bots.botNames();
+        // }
 
-        if (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween) {
-            bots.forceBossSpawns();
-        }
+        // if (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween) {
+        //     bots.forceBossSpawns();
+        // }
 
-        if (modConfig.boss_difficulty == true && !ModTracker.sainPresent) {
-            bots.bossDifficulty();
-        }
+        // if (modConfig.boss_difficulty == true && !ModTracker.sainPresent) {
+        //     bots.bossDifficulty();
+        // }
 
-        if (modConfig.med_changes == true) {
-            itemCloning.createCustomMedItems();
-            // bots.botMeds();
-            meds.loadMeds();
-        }
+        // if (modConfig.med_changes == true) {
+        //     itemCloning.createCustomMedItems();
+        //     // bots.botMeds();
+        //     meds.loadMeds();
+        // }
 
-        bots.botHpMulti();
+        // bots.botHpMulti();
 
-        fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
-        fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
+        // fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
+        // fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
 
-        if (modConfig.malf_changes == true) {
-            ammo.loadAmmoMalfChanges();
-            weaponsGlobals.loadGlobalMalfChanges();
-        }
+        // if (modConfig.malf_changes == true) {
+        //     ammo.loadAmmoMalfChanges();
+        //     weaponsGlobals.loadGlobalMalfChanges();
+        // }
 
-        if (modConfig.trader_repair_changes == true) {
-            traders.loadTraderRepairs();
-        }
+        // if (modConfig.trader_repair_changes == true) {
+        //     traders.loadTraderRepairs();
+        // }
 
-        if (ConfigChecker.dllIsPresent == true) {
-            if (modConfig.recoil_attachment_overhaul) {
-                ammo.loadAmmoFirerateChanges();
-                quests.fixMechancicQuests();
-                ammo.grenadeTweaks();
-            }
-            if (modConfig.headset_changes) {
-                gear.loadHeadsetTweaks();
-            }
-        }
+        // if (ConfigChecker.dllIsPresent == true) {
+        //     if (modConfig.recoil_attachment_overhaul) {
+        //         ammo.loadAmmoFirerateChanges();
+        //         // quests.fixMechancicQuests();
+        //         ammo.grenadeTweaks();
+        //     }
+        //     if (modConfig.headset_changes) {
+        //         gear.loadHeadsetTweaks();
+        //     }
+        // }
 
-        if (modConfig.remove_quest_fir_req == true) {
-            quests.removeFIRQuestRequire();
-        }
+        // if (modConfig.remove_quest_fir_req == true) {
+        //     quests.removeFIRQuestRequire();
+        // }
 
-        //traders
-        traders.loadTraderTweaks();
+        // //traders
+        // traders.loadTraderTweaks();
         
-        if (modConfig.change_trader_ll == true) {
-            traders.setLoyaltyLevels();
-        }
-        if (modConfig.add_cust_trader_items == true) {
-            traders.addItemsToAssorts();
-        }
-        traders.loadTraderRefreshTimes();
-        //
+        // if (modConfig.change_trader_ll == true) {
+        //     traders.setLoyaltyLevels();
+        // }
+        // if (modConfig.add_cust_trader_items == true) {
+        //     traders.addItemsToAssorts();
+        // }
+        // traders.loadTraderRefreshTimes();
+        // //
 
-        if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-            attachBase.loadAttRequirements();
-        }
+        // if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
+        //     attachBase.loadAttRequirements();
+        // }
 
-        attachBase.loadAttCompat();
+        // attachBase.loadAttCompat();
 
-        itemsClass.loadItemsRestrictions();
-        player.loadPlayerStats();
-        player.playerProfiles(jsonUtil);
-        weaponsGlobals.loadGlobalWeps();
+        // itemsClass.loadItemsRestrictions();
+        // player.loadPlayerStats();
+        // player.playerProfiles(jsonUtil);
+        // weaponsGlobals.loadGlobalWeps();
 
     }
 
