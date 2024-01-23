@@ -118,7 +118,7 @@ export class AttatchmentBase {
                 for (let slot in serverItem._props.Slots) {
                     let compatItems = serverItem._props.Slots[slot]._props.filters[0].Filter;
                     if (compatItems.includes("5649a2464bdc2d91118b45a8")) {
-                        serverItem._props.Slots[slot]._props.filters[0].Filter = tacDevices.concat(tacDevices);
+                        serverItem._props.Slots[slot]._props.filters[0].Filter = tacDevices.concat(compatItems);
                     }
                 }
             }
@@ -126,9 +126,9 @@ export class AttatchmentBase {
             if (serverItem._parent === "55818a304bdc2db5418b457d") {
                 for (let slot in serverItem._props.Slots) {
                     if (serverItem._props.Slots[slot]._name === "mod_sight_rear") {
-                        let serverArr = serverItem._props.Slots[slot]._props.filters[0].Filter;
-                        let compatMods = ["5649a2464bdc2d91118b45a8"];
-                        serverItem._props.Slots[slot]._props.filters[0].Filter = compatMods.concat(serverArr);
+                        let compatItems = serverItem._props.Slots[slot]._props.filters[0].Filter;
+                        let canted = ["5649a2464bdc2d91118b45a8"];
+                        serverItem._props.Slots[slot]._props.filters[0].Filter = canted.concat(compatItems);
                     }
                 }
             }
