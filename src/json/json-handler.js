@@ -110,9 +110,9 @@ class JsonHandler {
                         serverItem._props.RecoilForceUp *= 0.5;
                         serverItem._props.RecoilForceBack *= 1.5;
                         serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-                        serverItem._props.Convergence *= 4;
+                        serverItem._props.RecoilReturnSpeedHandRotation *= 4;
                         serverItem._props.RecoilAngle = 90;
-                        serverItem._props.CameraRecoil = 0.01;
+                        serverItem._props.RecoilCamera = 0.01;
                         let weapPropertyValues = ["SPTRM", "undefined", "0", "false", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
                         let combinedArr = weapPropertyValues.concat(serverConfItems);
                         serverItem._props.ConflictingItems = combinedArr;
@@ -122,9 +122,9 @@ class JsonHandler {
                         serverItem._props.RecoilForceUp *= 0.5;
                         serverItem._props.RecoilForceBack *= 0.3;
                         serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-                        serverItem._props.Convergence *= 10;
+                        serverItem._props.RecoilReturnSpeedHandRotation *= 10;
                         serverItem._props.RecoilAngle = 90;
-                        serverItem._props.CameraRecoil *= 0.9;
+                        serverItem._props.RecoilCamera *= 0.9;
                         let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
                         let combinedArr = weapPropertyValues.concat(serverConfItems);
                         serverItem._props.ConflictingItems = combinedArr;

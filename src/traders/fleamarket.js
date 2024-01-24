@@ -449,8 +449,7 @@ class TieredFlea {
             if (this.checkIfBanned(this.itemDB()[i]._id)) {
                 this.itemDB()[i]._props.CanSellOnRagfair = false;
             }
-            else if (this.itemDB()[i]._parent === "5448e54d4bdc2dcc718b4568"
-                || this.itemDB()[i]._parent === "5448e5284bdc2dcb718b4567") {
+            else if (this.itemDB()[i]._parent === enums_1.ParentClasses.ARMORVEST || this.itemDB()[i]._parent === enums_1.ParentClasses.ARMOR_PLATE) {
                 this.itemDB()[i]._props.CanSellOnRagfair = bool;
             }
         }

@@ -161,8 +161,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
             const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
-                result.prepareAndGenerateBots = (sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase[] => {
-                    return botGen.myPrepareAndGenerateBots(sessionId, botGenerationDetails);
+                result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase => {
+                    return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
                 }
             }, { frequency: "Always" });
         }
@@ -605,7 +605,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
-            armor.revertHelmetZones();
             armor.loadArmor();
             bots.setBotHealth();
         }

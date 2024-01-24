@@ -324,9 +324,9 @@ export class JsonGen {
         let VerticalRecoil = serverItem._props.RecoilForceUp;
         let HorizontalRecoil = serverItem._props.RecoilForceBack;
         let Dispersion = serverItem._props.RecolDispersion;
-        let CameraRecoil = serverItem._props.CameraRecoil;
+        let CameraRecoil = serverItem._props.RecoilCamera;
         let CameraSnap = serverItem._props.CameraSnap;
-        let Convergence = serverItem._props.Convergence;
+        let Convergence = serverItem._props.RecoilReturnSpeedHandRotation;
         let RecoilAngle = serverItem._props.RecoilAngle;
         let DurabilityBurnRatio = serverItem._props.DurabilityBurnRatio;
         let BaseMalfunctionChance = serverItem._props.BaseMalfunctionChance;

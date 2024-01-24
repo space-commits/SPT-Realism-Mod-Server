@@ -79,6 +79,7 @@ class WeaponsGlobals {
             this.globalDB().Aiming.ProceduralIntensityByPose["x"] = 0.15;
             this.globalDB().Aiming.ProceduralIntensityByPose["y"] = 0.7;
             this.globalDB().Aiming.AimProceduralIntensity = 1;
+            this.globalDB().Aiming.RecoilCrank = true;
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }

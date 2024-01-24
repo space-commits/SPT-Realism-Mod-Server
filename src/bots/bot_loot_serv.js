@@ -241,7 +241,7 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
             const itemSpawnLimits = {};
             let fitItemIntoContainerAttempts = 0;
             for (let i = 0; i < totalItemCount; i++) {
-                const itemToAddTemplate = this.getRandomItemFromPoolByRole(pool, botRole);
+                const itemToAddTemplate = this.getRandomItemFromPoolByBotRole(pool, botRole);
                 const id = this.hashUtil.generate();
                 const itemsToAdd = [{
                         _id: id,
@@ -267,32 +267,28 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
                         continue;
                     }
                 }
-                // Fill ammo box
-                if (this.itemHelper.isOfBaseclass(itemToAddTemplate._id, BaseClasses_1.BaseClasses.AMMO_BOX)) {
-                    this.itemHelper.addCartridgesToAmmoBox(itemsToAdd, itemToAddTemplate);
-                }
-                // make money a stack
-                else if (this.itemHelper.isOfBaseclass(itemToAddTemplate._id, BaseClasses_1.BaseClasses.MONEY)) {
-                    this.randomiseMoneyStackSize(isPmc, itemToAddTemplate, itemsToAdd[0]);
-                }
-                // Make ammo a stack
-                else if (this.itemHelper.isOfBaseclass(itemToAddTemplate._id, BaseClasses_1.BaseClasses.AMMO)) {
-                    this.randomiseAmmoStackSize(isPmc, itemToAddTemplate, itemsToAdd[0]);
-                }
+                this.addRequiredChildItemsToParent(itemToAddTemplate, itemsToAdd, isPmc);
                 // Attempt to add item to container(s)
                 const itemAddedResult = this.botWeaponGeneratorHelper.addItemWithChildrenToEquipmentSlot(equipmentSlots, id, itemToAddTemplate._id, itemsToAdd, inventoryToAddItemsTo);
-                if (itemAddedResult === ItemAddedResult_1.ItemAddedResult.NO_SPACE) {
-                    fitItemIntoContainerAttempts++;
-                    if (fitItemIntoContainerAttempts >= 4) {
-                        this.logger.debug(`Failed to place item ${i} of ${totalItemCount} item into ${botRole} container: ${equipmentSlots}, ${fitItemIntoContainerAttempts} times, skipping`);
+                // Handle when item cannot be added
+                if (itemAddedResult !== ItemAddedResult_1.ItemAddedResult.SUCCESS) {
+                    if (itemAddedResult === ItemAddedResult_1.ItemAddedResult.NO_CONTAINERS) {
+                        // Bot has no container to put item in, exit
+                        this.logger.debug(`Unable to add: ${totalItemCount} items to bot as it lacks a container to include them`);
                         break;
                     }
+                    fitItemIntoContainerAttempts++;
+                    if (fitItemIntoContainerAttempts >= 4) {
+                        this.logger.debug(`Failed to place item ${i} of ${totalItemCount} items into ${botRole} containers: ${equipmentSlots.join(",")}. Tried ${fitItemIntoContainerAttempts} times, reason: ${ItemAddedResult_1.ItemAddedResult[itemAddedResult]}, skipping`);
+                        break;
+                    }
+                    // Try again, failed but still under attempt limit
+                    continue;
                 }
-                else {
-                    fitItemIntoContainerAttempts = 0;
-                }
+                // Item added okay, reset counter for next item
+                fitItemIntoContainerAttempts = 0;
                 // Stop adding items to bots pool if rolling total is over total limit
-                if (totalValueLimitRub > 0 && itemAddedResult === ItemAddedResult_1.ItemAddedResult.SUCCESS) {
+                if (totalValueLimitRub > 0) {
                     currentTotalRub += this.handbookHelper.getTemplatePrice(itemToAddTemplate._id);
                     if (currentTotalRub > totalValueLimitRub) {
                         break;

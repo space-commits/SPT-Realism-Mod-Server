@@ -2,44 +2,74 @@
     "condition": {
         "5422acb9af1c889c16000029": {
             "_name": "WEAPON",
-            "conditionChance": 0.4,
-            "min": 0.1,
+            "conditionChance": 0.2,
+            "min": 0.3,
             "max": 1
         },
         "543be5664bdc2dd4348b4569": {
             "_name": "MEDS",
-            "conditionChance": 0.35,
-            "min": 0.4,
+            "conditionChance": 0.2,
+            "min": 0.3,
             "max": 1
         },
         "5447e0e74bdc2d3c308b4567": {
             "_name": "SPEC_ITEM",
-            "conditionChance": 0.5,
+            "conditionChance": 0.3,
             "min": 0.02,
             "max": 1
         },
         "543be5e94bdc2df1348b4568": {
             "_name": "KEY",
-            "conditionChance": 1,
-            "min": 0.1,
+            "conditionChance": 0.04,
+            "min": 0.5,
             "max": 1
         },
         "5448e5284bdc2dcb718b4567": {
             "_name": "VEST",
-            "conditionChance": 0.5,
+            "conditionChance": 0.2,
             "min": 0.05,
+            "max": 1
+        },
+        "65649eb40bf0ed77b8044453": {
+            "_name": "BUILT_IN_INSERTS",
+            "conditionChance": 0.3,
+            "min": 0.1,
             "max": 1
         },
         "57bef4c42459772e8d35a53b": {
             "_name": "ARMORED_EQUIPMENT",
-            "conditionChance": 0.5,
+            "conditionChance": 0.25,
             "min": 0.05,
+            "max": 1
+        },
+        "644120aa86ffbe10ee032b6f": {
+            "_name": "ARMOR_PLATE",
+            "conditionChance": 0.45,
+            "min": 0.2,
             "max": 1
         },
         "543be6674bdc2df1348b4569": {
             "_name": "FOOD_DRINK",
-            "conditionChance": 0.3,
+            "conditionChance": 0.05,
+            "min": 0.05,
+            "max": 1
+        },
+        "5d650c3e815116009f6201d2": {
+            "_name": "FUEL",
+            "conditionChance": 0.12,
             "min": 0.5,
+            "max": 0.99
+        },
+        "5a341c4686f77469e155819e": {
+            "_name": "FACECOVER",
+            "conditionChance": 0.32,
+            "min": 0.3,
+            "max": 1
+        },
+        "5448e5724bdc2ddf718b4568": {
+            "_name": "VISORS",
+            "conditionChance": 0.32,
+            "min": 0.35,
             "max": 1
         }
     }

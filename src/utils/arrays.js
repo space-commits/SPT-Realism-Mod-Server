@@ -361,7 +361,8 @@ class Arrays {
         "rezervbase",
         "reservebase",
         "streets of tarkov",
-        "tarkovstreets"
+        "tarkovstreets",
+        "sandbox"
     ];
     cqbMaps = [
         "factory",

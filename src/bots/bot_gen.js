@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotEquipGenHelper = exports.BotGenHelper = exports.CheckRequired = exports.BotWepGen = exports.BotInvGen = exports.BotGen = exports.GenBotLvl = void 0;
+exports.BotEquipGenHelper = exports.BotGenHelper = exports.CheckRequired = exports.BotWepGen = exports.BotEquipModGen = exports.BotInvGen = exports.BotGen = exports.GenBotLvl = void 0;
 const BotWeaponGenerator_1 = require("C:/snapshot/project/obj/generators/BotWeaponGenerator");
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const utils_1 = require("../utils/utils");
@@ -16,6 +16,7 @@ const bot_loot_serv_1 = require("./bot_loot_serv");
 const EquipmentSlots_1 = require("C:/snapshot/project/obj/models/enums/EquipmentSlots");
 const enums_1 = require("../utils/enums");
 const seasonalevents_1 = require("../misc/seasonalevents");
+const IFilterPlateModsForSlotByLevelResult_1 = require("C:/snapshot/project/obj/generators/IFilterPlateModsForSlotByLevelResult");
 const modConfig = require("../../config/config.json");
 class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
     genBotLvl(levelDetails, botGenerationDetails, bot) {
@@ -81,7 +82,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
     botTierMapFactor(tier, utils) {
         const hightier = ["rezervbase", "reservebase", "tarkovstreets", "factory4_night"];
         const midtier = ["shoreline", "lighthouse", "interchange", "factory4_night"];
-        const lowtier = ["bigmap", "customs", "tarkovstreets"];
+        const lowtier = ["bigmap", "customs", "tarkovstreets", "sandbox"];
         let rndNum = utils.pickRandNumOneInTen();
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
@@ -97,105 +98,101 @@ class BotGen extends BotGenerator_1.BotGenerator {
         }
         return tier;
     }
-    myPrepareAndGenerateBots(sessionId, botGenerationDetails) {
+    myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
         const postLoadDBServer = tsyringe_1.container.resolve("DatabaseServer");
         const tables = postLoadDBServer.getTables();
         const arrays = new arrays_1.Arrays(tables);
         const utils = new utils_1.Utils(tables, arrays);
         const botLoader = new bots_1.BotLoader(this.logger, tables, this.configServer, modConfig, arrays, utils);
-        const output = [];
-        for (let i = 0; i < botGenerationDetails.botCountToGenerate; i++) {
-            let bot = this.getCloneOfBotBase();
-            bot.Info.Settings.Role = botGenerationDetails.role;
-            bot.Info.Side = botGenerationDetails.side;
-            bot.Info.Settings.BotDifficulty = botGenerationDetails.botDifficulty;
-            // Get raw json data for bot (Cloned)
-            const botJsonTemplate = this.jsonUtil.clone(this.botHelper.getBotTemplate((botGenerationDetails.isPmc)
-                ? bot.Info.Side
-                : botGenerationDetails.role));
-            const botRole = botGenerationDetails.role.toLowerCase();
-            const isPMC = this.botHelper.isBotPmc(botRole);
-            let pmcTier = 1;
-            if (isPMC) {
-                pmcTier = this.botTierMapFactor(this.getPMCTier(utils), utils);
-                const isUSEC = this.isBotUSEC(botRole);
-                const changeDiffi = modConfig.pmc_difficulty == true && utils_1.ModTracker.sainPresent == false;
-                if (modConfig.bot_testing == true) {
-                    pmcTier = modConfig.bot_test_tier;
+        let bot = this.getCloneOfBotBase();
+        bot.Info.Settings.Role = botGenerationDetails.eventRole ? botGenerationDetails.eventRole : botGenerationDetails.role;
+        bot.Info.Side = botGenerationDetails.side;
+        bot.Info.Settings.BotDifficulty = botGenerationDetails.botDifficulty;
+        // Get raw json data for bot (Cloned)
+        const botJsonTemplate = this.jsonUtil.clone(this.botHelper.getBotTemplate((botGenerationDetails.isPmc)
+            ? bot.Info.Side
+            : botGenerationDetails.role));
+        const botRole = botGenerationDetails.role.toLowerCase();
+        const isPMC = this.botHelper.isBotPmc(botRole);
+        let pmcTier = 1;
+        if (isPMC) {
+            pmcTier = this.botTierMapFactor(this.getPMCTier(utils), utils);
+            const isUSEC = this.isBotUSEC(botRole);
+            const changeDiffi = modConfig.pmc_difficulty == true && utils_1.ModTracker.sainPresent == false;
+            if (modConfig.bot_testing == true) {
+                pmcTier = modConfig.bot_test_tier;
+            }
+            if (pmcTier === 1) {
+                if (isUSEC) {
+                    botLoader.usecLoad1(botJsonTemplate);
                 }
-                if (pmcTier === 1) {
-                    if (isUSEC) {
-                        botLoader.usecLoad1(botJsonTemplate);
-                    }
-                    else {
-                        botLoader.bearLoad1(botJsonTemplate);
-                    }
-                    if (changeDiffi == true) {
-                        bot.Info.Settings.BotDifficulty = "normal";
-                    }
+                else {
+                    botLoader.bearLoad1(botJsonTemplate);
                 }
-                if (pmcTier === 2) {
-                    if (isUSEC) {
-                        botLoader.usecLoad2(botJsonTemplate);
-                    }
-                    else {
-                        botLoader.bearLoad2(botJsonTemplate);
-                    }
-                    if (changeDiffi == true) {
-                        bot.Info.Settings.BotDifficulty = "normal";
-                    }
-                }
-                if (pmcTier === 3) {
-                    if (isUSEC) {
-                        botLoader.usecLoad3(botJsonTemplate);
-                    }
-                    else {
-                        botLoader.bearLoad3(botJsonTemplate);
-                    }
-                    if (changeDiffi == true) {
-                        bot.Info.Settings.BotDifficulty = "hard";
-                    }
-                }
-                if (pmcTier === 4) {
-                    if (isUSEC) {
-                        botLoader.usecLoad4(botJsonTemplate);
-                    }
-                    else {
-                        botLoader.bearLoad4(botJsonTemplate);
-                    }
-                    if (changeDiffi == true) {
-                        bot.Info.Settings.BotDifficulty = "hard";
-                    }
-                }
-                if (pmcTier === 5) {
-                    if (isUSEC) {
-                        botLoader.usecLoad5(botJsonTemplate);
-                    }
-                    else {
-                        botLoader.bearLoad5(botJsonTemplate);
-                    }
-                    if (changeDiffi == true) {
-                        bot.Info.Settings.BotDifficulty = "impossible";
-                    }
-                }
-                if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
-                    botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = {};
-                    botJsonTemplate.inventory.equipment.SecondPrimaryWeapon = {};
-                    botJsonTemplate.inventory.equipment.Holster = {};
-                }
-                if (modConfig.logEverything == true) {
-                    this.logger.warning("=================");
-                    this.logger.warning("bot " + botRole);
-                    this.logger.warning("tier " + pmcTier);
-                    this.logger.warning("map " + utils_1.RaidInfoTracker.mapName);
-                    this.logger.warning("TOD " + utils_1.RaidInfoTracker.TOD);
-                    this.logger.warning("===========");
+                if (changeDiffi == true) {
+                    bot.Info.Settings.BotDifficulty = "normal";
                 }
             }
-            bot = this.myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier);
-            output.push(bot);
+            if (pmcTier === 2) {
+                if (isUSEC) {
+                    botLoader.usecLoad2(botJsonTemplate);
+                }
+                else {
+                    botLoader.bearLoad2(botJsonTemplate);
+                }
+                if (changeDiffi == true) {
+                    bot.Info.Settings.BotDifficulty = "normal";
+                }
+            }
+            if (pmcTier === 3) {
+                if (isUSEC) {
+                    botLoader.usecLoad3(botJsonTemplate);
+                }
+                else {
+                    botLoader.bearLoad3(botJsonTemplate);
+                }
+                if (changeDiffi == true) {
+                    bot.Info.Settings.BotDifficulty = "hard";
+                }
+            }
+            if (pmcTier === 4) {
+                if (isUSEC) {
+                    botLoader.usecLoad4(botJsonTemplate);
+                }
+                else {
+                    botLoader.bearLoad4(botJsonTemplate);
+                }
+                if (changeDiffi == true) {
+                    bot.Info.Settings.BotDifficulty = "hard";
+                }
+            }
+            if (pmcTier === 5) {
+                if (isUSEC) {
+                    botLoader.usecLoad5(botJsonTemplate);
+                }
+                else {
+                    botLoader.bearLoad5(botJsonTemplate);
+                }
+                if (changeDiffi == true) {
+                    bot.Info.Settings.BotDifficulty = "impossible";
+                }
+            }
+            if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
+                botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = {};
+                botJsonTemplate.inventory.equipment.SecondPrimaryWeapon = {};
+                botJsonTemplate.inventory.equipment.Holster = {};
+            }
+            if (modConfig.logEverything == true) {
+                this.logger.warning("=================");
+                this.logger.warning("bot " + botRole);
+                this.logger.warning("tier " + pmcTier);
+                this.logger.warning("map " + utils_1.RaidInfoTracker.mapName);
+                this.logger.warning("TOD " + utils_1.RaidInfoTracker.TOD);
+                this.logger.warning("===========");
+            }
         }
-        return output;
+        bot = this.myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier);
+        return bot;
     }
     myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier) {
         const botWeaponGenerator = tsyringe_1.container.resolve("BotWeaponGenerator");
@@ -223,6 +220,10 @@ class BotGen extends BotGenerator_1.BotGenerator {
         if (seasonalevents_1.EventTracker.isHalloween == true) {
             seasonalEvents.giveBotsHalloweenTreats(botJsonTemplate);
         }
+        // Remove hideout data if bot is not a PMC or pscav
+        if (!(botGenerationDetails.isPmc || botGenerationDetails.isPlayerScav)) {
+            bot.Hideout = null;
+        }
         bot.Info.Experience = botLevel.exp;
         bot.Info.Level = botLevel.level;
         bot.Info.Settings.Experience = this.randomUtil.getInt(botJsonTemplate.experience.reward.min, botJsonTemplate.experience.reward.max);
@@ -234,13 +235,19 @@ class BotGen extends BotGenerator_1.BotGenerator {
         bot.Inventory = botInvGen.myGenerateInventory(sessionId, botJsonTemplate, botRole, botGenerationDetails.isPmc, botLevel.level, pmcTier);
         if (this.botHelper.isBotPmc(botRole)) {
             this.getRandomisedGameVersionAndCategory(bot.Info);
-            bot = this.generateDogtag(bot);
             bot.Info.IsStreamerModeAvailable = true; // Set to true so client patches can pick it up later - client sometimes alters botrole to assaultGroup
+        }
+        if (this.botConfig.botRolesWithDogTags.includes(botRole)) {
+            this.addDogtagToBot(bot);
         }
         // generate new bot ID
         bot = this.generateId(bot);
         // generate new inventory ID
         bot = this.generateInventoryID(bot);
+        // Set role back to originally requested now its been generated
+        if (botGenerationDetails.eventRole) {
+            bot.Info.Settings.Role = botGenerationDetails.eventRole;
+        }
         return bot;
     }
 }
@@ -277,7 +284,7 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         const equipmentChances = botJsonTemplate.chances;
         const itemGenerationLimitsMinMax = botJsonTemplate.generation;
         // Generate base inventory with no items
-        let botInventory = this.generateInventoryBase();
+        const botInventory = this.generateInventoryBase();
         this.myGenerateAndAddEquipmentToBot(templateInventory, equipmentChances, botRole, botInventory, botLevel);
         // Roll weapon spawns and generate a weapon for each roll that passed
         this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, false);
@@ -319,7 +326,7 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         const botWeaponModLimitService = tsyringe_1.container.resolve("BotWeaponModLimitService");
         const repairService = tsyringe_1.container.resolve("RepairService");
         const botWepGen = new BotWepGen(jsonUtil, this.logger, this.hashUtil, this.databaseServer, itemHelper, this.weightedRandomHelper, this.botGeneratorHelper, this.randomUtil, this.configServer, botWeaponGeneratorHelper, botWeaponModLimitService, this.botEquipmentModGenerator, this.localisationService, repairService, inventoryMagGenComponents);
-        const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.mods, botRole, isPmc, botLevel, pmcTier, getSecondary);
+        const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.weaponMods, botRole, isPmc, botLevel, pmcTier, getSecondary);
         botInventory.items.push(...generatedWeapon.weapon);
         this.botWeaponGenerator.addExtraMagazinesToInventory(generatedWeapon, itemGenerationLimitsMinMax.items.magazines, botInventory, botRole);
     }
@@ -342,65 +349,273 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
             if (excludedSlots.includes(equipmentSlot)) {
                 continue;
             }
-            this.myGenerateEquipment(equipmentSlot, templateInventory.equipment[equipmentSlot], templateInventory.mods, equipmentChances, botRole, botInventory, randomistionDetails);
+            this.myGenerateEquipment({
+                rootEquipmentSlot: equipmentSlot,
+                rootEquipmentPool: templateInventory.equipment[equipmentSlot],
+                modPool: templateInventory.mods,
+                spawnChances: equipmentChances,
+                botRole: botRole,
+                botLevel: botLevel,
+                inventory: botInventory,
+                botEquipmentConfig: botEquipConfig,
+                randomisationDetails: randomistionDetails
+            });
         }
         // Generate below in specific order
-        this.myGenerateEquipment(EquipmentSlots_1.EquipmentSlots.HEADWEAR, templateInventory.equipment.Headwear, templateInventory.mods, equipmentChances, botRole, botInventory, randomistionDetails);
-        this.myGenerateEquipment(EquipmentSlots_1.EquipmentSlots.FACE_COVER, templateInventory.equipment.FaceCover, templateInventory.mods, equipmentChances, botRole, botInventory, randomistionDetails);
-        this.myGenerateEquipment(EquipmentSlots_1.EquipmentSlots.EARPIECE, templateInventory.equipment.Earpiece, templateInventory.mods, equipmentChances, botRole, botInventory, randomistionDetails);
-        this.myGenerateEquipment(EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST, templateInventory.equipment.TacticalVest, templateInventory.mods, equipmentChances, botRole, botInventory, randomistionDetails);
-        this.myGenerateEquipment(EquipmentSlots_1.EquipmentSlots.ARMOR_VEST, templateInventory.equipment.ArmorVest, templateInventory.mods, equipmentChances, botRole, botInventory, randomistionDetails);
+        this.myGenerateEquipment({
+            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.HEADWEAR,
+            rootEquipmentPool: templateInventory.equipment.Headwear,
+            modPool: templateInventory.mods,
+            spawnChances: equipmentChances,
+            botRole: botRole,
+            botLevel: botLevel,
+            inventory: botInventory,
+            botEquipmentConfig: botEquipConfig,
+            randomisationDetails: randomistionDetails
+        });
+        this.myGenerateEquipment({
+            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.FACE_COVER,
+            rootEquipmentPool: templateInventory.equipment.FaceCover,
+            modPool: templateInventory.mods,
+            spawnChances: equipmentChances,
+            botRole: botRole,
+            botLevel: botLevel,
+            inventory: botInventory,
+            botEquipmentConfig: botEquipConfig,
+            randomisationDetails: randomistionDetails
+        });
+        this.myGenerateEquipment({
+            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.EARPIECE,
+            rootEquipmentPool: templateInventory.equipment.Earpiece,
+            modPool: templateInventory.mods,
+            spawnChances: equipmentChances,
+            botRole: botRole,
+            botLevel: botLevel,
+            inventory: botInventory,
+            botEquipmentConfig: botEquipConfig,
+            randomisationDetails: randomistionDetails
+        });
+        this.myGenerateEquipment({
+            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST,
+            rootEquipmentPool: templateInventory.equipment.TacticalVest,
+            modPool: templateInventory.mods,
+            spawnChances: equipmentChances,
+            botRole: botRole,
+            botLevel: botLevel,
+            inventory: botInventory,
+            botEquipmentConfig: botEquipConfig,
+            randomisationDetails: randomistionDetails
+        });
+        this.myGenerateEquipment({
+            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.ARMOR_VEST,
+            rootEquipmentPool: templateInventory.equipment.ArmorVest,
+            modPool: templateInventory.mods,
+            spawnChances: equipmentChances,
+            botRole: botRole,
+            botLevel: botLevel,
+            inventory: botInventory,
+            botEquipmentConfig: botEquipConfig,
+            randomisationDetails: randomistionDetails
+        });
     }
-    myGenerateEquipment(equipmentSlot, equipmentPool, modPool, spawnChances, botRole, inventory, randomisationDetails) {
+    myGenerateEquipment(settings) {
         const logger = tsyringe_1.container.resolve("WinstonLogger");
         const durabilityLimitsHelper = tsyringe_1.container.resolve("DurabilityLimitsHelper");
         const appContext = tsyringe_1.container.resolve("ApplicationContext");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
+        const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
+        const probabilityHelper = tsyringe_1.container.resolve("ProbabilityHelper");
+        const botWeaponGeneratorHelper = tsyringe_1.container.resolve("BotWeaponGeneratorHelper");
+        const botEquipmentFilterService = tsyringe_1.container.resolve("BotEquipmentFilterService");
+        const profileHelper = tsyringe_1.container.resolve("ProfileHelper");
+        const botWeaponModLimitService = tsyringe_1.container.resolve("BotWeaponModLimitService");
+        const itemFilterService = tsyringe_1.container.resolve("ItemFilterService");
+        const presetHelper = tsyringe_1.container.resolve("PresetHelper");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, itemHelper, appContext, this.localisationService, this.configServer);
-        const spawnChance = [EquipmentSlots_1.EquipmentSlots.POCKETS, EquipmentSlots_1.EquipmentSlots.SECURED_CONTAINER].includes(equipmentSlot)
+        const myBotEquipModGen = new BotEquipModGen(logger, jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, botWeaponModLimitService, this.botHelper, this.botGeneratorHelper, botWeaponGeneratorHelper, this.weightedRandomHelper, presetHelper, this.localisationService, this.botEquipmentModPoolService, this.configServer);
+        const spawnChance = [EquipmentSlots_1.EquipmentSlots.POCKETS, EquipmentSlots_1.EquipmentSlots.SECURED_CONTAINER].includes(settings.rootEquipmentSlot)
             ? 100
-            : spawnChances.equipment[equipmentSlot];
+            : settings.spawnChances.equipment[settings.rootEquipmentSlot];
         if (typeof spawnChance === "undefined") {
-            this.logger.warning(this.localisationService.getText("bot-no_spawn_chance_defined_for_equipment_slot", equipmentSlot));
+            this.logger.warning(this.localisationService.getText("bot-no_spawn_chance_defined_for_equipment_slot", settings.rootEquipmentSlot));
             return;
         }
         const shouldSpawn = this.randomUtil.getChance100(spawnChance);
-        if (Object.keys(equipmentPool).length && shouldSpawn) {
+        if (Object.keys(settings.rootEquipmentSlot).length && shouldSpawn) {
             const id = this.hashUtil.generate();
-            const equipmentItemTpl = this.weightedRandomHelper.getWeightedValue(equipmentPool);
+            const equipmentItemTpl = this.weightedRandomHelper.getWeightedValue(settings.rootEquipmentPool);
             const itemTemplate = this.itemHelper.getItem(equipmentItemTpl);
             if (!itemTemplate[0]) {
                 this.logger.error(this.localisationService.getText("bot-missing_item_template", equipmentItemTpl));
-                this.logger.info(`EquipmentSlot -> ${equipmentSlot}`);
+                this.logger.info(`EquipmentSlot -> ${settings.rootEquipmentSlot}`);
                 return;
             }
-            if (this.botGeneratorHelper.isItemIncompatibleWithCurrentItems(inventory.items, equipmentItemTpl, equipmentSlot).incompatible) {
+            if (this.botGeneratorHelper.isItemIncompatibleWithCurrentItems(settings.inventory.items, equipmentItemTpl, settings.rootEquipmentSlot).incompatible) {
                 // Bad luck - randomly picked item was not compatible with current gear
                 return;
             }
             const item = {
                 "_id": id,
                 "_tpl": equipmentItemTpl,
-                "parentId": inventory.equipment,
-                "slotId": equipmentSlot,
-                ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate[1], botRole, itemTemplate[1]._parent)
+                "parentId": settings.inventory.equipment,
+                "slotId": settings.rootEquipmentSlot,
+                ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate[1], settings.botRole, itemTemplate[1]._parent)
             };
             // use dynamic mod pool if enabled in config
-            const botEquipmentRole = this.botGeneratorHelper.getBotEquipmentRole(botRole);
-            if (this.botConfig.equipment[botEquipmentRole] && randomisationDetails?.randomisedArmorSlots?.includes(equipmentSlot)) {
-                modPool[equipmentItemTpl] = this.getFilteredDynamicModsForItem(equipmentItemTpl, this.botConfig.equipment[botEquipmentRole].blacklist);
+            const botEquipmentRole = this.botGeneratorHelper.getBotEquipmentRole(settings.botRole);
+            if (this.botConfig.equipment[botEquipmentRole] && settings.randomisationDetails?.randomisedArmorSlots?.includes(settings.rootEquipmentSlot)) {
+                settings.modPool[equipmentItemTpl] = this.getFilteredDynamicModsForItem(equipmentItemTpl, this.botConfig.equipment[botEquipmentRole].blacklist);
             }
-            if (typeof (modPool[equipmentItemTpl]) !== "undefined" || Object.keys(modPool[equipmentItemTpl] || {}).length > 0) {
-                const items = this.botEquipmentModGenerator.generateModsForEquipment([item], modPool, id, itemTemplate[1], spawnChances.mods, botRole);
-                inventory.items.push(...items);
+            // Item has slots
+            if (itemTemplate[1]._props.Slots?.length > 0) {
+                const items = myBotEquipModGen.myGenerateModsForEquipment([item], id, itemTemplate[1], settings);
+                settings.inventory.items.push(...items);
             }
             else {
-                inventory.items.push(item);
+                settings.inventory.items.push(item);
             }
         }
     }
 }
 exports.BotInvGen = BotInvGen;
+class BotEquipModGen extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
+    getArmorPlates(settings, modSlot, existingPlateTplPool, armorItem) {
+        const result = {
+            result: IFilterPlateModsForSlotByLevelResult_1.Result.UNKNOWN_FAILURE,
+            plateModTpls: null
+        };
+        // Not pmc or not a plate slot, return original mod pool array
+        if (!this.itemHelper.isRemovablePlateSlot(modSlot)) {
+            result.result = IFilterPlateModsForSlotByLevelResult_1.Result.NOT_PLATE_HOLDING_SLOT;
+            result.plateModTpls = existingPlateTplPool;
+            return result;
+        }
+        // Get the front/back/side weights based on bots level
+        const plateSlotWeights = settings
+            .botEquipmentConfig
+            ?.armorPlateWeighting
+            ?.find(x => settings.botLevel >= x.levelRange.min && settings.botLevel <= x.levelRange.max);
+        if (!plateSlotWeights) {
+            // No weights, return original array of plate tpls
+            result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
+            result.plateModTpls = existingPlateTplPool;
+            return result;
+        }
+        // Get the specific plate slot weights (front/back/side)
+        const plateWeights = plateSlotWeights[modSlot];
+        if (!plateWeights) {
+            // No weights, return original array of plate tpls
+            result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
+            result.plateModTpls = existingPlateTplPool;
+            return result;
+        }
+        // Choose a plate level based on weighting
+        const chosenArmorPlateLevel = this.weightedRandomHelper.getWeightedValue(plateWeights);
+        // Convert the array of ids into database items
+        const platesFromDb = existingPlateTplPool.map(x => this.itemHelper.getItem(x)[1]);
+        // Filter plates to the chosen level based on its armorClass property
+        const filteredPlates = platesFromDb.filter(x => x._props.armorClass === chosenArmorPlateLevel);
+        if (filteredPlates.length === 0) {
+            this.logger.debug(`Plate filter was too restrictive for armor: ${armorItem._id}, unable to find plates of level: ${chosenArmorPlateLevel}. Using mod items default plate`);
+            const relatedItemDbModSlot = armorItem._props.Slots.find(slot => slot._name.toLowerCase() === modSlot);
+            if (!relatedItemDbModSlot._props.filters[0].Plate) {
+                // No relevant plate found after filtering AND no default plate
+                // Last attempt, get default preset and see if it has a plate default
+                const defaultPreset = this.presetHelper.getDefaultPreset(armorItem._id);
+                if (defaultPreset) {
+                    const relatedPresetSlot = defaultPreset._items.find(item => item.slotId?.toLowerCase() === modSlot);
+                    if (relatedPresetSlot) {
+                        result.result = IFilterPlateModsForSlotByLevelResult_1.Result.SUCCESS;
+                        result.plateModTpls = [relatedPresetSlot._tpl];
+                        return result;
+                    }
+                }
+                result.result = IFilterPlateModsForSlotByLevelResult_1.Result.NO_DEFAULT_FILTER;
+                return result;
+            }
+            result.result = IFilterPlateModsForSlotByLevelResult_1.Result.SUCCESS;
+            result.plateModTpls = [relatedItemDbModSlot._props.filters[0].Plate];
+            return result;
+        }
+        // Only return the items ids
+        result.result = IFilterPlateModsForSlotByLevelResult_1.Result.SUCCESS;
+        result.plateModTpls = filteredPlates.map(x => x._id);
+        return result;
+    }
+    myGenerateModsForEquipment(equipment, parentId, parentTemplate, settings, forceSpawn) {
+        const compatibleModsPool = settings.modPool[parentTemplate._id];
+        if (!compatibleModsPool) {
+            this.logger.warning(`bot: ${settings.botRole} lacks a mod slot pool for item: ${parentTemplate._id} ${parentTemplate._name}`);
+        }
+        // Iterate over mod pool and choose mods to add to item
+        for (const modSlot in compatibleModsPool) {
+            const itemSlot = this.getModItemSlot(modSlot, parentTemplate);
+            if (!itemSlot) {
+                this.logger.error(this.localisationService.getText("bot-mod_slot_missing_from_item", {
+                    modSlot: modSlot,
+                    parentId: parentTemplate._id,
+                    parentName: parentTemplate._name,
+                    botRole: settings.botRole
+                }));
+                continue;
+            }
+            if (!(this.shouldModBeSpawned(itemSlot, modSlot.toLowerCase(), settings.spawnChances.equipmentMods) || forceSpawn)) {
+                continue;
+            }
+            // Ensure submods for nvgs all spawn together
+            if (modSlot === "mod_nvg") {
+                forceSpawn = true;
+            }
+            let modPoolToChooseFrom = compatibleModsPool[modSlot];
+            if (this.itemHelper.isRemovablePlateSlot(modSlot.toLowerCase())) {
+                const outcome = this.filterPlateModsForSlotByLevel(settings, modSlot.toLowerCase(), compatibleModsPool[modSlot], parentTemplate);
+                if ([IFilterPlateModsForSlotByLevelResult_1.Result.UNKNOWN_FAILURE, IFilterPlateModsForSlotByLevelResult_1.Result.NO_DEFAULT_FILTER].includes(outcome.result)) {
+                    this.logger.debug(`Plate slot: ${modSlot} selection for armor: ${parentTemplate._id} failed: ${IFilterPlateModsForSlotByLevelResult_1.Result[outcome.result]}, skipping`);
+                    continue;
+                }
+                if ([IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS].includes(outcome.result)) {
+                    this.logger.warning(`Plate slot: ${modSlot} lacks weights for armor: ${parentTemplate._id}, unable to adjust plate choice, using existing data`);
+                }
+                modPoolToChooseFrom = outcome.plateModTpls;
+            }
+            // Find random mod and check its compatible
+            let modTpl;
+            let found = false;
+            const exhaustableModPool = new BotGeneratorHelper_1.ExhaustableArray(modPoolToChooseFrom, this.randomUtil, this.jsonUtil);
+            while (exhaustableModPool.hasValues()) {
+                modTpl = exhaustableModPool.getRandomValue();
+                if (!this.botGeneratorHelper.isItemIncompatibleWithCurrentItems(equipment, modTpl, modSlot).incompatible) {
+                    found = true;
+                    break;
+                }
+            }
+            // Compatible item not found but slot REQUIRES item, get random item from db
+            const parentSlot = parentTemplate._props.Slots.find((i) => i._name === modSlot);
+            if (!found && parentSlot !== undefined && parentSlot._required) {
+                modTpl = this.getModTplFromItemDb(modTpl, parentSlot, modSlot, equipment);
+                found = !!modTpl;
+            }
+            // Compatible item not found + not required
+            if (!found && parentSlot !== undefined && !parentSlot._required) {
+                // Don't add item
+                continue;
+            }
+            const modTemplate = this.itemHelper.getItem(modTpl);
+            if (!this.isModValidForSlot(modTemplate, itemSlot, modSlot, parentTemplate, settings.botRole)) {
+                continue;
+            }
+            const modId = this.hashUtil.generate();
+            equipment.push(this.createModItem(modId, modTpl, parentId, modSlot, modTemplate[1], settings.botRole));
+            // Does the item being added have possible child mods?
+            if (Object.keys(settings.modPool).includes(modTpl)) {
+                // Call self recursively with item being checkced item we just added to bot
+                this.generateModsForEquipment(equipment, modId, modTemplate[1], settings, forceSpawn);
+            }
+        }
+        return equipment;
+    }
+}
+exports.BotEquipModGen = BotEquipModGen;
 class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     myGenerateRandomWeapon(sessionId, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel, pmcTier, getSecondary = false) {
         let weaponTpl = "";
@@ -420,7 +635,8 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         const botHelper = tsyringe_1.container.resolve("BotHelper");
         const botEquipmentModPoolService = tsyringe_1.container.resolve("BotEquipmentModPoolService");
         const tables = this.databaseServer.getTables();
-        const _botModGen = new BotEquipGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
+        const presetHelper = tsyringe_1.container.resolve("PresetHelper");
+        const _botModGen = new BotEquipGenHelper(this.logger, this.jsonUtil, this.hashUtil, this.randomUtil, probabilityHelper, this.databaseServer, this.itemHelper, botEquipmentFilterService, itemFilterService, profileHelper, this.botWeaponModLimitService, botHelper, this.botGeneratorHelper, this.botWeaponGeneratorHelper, this.weightedRandomHelper, presetHelper, this.localisationService, botEquipmentModPoolService, this.configServer);
         const modPool = botTemplateInventory.mods;
         const weaponItemTemplate = this.itemHelper.getItem(weaponTpl)[1];
         if (!weaponItemTemplate) {
@@ -457,8 +673,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             this.fillExistingMagazines(weaponWithModsArray, magazine, ammoTpl);
         }
         // Add cartridge(s) to gun chamber(s)
-        if (weaponItemTemplate._props.Chambers?.length > 0
-            && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
+        if (weaponItemTemplate._props.Chambers?.length > 0 && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
             // Guns have variety of possible Chamber ids, patron_in_weapon/patron_in_weapon_000/patron_in_weapon_001
             const chamberSlotNames = weaponItemTemplate._props.Chambers.map(x => x._name);
             this.addCartridgeToChamber(weaponWithModsArray, ammoTpl, chamberSlotNames);
@@ -717,10 +932,14 @@ class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
             }
         }
         if (itemTemplate._props.MaxHpResource) {
-            itemProperties.MedKit = { HpResource: itemTemplate._props.MaxHpResource };
+            itemProperties.MedKit = {
+                HpResource: this.getRandomizedResourceValue(itemTemplate._props.MaxHpResource, this.botConfig.lootItemResourceRandomization[botRole]?.meds)
+            };
         }
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
-            itemProperties.FoodDrink = { HpPercent: itemTemplate._props.MaxResource };
+            itemProperties.FoodDrink = {
+                HpPercent: this.getRandomizedResourceValue(itemTemplate._props.MaxResource, this.botConfig.lootItemResourceRandomization[botRole]?.food)
+            };
         }
         if (itemTemplate._parent === BaseClasses_1.BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses_1.BaseClasses.TACTICAL_COMBO) {
             if ((parentWeaponClass === BaseClasses_1.BaseClasses.PISTOL && equipmentSlot.toLowerCase() === "holster") || equipmentSlot.toLowerCase() === "secondprimaryweapon") {
