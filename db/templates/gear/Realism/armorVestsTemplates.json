@@ -7,15 +7,7 @@
         "ArmorClass": "GOST 5A",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5ab8e4ed86f7742d8e50c7fa": {
         "ItemID": "5ab8e4ed86f7742d8e50c7fa",
@@ -25,15 +17,7 @@
         "ArmorClass": "PM 5",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "545cdb794bdc2d3a198b456a": {
         "ItemID": "545cdb794bdc2d3a198b456a",
@@ -43,15 +27,7 @@
         "ArmorClass": "GOST 6A",
         "CanSpall": true,
         "SpallReduction": 0.24,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5c0e53c886f7747fa54205c7": {
         "ItemID": "5c0e53c886f7747fa54205c7",
@@ -61,15 +37,7 @@
         "ArmorClass": "GOST 6A",
         "CanSpall": true,
         "SpallReduction": 0.31,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5c0e51be86f774598e797894": {
         "ItemID": "5c0e51be86f774598e797894",
@@ -79,15 +47,7 @@
         "ArmorClass": "GOST 6A",
         "CanSpall": true,
         "SpallReduction": 0.31,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5c0e541586f7747fa54205c9": {
         "ItemID": "5c0e541586f7747fa54205c9",
@@ -97,15 +57,7 @@
         "ArmorClass": "NIJ IV",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5df8a2ca86f7740bfe6df777": {
         "ItemID": "5df8a2ca86f7740bfe6df777",
@@ -115,15 +67,7 @@
         "ArmorClass": "GOST 2A",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5c0e5bab86f77461f55ed1f3": {
         "ItemID": "5c0e5bab86f77461f55ed1f3",
@@ -133,15 +77,7 @@
         "ArmorClass": "GOST 4",
         "CanSpall": true,
         "SpallReduction": 0.28,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5c0e57ba86f7747fa141986d": {
         "ItemID": "5c0e57ba86f7747fa141986d",
@@ -151,15 +87,7 @@
         "ArmorClass": "GOST 6A",
         "CanSpall": true,
         "SpallReduction": 0.25,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5fd4c474dd870108a754b241": {
         "ItemID": "5fd4c474dd870108a754b241",
@@ -169,14 +97,7 @@
         "ArmorClass": "NIJ RF3 07",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "609e8540d5c319764c2bc2e9": {
         "ItemID": "609e8540d5c319764c2bc2e9",
@@ -186,15 +107,7 @@
         "ArmorClass": "PM 5",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "60a283193cb70855c43a381d": {
         "ItemID": "60a283193cb70855c43a381d",
@@ -204,15 +117,7 @@
         "ArmorClass": "PM 10",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5e9dacf986f774054d6b89f4": {
         "ItemID": "5e9dacf986f774054d6b89f4",
@@ -222,15 +127,7 @@
         "ArmorClass": "GOST 5A",
         "CanSpall": true,
         "SpallReduction": 0.29,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "62a09d79de7ac81993580530": {
         "ItemID": "62a09d79de7ac81993580530",
@@ -240,15 +137,7 @@
         "ArmorClass": "VSM",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5b44cd8b86f774503d30cba2": {
         "ItemID": "5b44cd8b86f774503d30cba2",
@@ -258,15 +147,7 @@
         "ArmorClass": "XSAPI",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5b44cf1486f77431723e3d05": {
         "ItemID": "5b44cf1486f77431723e3d05",
@@ -276,15 +157,7 @@
         "ArmorClass": "XSAPI",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5b44d0de86f774503d30cba8": {
         "ItemID": "5b44d0de86f774503d30cba8",
@@ -294,15 +167,7 @@
         "ArmorClass": "XSAPI",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5b44d22286f774172b0c9de8": {
         "ItemID": "5b44d22286f774172b0c9de8",
@@ -312,15 +177,7 @@
         "ArmorClass": "GOST 2",
         "CanSpall": true,
         "SpallReduction": 0.28,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5f5f41476bdad616ad46d631": {
         "ItemID": "5f5f41476bdad616ad46d631",
@@ -330,15 +187,7 @@
         "ArmorClass": "GOST 5",
         "CanSpall": true,
         "SpallReduction": 0.3,
-        "ReloadSpeedMulti": 0.65,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 0.65
     },
     "607f20859ee58b18e41ecd90": {
         "ItemID": "607f20859ee58b18e41ecd90",
@@ -348,15 +197,7 @@
         "ArmorClass": "NIJ II",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5ca2151486f774244a3b8d30": {
         "ItemID": "5ca2151486f774244a3b8d30",
@@ -366,15 +207,7 @@
         "ArmorClass": "GOST 5A",
         "CanSpall": true,
         "SpallReduction": 0.29,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5ca21c6986f77479963115a7": {
         "ItemID": "5ca21c6986f77479963115a7",
@@ -384,15 +217,7 @@
         "ArmorClass": "GOST 5A",
         "CanSpall": true,
         "SpallReduction": 0.24,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5e4abb5086f77406975c9342": {
         "ItemID": "5e4abb5086f77406975c9342",
@@ -402,14 +227,7 @@
         "ArmorClass": "NIJ III+",
         "CanSpall": true,
         "SpallReduction": 0.21,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "6038b4ca92ec1c3103795a0d": {
         "ItemID": "6038b4ca92ec1c3103795a0d",
@@ -419,14 +237,7 @@
         "ArmorClass": "NIJ III+",
         "CanSpall": true,
         "SpallReduction": 0.21,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "6038b4b292ec1c3103795a0b": {
         "ItemID": "6038b4b292ec1c3103795a0b",
@@ -436,14 +247,7 @@
         "ArmorClass": "NIJ III+",
         "CanSpall": true,
         "SpallReduction": 0.21,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5c0e655586f774045612eeb2": {
         "ItemID": "5c0e655586f774045612eeb2",
@@ -453,14 +257,7 @@
         "ArmorClass": "NIJ III",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5c0e5edb86f77461f55ed1f7": {
         "ItemID": "5c0e5edb86f77461f55ed1f7",
@@ -470,15 +267,7 @@
         "ArmorClass": "GOST 3",
         "CanSpall": true,
         "SpallReduction": 0.4,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5c0e625a86f7742d77340f62": {
         "ItemID": "5c0e625a86f7742d77340f62",
@@ -488,15 +277,7 @@
         "ArmorClass": "GOST 6A",
         "CanSpall": true,
         "SpallReduction": 0.35,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "59e7635f86f7742cbf2c1095": {
         "ItemID": "59e7635f86f7742cbf2c1095",
@@ -506,15 +287,7 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "5648a7494bdc2d9d488b4583": {
         "ItemID": "5648a7494bdc2d9d488b4583",
@@ -524,15 +297,7 @@
         "ArmorClass": "NIJ IIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "63737f448b28897f2802b874": {
         "ItemID": "63737f448b28897f2802b874",
@@ -542,14 +307,7 @@
         "ArmorClass": "PM 8",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "64abd93857958b4249003418": {
         "ItemID": "64abd93857958b4249003418",
@@ -559,15 +317,7 @@
         "ArmorClass": "ESAPI",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "64be79e2bf8412471d0d9bcc": {
         "ItemID": "64be79e2bf8412471d0d9bcc",
@@ -577,15 +327,7 @@
         "ArmorClass": "GOST 3A",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": false,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     },
     "64be79c487d1510151095552": {
         "ItemID": "64be79c487d1510151095552",
@@ -595,14 +337,6 @@
         "ArmorClass": "GOST 3A",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": false,
-        "Price": 0
+        "ReloadSpeedMulti": 1
     }
 }

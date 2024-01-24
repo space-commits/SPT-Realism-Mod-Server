@@ -59,116 +59,105 @@ export class Armor {
             let plateColliders = serverItem._props.armorPlateColliders;
 
             ///Built-In Aramid///
-            if (class3Aramid.includes(serverItem)) {
+            if ((serverItem._props.ArmorMaterial === "Aramid" && serverItem._props.armorClass === "1") || serverItem._name.includes("module3m")) {
                 if (armorColliders.filter(str => str.includes("neck"))) {
                     serverItem._props.Durability = 25;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 3;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.45;
+                    serverItem._props.BluntThroughput = 0.55;
                 }
                 else if (armorColliders.filter(str => str.includes("arm"))) {
                     serverItem._props.Durability = 35;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 3;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.45;
+                    serverItem._props.BluntThroughput = 0.4;
                 }
                 else if (armorColliders.filter(str => str.includes("side"))) {
                     serverItem._props.Durability = 35;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 3;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.45;
+                    serverItem._props.BluntThroughput = 0.5;
                 }
                 else if (armorColliders.filter(str => str.includes("pelvis"))) {
                     serverItem._props.Durability = 40;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 3;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.6;
+                    serverItem._props.BluntThroughput = 0.4;
                 }
                 else {
                     serverItem._props.Durability = 100;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 3;
-                    serverItem._props.ArmorMaterial = 'Aramid';
                     serverItem._props.BluntThroughput = 0.45;
                 }
             }
-            if (class4Aramid.includes(serverItem)) {
+            if (serverItem._props.ArmorMaterial === "Aramid" && serverItem._props.armorClass === "2") {
                 if (armorColliders.filter(str => str.includes("neck"))) {
                     serverItem._props.Durability = 25;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 4;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.5;
+                    serverItem._props.BluntThroughput = 0.6;
                 }
                 else if (armorColliders.filter(str => str.includes("arm"))) {
                     serverItem._props.Durability = 35;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 4;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.5;
+                    serverItem._props.BluntThroughput = 0.45;
                 }
                 else if (armorColliders.filter(str => str.includes("side"))) {
                     serverItem._props.Durability = 35;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 4;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.5;
+                    serverItem._props.BluntThroughput = 0.55;
                 }
                 else if (armorColliders.filter(str => str.includes("pelvis"))) {
                     serverItem._props.Durability = 40;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 4;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.6;
+                    serverItem._props.BluntThroughput = 0.45;
                 }
                 else {
                     serverItem._props.Durability = 100;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 4;
-                    serverItem._props.ArmorMaterial = 'Aramid';
                     serverItem._props.BluntThroughput = 0.5;
                 }
             }
-            if (class5Aramid.includes(serverItem)) {
+            if (serverItem._props.ArmorMaterial === "Aramid" && (serverItem._props.armorClass === "3" || serverItem._props.armorClass === "4")) {
                 if (armorColliders.filter(str => str.includes("neck"))) {
                     serverItem._props.Durability = 25;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 5;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.6;
+                    serverItem._props.BluntThroughput = 0.7;
                 }
                 else if (armorColliders.filter(str => str.includes("arm"))) {
                     serverItem._props.Durability = 35;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 5;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.6;
+                    serverItem._props.BluntThroughput = 0.55;
                 }
                 else if (armorColliders.filter(str => str.includes("side"))) {
                     serverItem._props.Durability = 35;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 5;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.6;
+                    serverItem._props.BluntThroughput = 0.65;
                 }
                 else if (armorColliders.filter(str => str.includes("pelvis"))) {
                     serverItem._props.Durability = 40;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 5;
-                    serverItem._props.ArmorMaterial = 'Aramid';
-                    serverItem._props.BluntThroughput = 0.6;
+                    serverItem._props.BluntThroughput = 0.55;
                 }
                 else {
                     serverItem._props.Durability = 100;
                     serverItem._props.MaxDurability = serverItem._props.Durability;
                     serverItem._props.armorClass = 5;
-                    serverItem._props.ArmorMaterial = 'Aramid';
                     serverItem._props.BluntThroughput = 0.6;
                 }
+            }
+            if(serverItem._props.ArmorMaterial === "Aramid" && plateColliders !== undefined && plateColliders.length > 0){
+                serverItem._props.armorClass = 2;
+                serverItem._props.BluntThroughput = 0.4;
             }
 
 
@@ -204,8 +193,7 @@ export class Armor {
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 3;
                 serverItem._props.BluntThroughput = 0.4;
-                serverItem._props.ArmorMaterial = 'Titan';
-                serverItem._props.Weight = 9.2;
+                serverItem._props.ArmorMaterial = 'Aramid';
             }
             //6B3TM groin
             if (serverItem._id === "6576500f526e320fbe03577f" || serverItem._id === "6576504b526e320fbe035783") {
@@ -214,7 +202,6 @@ export class Armor {
                 serverItem._props.armorClass = 3;
                 serverItem._props.BluntThroughput = 0.4;
                 serverItem._props.ArmorMaterial = 'Aramid';
-                serverItem._props.Weight = 9.2;
             }
 
             //6B5 Uley 16 front/back
@@ -273,7 +260,7 @@ export class Armor {
                 serverItem._props.MaxDurability = serverItem._props.Durability;
                 serverItem._props.armorClass = 5;
                 serverItem._props.BluntThroughput = 0.35;
-                serverItem._props.ArmorMaterial = 'Titan';
+                serverItem._props.ArmorMaterial = 'Combined';
             }
 
             //Steel NIJ III

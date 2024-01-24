@@ -8,13 +8,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.92,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.82
     },
     "61bcc89aef0f505f0c6cd0fc": {
@@ -26,13 +19,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.77
     },
     "5c0e3eb886f7742015526062": {
@@ -44,13 +30,6 @@
         "CanSpall": true,
         "SpallReduction": 0.23,
         "ReloadSpeedMulti": 0.91,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "Price": 0,
         "Comfort": 1.1
     },
     "5ab8dced86f774646209ec87": {
@@ -62,13 +41,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.93,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.8
     },
     "5c0e446786f7742013381639": {
@@ -80,13 +52,6 @@
         "CanSpall": true,
         "SpallReduction": 0.29,
         "ReloadSpeedMulti": 0.91,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "Price": 0,
         "Comfort": 1.1
     },
     "5d5d87f786f77427997cfaef": {
@@ -98,13 +63,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.15,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.81
     },
     "5d5d646386f7742797261fd9": {
@@ -116,13 +74,6 @@
         "CanSpall": true,
         "SpallReduction": 0.33,
         "ReloadSpeedMulti": 0.91,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 1.14
     },
     "544a5caa4bdc2d1a388b4568": {
@@ -134,13 +85,6 @@
         "CanSpall": true,
         "SpallReduction": 0.18,
         "ReloadSpeedMulti": 1.16,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.87
     },
     "628d0618d1ba6e4fa07ce5a4": {
@@ -152,14 +96,6 @@
         "CanSpall": true,
         "SpallReduction": 0.25,
         "ReloadSpeedMulti": 0.935,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0,
         "Comfort": 1
     },
     "5e4ac41886f77406a511c9a8": {
@@ -171,13 +107,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.79
     },
     "5c0e746986f7741453628fe5": {
@@ -189,13 +118,6 @@
         "CanSpall": true,
         "SpallReduction": 0.2,
         "ReloadSpeedMulti": 0.96,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.84
     },
     "628dc750b910320f4c27a732": {
@@ -207,14 +129,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.13,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0,
         "Comfort": 0.9
     },
     "61bc85697113f767765c7fe7": {
@@ -226,13 +140,6 @@
         "CanSpall": true,
         "SpallReduction": 0.23,
         "ReloadSpeedMulti": 1.14,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.76
     },
     "609e860ebd219504d8507525": {
@@ -244,13 +151,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.97,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.81
     },
     "628b9784bcf6e2659e09b8a2": {
@@ -262,13 +162,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.75
     },
     "628b9c7d45122232a872358f": {
@@ -280,13 +173,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.13,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.76
     },
     "5b44cad286f77402a54ae7e5": {
@@ -298,13 +184,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.16,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.77
     },
     "60a3c70cde5f453f634816a3": {
@@ -316,14 +195,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.07,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0,
         "Comfort": 0.86
     },
     "60a3c68c37ea821725773ef5": {
@@ -335,14 +206,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.09,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0,
         "Comfort": 0.86
     },
     "628cd624459354321c4b7fa2": {
@@ -354,13 +217,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.08,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.74
     },
     "639343fce101f4caa40a4ef3": {
@@ -372,13 +228,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.78
     },
     "64a536392d2c4e6e970f4121": {
@@ -390,13 +239,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.79
     },
     "64a5366719bab53bd203bf33": {
@@ -408,13 +250,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0,
         "Comfort": 0.81
     }
 }

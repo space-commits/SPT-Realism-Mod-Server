@@ -242,7 +242,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 75,
+                "mod_equipment_000": 15,
+                "mod_equipment_001": 35,
+                "mod_equipment_002": 35,
+                "mod_mount": 100,
+                "mod_nvg": 5,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_flashlight": 100,
                 "mod_foregrip": 100,
                 "mod_magazine": 100,
@@ -464,7 +476,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 75,
+                "mod_equipment_000": 25,
+                "mod_equipment_001": 50,
+                "mod_equipment_002": 50,
+                "mod_mount": 100,
+                "mod_nvg": 5,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_flashlight": 100,
                 "mod_foregrip": 100,
                 "mod_magazine": 100,
@@ -481,7 +505,7 @@
                 "mod_stock_002": 100,
                 "mod_tactical": 61,
                 "mod_tactical_000": 100,
-                "mod_equipment": 70,
+                "mod_equipment": 75,
                 "mod_nvg": 10,
                 "mod_equipment_000": 25,
                 "mod_equipment_001": 50,
@@ -686,7 +710,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 75,
+                "mod_equipment_000": 35,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100,
+                "mod_mount": 100,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_flashlight": 100,
                 "mod_foregrip": 100,
                 "mod_magazine": 100,
@@ -703,7 +739,7 @@
                 "mod_stock_002": 100,
                 "mod_tactical": 61,
                 "mod_tactical_000": 100,
-                "mod_equipment": 70,
+                "mod_equipment": 75,
                 "mod_nvg": 15,
                 "mod_equipment_000": 35,
                 "mod_equipment_001": 100,

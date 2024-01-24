@@ -946,9 +946,9 @@
           ]
         },
         "6374a822e629013b9c0645c8": {
-            "mod_sight_rear": [
-                "63c6adcfb4ba094317063742"
-            ]
+          "mod_sight_rear": [
+            "63c6adcfb4ba094317063742"
+          ]
         },
         "5448bd6b4bdc2dfc2f8b4569": {
           "mod_magazine": [
@@ -1199,7 +1199,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 50,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 20,
+        "mod_mount": 40,
+        "mod_nvg": 5,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 40,
         "mod_mount_000": 40,
         "mod_mount_001": 40,
@@ -2786,7 +2798,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 50,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 20,
+        "mod_mount": 60,
+        "mod_nvg": 7,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 60,
         "mod_mount_000": 60,
         "mod_mount_001": 60,
@@ -4536,7 +4560,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 60,
+        "mod_equipment_000": 60,
+        "mod_equipment_001": 55,
+        "mod_equipment_002": 25,
+        "mod_mount": 75,
+        "mod_nvg": 7,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 75,
         "mod_mount_000": 75,
         "mod_mount_001": 75,
@@ -6696,7 +6732,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 70,
+        "mod_equipment_000": 70,
+        "mod_equipment_001": 65,
+        "mod_equipment_002": 65,
+        "mod_mount": 90,
+        "mod_nvg": 15,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 90,
         "mod_mount_000": 90,
         "mod_mount_001": 90,

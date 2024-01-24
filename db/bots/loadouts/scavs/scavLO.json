@@ -1422,7 +1422,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 50,
+        "front_plate": 100,
+        "left_side_plate": 25,
+        "mod_equipment": 50,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 50,
+        "mod_mount": 50,
+        "mod_nvg": 0,
+        "right_side_plate": 25
+      },
+      "weaponMods": {
         "mod_mount": 50,
         "mod_mount_000": 50,
         "mod_muzzle": 100,
@@ -3192,7 +3204,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 75,
+        "left_side_plate": 35,
+        "mod_equipment": 50,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 50,
+        "mod_mount": 50,
+        "mod_nvg": 0,
+        "right_side_plate": 35
+      },
+      "weaponMods": {
         "mod_mount": 50,
         "mod_mount_000": 50,
         "mod_muzzle": 100,
@@ -5230,7 +5254,7 @@
         "SecuredContainer": [],
         "SpecialLoot": []
       },
-      "dynamic_looting":{
+      "dynamic_looting": {
         "Empty": [],
         "TacticalVest": [
           "5751a25924597722c463c472",
@@ -5317,7 +5341,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 85,
+        "left_side_plate": 50,
+        "mod_equipment": 75,
+        "mod_equipment_000": 75,
+        "mod_equipment_001": 75,
+        "mod_equipment_002": 75,
+        "mod_mount": 60,
+        "mod_nvg": 5,
+        "right_side_plate": 50
+      },
+      "weaponMods": {
         "mod_mount": 60,
         "mod_mount_000": 60,
         "mod_muzzle": 100,

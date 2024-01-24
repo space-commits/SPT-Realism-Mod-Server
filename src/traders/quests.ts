@@ -1,4 +1,4 @@
-import { AvailableForConditions, IQuest } from "@spt-aki/models/eft/common/tables/IQuest";
+import { IQuest } from "@spt-aki/models/eft/common/tables/IQuest";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 

@@ -91,6 +91,8 @@ export class WeaponsGlobals {
 
             this.globalDB().Aiming.AimProceduralIntensity = 1;
 
+            this.globalDB().Aiming.RecoilCrank = true;
+
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }

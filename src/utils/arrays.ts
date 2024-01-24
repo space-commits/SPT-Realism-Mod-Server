@@ -373,7 +373,8 @@ export class Arrays {
         "rezervbase",
         "reservebase",
         "streets of tarkov",
-        "tarkovstreets"
+        "tarkovstreets",
+        "sandbox"
     ]
 
     public cqbMaps = [
