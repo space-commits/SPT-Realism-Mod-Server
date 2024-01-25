@@ -226,7 +226,6 @@ class JsonGen {
     assignJSONToAmmo(serverItem, fileItem) {
         if (fileItem) {
             fileItem;
-            fileItem.Price = 0;
             return fileItem;
         }
         let ItemID = serverItem._id;

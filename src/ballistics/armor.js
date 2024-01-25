@@ -1,7 +1,33 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Armor = void 0;
 const enums_1 = require("../utils/enums");
+const fs = __importStar(require("fs"));
+const path = __importStar(require("path"));
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 class Armor {
     logger;
     tables;
@@ -31,6 +57,11 @@ class Armor {
         this.armMat().ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represetns loss of anti-spall coating
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
+            //use this to generate json for armor containing all the armor's armor slots, which I can then use to push to all bots to prevent bot gen errors
+            // let armorLevl: number = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass as string);
+            // if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG) {
+            //     this.itemWriteToFile(i, serverItem);
+            // }
             this.revertHelmetZones(serverItem);
             this.standardizeAramid(serverItem);
             this.loadBodyArmor(serverItem);
@@ -50,6 +81,61 @@ class Armor {
                 }
             }
         }
+    }
+    itemWriteToFile(index, serverItem) {
+        armorTemplate[index] = this.writeArmorToFile(serverItem);
+        this.saveToJSONFile(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
+    }
+    writeArmorToFile(serverItem) {
+        const validSlots = [
+            "Front_plate",
+            "Back_plate",
+            "Left_side_plate",
+            "Right_side_plate",
+            "Soft_armor_front",
+            "Soft_armor_back",
+            "Soft_armor_left",
+            "soft_armor_right",
+            "Collar",
+            "Shoulder_l",
+            "Shoulder_r",
+            "Groin",
+            "Groin_back",
+            "Helmet_top",
+            "Helmet_back",
+            "Helmet_ears",
+            "helmet_eyes",
+            "helmet_jaw"
+        ];
+        let armor = {};
+        this.logger.warning("item: " + serverItem._name);
+        if (Array.isArray(serverItem._props.Slots)) {
+            for (const slot of serverItem._props.Slots) {
+                if (validSlots.includes(slot._name)) {
+                    this.logger.warning("found slot: " + slot._name);
+                    let slotItems = [];
+                    for (const filter of slot._props.filters) {
+                        for (const item of filter.Filter) {
+                            slotItems.push(item);
+                        }
+                    }
+                    armor[slot._name] = slotItems;
+                }
+            }
+            return armor;
+        }
+        else {
+            this.logger.warning("no array");
+        }
+    }
+    saveToJSONFile(data, filePath) {
+        const baseFolderPath = path.resolve(path.join(__dirname, '../../'));
+        fs.writeFile(path.join(baseFolderPath, filePath), JSON.stringify(data, null, 4), function (err) {
+            if (err) {
+                console.log(`Trying to save the config to ${path.join(baseFolderPath, filePath)} failed:`);
+                throw err;
+            }
+        });
     }
     standardizeAramid(serverItem) {
         let armorColliders = serverItem._props.armorColliders;
@@ -422,14 +508,14 @@ class Armor {
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Ceramic';
         }
-        // //6B23-2 (back)
-        // if (serverItem._id === "657b22485f444d6dff0c6c2f") {
-        //     serverItem._props.Durability = 100;
-        //     serverItem._props.MaxDurability = serverItem._props.Durability;
-        //     serverItem._props.armorClass = 9;
-        //     serverItem._props.BluntThroughput = 0.1;
-        //     serverItem._props.ArmorMaterial = 'Ceramic';
-        // }
+        //6B23-2 (back)
+        if (serverItem._id === "657b22485f444d6dff0c6c2f") {
+            serverItem._props.Durability = 100;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 9;
+            serverItem._props.BluntThroughput = 0.1;
+            serverItem._props.ArmorMaterial = 'Ceramic';
+        }
         //Granit 4 Front
         if (serverItem._id === "656f611f94b480b8a500c0db") {
             serverItem._props.Durability = 100;

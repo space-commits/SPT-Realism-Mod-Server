@@ -72,7 +72,6 @@ import { Spawns } from "./bots/maps";
 import { Gear } from "./items/gear";
 import { EventTracker, SeasonalEventsHandler } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
-import * as path from 'path';
 import { DescriptionGen } from "./json/description_gen";
 import { JsonHandler } from "./json/json-handler";
 import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
@@ -89,8 +88,9 @@ import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
 import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentService";
 import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
 
+import * as path from 'path';
+import * as fs from 'fs';
 
-const fs = require('fs');
 const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
@@ -604,7 +604,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         // codegen.ammoTemplatesCodeGen();
 
         if (modConfig.realistic_ballistics == true) {
-            ammo.loadAmmoStats();
+            ammo.loadAmmoStats(); 
             armor.loadArmor();
             bots.setBotHealth();
         }

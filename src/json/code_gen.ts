@@ -244,7 +244,6 @@ export class JsonGen {
 
         if (fileItem) {
             fileItem;
-            fileItem.Price = 0;
             return fileItem;
         }
 

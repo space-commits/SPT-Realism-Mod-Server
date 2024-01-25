@@ -27,6 +27,7 @@ const USECNames = require("../../db/bots/names/USECNames.json");
 const bearNames = require("../../db/bots/names/bearNames.json");
 const pmcTypes = require("../../db/bots/pmcTypes.json");
 const keys = require("../../db/bots/loadouts/templates/keys.json");
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 class BotLoader {
     logger;
     tables;

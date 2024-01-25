@@ -227,8 +227,8 @@ class JsonHandler {
                     serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
                     serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;
                     serverItem._props.RecolDispersion = fileItem.Dispersion;
-                    serverItem._props.CameraRecoil = fileItem.CameraRecoil;
-                    serverItem._props.Convergence = fileItem.Convergence;
+                    serverItem._props.RecoilCamera = fileItem.CameraRecoil;
+                    serverItem._props.RecoilReturnSpeedHandRotation = fileItem.Convergence;
                     serverItem._props.RecoilAngle = fileItem.RecoilAngle;
                     serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
                     serverItem._props.HeatFactor = fileItem.HeatFactor;

@@ -4,6 +4,10 @@ import { ParentClasses } from "../utils/enums";
 import { IArmorMaterials, IConfig } from "@spt-aki/models/eft/common/IGlobals";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
+import * as fs from 'fs';
+import * as path from 'path';
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
+
 export class Armor {
 
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
@@ -37,7 +41,13 @@ export class Armor {
 
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            
+
+            //use this to generate json for armor containing all the armor's armor slots, which I can then use to push to all bots to prevent bot gen errors
+            // let armorLevl: number = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass as string);
+            // if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG) {
+            //     this.itemWriteToFile(i, serverItem);
+            // }
+
             this.revertHelmetZones(serverItem);
             this.standardizeAramid(serverItem);
             this.loadBodyArmor(serverItem);
@@ -59,6 +69,73 @@ export class Armor {
                 }
             }
         }
+    }
+
+
+    private itemWriteToFile(index: string, serverItem: ITemplateItem) {
+        armorTemplate[index] = this.writeArmorToFile(serverItem);
+
+        this.saveToJSONFile(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
+    }
+
+    private writeArmorToFile(serverItem: ITemplateItem) {
+
+        const validSlots = [
+            "Front_plate",
+            "Back_plate",
+            "Left_side_plate",
+            "Right_side_plate",
+            "Soft_armor_front",
+            "Soft_armor_back",
+            "Soft_armor_left",
+            "soft_armor_right",
+            "Collar",
+            "Shoulder_l",
+            "Shoulder_r",
+            "Groin",
+            "Groin_back",
+            "Helmet_top",
+            "Helmet_back",
+            "Helmet_ears",
+            "helmet_eyes",
+            "helmet_jaw"
+        ];
+
+
+
+        let armor = {};
+
+        this.logger.warning("item: " + serverItem._name);
+
+        if (Array.isArray(serverItem._props.Slots)) {
+            for (const slot of serverItem._props.Slots) {
+                                
+                if (validSlots.includes(slot._name)) {
+                    this.logger.warning("found slot: " + slot._name);
+                    let slotItems = [];
+                    for (const filter of slot._props.filters){
+                        for(const item of filter.Filter){
+                            slotItems.push(item);
+                        }
+                    }      
+                    armor[slot._name] = slotItems;    
+                }
+            }
+            return armor;
+        }
+        else {
+            this.logger.warning("no array");
+        }
+    }
+
+    public saveToJSONFile(data: any, filePath: string) {
+        const baseFolderPath = path.resolve(path.join(__dirname, '../../'));
+        fs.writeFile(path.join(baseFolderPath, filePath), JSON.stringify(data, null, 4), function (err) {
+            if (err) {
+                console.log(`Trying to save the config to ${path.join(baseFolderPath, filePath)} failed:`);
+                throw err;
+            }
+        });
     }
 
     private standardizeAramid(serverItem: ITemplateItem) {

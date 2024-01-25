@@ -71,6 +71,12 @@
             "conditionChance": 0.32,
             "min": 0.35,
             "max": 1
+        },
+        "5a341c4086f77401f2541505": {
+            "_name": "HELMETS",
+            "conditionChance": 0.32,
+            "min": 0.35,
+            "max": 1
         }
     }
 }

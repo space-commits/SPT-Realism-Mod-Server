@@ -90,7 +90,7 @@ class Traders {
             this.traderConf.fence.itemPriceMult = 1.8;
             this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
-            this.traderConf.fence.blacklist = fenceLimits.blacklist;
+            // this.traderConf.fence.blacklist = fenceLimits.blacklist; //somehow this causes error
         }
         if (modConfig.change_heal_cost == true) {
             this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
@@ -166,11 +166,13 @@ class Traders {
             //Skier//
             this.assortItemPusher(skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
         }
-        //jaeger
-        this.assortItemPusher(jaegId, "mosin_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 5000);
-        this.assortItemPusher(jaegId, "6kh4_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 4000);
-        // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
-        this.assortItemPusher(jaegId, "m9_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+        if (this.modConf.recoil_attachment_overhaul == true) {
+            //jaeger
+            this.assortItemPusher(jaegId, "mosin_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 5000);
+            this.assortItemPusher(jaegId, "6kh4_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+            // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
+            this.assortItemPusher(jaegId, "m9_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+        }
         //ragman//
         this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
         this.assortNestedItemPusher(ragmId, "5e00c1ad86f774747333222c", { "5e01f31d86f77465cf261343": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 4, true, undefined, 1.25, { "5c0558060db834001b735271": "mod_nvg" });

@@ -34,6 +34,7 @@ const USECNames = require("../../db/bots/names/USECNames.json");
 const bearNames = require("../../db/bots/names/bearNames.json");
 const pmcTypes = require("../../db/bots/pmcTypes.json");
 const keys = require("../../db/bots/loadouts/templates/keys.json");
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 
 export class BotLoader {
 
@@ -2550,7 +2551,6 @@ export class BotLoader {
             this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 }
         }
 
-        
         if(this.modConfig.bot_loot_changes === true){
             this.tagillaBase.inventory.items = tagillaLO.tagillaLO1.inventory.items;
         }
