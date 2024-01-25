@@ -115,6 +115,8 @@ export class BotLoader {
             "forceStock": true
         }
 
+
+
         this.botConf().equipment["assault"] = botEquipmentTempalte;
         this.botConf().equipment["pmcbot"] = botEquipmentTempalte;
         this.botConf().equipment["exusec"] = botEquipmentTempalte;
@@ -135,6 +137,7 @@ export class BotLoader {
         this.botConf().equipment["pmc"].weightingAdjustmentsByBotLevel = [];
         this.botConf().equipment["pmc"].weightingAdjustmentsByPlayerLevel = [];
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
+        this.botConf().equipment["pmc"].filterPlatesByLevel = false;
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("Bots Loaded");

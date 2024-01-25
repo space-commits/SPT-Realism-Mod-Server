@@ -8,6 +8,36 @@ import * as fs from 'fs';
 import * as path from 'path';
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 
+const allValidArmorSlots = [
+    "front_plate",
+    "back_plate",
+    "left_side_plate",
+    "right_side_plate",
+    "soft_armor_front",
+    "soft_armor_back",
+    "soft_armor_left",
+    "soft_armor_right",
+    "collar",
+    "shoulder_l",
+    "shoulder_r",
+    "groin",
+    "groin_back",
+    "helmet_top",
+    "helmet_back",
+    "helmet_ears",
+    "helmet_eyes",
+    "helmet_jaw"
+];
+
+const validHelmetSlots = [
+    "helmet_top",
+    "helmet_back",
+    "helmet_ears",
+    "helmet_eyes",
+    "helmet_jaw"
+];
+
+
 export class Armor {
 
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
@@ -42,16 +72,18 @@ export class Armor {
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
 
-            //use this to generate json for armor containing all the armor's armor slots, which I can then use to push to all bots to prevent bot gen errors
+            // // use this to generate json for armor containing all the armor's armor slots, which I can then use to push to all bots to prevent bot gen errors
             // let armorLevl: number = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass as string);
-            // if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG) {
+            // if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG || serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) {
             //     this.itemWriteToFile(i, serverItem);
             // }
 
-            this.revertHelmetZones(serverItem);
-            this.standardizeAramid(serverItem);
+            if(serverItem._props.MaterialType !== "Helmet"){
+                this.standardizeAramid(serverItem);
+            }
+
             this.loadBodyArmor(serverItem);
-            this.loadHelmets(serverItem);
+            this.loadHelmets(serverItem, this.tables);
             this.loadGlasses(serverItem);
             this.loadArmorMods(serverItem);
         }
@@ -61,17 +93,6 @@ export class Armor {
         }
     }
 
-    private revertHelmetZones(serverItem: ITemplateItem) {
-        if (serverItem._parent === ParentClasses.HEADWEAR) {
-            for (let j = serverItem._props.Slots.length - 1; j >= 0; j--) {
-                if (serverItem._props.Slots[j]._name.toLowerCase().includes("helmet_")) {
-                    serverItem._props.Slots.splice(j, 1);
-                }
-            }
-        }
-    }
-
-
     private itemWriteToFile(index: string, serverItem: ITemplateItem) {
         armorTemplate[index] = this.writeArmorToFile(serverItem);
 
@@ -80,51 +101,22 @@ export class Armor {
 
     private writeArmorToFile(serverItem: ITemplateItem) {
 
-        const validSlots = [
-            "Front_plate",
-            "Back_plate",
-            "Left_side_plate",
-            "Right_side_plate",
-            "Soft_armor_front",
-            "Soft_armor_back",
-            "Soft_armor_left",
-            "soft_armor_right",
-            "Collar",
-            "Shoulder_l",
-            "Shoulder_r",
-            "Groin",
-            "Groin_back",
-            "Helmet_top",
-            "Helmet_back",
-            "Helmet_ears",
-            "helmet_eyes",
-            "helmet_jaw"
-        ];
-
-
-
         let armor = {};
-
-        this.logger.warning("item: " + serverItem._name);
 
         if (Array.isArray(serverItem._props.Slots)) {
             for (const slot of serverItem._props.Slots) {
-                                
-                if (validSlots.includes(slot._name)) {
-                    this.logger.warning("found slot: " + slot._name);
+
+                if (allValidArmorSlots.includes(slot._name.toLowerCase())) {
                     let slotItems = [];
-                    for (const filter of slot._props.filters){
-                        for(const item of filter.Filter){
+                    for (const filter of slot._props.filters) {
+                        for (const item of filter.Filter) {
                             slotItems.push(item);
                         }
-                    }      
-                    armor[slot._name] = slotItems;    
+                    }
+                    armor[slot._name] = slotItems;
                 }
             }
             return armor;
-        }
-        else {
-            this.logger.warning("no array");
         }
     }
 
@@ -138,108 +130,54 @@ export class Armor {
         });
     }
 
-    private standardizeAramid(serverItem: ITemplateItem) {
-
+    private aramidHelper(serverItem: ITemplateItem, targetClass: number, newClass: number, durability: number, blunt: number) {
         let armorColliders = serverItem._props.armorColliders;
+        let armorLevl: number = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass as string);
+
+        if (armorLevl === targetClass) {
+            if (armorColliders.filter(str => str.toLowerCase().includes("neck")).length) {
+                serverItem._props.Durability = durability * 0.25;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = newClass;
+                serverItem._props.BluntThroughput = blunt * 1.25;
+            }
+            else if (armorColliders.filter(str => str.toLowerCase().includes("arm")).length) {
+                serverItem._props.Durability = durability * 0.35;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = newClass;
+                serverItem._props.BluntThroughput = blunt * 0.85;
+            }
+            else if (armorColliders.filter(str => str.toLowerCase().includes("side")).length) {
+                serverItem._props.Durability = durability * 0.35;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = newClass;
+                serverItem._props.BluntThroughput = blunt * 1.1;
+            }
+            else if (armorColliders.filter(str => str.toLowerCase().includes("pelvis")).length) {
+                serverItem._props.Durability = durability * 0.4;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = newClass;
+                serverItem._props.BluntThroughput = blunt * 0.8;
+            }
+            else {
+                serverItem._props.Durability = durability;
+                serverItem._props.MaxDurability = serverItem._props.Durability;
+                serverItem._props.armorClass = newClass;
+                serverItem._props.BluntThroughput = blunt;
+            }
+        }
+    }
+
+    private standardizeAramid(serverItem: ITemplateItem) {
         let plateColliders = serverItem._props.armorPlateColliders;
 
-        ///Built-In Aramid///
-        if ((serverItem._props.ArmorMaterial === "Aramid" && serverItem._props.armorClass === "1") || serverItem._name.includes("module3m")) {
-            if (armorColliders.filter(str => str.includes("neck")).length) {
-                serverItem._props.Durability = 25;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 3;
-                serverItem._props.BluntThroughput = 0.55;
-            }
-            else if (armorColliders.filter(str => str.includes("arm")).length) {
-                serverItem._props.Durability = 35;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 3;
-                serverItem._props.BluntThroughput = 0.4;
-            }
-            else if (armorColliders.filter(str => str.includes("side")).length) {
-                serverItem._props.Durability = 35;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 3;
-                serverItem._props.BluntThroughput = 0.5;
-            }
-            else if (armorColliders.filter(str => str.includes("pelvis")).length) {
-                serverItem._props.Durability = 40;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 3;
-                serverItem._props.BluntThroughput = 0.4;
-            }
-            else {
-                serverItem._props.Durability = 100;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 3;
-                serverItem._props.BluntThroughput = 0.45;
-            }
+        if (serverItem._props.ArmorMaterial === "Aramid") {
+            this.aramidHelper(serverItem, 1, 3, 100, 0.45);
+            this.aramidHelper(serverItem, 2, 4, 100, 0.5);
+            this.aramidHelper(serverItem, 3, 5, 100, 0.6);
+            this.aramidHelper(serverItem, 4, 5, 100, 0.6);
         }
-        if (serverItem._props.ArmorMaterial === "Aramid" && serverItem._props.armorClass === "2") {
-            if (armorColliders.filter(str => str.toLocaleLowerCase().includes("neck")).length) {
-                serverItem._props.Durability = 25;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
-                serverItem._props.BluntThroughput = 0.6;
-            }
-            else if (armorColliders.filter(str => str.includes("arm")).length) {
-                serverItem._props.Durability = 35;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
-                serverItem._props.BluntThroughput = 0.45;
-            }
-            else if (armorColliders.filter(str => str.includes("side")).length) {
-                serverItem._props.Durability = 35;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
-                serverItem._props.BluntThroughput = 0.55;
-            }
-            else if (armorColliders.filter(str => str.includes("pelvis")).length) {
-                serverItem._props.Durability = 40;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
-                serverItem._props.BluntThroughput = 0.45;
-            }
-            else {
-                serverItem._props.Durability = 100;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 4;
-                serverItem._props.BluntThroughput = 0.5;
-            }
-        }
-        if (serverItem._props.ArmorMaterial === "Aramid" && (serverItem._props.armorClass === "3" || serverItem._props.armorClass === "4")) {
-            if (armorColliders.filter(str => str.includes("neck")).length) {
-                serverItem._props.Durability = 25;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 5;
-                serverItem._props.BluntThroughput = 0.7;
-            }
-            else if (armorColliders.filter(str => str.includes("arm")).length) {
-                serverItem._props.Durability = 35;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 5;
-                serverItem._props.BluntThroughput = 0.55;
-            }
-            else if (armorColliders.filter(str => str.includes("side")).length) {
-                serverItem._props.Durability = 35;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 5;
-                serverItem._props.BluntThroughput = 0.65;
-            }
-            else if (armorColliders.filter(str => str.includes("pelvis")).length) {
-                serverItem._props.Durability = 40;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 5;
-                serverItem._props.BluntThroughput = 0.55;
-            }
-            else {
-                serverItem._props.Durability = 100;
-                serverItem._props.MaxDurability = serverItem._props.Durability;
-                serverItem._props.armorClass = 5;
-                serverItem._props.BluntThroughput = 0.6;
-            }
-        }
+
         if (serverItem._props.ArmorMaterial === "Aramid" && plateColliders !== undefined && plateColliders.length > 0) {
             serverItem._props.armorClass = 2;
             serverItem._props.BluntThroughput = 0.4;
@@ -1054,12 +992,49 @@ export class Armor {
         }
     }
 
-    private loadHelmets(serverItem: ITemplateItem) {
+
+    private modifySubArmor(serverItem: ITemplateItem, tables: IDatabaseTables, validSlots: string[], durability: number, armorClass: number, blunt: number, armorMat: string) {
+
+        //make sure item has slots array
+        if (Array.isArray(serverItem._props.Slots)) {
+            //iterate slots
+            for (const slot of serverItem._props.Slots) {
+                //check if slot is of valid type
+                if (validSlots.includes(slot._name.toLowerCase())) {
+                    //iterate filters array
+                    for (const filter of slot._props.filters) {
+                        //iterate over items contained in filters array
+                        for (const item of filter.Filter) {
+                            let subArmor = tables.templates.items[item];
+                            subArmor._props.armorClass = armorClass;
+                            subArmor._props.Durability = durability;
+                            subArmor._props.MaxDurability = durability;
+                            if (slot._name.toLowerCase().includes("eyes")) {
+                                subArmor._props.ArmorMaterial = 'Glass';
+                            }
+                            if (subArmor._props.ArmorMaterial.toLocaleLowerCase() !== "glass") {
+                                subArmor._props.ArmorMaterial = armorMat;
+                                subArmor._props.BluntThroughput = blunt;
+                            }
+                            else {
+                                subArmor._props.BluntThroughput = 0;
+                                if (armorClass === 5) {
+                                    subArmor._props.armorClass = 3;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private loadHelmets(serverItem: ITemplateItem, tables: IDatabaseTables) {
         ///// HELMETS //////
         //// Class 0 ////
         //Beanie
         if (serverItem._id === "60bf74184a63fc79b60c57f6") {
-            serverItem._props.Durability = 69420;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = 2;
@@ -1074,21 +1049,17 @@ export class Armor {
         }
         //Tank Crew Helmet
         if (serverItem._id === "5df8a58286f77412631087ed") {
-            serverItem._props.Durability = 99999;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = 0;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = 0;
-            serverItem._props.BluntThroughput = 0.0;
+            serverItem._props.BluntThroughput = 0;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.armorColliders = [
-                "Jaw",
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 10, 1, 0.5, 'Aramid');
         }
         //// Class 1 ////
         //Knight Mask
@@ -1101,14 +1072,14 @@ export class Armor {
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.armorColliders = [
-                "ParietalHead"
+                "HeadCommon"
             ];
         }
         //Kolpak
         if (serverItem._id === "59e7711e86f7746cae05fbe1") {
-            serverItem._props.Durability = 40;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 1;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.95;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.95;
@@ -1116,17 +1087,13 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 1.9;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 40, 1, 0.05, 'UHMWPE');
         }
         //SHPM Firefighter
         if (serverItem._id === "5c08f87c0db8340019124324") {
-            serverItem._props.Durability = 35;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 1;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.75;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.75;
@@ -1134,19 +1101,13 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 1.5;
-            serverItem._props.armorColliders = [
-                "Eyes",
-                "Jaw",
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 35, 1, 0.05, 'UHMWPE');
         }
         //Fast MT Helmet Replica
         if (serverItem._id === "5ea05cf85ad9772e6624305d") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 1;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.225;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.225;
@@ -1154,10 +1115,7 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 0.45;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 20, 1, 0.22, 'UHMWPE');
         }
         //// Class 2 ////
         //Glorious E Mask
@@ -1172,14 +1130,15 @@ export class Armor {
             serverItem._props.armorColliders = [
                 "ParietalHead",
                 "Ears",
-                "Jaws"
+                "Jaws",
+                "HeadCommon"
             ];
         }
         //Djeta
         if (serverItem._id === "5c0d2727d174af02a012cf58") {
-            serverItem._props.Durability = 38;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 2;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.65;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.65;
@@ -1187,13 +1146,7 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 1.3;
-            serverItem._props.armorColliders = [
-                "Eyes",
-                "Jaw",
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 38, 2, 0.05, 'UHMWPE');
         }
         //// Class 3 ////
         //Shattered Facemask
@@ -1211,14 +1164,15 @@ export class Armor {
             serverItem._props.armorColliders = [
                 "Jaw",
                 "Ears",
-                "ParietalHead"
+                "ParietalHead",
+                "HeadCommon"
             ];
         }
         //UN Helmet
         if (serverItem._id === "5aa7d03ae5b5b00016327db5") {
-            serverItem._props.Durability = 45;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.1;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.1;
@@ -1226,17 +1180,13 @@ export class Armor {
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 2.2;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 45, 3, 0.16, 'Aramid');
         }
         //Kiver
         if (serverItem._id === "5645bc214bdc2d363b8b4571") {
-            serverItem._props.Durability = 35;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.6;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.6;
@@ -1244,17 +1194,13 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.2;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 35, 3, 0.2, 'Aramid');
         }
         //LZSh
         if (serverItem._id === "5b432d215acfc4771e1c6624") {
-            serverItem._props.Durability = 26;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.475;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.475;
@@ -1262,16 +1208,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 0.95;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 26, 3, 0.27, 'Aramid');
         }
         //SSh-68
         if (serverItem._id === "5c06c6a80db834001b735491") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.25;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.25;
@@ -1279,17 +1222,13 @@ export class Armor {
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
             serverItem._props.Weight = 1.5;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 20, 3, 0.13, 'ArmoredSteel');
         }
         //Ratnik-BSh 6B47
         if (serverItem._id === "5a7c4850e899ef00150be885") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.65;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.65;
@@ -1297,17 +1236,13 @@ export class Armor {
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.305;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 30, 3, 0.26, 'Aramid');
         }
         //Ratnik-BSh Covered 6B47
         if (serverItem._id === "5aa7cfc0e5b5b00015693143") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.65;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.65;
@@ -1315,11 +1250,7 @@ export class Armor {
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.3;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 30, 3, 0.26, 'Aramid');
         }
         //// Class 4 ////
         //Tagilla's Welding Mask "UBEY"
@@ -1338,7 +1269,8 @@ export class Armor {
                 "Eyes",
                 "Jaw",
                 "Ears",
-                "ParietalHead"
+                "ParietalHead",
+                "HeadCommon"
             ];
         }
         //Tagilla's Welding Mask "Gorilla"
@@ -1357,14 +1289,15 @@ export class Armor {
                 "Eyes",
                 "Jaw",
                 "Ears",
-                "ParietalHead"
+                "ParietalHead",
+                "HeadCommon"
             ];
         }
         //NFM HJELM
         if (serverItem._id === "61bca7cda0eae612383adf57") {
-            serverItem._props.Durability = 15;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.4;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.4;
@@ -1372,17 +1305,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 0.8;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 15, 4, 0.35, 'UHMWPE');
         }
         //Sfera
         if (serverItem._id === "5aa7d193e5b5b000171d063f") {
-            serverItem._props.Durability = 15;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.75;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.75;
@@ -1390,17 +1319,13 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
             serverItem._props.Weight = 3.5;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 15, 4, 0.22, 'ArmoredSteel');
         }
         //Ops-Core Fast MT Tan
         if (serverItem._id === "5ac8d6885acfc400180ae7b0") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.45;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.45;
@@ -1408,16 +1333,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 0.9;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 20, 4, 0.35, 'UHMWPE');
         }
         //Ops-Core Fast MT Black
         if (serverItem._id === "5a154d5cfcdbcb001a3b00da") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.45;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.45;
@@ -1425,16 +1347,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 0.9;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 20, 4, 0.35, 'UHMWPE');
         }
         //Crye Airframe
         if (serverItem._id === "5c17a7ed2e2216152142459c") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.44;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.44;
@@ -1442,16 +1361,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 0.88;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 30, 4, 0.33, 'UHMWPE');
         }
         //Caiman
         if (serverItem._id === "5f60b34a41e30a4ab12a6947") {
-            serverItem._props.Durability = 25;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.56;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.56;
@@ -1459,91 +1375,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 1.12;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
-        }
-        //// Class 5 ////
-        //Ronin
-        if (serverItem._id === "5b4329f05acfc47a86086aa1") {
-            serverItem._props.Durability = 50;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
-            serverItem._props.speedPenaltyPercent = -1;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -5;
-            serverItem._props.BluntThroughput = 0.3;
-            serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 1.6;
-            serverItem._props.armorColliders = [
-                "Eyes",
-                "Jaw",
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
-        }
-        //BNTI LSHZ-2DTM
-        if (serverItem._id === "5d6d3716a4b9361bc8618872") {
-            serverItem._props.Durability = 60;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
-            serverItem._props.speedPenaltyPercent = -1.7;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.7;
-            serverItem._props.BluntThroughput = 0.287;
-            serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 3.4;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
-        }
-        //ZSh
-        if (serverItem._id === "5aa7e454e5b5b0214e506fa2") {
-            serverItem._props.Durability = 15;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
-            serverItem._props.speedPenaltyPercent = -1.85;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.85;
-            serverItem._props.BluntThroughput = 0.165;
-            serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'Titan';
-            serverItem._props.Weight = 3.7;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
-        }
-        //ZSh Black
-        if (serverItem._id === "5aa7e4a4e5b5b000137b76f2") {
-            serverItem._props.Durability = 15;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
-            serverItem._props.speedPenaltyPercent = -1.85;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.85;
-            serverItem._props.BluntThroughput = 0.165;
-            serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'Titan';
-            serverItem._props.Weight = 3.7;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 25, 4, 0.31, 'UHMWPE');
         }
         //TC-2001
         if (serverItem._id === "5d5e7d28a4b936645d161203") {
-            serverItem._props.Durability = 50;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.7;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.7;
@@ -1551,16 +1389,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.4;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 50, 4, 0.24, 'Aramid');
         }
         //TC-2002
         if (serverItem._id === "5d5e9c74a4b9364855191c40") {
-            serverItem._props.Durability = 55;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.71;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.71;
@@ -1568,16 +1403,76 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.42;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 55, 4, 0.24, 'Aramid');
+        }
+        //Death Shadow mask
+        if (serverItem._id === "6570aead4d84f81fd002a033") {
+            serverItem._props.Durability = 60;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 5;
+            serverItem._props.speedPenaltyPercent = -0.8;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.BluntThroughput = 0.5;
+            serverItem._props.DeafStrength = "Low";
+            serverItem._props.ArmorMaterial = 'Aramid';
+            serverItem._props.Weight = 2.1;
             serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
+                "Eyes",
+                "HeadCommon"
             ];
+        }
+        //// Class 5 ////
+        //Atomic Defense ballistic mask
+        if (serverItem._id === "657089638db3adca1009f4ca") {
+            serverItem._props.Durability = 60;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 5;
+            serverItem._props.speedPenaltyPercent = -0.8;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.BluntThroughput = 0.5;
+            serverItem._props.DeafStrength = "Low";
+            serverItem._props.ArmorMaterial = 'Aramid';
+            serverItem._props.Weight = 2.1;
+            serverItem._props.armorColliders = [
+                "Jaw",
+                "HeadCommon"
+            ];
+        }
+        //Ronin
+        if (serverItem._id === "5b4329f05acfc47a86086aa1") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -1;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
+            serverItem._props.BluntThroughput = 0.3;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'Aramid';
+            serverItem._props.Weight = 1.6;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 30, 5, 0.33, 'Aramid');
+        }
+        //BNTI LSHZ-2DTM
+        if (serverItem._id === "5d6d3716a4b9361bc8618872") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -1.7;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -1.7;
+            serverItem._props.BluntThroughput = 0.287;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'Aramid';
+            serverItem._props.Weight = 3.4;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 50, 5, 0.29, 'Aramid');
         }
         //ULACH Black
         if (serverItem._id === "5b40e1525acfc4771e1c6611") {
-            serverItem._props.Durability = 75;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.95;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.95;
@@ -1585,17 +1480,13 @@ export class Armor {
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.9;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 70, 5, 0.19, 'Aramid');
         }
         //ULACH Tan
         if (serverItem._id === "5b40e2bc5acfc40016388216") {
-            serverItem._props.Durability = 75;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.95;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.95;
@@ -1603,17 +1494,13 @@ export class Armor {
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.9;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 70, 5, 0.19, 'Aramid');
         }
         //ACHHC Black
         if (serverItem._id === "5b40e3f35acfc40016388218") {
-            serverItem._props.Durability = 60;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.75;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.75;
@@ -1621,16 +1508,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.5;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 60, 5, 0.22, 'Aramid');
         }
         //ACHHC Olive
         if (serverItem._id === "5b40e4035acfc47a87740943") {
-            serverItem._props.Durability = 60;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.75;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.75;
@@ -1638,16 +1522,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.5;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 60, 5, 0.22, 'Aramid');
         }
         //Team Wendy Exfil Black
         if (serverItem._id === "5e00c1ad86f774747333222c") {
-            serverItem._props.Durability = 19;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.59;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.59;
@@ -1655,16 +1536,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 1.18;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 19, 5, 0.48, 'UHMWPE');
         }
         //Team Wendy Exfil Coyote
         if (serverItem._id === "5e01ef6886f77445f643baa4") {
-            serverItem._props.Durability = 19;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.59;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.59;
@@ -1672,16 +1550,13 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 1.18;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 19, 5, 0.48, 'UHMWPE');
         }
         //TC 800
         if (serverItem._id === "5e4bfc1586f774264f7582d3") {
-            serverItem._props.Durability = 25;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.585;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.585;
@@ -1689,52 +1564,27 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 1.17;
-            serverItem._props.armorColliders = [
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 25, 5, 0.44, 'UHMWPE');
         }
-        //Altyn
-        if (serverItem._id === "5aa7e276e5b5b000171d0647") {
-            serverItem._props.Durability = 20;
+        //NPP KIASS Tor-2
+        if (serverItem._id === "65719f0775149d62ce0a670b") {
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
-            serverItem._props.speedPenaltyPercent = -2;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -2;
-            serverItem._props.BluntThroughput = 0.13;
-            serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'Titan';
-            serverItem._props.Weight = 4;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
-        }
-        //Rys-T
-        if (serverItem._id === "5f60c74e3b85f6263c145586") {
-            serverItem._props.Durability = 15;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.25;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.25;
-            serverItem._props.BluntThroughput = 0.11;
-            serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'Titan';
-            serverItem._props.Weight = 2.5;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            serverItem._props.BluntThroughput = 0.3;
+            serverItem._props.DeafStrength = "Low";
+            serverItem._props.ArmorMaterial = 'Aramid';
+            serverItem._props.Weight = 2.4;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 75, 5, 0.3, 'Aramid');
         }
         //Diamond Age
         if (serverItem._id === "5ea17ca01412a1425304d1c0") {
-            serverItem._props.Durability = 27;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.48;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.48;
@@ -1742,54 +1592,112 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Weight = 0.96;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 27, 5, 0.39, 'Combined');
+        }
+        //Diamond Age NeoSteel
+        if (serverItem._id === "65709d2d21b9f815e208ff95") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -0.9;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -0.9;
+            serverItem._props.BluntThroughput = 0.18;
+            serverItem._props.DeafStrength = "None";
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.Weight = 1.2;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 12, 5, 0.18, 'ArmoredSteel');
+        }
+        //ZSh
+        if (serverItem._id === "5aa7e454e5b5b0214e506fa2") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -1.85;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -1.85;
+            serverItem._props.BluntThroughput = 0.165;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.Weight = 3.7;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 15, 5, 0.165, 'ArmoredSteel');
+        }
+        //ZSh Black
+        if (serverItem._id === "5aa7e4a4e5b5b000137b76f2") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -1.85;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -1.85;
+            serverItem._props.BluntThroughput = 0.165;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.Weight = 3.7;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 15, 5, 0.165, 'ArmoredSteel');
+        }
+        //Altyn
+        if (serverItem._id === "5aa7e276e5b5b000171d0647") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -2;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -2;
+            serverItem._props.BluntThroughput = 0.13;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.Weight = 4;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 20, 5, 0.13, 'ArmoredSteel');
+        }
+        //Rys-T
+        if (serverItem._id === "5f60c74e3b85f6263c145586") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -1.25;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -1.25;
+            serverItem._props.BluntThroughput = 0.11;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'Titan';
+            serverItem._props.Weight = 2.5;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 20, 5, 0.1, 'Titan');
         }
         //Maska
         if (serverItem._id === "5c091a4e0db834001d5addc8") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.3;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.3;
             serverItem._props.BluntThroughput = 0.088;
             serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'Titan';
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
             serverItem._props.Weight = 2.6;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 22, 5, 0.088, 'ArmoredSteel');
         }
         //Maska Killa
         if (serverItem._id === "5c0e874186f7745dc7616606") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.3;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.3;
             serverItem._props.BluntThroughput = 0.088;
             serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'Titan';
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
             serverItem._props.Weight = 2.6;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 22, 5, 0.088, 'ArmoredSteel');
         }
         //// Class 8 ////
         //Vulkan-5
         if (serverItem._id === "5ca20ee186f774799474abc2") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 8;
+            serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -2.25;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -2.25;
@@ -1797,11 +1705,7 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Weight = 4.5;
-            serverItem._props.armorColliders = [
-                "Ears",
-                "BackHead",
-                "ParietalHead"
-            ];
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 30, 8, 0.108, 'Combined');
         }
     }
 
