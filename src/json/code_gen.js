@@ -248,19 +248,13 @@ class JsonGen {
         let AllowADS = true;
         let LoyaltyLevel = 2;
         let ReloadSpeedMulti = 1;
-        let MinPen = 50;
-        let MinVelocity = 500;
-        let MinKE = 2000;
+        let Price = 0;
+        let Comfort = 1;
         let ArmorClass = "";
         let CanSpall = false;
         let SpallReduction = 1;
         let BlocksMouth = false;
-        let HasSideArmor = false;
-        let HasStomachArmor = false;
-        let HasNeckArmor = false;
         let dB = 0;
-        let Price = 0;
-        let Comfort = 1;
         let item = {
             ItemID,
             Name,
@@ -276,6 +270,10 @@ class JsonGen {
         // new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
             // fileItem.HeatFactor = serverItem._props.HeatFactor; You need to give it a value. If you set it to the server item's propety value, the new property will only appear if the server mod has that property
+            fileItem.RecoilDamping = serverItem._props.RecoilDampingHandRotation;
+            fileItem.RecoilHandDamping = serverItem._props.RecoilReturnPathDampingHandRotation;
+            fileItem.OffsetRotation = serverItem._props.RecoilReturnPathOffsetHandRotation;
+            fileItem.RecoilIntensity = serverItem._props.RecoilCategoryMultiplierHandRotation;
             fileItem;
             return fileItem;
         }
@@ -285,8 +283,10 @@ class JsonGen {
         let OperationType = "";
         let WeapAccuracy = 0;
         let BaseTorque = 0;
-        let RecoilDamping = 75;
-        let RecoilHandDamping = 60;
+        let RecoilDamping = serverItem._props.RecoilDampingHandRotation;
+        let RecoilHandDamping = serverItem._props.RecoilReturnPathDampingHandRotation;
+        let OffsetRotation = serverItem._props.RecoilReturnPathOffsetHandRotation;
+        let RecoilIntensity = serverItem._props.RecoilCategoryMultiplierHandRotation;
         let HasShoulderContact = false;
         let WeaponAllowADS = false;
         let Ergonomics = serverItem._props.Ergonomics;
@@ -330,6 +330,8 @@ class JsonGen {
             BaseTorque,
             RecoilDamping,
             RecoilHandDamping,
+            OffsetRotation,
+            RecoilIntensity,
             HasShoulderContact,
             WeaponAllowADS,
             Ergonomics,

@@ -581,12 +581,14 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
                 const weaponSlotItem = weaponItemArray.find(x => x.parentId === mod._id && x.slotId === slotName);
                 if (!weaponSlotItem) {
                     if (modConfig.logEverything == true) {
-                        this.logger.info(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
+                        this.logger.warning(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
                     }
                     return false;
                 }
                 if (!allowedTpls.includes(weaponSlotItem._tpl)) {
-                    this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modDbTemplate._name, weaponTpl: weaponSlotItem._tpl }));
+                    if (modConfig.logEverything == true) {
+                        this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modDbTemplate._name, weaponTpl: weaponSlotItem._tpl }));
+                    }
                     return false;
                 }
             }

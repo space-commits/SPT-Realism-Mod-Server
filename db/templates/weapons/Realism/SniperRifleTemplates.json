@@ -27,8 +27,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 5.9,
-        "RecoilDamping": 0.69,
-        "RecoilHandDamping": 0.68,
+        "RecoilDamping": 0.87,
+        "RecoilHandDamping": 0.41,
         "WeaponAllowADS": false,
         "Weight": 0.55,
         "DurabilityBurnRatio": 0.4,
@@ -41,7 +41,9 @@
         "MaxChamberSpeed": 1.3,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 1.1,
-        "BaseFixSpeed": 0.9
+        "BaseFixSpeed": 0.9,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2645
     },
     "61f7c9e189e6fb1a5e3ea78d": {
         "ItemID": "61f7c9e189e6fb1a5e3ea78d",
@@ -114,8 +116,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.7,
-        "RecoilHandDamping": 0.65,
+        "RecoilDamping": 0.87,
+        "RecoilHandDamping": 0.41,
         "WeaponAllowADS": false,
         "Weight": 0.76,
         "DurabilityBurnRatio": 0.6,
@@ -128,7 +130,9 @@
         "MaxChamberSpeed": 1,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 1.5,
-        "BaseFixSpeed": 1.5
+        "BaseFixSpeed": 1.5,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2645
     },
     "5ae08f0a5acfc408fb1398a1": {
         "ItemID": "5ae08f0a5acfc408fb1398a1",
@@ -158,8 +162,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.7,
-        "RecoilHandDamping": 0.65,
+        "RecoilDamping": 0.87,
+        "RecoilHandDamping": 0.41,
         "WeaponAllowADS": false,
         "Weight": 0.8,
         "DurabilityBurnRatio": 0.6,
@@ -172,7 +176,9 @@
         "MaxChamberSpeed": 1,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 1.55,
-        "BaseFixSpeed": 1.55
+        "BaseFixSpeed": 1.55,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2645
     },
     "55801eed4bdc2d89578b4588": {
         "ItemID": "55801eed4bdc2d89578b4588",
@@ -202,8 +208,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 3.35,
-        "RecoilDamping": 0.66,
-        "RecoilHandDamping": 0.67,
+        "RecoilDamping": 0.87,
+        "RecoilHandDamping": 0.41,
         "WeaponAllowADS": false,
         "Weight": 1.9,
         "DurabilityBurnRatio": 0.25,
@@ -216,7 +222,9 @@
         "MaxChamberSpeed": 1.1,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 1.15,
-        "BaseFixSpeed": 1.15
+        "BaseFixSpeed": 1.15,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2645
     },
     "588892092459774ac91d4b11": {
         "ItemID": "588892092459774ac91d4b11",
@@ -246,8 +254,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 5.81,
-        "RecoilDamping": 0.64,
-        "RecoilHandDamping": 0.68,
+        "RecoilDamping": 0.85,
+        "RecoilHandDamping": 0.41,
         "WeaponAllowADS": false,
         "Weight": 2.22,
         "DurabilityBurnRatio": 0.3,
@@ -260,7 +268,9 @@
         "MaxChamberSpeed": 1,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 3,
-        "BaseFixSpeed": 3
+        "BaseFixSpeed": 3,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2645
     },
     "5df24cf80dee1b22f862e9bc": {
         "ItemID": "5df24cf80dee1b22f862e9bc",
@@ -290,8 +300,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.65,
-        "RecoilHandDamping": 0.78,
+        "RecoilDamping": 0.85,
+        "RecoilHandDamping": 0.41,
         "WeaponAllowADS": false,
         "Weight": 1.49,
         "DurabilityBurnRatio": 0.35,
@@ -304,7 +314,9 @@
         "MaxChamberSpeed": 0.9,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 1,
-        "BaseFixSpeed": 1
+        "BaseFixSpeed": 1,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2645
     },
     "5bfea6e90db834001b7347f3": {
         "ItemID": "5bfea6e90db834001b7347f3",
@@ -334,8 +346,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.64,
-        "RecoilHandDamping": 0.68,
+        "RecoilDamping": 0.85,
+        "RecoilHandDamping": 0.41,
         "WeaponAllowADS": false,
         "Weight": 0.55,
         "DurabilityBurnRatio": 0.3,
@@ -348,7 +360,9 @@
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 1.3,
-        "BaseFixSpeed": 1.3
+        "BaseFixSpeed": 1.3,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2645
     },
     "627e14b21713922ded6f2c15": {
         "ItemID": "627e14b21713922ded6f2c15",
@@ -378,8 +392,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.63,
-        "RecoilHandDamping": 0.72,
+        "RecoilDamping": 0.87,
+        "RecoilHandDamping": 0.41,
         "WeaponAllowADS": false,
         "Weight": 0.55,
         "DurabilityBurnRatio": 0.4,
@@ -392,6 +406,8 @@
         "MaxChamberSpeed": 0.8,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 1.6,
-        "BaseFixSpeed": 1.6
+        "BaseFixSpeed": 1.6,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2645
     }
 }

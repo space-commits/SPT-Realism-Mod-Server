@@ -27,8 +27,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
         "Velocity": 0,
-        "RecoilDamping": 0.69,
-        "RecoilHandDamping": 0.76,
+        "RecoilDamping": 0.875,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.069,
         "DurabilityBurnRatio": 0.4,
@@ -41,7 +41,9 @@
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.5,
-        "BaseFixSpeed": 1.2
+        "BaseFixSpeed": 1.2,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.207
     },
     "643ea5b23db6f9f57107d9fd": {
         "ItemID": "643ea5b23db6f9f57107d9fd",
@@ -71,8 +73,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
         "Velocity": 0,
-        "RecoilDamping": 0.7,
-        "RecoilHandDamping": 0.7,
+        "RecoilDamping": 0.875,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.069,
         "DurabilityBurnRatio": 0.35,
@@ -85,7 +87,9 @@
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.5,
-        "BaseFixSpeed": 1.2
+        "BaseFixSpeed": 1.2,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.207
     },
     "mechOPSKSv1": {
         "ItemID": "mechOPSKSv1",
@@ -115,8 +119,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
         "Velocity": 2.5,
-        "RecoilDamping": 0.68,
-        "RecoilHandDamping": 0.7,
+        "RecoilDamping": 0.86,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 2.427,
         "DurabilityBurnRatio": 0.3,
@@ -129,7 +133,9 @@
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.2,
-        "BaseFixSpeed": 1.2
+        "BaseFixSpeed": 1.2,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.207
     },
     "mechSKSv1": {
         "ItemID": "mechSKSv1",
@@ -159,8 +165,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
         "Velocity": 2.5,
-        "RecoilDamping": 0.7,
-        "RecoilHandDamping": 0.7,
+        "RecoilDamping": 0.86,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 2.427,
         "DurabilityBurnRatio": 0.3,
@@ -173,7 +179,9 @@
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.22,
-        "BaseFixSpeed": 1.22
+        "BaseFixSpeed": 1.22,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.207
     },
     "587e02ff24597743df3deaeb": {
         "ItemID": "587e02ff24597743df3deaeb",
@@ -203,8 +211,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
         "Velocity": 2.5,
-        "RecoilDamping": 0.68,
-        "RecoilHandDamping": 0.75,
+        "RecoilDamping": 0.86,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 2.627,
         "DurabilityBurnRatio": 0.35,
@@ -217,7 +225,9 @@
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.15,
-        "BaseFixSpeed": 1.15
+        "BaseFixSpeed": 1.15,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.207
     },
     "574d967124597745970e7c94": {
         "ItemID": "574d967124597745970e7c94",
@@ -247,8 +257,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 10,
         "Velocity": 2.5,
-        "RecoilDamping": 0.71,
-        "RecoilHandDamping": 0.69,
+        "RecoilDamping": 0.86,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 2.627,
         "DurabilityBurnRatio": 0.35,
@@ -261,7 +271,9 @@
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.17,
-        "BaseFixSpeed": 1.17
+        "BaseFixSpeed": 1.17,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.207
     },
     "5c501a4d2e221602b412b540": {
         "ItemID": "5c501a4d2e221602b412b540",
