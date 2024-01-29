@@ -51,10 +51,10 @@ class FleaChangesPreDBLoad {
         }
         if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.condition = custFleaConfig.condition;
-            this.fleaConf.sell.chance.base = 45;
-            this.fleaConf.sell.time.base = 2;
-            this.fleaConf.sell.time.min = 0;
-            this.fleaConf.sell.time.max = 1.0;
+            // this.fleaConf.sell.chance.base = 45;
+            // this.fleaConf.sell.time.base = 2;
+            // this.fleaConf.sell.time.min = 0;
+            // this.fleaConf.sell.time.max = 1.0;
             this.fleaConf.sell.reputation.gain = 0.00001;
             this.fleaConf.sell.reputation.loss = 0.000005;
             this.fleaConf.dynamic.currencies = {

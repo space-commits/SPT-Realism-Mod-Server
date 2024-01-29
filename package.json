@@ -1,10 +1,10 @@
 {
     "name": "SPT Realism Mod",
-    "version": "0.14.11",
+    "version": "0.15.0",
     "main": "src/mod.js",
     "license": "CC BY-NC-SA",
     "author": "Fontaine",
-    "akiVersion": "3.7.6",
+    "akiVersion": "3.8.0",
     "scripts": {
         "setup": "npm i",
         "build": "node ./build.mjs",

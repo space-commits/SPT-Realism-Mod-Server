@@ -2578,6 +2578,7 @@
       "items": {
         "TacticalVest": [
           "5710c24ad2720bc3458b45a3",
+          "5448be9a4bdc2dfd2f8b456a",
           "5a0c27731526d80618476ac4",
           "5e831507ea0a7c419c2f9bd9",
           "590c661e86f7741e566b646a",
@@ -2732,6 +2733,7 @@
       "dynamic_looting": {
         "TacticalVest": [
           "5710c24ad2720bc3458b45a3",
+          "5448be9a4bdc2dfd2f8b456a",
           "5a0c27731526d80618476ac4",
           "5e831507ea0a7c419c2f9bd9",
           "590c661e86f7741e566b646a",
@@ -4377,6 +4379,7 @@
       "items": {
         "TacticalVest": [
           "5710c24ad2720bc3458b45a3",
+          "5448be9a4bdc2dfd2f8b456a",
           "5a0c27731526d80618476ac4",
           "5e831507ea0a7c419c2f9bd9",
           "544fb45d4bdc2dee738b4568",
@@ -4511,6 +4514,7 @@
       "dynamic_looting": {
         "TacticalVest": [
           "5710c24ad2720bc3458b45a3",
+          "5448be9a4bdc2dfd2f8b456a",
           "5a0c27731526d80618476ac4",
           "5e831507ea0a7c419c2f9bd9",
           "544fb45d4bdc2dee738b4568",
@@ -6552,6 +6556,9 @@
       "items": {
         "TacticalVest": [
           "5710c24ad2720bc3458b45a3",
+          "5448be9a4bdc2dfd2f8b456a",
+          "5e32f56fcb6d5863cc5e5ee4",
+          "5e340dcdcb6d5863cc5e5efb",
           "5a0c27731526d80618476ac4",
           "5e831507ea0a7c419c2f9bd9",
           "5e8488fa988a8701445df1e4",
@@ -6652,7 +6659,6 @@
           "591094e086f7747caa7bb2ef",
           "5ac78a9b86f7741cca0bbd8d",
           "61605e13ffa6e502ac5e7eef",
-          "61605d88ffa6e502ac5e7eeb",
           "61bf7c024770ee6f9c6b8b53",
           "62a0a16d0b9d3c46de5b6e97",
           "59faff1d86f7746c51718c9c",
@@ -6683,6 +6689,9 @@
       "dynamic_looting": {
         "TacticalVest": [
           "5710c24ad2720bc3458b45a3",
+          "5448be9a4bdc2dfd2f8b456a",
+          "5e32f56fcb6d5863cc5e5ee4",
+          "5e340dcdcb6d5863cc5e5efb",
           "5a0c27731526d80618476ac4",
           "5e831507ea0a7c419c2f9bd9",
           "5e8488fa988a8701445df1e4",

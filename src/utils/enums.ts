@@ -51,7 +51,7 @@ export const enum ParentClasses {
     AMMO = "5485a8684bdc2da71d8b4567",
     AMMO_BOX = "543be5cb4bdc2deb348b4568",
     LOOT_CONTAINER = "566965d44bdc2d814c8b4571",
-    MOD_CONTAINER = "5448bf274bdc2dfc2f8b456a",
+    SECURE_CONTAINER = "5448bf274bdc2dfc2f8b456a",
     SEARCHABLE_ITEM = "566168634bdc2d144c8b456c",
     STASH = "566abbb64bdc2d144c8b457d",
     SORTING_TABLE = "6050cac987d3f925bf016837",
@@ -94,7 +94,10 @@ export const enum ParentClasses {
     ARMOR_PLATE = "644120aa86ffbe10ee032b6f",
     BUILT_IN_ARMOR = "65649eb40bf0ed77b8044453",
     CULTIST_AMULET= "64b69b0c8f3be32ed22682f8",
-    RADIO_TRANSMITTER = "62e9103049c018f425059f38"
+    RADIO_TRANSMITTER = "62e9103049c018f425059f38",
+    IRON_SIGHTS = "55818ac54bdc2d5b648b456e",
+    HANDGUARDS = "55818a104bdc2db9688b4569",
+    BARRELS = "555ef6e44bdc2de9068b457e"
 }
 
 export const enum Calibers {
