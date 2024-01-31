@@ -184,8 +184,6 @@ export class Player {
 
 
     public loadPlayerStats() {
-
-
         if(this.modConfig.realistic_ballistics == true || this.modConfig.med_changes == true){
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
@@ -211,10 +209,10 @@ export class Player {
 
         if (this.modConfig.movement_changes == true) {
 
-            this.globalDB().WalkSpeed["x"] = 0.6;
-            this.globalDB().WalkSpeed["y"] = 0.87;
+            this.globalDB().WalkSpeed["x"] = 0.54;
+            this.globalDB().WalkSpeed["y"] = 0.77;
             this.globalDB().SprintSpeed["x"] = 0.05;
-            this.globalDB().SprintSpeed["y"] = 0.45;
+            this.globalDB().SprintSpeed["y"] = 0.5;
 
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB().Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight

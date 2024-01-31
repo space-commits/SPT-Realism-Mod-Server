@@ -1530,7 +1530,7 @@ export class BotLoader {
         botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
         botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
         botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
-  
+
         if(this.modConfig.add_keys === true){
             botJsonTemplate.inventory.items.Backpack.push(...keys.tier4_PMC_Keys);
         }

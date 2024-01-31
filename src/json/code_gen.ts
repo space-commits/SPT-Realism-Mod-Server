@@ -7,6 +7,7 @@ import { ParentClasses } from "../utils/enums";
 import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
 
 const modConfig = require("../../config/config.json");
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 
 const presetPath = "Realism";
 
@@ -48,6 +49,28 @@ const SMGTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "
 const SniperRifleTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/SniperRifleTemplates.json");
 const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/GrenadeLauncherTemplates.json");
+
+const allValidArmorSlots = [
+    "front_plate",
+    "back_plate",
+    "left_side_plate",
+    "right_side_plate",
+    "soft_armor_front",
+    "soft_armor_back",
+    "soft_armor_left",
+    "soft_armor_right",
+    "collar",
+    "shoulder_l",
+    "shoulder_r",
+    "groin",
+    "groin_back",
+    "helmet_top",
+    "helmet_back",
+    "helmet_ears",
+    "helmet_eyes",
+    "helmet_jaw"
+];
+
 
 
 export class JsonGen {
@@ -737,6 +760,38 @@ export class JsonGen {
                 MalfChance
             };
             return item;
+        }
+    }
+
+    public genArmorMods() {
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG || serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) {
+                this.armorModsWriteToFile(i, serverItem);
+            }
+        }
+    }
+
+    private armorModsWriteToFile(index: string, serverItem: ITemplateItem) {
+        armorTemplate[index] = this.writeArmorToFile(serverItem);
+        this.utils.saveToJSONFile(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
+    }
+
+    private writeArmorToFile(serverItem: ITemplateItem) {
+        let armor = {};
+        if (Array.isArray(serverItem._props.Slots)) {
+            for (const slot of serverItem._props.Slots) {
+                if (allValidArmorSlots.includes(slot._name.toLowerCase())) {
+                    let slotItems = [];
+                    for (const filter of slot._props.filters) {
+                        for (const item of filter.Filter) {
+                            slotItems.push(item);
+                        }
+                    }
+                    armor[slot._name] = slotItems;
+                }
+            }
+            return armor;
         }
     }
 }

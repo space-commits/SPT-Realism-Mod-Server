@@ -40,7 +40,7 @@ import { ITrader } from "@spt-aki/models/eft/common/tables/ITrader";
 import { TraderPurchasePersisterService } from "@spt-aki/services/TraderPurchasePersisterService";
 import { RagfairServer } from "@spt-aki/servers/RagfairServer";;
 import { BotHelper } from "@spt-aki/helpers/BotHelper";
-import { IBotBase, Inventory, Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
+import { IBotBase } from "@spt-aki/models/eft/common/tables/IBotBase";
 import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
 import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
@@ -51,7 +51,19 @@ import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairController } from "@spt-aki/controllers/RagfairController";
 import { IPostAkiLoadModAsync } from "@spt-aki/models/external/IPostAkiLoadModAsync";
 import { LocationController } from "@spt-aki/controllers/LocationController";
-
+import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
+import { LootGenerator } from "@spt-aki/generators/LootGenerator";
+import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
+import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
+import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
+import { BotGenerator } from "@spt-aki/generators/BotGenerator";
+import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootResult";
+import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
+import { RagfairTaxService } from "@spt-aki/services/RagfairTaxService";
+import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
+import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
+import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentService";
+import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
 import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
 import { AttatchmentBase as AttachmentBase } from "./weapons/attatchment_base";
@@ -70,23 +82,10 @@ import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./tr
 import { AirdropLootgen, Airdrops } from "./misc/airdrops";
 import { Spawns } from "./bots/maps";
 import { Gear } from "./items/gear";
-import { EventTracker, SeasonalEventsHandler } from "./misc/seasonalevents";
+import { EventTracker } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
 import { DescriptionGen } from "./json/description_gen";
 import { JsonHandler } from "./json/json-handler";
-import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
-import { LootGenerator } from "@spt-aki/generators/LootGenerator";
-import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
-import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
-import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
-import { BotGenerator } from "@spt-aki/generators/BotGenerator";
-import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootResult";
-import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
-import { RagfairTaxService } from "@spt-aki/services/RagfairTaxService";
-import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
-import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
-import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentService";
-import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
 
 import * as path from 'path';
 import * as fs from 'fs';
@@ -604,7 +603,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         // codegen.ammoTemplatesCodeGen();
 
         if (modConfig.realistic_ballistics == true) {
-            ammo.loadAmmoStats(); 
+            ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
         }
@@ -690,7 +689,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
         //traders
         traders.loadTraderTweaks();
-        
+
         if (modConfig.change_trader_ll == true) {
             traders.setLoyaltyLevels();
         }
@@ -763,7 +762,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         }
     }
 
-    private checkForMods(preAkiModLoader: PreAkiModLoader, logger: ILogger, modConf: any){
+    private checkForMods(preAkiModLoader: PreAkiModLoader, logger: ILogger, modConf: any) {
         const activeMods = preAkiModLoader.getImportedModDetails();
         for (const modname in activeMods) {
             if (modname.includes("Jiro-BatterySystem")) {
@@ -784,12 +783,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
             }
             if (modname.includes("AlgorithmicLevelProgression")) {
                 ModTracker.alpPresent = true;
-                if(modConf.bot_changes == true){
+                if (modConf.bot_changes == true) {
                     logger.logWithColor("===========================!============================", LogTextColor.WHITE, LogBackgroundColor.RED);
                     logger.logWithColor("Realism: WARNING, ALP DETECTED! You have Realism's bot progression enabled already. Either uninstall ALP or disable Realism's bot changes!", LogTextColor.WHITE, LogBackgroundColor.RED);
                     logger.logWithColor("===========================!============================", LogTextColor.WHITE, LogBackgroundColor.RED);
                 }
-                else{
+                else {
                     logger.logWithColor("Realism: ALP Detected, Making Adjustments", LogTextColor.GREEN);
                 }
             }

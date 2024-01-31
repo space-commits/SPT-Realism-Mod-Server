@@ -1,52 +1,7 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Armor = void 0;
-const fs = __importStar(require("fs"));
-const path = __importStar(require("path"));
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
-const allValidArmorSlots = [
-    "front_plate",
-    "back_plate",
-    "left_side_plate",
-    "right_side_plate",
-    "soft_armor_front",
-    "soft_armor_back",
-    "soft_armor_left",
-    "soft_armor_right",
-    "collar",
-    "shoulder_l",
-    "shoulder_r",
-    "groin",
-    "groin_back",
-    "helmet_top",
-    "helmet_back",
-    "helmet_ears",
-    "helmet_eyes",
-    "helmet_jaw"
-];
+const enums_1 = require("../utils/enums");
 const validHelmetSlots = [
     "helmet_top",
     "helmet_back",
@@ -58,10 +13,12 @@ class Armor {
     logger;
     tables;
     modConf;
-    constructor(logger, tables, modConf) {
+    utils;
+    constructor(logger, tables, modConf, utils) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
+        this.utils = utils;
     }
     globalDB() {
         return this.tables.globals.config;
@@ -77,14 +34,14 @@ class Armor {
         this.armMat().Glass.Destructibility = 0.6;
         this.armMat().Aramid.Destructibility = 0.24;
         this.armMat().Ceramic.Destructibility = 0.18;
-        this.armMat().Combined.Destructibility = 0.16;
-        this.armMat().UHMWPE.Destructibility = 0.13;
-        this.armMat().Titan.Destructibility = 0.06;
-        this.armMat().ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represetns loss of anti-spall coating
+        this.armMat().Combined.Destructibility = 0.12;
+        this.armMat().UHMWPE.Destructibility = 0.15;
+        this.armMat().Titan.Destructibility = 0.05;
+        this.armMat().ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represents loss of anti-spall coating
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
             // // use this to generate json for armor containing all the armor's armor slots, which I can then use to push to all bots to prevent bot gen errors
-            // let armorLevl: number = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass as string);
+            // 
             // if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG || serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) {
             //     this.itemWriteToFile(i, serverItem);
             // }
@@ -95,40 +52,116 @@ class Armor {
             this.loadHelmets(serverItem, this.tables);
             this.loadGlasses(serverItem);
             this.loadArmorMods(serverItem);
+            this.removePlateCollidors(serverItem);
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("Armour loaded");
         }
     }
-    itemWriteToFile(index, serverItem) {
-        armorTemplate[index] = this.writeArmorToFile(serverItem);
-        this.saveToJSONFile(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
-    }
-    writeArmorToFile(serverItem) {
-        let armor = {};
-        if (Array.isArray(serverItem._props.Slots)) {
-            for (const slot of serverItem._props.Slots) {
-                if (allValidArmorSlots.includes(slot._name.toLowerCase())) {
-                    let slotItems = [];
-                    for (const filter of slot._props.filters) {
-                        for (const item of filter.Filter) {
-                            slotItems.push(item);
+    removePlateCollidors(serverItem) {
+        const validSlots = [
+            "front_plate",
+            "back_plate",
+            "left_side_plate",
+            "right_side_plate",
+            "soft_armor_front",
+            "soft_armor_back",
+            "soft_armor_left",
+            "soft_armor_right",
+        ];
+        const validCollidors = [
+            "plate_granit_sapi_back",
+            "plate_granit_sapi_chest",
+            "plate_granit_ssapi_side_left_high",
+            "plate_granit_ssapi_side_right_high",
+            "plate_granit_ssapi_side_left_low",
+            "plate_granit_ssapi_side_right_low",
+            "plate_korund_chest",
+            "plate_6b13_back",
+            "plate_korund_side_left_high",
+            "plate_korund_side_left_low",
+            "plate_korund_side_right_high",
+            "plate_korund_side_right_low"
+        ];
+        const torsoPlates = [
+            "plate_granit_sapi_back",
+            "plate_granit_sapi_chest",
+        ];
+        const bodyPlates = [
+            "plate_korund_chest"
+        ];
+        const backPlates = [
+            "plate_6b13_back"
+        ];
+        const sidePlates = [
+            "plate_granit_ssapi_side_left_high",
+            "plate_granit_ssapi_side_right_high",
+            "plate_granit_ssapi_side_left_low",
+            "plate_granit_ssapi_side_right_low",
+            "plate_korund_side_left_high",
+            "plate_korund_side_left_low",
+            "plate_korund_side_right_high",
+            "plate_korund_side_right_low"
+        ];
+        if (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG) {
+            if (Array.isArray(serverItem._props.Slots)) {
+                for (const slot of serverItem._props.Slots) {
+                    if (validSlots.includes(slot._name.toLowerCase())) {
+                        for (const filter of slot._props.filters) {
+                            if (filter.armorPlateColliders !== undefined && filter.armorPlateColliders.length > 0) {
+                                for (const col of filter.armorPlateColliders) {
+                                    if (filter.armorColliders != undefined) {
+                                        let plateCollidor = col.toLowerCase();
+                                        this.logger.warning(plateCollidor);
+                                        if (plateCollidor === "plate_granit_sapi_chest") {
+                                            filter.armorColliders.push("RibcageUp");
+                                        }
+                                        if (plateCollidor === "plate_granit_sapi_back") {
+                                            filter.armorColliders.push("SpineTop");
+                                        }
+                                        if (plateCollidor === "plate_korund_chest") {
+                                            filter.armorColliders.push("RibcageUp", "RibcageLow");
+                                        }
+                                        if (plateCollidor === "plate_6B13_back") {
+                                            filter.armorColliders.push("SpineTop", "SpineDown");
+                                        }
+                                        if (plateCollidor.includes("left")) {
+                                            filter.armorColliders.push("LeftSideChestDown");
+                                        }
+                                        if (plateCollidor.includes("right")) {
+                                            filter.armorColliders.push("RightSideChestDown");
+                                        }
+                                    }
+                                }
+                            }
+                            filter.armorPlateColliders = [];
                         }
                     }
-                    armor[slot._name] = slotItems;
                 }
             }
-            return armor;
         }
-    }
-    saveToJSONFile(data, filePath) {
-        const baseFolderPath = path.resolve(path.join(__dirname, '../../'));
-        fs.writeFile(path.join(baseFolderPath, filePath), JSON.stringify(data, null, 4), function (err) {
-            if (err) {
-                console.log(`Trying to save the config to ${path.join(baseFolderPath, filePath)} failed:`);
-                throw err;
+        if ((serverItem._parent === enums_1.ParentClasses.ARMOR_PLATE || serverItem._parent === enums_1.ParentClasses.BUILT_IN_ARMOR) && serverItem._props.armorPlateColliders !== undefined && serverItem._props.armorPlateColliders.length > 0) {
+            for (const item of serverItem._props.armorPlateColliders) {
+                let plateCollidor = item.toLowerCase();
+                if (torsoPlates.includes(plateCollidor)) {
+                    serverItem._props.armorColliders.push("RibcageUp", "SpineTop");
+                    break;
+                }
+                if (bodyPlates.includes(plateCollidor)) {
+                    serverItem._props.armorColliders.push("RibcageUp", "RibcageLow");
+                    break;
+                }
+                if (backPlates.includes(plateCollidor)) {
+                    serverItem._props.armorColliders.push("SpineTop", "SpineDown");
+                    break;
+                }
+                if (sidePlates.includes(plateCollidor)) {
+                    serverItem._props.armorColliders.push("RightSideChestDown", "LeftSideChestDown");
+                    break;
+                }
             }
-        });
+            serverItem._props.armorPlateColliders = [];
+        }
     }
     aramidHelper(serverItem, targetClass, newClass, durability, blunt) {
         let armorColliders = serverItem._props.armorColliders;
@@ -293,7 +326,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.015;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
         }
-        //Titanium NIJ IV (retarded BSG shit)
+        //Titanium NIJ IV (BSG's bullshit)
         if (serverItem._id === "656fa99800d62bcd2e024088" || serverItem._id === "656fa25e94b480b8a500c0e0") {
             serverItem._props.Durability = 50;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -317,7 +350,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.2;
             serverItem._props.ArmorMaterial = 'UHMWPE';
         }
-        //UHMWPE NIJ IV (bsg, not sure if this is even a thing)
+        //UHMWPE NIJ IV (BSG bullshit, not sure if this is even a thing IRL)
         if (serverItem._id === "656fafe3498d1b7e3e071da4") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -373,7 +406,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.1;
             serverItem._props.ArmorMaterial = 'Ceramic';
         }
-        //SAPI
+        //sapi
         if (serverItem._id === "655746010177119f4a097ff7") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -381,7 +414,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Combined';
         }
-        //SSAPI Side
+        //Ssapi Side
         if (serverItem._id === "6557458f83942d705f0c4962") {
             serverItem._props.Durability = 30;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -389,7 +422,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
         }
-        //ESAPI
+        //Esapi
         if (serverItem._id === "64afdcb83efdfea28601d041") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -405,7 +438,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Combined';
         }
-        //XSAPI
+        //Xsapi
         if (serverItem._id === "") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -421,7 +454,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.1;
             serverItem._props.ArmorMaterial = 'Combined';
         }
-        //6B12 (used by 6B23-1, should be class 8 while taking aramid into account)
+        //6B12 (used by 6B23-1, should be class 8 with taking aramid into account)
         if (serverItem._id === "654a4dea7c17dec2f50cc86a") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -509,7 +542,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.15;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
         }
-        //Korund VM Front
+        //korund VM Front
         if (serverItem._id === "656f664200d62bcd2e024077") {
             serverItem._props.Durability = 115;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -517,7 +550,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.08;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
         }
-        //Korund VM Back
+        //korund VM Back
         if (serverItem._id === "657b2797c3dbcb01d60c35ea") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -525,7 +558,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.08;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
         }
-        //Korund VM Side
+        //korund VM Side
         if (serverItem._id === "654a4f8bc721968a4404ef18") {
             serverItem._props.Durability = 40;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -533,7 +566,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.1;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
         }
-        //Korund VM-K Front
+        //korund VM-K Front
         if (serverItem._id === "656f66b5c6baea13cd07e108") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -541,7 +574,7 @@ class Armor {
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Ceramic';
         }
-        //Korund VM-K Back
+        //korund VM-K Back
         if (serverItem._id === "657b28d25f444d6dff0c6c77") {
             serverItem._props.Durability = 80;
             serverItem._props.MaxDurability = serverItem._props.Durability;
@@ -1224,7 +1257,7 @@ class Armor {
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.75;
             serverItem._props.BluntThroughput = 0.145;
-            serverItem._props.DeafStrength = "Low";
+            serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Weight = 1.5;
             serverItem._props.armorColliders = [
@@ -1244,7 +1277,7 @@ class Armor {
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.9;
             serverItem._props.BluntThroughput = 0.156;
-            serverItem._props.DeafStrength = "Low";
+            serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Weight = 1.8;
             serverItem._props.armorColliders = [

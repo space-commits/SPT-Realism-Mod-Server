@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonGen = void 0;
 const enums_1 = require("../utils/enums");
 const modConfig = require("../../config/config.json");
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 const presetPath = "Realism";
 const armorComponentsTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../../db/templates/gear/" + `${presetPath}` + "/armorChestrigTemplates.json");
@@ -39,6 +40,26 @@ const SMGTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "
 const SniperRifleTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/SniperRifleTemplates.json");
 const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${presetPath}` + "/GrenadeLauncherTemplates.json");
+const allValidArmorSlots = [
+    "front_plate",
+    "back_plate",
+    "left_side_plate",
+    "right_side_plate",
+    "soft_armor_front",
+    "soft_armor_back",
+    "soft_armor_left",
+    "soft_armor_right",
+    "collar",
+    "shoulder_l",
+    "shoulder_r",
+    "groin",
+    "groin_back",
+    "helmet_top",
+    "helmet_back",
+    "helmet_ears",
+    "helmet_eyes",
+    "helmet_jaw"
+];
 class JsonGen {
     logger;
     tables;
@@ -699,6 +720,35 @@ class JsonGen {
                 MalfChance
             };
             return item;
+        }
+    }
+    genArmorMods() {
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            if (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG || serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER) {
+                this.armorModsWriteToFile(i, serverItem);
+            }
+        }
+    }
+    armorModsWriteToFile(index, serverItem) {
+        armorTemplate[index] = this.writeArmorToFile(serverItem);
+        this.utils.saveToJSONFile(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
+    }
+    writeArmorToFile(serverItem) {
+        let armor = {};
+        if (Array.isArray(serverItem._props.Slots)) {
+            for (const slot of serverItem._props.Slots) {
+                if (allValidArmorSlots.includes(slot._name.toLowerCase())) {
+                    let slotItems = [];
+                    for (const filter of slot._props.filters) {
+                        for (const item of filter.Filter) {
+                            slotItems.push(item);
+                        }
+                    }
+                    armor[slot._name] = slotItems;
+                }
+            }
+            return armor;
         }
     }
 }
