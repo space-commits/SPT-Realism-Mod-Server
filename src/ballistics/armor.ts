@@ -3,7 +3,6 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { IArmorMaterials, IConfig } from "@spt-aki/models/eft/common/IGlobals";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
-import { Utils } from "src/utils/utils";
 
 const validHelmetSlots = [
     "helmet_top",
@@ -124,7 +123,6 @@ export class Armor {
                             for (const col of filter.armorPlateColliders) {
                                 if (filter.armorColliders != undefined) {
                                     let plateCollidor = col.toLowerCase();
-                                    this.logger.warning(plateCollidor);
                                     if (plateCollidor === "plate_granit_sapi_chest") {
                                         filter.armorColliders.push("RibcageUp");
                                     }

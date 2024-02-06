@@ -49,7 +49,6 @@ import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
 import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
 import { RagfairController } from "@spt-aki/controllers/RagfairController";
-import { IPostAkiLoadModAsync } from "@spt-aki/models/external/IPostAkiLoadModAsync";
 import { LocationController } from "@spt-aki/controllers/LocationController";
 import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
 import { LootGenerator } from "@spt-aki/generators/LootGenerator";
@@ -64,9 +63,8 @@ import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
 import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
 import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentService";
 import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
-import { Ammo } from "./ballistics/ammo";
-import { Armor } from "./ballistics/armor";
-import { AttatchmentBase as AttachmentBase } from "./weapons/attatchment_base";
+
+import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
 import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
 import { Arrays } from "./utils/arrays"
@@ -86,6 +84,8 @@ import { EventTracker } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
 import { DescriptionGen } from "./json/description_gen";
 import { JsonHandler } from "./json/json-handler";
+import { Ammo } from "./ballistics/ammo";
+import { Armor } from "./ballistics/armor";
 
 import * as path from 'path';
 import * as fs from 'fs';
@@ -93,12 +93,11 @@ import * as fs from 'fs';
 const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
 const buffs = require("../db/items/buffs.json");
-const custProfile = require("../db/profile/profile.json");
 const modConfig = require("../config/config.json");
 
 let validatedClient = false;
 
-export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IPostAkiLoadModAsync {
+export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
     private path: { resolve: (arg0: string) => any; };
     private modLoader: PreAkiModLoader;
@@ -217,7 +216,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const arrays = new Arrays(postLoadTables);
                         const utils = new Utils(postLoadTables, arrays);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
-                        const player = new Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
+                        const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -315,7 +314,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const postLoadtables = postLoadDBServer.getTables();
                         const arrays = new Arrays(postLoadtables);
                         const utils = new Utils(postLoadtables, arrays);
-                        const player = new Player(logger, postLoadtables, modConfig, custProfile, medItems, utils);
+                        const player = new Player(logger, postLoadtables, modConfig, medItems, utils);
 
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -453,7 +452,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const utils = new Utils(postLoadTables, arrays);
-                        const player = new Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
+                        const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
 
@@ -545,15 +544,15 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
 
 
 
-    public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
-        const logger = container.resolve<ILogger>("WinstonLogger");
+    // public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
+    //     const logger = container.resolve<ILogger>("WinstonLogger");
 
-        const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-        const tables = databaseServer.getTables();
-        const jsonHand = new JsonHandler(tables, logger);
-        jsonHand.pushWeaponsToServer();
-        jsonHand.pushModsToServer();
-    }
+    //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+    //     const tables = databaseServer.getTables();
+    //     const jsonHand = new JsonHandler(tables, logger);
+    //     jsonHand.pushWeaponsToServer();
+    //     jsonHand.pushModsToServer();
+    // }
 
     public postDBLoad(container: DependencyContainer): void {
 
@@ -575,7 +574,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
         const meds = new Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new Player(logger, tables, modConfig, custProfile, medItems, utils);
+        const player = new Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
         const codegen = new JsonGen(logger, tables, modConfig, utils, arrays);
@@ -590,6 +589,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         const jsonHand = new JsonHandler(tables, logger);
 
         this.dllChecker(logger, modConfig);
+
+        attachBase.loadAttCompat();
 
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
@@ -702,8 +703,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod, IP
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
-
-        attachBase.loadAttCompat();
 
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();

@@ -164,7 +164,7 @@ class Player {
         if (this.modConfig.realistic_ballistics == true || this.modConfig.med_changes == true) {
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
-            this.globalDB().Stamina.AimDrainRate = 0.25;
+            this.globalDB().Stamina.AimDrainRate = 0.35;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
@@ -182,9 +182,9 @@ class Player {
         }
         if (this.modConfig.movement_changes == true) {
             this.globalDB().WalkSpeed["x"] = 0.54;
-            this.globalDB().WalkSpeed["y"] = 0.78;
+            this.globalDB().WalkSpeed["y"] = 0.77;
             this.globalDB().SprintSpeed["x"] = 0.05;
-            this.globalDB().SprintSpeed["y"] = 0.47;
+            this.globalDB().SprintSpeed["y"] = 0.5;
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB().Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight

@@ -13,12 +13,10 @@ class Armor {
     logger;
     tables;
     modConf;
-    utils;
-    constructor(logger, tables, modConf, utils) {
+    constructor(logger, tables, modConf) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
-        this.utils = utils;
     }
     globalDB() {
         return this.tables.globals.config;
@@ -103,39 +101,36 @@ class Armor {
             "plate_korund_side_right_high",
             "plate_korund_side_right_low"
         ];
-        if (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG) {
-            if (Array.isArray(serverItem._props.Slots)) {
-                for (const slot of serverItem._props.Slots) {
-                    if (validSlots.includes(slot._name.toLowerCase())) {
-                        for (const filter of slot._props.filters) {
-                            if (filter.armorPlateColliders !== undefined && filter.armorPlateColliders.length > 0) {
-                                for (const col of filter.armorPlateColliders) {
-                                    if (filter.armorColliders != undefined) {
-                                        let plateCollidor = col.toLowerCase();
-                                        this.logger.warning(plateCollidor);
-                                        if (plateCollidor === "plate_granit_sapi_chest") {
-                                            filter.armorColliders.push("RibcageUp");
-                                        }
-                                        if (plateCollidor === "plate_granit_sapi_back") {
-                                            filter.armorColliders.push("SpineTop");
-                                        }
-                                        if (plateCollidor === "plate_korund_chest") {
-                                            filter.armorColliders.push("RibcageUp", "RibcageLow");
-                                        }
-                                        if (plateCollidor === "plate_6B13_back") {
-                                            filter.armorColliders.push("SpineTop", "SpineDown");
-                                        }
-                                        if (plateCollidor.includes("left")) {
-                                            filter.armorColliders.push("LeftSideChestDown");
-                                        }
-                                        if (plateCollidor.includes("right")) {
-                                            filter.armorColliders.push("RightSideChestDown");
-                                        }
+        if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG) && Array.isArray(serverItem._props.Slots)) {
+            for (const slot of serverItem._props.Slots) {
+                if (validSlots.includes(slot._name.toLowerCase())) {
+                    for (const filter of slot._props.filters) {
+                        if (filter.armorPlateColliders !== undefined && filter.armorPlateColliders.length > 0) {
+                            for (const col of filter.armorPlateColliders) {
+                                if (filter.armorColliders != undefined) {
+                                    let plateCollidor = col.toLowerCase();
+                                    if (plateCollidor === "plate_granit_sapi_chest") {
+                                        filter.armorColliders.push("RibcageUp");
+                                    }
+                                    if (plateCollidor === "plate_granit_sapi_back") {
+                                        filter.armorColliders.push("SpineTop");
+                                    }
+                                    if (plateCollidor === "plate_korund_chest") {
+                                        filter.armorColliders.push("RibcageUp", "RibcageLow");
+                                    }
+                                    if (plateCollidor === "plate_6B13_back") {
+                                        filter.armorColliders.push("SpineTop", "SpineDown");
+                                    }
+                                    if (plateCollidor.includes("left")) {
+                                        filter.armorColliders.push("LeftSideChestDown");
+                                    }
+                                    if (plateCollidor.includes("right")) {
+                                        filter.armorColliders.push("RightSideChestDown");
                                     }
                                 }
                             }
-                            filter.armorPlateColliders = [];
                         }
+                        filter.armorPlateColliders = [];
                     }
                 }
             }

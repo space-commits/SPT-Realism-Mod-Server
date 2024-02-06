@@ -237,6 +237,7 @@ class JsonHandler {
                     serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
                     serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
+                    serverItem._props.shotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Weight = fileItem.Weight;
                     serverItem._props.bFirerate = fileItem.AutoROF;
                     serverItem._props.SingleFireRate = fileItem.SemiROF;
@@ -250,7 +251,7 @@ class JsonHandler {
                         serverItem._props.weapFireType = fileItem.weapFireType;
                     }
                     let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
-                        "unused", "unused", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
+                        fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.7", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
                         fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1", fileItem?.CameraSnap?.toString() || "0.1"
                     ];
                     let combinedArr = weapPropertyValues.concat(serverConfItems);

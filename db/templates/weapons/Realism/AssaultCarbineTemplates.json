@@ -449,7 +449,9 @@
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.5,
-        "BaseFixSpeed": 1.3
+        "BaseFixSpeed": 1.3,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.207
     },
     "59e6687d86f77411d949b251": {
         "ItemID": "59e6687d86f77411d949b251",

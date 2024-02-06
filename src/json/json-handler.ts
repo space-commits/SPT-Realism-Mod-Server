@@ -79,7 +79,7 @@ export class JsonHandler {
                 this.callHelper(GasblockTemplates, serverItem, this.modPusherHelper);
                 this.callHelper(HandguardTemplates, serverItem, this.modPusherHelper);
                 this.callHelper(FlashlightLaserTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(UBGLTempaltes, serverItem, this.modPusherHelper)
+                this.callHelper(UBGLTempaltes, serverItem, this.modPusherHelper);
             }
         }
     }
@@ -179,14 +179,13 @@ export class JsonHandler {
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
                 fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.HasExtraArmor?.toString() || "false"];
 
-                let combinedArr = armorPropertyValues.concat(serverConfItems)
+            let combinedArr = armorPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;
         }
     }
 
     private modPusherHelper(serverItem: any, fileItem: any) {
         if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
-
             if (serverItem._id === fileItem.ItemID) {
                 let serverConfItems = serverItem._props.ConflictingItems;
                 if (serverConfItems[0] !== "SPTRM") {
@@ -205,7 +204,7 @@ export class JsonHandler {
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Loudness = fileItem.Loudness;
 
-                    let isScope: boolean = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
+                    let isScope = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
                     if (isScope != true) {
                         serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
                     }
@@ -264,6 +263,7 @@ export class JsonHandler {
                     serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
                     serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
+                    serverItem._props.shotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Weight = fileItem.Weight;
                     serverItem._props.bFirerate = fileItem.AutoROF;
                     serverItem._props.SingleFireRate = fileItem.SemiROF;
@@ -279,7 +279,7 @@ export class JsonHandler {
                     }
 
                     let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
-                        "unused", "unused", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
+                        fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.7", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
                         fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1", fileItem?.CameraSnap?.toString() || "0.1"
                     ];
 

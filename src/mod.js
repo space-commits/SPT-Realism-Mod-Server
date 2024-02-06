@@ -27,6 +27,8 @@ exports.Main = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
 ;
+const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
+const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
 const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
 const attatchment_base_1 = require("./weapons/attatchment_base");
@@ -49,8 +51,6 @@ const seasonalevents_1 = require("./misc/seasonalevents");
 const item_cloning_1 = require("./items/item_cloning");
 const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
-const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
-const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
 const path = __importStar(require("path"));
 const fs = __importStar(require("fs"));
 const medItems = require("../db/items/med_items.json");
@@ -417,14 +417,14 @@ class Main {
             }
         });
     }
-    async postAkiLoadAsync(container) {
-        const logger = container.resolve("WinstonLogger");
-        const databaseServer = container.resolve("DatabaseServer");
-        const tables = databaseServer.getTables();
-        const jsonHand = new json_handler_1.JsonHandler(tables, logger);
-        jsonHand.pushWeaponsToServer();
-        jsonHand.pushModsToServer();
-    }
+    // public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
+    //     const logger = container.resolve<ILogger>("WinstonLogger");
+    //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+    //     const tables = databaseServer.getTables();
+    //     const jsonHand = new JsonHandler(tables, logger);
+    //     jsonHand.pushWeaponsToServer();
+    //     jsonHand.pushModsToServer();
+    // }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseServer = container.resolve("DatabaseServer");
@@ -458,6 +458,7 @@ class Main {
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
         this.dllChecker(logger, modConfig);
+        attachBase.loadAttCompat();
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
@@ -547,7 +548,6 @@ class Main {
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
-        attachBase.loadAttCompat();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
