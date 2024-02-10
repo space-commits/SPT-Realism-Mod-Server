@@ -28,7 +28,7 @@
         "LoyaltyLevel": 2,
         "ArmorClass": "GOST 3",
         "CanSpall": true,
-        "SpallReduction": 0.23,
+        "SpallReduction": 0.3,
         "ReloadSpeedMulti": 0.91,
         "Comfort": 1.1
     },
@@ -50,7 +50,7 @@
         "LoyaltyLevel": 2,
         "ArmorClass": "GOST 4",
         "CanSpall": true,
-        "SpallReduction": 0.29,
+        "SpallReduction": 0.22,
         "ReloadSpeedMulti": 0.91,
         "Comfort": 1.1
     },
@@ -82,8 +82,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 4,
         "ArmorClass": "NIJ III+",
-        "CanSpall": true,
-        "SpallReduction": 0.18,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1.16,
         "Comfort": 0.87
     },
@@ -93,8 +93,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5",
-        "CanSpall": true,
-        "SpallReduction": 0.25,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 0.935,
         "Comfort": 1
     },
@@ -115,8 +115,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 3,
         "ArmorClass": "NIJ III",
-        "CanSpall": true,
-        "SpallReduction": 0.2,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 0.96,
         "Comfort": 0.84
     },
@@ -137,8 +137,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "NIJ III+",
-        "CanSpall": true,
-        "SpallReduction": 0.23,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
         "Comfort": 0.76
     },

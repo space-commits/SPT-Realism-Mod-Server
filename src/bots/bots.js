@@ -19,15 +19,12 @@ const saniLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarLO.json");
 const saniFollowerLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarfollowerLO.json");
 const reshLO = require("../../db/bots/loadouts/bosses/reshalla/reshallaLO.json");
 const reshFollowerLO = require("../../db/bots/loadouts/bosses/reshalla/reshallafollowerLO.json");
-const scavLootLimitCat = require("../../db/bots/loadouts/scavs/scavLootLimitCat.json");
-const PMCLootLimitCat = require("../../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
 const botHealth = require("../../db/bots/botHealth.json");
 const rmBotConfig = require("../../db/bots/botconfig.json");
 const USECNames = require("../../db/bots/names/USECNames.json");
 const bearNames = require("../../db/bots/names/bearNames.json");
 const pmcTypes = require("../../db/bots/pmcTypes.json");
 const keys = require("../../db/bots/loadouts/templates/keys.json");
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 class BotLoader {
     logger;
     tables;
@@ -553,7 +550,7 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile1;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc1.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc1.isUsec;
-        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
+        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent && this.modConfig.spawn_waves != true) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         }
         if (this.modConfig.bot_loot_changes === true) {
@@ -629,7 +626,7 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile2;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc2.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc2.isUsec;
-        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
+        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent && this.modConfig.spawn_waves != true) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         }
         if (this.modConfig.bot_loot_changes === true) {
@@ -705,7 +702,7 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile3;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc3.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc3.isUsec;
-        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
+        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent && this.modConfig.spawn_waves != true) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         }
         if (this.modConfig.bot_loot_changes === true) {

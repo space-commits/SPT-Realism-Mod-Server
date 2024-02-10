@@ -9,6 +9,7 @@ const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
 const gearPath = modConfig.gear_preset;
 
+const armorPlateTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorPlateTemplates.json");
 const armorComponentsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorChestrigTemplates.json");
 const helmetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/helmetTemplates.json");
@@ -149,6 +150,7 @@ export class JsonHandler {
             if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass !== undefined) {
                 this.callHelper(armorChestrigTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(armorComponentsTemplates, serverItem, this.gearPusherHelper);
+                this.callHelper(armorPlateTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(helmetTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(armorVestsTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(armorMasksTemplates, serverItem, this.gearPusherHelper);

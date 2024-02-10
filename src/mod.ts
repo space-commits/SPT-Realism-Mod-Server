@@ -74,7 +74,7 @@ import { WeaponsGlobals } from "./weapons/weapons_globals"
 import { BotLoader } from "./bots/bots";
 import { BotGen } from "./bots/bot_gen";
 import { ItemsClass } from "./items/items";
-import { JsonGen } from "./json/code_gen";
+import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
 import { AirdropLootgen, Airdrops } from "./misc/airdrops";
@@ -368,7 +368,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             let realTime = "";
                             let mapType = "";
 
-
                             if (matchInfo.timeVariant === "PAST") {
                                 realTime = getTime(time, 12);
                             }
@@ -577,7 +576,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const player = new Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
-        const codegen = new JsonGen(logger, tables, modConfig, utils, arrays);
+        const jsonGen = new JsonGen(logger, tables, modConfig, utils, arrays);
         const fleaChangesPreDB = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
@@ -598,10 +597,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             itemsClass.addCustomItems();
         }
 
-        // codegen.attTemplatesCodeGen();
-        // codegen.weapTemplatesCodeGen();
-        // codegen.gearTemplatesCodeGen();
-        // codegen.ammoTemplatesCodeGen();
+        // jsonGen.attTemplatesCodeGen();
+        // jsonGen.weapTemplatesCodeGen();
+        // jsonGen.gearTemplatesCodeGen();
+        // jsonGen.ammoTemplatesCodeGen();
 
         if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();

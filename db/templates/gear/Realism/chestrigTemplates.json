@@ -73,7 +73,7 @@
         "ArmorClass": "",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 0.90,
+        "ReloadSpeedMulti": 0.9,
         "Comfort": 0.77
     },
     "6034cf5fffd42c541047f72e": {

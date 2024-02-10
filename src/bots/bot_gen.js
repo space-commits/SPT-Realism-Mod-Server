@@ -25,7 +25,12 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
         let exp = 0;
         let level = 1;
         if (bot.Info.Settings.Role === "sptBear" || bot.Info.Settings.Role === "sptUsec") {
-            level = this.randomUtil.getInt(levelDetails.min, levelDetails.max);
+            if (utils_1.RaidInfoTracker.mapName === "sandbox" && utils_1.ProfileTracker.level <= 15) {
+                level = this.randomUtil.getInt(1, 15);
+            }
+            else {
+                level = this.randomUtil.getInt(levelDetails.min, levelDetails.max);
+            }
         }
         else {
             level = this.randomUtil.getInt(1, highestLevel);
@@ -49,7 +54,10 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const level = utils_1.ProfileTracker.level;
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
-        if (level <= 5) {
+        if (utils_1.RaidInfoTracker.mapName === "sandbox" && level <= 15) {
+            tier = utils.probabilityWeighter(tierArray, [90, 10, 0, 0, 0]);
+        }
+        else if (level <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         else if (level <= 10) {
@@ -96,6 +104,23 @@ class BotGen extends BotGenerator_1.BotGenerator {
             tier = Math.min(tier + 1, 5);
         }
         return tier;
+    }
+    addArmorInserts(mods) {
+        Object.keys(armorTemplate).forEach(outerKey => {
+            // If the outer key exists in mods, compare inner keys
+            if (mods[outerKey]) {
+                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
+                    // If the inner key doesn't exist in mods, insert it
+                    if (!mods[outerKey][innerKey]) {
+                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
+                    }
+                });
+            }
+            //if mods doesnt have the outer key, insert it
+            else {
+                mods[outerKey] = armorTemplate[outerKey];
+            }
+        });
     }
     myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
         const postLoadDBServer = tsyringe_1.container.resolve("DatabaseServer");
@@ -193,7 +218,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         //instead of manually editing all my bot loadout json with the new armor plates/inserts, I programatically generated a file with all the json
         //and then I combine the armor json with the bot's mods json
         //this is highly ineffecient as I am doing it per bot generated, not ideal but for now it works until I figure out a better way
-        Object.assign(botJsonTemplate.inventory.mods, armorTemplate);
+        this.addArmorInserts(botJsonTemplate.inventory.mods);
         bot = this.myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier);
         return bot;
     }

@@ -16,7 +16,7 @@ import { BotModLimits, BotWeaponModLimitService } from "@spt-aki/services/BotWea
 import { __String } from "typescript";
 import { BotHelper } from "@spt-aki/helpers/BotHelper";
 import { BotEquipmentModPoolService } from "@spt-aki/services/BotEquipmentModPoolService";
-import { EquipmentFilterDetails, RandomisationDetails } from "@spt-aki/models/spt/config/IBotConfig";
+import { EquipmentFilterDetails } from "@spt-aki/models/spt/config/IBotConfig";
 import { BotGeneratorHelper, ExhaustableArray } from "@spt-aki/helpers/BotGeneratorHelper";
 import { BotGenerator } from "@spt-aki/generators/BotGenerator";
 import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
@@ -42,11 +42,9 @@ import { BotLootGen } from "./bot_loot_serv";
 import { EquipmentSlots } from "@spt-aki/models/enums/EquipmentSlots";
 import { IInventoryMagGen } from "@spt-aki/generators/weapongen/IInventoryMagGen";
 import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { ParentClasses } from "../utils/enums";
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { RepairService } from "@spt-aki/services/RepairService";
 import { EventTracker, SeasonalEventsHandler } from "../misc/seasonalevents";
-import { IFilterPlateModsForSlotByLevelResult, Result } from "@spt-aki/generators/IFilterPlateModsForSlotByLevelResult";
 import { PresetHelper } from "@spt-aki/helpers/PresetHelper";
 
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
@@ -64,8 +62,12 @@ export class GenBotLvl extends BotLevelGenerator {
         let level = 1;
 
         if (bot.Info.Settings.Role === "sptBear" || bot.Info.Settings.Role === "sptUsec") {
-            level = this.randomUtil.getInt(levelDetails.min, levelDetails.max);
-
+            if (RaidInfoTracker.mapName === "sandbox" && ProfileTracker.level <= 15) {
+                level = this.randomUtil.getInt(1, 15);
+            }
+            else {
+                level = this.randomUtil.getInt(levelDetails.min, levelDetails.max);
+            }
         }
         else {
             level = this.randomUtil.getInt(1, highestLevel);
@@ -94,7 +96,10 @@ export class BotGen extends BotGenerator {
         const level = ProfileTracker.level;
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
-        if (level <= 5) {
+        if (RaidInfoTracker.mapName === "sandbox" && level <= 15) {
+            tier = utils.probabilityWeighter(tierArray, [90, 10, 0, 0, 0]);
+        }
+        else if (level <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         else if (level <= 10) {
@@ -144,6 +149,25 @@ export class BotGen extends BotGenerator {
             tier = Math.min(tier + 1, 5);
         }
         return tier;
+    }
+
+    private addArmorInserts(mods: Mods) {
+
+        Object.keys(armorTemplate).forEach(outerKey => {
+            // If the outer key exists in mods, compare inner keys
+            if (mods[outerKey]) {
+                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
+                    // If the inner key doesn't exist in mods, insert it
+                    if (!mods[outerKey][innerKey]) {
+                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
+                    }
+                });
+            }
+            //if mods doesnt have the outer key, insert it
+            else {
+                mods[outerKey] = armorTemplate[outerKey];
+            }
+        });
     }
 
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase {
@@ -258,7 +282,7 @@ export class BotGen extends BotGenerator {
         //instead of manually editing all my bot loadout json with the new armor plates/inserts, I programatically generated a file with all the json
         //and then I combine the armor json with the bot's mods json
         //this is highly ineffecient as I am doing it per bot generated, not ideal but for now it works until I figure out a better way
-        Object.assign(botJsonTemplate.inventory.mods, armorTemplate);
+        this.addArmorInserts(botJsonTemplate.inventory.mods);
 
         bot = this.myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier);
         return bot;
@@ -775,7 +799,7 @@ export class BotWepGen extends BotWeaponGenerator {
                 }
 
                 if (!allowedTpls.includes(weaponSlotItem._tpl)) {
-                    if(modConfig.logEverything == true){
+                    if (modConfig.logEverything == true) {
                         this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modDbTemplate._name, weaponTpl: weaponSlotItem._tpl }));
                     }
                     return false;

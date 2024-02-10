@@ -3622,7 +3622,7 @@ class Ammo {
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
             if (serverItem._parent === enums_1.ParentClasses.AMMO) {
-                serverItem._props.casingMass = Math.min(1.05, (serverItem._props.ammoRec / 500) + 1);
+                serverItem._props.casingMass = Math.min(1.05, Math.max((serverItem._props.ammoRec / 500) + 1), 0.9);
             }
         }
         if (this.modConf.logEverything == true) {

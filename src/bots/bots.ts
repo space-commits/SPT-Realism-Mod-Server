@@ -26,15 +26,13 @@ const saniLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarLO.json");
 const saniFollowerLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarfollowerLO.json");
 const reshLO = require("../../db/bots/loadouts/bosses/reshalla/reshallaLO.json");
 const reshFollowerLO = require("../../db/bots/loadouts/bosses/reshalla/reshallafollowerLO.json");
-const scavLootLimitCat = require("../../db/bots/loadouts/scavs/scavLootLimitCat.json");
-const PMCLootLimitCat = require("../../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
 const botHealth = require("../../db/bots/botHealth.json");
 const rmBotConfig = require("../../db/bots/botconfig.json");
 const USECNames = require("../../db/bots/names/USECNames.json");
 const bearNames = require("../../db/bots/names/bearNames.json");
 const pmcTypes = require("../../db/bots/pmcTypes.json");
 const keys = require("../../db/bots/loadouts/templates/keys.json");
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
+
 
 export class BotLoader {
 
@@ -603,7 +601,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc1.isUsec;
 
-        if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
+        if (!ModTracker.qtbPresent && !ModTracker.swagPresent && this.modConfig.spawn_waves != true) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         }
 
@@ -693,7 +691,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc2.isUsec;
 
-        if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
+        if (!ModTracker.qtbPresent && !ModTracker.swagPresent && this.modConfig.spawn_waves != true) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         }
 
@@ -782,7 +780,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc3.isUsec;
 
-        if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
+        if (!ModTracker.qtbPresent && !ModTracker.swagPresent && this.modConfig.spawn_waves != true) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         }
 

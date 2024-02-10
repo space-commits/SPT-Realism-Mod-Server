@@ -7,7 +7,6 @@ class Player {
     logger;
     tables;
     modConfig;
-    custProfile;
     medItems;
     helper;
     defaultHeadHealth;
@@ -28,11 +27,10 @@ class Player {
     energy = 130;
     tempCurr = 30;
     tempMax = 30;
-    constructor(logger, tables, modConfig, custProfile, medItems, helper) {
+    constructor(logger, tables, modConfig, medItems, helper) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
-        this.custProfile = custProfile;
         this.medItems = medItems;
         this.helper = helper;
         let healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
@@ -289,11 +287,6 @@ class Player {
         }
     }
     playerProfiles(jsonUtil) {
-        this.tables.locales.server["en"]["realism-profile"] = "Standard stash size, alpha container, limited resources and low cash. Intended as a more hardcore start.";
-        this.tables.templates.profiles["Realism Mod"] = jsonUtil.clone(this.tables.templates.profiles["Standard"]);
-        this.tables.templates.profiles["Realism Mod"].bear.character.Inventory = this.custProfile.BearInventory;
-        this.tables.templates.profiles["Realism Mod"].usec.character.Inventory = this.custProfile.USECInventory;
-        this.tables.templates.profiles["Realism Mod"].descriptionLocaleKey = "realism-profile";
         for (let profile in this.tables.templates.profiles) {
             this.correctInventory(this.tables.templates.profiles[profile].bear.character.Inventory.items);
             this.correctInventory(this.tables.templates.profiles[profile].usec.character.Inventory.items);

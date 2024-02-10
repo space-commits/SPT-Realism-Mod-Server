@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AttatchmentBase = void 0;
-class AttatchmentBase {
+exports.AttachmentBase = void 0;
+class AttachmentBase {
     logger;
     tables;
     arrays;
@@ -154,110 +154,113 @@ class AttatchmentBase {
         }
     }
     loadAttRequirements() {
+        let requiredMods = [
+            "5b31163c5acfc400153b71cb",
+            "58d2664f86f7747fec5834f6",
+            "5c7d55f52e221644f31bff6a",
+            "58d39d3d86f77445bb794ae7",
+            "577d128124597739d65d0e56",
+            "5a33b2c9c4a282000c5a9511",
+            "5cc70102e4a949035e43ba74",
+            "5cf7acfcd7f00c1084477cf2",
+            "5b363dea5acfc4771e1c5e7e",
+            "5b363e1b5acfc4771e1c5e80",
+            "59bffc1f86f77435b128b872",
+            "5de8f237bbaf010b10528a70",
+            "5e21ca18e4d47f0da15e77dd",
+            "5cf79389d7f00c10941a0c4d",
+            "5cf79599d7f00c10875d9212",
+            "5cf67cadd7f00c065a5abab7",
+            "5cf67a1bd7f00c06585fb6f3",
+            "615d8e9867085e45ef1409c6",
+            "5fc4b992187fea44d52edaa9",
+            "5fc4b97bab884124df0cd5e3",
+            "5c4eec9b2e2216398b5aaba2",
+            "6171407e50224f204c1da3c5",
+            "61713cc4d8e3106d9806c109",
+            "618a75c9a3884f56c957ca1b",
+            "615d8da4d3a39d50044c10e8",
+            "615d8d878004cc50514c3233",
+            "616584766ef05c2ce828ef57",
+            "616554fe50224f204c1da2aa",
+            "609a4b4fe2ff132951242d04",
+            "58d39b0386f77443380bf13c",
+            "5c7d560b2e22160bc12c6139",
+            "5c86592b2e2216000e69e77c",
+            "5c6162682e22160010261a2b",
+            "5c90c3622e221601da359851",
+            "5c61627a2e22160012542c55",
+            "5c61a40d2e2216001403158d",
+            "5bfebc5e0db834001a6694e5",
+            "5c1cdd302e221602b3137250",
+            "5c064c400db834001d23f468",
+            "5bbdb811d4351e45020113c7",
+            "5bc5a372d4351e44f824d17f",
+            "5b3f7bf05acfc433000ecf6b",
+            "5b3f7c005acfc4704b4a1de8",
+            "5b3b99265acfc4704b4a1afb",
+            "5b3b6dc75acfc47a8773fb1e",
+            "5b2389515acfc4771e1be0c0",
+            "5aa66a9be5b5b0214e506e89",
+            "5aa66c72e5b5b00016327c93",
+            "591ee00d86f774592f7b841e",
+            "5a33bab6c4a28200741e22f8",
+            "5649a2464bdc2d91118b45a8",
+            "57d17e212459775a1179a0f5",
+            "59db7eed86f77461f8380365",
+            "5a1ead28fcdbcb001912fa9f",
+            "5a32aa0cc4a28232996e405f",
+            "57acb6222459771ec34b5cb0",
+            "57acb6222459771ec34b5cb0",
+            "57c69dd424597774c03b7bbc",
+            "5a27b3d0c4a282000d721ec1",
+            "5a7ad4af51dfba0013379717",
+            "5a7ad55551dfba0015068f42",
+            "5a7b4900e899ef197b331a2a",
+            "5b3a08b25acfc4001754880c",
+            "5cc7015ae4a949001152b4c6",
+            "5cde7b43d7f00c000d36b93e",
+            "5d024f5cd7ad1a04a067e91a",
+            "5d0a29ead7ad1a0026013f27",
+            "5d0a29fed7ad1a002769ad08",
+            "5dff77c759400025ea5150cf",
+            "5d7b6bafa4b93652786f4c76",
+            "5dff8db859400025ea5150d4",
+            "5df35e970b92095fd441e4d2",
+            "5e569a0156edd02abe09f27d",
+            "5e569a2e56edd02abe09f280",
+            "5eeb2ff5ea4f8b73c827350b",
+            "5ef5d994dfbc9f3c660ded95",
+            "5ef369b08cef260c0642acaf",
+            "618b9682a3884f56c957ca78",
+            "618ba92152ecee1505530bd3",
+            "5addbfe15acfc4001a5fc58b",
+            "5a37ca54c4a282000d72296a",
+            "55d48a634bdc2d8b2f8b456a",
+            "5addbfef5acfc400185c2857",
+            "5a33b652c4a28232996e407c",
+            "5d2c770c48f0354b4a07c100",
+            "5d2c772c48f0355d95672c25",
+            "5926dad986f7741f82604363",
+            "5b7be47f5acfc400170e2dd2",
+            "5b7be4895acfc400170e2dd5",
+            "5a0abb6e1526d8000a025282",
+            "5dfe14f30b92095fd441edaf",
+            "57ffb0062459777a045af529",
+            "5f2aa49f9b44de6b1b4e68d4",
+            "5aaf8e43e5b5b00015693246",
+            "5827272a24597748c74bdeea",
+            "58272b392459774b4c7b3ccd",
+            "5a16b93dfcdbcbcae6687261",
+            "5c066ef40db834001966a595",
+            "5c11046cd174af02a012e42b",
+            "5c0695860db834001b735461",
+            "5a16b8a9fcdbcb00165aa6ca",
+            "641dc35e19604f20c800be18"
+        ];
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            if (serverItem._id === "5b31163c5acfc400153b71cb"
-                || serverItem._id === "58d2664f86f7747fec5834f6"
-                || serverItem._id === "5c7d55f52e221644f31bff6a"
-                || serverItem._id === "58d39d3d86f77445bb794ae7"
-                || serverItem._id === "577d128124597739d65d0e56"
-                || serverItem._id === "5a33b2c9c4a282000c5a9511"
-                || serverItem._id === "5cc70102e4a949035e43ba74"
-                || serverItem._id === "5cf7acfcd7f00c1084477cf2"
-                || serverItem._id === "5b363dea5acfc4771e1c5e7e"
-                || serverItem._id === "5b363e1b5acfc4771e1c5e80"
-                || serverItem._id === "59bffc1f86f77435b128b872"
-                || serverItem._id === "5de8f237bbaf010b10528a70"
-                || serverItem._id === "5e21ca18e4d47f0da15e77dd"
-                || serverItem._id === "5cf79389d7f00c10941a0c4d"
-                || serverItem._id === "5cf79599d7f00c10875d9212"
-                || serverItem._id === "5cf67cadd7f00c065a5abab7"
-                || serverItem._id === "5cf67a1bd7f00c06585fb6f3"
-                || serverItem._id === "615d8e9867085e45ef1409c6"
-                || serverItem._id === "5fc4b992187fea44d52edaa9"
-                || serverItem._id === "5fc4b97bab884124df0cd5e3"
-                || serverItem._id === "5c4eec9b2e2216398b5aaba2"
-                || serverItem._id === "6171407e50224f204c1da3c5"
-                || serverItem._id === "61713cc4d8e3106d9806c109"
-                || serverItem._id === "618a75c9a3884f56c957ca1b"
-                || serverItem._id === "615d8da4d3a39d50044c10e8"
-                || serverItem._id === "615d8d878004cc50514c3233"
-                || serverItem._id === "616584766ef05c2ce828ef57"
-                || serverItem._id === "616554fe50224f204c1da2aa"
-                || serverItem._id === "609a4b4fe2ff132951242d04"
-                || serverItem._id === "58d39b0386f77443380bf13c"
-                || serverItem._id === "5c7d560b2e22160bc12c6139"
-                || serverItem._id === "5c86592b2e2216000e69e77c"
-                || serverItem._id === "5c6162682e22160010261a2b"
-                || serverItem._id === "5c90c3622e221601da359851"
-                || serverItem._id === "5c61627a2e22160012542c55"
-                || serverItem._id === "5c61a40d2e2216001403158d"
-                || serverItem._id === "5bfebc5e0db834001a6694e5"
-                || serverItem._id === "5c1cdd302e221602b3137250"
-                || serverItem._id === "5c064c400db834001d23f468"
-                || serverItem._id === "5bbdb811d4351e45020113c7"
-                || serverItem._id === "5bc5a372d4351e44f824d17f"
-                || serverItem._id === "5b3f7bf05acfc433000ecf6b"
-                || serverItem._id === "5b3f7c005acfc4704b4a1de8"
-                || serverItem._id === "5b3b99265acfc4704b4a1afb"
-                || serverItem._id === "5b3b6dc75acfc47a8773fb1e"
-                || serverItem._id === "5b2389515acfc4771e1be0c0"
-                || serverItem._id === "5aa66a9be5b5b0214e506e89"
-                || serverItem._id === "5aa66c72e5b5b00016327c93"
-                || serverItem._id === "591ee00d86f774592f7b841e"
-                || serverItem._id === "5a33bab6c4a28200741e22f8"
-                || serverItem._id === "5649a2464bdc2d91118b45a8"
-                || serverItem._id === "57d17e212459775a1179a0f5"
-                || serverItem._id === "59db7eed86f77461f8380365"
-                || serverItem._id === "5a1ead28fcdbcb001912fa9f"
-                || serverItem._id === "5a32aa0cc4a28232996e405f"
-                || serverItem._id === "57acb6222459771ec34b5cb0"
-                || serverItem._id === "57acb6222459771ec34b5cb0"
-                || serverItem._id === "57c69dd424597774c03b7bbc"
-                || serverItem._id === "5a27b3d0c4a282000d721ec1"
-                || serverItem._id === "5a7ad4af51dfba0013379717"
-                || serverItem._id === "5a7ad55551dfba0015068f42"
-                || serverItem._id === "5a7b4900e899ef197b331a2a"
-                || serverItem._id === "5b3a08b25acfc4001754880c"
-                || serverItem._id === "5cc7015ae4a949001152b4c6"
-                || serverItem._id === "5cde7b43d7f00c000d36b93e"
-                || serverItem._id === "5d024f5cd7ad1a04a067e91a"
-                || serverItem._id === "5d0a29ead7ad1a0026013f27"
-                || serverItem._id === "5d0a29fed7ad1a002769ad08"
-                || serverItem._id === "5dff77c759400025ea5150cf"
-                || serverItem._id === "5d7b6bafa4b93652786f4c76"
-                || serverItem._id === "5dff8db859400025ea5150d4"
-                || serverItem._id === "5df35e970b92095fd441e4d2"
-                || serverItem._id === "5e569a0156edd02abe09f27d"
-                || serverItem._id === "5e569a2e56edd02abe09f280"
-                || serverItem._id === "5eeb2ff5ea4f8b73c827350b"
-                || serverItem._id === "5ef5d994dfbc9f3c660ded95"
-                || serverItem._id === "5ef369b08cef260c0642acaf"
-                || serverItem._id === "618b9682a3884f56c957ca78"
-                || serverItem._id === "618ba92152ecee1505530bd3"
-                || serverItem._id === "5addbfe15acfc4001a5fc58b"
-                || serverItem._id === "5a37ca54c4a282000d72296a"
-                || serverItem._id === "55d48a634bdc2d8b2f8b456a"
-                || serverItem._id === "5addbfef5acfc400185c2857"
-                || serverItem._id === "5a33b652c4a28232996e407c"
-                || serverItem._id === "5d2c770c48f0354b4a07c100"
-                || serverItem._id === "5d2c772c48f0355d95672c25"
-                || serverItem._id === "5926dad986f7741f82604363"
-                || serverItem._id === "5b7be47f5acfc400170e2dd2"
-                || serverItem._id === "5b7be4895acfc400170e2dd5"
-                || serverItem._id === "5a0abb6e1526d8000a025282"
-                || serverItem._id === "5dfe14f30b92095fd441edaf"
-                || serverItem._id === "57ffb0062459777a045af529"
-                || serverItem._id === "5f2aa49f9b44de6b1b4e68d4"
-                || serverItem._id === "5aaf8e43e5b5b00015693246"
-                || serverItem._id === "5827272a24597748c74bdeea"
-                || serverItem._id === "58272b392459774b4c7b3ccd"
-                || serverItem._id === "5a16b93dfcdbcbcae6687261"
-                || serverItem._id === "5c066ef40db834001966a595"
-                || serverItem._id === "5c11046cd174af02a012e42b"
-                || serverItem._id === "5c0695860db834001b735461"
-                || serverItem._id === "5a16b8a9fcdbcb00165aa6ca"
-                || serverItem._id === "641dc35e19604f20c800be18") {
+            if (requiredMods.includes(serverItem._id)) {
                 serverItem._props.Slots[0]._botRequired = serverItem._props.Slots[0]._required;
                 serverItem._props.Slots[0]._botRequired = true;
             }
@@ -288,5 +291,5 @@ class AttatchmentBase {
         }
     }
 }
-exports.AttatchmentBase = AttatchmentBase;
+exports.AttachmentBase = AttachmentBase;
 //# sourceMappingURL=attatchment_base.js.map

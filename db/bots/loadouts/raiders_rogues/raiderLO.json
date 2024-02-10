@@ -317,7 +317,9 @@
           "5e4bfc1586f774264f7582d3": 10,
           "5b40e3f35acfc40016388218": 10,
           "5ea17ca01412a1425304d1c0": 1,
-          "5b4329f05acfc47a86086aa1": 1
+          "5b4329f05acfc47a86086aa1": 1,
+          "65719f0775149d62ce0a670b": 3,
+          "65709d2d21b9f815e208ff95": 1
         },
         "Earpiece": {
           "6033fa48ffd42c541047f728": 20,
@@ -428,6 +430,39 @@
         }
       },
       "mods": {
+        "65719f0775149d62ce0a670b": {
+          "Helmet_top": [
+            "657fa0fcd4caf976440afe3e"
+          ],
+          "Helmet_back": [
+            "657fa168e9433140ad0baf8e"
+          ],
+          "Helmet_ears": [
+            "657fa186d4caf976440afe42"
+          ],
+          "mod_equipment_000": [
+            "65719f9ef392ad76c50a2ec8"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
+        "65709d2d21b9f815e208ff95": {
+          "Helmet_top": [
+            "657f9eb7e9433140ad0baf86"
+          ],
+          "Helmet_back": [
+            "657f9ef6c6679fefb3051e1f"
+          ],
+          "mod_equipment_000": [
+            "6570a88c8f221f3b210353b7"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
         "5ca20ee186f774799474abc2": {
           "mod_equipment": [
             "5ca2113f86f7740b2547e1d2"
@@ -1032,7 +1067,9 @@
           "5b40e3f35acfc40016388218": 5,
           "5ea17ca01412a1425304d1c0": 1,
           "5ca20ee186f774799474abc2": 1,
-          "5b4329f05acfc47a86086aa1": 1
+          "5b4329f05acfc47a86086aa1": 1,
+          "65719f0775149d62ce0a670b": 3,
+          "65709d2d21b9f815e208ff95": 1
         },
         "Earpiece": {
           "6033fa48ffd42c541047f728": 20,
@@ -1146,6 +1183,39 @@
         }
       },
       "mods": {
+        "65719f0775149d62ce0a670b": {
+          "Helmet_top": [
+            "657fa0fcd4caf976440afe3e"
+          ],
+          "Helmet_back": [
+            "657fa168e9433140ad0baf8e"
+          ],
+          "Helmet_ears": [
+            "657fa186d4caf976440afe42"
+          ],
+          "mod_equipment_000": [
+            "65719f9ef392ad76c50a2ec8"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
+        "65709d2d21b9f815e208ff95": {
+          "Helmet_top": [
+            "657f9eb7e9433140ad0baf86"
+          ],
+          "Helmet_back": [
+            "657f9ef6c6679fefb3051e1f"
+          ],
+          "mod_equipment_000": [
+            "6570a88c8f221f3b210353b7"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
         "5ca20ee186f774799474abc2": {
           "mod_equipment": [
             "5ca2113f86f7740b2547e1d2"
@@ -1768,7 +1838,9 @@
           "5b40e3f35acfc40016388218": 5,
           "5ea17ca01412a1425304d1c0": 5,
           "5ca20ee186f774799474abc2": 3,
-          "5b4329f05acfc47a86086aa1": 1
+          "5b4329f05acfc47a86086aa1": 1,
+          "65719f0775149d62ce0a670b": 3,
+          "65709d2d21b9f815e208ff95": 1
         },
         "Earpiece": {
           "6033fa48ffd42c541047f728": 20,
@@ -1883,6 +1955,39 @@
         }
       },
       "mods": {
+        "65719f0775149d62ce0a670b": {
+          "Helmet_top": [
+            "657fa0fcd4caf976440afe3e"
+          ],
+          "Helmet_back": [
+            "657fa168e9433140ad0baf8e"
+          ],
+          "Helmet_ears": [
+            "657fa186d4caf976440afe42"
+          ],
+          "mod_equipment_000": [
+            "65719f9ef392ad76c50a2ec8"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
+        "65709d2d21b9f815e208ff95": {
+          "Helmet_top": [
+            "657f9eb7e9433140ad0baf86"
+          ],
+          "Helmet_back": [
+            "657f9ef6c6679fefb3051e1f"
+          ],
+          "mod_equipment_000": [
+            "6570a88c8f221f3b210353b7"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
         "5ca20ee186f774799474abc2": {
           "mod_equipment": [
             "5ca2113f86f7740b2547e1d2"

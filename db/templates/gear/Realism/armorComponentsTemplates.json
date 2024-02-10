@@ -304,5 +304,27 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true
+    },
+    "6570a88c8f221f3b210353b7": {
+        "ItemID": "6570a88c8f221f3b210353b7",
+        "Name": "item_equipment_helmet_neosteel_mandible",
+        "AllowADS": false,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "PM 3",
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1,
+        "BlocksMouth": true
+    },
+    "65719f9ef392ad76c50a2ec8": {
+        "ItemID": "65719f9ef392ad76c50a2ec8",
+        "Name": "item_equipment_helmet_tor_2_faceshield",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "GOST 2",
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1,
+        "BlocksMouth": true
     }
 }
