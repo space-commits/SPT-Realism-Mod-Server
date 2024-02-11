@@ -776,7 +776,7 @@ class Armor {
             serverItem._props.Weight = 1.1;
         }
         //Tor-2 Visor
-        if (serverItem._id === "5aa7e3abe5b5b000171d064d") {
+        if (serverItem._id === "65719f9ef392ad76c50a2ec8") {
             serverItem._props.Durability = 35;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4;
