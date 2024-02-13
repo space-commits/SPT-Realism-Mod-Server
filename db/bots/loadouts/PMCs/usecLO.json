@@ -27,6 +27,10 @@
     },
     "inventory": {
       "Ammo": {
+        "Caliber68x51": {
+          "6529243824cbe3c74a05e5c1": 1,
+          "6529302b8c26af6326029fb7": 1
+        },
         "Caliber12g": {
           "5d6e6891a4b9361bd473feea": 2,
           "5d6e689ca4b9361bc8618956": 2,

@@ -38,6 +38,10 @@
   "rogueLO1": {
     "inventory": {
       "Ammo": {
+        "Caliber68x51": {
+          "6529243824cbe3c74a05e5c1": 1,
+          "6529302b8c26af6326029fb7": 1
+        },
         "Caliber12g": {
           "5d6e6806a4b936088465b17e": 5,
           "5d6e67fba4b9361bc73bc779": 5,

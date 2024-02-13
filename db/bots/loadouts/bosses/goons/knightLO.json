@@ -48,6 +48,10 @@
     "knightLO1": {
         "inventory": {
             "Ammo": {
+                "Caliber68x51": {
+                    "6529243824cbe3c74a05e5c1": 1,
+                    "6529302b8c26af6326029fb7": 1
+                },
                 "Caliber762x39": {
                     "59e0d99486f7744a32234762": 5,
                     "5656d7c34bdc2d9d198b4587": 10,
