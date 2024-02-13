@@ -3989,7 +3989,7 @@
         "ModMalfunctionChance": 0,
         "Convergence": 0,
         "Accuracy": 0,
-        "CenterOfImpact": 0.01,
+        "CenterOfImpact": 0.025,
         "HeatFactor": 0.968,
         "CoolFactor": 0.971,
         "DurabilityBurnModificator": 1,

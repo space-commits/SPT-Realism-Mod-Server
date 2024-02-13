@@ -812,7 +812,7 @@ export class BotWepGen extends BotWeaponGenerator {
     private reformatPreset(presetFile, presetObj) {
         if (presetFile[presetObj].hasOwnProperty("root")) {
 
-            presetFile[presetObj] = presetFile[presetFile[presetObj].name]
+            presetFile[presetObj] = presetFile[presetFile[presetObj].name];
 
             presetFile[presetObj] =
             {

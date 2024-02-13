@@ -28,33 +28,6 @@ class AttachmentBase {
             "5c5952732e2216398b5abda2",
             "644a3df63b0b6f03e101e065"
         ];
-        const stocksArr = [
-            "5fc2369685fd526b824a5713",
-            "606587d11246154cad35d635",
-            "602e620f9b513876d4338d9a",
-            "5a9eb32da2750c00171b3f9c",
-            "5bfe86df0db834001b734685",
-            "55d4ae6c4bdc2d8b2f8b456e",
-            "5c87a07c2e2216001219d4a2",
-            "5bb20e70d4351e0035629f8f",
-            "5beec8c20db834001d2c465c",
-            "5fbbaa86f9986c4cff3fe5f6",
-            "5fce16961f152d4312622bc9",
-            "5ae30c9a5acfc408fb139a03",
-            "5d135e83d7ad1a21b83f42d8",
-            "5d135ecbd7ad1a21c176542e",
-            "56eabf3bd2720b75698b4569",
-            "58d2946386f774496974c37e",
-            "58d2946c86f7744e271174b5",
-            "58d2947686f774485c6a1ee5",
-            "58d2947e86f77447aa070d53",
-            "5d44069ca4b9361ebd26fc37",
-            "5d4406a8a4b9361e4f6eb8b7",
-            "5947c73886f7747701588af5",
-            "5c793fde2e221601da358614",
-            "5b39f8db5acfc40016387a1b",
-            "628a85ee6b1d481ff772e9d5"
-        ];
         const cantedMountConfWeaps = [
             "5926bb2186f7744b1c6c6e60",
             "5d2f0d8048f0356c925bc3b0",
@@ -89,6 +62,13 @@ class AttachmentBase {
             "_mergeSlotWithChildren": true,
             "_proto": "55d30c4c4bdc2db4468b457e"
         };
+        let stocksArr = [];
+        let defaultStocks = this.itemDB()["5649be884bdc2d79388b4577"]._props.Slots[0]._props.filters[0].Filter;
+        for (let stock in defaultStocks) {
+            if (defaultStocks[stock] !== "5d4406a8a4b9361e4f6eb8b7" && defaultStocks[stock] !== "5d44069ca4b9361ebd26fc37") {
+                stocksArr.push(defaultStocks[stock]);
+            }
+        }
         for (let bf in buffertubes) {
             this.itemDB()[buffertubes[bf]]._props.Slots = [];
             for (let slot in slots) {
