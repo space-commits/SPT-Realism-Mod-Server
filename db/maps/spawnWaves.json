@@ -339,7 +339,7 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
-            "SpawnPoints": "",
+            "SpawnPoints": "ZoneClimova",
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 31,
@@ -363,7 +363,7 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
-            "SpawnPoints": "",
+            "SpawnPoints": "ZoneMvd",
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 33,

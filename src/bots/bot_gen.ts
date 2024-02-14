@@ -91,7 +91,8 @@ export class BotGen extends BotGenerator {
     private isBotUSEC(botRole: string): boolean {
         return (["usec", "sptusec"].includes(botRole.toLowerCase()));
     }
-
+    
+    //get pmc's tier "randomly"
     private getPMCTier(utils: Utils): number {
         const level = ProfileTracker.level;
         let tier = 1;
@@ -129,20 +130,21 @@ export class BotGen extends BotGenerator {
         return tier;
     }
 
+    //skew the tiering of PMCs based on map
     private botTierMapFactor(tier: number, utils: Utils): number {
 
-        const hightier: string[] = ["rezervbase", "reservebase", "tarkovstreets", "factory4_night"];
-        const midtier: string[] = ["shoreline", "lighthouse", "interchange", "factory4_night"];
-        const lowtier: string[] = ["bigmap", "customs", "tarkovstreets", "sandbox"];
+        const hightier: string[] = ["rezervbase", "reservebase", "tarkovstreets"];
+        const midtier: string[] = ["factory4_night"];
+        const lowtier: string[] = ["bigmap", "customs", "interchange", "lighthouse"];
 
         let rndNum = utils.pickRandNumOneInTen();
         if (RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 4 && (hightier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
+        else if (rndNum <= 4 && (hightier.includes(RaidInfoTracker.mapName))) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 2 && midtier.includes(RaidInfoTracker.mapName)) {
+        else if (rndNum <= 2 && (midtier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
             tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 1 && lowtier.includes(RaidInfoTracker.mapName)) {
@@ -151,6 +153,7 @@ export class BotGen extends BotGenerator {
         return tier;
     }
 
+    //too lazy to manually add the json for new armor slots
     private addArmorInserts(mods: Mods) {
 
         Object.keys(armorTemplate).forEach(outerKey => {
@@ -218,7 +221,7 @@ export class BotGen extends BotGenerator {
                     bot.Info.Settings.BotDifficulty = "normal";
                 }
             }
-            if (pmcTier === 2) {
+            else if (pmcTier === 2) {
                 if (isUSEC) {
                     botLoader.usecLoad2(botJsonTemplate);
                 }
@@ -229,7 +232,7 @@ export class BotGen extends BotGenerator {
                     bot.Info.Settings.BotDifficulty = "normal";
                 }
             }
-            if (pmcTier === 3) {
+            else if (pmcTier === 3) {
                 if (isUSEC) {
                     botLoader.usecLoad3(botJsonTemplate);
                 }
@@ -240,7 +243,7 @@ export class BotGen extends BotGenerator {
                     bot.Info.Settings.BotDifficulty = "hard";
                 }
             }
-            if (pmcTier === 4) {
+            else if (pmcTier === 4) {
                 if (isUSEC) {
                     botLoader.usecLoad4(botJsonTemplate);
                 }
@@ -251,7 +254,7 @@ export class BotGen extends BotGenerator {
                     bot.Info.Settings.BotDifficulty = "hard";
                 }
             }
-            if (pmcTier === 5) {
+            else if (pmcTier === 5) {
                 if (isUSEC) {
                     botLoader.usecLoad5(botJsonTemplate);
                 }
@@ -567,14 +570,14 @@ export class BotInvGen extends BotInventoryGenerator {
         const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
         const appContext = container.resolve<ApplicationContext>("ApplicationContext");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-        const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
-        const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
-        const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
-        const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
-        const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-        const botWeaponModLimitService = container.resolve<BotWeaponModLimitService>("BotWeaponModLimitService");
-        const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-        const presetHelper = container.resolve<PresetHelper>("PresetHelper");
+        // const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
+        // const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
+        // const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
+        // const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
+        // const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+        // const botWeaponModLimitService = container.resolve<BotWeaponModLimitService>("BotWeaponModLimitService");
+        // const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+        // const presetHelper = container.resolve<PresetHelper>("PresetHelper");
 
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, itemHelper, appContext, this.localisationService, this.configServer);
 
@@ -812,7 +815,7 @@ export class BotWepGen extends BotWeaponGenerator {
     private reformatPreset(presetFile, presetObj) {
         if (presetFile[presetObj].hasOwnProperty("root")) {
 
-            presetFile[presetObj] = presetFile[presetFile[presetObj].name];
+            // presetFile[presetObj] = presetFile[presetFile[presetObj].name];
 
             presetFile[presetObj] =
             {
@@ -874,7 +877,6 @@ export class BotWepGen extends BotWeaponGenerator {
             let preset: IPreset;
             let botName = tier === 5 ? "tier5pmc" : botRole;
             let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
-            // presetFile = tier === 5 ? presetFile.tier5PMCPresets : presetFile;
 
             for (let presetObj in presetFile) {
 
@@ -942,8 +944,9 @@ export class BotWepGen extends BotWeaponGenerator {
             }
         }
         catch {
-            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
-            this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
+            this.logger.error(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
+            this.logger.error(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
+
             let preset: IPreset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {
                 if (presetObj._items[0]._tpl === weaponTpl) {
@@ -954,7 +957,8 @@ export class BotWepGen extends BotWeaponGenerator {
             if (preset) {
                 const parentItem: Item = preset._items[0];
                 preset._items[0] = {
-                    ...parentItem, ...{
+                    ...parentItem, 
+                    ...{
                         "parentId": weaponParentId,
                         "slotId": equipmentSlot,
                         ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole, this.databaseServer.getTables().templates.items[weaponTpl]._parent)
@@ -1183,7 +1187,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
 
         if (!found && parentSlot !== undefined) {
             if (parentSlot._required) {
-                this.logger.warning(`Required slot unable to be filled, ${modSlot} on ${parentTemplate._name} ${parentTemplate._id} for weapon ${weapon[0]._tpl}`);
+                this.logger.info(`Required slot unable to be filled, ${modSlot} on ${parentTemplate._name} ${parentTemplate._id} for weapon ${weapon[0]._tpl}`);
             }
 
             return null;

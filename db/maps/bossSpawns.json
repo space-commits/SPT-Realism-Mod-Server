@@ -3,6 +3,46 @@
         {
             "BossChance": 35,
             "BossDifficult": "normal",
+            "BossEscortAmount": "2",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "followerKolontaySecurity",
+            "BossName": "bossKolontay",
+            "BossPlayer": false,
+            "BossZone": "ZoneClimova,ZoneMvd",
+            "Delay": 0,
+            "ForceSpawn": false,
+            "IgnoreMaxBots": false,
+            "RandomTimeSpawn": false,
+            "Supports": [
+              {
+                "BossEscortAmount": "2",
+                "BossEscortDifficult": [
+                  "normal"
+                ],
+                "BossEscortType": "followerKolontayAssault"
+              },
+              {
+                "BossEscortAmount": "2",
+                "BossEscortDifficult": [
+                  "normal"
+                ],
+                "BossEscortType": "followerKolontaySecurity"
+              },
+              {
+                "BossEscortAmount": "0",
+                "BossEscortDifficult": [
+                  "normal"
+                ],
+                "BossEscortType": "followerGluharScout"
+              }
+            ],
+            "Time": -1,
+            "TriggerId": "",
+            "TriggerName": ""
+          },
+        {
+            "BossChance": 35,
+            "BossDifficult": "normal",
             "BossEscortAmount": "6",
             "BossEscortDifficult": "normal",
             "BossEscortType": "followerBoar",

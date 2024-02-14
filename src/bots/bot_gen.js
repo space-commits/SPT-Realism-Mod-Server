@@ -50,6 +50,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
     isBotUSEC(botRole) {
         return (["usec", "sptusec"].includes(botRole.toLowerCase()));
     }
+    //get pmc's tier "randomly"
     getPMCTier(utils) {
         const level = utils_1.ProfileTracker.level;
         let tier = 1;
@@ -86,18 +87,19 @@ class BotGen extends BotGenerator_1.BotGenerator {
         }
         return tier;
     }
+    //skew the tiering of PMCs based on map
     botTierMapFactor(tier, utils) {
-        const hightier = ["rezervbase", "reservebase", "tarkovstreets", "factory4_night"];
-        const midtier = ["shoreline", "lighthouse", "interchange", "factory4_night"];
-        const lowtier = ["bigmap", "customs", "tarkovstreets", "sandbox"];
+        const hightier = ["rezervbase", "reservebase", "tarkovstreets"];
+        const midtier = ["factory4_night"];
+        const lowtier = ["bigmap", "customs", "interchange", "lighthouse"];
         let rndNum = utils.pickRandNumOneInTen();
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 4 && (hightier.includes(utils_1.RaidInfoTracker.mapName) || utils_1.RaidInfoTracker.TOD === "night")) {
+        else if (rndNum <= 4 && (hightier.includes(utils_1.RaidInfoTracker.mapName))) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 2 && midtier.includes(utils_1.RaidInfoTracker.mapName)) {
+        else if (rndNum <= 2 && (midtier.includes(utils_1.RaidInfoTracker.mapName) || utils_1.RaidInfoTracker.TOD === "night")) {
             tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 1 && lowtier.includes(utils_1.RaidInfoTracker.mapName)) {
@@ -105,6 +107,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         }
         return tier;
     }
+    //too lazy to manually add the json for new armor slots
     addArmorInserts(mods) {
         Object.keys(armorTemplate).forEach(outerKey => {
             // If the outer key exists in mods, compare inner keys
@@ -157,7 +160,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
                     bot.Info.Settings.BotDifficulty = "normal";
                 }
             }
-            if (pmcTier === 2) {
+            else if (pmcTier === 2) {
                 if (isUSEC) {
                     botLoader.usecLoad2(botJsonTemplate);
                 }
@@ -168,7 +171,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
                     bot.Info.Settings.BotDifficulty = "normal";
                 }
             }
-            if (pmcTier === 3) {
+            else if (pmcTier === 3) {
                 if (isUSEC) {
                     botLoader.usecLoad3(botJsonTemplate);
                 }
@@ -179,7 +182,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
                     bot.Info.Settings.BotDifficulty = "hard";
                 }
             }
-            if (pmcTier === 4) {
+            else if (pmcTier === 4) {
                 if (isUSEC) {
                     botLoader.usecLoad4(botJsonTemplate);
                 }
@@ -190,7 +193,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
                     bot.Info.Settings.BotDifficulty = "hard";
                 }
             }
-            if (pmcTier === 5) {
+            else if (pmcTier === 5) {
                 if (isUSEC) {
                     botLoader.usecLoad5(botJsonTemplate);
                 }
@@ -451,14 +454,14 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         const durabilityLimitsHelper = tsyringe_1.container.resolve("DurabilityLimitsHelper");
         const appContext = tsyringe_1.container.resolve("ApplicationContext");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
-        const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
-        const probabilityHelper = tsyringe_1.container.resolve("ProbabilityHelper");
-        const botWeaponGeneratorHelper = tsyringe_1.container.resolve("BotWeaponGeneratorHelper");
-        const botEquipmentFilterService = tsyringe_1.container.resolve("BotEquipmentFilterService");
-        const profileHelper = tsyringe_1.container.resolve("ProfileHelper");
-        const botWeaponModLimitService = tsyringe_1.container.resolve("BotWeaponModLimitService");
-        const itemFilterService = tsyringe_1.container.resolve("ItemFilterService");
-        const presetHelper = tsyringe_1.container.resolve("PresetHelper");
+        // const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
+        // const probabilityHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
+        // const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
+        // const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
+        // const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+        // const botWeaponModLimitService = container.resolve<BotWeaponModLimitService>("BotWeaponModLimitService");
+        // const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+        // const presetHelper = container.resolve<PresetHelper>("PresetHelper");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseServer, durabilityLimitsHelper, itemHelper, appContext, this.localisationService, this.configServer);
         const spawnChance = [EquipmentSlots_1.EquipmentSlots.POCKETS, EquipmentSlots_1.EquipmentSlots.SECURED_CONTAINER].includes(settings.rootEquipmentSlot)
             ? 100
@@ -622,7 +625,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     }
     reformatPreset(presetFile, presetObj) {
         if (presetFile[presetObj].hasOwnProperty("root")) {
-            presetFile[presetObj] = presetFile[presetFile[presetObj].name];
+            // presetFile[presetObj] = presetFile[presetFile[presetObj].name];
             presetFile[presetObj] =
                 {
                     "_id": presetFile[presetObj].id,
@@ -676,7 +679,6 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             let preset;
             let botName = tier === 5 ? "tier5pmc" : botRole;
             let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
-            // presetFile = tier === 5 ? presetFile.tier5PMCPresets : presetFile;
             for (let presetObj in presetFile) {
                 this.reformatPreset(presetFile, presetObj);
                 if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
@@ -732,8 +734,8 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
         }
         catch {
-            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
-            this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
+            this.logger.error(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
+            this.logger.error(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
             let preset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {
                 if (presetObj._items[0]._tpl === weaponTpl) {
@@ -744,7 +746,8 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             if (preset) {
                 const parentItem = preset._items[0];
                 preset._items[0] = {
-                    ...parentItem, ...{
+                    ...parentItem,
+                    ...{
                         "parentId": weaponParentId,
                         "slotId": equipmentSlot,
                         ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole, this.databaseServer.getTables().templates.items[weaponTpl]._parent)
@@ -930,7 +933,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         }
         if (!found && parentSlot !== undefined) {
             if (parentSlot._required) {
-                this.logger.warning(`Required slot unable to be filled, ${modSlot} on ${parentTemplate._name} ${parentTemplate._id} for weapon ${weapon[0]._tpl}`);
+                this.logger.info(`Required slot unable to be filled, ${modSlot} on ${parentTemplate._name} ${parentTemplate._id} for weapon ${weapon[0]._tpl}`);
             }
             return null;
         }

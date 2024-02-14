@@ -23,62 +23,62 @@
             {
                 "_id": "b05b4d1f3152dcbe7382483e",
                 "_tpl": "651580dc71a4f10aec4b6056",
-                "parentid": "4c0b4548dc5c52877a59cf5a",
-                "slotid": "mod_pistol_grip"
+                "parentId": "4c0b4548dc5c52877a59cf5a",
+                "slotId": "mod_pistol_grip"
             },
             {
                 "_id": "ab3307a4e0b41a4ff0d80db6",
                 "_tpl": "57dc347d245977596754e7a1",
-                "parentid": "4c0b4548dc5c52877a59cf5a",
-                "slotid": "mod_stock"
+                "parentId": "4c0b4548dc5c52877a59cf5a",
+                "slotId": "mod_stock"
             },
             {
                 "_id": "16fa92261dcf1761d6a5ce35",
                 "_tpl": "6130ca3fd92c473c77020dbd",
-                "parentid": "4c0b4548dc5c52877a59cf5a",
-                "slotid": "mod_charge"
+                "parentId": "4c0b4548dc5c52877a59cf5a",
+                "slotId": "mod_charge"
             },
             {
                 "_id": "c89b2d8493c7d2599b95435e",
                 "_tpl": "564ca99c4bdc2d16268b4589",
-                "parentid": "4c0b4548dc5c52877a59cf5a",
-                "slotid": "mod_magazine"
+                "parentId": "4c0b4548dc5c52877a59cf5a",
+                "slotId": "mod_magazine"
             },
             {
                 "_id": "5b434dd102956a91be37c5bf",
                 "_tpl": "59bffc1f86f77435b128b872",
-                "parentid": "4c0b4548dc5c52877a59cf5a",
-                "slotid": "mod_muzzle"
+                "parentId": "4c0b4548dc5c52877a59cf5a",
+                "slotId": "mod_muzzle"
             },
             {
                 "_id": "d77426ed14667df2ade9719b",
                 "_tpl": "655cb6b5d680a544f30607fa",
-                "parentid": "4c0b4548dc5c52877a59cf5a",
-                "slotid": "mod_reciever"
+                "parentId": "4c0b4548dc5c52877a59cf5a",
+                "slotId": "mod_reciever"
             },
             {
                 "_id": "f7b7ec7f054a7598478b5da2",
                 "_tpl": "59d36a0086f7747e673f3946",
-                "parentid": "4c0b4548dc5c52877a59cf5a",
-                "slotid": "mod_gas_block"
+                "parentId": "4c0b4548dc5c52877a59cf5a",
+                "slotId": "mod_gas_block"
             },
             {
                 "_id": "1057753919baa2fbd9ce574e",
                 "_tpl": "6494094948796d891603e59f",
-                "parentid": "ab3307a4e0b41a4ff0d80db6",
-                "slotid": "mod_stock"
+                "parentId": "ab3307a4e0b41a4ff0d80db6",
+                "slotId": "mod_stock"
             },
             {
                 "_id": "16f444c9288b9b8a0bc60ba1",
                 "_tpl": "59bffbb386f77435b379b9c2",
-                "parentid": "5b434dd102956a91be37c5bf",
-                "slotid": "mod_muzzle"
+                "parentId": "5b434dd102956a91be37c5bf",
+                "slotId": "mod_muzzle"
             },
             {
                 "_id": "ad7c4d717fd2aaf4929620ab",
                 "_tpl": "655f13e0a246670fb0373245",
-                "parentid": "d77426ed14667df2ade9719b",
-                "slotid": "mod_scope",
+                "parentId": "d77426ed14667df2ade9719b",
+                "slotId": "mod_scope",
                 "upd": {
                     "Sight": {
                         "ScopesCurrentCalibPointIndexes": [
@@ -96,14 +96,14 @@
             {
                 "_id": "86788debbea503d5f3b60471",
                 "_tpl": "647db1eca8d3399c380d195c",
-                "parentid": "f7b7ec7f054a7598478b5da2",
-                "slotid": "mod_handguard"
+                "parentId": "f7b7ec7f054a7598478b5da2",
+                "slotId": "mod_handguard"
             },
             {
                 "_id": "5d6a86153c174a8565b7ecb2",
                 "_tpl": "651a8bf3a8520e48047bf708",
-                "parentid": "86788debbea503d5f3b60471",
-                "slotid": "mod_foregrip"
+                "parentId": "86788debbea503d5f3b60471",
+                "slotId": "mod_foregrip"
             }
         ]
     },

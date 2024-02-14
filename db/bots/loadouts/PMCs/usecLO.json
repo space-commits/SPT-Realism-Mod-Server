@@ -209,9 +209,10 @@
           "606dae0ab0e443224b421bb7": 1,
           "576165642459773c7a400233": 1,
           "5d2f0d8048f0356c925bc3b0": 3,
-          "5e00903ae9dc277128008b87": 3,
           "587e02ff24597743df3deaeb": 1,
-          "574d967124597745970e7c94": 2
+          "574d967124597745970e7c94": 2,
+          "5e870397991fd70db46995c8": 1,
+          "5a7828548dc32e5a9c28b516": 1
         },
         "SecondPrimaryWeapon": {},
         "Holster": {
@@ -559,6 +560,21 @@
             "57ae0171245977343c27bfcf"
           ]
         },
+        "5ae35b315acfc4001714e8b0": {
+          "mod_pistol_grip": [
+            "55d4b9964bdc2d1d4e8b456e",
+            "57c55efc2459772d2c6271e7",
+            "57c55f092459772d291a8463"
+          ],
+          "mod_stock": [
+            "55d4ae6c4bdc2d8b2f8b456e",
+            "5ae30c9a5acfc408fb139a03",
+            "5b39f8db5acfc40016387a1b",
+            "5a9eb32da2750c00171b3f9c",
+            "5bfe86df0db834001b734685",
+            "5947c73886f7747701588af5"
+          ]
+        },
         "Guns": {},
         "56dee2bdd2720bc8328b4567": {
           "mod_barrel": [
@@ -591,6 +607,56 @@
             "5d6e68dea4b9361bcc29e659",
             "5d6e6891a4b9361bd473feea",
             "5d6e689ca4b9361bc8618956"
+          ]
+        },
+        "5a7828548dc32e5a9c28b516": {
+          "mod_barrel": [
+            "5a787f7ac5856700177af660"
+          ],
+          "mod_handguard": [
+            "5a788089c5856700142fdd9c",
+            "5a788068c5856700137e4c8f"
+          ],
+          "mod_magazine": [
+            "5a78830bc5856700137e4c90",
+            "5a78832ec5856700155a6ca3"
+          ],
+          "mod_mount": [
+            "5a78948ec5856700177b1124"
+          ],
+          "mod_stock": [
+            "5a7880d0c5856700142fdd9d",
+            "5ae35b315acfc4001714e8b0",
+            "5a78813bc5856700186c4abe"
+          ],
+          "patron_in_weapon": [
+            "5d6e67fba4b9361bc73bc779",
+            "5d6e6806a4b936088465b17e",
+            "5d6e68b3a4b9361bca7e50b5"
+          ]
+        },
+        "5e870397991fd70db46995c8": {
+          "mod_barrel": [
+            "5e87071478f43e51ca2de5e1"
+          ],
+          "mod_handguard": [
+            "5eea21647547d6330471b3c9",
+            "5e87076ce2db31558c75a11d"
+          ],
+          "mod_magazine": [
+            "5e87080c81c4ed43e83cefda"
+          ],
+          "mod_mount": [
+            "5e87114fe2db31558c75a120"
+          ],
+          "mod_stock": [
+            "5e87116b81c4ed43e83cefdd",
+            "5eea217fc64c5d0dfc05712a"
+          ],
+          "patron_in_weapon": [
+            "5d6e67fba4b9361bc73bc779",
+            "5d6e6806a4b936088465b17e",
+            "5d6e68b3a4b9361bca7e50b5"
           ]
         },
         "54491c4f4bdc2db1078b4568": {

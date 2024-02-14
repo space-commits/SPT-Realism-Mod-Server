@@ -26,6 +26,7 @@ class Arrays {
             botDB["sectantpriest"],
             botDB["bosszryachiy"],
             botDB["bossboar"],
+            botDB["bosskolontay"]
         ];
         this.bossFollowerArr = [
             botDB["followerbully"],
@@ -38,7 +39,9 @@ class Arrays {
             botDB["followertagilla"],
             botDB["followerzryachiy"],
             botDB["followerboar"],
-            botDB["bossboarsniper"]
+            botDB["bossboarsniper"],
+            botDB["followerkolontaysecurity"],
+            botDB["followerkolontayassault"]
         ];
         this.rogueRaiderList = [
             botDB["pmcbot"],

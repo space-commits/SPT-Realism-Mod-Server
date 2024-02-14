@@ -75,11 +75,11 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tickred 
                 serverItem._props.ConflictingItems.splice(4, 0, "true"); //can be used in raid
                 serverItem._props.ConflictingItems.splice(5, 0, "600"); // full duration
-                serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
+                serverItem._props.ConflictingItems.splice(6, 0, "20"); // wait period reduction
                 serverItem._props.ConflictingItems.splice(7, 0, "120"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.6"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "25"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "8"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
             }
             //Ibuprofen
             if (serverItem._id === "5af0548586f7743a532b7e99") {
@@ -95,9 +95,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
-                serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
-                serverItem._props.ConflictingItems.splice(7, 0, "70"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period reduction
+                serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
+                serverItem._props.ConflictingItems.splice(8, 0, "0.25"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "40"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "4"); // strength
             }
@@ -115,11 +115,11 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "900"); // full duration
-                serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period
+                serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period reduction
                 serverItem._props.ConflictingItems.splice(7, 0, "270"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.75"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "14"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "30"); // strength
             }
             ///Medicines///
             //Augmentin
