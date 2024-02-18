@@ -36,12 +36,12 @@ class DescriptionGen {
                 if (item._props.ConflictingItems[13] === "true" && (item._parent === enums_1.ParentClasses.SILENCER || item._parent === enums_1.ParentClasses.GASBLOCK)) {
                     locale[`${templateItem}` + " Description"] = "This attachment allows the reliable cycling of subsonic ammunition." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "gasblock_upgassed") {
-                    locale[`${templateItem}` + " Description"] = "This gasblock facilitates a large gas port opening on barrels that have one. If combined with such a barrel, the barrel's malfunction penalty is removed at the expense of more recoil and durability burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
-                }
-                if (modType === "gasblock_downgassed") {
-                    locale[`${templateItem}` + " Description"] = "This gasblock makes the rifle under-gassed, reducing recoil but also reducing reliability. It has increased negative effects on short barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
-                }
+                // if (modType === "gasblock_upgassed") {
+                //     locale[`${templateItem}` + " Description"] = "This gasblock facilitates a large gas port opening on barrels that have one. If combined with such a barrel, the barrel's malfunction penalty is removed at the expense of more recoil and durability burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                // }
+                // if (modType === "gasblock_downgassed") {
+                //     locale[`${templateItem}` + " Description"] = "This gasblock makes the rifle under-gassed, reducing recoil but also reducing reliability. It has increased negative effects on short barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                // }
                 if (modType === "short_barrel") {
                     locale[`${templateItem}` + " Description"] = "This barrel has a large gas port and requires a gas block that facilitates this in order for the rifle to cycle reliably. If the right gas block is used the increased malfunction chance penatly of this barrel is removed, but recoil, firerate and durabiltiy burn is increased" + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }

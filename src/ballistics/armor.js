@@ -38,11 +38,6 @@ class Armor {
         this.armMat().ArmoredSteel.Destructibility = 0.2; //steel no longer becomes more likely to pen with dura loss, so represents loss of anti-spall coating
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            // // use this to generate json for armor containing all the armor's armor slots, which I can then use to push to all bots to prevent bot gen errors
-            // 
-            // if (serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG || serverItem._parent === ParentClasses.HEADWEAR || serverItem._parent === ParentClasses.FACECOVER) {
-            //     this.itemWriteToFile(i, serverItem);
-            // }
             if (serverItem._props.MaterialType !== "Helmet") {
                 this.standardizeAramid(serverItem);
             }
@@ -50,7 +45,7 @@ class Armor {
             this.loadHelmets(serverItem, this.tables);
             this.loadGlasses(serverItem);
             this.loadArmorMods(serverItem);
-            // this.removePlateCollidors(serverItem);
+            this.removePlateCollidors(serverItem);
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("Armour loaded");
