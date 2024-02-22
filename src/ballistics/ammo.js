@@ -1377,7 +1377,7 @@ class Ammo {
             if (serverItem._id === "62330bfadc5883093563729b") {
                 serverItem._props.PenetrationPower = 38;
                 serverItem._props.ArmorDamage = 15;
-                serverItem._props.Damage = 80;
+                serverItem._props.Damage = 130;
                 serverItem._props.RicochetChance = 0.15;
                 serverItem._props.FragmentationChance = 0.1;
                 serverItem._props.HeavyBleedingDelta = 0.25;
@@ -1395,9 +1395,9 @@ class Ammo {
             }
             //JHP
             if (serverItem._id === "62330c18744e5e31df12f516") {
-                serverItem._props.PenetrationPower = 40;
+                serverItem._props.PenetrationPower = 44;
                 serverItem._props.ArmorDamage = 18;
-                serverItem._props.Damage = 72;
+                serverItem._props.Damage = 120;
                 serverItem._props.RicochetChance = 0.3;
                 serverItem._props.FragmentationChance = 0.25;
                 serverItem._props.HeavyBleedingDelta = 0.35;
@@ -1415,9 +1415,9 @@ class Ammo {
             }
             //SP
             if (serverItem._id === "62330c40bdd19b369e1e53d1") {
-                serverItem._props.PenetrationPower = 41;
+                serverItem._props.PenetrationPower = 42;
                 serverItem._props.ArmorDamage = 14;
-                serverItem._props.Damage = 68;
+                serverItem._props.Damage = 100;
                 serverItem._props.RicochetChance = 0.4;
                 serverItem._props.FragmentationChance = 0.12;
                 serverItem._props.HeavyBleedingDelta = 0.27;
@@ -1435,9 +1435,9 @@ class Ammo {
             }
             //FMJ
             if (serverItem._id === "62330b3ed4dc74626d570b95") {
-                serverItem._props.PenetrationPower = 42;
+                serverItem._props.PenetrationPower = 46;
                 serverItem._props.ArmorDamage = 15;
-                serverItem._props.Damage = 58;
+                serverItem._props.Damage = 80;
                 serverItem._props.RicochetChance = 0.5;
                 serverItem._props.FragmentationChance = 0.08;
                 serverItem._props.HeavyBleedingDelta = 0.22;

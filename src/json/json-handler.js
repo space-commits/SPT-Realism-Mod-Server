@@ -249,6 +249,7 @@ class JsonHandler {
                     serverItem._props.RecoilReturnPathDampingHandRotation = fileItem.RecoilHandDamping;
                     serverItem._props.RecoilReturnPathOffsetHandRotation = fileItem.OffsetRotation;
                     serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
+                    serverItem._props.CanQueueSecondShot = true;
                     if (fileItem.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
                     }

@@ -2,7 +2,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { Utils } from "src/utils/utils";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { Arrays } from "../utils/arrays";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { ITemplateItem, Slot } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 
 export class AttachmentBase {
 
@@ -46,6 +46,22 @@ export class AttachmentBase {
             "mod_stock_001",
         ];
 
+
+        let stocksArr: string[] = [];
+        let firstSlotstocksArr: string[] = [];
+        let defaultStocks = this.itemDB()["5649be884bdc2d79388b4577"]._props.Slots[0]._props.filters[0].Filter;
+        for (let stock in defaultStocks) {
+            if (defaultStocks[stock] !== "5d4406a8a4b9361e4f6eb8b7" && defaultStocks[stock] !== "5d44069ca4b9361ebd26fc37") {
+                stocksArr.push(defaultStocks[stock]);
+                firstSlotstocksArr.push(defaultStocks[stock]);
+            }
+            else {
+                firstSlotstocksArr.push(defaultStocks[stock]);
+            }
+        }
+
+
+
         let stockSlot = {
             "_name": "name",
             "_id": "id",
@@ -63,35 +79,47 @@ export class AttachmentBase {
             "_proto": "55d30c4c4bdc2db4468b457e"
         };
 
-        let stocksArr = [];
-
-        let defaultStocks = this.itemDB()["5649be884bdc2d79388b4577"]._props.Slots[0]._props.filters[0].Filter;
-        for (let stock in defaultStocks) {
-            if (defaultStocks[stock] !== "5d4406a8a4b9361e4f6eb8b7" && defaultStocks[stock] !== "5d44069ca4b9361ebd26fc37") {
-                stocksArr.push(defaultStocks[stock]);
+        let bufferSlots: Slot[] = [];
+        for (let slot in slots) {
+            let newSlot: Slot = {
+                _name: slots[slot],
+                _id: this.utils.genId(),
+                _parent: "",
+                _props: {
+                    filters: []
+                },
+                _required: false,
+                _proto: "55d30c4c4bdc2db4468b457e"
             }
+            bufferSlots.push(newSlot);
         }
 
+
+
         for (let bf in buffertubes) {
-            this.itemDB()[buffertubes[bf]]._props.Slots = [];
-            for (let slot in slots) {
-                let newStockSlot = { ...stockSlot };
-                newStockSlot._name = slots[slot];
-                newStockSlot._id = this.utils.genId();
-                newStockSlot._parent = buffertubes[bf];
-                newStockSlot._props.filters[0].Filter = stocksArr;
-                if (slots[slot] === "mod_stock_000") {
-                    newStockSlot._mergeSlotWithChildren = true;
+            this.itemDB()[buffertubes[bf]]._props.Slots = bufferSlots;
+
+            for (let i in this.itemDB()[buffertubes[bf]]._props.Slots) {
+                let slot = this.itemDB()[buffertubes[bf]]._props.Slots[i];
+                slot._parent = buffertubes[bf];
+
+                if (slot._name === "mod_stock_000") {
+                    slot._mergeSlotWithChildren = true;
+                    slot._props.filters[0] = {
+                        Filter: firstSlotstocksArr
+                    }
                 }
                 else {
-                    newStockSlot._mergeSlotWithChildren = false;
+                    slot._mergeSlotWithChildren = false;
+                    slot._props.filters[0] = {
+                        Filter: stocksArr
+                    }
                 }
-                this.itemDB()[buffertubes[bf]]._props.Slots.push(newStockSlot);
             }
         }
 
         for (let stock in stocksArr) {
-            this.itemDB()[stocksArr[stock]]._props.ConflictingItems = stocksArr;
+            this.itemDB()[stocksArr[stock]]._props.ConflictingItems = firstSlotstocksArr;
         }
 
         for (let i in this.itemDB()) {
