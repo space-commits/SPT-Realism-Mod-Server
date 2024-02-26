@@ -1678,7 +1678,7 @@
         "RecoilAngle": 85,
         "DurabilityBurnRatio": 1.15,
         "BaseMalfunctionChance": 0.1771,
-        "HeatFactorGun": 1,
+        "HeatFactorGun": 0.35,
         "HeatFactorByShot": 1.48,
         "CoolFactorGun": 3.168,
         "CoolFactorGunMods": 1,
@@ -1693,11 +1693,11 @@
         "SemiROF": 450,
         "LoyaltyLevel": 5,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1,
+        "BaseChamberSpeedMulti": 1.3,
         "MaxChamberSpeed": 1.5,
-        "MinChamberSpeed": 0.7,
+        "MinChamberSpeed": 0.8,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1,
-        "BaseFixSpeed": 1
+        "BaseChamberCheckSpeed": 1.05,
+        "BaseFixSpeed": 1.3
     }
 }

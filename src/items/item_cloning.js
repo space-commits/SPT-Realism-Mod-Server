@@ -101,6 +101,21 @@ class ItemCloning {
         defaultInventory.Slots[1]._props.filters[0].Filter.push("5447b6094bdc2dc3278b4567");
     }
     createCustomAttachments() {
+        //Mechanic MCX 171mm 5.56 Barrel
+        this.cloneAttachments("5fbbfabed5cb881a7363194e", "mechMCX_171mm", "violet");
+        this.addToHandbook("mechMCX_171mm", "5b5f75c686f774094242f19f", 10000);
+        this.addToLocale("mechMCX_171mm", "MCX 5.56x45mm 171mm barrel", "MCX 171mm 5.56", "A 171mm barrel for MCX-based weapons, chambered in 5.56x45mm.");
+        this.pushAttToFilters("5fbbfabed5cb881a7363194e", "mechMCX_171mm");
+        //Mechanic MCX 229mm 5.56 Barrel
+        this.cloneAttachments("5fbbfacda56d053a3543f799", "mechMCX_229mm", "violet");
+        this.addToHandbook("mechMCX_229mm", "5b5f75c686f774094242f19f", 10000);
+        this.addToLocale("mechMCX_229mm", "MCX 5.56x45mm 229mm barrel", "MCX 229mm 5.56", "A 229mm barrel for MCX-based weapons, chambered in 5.56x45mm.");
+        this.pushAttToFilters("5fbbfacda56d053a3543f799", "mechMCX_229mm");
+        //Mechanic SPEAR 330mm .308 Barrel
+        this.cloneAttachments("652910565ae2ae97b80fdf35", "mechSpear_330mm", "violet");
+        this.addToHandbook("mechSpear_330mm", "5b5f75c686f774094242f19f", 10000);
+        this.addToLocale("mechSpear_330mm", "MCX SPEAR 7.62x51 330mm barrel", "SPEAR 330mm .308", "A 13 inch (330mm) barrel for the MCX SPEAR assault rifle chambered in 7.62x51 (.308 Winchester) ammo. Manufactured by SIG Sauer.");
+        this.pushAttToFilters("652910565ae2ae97b80fdf35", "mechSpear_330mm");
         //Mechanic custom ar15 260mm barrel
         this.cloneAttachments("55d35ee94bdc2d61338b4568", "mechAR15_260mm", "violet");
         this.addToHandbook("mechAR15_260mm", "5b5f75c686f774094242f19f", 10000);

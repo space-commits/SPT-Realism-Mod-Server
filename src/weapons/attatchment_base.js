@@ -17,6 +17,55 @@ class AttachmentBase {
     itemDB() {
         return this.tables.templates.items;
     }
+    localsDB() {
+        return this.tables.locales.global;
+    }
+    loadCaliberConversions() {
+        let _556Ammo = [];
+        let _300BlkAmmo = [];
+        let _308Ammo = [];
+        let _277Ammo = [];
+        //mcx
+        for (let ammo of this.itemDB()["5fbcc1d9016cce60e8341ab3"]._props.Chambers[0]._props.filters[0].Filter) {
+            _300BlkAmmo.push(ammo);
+        }
+        //m4
+        for (let ammo of this.itemDB()["5447a9cd4bdc2dbd208b4567"]._props.Chambers[0]._props.filters[0].Filter) {
+            _556Ammo.push(ammo);
+        }
+        //spear
+        for (let ammo of this.itemDB()["65290f395ae2ae97b80fdf2d"]._props.Chambers[0]._props.filters[0].Filter) {
+            _277Ammo.push(ammo);
+        }
+        //scar-h
+        for (let ammo of this.itemDB()["6165ac306ef05c2ce828ef74"]._props.Chambers[0]._props.filters[0].Filter) {
+            _308Ammo.push(ammo);
+        }
+        for (let ammo of _556Ammo) {
+            this.itemDB()["5fbcc1d9016cce60e8341ab3"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
+            this.itemDB()["5fbbfabed5cb881a7363194e"]._props.ConflictingItems.push(ammo);
+            this.itemDB()["5fbbfacda56d053a3543f799"]._props.ConflictingItems.push(ammo);
+        }
+        for (let ammo of _300BlkAmmo) {
+            this.itemDB()["mechMCX_229mm"]._props.ConflictingItems.push(ammo);
+            this.itemDB()["mechMCX_171mm"]._props.ConflictingItems.push(ammo);
+        }
+        for (let ammo of _277Ammo) {
+            this.itemDB()["mechSpear_330mm"]._props.ConflictingItems.push(ammo);
+        }
+        for (let ammo of _308Ammo) {
+            this.itemDB()["65290f395ae2ae97b80fdf2d"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
+            this.itemDB()["652910565ae2ae97b80fdf35"]._props.ConflictingItems.push(ammo);
+        }
+        for (let local in this.localsDB()) {
+            this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 ShortName"] = "MCX Multi Cal.";
+            this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"] = this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"].replace(/SIG MCX \.300 Blackout/g, "SIG MCX Multi Cal.");
+            this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"] = this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"].replace(/SIG MCX \.300 AAC Blackout/g, "SIG MCX Multi Cal.");
+            this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Description"] = this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Description"].replace(/\.300 Blackout/g, "Multi Caliber");
+            this.localsDB()[local]["65290f395ae2ae97b80fdf2d ShortName"] = "SPEAR Multi Cal.";
+            this.localsDB()[local]["65290f395ae2ae97b80fdf2d Name"] = this.localsDB()[local]["65290f395ae2ae97b80fdf2d Name"].replace(/6\.8x51/g, "Multi Cal.");
+        }
+    }
     loadAttCompat() {
         const tacDevices = [
             "57fd23e32459772d0805bcf1",
@@ -58,22 +107,6 @@ class AttachmentBase {
                 firstSlotstocksArr.push(defaultStocks[stock]);
             }
         }
-        let stockSlot = {
-            "_name": "name",
-            "_id": "id",
-            "_parent": "parent",
-            "_props": {
-                "filters": [
-                    {
-                        "Shift": 0,
-                        "Filter": []
-                    }
-                ]
-            },
-            "_required": false,
-            "_mergeSlotWithChildren": true,
-            "_proto": "55d30c4c4bdc2db4468b457e"
-        };
         let bufferSlots = [];
         for (let slot in slots) {
             let newSlot = {
@@ -145,13 +178,6 @@ class AttachmentBase {
             if (serverItem._props.weapClass === "pistol") {
                 serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
             }
-            // if(serverItem._id === "622b3d5cf9cfc87d675d2de9"){
-            //     let scopes = serverItem._props.Slots[0]._props.filters[0].Filter;
-            //     for(let scope in scopes)
-            //     {
-            //         serverItem._props.Slots[2]._props.filters[0].Filter.push(scopes[scope]);
-            //     }
-            // }
         }
     }
     loadAttRequirements() {

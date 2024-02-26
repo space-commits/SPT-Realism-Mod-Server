@@ -239,7 +239,7 @@ export class JsonHandler {
 
                 if (modConfig.malf_changes == true) {
                     serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
-                    serverItem._props.HeatFactorGun = fileItem.HeatFactorGun;
+                    serverItem._props.HeatFactorGun = fileItem.HeatFactorGun * 1.5;
                     serverItem._props.HeatFactorByShot = fileItem.HeatFactorByShot;
                     serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
                     serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
@@ -276,6 +276,7 @@ export class JsonHandler {
                     serverItem._props.RecoilReturnPathOffsetHandRotation = fileItem.OffsetRotation;
                     serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
                     serverItem._props.CanQueueSecondShot = true;
+
                     if (fileItem.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
                     }

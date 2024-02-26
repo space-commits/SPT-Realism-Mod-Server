@@ -589,13 +589,14 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         this.dllChecker(logger, modConfig);
 
-        attachBase.loadAttCompat();
-
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
             itemsClass.addCustomItems();
+            attachBase.loadAttCompat();
+            attachBase.loadCaliberConversions();
         }
+     
 
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();

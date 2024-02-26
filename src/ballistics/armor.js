@@ -45,7 +45,7 @@ class Armor {
             this.loadHelmets(serverItem, this.tables);
             this.loadGlasses(serverItem);
             this.loadArmorMods(serverItem);
-            this.removePlateCollidors(serverItem);
+            this.removePlateCollidors(serverItem); //temporary untill BSG sorts their shit out
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("Armour loaded");

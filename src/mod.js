@@ -457,11 +457,12 @@ class Main {
         const descGen = new description_gen_1.DescriptionGen(tables);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
         this.dllChecker(logger, modConfig);
-        attachBase.loadAttCompat();
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
             itemsClass.addCustomItems();
+            attachBase.loadAttCompat();
+            attachBase.loadCaliberConversions();
         }
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();

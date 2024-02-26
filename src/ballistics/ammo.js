@@ -2101,7 +2101,7 @@ class Ammo {
             if (serverItem._id === "6196364158ef8c428c287d9f") {
                 serverItem._props.PenetrationPower = 50;
                 serverItem._props.ArmorDamage = 16;
-                serverItem._props.Damage = 99;
+                serverItem._props.Damage = 100;
                 serverItem._props.InitialSpeed = 645;
                 serverItem._props.RicochetChance = 0.25;
                 serverItem._props.FragmentationChance = 0;
