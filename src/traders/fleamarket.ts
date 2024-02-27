@@ -70,12 +70,12 @@ export class FleaChangesPreDBLoad {
             this.fleaConf.dynamic.offerItemCount.min = 0;
             this.fleaConf.dynamic.offerItemCount.max = 2;
 
-            this.fleaConf.dynamic.priceRanges.default.min = 1.3;
-            this.fleaConf.dynamic.priceRanges.default.max = 2;
-            this.fleaConf.dynamic.priceRanges.preset.min = 1.5;
-            this.fleaConf.dynamic.priceRanges.preset.max = 2.25;
-            this.fleaConf.dynamic.priceRanges.pack.min = 1.3;
-            this.fleaConf.dynamic.priceRanges.pack.max = 2;
+            this.fleaConf.dynamic.priceRanges.default.min = 0.75;
+            this.fleaConf.dynamic.priceRanges.default.max = 1.75;
+            this.fleaConf.dynamic.priceRanges.preset.min = 0.75;
+            this.fleaConf.dynamic.priceRanges.preset.max = 1.75;
+            this.fleaConf.dynamic.priceRanges.pack.min = 0.75;
+            this.fleaConf.dynamic.priceRanges.pack.max = 1.75;
 
             this.fleaConf.dynamic.endTimeSeconds.min = 600;
             this.fleaConf.dynamic.endTimeSeconds.max = 3600;

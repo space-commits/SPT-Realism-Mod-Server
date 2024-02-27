@@ -239,7 +239,7 @@ export class JsonHandler {
 
                 if (modConfig.malf_changes == true) {
                     serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
-                    serverItem._props.HeatFactorGun = fileItem.HeatFactorGun * 1.5;
+                    serverItem._props.HeatFactorGun = fileItem.HeatFactorGun * 2;
                     serverItem._props.HeatFactorByShot = fileItem.HeatFactorByShot;
                     serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
                     serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;

@@ -25,6 +25,8 @@ class AttachmentBase {
         let _300BlkAmmo = [];
         let _308Ammo = [];
         let _277Ammo = [];
+        let _366Ammo = [];
+        let _762x39Ammo = [];
         //mcx
         for (let ammo of this.itemDB()["5fbcc1d9016cce60e8341ab3"]._props.Chambers[0]._props.filters[0].Filter) {
             _300BlkAmmo.push(ammo);
@@ -41,21 +43,29 @@ class AttachmentBase {
         for (let ammo of this.itemDB()["6165ac306ef05c2ce828ef74"]._props.Chambers[0]._props.filters[0].Filter) {
             _308Ammo.push(ammo);
         }
+        //vpo
+        for (let ammo of this.itemDB()["59e6687d86f77411d949b251"]._props.Chambers[0]._props.filters[0].Filter) {
+            _366Ammo.push(ammo);
+        }
+        //akm
+        for (let ammo of this.itemDB()["59d6088586f774275f37482f"]._props.Chambers[0]._props.filters[0].Filter) {
+            _762x39Ammo.push(ammo);
+        }
+        //MCX
         for (let ammo of _556Ammo) {
             this.itemDB()["5fbcc1d9016cce60e8341ab3"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
-            this.itemDB()["5fbbfabed5cb881a7363194e"]._props.ConflictingItems.push(ammo);
-            this.itemDB()["5fbbfacda56d053a3543f799"]._props.ConflictingItems.push(ammo);
         }
+        //MDR
         for (let ammo of _300BlkAmmo) {
-            this.itemDB()["mechMCX_229mm"]._props.ConflictingItems.push(ammo);
-            this.itemDB()["mechMCX_171mm"]._props.ConflictingItems.push(ammo);
+            this.itemDB()["5c488a752e221602b412af63"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
         }
-        for (let ammo of _277Ammo) {
-            this.itemDB()["mechSpear_330mm"]._props.ConflictingItems.push(ammo);
-        }
+        //SPEAR
         for (let ammo of _308Ammo) {
             this.itemDB()["65290f395ae2ae97b80fdf2d"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
-            this.itemDB()["652910565ae2ae97b80fdf35"]._props.ConflictingItems.push(ammo);
+        }
+        //VPO-215 Magazine
+        for (let ammo of _762x39Ammo) {
+            this.itemDB()["5de653abf76fdc1ce94a5a2a"]._props.Cartridges[0]._props.filters[0].Filter.push(ammo);
         }
         for (let local in this.localsDB()) {
             this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 ShortName"] = "MCX Multi Cal.";
@@ -64,6 +74,21 @@ class AttachmentBase {
             this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Description"] = this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Description"].replace(/\.300 Blackout/g, "Multi Caliber");
             this.localsDB()[local]["65290f395ae2ae97b80fdf2d ShortName"] = "SPEAR Multi Cal.";
             this.localsDB()[local]["65290f395ae2ae97b80fdf2d Name"] = this.localsDB()[local]["65290f395ae2ae97b80fdf2d Name"].replace(/6\.8x51/g, "Multi Cal.");
+            this.localsDB()[local]["5c488a752e221602b412af63 Name"] = this.localsDB()[local]["5c488a752e221602b412af63 Name"].replace(/5\.56x45/g, "Multi Cal.");
+            this.localsDB()[local]["5c488a752e221602b412af63 Description"] = this.localsDB()[local]["5c488a752e221602b412af63 Description"].replace(/5\.56x45/g, "Multi Cal.");
+            this.localsDB()[local]["5de652c31b7e3716273428be Name"] = this.localsDB()[local]["5de652c31b7e3716273428be Name"].replace(/\.366 TKM/g, "");
+            this.localsDB()[local]["5de652c31b7e3716273428be Description"] = this.localsDB()[local]["5de652c31b7e3716273428be Description"].replace(/Chambered in \.366 TKM ammo./g, "Chambered mostly in .366 TKM ammo, can be rechambered for 7.62x39mm.");
+        }
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            if (serverItem?._props?.RecoilReturnSpeedHandRotation !== null && serverItem?._props?.RecoilReturnSpeedHandRotation !== undefined) {
+                if (serverItem._props.ammoCaliber === "Caliber366TKM") {
+                    serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._762x39Ammo);
+                }
+                if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber762x39") {
+                    serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._366Ammo);
+                }
+            }
         }
     }
     loadAttCompat() {
@@ -179,6 +204,7 @@ class AttachmentBase {
                 serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
             }
         }
+        this.itemDB()["mechMDR_406"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
     }
     loadAttRequirements() {
         let requiredMods = [

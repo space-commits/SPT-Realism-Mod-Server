@@ -41,7 +41,7 @@
         "MaxChamberSpeed": 1.3,
         "IsManuallyOperated": true,
         "BaseChamberCheckSpeed": 1.1,
-        "BaseFixSpeed": 0.9,
+        "BaseFixSpeed": 1.15,
         "OffsetRotation": 0.01,
         "RecoilIntensity": 0.2645
     },

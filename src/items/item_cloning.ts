@@ -148,22 +148,33 @@ export class ItemCloning {
     }
 
     public createCustomAttachments() {
+        //Mechanic VPO-215 23incg 7.62x39 Barrel
+        this.cloneAttachments("5de65547883dde217541644b", "mechVPO_23", "violet");
+        this.addToHandbook("mechVPO_23", "5b5f75c686f774094242f19f", 15000);
+        this.addToLocale("mechVPO_23", "VPO-215 \"Gornostay\" 7.62x39mm 23 inch barrel", "215 7.62x39 23\"", "A 23 inch (600mm) barrel for VPO-215 rifle chambered in 7.62x39mm.");
+        this.pushAttToFilters("5de65547883dde217541644b", "mechVPO_23");
+
+        //Mechanic MDR 406mm 300blk Barrel
+        this.cloneAttachments("5c48a2852e221602b21d5923", "mechMDR_406", "violet");
+        this.addToHandbook("mechMDR_406", "5b5f75c686f774094242f19f", 15000);
+        this.addToLocale("mechMDR_406", "MDR .300 BLK 16 inch barrel", "MDR 300BLK 16\"", "A 16 inch (406mm) barrel for MDR based weapons for .300 BLK ammo.");
+        this.pushAttToFilters("5c48a2852e221602b21d5923", "mechMDR_406");
 
         //Mechanic MCX 171mm 5.56 Barrel
         this.cloneAttachments("5fbbfabed5cb881a7363194e", "mechMCX_171mm", "violet");
-        this.addToHandbook("mechMCX_171mm", "5b5f75c686f774094242f19f", 10000);
+        this.addToHandbook("mechMCX_171mm", "5b5f75c686f774094242f19f", 15000);
         this.addToLocale("mechMCX_171mm", "MCX 5.56x45mm 171mm barrel", "MCX 171mm 5.56", "A 171mm barrel for MCX-based weapons, chambered in 5.56x45mm.");
         this.pushAttToFilters("5fbbfabed5cb881a7363194e", "mechMCX_171mm");
 
         //Mechanic MCX 229mm 5.56 Barrel
         this.cloneAttachments("5fbbfacda56d053a3543f799", "mechMCX_229mm", "violet");
-        this.addToHandbook("mechMCX_229mm", "5b5f75c686f774094242f19f", 10000);
+        this.addToHandbook("mechMCX_229mm", "5b5f75c686f774094242f19f", 15000);
         this.addToLocale("mechMCX_229mm", "MCX 5.56x45mm 229mm barrel", "MCX 229mm 5.56", "A 229mm barrel for MCX-based weapons, chambered in 5.56x45mm.");
         this.pushAttToFilters("5fbbfacda56d053a3543f799", "mechMCX_229mm");
 
         //Mechanic SPEAR 330mm .308 Barrel
         this.cloneAttachments("652910565ae2ae97b80fdf35", "mechSpear_330mm", "violet");
-        this.addToHandbook("mechSpear_330mm", "5b5f75c686f774094242f19f", 10000);
+        this.addToHandbook("mechSpear_330mm", "5b5f75c686f774094242f19f", 15000);
         this.addToLocale("mechSpear_330mm", "MCX SPEAR 7.62x51 330mm barrel", "SPEAR 330mm .308", "A 13 inch (330mm) barrel for the MCX SPEAR assault rifle chambered in 7.62x51 (.308 Winchester) ammo. Manufactured by SIG Sauer.");
         this.pushAttToFilters("652910565ae2ae97b80fdf35", "mechSpear_330mm");
 
@@ -175,25 +186,25 @@ export class ItemCloning {
 
         //366 AKM Muzzle Break Compensator
         this.cloneAttachments("59e61eb386f77440d64f5daf", "mechSlant_366", "violet");
-        this.addToHandbook("mechSlant_366", "5b5f724c86f774093f2ecf15", 1000);
+        this.addToHandbook("mechSlant_366", "5b5f724c86f774093f2ecf15", 3000);
         this.addToLocale("mechSlant_366", "Mechanic's Custom .366 AKM-Style Muzzle Brake", ".366 TKM Brake", "Mechanic bored out this brake to accomodate .366 TKM.");
         this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechSlant_366");
 
         //366 Spikes Tactical Comp
         this.cloneAttachments("5a9ea27ca2750c00137fa672", "mechSpikes_366", "violet");
-        this.addToHandbook("mechSpikes_366", "5b5f724c86f774093f2ecf15", 6000);
+        this.addToHandbook("mechSpikes_366", "5b5f724c86f774093f2ecf15", 8000);
         this.addToLocale("mechSpikes_366", "Mechanic's Custom .366 TKM Spikes Tactical Dynacomp", ".366 TKM Dynacomp", "Mechanic bored out this compensator to accomodate .366 TKM.");
         this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechSpikes_366");
 
         //366 Zenit DTK Comp
         this.cloneAttachments("5649ab884bdc2ded0b8b457f", "mechDTK_366", "violet");
-        this.addToHandbook("mechDTK_366", "5b5f724c86f774093f2ecf15", 8000);
+        this.addToHandbook("mechDTK_366", "5b5f724c86f774093f2ecf15", 10000);
         this.addToLocale("mechDTK_366", "Mechanic's Custom .366 TKM Zenit DTK-1", ".366 TKM DTK-1", "Mechanic bored out this compensator to accomodate .366 TKM.");
         this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechDTK_366");
 
         //366 JMAC Comp
         this.cloneAttachments("5f633f68f5750b524b45f112", "mechJMAC_366", "violet");
-        this.addToHandbook("mechJMAC_366", "5b5f724c86f774093f2ecf15", 16000);
+        this.addToHandbook("mechJMAC_366", "5b5f724c86f774093f2ecf15", 20000);
         this.addToLocale("mechJMAC_366", "Mechanic's Custom .366 TKM JMac RRD-4C", ".366 TKM RRD-4C", "Mechanic bored out this compensator to accomodate .366 TKM.");
         this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechJMAC_366");
     }

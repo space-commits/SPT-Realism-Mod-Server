@@ -10,7 +10,7 @@
         "Weight": 0.015,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 37,
+        "ChamberSpeed": 29,
         "LoyaltyLevel": 0,
         "Price": 0
     },
@@ -25,7 +25,7 @@
         "Weight": 0.017,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 32,
+        "ChamberSpeed": 24,
         "LoyaltyLevel": 0,
         "Price": 0
     },
