@@ -13,7 +13,7 @@
         "Accuracy": 0,
         "CenterOfImpact": 0.1,
         "HeatFactor": 1,
-        "CoolFactor": 1.2,
+        "CoolFactor": 1.4,
         "DurabilityBurnModificator": 1,
         "Velocity": 4,
         "ConflictingItems": [],

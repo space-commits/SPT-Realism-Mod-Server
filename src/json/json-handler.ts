@@ -195,8 +195,8 @@ export class JsonHandler {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
                     serverItem._props.Accuracy = fileItem.Accuracy;
                     serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                    serverItem._props.HeatFactor = fileItem.HeatFactor;
-                    serverItem._props.CoolFactor = fileItem.CoolFactor;
+                    serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor * 1.2 : 1;
+                    serverItem._props.CoolFactor = fileItem.CoolFactor != null ? fileItem.CoolFactor * 1.2 : 1
                     serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
                     // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
                     // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
@@ -239,10 +239,12 @@ export class JsonHandler {
 
                 if (modConfig.malf_changes == true) {
                     serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
-                    serverItem._props.HeatFactorGun = fileItem.HeatFactorGun * 2;
+                    serverItem._props.HeatFactorGun = fileItem.HeatFactorGun;
                     serverItem._props.HeatFactorByShot = fileItem.HeatFactorByShot;
                     serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
                     serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
+                    serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
+                    serverItem._props.AllowOverheat = fileItem.AllowOverheat;
                 }
 
                 if (modConfig.realistic_ballistics == true) {
@@ -251,16 +253,12 @@ export class JsonHandler {
 
                 if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
-
                     serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
                     serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;
                     serverItem._props.RecolDispersion = fileItem.Dispersion;
                     serverItem._props.RecoilCamera = fileItem.CameraRecoil;
                     serverItem._props.RecoilAngle = fileItem.RecoilAngle;
                     serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                    serverItem._props.HeatFactor = fileItem.HeatFactor;
-                    serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
-                    serverItem._props.AllowOverheat = fileItem.AllowOverheat;
                     serverItem._props.HipAccuracyRestorationDelay = fileItem.HipAccuracyRestorationDelay;
                     serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
                     serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
