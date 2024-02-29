@@ -879,7 +879,7 @@
     "57f4c844245977379d5c14d1": {
         "ItemID": "57f4c844245977379d5c14d1",
         "Name": "weapon_zmz_pp-9_9x18pmm",
-        "WeapType": "",
+        "WeapType": "highP",
         "OperationType": "magForward",
         "WeapAccuracy": 0,
         "BaseTorque": -0.25,
@@ -908,7 +908,7 @@
         "RecoilHandDamping": 0.45,
         "WeaponAllowADS": true,
         "Weight": 1.33,
-        "DurabilityBurnRatio": 0.025,
+        "DurabilityBurnRatio": 0.1,
         "AutoROF": 1000,
         "SemiROF": 340,
         "LoyaltyLevel": 1,
