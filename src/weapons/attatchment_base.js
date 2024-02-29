@@ -58,7 +58,6 @@ class AttachmentBase {
         //MDR
         for (let ammo of _300BlkAmmo) {
             this.itemDB()["5c488a752e221602b412af63"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
-            this.itemDB()["5447a9cd4bdc2dbd208b4567"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
         }
         //SPEAR
         for (let ammo of _308Ammo) {
@@ -88,6 +87,9 @@ class AttachmentBase {
                 }
                 if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber762x39") {
                     serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._366Ammo);
+                }
+                if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber556x45NATO") {
+                    serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._556Ammo);
                 }
             }
         }
