@@ -59,6 +59,7 @@ const pkId = "5935c25fb3acc3127c3d8cd9";
 const mechId = "5a7c2eca46aef81a7ca2145d";
 const ragmId = "5ac3b934156ae10c4430e83c";
 const jaegId = "5c0647fdd443bc2504c2d371";
+const fenceId = "579dc571d53a0658a154fbec";
 
 export class Traders {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private utils: Utils) { }
@@ -66,6 +67,14 @@ export class Traders {
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
     }
+
+    private modifyTraderBuyPrice(traderId: string, basePrice: number){
+        for (let i in this.tables.traders[traderId].base.loyaltyLevels)     {
+            let multi = Number(i);
+            this.tables.traders[traderId].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(basePrice - (multi * 5)), 40);
+        }
+    }
+
     public loadTraderTweaks() {
 
         if (modConfig.change_buy_categories == true) {
@@ -79,13 +88,15 @@ export class Traders {
         }
 
         if (modConfig.change_buy_price == true) {
-            let ll = 0;
-            for (let trader in this.tables.traders) {
-                for (let i in this.tables.traders[trader].base.loyaltyLevels) {
-                    ll++;
-                    this.tables.traders[trader].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(75 - (ll * 5)), 40);
-                }
-            }
+            
+            this.modifyTraderBuyPrice(pkId, this.utils.pickRandNumInRange(69, 73));
+            this.modifyTraderBuyPrice(ragmId, this.utils.pickRandNumInRange(69, 73));
+            this.modifyTraderBuyPrice(jaegId, this.utils.pickRandNumInRange(75, 80));
+            this.modifyTraderBuyPrice(prapId, this.utils.pickRandNumInRange(65, 75));
+            this.modifyTraderBuyPrice(theraId, this.utils.pickRandNumInRange(78, 84));
+            this.modifyTraderBuyPrice(skierId, this.utils.pickRandNumInRange(65, 70));
+            this.modifyTraderBuyPrice(mechId, this.utils.pickRandNumInRange(69, 69));
+            this.modifyTraderBuyPrice(fenceId, this.utils.pickRandNumInRange(80, 90));
         }
 
         if (modConfig.nerf_fence == true) {

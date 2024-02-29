@@ -91,6 +91,9 @@ export class AttachmentBase {
                 if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber762x39") {
                     serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._366Ammo);
                 }
+                if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber556x45NATO") {
+                    serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._556Ammo);
+                }
             }
 
         }
