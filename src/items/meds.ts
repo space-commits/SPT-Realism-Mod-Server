@@ -3,8 +3,8 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
 
-export class Meds {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private medItems, private buffs) { }
+export class Consumables {
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private medItems, private foodItems, private buffMeds, private buffsFood) { }
 
     globalDB(): IConfig {
         return this.tables.globals.config;
@@ -16,18 +16,243 @@ export class Meds {
         return this.globalDB().Health.Effects.Stimulator.Buffs;
     }
 
+
+    public loadFood() {
+        for (const buffName in this.buffsFood) {
+            this.buffDB()[buffName] = this.buffsFood[buffName]
+        }
+
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            ////Drinks////
+            //Water//
+            //Water Bottle
+            if (serverItem._id === "5448fee04bdc2dbc018b4567") {
+                serverItem._props.StimulatorBuffs = this.foodItems.water.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Kvass
+            if (serverItem._id === "5e8f3423fd7471236e6e3b64") {
+                serverItem._props.StimulatorBuffs = this.foodItems.kvass.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Aquamari
+            if (serverItem._id === "5c0fa877d174af02a012e1cf") {
+                serverItem._props.StimulatorBuffs = this.foodItems.aquamari.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Purified Water
+            if (serverItem._id === "5d1b33a686f7742523398398") {
+                serverItem._props.StimulatorBuffs = this.foodItems.purewater.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Energy//
+            //HotRod
+            if (serverItem._id === "5751496424597720a27126da") {
+                serverItem._props.StimulatorBuffs = this.foodItems.hotrod.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //MaxEnergy
+            if (serverItem._id === "5751435d24597720a27126d1") {
+                serverItem._props.StimulatorBuffs = this.foodItems.maxenergy.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Juice//
+            //Apple
+            if (serverItem._id === "57513f07245977207e26a311") {
+                serverItem._props.StimulatorBuffs = this.foodItems.apple.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Pineapple
+            if (serverItem._id === "544fb62a4bdc2dfb738b4568b") {
+                serverItem._props.StimulatorBuffs = this.foodItems.pineapple.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Vita
+            if (serverItem._id === "57513fcc24597720a31c09a6") {
+                serverItem._props.StimulatorBuffs = this.foodItems.vita.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Soda//
+            //Green Tea
+            if (serverItem._id === "575062b524597720a31c09a1") {
+                serverItem._props.StimulatorBuffs = this.foodItems.greenice.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //TarCola
+            if (serverItem._id === "57514643245977207f2c2d09") {
+                serverItem._props.StimulatorBuffs = this.foodItems.tarcola.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //RatCola
+            if (serverItem._id === "60b0f93284c20f0feb453da7") {
+                serverItem._props.StimulatorBuffs = this.foodItems.ratcola.StimulatorBuffs;
+            }
+            //Other
+            //Milk
+            if (serverItem._id === "575146b724597720a27126d5") {
+                serverItem._props.StimulatorBuffs = this.foodItems.milk.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            ///Alcohol///
+            //Moonshine
+            if (serverItem._id === "5d1b376e86f774252519444e") {
+                serverItem._props.StimulatorBuffs = this.foodItems.moonshine.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Jack
+            if (serverItem._id === "5d403f9186f7743cac3f229b") {
+                serverItem._props.StimulatorBuffs = this.foodItems.jack.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Vodka (Bad)
+            if (serverItem._id === "614451b71e5874611e2c7ae5") {
+                serverItem._props.StimulatorBuffs = this.foodItems.vodka_bad.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Vodka
+            if (serverItem._id === "5d40407c86f774318526545a") {
+                serverItem._props.StimulatorBuffs = this.foodItems.vodka.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Beer
+            if (serverItem._id === "62a09f32621468534a797acb") {
+                serverItem._props.StimulatorBuffs = this.foodItems.beer.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            ////Foods////
+            //Sweet//
+            //Alyonka
+            if (serverItem._id === "57505f6224597709a92585a9") {
+                serverItem._props.StimulatorBuffs = this.foodItems.alyonka.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Sugar
+            if (serverItem._id === "59e3577886f774176a362503") {
+                serverItem._props.StimulatorBuffs = this.foodItems.sugar.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Slickers
+            if (serverItem._id === "544fb6cc4bdc2d34748b456e") {
+                serverItem._props.StimulatorBuffs = this.foodItems.slippers.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Condensed Milk
+            if (serverItem._id === "5734773724597737fd047c14") {
+                serverItem._props.StimulatorBuffs = this.foodItems.condensed_milk.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Dry//
+            //Rye
+            if (serverItem._id === "57347d3d245977448f7b7f61") {
+                serverItem._props.StimulatorBuffs = this.foodItems.borodinskiye.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Emelya
+            if (serverItem._id === "5751487e245977207e26a315") {
+                serverItem._props.StimulatorBuffs = this.foodItems.emelya.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Oats
+            if (serverItem._id === "57347d90245977448f7b7f65") {
+                serverItem._props.StimulatorBuffs = this.foodItems.oat_flakes.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Noodles
+            if (serverItem._id === "656df4fec921ad01000481a2") {
+                serverItem._props.StimulatorBuffs = this.foodItems.noodles.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Misc//
+            //Mayo
+            if (serverItem._id === "5bc9b156d4351e00367fbce9") {
+                serverItem._props.StimulatorBuffs = this.foodItems.mayonez.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Dried Meat
+            if (serverItem._id === "65815f0e647e3d7246384e14") {
+                serverItem._props.StimulatorBuffs = this.foodItems.dried_meat.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Sausage
+            if (serverItem._id === "635a758bfefc88a93f021b8a") {
+                serverItem._props.StimulatorBuffs = this.foodItems.mayonez.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //MRE//
+            //US MRE
+            if (serverItem._id === "590c5f0d86f77413997acfab") {
+                serverItem._props.StimulatorBuffs = this.foodItems.mre.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Iskra
+            if (serverItem._id === "590c5d4b86f774784e1b9c45") {
+                serverItem._props.StimulatorBuffs = this.foodItems.iskra.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Canned//
+            //Beef Large
+            if (serverItem._id === "57347da92459774491567cf5") {
+                serverItem._props.StimulatorBuffs = this.foodItems.beef_large.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Beef Small
+            if (serverItem._id === "57347d7224597744596b4e72") {
+                serverItem._props.StimulatorBuffs = this.foodItems.beef_small.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Saury
+            if (serverItem._id === "5673de654bdc2d180f8b456d") {
+                serverItem._props.StimulatorBuffs = this.foodItems.suary.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Salmom
+            if (serverItem._id === "57347d5f245977448b40fa81") {
+                serverItem._props.StimulatorBuffs = this.foodItems.salmon.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Herring
+            if (serverItem._id === "57347d9c245977448b40fa85") {
+                serverItem._props.StimulatorBuffs = this.foodItems.herring.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Sprats
+            if (serverItem._id === "5bc9c29cd4351e003562b8a3") {
+                serverItem._props.StimulatorBuffs = this.foodItems.sprats.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Peas
+            if (serverItem._id === "57347d692459774491567cf1") {
+                serverItem._props.StimulatorBuffs = this.foodItems.peas.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+            //Squash
+            if (serverItem._id === "57347d8724597744596b4e76") {
+                serverItem._props.StimulatorBuffs = this.foodItems.squash.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+            }
+        }
+        if (this.modConf.logEverything == true) {
+            this.logger.info("Provisions loaded");
+        }
+    }
+
+    public loadStims() {
+
+    }
+
     public loadMeds() {
 
         //Adjust Thermal stim to compensate for lower base temp
         this.globalDB().Health.Effects.Stimulator.Buffs.Buffs_BodyTemperature["Value"] = -3;
 
-        for (const buffName in this.buffs) {
-            this.buffDB()[buffName] = this.buffs[buffName]
+        for (const buffName in this.buffMeds) {
+            this.buffDB()[buffName] = this.buffMeds[buffName]
         }
 
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            
+
             ///Custom///
             if (serverItem._id === "SJ0") {
                 serverItem._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
@@ -36,7 +261,7 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); 
+                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
                 serverItem._props.ConflictingItems.splice(4, 0, "false");
             }
             if (serverItem._id === "TIER1MEDKIT") {
@@ -50,14 +275,14 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); 
+                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
                 serverItem._props.ConflictingItems.splice(4, 0, "false");
             }
             if (serverItem._id === "TIER3MEDKIT") {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); 
+                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
                 serverItem._props.ConflictingItems.splice(4, 0, "false");
             }
             ///Pain Meds//
@@ -136,9 +361,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "none");
-                serverItem._props.ConflictingItems.splice(6, 0, "none"); 
-                serverItem._props.ConflictingItems.splice(7, 0, "none"); 
-                serverItem._props.ConflictingItems.splice(8, 0, "none"); 
+                serverItem._props.ConflictingItems.splice(6, 0, "none");
+                serverItem._props.ConflictingItems.splice(7, 0, "none");
+                serverItem._props.ConflictingItems.splice(8, 0, "none");
             }
             ///Bandages///
             //Aeseptic Bandage
@@ -153,9 +378,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //Army Bandage
             if (serverItem._id === "5751a25924597722c463c472") {
@@ -169,9 +394,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             ///Tourniquets///
             //CAT
@@ -186,9 +411,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //Esmarch
             if (serverItem._id === "5e831507ea0a7c419c2f9bd9") {
@@ -202,9 +427,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.8"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //Calok
             if (serverItem._id === "5e8488fa988a8701445df1e4") {
@@ -218,9 +443,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");//can be used in raid
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             ///Splints///
             //Immobilizing Splint
@@ -236,9 +461,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //Alu Splint
             if (serverItem._id === "5af0454c86f7746bf20992e8") {
@@ -253,9 +478,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             ///Medkits///
             //AI-2
@@ -293,9 +518,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "1");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //Salewa
             if (serverItem._id === "544fb45d4bdc2dee738b4568") {
@@ -311,9 +536,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.8"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //IFAK
             if (serverItem._id === "590c678286f77426c9660122") {
@@ -329,9 +554,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //AFAK
             if (serverItem._id === "60098ad7c2240c0fe85c570a") {
@@ -347,9 +572,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //Grizzly
             if (serverItem._id === "590c657e86f77412b013051d") {
@@ -365,9 +590,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             ///Smeary stuff///
             //Vaseline
@@ -384,9 +609,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //GoldenStar
             if (serverItem._id === "5751a89d24597722aa0e8db0") {
@@ -402,9 +627,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             ///Surgery/
             //CMS
@@ -419,9 +644,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.85"); // hp restore per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             //Surv12
             if (serverItem._id === "5d02797c86f774203f38e30a") {
@@ -435,9 +660,9 @@ export class Meds {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.95"); // hp restore per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, ""); 
-                serverItem._props.ConflictingItems.splice(7, 0, ""); 
-                serverItem._props.ConflictingItems.splice(8, 0, ""); 
+                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(7, 0, "");
+                serverItem._props.ConflictingItems.splice(8, 0, "");
             }
         }
         if (this.modConf.logEverything == true) {

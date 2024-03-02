@@ -145,6 +145,7 @@ export class ItemsClass {
                 "5ac7655e5acfc40016339a19",
                 "5ac72e7d5acfc40016339a02",
                 "5649aa744bdc2ded0b8b457e",
+                "59e61eb386f77440d64f5daf"
             ];
 
         let incompatibleWeapons =

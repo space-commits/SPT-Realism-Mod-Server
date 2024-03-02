@@ -53,9 +53,11 @@ const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
 const path = __importStar(require("path"));
 const fs = __importStar(require("fs"));
-const medItems = require("../db/items/med_items.json");
 const crafts = require("../db/items/hideout_crafts.json");
-const buffs = require("../db/items/buffs.json");
+const medItems = require("../db/items/med_items.json");
+const medBuffs = require("../db/items/buffs.json");
+const foodItems = require("../db/items/food_items.json");
+const foodBuffs = require("../db/items/buffs_food.json");
 const modConfig = require("../config/config.json");
 let validatedClient = false;
 class Main {
@@ -442,7 +444,7 @@ class Main {
         const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
-        const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
+        const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs);
         const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new fleamarket_1.FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
@@ -510,8 +512,9 @@ class Main {
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
             // bots.botMeds();
-            meds.loadMeds();
+            consumables.loadMeds();
         }
+        consumables.loadFood();
         bots.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case

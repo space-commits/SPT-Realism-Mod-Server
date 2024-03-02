@@ -68,7 +68,7 @@ import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
 import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
 import { Arrays } from "./utils/arrays"
-import { Meds } from "./items/meds";
+import { Consumables } from "./items/meds";
 import { Player } from "./player/player"
 import { WeaponsGlobals } from "./weapons/weapons_globals"
 import { BotLoader } from "./bots/bots";
@@ -90,9 +90,12 @@ import { Armor } from "./ballistics/armor";
 import * as path from 'path';
 import * as fs from 'fs';
 
-const medItems = require("../db/items/med_items.json");
+
 const crafts = require("../db/items/hideout_crafts.json");
-const buffs = require("../db/items/buffs.json");
+const medItems = require("../db/items/med_items.json");
+const medBuffs = require("../db/items/buffs.json");
+const foodItems = require("../db/items/food_items.json");
+const foodBuffs = require("../db/items/buffs_food.json");
 const modConfig = require("../config/config.json");
 
 let validatedClient = false;
@@ -572,7 +575,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
-        const meds = new Meds(logger, tables, modConfig, medItems, buffs);
+        const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs);
         const player = new Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
@@ -656,8 +659,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
             // bots.botMeds();
-            meds.loadMeds();
+            consumables.loadMeds();
         }
+
+        consumables.loadFood();
 
         bots.botHpMulti();
 
