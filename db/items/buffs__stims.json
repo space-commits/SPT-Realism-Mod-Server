@@ -1,3 +1,1179 @@
 {
+    "BuffsAdrenaline": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "Endurance",
+            "Value": 5
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "Strength",
+            "Value": 5
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "StressResistance",
+            "Value": 5
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.2
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.2
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 305,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.075
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 125,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 185,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_L1": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.5
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "Endurance",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "Strength",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "StressResistance",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.4
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.4
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 80,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 305,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.25
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 125,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 185,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
     
+    "Buffs_Trimadol": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.2
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "Endurance",
+            "Value": 10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "Strength",
+            "Value": 10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "StressResistance",
+            "Value": 10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "RecoilControl",
+            "Value": 10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "Perception",
+            "Value": 10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 300,
+            "SkillName": "Attention",
+            "Value": 10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 200,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.6
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 200,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 305,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.1
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 125,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 185,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "BuffsZagustin": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "RemoveAllBloodLosses",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 300,
+            "SkillName": "Vitality",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 315,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.47
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.15
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -1
+        }
+    ],
+    "AHF1M": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "RemoveAllBloodLosses",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 150,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 150,
+            "SkillName": "Vitality",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 150,
+            "SkillName": "Health",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 160,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.33
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 150,
+            "SkillName": "",
+            "Value": 0.25
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 150,
+            "SkillName": "",
+            "Value": -2
+        }
+    ],
+    "Buffs_3bTG": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "Attention",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "Perception",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "Strength",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "Attention",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "Perception",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "Strength",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.5
+        }
+    ],
+    "Buffs_P22": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.3
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "StressResistance",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "Health",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "Vitality",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "Endurance",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.1
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "StressResistance",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "Health",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "Vitality",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "Endurance",
+            "Value": -10
+        }
+    ],
+    "Buffs_Meldonin": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 310,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.1
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 300,
+            "SkillName": "Endurance",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 300,
+            "SkillName": "StressResistance",
+            "Value": 10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.5
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 315,
+            "Duration": 300,
+            "SkillName": "Vitality",
+            "Value": -15
+        },        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 315,
+            "Duration": 300,
+            "SkillName": "Metabolism",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 315,
+            "Duration": 300,
+            "SkillName": "Health",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 315,
+            "Duration": 300,
+            "SkillName": "Strength",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 315,
+            "Duration": 300,
+            "SkillName": "Strength",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 315,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.3
+        }
+    ],
+    "Buffs_Perfotoran": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "Metabolism",
+            "Value": 10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "Antidote",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 70,
+            "Duration": 300,
+            "SkillName": "Health",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 70,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.33
+        }
+    ],
+    "Buffs_MULE": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "WeightLimit",
+            "Chance": 1,
+            "Delay": 30,
+            "Duration": 900,
+            "SkillName": "",
+            "Value": 0.5
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 30,
+            "Duration": 900,
+            "SkillName": "",
+            "Value": -0.26
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 30,
+            "Duration": 900,
+            "SkillName": "",
+            "Value": -0.26
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 30,
+            "Duration": 900,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "BuffsPropital": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "Metabolism",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "Health",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "Vitality",
+            "Value": 20
+        }
+    ],
+    "Buffs_PNB": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 0.9,
+            "Delay": 1,
+            "Duration": 200,
+            "SkillName": "",
+            "Value": 0.5
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 1
+        }
+    ],
+    "BuffseTGchange": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 1
+        }
+    ],
+    "Buffs_SJ0": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 4
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "Contusion",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 0.75,
+            "Delay": 45,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 4
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "Contusion",
+            "Chance": 0.75,
+            "Delay": 45,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "Pain",
+            "Chance": 0.75,
+            "Delay": 45,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 0.75,
+            "Delay": 45,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 0.75,
+            "Delay": 45,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 0.5,
+            "Delay": 90,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 4
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "Contusion",
+            "Chance": 0.5,
+            "Delay": 90,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "Pain",
+            "Chance": 0.5,
+            "Delay": 90,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 0.5,
+            "Delay": 90,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 0.5,
+            "Delay": 90,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 0.25,
+            "Delay": 165,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 4
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "Contusion",
+            "Chance": 0.25,
+            "Delay": 165,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "Pain",
+            "Chance": 0.25,
+            "Delay": 165,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 0.25,
+            "Delay": 165,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 0.25,
+            "Delay": 165,
+            "Duration": 15,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 0.9,
+            "Delay": 1,
+            "Duration": 200,
+            "SkillName": "",
+            "Value": 0.5
+        }
+    ],
+    "BuffsSJ1TGLabs": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "Endurance",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "Strength",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "StressResistance",
+            "Value": 20
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 100,
+            "Duration": 200,
+            "SkillName": "",
+            "Value": -0.25
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 100,
+            "Duration": 200,
+            "SkillName": "",
+            "Value": -0.3
+        }
+    ],
+    "BuffsSJ6TGLabs": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 2
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 200,
+            "Duration": 40,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 200,
+            "Duration": 40,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_SJ12_TGLabs": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "BodyTemperature",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "SkillName": "",
+            "Value": -4
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "SkillName": "",
+            "Value": 0.05
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "SkillName": "",
+            "Value": 0.05
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "SkillName": "Perception",
+            "Value": 30
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "BodyTemperature",
+            "Chance": 1,
+            "Delay": 606,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 6
+        }
+    ]
 }

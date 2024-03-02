@@ -4,7 +4,7 @@ import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
 
 export class Consumables {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private medItems, private foodItems, private buffMeds, private buffsFood) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private medItems, private foodItems, private buffMeds, private buffsFood, private buffsStims) { }
 
     globalDB(): IConfig {
         return this.tables.globals.config;
@@ -14,6 +14,15 @@ export class Consumables {
     }
     buffDB(): any {
         return this.globalDB().Health.Effects.Stimulator.Buffs;
+    }
+
+    public loadStims() {
+        for (const buffName in this.buffsStims) {
+            this.buffDB()[buffName] = this.buffsStims[buffName]
+        }
+
+        ///Custom///
+        this.itemDB()["SJ0"]._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
     }
 
 
@@ -237,10 +246,6 @@ export class Consumables {
         }
     }
 
-    public loadStims() {
-
-    }
-
     public loadMeds() {
 
         //Adjust Thermal stim to compensate for lower base temp
@@ -253,10 +258,6 @@ export class Consumables {
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
 
-            ///Custom///
-            if (serverItem._id === "SJ0") {
-                serverItem._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
-            }
             if (serverItem._id === "SUPERBOTMEDKIT") {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
