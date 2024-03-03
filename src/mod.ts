@@ -96,6 +96,7 @@ const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
 const foodItems = require("../db/items/food_items.json");
 const foodBuffs = require("../db/items/buffs_food.json");
+const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
 
 let validatedClient = false;
@@ -575,7 +576,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
-        const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs);
+        const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
@@ -662,7 +663,13 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             consumables.loadMeds();
         }
 
-        consumables.loadFood();
+        if(modConfig.food_changes == true){
+            consumables.loadFood();
+        }
+
+        if(modConfig.stim_changes == true){
+            consumables.loadStims();       
+        }
 
         bots.botHpMulti();
 

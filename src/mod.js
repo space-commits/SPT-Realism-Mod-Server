@@ -58,6 +58,7 @@ const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
 const foodItems = require("../db/items/food_items.json");
 const foodBuffs = require("../db/items/buffs_food.json");
+const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
 let validatedClient = false;
 class Main {
@@ -444,7 +445,7 @@ class Main {
         const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
-        const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs);
+        const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new fleamarket_1.FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
@@ -514,7 +515,12 @@ class Main {
             // bots.botMeds();
             consumables.loadMeds();
         }
-        consumables.loadFood();
+        if (modConfig.food_changes == true) {
+            consumables.loadFood();
+        }
+        if (modConfig.stim_changes == true) {
+            consumables.loadStims();
+        }
         bots.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
