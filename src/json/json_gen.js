@@ -319,7 +319,7 @@ class JsonGen {
         let HorizontalRecoil = serverItem._props.RecoilForceBack;
         let Dispersion = serverItem._props.RecolDispersion;
         let CameraRecoil = serverItem._props.RecoilCamera;
-        let CameraSnap = serverItem._props.CameraSnap;
+        let VisualMulti = 1;
         let Convergence = serverItem._props.RecoilReturnSpeedHandRotation;
         let RecoilAngle = serverItem._props.RecoilAngle;
         let DurabilityBurnRatio = serverItem._props.DurabilityBurnRatio;
@@ -364,7 +364,7 @@ class JsonGen {
             HorizontalRecoil,
             Dispersion,
             CameraRecoil,
-            CameraSnap,
+            VisualMulti,
             Convergence,
             RecoilAngle,
             DurabilityBurnRatio,
