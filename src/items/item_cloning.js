@@ -24,39 +24,49 @@ class ItemCloning {
     }
     createCustomMedItems() {
         //Tier 1 Medkit
-        this.cloneMedicalItem("5755356824597772cb798962", "TIER1MEDKIT", this.medItems.TIER1MEDKIT.MaxHpResource, this.medItems.TIER1MEDKIT.medUseTime, this.medItems.TIER1MEDKIT.hpResourceRate, "assets/content/items/barter/item_barter_meds_tools/item_barter_meds_tools.bundle", "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle", "yellow ", this.medItems.TIER1MEDKIT.effects_damage);
+        this.cloneMedicalItem("5755356824597772cb798962", "TIER1MEDKIT", this.medItems.TIER1MEDKIT.MaxHpResource, this.medItems.TIER1MEDKIT.medUseTime, this.medItems.TIER1MEDKIT.hpResourceRate, "assets/content/items/barter/item_barter_meds_tools/item_barter_meds_tools.bundle", "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle", "yellow ", this.medItems.TIER1MEDKIT.effects_damage, {});
         this.addToHandbook("TIER1MEDKIT", "5b47574386f77428ca22b338", 10000);
         this.addToLocale("TIER1MEDKIT", "Makeshift Medical Kit", "TIER1", "A makeshift medical kit used for healing minor wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        // this.addToHideout(this.crafts.Tier1Medkit);
         //Tier 2 Medkit
-        this.cloneMedicalItem("5755356824597772cb798962", "TIER2MEDKIT", this.medItems.TIER2MEDKIT.MaxHpResource, this.medItems.TIER2MEDKIT.medUseTime, this.medItems.TIER2MEDKIT.hpResourceRate, "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_loot.bundle", "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle", "blue", this.medItems.TIER2MEDKIT.effects_damage);
+        this.cloneMedicalItem("5755356824597772cb798962", "TIER2MEDKIT", this.medItems.TIER2MEDKIT.MaxHpResource, this.medItems.TIER2MEDKIT.medUseTime, this.medItems.TIER2MEDKIT.hpResourceRate, "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_loot.bundle", "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle", "blue", this.medItems.TIER2MEDKIT.effects_damage, {});
         this.addToHandbook("TIER2MEDKIT", "5b47574386f77428ca22b338", 20000);
         this.addToLocale("TIER2MEDKIT", "Improved Makeshift Medical Kit", "TIER2", "An improved makeshift medical kit used for healing wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        // this.addToHideout(this.crafts.Tier2Medkit);
         //Tier 3 Medkit
-        this.cloneMedicalItem("5755356824597772cb798962", "TIER3MEDKIT", this.medItems.TIER3MEDKIT.MaxHpResource, this.medItems.TIER3MEDKIT.medUseTime, this.medItems.TIER3MEDKIT.hpResourceRate, "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_loot.bundle", "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_container.bundle", "violet", this.medItems.TIER3MEDKIT.effects_damage);
+        this.cloneMedicalItem("5755356824597772cb798962", "TIER3MEDKIT", this.medItems.TIER3MEDKIT.MaxHpResource, this.medItems.TIER3MEDKIT.medUseTime, this.medItems.TIER3MEDKIT.hpResourceRate, "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_loot.bundle", "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_container.bundle", "violet", this.medItems.TIER3MEDKIT.effects_damage, {});
         this.addToHandbook("TIER3MEDKIT", "5b47574386f77428ca22b338", 30000);
         this.addToLocale("TIER3MEDKIT", "High-Grade Makeshift Medical Kit", "TIER3", "A high-grade makeshift medical kit used for healing more severe wounds that have been already stabilized in the field. Not suitable for use in the field.");
-        // this.addToHideout(this.crafts.Tier3Medkit);
-        //Makeshift Regen
-        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "SJ0", this.medItems.SJ0.MaxHpResource, this.medItems.SJ0.medUseTime, this.medItems.SJ0.hpResourceRate, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", this.medItems.SJ0.effects_damage);
+        //SJO Regen
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "SJ0", this.medItems.SJ0.MaxHpResource, this.medItems.SJ0.medUseTime, this.medItems.SJ0.hpResourceRate, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", this.medItems.SJ0.effects_damage, {});
         this.addToHandbook("SJ0", "5b47574386f77428ca22b33a", 30000);
         this.addToLocale("SJ0", "SJ0 TGLabs Combat Stimulant Injector", "SJ0", "TerraGroup Labs' first attempt at a combat stimulant with regenerative properties. Despite reports of initial trials being promising, in-theatre testing by USEC operatives proved disasterous due to extensive unreported side-effects. The stimulant was later recalled for disposal, but shady characters in the Tarkov region managed to intercept significant quanities of the product and still peddle it to this day, often resusing old Adrenaline injector casings or whatver they can get their hands on.");
-        // this.addToHideout(this.crafts.Tier3Medkit);
-        //SuperMedkit (for bots)
-        // this.cloneMedicalItem(
-        //     "590c678286f77426c9660122",
-        //     "SUPERBOTMEDKIT",
-        //     this.medItems.SUPERBOTMEDKIT.MaxHpResource,
-        //     this.medItems.SUPERBOTMEDKIT.medUseTime,
-        //     this.medItems.SUPERBOTMEDKIT.hpResourceRate,
-        //     "assets/content/weapons/usable_items/item_ifak/item_ifak_loot.bundle",
-        //     "assets/content/weapons/usable_items/item_ifak/item_ifak_container.bundle",
-        //     "yellow",
-        //     this.medItems.SUPERBOTMEDKIT.effects_damage
-        // );
-        // this.addToHandbook("SUPERBOTMEDKIT", "5b47574386f77428ca22b338", 1);
-        // this.addToLocale("SUPERBOTMEDKIT", "Super Bot Medkit", "SUPERBOTMEDKIT", "Super medkit for bots, will only appear in their Secure Container.");
+        //Adrenal Debuffs
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "adrenal_debuff", 0, 2, 0, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", {}, {});
+        this.addToHandbook("adrenal_debuff", "5b47574386f77428ca22b33a", 1);
+        this.addToLocale("adrenal_debuff", "Adrenal Debuff", "Adrenal", "If you are seeing this outside of the handbook, something has gone wrong.");
+        //Regen Debuff
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "regen_debuff", 0, 2, 0, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", {}, {});
+        this.addToHandbook("regen_debuff", "5b47574386f77428ca22b33a", 1);
+        this.addToLocale("regen_debuff", "Regen Debuff", "Regen", "If you are seeing this outside of the handbook, something has gone wrong.");
+        //Clotting Debuffs
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "clotting_debuff", 0, 2, 0, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", {}, {});
+        this.addToHandbook("clotting_debuff", "5b47574386f77428ca22b33a", 1);
+        this.addToLocale("clotting_debuff", "Clotting Debuff", "Clotting", "If you are seeing this outside of the handbook, something has gone wrong.");
+        //Weight Debuffs
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "weight_debuff", 0, 2, 0, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", {}, {});
+        this.addToHandbook("weight_debuff", "5b47574386f77428ca22b33a", 1);
+        this.addToLocale("weight_debuff", "Weight Debuff", "Weight", "If you are seeing this outside of the handbook, something has gone wrong.");
+        //Performance Debuffs
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "performance_debuff", 0, 2, 0, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", {}, {});
+        this.addToHandbook("performance_debuff", "5b47574386f77428ca22b33a", 1);
+        this.addToLocale("performance_debuff", "Performance Debuff", "Performance", "If you are seeing this outside of the handbook, something has gone wrong.");
+        //Generic Debuffs
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "generic_debuff", 0, 2, 0, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", {}, {});
+        this.addToHandbook("generic_debuff", "5b47574386f77428ca22b33a", 1);
+        this.addToLocale("generic_debuff", "Generic Debuff", "Generic", "If you are seeing this outside of the handbook, something has gone wrong.");
+        //Damage Debuffs
+        this.cloneMedicalItem("5c10c8fd86f7743d7d706df3", "damage_debuff", 0, 2, 0, "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle", "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle", "blue", {}, {});
+        this.addToHandbook("damage_debuff", "5b47574386f77428ca22b33a", 1);
+        this.addToLocale("damage_debuff", "Damage Debuff", "Damage", "If you are seeing this outside of the handbook, something has gone wrong.");
     }
     createCustomWeapons() {
         //Mechanic custom SKS
@@ -201,7 +211,7 @@ class ItemCloning {
             this.logger.info("Item " + itemID._id + " Added");
         }
     }
-    cloneMedicalItem(itemToClone, newItemID, maxHpResource, medUseTime, hpResourceRate, prefabePath, usePrefabPath, color, effectsDamage) {
+    cloneMedicalItem(itemToClone, newItemID, maxHpResource, medUseTime, hpResourceRate, prefabePath, usePrefabPath, color, effectsDamage, effectsHealth) {
         this.cloneItem(itemToClone, newItemID);
         let itemID = this.itemDB()[newItemID];
         itemID._props.MaxHpResource = maxHpResource;
@@ -211,6 +221,7 @@ class ItemCloning {
         itemID._props.UsePrefab.path = usePrefabPath;
         itemID._props.BackgroundColor = color;
         itemID._props.effects_damage = effectsDamage;
+        itemID._props.effects_health = effectsHealth;
         itemID._props.CanSellOnRagfair = false;
         if (this.modConfig.logEverything == true) {
             this.logger.info("Item " + itemID._id + " Added");

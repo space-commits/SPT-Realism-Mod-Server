@@ -48,6 +48,15 @@ export class FleaChangesPreDBLoad {
         }
         else if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = true;
+            this.fleaConf.dynamic.blacklist.custom.push(
+                "generic_debuff",
+                "performance_debuff",
+                "weight_debuff",
+                "clotting_debuff",
+                "damage_debuff",
+                "adrenal_debuff",
+                "regen_debuff"
+            );
         }
 
         if (this.modConfig.flea_changes == true) {

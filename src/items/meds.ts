@@ -20,7 +20,15 @@ export class Consumables {
         for (const buffName in this.buffsStims) {
             this.buffDB()[buffName] = this.buffsStims[buffName]
         }
-
+        ///Buffs///
+        this.itemDB()["generic_debuff"]._props.StimulatorBuffs = "Buffs_Generic";
+        this.itemDB()["performance_debuff"]._props.StimulatorBuffs = "Buffs_Performance";
+        this.itemDB()["weight_debuff"]._props.StimulatorBuffs = "Buffs_Weight";
+        this.itemDB()["clotting_debuff"]._props.StimulatorBuffs = "Buffs_Clotting";
+        this.itemDB()["damage_debuff"]._props.StimulatorBuffs = "Buffs_Damage";
+        this.itemDB()["adrenal_debuff"]._props.StimulatorBuffs = "Buffs_Adrenal";
+        this.itemDB()["regen_debuff"]._props.StimulatorBuffs = "Buffs_Regenerative";
+        
         ///Custom///
         this.itemDB()["SJ0"]._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
 
