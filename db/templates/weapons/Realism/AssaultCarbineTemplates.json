@@ -328,12 +328,12 @@
         "BaseTorque": 1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 86,
+        "VerticalRecoil": 84,
         "HorizontalRecoil": 140,
-        "Dispersion": 15,
+        "Dispersion": 12,
         "CameraRecoil": 0.06,
-        "VisualMulti": 1.25,
-        "Convergence": 20,
+        "VisualMulti": 1.15,
+        "Convergence": 13.5,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.15,
         "HeatFactorGun": 0.27,
@@ -362,7 +362,7 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.3,
         "BaseFixSpeed": 1.15,
-        "RecoilIntensity": 0.125
+        "RecoilIntensity": 0.1
     },
     "5d43021ca4b9362eab4b5e25": {
         "ItemID": "5d43021ca4b9362eab4b5e25",
@@ -373,12 +373,12 @@
         "BaseTorque": 1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 86,
+        "VerticalRecoil": 84,
         "HorizontalRecoil": 140,
-        "Dispersion": 15,
+        "Dispersion": 12,
         "CameraRecoil": 0.06,
-        "VisualMulti": 1.25,
-        "Convergence": 15,
+        "VisualMulti": 1.15,
+        "Convergence": 13.5,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.08,
         "HeatFactorGun": 0.27,
@@ -407,7 +407,7 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.45,
         "BaseFixSpeed": 1.25,
-        "RecoilIntensity": 0.125
+        "RecoilIntensity": 0.1
     },
     "59e6152586f77473dc057aa1": {
         "ItemID": "59e6152586f77473dc057aa1",

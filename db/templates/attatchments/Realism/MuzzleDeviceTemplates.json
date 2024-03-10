@@ -4103,7 +4103,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
-        "CameraRecoil": -15,
+        "CameraRecoil": -12,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -4119,7 +4119,7 @@
         "Weight": 0.085,
         "ModShotDispersion": 0,
         "Loudness": 75,
-        "Convergence": 32,
+        "Convergence": 28,
         "LoyaltyLevel": 0,
         "Price": 0
     },
