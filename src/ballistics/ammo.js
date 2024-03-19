@@ -1266,10 +1266,10 @@ class Ammo {
             if (serverItem._id === "5ea2a8e200685063ec28c05a") {
                 serverItem._props.PenetrationPower = 25;
                 serverItem._props.ArmorDamage = 18;
-                serverItem._props.Damage = 63;
+                serverItem._props.Damage = 64;
                 serverItem._props.InitialSpeed = 292;
                 serverItem._props.RicochetChance = 0.2;
-                serverItem._props.FragmentationChance = 0.3;
+                serverItem._props.FragmentationChance = 0.4;
                 serverItem._props.BulletMassGram = 10.5;
                 serverItem._props.HeavyBleedingDelta = 0.3;
                 serverItem._props.LightBleedingDelta = 0.65;
@@ -3408,7 +3408,7 @@ class Ammo {
             }
             // M855
             if (serverItem._id === "54527a984bdc2d4e668b4567") {
-                serverItem._props.PenetrationPower = 66;
+                serverItem._props.PenetrationPower = 67;
                 serverItem._props.ArmorDamage = 17;
                 serverItem._props.Damage = 60;
                 serverItem._props.InitialSpeed = 902;
@@ -3516,7 +3516,7 @@ class Ammo {
                     serverItem._props.HeatFactor = 1.24;
                 }
             }
-            ///.50 cal ///
+            ///.50 BMG ///
             //FMJ
             if (serverItem._id === "5cde8864d7f00c0010373be1") {
                 serverItem._props.PenetrationPower = 85;
@@ -3651,8 +3651,7 @@ class Ammo {
             this.logger.info("Ammo Firerate Stats Loaded");
         }
     }
-    loadAmmoMalfChanges() {
-        const _9x18AmmoArr = this.itemDB()["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
+    loadAmmoStatAdjustments() {
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
             if (serverItem._parent === enums_1.ParentClasses.AMMO) {
@@ -3663,54 +3662,8 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = misfireChance;
                 }
             }
-            // if (serverItem._id === "5c07a8770db8340023300450") {
-            //     serverItem._props.Slots[2]._props.filters[0].Filter = this.itemDB["55d355e64bdc2d962f8b4569"]._props.Slots[2]._props.filters[0].Filter
-            // }
-            //Kedr-B
-            if (serverItem._id === "57f3c6bd24597738e730fa2f") {
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
-                }
-            }
-            //Kedr
-            if (serverItem._id === "57d14d2524597714373db789") {
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
-                }
-            }
-            //Makarov
-            if (serverItem._id === "5448bd6b4bdc2dfc2f8b4569") {
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
-                }
-            }
-            //Makarov threaded
-            if (serverItem._id === "579204f224597773d619e051") {
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
-                }
-            }
-            //PB
-            if (serverItem._id === "56e0598dd2720bb5668b45a6") {
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
-                }
-            }
-            //APS
-            if (serverItem._id === "5a17f98cfcdbcb0980087290") {
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
-                }
-            }
-            //APS
-            if (serverItem._id === "5abccb7dd8ce87001773e277") {
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.Chambers[0]._props.filters[0].Filter = _9x18AmmoArr;
-                }
-            }
         }
         if (this.modConf.logEverything == true) {
-            this.logger.info("Ammo Compatibility Changes Loaded");
             this.logger.info("Global Mafunction Stats Loaded");
         }
     }

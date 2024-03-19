@@ -525,7 +525,7 @@ class Main {
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
         if (modConfig.malf_changes == true) {
-            ammo.loadAmmoMalfChanges();
+            ammo.loadAmmoStatAdjustments();
             weaponsGlobals.loadGlobalMalfChanges();
         }
         if (modConfig.trader_repair_changes == true) {

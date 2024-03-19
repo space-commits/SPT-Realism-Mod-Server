@@ -18,36 +18,34 @@ export class AttachmentBase {
 
     public loadCaliberConversions() {
 
-        let _556Ammo = [];
-        let _300BlkAmmo = [];
-        let _308Ammo = [];
-        let _277Ammo = [];
-        let _366Ammo = [];
-        let _762x39Ammo = [];
-        //mcx
-        for (let ammo of this.itemDB()["5fbcc1d9016cce60e8341ab3"]._props.Chambers[0]._props.filters[0].Filter) {
-            _300BlkAmmo.push(ammo);
-        }
-        //m4
-        for (let ammo of this.itemDB()["5447a9cd4bdc2dbd208b4567"]._props.Chambers[0]._props.filters[0].Filter) {
-            _556Ammo.push(ammo);
-        }
-        //spear
-        for (let ammo of this.itemDB()["65290f395ae2ae97b80fdf2d"]._props.Chambers[0]._props.filters[0].Filter) {
-            _277Ammo.push(ammo);
-        }
-        //scar-h
-        for (let ammo of this.itemDB()["6165ac306ef05c2ce828ef74"]._props.Chambers[0]._props.filters[0].Filter) {
-            _308Ammo.push(ammo);
-        }
-        //vpo
-        for (let ammo of this.itemDB()["59e6687d86f77411d949b251"]._props.Chambers[0]._props.filters[0].Filter) {
-            _366Ammo.push(ammo);
-        }
-        //akm
-        for (let ammo of this.itemDB()["59d6088586f774275f37482f"]._props.Chambers[0]._props.filters[0].Filter) {
-            _762x39Ammo.push(ammo);
-        }
+        const _556Ammo = this.itemDB()["5447a9cd4bdc2dbd208b4567"]._props.Chambers[0]._props.filters[0].Filter;
+        const _300BlkAmmo = this.itemDB()["5fbcc1d9016cce60e8341ab3"]._props.Chambers[0]._props.filters[0].Filter;
+        const _308Ammo = this.itemDB()["6165ac306ef05c2ce828ef74"]._props.Chambers[0]._props.filters[0].Filter
+        const _277Ammo = this.itemDB()["65290f395ae2ae97b80fdf2d"]._props.Chambers[0]._props.filters[0].Filter;
+        const _366Ammo = this.itemDB()["59e6687d86f77411d949b251"]._props.Chambers[0]._props.filters[0].Filter;
+        const _762x39Ammo = this.itemDB()["59d6088586f774275f37482f"]._props.Chambers[0]._props.filters[0].Filter;
+        const _9x18Ammo = this.itemDB()["57f4c844245977379d5c14d1"]._props.Chambers[0]._props.filters[0].Filter;
+
+        //Kedr-B
+        this.itemDB()["57f3c6bd24597738e730fa2f"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
+
+        //Kedr
+        this.itemDB()["57d14d2524597714373db789"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
+
+        //Makarov
+        this.itemDB()["5448bd6b4bdc2dfc2f8b4569"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
+
+        //Makarov threaded
+        this.itemDB()["579204f224597773d619e051"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
+
+        //PB
+        this.itemDB()["56e0598dd2720bb5668b45a6"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
+
+        //APS
+        this.itemDB()["5a17f98cfcdbcb0980087290"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
+
+        //APB
+        this.itemDB()["5abccb7dd8ce87001773e277"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
 
         //MCX
         for (let ammo of _556Ammo) {

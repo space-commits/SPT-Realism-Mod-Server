@@ -677,7 +677,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
 
         if (modConfig.malf_changes == true) {
-            ammo.loadAmmoMalfChanges();
+            ammo.loadAmmoStatAdjustments();
             weaponsGlobals.loadGlobalMalfChanges();
         }
 
