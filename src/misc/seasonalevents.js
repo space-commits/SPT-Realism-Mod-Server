@@ -56,24 +56,6 @@ class SeasonalEventsHandler {
         "634959225289190e5e773b3b",
         "634959225289190e5e773b3b",
     ];
-    giveBotsChristmasPresents(botJsonTemplate) {
-        for (let item in this.christmasItems) {
-            botJsonTemplate.inventory.items.Backpack.push(this.christmasItems[item]);
-            botJsonTemplate.inventory.items.Pockets.push(this.christmasItems[item]);
-        }
-        botJsonTemplate.inventory.equipment.Headwear["5a43957686f7742a2c2f11b0"] = 5;
-        botJsonTemplate.inventory.equipment.Headwear["5a43943586f77416ad2f06e2"] = 5;
-    }
-    giveBotsHalloweenTreats(botJsonTemplate) {
-        for (let item in this.halloweenBag) {
-            botJsonTemplate.inventory.items.Backpack.push(this.halloweenBag[item]);
-        }
-        for (let item in this.halloweenPocket) {
-            botJsonTemplate.inventory.items.Pockets.push(this.halloweenPocket[item]);
-            botJsonTemplate.inventory.items.TacticalVest.push(this.halloweenPocket[item]);
-        }
-        botJsonTemplate.inventory.equipment.Headwear["59ef13ca86f77445fd0e2483"] = 5;
-    }
 }
 exports.SeasonalEventsHandler = SeasonalEventsHandler;
 //# sourceMappingURL=seasonalevents.js.map

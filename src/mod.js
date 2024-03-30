@@ -140,7 +140,8 @@ class Main {
             const lootGenerator = container.resolve("LootGenerator");
             const raidTimeAdjustmentService = container.resolve("RaidTimeAdjustmentService");
             const appContext = container.resolve("ApplicationContext");
-            const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, lootGenerator, databaseServer, timeUtil, configServer, appContext);
+            const itemFilterService = container.resolve("ItemFilterService");
+            const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext);
             container.afterResolution("LocationController", (_t, result) => {
                 result.getAirdropLoot = () => {
                     return airdropController.myGetAirdropLoot();
@@ -553,7 +554,6 @@ class Main {
             traders.addItemsToAssorts();
         }
         traders.loadTraderRefreshTimes();
-        //
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }

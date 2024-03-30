@@ -91,7 +91,8 @@ class Traders {
             this.traderConf.fence.discountOptions.assortSize = 10;
             this.traderConf.fence.discountOptions.presetPriceMult = 2.5;
             this.traderConf.fence.discountOptions.itemPriceMult = 2;
-            this.traderConf.fence.maxPresetsPercent = 4;
+            this.traderConf.fence.weaponPresetMinMax.min = 0;
+            this.traderConf.fence.weaponPresetMinMax.max = 4;
             this.traderConf.fence.partialRefreshChangePercent = 50;
             this.traderConf.fence.discountOptions.assortSize = 10;
             this.traderConf.fence.assortSize = 30;
@@ -111,7 +112,8 @@ class Traders {
     }
     loadTraderRefreshTimes() {
         for (let trader in this.traderConf.updateTime) {
-            this.traderConf.updateTime[trader].seconds = modConfig.trader_refresh_time;
+            this.traderConf.updateTime[trader].seconds.min = modConfig.trader_refresh_time;
+            this.traderConf.updateTime[trader].seconds.max = modConfig.trader_refresh_time;
         }
     }
     loadTraderRepairs() {

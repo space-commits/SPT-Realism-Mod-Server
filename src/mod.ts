@@ -89,6 +89,7 @@ import { Armor } from "./ballistics/armor";
 
 import * as path from 'path';
 import * as fs from 'fs';
+import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
 
 
 const crafts = require("../db/items/hideout_crafts.json");
@@ -194,7 +195,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
             const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-            const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
+            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+            const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
 
             container.afterResolution("LocationController", (_t, result: LocationController) => {
                 result.getAirdropLoot = (): IAirdropLootResult => {
@@ -594,7 +596,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         this.dllChecker(logger, modConfig);
 
         if (modConfig.recoil_attachment_overhaul == true) {
-            itemCloning.createCustomWeapons();
+            itemCloning.createCustomWeapons(); 
             itemCloning.createCustomAttachments();
             itemsClass.addCustomItems();
             attachBase.loadAttCompat();
@@ -709,8 +711,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }
+        
         traders.loadTraderRefreshTimes();
-        //
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();

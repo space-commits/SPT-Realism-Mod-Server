@@ -179,8 +179,8 @@ class JsonHandler {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
                     serverItem._props.Accuracy = fileItem.Accuracy;
                     serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                    serverItem._props.HeatFactor = fileItem.HeatFactor != null && fileItem.HeatFactor != 1 ? fileItem.HeatFactor * 1.2 : 1;
-                    serverItem._props.CoolFactor = fileItem.CoolFactor != null && fileItem.CoolFactor != 1 ? fileItem.CoolFactor * 1.2 : 1;
+                    serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor : 1;
+                    serverItem._props.CoolFactor = fileItem.CoolFactor != null ? fileItem.CoolFactor : 1;
                     serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
                     // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
                     // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
