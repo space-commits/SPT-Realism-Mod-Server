@@ -94,7 +94,7 @@ class JsonHandler {
             }
         }
         //catch any modded weapons not in templates
-        if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) {
+        if (modConfig.recoil_attachment_overhaul == true && utils_1.ConfigChecker.dllIsPresent == true) {
             for (let j in this.itemDB()) {
                 let serverItem = this.itemDB()[j];
                 let serverConfItems = serverItem._props.ConflictingItems;
@@ -172,7 +172,7 @@ class JsonHandler {
         }
     }
     modPusherHelper(serverItem, fileItem) {
-        if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) {
+        if (modConfig.recoil_attachment_overhaul == true && utils_1.ConfigChecker.dllIsPresent == true) {
             if (serverItem._id === fileItem.ItemID) {
                 let serverConfItems = serverItem._props.ConflictingItems;
                 if (serverConfItems[0] !== "SPTRM") {
@@ -226,7 +226,7 @@ class JsonHandler {
                 if (modConfig.realistic_ballistics == true) {
                     serverItem._props.Velocity = fileItem.Velocity;
                 }
-                if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && utils_1.ConfigChecker.dllIsPresent == true) {
+                if (modConfig.recoil_attachment_overhaul == true && utils_1.ConfigChecker.dllIsPresent == true) {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
                     serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
                     serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;
@@ -253,6 +253,7 @@ class JsonHandler {
                     serverItem._props.CameraToWeaponAngleSpeedRange.y = 0;
                     serverItem._props.CameraToWeaponAngleStep = 0;
                     serverItem._props.CameraSnap = 1;
+                    serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
                     if (fileItem.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
                     }

@@ -666,6 +666,7 @@ class Ammo {
             if (serverItem._id === "5e85a9f4add9fe03027d9bf1") {
                 serverItem._props.Damage = 1;
                 serverItem._props.ammoRec = -20;
+                serverItem._props.BallisticCoeficient = 0.01;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
