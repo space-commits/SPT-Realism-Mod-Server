@@ -1,26 +1,27 @@
 {
   "appearance": {
-    "head": [
-      "5cc084dd14c02e000b0550a3",
-      "5fdb50bb2b730a787b3f78cf",
-      "5fdb7571e4ed5b5ea251e529",
-      "60a6aaad42fd2735e4589978",
-      "619f94f5b90286142b59d45f",
-      "62a9e7d15ea3b87d6f642a28"
-    ]
+    "head": {
+      "5cc084dd14c02e000b0550a3": 1,
+      "5fdb7571e4ed5b5ea251e529": 1,
+      "62a9e7d15ea3b87d6f642a28": 1,
+      "619f94f5b90286142b59d45f": 1,
+      "60a6aaad42fd2735e4589978": 1,
+      "5fdb50bb2b730a787b3f78cf": 1,
+      "6574aa9a1b144de18c0fba45": 1
+    }
   },
-  "LowTierVoice": [
-    "Bear_1",
-    "Bear_2",
-    "Bear_3"
-  ],
-  "HighTierVoice": [
-    "Bear_1",
-    "Bear_2",
-    "Bear_3",
-    "Bear_1_Eng",
-    "Bear_2_Eng"
-  ],
+  "LowTierVoice": {
+    "Bear_1": 1,
+    "Bear_2": 1,
+    "Bear_3": 1
+  },
+  "HighTierVoice": {
+    "Bear_1": 1,
+    "Bear_2": 1,
+    "Bear_3": 1,
+    "Bear_1_Eng": 1,
+    "Bear_2_Eng": 1
+  },
   "bearLO1": {
     "experience": {
       "level": {

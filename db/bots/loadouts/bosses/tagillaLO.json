@@ -45,23 +45,6 @@
             }
         ]
     },
-    "appearance": {
-        "body": {
-            "5e9d9fa986f774054d6b89f2": 1
-        },
-        "feet": {
-            "609e86c09776a947754429b2": 1
-        },
-        "hands": [
-            "5cc2e68f14c02e28b47de290"
-        ],
-        "head": [
-            "5f68c4c217d579077152a252"
-        ],
-        "voice": [
-            "SectantPriest"
-        ]
-    },
     "tagillaLO1": {
         "inventory": {
             "Ammo": {

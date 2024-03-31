@@ -70,29 +70,33 @@
       "5e4bb39386f774067f79de05": 1,
       "5fce3e965a9f8c40685693bc": 1
     },
-    "head": [
-      "5cc084dd14c02e000b0550a3",
-      "5fdb5950f5264a66150d1c6e",
-      "60a6aaad42fd2735e4589978",
-      "60a6aa8fd559ae040d0d951f",
-      "5fdb50bb2b730a787b3f78cf",
-      "5fdb7571e4ed5b5ea251e529",
-      "5fdb4139e4ed5b5ea251e4ed",
-      "5cde96047d6c8b20b577f016",
-      "619f94f5b90286142b59d45f",
-      "62a9e7d15ea3b87d6f642a28",
-      "619f9e338858a474c8685cc9",
-      "62aca6a1310e67685a2fc2e7"
-    ],
-    "voice": [
-      "Usec_1",
-      "Usec_2",
-      "Usec_3",
-      "Usec_4",
-      "Usec_5",
-      "Bear_1_Eng",
-      "Bear_2_Eng"
-    ]
+    "head": {
+      "5cde96047d6c8b20b577f016": 1,
+      "60a6aa8fd559ae040d0d951f": 1,
+      "619f9e338858a474c8685cc9": 1,
+      "5fdb5950f5264a66150d1c6e": 1,
+      "5fdb4139e4ed5b5ea251e4ed": 1,
+      "62aca6a1310e67685a2fc2e7": 1,
+      "6574aabee0423b9ebe0c79cf": 1,
+      "5cc084dd14c02e000b0550a3": 1,
+      "5fdb7571e4ed5b5ea251e529": 1,
+      "62a9e7d15ea3b87d6f642a28": 1,
+      "619f94f5b90286142b59d45f": 1,
+      "60a6aaad42fd2735e4589978": 1,
+      "5fdb50bb2b730a787b3f78cf": 1,
+      "6574aa9a1b144de18c0fba45": 1,
+      "5cc2e4d014c02e000d0115f8": 1,
+      "5cde9ff17d6c8b0474535daa": 1
+    },
+    "voice": {
+      "Usec_1": 1,
+      "Usec_2": 1,
+      "Usec_3": 1,
+      "Usec_4": 1,
+      "Usec_5": 1,
+      "Bear_1_Eng": 1,
+      "Bear_2_Eng": 1
+    }
   },
   "raiderLO1": {
     "inventory": {
