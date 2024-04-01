@@ -100,11 +100,12 @@ class BotLoader {
             "weightingAdjustmentsByBotLevel": [],
             "weaponSightWhitelist": {},
             "randomisation": [],
-            "clothing": [],
-            "weightingAdjustments": [],
             "blacklist": [],
             "whitelist": [],
-            "forceStock": true
+            "forceStock": true,
+            "filterPlatesByLevel": true,
+            "weaponSlotIdsToMakeRequired": [],
+            "forceOnlyArmoredRigWhenNoArmor": false,
         };
         this.botConf().equipment["assault"] = botEquipmentTempalte;
         this.botConf().equipment["pmcbot"] = botEquipmentTempalte;
@@ -118,6 +119,7 @@ class BotLoader {
         this.botConf().equipment["followersanitar"] = botEquipmentTempalte;
         this.botConf().equipment["bossbully"] = botEquipmentTempalte;
         this.botConf().equipment["followerbossbully"] = botEquipmentTempalte;
+        this.botConf().equipment["pmc"] = botEquipmentTempalte;
         this.botConf().equipment["pmc"].weaponModLimits.scopeLimit = 100;
         this.botConf().equipment["pmc"].weaponModLimits.lightLaserLimit = 2;
         this.botConf().equipment["pmc"].randomisation = [];
@@ -125,18 +127,10 @@ class BotLoader {
         this.botConf().equipment["pmc"].weightingAdjustmentsByBotLevel = [];
         this.botConf().equipment["pmc"].weightingAdjustmentsByPlayerLevel = [];
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-        this.botConf().equipment["pmc"].filterPlatesByLevel = false;
+        this.botConf().equipment["pmc"].filterPlatesByLevel = true;
         if (this.modConfig.logEverything == true) {
             this.logger.info("Bots Loaded");
         }
-    }
-    botMeds() {
-        // this.arrays.nonScavBotArr.forEach(addBotMedkit);
-        // function addBotMedkit(bot) {
-        //     if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
-        //         bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
-        //     }
-        // }
     }
     forceBossSpawns() {
         for (let i in this.mapDB()) {

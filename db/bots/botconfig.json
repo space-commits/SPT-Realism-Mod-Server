@@ -702,7 +702,7 @@
         "maxBackpackLootTotalRub": 90000,
         "maxPocketLootTotalRub": 35000,
         "maxVestLootTotalRub": 35000,
-        "looseWeaponInBackpackChancePercent": 5,
+        "looseWeaponInBackpackChancePercent": 0,
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
             "assault": {
@@ -750,7 +750,7 @@
         "maxBackpackLootTotalRub": 150000,
         "maxPocketLootTotalRub": 50000,
         "maxVestLootTotalRub": 50000,
-        "looseWeaponInBackpackChancePercent": 10,
+        "looseWeaponInBackpackChancePercent": 0,
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
             "assault": {

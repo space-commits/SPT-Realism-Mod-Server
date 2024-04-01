@@ -2,7 +2,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
-import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
+import { EquipmentFilters, IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
 import { BotTierTracker, Utils, RaidInfoTracker, ModTracker } from "../utils/utils";
 import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
@@ -32,7 +32,6 @@ const USECNames = require("../../db/bots/names/USECNames.json");
 const bearNames = require("../../db/bots/names/bearNames.json");
 const pmcTypes = require("../../db/bots/pmcTypes.json");
 const keys = require("../../db/bots/loadouts/templates/keys.json");
-
 
 export class BotLoader {
 
@@ -91,7 +90,7 @@ export class BotLoader {
 
         // this.setDefaultLootOdds();
 
-        const botEquipmentTempalte = {
+        const botEquipmentTempalte: EquipmentFilters = {
             "weaponModLimits": {
                 "scopeLimit": 2,
                 "lightLaserLimit": 2
@@ -106,14 +105,13 @@ export class BotLoader {
             "weightingAdjustmentsByBotLevel": [],
             "weaponSightWhitelist": {},
             "randomisation": [],
-            "clothing": [],
-            "weightingAdjustments": [],
             "blacklist": [],
             "whitelist": [],
-            "forceStock": true
+            "forceStock": true,
+            "filterPlatesByLevel": true,
+            "weaponSlotIdsToMakeRequired": [],
+            "forceOnlyArmoredRigWhenNoArmor": false,
         }
-
-
 
         this.botConf().equipment["assault"] = botEquipmentTempalte;
         this.botConf().equipment["pmcbot"] = botEquipmentTempalte;
@@ -128,6 +126,7 @@ export class BotLoader {
         this.botConf().equipment["bossbully"] = botEquipmentTempalte;
         this.botConf().equipment["followerbossbully"] = botEquipmentTempalte;
 
+        this.botConf().equipment["pmc"] = botEquipmentTempalte;
         this.botConf().equipment["pmc"].weaponModLimits.scopeLimit = 100;
         this.botConf().equipment["pmc"].weaponModLimits.lightLaserLimit = 2;
         this.botConf().equipment["pmc"].randomisation = [];
@@ -135,20 +134,11 @@ export class BotLoader {
         this.botConf().equipment["pmc"].weightingAdjustmentsByBotLevel = [];
         this.botConf().equipment["pmc"].weightingAdjustmentsByPlayerLevel = [];
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-        this.botConf().equipment["pmc"].filterPlatesByLevel = false;
+        this.botConf().equipment["pmc"].filterPlatesByLevel = true;
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("Bots Loaded");
         }
-    }
-
-    public botMeds() {
-        // this.arrays.nonScavBotArr.forEach(addBotMedkit);
-        // function addBotMedkit(bot) {
-        //     if (bot !== "assault" && bot !== "marskman" && bot.inventory.items.SecuredContainer) {
-        //         bot.inventory.items.SecuredContainer.push("SUPERBOTMEDKIT");
-        //     }
-        // }
     }
 
     public forceBossSpawns() {
