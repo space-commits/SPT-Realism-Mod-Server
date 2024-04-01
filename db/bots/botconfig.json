@@ -9,7 +9,7 @@
         "bossTagilla": 5,
         "bossKnight": 5,
         "bossZryachiy": 5,
-        "bossTest": 5,
+        "bossTest": 1,
         "cursedAssault": 10,
         "followerBully": 10,
         "followerGluharAssault": 10,
@@ -22,13 +22,13 @@
         "followerBirdEye": 5,
         "followerBigPipe": 5,
         "followerZryachiy": 10,
-        "followerTest": 10,
+        "followerTest": 1,
         "marksman": 10,
         "pmcBot": 30,
         "sectantPriest": 5,
         "sectantWarrior": 10,
         "gifter": 5,
-        "test": 5,
+        "test": 1,
         "exUsec": 30,
         "arenaFighterEvent": 10,
         "arenaFighter": 10,
@@ -37,7 +37,16 @@
         "crazyAssaultEvent": 10,
         "bossBoar": 5,
         "followerBoar": 15,
-        "bossBoarSniper": 5
+        "followerboarclose1": 4,
+        "followerboarclose2": 4,
+        "bossBoarSniper": 5,
+        "bosskolontay": 5,
+        "followerKolontayAssault": 10,
+        "followerKolontaySecurity": 10,
+        "shooterBTR": 2,
+        "peacefullZryachiyEvent": 1,
+        "ravangeZryachiyEvent": 1,
+        "sectactPriestEvent": 1
     },
     "cartridgeBlacklist": [],
     "blacklist": [
@@ -693,7 +702,7 @@
         "maxBackpackLootTotalRub": 90000,
         "maxPocketLootTotalRub": 35000,
         "maxVestLootTotalRub": 35000,
-        "looseWeaponInBackpackChancePercent": 5,
+        "looseWeaponInBackpackChancePercent": 0,
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
             "assault": {
@@ -741,7 +750,7 @@
         "maxBackpackLootTotalRub": 150000,
         "maxPocketLootTotalRub": 50000,
         "maxVestLootTotalRub": 50000,
-        "looseWeaponInBackpackChancePercent": 10,
+        "looseWeaponInBackpackChancePercent": 0,
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
             "assault": {

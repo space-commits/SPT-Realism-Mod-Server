@@ -8,14 +8,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.05
     },
     "5ab8e4ed86f7742d8e50c7fa": {
         "ItemID": "5ab8e4ed86f7742d8e50c7fa",
@@ -26,14 +19,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.05
     },
     "545cdb794bdc2d3a198b456a": {
         "ItemID": "545cdb794bdc2d3a198b456a",
@@ -41,17 +27,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": true,
-        "SpallReduction": 0.24,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.08
     },
     "5c0e53c886f7747fa54205c7": {
         "ItemID": "5c0e53c886f7747fa54205c7",
@@ -59,17 +38,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": true,
-        "SpallReduction": 0.31,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.12
     },
     "5c0e51be86f774598e797894": {
         "ItemID": "5c0e51be86f774598e797894",
@@ -77,17 +49,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": true,
-        "SpallReduction": 0.31,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.12
     },
     "5c0e541586f7747fa54205c9": {
         "ItemID": "5c0e541586f7747fa54205c9",
@@ -98,14 +63,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.05
     },
     "5df8a2ca86f7740bfe6df777": {
         "ItemID": "5df8a2ca86f7740bfe6df777",
@@ -113,17 +71,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "GOST 2A",
-        "CanSpall": false,
-        "SpallReduction": 1,
+        "CanSpall": true,
+        "SpallReduction": 0.15,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.1
     },
     "5c0e5bab86f77461f55ed1f3": {
         "ItemID": "5c0e5bab86f77461f55ed1f3",
@@ -131,17 +82,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 4,
         "ArmorClass": "GOST 4",
-        "CanSpall": true,
-        "SpallReduction": 0.28,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.1
     },
     "5c0e57ba86f7747fa141986d": {
         "ItemID": "5c0e57ba86f7747fa141986d",
@@ -149,17 +93,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": true,
-        "SpallReduction": 0.25,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.1
     },
     "5fd4c474dd870108a754b241": {
         "ItemID": "5fd4c474dd870108a754b241",
@@ -170,13 +107,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "Comfort": 0.85
     },
     "609e8540d5c319764c2bc2e9": {
         "ItemID": "609e8540d5c319764c2bc2e9",
@@ -187,14 +118,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 0.95
     },
     "60a283193cb70855c43a381d": {
         "ItemID": "60a283193cb70855c43a381d",
@@ -205,14 +129,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.05
     },
     "5e9dacf986f774054d6b89f4": {
         "ItemID": "5e9dacf986f774054d6b89f4",
@@ -220,17 +137,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5A",
-        "CanSpall": true,
-        "SpallReduction": 0.29,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.045
     },
     "62a09d79de7ac81993580530": {
         "ItemID": "62a09d79de7ac81993580530",
@@ -241,14 +151,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 0.94
     },
     "5b44cd8b86f774503d30cba2": {
         "ItemID": "5b44cd8b86f774503d30cba2",
@@ -259,14 +162,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.05
     },
     "5b44cf1486f77431723e3d05": {
         "ItemID": "5b44cf1486f77431723e3d05",
@@ -277,14 +173,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.025
     },
     "5b44d0de86f774503d30cba8": {
         "ItemID": "5b44d0de86f774503d30cba8",
@@ -295,14 +184,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.035
     },
     "5b44d22286f774172b0c9de8": {
         "ItemID": "5b44d22286f774172b0c9de8",
@@ -310,17 +192,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "GOST 2",
-        "CanSpall": true,
-        "SpallReduction": 0.28,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.07
     },
     "5f5f41476bdad616ad46d631": {
         "ItemID": "5f5f41476bdad616ad46d631",
@@ -328,17 +203,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5",
-        "CanSpall": true,
-        "SpallReduction": 0.3,
-        "ReloadSpeedMulti": 0.65,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.07
     },
     "607f20859ee58b18e41ecd90": {
         "ItemID": "607f20859ee58b18e41ecd90",
@@ -348,15 +216,8 @@
         "ArmorClass": "NIJ II",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "ReloadSpeedMulti": 1.055,
+        "Comfort": 0.5
     },
     "5ca2151486f774244a3b8d30": {
         "ItemID": "5ca2151486f774244a3b8d30",
@@ -364,17 +225,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5A",
-        "CanSpall": true,
-        "SpallReduction": 0.29,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 0.5
     },
     "5ca21c6986f77479963115a7": {
         "ItemID": "5ca21c6986f77479963115a7",
@@ -382,17 +236,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 5A",
-        "CanSpall": true,
-        "SpallReduction": 0.24,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": true,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.055
     },
     "5e4abb5086f77406975c9342": {
         "ItemID": "5e4abb5086f77406975c9342",
@@ -400,16 +247,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 3,
         "ArmorClass": "NIJ III+",
-        "CanSpall": true,
-        "SpallReduction": 0.21,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "Comfort": 0.88
     },
     "6038b4ca92ec1c3103795a0d": {
         "ItemID": "6038b4ca92ec1c3103795a0d",
@@ -417,16 +258,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 3,
         "ArmorClass": "NIJ III+",
-        "CanSpall": true,
-        "SpallReduction": 0.21,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "Comfort": 0.88
     },
     "6038b4b292ec1c3103795a0b": {
         "ItemID": "6038b4b292ec1c3103795a0b",
@@ -434,16 +269,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 3,
         "ArmorClass": "NIJ III+",
-        "CanSpall": true,
-        "SpallReduction": 0.21,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "Comfort": 0.88
     },
     "5c0e655586f774045612eeb2": {
         "ItemID": "5c0e655586f774045612eeb2",
@@ -454,13 +283,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "Comfort": 0.91
     },
     "5c0e5edb86f77461f55ed1f7": {
         "ItemID": "5c0e5edb86f77461f55ed1f7",
@@ -468,17 +291,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "GOST 3",
-        "CanSpall": true,
-        "SpallReduction": 0.4,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.07
     },
     "5c0e625a86f7742d77340f62": {
         "ItemID": "5c0e625a86f7742d77340f62",
@@ -486,17 +302,10 @@
         "AllowADS": true,
         "LoyaltyLevel": 5,
         "ArmorClass": "GOST 6A",
-        "CanSpall": true,
-        "SpallReduction": 0.35,
+        "CanSpall": false,
+        "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": true,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.06
     },
     "59e7635f86f7742cbf2c1095": {
         "ItemID": "59e7635f86f7742cbf2c1095",
@@ -507,14 +316,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.07
     },
     "5648a7494bdc2d9d488b4583": {
         "ItemID": "5648a7494bdc2d9d488b4583",
@@ -525,14 +327,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.05
     },
     "63737f448b28897f2802b874": {
         "ItemID": "63737f448b28897f2802b874",
@@ -543,13 +338,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "Price": 0
+        "Comfort": 0.93
     },
     "64abd93857958b4249003418": {
         "ItemID": "64abd93857958b4249003418",
@@ -560,14 +349,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": true,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": true,
-        "Price": 0
+        "Comfort": 1.035
     },
     "64be79e2bf8412471d0d9bcc": {
         "ItemID": "64be79e2bf8412471d0d9bcc",
@@ -578,14 +360,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": false,
-        "Price": 0
+        "Comfort": 1.065
     },
     "64be79c487d1510151095552": {
         "ItemID": "64be79c487d1510151095552",
@@ -596,13 +371,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "HasSideArmor": false,
-        "HasStomachArmor": false,
-        "HasNeckArmor": false,
-        "HasExtraArmor": false,
-        "Price": 0
+        "Comfort": 1.065
     }
 }

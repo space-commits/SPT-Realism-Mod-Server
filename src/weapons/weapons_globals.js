@@ -23,7 +23,8 @@ class WeaponsGlobals {
         this.globalDB().Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
         this.globalDB().Overheat.MaxCOIIncreaseMult = 4;
         this.globalDB().Overheat.FirerateReduceMinMult = 1;
-        this.globalDB().Overheat.FirerateOverheatBorder = 120;
+        this.globalDB().Overheat.FirerateReduceMaxMult = 1.2;
+        this.globalDB().Overheat.FirerateOverheatBorder = 100;
         this.globalDB().Overheat.AutoshotChance = 0.4;
         this.globalDB().Overheat.OverheatProblemsStart = 70;
         this.globalDB().Overheat.MinWearOnOverheat = 0.2;
@@ -79,6 +80,7 @@ class WeaponsGlobals {
             this.globalDB().Aiming.ProceduralIntensityByPose["x"] = 0.15;
             this.globalDB().Aiming.ProceduralIntensityByPose["y"] = 0.7;
             this.globalDB().Aiming.AimProceduralIntensity = 1;
+            this.globalDB().Aiming.RecoilCrank = true;
             if (this.modConf.logEverything == true) {
                 this.logger.info("Recoil Changes Enabled");
             }

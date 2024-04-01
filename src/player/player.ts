@@ -11,7 +11,6 @@ import { IProfileTemplates } from "@spt-aki/models/eft/common/tables/IProfileTem
 
 const botHealth = require("../../db/bots/botHealth.json");
 
-
 export class Player {
 
     public defaultHeadHealth;
@@ -34,7 +33,7 @@ export class Player {
     public tempMax = 30;
 
     
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private custProfile, private medItems, private helper: Utils)  {
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig,  private medItems, private helper: Utils)  {
         let healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
         this.defaultHeadHealth = healthTemplate.BodyParts.Head.Health.Maximum;
         this.defaultChestHealth = healthTemplate.BodyParts.Chest.Health.Maximum;
@@ -184,13 +183,11 @@ export class Player {
 
 
     public loadPlayerStats() {
-
-
         if(this.modConfig.realistic_ballistics == true || this.modConfig.med_changes == true){
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
     
-            this.globalDB().Stamina.AimDrainRate = 0.25;
+            this.globalDB().Stamina.AimDrainRate = 0.35;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
@@ -211,10 +208,10 @@ export class Player {
 
         if (this.modConfig.movement_changes == true) {
 
-            this.globalDB().WalkSpeed["x"] = 0.6;
-            this.globalDB().WalkSpeed["y"] = 0.87;
+            this.globalDB().WalkSpeed["x"] = 0.54;
+            this.globalDB().WalkSpeed["y"] = 0.77;
             this.globalDB().SprintSpeed["x"] = 0.05;
-            this.globalDB().SprintSpeed["y"] = 0.45;
+            this.globalDB().SprintSpeed["y"] = 0.5;
 
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB().Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
@@ -355,13 +352,6 @@ export class Player {
     }
 
     public playerProfiles(jsonUtil: JsonUtil) {
-
-        this.tables.locales.server["en"]["realism-profile"] = "Standard stash size, alpha container, limited resources and low cash. Intended as a more hardcore start.";
-        this.tables.templates.profiles["Realism Mod"] = jsonUtil.clone(this.tables.templates.profiles["Standard"])
-        this.tables.templates.profiles["Realism Mod"].bear.character.Inventory = this.custProfile.BearInventory;
-        this.tables.templates.profiles["Realism Mod"].usec.character.Inventory = this.custProfile.USECInventory;
-        this.tables.templates.profiles["Realism Mod"].descriptionLocaleKey = "realism-profile";
-
         for (let profile in this.tables.templates.profiles){
             this.correctInventory(this.tables.templates.profiles[profile].bear.character.Inventory.items);
             this.correctInventory(this.tables.templates.profiles[profile].usec.character.Inventory.items);

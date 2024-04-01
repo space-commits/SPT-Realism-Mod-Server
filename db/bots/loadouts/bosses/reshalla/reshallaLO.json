@@ -247,7 +247,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 0
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 50,
+                "mod_equipment_000": 10,
+                "mod_equipment_001": 80,
+                "mod_equipment_002": 80,
+                "mod_mount": 60,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_charge": 13,
                 "mod_equipment": 100,
                 "mod_foregrip": 8,
@@ -475,7 +487,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 0
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 50,
+                "mod_equipment_000": 10,
+                "mod_equipment_001": 80,
+                "mod_equipment_002": 80,
+                "mod_mount": 60,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_charge": 13,
                 "mod_equipment": 100,
                 "mod_foregrip": 8,
@@ -703,7 +727,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 0
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 50,
+                "mod_equipment_000": 10,
+                "mod_equipment_001": 80,
+                "mod_equipment_002": 80,
+                "mod_mount": 60,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_charge": 13,
                 "mod_equipment": 100,
                 "mod_foregrip": 8,

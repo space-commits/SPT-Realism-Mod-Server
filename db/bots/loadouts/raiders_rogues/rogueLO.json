@@ -19,25 +19,30 @@
       "5d1f592286f7743f8362bcdb": 1,
       "5e9dcadd86f7743e20652f23": 1
     },
-    "head": [
-      "5cde96047d6c8b20b577f016",
-      "5fdb5950f5264a66150d1c6e",
-      "5fdb4139e4ed5b5ea251e4ed",
-      "60a6aa8fd559ae040d0d951f",
-      "619f9e338858a474c8685cc9",
-      "62aca6a1310e67685a2fc2e7"
-    ],
-    "voice": [
-      "Usec_1",
-      "Usec_2",
-      "Usec_3",
-      "Usec_4",
-      "Usec_5"
-    ]
+    "head": {
+      "5cde96047d6c8b20b577f016": 1,
+      "60a6aa8fd559ae040d0d951f": 1,
+      "619f9e338858a474c8685cc9": 1,
+      "5fdb5950f5264a66150d1c6e": 1,
+      "5fdb4139e4ed5b5ea251e4ed": 1,
+      "62aca6a1310e67685a2fc2e7": 1,
+      "6574aabee0423b9ebe0c79cf": 1
+    },
+    "voice": {
+      "Usec_1": 1,
+      "Usec_2": 1,
+      "Usec_3": 1,
+      "Usec_4": 1,
+      "Usec_5": 1
+    }
   },
   "rogueLO1": {
     "inventory": {
       "Ammo": {
+        "Caliber68x51": {
+          "6529243824cbe3c74a05e5c1": 1,
+          "6529302b8c26af6326029fb7": 1
+        },
         "Caliber12g": {
           "5d6e6806a4b936088465b17e": 5,
           "5d6e67fba4b9361bc73bc779": 5,
@@ -436,7 +441,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 100,
+        "mod_equipment_000": 100,
+        "mod_equipment_001": 100,
+        "mod_equipment_002": 100,
+        "mod_mount": 100,
+        "mod_nvg": 20,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 100,
         "mod_mount_000": 100,
         "mod_mount_001": 100,
@@ -714,10 +731,10 @@
           "618cfae774bb2d036a049e7c": 1
         },
         "FirstPrimaryWeapon": {
-          "618428466ef05c2ce828f218": 15,
+          "618428466ef05c2ce828f218": 12,
           "628a60ae6b1d481ff772e9c8": 5,
-          "5bb2475ed4351e00853264e3": 15,
-          "5447a9cd4bdc2dbd208b4567": 20,
+          "5bb2475ed4351e00853264e3": 12,
+          "5447a9cd4bdc2dbd208b4567": 17,
           "6165ac306ef05c2ce828ef74": 2,
           "5df8ce05b11454561e39243b": 2,
           "5aafa857e5b5b00018480968": 4
@@ -927,7 +944,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 100,
+        "mod_equipment_000": 100,
+        "mod_equipment_001": 100,
+        "mod_equipment_002": 100,
+        "mod_mount": 100,
+        "mod_nvg": 20,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 100,
         "mod_mount_000": 100,
         "mod_mount_001": 100,
@@ -1205,14 +1234,15 @@
           "618cfae774bb2d036a049e7c": 1
         },
         "FirstPrimaryWeapon": {
-          "618428466ef05c2ce828f218": 15,
+          "618428466ef05c2ce828f218": 10,
           "628a60ae6b1d481ff772e9c8": 3,
-          "5bb2475ed4351e00853264e3": 15,
-          "5447a9cd4bdc2dbd208b4567": 20,
+          "5bb2475ed4351e00853264e3": 10,
+          "5447a9cd4bdc2dbd208b4567": 15,
           "6165ac306ef05c2ce828ef74": 5,
           "6176aca650224f204c1da3fb": 1,
           "5df8ce05b11454561e39243b": 5,
-          "5aafa857e5b5b00018480968": 5
+          "5aafa857e5b5b00018480968": 5,
+          "65290f395ae2ae97b80fdf2d": 1
         },
         "SecondPrimaryWeapon": {
           "5a7828548dc32e5a9c28b516": 1,
@@ -1443,7 +1473,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 100,
+        "mod_equipment_000": 100,
+        "mod_equipment_001": 100,
+        "mod_equipment_002": 100,
+        "mod_mount": 100,
+        "mod_nvg": 20,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 100,
         "mod_mount_000": 100,
         "mod_mount_001": 100,

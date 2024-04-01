@@ -27,6 +27,7 @@ export class Arrays {
             botDB["sectantpriest"],
             botDB["bosszryachiy"],
             botDB["bossboar"],
+            botDB["bosskolontay"]
         ];
 
         this.bossFollowerArr = [
@@ -40,7 +41,9 @@ export class Arrays {
             botDB["followertagilla"],
             botDB["followerzryachiy"],
             botDB["followerboar"],
-            botDB["bossboarsniper"]
+            botDB["bossboarsniper"],
+            botDB["followerkolontaysecurity"],
+            botDB["followerkolontayassault"]
         ];
 
         this.rogueRaiderList = [
@@ -373,7 +376,8 @@ export class Arrays {
         "rezervbase",
         "reservebase",
         "streets of tarkov",
-        "tarkovstreets"
+        "tarkovstreets",
+        "sandbox"
     ]
 
     public cqbMaps = [

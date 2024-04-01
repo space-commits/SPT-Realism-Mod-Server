@@ -59,6 +59,7 @@ const pkId = "5935c25fb3acc3127c3d8cd9";
 const mechId = "5a7c2eca46aef81a7ca2145d";
 const ragmId = "5ac3b934156ae10c4430e83c";
 const jaegId = "5c0647fdd443bc2504c2d371";
+const fenceId = "579dc571d53a0658a154fbec";
 
 export class Traders {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private utils: Utils) { }
@@ -66,8 +67,15 @@ export class Traders {
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
     }
-    public loadTraderTweaks() {
 
+    private modifyTraderBuyPrice(traderId: string, basePrice: number){
+        for (let i in this.tables.traders[traderId].base.loyaltyLevels)     {
+            let multi = Number(i);
+            this.tables.traders[traderId].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(basePrice - (multi * 5)), 40);
+        }
+    }
+
+    public loadTraderTweaks() {
         if (modConfig.change_buy_categories == true) {
             this.tables.traders[pkId].base.items_buy.category = buyCat.peacekeeper;
             this.tables.traders[ragmId].base.items_buy.category = buyCat.ragman;
@@ -79,27 +87,30 @@ export class Traders {
         }
 
         if (modConfig.change_buy_price == true) {
-            let ll = 0;
-            for (let trader in this.tables.traders) {
-                for (let i in this.tables.traders[trader].base.loyaltyLevels) {
-                    ll++;
-                    this.tables.traders[trader].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(75 - (ll * 5)), 40);
-                }
-            }
+            
+            this.modifyTraderBuyPrice(pkId, this.utils.pickRandNumInRange(69, 73));
+            this.modifyTraderBuyPrice(ragmId, this.utils.pickRandNumInRange(69, 73));
+            this.modifyTraderBuyPrice(jaegId, this.utils.pickRandNumInRange(75, 80));
+            this.modifyTraderBuyPrice(prapId, this.utils.pickRandNumInRange(65, 75));
+            this.modifyTraderBuyPrice(theraId, this.utils.pickRandNumInRange(78, 84));
+            this.modifyTraderBuyPrice(skierId, this.utils.pickRandNumInRange(65, 70));
+            this.modifyTraderBuyPrice(mechId, this.utils.pickRandNumInRange(69, 69));
+            this.modifyTraderBuyPrice(fenceId, this.utils.pickRandNumInRange(80, 90));
         }
 
         if (modConfig.nerf_fence == true) {
             this.traderConf.fence.discountOptions.assortSize = 10;
             this.traderConf.fence.discountOptions.presetPriceMult = 2.5;
             this.traderConf.fence.discountOptions.itemPriceMult = 2;
-            this.traderConf.fence.maxPresetsPercent = 4;
+            this.traderConf.fence.weaponPresetMinMax.min = 0;
+            this.traderConf.fence.weaponPresetMinMax.max = 4;
             this.traderConf.fence.partialRefreshChangePercent = 50;
             this.traderConf.fence.discountOptions.assortSize = 10;
             this.traderConf.fence.assortSize = 30;
             this.traderConf.fence.itemPriceMult = 1.8;
             this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
-            this.traderConf.fence.blacklist = fenceLimits.blacklist;
+            // this.traderConf.fence.blacklist = fenceLimits.blacklist; //somehow this causes error
         }
 
         if (modConfig.change_heal_cost == true) {
@@ -115,7 +126,8 @@ export class Traders {
 
     public loadTraderRefreshTimes() {
         for (let trader in this.traderConf.updateTime) {
-            this.traderConf.updateTime[trader].seconds = modConfig.trader_refresh_time;
+            this.traderConf.updateTime[trader].seconds.min = modConfig.trader_refresh_time;
+            this.traderConf.updateTime[trader].seconds.max = modConfig.trader_refresh_time;
         }
     }
 
@@ -187,11 +199,14 @@ export class Traders {
             this.assortItemPusher(skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
         }
 
-        //jaeger
-        this.assortItemPusher(jaegId, "mosin_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 5000);
-        this.assortItemPusher(jaegId, "6kh4_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 4000);
-        // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
-        this.assortItemPusher(jaegId, "m9_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+        if (this.modConf.recoil_attachment_overhaul == true) {
+            //jaeger
+            this.assortItemPusher(jaegId, "mosin_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 5000);
+            this.assortItemPusher(jaegId, "6kh4_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+            // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
+            this.assortItemPusher(jaegId, "m9_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+        }
+
 
         //ragman//
         this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
@@ -208,12 +223,14 @@ export class Traders {
             this.assortItemPusher(mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
             this.assortItemPusher(mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
             //attachments
-            this.assortItemPusher(mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(mechId, "mechSpear_330mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
+            this.assortItemPusher(mechId, "mechMCX_171mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
+            this.assortItemPusher(mechId, "mechMCX_229mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
+            this.assortItemPusher(mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
             this.assortItemPusher(mechId, "mechSlant_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
             this.assortItemPusher(mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
             this.assortItemPusher(mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
             this.assortItemPusher(mechId, "mechJMAC_366", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
-
         }
         //scopes
         this.assortNestedItemPusher(mechId, "616584766ef05c2ce828ef57", { "5c7d560b2e22160bc12c6139": "mod_scope", "5c7d55de2e221644f31bff68": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25);

@@ -7,7 +7,6 @@ class Player {
     logger;
     tables;
     modConfig;
-    custProfile;
     medItems;
     helper;
     defaultHeadHealth;
@@ -28,11 +27,10 @@ class Player {
     energy = 130;
     tempCurr = 30;
     tempMax = 30;
-    constructor(logger, tables, modConfig, custProfile, medItems, helper) {
+    constructor(logger, tables, modConfig, medItems, helper) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
-        this.custProfile = custProfile;
         this.medItems = medItems;
         this.helper = helper;
         let healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
@@ -164,7 +162,7 @@ class Player {
         if (this.modConfig.realistic_ballistics == true || this.modConfig.med_changes == true) {
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
-            this.globalDB().Stamina.AimDrainRate = 0.25;
+            this.globalDB().Stamina.AimDrainRate = 0.35;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
@@ -181,10 +179,10 @@ class Player {
             this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 90;
         }
         if (this.modConfig.movement_changes == true) {
-            this.globalDB().WalkSpeed["x"] = 0.6;
-            this.globalDB().WalkSpeed["y"] = 0.87;
+            this.globalDB().WalkSpeed["x"] = 0.54;
+            this.globalDB().WalkSpeed["y"] = 0.77;
             this.globalDB().SprintSpeed["x"] = 0.05;
-            this.globalDB().SprintSpeed["y"] = 0.45;
+            this.globalDB().SprintSpeed["y"] = 0.5;
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB().Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight
@@ -289,11 +287,6 @@ class Player {
         }
     }
     playerProfiles(jsonUtil) {
-        this.tables.locales.server["en"]["realism-profile"] = "Standard stash size, alpha container, limited resources and low cash. Intended as a more hardcore start.";
-        this.tables.templates.profiles["Realism Mod"] = jsonUtil.clone(this.tables.templates.profiles["Standard"]);
-        this.tables.templates.profiles["Realism Mod"].bear.character.Inventory = this.custProfile.BearInventory;
-        this.tables.templates.profiles["Realism Mod"].usec.character.Inventory = this.custProfile.USECInventory;
-        this.tables.templates.profiles["Realism Mod"].descriptionLocaleKey = "realism-profile";
         for (let profile in this.tables.templates.profiles) {
             this.correctInventory(this.tables.templates.profiles[profile].bear.character.Inventory.items);
             this.correctInventory(this.tables.templates.profiles[profile].usec.character.Inventory.items);

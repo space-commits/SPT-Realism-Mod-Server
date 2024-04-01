@@ -8,9 +8,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5d6d3be5a4b9361bc73bc763": {
@@ -22,9 +19,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5a16badafcdbcb001865f72d": {
@@ -36,9 +30,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5c1793902e221602b21d3de2": {
@@ -50,9 +41,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5e00cfa786f77469dc6e5685": {
@@ -64,9 +52,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5e01f31d86f77465cf261343": {
@@ -78,9 +63,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5c0e66e2d174af02a96252f4": {
@@ -92,9 +74,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5c178a942e22164bef5ceca3": {
@@ -106,9 +85,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5ea18c84ecf1982c7712d9a2": {
@@ -120,9 +96,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5e00cdd986f7747473332240": {
@@ -134,10 +107,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5ac4c50d5acfc40019262e87": {
@@ -149,10 +118,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5b46238386f7741a693bcf9c": {
@@ -164,10 +129,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5f60c85b58eff926626a60f7": {
@@ -179,10 +140,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5aa7e3abe5b5b000171d064d": {
@@ -194,10 +151,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5ca2113f86f7740b2547e1d2": {
@@ -209,10 +162,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5d6d3829a4b9361bc8618943": {
@@ -224,10 +173,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5c0e842486f77443a74d2976": {
@@ -239,10 +184,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5aa7e373e5b5b000137b76f0": {
@@ -254,10 +195,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5a16b7e1fcdbcb00165aa6c9": {
@@ -269,10 +206,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5a16b672fcdbcb001912fa83": {
@@ -284,9 +217,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "5c0919b50db834001b7ce3b9": {
@@ -298,10 +228,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5e01f37686f774773c6f6c15": {
@@ -313,10 +239,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0,
         "BlocksMouth": true
     },
     "5ea058e01dbce517f324b3e2": {
@@ -328,11 +250,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "BlocksMouth": true,
-        "Price": 0
+        "BlocksMouth": true
     },
     "5f60c076f2bcbb675b00dac2": {
         "ItemID": "5f60c076f2bcbb675b00dac2",
@@ -343,11 +261,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "BlocksMouth": true,
-        "Price": 0
+        "BlocksMouth": true
     },
     "5a16ba61fcdbcb098008728a": {
         "ItemID": "5a16ba61fcdbcb098008728a",
@@ -358,11 +272,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "BlocksMouth": true,
-        "Price": 0
+        "BlocksMouth": true
     },
     "5f60bf4558eff926626a60f2": {
         "ItemID": "5f60bf4558eff926626a60f2",
@@ -373,9 +283,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "Price": 0
     },
     "60a7ad3a0c5cb24b0134664a": {
@@ -386,9 +293,6 @@
         "ArmorClass": "Unclassified",
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
         "BlocksMouth": true
     },
     "60a7ad2a2198820d95707a2e": {
@@ -399,9 +303,28 @@
         "ArmorClass": "Unclassified",
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
+        "BlocksMouth": true
+    },
+    "6570a88c8f221f3b210353b7": {
+        "ItemID": "6570a88c8f221f3b210353b7",
+        "Name": "item_equipment_helmet_neosteel_mandible",
+        "AllowADS": false,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "PM 3",
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1,
+        "BlocksMouth": true
+    },
+    "65719f9ef392ad76c50a2ec8": {
+        "ItemID": "65719f9ef392ad76c50a2ec8",
+        "Name": "item_equipment_helmet_tor_2_faceshield",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "GOST 2",
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1,
         "BlocksMouth": true
     }
 }

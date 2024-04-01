@@ -1,0 +1,162 @@
+{
+    "water": {
+        "StimulatorBuffs": "Buffs_drink_water",
+        "effects_health": {}
+    },
+    "kvass": {
+        "StimulatorBuffs": "Buffs_drink_kvass",
+        "effects_health": {}
+    },
+    "aquamari": {
+        "StimulatorBuffs": "Buffs_drink_aquamari",
+        "effects_health": {}
+    },
+    "purewater": {
+        "StimulatorBuffs": "Buffs_drink_purewater",
+        "effects_health": {}
+    },
+    "hotrod": {
+        "StimulatorBuffs": "Buffs_drink_hotrod",
+        "effects_health": {}
+    },
+    "maxenergy": {
+        "StimulatorBuffs": "Buffs_drink_maxenergy",
+        "effects_health": {}
+    },
+    "tarcola": {
+        "StimulatorBuffs": "Buffs_drink_tarcola",
+        "effects_health": {}
+    },
+    "ratcola": {
+        "StimulatorBuffs": "Buffs_drink_ratcola",
+        "effects_health": {}
+    },
+    "milk": {
+        "StimulatorBuffs": "Buffs_drink_milk",
+        "effects_health": {}
+    },
+    "moonshine": {
+        "StimulatorBuffs": "Buffs_drink_moonshine",
+        "effects_health": {}
+    },
+    "jack": {
+        "StimulatorBuffs": "Buffs_drink_jack",
+        "effects_health": {}
+    },
+    "vodka_bad": {
+        "StimulatorBuffs": "Buffs_drink_vodka_BAD",
+        "effects_health": {}
+    },
+    "vodka": {
+        "StimulatorBuffs": "Buffs_drink_vodka",
+        "effects_health": {}
+    },
+    "beer": {
+        "StimulatorBuffs": "Buffs_drink_beer",
+        "effects_health": {}
+    },
+    "alyonka": {
+        "StimulatorBuffs": "Buffs_food_alyonka",
+        "effects_health": {}
+    },
+    "sugar": {
+        "StimulatorBuffs": "Buffs_food_sugar",
+        "effects_health": {}
+    },
+    "slippers": {
+        "StimulatorBuffs": "Buffs_food_slippers",
+        "effects_health": {}
+    },
+    "condensed_milk": {
+        "StimulatorBuffs": "Buffs_food_condensed_milk",
+        "effects_health": {}
+    },
+    "borodinskiye": {
+        "StimulatorBuffs": "Buffs_food_borodinskiye",
+        "effects_health": {}
+    },
+    "emelya": {
+        "StimulatorBuffs": "Buffs_food_emelya",
+        "effects_health": {}
+    },
+    "crackers": {
+        "StimulatorBuffs": "Buffs_food_crackers",
+        "effects_health": {}
+    },
+    "mayonez": {
+        "StimulatorBuffs": "Buffs_food_mayonez",
+        "effects_health": {}
+    },
+    "mre": {
+        "StimulatorBuffs": "Buffs_food_mre",
+        "effects_health": {}
+    },
+    "iskra": {
+        "StimulatorBuffs": "Buffs_food_iskra",
+        "effects_health": {}
+    },
+    "beef_small": {
+        "StimulatorBuffs": "Buffs_food_beef_small",
+        "effects_health": {}
+    },
+    "beef_large": {
+        "StimulatorBuffs": "Buffs_food_beef_large",
+        "effects_health": {}
+    },
+    "peas": {
+        "StimulatorBuffs": "Buffs_food_peas",
+        "effects_health": {}
+    },
+    "herring": {
+        "StimulatorBuffs": "Buffs_food_herring",
+        "effects_health": {}
+    },
+    "salmon": {
+        "StimulatorBuffs": "Buffs_food_salmon",
+        "effects_health": {}
+    },
+    "suary": {
+        "StimulatorBuffs": "Buffs_food_suary",
+        "effects_health": {}
+    },
+    "squash": {
+        "StimulatorBuffs": "Buffs_food_squash",
+        "effects_health": {}
+    },
+    "sprats": {
+        "StimulatorBuffs": "Buffs_food_sprats",
+        "effects_health": {}
+    },
+    "noodles": {
+        "StimulatorBuffs": "Buffs_food_noodles",
+        "effects_health": {}
+    },
+    "oat_flakes": {
+        "StimulatorBuffs": "Buffs_food_oat_flakes",
+        "effects_health": {}
+    },
+    "dried_meat": {
+        "StimulatorBuffs": "Buffs_food_dried_meat",
+        "effects_health": {}
+    },
+    "apple": {
+        "StimulatorBuffs": "Buffs_apple_juice",
+        "effects_health": {}
+    },
+    "pineapple": {
+        "StimulatorBuffs": "Buffs_pineapple_juice",
+        "effects_health": {}
+    },
+    "vita": {
+        "StimulatorBuffs": "Buffs_vita_juice",
+        "effects_health": {}
+    },
+    "greenice": {
+        "StimulatorBuffs": "Buffs_green_tea",
+        "effects_health": {}
+    },
+    "sausage": {
+        "StimulatorBuffs": "Buffs_food_sausage",
+        "effects_health": {}
+    }
+}

@@ -54,6 +54,10 @@
         },
         "inventory": {
             "Ammo": {
+                "Caliber68x51": {
+                    "6529243824cbe3c74a05e5c1": 1,
+                    "6529302b8c26af6326029fb7": 1
+                },
                 "Caliber1143x23ACP": {
                     "5ea2a8e200685063ec28c05a": 1,
                     "5efb0cabfb3e451d70735af5": 1,
@@ -287,7 +291,8 @@
                 "5644bd2b4bdc2d3b4c8b4572": 4,
                 "5beed0f50db834001c062b12": 3,
                 "64ca3d3954fc657e230529cc": 1,
-                "5cadfbf7ae92152ac412eeef": 1
+                "5cadfbf7ae92152ac412eeef": 1,
+                "65290f395ae2ae97b80fdf2d": 3
             },
             "Headwear_night": {
                 "5f60b34a41e30a4ab12a6947": 2,
@@ -299,7 +304,9 @@
                 "5e00c1ad86f774747333222c": 2,
                 "5e01ef6886f77445f643baa4": 2,
                 "5d5e9c74a4b9364855191c40": 1,
-                "5d5e7d28a4b936645d161203": 1
+                "5d5e7d28a4b936645d161203": 1,
+                "65719f0775149d62ce0a670b": 2,
+                "65709d2d21b9f815e208ff95": 1
             },
             "Headwear_cqb": {
                 "5f60c74e3b85f6263c145586": 1,
@@ -312,7 +319,9 @@
                 "5c17a7ed2e2216152142459c": 2,
                 "5e00c1ad86f774747333222c": 2,
                 "5e01ef6886f77445f643baa4": 2,
-                "5ea17ca01412a1425304d1c0": 1
+                "5ea17ca01412a1425304d1c0": 1,
+                "65719f0775149d62ce0a670b": 2,
+                "65709d2d21b9f815e208ff95": 2
             },
             "equipment": {
                 "FirstPrimaryWeapon": {},
@@ -337,7 +346,9 @@
                     "5aa7e276e5b5b000171d0647": 1,
                     "5c17a7ed2e2216152142459c": 2,
                     "5d5e9c74a4b9364855191c40": 1,
-                    "5d5e7d28a4b936645d161203": 1
+                    "5d5e7d28a4b936645d161203": 1,
+                    "65719f0775149d62ce0a670b": 2,
+                    "65709d2d21b9f815e208ff95": 1
                 },
                 "Earpiece": {
                     "5aa2ba71e5b5b000137b758f": 1,
@@ -480,6 +491,39 @@
                 }
             },
             "mods": {
+                "65719f0775149d62ce0a670b": {
+                    "Helmet_top": [
+                        "657fa0fcd4caf976440afe3e"
+                    ],
+                    "Helmet_back": [
+                        "657fa168e9433140ad0baf8e"
+                    ],
+                    "Helmet_ears": [
+                        "657fa186d4caf976440afe42"
+                    ],
+                    "mod_equipment_000": [
+                        "65719f9ef392ad76c50a2ec8"
+                    ],
+                    "mod_nvg": [
+                        "5c0558060db834001b735271",
+                        "5a16b8a9fcdbcb00165aa6ca"
+                    ]
+                },
+                "65709d2d21b9f815e208ff95": {
+                    "Helmet_top": [
+                        "657f9eb7e9433140ad0baf86"
+                    ],
+                    "Helmet_back": [
+                        "657f9ef6c6679fefb3051e1f"
+                    ],
+                    "mod_equipment_000": [
+                        "6570a88c8f221f3b210353b7"
+                    ],
+                    "mod_nvg": [
+                        "5c0558060db834001b735271",
+                        "5a16b8a9fcdbcb00165aa6ca"
+                    ]
+                },
                 "5ea18c84ecf1982c7712d9a2": {
                     "mod_nvg": [
                         "5c0558060db834001b735271",
@@ -766,7 +810,19 @@
                 "Pockets": 100,
                 "SecuredContainer": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 100,
+                "mod_equipment_000": 100,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100,
+                "mod_mount": 100,
+                "mod_nvg": 100,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_mount": 100,
                 "mod_mount_000": 100,
                 "mod_mount_001": 100,

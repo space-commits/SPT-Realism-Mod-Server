@@ -174,12 +174,12 @@
           "60db29ce99594040e04c4a27": 3,
           "576165642459773c7a400233": 4,
           "5a38e6bac4a2826c6e06d79b": 6,
-          "587e02ff24597743df3deaeb": 2,
-          "574d967124597745970e7c94": 2,
           "61f7c9e189e6fb1a5e3ea78d": 2,
           "5bfd297f0db834001a669119": 1,
           "6410733d5dd49d77bd07847e": 1,
-          "643ea5b23db6f9f57107d9fd": 1
+          "643ea5b23db6f9f57107d9fd": 1,
+          "587e02ff24597743df3deaeb": 1,
+          "574d967124597745970e7c94": 4
         },
         "SecondPrimaryWeapon": {},
         "Backpack": {
@@ -753,37 +753,6 @@
         "59d6514b86f774171a068a08": {
           "mod_stock": [
             "5a0c59791526d8dba737bba7"
-          ]
-        },
-        "574d967124597745970e7c94": {
-          "mod_stock": [
-            "574dad8024597745964bf05c",
-            "587e0531245977466077a0f7"
-          ],
-          "mod_magazine": [
-            "587df3a12459772c28142567"
-          ],
-          "patron_in_weapon": [
-            "59e4d3d286f774176a36250a",
-            "59e4cf5286f7741778269d8a"
-          ],
-          "mod_sight_rear": [
-            "574db213245977459a2f3f5d"
-          ]
-        },
-        "587e02ff24597743df3deaeb": {
-          "mod_stock": [
-            "587e0531245977466077a0f7"
-          ],
-          "mod_magazine": [
-            "587df3a12459772c28142567"
-          ],
-          "patron_in_weapon": [
-            "59e4d3d286f774176a36250a",
-            "59e4cf5286f7741778269d8a"
-          ],
-          "mod_mount": [
-            "587e08ee245977446b4410cf"
           ]
         },
         "587e08ee245977446b4410cf": {
@@ -1422,7 +1391,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 50,
+        "front_plate": 100,
+        "left_side_plate": 25,
+        "mod_equipment": 50,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 50,
+        "mod_mount": 50,
+        "mod_nvg": 0,
+        "right_side_plate": 25
+      },
+      "weaponMods": {
         "mod_mount": 50,
         "mod_mount_000": 50,
         "mod_muzzle": 100,
@@ -1624,15 +1605,15 @@
           "60db29ce99594040e04c4a27": 1,
           "576165642459773c7a400233": 3,
           "5a38e6bac4a2826c6e06d79b": 3,
-          "587e02ff24597743df3deaeb": 3,
-          "574d967124597745970e7c94": 5,
           "57dc2fa62459775949412633": 2,
           "59d6088586f774275f37482f": 1,
           "59ff346386f77477562ff5e2": 1,
           "5bfd297f0db834001a669119": 3,
           "57f3c6bd24597738e730fa2f": 2,
           "61f7c9e189e6fb1a5e3ea78d": 2,
-          "643ea5b23db6f9f57107d9fd": 1
+          "643ea5b23db6f9f57107d9fd": 1,
+          "587e02ff24597743df3deaeb": 3,
+          "574d967124597745970e7c94": 6
         },
         "Holster": {
           "5abccb7dd8ce87001773e277": 1,
@@ -2410,38 +2391,6 @@
             "5a0c59791526d8dba737bba7"
           ]
         },
-        "574d967124597745970e7c94": {
-          "mod_stock": [
-            "574dad8024597745964bf05c",
-            "587e0531245977466077a0f7"
-          ],
-          "mod_magazine": [
-            "587df583245977373c4f1129",
-            "587df3a12459772c28142567"
-          ],
-          "patron_in_weapon": [
-            "59e4d3d286f774176a36250a",
-            "59e4cf5286f7741778269d8a"
-          ],
-          "mod_sight_rear": [
-            "574db213245977459a2f3f5d"
-          ]
-        },
-        "587e02ff24597743df3deaeb": {
-          "mod_stock": [
-            "587e0531245977466077a0f7"
-          ],
-          "mod_magazine": [
-            "587df3a12459772c28142567"
-          ],
-          "patron_in_weapon": [
-            "59e4d3d286f774176a36250a",
-            "59e4cf5286f7741778269d8a"
-          ],
-          "mod_mount": [
-            "587e08ee245977446b4410cf"
-          ]
-        },
         "587e08ee245977446b4410cf": {
           "mod_scope": [
             "57486e672459770abd687134",
@@ -3192,7 +3141,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 75,
+        "left_side_plate": 35,
+        "mod_equipment": 50,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 50,
+        "mod_mount": 50,
+        "mod_nvg": 0,
+        "right_side_plate": 35
+      },
+      "weaponMods": {
         "mod_mount": 50,
         "mod_mount_000": 50,
         "mod_muzzle": 100,
@@ -3394,8 +3355,6 @@
           "59f9cabd86f7743a10721f46": 1,
           "576165642459773c7a400233": 4,
           "5a38e6bac4a2826c6e06d79b": 2,
-          "587e02ff24597743df3deaeb": 4,
-          "574d967124597745970e7c94": 5,
           "57dc2fa62459775949412633": 3,
           "59d6088586f774275f37482f": 3,
           "59ff346386f77477562ff5e2": 3,
@@ -3409,7 +3368,9 @@
           "60db29ce99594040e04c4a27": 1,
           "61f7c9e189e6fb1a5e3ea78d": 2,
           "6410733d5dd49d77bd07847e": 1,
-          "643ea5b23db6f9f57107d9fd": 1
+          "643ea5b23db6f9f57107d9fd": 1,
+          "587e02ff24597743df3deaeb": 5,
+          "574d967124597745970e7c94": 4
         },
         "Holster": {
           "5abccb7dd8ce87001773e277": 1,
@@ -3465,8 +3426,8 @@
           "557ff21e4bdc2d89578b4586": 9
         },
         "ArmorVest": {
-          "5c0e51be86f774598e797894": 50,
-          "5c0e53c886f7747fa54205c7": 50,
+          "5c0e51be86f774598e797894": 30,
+          "5c0e53c886f7747fa54205c7": 30,
           "5ab8e4ed86f7742d8e50c7fa": 100,
           "5648a7494bdc2d9d488b4583": 150,
           "5df8a2ca86f7740bfe6df777": 150,
@@ -4427,38 +4388,6 @@
             "5a0c59791526d8dba737bba7"
           ]
         },
-        "574d967124597745970e7c94": {
-          "mod_stock": [
-            "574dad8024597745964bf05c",
-            "587e0531245977466077a0f7"
-          ],
-          "mod_magazine": [
-            "587df583245977373c4f1129",
-            "587df3a12459772c28142567"
-          ],
-          "patron_in_weapon": [
-            "59e4d3d286f774176a36250a",
-            "59e4cf5286f7741778269d8a"
-          ],
-          "mod_sight_rear": [
-            "574db213245977459a2f3f5d"
-          ]
-        },
-        "587e02ff24597743df3deaeb": {
-          "mod_stock": [
-            "587e0531245977466077a0f7"
-          ],
-          "mod_magazine": [
-            "587df3a12459772c28142567"
-          ],
-          "patron_in_weapon": [
-            "59e4d3d286f774176a36250a",
-            "59e4cf5286f7741778269d8a"
-          ],
-          "mod_mount": [
-            "587e08ee245977446b4410cf"
-          ]
-        },
         "587e08ee245977446b4410cf": {
           "mod_scope": [
             "57486e672459770abd687134",
@@ -5230,7 +5159,7 @@
         "SecuredContainer": [],
         "SpecialLoot": []
       },
-      "dynamic_looting":{
+      "dynamic_looting": {
         "Empty": [],
         "TacticalVest": [
           "5751a25924597722c463c472",
@@ -5317,7 +5246,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 85,
+        "left_side_plate": 50,
+        "mod_equipment": 75,
+        "mod_equipment_000": 75,
+        "mod_equipment_001": 75,
+        "mod_equipment_002": 75,
+        "mod_mount": 60,
+        "mod_nvg": 5,
+        "right_side_plate": 50
+      },
+      "weaponMods": {
         "mod_mount": 60,
         "mod_mount_000": 60,
         "mod_muzzle": 100,

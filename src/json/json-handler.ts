@@ -9,6 +9,7 @@ const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
 const gearPath = modConfig.gear_preset;
 
+const armorPlateTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorPlateTemplates.json");
 const armorComponentsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorChestrigTemplates.json");
 const helmetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/helmetTemplates.json");
@@ -79,7 +80,7 @@ export class JsonHandler {
                 this.callHelper(GasblockTemplates, serverItem, this.modPusherHelper);
                 this.callHelper(HandguardTemplates, serverItem, this.modPusherHelper);
                 this.callHelper(FlashlightLaserTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(UBGLTempaltes, serverItem, this.modPusherHelper)
+                this.callHelper(UBGLTempaltes, serverItem, this.modPusherHelper);
             }
         }
     }
@@ -101,7 +102,7 @@ export class JsonHandler {
             }
         }
         //catch any modded weapons not in templates
-        if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
+        if (modConfig.recoil_attachment_overhaul == true && ConfigChecker.dllIsPresent == true) {
             for (let j in this.itemDB()) {
                 let serverItem = this.itemDB()[j];
                 let serverConfItems = serverItem._props.ConflictingItems;
@@ -119,9 +120,9 @@ export class JsonHandler {
                         serverItem._props.RecoilForceUp *= 0.5;
                         serverItem._props.RecoilForceBack *= 1.5;
                         serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-                        serverItem._props.Convergence *= 4;
+                        serverItem._props.RecoilReturnSpeedHandRotation *= 4;
                         serverItem._props.RecoilAngle = 90;
-                        serverItem._props.CameraRecoil = 0.01;
+                        serverItem._props.RecoilCamera = 0.01;
                         let weapPropertyValues = ["SPTRM", "undefined", "0", "false", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
                         let combinedArr = weapPropertyValues.concat(serverConfItems)
                         serverItem._props.ConflictingItems = combinedArr;
@@ -131,9 +132,9 @@ export class JsonHandler {
                         serverItem._props.RecoilForceUp *= 0.5;
                         serverItem._props.RecoilForceBack *= 0.3;
                         serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-                        serverItem._props.Convergence *= 10;
+                        serverItem._props.RecoilReturnSpeedHandRotation *= 10;
                         serverItem._props.RecoilAngle = 90;
-                        serverItem._props.CameraRecoil *= 0.9;
+                        serverItem._props.RecoilCamera *= 0.9;
                         let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
                         let combinedArr = weapPropertyValues.concat(serverConfItems)
                         serverItem._props.ConflictingItems = combinedArr;
@@ -149,6 +150,7 @@ export class JsonHandler {
             if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass !== undefined) {
                 this.callHelper(armorChestrigTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(armorComponentsTemplates, serverItem, this.gearPusherHelper);
+                this.callHelper(armorPlateTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(helmetTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(armorVestsTemplates, serverItem, this.gearPusherHelper);
                 this.callHelper(armorMasksTemplates, serverItem, this.gearPusherHelper);
@@ -179,14 +181,13 @@ export class JsonHandler {
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
                 fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.HasExtraArmor?.toString() || "false"];
 
-                let combinedArr = armorPropertyValues.concat(serverConfItems)
+            let combinedArr = armorPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;
         }
     }
 
     private modPusherHelper(serverItem: any, fileItem: any) {
-        if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
-
+        if (modConfig.recoil_attachment_overhaul == true && ConfigChecker.dllIsPresent == true) {
             if (serverItem._id === fileItem.ItemID) {
                 let serverConfItems = serverItem._props.ConflictingItems;
                 if (serverConfItems[0] !== "SPTRM") {
@@ -194,8 +195,8 @@ export class JsonHandler {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
                     serverItem._props.Accuracy = fileItem.Accuracy;
                     serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                    serverItem._props.HeatFactor = fileItem.HeatFactor;
-                    serverItem._props.CoolFactor = fileItem.CoolFactor;
+                    serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor : 1;
+                    serverItem._props.CoolFactor = fileItem.CoolFactor != null ? fileItem.CoolFactor : 1;
                     serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
                     // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
                     // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
@@ -205,7 +206,7 @@ export class JsonHandler {
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Loudness = fileItem.Loudness;
 
-                    let isScope: boolean = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
+                    let isScope = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
                     if (isScope != true) {
                         serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
                     }
@@ -242,35 +243,42 @@ export class JsonHandler {
                     serverItem._props.HeatFactorByShot = fileItem.HeatFactorByShot;
                     serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;
                     serverItem._props.CoolFactorGunMods = fileItem.CoolFactorGunMods;
+                    serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
+                    serverItem._props.AllowOverheat = fileItem.AllowOverheat;
                 }
 
                 if (modConfig.realistic_ballistics == true) {
                     serverItem._props.Velocity = fileItem.Velocity;
                 }
 
-                if (modConfig.recoil_attachment_overhaul == true && modConfig.legacy_recoil_changes != true && ConfigChecker.dllIsPresent == true) {
+                if (modConfig.recoil_attachment_overhaul == true && ConfigChecker.dllIsPresent == true) {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
-
                     serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
                     serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;
                     serverItem._props.RecolDispersion = fileItem.Dispersion;
-                    serverItem._props.CameraRecoil = fileItem.CameraRecoil;
-
-                    serverItem._props.Convergence = fileItem.Convergence;
+                    serverItem._props.RecoilCamera = fileItem.CameraRecoil;
                     serverItem._props.RecoilAngle = fileItem.RecoilAngle;
-
                     serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                    serverItem._props.HeatFactor = fileItem.HeatFactor;
-                    serverItem._props.DurabilityBurnRatio = fileItem.DurabilityBurnRatio;
-                    serverItem._props.AllowOverheat = fileItem.AllowOverheat;
                     serverItem._props.HipAccuracyRestorationDelay = fileItem.HipAccuracyRestorationDelay;
                     serverItem._props.HipAccuracyRestorationSpeed = fileItem.HipAccuracyRestorationSpeed;
                     serverItem._props.HipInnaccuracyGain = fileItem.HipInnaccuracyGain;
                     serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
+                    serverItem._props.shotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Weight = fileItem.Weight;
                     serverItem._props.bFirerate = fileItem.AutoROF;
-                    serverItem._props.SingleFireRate = fileItem.SemiROF;
+                    serverItem._props.SingleFireRate = fileItem.SemiROF * 1.05;
                     serverItem._props.DoubleActionAccuracyPenalty = fileItem.DoubleActionAccuracyPenalty;
+                    serverItem._props.RecoilReturnSpeedHandRotation = fileItem.Convergence;
+                    serverItem._props.RecoilDampingHandRotation = fileItem.RecoilDamping;
+                    serverItem._props.RecoilReturnPathDampingHandRotation = fileItem.RecoilHandDamping;
+                    serverItem._props.RecoilReturnPathOffsetHandRotation = fileItem.OffsetRotation;
+                    serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
+                    serverItem._props.CanQueueSecondShot = true;
+                    serverItem._props.CameraToWeaponAngleSpeedRange.x = 0
+                    serverItem._props.CameraToWeaponAngleSpeedRange.y = 0;
+                    serverItem._props.CameraToWeaponAngleStep = 0;
+                    serverItem._props.CameraSnap = 1;
+                    serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
 
                     if (fileItem.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
@@ -278,7 +286,7 @@ export class JsonHandler {
 
                     let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
                         fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.7", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
-                        fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1", fileItem?.CameraSnap?.toString() || "0.1"
+                        fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1", fileItem?.VisualMulti?.toString() || "1"
                     ];
 
                     let combinedArr = weapPropertyValues.concat(serverConfItems)

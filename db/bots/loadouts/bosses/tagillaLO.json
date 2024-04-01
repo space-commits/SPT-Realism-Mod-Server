@@ -45,23 +45,6 @@
             }
         ]
     },
-    "appearance": {
-        "body": {
-            "5e9d9fa986f774054d6b89f2": 1
-        },
-        "feet": {
-            "609e86c09776a947754429b2": 1
-        },
-        "hands": [
-            "5cc2e68f14c02e28b47de290"
-        ],
-        "head": [
-            "5f68c4c217d579077152a252"
-        ],
-        "voice": [
-            "SectantPriest"
-        ]
-    },
     "tagillaLO1": {
         "inventory": {
             "Ammo": {
@@ -218,7 +201,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 100,
+                "mod_equipment_000": 100,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100,
+                "mod_mount": 100,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_charge": 32,
                 "mod_foregrip": 47,
                 "mod_magazine": 100,
@@ -406,7 +401,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 100,
+                "mod_equipment_000": 100,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100,
+                "mod_mount": 100,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_charge": 32,
                 "mod_foregrip": 47,
                 "mod_magazine": 100,
@@ -600,7 +607,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 100,
+                "mod_equipment_000": 100,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100,
+                "mod_mount": 100,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_charge": 32,
                 "mod_foregrip": 47,
                 "mod_magazine": 100,

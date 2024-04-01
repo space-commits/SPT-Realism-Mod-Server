@@ -1,26 +1,31 @@
 {
     "name": "SPT Realism Mod",
-    "version": "0.14.11",
+    "version": "1.0.0",
     "main": "src/mod.js",
     "license": "CC BY-NC-SA",
     "author": "Fontaine",
-    "akiVersion": "3.7.6",
+    "akiVersion": "3.8.0",
+    "loadBefore": [],
+	"loadAfter": [],
+	"incompatibilities": [],
+	"contributors": [],
+    "isBundleMod": true,
     "scripts": {
         "setup": "npm i",
         "build": "node ./build.mjs",
         "buildinfo": "node ./build.mjs --verbose"
     },
     "devDependencies": {
-        "@types/node": "20.4.5",
-        "@typescript-eslint/eslint-plugin": "6.2.0",
-        "@typescript-eslint/parser": "6.2.0",
+        "@types/node": "20.11",
+        "@typescript-eslint/eslint-plugin": "7.2",
+        "@typescript-eslint/parser": "7.2",
         "archiver": "^6.0",
-        "eslint": "8.46.0",
-        "fs-extra": "^11.1",
+        "eslint": "8.57",
+        "fs-extra": "11.2",
         "ignore": "^5.2",
         "os": "^0.1",
         "tsyringe": "4.8.0",
-        "typescript": "5.1.6",
-        "winston": "^3.9"
+        "typescript": "5.4",
+        "winston": "3.12"
     }
 }

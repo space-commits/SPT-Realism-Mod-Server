@@ -13,7 +13,7 @@
         "Accuracy": 0,
         "CenterOfImpact": 0.1,
         "HeatFactor": 1,
-        "CoolFactor": 1.2,
+        "CoolFactor": 1.4,
         "DurabilityBurnModificator": 1,
         "Velocity": 4,
         "ConflictingItems": [],
@@ -21,8 +21,8 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "646371faf2404ab67905c8e9": {
         "ItemID": "646371faf2404ab67905c8e9",
@@ -45,8 +45,8 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6410758c857473525b08bb77": {
         "ItemID": "6410758c857473525b08bb77",
@@ -69,8 +69,8 @@
         "Weight": 1.33,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "barrel_ak15": {
         "ItemID": "barrel_ak15",
@@ -93,7 +93,6 @@
         "Weight": 0.84,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
         "LoyaltyLevel": 0
     },
     "imi_uzi_260mm_barrel": {
@@ -302,10 +301,37 @@
         "ShotgunDispersion": 1,
         "Loudness": 0
     },
+    "mechVPO_23": {
+        "ItemID": "mechVPO_23",
+        "Name": "barrel_vpo215_600mm_762x39",
+        "ModType": "762x39",
+        "VerticalRecoil": 10,
+        "HorizontalRecoil": -10,
+        "CameraRecoil": -10,
+        "Dispersion": 10,
+        "ChamberSpeed": 15,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": -10,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.03,
+        "HeatFactor": 0.83,
+        "CoolFactor": 0.88,
+        "DurabilityBurnModificator": 0.9,
+        "Velocity": 4,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 1.205,
+        "ShotgunDispersion": 1,
+        "Loudness": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
     "5de65547883dde217541644b": {
         "ItemID": "5de65547883dde217541644b",
         "Name": "barrel_vpo215_600mm_366tkm",
-        "ModType": "",
+        "ModType": "366",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
@@ -323,8 +349,8 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "560836fb4bdc2d773f8b4569": {
         "ItemID": "560836fb4bdc2d773f8b4569",
@@ -347,8 +373,8 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "622b3858034a3e17ad0b81f5": {
         "ItemID": "622b3858034a3e17ad0b81f5",
@@ -371,8 +397,8 @@
         "Weight": 0.47,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "560837824bdc2d57468b4568": {
         "ItemID": "560837824bdc2d57468b4568",
@@ -395,8 +421,8 @@
         "Weight": 1.5,
         "ShotgunDispersion": 1.075,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5cc701d7e4a94900100ac4e7": {
         "ItemID": "5cc701d7e4a94900100ac4e7",
@@ -425,8 +451,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "611a30addbdd8440277441dc": {
         "ItemID": "611a30addbdd8440277441dc",
@@ -449,8 +475,8 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5894a2c386f77427140b8342": {
         "ItemID": "5894a2c386f77427140b8342",
@@ -478,8 +504,8 @@
         "Weight": 0.25,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "55d447bb4bdc2d892f8b456f": {
         "ItemID": "55d447bb4bdc2d892f8b456f",
@@ -502,8 +528,8 @@
         "Weight": 2.2,
         "ShotgunDispersion": 0.94,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5e848d2eea0a7c419c2f9bfd": {
         "ItemID": "5e848d2eea0a7c419c2f9bfd",
@@ -526,8 +552,8 @@
         "Weight": 1.23,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5e848d1c264f7c180b5e35a9": {
         "ItemID": "5e848d1c264f7c180b5e35a9",
@@ -550,8 +576,8 @@
         "Weight": 0.91,
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a34fae7c4a2826c6e06d760": {
         "ItemID": "5a34fae7c4a2826c6e06d760",
@@ -575,8 +601,8 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "64748d02d1c009260702b526": {
         "ItemID": "64748d02d1c009260702b526",
@@ -599,8 +625,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.7,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5580169d4bdc2d9d138b4585": {
         "ItemID": "5580169d4bdc2d9d138b4585",
@@ -623,33 +649,33 @@
         "Weight": 1.5,
         "ShotgunDispersion": 0.8,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "mechAR15_260mm": {
         "ItemID": "mechAR15_260mm",
         "Name": "mechanic_barrel_ar15_260mm",
         "ModType": "short_barrel",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 10,
+        "HorizontalRecoil": 5,
         "AutoROF": 1.5,
         "SemiROF": 2.5,
         "CameraRecoil": 5,
         "ModMalfunctionChance": 100,
         "Convergence": 0,
         "Accuracy": 0,
-        "CenterOfImpact": 0.019,
+        "CenterOfImpact": 0.018,
         "HeatFactor": 1.04,
         "CoolFactor": 0.94,
-        "DurabilityBurnModificator": 1.1,
+        "DurabilityBurnModificator": 1.05,
         "Velocity": -20,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.6305,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "55d35ee94bdc2d61338b4568": {
         "ItemID": "55d35ee94bdc2d61338b4568",
@@ -660,7 +686,7 @@
         "AutoROF": 3,
         "SemiROF": 5,
         "CameraRecoil": 15,
-        "ModMalfunctionChance": 10,
+        "ModMalfunctionChance": 15,
         "Convergence": 0,
         "Accuracy": 0,
         "CenterOfImpact": 0.028,
@@ -673,8 +699,8 @@
         "Weight": 0.6305,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "63d3ce0446bd475bcb50f55f": {
         "ItemID": "63d3ce0446bd475bcb50f55f",
@@ -698,8 +724,8 @@
         "Weight": 0.509,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "55d3632e4bdc2d972f8b4569": {
         "ItemID": "55d3632e4bdc2d972f8b4569",
@@ -723,8 +749,8 @@
         "Weight": 0.7326,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c0e2f94d174af029f650d56": {
         "ItemID": "5c0e2f94d174af029f650d56",
@@ -751,8 +777,8 @@
         "Weight": 0.9616,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "63d3d44a2a49307baf09386d": {
         "ItemID": "63d3d44a2a49307baf09386d",
@@ -783,8 +809,8 @@
         "Weight": 0.78,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5d440b93a4b9364276578d4b": {
         "ItemID": "5d440b93a4b9364276578d4b",
@@ -813,11 +839,11 @@
             "5d00f63bd7ad1a59283b1c1e"
         ],
         "Ergonomics": 0,
-        "Weight": 1.1,
+        "Weight": 0.99,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "55d4491a4bdc2d882f8b456e": {
         "ItemID": "55d4491a4bdc2d882f8b456e",
@@ -840,19 +866,19 @@
         "Weight": 0.75,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fbbfabed5cb881a7363194e": {
         "ItemID": "5fbbfabed5cb881a7363194e",
         "Name": "barrel_mcx_171mm_762x35",
-        "ModType": "",
+        "ModType": "300",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 4,
         "AutoROF": 1.5,
         "SemiROF": 2.5,
         "CameraRecoil": 4,
-        "ModMalfunctionChance": 15,
+        "ModMalfunctionChance": 5,
         "Convergence": 0,
         "Accuracy": 0,
         "CenterOfImpact": 0.022,
@@ -865,13 +891,13 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fbbfacda56d053a3543f799": {
         "ItemID": "5fbbfacda56d053a3543f799",
         "Name": "barrel_mcx_229mm_762x35",
-        "ModType": "",
+        "ModType": "300",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
@@ -889,8 +915,60 @@
         "Weight": 0.479,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
+    "mechMCX_229mm": {
+        "ItemID": "mechMCX_229mm",
+        "Name": "mechMCX_229mm",
+        "ModType": "556",
+        "VerticalRecoil": 10,
+        "HorizontalRecoil": -5,
+        "AutoROF": 1.5,
+        "SemiROF": 2.5,
+        "CameraRecoil": -10,
+        "Dispersion": -5,
+        "Convergence": 10,
+        "ModMalfunctionChance": 8,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.039,
+        "HeatFactor": 1.03,
+        "CoolFactor": 1.03,
+        "DurabilityBurnModificator": 1.05,
+        "Velocity": -24,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.489,
+        "ShotgunDispersion": 1,
+        "Loudness": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
+    "mechMCX_171mm": {
+        "ItemID": "mechMCX_171mm",
+        "Name": "mechMCX_171mm",
+        "ModType": "556",
+        "VerticalRecoil": 10,
+        "HorizontalRecoil": -4,
+        "AutoROF": 2,
+        "SemiROF": 3.5,
+        "CameraRecoil": -7,
+        "Dispersion": -5,
+        "Convergence": 10,
+        "ModMalfunctionChance": 14,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.03,
+        "HeatFactor": 1.09,
+        "CoolFactor": 1.09,
+        "DurabilityBurnModificator": 1.1,
+        "Velocity": -28,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.419,
+        "ShotgunDispersion": 1,
+        "Loudness": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "588200af24597742fa221dfb": {
         "ItemID": "588200af24597742fa221dfb",
@@ -913,8 +991,8 @@
         "Weight": 1.25,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c5db5962e2216000e5e46eb": {
         "ItemID": "5c5db5962e2216000e5e46eb",
@@ -942,8 +1020,8 @@
         "Weight": 0.19,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6076c1b9f2cb2e02a42acedc": {
         "ItemID": "6076c1b9f2cb2e02a42acedc",
@@ -966,8 +1044,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1.05,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5888945a2459774bf43ba385": {
         "ItemID": "5888945a2459774bf43ba385",
@@ -991,8 +1069,8 @@
         "Weight": 2.378,
         "ShotgunDispersion": 1,
         "Loudness": -60,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5888956924597752983e182d": {
         "ItemID": "5888956924597752983e182d",
@@ -1017,8 +1095,8 @@
         "Weight": 2.112,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "612368f58b401f4f51239b33": {
         "ItemID": "612368f58b401f4f51239b33",
@@ -1041,8 +1119,8 @@
         "Weight": 1.55,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c5db5b82e2216003a0fe71d": {
         "ItemID": "5c5db5b82e2216003a0fe71d",
@@ -1068,8 +1146,8 @@
         "Weight": 0.28,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5cc701aae4a949000e1ea45c": {
         "ItemID": "5cc701aae4a949000e1ea45c",
@@ -1098,8 +1176,8 @@
         "Weight": 0.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5d440b9fa4b93601354d480c": {
         "ItemID": "5d440b9fa4b93601354d480c",
@@ -1128,11 +1206,11 @@
             "5d00f63bd7ad1a59283b1c1e"
         ],
         "Ergonomics": 0,
-        "Weight": 0.99,
+        "Weight": 1.1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5e87071478f43e51ca2de5e1": {
         "ItemID": "5e87071478f43e51ca2de5e1",
@@ -1155,8 +1233,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.88,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bb20d9cd4351e00334c9d8a": {
         "ItemID": "5bb20d9cd4351e00334c9d8a",
@@ -1185,8 +1263,8 @@
         "Weight": 0.835,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c6d85e02e22165df16b81f4": {
         "ItemID": "5c6d85e02e22165df16b81f4",
@@ -1227,8 +1305,8 @@
         "Weight": 0.615,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bb20d92d4351e00853263eb": {
         "ItemID": "5bb20d92d4351e00853263eb",
@@ -1258,8 +1336,8 @@
         "Weight": 0.465,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bb20da5d4351e0035629dbf": {
         "ItemID": "5bb20da5d4351e0035629dbf",
@@ -1289,8 +1367,8 @@
         "Weight": 1.03,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bb20dadd4351e00367faeff": {
         "ItemID": "5bb20dadd4351e00367faeff",
@@ -1314,8 +1392,8 @@
         "Weight": 1.05,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5f2aa46b878ef416f538b567": {
         "ItemID": "5f2aa46b878ef416f538b567",
@@ -1338,8 +1416,8 @@
         "Weight": 0.91,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "55d448594bdc2d8c2f8b4569": {
         "ItemID": "55d448594bdc2d8c2f8b4569",
@@ -1362,8 +1440,8 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a34f7f1c4a2826c6e06d75d": {
         "ItemID": "5a34f7f1c4a2826c6e06d75d",
@@ -1387,8 +1465,8 @@
         "Weight": 1.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5608373c4bdc2dc8488b4570": {
         "ItemID": "5608373c4bdc2dc8488b4570",
@@ -1411,8 +1489,8 @@
         "Weight": 1.3,
         "ShotgunDispersion": 1.05,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c5db5c62e22160012542255": {
         "ItemID": "5c5db5c62e22160012542255",
@@ -1436,8 +1514,8 @@
         "Weight": 0.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fc23678ab884124df0cd590": {
         "ItemID": "5fc23678ab884124df0cd590",
@@ -1468,8 +1546,8 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "560836484bdc2d20478b456e": {
         "ItemID": "560836484bdc2d20478b456e",
@@ -1492,8 +1570,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.975,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "588200cf2459774414733d55": {
         "ItemID": "588200cf2459774414733d55",
@@ -1516,8 +1594,8 @@
         "Weight": 1.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c5db5852e2216003a0fe71a": {
         "ItemID": "5c5db5852e2216003a0fe71a",
@@ -1547,8 +1625,8 @@
         "Weight": 0.16,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "56deec93d2720bec348b4568": {
         "ItemID": "56deec93d2720bec348b4568",
@@ -1571,8 +1649,8 @@
         "Weight": 1.55,
         "ShotgunDispersion": 1.05,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "588200c224597743990da9ed": {
         "ItemID": "588200c224597743990da9ed",
@@ -1595,8 +1673,8 @@
         "Weight": 1.25,
         "ShotgunDispersion": 0.95,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "58aeaaa886f7744fc1560f81": {
         "ItemID": "58aeaaa886f7744fc1560f81",
@@ -1623,8 +1701,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5cadc1c6ae9215000f2775a4": {
         "ItemID": "5cadc1c6ae9215000f2775a4",
@@ -1647,8 +1725,8 @@
         "Weight": 0.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194ef39de3cdf1d2614a768": {
         "ItemID": "6194ef39de3cdf1d2614a768",
@@ -1671,8 +1749,8 @@
         "Weight": 0.113,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6183fd9e8004cc50514c358f": {
         "ItemID": "6183fd9e8004cc50514c358f",
@@ -1696,8 +1774,8 @@
         "Weight": 1.05,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5d3eb5b6a4b9361eab311902": {
         "ItemID": "5d3eb5b6a4b9361eab311902",
@@ -1720,8 +1798,8 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6065878ac9cf8012264142fd": {
         "ItemID": "6065878ac9cf8012264142fd",
@@ -1745,8 +1823,8 @@
         "Weight": 1.13,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "60658776f2cb2e02a42ace2b": {
         "ItemID": "60658776f2cb2e02a42ace2b",
@@ -1776,8 +1854,8 @@
         "Weight": 0.47,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6183b084a112697a4b3a6e6c": {
         "ItemID": "6183b084a112697a4b3a6e6c",
@@ -1800,8 +1878,8 @@
         "Weight": 1.26,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "560836b64bdc2d57468b4567": {
         "ItemID": "560836b64bdc2d57468b4567",
@@ -1824,8 +1902,8 @@
         "Weight": 0.85,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6183fc15d3a39d50044c13e9": {
         "ItemID": "6183fc15d3a39d50044c13e9",
@@ -1849,8 +1927,8 @@
         "Weight": 0.9,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "618168b350224f204c1da4d8": {
         "ItemID": "618168b350224f204c1da4d8",
@@ -1874,8 +1952,8 @@
         "Weight": 1.02,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a787f25c5856700186c4ab9": {
         "ItemID": "5a787f25c5856700186c4ab9",
@@ -1898,8 +1976,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "560835c74bdc2dc8488b456f": {
         "ItemID": "560835c74bdc2dc8488b456f",
@@ -1922,8 +2000,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.95,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6183b0711cb55961fa0fdcad": {
         "ItemID": "6183b0711cb55961fa0fdcad",
@@ -1947,8 +2025,8 @@
         "Weight": 1.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6183fd911cb55961fa0fdce9": {
         "ItemID": "6183fd911cb55961fa0fdce9",
@@ -1971,8 +2049,8 @@
         "Weight": 1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5e81c519cb2b95385c177551": {
         "ItemID": "5e81c519cb2b95385c177551",
@@ -1995,8 +2073,8 @@
         "Weight": 0.095,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "622b379bf9cfc87d675d2de5": {
         "ItemID": "622b379bf9cfc87d675d2de5",
@@ -2020,8 +2098,8 @@
         "Weight": 0.39,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "61702be9faa1272e431522c3": {
         "ItemID": "61702be9faa1272e431522c3",
@@ -2044,8 +2122,34 @@
         "Weight": 1.24,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
+    "mechMDR_406": {
+        "ItemID": "mechMDR_406",
+        "Name": "barrel_mdr_dt_406mm_300blk",
+        "ModType": "300",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 15,
+        "CameraRecoil": 15,
+        "Dispersion": 10,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": 15,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.05,
+        "HeatFactor": 0.98,
+        "CoolFactor": 0.99,
+        "DurabilityBurnModificator": 0.85,
+        "Velocity": 13.3,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.5,
+        "ShotgunDispersion": 1,
+        "Loudness": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c48a2852e221602b21d5923": {
         "ItemID": "5c48a2852e221602b21d5923",
@@ -2068,8 +2172,8 @@
         "Weight": 0.509,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5dcbe9431e1f4616d354987e": {
         "ItemID": "5dcbe9431e1f4616d354987e",
@@ -2092,8 +2196,8 @@
         "Weight": 0.62,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "622b38c56762c718e457e246": {
         "ItemID": "622b38c56762c718e457e246",
@@ -2117,8 +2221,8 @@
         "Weight": 0.69,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5dfa397fb11454561e39246c": {
         "ItemID": "5dfa397fb11454561e39246c",
@@ -2142,8 +2246,8 @@
         "Weight": 1.6,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6259c2c1d714855d182bad85": {
         "ItemID": "6259c2c1d714855d182bad85",
@@ -2166,8 +2270,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5df917564a9f347bc92edca3": {
         "ItemID": "5df917564a9f347bc92edca3",
@@ -2191,8 +2295,8 @@
         "Weight": 1.02,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "61f4012adfc9f01a816adda1": {
         "ItemID": "61f4012adfc9f01a816adda1",
@@ -2215,8 +2319,8 @@
         "Weight": 1.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "55d449444bdc2d962f8b456d": {
         "ItemID": "55d449444bdc2d962f8b456d",
@@ -2239,8 +2343,8 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "603372d154072b51b239f9e1": {
         "ItemID": "603372d154072b51b239f9e1",
@@ -2273,8 +2377,8 @@
         "Weight": 0.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fbbc366ca32ed67276c1557": {
         "ItemID": "5fbbc366ca32ed67276c1557",
@@ -2297,8 +2401,8 @@
         "Weight": 0.16,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "603373004e02ce1eaa358814": {
         "ItemID": "603373004e02ce1eaa358814",
@@ -2323,8 +2427,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194efe07c6c7b169525f11b": {
         "ItemID": "6194efe07c6c7b169525f11b",
@@ -2347,8 +2451,8 @@
         "Weight": 0.122,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a6b5f868dc32e000a311389": {
         "ItemID": "5a6b5f868dc32e000a311389",
@@ -2371,8 +2475,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c471cb32e221602b177afaa": {
         "ItemID": "5c471cb32e221602b177afaa",
@@ -2395,8 +2499,8 @@
         "Weight": 0.834,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "603372f153a60014f970616d": {
         "ItemID": "603372f153a60014f970616d",
@@ -2425,8 +2529,8 @@
         "Weight": 0.6,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ea02bb600685063ec28bfa1": {
         "ItemID": "5ea02bb600685063ec28bfa1",
@@ -2449,8 +2553,8 @@
         "Weight": 0.51,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fc3e4a27283c4046c5814ab": {
         "ItemID": "5fc3e4a27283c4046c5814ab",
@@ -2473,8 +2577,8 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5608379a4bdc2d26448b4569": {
         "ItemID": "5608379a4bdc2d26448b4569",
@@ -2497,8 +2601,8 @@
         "Weight": 1.55,
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "571a26d524597720680fbe8a": {
         "ItemID": "571a26d524597720680fbe8a",
@@ -2521,8 +2625,8 @@
         "Weight": 0.06,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "628121434fa03b6b6c35dc6a": {
         "ItemID": "628121434fa03b6b6c35dc6a",
@@ -2553,8 +2657,8 @@
         "Weight": 1.93,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fb653962b1b027b1f50bd03": {
         "ItemID": "5fb653962b1b027b1f50bd03",
@@ -2577,8 +2681,8 @@
         "Weight": 0.21,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5beec1bd0db834001e6006f3": {
         "ItemID": "5beec1bd0db834001e6006f3",
@@ -2601,8 +2705,8 @@
         "Weight": 0.94,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fb65363d1409e5ca04b54f5": {
         "ItemID": "5fb65363d1409e5ca04b54f5",
@@ -2625,8 +2729,8 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5df256570dee1b22f862e9c4": {
         "ItemID": "5df256570dee1b22f862e9c4",
@@ -2649,8 +2753,8 @@
         "Weight": 2.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194eff92d2c397d6600348b": {
         "ItemID": "6194eff92d2c397d6600348b",
@@ -2673,8 +2777,8 @@
         "Weight": 0.141,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a787fadc5856700155a6ca1": {
         "ItemID": "5a787fadc5856700155a6ca1",
@@ -2697,8 +2801,8 @@
         "Weight": 1.1,
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "628121651d5df4475f46a33c": {
         "ItemID": "628121651d5df4475f46a33c",
@@ -2748,8 +2852,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5d3eb59ea4b9361c284bb4b2": {
         "ItemID": "5d3eb59ea4b9361c284bb4b2",
@@ -2772,8 +2876,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5b1fa9ea5acfc40018633c0a": {
         "ItemID": "5b1fa9ea5acfc40018633c0a",
@@ -2797,8 +2901,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "56d5a1f7d2720bb3418b456a": {
         "ItemID": "56d5a1f7d2720bb3418b456a",
@@ -2821,8 +2925,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a787fdfc5856700142fdd9a": {
         "ItemID": "5a787fdfc5856700142fdd9a",
@@ -2845,8 +2949,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1.15,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5beec2820db834001b095426": {
         "ItemID": "5beec2820db834001b095426",
@@ -2870,8 +2974,8 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "602a95edda11d6478d5a06da": {
         "ItemID": "602a95edda11d6478d5a06da",
@@ -2894,8 +2998,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "560837544bdc2de22e8b456e": {
         "ItemID": "560837544bdc2de22e8b456e",
@@ -2918,8 +3022,8 @@
         "Weight": 1.35,
         "ShotgunDispersion": 1.075,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "602a95fe4e02ce1eaa358729": {
         "ItemID": "602a95fe4e02ce1eaa358729",
@@ -2942,8 +3046,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "560837154bdc2da74d8b4568": {
         "ItemID": "560837154bdc2da74d8b4568",
@@ -2966,8 +3070,8 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.05,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fbbc383d5cb881a7363194a": {
         "ItemID": "5fbbc383d5cb881a7363194a",
@@ -2990,8 +3094,8 @@
         "Weight": 0.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "603372b4da11d6478d5a07ff": {
         "ItemID": "603372b4da11d6478d5a07ff",
@@ -3026,8 +3130,8 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "587de4282459771bca0ec90b": {
         "ItemID": "587de4282459771bca0ec90b",
@@ -3050,8 +3154,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a787ebcc5856700142fdd98": {
         "ItemID": "5a787ebcc5856700142fdd98",
@@ -3074,8 +3178,8 @@
         "Weight": 1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a787f7ac5856700177af660": {
         "ItemID": "5a787f7ac5856700177af660",
@@ -3098,8 +3202,8 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a6b5b8a8dc32e001207faf3": {
         "ItemID": "5a6b5b8a8dc32e001207faf3",
@@ -3122,8 +3226,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6281214c1d5df4475f46a33a": {
         "ItemID": "6281214c1d5df4475f46a33a",
@@ -3173,8 +3277,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6281215b4fa03b6b6c35dc6c": {
         "ItemID": "6281215b4fa03b6b6c35dc6c",
@@ -3231,8 +3335,8 @@
         "Weight": 0.7,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bfd4cd60db834001c38f095": {
         "ItemID": "5bfd4cd60db834001c38f095",
@@ -3262,8 +3366,8 @@
         "Weight": 0.9,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bfd4cbe0db834001b73449f": {
         "ItemID": "5bfd4cbe0db834001b73449f",
@@ -3286,8 +3390,8 @@
         "Weight": 1.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ae09bff5acfc4001562219d": {
         "ItemID": "5ae09bff5acfc4001562219d",
@@ -3313,8 +3417,8 @@
         "Weight": 1.7,
         "ShotgunDispersion": 1.9,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a6b5e468dc32e001207faf5": {
         "ItemID": "5a6b5e468dc32e001207faf5",
@@ -3337,8 +3441,8 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194f017ed0429009f543eaa": {
         "ItemID": "6194f017ed0429009f543eaa",
@@ -3361,8 +3465,8 @@
         "Weight": 0.163,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194f02d9bb3d20b0946d2f0": {
         "ItemID": "6194f02d9bb3d20b0946d2f0",
@@ -3385,8 +3489,8 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5f3e7801153b8571434a924c": {
         "ItemID": "5f3e7801153b8571434a924c",
@@ -3409,8 +3513,8 @@
         "Weight": 0.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5f3e77f59103d430b93f94c1": {
         "ItemID": "5f3e77f59103d430b93f94c1",
@@ -3433,8 +3537,8 @@
         "Weight": 0.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5aaf9d53e5b5b00015042a52": {
         "ItemID": "5aaf9d53e5b5b00015042a52",
@@ -3457,8 +3561,8 @@
         "Weight": 1.04,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5addbac75acfc400194dbc56": {
         "ItemID": "5addbac75acfc400194dbc56",
@@ -3482,8 +3586,8 @@
         "Weight": 1.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bfebc320db8340019668d79": {
         "ItemID": "5bfebc320db8340019668d79",
@@ -3506,8 +3610,8 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5d2703038abbc3105103d94c": {
         "ItemID": "5d2703038abbc3105103d94c",
@@ -3530,8 +3634,8 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5d2702e88abbc31ed91efc44": {
         "ItemID": "5d2702e88abbc31ed91efc44",
@@ -3554,8 +3658,8 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bfebc250db834001a6694e1": {
         "ItemID": "5bfebc250db834001a6694e1",
@@ -3578,8 +3682,8 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5b099a765acfc47a8607efe3": {
         "ItemID": "5b099a765acfc47a8607efe3",
@@ -3610,8 +3714,8 @@
         "Weight": 0.83,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5b7be1125acfc4001876c0e5": {
         "ItemID": "5b7be1125acfc4001876c0e5",
@@ -3641,8 +3745,8 @@
         "Weight": 0.96,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5b7be1265acfc400161d0798": {
         "ItemID": "5b7be1265acfc400161d0798",
@@ -3669,8 +3773,8 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "571a279b24597720b4066566": {
         "ItemID": "571a279b24597720b4066566",
@@ -3693,8 +3797,8 @@
         "Weight": 0.062,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5b3baf8f5acfc40dc5296692": {
         "ItemID": "5b3baf8f5acfc40dc5296692",
@@ -3717,8 +3821,8 @@
         "Weight": 0.06,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6130c3dffaa1272e43151c7d": {
         "ItemID": "6130c3dffaa1272e43151c7d",
@@ -3741,8 +3845,8 @@
         "Weight": 0.415,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "62e7c7f3c34ea971710c32fc": {
         "ItemID": "62e7c7f3c34ea971710c32fc",
@@ -3766,8 +3870,8 @@
         "Weight": 0.83,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6333f05d1bc0e6217a0e9d34": {
         "ItemID": "6333f05d1bc0e6217a0e9d34",
@@ -3790,8 +3894,8 @@
         "Weight": 0.535,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "630e39c3bd357927e4007c15": {
         "ItemID": "630e39c3bd357927e4007c15",
@@ -3814,8 +3918,8 @@
         "Weight": 0.53,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "630764fea987397c0816d219": {
         "ItemID": "630764fea987397c0816d219",
@@ -3838,7 +3942,194 @@
         "Weight": 0.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
+    "634eff66517ccc8a960fc735": {
+        "ItemID": "634eff66517ccc8a960fc735",
+        "Name": "barrel_sks_molot_520mm_762x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.05,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 2.5,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 1.5,
+        "ShotgunDispersion": 1.9,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "634f02331f9f536910079b51": {
+        "ItemID": "634f02331f9f536910079b51",
+        "Name": "barrel_sks_toz_520mm_762x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.073,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 2.5,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 1.5,
+        "ShotgunDispersion": 1.9,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "645122f6d4928d46d30be3ff": {
+        "ItemID": "645122f6d4928d46d30be3ff",
+        "Name": "barrel_9a91_kbp_9a91_180mm_9x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.08,
+        "HeatFactor": 1.084,
+        "CoolFactor": 1.125,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 2,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.409,
+        "ShotgunDispersion": 1,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "645123013d52156624001fd1": {
+        "ItemID": "645123013d52156624001fd1",
+        "Name": "barrel_9a91_kbp_vsk94_180mm_9x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.056,
+        "HeatFactor": 1.084,
+        "CoolFactor": 1.125,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 2,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.409,
+        "ShotgunDispersion": 1,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "6513eff1e06849f06c0957d4": {
+        "ItemID": "6513eff1e06849f06c0957d4",
+        "Name": "barrel_rpd_zid_rpd_520mm_762x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.13,
+        "HeatFactor": 0.9,
+        "CoolFactor": 0.925,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 2.5,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 1.8,
+        "ShotgunDispersion": 1.9,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "65266fd43341ed9aa903dd56": {
+        "ItemID": "65266fd43341ed9aa903dd56",
+        "Name": "barrel_rpd_kiba_sawed_off_350mm_762x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 5,
+        "CameraRecoil": 5,
+        "AutoROF": 2.5,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.15,
+        "HeatFactor": 0.96,
+        "CoolFactor": 0.98,
+        "DurabilityBurnModificator": 1.1,
+        "Velocity": -10,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 1.05,
+        "ShotgunDispersion": 1.9,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "mechSpear_330mm": {
+        "ItemID": "mechSpear_330mm",
+        "Name": "barrel_mcx_sig_spear_330mm_762x51",
+        "ModType": "308",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 15,
+        "CameraRecoil": 15,
+        "Dispersion": -15,
+        "AutoROF": -2.5,
+        "SemiROF": -2.5,
+        "ModMalfunctionChance": 0,
+        "Convergence": -10,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.04,
+        "HeatFactor": 0.968,
+        "CoolFactor": 0.971,
+        "DurabilityBurnModificator": 0.9,
+        "Velocity": -13.7,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.4,
+        "ShotgunDispersion": 1,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "652910565ae2ae97b80fdf35": {
+        "ItemID": "652910565ae2ae97b80fdf35",
+        "Name": "barrel_mcx_sig_spear_330mm_68x51",
+        "ModType": "277",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.025,
+        "HeatFactor": 0.968,
+        "CoolFactor": 0.971,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.479,
+        "ShotgunDispersion": 1,
+        "Loudness": 0,
+        "MalfChance": 0
     }
 }

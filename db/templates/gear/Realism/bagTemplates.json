@@ -4,7 +4,6 @@
         "Name": "item_equipment_backpack_betav2",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.84
     },
@@ -13,7 +12,6 @@
         "Name": "backpack_wild",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.98
     },
@@ -22,7 +20,6 @@
         "Name": "item_equipment_backpack_redfox",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.02
     },
@@ -31,7 +28,6 @@
         "Name": "item_equipment_backpack_pillbox",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.79
     },
@@ -40,7 +36,6 @@
         "Name": "item_equipment_backpack_lbt1476a",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.88
     },
@@ -49,7 +44,6 @@
         "Name": "item_equipment_backpack_blackjack",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.8
     },
@@ -58,7 +52,6 @@
         "Name": "forward_backpack",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.2
     },
@@ -67,7 +60,6 @@
         "Name": "item_equipment_backpack_gr99t20",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.88
     },
@@ -76,7 +68,6 @@
         "Name": "item_equipment_backpack_g2_gunslinger",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.79
     },
@@ -85,7 +76,6 @@
         "Name": "item_equipment_backpack_drawbridge",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.74
     },
@@ -94,7 +84,6 @@
         "Name": "item_equipment_backpack_medpack",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.83
     },
@@ -103,7 +92,6 @@
         "Name": "item_equipment_backpack_Takedown_sling_multicam",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.05
     },
@@ -112,7 +100,6 @@
         "Name": "tactical_backpack",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.12
     },
@@ -121,7 +108,6 @@
         "Name": "item_equipment_backpack_trooper_35",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.84
     },
@@ -130,7 +116,6 @@
         "Name": "item_equipment_backpack_takedown_sling",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.05
     },
@@ -139,7 +124,6 @@
         "Name": "item_equipment_backpack_f4terminator",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.8
     },
@@ -148,7 +132,6 @@
         "Name": "item_equipment_backpack_f5switchblade",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.89
     },
@@ -157,7 +140,6 @@
         "Name": "item_equipment_backpack_daypack14",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.9
     },
@@ -166,7 +148,6 @@
         "Name": "item_equipment_backpack_mech",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.82
     },
@@ -175,7 +156,6 @@
         "Name": "item_equipment_backpack_wartech",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.91
     },
@@ -184,7 +164,6 @@
         "Name": "standartBackpack",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.89
     },
@@ -193,7 +172,6 @@
         "Name": "item_equipment_backpack_gr99_t30",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.89
     },
@@ -202,7 +180,6 @@
         "Name": "item_equipment_backpack_boss_birdeye",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.85
     },
@@ -211,7 +188,6 @@
         "Name": "item_equipment_backpack_paratus",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.77
     },
@@ -220,7 +196,6 @@
         "Name": "item_equipment_backpack_gr99_t30_multicam",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.89
     },
@@ -229,7 +204,6 @@
         "Name": "item_equipment_backpack_gr99t20_multicam",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.88
     },
@@ -238,7 +212,6 @@
         "Name": "backpack_sanitar_medbag",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.16
     },
@@ -247,7 +220,6 @@
         "Name": "bigBackpack",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.87
     },
@@ -256,7 +228,6 @@
         "Name": "backpack_molle",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.08
     },
@@ -265,7 +236,6 @@
         "Name": "backpack_pilgrim_red",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.75
     },
@@ -274,7 +244,6 @@
         "Name": "backpack_vkboarmy",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.15
     },
@@ -283,7 +252,6 @@
         "Name": "backpack_Raid_6SH118",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.82
     },
@@ -292,7 +260,6 @@
         "Name": "backpack_pilgrim",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.75
     },
@@ -301,7 +268,6 @@
         "Name": "backpack_sso_attack2",
         "AllowADS": true,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.8
     }

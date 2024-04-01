@@ -70,29 +70,33 @@
       "5e4bb39386f774067f79de05": 1,
       "5fce3e965a9f8c40685693bc": 1
     },
-    "head": [
-      "5cc084dd14c02e000b0550a3",
-      "5fdb5950f5264a66150d1c6e",
-      "60a6aaad42fd2735e4589978",
-      "60a6aa8fd559ae040d0d951f",
-      "5fdb50bb2b730a787b3f78cf",
-      "5fdb7571e4ed5b5ea251e529",
-      "5fdb4139e4ed5b5ea251e4ed",
-      "5cde96047d6c8b20b577f016",
-      "619f94f5b90286142b59d45f",
-      "62a9e7d15ea3b87d6f642a28",
-      "619f9e338858a474c8685cc9",
-      "62aca6a1310e67685a2fc2e7"
-    ],
-    "voice": [
-      "Usec_1",
-      "Usec_2",
-      "Usec_3",
-      "Usec_4",
-      "Usec_5",
-      "Bear_1_Eng",
-      "Bear_2_Eng"
-    ]
+    "head": {
+      "5cde96047d6c8b20b577f016": 1,
+      "60a6aa8fd559ae040d0d951f": 1,
+      "619f9e338858a474c8685cc9": 1,
+      "5fdb5950f5264a66150d1c6e": 1,
+      "5fdb4139e4ed5b5ea251e4ed": 1,
+      "62aca6a1310e67685a2fc2e7": 1,
+      "6574aabee0423b9ebe0c79cf": 1,
+      "5cc084dd14c02e000b0550a3": 1,
+      "5fdb7571e4ed5b5ea251e529": 1,
+      "62a9e7d15ea3b87d6f642a28": 1,
+      "619f94f5b90286142b59d45f": 1,
+      "60a6aaad42fd2735e4589978": 1,
+      "5fdb50bb2b730a787b3f78cf": 1,
+      "6574aa9a1b144de18c0fba45": 1,
+      "5cc2e4d014c02e000d0115f8": 1,
+      "5cde9ff17d6c8b0474535daa": 1
+    },
+    "voice": {
+      "Usec_1": 1,
+      "Usec_2": 1,
+      "Usec_3": 1,
+      "Usec_4": 1,
+      "Usec_5": 1,
+      "Bear_1_Eng": 1,
+      "Bear_2_Eng": 1
+    }
   },
   "raiderLO1": {
     "inventory": {
@@ -317,7 +321,9 @@
           "5e4bfc1586f774264f7582d3": 10,
           "5b40e3f35acfc40016388218": 10,
           "5ea17ca01412a1425304d1c0": 1,
-          "5b4329f05acfc47a86086aa1": 1
+          "5b4329f05acfc47a86086aa1": 1,
+          "65719f0775149d62ce0a670b": 3,
+          "65709d2d21b9f815e208ff95": 1
         },
         "Earpiece": {
           "6033fa48ffd42c541047f728": 20,
@@ -428,6 +434,39 @@
         }
       },
       "mods": {
+        "65719f0775149d62ce0a670b": {
+          "Helmet_top": [
+            "657fa0fcd4caf976440afe3e"
+          ],
+          "Helmet_back": [
+            "657fa168e9433140ad0baf8e"
+          ],
+          "Helmet_ears": [
+            "657fa186d4caf976440afe42"
+          ],
+          "mod_equipment_000": [
+            "65719f9ef392ad76c50a2ec8"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
+        "65709d2d21b9f815e208ff95": {
+          "Helmet_top": [
+            "657f9eb7e9433140ad0baf86"
+          ],
+          "Helmet_back": [
+            "657f9ef6c6679fefb3051e1f"
+          ],
+          "mod_equipment_000": [
+            "6570a88c8f221f3b210353b7"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
         "5ca20ee186f774799474abc2": {
           "mod_equipment": [
             "5ca2113f86f7740b2547e1d2"
@@ -593,7 +632,14 @@
           "5ed515ece452db0eb56fc028",
           "5ed5160a87bb8443d10680b5",
           "5c0e531286f7747fa54205c2",
-          "5fca138c2a7b221b2852a5c6"
+          "5fca138c2a7b221b2852a5c6",
+          "5710c24ad2720bc3458b45a3",
+          "58d3db5386f77426186285a0",
+          "5448be9a4bdc2dfd2f8b456a",
+          "5e32f56fcb6d5863cc5e5ee4",
+          "5e340dcdcb6d5863cc5e5efb",
+          "619256e5f8af2c1a4e1f5d92",
+          "5a0c27731526d80618476ac4"
         ],
         "Backpack": [
           "5c0e530286f7747fa1419862",
@@ -708,7 +754,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 100,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 50,
+        "mod_mount": 100,
+        "mod_nvg": 100,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 100,
         "mod_mount_000": 100,
         "mod_mount_001": 100,
@@ -1013,7 +1071,9 @@
           "5b40e3f35acfc40016388218": 5,
           "5ea17ca01412a1425304d1c0": 1,
           "5ca20ee186f774799474abc2": 1,
-          "5b4329f05acfc47a86086aa1": 1
+          "5b4329f05acfc47a86086aa1": 1,
+          "65719f0775149d62ce0a670b": 3,
+          "65709d2d21b9f815e208ff95": 1
         },
         "Earpiece": {
           "6033fa48ffd42c541047f728": 20,
@@ -1127,6 +1187,39 @@
         }
       },
       "mods": {
+        "65719f0775149d62ce0a670b": {
+          "Helmet_top": [
+            "657fa0fcd4caf976440afe3e"
+          ],
+          "Helmet_back": [
+            "657fa168e9433140ad0baf8e"
+          ],
+          "Helmet_ears": [
+            "657fa186d4caf976440afe42"
+          ],
+          "mod_equipment_000": [
+            "65719f9ef392ad76c50a2ec8"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
+        "65709d2d21b9f815e208ff95": {
+          "Helmet_top": [
+            "657f9eb7e9433140ad0baf86"
+          ],
+          "Helmet_back": [
+            "657f9ef6c6679fefb3051e1f"
+          ],
+          "mod_equipment_000": [
+            "6570a88c8f221f3b210353b7"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
         "5ca20ee186f774799474abc2": {
           "mod_equipment": [
             "5ca2113f86f7740b2547e1d2"
@@ -1306,7 +1399,14 @@
           "5fca138c2a7b221b2852a5c6",
           "5c0e533786f7747fa23f4d47",
           "5c1f79a086f7746ed066fb8f",
-          "5c1e2d1f86f77431e9280bee"
+          "5c1e2d1f86f77431e9280bee",
+          "5710c24ad2720bc3458b45a3",
+          "58d3db5386f77426186285a0",
+          "5448be9a4bdc2dfd2f8b456a",
+          "5e32f56fcb6d5863cc5e5ee4",
+          "5e340dcdcb6d5863cc5e5efb",
+          "619256e5f8af2c1a4e1f5d92",
+          "5a0c27731526d80618476ac4"
         ],
         "Backpack": [
           "5c0e530286f7747fa1419862",
@@ -1427,7 +1527,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 100,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 50,
+        "mod_mount": 100,
+        "mod_nvg": 100,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 100,
         "mod_mount_000": 100,
         "mod_mount_001": 100,
@@ -1730,7 +1842,9 @@
           "5b40e3f35acfc40016388218": 5,
           "5ea17ca01412a1425304d1c0": 5,
           "5ca20ee186f774799474abc2": 3,
-          "5b4329f05acfc47a86086aa1": 1
+          "5b4329f05acfc47a86086aa1": 1,
+          "65719f0775149d62ce0a670b": 3,
+          "65709d2d21b9f815e208ff95": 1
         },
         "Earpiece": {
           "6033fa48ffd42c541047f728": 20,
@@ -1845,6 +1959,39 @@
         }
       },
       "mods": {
+        "65719f0775149d62ce0a670b": {
+          "Helmet_top": [
+            "657fa0fcd4caf976440afe3e"
+          ],
+          "Helmet_back": [
+            "657fa168e9433140ad0baf8e"
+          ],
+          "Helmet_ears": [
+            "657fa186d4caf976440afe42"
+          ],
+          "mod_equipment_000": [
+            "65719f9ef392ad76c50a2ec8"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
+        "65709d2d21b9f815e208ff95": {
+          "Helmet_top": [
+            "657f9eb7e9433140ad0baf86"
+          ],
+          "Helmet_back": [
+            "657f9ef6c6679fefb3051e1f"
+          ],
+          "mod_equipment_000": [
+            "6570a88c8f221f3b210353b7"
+          ],
+          "mod_nvg": [
+            "5c0558060db834001b735271",
+            "5a16b8a9fcdbcb00165aa6ca"
+          ]
+        },
         "5ca20ee186f774799474abc2": {
           "mod_equipment": [
             "5ca2113f86f7740b2547e1d2"
@@ -2028,7 +2175,14 @@
           "5fca138c2a7b221b2852a5c6",
           "5c0e533786f7747fa23f4d47",
           "5c1f79a086f7746ed066fb8f",
-          "5c1e2d1f86f77431e9280bee"
+          "5c1e2d1f86f77431e9280bee",
+          "5710c24ad2720bc3458b45a3",
+          "58d3db5386f77426186285a0",
+          "5448be9a4bdc2dfd2f8b456a",
+          "5e32f56fcb6d5863cc5e5ee4",
+          "5e340dcdcb6d5863cc5e5efb",
+          "619256e5f8af2c1a4e1f5d92",
+          "5a0c27731526d80618476ac4"
         ],
         "Backpack": [
           "6389c7750ef44505c87f5996",
@@ -2151,7 +2305,19 @@
         "Pockets": 100,
         "SecuredContainer": 100
       },
-      "mods": {
+      "equipmentMods": {
+        "back_plate": 100,
+        "front_plate": 100,
+        "left_side_plate": 100,
+        "mod_equipment": 100,
+        "mod_equipment_000": 50,
+        "mod_equipment_001": 50,
+        "mod_equipment_002": 50,
+        "mod_mount": 100,
+        "mod_nvg": 100,
+        "right_side_plate": 100
+      },
+      "weaponMods": {
         "mod_mount": 100,
         "mod_mount_000": 100,
         "mod_mount_001": 100,

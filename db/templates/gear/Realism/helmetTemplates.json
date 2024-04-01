@@ -8,10 +8,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.95
     },
     "5d5e7d28a4b936645d161203": {
         "ItemID": "5d5e7d28a4b936645d161203",
@@ -22,10 +20,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.9
     },
     "5e4bfc1586f774264f7582d3": {
         "ItemID": "5e4bfc1586f774264f7582d3",
@@ -36,10 +32,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.9
     },
     "5f60c74e3b85f6263c145586": {
         "ItemID": "5f60c74e3b85f6263c145586",
@@ -50,10 +44,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.1
     },
     "60bf74184a63fc79b60c57f6": {
         "ItemID": "60bf74184a63fc79b60c57f6",
@@ -64,10 +56,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.8
     },
     "61bca7cda0eae612383adf57": {
         "ItemID": "61bca7cda0eae612383adf57",
@@ -78,10 +68,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.89
     },
     "59ef13ca86f77445fd0e2483": {
         "ItemID": "59ef13ca86f77445fd0e2483",
@@ -92,10 +80,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.2
     },
     "5d6d3716a4b9361bc8618872": {
         "ItemID": "5d6d3716a4b9361bc8618872",
@@ -106,10 +92,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.06
     },
     "5aa7d193e5b5b000171d063f": {
         "ItemID": "5aa7d193e5b5b000171d063f",
@@ -120,10 +104,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.15
     },
     "5d5e9c74a4b9364855191c40": {
         "ItemID": "5d5e9c74a4b9364855191c40",
@@ -134,10 +116,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.92
     },
     "5df8a58286f77412631087ed": {
         "ItemID": "5df8a58286f77412631087ed",
@@ -148,10 +128,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.05
     },
     "5a154d5cfcdbcb001a3b00da": {
         "ItemID": "5a154d5cfcdbcb001a3b00da",
@@ -162,10 +140,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.88
     },
     "5aa7e276e5b5b000171d0647": {
         "ItemID": "5aa7e276e5b5b000171d0647",
@@ -176,10 +152,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.12
     },
     "5aa7e4a4e5b5b000137b76f2": {
         "ItemID": "5aa7e4a4e5b5b000137b76f2",
@@ -190,10 +164,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.09
     },
     "5aa7cfc0e5b5b00015693143": {
         "ItemID": "5aa7cfc0e5b5b00015693143",
@@ -204,10 +176,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.02
     },
     "5b4329f05acfc47a86086aa1": {
         "ItemID": "5b4329f05acfc47a86086aa1",
@@ -218,10 +188,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.07
     },
     "5ac8d6885acfc400180ae7b0": {
         "ItemID": "5ac8d6885acfc400180ae7b0",
@@ -232,10 +200,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.88
     },
     "5a7c4850e899ef00150be885": {
         "ItemID": "5a7c4850e899ef00150be885",
@@ -246,10 +212,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.025
     },
     "5c06c6a80db834001b735491": {
         "ItemID": "5c06c6a80db834001b735491",
@@ -260,10 +224,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.05
     },
     "5645bc214bdc2d363b8b4571": {
         "ItemID": "5645bc214bdc2d363b8b4571",
@@ -274,10 +236,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.095
     },
     "5aa7d03ae5b5b00016327db5": {
         "ItemID": "5aa7d03ae5b5b00016327db5",
@@ -288,10 +248,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.035
     },
     "5aa7e454e5b5b0214e506fa2": {
         "ItemID": "5aa7e454e5b5b0214e506fa2",
@@ -302,10 +260,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.1
     },
     "5c091a4e0db834001d5addc8": {
         "ItemID": "5c091a4e0db834001d5addc8",
@@ -316,10 +272,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.12
     },
     "59e7711e86f7746cae05fbe1": {
         "ItemID": "59e7711e86f7746cae05fbe1",
@@ -330,10 +284,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.12
     },
     "5ca20ee186f774799474abc2": {
         "ItemID": "5ca20ee186f774799474abc2",
@@ -344,10 +296,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.13
     },
     "5b40e3f35acfc40016388218": {
         "ItemID": "5b40e3f35acfc40016388218",
@@ -358,10 +308,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.92
     },
     "5b40e4035acfc47a87740943": {
         "ItemID": "5b40e4035acfc47a87740943",
@@ -372,10 +320,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.92
     },
     "5b40e1525acfc4771e1c6611": {
         "ItemID": "5b40e1525acfc4771e1c6611",
@@ -386,10 +332,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.95
     },
     "5b40e2bc5acfc40016388216": {
         "ItemID": "5b40e2bc5acfc40016388216",
@@ -400,10 +344,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.95
     },
     "5c17a7ed2e2216152142459c": {
         "ItemID": "5c17a7ed2e2216152142459c",
@@ -414,10 +356,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.87
     },
     "5ea17ca01412a1425304d1c0": {
         "ItemID": "5ea17ca01412a1425304d1c0",
@@ -428,10 +368,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.89
     },
     "5f60b34a41e30a4ab12a6947": {
         "ItemID": "5f60b34a41e30a4ab12a6947",
@@ -442,10 +380,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.86
     },
     "5ea05cf85ad9772e6624305d": {
         "ItemID": "5ea05cf85ad9772e6624305d",
@@ -456,10 +392,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.055
     },
     "5c0e874186f7745dc7616606": {
         "ItemID": "5c0e874186f7745dc7616606",
@@ -470,10 +404,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.11
     },
     "5e00c1ad86f774747333222c": {
         "ItemID": "5e00c1ad86f774747333222c",
@@ -484,10 +416,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.85
     },
     "5e01ef6886f77445f643baa4": {
         "ItemID": "5e01ef6886f77445f643baa4",
@@ -498,10 +428,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 0.85
     },
     "5c08f87c0db8340019124324": {
         "ItemID": "5c08f87c0db8340019124324",
@@ -512,10 +440,8 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.15
     },
     "5c0d2727d174af02a012cf58": {
         "ItemID": "5c0d2727d174af02a012cf58",
@@ -526,9 +452,26 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "MinVelocity": 500,
-        "MinKE": 2000,
-        "MinPen": 50,
-        "Price": 0
+        "Price": 0,
+        "Comfort": 1.13
+    },
+    "65709d2d21b9f815e208ff95": {
+        "ItemID": "65709d2d21b9f815e208ff95",
+        "Name": "item_equipment_helmet_neosteel",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "PM 3",
+        "Price": 0,
+        "Comfort": 1.02
+    },
+    "65719f0775149d62ce0a670b": {
+        "ItemID": "65719f0775149d62ce0a670b",
+        "Name": "item_equipment_helmet_tor_2",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "GOST 2A",
+        "Price": 0,
+        "Comfort": 1,
+        "ReloadSpeedMulti": 1
     }
 }

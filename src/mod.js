@@ -27,8 +27,8 @@ exports.Main = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVariableType");
 ;
-const ammo_1 = require("./ballistics/ammo");
-const armor_1 = require("./ballistics/armor");
+const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
+const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
 const attatchment_base_1 = require("./weapons/attatchment_base");
 const fleamarket_1 = require("./traders/fleamarket");
 const utils_1 = require("./utils/utils");
@@ -39,7 +39,7 @@ const weapons_globals_1 = require("./weapons/weapons_globals");
 const bots_1 = require("./bots/bots");
 const bot_gen_1 = require("./bots/bot_gen");
 const items_1 = require("./items/items");
-const code_gen_1 = require("./json/code_gen");
+const json_gen_1 = require("./json/json_gen");
 const quests_1 = require("./traders/quests");
 const traders_1 = require("./traders/traders");
 const airdrops_1 = require("./misc/airdrops");
@@ -47,16 +47,18 @@ const maps_1 = require("./bots/maps");
 const gear_1 = require("./items/gear");
 const seasonalevents_1 = require("./misc/seasonalevents");
 const item_cloning_1 = require("./items/item_cloning");
-const path = __importStar(require("path"));
 const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
-const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
-const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
-const fs = require('fs');
-const medItems = require("../db/items/med_items.json");
+const ammo_1 = require("./ballistics/ammo");
+const armor_1 = require("./ballistics/armor");
+const path = __importStar(require("path"));
+const fs = __importStar(require("fs"));
 const crafts = require("../db/items/hideout_crafts.json");
-const buffs = require("../db/items/buffs.json");
-const custProfile = require("../db/profile/profile.json");
+const medItems = require("../db/items/med_items.json");
+const medBuffs = require("../db/items/buffs.json");
+const foodItems = require("../db/items/food_items.json");
+const foodBuffs = require("../db/items/buffs_food.json");
+const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
 let validatedClient = false;
 class Main {
@@ -111,8 +113,8 @@ class Main {
             const seasonalEventService = container.resolve("SeasonalEventService");
             const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
             container.afterResolution("BotGenerator", (_t, result) => {
-                result.prepareAndGenerateBots = (sessionId, botGenerationDetails) => {
-                    return botGen.myPrepareAndGenerateBots(sessionId, botGenerationDetails);
+                result.prepareAndGenerateBot = (sessionId, botGenerationDetails) => {
+                    return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
                 };
             }, { frequency: "Always" });
         }
@@ -138,7 +140,8 @@ class Main {
             const lootGenerator = container.resolve("LootGenerator");
             const raidTimeAdjustmentService = container.resolve("RaidTimeAdjustmentService");
             const appContext = container.resolve("ApplicationContext");
-            const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, lootGenerator, databaseServer, timeUtil, configServer, appContext);
+            const itemFilterService = container.resolve("ItemFilterService");
+            const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext);
             container.afterResolution("LocationController", (_t, result) => {
                 result.getAirdropLoot = () => {
                     return airdropController.myGetAirdropLoot();
@@ -159,7 +162,7 @@ class Main {
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const utils = new utils_1.Utils(postLoadTables, arrays);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const maps = new maps_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -236,7 +239,7 @@ class Main {
                     const postLoadtables = postLoadDBServer.getTables();
                     const arrays = new arrays_1.Arrays(postLoadtables);
                     const utils = new utils_1.Utils(postLoadtables, arrays);
-                    const player = new player_1.Player(logger, postLoadtables, modConfig, custProfile, medItems, utils);
+                    const player = new player_1.Player(logger, postLoadtables, modConfig, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     try {
@@ -347,7 +350,7 @@ class Main {
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const utils = new utils_1.Utils(postLoadTables, arrays);
-                    const player = new player_1.Player(logger, postLoadTables, modConfig, custProfile, medItems, utils);
+                    const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     let level = 1;
@@ -417,14 +420,14 @@ class Main {
             }
         });
     }
-    async postAkiLoadAsync(container) {
-        const logger = container.resolve("WinstonLogger");
-        const databaseServer = container.resolve("DatabaseServer");
-        const tables = databaseServer.getTables();
-        const jsonHand = new json_handler_1.JsonHandler(tables, logger);
-        jsonHand.pushWeaponsToServer();
-        jsonHand.pushModsToServer();
-    }
+    // public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
+    //     const logger = container.resolve<ILogger>("WinstonLogger");
+    //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+    //     const tables = databaseServer.getTables();
+    //     const jsonHand = new JsonHandler(tables, logger);
+    //     jsonHand.pushWeaponsToServer();
+    //     jsonHand.pushModsToServer();
+    // }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseServer = container.resolve("DatabaseServer");
@@ -440,14 +443,14 @@ class Main {
         const utils = new utils_1.Utils(tables, arrays);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
-        const attachBase = new attatchment_base_1.AttatchmentBase(logger, tables, arrays, modConfig, utils);
+        const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
-        const meds = new meds_1.Meds(logger, tables, modConfig, medItems, buffs);
-        const player = new player_1.Player(logger, tables, modConfig, custProfile, medItems, utils);
+        const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
+        const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new fleamarket_1.FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
-        const codegen = new code_gen_1.JsonGen(logger, tables, modConfig, utils, arrays);
+        const jsonGen = new json_gen_1.JsonGen(logger, tables, modConfig, utils, arrays);
         const fleaChangesPreDB = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
@@ -462,11 +465,13 @@ class Main {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
             itemsClass.addCustomItems();
+            attachBase.loadAttCompat();
+            attachBase.loadCaliberConversions();
         }
-        // codegen.attTemplatesCodeGen();
-        // codegen.weapTemplatesCodeGen();
-        // codegen.gearTemplatesCodeGen();
-        // codegen.ammoTemplatesCodeGen();
+        // jsonGen.attTemplatesCodeGen();
+        // jsonGen.weapTemplatesCodeGen();
+        // jsonGen.gearTemplatesCodeGen();
+        // jsonGen.ammoTemplatesCodeGen();
         if (modConfig.realistic_ballistics == true) {
             ammo.loadAmmoStats();
             armor.loadArmor();
@@ -476,7 +481,6 @@ class Main {
         jsonHand.pushWeaponsToServer();
         jsonHand.pushGearToServer();
         descGen.descriptionGen();
-        armor.armorMousePenalty();
         if (modConfig.headgear_conflicts == true) {
             gear.loadGearConflicts();
         }
@@ -510,13 +514,19 @@ class Main {
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
             // bots.botMeds();
-            meds.loadMeds();
+            consumables.loadMeds();
+        }
+        if (modConfig.food_changes == true) {
+            consumables.loadFood();
+        }
+        if (modConfig.stim_changes == true) {
+            consumables.loadStims();
         }
         bots.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
         if (modConfig.malf_changes == true) {
-            ammo.loadAmmoMalfChanges();
+            ammo.loadAmmoStatAdjustments();
             weaponsGlobals.loadGlobalMalfChanges();
         }
         if (modConfig.trader_repair_changes == true) {
@@ -525,7 +535,7 @@ class Main {
         if (utils_1.ConfigChecker.dllIsPresent == true) {
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
-                quests.fixMechancicQuests();
+                // quests.fixMechancicQuests();
                 ammo.grenadeTweaks();
             }
             if (modConfig.headset_changes) {
@@ -544,11 +554,9 @@ class Main {
             traders.addItemsToAssorts();
         }
         traders.loadTraderRefreshTimes();
-        //
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
-        attachBase.loadAttCompat();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);

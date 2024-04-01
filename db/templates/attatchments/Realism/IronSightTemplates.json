@@ -9,7 +9,9 @@
         "Ergonomics": 0,
         "Weight": 0.025,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "64119d90dcf48d656f0aa275": {
         "ItemID": "64119d90dcf48d656f0aa275",
@@ -21,7 +23,9 @@
         "Ergonomics": 0,
         "Weight": 0.025,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "64119d672c6d6f921a0929fb": {
         "ItemID": "64119d672c6d6f921a0929fb",
@@ -33,7 +37,9 @@
         "Ergonomics": 0,
         "Weight": 0.07,
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
     },
     "imi_uzi_sight_front": {
         "ItemID": "imi_uzi_sight_front",
@@ -106,8 +112,8 @@
         "Weight": 0.034,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "57c44e7b2459772d28133248": {
         "ItemID": "57c44e7b2459772d28133248",
@@ -120,8 +126,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "56083e1b4bdc2dc8488b4572": {
         "ItemID": "56083e1b4bdc2dc8488b4572",
@@ -144,8 +150,8 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "599860e986f7743bb57573a6": {
         "ItemID": "599860e986f7743bb57573a6",
@@ -158,8 +164,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "58272b842459774abc128d50": {
         "ItemID": "58272b842459774abc128d50",
@@ -176,8 +182,8 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "57a9b9ce2459770ee926038d": {
         "ItemID": "57a9b9ce2459770ee926038d",
@@ -190,8 +196,8 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c503b1c2e221602b21d6e9d": {
         "ItemID": "5c503b1c2e221602b21d6e9d",
@@ -204,8 +210,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c471ba12e221602b3137d76": {
         "ItemID": "5c471ba12e221602b3137d76",
@@ -218,8 +224,8 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c471b7e2e2216152006e46c": {
         "ItemID": "5c471b7e2e2216152006e46c",
@@ -232,8 +238,8 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "57838e1b2459774a256959b1": {
         "ItemID": "57838e1b2459774a256959b1",
@@ -246,8 +252,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "649ec2cec93611967b03495e": {
         "ItemID": "649ec2cec93611967b03495e",
@@ -260,8 +266,8 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "649ec2da59cbb3c813042dca": {
         "ItemID": "649ec2da59cbb3c813042dca",
@@ -276,8 +282,8 @@
         "Weight": 0.05,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5beec9450db83400970084fd": {
         "ItemID": "5beec9450db83400970084fd",
@@ -292,8 +298,8 @@
         "Weight": 0.05,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "574db213245977459a2f3f5d": {
         "ItemID": "574db213245977459a2f3f5d",
@@ -306,8 +312,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ae099875acfc4001714e593": {
         "ItemID": "5ae099875acfc4001714e593",
@@ -320,8 +326,8 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bfd4c980db834001b73449d": {
         "ItemID": "5bfd4c980db834001b73449d",
@@ -356,8 +362,8 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ae099925acfc4001a5fc7b3": {
         "ItemID": "5ae099925acfc4001a5fc7b3",
@@ -370,8 +376,8 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5649d9a14bdc2d79388b4580": {
         "ItemID": "5649d9a14bdc2d79388b4580",
@@ -392,8 +398,8 @@
         "Weight": 0.085,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "59d650cf86f7741b846413a4": {
         "ItemID": "59d650cf86f7741b846413a4",
@@ -406,8 +412,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "59e8977386f77415a553c453": {
         "ItemID": "59e8977386f77415a553c453",
@@ -420,8 +426,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bf3f59f0db834001a6fa060": {
         "ItemID": "5bf3f59f0db834001a6fa060",
@@ -434,8 +440,8 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "628b9471078f94059a4b9bfb": {
         "ItemID": "628b9471078f94059a4b9bfb",
@@ -448,8 +454,8 @@
         "Weight": 0.015,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "628a7b23b0f75035732dd565": {
         "ItemID": "628a7b23b0f75035732dd565",
@@ -462,8 +468,8 @@
         "Weight": 0.026,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5649b0544bdc2d1b2b8b458a": {
         "ItemID": "5649b0544bdc2d1b2b8b458a",
@@ -476,8 +482,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ac72e475acfc400180ae6fe": {
         "ItemID": "5ac72e475acfc400180ae6fe",
@@ -490,8 +496,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a0ed824fcdbcb0176308b0d": {
         "ItemID": "5a0ed824fcdbcb0176308b0d",
@@ -504,8 +510,8 @@
         "Weight": 0.01,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a0eb980fcdbcb001a3b00a6": {
         "ItemID": "5a0eb980fcdbcb001a3b00a6",
@@ -518,8 +524,8 @@
         "Weight": 0.035,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ac733a45acfc400192630e2": {
         "ItemID": "5ac733a45acfc400192630e2",
@@ -532,8 +538,8 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a0f096dfcdbcb0176308b15": {
         "ItemID": "5a0f096dfcdbcb0176308b15",
@@ -546,8 +552,8 @@
         "Weight": 0.01,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5e87114fe2db31558c75a120": {
         "ItemID": "5e87114fe2db31558c75a120",
@@ -560,8 +566,8 @@
         "Weight": 0.022,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5e8708d4ae379e67d22e0102": {
         "ItemID": "5e8708d4ae379e67d22e0102",
@@ -574,8 +580,8 @@
         "Weight": 0.02,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "625ebcef6f53af4aa66b44dc": {
         "ItemID": "625ebcef6f53af4aa66b44dc",
@@ -588,8 +594,8 @@
         "Weight": 0.035,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5caf1691ae92152ac412efb9": {
         "ItemID": "5caf1691ae92152ac412efb9",
@@ -612,8 +618,8 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5caf16a2ae92152ac412efbc": {
         "ItemID": "5caf16a2ae92152ac412efbc",
@@ -626,8 +632,8 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "623166e08c43374ca1567195": {
         "ItemID": "623166e08c43374ca1567195",
@@ -652,8 +658,8 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6231670f0b8aa5472d060095": {
         "ItemID": "6231670f0b8aa5472d060095",
@@ -676,8 +682,8 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5abcbb20d8ce87001773e258": {
         "ItemID": "5abcbb20d8ce87001773e258",
@@ -690,8 +696,8 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5addba3e5acfc4001669f0ab": {
         "ItemID": "5addba3e5acfc4001669f0ab",
@@ -704,8 +710,8 @@
         "Weight": 0.038,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5aafa49ae5b5b00015042a58": {
         "ItemID": "5aafa49ae5b5b00015042a58",
@@ -718,8 +724,8 @@
         "Weight": 0.038,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5b0bc22d5acfc47a8607f085": {
         "ItemID": "5b0bc22d5acfc47a8607f085",
@@ -732,8 +738,8 @@
         "Weight": 0.09,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5de8fb539f98ac2bc659513a": {
         "ItemID": "5de8fb539f98ac2bc659513a",
@@ -746,8 +752,8 @@
         "Weight": 0.01,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5926d2be86f774134d668e4e": {
         "ItemID": "5926d2be86f774134d668e4e",
@@ -762,8 +768,8 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ae30bad5acfc400185c2dc4": {
         "ItemID": "5ae30bad5acfc400185c2dc4",
@@ -830,8 +836,8 @@
         "Weight": 0.136,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "55d5f46a4bdc2d1b198b4567": {
         "ItemID": "55d5f46a4bdc2d1b198b4567",
@@ -874,8 +880,8 @@
         "Weight": 0.126,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ba26b01d4351e0085325a51": {
         "ItemID": "5ba26b01d4351e0085325a51",
@@ -888,8 +894,8 @@
         "Weight": 0.13,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5ba26b17d4351e00367f9bdd": {
         "ItemID": "5ba26b17d4351e00367f9bdd",
@@ -902,8 +908,8 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c1780312e221602b66cc189": {
         "ItemID": "5c1780312e221602b66cc189",
@@ -916,8 +922,8 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c17804b2e2216152006c02f": {
         "ItemID": "5c17804b2e2216152006c02f",
@@ -930,8 +936,8 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5dfa3d7ac41b2312ea33362a": {
         "ItemID": "5dfa3d7ac41b2312ea33362a",
@@ -944,8 +950,8 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5dfa3d950dee1b22f862eae0": {
         "ItemID": "5dfa3d950dee1b22f862eae0",
@@ -958,8 +964,8 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "61816fcad92c473c770215cc": {
         "ItemID": "61816fcad92c473c770215cc",
@@ -972,8 +978,8 @@
         "Weight": 0.034,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "61817865d3a39d50044c13a4": {
         "ItemID": "61817865d3a39d50044c13a4",
@@ -986,8 +992,8 @@
         "Weight": 0.036,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fb6564947ce63734e3fa1da": {
         "ItemID": "5fb6564947ce63734e3fa1da",
@@ -1000,8 +1006,8 @@
         "Weight": 0.02,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fb6567747ce63734e3fa1dc": {
         "ItemID": "5fb6567747ce63734e3fa1dc",
@@ -1014,8 +1020,8 @@
         "Weight": 0.02,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bc09a30d4351e00367fb7c8": {
         "ItemID": "5bc09a30d4351e00367fb7c8",
@@ -1028,8 +1034,8 @@
         "Weight": 0.034,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c18b90d2e2216152142466b": {
         "ItemID": "5c18b90d2e2216152142466b",
@@ -1042,8 +1048,8 @@
         "Weight": 0.034,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bc09a18d4351e003562b68e": {
         "ItemID": "5bc09a18d4351e003562b68e",
@@ -1056,8 +1062,8 @@
         "Weight": 0.036,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c18b9192e2216398b5a8104": {
         "ItemID": "5c18b9192e2216398b5a8104",
@@ -1070,8 +1076,8 @@
         "Weight": 0.036,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fc0fa362770a0045c59c677": {
         "ItemID": "5fc0fa362770a0045c59c677",
@@ -1084,8 +1090,8 @@
         "Weight": 0.065,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5fc0fa957283c4046c58147e": {
         "ItemID": "5fc0fa957283c4046c58147e",
@@ -1098,8 +1104,8 @@
         "Weight": 0.13,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5894a73486f77426d259076c": {
         "ItemID": "5894a73486f77426d259076c",
@@ -1112,8 +1118,8 @@
         "Weight": 0.13,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5894a81786f77427140b8347": {
         "ItemID": "5894a81786f77427140b8347",
@@ -1126,8 +1132,8 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5bb20e49d4351e3bac1212de": {
         "ItemID": "5bb20e49d4351e3bac1212de",
@@ -1140,8 +1146,8 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "55d4af3a4bdc2d972f8b456f": {
         "ItemID": "55d4af3a4bdc2d972f8b456f",
@@ -1154,8 +1160,8 @@
         "Weight": 0.176,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5cadd954ae921500103bb3c2": {
         "ItemID": "5cadd954ae921500103bb3c2",
@@ -1168,8 +1174,8 @@
         "Weight": 0.028,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5cadd940ae9215051e1c2316": {
         "ItemID": "5cadd940ae9215051e1c2316",
@@ -1182,8 +1188,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5cadd919ae921500126a77f3": {
         "ItemID": "5cadd919ae921500126a77f3",
@@ -1196,8 +1202,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "61963a852d2c397d660036ad": {
         "ItemID": "61963a852d2c397d660036ad",
@@ -1213,8 +1219,8 @@
         "Weight": 0.028,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194f2912d2c397d6600348d": {
         "ItemID": "6194f2912d2c397d6600348d",
@@ -1227,8 +1233,8 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194f35c18a3974e5e7421e6": {
         "ItemID": "6194f35c18a3974e5e7421e6",
@@ -1241,8 +1247,8 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194f3286db0f2477964e67d": {
         "ItemID": "6194f3286db0f2477964e67d",
@@ -1255,8 +1261,8 @@
         "Weight": 0.005,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "6194f2df645b5d229654ad77": {
         "ItemID": "6194f2df645b5d229654ad77",
@@ -1269,8 +1275,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5aba637ad8ce87001773e17f": {
         "ItemID": "5aba637ad8ce87001773e17f",
@@ -1283,8 +1289,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5aba62f8d8ce87001943946b": {
         "ItemID": "5aba62f8d8ce87001943946b",
@@ -1297,8 +1303,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5aba639ed8ce8700182ece67": {
         "ItemID": "5aba639ed8ce8700182ece67",
@@ -1311,8 +1317,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a7d9122159bd4001438dbf4": {
         "ItemID": "5a7d9122159bd4001438dbf4",
@@ -1325,8 +1331,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a7d912f159bd400165484f3": {
         "ItemID": "5a7d912f159bd400165484f3",
@@ -1339,8 +1345,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a71e0fb8dc32e00094b97f2": {
         "ItemID": "5a71e0fb8dc32e00094b97f2",
@@ -1353,8 +1359,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a6f5d528dc32e00094b97d9": {
         "ItemID": "5a6f5d528dc32e00094b97d9",
@@ -1367,8 +1373,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a7d90eb159bd400165484f1": {
         "ItemID": "5a7d90eb159bd400165484f1",
@@ -1381,8 +1387,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a6f58f68dc32e000a311390": {
         "ItemID": "5a6f58f68dc32e000a311390",
@@ -1395,8 +1401,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a7d9104159bd400134c8c21": {
         "ItemID": "5a7d9104159bd400134c8c21",
@@ -1409,8 +1415,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5a71e0048dc32e000c52ecc8": {
         "ItemID": "5a71e0048dc32e000c52ecc8",
@@ -1423,8 +1429,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5e81ee213397a21db957f6a6": {
         "ItemID": "5e81ee213397a21db957f6a6",
@@ -1437,8 +1443,8 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5f3e78a7fbf956000b716b8e": {
         "ItemID": "5f3e78a7fbf956000b716b8e",
@@ -1451,8 +1457,8 @@
         "Weight": 0.002,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5e81ee4dcb2b95385c177582": {
         "ItemID": "5e81ee4dcb2b95385c177582",
@@ -1465,8 +1471,8 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5f3e7897ddc4f03b010e204a": {
         "ItemID": "5f3e7897ddc4f03b010e204a",
@@ -1479,8 +1485,8 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5d3eb536a4b9363b1f22f8e2": {
         "ItemID": "5d3eb536a4b9363b1f22f8e2",
@@ -1493,8 +1499,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5d3eb4aba4b93650d64e497d": {
         "ItemID": "5d3eb4aba4b93650d64e497d",
@@ -1507,8 +1513,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "60228a850ddce744014caf69": {
         "ItemID": "60228a850ddce744014caf69",
@@ -1521,8 +1527,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "60228a76d62c9b14ed777a66": {
         "ItemID": "60228a76d62c9b14ed777a66",
@@ -1535,8 +1541,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "60229948cacb6b0506369e27": {
         "ItemID": "60229948cacb6b0506369e27",
@@ -1551,8 +1557,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "602293f023506e50807090cb": {
         "ItemID": "602293f023506e50807090cb",
@@ -1567,8 +1573,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c07b3850db834002330045b": {
         "ItemID": "5c07b3850db834002330045b",
@@ -1581,8 +1587,8 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "56ea7293d2720b8d4b8b45ba": {
         "ItemID": "56ea7293d2720b8d4b8b45ba",
@@ -1595,8 +1601,8 @@
         "Weight": 0.028,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "56d5a77ed2720b90418b4568": {
         "ItemID": "56d5a77ed2720b90418b4568",
@@ -1609,8 +1615,8 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "5c07b36c0db834002a1259e9": {
         "ItemID": "5c07b36c0db834002a1259e9",
@@ -1623,8 +1629,8 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "56d5a661d2720bd8418b456b": {
         "ItemID": "56d5a661d2720bd8418b456b",
@@ -1637,8 +1643,8 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "619f4d304c58466fe1228437": {
         "ItemID": "619f4d304c58466fe1228437",
@@ -1651,8 +1657,8 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "619f4f8c4c58466fe1228439": {
         "ItemID": "619f4f8c4c58466fe1228439",
@@ -1665,8 +1671,8 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "619f52454c58466fe122843b": {
         "ItemID": "619f52454c58466fe122843b",
@@ -1679,8 +1685,8 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "619f4cee4c58466fe1228435": {
         "ItemID": "619f4cee4c58466fe1228435",
@@ -1693,8 +1699,8 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "630765cb962d0247b029dc45": {
         "ItemID": "630765cb962d0247b029dc45",
@@ -1705,8 +1711,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.008,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "630765777d50ff5e8a1ea718": {
         "ItemID": "630765777d50ff5e8a1ea718",
@@ -1717,7 +1723,29 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.007,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
+    "63c6adcfb4ba094317063742": {
+        "ItemID": "63c6adcfb4ba094317063742",
+        "Name": "sight_rear_pm_izhmeh_pm_std",
+        "ModType": "",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [
+            "60228a850ddce744014caf69"
+        ],
+        "Ergonomics": 0,
+        "Weight": 0.002
+    },
+    "6513f153e63f29908d0ffaba": {
+        "ItemID": "6513f153e63f29908d0ffaba",
+        "Name": "sight_rear_rpd_zid_rpd_std",
+        "ModType": "",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.025
     }
 }

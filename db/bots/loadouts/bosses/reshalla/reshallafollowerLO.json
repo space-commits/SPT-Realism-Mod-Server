@@ -451,7 +451,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 50,
+                "mod_equipment_000": 10,
+                "mod_equipment_001": 80,
+                "mod_equipment_002": 80,
+                "mod_mount": 60,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_mount": 60,
                 "mod_mount_000": 60,
                 "mod_muzzle": 100,
@@ -848,8 +860,7 @@
                         "648afce7ec6bb25b2608defb",
                         "637784c5f7b3f4ac1a0d1a9a"
                     ]
-                }
-                ,
+                },
                 "6374a822e629013b9c0645c8": {
                     "mod_sight_rear": [
                         "63c6adcfb4ba094317063742"
@@ -906,7 +917,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 50,
+                "mod_equipment_000": 10,
+                "mod_equipment_001": 80,
+                "mod_equipment_002": 80,
+                "mod_mount": 60,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_mount": 60,
                 "mod_mount_000": 60,
                 "mod_muzzle": 100,
@@ -1298,8 +1321,7 @@
                         "648afce7ec6bb25b2608defb",
                         "637784c5f7b3f4ac1a0d1a9a"
                     ]
-                }
-                ,
+                },
                 "6374a822e629013b9c0645c8": {
                     "mod_sight_rear": [
                         "63c6adcfb4ba094317063742"
@@ -1356,7 +1378,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 50,
+                "mod_equipment_000": 10,
+                "mod_equipment_001": 80,
+                "mod_equipment_002": 80,
+                "mod_mount": 60,
+                "mod_nvg": 15,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_mount": 60,
                 "mod_mount_000": 60,
                 "mod_muzzle": 100,

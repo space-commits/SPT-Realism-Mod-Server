@@ -250,7 +250,7 @@
                 "ArmBand": 0,
                 "ArmorVest": 100,
                 "Backpack": 100,
-                "Earpiece": 100,
+                "Earpiece": 0,
                 "Eyewear": 0,
                 "FaceCover": 0,
                 "FirstPrimaryWeapon": 100,
@@ -262,7 +262,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 75,
+                "mod_equipment_000": 35,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100,
+                "mod_mount": 100,
+                "mod_nvg": 50,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_foregrip": 88,
                 "mod_magazine": 100,
                 "mod_mount": 100,
@@ -494,7 +506,7 @@
                 "ArmBand": 0,
                 "ArmorVest": 100,
                 "Backpack": 100,
-                "Earpiece": 100,
+                "Earpiece": 0,
                 "Eyewear": 0,
                 "FaceCover": 0,
                 "FirstPrimaryWeapon": 100,
@@ -506,7 +518,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 75,
+                "mod_equipment_000": 35,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100,
+                "mod_mount": 100,
+                "mod_nvg": 50,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_foregrip": 88,
                 "mod_magazine": 100,
                 "mod_mount": 100,
@@ -744,7 +768,7 @@
                 "ArmBand": 0,
                 "ArmorVest": 100,
                 "Backpack": 100,
-                "Earpiece": 100,
+                "Earpiece": 0,
                 "Eyewear": 0,
                 "FaceCover": 0,
                 "FirstPrimaryWeapon": 100,
@@ -756,7 +780,19 @@
                 "SecuredContainer": 100,
                 "TacticalVest": 100
             },
-            "mods": {
+            "equipmentMods": {
+                "back_plate": 100,
+                "front_plate": 100,
+                "left_side_plate": 100,
+                "mod_equipment": 75,
+                "mod_equipment_000": 35,
+                "mod_equipment_001": 100,
+                "mod_equipment_002": 100,
+                "mod_mount": 100,
+                "mod_nvg": 50,
+                "right_side_plate": 100
+            },
+            "weaponMods": {
                 "mod_foregrip": 88,
                 "mod_magazine": 100,
                 "mod_mount": 100,
