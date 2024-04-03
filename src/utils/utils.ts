@@ -4,6 +4,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { Arrays } from "./arrays";
 import * as path from 'path';
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
@@ -15,9 +16,6 @@ export class Utils {
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
-    }
-    medItems(): string[] {
-        return this.arrays.stashMeds;
     }
     
     public getInt(min: number, max: number): number
@@ -36,45 +34,63 @@ export class Utils {
         if (playerData?.Inventory !== undefined) {
             for (let i in playerData.Inventory.items) {
                 if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
-                    for (let j in this.medItems()) {
-                        if (playerData.Inventory.items[i]._tpl === this.medItems()[j]) {
-                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB()[this.medItems()[j]]._props.MaxHpResource;
-                        }
+                    let templateItem = this.itemDB()[playerData.Inventory.items[i]._tpl];
+                    if(templateItem !== null && templateItem !== undefined){
+                        playerData.Inventory.items[i].upd.MedKit.HpResource = templateItem._props.MaxHpResource;
                     }
                 }
             }
         }
     }
 
-    public correctItemResources(playerData: IPmcData, pmcEXP: number) {
+    public correctItemResources(playerData: IPmcData, playerXP: number, logger: ILogger) {
         if (playerData?.Inventory !== undefined) {
             for (let i in playerData.Inventory.items) {
                 let profileItem = playerData.Inventory.items[i];
                 if (profileItem?.upd?.Repairable?.Durability !== undefined) {
-                    this.correctDuraHelper(profileItem, pmcEXP);
+                    this.correctDuraHelper(profileItem, playerXP);
                 }
                 if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
-                    this.correctMedicalRes(profileItem, pmcEXP);
+                    this.correctMedicalRes(profileItem, playerXP, logger);
+                }
+                if(modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent !== undefined){
+                    this.correcProvisionRes(profileItem, playerXP, logger);
                 }
             }
         }
     }
 
-    private correctMedicalRes(profileItem: Item, pmcEXP: number) {
-        for (let j in this.medItems()) {
-
-            if (profileItem._tpl === this.medItems()[j]) {
-                if ((profileItem.upd.MedKit.HpResource > this.itemDB()[this.medItems()[j]]._props.MaxHpResource) || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
-                    profileItem.upd.MedKit.HpResource = this.itemDB()[this.medItems()[j]]._props.MaxHpResource;
-                }
+    private correcProvisionRes(profileItem: Item, playerXP: number, logger: ILogger) {
+        let templateItem = this.itemDB()[profileItem._tpl];
+        if(templateItem !== null && templateItem !== undefined){
+            logger.warning("found item");
+            logger.warning("item hp resource " + profileItem.upd.FoodDrink.HpPercent);
+            logger.warning("template resource " + templateItem._props.MaxResource);
+            if(profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0 ){
+                profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
             }
         }
     }
 
-    private correctDuraHelper(profileItem: Item,  pmcEXP: number) {
+
+    private correctMedicalRes(profileItem: Item, playerXP: number, logger: ILogger) {
+
+        let templateItem = this.itemDB()[profileItem._tpl];
+        if(templateItem !== null && templateItem !== undefined){
+            logger.warning("found item");
+            logger.warning("item hp resource " + profileItem.upd.MedKit.HpResource);
+            logger.warning("template resource " + templateItem._props.MaxHpResource);
+            if(profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0 ){
+                profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
+            }
+      
+        }
+    }
+
+    private correctDuraHelper(profileItem: Item, playerXP: number) {
         for (let j in this.itemDB()) {
             let serverItem = this.itemDB()[j]
-            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
+            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (playerXP == 0)) {
                 profileItem.upd.Repairable.Durability = serverItem._props.Durability;
                 profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;
             }

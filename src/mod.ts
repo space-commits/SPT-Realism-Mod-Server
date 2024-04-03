@@ -760,7 +760,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     }
 
     private checkProfile(pmcData: IPmcData, pmcEXP: number, utils: Utils, player: Player, logger: ILogger) {
-        utils.correctItemResources(pmcData, pmcEXP);
+        utils.correctItemResources(pmcData, pmcEXP, logger);
         if (modConfig.med_changes == true) {
             pmcData.Health.Hydration.Maximum = player.hydration;
             pmcData.Health.Energy.Maximum = player.energy;

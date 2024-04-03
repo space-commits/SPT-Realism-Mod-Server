@@ -199,6 +199,7 @@ export class TieredFlea {
             this.canSellSpecial(true, serverItem);
             this.canSellOtherLoot(true, serverItem);
             this.canSellMounts(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
 
@@ -216,6 +217,7 @@ export class TieredFlea {
             this.canSellParts(true, serverItem);
             this.canSellLube(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
 
@@ -238,6 +240,7 @@ export class TieredFlea {
             this.canSellMedicalSupplies(true, serverItem);
             this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
 
@@ -268,6 +271,7 @@ export class TieredFlea {
             this.canSellSMG(true, serverItem);
             this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
 
@@ -309,6 +313,7 @@ export class TieredFlea {
             this.canSellJewelry(true, serverItem);
             this.canSellElectronics(true, serverItem);
             this.canSellDMR(true, serverItem)
+            this.canSellIrons(true, serverItem);
         }
     }
 
@@ -361,6 +366,7 @@ export class TieredFlea {
             this.canSellAmmo(true, serverItem);
             this.canSellInfo(true, serverItem);
             this.canSellKeys(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
 
@@ -377,6 +383,7 @@ export class TieredFlea {
     }
 
     private canSellAll(bool: boolean, serverItem: ITemplateItem) {
+        this.canSellIrons(bool, serverItem);
         this.canSellSecureContainer(bool, serverItem);
         this.canSellMeds(bool, serverItem);
         this.canSellStims(bool, serverItem);
@@ -598,7 +605,7 @@ export class TieredFlea {
         if (this.checkIfBanned(serverItem._id)) {
             serverItem._props.CanSellOnRagfair = false;
         }
-        else if (serverItem._parent === ParentClasses.OTHER) {
+        else if (serverItem._parent === ParentClasses.FUEL) {
             serverItem._props.CanSellOnRagfair = bool;
         }
     }
@@ -625,7 +632,7 @@ export class TieredFlea {
         if (this.checkIfBanned(serverItem._id)) {
             serverItem._props.CanSellOnRagfair = false;
         }
-        else if (serverItem._parent === ParentClasses.ELECTRONICS) {
+        else if (serverItem._parent === ParentClasses.ELECTRONICS || serverItem._parent === ParentClasses.BATTERY) {
             serverItem._props.CanSellOnRagfair = bool;
         }
     }

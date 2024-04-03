@@ -266,7 +266,7 @@ export class JsonHandler {
                     serverItem._props.shotgunDispersion = fileItem.ShotgunDispersion;
                     serverItem._props.Weight = fileItem.Weight;
                     serverItem._props.bFirerate = fileItem.AutoROF;
-                    serverItem._props.SingleFireRate = fileItem.SemiROF * 1.05;
+                    serverItem._props.SingleFireRate = fileItem.SemiROF * 1.1;
                     serverItem._props.DoubleActionAccuracyPenalty = fileItem.DoubleActionAccuracyPenalty;
                     serverItem._props.RecoilReturnSpeedHandRotation = fileItem.Convergence;
                     serverItem._props.RecoilDampingHandRotation = fileItem.RecoilDamping;

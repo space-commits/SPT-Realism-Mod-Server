@@ -594,7 +594,7 @@ class Main {
         }
     }
     checkProfile(pmcData, pmcEXP, utils, player, logger) {
-        utils.correctItemResources(pmcData, pmcEXP);
+        utils.correctItemResources(pmcData, pmcEXP, logger);
         if (modConfig.med_changes == true) {
             pmcData.Health.Hydration.Maximum = player.hydration;
             pmcData.Health.Energy.Maximum = player.energy;

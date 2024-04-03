@@ -206,7 +206,7 @@
         },
         {
             "BuffType": "Antidote",
-            "Chance": 0.25,
+            "Chance": 0.33,
             "Delay": 15,
             "Duration": 210,
             "Value": 0,
