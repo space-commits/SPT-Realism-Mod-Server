@@ -42,9 +42,9 @@ class Consumables {
             this.itemDB()["damage_debuff"]._props.StimulatorBuffs = "Buffs_Damage";
             this.itemDB()["adrenal_debuff"]._props.StimulatorBuffs = "Buffs_Adrenal";
             this.itemDB()["regen_debuff"]._props.StimulatorBuffs = "Buffs_Regenerative";
+            ///Custom///
+            this.itemDB()["SJ0"]._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
         }
-        ///Custom///
-        this.itemDB()["SJ0"]._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
         //adrenaline
         this.itemDB()["5c10c8fd86f7743d7d706df3"]._props.effects_damage = {
             "Contusion": {
