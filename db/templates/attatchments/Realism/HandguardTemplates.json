@@ -3587,7 +3587,7 @@
         "Ergonomics": 0,
         "Accuracy": 0,
         "HeatFactor": 1.05,
-        "CoolFactor": 0.95,
+        "CoolFactor": 1.05,
         "ConflictingItems": [],
         "Weight": 0.1
     },
