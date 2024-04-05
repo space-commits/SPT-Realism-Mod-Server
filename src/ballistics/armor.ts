@@ -29,7 +29,7 @@ export class Armor {
     public loadArmor() {
 
         //Armor Destructibility values
-        this.armMat().Glass.Destructibility = 1;//
+        this.armMat().Glass.Destructibility = 0.5;//
         this.armMat().Aramid.Destructibility = 0.45;
         this.armMat().Ceramic.Destructibility = 0.4;//
         this.armMat().Combined.Destructibility = 0.3;//
