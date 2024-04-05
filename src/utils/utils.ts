@@ -112,21 +112,6 @@ export class Utils {
         return weighedElems[randomTier];
     }
 
-    public removeCustomItems(playerData: IPmcData) {
-        if (playerData?.Inventory !== undefined) {
-            for (let i = 0; i < playerData.Inventory.items.length; i++) {
-
-                if (playerData.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
-                    playerData.Inventory.items[i]._tpl === "TIER2MEDKIT" ||
-                    playerData.Inventory.items[i]._tpl === "TIER3MEDKIT" ||
-                    playerData.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
-                    playerData.Inventory.items[i]._tpl = "5755356824597772cb798962"
-                    playerData.Inventory.items[i].upd.MedKit.HpResource = 100;
-                }
-            }
-        }
-    }
-
     public pickRandNumInRange(min: number, max: number): number {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }

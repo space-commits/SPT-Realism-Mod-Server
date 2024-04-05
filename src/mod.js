@@ -193,7 +193,6 @@ class Main {
                                 this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
                                 this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
                                 if (modConfig.med_changes == false && modConfig.revert_hp == true) {
-                                    utils.removeCustomItems(pmcData);
                                     pmcData.Health.Hydration.Maximum = player.defaultHydration;
                                     pmcData.Health.Energy.Maximum = player.defaultEnergy;
                                     if (pmcData.Health.Energy.Current > pmcData.Health.Energy.Maximum) {

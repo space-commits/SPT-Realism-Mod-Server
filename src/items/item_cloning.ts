@@ -18,55 +18,6 @@ export class ItemCloning {
     }
 
     public createCustomMedItems() {
-        //Tier 1 Medkit
-        this.cloneMedicalItem(
-            "5755356824597772cb798962",
-            "TIER1MEDKIT",
-            this.medItems.TIER1MEDKIT.MaxHpResource,
-            this.medItems.TIER1MEDKIT.medUseTime,
-            this.medItems.TIER1MEDKIT.hpResourceRate,
-            "assets/content/items/barter/item_barter_meds_tools/item_barter_meds_tools.bundle",
-            "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle",
-            "yellow ",
-            this.medItems.TIER1MEDKIT.effects_damage,
-            {}
-        );
-        this.addToHandbook("TIER1MEDKIT", "5b47574386f77428ca22b338", 10000);
-        this.addToLocale("TIER1MEDKIT", "Makeshift Medical Kit", "TIER1", "A makeshift medical kit used for healing minor wounds that have been already stabilized in the field. Not suitable for use in the field.");
-
-        //Tier 2 Medkit
-        this.cloneMedicalItem(
-            "5755356824597772cb798962",
-            "TIER2MEDKIT",
-            this.medItems.TIER2MEDKIT.MaxHpResource,
-            this.medItems.TIER2MEDKIT.medUseTime,
-            this.medItems.TIER2MEDKIT.hpResourceRate,
-            "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_loot.bundle",
-            "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle",
-            "blue",
-            this.medItems.TIER2MEDKIT.effects_damage,
-            {}
-        );
-        this.addToHandbook("TIER2MEDKIT", "5b47574386f77428ca22b338", 20000);
-        this.addToLocale("TIER2MEDKIT", "Improved Makeshift Medical Kit", "TIER2", "An improved makeshift medical kit used for healing wounds that have been already stabilized in the field. Not suitable for use in the field.");
-
-        //Tier 3 Medkit
-        this.cloneMedicalItem(
-            "5755356824597772cb798962",
-            "TIER3MEDKIT",
-            this.medItems.TIER3MEDKIT.MaxHpResource,
-            this.medItems.TIER3MEDKIT.medUseTime,
-            this.medItems.TIER3MEDKIT.hpResourceRate,
-            "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_loot.bundle",
-            "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_container.bundle",
-            "violet",
-            this.medItems.TIER3MEDKIT.effects_damage,
-            {}
-        );
-        this.addToHandbook("TIER3MEDKIT", "5b47574386f77428ca22b338", 30000);
-        this.addToLocale("TIER3MEDKIT", "High-Grade Makeshift Medical Kit", "TIER3", "A high-grade makeshift medical kit used for healing more severe wounds that have been already stabilized in the field. Not suitable for use in the field.");
-
-
         //SJO Regen
         this.cloneMedicalItem(
             "5c10c8fd86f7743d7d706df3",

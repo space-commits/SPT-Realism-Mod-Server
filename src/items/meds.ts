@@ -355,35 +355,6 @@ export class Consumables {
 
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-
-            if (serverItem._id === "SUPERBOTMEDKIT") {
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
-                serverItem._props.ConflictingItems.splice(4, 0, "false");
-            }
-            if (serverItem._id === "TIER1MEDKIT") {
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
-                serverItem._props.ConflictingItems.splice(4, 0, "false");
-            }
-            if (serverItem._id === "TIER2MEDKIT") {
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
-                serverItem._props.ConflictingItems.splice(4, 0, "false");
-            }
-            if (serverItem._id === "TIER3MEDKIT") {
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
-                serverItem._props.ConflictingItems.splice(4, 0, "false");
-            }
             ///Pain Meds//
             //Analgin
             if (serverItem._id === "544fb37f4bdc2dee738b4567") {
