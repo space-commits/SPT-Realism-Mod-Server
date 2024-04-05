@@ -711,7 +711,6 @@ class Consumables {
                 serverItem._props.MaxHpResource = this.medItems.cms.MaxHpResource;
                 serverItem._props.effects_damage = this.medItems.cms.effects_damage;
                 serverItem._props.medUseTime = this.medItems.cms.medUseTime;
-                // serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "surg");
                 serverItem._props.ConflictingItems.splice(2, 0, "surg");
@@ -728,7 +727,6 @@ class Consumables {
                 serverItem._props.MaxHpResource = this.medItems.surv12.MaxHpResource;
                 serverItem._props.effects_damage = this.medItems.surv12.effects_damage;
                 serverItem._props.medUseTime = this.medItems.surv12.medUseTime;
-                // serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "surg");
                 serverItem._props.ConflictingItems.splice(2, 0, "surg");
