@@ -81,7 +81,7 @@ class BotLoader {
         return this.configServ.getConfig(ConfigTypes_1.ConfigTypes.PMC);
     }
     lootBlacklist() {
-        const blacklist = [
+        return [
             "generic_debuff",
             "performance_debuff",
             "weight_debuff",
@@ -90,7 +90,6 @@ class BotLoader {
             "adrenal_debuff",
             "regen_debuff"
         ];
-        return blacklist;
     }
     loadBots() {
         if (this.modConfig.dynamic_loot_pmcs === true) {

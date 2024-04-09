@@ -13,11 +13,15 @@ export class Quests {
     }
 
     public removeFIRQuestRequire() {
-        for (let quest in this.questDB) {
-            let availForFin = this.questDB[quest].conditions.AvailableForFinish;
-            for (let requirement in availForFin) {
-                if (availForFin[requirement]._props.onlyFoundInRaid) {
-                    availForFin[requirement]._props.onlyFoundInRaid = false;
+        for (let i in this.questDB()) {
+            let quest = this.questDB()[i];
+            if (quest && quest.conditions && quest.conditions.AvailableForFinish) {
+
+                let availForFin = quest.conditions.AvailableForFinish;
+                for (let requirement in availForFin) {
+                    if (availForFin[requirement].onlyFoundInRaid) {
+                        availForFin[requirement].onlyFoundInRaid = false;
+                    }
                 }
             }
         }
@@ -27,34 +31,41 @@ export class Quests {
         }
     }
 
-    private changeGunsmishRequirements(conditions: any, num: number) {
-        conditions[num]._props.ergonomics.compareMethod = ">=";
-        conditions[num]._props.ergonomics.value = -100;
-        conditions[num]._props.recoil.compareMethod = "<=";
-        conditions[num]._props.recoil.value = 100000;
-        conditions[num]._props.weight.compareMethod = "<=";
-        conditions[num]._props.weight.value = 10000;
-        conditions[num]._props.width.compareMethod = ">=";
-        conditions[num]._props.width.value = 0;
-        conditions[num]._props.height.compareMethod = ">=";
-        conditions[num]._props.height.value = 0;
-        conditions[num]._props.durability.compareMethod = "<=";
-        conditions[num]._props.durability.value = 200;
-    }
-
     public fixMechancicQuests() {
-        for (let quest in this.questDB()) {
-            if (this.questDB()[quest].QuestName.includes("Gunsmith")) {
-                let conditions = this.questDB()[quest].conditions.AvailableForFinish;
-
-                for (let i = 0; i < conditions.length; i++) {
-                    this.changeGunsmishRequirements(conditions, i);
+        for (let i in this.questDB()) {
+            if (this.questDB()[i].QuestName.includes("Gunsmith")) {
+                let quest = this.questDB()[i];
+                if (quest && quest.conditions && quest.conditions.AvailableForFinish) {
+                    quest.conditions.AvailableForFinish.forEach((condition: any) => {
+                        if (condition["ergonomics"]) {
+                            condition["ergonomics"].value = 0;
+                            condition["ergonomics"].compareMethod = ">=";
+                        }
+                        if (condition["recoil"]) {
+                            condition["recoil"].value = 0;
+                            condition["ergonomics"].compareMethod = ">=";
+                        }
+                        if (condition["weight"]) {
+                            condition["weight"].value = 0;
+                            condition["ergonomics"].compareMethod = ">=";
+                        }
+                        if (condition["width"]) {
+                            condition["width"].value = 0;
+                            condition["ergonomics"].compareMethod = ">=";
+                        }
+                        if (condition["height"]) {
+                            condition["height"].value = 0;
+                            condition["ergonomics"].compareMethod = ">=";
+                        }
+                        if (condition["durability"]) {
+                            condition["durability"].value = 0;
+                            condition["ergonomics"].compareMethod = ">=";
+                        }
+                    });
                 }
 
-                let id = this.questDB()[quest]._id;
-
+                let id = this.questDB()[i]._id;
                 let desc = this.localesEN()[id + " description"];
-
                 this.localesEN()[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
 
             }

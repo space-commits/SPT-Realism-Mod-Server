@@ -588,7 +588,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(3, 0, "1");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "150"); // HP restore amount
+                serverItem._props.ConflictingItems.splice(6, 0, "50"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -624,7 +624,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "47"); // HP restore amount
+                serverItem._props.ConflictingItems.splice(6, 0, "67"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -642,7 +642,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "40"); // HP restore amount
+                serverItem._props.ConflictingItems.splice(6, 0, "50"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -660,7 +660,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "51"); // HP restore amount
+                serverItem._props.ConflictingItems.splice(6, 0, "25"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }

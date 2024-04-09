@@ -81,7 +81,7 @@ export class BotLoader {
     }
 
     lootBlacklist(): string[]{
-        const blacklist = [
+        return [
             "generic_debuff",
             "performance_debuff",
             "weight_debuff",
@@ -90,7 +90,6 @@ export class BotLoader {
             "adrenal_debuff",
             "regen_debuff"
         ];
-        return blacklist;
     }
 
     public loadBots() {

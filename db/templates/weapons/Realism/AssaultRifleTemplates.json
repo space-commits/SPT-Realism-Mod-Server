@@ -1632,7 +1632,7 @@
         "HorizontalRecoil": 140,
         "Dispersion": 11,
         "CameraRecoil": 0.03,
-        "VisualMulti": 1,
+        "VisualMulti": 1.15,
         "Convergence": 17,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.1,
@@ -1656,14 +1656,14 @@
         "SemiROF": 400,
         "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.41,
+        "BaseChamberSpeedMulti": 1.5,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1.37,
+        "BaseChamberCheckSpeed": 1.5,
         "BaseFixSpeed": 1.2,
         "OffsetRotation": 0.008,
-        "RecoilIntensity": 0.15
+        "RecoilIntensity": 0.155
     },
     "65290f395ae2ae97b80fdf2d": {
         "ItemID": "65290f395ae2ae97b80fdf2d",

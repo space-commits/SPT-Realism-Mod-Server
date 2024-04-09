@@ -8,13 +8,15 @@ import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
 import { HandbookItem } from "@spt-aki/models/eft/common/tables/IHandbookBase";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
+import { IItemConfig } from "@spt-aki/models/spt/config/IItemConfig";
+import { Arrays } from "src/utils/arrays";
 
 const myTemplates = require("../../db/templates/new_items/items.json");
 const myLocales = require("../../db/templates/new_items/en.json");
 const myHandbook = require("../../db/templates/new_items/handbook.json");
 
 export class ItemsClass {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private inventoryConf: IInventoryConfig, private raidConf: IInRaidConfig, private fleaConf: IRagfairConfig) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private inventoryConf: IInventoryConfig, private raidConf: IInRaidConfig, private fleaConf: IRagfairConfig, private itemConfig: IItemConfig,  private arrays: Arrays) { }
 
     globalDB(): IConfig {
         return this.tables.globals.config;
@@ -181,6 +183,14 @@ export class ItemsClass {
                 this.itemDB()["6kh4_bayonet"]._props.ConflictingItems.push(item);
                 // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
+        }
+    }
+
+
+    public loadItemBlacklists(){
+        for(let i in this.arrays.blacklistedItems){
+            this.itemConfig.blacklist.push(this.arrays.blacklistedItems[i]);
+            this.itemConfig.rewardItemBlacklist.push(this.arrays.blacklistedItems[i]);
         }
     }
 

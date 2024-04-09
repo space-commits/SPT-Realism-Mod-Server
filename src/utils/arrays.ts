@@ -399,6 +399,16 @@ export class Arrays {
         "5c0647fdd443bc2504c2d371"
     ];
 
+    public blacklistedItems = [
+        "generic_debuff",
+        "performance_debuff",
+        "weight_debuff",
+        "clotting_debuff",
+        "damage_debuff",
+        "adrenal_debuff",
+        "regen_debuff"
+    ];
+
     public stashMeds = [
         "544fb37f4bdc2dee738b4567",
         "5af0548586f7743a532b7e99",

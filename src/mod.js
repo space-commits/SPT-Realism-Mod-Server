@@ -435,6 +435,7 @@ class Main {
         const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.IN_RAID);
+        const itemConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.ITEM);
         const jsonUtil = container.resolve("JsonUtil");
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
@@ -444,7 +445,7 @@ class Main {
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
+        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf, arrays);
         const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
@@ -534,7 +535,7 @@ class Main {
         if (utils_1.ConfigChecker.dllIsPresent == true) {
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
-                // quests.fixMechancicQuests();
+                quests.fixMechancicQuests();
                 ammo.grenadeTweaks();
             }
             if (modConfig.headset_changes) {

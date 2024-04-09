@@ -11,13 +11,17 @@ class ItemsClass {
     inventoryConf;
     raidConf;
     fleaConf;
-    constructor(logger, tables, modConfig, inventoryConf, raidConf, fleaConf) {
+    itemConfig;
+    arrays;
+    constructor(logger, tables, modConfig, inventoryConf, raidConf, fleaConf, itemConfig, arrays) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
         this.inventoryConf = inventoryConf;
         this.raidConf = raidConf;
         this.fleaConf = fleaConf;
+        this.itemConfig = itemConfig;
+        this.arrays = arrays;
     }
     globalDB() {
         return this.tables.globals.config;
@@ -166,6 +170,12 @@ class ItemsClass {
                 this.itemDB()["6kh4_bayonet"]._props.ConflictingItems.push(item);
                 // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
+        }
+    }
+    loadItemBlacklists() {
+        for (let i in this.arrays.blacklistedItems) {
+            this.itemConfig.blacklist.push(this.arrays.blacklistedItems[i]);
+            this.itemConfig.rewardItemBlacklist.push(this.arrays.blacklistedItems[i]);
         }
     }
     loadItemsRestrictions() {

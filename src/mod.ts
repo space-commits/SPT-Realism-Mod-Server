@@ -90,6 +90,7 @@ import { Armor } from "./ballistics/armor";
 import * as path from 'path';
 import * as fs from 'fs';
 import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
+import { IItemConfig } from "@spt-aki/models/spt/config/IItemConfig";
 
 
 const crafts = require("../db/items/hideout_crafts.json");
@@ -567,6 +568,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig<IInRaidConfig>(ConfigTypes.IN_RAID);
+        const itemConf = configServer.getConfig<IItemConfig>(ConfigTypes.ITEM);
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
@@ -576,7 +578,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
+        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf, arrays);
         const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
@@ -689,7 +691,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (ConfigChecker.dllIsPresent == true) {
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
-                // quests.fixMechancicQuests();
+                quests.fixMechancicQuests();
                 ammo.grenadeTweaks();
             }
             if (modConfig.headset_changes) {
@@ -717,6 +719,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             attachBase.loadAttRequirements();
         }
 
+        itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);

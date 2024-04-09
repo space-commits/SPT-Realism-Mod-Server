@@ -284,13 +284,13 @@
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 4
             },
             "Fracture": {
                 "delay": 10,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 4
             }
         },
         "StimulatorBuffs": "Buffs_grizzly",
