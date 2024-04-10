@@ -33,42 +33,50 @@ export class Quests {
 
     public fixMechancicQuests() {
         for (let i in this.questDB()) {
-            if (this.questDB()[i].QuestName.includes("Gunsmith")) {
-                let quest = this.questDB()[i];
-                if (quest && quest.conditions && quest.conditions.AvailableForFinish) {
-                    quest.conditions.AvailableForFinish.forEach((condition: any) => {
-                        if (condition["ergonomics"]) {
-                            condition["ergonomics"].value = 0;
-                            condition["ergonomics"].compareMethod = ">=";
-                        }
-                        if (condition["recoil"]) {
-                            condition["recoil"].value = 0;
-                            condition["ergonomics"].compareMethod = ">=";
-                        }
-                        if (condition["weight"]) {
-                            condition["weight"].value = 0;
-                            condition["ergonomics"].compareMethod = ">=";
-                        }
-                        if (condition["width"]) {
-                            condition["width"].value = 0;
-                            condition["ergonomics"].compareMethod = ">=";
-                        }
-                        if (condition["height"]) {
-                            condition["height"].value = 0;
-                            condition["ergonomics"].compareMethod = ">=";
-                        }
-                        if (condition["durability"]) {
-                            condition["durability"].value = 0;
-                            condition["ergonomics"].compareMethod = ">=";
-                        }
-                    });
+
+            if (!this.questDB()[i].QuestName.includes("Gunsmith")) continue;
+
+            let quest = this.questDB()[i];
+            this.logger.warning("" +quest.QuestName);
+            if (!quest?.conditions?.AvailableForFinish) continue;
+
+            for(let j in quest.conditions.AvailableForFinish){
+                let condition = quest.conditions.AvailableForFinish[j];
+                if (condition["ergonomics"]) {
+                    condition["ergonomics"].value = 1;
+                    condition["ergonomics"].compareMethod = ">=";
+                    this.logger.warning("" + condition["ergonomics"].value);
                 }
-
-                let id = this.questDB()[i]._id;
-                let desc = this.localesEN()[id + " description"];
-                this.localesEN()[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
-
+                if (condition["recoil"]) {
+                    condition["recoil"].value = 1;
+                    condition["recoil"].compareMethod = ">=";
+                    this.logger.warning("" + condition["recoil"].value);
+                }
+                if (condition["weight"]) {
+                    condition["weight"].value = 0;
+                    condition["weight"].compareMethod = ">=";
+                    this.logger.warning("" + condition["weight"].value);
+                }
+                if (condition["width"]) {
+                    condition["width"].value = 0;
+                    condition["width"].compareMethod = ">=";
+                    this.logger.warning("" + condition["width"].value);
+                }
+                if (condition["height"]) {
+                    condition["height"].value = 0;
+                    condition["height"].compareMethod = ">=";
+                    this.logger.warning("" + condition["height"].value);
+                }
+                if (condition["durability"]) {
+                    condition["durability"].value = 1;
+                    condition["durability"].compareMethod = ">=";
+                    this.logger.warning("" + condition["durability"].value);
+                }
             }
+
+            let id = this.questDB()[i]._id;
+            let desc = this.localesEN()[id + " description"];
+            this.localesEN()[id + " description"] = `${desc}` + "\n\nDurability, Ergo, Recoil, Weight and Size Requirements Have Been Removed.";
         }
 
         if (this.modConf.logEverything == true) {

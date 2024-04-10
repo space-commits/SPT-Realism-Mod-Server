@@ -259,19 +259,28 @@ export class ItemCloning {
     }
 
 
-    private addCustomWeapsToQuests(targetWeap: string, weapToAdd: string) {
-        for (let quest in this.questDB) {
-            let conditions = this.questDB[quest].conditions.AvailableForFinish[0];
-            if (conditions._parent === "CounterCreator") {
-                let killConditions = conditions._props.counter.conditions[0]
-                if (killConditions._parent === "Kills" && killConditions._props?.weapon !== undefined) {
-                    if (killConditions._props.weapon.includes(targetWeap)) {
-                        killConditions._props.weapon.push(weapToAdd);
+    private addCustomWeapsToQuests(originalWeapon: string, weapToAdd: string) {
+        for (let q in this.questDB()) {
+            let quest = this.questDB()[q];
+
+            if (!quest?.conditions?.AvailableForFinish) continue;
+
+            let availForFin = quest.conditions.AvailableForFinish;
+            for (let r in availForFin) {
+                let requirement = availForFin[r];
+
+                if (requirement.conditionType !== "CounterCreator" || !requirement.counter?.conditions) continue;
+
+                for (let c in requirement.counter.conditions) {
+                    let subCondition = requirement.counter.conditions[c];
+                    if (subCondition.conditionType == "Kills" && subCondition.weapon && subCondition.weapon.includes(originalWeapon)) {
+                        subCondition.weapon.push(weapToAdd);
                     }
                 }
             }
         }
     }
+
     private addToMastering(id: string, masteringCat: string) {
         let mastering = this.tables.globals.config.Mastering;
         for (let cat in mastering) {

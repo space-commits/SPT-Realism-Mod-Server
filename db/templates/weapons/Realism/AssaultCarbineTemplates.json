@@ -359,10 +359,10 @@
         "BaseTorque": 1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 84,
+        "VerticalRecoil": 86,
         "HorizontalRecoil": 140,
         "Dispersion": 11,
-        "CameraRecoil": 0.03,
+        "CameraRecoil": 0.04,
         "VisualMulti": 1.2,
         "Convergence": 17,
         "RecoilAngle": 90,
@@ -394,7 +394,7 @@
         "BaseChamberCheckSpeed": 1.45,
         "BaseFixSpeed": 1.17,
         "OffsetRotation": 0.008,
-        "RecoilIntensity": 0.155
+        "RecoilIntensity": 0.165
     },
     "5d43021ca4b9362eab4b5e25": {
         "ItemID": "5d43021ca4b9362eab4b5e25",
@@ -405,10 +405,10 @@
         "BaseTorque": 1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 84,
+        "VerticalRecoil": 86,
         "HorizontalRecoil": 140,
         "Dispersion": 11,
-        "CameraRecoil": 0.03,
+        "CameraRecoil": 0.04,
         "VisualMulti": 1.15,
         "Convergence": 17,
         "RecoilAngle": 90,
@@ -440,7 +440,7 @@
         "BaseChamberCheckSpeed": 1.55,
         "BaseFixSpeed": 1.25,
         "OffsetRotation": 0.008,
-        "RecoilIntensity": 0.155
+        "RecoilIntensity": 0.165
     },
     "59e6152586f77473dc057aa1": {
         "ItemID": "59e6152586f77473dc057aa1",

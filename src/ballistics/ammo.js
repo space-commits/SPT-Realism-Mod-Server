@@ -3000,7 +3000,7 @@ class Ammo {
             // PRS
             if (serverItem._id === "56dff338d2720bbd668b4569") {
                 serverItem._props.PenetrationPower = 46;
-                serverItem._props.ArmorDamage = 1;
+                serverItem._props.ArmorDamage = 0.5;
                 serverItem._props.Damage = 61;
                 serverItem._props.InitialSpeed = 910;
                 serverItem._props.RicochetChance = 0.0;
@@ -3334,7 +3334,7 @@ class Ammo {
             // Mk 255 Mod 0
             if (serverItem._id === "59e6918f86f7746c9f75e849") {
                 serverItem._props.PenetrationPower = 48;
-                serverItem._props.ArmorDamage = 1;
+                serverItem._props.ArmorDamage = 0.5;
                 serverItem._props.Damage = 70;
                 serverItem._props.InitialSpeed = 880;
                 serverItem._props.RicochetChance = 0.0;

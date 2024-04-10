@@ -734,7 +734,7 @@
         "VerticalRecoil": 460,
         "HorizontalRecoil": 250,
         "Dispersion": 12,
-        "CameraRecoil": 0.04,
+        "CameraRecoil": 0.004,
         "VisualMulti": 2.2,
         "Convergence": 16,
         "RecoilAngle": 95,

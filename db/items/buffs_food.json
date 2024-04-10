@@ -7,7 +7,7 @@
             "Delay": 1,
             "Duration": 100,
             "SkillName": "",
-            "Value": 0.05
+            "Value": 0.035
         },
         {
             "AbsoluteValue": true,
@@ -16,7 +16,7 @@
             "Delay": 1,
             "Duration": 100,
             "SkillName": "",
-            "Value": 0.35
+            "Value": 0.246
         },
         {
             "AbsoluteValue": true,
@@ -36,7 +36,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.05
+            "Value": 0.035
         },
         {
             "AbsoluteValue": true,
@@ -45,7 +45,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.4
+            "Value": 0.281
         },
         {
             "AbsoluteValue": true,
@@ -65,7 +65,7 @@
             "Delay": 1,
             "Duration": 100,
             "SkillName": "",
-            "Value": 0.2
+            "Value": 0.14
         },
         {
             "AbsoluteValue": true,
@@ -74,7 +74,7 @@
             "Delay": 1,
             "Duration": 100,
             "SkillName": "",
-            "Value": 1.2
+            "Value": 0.844
         },
         {
             "AbsoluteValue": true,
@@ -103,7 +103,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.1
+            "Value": 0.07
         },
         {
             "AbsoluteValue": true,
@@ -112,7 +112,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.7
+            "Value": 0.493
         },
         {
             "AbsoluteValue": true,
@@ -141,7 +141,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.1
+            "Value": 0.07
         },
         {
             "AbsoluteValue": true,
@@ -150,7 +150,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.2
+            "Value": 0.14
         },
         {
             "AbsoluteValue": true,
@@ -170,7 +170,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.11
+            "Value": 0.077
         },
         {
             "AbsoluteValue": true,
@@ -179,7 +179,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.22
+            "Value": 0.155
         },
         {
             "AbsoluteValue": true,
@@ -199,7 +199,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.14
+            "Value": 0.099
         },
         {
             "AbsoluteValue": true,
@@ -208,7 +208,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.194
+            "Value": 0.136
         },
         {
             "AbsoluteValue": true,
@@ -228,7 +228,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.12
+            "Value": 0.085
         },
         {
             "AbsoluteValue": true,
@@ -237,7 +237,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.17
+            "Value": 0.12
         },
         {
             "AbsoluteValue": true,
@@ -257,7 +257,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.08
+            "Value": 0.056
         },
         {
             "AbsoluteValue": true,
@@ -266,7 +266,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.1
+            "Value": 0.07
         },
         {
             "AbsoluteValue": true,
@@ -286,7 +286,7 @@
             "Delay": 1,
             "Duration": 120,
             "SkillName": "",
-            "Value": 0.33
+            "Value": 0.231
         },
         {
             "AbsoluteValue": true,
@@ -295,7 +295,7 @@
             "Delay": 1,
             "Duration": 120,
             "SkillName": "",
-            "Value": 0.17
+            "Value": 0.12
         },
         {
             "AbsoluteValue": true,
@@ -324,7 +324,7 @@
             "Delay": 1,
             "Duration": 60,
             "SkillName": "",
-            "Value": 0.42
+            "Value": 0.295
         },
         {
             "AbsoluteValue": true,
@@ -333,7 +333,7 @@
             "Delay": 1,
             "Duration": 60,
             "SkillName": "",
-            "Value": 0.25
+            "Value": 0.176
         },
         {
             "AbsoluteValue": true,
@@ -362,7 +362,7 @@
             "Delay": 1,
             "Duration": 60,
             "SkillName": "",
-            "Value": 0.4
+            "Value": 0.281
         },
         {
             "AbsoluteValue": true,
@@ -371,7 +371,7 @@
             "Delay": 1,
             "Duration": 60,
             "SkillName": "",
-            "Value": 0.28
+            "Value": 0.198
         },
         {
             "AbsoluteValue": true,
@@ -418,7 +418,7 @@
             "Delay": 1,
             "Duration": 30,
             "SkillName": "",
-            "Value": 1.34
+            "Value": 0.943
         },
         {
             "AbsoluteValue": true,
@@ -427,7 +427,7 @@
             "Delay": 1,
             "Duration": 30,
             "SkillName": "",
-            "Value": 0.5
+            "Value": 0.351
         },
         {
             "AbsoluteValue": true,
@@ -483,7 +483,7 @@
             "Delay": 1,
             "Duration": 30,
             "SkillName": "",
-            "Value": 2
+            "Value": 1.406
         },
         {
             "AbsoluteValue": true,
@@ -492,7 +492,7 @@
             "Delay": 1,
             "Duration": 30,
             "SkillName": "",
-            "Value": 0.4
+            "Value": 0.281
         },
         {
             "AbsoluteValue": true,
@@ -660,7 +660,7 @@
             "Delay": 1,
             "Duration": 60,
             "SkillName": "",
-            "Value": 0.13
+            "Value": 0.092
         },
         {
             "AbsoluteValue": true,
@@ -772,7 +772,7 @@
             "Delay": 1,
             "Duration": 120,
             "SkillName": "",
-            "Value": 0.08
+            "Value": 0.056
         },
         {
             "AbsoluteValue": true,
@@ -810,7 +810,7 @@
             "Delay": 1,
             "Duration": 60,
             "SkillName": "",
-            "Value": 1.0
+            "Value": 0.703
         },
         {
             "AbsoluteValue": true,
@@ -839,7 +839,7 @@
             "Delay": 1,
             "Duration": 120,
             "SkillName": "",
-            "Value": 0.125
+            "Value": 0.089
         },
         {
             "AbsoluteValue": true,
@@ -859,7 +859,7 @@
             "Delay": 1,
             "Duration": 120,
             "SkillName": "",
-            "Value": 0.135
+            "Value": 0.095
         },
         {
             "AbsoluteValue": true,
@@ -888,7 +888,7 @@
             "Delay": 1,
             "Duration": 120,
             "SkillName": "",
-            "Value": 0.25
+            "Value": 0.176
         },
         {
             "AbsoluteValue": true,
@@ -917,7 +917,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.084
+            "Value": 0.059
         },
         {
             "AbsoluteValue": true,
@@ -946,7 +946,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.088
+            "Value": 0.062
         },
         {
             "AbsoluteValue": true,
@@ -975,7 +975,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.09
+            "Value": 0.064
         },
         {
             "AbsoluteValue": true,
@@ -995,7 +995,7 @@
             "Delay": 1,
             "Duration": 120,
             "SkillName": "",
-            "Value": 0.084
+            "Value": 0.059
         },
         {
             "AbsoluteValue": true,
@@ -1024,7 +1024,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.52
+            "Value": 0.365
         },
         {
             "AbsoluteValue": true,
@@ -1044,7 +1044,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.4
+            "Value": 0.281
         },
         {
             "AbsoluteValue": true,
@@ -1064,7 +1064,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.2
+            "Value": 0.14
         },
         {
             "AbsoluteValue": true,
@@ -1073,7 +1073,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.05
+            "Value": 0.035
         },
         {
             "AbsoluteValue": true,
@@ -1093,7 +1093,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.37
+            "Value": 0.26
         },
         {
             "AbsoluteValue": true,
@@ -1113,7 +1113,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.39
+            "Value": 0.274
         },
         {
             "AbsoluteValue": true,
@@ -1133,7 +1133,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.34
+            "Value": 0.239
         },
         {
             "AbsoluteValue": true,
@@ -1153,7 +1153,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.28
+            "Value": 0.198
         },
         {
             "AbsoluteValue": true,
@@ -1173,7 +1173,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.3
+            "Value": 0.211
         },
         {
             "AbsoluteValue": true,
@@ -1202,7 +1202,7 @@
             "Delay": 1,
             "Duration": 180,
             "SkillName": "",
-            "Value": 0.13
+            "Value": 0.092
         },
         {
             "AbsoluteValue": true,
@@ -1231,7 +1231,7 @@
             "Delay": 1,
             "Duration": 240,
             "SkillName": "",
-            "Value": 0.126
+            "Value": 0.089
         },
         {
             "AbsoluteValue": true,
@@ -1260,7 +1260,7 @@
             "Delay": 1,
             "Duration": 240,
             "SkillName": "",
-            "Value": 0.2
+            "Value": 0.14
         },
         {
             "AbsoluteValue": true,
@@ -1289,7 +1289,7 @@
             "Delay": 1,
             "Duration": 240,
             "SkillName": "",
-            "Value": 0.25
+            "Value": 0.176
         },
         {
             "AbsoluteValue": true,
@@ -1318,7 +1318,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.8
+            "Value": 0.562
         }
     ],
     "Buffs_food_iskra": [
@@ -1329,7 +1329,7 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.87
+            "Value": 0.611
         }
     ]
 }

@@ -150,14 +150,20 @@ class ItemCloning {
         this.addToLocale("mechJMAC_366", "Mechanic's Custom .366 TKM JMac RRD-4C", ".366 TKM RRD-4C", "Mechanic bored out this compensator to accomodate .366 TKM.");
         this.pushAttToFilters("5a9fbb74a2750c0032157181", "mechJMAC_366");
     }
-    addCustomWeapsToQuests(targetWeap, weapToAdd) {
-        for (let quest in this.questDB) {
-            let conditions = this.questDB[quest].conditions.AvailableForFinish[0];
-            if (conditions._parent === "CounterCreator") {
-                let killConditions = conditions._props.counter.conditions[0];
-                if (killConditions._parent === "Kills" && killConditions._props?.weapon !== undefined) {
-                    if (killConditions._props.weapon.includes(targetWeap)) {
-                        killConditions._props.weapon.push(weapToAdd);
+    addCustomWeapsToQuests(originalWeapon, weapToAdd) {
+        for (let q in this.questDB()) {
+            let quest = this.questDB()[q];
+            if (!quest?.conditions?.AvailableForFinish)
+                continue;
+            let availForFin = quest.conditions.AvailableForFinish;
+            for (let r in availForFin) {
+                let requirement = availForFin[r];
+                if (requirement.conditionType !== "CounterCreator" || !requirement.counter?.conditions)
+                    continue;
+                for (let c in requirement.counter.conditions) {
+                    let subCondition = requirement.counter.conditions[c];
+                    if (subCondition.conditionType == "Kills" && subCondition.weapon && subCondition.weapon.includes(originalWeapon)) {
+                        subCondition.weapon.push(weapToAdd);
                     }
                 }
             }

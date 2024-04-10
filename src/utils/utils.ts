@@ -63,9 +63,6 @@ export class Utils {
     private correcProvisionRes(profileItem: Item, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
         if(templateItem !== null && templateItem !== undefined){
-            logger.warning("found item");
-            logger.warning("item hp resource " + profileItem.upd.FoodDrink.HpPercent);
-            logger.warning("template resource " + templateItem._props.MaxResource);
             if(profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0 ){
                 profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
             }
@@ -77,9 +74,6 @@ export class Utils {
 
         let templateItem = this.itemDB()[profileItem._tpl];
         if(templateItem !== null && templateItem !== undefined){
-            logger.warning("found item");
-            logger.warning("item hp resource " + profileItem.upd.MedKit.HpResource);
-            logger.warning("template resource " + templateItem._props.MaxHpResource);
             if(profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0 ){
                 profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
             }

@@ -557,6 +557,7 @@ class Main {
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
+        itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
