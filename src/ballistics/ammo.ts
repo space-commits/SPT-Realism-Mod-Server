@@ -195,7 +195,7 @@ export class Ammo {
             //Lead slug  
             if (serverItem._id === "58820d1224597753c90aeb13") {
                 serverItem._props.PenetrationPower = 19;
-                serverItem._props.ArmorDamage = 22.5;
+                serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 165;
                 serverItem._props.InitialSpeed = 380;
                 serverItem._props.RicochetChance = 0.15;
@@ -242,7 +242,7 @@ export class Ammo {
             //Poleva-3 (HP)
             if (serverItem._id === "5d6e6891a4b9361bd473feea") {
                 serverItem._props.PenetrationPower = 21;
-                serverItem._props.ArmorDamage = 23.75;
+                serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 187;
                 serverItem._props.InitialSpeed = 410;
                 serverItem._props.RicochetChance = 0.14;
@@ -288,7 +288,7 @@ export class Ammo {
             //RIP (HP copper)
             if (serverItem._id === "5c0d591486f7744c505b416f") {
                 serverItem._props.PenetrationPower = 24;
-                serverItem._props.ArmorDamage = 27.5;
+                serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 182;
                 serverItem._props.InitialSpeed = 435;
                 serverItem._props.RicochetChance = 0.2;
@@ -334,7 +334,7 @@ export class Ammo {
             //Copper Sabot (HP)
             if (serverItem._id === "5d6e68b3a4b9361bca7e50b5") {
                 serverItem._props.PenetrationPower = 43;
-                serverItem._props.ArmorDamage = 26.25;
+                serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 180;
                 serverItem._props.InitialSpeed = 442;
                 serverItem._props.RicochetChance = 0.15;
@@ -357,7 +357,7 @@ export class Ammo {
             //FTX custom light
             if (serverItem._id === "5d6e68e6a4b9361c140bcfe0") {
                 serverItem._props.PenetrationPower = 50;
-                serverItem._props.ArmorDamage = 21.25;
+                serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 154;
                 serverItem._props.InitialSpeed = 480;
                 serverItem._props.RicochetChance = 0.25;
@@ -403,7 +403,7 @@ export class Ammo {
             //AP-20 
             if (serverItem._id === "5d6e68a8a4b9360b6c0d54e2") {
                 serverItem._props.PenetrationPower = 62;
-                serverItem._props.ArmorDamage = 27.5;
+                serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 160;
                 serverItem._props.InitialSpeed = 510;
                 serverItem._props.RicochetChance = 0.35;
@@ -642,7 +642,7 @@ export class Ammo {
             //Shrap 25
             if (serverItem._id === "5f647f31b6238e5dd066e196") {
                 serverItem._props.PenetrationPower = 35;
-                serverItem._props.ArmorDamage = 22.5;
+                serverItem._props.ArmorDamage = 1;
                 serverItem._props.ProjectileCount = 12;
                 serverItem._props.Damage = 19;
                 serverItem._props.InitialSpeed = 375;
@@ -2483,7 +2483,7 @@ export class Ammo {
             // PS12B
             if (serverItem._id === "5cadf6eeae921500134b2799") {
                 serverItem._props.PenetrationPower = 62;
-                serverItem._props.ArmorDamage = 17.5;
+                serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 120;
                 serverItem._props.InitialSpeed = 570;
                 serverItem._props.RicochetChance = 0.1;
@@ -3569,29 +3569,6 @@ export class Ammo {
                     serverItem._props.HeatFactor = 1.04;
                 }
             }
-            // M855
-            if (serverItem._id === "54527a984bdc2d4e668b4567") {
-                serverItem._props.PenetrationPower = 67;
-                serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 60;
-                serverItem._props.InitialSpeed = 902;
-                serverItem._props.RicochetChance = 0.5;
-                serverItem._props.FragmentationChance = 0.05;
-                serverItem._props.BulletMassGram = 4;
-                serverItem._props.HeavyBleedingDelta = 0.25;
-                serverItem._props.LightBleedingDelta = 0.55;
-                serverItem._props.ammoAccr = -15;
-                serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 7;
-
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.25;
-                    serverItem._props.MisfireChance = 0;
-                    serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.3;
-                    serverItem._props.HeatFactor = 1;
-                }
-            }
             // M856A1
             if (serverItem._id === "59e6906286f7746c9f75e847") {
                 serverItem._props.PenetrationPower = 63;
@@ -3612,6 +3589,29 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.HeatFactor = 1;
+                }
+            }
+            // M855
+            if (serverItem._id === "54527a984bdc2d4e668b4567") {
+                serverItem._props.PenetrationPower = 67;
+                serverItem._props.ArmorDamage = 1;
+                serverItem._props.Damage = 60;
+                serverItem._props.InitialSpeed = 902;
+                serverItem._props.RicochetChance = 0.5;
+                serverItem._props.FragmentationChance = 0.05;
+                serverItem._props.BulletMassGram = 4;
+                serverItem._props.HeavyBleedingDelta = 0.25;
+                serverItem._props.LightBleedingDelta = 0.55;
+                serverItem._props.ammoAccr = -15;
+                serverItem._props.ammoHear = 0;
+                serverItem._props.ammoRec = 7;
+
+                if (this.modConf.malf_changes == true) {
+                    serverItem._props.MalfMisfireChance = 0.25;
+                    serverItem._props.MisfireChance = 0;
+                    serverItem._props.MalfFeedChance = 0;
+                    serverItem._props.DurabilityBurnModificator = 1.3;
                     serverItem._props.HeatFactor = 1;
                 }
             }

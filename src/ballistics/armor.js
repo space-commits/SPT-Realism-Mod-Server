@@ -194,10 +194,10 @@ class Armor {
     standardizeAramid(serverItem) {
         let plateColliders = serverItem._props.armorPlateColliders;
         if (serverItem._props.ArmorMaterial === "Aramid") {
-            this.aramidHelper(serverItem, 1, 3, 100, 0.3);
-            this.aramidHelper(serverItem, 2, 4, 100, 0.4);
-            this.aramidHelper(serverItem, 3, 5, 100, 0.5);
-            this.aramidHelper(serverItem, 4, 5, 100, 0.5);
+            this.aramidHelper(serverItem, 1, 3, 100, 0.2);
+            this.aramidHelper(serverItem, 2, 4, 100, 0.2);
+            this.aramidHelper(serverItem, 3, 5, 100, 0.35);
+            this.aramidHelper(serverItem, 4, 5, 100, 0.35);
         }
         if (serverItem._props.ArmorMaterial === "Aramid" && plateColliders !== undefined && plateColliders.length > 0) {
             serverItem._props.armorClass = 2;
@@ -1314,20 +1314,6 @@ class Armor {
                 "HeadCommon"
             ];
         }
-        //Diamond Age NeoSteel/Nova Steel
-        if (serverItem._id === "65709d2d21b9f815e208ff95") {
-            serverItem._props.Durability = 0;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.9;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.9;
-            serverItem._props.BluntThroughput = 0.085;
-            serverItem._props.DeafStrength = "None";
-            serverItem._props.ArmorMaterial = 'ArmoredSteel';
-            serverItem._props.Weight = 1.2;
-            this.modifySubArmor(serverItem, tables, validHelmetSlots, 24, 4, serverItem._props.BluntThroughput, 'ArmoredSteel');
-        }
         //NFM HJELM
         if (serverItem._id === "61bca7cda0eae612383adf57") {
             serverItem._props.Durability = 0;
@@ -1628,6 +1614,20 @@ class Armor {
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Weight = 0.96;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 60, 5, serverItem._props.BluntThroughput, 'Combined');
+        }
+        //Diamond Age NeoSteel/Nova Steel
+        if (serverItem._id === "65709d2d21b9f815e208ff95") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -0.9;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -0.9;
+            serverItem._props.BluntThroughput = 0.085;
+            serverItem._props.DeafStrength = "None";
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.Weight = 1.2;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 24, 5, serverItem._props.BluntThroughput, 'ArmoredSteel');
         }
         //ZSh
         if (serverItem._id === "5aa7e454e5b5b0214e506fa2") {
