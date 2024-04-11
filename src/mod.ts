@@ -147,9 +147,18 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 {
                     url: "/RealismMod/GetInfo",
                     action: (url, info, sessionId, output) => {
-                        const parsedPath = __dirname.split("\\");
-                        const folderName = parsedPath[parsedPath.length - 2];
-                        return jsonUtil.serialize(this.path.resolve(this.modLoader.getModPath(`${folderName}`)));
+
+                        try {
+                            //I know this is awful
+                            const parsedPath = __dirname.split("\\");
+                            const folderName = parsedPath[parsedPath.length - 2];
+                            const modPath = path.resolve(this.modLoader.getModPath(`${folderName}`));
+                            const configFilePath = path.join(modPath, "config", "config.json");
+                            const fileContents = fs.readFileSync(configFilePath, "utf8");
+                            return jsonUtil.serialize(fileContents);
+                        } catch (err) {
+                            console.error("Failed to read config file", err);
+                        }
                     }
                 }
             ],
@@ -597,13 +606,13 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         this.dllChecker(logger, modConfig);
 
         if (modConfig.recoil_attachment_overhaul == true) {
-            itemCloning.createCustomWeapons(); 
+            itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
             itemsClass.addCustomItems();
             attachBase.loadAttCompat();
             attachBase.loadCaliberConversions();
         }
-     
+
 
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -666,12 +675,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             consumables.loadMeds();
         }
 
-        if(modConfig.food_changes == true){
+        if (modConfig.food_changes == true) {
             consumables.loadFood();
         }
 
-        if(modConfig.stim_changes == true){
-            consumables.loadStims();       
+        if (modConfig.stim_changes == true) {
+            consumables.loadStims();
         }
 
         bots.botHpMulti();
@@ -712,7 +721,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }
-        
+
         traders.loadTraderRefreshTimes();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {

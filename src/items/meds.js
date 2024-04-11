@@ -271,6 +271,12 @@ class Consumables {
                 serverItem._props.effects_health = {};
                 serverItem._props.MaxResource = 1;
             }
+            //Crackers
+            if (serverItem._id === "5448ff904bdc2d6f028b456e") {
+                serverItem._props.StimulatorBuffs = this.foodItems.crackers.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+                serverItem._props.MaxResource = 1;
+            }
             //Misc//
             //Mayo
             if (serverItem._id === "5bc9b156d4351e00367fbce9") {

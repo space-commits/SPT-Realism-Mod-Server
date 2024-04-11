@@ -1284,7 +1284,7 @@
         "ItemID": "544a37c44bdc2d25388b4567",
         "Name": "mag_stanag_surefire_mag5_556x45_60",
         "ModType": "",
-        "ReloadSpeed": -8,
+        "ReloadSpeed": -12,
         "Ergonomics": -2,
         "MagMalfunctionChance": 1.4,
         "LoadUnloadModifier": 20,

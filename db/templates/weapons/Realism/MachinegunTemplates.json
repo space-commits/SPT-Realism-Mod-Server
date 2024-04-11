@@ -100,10 +100,10 @@
         "BaseTorque": 0,
         "HasShoulderContact": true,
         "Ergonomics": 100,
-        "VerticalRecoil": 18,
-        "HorizontalRecoil": 200,
-        "Dispersion": 20,
-        "CameraRecoil": 0.1,
+        "VerticalRecoil": 100,
+        "HorizontalRecoil": 350,
+        "Dispersion": 10,
+        "CameraRecoil": 1,
         "VisualMulti": 1,
         "Convergence": 8,
         "RecoilAngle": 90,
@@ -135,7 +135,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.185
+        "RecoilIntensity": 0.3
     },
     "5beed0f50db834001c062b12": {
         "ItemID": "5beed0f50db834001c062b12",

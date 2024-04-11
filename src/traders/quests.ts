@@ -35,42 +35,33 @@ export class Quests {
         for (let i in this.questDB()) {
 
             if (!this.questDB()[i].QuestName.includes("Gunsmith")) continue;
-
             let quest = this.questDB()[i];
-            this.logger.warning("" +quest.QuestName);
             if (!quest?.conditions?.AvailableForFinish) continue;
-
             for(let j in quest.conditions.AvailableForFinish){
                 let condition = quest.conditions.AvailableForFinish[j];
                 if (condition["ergonomics"]) {
                     condition["ergonomics"].value = 1;
                     condition["ergonomics"].compareMethod = ">=";
-                    this.logger.warning("" + condition["ergonomics"].value);
                 }
                 if (condition["recoil"]) {
                     condition["recoil"].value = 1;
                     condition["recoil"].compareMethod = ">=";
-                    this.logger.warning("" + condition["recoil"].value);
                 }
                 if (condition["weight"]) {
                     condition["weight"].value = 0;
                     condition["weight"].compareMethod = ">=";
-                    this.logger.warning("" + condition["weight"].value);
                 }
                 if (condition["width"]) {
                     condition["width"].value = 0;
                     condition["width"].compareMethod = ">=";
-                    this.logger.warning("" + condition["width"].value);
                 }
                 if (condition["height"]) {
                     condition["height"].value = 0;
                     condition["height"].compareMethod = ">=";
-                    this.logger.warning("" + condition["height"].value);
                 }
                 if (condition["durability"]) {
                     condition["durability"].value = 1;
                     condition["durability"].compareMethod = ">=";
-                    this.logger.warning("" + condition["durability"].value);
                 }
             }
 

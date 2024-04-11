@@ -99,7 +99,12 @@ class ItemCloning {
         defaultInventory.Slots[1]._props.filters[0].Filter.push("5447b6094bdc2dc3278b4567");
     }
     createCustomAttachments() {
-        //Mechanic VPO-215 23incg 7.62x39 Barrel
+        //Mechanic SKS .366 TKM Barrel
+        this.cloneAttachments("634f02331f9f536910079b51", "mechSKS_366", "violet");
+        this.addToHandbook("mechSKS_366", "5b5f75c686f774094242f19f", 15000);
+        this.addToLocale("mechSKS_366", "SKS .366 TKM 520mm barrel", "SKS .366 520mm", "A 520mm barrel for SKS rifle chambered in .366 TKM.");
+        this.pushAttToFilters("634f02331f9f536910079b51", "mechSKS_366");
+        //Mechanic VPO-215 23inch 7.62x39 Barrel
         this.cloneAttachments("5de65547883dde217541644b", "mechVPO_23", "violet");
         this.addToHandbook("mechVPO_23", "5b5f75c686f774094242f19f", 15000);
         this.addToLocale("mechVPO_23", "VPO-215 \"Gornostay\" 7.62x39mm 23 inch barrel", "215 7.62x39 23\"", "A 23 inch (600mm) barrel for VPO-215 rifle chambered in 7.62x39mm.");

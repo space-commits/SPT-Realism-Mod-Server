@@ -193,10 +193,13 @@ class Traders {
             this.assortItemPusher(mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
             this.assortItemPusher(mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
             //attachments
-            this.assortItemPusher(mechId, "mechSpear_330mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
-            this.assortItemPusher(mechId, "mechMCX_171mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
-            this.assortItemPusher(mechId, "mechMCX_229mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
-            this.assortItemPusher(mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
+            this.assortItemPusher(mechId, "mechSKS_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(mechId, "mechVPO_23", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(mechId, "mechMDR_406", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(mechId, "mechSpear_330mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
+            this.assortItemPusher(mechId, "mechMCX_171mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(mechId, "mechMCX_229mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 15000);
             this.assortItemPusher(mechId, "mechSlant_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
             this.assortItemPusher(mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
             this.assortItemPusher(mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
