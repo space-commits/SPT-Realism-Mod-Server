@@ -104,7 +104,7 @@ export class BotGen extends BotGenerator {
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
         if (RaidInfoTracker.mapName === "sandbox" && level <= 15) {
-            tier = utils.probabilityWeighter(tierArray, [90, 10, 0, 0, 0]);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         else if (level <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
@@ -144,10 +144,13 @@ export class BotGen extends BotGenerator {
         const lowtier: string[] = ["bigmap", "customs", "interchange", "lighthouse"];
 
         let rndNum = utils.pickRandNumOneInTen();
+        if (RaidInfoTracker.mapName === "sandbox") { //me being superstitious 
+            return tier;
+        }
         if (RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 4 && (hightier.includes(RaidInfoTracker.mapName))) {
+        else if (rndNum <= 4 && hightier.includes(RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 2 && (midtier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {

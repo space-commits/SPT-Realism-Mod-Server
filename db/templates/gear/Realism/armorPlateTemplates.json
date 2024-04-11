@@ -456,7 +456,7 @@
         "AllowADS": true,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "ReloadSpeedMulti": 3,
+        "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.5
     },
@@ -506,7 +506,7 @@
         "AllowADS": true,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "ReloadSpeedMulti": 3,
+        "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.45
     },

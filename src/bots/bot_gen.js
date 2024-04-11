@@ -60,7 +60,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
         if (utils_1.RaidInfoTracker.mapName === "sandbox" && level <= 15) {
-            tier = utils.probabilityWeighter(tierArray, [90, 10, 0, 0, 0]);
+            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
         else if (level <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
@@ -97,6 +97,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const midtier = ["factory4_night"];
         const lowtier = ["bigmap", "customs", "interchange", "lighthouse"];
         let rndNum = utils.pickRandNumOneInTen();
+        if (utils_1.RaidInfoTracker.mapName === "sandbox") {
+            return tier;
+        }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }

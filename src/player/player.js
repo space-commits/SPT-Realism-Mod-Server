@@ -179,8 +179,8 @@ class Player {
             this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 90;
         }
         if (this.modConfig.movement_changes == true) {
-            this.globalDB().WalkSpeed["x"] = 0.54;
-            this.globalDB().WalkSpeed["y"] = 0.77;
+            this.globalDB().WalkSpeed["x"] = 0.59;
+            this.globalDB().WalkSpeed["y"] = 0.84;
             this.globalDB().SprintSpeed["x"] = 0.05;
             this.globalDB().SprintSpeed["y"] = 0.5;
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
