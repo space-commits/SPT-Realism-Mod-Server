@@ -17,24 +17,6 @@
             "Value": -0.02,
             "AbsoluteValue": true,
             "SkillName": ""
-        },
-        {
-            "BuffType": "HydrationRate",
-            "Chance": 1,
-            "Delay": 25,
-            "Duration": 600,
-            "Value": -0.02,
-            "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "EnergyRate",
-            "Chance": 1,
-            "Delay": 25,
-            "Duration": 600,
-            "Value": -0.02,
-            "AbsoluteValue": true,
-            "SkillName": ""
         }
     ],
     "Buffs_ibuprofen": [
@@ -51,24 +33,6 @@
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 45,
-            "Duration": 300,
-            "Value": -0.015,
-            "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "HydrationRate",
-            "Chance": 1,
-            "Delay": 40,
-            "Duration": 300,
-            "Value": -0.025,
-            "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "EnergyRate",
-            "Chance": 1,
-            "Delay": 40,
             "Duration": 300,
             "Value": -0.015,
             "AbsoluteValue": true,
@@ -165,24 +129,6 @@
             "Value": -35,
             "AbsoluteValue": true,
             "SkillName": "Attention"
-        },
-        {
-            "BuffType": "HydrationRate",
-            "Chance": 1,
-            "Delay": 15,
-            "Duration": 780,
-            "Value": -0.03,
-            "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "EnergyRate",
-            "Chance": 1,
-            "Delay": 15,
-            "Duration": 780,
-            "Value": -0.025,
-            "AbsoluteValue": true,
-            "SkillName": ""
         }
     ],
     "Buffs_augmentin": [

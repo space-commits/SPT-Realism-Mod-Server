@@ -180,8 +180,8 @@ class Main {
                     let level = 1;
                     if (pmcData?.Info?.Level !== undefined) {
                         level = pmcData.Info.Level;
-                        utils_1.ProfileTracker.level = level;
                     }
+                    utils_1.ProfileTracker.level = level;
                     try {
                         if (modConfig.backup_profiles == true) {
                             this.backupProfile(profileData, logger);
@@ -333,6 +333,7 @@ class Main {
                             pmcConf.convertIntoPmcChance["assault"].min = 100;
                             pmcConf.convertIntoPmcChance["assault"].max = 100;
                         }
+                        logger.warning("Player Level = " + utils_1.ProfileTracker.level);
                         logger.warning("Map Name = " + matchInfo.location);
                         logger.warning("Map Type  = " + mapType);
                         logger.warning("Time " + time);
@@ -467,7 +468,7 @@ class Main {
         const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations);
         const gear = new gear_1.Gear(arrays, tables, logger);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new description_gen_1.DescriptionGen(tables);
+        const descGen = new description_gen_1.DescriptionGen(tables, modConfig);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
         this.dllChecker(logger, modConfig);
         if (modConfig.recoil_attachment_overhaul == true) {

@@ -97,13 +97,13 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const midtier = ["factory4_night"];
         const lowtier = ["bigmap", "customs", "interchange", "lighthouse"];
         let rndNum = utils.pickRandNumOneInTen();
-        if (utils_1.RaidInfoTracker.mapName === "sandbox") {
+        if (utils_1.RaidInfoTracker.mapName === "sandbox") { //me being superstitious 
             return tier;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 4 && (hightier.includes(utils_1.RaidInfoTracker.mapName))) {
+        else if (rndNum <= 4 && hightier.includes(utils_1.RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 2 && (midtier.includes(utils_1.RaidInfoTracker.mapName) || utils_1.RaidInfoTracker.TOD === "night")) {

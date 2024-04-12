@@ -31,6 +31,7 @@ export class Consumables {
             this.itemDB()["damage_debuff"]._props.StimulatorBuffs = "Buffs_Damage";
             this.itemDB()["adrenal_debuff"]._props.StimulatorBuffs = "Buffs_Adrenal";
             this.itemDB()["regen_debuff"]._props.StimulatorBuffs = "Buffs_Regenerative";
+            this.itemDB()["regen_debuff"]._props.StimulatorBuffs = "Buffs_Regenerative";
             ///Custom///
             this.itemDB()["SJ0"]._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
         }
@@ -619,7 +620,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.8"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "30"); // HP restore amount
+                serverItem._props.ConflictingItems.splice(6, 0, "40"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -633,11 +634,11 @@ export class Consumables {
                 serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(2, 0, "clot");
+                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "67"); // HP restore amount
+                serverItem._props.ConflictingItems.splice(6, 0, "45"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -655,7 +656,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "50"); // HP restore amount
+                serverItem._props.ConflictingItems.splice(6, 0, "55"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }

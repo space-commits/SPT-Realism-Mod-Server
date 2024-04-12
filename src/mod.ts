@@ -240,11 +240,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const profileData = profileHelper.getFullProfile(sessionID)
 
                         let level = 1;
-
                         if (pmcData?.Info?.Level !== undefined) {
                             level = pmcData.Info.Level;
-                            ProfileTracker.level = level;
                         }
+                        ProfileTracker.level = level;
 
                         try {
 
@@ -435,6 +434,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
 
+                            logger.warning("Player Level = " + ProfileTracker.level);
                             logger.warning("Map Name = " + matchInfo.location);
                             logger.warning("Map Type  = " + mapType);
                             logger.warning("Time " + time);
@@ -600,7 +600,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const maps = new Spawns(logger, tables, modConfig, tables.locations);
         const gear = new Gear(arrays, tables, logger);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new DescriptionGen(tables);
+        const descGen = new DescriptionGen(tables, modConfig);
         const jsonHand = new JsonHandler(tables, logger);
 
         this.dllChecker(logger, modConfig);

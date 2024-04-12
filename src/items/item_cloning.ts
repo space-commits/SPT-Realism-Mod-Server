@@ -49,7 +49,7 @@ export class ItemCloning {
         );
         this.addToHandbook("adrenal_debuff", "5b47574386f77428ca22b33a", 1);
         this.addToLocale("adrenal_debuff", "Adrenal Debuff", "Adrenal", "If you are seeing this outside of the handbook, something has gone wrong.");
-
+      
         //Regen Debuff
         this.cloneMedicalItem(
             "5c10c8fd86f7743d7d706df3",

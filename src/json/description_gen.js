@@ -4,8 +4,10 @@ exports.DescriptionGen = void 0;
 const enums_1 = require("../utils/enums");
 class DescriptionGen {
     tables;
-    constructor(tables) {
+    modConfig;
+    constructor(tables, modConfig) {
         this.tables = tables;
+        this.modConfig = modConfig;
     }
     itemDB() {
         return this.tables.templates.items;
@@ -90,6 +92,36 @@ class DescriptionGen {
                     if (item._props.ConflictingItems[1] === "false") {
                         locale[`${templateItem}` + " Description"] = "This gear item blocks the use of sights while using a stock in the extended/unfolded position, unless the weapon/stock allows it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
+                }
+            }
+            if (item._parent === enums_1.ParentClasses.STIMULATOR && this.modConfig.stim_changes === true) {
+                //generic
+                if (item._id === "5fca13ca637ee0341a484f46" || item._id === "637b612fb7afa97bfc3d7005" || item._id === "637b6251104668754b72f8f9") {
+                    locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, cerebral contusion or swelling of the brain, hand tremors, slowed metatbolism, increased levels of stress, weakened immune system, dyspnea, chronic inflammation, and overall reduced vitality.";
+                }
+                //regen
+                if (item._id === "5c0e534186f7747fa1419867" || item._id === "5c0e530286f7747fa1419862" || item._id === "SJ0") {
+                    locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, hand tremors, and increased suspetibility to bruising, injury and tissue damage.";
+                }
+                //damage
+                if (item._id === "5ed515ece452db0eb56fc028" || item._id === "637b6179104668754b72f8f5") {
+                    locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include cerebral contusion or swelling of the brain, hand tremors, reduced concentration, attention and perception, reduced vitality, rapid deterioration of organ function and necrosis.";
+                }
+                //adrenal
+                if (item._id === "5c10c8fd86f7743d7d706df3" || item._id === "5ed515e03a40a50460332579" || item._id === "637b620db7afa97bfc3d7009") {
+                    locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include tunnel vision, hand tremors, dyspnea, chronic fatigue, asthenia and stress cardiomyopathy.";
+                }
+                //clotting
+                if (item._id === "5ed515f6915ec335206e4152" || item._id === "5c0e533786f7747fa23f4d47") {
+                    locale[`${templateItem}` + " Description"] = `${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, hand tremors, reduced concentration, attention and perception, dyspnea, chronic inflammation, and hematuria with clot retention.";
+                }
+                //weight
+                if (item._id === "5ed51652f6c34d2cc26336a1") {
+                    locale[`${templateItem}` + " Description"] = `${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include tunnel vision, hand tremors, reduced concentration, slowed metabolism, dyspnea, chronic fatigue, and asthenia.";
+                }
+                //performance
+                if (item._id === "5ed5160a87bb8443d10680b5" || item._id === "5ed515c8d380ab312177c0fa" || item._id === "5c0e531d86f7747fa23f4d42" || item._id === "5c0e531286f7747fa54205c2") {
+                    locale[`${templateItem}` + " Description"] = `${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include tunnel vision, hand tremors, increased levels of stress, dyspnea, and muscular dystrophy.";
                 }
             }
             if (item._parent === enums_1.ParentClasses.AMMO) {

@@ -242,7 +242,7 @@
             }
         },
         "StimulatorBuffs": "Buffs_IFAK",
-        "MaxHpResource": 6,
+        "MaxHpResource": 7,
         "medUseTime": 6,
         "hpResourceRate": 0
     },
@@ -268,7 +268,7 @@
             }
         },
         "StimulatorBuffs": "Buffs_AFAK",
-        "MaxHpResource": 7,
+        "MaxHpResource": 6,
         "medUseTime": 7.5,
         "hpResourceRate": 0
     },
@@ -284,17 +284,17 @@
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 4
+                "cost": 2
             },
             "Fracture": {
                 "delay": 10,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 4
+                "cost": 2
             }
         },
         "StimulatorBuffs": "Buffs_grizzly",
-        "MaxHpResource": 21,
+        "MaxHpResource": 20,
         "medUseTime": 10,
         "hpResourceRate": 0
     },
