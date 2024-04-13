@@ -623,7 +623,7 @@
         "ConflictingItems": [],
         "Ergonomics": 5,
         "Weight": 0.8,
-        "ShotgunDispersion": 0.7,
+        "ShotgunDispersion": 0.85,
         "Loudness": 0,
         "LoyaltyLevel": 0,
         "Price": 0

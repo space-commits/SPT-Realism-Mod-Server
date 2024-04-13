@@ -317,6 +317,15 @@ export class Armor {
             serverItem._props.ArmorMaterial = 'Aramid';
         }
 
+        //Kulon front/back
+        if (serverItem._id === "6570495b45d573133d0d6adb" || serverItem._id === "657049d23425b19bbc0502f0") {
+            serverItem._props.Durability = 90;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 7;
+            serverItem._props.BluntThroughput = 0.05;
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+        }
+        
         //6B2 Flora front/back
         if (serverItem._id === "656fd89bf5a9631d4e042575" || serverItem._id === "656fd7c32668ef0402028fb9") {
             serverItem._props.Durability = 105;

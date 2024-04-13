@@ -213,7 +213,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.11,
+            "Chance": 0.06,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -242,7 +242,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.08,
+            "Chance": 0.04,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -271,7 +271,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.02,
+            "Chance": 0.01,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -931,7 +931,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.02,
+            "Chance": 0.01,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1009,7 +1009,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.2,
+            "Chance": 0.1,
             "Delay": 10,
             "Duration": 50,
             "SkillName": "",
@@ -1029,7 +1029,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.06,
+            "Chance": 0.03,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1049,7 +1049,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.045,
+            "Chance": 0.03,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1078,7 +1078,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.025,
+            "Chance": 0.02,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1098,7 +1098,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.05,
+            "Chance": 0.03,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1118,7 +1118,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.055,
+            "Chance": 0.04,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1138,7 +1138,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.05,
+            "Chance": 0.04,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1158,7 +1158,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.045,
+            "Chance": 0.035,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1245,7 +1245,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.005,
+            "Chance": 0.01,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1274,7 +1274,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.005,
+            "Chance": 0.04,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1303,7 +1303,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.15,
+            "Chance": 0.08,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
