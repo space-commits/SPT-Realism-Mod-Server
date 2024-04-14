@@ -598,7 +598,7 @@ class Consumables {
                 serverItem._props.effects_damage = this.medItems.CAR.effects_damage;
                 serverItem._props.effects_health = this.medItems.CAR.effects_health;
                 serverItem._props.medUseTime = this.medItems.CAR.medUseTime;
-                serverItem._props.hpResourceRate = 0;
+                serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");

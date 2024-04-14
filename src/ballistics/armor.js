@@ -226,7 +226,7 @@ class Armor {
         if (serverItem._id === "65764e1e2bc38ef78e076489") {
             serverItem._props.Durability = 135;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 6;
             serverItem._props.BluntThroughput = 0.06;
             serverItem._props.ArmorMaterial = 'Titan';
         }
@@ -536,7 +536,7 @@ class Armor {
         }
         //Granit BR5
         if (serverItem._id === "64afc71497cf3a403c01ff38") {
-            serverItem._props.Durability = 160;
+            serverItem._props.Durability = 140;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.12;
@@ -578,15 +578,15 @@ class Armor {
         if (serverItem._id === "656f66b5c6baea13cd07e108") {
             serverItem._props.Durability = 135;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 8;
+            serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Ceramic';
         }
         //korund VM-K Back
         if (serverItem._id === "657b28d25f444d6dff0c6c77") {
-            serverItem._props.Durability = 125;
+            serverItem._props.Durability = 130;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 8;
+            serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.13;
             serverItem._props.ArmorMaterial = 'Ceramic';
         }
