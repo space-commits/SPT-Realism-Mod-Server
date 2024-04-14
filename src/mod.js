@@ -98,9 +98,18 @@ class Main {
             {
                 url: "/RealismMod/GetInfo",
                 action: (url, info, sessionId, output) => {
-                    const parsedPath = __dirname.split("\\");
-                    const folderName = parsedPath[parsedPath.length - 2];
-                    return jsonUtil.serialize(this.path.resolve(this.modLoader.getModPath(`${folderName}`)));
+                    try {
+                        //I know this is awful
+                        const parsedPath = __dirname.split("\\");
+                        const folderName = parsedPath[parsedPath.length - 2];
+                        const modPath = path.resolve(this.modLoader.getModPath(`${folderName}`));
+                        const configFilePath = path.join(modPath, "config", "config.json");
+                        const fileContents = fs.readFileSync(configFilePath, "utf8");
+                        return jsonUtil.serialize(fileContents);
+                    }
+                    catch (err) {
+                        console.error("Failed to read config file", err);
+                    }
                 }
             }
         ], "RealismMod");
@@ -171,8 +180,8 @@ class Main {
                     let level = 1;
                     if (pmcData?.Info?.Level !== undefined) {
                         level = pmcData.Info.Level;
-                        utils_1.ProfileTracker.level = level;
                     }
+                    utils_1.ProfileTracker.level = level;
                     try {
                         if (modConfig.backup_profiles == true) {
                             this.backupProfile(profileData, logger);
@@ -193,7 +202,6 @@ class Main {
                                 this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
                                 this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
                                 if (modConfig.med_changes == false && modConfig.revert_hp == true) {
-                                    utils.removeCustomItems(pmcData);
                                     pmcData.Health.Hydration.Maximum = player.defaultHydration;
                                     pmcData.Health.Energy.Maximum = player.defaultEnergy;
                                     if (pmcData.Health.Energy.Current > pmcData.Health.Energy.Maximum) {
@@ -325,6 +333,7 @@ class Main {
                             pmcConf.convertIntoPmcChance["assault"].min = 100;
                             pmcConf.convertIntoPmcChance["assault"].max = 100;
                         }
+                        logger.warning("Player Level = " + utils_1.ProfileTracker.level);
                         logger.warning("Map Name = " + matchInfo.location);
                         logger.warning("Map Type  = " + mapType);
                         logger.warning("Time " + time);
@@ -436,6 +445,7 @@ class Main {
         const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.IN_RAID);
+        const itemConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.ITEM);
         const jsonUtil = container.resolve("JsonUtil");
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
@@ -445,7 +455,7 @@ class Main {
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
+        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf, arrays);
         const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
@@ -458,7 +468,7 @@ class Main {
         const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations);
         const gear = new gear_1.Gear(arrays, tables, logger);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new description_gen_1.DescriptionGen(tables);
+        const descGen = new description_gen_1.DescriptionGen(tables, modConfig);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
         this.dllChecker(logger, modConfig);
         if (modConfig.recoil_attachment_overhaul == true) {
@@ -535,7 +545,7 @@ class Main {
         if (utils_1.ConfigChecker.dllIsPresent == true) {
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
-                // quests.fixMechancicQuests();
+                quests.fixMechancicQuests();
                 ammo.grenadeTweaks();
             }
             if (modConfig.headset_changes) {
@@ -557,6 +567,7 @@ class Main {
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
+        itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
@@ -594,7 +605,7 @@ class Main {
         }
     }
     checkProfile(pmcData, pmcEXP, utils, player, logger) {
-        utils.correctItemResources(pmcData, pmcEXP);
+        utils.correctItemResources(pmcData, pmcEXP, logger);
         if (modConfig.med_changes == true) {
             pmcData.Health.Hydration.Maximum = player.hydration;
             pmcData.Health.Energy.Maximum = player.energy;

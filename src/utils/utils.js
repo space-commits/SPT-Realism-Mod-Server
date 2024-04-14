@@ -37,9 +37,6 @@ class Utils {
     itemDB() {
         return this.tables.templates.items;
     }
-    medItems() {
-        return this.arrays.stashMeds;
-    }
     getInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -52,41 +49,50 @@ class Utils {
         if (playerData?.Inventory !== undefined) {
             for (let i in playerData.Inventory.items) {
                 if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
-                    for (let j in this.medItems()) {
-                        if (playerData.Inventory.items[i]._tpl === this.medItems()[j]) {
-                            playerData.Inventory.items[i].upd.MedKit.HpResource = this.itemDB()[this.medItems()[j]]._props.MaxHpResource;
-                        }
+                    let templateItem = this.itemDB()[playerData.Inventory.items[i]._tpl];
+                    if (templateItem !== null && templateItem !== undefined) {
+                        playerData.Inventory.items[i].upd.MedKit.HpResource = templateItem._props.MaxHpResource;
                     }
                 }
             }
         }
     }
-    correctItemResources(playerData, pmcEXP) {
+    correctItemResources(playerData, playerXP, logger) {
         if (playerData?.Inventory !== undefined) {
             for (let i in playerData.Inventory.items) {
                 let profileItem = playerData.Inventory.items[i];
                 if (profileItem?.upd?.Repairable?.Durability !== undefined) {
-                    this.correctDuraHelper(profileItem, pmcEXP);
+                    this.correctDuraHelper(profileItem, playerXP);
                 }
                 if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
-                    this.correctMedicalRes(profileItem, pmcEXP);
+                    this.correctMedicalRes(profileItem, playerXP, logger);
+                }
+                if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent !== undefined) {
+                    this.correcProvisionRes(profileItem, playerXP, logger);
                 }
             }
         }
     }
-    correctMedicalRes(profileItem, pmcEXP) {
-        for (let j in this.medItems()) {
-            if (profileItem._tpl === this.medItems()[j]) {
-                if ((profileItem.upd.MedKit.HpResource > this.itemDB()[this.medItems()[j]]._props.MaxHpResource) || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
-                    profileItem.upd.MedKit.HpResource = this.itemDB()[this.medItems()[j]]._props.MaxHpResource;
-                }
+    correcProvisionRes(profileItem, playerXP, logger) {
+        let templateItem = this.itemDB()[profileItem._tpl];
+        if (templateItem !== null && templateItem !== undefined) {
+            if (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0) {
+                profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
             }
         }
     }
-    correctDuraHelper(profileItem, pmcEXP) {
+    correctMedicalRes(profileItem, playerXP, logger) {
+        let templateItem = this.itemDB()[profileItem._tpl];
+        if (templateItem !== null && templateItem !== undefined) {
+            if (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0) {
+                profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
+            }
+        }
+    }
+    correctDuraHelper(profileItem, playerXP) {
         for (let j in this.itemDB()) {
             let serverItem = this.itemDB()[j];
-            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (pmcEXP == 0 && profileItem._tpl === this.medItems[j])) {
+            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (playerXP == 0)) {
                 profileItem.upd.Repairable.Durability = serverItem._props.Durability;
                 profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;
             }
@@ -104,19 +110,6 @@ class Utils {
         }
         let randomTier = Math.floor(Math.random() * totalWeight);
         return weighedElems[randomTier];
-    }
-    removeCustomItems(playerData) {
-        if (playerData?.Inventory !== undefined) {
-            for (let i = 0; i < playerData.Inventory.items.length; i++) {
-                if (playerData.Inventory.items[i]._tpl === "TIER1MEDKIT" ||
-                    playerData.Inventory.items[i]._tpl === "TIER2MEDKIT" ||
-                    playerData.Inventory.items[i]._tpl === "TIER3MEDKIT" ||
-                    playerData.Inventory.items[i]._tpl === "SUPERBOTMEDKIT") {
-                    playerData.Inventory.items[i]._tpl = "5755356824597772cb798962";
-                    playerData.Inventory.items[i].upd.MedKit.HpResource = 100;
-                }
-            }
-        }
     }
     pickRandNumInRange(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;

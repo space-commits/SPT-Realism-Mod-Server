@@ -208,8 +208,8 @@ export class Player {
 
         if (this.modConfig.movement_changes == true) {
 
-            this.globalDB().WalkSpeed["x"] = 0.54;
-            this.globalDB().WalkSpeed["y"] = 0.77;
+            this.globalDB().WalkSpeed["x"] = 0.59;
+            this.globalDB().WalkSpeed["y"] = 0.84;
             this.globalDB().SprintSpeed["x"] = 0.05;
             this.globalDB().SprintSpeed["y"] = 0.5;
 
@@ -309,9 +309,9 @@ export class Player {
 
         if (this.modConfig.realistic_ballistics == true) {
 
-            this.globalDB().LegsOverdamage = 1.8; // 2
-            this.globalDB().HandsOverdamage = 0.5; //0.56
-            this.globalDB().StomachOverdamage = 2.8; //2.8
+            this.globalDB().LegsOverdamage = 3.5; // 2
+            this.globalDB().HandsOverdamage = 3.9; //0.56
+            this.globalDB().StomachOverdamage = 3; //2.8
         }
 
         if (this.modConfig.realistic_player_health == true) {
@@ -360,12 +360,6 @@ export class Player {
 
     private correctInventory(inventory) {
         for (let i in inventory) {
-            if (this.modConfig.med_changes == false) {
-                this.resetMedkitHP(inventory[i]);
-            }
-            else {
-                this.setMedkitHP(inventory[i]);
-            }
             if (this.modConfig.realistic_ballistics == true) {
                 this.setArmorDuabaility(inventory[i]);
             }
@@ -385,27 +379,6 @@ export class Player {
                 invItem.upd.Repairable.Durability = this.tables.templates.items[i]._props.Durability;
                 invItem.upd.Repairable.MaxDurability = this.tables.templates.items[i]._props.Durability;
             }
-        }
-    }
-
-    private resetMedkitHP(invItem: Item) {
-        if (invItem._tpl === "TIER1MEDKIT" ||
-            invItem._tpl === "TIER2MEDKIT" ||
-            invItem._tpl === "TIER3MEDKIT") {
-            invItem._tpl = "5755356824597772cb798962"
-            invItem.upd.MedKit.HpResource = 100;
-        }
-    }
-
-    private setMedkitHP(invItem: Item) {
-        if (invItem._tpl === "TIER1MEDKIT") {
-            invItem.upd.MedKit.HpResource = this.medItems.TIER1MEDKIT.MaxHpResource;
-        }
-        if (invItem._tpl === "TIER2MEDKIT") {
-            invItem.upd.MedKit.HpResource = this.medItems.TIER2MEDKIT.MaxHpResource;
-        }
-        if (invItem._tpl === "TIER3MEDKIT") {
-            invItem.upd.MedKit.HpResource = this.medItems.TIER3MEDKIT.MaxHpResource;
         }
     }
 }

@@ -176,6 +176,7 @@ class TieredFlea {
             this.canSellSpecial(true, serverItem);
             this.canSellOtherLoot(true, serverItem);
             this.canSellMounts(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
     flea3() {
@@ -192,6 +193,7 @@ class TieredFlea {
             this.canSellParts(true, serverItem);
             this.canSellLube(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
     flea4() {
@@ -213,6 +215,7 @@ class TieredFlea {
             this.canSellMedicalSupplies(true, serverItem);
             this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
     flea5() {
@@ -242,6 +245,7 @@ class TieredFlea {
             this.canSellSMG(true, serverItem);
             this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
     flea6() {
@@ -282,6 +286,7 @@ class TieredFlea {
             this.canSellJewelry(true, serverItem);
             this.canSellElectronics(true, serverItem);
             this.canSellDMR(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
     flea7() {
@@ -333,6 +338,7 @@ class TieredFlea {
             this.canSellAmmo(true, serverItem);
             this.canSellInfo(true, serverItem);
             this.canSellKeys(true, serverItem);
+            this.canSellIrons(true, serverItem);
         }
     }
     fleaFullUnlock() {
@@ -347,6 +353,7 @@ class TieredFlea {
         }
     }
     canSellAll(bool, serverItem) {
+        this.canSellIrons(bool, serverItem);
         this.canSellSecureContainer(bool, serverItem);
         this.canSellMeds(bool, serverItem);
         this.canSellStims(bool, serverItem);
@@ -548,7 +555,7 @@ class TieredFlea {
         if (this.checkIfBanned(serverItem._id)) {
             serverItem._props.CanSellOnRagfair = false;
         }
-        else if (serverItem._parent === enums_1.ParentClasses.OTHER) {
+        else if (serverItem._parent === enums_1.ParentClasses.FUEL) {
             serverItem._props.CanSellOnRagfair = bool;
         }
     }
@@ -572,7 +579,7 @@ class TieredFlea {
         if (this.checkIfBanned(serverItem._id)) {
             serverItem._props.CanSellOnRagfair = false;
         }
-        else if (serverItem._parent === enums_1.ParentClasses.ELECTRONICS) {
+        else if (serverItem._parent === enums_1.ParentClasses.ELECTRONICS || serverItem._parent === enums_1.ParentClasses.BATTERY) {
             serverItem._props.CanSellOnRagfair = bool;
         }
     }

@@ -1,1353 +1,1335 @@
 {
-  "Buffs_emergency_water": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 100,
-      "SkillName": "",
-      "Value": 0.025
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 100,
-      "SkillName": "",
-      "Value": 0.175
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "StaminaRate",
-      "Chance": 1,
-      "Delay": 50,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.125
-    }
-  ],
-  "Buffs_drink_water": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.025
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.2
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "StaminaRate",
-      "Chance": 1,
-      "Delay": 90,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.125
-    }
-  ],
-  "Buffs_drink_aquamari": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 100,
-      "SkillName": "",
-      "Value": 0.1
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 100,
-      "SkillName": "",
-      "Value": 0.6
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "StaminaRate",
-      "Chance": 1,
-      "Delay": 50,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.175
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 1,
-      "Delay": 50,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 10
-    }
-  ],
-  "Buffs_drink_purewater": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.05
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.35
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "StaminaRate",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.25
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 15
-    }
-  ],
-  "Buffs_drink_milk": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.05
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.1
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.15,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_apple_juice": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.055
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.11
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.1,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_pineapple_juice": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.07
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.097
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.11,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_vita_juice": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.06
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.085
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.08,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_green_tea": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.04
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.05
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.02,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_drink_kvass": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": 0.165
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": 0.085
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -0.041
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -0.022
-    }
-  ],
-  "Buffs_drink_tarcola": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": 0.21
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": 0.125
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.083
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.042
-    }
-  ],
-  "Buffs_drink_ratcola": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": 0.2
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": 0.14
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.085
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.04
-    }
-  ],
-  "Buffs_drink_hotrod": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 500,
-      "SkillName": "",
-      "Value": 14
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "StaminaRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 500,
-      "SkillName": "",
-      "Value": 0.35
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0.67
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0.25
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.167
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.063
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "SkillRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 300,
-      "SkillName": "StressResistance",
-      "Value": -5
-    }
-  ],
-  "Buffs_drink_maxenergy": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 500,
-      "SkillName": "",
-      "Value": 15
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "StaminaRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 500,
-      "SkillName": "",
-      "Value": 0.4
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 1
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0.2
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.25
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.05
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "SkillRate",
-      "Chance": 1,
-      "Delay": 300,
-      "Duration": 300,
-      "SkillName": "StressResistance",
-      "Value": -7
-    }
-  ],
-  "Buffs_drink_moonshine": [
-    {
-      "AbsoluteValue": false,
-      "BuffType": "DamageModifier",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.1
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -0.085
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -0.085
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "SkillRate",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 300,
-      "SkillName": "Attention",
-      "Value": -10
-    },
-    {
-      "AbsoluteValue": false,
-      "BuffType": "HandsTremor",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -20
-    }
-  ],
-  "Buffs_drink_jack": [
-    {
-      "AbsoluteValue": false,
-      "BuffType": "DamageModifier",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": 0.05
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -0.07
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -0.07
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "SkillRate",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "Attention",
-      "Value": -5
-    },
-    {
-      "AbsoluteValue": false,
-      "BuffType": "HandsTremor",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": 0
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": -10
-    }
-  ],
-  "Buffs_drink_vodka_BAD": [
-    {
-      "AbsoluteValue": false,
-      "BuffType": "DamageModifier",
-      "Chance": 0.5,
-      "Delay": 150,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.15
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.065
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": 0.065
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "SkillRate",
-      "Chance": 1,
-      "Delay": 60,
-      "Duration": 300,
-      "SkillName": "Attention",
-      "Value": -15
-    },
-    {
-      "AbsoluteValue": false,
-      "BuffType": "HandsTremor",
-      "Chance": 1,
-      "Delay": 60,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 1,
-      "Delay": 60,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -25
-    }
-  ],
-  "Buffs_drink_vodka": [
-    {
-      "AbsoluteValue": false,
-      "BuffType": "DamageModifier",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": 0.06
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.06
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.06
-    },
-    {
-      "AbsoluteValue": false,
-      "BuffType": "HandsTremor",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": 0
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 0.25,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": -10
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "SkillRate",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "Attention",
-      "Value": -6
-    },
-    {
-      "AbsoluteValue": false,
-      "BuffType": "HandsTremor",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": 0
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 1,
-      "Delay": 150,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": -12
-    }
-  ],
-  "Buffs_drink_beer": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": 0.04
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.04
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "SkillRate",
-      "Chance": 1,
-      "Delay": 60,
-      "Duration": 120,
-      "SkillName": "Attention",
-      "Value": -1
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "MaxStamina",
-      "Chance": 0.25,
-      "Delay": 60,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -5
-    }
-  ],
-  "Buffs_food_sugar": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": 0.5
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.335
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 120,
-      "Duration": 60,
-      "SkillName": "",
-      "Value": -0.65
-    }
-  ],
-  "Buffs_food_alyonka": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": 0.0625
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.041
-    }
-  ],
-  "Buffs_food_slippers": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": 0.0675
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.0425
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 120,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.025
-    }
-  ],
-  "Buffs_food_condensed_milk": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": 0.125
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.21
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 120,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.185
-    }
-  ],
-  "Buffs_food_borodinskiye": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.042
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": -0.014
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.02,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_emelya": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.044
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": -0.0145
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.01,
-      "Delay": 10,
-      "Duration": 50,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_crackers": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.045
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": -0.045
-    }
-  ],
-  "Buffs_food_mayonez": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": 0.042
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 120,
-      "SkillName": "",
-      "Value": -0.175
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.2,
-      "Delay": 10,
-      "Duration": 50,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_beef_large": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.26
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.06,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_beef_small": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.2
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.045,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_peas": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.1
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.025
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.025,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_herring": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.185
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.05,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_salmon": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.195
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.055,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_suary": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.17
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.05,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_sprats": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.14
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.045,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_squash": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.15
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -0.025
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.025,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_noodles": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": 0.065
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 180,
-      "SkillName": "",
-      "Value": -0.03
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.01,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_oat_flakes": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": 0.063
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": -0.021
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.005,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_dried_meat": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": 0.1
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": -0.025
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.005,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
-  "Buffs_food_sausage": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": 0.125
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 240,
-      "SkillName": "",
-      "Value": -0.015
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "UnknownToxin",
-      "Chance": 0.15,
-      "Delay": 10,
-      "Duration": 30,
-      "SkillName": "",
-      "Value": 0
-    }
-  ],
+    "Buffs_emergency_water": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 100,
+            "SkillName": "",
+            "Value": 0.035
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 100,
+            "SkillName": "",
+            "Value": 0.307
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 50,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.125
+        }
+    ],
+    "Buffs_drink_water": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.035
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.351
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 90,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.125
+        }
+    ],
+    "Buffs_drink_aquamari": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 100,
+            "SkillName": "",
+            "Value": 0.14
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 100,
+            "SkillName": "",
+            "Value": 1.055
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 50,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.175
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 50,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 10
+        }
+    ],
+    "Buffs_drink_purewater": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.07
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.616
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.25
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 15
+        }
+    ],
+    "Buffs_drink_milk": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.07
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.175
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.15,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_apple_juice": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.077
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.194
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.1,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_pineapple_juice": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.099
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.17
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.06,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_vita_juice": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.085
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.04,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_green_tea": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.056
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.088
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.01,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_drink_kvass": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": 0.231
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": 0.15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.041
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.022
+        }
+    ],
+    "Buffs_drink_tarcola": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0.295
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0.22
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.083
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.042
+        }
+    ],
+    "Buffs_drink_ratcola": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0.281
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0.247
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.085
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.04
+        }
+    ],
+    "Buffs_drink_hotrod": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 500,
+            "SkillName": "",
+            "Value": 14
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 500,
+            "SkillName": "",
+            "Value": 0.35
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0.943
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0.439
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.167
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.063
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 300,
+            "SkillName": "StressResistance",
+            "Value": -5
+        }
+    ],
+    "Buffs_drink_maxenergy": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 500,
+            "SkillName": "",
+            "Value": 15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 500,
+            "SkillName": "",
+            "Value": 0.4
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 1.406
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0.351
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.25
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.05
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 300,
+            "Duration": 300,
+            "SkillName": "StressResistance",
+            "Value": -7
+        }
+    ],
+    "Buffs_drink_moonshine": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.1
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.085
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.085
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "Attention",
+            "Value": -10
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -20
+        }
+    ],
+    "Buffs_drink_jack": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 0.05
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.07
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.07
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "Attention",
+            "Value": -5
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": -10
+        }
+    ],
+    "Buffs_drink_vodka_BAD": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 0.5,
+            "Delay": 150,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.065
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0.115
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 60,
+            "Duration": 300,
+            "SkillName": "Attention",
+            "Value": -15
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 60,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 60,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -25
+        }
+    ],
+    "Buffs_drink_vodka": [
+        {
+            "AbsoluteValue": false,
+            "BuffType": "DamageModifier",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 0.06
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.06
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.06
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 0.25,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": -10
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "Attention",
+            "Value": -6
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 0
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 150,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": -12
+        }
+    ],
+    "Buffs_drink_beer": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": 0.056
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.04
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 60,
+            "Duration": 120,
+            "SkillName": "Attention",
+            "Value": -1
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "MaxStamina",
+            "Chance": 0.25,
+            "Delay": 60,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -5
+        }
+    ],
+    "Buffs_food_sugar": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": 0.703
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.335
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 120,
+            "Duration": 60,
+            "SkillName": "",
+            "Value": -0.65
+        }
+    ],
+    "Buffs_food_alyonka": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": 0.089
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.041
+        }
+    ],
+    "Buffs_food_slippers": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": 0.095
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.0425
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 120,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.025
+        }
+    ],
+    "Buffs_food_condensed_milk": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": 0.176
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.21
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 120,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.185
+        }
+    ],
+    "Buffs_food_borodinskiye": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.059
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": -0.014
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.01,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_emelya": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.062
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": -0.0145
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.01,
+            "Delay": 10,
+            "Duration": 50,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_crackers": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.064
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": -0.045
+        }
+    ],
+    "Buffs_food_mayonez": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": 0.059
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 120,
+            "SkillName": "",
+            "Value": -0.175
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.1,
+            "Delay": 10,
+            "Duration": 50,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_beef_large": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.365
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.03,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_beef_small": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.281
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.03,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_peas": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.14
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.044
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.02,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_herring": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.26
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.03,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_salmon": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.274
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.04,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_suary": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.239
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.04,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_sprats": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.198
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.035,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_squash": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.211
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.025
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.025,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_noodles": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": 0.092
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": -0.03
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.01,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_oat_flakes": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 0.089
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.021
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.01,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_dried_meat": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 0.14
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": -0.025
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.04,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
+    "Buffs_food_sausage": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 0.176
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": -0.015
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.08,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
     "Buffs_food_mre": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.4
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.05
-    }
-  ],
-  "Buffs_food_iskra": [
-    {
-      "AbsoluteValue": true,
-      "BuffType": "EnergyRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.435
-    },
-    {
-      "AbsoluteValue": true,
-      "BuffType": "HydrationRate",
-      "Chance": 1,
-      "Delay": 1,
-      "Duration": 300,
-      "SkillName": "",
-      "Value": 0.0325
-    }
-  ]
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.562
+        }
+    ],
+    "Buffs_food_iskra": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0.611
+        }
+    ]
 }

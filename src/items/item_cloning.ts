@@ -18,55 +18,6 @@ export class ItemCloning {
     }
 
     public createCustomMedItems() {
-        //Tier 1 Medkit
-        this.cloneMedicalItem(
-            "5755356824597772cb798962",
-            "TIER1MEDKIT",
-            this.medItems.TIER1MEDKIT.MaxHpResource,
-            this.medItems.TIER1MEDKIT.medUseTime,
-            this.medItems.TIER1MEDKIT.hpResourceRate,
-            "assets/content/items/barter/item_barter_meds_tools/item_barter_meds_tools.bundle",
-            "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle",
-            "yellow ",
-            this.medItems.TIER1MEDKIT.effects_damage,
-            {}
-        );
-        this.addToHandbook("TIER1MEDKIT", "5b47574386f77428ca22b338", 10000);
-        this.addToLocale("TIER1MEDKIT", "Makeshift Medical Kit", "TIER1", "A makeshift medical kit used for healing minor wounds that have been already stabilized in the field. Not suitable for use in the field.");
-
-        //Tier 2 Medkit
-        this.cloneMedicalItem(
-            "5755356824597772cb798962",
-            "TIER2MEDKIT",
-            this.medItems.TIER2MEDKIT.MaxHpResource,
-            this.medItems.TIER2MEDKIT.medUseTime,
-            this.medItems.TIER2MEDKIT.hpResourceRate,
-            "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_loot.bundle",
-            "assets/content/weapons/usable_items/item_meds_core_medical_surgical_kit/item_meds_core_medical_surgical_kit_container.bundle",
-            "blue",
-            this.medItems.TIER2MEDKIT.effects_damage,
-            {}
-        );
-        this.addToHandbook("TIER2MEDKIT", "5b47574386f77428ca22b338", 20000);
-        this.addToLocale("TIER2MEDKIT", "Improved Makeshift Medical Kit", "TIER2", "An improved makeshift medical kit used for healing wounds that have been already stabilized in the field. Not suitable for use in the field.");
-
-        //Tier 3 Medkit
-        this.cloneMedicalItem(
-            "5755356824597772cb798962",
-            "TIER3MEDKIT",
-            this.medItems.TIER3MEDKIT.MaxHpResource,
-            this.medItems.TIER3MEDKIT.medUseTime,
-            this.medItems.TIER3MEDKIT.hpResourceRate,
-            "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_loot.bundle",
-            "assets/content/weapons/usable_items/item_meds_survival_first_aid_rollup_kit/item_meds_survival_first_aid_rollup_kit_container.bundle",
-            "violet",
-            this.medItems.TIER3MEDKIT.effects_damage,
-            {}
-        );
-        this.addToHandbook("TIER3MEDKIT", "5b47574386f77428ca22b338", 30000);
-        this.addToLocale("TIER3MEDKIT", "High-Grade Makeshift Medical Kit", "TIER3", "A high-grade makeshift medical kit used for healing more severe wounds that have been already stabilized in the field. Not suitable for use in the field.");
-
-
         //SJO Regen
         this.cloneMedicalItem(
             "5c10c8fd86f7743d7d706df3",
@@ -98,7 +49,7 @@ export class ItemCloning {
         );
         this.addToHandbook("adrenal_debuff", "5b47574386f77428ca22b33a", 1);
         this.addToLocale("adrenal_debuff", "Adrenal Debuff", "Adrenal", "If you are seeing this outside of the handbook, something has gone wrong.");
-
+      
         //Regen Debuff
         this.cloneMedicalItem(
             "5c10c8fd86f7743d7d706df3",
@@ -246,7 +197,14 @@ export class ItemCloning {
     }
 
     public createCustomAttachments() {
-        //Mechanic VPO-215 23incg 7.62x39 Barrel
+        
+        //Mechanic SKS .366 TKM Barrel
+        this.cloneAttachments("634f02331f9f536910079b51", "mechSKS_366", "violet");
+        this.addToHandbook("mechSKS_366", "5b5f75c686f774094242f19f", 15000);
+        this.addToLocale("mechSKS_366", "SKS .366 TKM 520mm barrel", "SKS .366 520mm", "A 520mm barrel for SKS rifle chambered in .366 TKM.");
+        this.pushAttToFilters("634f02331f9f536910079b51", "mechSKS_366");
+
+        //Mechanic VPO-215 23inch 7.62x39 Barrel
         this.cloneAttachments("5de65547883dde217541644b", "mechVPO_23", "violet");
         this.addToHandbook("mechVPO_23", "5b5f75c686f774094242f19f", 15000);
         this.addToLocale("mechVPO_23", "VPO-215 \"Gornostay\" 7.62x39mm 23 inch barrel", "215 7.62x39 23\"", "A 23 inch (600mm) barrel for VPO-215 rifle chambered in 7.62x39mm.");
@@ -308,19 +266,28 @@ export class ItemCloning {
     }
 
 
-    private addCustomWeapsToQuests(targetWeap: string, weapToAdd: string) {
-        for (let quest in this.questDB) {
-            let conditions = this.questDB[quest].conditions.AvailableForFinish[0];
-            if (conditions._parent === "CounterCreator") {
-                let killConditions = conditions._props.counter.conditions[0]
-                if (killConditions._parent === "Kills" && killConditions._props?.weapon !== undefined) {
-                    if (killConditions._props.weapon.includes(targetWeap)) {
-                        killConditions._props.weapon.push(weapToAdd);
+    private addCustomWeapsToQuests(originalWeapon: string, weapToAdd: string) {
+        for (let q in this.questDB()) {
+            let quest = this.questDB()[q];
+
+            if (!quest?.conditions?.AvailableForFinish) continue;
+
+            let availForFin = quest.conditions.AvailableForFinish;
+            for (let r in availForFin) {
+                let requirement = availForFin[r];
+
+                if (requirement.conditionType !== "CounterCreator" || !requirement.counter?.conditions) continue;
+
+                for (let c in requirement.counter.conditions) {
+                    let subCondition = requirement.counter.conditions[c];
+                    if (subCondition.conditionType == "Kills" && subCondition.weapon && subCondition.weapon.includes(originalWeapon)) {
+                        subCondition.weapon.push(weapToAdd);
                     }
                 }
             }
         }
     }
+
     private addToMastering(id: string, masteringCat: string) {
         let mastering = this.tables.globals.config.Mastering;
         for (let cat in mastering) {

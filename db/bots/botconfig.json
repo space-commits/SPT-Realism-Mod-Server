@@ -66,6 +66,7 @@
         "interchange": 25,
         "laboratory": 20,
         "tarkovstreets": 30,
+        "sandbox": 18,
         "default": 25
     },
     "maxBotCapLow": {
@@ -79,6 +80,7 @@
         "interchange": 14,
         "laboratory": 15,
         "tarkovstreets": 12,
+        "sandbox": 12,
         "default": 15
     },
     "lootNValue": {

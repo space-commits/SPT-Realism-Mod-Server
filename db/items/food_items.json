@@ -1,4 +1,8 @@
 {
+    "ewr": {
+        "StimulatorBuffs": "Buffs_emergency_water",
+        "effects_health": {}
+    },
     "water": {
         "StimulatorBuffs": "Buffs_drink_water",
         "effects_health": {}

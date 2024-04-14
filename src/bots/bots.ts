@@ -80,7 +80,17 @@ export class BotLoader {
         return this.configServ.getConfig<IPmcConfig>(ConfigTypes.PMC);
     }
 
-
+    lootBlacklist(): string[]{
+        return [
+            "generic_debuff",
+            "performance_debuff",
+            "weight_debuff",
+            "clotting_debuff",
+            "damage_debuff",
+            "adrenal_debuff",
+            "regen_debuff"
+        ];
+    }
 
     public loadBots() {
 
@@ -135,6 +145,12 @@ export class BotLoader {
         this.botConf().equipment["pmc"].weightingAdjustmentsByPlayerLevel = [];
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         this.botConf().equipment["pmc"].filterPlatesByLevel = true;
+
+        for(let i in this.lootBlacklist()){
+            this.botConfPMC().vestLoot.blacklist.push(this.lootBlacklist()[i]);
+            this.botConfPMC().pocketLoot.blacklist.push(this.lootBlacklist()[i]);
+            this.botConfPMC().backpackLoot.blacklist.push(this.lootBlacklist()[i]);
+        }         
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("Bots Loaded");

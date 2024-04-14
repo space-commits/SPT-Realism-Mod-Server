@@ -90,6 +90,7 @@ import { Armor } from "./ballistics/armor";
 import * as path from 'path';
 import * as fs from 'fs';
 import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
+import { IItemConfig } from "@spt-aki/models/spt/config/IItemConfig";
 
 
 const crafts = require("../db/items/hideout_crafts.json");
@@ -146,9 +147,18 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 {
                     url: "/RealismMod/GetInfo",
                     action: (url, info, sessionId, output) => {
-                        const parsedPath = __dirname.split("\\");
-                        const folderName = parsedPath[parsedPath.length - 2];
-                        return jsonUtil.serialize(this.path.resolve(this.modLoader.getModPath(`${folderName}`)));
+
+                        try {
+                            //I know this is awful
+                            const parsedPath = __dirname.split("\\");
+                            const folderName = parsedPath[parsedPath.length - 2];
+                            const modPath = path.resolve(this.modLoader.getModPath(`${folderName}`));
+                            const configFilePath = path.join(modPath, "config", "config.json");
+                            const fileContents = fs.readFileSync(configFilePath, "utf8");
+                            return jsonUtil.serialize(fileContents);
+                        } catch (err) {
+                            console.error("Failed to read config file", err);
+                        }
                     }
                 }
             ],
@@ -230,11 +240,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const profileData = profileHelper.getFullProfile(sessionID)
 
                         let level = 1;
-
                         if (pmcData?.Info?.Level !== undefined) {
                             level = pmcData.Info.Level;
-                            ProfileTracker.level = level;
                         }
+                        ProfileTracker.level = level;
 
                         try {
 
@@ -264,7 +273,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                     this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
 
                                     if (modConfig.med_changes == false && modConfig.revert_hp == true) {
-                                        utils.removeCustomItems(pmcData);
                                         pmcData.Health.Hydration.Maximum = player.defaultHydration
                                         pmcData.Health.Energy.Maximum = player.defaultEnergy;
                                         if (pmcData.Health.Energy.Current > pmcData.Health.Energy.Maximum) {
@@ -426,6 +434,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
 
+                            logger.warning("Player Level = " + ProfileTracker.level);
                             logger.warning("Map Name = " + matchInfo.location);
                             logger.warning("Map Type  = " + mapType);
                             logger.warning("Time " + time);
@@ -568,6 +577,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig<IInRaidConfig>(ConfigTypes.IN_RAID);
+        const itemConf = configServer.getConfig<IItemConfig>(ConfigTypes.ITEM);
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
@@ -577,7 +587,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf);
+        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf, arrays);
         const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
@@ -590,19 +600,19 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const maps = new Spawns(logger, tables, modConfig, tables.locations);
         const gear = new Gear(arrays, tables, logger);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new DescriptionGen(tables);
+        const descGen = new DescriptionGen(tables, modConfig);
         const jsonHand = new JsonHandler(tables, logger);
 
         this.dllChecker(logger, modConfig);
 
         if (modConfig.recoil_attachment_overhaul == true) {
-            itemCloning.createCustomWeapons(); 
+            itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
             itemsClass.addCustomItems();
             attachBase.loadAttCompat();
             attachBase.loadCaliberConversions();
         }
-     
+
 
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -665,12 +675,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             consumables.loadMeds();
         }
 
-        if(modConfig.food_changes == true){
+        if (modConfig.food_changes == true) {
             consumables.loadFood();
         }
 
-        if(modConfig.stim_changes == true){
-            consumables.loadStims();       
+        if (modConfig.stim_changes == true) {
+            consumables.loadStims();
         }
 
         bots.botHpMulti();
@@ -690,7 +700,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (ConfigChecker.dllIsPresent == true) {
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
-                // quests.fixMechancicQuests();
+                quests.fixMechancicQuests();
                 ammo.grenadeTweaks();
             }
             if (modConfig.headset_changes) {
@@ -711,13 +721,14 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }
-        
+
         traders.loadTraderRefreshTimes();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
 
+        itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
@@ -760,7 +771,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     }
 
     private checkProfile(pmcData: IPmcData, pmcEXP: number, utils: Utils, player: Player, logger: ILogger) {
-        utils.correctItemResources(pmcData, pmcEXP);
+        utils.correctItemResources(pmcData, pmcEXP, logger);
         if (modConfig.med_changes == true) {
             pmcData.Health.Hydration.Maximum = player.hydration;
             pmcData.Health.Energy.Maximum = player.energy;

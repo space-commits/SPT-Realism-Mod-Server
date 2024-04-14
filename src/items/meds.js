@@ -33,16 +33,19 @@ class Consumables {
         for (const buffName in this.buffsStims) {
             this.buffDB()[buffName] = this.buffsStims[buffName];
         }
-        ///Buffs///
-        this.itemDB()["generic_debuff"]._props.StimulatorBuffs = "Buffs_Generic";
-        this.itemDB()["performance_debuff"]._props.StimulatorBuffs = "Buffs_Performance";
-        this.itemDB()["weight_debuff"]._props.StimulatorBuffs = "Buffs_Weight";
-        this.itemDB()["clotting_debuff"]._props.StimulatorBuffs = "Buffs_Clotting";
-        this.itemDB()["damage_debuff"]._props.StimulatorBuffs = "Buffs_Damage";
-        this.itemDB()["adrenal_debuff"]._props.StimulatorBuffs = "Buffs_Adrenal";
-        this.itemDB()["regen_debuff"]._props.StimulatorBuffs = "Buffs_Regenerative";
-        ///Custom///
-        this.itemDB()["SJ0"]._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
+        if (this.modConf.med_changes == true) {
+            ///DeBuffs///
+            this.itemDB()["generic_debuff"]._props.StimulatorBuffs = "Buffs_Generic";
+            this.itemDB()["performance_debuff"]._props.StimulatorBuffs = "Buffs_Performance";
+            this.itemDB()["weight_debuff"]._props.StimulatorBuffs = "Buffs_Weight";
+            this.itemDB()["clotting_debuff"]._props.StimulatorBuffs = "Buffs_Clotting";
+            this.itemDB()["damage_debuff"]._props.StimulatorBuffs = "Buffs_Damage";
+            this.itemDB()["adrenal_debuff"]._props.StimulatorBuffs = "Buffs_Adrenal";
+            this.itemDB()["regen_debuff"]._props.StimulatorBuffs = "Buffs_Regenerative";
+            this.itemDB()["regen_debuff"]._props.StimulatorBuffs = "Buffs_Regenerative";
+            ///Custom///
+            this.itemDB()["SJ0"]._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
+        }
         //adrenaline
         this.itemDB()["5c10c8fd86f7743d7d706df3"]._props.effects_damage = {
             "Contusion": {
@@ -93,9 +96,9 @@ class Consumables {
             let serverItem = this.itemDB()[i];
             ////Drinks////
             //Water//
-            //Water Bottle
+            //EWR
             if (serverItem._id === "60098b1705871270cd5352a1") {
-                serverItem._props.StimulatorBuffs = this.foodItems.water.StimulatorBuffs;
+                serverItem._props.StimulatorBuffs = this.foodItems.ewr.StimulatorBuffs;
                 serverItem._props.effects_health = {};
                 serverItem._props.MaxResource = 1;
             }
@@ -144,13 +147,19 @@ class Consumables {
                 serverItem._props.MaxResource = 1;
             }
             //Pineapple
-            if (serverItem._id === "544fb62a4bdc2dfb738b4568b") {
+            if (serverItem._id === "544fb62a4bdc2dfb738b4568") {
                 serverItem._props.StimulatorBuffs = this.foodItems.pineapple.StimulatorBuffs;
                 serverItem._props.effects_health = {};
                 serverItem._props.MaxResource = 1;
             }
             //Vita
             if (serverItem._id === "57513fcc24597720a31c09a6") {
+                serverItem._props.StimulatorBuffs = this.foodItems.vita.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+                serverItem._props.MaxResource = 1;
+            }
+            //Grand
+            if (serverItem._id === "57513f9324597720a7128161") {
                 serverItem._props.StimulatorBuffs = this.foodItems.vita.StimulatorBuffs;
                 serverItem._props.effects_health = {};
                 serverItem._props.MaxResource = 1;
@@ -171,6 +180,7 @@ class Consumables {
             //RatCola
             if (serverItem._id === "60b0f93284c20f0feb453da7") {
                 serverItem._props.StimulatorBuffs = this.foodItems.ratcola.StimulatorBuffs;
+                serverItem._props.effects_health = {};
                 serverItem._props.MaxResource = 1;
             }
             //Other
@@ -259,6 +269,12 @@ class Consumables {
             //Noodles
             if (serverItem._id === "656df4fec921ad01000481a2") {
                 serverItem._props.StimulatorBuffs = this.foodItems.noodles.StimulatorBuffs;
+                serverItem._props.effects_health = {};
+                serverItem._props.MaxResource = 1;
+            }
+            //Crackers
+            if (serverItem._id === "5448ff904bdc2d6f028b456e") {
+                serverItem._props.StimulatorBuffs = this.foodItems.crackers.StimulatorBuffs;
                 serverItem._props.effects_health = {};
                 serverItem._props.MaxResource = 1;
             }
@@ -356,34 +372,6 @@ class Consumables {
         }
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            if (serverItem._id === "SUPERBOTMEDKIT") {
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
-                serverItem._props.ConflictingItems.splice(4, 0, "false");
-            }
-            if (serverItem._id === "TIER1MEDKIT") {
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
-                serverItem._props.ConflictingItems.splice(4, 0, "false");
-            }
-            if (serverItem._id === "TIER2MEDKIT") {
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
-                serverItem._props.ConflictingItems.splice(4, 0, "false");
-            }
-            if (serverItem._id === "TIER3MEDKIT") {
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6");
-                serverItem._props.ConflictingItems.splice(4, 0, "false");
-            }
             ///Pain Meds//
             //Analgin
             if (serverItem._id === "544fb37f4bdc2dee738b4567") {
@@ -423,7 +411,28 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.25"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "40"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "4"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "5"); // strength
+            }
+            //AI-2
+            if (serverItem._id === "5755356824597772cb798962") {
+                serverItem._parent = "5448f3a14bdc2d27728b4569";
+                serverItem._props.MaxHpResource = this.medItems["AI-2"].MaxHpResource;
+                serverItem._props.StimulatorBuffs = this.medItems["AI-2"].StimulatorBuffs;
+                serverItem._props.effects_damage = this.medItems["AI-2"].effects_damage;
+                serverItem._props.effects_health = this.medItems["AI-2"].effects_health;
+                serverItem._props.medUseTime = this.medItems["AI-2"].medUseTime;
+                serverItem._props.hpResourceRate = 0;
+                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
+                serverItem._props.ConflictingItems.splice(1, 0, "drugpain");
+                serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
+                serverItem._props.ConflictingItems.splice(4, 0, "true");
+                serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
+                serverItem._props.ConflictingItems.splice(6, 0, "0"); // HP restore amount
+                serverItem._props.ConflictingItems.splice(7, 0, "135"); // effect period
+                serverItem._props.ConflictingItems.splice(8, 0, "0.7"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(9, 0, "10"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "15"); // strength
             }
             //Morphine
             if (serverItem._id === "544fb3f34bdc2d03748b456a") {
@@ -582,27 +591,6 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
             ///Medkits///
-            //AI-2
-            if (serverItem._id === "5755356824597772cb798962") {
-                serverItem._parent = "5448f3a14bdc2d27728b4569";
-                serverItem._props.MaxHpResource = this.medItems["AI-2"].MaxHpResource;
-                serverItem._props.StimulatorBuffs = this.medItems["AI-2"].StimulatorBuffs;
-                serverItem._props.effects_damage = this.medItems["AI-2"].effects_damage;
-                serverItem._props.effects_health = this.medItems["AI-2"].effects_health;
-                serverItem._props.medUseTime = this.medItems["AI-2"].medUseTime;
-                serverItem._props.hpResourceRate = 0;
-                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
-                serverItem._props.ConflictingItems.splice(1, 0, "drugpain");
-                serverItem._props.ConflictingItems.splice(2, 0, "none");
-                serverItem._props.ConflictingItems.splice(3, 0, "0");
-                serverItem._props.ConflictingItems.splice(4, 0, "true");
-                serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
-                serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period
-                serverItem._props.ConflictingItems.splice(7, 0, "135"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.7"); // tunnel vision strength
-                serverItem._props.ConflictingItems.splice(9, 0, "10"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
-            }
             //CAR
             if (serverItem._id === "590c661e86f7741e566b646a") {
                 serverItem._parent = "5448f3ac4bdc2dce718b4569";
@@ -610,14 +598,14 @@ class Consumables {
                 serverItem._props.effects_damage = this.medItems.CAR.effects_damage;
                 serverItem._props.effects_health = this.medItems.CAR.effects_health;
                 serverItem._props.medUseTime = this.medItems.CAR.medUseTime;
-                serverItem._props.hpResourceRate = 0;
+                serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "none");
                 serverItem._props.ConflictingItems.splice(3, 0, "1");
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(6, 0, "50"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -628,14 +616,14 @@ class Consumables {
                 serverItem._props.effects_damage = this.medItems.salewa.effects_damage;
                 serverItem._props.effects_health = this.medItems.salewa.effects_health;
                 serverItem._props.medUseTime = this.medItems.salewa.medUseTime;
-                serverItem._props.hpResourceRate = 0;
+                serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
                 serverItem._props.ConflictingItems.splice(3, 0, "0.8"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(6, 0, "40"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -646,14 +634,14 @@ class Consumables {
                 serverItem._props.effects_damage = this.medItems.IFAK.effects_damage;
                 serverItem._props.effects_health = this.medItems.IFAK.effects_health;
                 serverItem._props.medUseTime = this.medItems.IFAK.medUseTime;
-                serverItem._props.hpResourceRate = 0;
+                serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
-                serverItem._props.ConflictingItems.splice(2, 0, "combo");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(2, 0, "clot");
+                serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(6, 0, "45"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -664,14 +652,14 @@ class Consumables {
                 serverItem._props.effects_damage = this.medItems.AFAK.effects_damage;
                 serverItem._props.effects_health = this.medItems.AFAK.effects_health;
                 serverItem._props.medUseTime = this.medItems.AFAK.medUseTime;
-                serverItem._props.hpResourceRate = 0;
+                serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "clot");
                 serverItem._props.ConflictingItems.splice(3, 0, "0"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(6, 0, "55"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -682,14 +670,14 @@ class Consumables {
                 serverItem._props.effects_damage = this.medItems.grizzly.effects_damage;
                 serverItem._props.effects_health = this.medItems.grizzly.effects_health;
                 serverItem._props.medUseTime = this.medItems.grizzly.medUseTime;
-                serverItem._props.hpResourceRate = 0;
+                serverItem._props.hpResourceRate = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "medkit");
                 serverItem._props.ConflictingItems.splice(2, 0, "combo");
                 serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(6, 0, "25"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -743,7 +731,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.85"); // hp restore per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(6, 0, "105"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }
@@ -759,7 +747,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(3, 0, "0.95"); // hp restore per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
-                serverItem._props.ConflictingItems.splice(6, 0, "");
+                serverItem._props.ConflictingItems.splice(6, 0, "64"); // HP restore amount  
                 serverItem._props.ConflictingItems.splice(7, 0, "");
                 serverItem._props.ConflictingItems.splice(8, 0, "");
             }

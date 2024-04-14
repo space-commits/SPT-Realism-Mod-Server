@@ -42,14 +42,15 @@ class AttachmentBase {
         this.itemDB()["5a17f98cfcdbcb0980087290"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
         //APB
         this.itemDB()["5abccb7dd8ce87001773e277"]._props.Chambers[0]._props.filters[0].Filter = _9x18Ammo;
-        //MCX
-        for (let ammo of _556Ammo) {
-            this.itemDB()["5fbcc1d9016cce60e8341ab3"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
-        }
-        //MDR
-        for (let ammo of _300BlkAmmo) {
-            this.itemDB()["5c488a752e221602b412af63"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
-        }
+        //think this is redundant as I do it for all 556 and 300 blk guns now
+        // //MCX
+        // for (let ammo of _556Ammo) {
+        //     this.itemDB()["5fbcc1d9016cce60e8341ab3"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
+        // }
+        // //MDR
+        // for (let ammo of _300BlkAmmo) {
+        //     this.itemDB()["5c488a752e221602b412af63"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
+        // }
         //SPEAR
         for (let ammo of _308Ammo) {
             this.itemDB()["65290f395ae2ae97b80fdf2d"]._props.Chambers[0]._props.filters[0].Filter.push(ammo);
@@ -79,8 +80,11 @@ class AttachmentBase {
                 if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber762x39") {
                     serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._366Ammo);
                 }
-                if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber556x45NATO") {
+                if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber762x35") {
                     serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._556Ammo);
+                }
+                if (serverItem._props.Chambers.length && serverItem._props.ammoCaliber === "Caliber556x45NATO") {
+                    serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._300BlkAmmo);
                 }
             }
         }
