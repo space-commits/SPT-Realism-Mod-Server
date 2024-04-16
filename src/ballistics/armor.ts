@@ -325,7 +325,7 @@ export class Armor {
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
         }
-        
+
         //6B2 Flora front/back
         if (serverItem._id === "656fd89bf5a9631d4e042575" || serverItem._id === "656fd7c32668ef0402028fb9") {
             serverItem._props.Durability = 105;
@@ -703,13 +703,19 @@ export class Armor {
     }
 
     private loadArmorMods(serverItem: ITemplateItem) {
+        const classModifier = this.modConf.buff_helmets === true ? 1 : 0;
+        const duraModifier = this.modConf.buff_helmets === true ? 1.25 : 1;
+
         //// Helmet Accesories ////
         //// Class 1 ////
+
+
+        //// Class 2 ////
         //K1S Visor
         if (serverItem._id === "5ac4c50d5acfc40019262e87") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 1;
+            serverItem._props.armorClass = 2 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.5;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.5;
@@ -720,9 +726,9 @@ export class Armor {
         }
         //Ops-Core FAST Visor
         if (serverItem._id === "5a16b672fcdbcb001912fa83") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 1;
+            serverItem._props.armorClass = 2 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.175;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.175;
@@ -731,13 +737,11 @@ export class Armor {
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 0.35;
         }
-
-        //// Class 2 ////
         //Caiman Fixed Arm Visor
         if (serverItem._id === "5f60bf4558eff926626a60f2") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 2;
+            serverItem._props.armorClass = 2 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.19;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.19;
@@ -749,9 +753,9 @@ export class Armor {
         //// Class 3 ////
         //Heavy Trooper mask
         if (serverItem._id === "5ea058e01dbce517f324b3e2") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 3 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.2;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -4;
@@ -760,24 +764,11 @@ export class Armor {
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 0.4;
         }
-        //Caiman Mandible
-        if (serverItem._id === "5f60c076f2bcbb675b00dac2") {
-            serverItem._props.Durability = 25;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
-            serverItem._props.speedPenaltyPercent = -0.325;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -2;
-            serverItem._props.BluntThroughput = 0.025;
-            serverItem._props.DeafStrength = "Low";
-            serverItem._props.ArmorMaterial = 'UHMWPE';
-            serverItem._props.Weight = 0.65;
-        }
         //Kiver face shield
         if (serverItem._id === "5b46238386f7741a693bcf9c") {
-            serverItem._props.Durability = 25;
+            serverItem._props.Durability = 25 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 3 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.61;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.61;
@@ -788,9 +779,9 @@ export class Armor {
         }
         //TW EXFIL Visor Black
         if (serverItem._id === "5e00cdd986f7747473332240") {
-            serverItem._props.Durability = 22;
+            serverItem._props.Durability = 22 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 3 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.125;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.125;
@@ -801,9 +792,9 @@ export class Armor {
         }
         //TW EXFIL Visor Coyote
         if (serverItem._id === "5e01f37686f774773c6f6c15") {
-            serverItem._props.Durability = 22;
+            serverItem._props.Durability = 22 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 3;
+            serverItem._props.armorClass = 3 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.125;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.125;
@@ -815,9 +806,9 @@ export class Armor {
         //// Class 4 ////
         //Zsh Visor
         if (serverItem._id === "5aa7e3abe5b5b000171d064d") {
-            serverItem._props.Durability = 25;
+            serverItem._props.Durability = 25 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.55;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.55;
@@ -828,9 +819,9 @@ export class Armor {
         }
         //Tor-2 Visor
         if (serverItem._id === "65719f9ef392ad76c50a2ec8") {
-            serverItem._props.Durability = 35;
+            serverItem._props.Durability = 35 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.6;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.6;
@@ -841,9 +832,9 @@ export class Armor {
         }
         //Novasteel/Neosteel Mandible
         if (serverItem._id === "6570a88c8f221f3b210353b7") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.6;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -5;
@@ -854,9 +845,9 @@ export class Armor {
         }
         //FAST Mandible
         if (serverItem._id === "5a16ba61fcdbcb098008728a") {
-            serverItem._props.Durability = 40;
+            serverItem._props.Durability = 40 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.4;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -4;
@@ -867,9 +858,9 @@ export class Armor {
         }
         //Altyn Visor
         if (serverItem._id === "5aa7e373e5b5b000137b76f0") {
-            serverItem._props.Durability = 35;
+            serverItem._props.Durability = 35 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.7;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.7;
@@ -880,9 +871,9 @@ export class Armor {
         }
         //Rys-T Visor
         if (serverItem._id === "5f60c85b58eff926626a60f7") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.6;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.6;
@@ -893,9 +884,9 @@ export class Armor {
         }
         //FAST Side Armor
         if (serverItem._id === "5a16badafcdbcb001865f72d") {
-            serverItem._props.Durability = 14;
+            serverItem._props.Durability = 14 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.15;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.15;
@@ -906,9 +897,9 @@ export class Armor {
         }
         //TW EXFIL Ear Covers Black
         if (serverItem._id === "5e00cfa786f77469dc6e5685") {
-            serverItem._props.Durability = 8;
+            serverItem._props.Durability = 8 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.085;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.085;
@@ -919,9 +910,9 @@ export class Armor {
         }
         //TW EXFIL Ear Covers Coyote
         if (serverItem._id === "5e01f31d86f77465cf261343") {
-            serverItem._props.Durability = 8;
+            serverItem._props.Durability = 8 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4;
+            serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.085;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.085;
@@ -931,11 +922,24 @@ export class Armor {
             serverItem._props.Weight = 0.172;
         }
         //// Class 5 ////
+        //Caiman Mandible
+        if (serverItem._id === "5f60c076f2bcbb675b00dac2") {
+            serverItem._props.Durability = 25 * duraModifier;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 5 + classModifier;
+            serverItem._props.speedPenaltyPercent = -0.325;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -2;
+            serverItem._props.BluntThroughput = 0.025;
+            serverItem._props.DeafStrength = "Low";
+            serverItem._props.ArmorMaterial = 'UHMWPE';
+            serverItem._props.Weight = 0.65;
+        }
         //LSHZ-2DTM Aventail
         if (serverItem._id === "5d6d3be5a4b9361bc73bc763") {
-            serverItem._props.Durability = 40;
+            serverItem._props.Durability = 40 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.6;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.6;
@@ -945,9 +949,9 @@ export class Armor {
         }
         //LSHZ Visor
         if (serverItem._id === "5d6d3829a4b9361bc8618943") {
-            serverItem._props.Durability = 20;
+            serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.5;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.5;
@@ -958,9 +962,9 @@ export class Armor {
         }
         //Vulkan-5 Visor
         if (serverItem._id === "5ca2113f86f7740b2547e1d2") {
-            serverItem._props.Durability = 35;
+            serverItem._props.Durability = 35 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.9;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.9;
@@ -971,9 +975,9 @@ export class Armor {
         }
         //Ops-Core Multi-Hit Visor
         if (serverItem._id === "5a16b7e1fcdbcb00165aa6c9") {
-            serverItem._props.Durability = 60;
+            serverItem._props.Durability = 60 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.65;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.65;
@@ -984,9 +988,9 @@ export class Armor {
         }
         //Maska Visor
         if (serverItem._id === "5c0919b50db834001b7ce3b9") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.55;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.55;
@@ -997,9 +1001,9 @@ export class Armor {
         }
         //Maska Killa Visor
         if (serverItem._id === "5c0e842486f77443a74d2976") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.55;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.55;
@@ -1010,9 +1014,9 @@ export class Armor {
         }
         //Crye Airframe Chops
         if (serverItem._id === "5c178a942e22164bef5ceca3") {
-            serverItem._props.Durability = 25;
+            serverItem._props.Durability = 25 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.38;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.38;
@@ -1023,9 +1027,9 @@ export class Armor {
         }
         //Crye Airframe Ears
         if (serverItem._id === "5c1793902e221602b21d3de2") {
-            serverItem._props.Durability = 15;
+            serverItem._props.Durability = 15 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.125;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.125;
@@ -1036,9 +1040,9 @@ export class Armor {
         }
         //Caiman Hybrid Ballistic Applique
         if (serverItem._id === "5f60b85bbdb8e27dee3dc985") {
-            serverItem._props.Durability = 30;
+            serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 5;
+            serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.34;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.34;
@@ -1049,9 +1053,9 @@ export class Armor {
         //// Class 7 ////
         //SLAAP armor Plate
         if (serverItem._id === "5c0e66e2d174af02a96252f4") {
-            serverItem._props.Durability = 32;
+            serverItem._props.Durability = 32 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 7;
+            serverItem._props.armorClass = 7 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.75;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.75;
@@ -1062,9 +1066,9 @@ export class Armor {
 
         //Diamond Age Armor Plate
         if (serverItem._id === "5ea18c84ecf1982c7712d9a2") {
-            serverItem._props.Durability = 36;
+            serverItem._props.Durability = 36 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 7;
+            serverItem._props.armorClass = 7 + classModifier;
             serverItem._props.speedPenaltyPercent = -0.5;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -3.2;
@@ -1093,13 +1097,13 @@ export class Armor {
                             if (slot._name.toLowerCase().includes("eyes")) {
                                 subArmor._props.ArmorMaterial = 'Glass';
                             }
-                       
+
                             if (subArmor._props.ArmorMaterial.toLocaleLowerCase() !== "glass") {
                                 subArmor._props.ArmorMaterial = armorMat;
                                 subArmor._props.BluntThroughput = blunt;
                             }
                             //Ronin is a special case
-                            else { 
+                            else {
                                 subArmor._props.BluntThroughput = 0;
                                 if (armorClass === 5) {
                                     subArmor._props.armorClass = 3;
