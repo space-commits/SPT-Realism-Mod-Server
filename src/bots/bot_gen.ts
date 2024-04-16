@@ -182,6 +182,31 @@ export class BotGen extends BotGenerator {
         });
     }
 
+
+    public myGeneratePlayerScav(sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase
+    {
+        let bot = this.getCloneOfBotBase();
+        bot.Info.Settings.BotDifficulty = difficulty;
+        bot.Info.Settings.Role = role;
+        bot.Info.Side = "Savage";
+
+        const botGenDetails: BotGenerationDetails = {
+            isPmc: false,
+            side: "Savage",
+            role: role,
+            botRelativeLevelDeltaMax: 0,
+            botRelativeLevelDeltaMin: 0,
+            botCountToGenerate: 1,
+            botDifficulty: difficulty,
+            isPlayerScav: true,
+        };
+
+        this.addArmorInserts(botTemplate.inventory.mods);
+        bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
+
+        return bot;
+    }
+
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase {
 
         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");

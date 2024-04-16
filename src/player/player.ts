@@ -206,6 +206,11 @@ export class Player {
             this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 90;
         }
 
+        if(this.modConfig.enable_stances == true){
+            this.globalDB().Stamina.Capacity = 100;
+            this.globalDB().Stamina.BaseRestorationRate = 10;
+        }
+
         if (this.modConfig.movement_changes == true) {
 
             this.globalDB().WalkSpeed["x"] = 0.59;
@@ -252,22 +257,19 @@ export class Player {
 
             this.globalDB().Inertia.SprintAccelerationLimits["x"] = 0.38;
 
-            this.globalDB().Stamina.Capacity = 100;
-            this.globalDB().Stamina.BaseRestorationRate = 10;
-
             this.globalDB().Inertia.SideTime["x"] = 0.76;
             this.globalDB().Inertia.SideTime["y"] = 0.38;
             this.globalDB().Inertia.MinDirectionBlendTime = 0.19;
             this.globalDB().Inertia.WalkInertia["x"] = 0.0385;
             this.globalDB().Inertia.WalkInertia["y"] = 0.385;
+
             this.globalDB().Inertia.TiltInertiaMaxSpeed["x"] = 1.2;
-            this.globalDB().Inertia.TiltInertiaMaxSpeed["y"] = 0.84;
-            this.globalDB().Inertia.TiltMaxSideBackSpeed["x"] = 1.92;
-            this.globalDB().Inertia.TiltMaxSideBackSpeed["y"] = 1.32;
-            this.globalDB().Inertia.TiltStartSideBackSpeed["x"] = 1.44;
-            this.globalDB().Inertia.TiltStartSideBackSpeed["y"] = 0.96;
-            this.globalDB().Inertia.InertiaTiltCurveMin["y"] = 0.3;
-            this.globalDB().Inertia.InertiaTiltCurveMax["x"] = 1;
+            this.globalDB().Inertia.TiltInertiaMaxSpeed["y"] = 1;
+            this.globalDB().Inertia.TiltMaxSideBackSpeed["x"] = 2.4;
+            this.globalDB().Inertia.TiltMaxSideBackSpeed["y"] = 1.6;
+            this.globalDB().Inertia.TiltStartSideBackSpeed["x"] = 1.6;
+            this.globalDB().Inertia.TiltStartSideBackSpeed["y"] = 1;
+            this.globalDB().Inertia.InertiaTiltCurveMin["y"] = 0.44;
             this.globalDB().Inertia.InertiaTiltCurveMax["y"] = 0.1;
 
             this.globalDB().Inertia.InertiaBackwardCoef["x"] = 0.8;

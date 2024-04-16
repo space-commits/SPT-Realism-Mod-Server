@@ -132,6 +132,25 @@ class BotGen extends BotGenerator_1.BotGenerator {
             }
         });
     }
+    myGeneratePlayerScav(sessionId, role, difficulty, botTemplate) {
+        let bot = this.getCloneOfBotBase();
+        bot.Info.Settings.BotDifficulty = difficulty;
+        bot.Info.Settings.Role = role;
+        bot.Info.Side = "Savage";
+        const botGenDetails = {
+            isPmc: false,
+            side: "Savage",
+            role: role,
+            botRelativeLevelDeltaMax: 0,
+            botRelativeLevelDeltaMin: 0,
+            botCountToGenerate: 1,
+            botDifficulty: difficulty,
+            isPlayerScav: true,
+        };
+        this.addArmorInserts(botTemplate.inventory.mods);
+        bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
+        return bot;
+    }
     myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
         const postLoadDBServer = tsyringe_1.container.resolve("DatabaseServer");
         const tables = postLoadDBServer.getTables();
@@ -245,6 +264,10 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseServer, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
         const botRole = botGenerationDetails.role.toLowerCase();
         const botLevel = genBotLvl.genBotLvl(botJsonTemplate.experience.level, botGenerationDetails, bot);
+        this.logger.warning("===========");
+        this.logger.warning("bot " + botRole);
+        this.logger.warning("bot Level " + botLevel);
+        this.logger.warning("pmcTier " + pmcTier);
         if (!botGenerationDetails.isPlayerScav) {
             this.botEquipmentFilterService.filterBotEquipment(sessionId, botJsonTemplate, botLevel.level, botGenerationDetails);
         }
@@ -292,6 +315,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         if (botGenerationDetails.eventRole) {
             bot.Info.Settings.Role = botGenerationDetails.eventRole;
         }
+        this.logger.warning("===========");
         return bot;
     }
 }

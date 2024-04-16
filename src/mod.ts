@@ -91,6 +91,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
 import { IItemConfig } from "@spt-aki/models/spt/config/IItemConfig";
+import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
 
 
 const crafts = require("../db/items/hideout_crafts.json");
@@ -173,9 +174,16 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
             const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
             const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
+           
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
                 result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase => {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
+                }
+            }, { frequency: "Always" });
+
+            container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
+                result.generatePlayerScav = (sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase => {
+                    return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
                 }
             }, { frequency: "Always" });
         }

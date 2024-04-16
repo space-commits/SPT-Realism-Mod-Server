@@ -196,7 +196,6 @@ export class ItemsClass {
 
 
     public loadItemsRestrictions() {
-
         if (this.modConfig.all_examined == true) {
             for (let i in this.itemDB()) {
                 let serverItem = this.itemDB()[i];
