@@ -126,6 +126,11 @@ class Main {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
                 };
             }, { frequency: "Always" });
+            container.afterResolution("BotGenerator", (_t, result) => {
+                result.generatePlayerScav = (sessionId, role, difficulty, botTemplate) => {
+                    return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
+                };
+            }, { frequency: "Always" });
         }
         container.afterResolution("TraderAssortHelper", (_t, result) => {
             result.resetExpiredTrader = (trader) => {

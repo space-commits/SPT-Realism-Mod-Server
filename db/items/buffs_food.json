@@ -2,15 +2,6 @@
     "Buffs_emergency_water": [
         {
             "AbsoluteValue": true,
-            "BuffType": "EnergyRate",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 100,
-            "SkillName": "",
-            "Value": 0.035
-        },
-        {
-            "AbsoluteValue": true,
             "BuffType": "HydrationRate",
             "Chance": 1,
             "Delay": 1,
@@ -29,15 +20,6 @@
         }
     ],
     "Buffs_drink_water": [
-        {
-            "AbsoluteValue": true,
-            "BuffType": "EnergyRate",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 180,
-            "SkillName": "",
-            "Value": 0.035
-        },
         {
             "AbsoluteValue": true,
             "BuffType": "HydrationRate",
@@ -65,7 +47,7 @@
             "Delay": 1,
             "Duration": 100,
             "SkillName": "",
-            "Value": 0.14
+            "Value": 0.15
         },
         {
             "AbsoluteValue": true,
@@ -98,21 +80,12 @@
     "Buffs_drink_purewater": [
         {
             "AbsoluteValue": true,
-            "BuffType": "EnergyRate",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 300,
-            "SkillName": "",
-            "Value": 0.07
-        },
-        {
-            "AbsoluteValue": true,
             "BuffType": "HydrationRate",
             "Chance": 1,
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.616
+            "Value": 0.67
         },
         {
             "AbsoluteValue": true,
@@ -184,7 +157,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.1,
+            "Chance": 0.04,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -242,7 +215,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.04,
+            "Chance": 0.03,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -878,6 +851,15 @@
             "Duration": 120,
             "SkillName": "",
             "Value": -0.025
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "UnknownToxin",
+            "Chance": 0.02,
+            "Delay": 10,
+            "Duration": 30,
+            "SkillName": "",
+            "Value": 0
         }
     ],
     "Buffs_food_condensed_milk": [
@@ -956,15 +938,6 @@
             "Duration": 180,
             "SkillName": "",
             "Value": -0.0145
-        },
-        {
-            "AbsoluteValue": true,
-            "BuffType": "UnknownToxin",
-            "Chance": 0.01,
-            "Delay": 10,
-            "Duration": 50,
-            "SkillName": "",
-            "Value": 0
         }
     ],
     "Buffs_food_crackers": [
@@ -1009,7 +982,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.1,
+            "Chance": 1,
             "Delay": 10,
             "Duration": 50,
             "SkillName": "",
@@ -1029,7 +1002,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.03,
+            "Chance": 0.02,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1049,7 +1022,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.03,
+            "Chance": 0.015,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1078,7 +1051,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.02,
+            "Chance": 0.01,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1158,7 +1131,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.035,
+            "Chance": 0.03,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1187,7 +1160,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.025,
+            "Chance": 0.015,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1212,15 +1185,6 @@
             "Duration": 180,
             "SkillName": "",
             "Value": -0.03
-        },
-        {
-            "AbsoluteValue": true,
-            "BuffType": "UnknownToxin",
-            "Chance": 0.01,
-            "Delay": 10,
-            "Duration": 30,
-            "SkillName": "",
-            "Value": 0
         }
     ],
     "Buffs_food_oat_flakes": [
@@ -1241,15 +1205,6 @@
             "Duration": 300,
             "SkillName": "",
             "Value": -0.021
-        },
-        {
-            "AbsoluteValue": true,
-            "BuffType": "UnknownToxin",
-            "Chance": 0.01,
-            "Delay": 10,
-            "Duration": 30,
-            "SkillName": "",
-            "Value": 0
         }
     ],
     "Buffs_food_dried_meat": [
@@ -1274,7 +1229,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.04,
+            "Chance": 0.03,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1303,7 +1258,7 @@
         {
             "AbsoluteValue": true,
             "BuffType": "UnknownToxin",
-            "Chance": 0.08,
+            "Chance": 0.1,
             "Delay": 10,
             "Duration": 30,
             "SkillName": "",
@@ -1318,7 +1273,16 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.562
+            "Value": 0.7
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.1
         }
     ],
     "Buffs_food_iskra": [
@@ -1329,7 +1293,16 @@
             "Delay": 1,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.611
+            "Value": 0.67
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.067
         }
     ]
 }

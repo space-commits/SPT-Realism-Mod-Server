@@ -85,6 +85,11 @@ export class Consumables {
             this.buffDB()[buffName] = this.buffsFood[buffName]
         }
 
+        //at least for now, spoiled food uses toxin effect
+        this.globalDB().Health.Effects.Intoxication.DamageHealth = 0.01;
+        this.globalDB().Health.Effects.Intoxication.DefaultDelay = 40;
+        this.globalDB().Health.Effects.Intoxication.RemovePrice = 50000;
+
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
             ////Drinks////

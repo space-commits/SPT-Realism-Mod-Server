@@ -132,6 +132,25 @@ class BotGen extends BotGenerator_1.BotGenerator {
             }
         });
     }
+    myGeneratePlayerScav(sessionId, role, difficulty, botTemplate) {
+        let bot = this.getCloneOfBotBase();
+        bot.Info.Settings.BotDifficulty = difficulty;
+        bot.Info.Settings.Role = role;
+        bot.Info.Side = "Savage";
+        const botGenDetails = {
+            isPmc: false,
+            side: "Savage",
+            role: role,
+            botRelativeLevelDeltaMax: 0,
+            botRelativeLevelDeltaMin: 0,
+            botCountToGenerate: 1,
+            botDifficulty: difficulty,
+            isPlayerScav: true,
+        };
+        this.addArmorInserts(botTemplate.inventory.mods);
+        bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
+        return bot;
+    }
     myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
         const postLoadDBServer = tsyringe_1.container.resolve("DatabaseServer");
         const tables = postLoadDBServer.getTables();

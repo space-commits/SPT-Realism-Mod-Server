@@ -274,9 +274,6 @@ export class JsonHandler {
                     serverItem._props.RecoilReturnPathOffsetHandRotation = fileItem.OffsetRotation;
                     serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
                     serverItem._props.CanQueueSecondShot = true;
-                    serverItem._props.CameraToWeaponAngleSpeedRange.x = 0
-                    serverItem._props.CameraToWeaponAngleSpeedRange.y = 0;
-                    serverItem._props.CameraToWeaponAngleStep = 0;
                     serverItem._props.CameraSnap = 1;
                     serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
 
