@@ -206,6 +206,11 @@ export class Player {
             this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 90;
         }
 
+        if(this.modConfig.enable_stances == true){
+            this.globalDB().Stamina.Capacity = 100;
+            this.globalDB().Stamina.BaseRestorationRate = 10;
+        }
+
         if (this.modConfig.movement_changes == true) {
 
             this.globalDB().WalkSpeed["x"] = 0.59;
@@ -251,9 +256,6 @@ export class Player {
             this.globalDB().Inertia.PreSprintAccelerationLimits["y"] = 1.43;
 
             this.globalDB().Inertia.SprintAccelerationLimits["x"] = 0.38;
-
-            this.globalDB().Stamina.Capacity = 100;
-            this.globalDB().Stamina.BaseRestorationRate = 10;
 
             this.globalDB().Inertia.SideTime["x"] = 0.76;
             this.globalDB().Inertia.SideTime["y"] = 0.38;
