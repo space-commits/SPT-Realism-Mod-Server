@@ -318,7 +318,6 @@ export class MyLootCache extends BotLootCacheService {
     }
 
     public override clearCache(): void {
-        this.logger.warning("Clearning cache");
         this.myLootCache = {};
         this.lootCache = {};
     }
