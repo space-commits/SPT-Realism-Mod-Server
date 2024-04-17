@@ -581,20 +581,21 @@ class Main {
     postAkiLoad(container) {
         this.modLoader = container.resolve("PreAkiModLoader");
     }
+    //unsur if I still need to do this or not, now that configuration has been expanded
     dllChecker(logger, modConfig) {
-        const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
-        if (fs.existsSync(realismdll)) {
-            utils_1.ConfigChecker.dllIsPresent = true;
-            if (modConfig.recoil_attachment_overhaul == false) {
-                logger.info("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
-            }
-        }
-        else {
-            utils_1.ConfigChecker.dllIsPresent = false;
-            if (modConfig.recoil_attachment_overhaul == true) {
-                logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
-            }
-        }
+        utils_1.ConfigChecker.dllIsPresent = true;
+        // const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+        // if (fs.existsSync(realismdll)) {
+        //     ConfigChecker.dllIsPresent = true;
+        //     if (modConfig.recoil_attachment_overhaul == false) {
+        //         logger.info("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
+        //     }
+        // } else {
+        //     ConfigChecker.dllIsPresent = false;
+        //     if (modConfig.recoil_attachment_overhaul == true) {
+        //         logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
+        //     }
+        // }
     }
     revertMeds(pmcData, utils) {
         utils.revertMedItems(pmcData);

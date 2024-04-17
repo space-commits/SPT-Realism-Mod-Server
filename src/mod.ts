@@ -748,19 +748,23 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         this.modLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
     }
 
+    //unsur if I still need to do this or not, now that configuration has been expanded
     private dllChecker(logger: ILogger, modConfig: any) {
-        const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
-        if (fs.existsSync(realismdll)) {
-            ConfigChecker.dllIsPresent = true;
-            if (modConfig.recoil_attachment_overhaul == false) {
-                logger.info("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
-            }
-        } else {
-            ConfigChecker.dllIsPresent = false;
-            if (modConfig.recoil_attachment_overhaul == true) {
-                logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
-            }
-        }
+
+        ConfigChecker.dllIsPresent = true;
+
+        // const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+        // if (fs.existsSync(realismdll)) {
+        //     ConfigChecker.dllIsPresent = true;
+        //     if (modConfig.recoil_attachment_overhaul == false) {
+        //         logger.info("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
+        //     }
+        // } else {
+        //     ConfigChecker.dllIsPresent = false;
+        //     if (modConfig.recoil_attachment_overhaul == true) {
+        //         logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
+        //     }
+        // }
     }
 
     private revertMeds(pmcData: IPmcData, utils: Utils) {

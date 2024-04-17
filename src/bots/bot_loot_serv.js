@@ -1,625 +1,464 @@
-// import { BaseClasses } from "C:/snapshot/project/obj/models/enums/BaseClasses";
-// import { ITemplateItem } from "C:/snapshot/project/obj/models/eft/common/tables/ITemplateItem";
-// import { Chances, IBotType, Inventory, Items, ModsChances } from "C:/snapshot/project/obj/models/eft/common/tables/IBotType";
-// import { BotLootCacheService } from "C:/snapshot/project/obj/services/BotLootCacheService";
-// import { BotLootGenerator } from "C:/snapshot/project/obj/generators/BotLootGenerator";
-// import { Inventory as PmcInventory } from "C:/snapshot/project/obj/models/eft/common/tables/IBotBase";
-// import { JsonUtil } from "C:/snapshot/project/obj/utils/JsonUtil";
-// import { PMCLootGenerator } from "C:/snapshot/project/obj/generators/PMCLootGenerator";
-// import { RagfairPriceService } from "C:/snapshot/project/obj/services/RagfairPriceService";
-// import { container, inject } from "C:/snapshot/project/node_modules/tsyringe";
-// import { EquipmentSlots } from "C:/snapshot/project/obj/models/enums/EquipmentSlots";
-// import { BotTierTracker } from "../utils/utils";
-// import { LogTextColor } from "C:/snapshot/project/obj/models/spt/logging/LogTextColor";
-// import { LogBackgroundColor } from "C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor";
-// import { Item } from "C:/snapshot/project/obj/models/eft/common/tables/IItem";
-// import { ItemAddedResult } from "C:/snapshot/project/obj/models/enums/ItemAddedResult";
-// import { ParentClasses } from "../utils/enums";
-// const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
-// const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
-// const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
-// const tier5LO = require("../../db/bots/loadouts/PMCs/tier5PMC.json");
-// const raiderLO = require("../../db/bots/loadouts/raiders_rogues/raiderLO.json");
-// const rogueLO = require("../../db/bots/loadouts/raiders_rogues/rogueLO.json");
-// const knightLO = require("../../db/bots/loadouts/bosses/goons/knightLO.json");
-// const bigpipeLO = require("../../db/bots/loadouts/bosses/goons/bigpipeLO.json");
-// const birdeyeLO = require("../../db/bots/loadouts/bosses/goons/birdeyeLO.json");
-// const killaLO = require("../../db/bots/loadouts/bosses/killaLO.json");
-// const tagillaLO = require("../../db/bots/loadouts/bosses/tagillaLO.json");
-// const saniLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarLO.json");
-// const saniFollowerLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarfollowerLO.json");
-// const reshLO = require("../../db/bots/loadouts/bosses/reshalla/reshallaLO.json");
-// const reshFollowerLO = require("../../db/bots/loadouts/bosses/reshalla/reshallafollowerLO.json");
-// const modConfig = require("../../config/config.json");
-// export class MyBotLootCache {
-//     specialItems: ITemplateItem[]
-//     backpackLoot: ITemplateItem[]
-//     pocketLoot: ITemplateItem[]
-//     vestLoot: ITemplateItem[]
-//     combinedPoolLoot: ITemplateItem[]
-//     vestGrenadeItems: ITemplateItem[]
-//     pocketGrenadeItems: ITemplateItem[]
-//     vestHealingItems: ITemplateItem[]
-//     vestDrugItems: ITemplateItem[]
-//     vestStimItems: ITemplateItem[]
-//     pocketHealingItems: ITemplateItem[]
-//     pocketDrugItems: ITemplateItem[]
-//     pocketStimItems: ITemplateItem[]
-//     bagHealingItems: ITemplateItem[]
-//     bagDrugItems: ITemplateItem[]
-//     bagStimItems: ITemplateItem[]
-// }
-// export const enum MyLootCacheType {
-//     SPECIAL = "Special",
-//     BACKPACK = "Backpack",
-//     POCKET = "Pocket",
-//     VEST = "Vest",
-//     COMBINED = "Combined",
-//     VEST_GRENADE_ITEMS = "VestGrenadeItems",
-//     POCKET_GRENADE_ITEMS = "PocketGrenadeItems",
-//     VEST_HEALING_ITEMS = "VestHealingItems",
-//     VEST_DRUG_ITEMS = "VestDrugItems",
-//     VEST_STIM_ITEMS = "VestStimItems",
-//     POCKET_HEALING_ITEMS = "PocketHealingItems",
-//     POCKET_DRUG_ITEMS = "PocketDrugItems",
-//     POCKET_STIM_ITEMS = "PocketStimItems",
-//     BAG_HEALING_ITEMS = "BagHealingItems",
-//     BAG_DRUG_ITEMS = "BagDrugItems",
-//     BAG_STIM_ITEMS = "BagStimItems"
-// }
-// type BotGeneration = {
-//     [botName: string]: {
-//         [botTier: number]: any;
-//     };
-// };
-// const botGenerations: BotGeneration = {
-//     "assault": {
-//         1: scavLO.scavLO1.generation,
-//         2: scavLO.scavLO2.generation,
-//         3: scavLO.scavLO3.generation
-//     },
-//     "sptusec": {
-//         1: usecLO.usecLO1.generation,
-//         2: usecLO.usecLO2.generation,
-//         3: usecLO.usecLO3.generation,
-//         4: usecLO.usecLO4.generation,
-//         5: tier5LO.tier5LO.generation
-//     },
-//     "sptbear": {
-//         1: bearLO.bearLO1.generation,
-//         2: bearLO.bearLO2.generation,
-//         3: bearLO.bearLO3.generation,
-//         4: bearLO.bearLO4.generation,
-//         5: tier5LO.tier5LO.generation
-//     },
-//     "bossbully": {
-//         1: reshLO.reshallaLO1.generation,
-//         2: reshLO.reshallaLO2.generation,
-//         3: reshLO.reshallaLO3.generation
-//     },
-//     "bosskilla": {
-//         1: killaLO.killaLO1.generation,
-//         2: killaLO.killaLO2.generation,
-//         3: killaLO.killaLO3.generation
-//     },
-//     "bossknight": {
-//         1: knightLO.knightLO1.generation,
-//         2: knightLO.knightLO2.generation,
-//         3: knightLO.knightLO3.generation
-//     },
-//     "bosssanitar": {
-//         1: saniLO.sanitarLO1.generation,
-//         2: saniLO.sanitarLO2.generation,
-//         3: saniLO.sanitarLO3.generation
-//     },
-//     "bosstagilla": {
-//         1: tagillaLO.tagillaLO1.generation,
-//         2: tagillaLO.tagillaLO2.generation,
-//         3: tagillaLO.tagillaLO3.generation
-//     },
-//     "exusec": {
-//         1: rogueLO.rogueLO1.generation,
-//         2: rogueLO.rogueLO2.generation,
-//         3: rogueLO.rogueLO3.generation
-//     },
-//     "pmcbot": {
-//         1: raiderLO.raiderLO1.generation,
-//         2: raiderLO.raiderLO2.generation,
-//         3: raiderLO.raiderLO3.generation
-//     },
-//     "followerbigpipe": {
-//         1: bigpipeLO.bigpipeLO1.generation,
-//         2: bigpipeLO.bigpipeLO2.generation,
-//         3: bigpipeLO.bigpipeLO3.generation
-//     },
-//     "followerbirdeye": {
-//         1: birdeyeLO.birdeyeLO1.generation,
-//         2: birdeyeLO.birdeyeLO2.generation,
-//         3: birdeyeLO.birdeyeLO3.generation
-//     },
-//     "followerbully": {
-//         1: reshFollowerLO.reshallafollowerLO1.generation,
-//         2: reshFollowerLO.reshallafollowerLO2.generation,
-//         3: reshFollowerLO.reshallafollowerLO3.generation
-//     },
-//     "followersanitar": {
-//         1: saniFollowerLO.sanitarfollowerLO1.generation,
-//         2: saniFollowerLO.sanitarfollowerLO2.generation,
-//         3: saniFollowerLO.sanitarfollowerLO3.generation
-//     }
-// };
-// export class BotLootGen extends BotLootGenerator {
-//     public genLoot(sessionId: string, botJsonTemplate: IBotType, isPmc: boolean, botRole: string, botInventory: PmcInventory, pmcTier: number): void {
-//         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
-//         const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
-//         const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
-//         const tierChecker = new BotTierTracker();
-//         let tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : tierChecker.getTier(botRole);
-//         var itemCounts = botGenerations[botRole]?.[tier]?.items;
-//         if (itemCounts === null || itemCounts === undefined) {
-//             itemCounts = raiderLO.raiderLO3.generation.items;
-//         }
-//         const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
-//         const nValue = this.getBotLootNValueByRole(botRole);
-//         if ((modConfig.dynamic_loot_pmcs && (botRole === "sptbear" || botRole === "sptusec")) || (modConfig.dynamic_loot_scavs && botRole === "assault")) {
-//             itemCounts.looseLoot.min = 0;
-//             itemCounts.looseLoot.max = 3;
-//         }
-//         let healingTally = 0;
-//         let stimTally = 0;
-//         let drugTally = 0;
-//         let lootTally = 0;
-//         let grenadeTally = 0;
-//         const bagItemCount = this.getRandomisedCount(itemCounts.looseLoot.min, itemCounts.looseLoot.max, nValue);
-//         lootTally += bagItemCount;
-//         const pocketLootCount = lootTally >= itemCounts.looseLoot.max ? 0 : this.getRandomisedCount(itemCounts.looseLoot.min, itemCounts.looseLoot.max, nValue);
-//         lootTally += pocketLootCount;
-//         const vestLootCount = lootTally >= itemCounts.looseLoot.max ? 0 : this.getRandomisedCount(Math.round(itemCounts.looseLoot.min / 2), Math.round(itemCounts.looseLoot.max / 2), nValue); // Count is half what loose loot min/max is
-//         lootTally += vestLootCount;
-//         const specialLootItemCount = this.getRandomisedCount(itemCounts.specialItems.min, itemCounts.specialItems.max, nValue);
-//         const vestHealingItemCount = this.getRandomisedCount(itemCounts.healing.min, itemCounts.healing.max, 3);
-//         healingTally += vestHealingItemCount;
-//         const vestDrugItemCount = this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3)
-//         drugTally += vestDrugItemCount;
-//         const vestStimItemCount = this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
-//         stimTally += vestStimItemCount;
-//         const pocketHealingItemCount = healingTally >= itemCounts.healing.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.healing.min / 2)), Math.max(1, Math.round(itemCounts.healing.max / 2)), 3);
-//         healingTally += pocketHealingItemCount;
-//         const pocketDrugItemCount = drugTally >= itemCounts.drugs.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.drugs.min / 2)), Math.max(1, Math.round(itemCounts.drugs.max / 2)), 3)
-//         drugTally += pocketDrugItemCount;
-//         const pocketStimItemCount = stimTally >= itemCounts.stims.max ? 0 : this.getRandomisedCount(Math.max(0, Math.round(itemCounts.stims.min / 2)), Math.max(1, Math.round(itemCounts.stims.max / 2)), 3);
-//         stimTally += pocketStimItemCount;
-//         const bagHealingItemCount = healingTally >= itemCounts.healing.max ? 0 : this.getRandomisedCount(itemCounts.healing.min, itemCounts.healing.max, 3);
-//         healingTally += bagHealingItemCount;
-//         const bagDrugItemCount = drugTally >= itemCounts.drugs.max ? 0 : this.getRandomisedCount(itemCounts.drugs.min, itemCounts.drugs.max, 3);
-//         drugTally += bagDrugItemCount;
-//         const bagStimItemCount = stimTally >= itemCounts.stims.max ? 0 : this.getRandomisedCount(itemCounts.stims.min, itemCounts.stims.max, 3);
-//         stimTally += bagStimItemCount;
-//         const vestGrenadeCount = this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
-//         grenadeTally += vestGrenadeCount;
-//         const pocketGrenadeCount = grenadeTally >= itemCounts.grenades.max ? 0 : this.getRandomisedCount(itemCounts.grenades.min, itemCounts.grenades.max, 4);
-//         grenadeTally += pocketGrenadeCount;
-//         const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);
-//         // Forced pmc healing loot
-//         if (isPmc && this.pmcConfig.forceHealingItemsIntoSecure) {
-//             this.addForcedMedicalItemsToPmcSecure(botInventory, botRole);
-//         }
-//         if (containersBotHasAvailable.includes(EquipmentSlots.BACKPACK)) {
-//             // if (isPmc && this.randomUtil.getChance100(this.pmcConfig.looseWeaponInBackpackChancePercent)) {
-//             //     this.addLooseWeaponsToInventorySlot(sessionId, botInventory, "Backpack", botJsonTemplate.inventory, botJsonTemplate.chances.mods, botRole, isPmc, botLevel);
-//             // }
-//             // Backpack Loot
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, botJsonTemplate),
-//                 [EquipmentSlots.BACKPACK],
-//                 bagItemCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 this.pmcConfig.maxBackpackLootTotalRub,
-//                 isPmc);
-//             //Bag Meds
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_HEALING_ITEMS, botJsonTemplate),
-//                 [EquipmentSlots.BACKPACK],
-//                 bagHealingItemCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 0,
-//                 isPmc);
-//             //Bag Drugs
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_DRUG_ITEMS, botJsonTemplate),
-//                 [EquipmentSlots.BACKPACK],
-//                 bagDrugItemCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 0,
-//                 isPmc);
-//             //Bag Stims
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_STIM_ITEMS, botJsonTemplate),
-//                 [EquipmentSlots.BACKPACK],
-//                 bagStimItemCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 0,
-//                 isPmc);
-//         }
-//         if (containersBotHasAvailable.includes(EquipmentSlots.TACTICAL_VEST)) {
-//             //Vest Meds
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_HEALING_ITEMS, botJsonTemplate),
-//                 [EquipmentSlots.TACTICAL_VEST],
-//                 vestHealingItemCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 0,
-//                 isPmc);
-//             //Vest Drugs
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_DRUG_ITEMS, botJsonTemplate),
-//                 [EquipmentSlots.TACTICAL_VEST],
-//                 vestDrugItemCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 0,
-//                 isPmc);
-//             //Vest Stims
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_STIM_ITEMS, botJsonTemplate),
-//                 [EquipmentSlots.TACTICAL_VEST],
-//                 vestStimItemCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 0,
-//                 isPmc);
-//             // Vest Loot
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST, botJsonTemplate),
-//                 [EquipmentSlots.TACTICAL_VEST],
-//                 vestLootCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 this.pmcConfig.maxVestLootTotalRub,
-//                 isPmc);
-//             //Vest Nades
-//             this.myAddLootFromPool(
-//                 myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, botJsonTemplate),
-//                 [EquipmentSlots.TACTICAL_VEST],
-//                 vestGrenadeCount,
-//                 botInventory,
-//                 botRole,
-//                 true,
-//                 0,
-//                 isPmc);
-//         }
-//         // Pocket Loot
-//         this.myAddLootFromPool(
-//             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET, botJsonTemplate),
-//             [EquipmentSlots.POCKETS],
-//             pocketLootCount,
-//             botInventory,
-//             botRole,
-//             true,
-//             this.pmcConfig.maxPocketLootTotalRub,
-//             isPmc);
-//         // Grenades
-//         this.myAddLootFromPool(
-//             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, botJsonTemplate),
-//             [EquipmentSlots.POCKETS],
-//             pocketGrenadeCount,
-//             botInventory,
-//             botRole,
-//             true,
-//             0,
-//             isPmc);
-//         // Special items
-//         this.myAddLootFromPool(
-//             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.SPECIAL, botJsonTemplate),
-//             [EquipmentSlots.POCKETS, EquipmentSlots.BACKPACK, EquipmentSlots.TACTICAL_VEST],
-//             specialLootItemCount,
-//             botInventory,
-//             botRole);
-//         //Pocket Meds
-//         this.myAddLootFromPool(
-//             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_HEALING_ITEMS, botJsonTemplate),
-//             [EquipmentSlots.POCKETS],
-//             pocketHealingItemCount,
-//             botInventory,
-//             botRole,
-//             true,
-//             0,
-//             isPmc);
-//         //Pocket Drugs
-//         this.myAddLootFromPool(
-//             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_DRUG_ITEMS, botJsonTemplate),
-//             [EquipmentSlots.POCKETS],
-//             pocketDrugItemCount,
-//             botInventory,
-//             botRole,
-//             true,
-//             0,
-//             isPmc);
-//         //Pocket Stims
-//         this.myAddLootFromPool(
-//             myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_STIM_ITEMS, botJsonTemplate),
-//             [EquipmentSlots.POCKETS],
-//             pocketStimItemCount,
-//             botInventory,
-//             botRole,
-//             true,
-//             0,
-//             isPmc);
-//     }
-//     private myAddLootFromPool(pool: ITemplateItem[], equipmentSlots: string[], totalItemCount: number, inventoryToAddItemsTo: PmcInventory, botRole: string, useLimits = false, totalValueLimitRub = 0, isPmc = false): void {
-//         // Loot pool has items
-//         if (pool.length) {
-//             let currentTotalRub = 0;
-//             const itemLimits: Record<string, number> = {};
-//             const itemSpawnLimits: Record<string, Record<string, number>> = {};
-//             let fitItemIntoContainerAttempts = 0;
-//             for (let i = 0; i < totalItemCount; i++) {
-//                 const itemToAddTemplate = this.getRandomItemFromPoolByBotRole(pool, botRole);
-//                 const id = this.hashUtil.generate();
-//                 const itemsToAdd: Item[] = [{
-//                     _id: id,
-//                     _tpl: itemToAddTemplate._id,
-//                     ...this.botGeneratorHelper.generateExtraPropertiesForItem(itemToAddTemplate)
-//                 }];
-//                 if (useLimits) {
-//                     if (Object.keys(itemLimits).length === 0) {
-//                         this.initItemLimitArray(isPmc, botRole, itemLimits);
-//                     }
-//                     if (!itemSpawnLimits[botRole]) {
-//                         itemSpawnLimits[botRole] = this.getItemSpawnLimitsForBotType(isPmc, botRole);
-//                     }
-//                     if (itemToAddTemplate._parent === ParentClasses.KEYCARD || itemToAddTemplate._parent === ParentClasses.KEY_MECHANICAL) {
-//                         let randNum = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
-//                         if (randNum < 95) {
-//                             i--;
-//                             continue;
-//                         }
-//                     }
-//                     if (this.itemHasReachedSpawnLimit(itemToAddTemplate, botRole, isPmc, itemLimits, itemSpawnLimits[botRole])) {
-//                         i--;
-//                         continue;
-//                     }
-//                 }
-//                 this.addRequiredChildItemsToParent(itemToAddTemplate, itemsToAdd, isPmc);
-//                 // Attempt to add item to container(s)
-//                 const itemAddedResult = this.botWeaponGeneratorHelper.addItemWithChildrenToEquipmentSlot(equipmentSlots, id, itemToAddTemplate._id, itemsToAdd, inventoryToAddItemsTo);
-//                 // Handle when item cannot be added
-//                 if (itemAddedResult !== ItemAddedResult.SUCCESS) {
-//                     if (itemAddedResult === ItemAddedResult.NO_CONTAINERS) {
-//                         // Bot has no container to put item in, exit
-//                         this.logger.debug(`Unable to add: ${totalItemCount} items to bot as it lacks a container to include them`);
-//                         break;
-//                     }
-//                     fitItemIntoContainerAttempts++;
-//                     if (fitItemIntoContainerAttempts >= 4) {
-//                         this.logger.debug(
-//                             `Failed to place item ${i} of ${totalItemCount} items into ${botRole} containers: ${equipmentSlots.join(",")}. Tried ${fitItemIntoContainerAttempts} times, reason: ${ItemAddedResult[itemAddedResult]}, skipping`,
-//                         );
-//                         break;
-//                     }
-//                     // Try again, failed but still under attempt limit
-//                     continue;
-//                 }
-//                 // Item added okay, reset counter for next item
-//                 fitItemIntoContainerAttempts = 0;
-//                 // Stop adding items to bots pool if rolling total is over total limit
-//                 if (totalValueLimitRub > 0) {
-//                     currentTotalRub += this.handbookHelper.getTemplatePrice(itemToAddTemplate._id);
-//                     if (currentTotalRub > totalValueLimitRub) {
-//                         break;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-// export class MyLootCache extends BotLootCacheService {
-//     protected myLootCache: Record<string, MyBotLootCache> = {};
-//     private myBotRoleExistsInCache(botRole: string): boolean {
-//         return !!this.myLootCache[botRole];
-//     }
-//     private myInitCacheForBotRole(botRole: string): void {
-//         this.myLootCache[botRole] = {
-//             backpackLoot: [],
-//             pocketLoot: [],
-//             vestLoot: [],
-//             combinedPoolLoot: [],
-//             specialItems: [],
-//             vestGrenadeItems: [],
-//             pocketGrenadeItems: [],
-//             vestHealingItems: [],
-//             vestDrugItems: [],
-//             vestStimItems: [],
-//             pocketHealingItems: [],
-//             pocketDrugItems: [],
-//             pocketStimItems: [],
-//             bagHealingItems: [],
-//             bagDrugItems: [],
-//             bagStimItems: []
-//         };
-//     }
-//     public override clearCache(): void {
-//         this.myLootCache = {};
-//         this.lootCache = {};
-//     }
-//     public getLootCache(botRole: string, isPmc: boolean, lootType: MyLootCacheType, botJsonTemplate: IBotType): ITemplateItem[] {
-//         if (!this.myBotRoleExistsInCache(botRole)) {
-//             this.myInitCacheForBotRole(botRole)
-//             this.myAddLootToCache(botRole, isPmc, botJsonTemplate);
-//         }
-//         switch (lootType) {
-//             case MyLootCacheType.SPECIAL:
-//                 return this.myLootCache[botRole].specialItems;
-//             case MyLootCacheType.BACKPACK:
-//                 return this.myLootCache[botRole].backpackLoot;
-//             case MyLootCacheType.POCKET:
-//                 return this.myLootCache[botRole].pocketLoot;
-//             case MyLootCacheType.VEST:
-//                 return this.myLootCache[botRole].vestLoot;
-//             case MyLootCacheType.COMBINED:
-//                 return this.myLootCache[botRole].combinedPoolLoot;
-//             case MyLootCacheType.VEST_GRENADE_ITEMS:
-//                 return this.myLootCache[botRole].vestGrenadeItems;
-//             case MyLootCacheType.POCKET_GRENADE_ITEMS:
-//                 return this.myLootCache[botRole].pocketGrenadeItems;
-//             case MyLootCacheType.VEST_HEALING_ITEMS:
-//                 return this.myLootCache[botRole].vestHealingItems;
-//             case MyLootCacheType.VEST_DRUG_ITEMS:
-//                 return this.myLootCache[botRole].vestDrugItems;
-//             case MyLootCacheType.VEST_STIM_ITEMS:
-//                 return this.myLootCache[botRole].vestStimItems;
-//             case MyLootCacheType.POCKET_HEALING_ITEMS:
-//                 return this.myLootCache[botRole].pocketHealingItems;
-//             case MyLootCacheType.POCKET_DRUG_ITEMS:
-//                 return this.myLootCache[botRole].pocketDrugItems;
-//             case MyLootCacheType.POCKET_STIM_ITEMS:
-//                 return this.myLootCache[botRole].pocketStimItems;
-//             case MyLootCacheType.BAG_HEALING_ITEMS:
-//                 return this.myLootCache[botRole].bagHealingItems;
-//             case MyLootCacheType.BAG_DRUG_ITEMS:
-//                 return this.myLootCache[botRole].bagDrugItems;
-//             case MyLootCacheType.BAG_STIM_ITEMS:
-//                 return this.myLootCache[botRole].bagStimItems;
-//             default:
-//                 this.logger.error(this.localisationService.getText("bot-loot_type_not_found", { lootType: lootType, botRole: botRole, isPmc: isPmc }));
-//                 break;
-//         }
-//     }
-//     private myAddLootToCache(botRole: string, isPmc: boolean, botJsonTemplate: IBotType): void {
-//         const specialLootTemplates: ITemplateItem[] = [];
-//         const backpackLootTemplates: ITemplateItem[] = [];
-//         const pocketLootTemplates: ITemplateItem[] = [];
-//         const vestLootTemplates: ITemplateItem[] = [];
-//         const combinedPoolTemplates: ITemplateItem[] = [];
-//         const lootPool = botJsonTemplate.inventory.items;
-//         for (const [slot, pool] of Object.entries(lootPool)) {
-//             if (!pool?.length) {
-//                 continue;
-//             }
-//             // Sort loot pool into separate buckets
-//             let itemsToAdd: ITemplateItem[] = [];
-//             const items = this.databaseServer.getTables().templates.items;
-//             switch (slot.toLowerCase()) {
-//                 case "specialloot":
-//                     itemsToAdd = pool.map((lootTpl: string) => items[lootTpl]);
-//                     this.addUniqueItemsToPool(specialLootTemplates, itemsToAdd);
-//                     break;
-//                 case "pockets":
-//                     itemsToAdd = pool.map((lootTpl: string) => items[lootTpl]);
-//                     this.addUniqueItemsToPool(pocketLootTemplates, itemsToAdd);
-//                     break;
-//                 case "tacticalvest":
-//                     itemsToAdd = pool.map((lootTpl: string) => items[lootTpl]);
-//                     this.addUniqueItemsToPool(vestLootTemplates, itemsToAdd);
-//                     break;
-//                 case "securedcontainer":
-//                     // Don't add these items to loot pool
-//                     break;
-//                 default:
-//                     itemsToAdd = pool.map((lootTpl: string) => items[lootTpl]);
-//                     this.addUniqueItemsToPool(backpackLootTemplates, itemsToAdd);
-//             }
-//             // Add items to combined pool if any exist
-//             if (Object.keys(itemsToAdd).length > 0) {
-//                 this.addUniqueItemsToPool(combinedPoolTemplates, itemsToAdd);
-//             }
-//         }
-//         // Sort all items by their worth
-//         this.sortPoolByRagfairPrice(specialLootTemplates);
-//         this.sortPoolByRagfairPrice(backpackLootTemplates);
-//         this.sortPoolByRagfairPrice(pocketLootTemplates);
-//         this.sortPoolByRagfairPrice(vestLootTemplates);
-//         this.sortPoolByRagfairPrice(combinedPoolTemplates);
-//         const specialLootItems = specialLootTemplates.filter(template =>
-//             !this.isBulletOrGrenade(template._props)
-//             && !this.isMagazine(template._props));
-//         /////////////////////Meds//////////////////////////////
-//         //vest
-//         const vestHealingItems = vestLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.MEDKIT
-//             || template._parent === BaseClasses.MEDICAL);
-//         const vestDrugItems = vestLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.DRUGS);
-//         const vestStimItems = vestLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.STIMULATOR);
-//         //pocket
-//         const pocketHealingItems = pocketLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.MEDKIT
-//             || template._parent === BaseClasses.MEDICAL);
-//         const pocketDrugItems = pocketLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.DRUGS);
-//         const pocketStimItems = pocketLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.STIMULATOR);
-//         //bag
-//         const bagHealingItems = backpackLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.MEDKIT
-//             || template._parent === BaseClasses.MEDICAL);
-//         const bagDrugItems = backpackLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.DRUGS);
-//         const bagStimItems = backpackLootTemplates.filter(template =>
-//             this.isMedicalItem(template._props)
-//             && template._parent === BaseClasses.STIMULATOR);
-//         ///////////////////////////////////////////////////////
-//         const vestGrenadeItems = vestLootTemplates.filter(template =>
-//             this.isGrenade(template._props));
-//         const pocketGrenadeItems = pocketLootTemplates.filter(template =>
-//             this.isGrenade(template._props));
-//         // Get loot items (excluding magazines, bullets, grenades and healing items)
-//         const backpackLootItems = backpackLootTemplates.filter(template =>
-//             !this.isBulletOrGrenade(template._props)
-//             && !this.isMagazine(template._props)
-//             && !this.isMedicalItem(template._props)
-//             && !this.isGrenade(template._props));
-//         // Get pocket loot
-//         const pocketLootItems = pocketLootTemplates.filter(template =>
-//             !this.isBulletOrGrenade(template._props)
-//             && !this.isMagazine(template._props)
-//             && !this.isMedicalItem(template._props)
-//             && !this.isGrenade(template._props)
-//             && ("Height" in template._props)
-//             && ("Width" in template._props));
-//         // Get vest loot items
-//         const vestLootItems = vestLootTemplates.filter(template =>
-//             !this.isBulletOrGrenade(template._props)
-//             && !this.isMagazine(template._props)
-//             && !this.isMedicalItem(template._props)
-//             && !this.isGrenade(template._props));
-//         this.myLootCache[botRole].vestHealingItems = vestHealingItems;
-//         this.myLootCache[botRole].vestDrugItems = vestDrugItems;
-//         this.myLootCache[botRole].vestStimItems = vestStimItems;
-//         this.myLootCache[botRole].pocketHealingItems = pocketHealingItems;
-//         this.myLootCache[botRole].pocketDrugItems = pocketDrugItems;
-//         this.myLootCache[botRole].pocketStimItems = pocketStimItems;
-//         this.myLootCache[botRole].bagHealingItems = bagHealingItems;
-//         this.myLootCache[botRole].bagDrugItems = bagDrugItems;
-//         this.myLootCache[botRole].bagStimItems = bagStimItems;
-//         this.myLootCache[botRole].vestGrenadeItems = vestGrenadeItems;
-//         this.myLootCache[botRole].pocketGrenadeItems = pocketGrenadeItems;
-//         this.myLootCache[botRole].specialItems = specialLootItems;
-//         this.myLootCache[botRole].backpackLoot = backpackLootItems;
-//         this.myLootCache[botRole].pocketLoot = pocketLootItems;
-//         this.myLootCache[botRole].vestLoot = vestLootItems;
-//     }
-// }
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MyLootCache = exports.BotLootGen = exports.MyLootCacheType = exports.MyBotLootCache = void 0;
+const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
+const BotLootCacheService_1 = require("C:/snapshot/project/obj/services/BotLootCacheService");
+const BotLootGenerator_1 = require("C:/snapshot/project/obj/generators/BotLootGenerator");
+const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
+const EquipmentSlots_1 = require("C:/snapshot/project/obj/models/enums/EquipmentSlots");
+class MyBotLootCache {
+    specialItems;
+    secureLoot;
+    backpackLoot;
+    pocketLoot;
+    vestLoot;
+    combinedPoolLoot;
+    vestGrenadeItems;
+    pocketGrenadeItems;
+    vestHealingItems;
+    vestDrugItems;
+    vestStimItems;
+    pocketHealingItems;
+    pocketDrugItems;
+    pocketStimItems;
+    bagHealingItems;
+    bagDrugItems;
+    bagStimItems;
+}
+exports.MyBotLootCache = MyBotLootCache;
+var MyLootCacheType;
+(function (MyLootCacheType) {
+    MyLootCacheType["SPECIAL"] = "Special";
+    MyLootCacheType["SECURE"] = "SecuredContainer";
+    MyLootCacheType["BACKPACK"] = "Backpack";
+    MyLootCacheType["POCKET"] = "Pocket";
+    MyLootCacheType["VEST"] = "Vest";
+    MyLootCacheType["COMBINED"] = "Combined";
+    MyLootCacheType["VEST_GRENADE_ITEMS"] = "VestGrenadeItems";
+    MyLootCacheType["POCKET_GRENADE_ITEMS"] = "PocketGrenadeItems";
+    MyLootCacheType["VEST_HEALING_ITEMS"] = "VestHealingItems";
+    MyLootCacheType["VEST_DRUG_ITEMS"] = "VestDrugItems";
+    MyLootCacheType["VEST_STIM_ITEMS"] = "VestStimItems";
+    MyLootCacheType["POCKET_HEALING_ITEMS"] = "PocketHealingItems";
+    MyLootCacheType["POCKET_DRUG_ITEMS"] = "PocketDrugItems";
+    MyLootCacheType["POCKET_STIM_ITEMS"] = "PocketStimItems";
+    MyLootCacheType["BAG_HEALING_ITEMS"] = "BagHealingItems";
+    MyLootCacheType["BAG_DRUG_ITEMS"] = "BagDrugItems";
+    MyLootCacheType["BAG_STIM_ITEMS"] = "BagStimItems";
+})(MyLootCacheType || (exports.MyLootCacheType = MyLootCacheType = {}));
+class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
+    genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, pmcTier) {
+        const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
+        const pmcLootGenerator = tsyringe_1.container.resolve("PMCLootGenerator");
+        const ragfairPriceService = tsyringe_1.container.resolve("RagfairPriceService");
+        const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
+        const itemCounts = botJsonTemplate.generation.items;
+        const botItemLimits = this.getItemSpawnLimitsForBot(botRole);
+        const backpackLootCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.backpackLoot.weights));
+        const pocketLootCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights));
+        const vestLootCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
+        const specialLootItemCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.specialItems.weights));
+        const healingItemCountVest = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.healing.weights));
+        const healingItemCountPocket = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.healing.weights));
+        const healingItemCountBag = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.healing.weights));
+        const drugItemCountVest = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.drugs.weights));
+        const drugItemCountPocket = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.drugs.weights));
+        const drugItemCountBag = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.drugs.weights));
+        const stimItemCountVest = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.stims.weights));
+        const stimItemCountPocket = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.stims.weights));
+        const stimItemCountBag = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.stims.weights));
+        const grenadeCountVest = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.grenades.weights));
+        const grenadeCountPocket = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.grenades.weights));
+        const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);
+        // Forced pmc healing loot
+        if (isPmc && this.pmcConfig.forceHealingItemsIntoSecure) {
+            this.addForcedMedicalItemsToPmcSecure(botInventory, botRole);
+        }
+        if (containersBotHasAvailable.includes(EquipmentSlots_1.EquipmentSlots.BACKPACK)) {
+            // Backpack Loot
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.BACKPACK], backpackLootCount, botInventory, botRole, botItemLimits, this.pmcConfig.maxBackpackLootTotalRub, isPmc);
+            //Bag Meds
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_HEALING_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.BACKPACK], healingItemCountBag, botInventory, botRole, botItemLimits, 0, isPmc);
+            //Bag Drugs
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_DRUG_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.BACKPACK], drugItemCountBag, botInventory, botRole, botItemLimits, 0, isPmc);
+            //Bag Stims
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_STIM_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.BACKPACK], stimItemCountBag, botInventory, botRole, botItemLimits, 0, isPmc);
+        }
+        if (containersBotHasAvailable.includes(EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST)) {
+            //Vest Meds
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_HEALING_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST], healingItemCountVest, botInventory, botRole, botItemLimits, 0, isPmc);
+            //Vest Drugs
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_DRUG_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST], drugItemCountVest, botInventory, botRole, botItemLimits, 0, isPmc);
+            //Vest Stims
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_STIM_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST], stimItemCountVest, botInventory, botRole, botItemLimits, 0, isPmc);
+            // Vest Loot
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST], vestLootCount, botInventory, botRole, botItemLimits, this.pmcConfig.maxVestLootTotalRub, isPmc);
+            //Vest Nades
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.VEST_GRENADE_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST], grenadeCountVest, botInventory, botRole, botItemLimits, 0, isPmc);
+        }
+        // Pocket Loot
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.POCKETS], pocketLootCount, botInventory, botRole, botItemLimits, this.pmcConfig.maxPocketLootTotalRub, isPmc);
+        // Grenades
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_GRENADE_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.POCKETS], grenadeCountPocket, botInventory, botRole, botItemLimits, 0, isPmc);
+        // Special items
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.SPECIAL, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.POCKETS, EquipmentSlots_1.EquipmentSlots.BACKPACK, EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST], specialLootItemCount, botInventory, botRole, botItemLimits);
+        //Pocket Meds
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_HEALING_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.POCKETS], healingItemCountPocket, botInventory, botRole, botItemLimits, 0, isPmc);
+        //Pocket Drugs
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_DRUG_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.POCKETS], drugItemCountPocket, botInventory, botRole, botItemLimits, 0, isPmc);
+        //Pocket Stims
+        this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.POCKET_STIM_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.POCKETS], stimItemCountPocket, botInventory, botRole, botItemLimits, 0, isPmc);
+    }
+}
+exports.BotLootGen = BotLootGen;
+class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
+    myLootCache = {};
+    myBotRoleExistsInCache(botRole) {
+        return !!this.myLootCache[botRole];
+    }
+    myInitCacheForBotRole(botRole) {
+        this.myLootCache[botRole] = {
+            specialItems: {},
+            secureLoot: {},
+            backpackLoot: {},
+            pocketLoot: {},
+            vestLoot: {},
+            combinedPoolLoot: {},
+            vestGrenadeItems: {},
+            pocketGrenadeItems: {},
+            vestHealingItems: {},
+            vestDrugItems: {},
+            vestStimItems: {},
+            pocketHealingItems: {},
+            pocketDrugItems: {},
+            pocketStimItems: {},
+            bagHealingItems: {},
+            bagDrugItems: {},
+            bagStimItems: {}
+        };
+    }
+    clearCache() {
+        this.logger.warning("Clearning cache");
+        this.myLootCache = {};
+        this.lootCache = {};
+    }
+    getLootCache(botRole, isPmc, lootType, botJsonTemplate) {
+        if (!this.myBotRoleExistsInCache(botRole)) {
+            this.myInitCacheForBotRole(botRole);
+            this.myAddLootToCache(botRole, isPmc, botJsonTemplate);
+        }
+        switch (lootType) {
+            case MyLootCacheType.SECURE:
+                return this.myLootCache[botRole].secureLoot;
+            case MyLootCacheType.SPECIAL:
+                return this.myLootCache[botRole].specialItems;
+            case MyLootCacheType.BACKPACK:
+                return this.myLootCache[botRole].backpackLoot;
+            case MyLootCacheType.POCKET:
+                return this.myLootCache[botRole].pocketLoot;
+            case MyLootCacheType.VEST:
+                return this.myLootCache[botRole].vestLoot;
+            case MyLootCacheType.COMBINED:
+                return this.myLootCache[botRole].combinedPoolLoot;
+            case MyLootCacheType.VEST_GRENADE_ITEMS:
+                return this.myLootCache[botRole].vestGrenadeItems;
+            case MyLootCacheType.POCKET_GRENADE_ITEMS:
+                return this.myLootCache[botRole].pocketGrenadeItems;
+            case MyLootCacheType.VEST_HEALING_ITEMS:
+                return this.myLootCache[botRole].vestHealingItems;
+            case MyLootCacheType.VEST_DRUG_ITEMS:
+                return this.myLootCache[botRole].vestDrugItems;
+            case MyLootCacheType.VEST_STIM_ITEMS:
+                return this.myLootCache[botRole].vestStimItems;
+            case MyLootCacheType.POCKET_HEALING_ITEMS:
+                return this.myLootCache[botRole].pocketHealingItems;
+            case MyLootCacheType.POCKET_DRUG_ITEMS:
+                return this.myLootCache[botRole].pocketDrugItems;
+            case MyLootCacheType.POCKET_STIM_ITEMS:
+                return this.myLootCache[botRole].pocketStimItems;
+            case MyLootCacheType.BAG_HEALING_ITEMS:
+                return this.myLootCache[botRole].bagHealingItems;
+            case MyLootCacheType.BAG_DRUG_ITEMS:
+                return this.myLootCache[botRole].bagDrugItems;
+            case MyLootCacheType.BAG_STIM_ITEMS:
+                return this.myLootCache[botRole].bagStimItems;
+            default:
+                this.logger.error(this.localisationService.getText("bot-loot_type_not_found", { lootType: lootType, botRole: botRole, isPmc: isPmc }));
+                break;
+        }
+    }
+    myAddLootToCache(botRole, isPmc, botJsonTemplate) {
+        const lootPool = botJsonTemplate.inventory.items;
+        const specialLootPool = {};
+        const backpackLootPool = {};
+        const pocketLootPool = {};
+        const vestLootPool = {};
+        const secureLootTPool = {};
+        const combinedLootPool = {};
+        for (const [slot, pool] of Object.entries(lootPool)) {
+            // No items to add, skip
+            if (Object.keys(pool).length === 0) {
+                continue;
+            }
+            // Sort loot pool into separate buckets
+            switch (slot.toLowerCase()) {
+                case "specialloot":
+                    this.addItemsToPool(specialLootPool, pool);
+                    break;
+                case "pockets":
+                    this.addItemsToPool(pocketLootPool, pool);
+                    break;
+                case "tacticalvest":
+                    this.addItemsToPool(vestLootPool, pool);
+                    break;
+                case "securedcontainer":
+                    this.addItemsToPool(secureLootTPool, pool);
+                    break;
+                case "backpack":
+                    this.addItemsToPool(backpackLootPool, pool);
+                    break;
+                default:
+                    this.logger.warning(`How did you get here ${slot}`);
+            }
+            // Add all items (if any) to combined pool (excluding secure)
+            if (Object.keys(pool).length > 0 && slot.toLowerCase() !== "securedcontainer") {
+                this.addItemsToPool(combinedLootPool, pool);
+            }
+        }
+        // Assign whitelisted special items to bot if any exist
+        const specialLootItems = (Object.keys(botJsonTemplate.generation.items.specialItems.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.specialItems.whitelist
+            : {};
+        if (Object.keys(specialLootItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(specialLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (!(this.isBulletOrGrenade(itemTemplate._props) || this.isMagazine(itemTemplate._props))) {
+                    specialLootItems[tpl] = weight;
+                }
+            }
+        }
+        /////////////////////Meds//////////////////////////////
+        ////Healing////
+        // Assign whitelisted healing items to bot if any exist
+        const vestHealingItems = (Object.keys(botJsonTemplate.generation.items.healing.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.healing.whitelist
+            : {};
+        // No whitelist, find and assign from combined item pool
+        if (Object.keys(vestHealingItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props)
+                    && itemTemplate._parent !== BaseClasses_1.BaseClasses.STIMULATOR
+                    && itemTemplate._parent !== BaseClasses_1.BaseClasses.DRUGS) {
+                    vestHealingItems[tpl] = weight;
+                }
+            }
+        }
+        // Assign whitelisted healing items to bot if any exist
+        const pocketHealingItems = (Object.keys(botJsonTemplate.generation.items.healing.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.healing.whitelist
+            : {};
+        // No whitelist, find and assign from combined item pool
+        if (Object.keys(pocketHealingItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props)
+                    && itemTemplate._parent !== BaseClasses_1.BaseClasses.STIMULATOR
+                    && itemTemplate._parent !== BaseClasses_1.BaseClasses.DRUGS) {
+                    pocketHealingItems[tpl] = weight;
+                }
+            }
+        }
+        // Assign whitelisted healing items to bot if any exist
+        const bagHealingItems = (Object.keys(botJsonTemplate.generation.items.healing.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.healing.whitelist
+            : {};
+        // No whitelist, find and assign from combined item pool
+        if (Object.keys(bagHealingItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props)
+                    && itemTemplate._parent !== BaseClasses_1.BaseClasses.STIMULATOR
+                    && itemTemplate._parent !== BaseClasses_1.BaseClasses.DRUGS) {
+                    bagHealingItems[tpl] = weight;
+                }
+            }
+        }
+        ////Drugs////
+        // Assign whitelisted drugs to bot if any exist
+        const vestDrugItems = (Object.keys(botJsonTemplate.generation.items.drugs.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.drugs.whitelist
+            : {};
+        // no whitelist, find and assign from combined item pool
+        if (Object.keys(vestDrugItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses_1.BaseClasses.DRUGS) {
+                    vestDrugItems[tpl] = weight;
+                }
+            }
+        }
+        // Assign whitelisted drugs to bot if any exist
+        const pocketDrugItems = (Object.keys(botJsonTemplate.generation.items.drugs.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.drugs.whitelist
+            : {};
+        // no whitelist, find and assign from combined item pool
+        if (Object.keys(pocketDrugItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses_1.BaseClasses.DRUGS) {
+                    pocketDrugItems[tpl] = weight;
+                }
+            }
+        }
+        // Assign whitelisted drugs to bot if any exist
+        const bagDrugItems = (Object.keys(botJsonTemplate.generation.items.drugs.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.drugs.whitelist
+            : {};
+        // no whitelist, find and assign from combined item pool
+        if (Object.keys(bagDrugItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses_1.BaseClasses.DRUGS) {
+                    bagDrugItems[tpl] = weight;
+                }
+            }
+        }
+        ////Stims////
+        // Assign whitelisted stims to bot if any exist
+        const vestStimItems = (Object.keys(botJsonTemplate.generation.items.stims.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.stims.whitelist
+            : {};
+        // No whitelist, find and assign from combined item pool
+        if (Object.keys(vestStimItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses_1.BaseClasses.STIMULATOR) {
+                    vestStimItems[tpl] = weight;
+                }
+            }
+        }
+        // Assign whitelisted stims to bot if any exist
+        const pocketStimItems = (Object.keys(botJsonTemplate.generation.items.stims.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.stims.whitelist
+            : {};
+        // No whitelist, find and assign from combined item pool
+        if (Object.keys(pocketStimItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses_1.BaseClasses.STIMULATOR) {
+                    pocketStimItems[tpl] = weight;
+                }
+            }
+        }
+        // Assign whitelisted stims to bot if any exist
+        const bagStimItems = (Object.keys(botJsonTemplate.generation.items.stims.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.stims.whitelist
+            : {};
+        // No whitelist, find and assign from combined item pool
+        if (Object.keys(bagStimItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses_1.BaseClasses.STIMULATOR) {
+                    bagStimItems[tpl] = weight;
+                }
+            }
+        }
+        //////////////////Grenades/////////////////
+        // Assign whitelisted grenades to bot if any exist
+        const vestGrenadeItems = (Object.keys(botJsonTemplate.generation.items.grenades.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.grenades.whitelist
+            : {};
+        // no whitelist, find and assign from combined item pool
+        if (Object.keys(vestGrenadeItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isGrenade(itemTemplate._props)) {
+                    vestGrenadeItems[tpl] = weight;
+                }
+            }
+        }
+        const pocketGrenadeItems = (Object.keys(botJsonTemplate.generation.items.grenades.whitelist)?.length > 0)
+            ? botJsonTemplate.generation.items.grenades.whitelist
+            : {};
+        // no whitelist, find and assign from combined item pool
+        if (Object.keys(pocketGrenadeItems).length === 0) {
+            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+                const itemTemplate = this.itemHelper.getItem(tpl)[1];
+                if (this.isGrenade(itemTemplate._props)) {
+                    pocketGrenadeItems[tpl] = weight;
+                }
+            }
+        }
+        //////////////////Loot/////////////////
+        // Get backpack loot (excluding magazines, bullets, grenades and healing items)
+        const filteredBackpackItems = {};
+        for (const itemKey of Object.keys(backpackLootPool)) {
+            const itemResult = this.itemHelper.getItem(itemKey);
+            if (!itemResult[0]) {
+                continue;
+            }
+            const itemTemplate = itemResult[1];
+            if (this.isBulletOrGrenade(itemTemplate._props)
+                || this.isMagazine(itemTemplate._props)
+                || this.isMedicalItem(itemTemplate._props)
+                || this.isGrenade(itemTemplate._props)) {
+                // Is type we dont want as backpack loot, skip
+                continue;
+            }
+            filteredBackpackItems[itemKey] = backpackLootPool[itemKey];
+        }
+        // Get pocket loot (excluding magazines, bullets, grenades, medical and healing items)
+        const filteredPocketItems = {};
+        for (const itemKey of Object.keys(pocketLootPool)) {
+            const itemResult = this.itemHelper.getItem(itemKey);
+            if (!itemResult[0]) {
+                continue;
+            }
+            const itemTemplate = itemResult[1];
+            if (this.isBulletOrGrenade(itemTemplate._props)
+                || this.isMagazine(itemTemplate._props)
+                || this.isMedicalItem(itemTemplate._props)
+                || this.isGrenade(itemTemplate._props)
+                || !("Height" in itemTemplate._props) // lacks height
+                || !("Width" in itemTemplate._props) // lacks width
+            ) {
+                continue;
+            }
+            filteredPocketItems[itemKey] = pocketLootPool[itemKey];
+        }
+        // Get vest loot (excluding magazines, bullets, grenades, medical and healing items)
+        const filteredVestItems = {};
+        for (const itemKey of Object.keys(vestLootPool)) {
+            const itemResult = this.itemHelper.getItem(itemKey);
+            if (!itemResult[0]) {
+                continue;
+            }
+            const itemTemplate = itemResult[1];
+            if (this.isBulletOrGrenade(itemTemplate._props)
+                || this.isMagazine(itemTemplate._props)
+                || this.isMedicalItem(itemTemplate._props)
+                || this.isGrenade(itemTemplate._props)) {
+                continue;
+            }
+            filteredVestItems[itemKey] = vestLootPool[itemKey];
+        }
+        this.myLootCache[botRole].vestHealingItems = vestHealingItems;
+        this.myLootCache[botRole].vestDrugItems = vestDrugItems;
+        this.myLootCache[botRole].vestStimItems = vestStimItems;
+        this.myLootCache[botRole].pocketHealingItems = pocketHealingItems;
+        this.myLootCache[botRole].pocketDrugItems = pocketDrugItems;
+        this.myLootCache[botRole].pocketStimItems = pocketStimItems;
+        this.myLootCache[botRole].bagHealingItems = bagHealingItems;
+        this.myLootCache[botRole].bagDrugItems = bagDrugItems;
+        this.myLootCache[botRole].bagStimItems = bagStimItems;
+        this.myLootCache[botRole].vestGrenadeItems = vestGrenadeItems;
+        this.myLootCache[botRole].pocketGrenadeItems = pocketGrenadeItems;
+        this.myLootCache[botRole].specialItems = specialLootItems;
+        this.myLootCache[botRole].backpackLoot = filteredBackpackItems;
+        this.myLootCache[botRole].pocketLoot = filteredPocketItems;
+        this.myLootCache[botRole].vestLoot = filteredVestItems;
+    }
+}
+exports.MyLootCache = MyLootCache;
 //# sourceMappingURL=bot_loot_serv.js.map

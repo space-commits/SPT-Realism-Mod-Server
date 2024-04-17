@@ -203,8 +203,6 @@ class AttachmentBase {
             }
         }
         this.itemDB()["mechMDR_406"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
-        //for some reason, somewhere somehow, SPT server is trying to put this brake on this adapater, causing an error, despite no bot json anywhere having this setup.
-        this.itemDB()["5a0abb6e1526d8000a025282"]._props.Slots[0]._props.filters[0].Filter.push("59e61eb386f77440d64f5daf");
     }
     loadAttRequirements() {
         let requiredMods = [

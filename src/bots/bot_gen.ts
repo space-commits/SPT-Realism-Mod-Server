@@ -51,8 +51,9 @@ import { InventoryHelper } from "@spt-aki/helpers/InventoryHelper";
 import { ModSpawn } from "@spt-aki/models/enums/ModSpawn";
 import { ExhaustableArray } from "@spt-aki/models/spt/server/ExhaustableArray";
 import { IFilterPlateModsForSlotByLevelResult, Result } from "@spt-aki/generators/IFilterPlateModsForSlotByLevelResult";
+import { BotLootGen } from "./bot_loot_serv";
 
-const armorPlateWeights = require("../../db/bots/loadouts/armorPlateWeights.json");
+const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 const modConfig = require("../../config/config.json");
 
@@ -434,13 +435,17 @@ export class BotInvGen extends BotInventoryGenerator {
 
     public myGenerateInventory(sessionId: string, botJsonTemplate: IBotType, botRole: string, isPmc: boolean, botLevel: number, pmcTier: number): PmcInventory {
 
-        // const botLootCacheService = container.resolve<BotLootCacheService>("BotLootCacheService");
-        // const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-        // const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
-        // const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
-        // const botLootGen = new BotLootGen(this.logger, this.hashUtil, this.randomUtil, itemHelper, this.databaseServer, handbookHelper, this.botGeneratorHelper, this.botWeaponGenerator, botWeaponGeneratorHelper, this.weightedRandomHelper, botLootCacheService, this.localisationService, this.configServer);
+        const botLootCacheService = container.resolve<BotLootCacheService>("BotLootCacheService");
+        const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+        const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
+        const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
+        const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const tables = this.databaseServer.getTables();
         const itemDb = tables.templates.items;
+        const botLootGen = new BotLootGen(
+            this.logger, this.hashUtil, this.randomUtil, itemHelper, jsonUtil, inventoryHelper, this.databaseServer,
+            handbookHelper, this.botGeneratorHelper, this.botWeaponGenerator, this.weightedRandomHelper, this.botHelper,
+            botLootCacheService, this.localisationService, this.configServer);
 
         const templateInventory = botJsonTemplate.inventory;
         const equipmentChances = botJsonTemplate.chances;
@@ -459,14 +464,12 @@ export class BotInvGen extends BotInventoryGenerator {
             this.tryGetPMCSecondary(botInventory, itemDb, templateInventory, equipmentChances, sessionId, botRole, isPmc, pmcTier, botLevel, itemGenerationLimitsMinMax);
         }
 
-        // if (modConfig.bot_loot_changes === true) {
-        //     botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, pmcTier);
-        // }
-        // else {
-        //     this.botLootGenerator.generateLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
-        // }
-
-        this.botLootGenerator.generateLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
+        if (modConfig.bot_loot_changes === true) {
+            botLootGen.genLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, pmcTier);
+        }
+        else {
+            this.botLootGenerator.generateLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
+        }
 
         return botInventory;
     }
@@ -1008,8 +1011,8 @@ export class BotWepGen extends BotWeaponGenerator {
             }
         }
         catch {
-            this.logger.error(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
-            this.logger.error(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
+            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
+            this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
 
             let preset: IPreset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {

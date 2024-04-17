@@ -189,7 +189,7 @@ export class JsonHandler {
     private modPusherHelper(serverItem: any, fileItem: any) {
         if (modConfig.recoil_attachment_overhaul == true && ConfigChecker.dllIsPresent == true) {
             if (serverItem._id === fileItem.ItemID) {
-                let serverConfItems = serverItem._props.ConflictingItems;
+                let serverConfItems = fileItem.ConflictingItems;
                 if (serverConfItems[0] !== "SPTRM") {
 
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
