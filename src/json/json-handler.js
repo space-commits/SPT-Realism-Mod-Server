@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonHandler = void 0;
 const enums_1 = require("../utils/enums");
-const utils_1 = require("../utils/utils");
 const modConfig = require("../../config/config.json");
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
@@ -94,7 +93,7 @@ class JsonHandler {
             }
         }
         //catch any modded weapons not in templates
-        if (modConfig.recoil_attachment_overhaul == true && utils_1.ConfigChecker.dllIsPresent == true) {
+        if (modConfig.recoil_attachment_overhaul == true) {
             for (let j in this.itemDB()) {
                 let serverItem = this.itemDB()[j];
                 let serverConfItems = serverItem._props.ConflictingItems;
@@ -172,7 +171,7 @@ class JsonHandler {
         }
     }
     modPusherHelper(serverItem, fileItem) {
-        if (modConfig.recoil_attachment_overhaul == true && utils_1.ConfigChecker.dllIsPresent == true) {
+        if (modConfig.recoil_attachment_overhaul == true) {
             if (serverItem._id === fileItem.ItemID) {
                 let serverConfItems = fileItem.ConflictingItems;
                 if (serverConfItems[0] !== "SPTRM") {
@@ -226,7 +225,7 @@ class JsonHandler {
                 if (modConfig.realistic_ballistics == true) {
                     serverItem._props.Velocity = fileItem.Velocity;
                 }
-                if (modConfig.recoil_attachment_overhaul == true && utils_1.ConfigChecker.dllIsPresent == true) {
+                if (modConfig.recoil_attachment_overhaul == true) {
                     serverItem._props.Ergonomics = fileItem.Ergonomics;
                     serverItem._props.RecoilForceUp = fileItem.VerticalRecoil;
                     serverItem._props.RecoilForceBack = fileItem.HorizontalRecoil;

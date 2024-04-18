@@ -138,7 +138,6 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
         };
     }
     clearCache() {
-        this.logger.warning("Clearning cache");
         this.myLootCache = {};
         this.lootCache = {};
     }

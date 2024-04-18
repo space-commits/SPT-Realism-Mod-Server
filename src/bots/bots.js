@@ -896,9 +896,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
@@ -957,9 +957,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
@@ -1028,9 +1028,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
@@ -1091,9 +1091,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
@@ -1114,9 +1114,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad5 loaded");
@@ -1167,9 +1167,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO1.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
@@ -1227,9 +1227,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO2.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
@@ -1291,9 +1291,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO3.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
@@ -1353,9 +1353,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
@@ -1375,9 +1375,9 @@ class BotLoader {
         this.tier5PMCLoad(botJsonTemplate);
         if (this.modConfig.dynamic_loot_pmcs === true) {
             botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
-            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad5 loaded");
