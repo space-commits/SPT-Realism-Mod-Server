@@ -1,4 +1,39 @@
 {
+    "playerScavBrainType": {
+        "factory4_day": {
+            "assault": 1
+        },
+        "factory4_night": {
+            "assault": 1
+        },
+        "bigmap": {
+            "assault": 1
+        },
+        "laboratory": {
+            "assault": 1
+        },
+        "woods": {
+            "assault": 1
+        },
+        "interchange": {
+            "assault": 1
+        },
+        "lighthouse": {
+            "assault": 1
+        },
+        "rezervbase": {
+            "assault": 1
+        },
+        "shoreline": {
+            "assault": 1
+        },
+        "tarkovstreets": {
+            "assault": 1
+        },
+        "sandbox": {
+            "assault": 1
+        }
+    },
     "pmcTypeTimmy": {
         "pmcTypeDay": {
             "sptbear": {

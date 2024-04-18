@@ -151,6 +151,9 @@ export class BotLoader {
         this.botConfPMC().backpackLoot.whitelist = [];
         this.botConfPMC().backpackLoot.blacklist = [];
 
+        this.botConf().playerScavBrainType = pmcTypes.playerScavBrainType;
+        this.botConf().chanceAssaultScavHasPlayerScavName = 0;
+
         // for (let i in this.lootBlacklist()) {
         //     this.botConfPMC().vestLoot.blacklist.push(this.lootBlacklist()[i]);
         //     this.botConfPMC().pocketLoot.blacklist.push(this.lootBlacklist()[i]);
