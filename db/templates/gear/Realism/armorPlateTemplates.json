@@ -80,11 +80,31 @@
         "CanSpall": false,
         "SpallReduction": 1
     },
+    "xsapi_chest": {
+        "ItemID": "xsapi_chest",
+        "Name": "xsapi_chest",
+        "AllowADS": true,
+        "LoyaltyLevel": 5,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "CanSpall": false,
+        "SpallReduction": 1
+    },
+    "mk4a_plate": {
+        "ItemID": "mk4a_plate",
+        "Name": "mk4a_plate",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "Price": 0,
+        "ReloadSpeedMulti": 1,
+        "CanSpall": false,
+        "SpallReduction": 1
+    },
     "64afdcb83efdfea28601d041": {
         "ItemID": "64afdcb83efdfea28601d041",
         "Name": "item_equipment_plate_sapi_6_frontback",
         "AllowADS": true,
-        "LoyaltyLevel": 5,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,

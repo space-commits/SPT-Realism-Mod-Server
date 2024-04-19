@@ -2137,6 +2137,26 @@
         "LoyaltyLevel": 0,
         "Price": 0
     },
+    "647db1eca8d3399c380d195c": {
+        "ItemID": "647db1eca8d3399c380d195c",
+        "Name": "handguard_aks74u_alfa_arms_goliaf_m_lok",
+        "ModType": "",
+        "VerticalRecoil": -4,
+        "HorizontalRecoil": -1,
+        "Dispersion": -1,
+        "AimSpeed": 0,
+        "ChamberSpeed": 0,
+        "Ergonomics": 16,
+        "Accuracy": 9,
+        "HeatFactor": 1.06,
+        "CoolFactor": 1,
+        "ConflictingItems": [
+            "593d493f86f7745e6b2ceb22",
+            "57ffb0e42459777d047111c5",
+            "615d8f8567085e45ef1409ca"
+        ],
+        "Weight": 0.15
+    },
     "5d15ce51d7ad1a1eff619092": {
         "ItemID": "5d15ce51d7ad1a1eff619092",
         "Name": "handguard_aks74u_alfa_arms_goliaf",
@@ -2150,19 +2170,11 @@
         "HeatFactor": 1,
         "CoolFactor": 1.07,
         "ConflictingItems": [
-            "5ac72e945acfc43f3b691116",
-            "5ac7655e5acfc40016339a19",
-            "5649aa744bdc2ded0b8b457e",
-            "5f633f791b231926f2329f13",
-            "5943eeeb86f77412d6384f6b",
-            "5cc9a96cd7f00c011c04e04a",
-            "615d8f5dd92c473c770212ef",
-            "5649ab884bdc2ded0b8b457f",
             "593d493f86f7745e6b2ceb22",
             "57ffb0e42459777d047111c5",
             "615d8f8567085e45ef1409ca"
         ],
-        "Weight": 0.15,
+        "Weight": 0.25,
         "LoyaltyLevel": 0,
         "Price": 0
     },
@@ -3413,34 +3425,6 @@
         "CoolFactor": 0.97,
         "ConflictingItems": [],
         "Weight": 0.167
-    },
-    "647db1eca8d3399c380d195c": {
-        "ItemID": "647db1eca8d3399c380d195c",
-        "Name": "handguard_aks74u_alfa_arms_goliaf_m_lok",
-        "ModType": "",
-        "VerticalRecoil": -4,
-        "HorizontalRecoil": -1,
-        "Dispersion": 0,
-        "AimSpeed": 0,
-        "ChamberSpeed": 0,
-        "Ergonomics": 16,
-        "Accuracy": 9,
-        "HeatFactor": 1.06,
-        "CoolFactor": 1,
-        "ConflictingItems": [
-            "5ac72e945acfc43f3b691116",
-            "5ac7655e5acfc40016339a19",
-            "5649aa744bdc2ded0b8b457e",
-            "5f633f791b231926f2329f13",
-            "5943eeeb86f77412d6384f6b",
-            "5cc9a96cd7f00c011c04e04a",
-            "615d8f5dd92c473c770212ef",
-            "5649ab884bdc2ded0b8b457f",
-            "593d493f86f7745e6b2ceb22",
-            "57ffb0e42459777d047111c5",
-            "615d8f8567085e45ef1409ca"
-        ],
-        "Weight": 0.25
     },
     "647dba3142c479dde701b654": {
         "ItemID": "647dba3142c479dde701b654",

@@ -475,7 +475,7 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
-        this.dllChecker(logger, modConfig);
+        // this.dllChecker(logger, modConfig);
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
@@ -488,6 +488,7 @@ class Main {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         if (modConfig.realistic_ballistics == true) {
+            itemCloning.createCustomPlates();
             ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
@@ -547,15 +548,13 @@ class Main {
         if (modConfig.trader_repair_changes == true) {
             traders.loadTraderRepairs();
         }
-        if (utils_1.ConfigChecker.dllIsPresent == true) {
-            if (modConfig.recoil_attachment_overhaul) {
-                ammo.loadAmmoFirerateChanges();
-                quests.fixMechancicQuests();
-                ammo.grenadeTweaks();
-            }
-            if (modConfig.headset_changes) {
-                gear.loadHeadsetTweaks();
-            }
+        if (modConfig.recoil_attachment_overhaul) {
+            ammo.loadAmmoFirerateChanges();
+            quests.fixMechancicQuests();
+            ammo.grenadeTweaks();
+        }
+        if (modConfig.headset_changes) {
+            gear.loadHeadsetTweaks();
         }
         if (modConfig.remove_quest_fir_req == true) {
             quests.removeFIRQuestRequire();
@@ -581,21 +580,22 @@ class Main {
     postAkiLoad(container) {
         this.modLoader = container.resolve("PreAkiModLoader");
     }
-    dllChecker(logger, modConfig) {
-        const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
-        if (fs.existsSync(realismdll)) {
-            utils_1.ConfigChecker.dllIsPresent = true;
-            if (modConfig.recoil_attachment_overhaul == false) {
-                logger.info("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
-            }
-        }
-        else {
-            utils_1.ConfigChecker.dllIsPresent = false;
-            if (modConfig.recoil_attachment_overhaul == true) {
-                logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
-            }
-        }
-    }
+    //unsur if I still need to do this or not, now that configuration has been expanded
+    // private dllChecker(logger: ILogger, modConfig: any) {
+    //     ConfigChecker.dllIsPresent = true;
+    //     const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
+    //     if (fs.existsSync(realismdll)) {
+    //         ConfigChecker.dllIsPresent = true;
+    //         if (modConfig.recoil_attachment_overhaul == false) {
+    //             logger.info("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
+    //         }
+    //     } else {
+    //         ConfigChecker.dllIsPresent = false;
+    //         if (modConfig.recoil_attachment_overhaul == true) {
+    //             logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
+    //         }
+    //     }
+    // }
     revertMeds(pmcData, utils) {
         utils.revertMedItems(pmcData);
     }
