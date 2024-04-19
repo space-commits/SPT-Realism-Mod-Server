@@ -62,7 +62,7 @@ class AttachmentBase {
         for (let local in this.localsDB()) {
             this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 ShortName"] = "MCX Multi Cal.";
             this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"] = this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"].replace(/SIG MCX \.300 Blackout/g, "SIG MCX Multi Cal.");
-            this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"] = this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"].replace(/SIG MCX \.300 AAC Blackout/g, "SIG MCX Multi Cal.");
+            // this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"] = this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Name"].replace(/SIG MCX \.300 AAC Blackout/g, "SIG MCX Multi Cal.");
             this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Description"] = this.localsDB()[local]["5fbcc1d9016cce60e8341ab3 Description"].replace(/\.300 Blackout/g, "Multi Caliber");
             this.localsDB()[local]["65290f395ae2ae97b80fdf2d ShortName"] = "SPEAR Multi Cal.";
             this.localsDB()[local]["65290f395ae2ae97b80fdf2d Name"] = this.localsDB()[local]["65290f395ae2ae97b80fdf2d Name"].replace(/6\.8x51/g, "Multi Cal.");
@@ -70,6 +70,9 @@ class AttachmentBase {
             this.localsDB()[local]["5c488a752e221602b412af63 Description"] = this.localsDB()[local]["5c488a752e221602b412af63 Description"].replace(/5\.56x45/g, "Multi Cal.");
             this.localsDB()[local]["5de652c31b7e3716273428be Name"] = this.localsDB()[local]["5de652c31b7e3716273428be Name"].replace(/\.366 TKM/g, "");
             this.localsDB()[local]["5de652c31b7e3716273428be Description"] = this.localsDB()[local]["5de652c31b7e3716273428be Description"].replace(/Chambered in \.366 TKM ammo./g, "Chambered mostly in .366 TKM ammo, can be rechambered for 7.62x39mm.");
+            this.localsDB()[local]["5a32a064c4a28200741e22de ShortName"] = "Osprey 45";
+            this.localsDB()[local]["5a32a064c4a28200741e22de Name"] = this.localsDB()[local]["5a32a064c4a28200741e22de Name"].replace(/9 9x19/g, "Multi Cal.");
+            this.localsDB()[local]["5a32a064c4a28200741e22de Description"] = this.localsDB()[local]["5a32a064c4a28200741e22de Description"].replace(/9x19 pistols and SMGs/g, "multiple pistol calibers");
         }
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
@@ -201,8 +204,15 @@ class AttachmentBase {
             if (serverItem._props.weapClass === "pistol") {
                 serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
             }
+            if (serverItem._props.Slots && serverItem._props.Slots.length > 0 && serverItem._props.Slots[0]._props &&
+                serverItem._props.Slots[0]._props.filters && serverItem._props.Slots[0]._props.filters.length > 0 &&
+                (serverItem._props.Slots[0]._props.filters[0].Filter.includes("5fc4b97bab884124df0cd5e3") || serverItem._props.Slots[0]._props.filters[0].Filter.includes("5fc4b992187fea44d52edaa9"))) {
+                serverItem._props.Slots[0]._props.filters[0].Filter.push("5a32a064c4a28200741e22de");
+            }
         }
         this.itemDB()["mechMDR_406"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
+        this.itemDB()["mechAUG_417"]._props.Slots[0]._props.filters[0].Filter = ["mechRatWorx"];
+        this.itemDB()["mechRatWorx"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
     }
     loadAttRequirements() {
         let requiredMods = [

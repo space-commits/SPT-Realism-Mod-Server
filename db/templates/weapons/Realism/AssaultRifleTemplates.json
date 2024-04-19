@@ -56,7 +56,7 @@
         "Ergonomics": 85,
         "VerticalRecoil": 65,
         "HorizontalRecoil": 185,
-        "Dispersion": 11,
+        "Dispersion": 7,
         "CameraRecoil": 0.042,
         "VisualMulti": 1.03,
         "Convergence": 13.5,
@@ -89,7 +89,12 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.009,
-        "RecoilIntensity": 0.15
+        "RecoilIntensity": 0.15,
+        "RecoilCenter": {
+            "x": 0,
+            "y": -0.35,
+            "z": -0.01
+        }
     },
     "62e7c4fba689e8c9c50dfc38": {
         "ItemID": "62e7c4fba689e8c9c50dfc38",
@@ -102,7 +107,7 @@
         "Ergonomics": 85,
         "VerticalRecoil": 65,
         "HorizontalRecoil": 175,
-        "Dispersion": 10,
+        "Dispersion": 6,
         "CameraRecoil": 0.072,
         "VisualMulti": 1.05,
         "Convergence": 13,
@@ -135,7 +140,12 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.009,
-        "RecoilIntensity": 0.152
+        "RecoilIntensity": 0.152,
+        "RecoilCenter": {
+            "x": 0,
+            "y": -0.35,
+            "z": -0.01
+        }
     },
     "628b9c37a733087d0d7fe84b": {
         "ItemID": "628b9c37a733087d0d7fe84b",
@@ -1067,11 +1077,11 @@
         "HasShoulderContact": false,
         "Ergonomics": 80,
         "VerticalRecoil": 97,
-        "HorizontalRecoil": 210,
+        "HorizontalRecoil": 215,
         "Dispersion": 11,
-        "CameraRecoil": 0.033,
-        "VisualMulti": 1.1,
-        "Convergence": 15,
+        "CameraRecoil": 0.04,
+        "VisualMulti": 1.12,
+        "Convergence": 14,
         "RecoilAngle": 84,
         "BaseMalfunctionChance": 0.15,
         "HeatFactorGun": 0.34,
@@ -1086,7 +1096,7 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0.867,
-        "RecoilHandDamping": 0.45,
+        "RecoilHandDamping": 0.5,
         "WeaponAllowADS": false,
         "Weight": 0.664,
         "DurabilityBurnRatio": 0.36,
@@ -1150,7 +1160,7 @@
         "RecoilIntensity": 0.2,
         "RecoilCenter": {
             "x": 0,
-            "y": -0.47,
+            "y": -0.45,
             "z": 0
         }
     },

@@ -488,6 +488,7 @@ class Main {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         if (modConfig.realistic_ballistics == true) {
+            itemCloning.createCustomPlates();
             ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();

@@ -53,9 +53,8 @@ export class Armor {
         }
     }
 
-    //make all aramid cover hitboxes rather than use plate collidor, as otherwise plate carriers are useless.
-    private modifySoftArmorCollidors(serverItem: ITemplateItem) {
-
+    //change the hitboxes used by armor slots
+    private modifyCarrierColidors(serverItem: ITemplateItem) {
         const validSlots = [
             "front_plate",
             "back_plate",
@@ -67,101 +66,70 @@ export class Armor {
             "soft_armor_right",
         ];
 
-        const validCollidors = [
-            "plate_granit_sapi_back",
-            "plate_granit_sapi_chest",
-            "plate_granit_ssapi_side_left_high",
-            "plate_granit_ssapi_side_right_high",
-            "plate_granit_ssapi_side_left_low",
-            "plate_granit_ssapi_side_right_low",
-            "plate_korund_chest",
-            "plate_6b13_back",
-            "plate_korund_side_left_high",
-            "plate_korund_side_left_low",
-            "plate_korund_side_right_high",
-            "plate_korund_side_right_low"
-        ];
-
-        const torsoPlates = [
-            "plate_granit_sapi_back",
-            "plate_granit_sapi_chest",
-        ];
-
-        const bodyPlates = [
-            "plate_korund_chest"
-        ];
-
-        const backPlates = [
-            "plate_6b13_back"
-        ];
-
-        const sidePlates = [
-            "plate_granit_ssapi_side_left_high",
-            "plate_granit_ssapi_side_right_high",
-            "plate_granit_ssapi_side_left_low",
-            "plate_granit_ssapi_side_right_low",
-            "plate_korund_side_left_high",
-            "plate_korund_side_left_low",
-            "plate_korund_side_right_high",
-            "plate_korund_side_right_low"
-        ];
-
-        if ((serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG) && Array.isArray(serverItem._props.Slots)) {
+        if ((serverItem._parent === ParentClasses.ARMORVEST || serverItem._parent === ParentClasses.CHESTRIG) && serverItem?._props?.Slots) {
             for (const slot of serverItem._props.Slots) {
-                if (validSlots.includes(slot._name.toLowerCase())) {
-                    for (const filter of slot._props.filters) {
-                        if (filter.armorPlateColliders !== undefined && filter.armorPlateColliders.length > 0 && filter.Filter.length == 1 && this.itemDB()[filter.Filter[0]]._props.ArmorMaterial === "Aramid") {
-                            for (const col of filter.armorPlateColliders) {
-                                if (filter.armorColliders != undefined) {
-                                    let plateCollidor = col.toLowerCase();
-                                    if (plateCollidor === "plate_granit_sapi_chest") {
-                                        filter.armorColliders.push("RibcageUp");
-                                    }
-                                    if (plateCollidor === "plate_granit_sapi_back") {
-                                        filter.armorColliders.push("SpineTop");
-                                    }
-                                    if (plateCollidor === "plate_korund_chest") {
-                                        filter.armorColliders.push("RibcageUp", "RibcageLow");
-                                    }
-                                    if (plateCollidor === "plate_6B13_back") {
-                                        filter.armorColliders.push("SpineTop", "SpineDown");
-                                    }
-                                    if (plateCollidor.includes("left")) {
-                                        filter.armorColliders.push("LeftSideChestDown");
-                                    }
-                                    if (plateCollidor.includes("right")) {
-                                        filter.armorColliders.push("RightSideChestDown");
-                                    }
-                                }
+                if (!validSlots.includes(slot._name.toLowerCase())) continue;
+                for (const filter of slot._props.filters) {
+                    if (!filter.armorPlateColliders || filter.armorPlateColliders.length === 0 || filter.Filter.length !== 1 || this.itemDB()[filter.Filter[0]]._props.ArmorMaterial !== "Aramid") continue;
+                    for (const col of filter.armorPlateColliders) {
+                        if (filter.armorColliders != undefined) {
+                            let plateCollidor = col.toLowerCase();
+                            if (plateCollidor === "plate_granit_sapi_chest") {
+                                filter.armorColliders.push("RibcageUp");
+                            }
+                            if (plateCollidor === "plate_granit_sapi_back") {
+                                filter.armorColliders.push("SpineTop");
+                            }
+                            if (plateCollidor === "plate_korund_chest") {
+                                filter.armorColliders.push("RibcageUp", "RibcageLow");
+                            }
+                            if (plateCollidor === "plate_6B13_back") {
+                                filter.armorColliders.push("SpineTop", "SpineDown");
+                            }
+                            if (plateCollidor.includes("left")) {
+                                filter.armorColliders.push("LeftSideChestDown");
+                            }
+                            if (plateCollidor.includes("right")) {
+                                filter.armorColliders.push("RightSideChestDown");
                             }
                         }
-                        filter.armorPlateColliders = [];
                     }
+                    filter.armorPlateColliders = [];
                 }
             }
         }
+    }
 
-        if ((serverItem._parent === ParentClasses.ARMOR_PLATE || serverItem._parent === ParentClasses.BUILT_IN_ARMOR) && serverItem._props.ArmorMaterial === "Aramid" && serverItem._props.armorPlateColliders !== undefined && serverItem._props.armorPlateColliders.length > 0) {
+    //change the hitboxes protected by integrated armors
+    private modifyArmorInsertCollidors(serverItem: ITemplateItem) {
+
+        if (serverItem._parent === ParentClasses.BUILT_IN_ARMOR && serverItem._props.ArmorMaterial === "Aramid" && serverItem._props.armorPlateColliders.length > 0) {
             for (const item of serverItem._props.armorPlateColliders) {
                 let plateCollidor = item.toLowerCase();
-                if (torsoPlates.includes(plateCollidor)) {
-                    serverItem._props.armorColliders.push("RibcageUp", "SpineTop");
+                if (plateCollidor.includes("chest")) {
+                    serverItem._props.armorColliders.push("RibcageUp");
                     break;
                 }
-                if (bodyPlates.includes(plateCollidor)) {
-                    serverItem._props.armorColliders.push("RibcageUp", "RibcageLow");
+                if (plateCollidor.includes("back")) {
+                    serverItem._props.armorColliders.push("RibcageUp");
                     break;
                 }
-                if (backPlates.includes(plateCollidor)) {
-                    serverItem._props.armorColliders.push("SpineTop", "SpineDown");
-                    break;
+                if (plateCollidor.includes("left")) {
+                    serverItem._props.armorColliders.push("LeftSideChestDown");
                 }
-                if (sidePlates.includes(plateCollidor)) {
-                    serverItem._props.armorColliders.push("RightSideChestDown", "LeftSideChestDown");
+                if (plateCollidor.includes("right")) {
+                    serverItem._props.armorColliders.push("RightSideChestDown");
                 }
             }
             serverItem._props.armorPlateColliders = [];
         }
+    }
+
+    //make all aramid cover hitboxes rather than use plate collidor, as otherwise plate carriers are useless.
+    private modifySoftArmorCollidors(serverItem: ITemplateItem) {
+
+        this.modifyCarrierColidors(serverItem);
+        this.modifyArmorInsertCollidors(serverItem);
     }
 
     private modifyAramid(serverItem: ITemplateItem, newClass: number, durability: number, blunt: number) {
@@ -199,6 +167,25 @@ export class Armor {
                         item._props.MaxDurability = item._props.Durability;
                         item._props.armorClass = newClass;
                         item._props.BluntThroughput = blunt;
+                    }
+                }
+            }
+        }
+    }
+
+    private changeDefaultPlate(serverItem: ITemplateItem, carrierId: string, newPlateId: string) {
+        serverItem._props.Slots.forEach(s => {
+            if (s._name.toLowerCase().includes("front_plate") || s._name.toLowerCase().includes("back_plate")) {
+                s._props.filters[0].Plate = newPlateId;
+            }
+        });
+
+        for (let presetId in this.tables.globals.ItemPresets) {
+            let preset = this.tables.globals.ItemPresets[presetId];
+            if (preset._items.length > 0 && preset._items[0]._tpl === carrierId) {
+                for (let slot in preset._items) {
+                    if (preset._items[slot]?.slotId && (preset._items[slot].slotId.toLowerCase().includes("front_plate") || preset._items[slot].slotId.toLowerCase().includes("back_plate"))) {
+                        preset._items[slot]._tpl = newPlateId;
                     }
                 }
             }
@@ -280,7 +267,7 @@ export class Armor {
         if (serverItem._id === "5c0e5bab86f77461f55ed1f3" || serverItem._id === "5c0e57ba86f7747fa141986d") {
             this.modifyAramid(serverItem, 5, 110, 0.38);
         }
-        //6B13 + Kordun
+        //6B13 + Korund
         if (serverItem._id === "5f5f41476bdad616ad46d631" || serverItem._id === "5c0e53c886f7747fa54205c7" || serverItem._id === "5c0e541586f7747fa54205c9") {
             this.modifyAramid(serverItem, 5, 100, 0.36);
         }
@@ -296,13 +283,23 @@ export class Armor {
         if (serverItem._id === "60a283193cb70855c43a381d") {
             this.modifyAramid(serverItem, 5, 120, 0.25);
         }
-        //IOTV + OTV
-        if (serverItem._id === "5b44cf1486f77431723e3d05" || serverItem._id === "5b44d0de86f774503d30cba8" || serverItem._id === "5b44cd8b86f774503d30cba2" || serverItem._id === "64abd93857958b4249003418") {
-            this.modifyAramid(serverItem, 5, 105, 0.29);
+        //IOTV
+        if (serverItem._id === "5b44cf1486f77431723e3d05" || serverItem._id === "5b44d0de86f774503d30cba8" || serverItem._id === "5b44cd8b86f774503d30cba2") {
+            this.modifyAramid(serverItem, 5, 110, 0.28);
+            this.changeDefaultPlate(serverItem, "5b44cf1486f77431723e3d05", "xsapi_chest");
+            this.changeDefaultPlate(serverItem, "5b44d0de86f774503d30cba8", "xsapi_chest");
+            this.changeDefaultPlate(serverItem, "5b44cd8b86f774503d30cba2", "xsapi_chest");
+        }
+        //OTV
+        if (serverItem._id === "64abd93857958b4249003418") {
+            this.modifyAramid(serverItem, 5, 100, 0.3);
+            this.changeDefaultPlate(serverItem, "64abd93857958b4249003418", "64afdcb83efdfea28601d041");
         }
         //Osprey
         if (serverItem._id === "60a3c70cde5f453f634816a3" || serverItem._id === "60a3c68c37ea821725773ef5") {
             this.modifyAramid(serverItem, 5, 90, 0.25);
+            this.changeDefaultPlate(serverItem, "60a3c70cde5f453f634816a3", "mk4a_plate");
+            this.changeDefaultPlate(serverItem, "60a3c68c37ea821725773ef5", "mk4a_plate");
         }
         //RBAV
         if (serverItem._id === "628dc750b910320f4c27a732") {
@@ -493,6 +490,7 @@ export class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle"
         }
         //Combined NIJ III+
         if (serverItem._id === "656fa61e94b480b8a500c0e8") {
@@ -501,6 +499,7 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle"
         }
         //Combined NIJ IV
         if (serverItem._id === "656fa53d94b480b8a500c0e4") {
@@ -509,6 +508,7 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle"
         }
 
         //Ceramic NIJ III
@@ -570,8 +570,8 @@ export class Armor {
             serverItem._props.ArmorMaterial = 'Combined';
         }
 
-        //Xsapi
-        if (serverItem._id === "") {
+        //XSAPI
+        if (serverItem._id === "xsapi_chest") {
             serverItem._props.Durability = 160;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 10;
@@ -579,12 +579,12 @@ export class Armor {
             serverItem._props.ArmorMaterial = 'Combined';
         }
 
-        //Osprey MK4A
-        if (serverItem._id === "") {
-            serverItem._props.Durability = 155;
+        //Osprey MK4A Plate
+        if (serverItem._id === "mk4a_plate") {
+            serverItem._props.Durability = 130;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 8;
-            serverItem._props.BluntThroughput = 0.14;
+            serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Combined';
         }
 
