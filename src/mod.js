@@ -493,8 +493,11 @@ class Main {
             armor.loadArmor();
             bots.setBotHealth();
         }
-        jsonHand.pushModsToServer();
-        jsonHand.pushWeaponsToServer();
+        jsonHand.processUserJsonFiles("F:/SP EFT/SPT-380-141/user/mods/zSPT-Realism-Mod-Dev/db/put_new_stuff_here");
+        if (modConfig.recoil_attachment_overhaul) {
+            jsonHand.pushModsToServer();
+            jsonHand.pushWeaponsToServer();
+        }
         jsonHand.pushGearToServer();
         descGen.descriptionGen();
         if (modConfig.headgear_conflicts == true) {

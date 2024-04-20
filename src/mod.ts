@@ -621,7 +621,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             attachBase.loadCaliberConversions();
         }
 
-
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
@@ -634,8 +633,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.setBotHealth();
         }
 
-        jsonHand.pushModsToServer();
-        jsonHand.pushWeaponsToServer();
+        jsonHand.processUserJsonFiles("F:/SP EFT/SPT-380-141/user/mods/zSPT-Realism-Mod-Dev/db/put_new_stuff_here");
+        if(modConfig.recoil_attachment_overhaul){
+            jsonHand.pushModsToServer();
+            jsonHand.pushWeaponsToServer();
+        }
         jsonHand.pushGearToServer();
         descGen.descriptionGen();
 
