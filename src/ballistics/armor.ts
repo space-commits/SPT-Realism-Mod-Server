@@ -581,10 +581,10 @@ export class Armor {
 
         //Osprey MK4A Plate
         if (serverItem._id === "mk4a_plate") {
-            serverItem._props.Durability = 130;
+            serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 8;
-            serverItem._props.BluntThroughput = 0.12;
+            serverItem._props.armorClass = 9;
+            serverItem._props.BluntThroughput = 0.1;
             serverItem._props.ArmorMaterial = 'Combined';
         }
 

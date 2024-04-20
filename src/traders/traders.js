@@ -197,7 +197,7 @@ class Traders {
             this.assortItemPusher(mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
             this.assortItemPusher(mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
             //attachments            
-            this.assortItemPusher(mechId, "mechAUG_417", 1, "5449016a4bdc2d6f028b456f", 1, false, 10000);
+            this.assortItemPusher(mechId, "mechRatWorx", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
             this.assortItemPusher(mechId, "mechSKS_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
             this.assortItemPusher(mechId, "mechVPO_23", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
             this.assortItemPusher(mechId, "mechAUG_417", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);

@@ -4,6 +4,9 @@ import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { ConfigChecker } from "../utils/utils";
 
+import * as fs from 'fs';
+import * as path from 'path';
+
 const modConfig = require("../../config/config.json");
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
@@ -53,7 +56,6 @@ const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${weapPa
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
 
 
-
 export class JsonHandler {
     constructor(private tables: IDatabaseTables, private logger: ILogger) { }
 
@@ -62,120 +64,64 @@ export class JsonHandler {
     }
 
     public pushModsToServer() {
-        for (let i in this.itemDB()) {
-            let serverItem = this.itemDB()[i];
-            if (serverItem._props.ToolModdable == true || serverItem._props.ToolModdable == false) {
-                this.callHelper(MuzzleDeviceTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(BarrelTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(MountTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(ReceiverTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(StockTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(ChargingHandleTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(ScopeTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(IronSightTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(MagazineTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(AuxiliaryModTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(ForegripTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(PistolGripTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(GasblockTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(HandguardTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(FlashlightLaserTemplates, serverItem, this.modPusherHelper);
-                this.callHelper(UBGLTempaltes, serverItem, this.modPusherHelper);
-            }
-        }
+        this.callHelper(MuzzleDeviceTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(BarrelTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(MountTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(ReceiverTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(StockTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(ChargingHandleTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(ScopeTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(IronSightTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(MagazineTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(AuxiliaryModTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(ForegripTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(PistolGripTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(GasblockTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(HandguardTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(FlashlightLaserTemplates, this.itemDB(), this.modPusherHelper);
+        this.callHelper(UBGLTempaltes, this.itemDB(), this.modPusherHelper);
     }
 
     public pushWeaponsToServer() {
-        for (let i in this.itemDB()) {
-            let serverItem = this.itemDB()[i];
-            if (serverItem._props.RecolDispersion) {
-                this.callHelper(AssaultRifleTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(AssaultCarbineTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(MachinegunTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(MarksmanRifleTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(PistolTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(ShotgunTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(SMGTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(SniperRifleTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(SpecialWeaponTemplates, serverItem, this.weapPusherHelper);
-                this.callHelper(GrenadeLauncherTemplates, serverItem, this.weapPusherHelper);
-            }
-        }
-        //catch any modded weapons not in templates
-        if (modConfig.recoil_attachment_overhaul == true) {
-            for (let j in this.itemDB()) {
-                let serverItem = this.itemDB()[j];
-                let serverConfItems = serverItem._props.ConflictingItems;
-                if (serverItem._parent == ParentClasses.SMG || serverItem._parent == ParentClasses.ASSAULT_CARBINE || serverItem._parent == ParentClasses.ASSAULT_RIFLE || serverItem._parent == ParentClasses.MARKSMAN_RIFLE || serverItem._parent == ParentClasses.SNIPER_RIFLE || serverItem._parent == ParentClasses.PISTOL || serverItem._parent == ParentClasses.SHOTGUN || serverItem._parent == ParentClasses.MACHINE_GUN) {
-                    if (serverConfItems !== undefined && serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
-                        continue;
-                    }
-                    if (serverConfItems === undefined) {
-                        serverItem._props.ConflictingItems = [];
-                        serverConfItems = serverItem._props.ConflictingItems;
-                    }
-
-                    if (serverItem._parent == ParentClasses.PISTOL) {
-                        serverItem._props.Ergonomics = 70;
-                        serverItem._props.RecoilForceUp *= 0.5;
-                        serverItem._props.RecoilForceBack *= 1.5;
-                        serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-                        serverItem._props.RecoilReturnSpeedHandRotation *= 4;
-                        serverItem._props.RecoilAngle = 90;
-                        serverItem._props.RecoilCamera = 0.01;
-                        let weapPropertyValues = ["SPTRM", "undefined", "0", "false", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
-                        let combinedArr = weapPropertyValues.concat(serverConfItems)
-                        serverItem._props.ConflictingItems = combinedArr;
-                    }
-                    else {
-                        serverItem._props.Ergonomics = 80;
-                        serverItem._props.RecoilForceUp *= 0.5;
-                        serverItem._props.RecoilForceBack *= 0.3;
-                        serverItem._props.RecolDispersion = Math.round(serverItem._props.RecolDispersion * 1.5);
-                        serverItem._props.RecoilReturnSpeedHandRotation *= 10;
-                        serverItem._props.RecoilAngle = 90;
-                        serverItem._props.RecoilCamera *= 0.9;
-                        let weapPropertyValues = ["SPTRM", "undefined", "0", "true", "1", "undefined", "0", "0.67", "0.68", "false", "1", "1.5", "0.7", "false", "1.2", "0.7", "1", "1", "0.1"];
-                        let combinedArr = weapPropertyValues.concat(serverConfItems)
-                        serverItem._props.ConflictingItems = combinedArr;
-                    }
-                }
-            }
-        }
+        this.callHelper(AssaultRifleTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(AssaultCarbineTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(MachinegunTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(MarksmanRifleTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(PistolTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(ShotgunTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(SMGTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(SniperRifleTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(SpecialWeaponTemplates, this.itemDB(), this.weapPusherHelper);
+        this.callHelper(GrenadeLauncherTemplates, this.itemDB(), this.weapPusherHelper);
     }
 
     public pushGearToServer() {
-        for (let i in this.itemDB()) {
-            let serverItem = this.itemDB()[i];
-            if (serverItem._props?.armorClass !== null && serverItem._props?.armorClass !== undefined) {
-                this.callHelper(armorChestrigTemplates, serverItem, this.gearPusherHelper);
-                this.callHelper(armorComponentsTemplates, serverItem, this.gearPusherHelper);
-                this.callHelper(armorPlateTemplates, serverItem, this.gearPusherHelper);
-                this.callHelper(helmetTemplates, serverItem, this.gearPusherHelper);
-                this.callHelper(armorVestsTemplates, serverItem, this.gearPusherHelper);
-                this.callHelper(armorMasksTemplates, serverItem, this.gearPusherHelper);
-                this.callHelper(chestrigTemplates, serverItem, this.gearPusherHelper);
-                this.callHelper(cosmeticsTemplates, serverItem, this.gearPusherHelper);
-            }
-            if (serverItem._parent === ParentClasses.HEADSET) {
-                this.callHelper(headsetTemplates, serverItem, this.gearPusherHelper);
-            }
-            if (serverItem._parent === ParentClasses.BACKPACK) {
-                this.callHelper(bagTemplates, serverItem, this.gearPusherHelper);
-            }
+        if (modConfig.realistic_ballistics == true) {
+            this.callHelper(armorChestrigTemplates, this.itemDB(), this.gearPusherHelper);
+            this.callHelper(armorComponentsTemplates, this.itemDB(), this.gearPusherHelper);
+            this.callHelper(armorPlateTemplates, this.itemDB(), this.gearPusherHelper);
+            this.callHelper(helmetTemplates, this.itemDB(), this.gearPusherHelper);
+            this.callHelper(armorVestsTemplates, this.itemDB(), this.gearPusherHelper);
+            this.callHelper(armorMasksTemplates, this.itemDB(), this.gearPusherHelper);
+            this.callHelper(chestrigTemplates, this.itemDB(), this.gearPusherHelper);
+            this.callHelper(cosmeticsTemplates, this.itemDB(), this.gearPusherHelper);
         }
+        if (modConfig.headset_changes == true) {
+            this.callHelper(headsetTemplates, this.itemDB(), this.gearPusherHelper);
+        }
+        this.callHelper(bagTemplates, this.itemDB(), this.gearPusherHelper);
     }
 
-    private callHelper(template: any, serverItem: ITemplateItem, funPusherHelper: Function) {
+    private callHelper(template: any, serverTemplates: Record<string, ITemplateItem>, funPusherHelper: Function) {
         for (let i in template) {
             let fileItem = template[i];
-            funPusherHelper(serverItem, fileItem);
+            funPusherHelper(fileItem, serverTemplates);
         }
     }
 
-    private gearPusherHelper(serverItem: any, fileItem: any) {
-        if (serverItem._id === fileItem.ItemID) {
-
+    private gearPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>) {
+        if (fileItem.ItemID in serverTemplates) {
+            let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
             let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
@@ -186,54 +132,53 @@ export class JsonHandler {
         }
     }
 
-    private modPusherHelper(serverItem: any, fileItem: any) {
-        if (modConfig.recoil_attachment_overhaul == true) {
-            if (serverItem._id === fileItem.ItemID) {
-                let serverConfItems = fileItem.ConflictingItems;
-                if (serverConfItems[0] !== "SPTRM") {
+    private modPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>) {
+        if (fileItem.ItemID in serverTemplates) {
+            let serverItem = serverTemplates[fileItem.ItemID];
+            let serverConfItems = serverItem._props.ConflictingItems;
+            if (serverConfItems[0] !== "SPTRM") {
 
-                    serverItem._props.Ergonomics = fileItem.Ergonomics;
-                    serverItem._props.Accuracy = fileItem.Accuracy;
-                    serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                    serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor : 1;
-                    serverItem._props.CoolFactor = fileItem.CoolFactor != null ? fileItem.CoolFactor : 1;
-                    serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
-                    // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
-                    // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
-                    serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
-                    serverItem._props.BlocksFolding = fileItem.BlocksFolding;
-                    serverItem._props.Weight = fileItem.Weight;
-                    serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
-                    serverItem._props.Loudness = fileItem.Loudness;
+                serverItem._props.Ergonomics = fileItem.Ergonomics;
+                serverItem._props.Accuracy = fileItem.Accuracy;
+                serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
+                serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor : 1;
+                serverItem._props.CoolFactor = fileItem.CoolFactor != null ? fileItem.CoolFactor : 1;
+                serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
+                // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
+                // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
+                serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
+                serverItem._props.BlocksFolding = fileItem.BlocksFolding;
+                serverItem._props.Weight = fileItem.Weight;
+                serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
+                serverItem._props.Loudness = fileItem.Loudness;
 
-                    let isScope = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
-                    if (isScope != true) {
-                        serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
-                    }
-
-                    if (modConfig.realistic_ballistics == true && isScope != true) {
-                        serverItem._props.Velocity = fileItem.Velocity;
-                    }
-
-                    if (fileItem.ModType === "Stock") {
-                        serverItem._parent = "55818a594bdc2db9688b456a";
-                    }
-
-                    let modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
-                        fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
-                        fileItem?.Convergence?.toString() || "0", fileItem?.CanCycleSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0",
-                        fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0"];
-
-                    let combinedArr = modPropertyValues.concat(serverConfItems)
-                    serverItem._props.ConflictingItems = combinedArr;
+                let isScope = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
+                if (isScope != true) {
+                    serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
                 }
 
+                if (modConfig.realistic_ballistics == true && isScope != true) {
+                    serverItem._props.Velocity = fileItem.Velocity;
+                }
+
+                if (fileItem.ModType === "Stock") {
+                    serverItem._parent = "55818a594bdc2db9688b456a";
+                }
+
+                let modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
+                    fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
+                    fileItem?.Convergence?.toString() || "0", fileItem?.CanCycleSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0",
+                    fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0"];
+
+                let combinedArr = modPropertyValues.concat(serverConfItems)
+                serverItem._props.ConflictingItems = combinedArr;
             }
         }
     }
 
-    private weapPusherHelper(serverItem: any, fileItem: any) {
-        if (serverItem._id === fileItem.ItemID) {
+    private weapPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>) {
+        if (fileItem.ItemID in serverTemplates) {
+            let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
             if (serverConfItems[0] !== "SPTRM") {
 
@@ -292,5 +237,51 @@ export class JsonHandler {
 
             }
         }
+    }
+
+    public processUserJsonFiles(folderPath: string) {
+        fs.readdir(folderPath, (err, files) => {
+            if (err) {
+                console.error(`Error reading directory ${folderPath}: ${err}`);
+                return;
+            }
+            files.forEach((file) => {
+                const filePath = path.join(folderPath, file);
+
+                fs.stat(filePath, (err, stats) => {
+                    if (err) {
+                        console.error(`Error getting file stats for ${filePath}: ${err}`);
+                        return;
+                    }
+
+                    if (stats.isDirectory()) {
+                        // Recursively call self for subfolders
+                        this.processUserJsonFiles(filePath);
+                    } else if (file.endsWith('.json')) {
+                        // Process JSON file
+                        fs.readFile(filePath, 'utf8', (err, data) => {
+                            if (err) {
+                                console.error(`Error reading file ${filePath}: ${err}`);
+                                return;
+                            }
+                            try {
+                                const jsonData = JSON.parse(data);
+                                for (let i in jsonData) {
+                                    if (jsonData[i].WeapType) {
+                                        this.weapPusherHelper(jsonData[i], this.itemDB());
+                                    }
+                                    if (jsonData[i].ModType) {
+                                        this.modPusherHelper(jsonData[i], this.itemDB());
+                                    }
+                                }
+                                console.log(jsonData);
+                            } catch (err) {
+                                console.error(`Error parsing JSON in file ${filePath}: ${err}`);
+                            }
+                        });
+                    }
+                });
+            });
+        });
     }
 }
