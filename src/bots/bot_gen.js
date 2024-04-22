@@ -337,6 +337,9 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         }
     }
     myGenerateInventory(sessionId, botJsonTemplate, botRole, isPmc, botLevel, pmcTier) {
+        const tierChecker = new utils_1.BotTierTracker();
+        this.logger.warning(`============`);
+        this.logger.warning(`Genning bot ${botRole} at pmc level ${pmcTier}, bot level : ${tierChecker.getTier(botRole)}`);
         const botLootCacheService = tsyringe_1.container.resolve("BotLootCacheService");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
         const handbookHelper = tsyringe_1.container.resolve("HandbookHelper");
@@ -363,6 +366,7 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         else {
             this.botLootGenerator.generateLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
         }
+        this.logger.warning(`============`);
         return botInventory;
     }
     myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, getSecondary = false) {
@@ -605,8 +609,8 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             this.fillExistingMagazines(weaponWithModsArray, magazine, ammoTpl);
         }
         // Add cartridge(s) to gun chamber(s)
-        if (weaponItemTemplate._props.Chambers?.length > 0
-            && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
+        if (weaponItemTemplate._props.Chambers?.length > 0 && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
+            this.logger.warning("attempting to add cartridge to chabmer");
             // Guns have variety of possible Chamber ids, patron_in_weapon/patron_in_weapon_000/patron_in_weapon_001
             const chamberSlotNames = weaponItemTemplate._props.Chambers.map(x => x._name);
             this.addCartridgeToChamber(weaponWithModsArray, ammoTpl, chamberSlotNames);
@@ -630,28 +634,28 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     myisWeaponValid(weaponItemArray) {
         const checkRequired = new CheckRequired();
         for (const mod of weaponItemArray) {
-            const modDbTemplate = this.itemHelper.getItem(mod._tpl)[1];
-            if (!modDbTemplate._props.Slots || !modDbTemplate._props.Slots.length) {
+            const modTemplate = this.itemHelper.getItem(mod._tpl)[1];
+            if (!modTemplate._props.Slots || !modTemplate._props.Slots.length) {
                 continue;
             }
             // Iterate over slots in db item, if required, check tpl in that slot matches the filter list
-            for (const modSlot of modDbTemplate._props.Slots) {
+            for (const modSlot of modTemplate._props.Slots) {
                 // ignore optional mods
                 if (!checkRequired.isRequired(modSlot)) {
                     continue;
                 }
                 const allowedTpls = modSlot._props.filters[0].Filter;
                 const slotName = modSlot._name;
-                const weaponSlotItem = weaponItemArray.find(x => x.parentId === mod._id && x.slotId === slotName);
+                const weaponSlotItem = weaponItemArray.find((weaponItem) => weaponItem.parentId === mod._id && weaponItem.slotId === slotName);
                 if (!weaponSlotItem) {
                     if (modConfig.logEverything == true) {
-                        this.logger.warning(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
+                        this.logger.warning(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modTemplate._name, slotId: mod.slotId }));
                     }
                     return false;
                 }
                 if (!allowedTpls.includes(weaponSlotItem._tpl)) {
                     if (modConfig.logEverything == true) {
-                        this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modDbTemplate._name, weaponTpl: weaponSlotItem._tpl }));
+                        this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modTemplate._name, weaponTpl: weaponSlotItem._tpl }));
                     }
                     return false;
                 }
@@ -804,7 +808,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
 exports.BotWepGen = BotWepGen;
 class CheckRequired {
     isRequired(slot) {
-        if (slot?._botRequired != undefined && slot._botRequired == true) {
+        if (slot?._botRequired && slot._botRequired == true) {
             return true;
         }
         else if (slot._required == true) {
@@ -1033,11 +1037,12 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
     }
     myShouldModBeSpawned(itemSlot, modSlot, modSpawnChances, checkRequired, botEquipConfig) {
         const slotRequired = itemSlot._required;
-        if (this.getAmmoContainers().includes(modSlot)) {
+        if (this.getAmmoContainers().includes(modSlot) || checkRequired.isRequired(itemSlot)) {
             return ModSpawn_1.ModSpawn.SPAWN;
         }
         const spawnMod = this.probabilityHelper.rollChance(modSpawnChances[modSlot]);
-        if (!spawnMod && (slotRequired || checkRequired.isRequired(itemSlot) || botEquipConfig.weaponSlotIdsToMakeRequired?.includes(modSlot))) {
+        if (!spawnMod && (slotRequired || botEquipConfig.weaponSlotIdsToMakeRequired?.includes(modSlot))) {
+            this.logger.warning("required slot wasn't able to be filled, using default item");
             // Mod is required but spawn chance roll failed, choose default mod spawn for slot
             return ModSpawn_1.ModSpawn.DEFAULT_MOD;
         }
@@ -1079,6 +1084,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         };
     }
     botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole, equipmentSlot) {
+        this.logger.warning("weapon parentTemplate " + parentTemplate._id);
         const checkRequired = new CheckRequired();
         const pmcProfile = this.profileHelper.getPmcProfile(sessionId);
         // Get pool of mods that fit weapon
@@ -1120,6 +1126,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
             if (!modToAdd || typeof modToAdd === "undefined") {
                 continue;
             }
+            this.logger.warning("mod to add " + modToAdd[1]._id);
             if (!this.myIsModValidForSlot(modToAdd, modsParentSlot, modSlot, parentTemplate, checkRequired)) {
                 continue;
             }

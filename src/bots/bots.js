@@ -775,7 +775,7 @@ class BotLoader {
                 this.botConf().equipment["assault"].laserIsActiveChancePercent = 70;
             }
         }
-        if (this.modConfig.dynamic_loot_scavs === true) {
+        if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO1.inventory.dynamic_looting;
             this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
@@ -808,7 +808,7 @@ class BotLoader {
                 this.botConf().equipment["assault"].laserIsActiveChancePercent = 80;
             }
         }
-        if (this.modConfig.dynamic_loot_scavs === true) {
+        if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO2.inventory.dynamic_looting;
             this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
@@ -841,7 +841,7 @@ class BotLoader {
                 this.botConf().equipment["assault"].laserIsActiveChancePercent = 90;
             }
         }
-        if (this.modConfig.dynamic_loot_scavs === true) {
+        if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO3.inventory.dynamic_looting;
             this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
