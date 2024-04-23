@@ -78,7 +78,7 @@ class Player {
                 this.setPlayerHealthHelper(scavData, false, false);
             }
             this.modConfig.revert_hp = false;
-            this.helper.saveToJSONFile(this.modConfig, 'config/config.json');
+            this.helper.writeConfigJSON(this.modConfig, 'config/config.json');
             if (this.modConfig.logEverything == true) {
                 this.logger.info("Realism Mod: Player Health Reverted To Vanilla Defaults");
             }

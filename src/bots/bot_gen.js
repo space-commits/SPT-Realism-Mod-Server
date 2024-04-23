@@ -337,9 +337,6 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         }
     }
     myGenerateInventory(sessionId, botJsonTemplate, botRole, isPmc, botLevel, pmcTier) {
-        const tierChecker = new utils_1.BotTierTracker();
-        this.logger.warning(`============`);
-        this.logger.warning(`Genning bot ${botRole} at pmc level ${pmcTier}, bot level : ${tierChecker.getTier(botRole)}`);
         const botLootCacheService = tsyringe_1.container.resolve("BotLootCacheService");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
         const handbookHelper = tsyringe_1.container.resolve("HandbookHelper");
@@ -366,7 +363,6 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         else {
             this.botLootGenerator.generateLoot(sessionId, botJsonTemplate, isPmc, botRole, botInventory, botLevel);
         }
-        this.logger.warning(`============`);
         return botInventory;
     }
     myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, getSecondary = false) {
@@ -610,7 +606,6 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         }
         // Add cartridge(s) to gun chamber(s)
         if (weaponItemTemplate._props.Chambers?.length > 0 && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
-            this.logger.warning("attempting to add cartridge to chabmer");
             // Guns have variety of possible Chamber ids, patron_in_weapon/patron_in_weapon_000/patron_in_weapon_001
             const chamberSlotNames = weaponItemTemplate._props.Chambers.map(x => x._name);
             this.addCartridgeToChamber(weaponWithModsArray, ammoTpl, chamberSlotNames);
@@ -777,7 +772,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
         }
         catch {
-            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
+            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, it is not a problem to report.`);
             this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
             let preset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {
@@ -1042,7 +1037,6 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         }
         const spawnMod = this.probabilityHelper.rollChance(modSpawnChances[modSlot]);
         if (!spawnMod && (slotRequired || botEquipConfig.weaponSlotIdsToMakeRequired?.includes(modSlot))) {
-            this.logger.warning("required slot wasn't able to be filled, using default item");
             // Mod is required but spawn chance roll failed, choose default mod spawn for slot
             return ModSpawn_1.ModSpawn.DEFAULT_MOD;
         }
@@ -1084,7 +1078,6 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         };
     }
     botModGen(sessionId, weapon, modPool, weaponParentId, parentTemplate, modSpawnChances, ammoTpl, botRole, botLevel, modLimits, botEquipmentRole, equipmentSlot) {
-        this.logger.warning("weapon parentTemplate " + parentTemplate._id);
         const checkRequired = new CheckRequired();
         const pmcProfile = this.profileHelper.getPmcProfile(sessionId);
         // Get pool of mods that fit weapon
@@ -1126,7 +1119,6 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
             if (!modToAdd || typeof modToAdd === "undefined") {
                 continue;
             }
-            this.logger.warning("mod to add " + modToAdd[1]._id);
             if (!this.myIsModValidForSlot(modToAdd, modsParentSlot, modSlot, parentTemplate, checkRequired)) {
                 continue;
             }

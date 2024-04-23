@@ -1416,9 +1416,6 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
     }
 
     public botModGen(sessionId: string, weapon: Item[], modPool: Mods, weaponParentId: string, parentTemplate: ITemplateItem, modSpawnChances: ModsChances, ammoTpl: string, botRole: string, botLevel: number, modLimits: BotModLimits, botEquipmentRole: string, equipmentSlot: string): Item[] {
-
-        this.logger.warning("weapon parentTemplate " + parentTemplate._id);
-
         const checkRequired = new CheckRequired();
         const pmcProfile = this.profileHelper.getPmcProfile(sessionId);
 

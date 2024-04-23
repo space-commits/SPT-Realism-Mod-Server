@@ -2485,7 +2485,7 @@ export class Ammo {
                 serverItem._props.Damage = 150;
                 serverItem._props.InitialSpeed = 870;
                 serverItem._props.RicochetChance = 0.15;
-                serverItem._props.FragmentationChance = 0.03;
+                serverItem._props.FragmentationChance = 0.06;
                 serverItem._props.BulletMassGram = 7;
                 serverItem._props.HeavyBleedingDelta = 0.8;
                 serverItem._props.LightBleedingDelta = 1;
@@ -2505,10 +2505,10 @@ export class Ammo {
             if (serverItem._id === "5cadf6ddae9215051e1c23b2") {
                 serverItem._props.PenetrationPower = 57;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 130;
+                serverItem._props.Damage = 134;
                 serverItem._props.InitialSpeed = 300;
                 serverItem._props.RicochetChance = 0.05;
-                serverItem._props.FragmentationChance = 0.02;
+                serverItem._props.FragmentationChance = 0.04;
                 serverItem._props.BulletMassGram = 32.9;
                 serverItem._props.HeavyBleedingDelta = 0.75;
                 serverItem._props.LightBleedingDelta = 1;
@@ -2528,7 +2528,7 @@ export class Ammo {
             if (serverItem._id === "5cadf6eeae921500134b2799") {
                 serverItem._props.PenetrationPower = 62;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 120;
+                serverItem._props.Damage = 124;
                 serverItem._props.InitialSpeed = 570;
                 serverItem._props.RicochetChance = 0.1;
                 serverItem._props.FragmentationChance = 0.01;
@@ -3479,7 +3479,7 @@ export class Ammo {
             if (serverItem._id === "5c0d5ae286f7741e46554302") {
                 serverItem._props.PenetrationPower = 56;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 135;
+                serverItem._props.Damage = 130;
                 serverItem._props.InitialSpeed = 983;
                 serverItem._props.RicochetChance = 0.3;
                 serverItem._props.FragmentationChance = 0.05;

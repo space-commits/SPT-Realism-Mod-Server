@@ -114,7 +114,7 @@ export class Utils {
         return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     }
 
-    public saveToJSONFile(data: any, filePath: string) {
+    public writeConfigJSON(data: any, filePath: string) {
         const baseFolderPath = path.resolve(path.join(__dirname, '../../'));
         fs.writeFile(path.join(baseFolderPath, filePath), JSON.stringify(data, null, 4), function (err) {
             if (err) {

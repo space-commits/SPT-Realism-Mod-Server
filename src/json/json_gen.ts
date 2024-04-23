@@ -259,10 +259,10 @@ export class JsonGen {
         filePathObj[index] = funJsonAssign(serverItem, fileItem, id);
 
         if (usePreset == true) {
-            this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
+            this.utils.writeConfigJSON(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
         }
         else {
-            this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
+            this.utils.writeConfigJSON(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
         }
     }
 
@@ -777,7 +777,7 @@ export class JsonGen {
 
     private armorModsWriteToFile(index: string, serverItem: ITemplateItem) {
         armorTemplate[index] = this.writeArmorToFile(serverItem);
-        this.utils.saveToJSONFile(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
+        this.utils.writeConfigJSON(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
     }
 
     private writeArmorToFile(serverItem: ITemplateItem) {

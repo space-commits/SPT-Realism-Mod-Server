@@ -106,7 +106,6 @@ let validatedClient = false;
 
 export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
-    private path: { resolve: (arg0: string) => any; };
     private modLoader: PreAkiModLoader;
 
     public preAkiLoad(container: DependencyContainer): void {
@@ -135,7 +134,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
         const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
         const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
-        this.path = require("path");
         const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const flea = new FleaChangesPreDBLoad(logger, fleaConf, modConfig);
 
@@ -174,7 +172,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
             const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
             const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
-           
+
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
                 result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase => {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
@@ -273,7 +271,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                         this.revertMeds(pmcData, utils);
                                         this.revertMeds(scavData, utils);
                                         modConfig.revert_med_changes = false;
-                                        utils.saveToJSONFile(modConfig, 'config/config.json');
+                                        utils.writeConfigJSON(modConfig, 'config/config.json');
                                         logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                     }
 
@@ -576,6 +574,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     //     jsonHand.pushModsToServer();
     // }
 
+
+    private readUserFiles(jsonHand: JsonHandler) {
+        const baseFolderPath = path.resolve(path.join(__dirname, '../'));
+        jsonHand.processUserJsonFiles(path.join(baseFolderPath, 'db/put_new_stuff_here'));
+    }
+
     public postDBLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
@@ -626,6 +630,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
 
+        this.readUserFiles(jsonHand);
+
         if (modConfig.realistic_ballistics == true) {
             itemCloning.createCustomPlates();
             ammo.loadAmmoStats();
@@ -633,8 +639,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.setBotHealth();
         }
 
-        // jsonHand.processUserJsonFiles("F:/SP EFT/SPT-380-141/usd-Dev/db/put_new_stuff_here");
-        if(modConfig.recoil_attachment_overhaul){
+        if (modConfig.recoil_attachment_overhaul) {
             jsonHand.pushModsToServer();
             jsonHand.pushWeaponsToServer();
         }
@@ -749,7 +754,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         this.modLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
     }
 
-    //unsur if I still need to do this or not, now that configuration has been expanded
+    //unsure if I still need to do this or not, now that configuration has been expanded
     // private dllChecker(logger: ILogger, modConfig: any) {
 
     //     ConfigChecker.dllIsPresent = true;
