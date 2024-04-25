@@ -3,7 +3,7 @@
         "items": {
             "backpackLoot": {
                 "weights": {
-                    "0": 1,
+                    "0": 5,
                     "1": 2,
                     "2": 1
                 },
@@ -11,7 +11,7 @@
             },
             "pocketLoot": {
                 "weights": {
-                    "0": 2,
+                    "0": 5,
                     "1": 2,
                     "2": 1
                 },
@@ -19,9 +19,48 @@
             },
             "vestLoot": {
                 "weights": {
-                    "0": 1,
+                    "0": 5,
                     "1": 2,
                     "2": 1
+                },
+                "whitelist": []
+            }
+        }
+    },
+    "dynamic_scav": {
+        "items": {
+            "backpackLoot": {
+                "weights": {
+                    "0": 4,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "pocketLoot": {
+                "weights": {
+                    "0": 4,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "vestLoot": {
+                "weights": {
+                    "0": 4,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "drugs": {
+                "weights": {
+                    "0": 10,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "healing": {
+                "weights": {
+                    "0": 10,
+                    "1": 1
                 },
                 "whitelist": []
             }

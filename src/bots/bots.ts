@@ -855,9 +855,9 @@ export class BotLoader {
 
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true ) {
             this.scavBase.inventory.items = scavLO.scavLO1.inventory.dynamic_looting;
-            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
 
         BotTierTracker.scavTier = 1;
@@ -893,9 +893,9 @@ export class BotLoader {
 
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true ) {
             this.scavBase.inventory.items = scavLO.scavLO2.inventory.dynamic_looting;
-            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
 
         BotTierTracker.scavTier = 2;
@@ -931,9 +931,9 @@ export class BotLoader {
 
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true ) {
             this.scavBase.inventory.items = scavLO.scavLO3.inventory.dynamic_looting;
-            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot;
-            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot;
-            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot;
+            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
 
         BotTierTracker.scavTier = 3;

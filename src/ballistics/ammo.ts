@@ -2783,7 +2783,7 @@ export class Ammo {
             if (serverItem._id === "5e023e53d4353e3302577c4c") {
                 serverItem._props.PenetrationPower = 55;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 125;
+                serverItem._props.Damage = 126;
                 serverItem._props.InitialSpeed = 800;
                 serverItem._props.RicochetChance = 0.13;
                 serverItem._props.FragmentationChance = 0;
@@ -2806,7 +2806,7 @@ export class Ammo {
             if (serverItem._id === "5e023e6e34d52a55c3304f71") {
                 serverItem._props.PenetrationPower = 52;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 135;
+                serverItem._props.Damage = 137;
                 serverItem._props.InitialSpeed = 808;
                 serverItem._props.RicochetChance = 0.07;
                 serverItem._props.FragmentationChance = 0;

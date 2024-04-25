@@ -183,7 +183,7 @@ export class Player {
 
 
     public loadPlayerStats() {
-        if(this.modConfig.realistic_ballistics == true || this.modConfig.med_changes == true){
+        if(this.modConfig.enable_stances == true){
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
     
