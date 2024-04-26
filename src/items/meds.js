@@ -393,7 +393,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(5, 0, "600"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "20"); // wait period reduction
                 serverItem._props.ConflictingItems.splice(7, 0, "120"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.35"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "25"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
             }
@@ -413,7 +413,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period reduction
                 serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.25"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.05"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "40"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "5"); // strength
             }
@@ -434,7 +434,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "0"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "135"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.7"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "10"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "15"); // strength
             }
@@ -454,7 +454,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(5, 0, "900"); // full duration
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period reduction
                 serverItem._props.ConflictingItems.splice(7, 0, "270"); // effect period
-                serverItem._props.ConflictingItems.splice(8, 0, "0.75"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(8, 0, "0.55"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "30"); // strength
             }

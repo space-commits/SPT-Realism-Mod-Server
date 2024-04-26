@@ -607,7 +607,6 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
     }
     modifyTraderAssorts(trader, logger) {
-        logger.warning("trader refresh");
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new arrays_1.Arrays(tables);
