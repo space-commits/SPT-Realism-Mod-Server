@@ -777,11 +777,9 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO1.inventory.dynamic_looting;
-            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic_scav.items.backpackLoot.weights;
-            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
-            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
-            this.scavBase.generation.items.drugs.weights = lootOdds.dynamic_scav.items.drugs.weights;
-            this.scavBase.generation.items.healing.weights = lootOdds.dynamic_scav.items.healing.weights;
+            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
+            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
+            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
         }
         utils_1.BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {

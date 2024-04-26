@@ -185,7 +185,7 @@ export class Traders {
             let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
             let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined) {
+                if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
@@ -444,8 +444,11 @@ export class RandomizeTraderAssort {
             this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
         }
 
+        this.logger.warning("trader refresh at start");
+
+
         for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined) {
+            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                 let assortItems = this.tables.traders[trader].assort.items;
                 for (let item in assortItems) {
                     let itemId = assortItems[item]._id;
@@ -482,11 +485,9 @@ export class RandomizeTraderAssort {
     }
 
     public randomizeStockHelper(item: Item) {
-
         let itemParent = this.itemDB[item._tpl]?._parent;
         if (!itemParent) {
             this.logger.warning(`Realism Mod: Unable to randomize stock for: ${item._tpl}, has no _parent / item does not exist in db`);
-
             return;
         }
 
@@ -567,7 +568,7 @@ export class RandomizeTraderAssort {
 
     private randomizeAmmoStock(assortItemParent: string, item: Item) {
 
-        if (assortItemParent === ParentClasses.AMMO) {
+        if (assortItemParent === ParentClasses.AMMO && item.slotId !== "cartridges") {
             this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 60 * modConfig.rand_stackable_modifier, 150 * modConfig.rand_stackable_modifier, 2);
             this.randomizeAmmoStockHelper(item, Calibers._9x19mm, 50 * modConfig.rand_stackable_modifier, 130 * modConfig.rand_stackable_modifier, 3);
             this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 60);
@@ -726,7 +727,6 @@ export class TraderRefresh extends TraderAssortHelper {
     }
 
     private modifyTraderAssorts(trader: ITrader, logger: ILogger): Item[] {
-
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new Arrays(tables);

@@ -162,7 +162,7 @@ class Traders {
             let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
             let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined) {
+                if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
@@ -364,8 +364,9 @@ class RandomizeTraderAssort {
         if (seasonalevents_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
         }
+        this.logger.warning("trader refresh at start");
         for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined) {
+            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                 let assortItems = this.tables.traders[trader].assort.items;
                 for (let item in assortItems) {
                     let itemId = assortItems[item]._id;
@@ -466,7 +467,7 @@ class RandomizeTraderAssort {
         this.randomizeStock(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
     }
     randomizeAmmoStock(assortItemParent, item) {
-        if (assortItemParent === enums_1.ParentClasses.AMMO) {
+        if (assortItemParent === enums_1.ParentClasses.AMMO && item.slotId !== "cartridges") {
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 60 * modConfig.rand_stackable_modifier, 150 * modConfig.rand_stackable_modifier, 2);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x19mm, 50 * modConfig.rand_stackable_modifier, 130 * modConfig.rand_stackable_modifier, 3);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 60);
@@ -606,6 +607,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
     }
     modifyTraderAssorts(trader, logger) {
+        logger.warning("trader refresh");
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new arrays_1.Arrays(tables);
