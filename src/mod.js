@@ -505,7 +505,7 @@ class Main {
         if (modConfig.headgear_conflicts == true) {
             gear.loadGearConflicts();
         }
-        if (modConfig.open_zones_fix == true) {
+        if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
             maps.openZonesFix();
         }
         if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
@@ -517,16 +517,16 @@ class Main {
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }
-        if (modConfig.increased_bot_cap == true) {
+        if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) {
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true) {
+        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) {
             bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {
             bots.botNames();
         }
-        if (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween) {
+        if (utils_1.ModTracker.swagPresent == false && (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween)) {
             bots.forceBossSpawns();
         }
         if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {
@@ -642,10 +642,10 @@ class Main {
             }
             if (modname.includes("QuestingBots")) {
                 utils_1.ModTracker.qtbPresent = true;
-                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+                logger.logWithColor("Realism: Questing Bots Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("SWAG")) {
-                utils_1.ModTracker.sainPresent = true;
+                utils_1.ModTracker.swagPresent = true;
                 logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("AlgorithmicLevelProgression")) {

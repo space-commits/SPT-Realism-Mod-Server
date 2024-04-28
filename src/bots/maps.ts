@@ -2,6 +2,7 @@ import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ILocations } from "@spt-aki/models/spt/server/ILocations";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { EventTracker } from "../misc/seasonalevents";
+import { ModTracker } from "../utils/utils";
 
 
 const botZones = require("../../db/maps/spawnZones.json");
@@ -68,7 +69,7 @@ export class Spawns {
 
     public loadSpawnChanges() {
 
-        if (this.modConf.boss_spawns == true) {
+        if (this.modConf.boss_spawns == true && ModTracker.swagPresent == false) {
             this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;
             this.tables.locations.factory4_day.base.BossLocationSpawn = bossSpawns.FactoryDayBossLocationSpawn;
             this.tables.locations.factory4_night.base.BossLocationSpawn = bossSpawns.FactoryNightBossLocationSpawn;
@@ -81,7 +82,7 @@ export class Spawns {
             this.tables.locations.tarkovstreets.base.BossLocationSpawn = bossSpawns.StreetsBossLocationSpawn;
         }
 
-        if (this.modConf.spawn_waves == true) {
+        if (this.modConf.spawn_waves == true && ModTracker.swagPresent == false) {
             this.tables.locations.bigmap.base.waves = spawnWaves.CustomsWaves;
             this.tables.locations.lighthouse.base.waves = spawnWaves.LighthouseWaves;
             this.tables.locations.factory4_day.base.waves = spawnWaves.FactoryWaves;

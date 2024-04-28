@@ -650,7 +650,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             gear.loadGearConflicts();
         }
 
-        if (modConfig.open_zones_fix == true) {
+        if (modConfig.open_zones_fix == true && !ModTracker.swagPresent) {
             maps.openZonesFix();
         }
 
@@ -666,10 +666,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.loadBots();
         }
 
-        if (modConfig.increased_bot_cap == true) {
+        if (modConfig.increased_bot_cap == true && ModTracker.swagPresent == false) {
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true) {
+        else if (modConfig.spawn_waves == true && ModTracker.swagPresent == false) {
             bots.increasePerformance();
         }
 
@@ -677,7 +677,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.botNames();
         }
 
-        if (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween) {
+        if (ModTracker.swagPresent == false && (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween)) {
             bots.forceBossSpawns();
         }
 
@@ -817,10 +817,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             }
             if (modname.includes("QuestingBots")) {
                 ModTracker.qtbPresent = true;
-                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor.GREEN);
+                logger.logWithColor("Realism: Questing Bots Detected, Making Adjustments", LogTextColor.GREEN);
             }
             if (modname.includes("SWAG")) {
-                ModTracker.sainPresent = true;
+                ModTracker.swagPresent = true;
                 logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor.GREEN);
             }
             if (modname.includes("AlgorithmicLevelProgression")) {

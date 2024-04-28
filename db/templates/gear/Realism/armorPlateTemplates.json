@@ -58,7 +58,8 @@
         "ReloadSpeedMulti": 1,
         "Comfort": 1,
         "CanSpall": true,
-        "SpallReduction": 0.2
+        "SpallReduction": 0.2,
+        "ArmorClass": "Br5"
     },
     "64afd81707e2cf40e903a316": {
         "ItemID": "64afd81707e2cf40e903a316",
@@ -68,7 +69,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.2
+        "SpallReduction": 0.2,
+        "ArmorClass": "GOST 6"
     },
     "64afdb577bb3bfe8fe03fd1d": {
         "ItemID": "64afdb577bb3bfe8fe03fd1d",
@@ -78,7 +80,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "ESBI"
     },
     "xsapi_chest": {
         "ItemID": "xsapi_chest",
@@ -88,7 +91,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "XSAPI"
     },
     "mk4a_plate": {
         "ItemID": "mk4a_plate",
@@ -98,7 +102,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "Mk4A"
     },
     "64afdcb83efdfea28601d041": {
         "ItemID": "64afdcb83efdfea28601d041",
@@ -108,7 +113,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "ESAPI"
     },
     "64afee8e9f589807e30dc68a": {
         "ItemID": "64afee8e9f589807e30dc68a",
@@ -168,7 +174,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.25
+        "SpallReduction": 0.25,
+        "ArmorClass": "4RS"
     },
     "654a4dea7c17dec2f50cc86a": {
         "ItemID": "654a4dea7c17dec2f50cc86a",
@@ -178,7 +185,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.4
+        "SpallReduction": 0.4,
+        "ArmorClass": "GOST 5"
     },
     "654a4f8bc721968a4404ef18": {
         "ItemID": "654a4f8bc721968a4404ef18",
@@ -188,7 +196,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.42
+        "SpallReduction": 0.42,
+        "ArmorClass": "GOST 5"
     },
     "654a8976f414fcea4004d78b": {
         "ItemID": "654a8976f414fcea4004d78b",
@@ -328,7 +337,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.15
+        "SpallReduction": 0.15,
+        "ArmorClass": "Br4"
     },
     "6557458f83942d705f0c4962": {
         "ItemID": "6557458f83942d705f0c4962",
@@ -338,7 +348,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "SSAPI"
     },
     "655746010177119f4a097ff7": {
         "ItemID": "655746010177119f4a097ff7",
@@ -348,7 +359,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "SAPI"
     },
     "6557519ac9b1d9bdcb0777e1": {
         "ItemID": "6557519ac9b1d9bdcb0777e1",
@@ -378,7 +390,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.1
+        "SpallReduction": 0.1,
+        "ArmorClass": "GOST 4"
     },
     "656efd66034e8e01c407f35c": {
         "ItemID": "656efd66034e8e01c407f35c",
@@ -388,7 +401,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.45
+        "SpallReduction": 0.45,
+        "ArmorClass": "GOST 6"
     },
     "656f57dc27aed95beb08f628": {
         "ItemID": "656f57dc27aed95beb08f628",
@@ -398,7 +412,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.5
+        "SpallReduction": 0.5,
+        "ArmorClass": "GOST 3"
     },
     "656f603f94b480b8a500c0d6": {
         "ItemID": "656f603f94b480b8a500c0d6",
@@ -408,7 +423,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.28
+        "SpallReduction": 0.28,
+        "ArmorClass": "GOST 6"
     },
     "656f611f94b480b8a500c0db": {
         "ItemID": "656f611f94b480b8a500c0db",
@@ -418,7 +434,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.1
+        "SpallReduction": 0.1,
+        "ArmorClass": "GOST 4"
     },
     "656f63c027aed95beb08f62c": {
         "ItemID": "656f63c027aed95beb08f62c",
@@ -428,7 +445,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.25
+        "SpallReduction": 0.25,
+        "ArmorClass": "4RS"
     },
     "656f664200d62bcd2e024077": {
         "ItemID": "656f664200d62bcd2e024077",
@@ -438,7 +456,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.42
+        "SpallReduction": 0.42,
+        "ArmorClass": "GOST 5"
     },
     "656f66b5c6baea13cd07e108": {
         "ItemID": "656f66b5c6baea13cd07e108",
@@ -448,7 +467,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.26
+        "SpallReduction": 0.26,
+        "ArmorClass": "GOST 6A"
     },
     "656f9d5900d62bcd2e02407c": {
         "ItemID": "656f9d5900d62bcd2e02407c",
@@ -458,7 +478,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.37
+        "SpallReduction": 0.37,
+        "ArmorClass": "NIJ III"
     },
     "656f9fa0498d1b7e3e071d98": {
         "ItemID": "656f9fa0498d1b7e3e071d98",
@@ -468,7 +489,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "NIJ III"
     },
     "656fa0fb498d1b7e3e071d9c": {
         "ItemID": "656fa0fb498d1b7e3e071d9c",
@@ -478,7 +500,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.5
+        "SpallReduction": 0.5,
+        "ArmorClass": "NIJ III+"
     },
     "656fa25e94b480b8a500c0e0": {
         "ItemID": "656fa25e94b480b8a500c0e0",
@@ -488,7 +511,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.25
+        "SpallReduction": 0.25,
+        "ArmorClass": "NIJ III"
     },
     "656fa53d94b480b8a500c0e4": {
         "ItemID": "656fa53d94b480b8a500c0e4",
@@ -498,7 +522,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "NIJ IV"
     },
     "656fa61e94b480b8a500c0e8": {
         "ItemID": "656fa61e94b480b8a500c0e8",
@@ -508,7 +533,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
-        "SpallReduction": 1
+        "SpallReduction": 1,
+        "ArmorClass": "NIJ III+"
     },
     "656fa76500d62bcd2e024080": {
         "ItemID": "656fa76500d62bcd2e024080",
@@ -518,7 +544,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.4
+        "SpallReduction": 0.4,
+        "ArmorClass": "NIJ III"
     },
     "656fa8d700d62bcd2e024084": {
         "ItemID": "656fa8d700d62bcd2e024084",
@@ -528,7 +555,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.45
+        "SpallReduction": 0.45,
+        "ArmorClass": "NIJ III+"
     },
     "656fa99800d62bcd2e024088": {
         "ItemID": "656fa99800d62bcd2e024088",
@@ -538,7 +566,8 @@
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
-        "SpallReduction": 0.35
+        "SpallReduction": 0.35,
+        "ArmorClass": "NIJ III+"
     },
     "656fac30c6baea13cd07e10c": {
         "ItemID": "656fac30c6baea13cd07e10c",

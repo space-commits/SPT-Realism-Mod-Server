@@ -646,7 +646,7 @@ export class BotLoader {
             }
         }
 
-        if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false) {
+        if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false && ModTracker.swagPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
                 this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
@@ -729,7 +729,7 @@ export class BotLoader {
             }
         }
 
-        if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false) {
+        if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false && ModTracker.swagPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
                 this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
@@ -812,7 +812,7 @@ export class BotLoader {
             }
         }
 
-        if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false) {
+        if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false && ModTracker.swagPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
                 this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;

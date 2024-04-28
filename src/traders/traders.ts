@@ -112,14 +112,14 @@ export class Traders {
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
 
             //ammo
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 10;
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].max = 120;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 60;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].max = 200;
             //ammo box
             this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].min = 1;
-            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].max = 3;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].max = 5;
             //magazine
             this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].min = 1;
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].max = 4;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].max = 10;
             //drugs
             this.traderConf.fence.itemStackSizeOverrideMinMax["5448f3a14bdc2d27728b4569"].min = 1;
             this.traderConf.fence.itemStackSizeOverrideMinMax["5448f3a14bdc2d27728b4569"].max = 4;
@@ -202,6 +202,19 @@ export class Traders {
     }
 
     public addItemsToAssorts() {
+
+
+        if (this.modConf.food_changes) {
+            this.assortItemPusher(jaegId, "544fb62a4bdc2dfb738b4568", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(jaegId, "60098b1705871270cd5352a1", 2, "5449016a4bdc2d6f028b456f", 2, false, 18000);
+            this.assortItemPusher(jaegId, "5448fee04bdc2dbc018b4567", 2, "5449016a4bdc2d6f028b456f", 3, false, 25000);
+
+            this.assortItemPusher(jaegId, "57347d692459774491567cf1", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(jaegId, "57347d7224597744596b4e72", 2, "5449016a4bdc2d6f028b456f", 2, false, 15000);
+            this.assortItemPusher(jaegId, "590c5d4b86f774784e1b9c45", 2, "5449016a4bdc2d6f028b456f", 3, false, 30000);
+
+            this.assortItemPusher(pkId, "590c5f0d86f77413997acfab", 2, "5696686a4bdc2da3298b456a", 3, false, 250);
+        }
 
         if (this.modConf.med_changes == true) {
             //Skier//
@@ -444,9 +457,6 @@ export class RandomizeTraderAssort {
             this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
         }
 
-        this.logger.warning("trader refresh at start");
-
-
         for (let trader in this.tables.traders) {
             if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                 let assortItems = this.tables.traders[trader].assort.items;
@@ -562,8 +572,8 @@ export class RandomizeTraderAssort {
         this.randomizeStock(itemParent, ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
 
         //provisions
-        this.randomizeStock(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
     }
 
     private randomizeAmmoStock(assortItemParent: string, item: Item) {

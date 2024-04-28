@@ -597,7 +597,7 @@ class BotLoader {
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
+        if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
                 this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
@@ -668,7 +668,7 @@ class BotLoader {
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
+        if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
                 this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
@@ -739,7 +739,7 @@ class BotLoader {
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             }
         }
-        if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false) {
+        if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
                 this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
