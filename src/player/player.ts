@@ -192,7 +192,7 @@ export class Player {
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
 
-            this.globalDB().AimPunchMagnitude = 11;
+            this.globalDB().AimPunchMagnitude = 9.5;
         }
 
         if (this.modConfig.weight_limits_changes == true) {

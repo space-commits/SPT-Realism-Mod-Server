@@ -115,6 +115,7 @@ var Calibers;
     Calibers["_762x25mm"] = "Caliber762x25TT";
     Calibers["_366TKM"] = "Caliber366TKM";
     Calibers["_762x39mm"] = "Caliber762x39";
+    Calibers["_68x51mm"] = "Caliber68x51";
     Calibers["_762x51mm"] = "Caliber762x51";
     Calibers["_762x54rmm"] = "Caliber762x54R";
     Calibers["_300BLK"] = "Caliber762x35";

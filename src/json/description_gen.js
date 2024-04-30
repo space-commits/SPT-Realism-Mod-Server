@@ -45,7 +45,7 @@ class DescriptionGen {
                 //     locale[`${templateItem}` + " Description"] = "This gasblock makes the rifle under-gassed, reducing recoil but also reducing reliability. It has increased negative effects on short barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 // }
                 if (modType === "short_barrel") {
-                    locale[`${templateItem}` + " Description"] = "This barrel has a large gas port and requires a gas block that facilitates this in order for the rifle to cycle reliably. If the right gas block is used the increased malfunction chance penatly of this barrel is removed, but recoil, firerate and durabiltiy burn is increased" + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                    locale[`${templateItem}` + " Description"] = "Short barrels benefit from muzzle boosters, improving reliability but at the cost of increased durability burn and increased rate of fire." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if (modType === "booster") {
                     locale[`${templateItem}` + " Description"] = "This muzzle device is a booster. It gives the full firerate, malfunction and durabiltiy burn stats on short barreled rifles, and a reduced amount on longer barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
