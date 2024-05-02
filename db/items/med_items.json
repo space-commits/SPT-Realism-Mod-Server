@@ -305,11 +305,11 @@
                 "delay": 30,
                 "duration": 1,
                 "fadeOut": 0,
-                "cost": 3
+                "cost": 2
             }
         },
         "StimulatorBuffs": "Buffs_vaseline",
-        "MaxHpResource": 5,
+        "MaxHpResource": 6,
         "medUseTime": 6.5,
         "hpResourceRate": 0
     },

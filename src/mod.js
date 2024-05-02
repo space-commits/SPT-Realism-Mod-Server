@@ -62,7 +62,6 @@ const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
 let validatedClient = false;
 class Main {
-    path;
     modLoader;
     preAkiLoad(container) {
         const logger = container.resolve("WinstonLogger");
@@ -89,7 +88,6 @@ class Main {
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
         const router = container.resolve("DynamicRouterModService");
         const preAkiModLoader = container.resolve("PreAkiModLoader");
-        this.path = require("path");
         const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
         const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
         this.checkForMods(preAkiModLoader, logger, modConfig);
@@ -201,7 +199,7 @@ class Main {
                                     this.revertMeds(pmcData, utils);
                                     this.revertMeds(scavData, utils);
                                     modConfig.revert_med_changes = false;
-                                    utils.saveToJSONFile(modConfig, 'config/config.json');
+                                    utils.writeConfigJSON(modConfig, 'config/config.json');
                                     logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                 }
                                 this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
@@ -442,6 +440,10 @@ class Main {
     //     jsonHand.pushWeaponsToServer();
     //     jsonHand.pushModsToServer();
     // }
+    readUserFiles(jsonHand) {
+        const baseFolderPath = path.resolve(path.join(__dirname, '../'));
+        jsonHand.processUserJsonFiles(path.join(baseFolderPath, 'db/put_new_stuff_here'));
+    }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseServer = container.resolve("DatabaseServer");
@@ -487,13 +489,13 @@ class Main {
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
+        this.readUserFiles(jsonHand);
         if (modConfig.realistic_ballistics == true) {
             itemCloning.createCustomPlates();
             ammo.loadAmmoStats();
             armor.loadArmor();
             bots.setBotHealth();
         }
-        jsonHand.processUserJsonFiles("F:/SP EFT/SPT-380-141/user/mods/zSPT-Realism-Mod-Dev/db/put_new_stuff_here");
         if (modConfig.recoil_attachment_overhaul) {
             jsonHand.pushModsToServer();
             jsonHand.pushWeaponsToServer();
@@ -503,7 +505,7 @@ class Main {
         if (modConfig.headgear_conflicts == true) {
             gear.loadGearConflicts();
         }
-        if (modConfig.open_zones_fix == true) {
+        if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
             maps.openZonesFix();
         }
         if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
@@ -515,16 +517,16 @@ class Main {
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }
-        if (modConfig.increased_bot_cap == true) {
+        if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) {
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true) {
+        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) {
             bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {
             bots.botNames();
         }
-        if (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween) {
+        if (utils_1.ModTracker.swagPresent == false && (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween)) {
             bots.forceBossSpawns();
         }
         if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {
@@ -583,7 +585,7 @@ class Main {
     postAkiLoad(container) {
         this.modLoader = container.resolve("PreAkiModLoader");
     }
-    //unsur if I still need to do this or not, now that configuration has been expanded
+    //unsure if I still need to do this or not, now that configuration has been expanded
     // private dllChecker(logger: ILogger, modConfig: any) {
     //     ConfigChecker.dllIsPresent = true;
     //     const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
@@ -640,10 +642,10 @@ class Main {
             }
             if (modname.includes("QuestingBots")) {
                 utils_1.ModTracker.qtbPresent = true;
-                logger.logWithColor("Realism: Queting Bots Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+                logger.logWithColor("Realism: Questing Bots Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("SWAG")) {
-                utils_1.ModTracker.sainPresent = true;
+                utils_1.ModTracker.swagPresent = true;
                 logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("AlgorithmicLevelProgression")) {

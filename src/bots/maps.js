@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Spawns = void 0;
+const utils_1 = require("../utils/utils");
 const botZones = require("../../db/maps/spawnZones.json");
 const bossSpawns = require("../../db/maps/bossSpawns.json");
 const spawnWaves = require("../../db/maps/spawnWaves.json");
@@ -68,7 +69,7 @@ class Spawns {
         }
     }
     loadSpawnChanges() {
-        if (this.modConf.boss_spawns == true) {
+        if (this.modConf.boss_spawns == true && utils_1.ModTracker.swagPresent == false) {
             this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;
             this.tables.locations.factory4_day.base.BossLocationSpawn = bossSpawns.FactoryDayBossLocationSpawn;
             this.tables.locations.factory4_night.base.BossLocationSpawn = bossSpawns.FactoryNightBossLocationSpawn;
@@ -80,7 +81,7 @@ class Spawns {
             this.tables.locations.woods.base.BossLocationSpawn = bossSpawns.WoodsBossLocationSpawn;
             this.tables.locations.tarkovstreets.base.BossLocationSpawn = bossSpawns.StreetsBossLocationSpawn;
         }
-        if (this.modConf.spawn_waves == true) {
+        if (this.modConf.spawn_waves == true && utils_1.ModTracker.swagPresent == false) {
             this.tables.locations.bigmap.base.waves = spawnWaves.CustomsWaves;
             this.tables.locations.lighthouse.base.waves = spawnWaves.LighthouseWaves;
             this.tables.locations.factory4_day.base.waves = spawnWaves.FactoryWaves;

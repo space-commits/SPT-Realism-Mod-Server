@@ -605,8 +605,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             this.fillExistingMagazines(weaponWithModsArray, magazine, ammoTpl);
         }
         // Add cartridge(s) to gun chamber(s)
-        if (weaponItemTemplate._props.Chambers?.length > 0
-            && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
+        if (weaponItemTemplate._props.Chambers?.length > 0 && weaponItemTemplate._props.Chambers[0]?._props?.filters[0]?.Filter?.includes(ammoTpl)) {
             // Guns have variety of possible Chamber ids, patron_in_weapon/patron_in_weapon_000/patron_in_weapon_001
             const chamberSlotNames = weaponItemTemplate._props.Chambers.map(x => x._name);
             this.addCartridgeToChamber(weaponWithModsArray, ammoTpl, chamberSlotNames);
@@ -630,28 +629,28 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     myisWeaponValid(weaponItemArray) {
         const checkRequired = new CheckRequired();
         for (const mod of weaponItemArray) {
-            const modDbTemplate = this.itemHelper.getItem(mod._tpl)[1];
-            if (!modDbTemplate._props.Slots || !modDbTemplate._props.Slots.length) {
+            const modTemplate = this.itemHelper.getItem(mod._tpl)[1];
+            if (!modTemplate._props.Slots || !modTemplate._props.Slots.length) {
                 continue;
             }
             // Iterate over slots in db item, if required, check tpl in that slot matches the filter list
-            for (const modSlot of modDbTemplate._props.Slots) {
+            for (const modSlot of modTemplate._props.Slots) {
                 // ignore optional mods
                 if (!checkRequired.isRequired(modSlot)) {
                     continue;
                 }
                 const allowedTpls = modSlot._props.filters[0].Filter;
                 const slotName = modSlot._name;
-                const weaponSlotItem = weaponItemArray.find(x => x.parentId === mod._id && x.slotId === slotName);
+                const weaponSlotItem = weaponItemArray.find((weaponItem) => weaponItem.parentId === mod._id && weaponItem.slotId === slotName);
                 if (!weaponSlotItem) {
                     if (modConfig.logEverything == true) {
-                        this.logger.warning(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modDbTemplate._name, slotId: mod.slotId }));
+                        this.logger.warning(this.localisationService.getText("bot-weapons_required_slot_missing_item", { modSlot: modSlot._name, modName: modTemplate._name, slotId: mod.slotId }));
                     }
                     return false;
                 }
                 if (!allowedTpls.includes(weaponSlotItem._tpl)) {
                     if (modConfig.logEverything == true) {
-                        this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modDbTemplate._name, weaponTpl: weaponSlotItem._tpl }));
+                        this.logger.warning(this.localisationService.getText("bot-weapon_contains_invalid_item", { modSlot: modSlot._name, modName: modTemplate._name, weaponTpl: weaponSlotItem._tpl }));
                     }
                     return false;
                 }
@@ -773,7 +772,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
         }
         catch {
-            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}`);
+            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, it is not a problem to report.`);
             this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
             let preset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {
@@ -804,7 +803,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
 exports.BotWepGen = BotWepGen;
 class CheckRequired {
     isRequired(slot) {
-        if (slot?._botRequired != undefined && slot._botRequired == true) {
+        if (slot?._botRequired && slot._botRequired == true) {
             return true;
         }
         else if (slot._required == true) {
@@ -1033,11 +1032,11 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
     }
     myShouldModBeSpawned(itemSlot, modSlot, modSpawnChances, checkRequired, botEquipConfig) {
         const slotRequired = itemSlot._required;
-        if (this.getAmmoContainers().includes(modSlot)) {
+        if (this.getAmmoContainers().includes(modSlot) || checkRequired.isRequired(itemSlot)) {
             return ModSpawn_1.ModSpawn.SPAWN;
         }
         const spawnMod = this.probabilityHelper.rollChance(modSpawnChances[modSlot]);
-        if (!spawnMod && (slotRequired || checkRequired.isRequired(itemSlot) || botEquipConfig.weaponSlotIdsToMakeRequired?.includes(modSlot))) {
+        if (!spawnMod && (slotRequired || botEquipConfig.weaponSlotIdsToMakeRequired?.includes(modSlot))) {
             // Mod is required but spawn chance roll failed, choose default mod spawn for slot
             return ModSpawn_1.ModSpawn.DEFAULT_MOD;
         }

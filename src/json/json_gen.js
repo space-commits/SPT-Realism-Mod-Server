@@ -242,10 +242,10 @@ class JsonGen {
         let fileItem = filePathObj[index];
         filePathObj[index] = funJsonAssign(serverItem, fileItem, id);
         if (usePreset == true) {
-            this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
+            this.utils.writeConfigJSON(filePathObj, `db/templates/${folderStr}/${presetPath}/${fileStr}.json`);
         }
         else {
-            this.utils.saveToJSONFile(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
+            this.utils.writeConfigJSON(filePathObj, `db/templates/${folderStr}/${fileStr}.json`);
         }
     }
     assignJSONToAmmo(serverItem, fileItem) {
@@ -736,7 +736,7 @@ class JsonGen {
     }
     armorModsWriteToFile(index, serverItem) {
         armorTemplate[index] = this.writeArmorToFile(serverItem);
-        this.utils.saveToJSONFile(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
+        this.utils.writeConfigJSON(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
     }
     writeArmorToFile(serverItem) {
         let armor = {};

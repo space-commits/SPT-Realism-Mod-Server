@@ -111,6 +111,7 @@ export const enum Calibers {
     _762x25mm = "Caliber762x25TT",
     _366TKM = "Caliber366TKM",
     _762x39mm = "Caliber762x39",
+    _68x51mm = "Caliber68x51",
     _762x51mm = "Caliber762x51",
     _762x54rmm = "Caliber762x54R",
     _300BLK = "Caliber762x35",

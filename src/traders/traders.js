@@ -99,7 +99,18 @@ class Traders {
             this.traderConf.fence.itemPriceMult = 1.8;
             this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
-            // this.traderConf.fence.blacklist = fenceLimits.blacklist; //somehow this causes error
+            //ammo
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 60;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].max = 200;
+            //ammo box
+            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].min = 1;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].max = 5;
+            //magazine
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].min = 1;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].max = 10;
+            //drugs
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448f3a14bdc2d27728b4569"].min = 1;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448f3a14bdc2d27728b4569"].max = 4;
         }
         if (modConfig.change_heal_cost == true) {
             this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;
@@ -151,7 +162,7 @@ class Traders {
             let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
             let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined) {
+                if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
@@ -168,6 +179,15 @@ class Traders {
         }
     }
     addItemsToAssorts() {
+        if (this.modConf.food_changes) {
+            this.assortItemPusher(jaegId, "544fb62a4bdc2dfb738b4568", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(jaegId, "60098b1705871270cd5352a1", 2, "5449016a4bdc2d6f028b456f", 2, false, 18000);
+            this.assortItemPusher(jaegId, "5448fee04bdc2dbc018b4567", 2, "5449016a4bdc2d6f028b456f", 3, false, 25000);
+            this.assortItemPusher(jaegId, "57347d692459774491567cf1", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(jaegId, "57347d7224597744596b4e72", 2, "5449016a4bdc2d6f028b456f", 2, false, 15000);
+            this.assortItemPusher(jaegId, "590c5d4b86f774784e1b9c45", 2, "5449016a4bdc2d6f028b456f", 3, false, 30000);
+            this.assortItemPusher(pkId, "590c5f0d86f77413997acfab", 2, "5696686a4bdc2da3298b456a", 3, false, 250);
+        }
         if (this.modConf.med_changes == true) {
             //Skier//
             this.assortItemPusher(skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
@@ -354,7 +374,7 @@ class RandomizeTraderAssort {
             this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
         }
         for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined) {
+            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                 let assortItems = this.tables.traders[trader].assort.items;
                 for (let item in assortItems) {
                     let itemId = assortItems[item]._id;
@@ -451,11 +471,11 @@ class RandomizeTraderAssort {
         this.randomizeStock(itemParent, enums_1.ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
         this.randomizeStock(itemParent, enums_1.ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
         //provisions
-        this.randomizeStock(itemParent, enums_1.ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
     }
     randomizeAmmoStock(assortItemParent, item) {
-        if (assortItemParent === enums_1.ParentClasses.AMMO) {
+        if (assortItemParent === enums_1.ParentClasses.AMMO && item.slotId !== "cartridges") {
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 60 * modConfig.rand_stackable_modifier, 150 * modConfig.rand_stackable_modifier, 2);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x19mm, 50 * modConfig.rand_stackable_modifier, 130 * modConfig.rand_stackable_modifier, 3);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 60);
@@ -467,6 +487,7 @@ class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 60 * modConfig.rand_stackable_modifier, 140 * modConfig.rand_stackable_modifier, 2);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._366TKM, 60 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 3);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x39mm, 50 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 55);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._68x51mm, 30 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 65);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x51mm, 30 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 65);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x54rmm, 40 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 69);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._300BLK, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 53);

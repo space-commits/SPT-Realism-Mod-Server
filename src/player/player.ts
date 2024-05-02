@@ -87,7 +87,7 @@ export class Player {
             }
 
             this.modConfig.revert_hp = false;
-            this.helper.saveToJSONFile(this.modConfig, 'config/config.json');
+            this.helper.writeConfigJSON(this.modConfig, 'config/config.json');
 
             if (this.modConfig.logEverything == true) {
                 this.logger.info("Realism Mod: Player Health Reverted To Vanilla Defaults");
@@ -183,7 +183,7 @@ export class Player {
 
 
     public loadPlayerStats() {
-        if(this.modConfig.realistic_ballistics == true || this.modConfig.med_changes == true){
+        if(this.modConfig.enable_stances == true || this.modConfig.movement_changes == true){
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
     
@@ -192,7 +192,7 @@ export class Player {
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
 
-            this.globalDB().AimPunchMagnitude = 8.5;
+            this.globalDB().AimPunchMagnitude = 9.5;
         }
 
         if (this.modConfig.weight_limits_changes == true) {
@@ -313,7 +313,7 @@ export class Player {
 
             this.globalDB().LegsOverdamage = 3.5; // 2
             this.globalDB().HandsOverdamage = 3.9; //0.56
-            this.globalDB().StomachOverdamage = 3; //2.8
+            this.globalDB().StomachOverdamage = 3.1; //2.8
         }
 
         if (this.modConfig.realistic_player_health == true) {

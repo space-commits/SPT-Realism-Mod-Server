@@ -110,7 +110,20 @@ export class Traders {
             this.traderConf.fence.itemPriceMult = 1.8;
             this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
-            // this.traderConf.fence.blacklist = fenceLimits.blacklist; //somehow this causes error
+
+            //ammo
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 60;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].max = 200;
+            //ammo box
+            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].min = 1;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].max = 5;
+            //magazine
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].min = 1;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].max = 10;
+            //drugs
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448f3a14bdc2d27728b4569"].min = 1;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448f3a14bdc2d27728b4569"].max = 4;
+
         }
 
         if (modConfig.change_heal_cost == true) {
@@ -172,7 +185,7 @@ export class Traders {
             let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
             let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined) {
+                if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
@@ -189,6 +202,19 @@ export class Traders {
     }
 
     public addItemsToAssorts() {
+
+
+        if (this.modConf.food_changes) {
+            this.assortItemPusher(jaegId, "544fb62a4bdc2dfb738b4568", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(jaegId, "60098b1705871270cd5352a1", 2, "5449016a4bdc2d6f028b456f", 2, false, 18000);
+            this.assortItemPusher(jaegId, "5448fee04bdc2dbc018b4567", 2, "5449016a4bdc2d6f028b456f", 3, false, 25000);
+
+            this.assortItemPusher(jaegId, "57347d692459774491567cf1", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(jaegId, "57347d7224597744596b4e72", 2, "5449016a4bdc2d6f028b456f", 2, false, 15000);
+            this.assortItemPusher(jaegId, "590c5d4b86f774784e1b9c45", 2, "5449016a4bdc2d6f028b456f", 3, false, 30000);
+
+            this.assortItemPusher(pkId, "590c5f0d86f77413997acfab", 2, "5696686a4bdc2da3298b456a", 3, false, 250);
+        }
 
         if (this.modConf.med_changes == true) {
             //Skier//
@@ -239,7 +265,7 @@ export class Traders {
             this.assortItemPusher(mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
             this.assortItemPusher(mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
             this.assortItemPusher(mechId, "mechJMAC_366", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
-            
+
             //skier//
             //guns
             this.assortItemPusher(skierId, "Skier209", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
@@ -432,7 +458,7 @@ export class RandomizeTraderAssort {
         }
 
         for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined) {
+            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
                 let assortItems = this.tables.traders[trader].assort.items;
                 for (let item in assortItems) {
                     let itemId = assortItems[item]._id;
@@ -469,11 +495,9 @@ export class RandomizeTraderAssort {
     }
 
     public randomizeStockHelper(item: Item) {
-
         let itemParent = this.itemDB[item._tpl]?._parent;
         if (!itemParent) {
             this.logger.warning(`Realism Mod: Unable to randomize stock for: ${item._tpl}, has no _parent / item does not exist in db`);
-
             return;
         }
 
@@ -548,13 +572,13 @@ export class RandomizeTraderAssort {
         this.randomizeStock(itemParent, ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
 
         //provisions
-        this.randomizeStock(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
     }
 
     private randomizeAmmoStock(assortItemParent: string, item: Item) {
 
-        if (assortItemParent === ParentClasses.AMMO) {
+        if (assortItemParent === ParentClasses.AMMO && item.slotId !== "cartridges") {
             this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 60 * modConfig.rand_stackable_modifier, 150 * modConfig.rand_stackable_modifier, 2);
             this.randomizeAmmoStockHelper(item, Calibers._9x19mm, 50 * modConfig.rand_stackable_modifier, 130 * modConfig.rand_stackable_modifier, 3);
             this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 60);
@@ -566,6 +590,7 @@ export class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 60 * modConfig.rand_stackable_modifier, 140 * modConfig.rand_stackable_modifier, 2);
             this.randomizeAmmoStockHelper(item, Calibers._366TKM, 60 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 3);
             this.randomizeAmmoStockHelper(item, Calibers._762x39mm, 50 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 55);
+            this.randomizeAmmoStockHelper(item, Calibers._68x51mm, 30 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 65);
             this.randomizeAmmoStockHelper(item, Calibers._762x51mm, 30 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 65);
             this.randomizeAmmoStockHelper(item, Calibers._762x54rmm, 40 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 69);
             this.randomizeAmmoStockHelper(item, Calibers._300BLK, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 53);
@@ -580,6 +605,7 @@ export class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
             this.randomizeAmmoStockHelper(item, Calibers._338mag, 10 * modConfig.rand_stackable_modifier, 25 * modConfig.rand_stackable_modifier, 4);
+
         }
     }
 
@@ -713,7 +739,6 @@ export class TraderRefresh extends TraderAssortHelper {
     }
 
     private modifyTraderAssorts(trader: ITrader, logger: ILogger): Item[] {
-
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new Arrays(tables);

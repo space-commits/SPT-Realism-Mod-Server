@@ -268,7 +268,7 @@ class JsonHandler {
                                         this.modPusherHelper(jsonData[i], this.itemDB());
                                     }
                                 }
-                                console.log(jsonData);
+                                // console.log(jsonData);
                             }
                             catch (err) {
                                 console.error(`Error parsing JSON in file ${filePath}: ${err}`);
