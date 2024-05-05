@@ -110,6 +110,7 @@ export class Traders {
             this.traderConf.fence.itemPriceMult = 1.8;
             this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
+            this.traderConf.fence.ammoMaxPenLimit = 70;
 
             //ammo
             this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 60;

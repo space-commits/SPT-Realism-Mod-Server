@@ -61,11 +61,12 @@ export class FleaChangesPreDBLoad {
 
         if (this.modConfig.flea_changes == true) {
 
-            //disabled due to bizzare SPT changes
+            //disabled due to SPT changes
             // this.fleaConf.dynamic.condition = custFleaConfig.condition;
 
-            this.fleaConf.ratingDecreaseCount = 0.12;
-            this.fleaConf.ratingIncreaseCount = 0.1;
+            //need to chec kif globalDB is initialized at this stage
+            // this.globalDB.ratingDecreaseCount = 0.12;
+            // this.globalDB.ratingIncreaseCount = 0.1;
 
             this.fleaConf.dynamic.currencies = {
                 "5449016a4bdc2d6f028b456f": 20,

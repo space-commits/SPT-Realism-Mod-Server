@@ -51,10 +51,11 @@ class FleaChangesPreDBLoad {
             this.fleaConf.dynamic.blacklist.custom.push("generic_debuff", "performance_debuff", "weight_debuff", "clotting_debuff", "damage_debuff", "adrenal_debuff", "regen_debuff");
         }
         if (this.modConfig.flea_changes == true) {
-            //disabled due to bizzare SPT changes
+            //disabled due to SPT changes
             // this.fleaConf.dynamic.condition = custFleaConfig.condition;
-            this.fleaConf.ratingDecreaseCount = 0.12;
-            this.fleaConf.ratingIncreaseCount = 0.1;
+            //need to chec kif globalDB is initialized at this stage
+            // this.globalDB.ratingDecreaseCount = 0.12;
+            // this.globalDB.ratingIncreaseCount = 0.1;
             this.fleaConf.dynamic.currencies = {
                 "5449016a4bdc2d6f028b456f": 20,
                 "5696686a4bdc2da3298b456a": 40,

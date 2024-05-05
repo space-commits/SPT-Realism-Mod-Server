@@ -255,7 +255,7 @@ class Player {
         if (this.modConfig.realistic_ballistics == true) {
             this.globalDB().LegsOverdamage = 3.5; // 2
             this.globalDB().HandsOverdamage = 3.9; //0.56
-            this.globalDB().StomachOverdamage = 3.2; //2.8
+            this.globalDB().StomachOverdamage = 3.1; //2.8
         }
         if (this.modConfig.realistic_player_health == true) {
             const health = this.globalDB().Health.Effects;

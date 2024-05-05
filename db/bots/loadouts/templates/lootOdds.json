@@ -1,27 +1,37 @@
 {
     "dynamic": {
         "items": {
+            "drink": {
+                "weights": {
+                    "0": 10,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 10,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
             "backpackLoot": {
                 "weights": {
-                    "0": 5,
-                    "1": 2,
-                    "2": 1
+                    "0": 0
                 },
                 "whitelist": []
             },
             "pocketLoot": {
                 "weights": {
-                    "0": 5,
-                    "1": 2,
-                    "2": 1
+                    "0": 0
                 },
                 "whitelist": []
             },
             "vestLoot": {
                 "weights": {
-                    "0": 5,
-                    "1": 2,
-                    "2": 1
+                    "0": 0
                 },
                 "whitelist": []
             }
@@ -29,24 +39,37 @@
     },
     "dynamic_scav": {
         "items": {
+            "drink": {
+                "weights": {
+                    "0": 10,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 10,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
             "backpackLoot": {
                 "weights": {
-                    "0": 4,
-                    "1": 1
+                    "0": 0
                 },
                 "whitelist": []
             },
             "pocketLoot": {
                 "weights": {
-                    "0": 4,
-                    "1": 1
+                    "0": 0
                 },
                 "whitelist": []
             },
             "vestLoot": {
                 "weights": {
-                    "0": 4,
-                    "1": 1
+                    "0": 0
                 },
                 "whitelist": []
             },
@@ -66,14 +89,131 @@
             }
         }
     },
-    "boss": {
+    "scav": {
         "items": {
+            "drink": {
+                "weights": {
+                    "0": 20,
+                    "1": 10,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 20,
+                    "1": 10,
+                    "2": 1
+                },
+                "whitelist": []
+            },
             "backpackLoot": {
                 "weights": {
+                    "0": 20,
+                    "1": 15,
+                    "2": 10,
+                    "3": 5,
+                    "4": 1,
+                    "5": 1
+                },
+                "whitelist": []
+            },
+            "drugs": {
+                "weights": {
+                    "0": 10,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "grenades": {
+                "weights": {
+                    "0": 20,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "healing": {
+                "weights": {
+                    "0": 15,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "magazines": {
+                "weights": {
                     "0": 0,
-                    "1": 0,
-                    "2": 0,
-                    "3": 0,
+                    "1": 5,
+                    "2": 15,
+                    "3": 5,
+                    "4": 1
+                },
+                "whitelist": []
+            },
+            "pocketLoot": {
+                "weights": {
+                    "0": 20,
+                    "1": 15,
+                    "2": 10,
+                    "3": 5,
+                    "4": 1,
+                    "5": 1
+                },
+                "whitelist": []
+            },
+            "specialItems": {
+                "weights": {
+                    "0": 1
+                },
+                "whitelist": []
+            },
+            "stims": {
+                "weights": {
+                    "0": 20,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "vestLoot": {
+                "weights": {
+                    "0": 20,
+                    "1": 15,
+                    "2": 10,
+                    "3": 5,
+                    "4": 1,
+                    "5": 1
+                },
+                "whitelist": []
+            },
+            "currency": {
+                "weights": {
+                    "0": 50,
+                    "1": 1
+                },
+                "whitelist": []
+            }
+        }
+    },
+    "boss": {
+        "items": {
+            "drink": {
+                "weights": {
+                    "0": 10,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 10,
+                    "1": 1
+                },
+                "whitelist": []
+            },
+            "backpackLoot": {
+                "weights": {
+                    "3": 1,
                     "4": 5,
                     "5": 10,
                     "6": 10,
@@ -86,16 +226,16 @@
             },
             "drugs": {
                 "weights": {
-                    "0": 1,
-                    "1": 2,
-                    "2": 1,
+                    "0": 2,
+                    "1": 5,
+                    "2": 2,
                     "3": 1
                 },
                 "whitelist": []
             },
             "grenades": {
                 "weights": {
-                    "0": 1,
+                    "0": 2,
                     "1": 5,
                     "2": 2,
                     "3": 1
@@ -104,25 +244,26 @@
             },
             "healing": {
                 "weights": {
-                    "0": 1,
+                    "0": 5,
                     "1": 15,
-                    "2": 10,
+                    "2": 5,
                     "3": 1
                 },
                 "whitelist": []
             },
             "magazines": {
                 "weights": {
-                    "0": 1,
-                    "1": 2,
-                    "2": 10,
-                    "3": 5
+                    "1": 1,
+                    "2": 5,
+                    "3": 10,
+                    "4": 1,
+                    "5": 1
                 },
                 "whitelist": []
             },
             "pocketLoot": {
                 "weights": {
-                    "0": 1,
+                    "0": 5,
                     "1": 5,
                     "2": 20,
                     "3": 10,
@@ -156,11 +297,34 @@
                     "3": 1
                 },
                 "whitelist": []
+            },
+            "currency": {
+                "weights": {
+                    "0": 30,
+                    "1": 1
+                },
+                "whitelist": []
             }
         }
     },
     "tier1": {
         "items": {
+            "drink": {
+                "weights": {
+                    "0": 10,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 10,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
             "backpackLoot": {
                 "weights": {
                     "0": 5,
@@ -236,11 +400,34 @@
                     "4": 1
                 },
                 "whitelist": []
+            },
+            "currency": {
+                "weights": {
+                    "0": 50,
+                    "1": 1
+                },
+                "whitelist": []
             }
         }
     },
     "tier2": {
         "items": {
+            "drink": {
+                "weights": {
+                    "0": 9,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 9,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
             "backpackLoot": {
                 "weights": {
                     "0": 2,
@@ -316,11 +503,34 @@
                     "4": 1
                 },
                 "whitelist": []
+            },
+            "currency": {
+                "weights": {
+                    "0": 45,
+                    "1": 1
+                },
+                "whitelist": []
             }
         }
     },
     "tier3": {
         "items": {
+            "drink": {
+                "weights": {
+                    "0": 8,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 8,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
             "backpackLoot": {
                 "weights": {
                     "0": 0,
@@ -361,7 +571,7 @@
                 "weights": {
                     "0": 0,
                     "1": 0,
-                    "2": 5,
+                    "2": 2,
                     "3": 15,
                     "4": 10
                 },
@@ -398,11 +608,34 @@
                     "4": 1
                 },
                 "whitelist": []
+            },
+            "currency": {
+                "weights": {
+                    "0": 40,
+                    "1": 1
+                },
+                "whitelist": []
             }
         }
     },
     "tier4": {
         "items": {
+            "drink": {
+                "weights": {
+                    "0": 7,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 7,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
             "backpackLoot": {
                 "weights": {
                     "0": 0,
@@ -485,11 +718,34 @@
                     "4": 1
                 },
                 "whitelist": []
+            },
+            "currency": {
+                "weights": {
+                    "0": 40,
+                    "1": 1
+                },
+                "whitelist": []
             }
         }
     },
     "tier5": {
         "items": {
+            "drink": {
+                "weights": {
+                    "0": 6,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
+            "food": {
+                "weights": {
+                    "0": 6,
+                    "1": 5,
+                    "2": 1
+                },
+                "whitelist": []
+            },
             "backpackLoot": {
                 "weights": {
                     "0": 0,
@@ -573,6 +829,13 @@
                     "2": 3,
                     "3": 2,
                     "4": 1
+                },
+                "whitelist": []
+            },
+            "currency": {
+                "weights": {
+                    "0": 35,
+                    "1": 1
                 },
                 "whitelist": []
             }

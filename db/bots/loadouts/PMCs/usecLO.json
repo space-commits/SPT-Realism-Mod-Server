@@ -8,6 +8,13 @@
       "60a6aaad42fd2735e4589978": 1,
       "5fdb50bb2b730a787b3f78cf": 1,
       "6574aa9a1b144de18c0fba45": 1
+    },
+    "voice": {
+      "Usec_1": 1,
+      "Usec_2": 1,
+      "Usec_3": 1,
+      "Usec_4": 1,
+      "Usec_5": 1
     }
   },
   "usecLO1": {
@@ -1421,6 +1428,7 @@
         },
         "Caliber1143x23ACP": {
           "5efb0cabfb3e451d70735af5": 1,
+          "5efb0d4f4bc50b58e81710f3": 1,
           "5efb0fc6aeb21837e749c801": 2,
           "5ea2a8e200685063ec28c05a": 2,
           "5e81f423763d9f754677bf2e": 5

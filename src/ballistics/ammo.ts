@@ -1350,7 +1350,7 @@ export class Ammo {
                 }
             }
             //7N24
-            if (serverItem._id === "6579847c5a0e5879d12f2873") {
+            if (serverItem._id === "6576f4708ca9c4381d16cd9d") {
                 serverItem._props.PenetrationPower = 60;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 58;

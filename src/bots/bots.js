@@ -760,7 +760,7 @@ class BotLoader {
         this.scavBase.chances = scavLO.scavLO1.chances;
         if (this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO1.inventory.items;
-            this.scavBase.generation = lootOdds.tier1;
+            this.scavBase.generation = lootOdds.scav;
         }
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.weaponMods.mod_flashlight = 40;
@@ -777,9 +777,11 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO1.inventory.dynamic_looting;
-            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
-            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
-            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic_scav.items.backpackLoot.weights;
+            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
+            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
+            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.pocketLoot.food;
+            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.pocketLoot.drink;
         }
         utils_1.BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {
@@ -793,7 +795,7 @@ class BotLoader {
         this.scavBase.chances = scavLO.scavLO2.chances;
         if (this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO2.inventory.items;
-            this.scavBase.generation = lootOdds.tier1;
+            this.scavBase.generation = lootOdds.scav;
         }
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.weaponMods.mod_flashlight = 60;
@@ -810,9 +812,10 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO2.inventory.dynamic_looting;
-            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
-            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
-            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
+            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
+            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.pocketLoot.food;
+            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.pocketLoot.drink;
         }
         utils_1.BotTierTracker.scavTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -826,7 +829,7 @@ class BotLoader {
         this.scavBase.chances = scavLO.scavLO3.chances;
         if (this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO3.inventory.items;
-            this.scavBase.generation = lootOdds.tier2;
+            this.scavBase.generation = lootOdds.tier1;
         }
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.weaponMods.mod_flashlight = 80;
@@ -843,9 +846,10 @@ class BotLoader {
         }
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO3.inventory.dynamic_looting;
-            this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
-            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
-            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
+            this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
+            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.pocketLoot.food;
+            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.pocketLoot.drink;
         }
         utils_1.BotTierTracker.scavTier = 3;
         if (this.modConfig.logEverything == true) {
@@ -859,6 +863,7 @@ class BotLoader {
         botJsonTemplate.chances = usecLO.usecLO1.chances;
         botJsonTemplate.appearance.body = usecLO.usecLO1.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO1.appearance.feet;
+        botJsonTemplate.appearance.voice = usecLO.appearance.voice;
         botJsonTemplate.experience.level = usecLO.usecLO1.experience.level;
         if (this.modConfig.bot_loot_changes === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.items;
@@ -901,6 +906,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
@@ -913,6 +920,7 @@ class BotLoader {
         botJsonTemplate.chances = usecLO.usecLO2.chances;
         botJsonTemplate.appearance.body = usecLO.usecLO2.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO2.appearance.feet;
+        botJsonTemplate.appearance.voice = usecLO.appearance.voice;
         botJsonTemplate.experience.level = usecLO.usecLO2.experience.level;
         if (this.modConfig.bot_loot_changes === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.items;
@@ -962,6 +970,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
@@ -974,6 +984,7 @@ class BotLoader {
         botJsonTemplate.chances = usecLO.usecLO3.chances;
         botJsonTemplate.appearance.body = usecLO.usecLO3.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO3.appearance.feet;
+        botJsonTemplate.appearance.voice = usecLO.appearance.voice;
         botJsonTemplate.experience.level = usecLO.usecLO3.experience.level;
         if (this.modConfig.bot_loot_changes === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.items;
@@ -1033,6 +1044,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
@@ -1045,6 +1058,7 @@ class BotLoader {
         botJsonTemplate.chances = usecLO.usecLO4.chances;
         botJsonTemplate.appearance.body = usecLO.usecLO4.appearance.body;
         botJsonTemplate.appearance.feet = usecLO.usecLO4.appearance.feet;
+        botJsonTemplate.appearance.voice = usecLO.appearance.voice;
         botJsonTemplate.experience.level = usecLO.usecLO4.experience.level;
         if (this.modConfig.bot_loot_changes === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
@@ -1096,6 +1110,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
@@ -1106,6 +1122,7 @@ class BotLoader {
         botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
         botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_usec.body;
         botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_usec.feet;
+        botJsonTemplate.appearance.voice = usecLO.appearance.voice;
         this.tier5PMCLoad(botJsonTemplate);
         if (this.modConfig.bot_loot_changes === true) {
             botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
@@ -1119,6 +1136,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad5 loaded");
@@ -1172,6 +1191,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
@@ -1232,6 +1253,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
@@ -1296,6 +1319,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
@@ -1358,6 +1383,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
@@ -1380,6 +1407,8 @@ class BotLoader {
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
+            botJsonTemplate.generation.items.drink.weights = lootOdds.dynamic.items.drink.weights;
+            botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad5 loaded");
