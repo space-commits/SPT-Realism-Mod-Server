@@ -984,7 +984,13 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
             let modPoolToChooseFrom = compatibleModsPool[modSlotName];
             if (settings.botEquipmentConfig.filterPlatesByLevel
                 && this.itemHelper.isRemovablePlateSlot(modSlotName.toLowerCase())) {
-                const outcome = this.myFilterPlateModsForSlotByLevel(settings, modSlotName.toLowerCase(), compatibleModsPool[modSlotName], parentTemplate, botRole, pmcTier);
+                let outcome;
+                if (modConfig.realistic_ballistics == true) {
+                    outcome = this.myFilterPlateModsForSlotByLevel(settings, modSlotName.toLowerCase(), compatibleModsPool[modSlotName], parentTemplate, botRole, pmcTier);
+                }
+                else {
+                    outcome = this.filterPlateModsForSlotByLevel(settings, modSlotName.toLowerCase(), compatibleModsPool[modSlotName], parentTemplate);
+                }
                 if ([IFilterPlateModsForSlotByLevelResult_1.Result.UNKNOWN_FAILURE, IFilterPlateModsForSlotByLevelResult_1.Result.NO_DEFAULT_FILTER].includes(outcome.result)) {
                     this.logger.debug(`Plate slot: ${modSlotName} selection for armor: ${parentTemplate._id} failed: ${IFilterPlateModsForSlotByLevelResult_1.Result[outcome.result]}, skipping`);
                     continue;

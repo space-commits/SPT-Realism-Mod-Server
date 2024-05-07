@@ -97,13 +97,7 @@ class Main {
                 url: "/RealismMod/GetInfo",
                 action: (url, info, sessionId, output) => {
                     try {
-                        //I know this is awful
-                        const parsedPath = __dirname.split("\\");
-                        const folderName = parsedPath[parsedPath.length - 2];
-                        const modPath = path.resolve(this.modLoader.getModPath(`${folderName}`));
-                        const configFilePath = path.join(modPath, "config", "config.json");
-                        const fileContents = fs.readFileSync(configFilePath, "utf8");
-                        return jsonUtil.serialize(fileContents);
+                        return jsonUtil.serialize(modConfig);
                     }
                     catch (err) {
                         console.error("Failed to read config file", err);

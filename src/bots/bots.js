@@ -780,8 +780,8 @@ class BotLoader {
             this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic_scav.items.backpackLoot.weights;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
             this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
-            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.pocketLoot.food;
-            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.pocketLoot.drink;
+            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
+            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
         utils_1.BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {
@@ -814,8 +814,8 @@ class BotLoader {
             this.scavBase.inventory.items = scavLO.scavLO2.inventory.dynamic_looting;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
             this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
-            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.pocketLoot.food;
-            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.pocketLoot.drink;
+            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
+            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
         utils_1.BotTierTracker.scavTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -848,8 +848,8 @@ class BotLoader {
             this.scavBase.inventory.items = scavLO.scavLO3.inventory.dynamic_looting;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
             this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
-            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.pocketLoot.food;
-            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.pocketLoot.drink;
+            this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
+            this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
         utils_1.BotTierTracker.scavTier = 3;
         if (this.modConfig.logEverything == true) {

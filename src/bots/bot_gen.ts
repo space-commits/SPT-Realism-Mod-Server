@@ -104,7 +104,7 @@ export class BotGen extends BotGenerator {
         const playerLevel = ProfileTracker.level;
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
-        const gzTiers =[89, 10, 1, 0, 0];
+        const gzTiers = [89, 10, 1, 0, 0];
         if (RaidInfoTracker.mapName === "sandbox" && playerLevel <= 15) {
             tier = utils.probabilityWeighter(tierArray, gzTiers);
         }
@@ -1285,14 +1285,27 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
                 settings.botEquipmentConfig.filterPlatesByLevel
                 && this.itemHelper.isRemovablePlateSlot(modSlotName.toLowerCase())
             ) {
-                const outcome = this.myFilterPlateModsForSlotByLevel(
-                    settings,
-                    modSlotName.toLowerCase(),
-                    compatibleModsPool[modSlotName],
-                    parentTemplate,
-                    botRole,
-                    pmcTier
-                );
+                let outcome;
+                if (modConfig.realistic_ballistics == true) {
+                    outcome = this.myFilterPlateModsForSlotByLevel(
+                        settings,
+                        modSlotName.toLowerCase(),
+                        compatibleModsPool[modSlotName],
+                        parentTemplate,
+                        botRole,
+                        pmcTier
+                    );
+                }
+                else {
+                    outcome = this.filterPlateModsForSlotByLevel(
+                        settings,
+                        modSlotName.toLowerCase(),
+                        compatibleModsPool[modSlotName],
+                        parentTemplate,
+                    );
+                }
+
+
                 if ([Result.UNKNOWN_FAILURE, Result.NO_DEFAULT_FILTER].includes(outcome.result)) {
                     this.logger.debug(
                         `Plate slot: ${modSlotName} selection for armor: ${parentTemplate._id} failed: ${Result[outcome.result]
@@ -1363,7 +1376,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         if (this.getAmmoContainers().includes(modSlot) || checkRequired.isRequired(itemSlot)) {
             return ModSpawn.SPAWN;
         }
- 
+
         const spawnMod = this.probabilityHelper.rollChance(modSpawnChances[modSlot]);
         if (!spawnMod && (slotRequired || botEquipConfig.weaponSlotIdsToMakeRequired?.includes(modSlot))) {
             // Mod is required but spawn chance roll failed, choose default mod spawn for slot
