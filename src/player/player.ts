@@ -299,12 +299,12 @@ export class Player {
 
         if (this.modConfig.med_changes == true) {
             this.globalDB().Health.Effects.Existence.EnergyDamage = 1;
-            this.globalDB().Health.Effects.Exhaustion.Damage = 0.5;
+            this.globalDB().Health.Effects.Exhaustion.Damage = 0.25;
             this.globalDB().Health.Effects.Exhaustion.DefaultDelay = 60;
 
             this.globalDB().Health.Effects.Existence.HydrationDamage = 1.5;
             this.globalDB().Health.Effects.Dehydration.BleedingHealth = 0.2;
-            this.globalDB().Health.Effects.Dehydration.DamageOnStrongDehydration = 0.5;
+            this.globalDB().Health.Effects.Dehydration.DamageOnStrongDehydration = 0.25;
             this.globalDB().Health.Effects.Dehydration.DefaultDelay = 60;
         }
 
