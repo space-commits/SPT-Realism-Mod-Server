@@ -568,12 +568,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     //     jsonHand.pushModsToServer();
     // }
 
-
-    private readUserFiles(jsonHand: JsonHandler) {
-        const baseFolderPath = path.resolve(path.join(__dirname, '../'));
-        jsonHand.processUserJsonFiles(path.join(baseFolderPath, 'db/put_new_stuff_here'));
-    }
-
     public postDBLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
@@ -624,7 +618,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
 
-        this.readUserFiles(jsonHand);
+        jsonHand.processUserJsonFiles();
 
         if (modConfig.realistic_ballistics == true) {
             itemCloning.createCustomPlates();

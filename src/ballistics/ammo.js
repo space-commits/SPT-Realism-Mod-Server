@@ -28,11 +28,11 @@ class Ammo {
                 serverItem._props.PenetrationPower = 10;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.ProjectileCount = 34;
-                serverItem._props.Damage = 6;
+                serverItem._props.Damage = 5;
                 serverItem._props.InitialSpeed = 285;
-                serverItem._props.BallisticCoeficient = 0.009;
-                serverItem._props.RicochetChance = 1;
-                serverItem._props.FragmentationChance = 0.9;
+                serverItem._props.BallisticCoeficient = 0.01;
+                serverItem._props.RicochetChance = 0.8;
+                serverItem._props.FragmentationChance = 0.5;
                 serverItem._props.BulletMassGram = 0.4;
                 serverItem._props.HeavyBleedingDelta = 1;
                 serverItem._props.LightBleedingDelta = 1;
@@ -42,7 +42,7 @@ class Ammo {
                 serverItem._props.Tracer = true;
                 serverItem._props.TracerColor = "grey";
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.7;
+                    serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -51,22 +51,22 @@ class Ammo {
             }
             //Flechette
             if (serverItem._id === "5d6e6911a4b9361bd5780d52") {
-                serverItem._props.PenetrationPower = 5;
-                serverItem._props.ArmorDamage = 1;
+                serverItem._props.PenetrationPower = 4;
+                serverItem._props.ArmorDamage = 0.5;
                 serverItem._props.ProjectileCount = 20;
-                serverItem._props.Damage = 9;
+                serverItem._props.Damage = 7;
                 serverItem._props.InitialSpeed = 300;
-                serverItem._props.BallisticCoeficient = 0.015;
-                serverItem._props.RicochetChance = 0.5;
-                serverItem._props.FragmentationChance = 0.6;
+                serverItem._props.BallisticCoeficient = 0.009;
+                serverItem._props.RicochetChance = 1;
+                serverItem._props.FragmentationChance = 0.1;
                 serverItem._props.BulletMassGram = 0.47;
                 serverItem._props.HeavyBleedingDelta = 0.8;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ammoAccr = -90;
+                serverItem._props.ammoAccr = -100;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -20;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.75;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
@@ -3620,14 +3620,14 @@ class Ammo {
             ///40mm////
             //M576 (MP-APERS) grenade
             if (serverItem._id === "5ede475339ee016e8c534742") {
-                serverItem._props.PenetrationPower = 20;
+                serverItem._props.PenetrationPower = 30;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 14;
+                serverItem._props.Damage = 15;
                 serverItem._props.ProjectileCount = 20;
                 // serverItem._props.InitialSpeed = 269;
                 serverItem._props.RicochetChance = 0.1;
                 serverItem._props.BulletMassGram = 24;
-                serverItem._props.HeavyBleedingDelta = 0.5;
+                serverItem._props.HeavyBleedingDelta = 1;
                 serverItem._props.LightBleedingDelta = 1;
                 serverItem._props.ammoAccr = 90;
             }

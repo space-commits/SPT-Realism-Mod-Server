@@ -434,10 +434,6 @@ class Main {
     //     jsonHand.pushWeaponsToServer();
     //     jsonHand.pushModsToServer();
     // }
-    readUserFiles(jsonHand) {
-        const baseFolderPath = path.resolve(path.join(__dirname, '../'));
-        jsonHand.processUserJsonFiles(path.join(baseFolderPath, 'db/put_new_stuff_here'));
-    }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseServer = container.resolve("DatabaseServer");
@@ -483,7 +479,7 @@ class Main {
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
-        this.readUserFiles(jsonHand);
+        jsonHand.processUserJsonFiles();
         if (modConfig.realistic_ballistics == true) {
             itemCloning.createCustomPlates();
             ammo.loadAmmoStats();
