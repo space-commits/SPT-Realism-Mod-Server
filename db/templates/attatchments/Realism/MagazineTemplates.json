@@ -299,7 +299,7 @@
         "ItemID": "5cf8f3b0d7f00c00217872ef",
         "Name": "mag_saiga12_maxrounds_powermag_20_12x76_20",
         "ModType": "",
-        "ReloadSpeed": -25,
+        "ReloadSpeed": -18,
         "Ergonomics": -8,
         "MagMalfunctionChance": 2.5,
         "LoadUnloadModifier": 15,

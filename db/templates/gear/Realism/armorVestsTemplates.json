@@ -151,7 +151,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.94
+        "Comfort": 0.95
     },
     "5b44cd8b86f774503d30cba2": {
         "ItemID": "5b44cd8b86f774503d30cba2",
@@ -217,7 +217,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.055,
-        "Comfort": 0.5
+        "Comfort": 1.05
     },
     "5ca2151486f774244a3b8d30": {
         "ItemID": "5ca2151486f774244a3b8d30",
@@ -228,7 +228,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.5
+        "Comfort": 1.05
     },
     "5ca21c6986f77479963115a7": {
         "ItemID": "5ca21c6986f77479963115a7",
@@ -239,7 +239,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.055
+        "Comfort": 1.065
     },
     "5e4abb5086f77406975c9342": {
         "ItemID": "5e4abb5086f77406975c9342",

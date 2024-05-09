@@ -218,12 +218,14 @@ export class JsonHandler {
                     serverItem._props.RecoilReturnPathDampingHandRotation = fileItem.RecoilHandDamping;
                     serverItem._props.RecoilReturnPathOffsetHandRotation = fileItem.OffsetRotation;
                     serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
-                    serverItem._props.CanQueueSecondShot = true;
                     serverItem._props.CameraSnap = 1;
                     serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
 
-                    if (fileItem.weapFireType !== undefined) {
+                    if (fileItem?.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
+                    }
+                    if(fileItem?.WeapType !== undefined && fileItem.OperationType !== "manual" && fileItem.OperationType !== "tubefed"){
+                        serverItem._props.CanQueueSecondShot = true;
                     }
 
                     let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
@@ -239,7 +241,8 @@ export class JsonHandler {
         }
     }
 
-    public processUserJsonFiles(folderPath: string) {
+    public processUserJsonFiles() {
+        const folderPath = path.join(__dirname, '..', '..', 'db', 'put_new_stuff_here');
         fs.readdir(folderPath, (err, files) => {
             if (err) {
                 console.error(`Error reading directory ${folderPath}: ${err}`);
@@ -256,7 +259,7 @@ export class JsonHandler {
 
                     if (stats.isDirectory()) {
                         // Recursively call self for subfolders
-                        this.processUserJsonFiles(filePath);
+                        this.processUserJsonFiles();
                     } else if (file.endsWith('.json')) {
                         // Process JSON file
                         fs.readFile(filePath, 'utf8', (err, data) => {
@@ -267,14 +270,13 @@ export class JsonHandler {
                             try {
                                 const jsonData = JSON.parse(data);
                                 for (let i in jsonData) {
-                                    if (jsonData[i].WeapType) {
+                                    if (jsonData[i].WeapType != undefined) {
                                         this.weapPusherHelper(jsonData[i], this.itemDB());
                                     }
-                                    if (jsonData[i].ModType) {
+                                    if (jsonData[i].ModType  != undefined) {
                                         this.modPusherHelper(jsonData[i], this.itemDB());
                                     }
                                 }
-                                // console.log(jsonData);
                             } catch (err) {
                                 console.error(`Error parsing JSON in file ${filePath}: ${err}`);
                             }

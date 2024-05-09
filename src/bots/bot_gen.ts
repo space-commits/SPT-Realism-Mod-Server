@@ -101,37 +101,38 @@ export class BotGen extends BotGenerator {
 
     //get pmc's tier "randomly"
     private getPMCTier(utils: Utils): number {
-        const level = ProfileTracker.level;
+        const playerLevel = ProfileTracker.level;
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
-        if (RaidInfoTracker.mapName === "sandbox" && level <= 15) {
+        const gzTiers = [89, 10, 1, 0, 0];
+        if (RaidInfoTracker.mapName === "sandbox" && playerLevel <= 15) {
+            tier = utils.probabilityWeighter(tierArray, gzTiers);
+        }
+        else if (playerLevel <= 5) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
         }
-        else if (level <= 5) {
-            tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds1);
-        }
-        else if (level <= 10) {
+        else if (playerLevel <= 10) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds2);
         }
-        else if (level <= 15) {
+        else if (playerLevel <= 15) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds3);
         }
-        else if (level <= 20) {
+        else if (playerLevel <= 20) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds4);
         }
-        else if (level <= 25) {
+        else if (playerLevel <= 25) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds5);
         }
-        else if (level <= 30) {
+        else if (playerLevel <= 30) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds6);
         }
-        else if (level <= 35) {
+        else if (playerLevel <= 35) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds7);
         }
-        else if (level <= 40) {
+        else if (playerLevel <= 40) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds8);
         }
-        else if (level > 40) {
+        else if (playerLevel > 40) {
             tier = utils.probabilityWeighter(tierArray, modConfig.botTierOdds9);
         }
         return tier;
@@ -236,7 +237,6 @@ export class BotGen extends BotGenerator {
         if (isPMC) {
 
             pmcTier = this.botTierMapFactor(this.getPMCTier(utils), utils);
-
             const isUSEC = this.isBotUSEC(botRole);
             const changeDiffi = modConfig.pmc_difficulty == true && ModTracker.sainPresent == false;
 
@@ -1159,7 +1159,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         }
         const tierChecker = new BotTierTracker();
         const tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : botRole === "assault" ? tierChecker.getTier(botRole) : 4;
-        const armorPlateWeight: IArmorPlateWeights[] = armorPlateWeights.armorPlateWeighting;
+        const armorPlateWeight: IArmorPlateWeights[] = modConfig.realistic_ballistics == true ? armorPlateWeights.realisticWeights : armorPlateWeights.standardWeights;
 
         // Get the front/back/side weights based on bots level
         const plateSlotWeights = armorPlateWeight.find((x) =>
@@ -1285,6 +1285,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
                 settings.botEquipmentConfig.filterPlatesByLevel
                 && this.itemHelper.isRemovablePlateSlot(modSlotName.toLowerCase())
             ) {
+
                 const outcome = this.myFilterPlateModsForSlotByLevel(
                     settings,
                     modSlotName.toLowerCase(),
@@ -1293,6 +1294,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
                     botRole,
                     pmcTier
                 );
+  
                 if ([Result.UNKNOWN_FAILURE, Result.NO_DEFAULT_FILTER].includes(outcome.result)) {
                     this.logger.debug(
                         `Plate slot: ${modSlotName} selection for armor: ${parentTemplate._id} failed: ${Result[outcome.result]
@@ -1363,7 +1365,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         if (this.getAmmoContainers().includes(modSlot) || checkRequired.isRequired(itemSlot)) {
             return ModSpawn.SPAWN;
         }
- 
+
         const spawnMod = this.probabilityHelper.rollChance(modSpawnChances[modSlot]);
         if (!spawnMod && (slotRequired || botEquipConfig.weaponSlotIdsToMakeRequired?.includes(modSlot))) {
             // Mod is required but spawn chance roll failed, choose default mod spawn for slot

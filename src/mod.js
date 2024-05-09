@@ -97,13 +97,7 @@ class Main {
                 url: "/RealismMod/GetInfo",
                 action: (url, info, sessionId, output) => {
                     try {
-                        //I know this is awful
-                        const parsedPath = __dirname.split("\\");
-                        const folderName = parsedPath[parsedPath.length - 2];
-                        const modPath = path.resolve(this.modLoader.getModPath(`${folderName}`));
-                        const configFilePath = path.join(modPath, "config", "config.json");
-                        const fileContents = fs.readFileSync(configFilePath, "utf8");
-                        return jsonUtil.serialize(fileContents);
+                        return jsonUtil.serialize(modConfig);
                     }
                     catch (err) {
                         console.error("Failed to read config file", err);
@@ -440,10 +434,6 @@ class Main {
     //     jsonHand.pushWeaponsToServer();
     //     jsonHand.pushModsToServer();
     // }
-    readUserFiles(jsonHand) {
-        const baseFolderPath = path.resolve(path.join(__dirname, '../'));
-        jsonHand.processUserJsonFiles(path.join(baseFolderPath, 'db/put_new_stuff_here'));
-    }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseServer = container.resolve("DatabaseServer");
@@ -489,7 +479,7 @@ class Main {
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
-        this.readUserFiles(jsonHand);
+        jsonHand.processUserJsonFiles();
         if (modConfig.realistic_ballistics == true) {
             itemCloning.createCustomPlates();
             ammo.loadAmmoStats();

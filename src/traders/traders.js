@@ -99,6 +99,7 @@ class Traders {
             this.traderConf.fence.itemPriceMult = 1.8;
             this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
+            this.traderConf.fence.ammoMaxPenLimit = 70;
             //ammo
             this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 60;
             this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].max = 200;
@@ -162,7 +163,7 @@ class Traders {
             let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
             let itemID = file[item].ItemID;
             for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
+                if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР" && this.tables.traders[trader].base.nickname !== "Fence") {
                     for (let item in this.tables.traders[trader].assort.items) {
                         if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
                             let id = this.tables.traders[trader].assort.items[item]._id;
@@ -374,7 +375,7 @@ class RandomizeTraderAssort {
             this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
         }
         for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР") {
+            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР" && this.tables.traders[trader].base.nickname !== "Fence") {
                 let assortItems = this.tables.traders[trader].assort.items;
                 for (let item in assortItems) {
                     let itemId = assortItems[item]._id;
