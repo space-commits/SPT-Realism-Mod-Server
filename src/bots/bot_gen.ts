@@ -1159,7 +1159,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         }
         const tierChecker = new BotTierTracker();
         const tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : botRole === "assault" ? tierChecker.getTier(botRole) : 4;
-        const armorPlateWeight: IArmorPlateWeights[] = armorPlateWeights.armorPlateWeighting;
+        const armorPlateWeight: IArmorPlateWeights[] = modConfig.realistic_ballistics == true ? armorPlateWeights.realisticWeights : armorPlateWeights.standardWeights;
 
         // Get the front/back/side weights based on bots level
         const plateSlotWeights = armorPlateWeight.find((x) =>
@@ -1285,27 +1285,16 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
                 settings.botEquipmentConfig.filterPlatesByLevel
                 && this.itemHelper.isRemovablePlateSlot(modSlotName.toLowerCase())
             ) {
-                let outcome;
-                if (modConfig.realistic_ballistics == true) {
-                    outcome = this.myFilterPlateModsForSlotByLevel(
-                        settings,
-                        modSlotName.toLowerCase(),
-                        compatibleModsPool[modSlotName],
-                        parentTemplate,
-                        botRole,
-                        pmcTier
-                    );
-                }
-                else {
-                    outcome = this.filterPlateModsForSlotByLevel(
-                        settings,
-                        modSlotName.toLowerCase(),
-                        compatibleModsPool[modSlotName],
-                        parentTemplate,
-                    );
-                }
 
-
+                const outcome = this.myFilterPlateModsForSlotByLevel(
+                    settings,
+                    modSlotName.toLowerCase(),
+                    compatibleModsPool[modSlotName],
+                    parentTemplate,
+                    botRole,
+                    pmcTier
+                );
+  
                 if ([Result.UNKNOWN_FAILURE, Result.NO_DEFAULT_FILTER].includes(outcome.result)) {
                     this.logger.debug(
                         `Plate slot: ${modSlotName} selection for armor: ${parentTemplate._id} failed: ${Result[outcome.result]
