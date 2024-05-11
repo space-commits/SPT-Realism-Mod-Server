@@ -632,8 +632,8 @@ export class BotLoader {
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 30;
-                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+                this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
+                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 55;
             }
             if (RaidInfoTracker.mapType === "cqb") {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 80;
@@ -715,8 +715,8 @@ export class BotLoader {
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
-                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
+                this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
+                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 35;
             }
             if (RaidInfoTracker.mapType === "cqb") {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 100;
@@ -798,8 +798,8 @@ export class BotLoader {
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
             if (RaidInfoTracker.mapType === "urban") {
-                this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 75;
-                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
+                this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
+                this.botConf().equipment["pmc"].laserIsActiveChancePercent = 15;
             }
             if (RaidInfoTracker.mapType === "cqb") {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 100;

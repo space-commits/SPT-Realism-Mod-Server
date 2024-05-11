@@ -39,6 +39,14 @@
         "ReloadSpeedMulti": 1,
         "Comfort": 0.88
     },
+    "656f198fb27298d6fd005466": {
+        "ItemID": "656f198fb27298d6fd005466",
+        "Name": "item_equipment_backpack_dragon",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.9
+    },
     "5c0e774286f77468413cc5b2": {
         "ItemID": "5c0e774286f77468413cc5b2",
         "Name": "item_equipment_backpack_blackjack",
