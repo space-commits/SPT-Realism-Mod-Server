@@ -224,7 +224,7 @@ export class JsonHandler {
                     if (fileItem?.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
                     }
-                    if(fileItem?.WeapType !== undefined && fileItem.OperationType !== "manual" && fileItem.OperationType !== "tubefed"){
+                    if(fileItem?.WeapType !== undefined && fileItem.OperationType !== "manual" && fileItem.OperationType !== "tubefed-m"){
                         serverItem._props.CanQueueSecondShot = true;
                     }
 
