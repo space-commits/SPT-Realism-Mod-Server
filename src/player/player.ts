@@ -187,7 +187,7 @@ export class Player {
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
     
-            this.globalDB().Stamina.AimDrainRate = 0.35;
+            this.globalDB().Stamina.AimDrainRate = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
@@ -311,8 +311,8 @@ export class Player {
 
         if (this.modConfig.realistic_ballistics == true) {
 
-            this.globalDB().LegsOverdamage = 3.5; // 2
-            this.globalDB().HandsOverdamage = 3.9; //0.56
+            this.globalDB().LegsOverdamage = 3.1; // 2
+            this.globalDB().HandsOverdamage = 2.5; //0.56
             this.globalDB().StomachOverdamage = 3.1; //2.8
         }
 

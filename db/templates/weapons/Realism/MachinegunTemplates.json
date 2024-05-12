@@ -165,7 +165,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.86,
+        "RecoilDamping": 0.8,
         "RecoilHandDamping": 0.7,
         "WeaponAllowADS": false,
         "Weight": 2.458,
