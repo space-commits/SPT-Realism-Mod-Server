@@ -457,9 +457,9 @@
         "LoyaltyLevel": 2,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "62a5c333ec21e50cad3b5dc6": {
         "ItemID": "62a5c333ec21e50cad3b5dc6",
@@ -468,9 +468,9 @@
         "LoyaltyLevel": 2,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "62a5c41e8ec41a51b34739c3": {
         "ItemID": "62a5c41e8ec41a51b34739c3",
@@ -479,9 +479,9 @@
         "LoyaltyLevel": 2,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "62963c18dbc8ab5f0d382d0b": {
         "ItemID": "62963c18dbc8ab5f0d382d0b",
@@ -501,9 +501,9 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -10,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "5b432b6c5acfc4001a599bf0": {
         "ItemID": "5b432b6c5acfc4001a599bf0",
@@ -512,9 +512,9 @@
         "LoyaltyLevel": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "59e7715586f7742ee5789605": {
         "ItemID": "59e7715586f7742ee5789605",
@@ -523,9 +523,9 @@
         "LoyaltyLevel": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -30,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "5bd071d786f7747e707b93a3": {
         "ItemID": "5bd071d786f7747e707b93a3",
@@ -534,9 +534,9 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "5bd0716d86f774171822ef4b": {
         "ItemID": "5bd0716d86f774171822ef4b",
@@ -545,9 +545,9 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "5bd06f5d86f77427101ad47c": {
         "ItemID": "5bd06f5d86f77427101ad47c",
@@ -556,9 +556,9 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "62a09dd4621468534a797ac7": {
         "ItemID": "62a09dd4621468534a797ac7",
@@ -578,9 +578,9 @@
         "LoyaltyLevel": 2,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -30,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -6
     },
     "60363c0c92ec1c31037959f5": {
         "ItemID": "60363c0c92ec1c31037959f5",
@@ -589,9 +589,9 @@
         "LoyaltyLevel": 3,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -25,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -4
     },
     "62a09e08de7ac81993580532": {
         "ItemID": "62a09e08de7ac81993580532",
@@ -611,9 +611,9 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "635267ab3c89e2112001f826": {
         "ItemID": "635267ab3c89e2112001f826",
@@ -622,9 +622,9 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "6176a40f0b8c0312ac75a3d3": {
         "ItemID": "6176a40f0b8c0312ac75a3d3",
@@ -633,9 +633,9 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
+        "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": -10
     },
     "572b7f1624597762ae139822": {
         "ItemID": "572b7f1624597762ae139822",
