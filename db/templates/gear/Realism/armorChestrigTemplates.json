@@ -8,7 +8,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.92,
-        "Comfort": 0.82
+        "Comfort": 0.82,
+        "speedPenaltyPercent": -1.5,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1
     },
     "61bcc89aef0f505f0c6cd0fc": {
         "ItemID": "61bcc89aef0f505f0c6cd0fc",
@@ -19,7 +22,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
-        "Comfort": 0.77
+        "Comfort": 0.77,
+        "speedPenaltyPercent": -2,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1.5
     },
     "5c0e3eb886f7742015526062": {
         "ItemID": "5c0e3eb886f7742015526062",
@@ -30,7 +36,10 @@
         "CanSpall": true,
         "SpallReduction": 0.3,
         "ReloadSpeedMulti": 0.91,
-        "Comfort": 1.1
+        "Comfort": 1.1,
+        "speedPenaltyPercent": -6,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -5.5
     },
     "5ab8dced86f774646209ec87": {
         "ItemID": "5ab8dced86f774646209ec87",
@@ -41,7 +50,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.93,
-        "Comfort": 0.8
+        "Comfort": 0.8,
+        "speedPenaltyPercent": -1.25,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -0.75
     },
     "5c0e446786f7742013381639": {
         "ItemID": "5c0e446786f7742013381639",
@@ -52,7 +64,10 @@
         "CanSpall": true,
         "SpallReduction": 0.22,
         "ReloadSpeedMulti": 0.91,
-        "Comfort": 1.1
+        "Comfort": 1.1,
+        "speedPenaltyPercent": -6,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -5.5
     },
     "5d5d87f786f77427997cfaef": {
         "ItemID": "5d5d87f786f77427997cfaef",
@@ -63,7 +78,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.15,
-        "Comfort": 0.81
+        "Comfort": 0.81,
+        "speedPenaltyPercent": -1.15,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1.25
     },
     "5d5d646386f7742797261fd9": {
         "ItemID": "5d5d646386f7742797261fd9",
@@ -74,7 +92,10 @@
         "CanSpall": true,
         "SpallReduction": 0.33,
         "ReloadSpeedMulti": 0.91,
-        "Comfort": 1.14
+        "Comfort": 1.15,
+        "speedPenaltyPercent": -5,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -4
     },
     "544a5caa4bdc2d1a388b4568": {
         "ItemID": "544a5caa4bdc2d1a388b4568",
@@ -85,7 +106,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.16,
-        "Comfort": 0.87
+        "Comfort": 0.87,
+        "speedPenaltyPercent": -2.2,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1.75
     },
     "628d0618d1ba6e4fa07ce5a4": {
         "ItemID": "628d0618d1ba6e4fa07ce5a4",
@@ -96,7 +120,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.935,
-        "Comfort": 1
+        "Comfort": 1,
+        "speedPenaltyPercent": -2.5,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -2.5
     },
     "5e4ac41886f77406a511c9a8": {
         "ItemID": "5e4ac41886f77406a511c9a8",
@@ -107,7 +134,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
-        "Comfort": 0.79
+        "Comfort": 0.79,
+        "speedPenaltyPercent": -1,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1
     },
     "5c0e746986f7741453628fe5": {
         "ItemID": "5c0e746986f7741453628fe5",
@@ -118,7 +148,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.96,
-        "Comfort": 0.84
+        "Comfort": 0.84,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0
     },
     "628dc750b910320f4c27a732": {
         "ItemID": "628dc750b910320f4c27a732",
@@ -129,7 +162,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.13,
-        "Comfort": 0.9
+        "Comfort": 0.9,
+        "speedPenaltyPercent": -2.5,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1
     },
     "61bc85697113f767765c7fe7": {
         "ItemID": "61bc85697113f767765c7fe7",
@@ -140,7 +176,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
-        "Comfort": 0.76
+        "Comfort": 0.76,
+        "speedPenaltyPercent": -0.5,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -0.5
     },
     "609e860ebd219504d8507525": {
         "ItemID": "609e860ebd219504d8507525",
@@ -151,7 +190,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.97,
-        "Comfort": 0.81
+        "Comfort": 0.81,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0
     },
     "628b9784bcf6e2659e09b8a2": {
         "ItemID": "628b9784bcf6e2659e09b8a2",
@@ -162,7 +204,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.75
+        "Comfort": 0.75,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0
     },
     "628b9c7d45122232a872358f": {
         "ItemID": "628b9c7d45122232a872358f",
@@ -173,7 +218,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.13,
-        "Comfort": 0.76
+        "Comfort": 0.76,
+        "speedPenaltyPercent": -0.75,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0 
     },
     "5b44cad286f77402a54ae7e5": {
         "ItemID": "5b44cad286f77402a54ae7e5",
@@ -184,7 +232,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.16,
-        "Comfort": 0.77
+        "Comfort": 0.77,
+        "speedPenaltyPercent": -1.25,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1
     },
     "60a3c70cde5f453f634816a3": {
         "ItemID": "60a3c70cde5f453f634816a3",
@@ -195,7 +246,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.07,
-        "Comfort": 0.86
+        "Comfort": 0.86,
+        "speedPenaltyPercent": -2.15,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -2.5
     },
     "60a3c68c37ea821725773ef5": {
         "ItemID": "60a3c68c37ea821725773ef5",
@@ -206,7 +260,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.09,
-        "Comfort": 0.86
+        "Comfort": 0.86,
+        "speedPenaltyPercent": -2,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -2.25
     },
     "628cd624459354321c4b7fa2": {
         "ItemID": "628cd624459354321c4b7fa2",
@@ -217,7 +274,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.08,
-        "Comfort": 0.74
+        "Comfort": 0.74,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0
     },
     "639343fce101f4caa40a4ef3": {
         "ItemID": "639343fce101f4caa40a4ef3",
@@ -228,7 +288,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.14,
-        "Comfort": 0.78
+        "Comfort": 0.78,
+        "speedPenaltyPercent": -0.25,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -0.5
     },
     "64a536392d2c4e6e970f4121": {
         "ItemID": "64a536392d2c4e6e970f4121",
@@ -239,7 +302,10 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.1,
-        "Comfort": 0.79
+        "Comfort": 0.79,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0
     },
     "64a5366719bab53bd203bf33": {
         "ItemID": "64a5366719bab53bd203bf33",
@@ -250,6 +316,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.81
+        "Comfort": 0.81,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0
     }
 }

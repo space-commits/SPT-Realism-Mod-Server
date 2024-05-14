@@ -132,6 +132,9 @@ class JsonHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
+            serverItem._props.speedPenaltyPercent = fileItem.speedPenaltyPercent;
+            serverItem._props.mousePenalty = fileItem.mousePenalty;
+            serverItem._props.weaponErgonomicPenalty = fileItem.weaponErgonomicPenalty;
             let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
                 fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.HasExtraArmor?.toString() || "false"];

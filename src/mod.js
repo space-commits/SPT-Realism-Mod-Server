@@ -500,18 +500,18 @@ class Main {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         jsonHand.processUserJsonFiles();
-        if (modConfig.realistic_ballistics == true) {
-            itemCloning.createCustomPlates();
-            ammo.loadAmmoStats();
-            armor.loadArmor();
-            bots.setBotHealth();
-        }
         if (modConfig.recoil_attachment_overhaul) {
+            itemCloning.createCustomPlates();
             jsonHand.pushModsToServer();
             jsonHand.pushWeaponsToServer();
         }
         jsonHand.pushGearToServer();
         descGen.descriptionGen();
+        if (modConfig.realistic_ballistics == true) {
+            ammo.loadAmmoStats();
+            armor.loadArmor();
+            bots.setBotHealth();
+        }
         if (modConfig.headgear_conflicts == true) {
             gear.loadGearConflicts();
         }
