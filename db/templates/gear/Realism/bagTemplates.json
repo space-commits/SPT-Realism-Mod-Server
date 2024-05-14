@@ -13,7 +13,7 @@
         "AllowADS": true,
         "LoyaltyLevel": 2,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.98
+        "Comfort": 1.04
     },
     "5f5e45cc5021ce62144be7aa": {
         "ItemID": "5f5e45cc5021ce62144be7aa",
@@ -30,6 +30,14 @@
         "LoyaltyLevel": 2,
         "ReloadSpeedMulti": 1,
         "Comfort": 0.79
+    },
+    "656ddcf0f02d7bcea90bf395": {
+        "ItemID": "656ddcf0f02d7bcea90bf395",
+        "Name": "item_equipment_backpack_tehinkom",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.025
     },
     "618cfae774bb2d036a049e7c": {
         "ItemID": "618cfae774bb2d036a049e7c",

@@ -69,7 +69,7 @@ export class GenBotLvl extends BotLevelGenerator {
         let level = 1;
 
         if (bot.Info.Settings.Role === "sptBear" || bot.Info.Settings.Role === "sptUsec") {
-            if (RaidInfoTracker.mapName === "sandbox" && ProfileTracker.level <= 15) {
+            if (RaidInfoTracker.mapName === "sandbox" && ProfileTracker.averagePlayerLevel <= 15) {
                 level = this.randomUtil.getInt(1, 15);
             }
             else {
@@ -101,7 +101,7 @@ export class BotGen extends BotGenerator {
 
     //get pmc's tier "randomly"
     private getPMCTier(utils: Utils): number {
-        const playerLevel = ProfileTracker.level;
+        const playerLevel = ProfileTracker.averagePlayerLevel;
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
         const gzTiers = [89, 10, 1, 0, 0];
@@ -207,7 +207,6 @@ export class BotGen extends BotGenerator {
 
         return bot;
     }
-
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase {
 
         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
@@ -232,7 +231,7 @@ export class BotGen extends BotGenerator {
 
         const botRole = botGenerationDetails.role.toLowerCase();
         const isPMC = this.botHelper.isBotPmc(botRole);
-
+        
         let pmcTier = 1;
         if (isPMC) {
 
@@ -1294,7 +1293,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
                     botRole,
                     pmcTier
                 );
-  
+
                 if ([Result.UNKNOWN_FAILURE, Result.NO_DEFAULT_FILTER].includes(outcome.result)) {
                     this.logger.debug(
                         `Plate slot: ${modSlotName} selection for armor: ${parentTemplate._id} failed: ${Result[outcome.result]

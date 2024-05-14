@@ -63,6 +63,9 @@ import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
 import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
 import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentService";
 import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
+import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
+import { IItemConfig } from "@spt-aki/models/spt/config/IItemConfig";
+import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
 
 import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
@@ -89,10 +92,6 @@ import { Armor } from "./ballistics/armor";
 
 import * as path from 'path';
 import * as fs from 'fs';
-import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
-import { IItemConfig } from "@spt-aki/models/spt/config/IItemConfig";
-import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
-
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -239,11 +238,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID)
 
-                        let level = 1;
-                        if (pmcData?.Info?.Level !== undefined) {
-                            level = pmcData.Info.Level;
-                        }
-                        ProfileTracker.level = level;
+                        this.checkPlayerLevel(profileData, pmcData, logger, true);
 
                         try {
 
@@ -295,10 +290,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             }
 
                             if (modConfig.tiered_flea == true) {
-                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
+                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, ProfileTracker.averagePlayerLevel);
                             }
                             if (modConfig.boss_spawns == true) {
-                                maps.setBossSpawnChance(level);
+                                maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
                             }
 
                             if (modConfig.logEverything == true) {
@@ -313,7 +308,33 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     }
                 }
             ],
-            "RealismMod"
+            "aki"
+        );
+
+        staticRouterModService.registerStaticRouter(
+            "runOnGameLogout",
+            [
+                {
+                    url: "/client/game/logout",
+                    action: (url, info, sessionID, output) => {
+                        const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+                        const profileData = profileHelper.getFullProfile(sessionID)
+
+                        let playerCount = 0;
+                        let cumulativePlayerLevel = 0;
+                        delete ProfileTracker.playerRecord[profileData.info.id];
+                        Object.values(ProfileTracker.playerRecord).forEach(value => {
+                            cumulativePlayerLevel += value;
+                            playerCount += 1;
+                        });
+
+                        ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
+                        logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
+                        return output;
+                    }
+                }
+            ],
+            "aki"
         );
 
         staticRouterModService.registerStaticRouter(
@@ -333,7 +354,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
 
-
                         try {
 
                             this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
@@ -352,7 +372,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     }
                 }
             ],
-            "RealismMod"
+            "aki"
         );
 
         staticRouterModService.registerStaticRouter(
@@ -374,6 +394,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const utils = new Utils(postLoadTables, arrays);
                             const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                             const pmcData = profileHelper.getPmcProfile(sessionID);
+                            const profileData = profileHelper.getFullProfile(sessionID);
 
                             const time = weatherController.generate().time; //apparently regenerates weather?
                             // const time = weatherController.getCurrentInRaidTime; //better way?
@@ -381,6 +402,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                             let realTime = "";
                             let mapType = "";
+
+                            //update global player level
+                            this.checkPlayerLevel(profileData, pmcData, logger);
 
                             if (matchInfo.timeVariant === "PAST") {
                                 realTime = getTime(time, 12);
@@ -434,7 +458,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                 pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
 
-                            logger.warning("Player Level = " + ProfileTracker.level);
+                            logger.warning("Avg. Player Level = " + ProfileTracker.averagePlayerLevel);
                             logger.warning("Map Name = " + matchInfo.location);
                             logger.warning("Map Type  = " + mapType);
                             logger.warning("Time " + time);
@@ -449,7 +473,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     }
                 }
             ],
-            "RealismMod"
+            "aki"
         );
 
         staticRouterModService.registerStaticRouter(
@@ -469,17 +493,20 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
+                        const profileData = profileHelper.getFullProfile(sessionID)
 
-                        let level = 1;
+                        const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+                        const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
+                        logger.warning("============== " + matchInfo.keyId);
 
-                        if (pmcData?.Info?.Level !== undefined) {
-                            level = pmcData.Info.Level;
-                        }
+             
+                        //update global player level
+                        this.checkPlayerLevel(profileData, pmcData, logger);
 
                         try {
 
                             if (modConfig.tiered_flea == true) {
-                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
+                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, ProfileTracker.averagePlayerLevel);
                             }
 
                             player.correctNegativeHP(pmcData);
@@ -501,7 +528,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                     }
                 }
             ],
-            "pmc"
+            "aki"
         );
     }
 
@@ -654,7 +681,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.loadBots();
         }
 
-        if (modConfig.increased_bot_cap == true && ModTracker.swagPresent == false) {
+
+        if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
+            logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
+            bots.testBotCap();
+        }
+        else if (modConfig.increased_bot_cap == true && ModTracker.swagPresent == false) {
             bots.increaseBotCap();
         }
         else if (modConfig.spawn_waves == true && ModTracker.swagPresent == false) {
@@ -773,6 +805,24 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
         if (EventTracker.isHalloween == true) {
             logger.warning("Happy Halloween!");
+        }
+    }
+
+    private checkPlayerLevel(profileData: IAkiProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
+        let level = 1;
+        if (pmcData?.Info?.Level !== undefined) {
+            level = pmcData.Info.Level;
+        }
+        let playerCount = 0;
+        let cumulativePlayerLevel = 0;
+        ProfileTracker.playerRecord[profileData.info.id] = level;
+        Object.values(ProfileTracker.playerRecord).forEach(value => {
+            cumulativePlayerLevel += value;
+            playerCount += 1;
+        });
+        ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
+        if (shouldLog) {
+            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
         }
     }
 

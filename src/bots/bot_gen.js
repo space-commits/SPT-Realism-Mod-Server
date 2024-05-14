@@ -30,7 +30,7 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
         let exp = 0;
         let level = 1;
         if (bot.Info.Settings.Role === "sptBear" || bot.Info.Settings.Role === "sptUsec") {
-            if (utils_1.RaidInfoTracker.mapName === "sandbox" && utils_1.ProfileTracker.level <= 15) {
+            if (utils_1.RaidInfoTracker.mapName === "sandbox" && utils_1.ProfileTracker.averagePlayerLevel <= 15) {
                 level = this.randomUtil.getInt(1, 15);
             }
             else {
@@ -57,7 +57,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
     }
     //get pmc's tier "randomly"
     getPMCTier(utils) {
-        const playerLevel = utils_1.ProfileTracker.level;
+        const playerLevel = utils_1.ProfileTracker.averagePlayerLevel;
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
         const gzTiers = [89, 10, 1, 0, 0];

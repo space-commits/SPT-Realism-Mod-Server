@@ -146,18 +146,19 @@ export class ModTracker{
 
 
 export class ProfileTracker{
-    static level: number = 1;
+    static averagePlayerLevel: number = 1;
+    static playerRecord: Record<string, number> = {};
 }
 
 export class ConfigChecker {
     static dllIsPresent: boolean = false;
 }
 
-
 export class RaidInfoTracker {
     static TOD: string = "";
     static mapType: string = "";
     static mapName: string = "";
+    // static activeRaids: RaidInfo[] = [];
 }
 
 export class BotTierTracker {

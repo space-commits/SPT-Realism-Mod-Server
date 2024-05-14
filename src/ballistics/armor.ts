@@ -112,7 +112,7 @@ export class Armor {
                     break;
                 }
                 if (plateCollidor.includes("back")) {
-                    serverItem._props.armorColliders.push("RibcageUp");
+                    serverItem._props.armorColliders.push("SpineTop");
                     break;
                 }
                 if (plateCollidor.includes("left")) {
@@ -237,7 +237,7 @@ export class Armor {
             this.modifyAramid(serverItem, 4, 100, 0.45);
         }
         //Strandhogg
-        if (serverItem._id === "544a5caa4bdc2d1a388b4568") {
+        if (serverItem._id === "61bcc89aef0f505f0c6cd0fc") {
             this.modifyAramid(serverItem, 4, 95, 0.3);
         }
         //AVS
@@ -432,6 +432,9 @@ export class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.08
             serverItem._props.ArmorMaterial = 'Titan';
+            serverItem._props.speedPenaltyPercent = -6;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Titanium NIJ III+ (BSG's bullshit)
         if (serverItem._id === "656fa99800d62bcd2e024088") {
@@ -440,6 +443,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.08
             serverItem._props.ArmorMaterial = 'Titan';
+            serverItem._props.speedPenaltyPercent = -6;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Steel NIJ III
         if (serverItem._id === "656f9d5900d62bcd2e02407c" || serverItem._id === "656fa76500d62bcd2e024080") {
@@ -448,6 +454,9 @@ export class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.025;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -6;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Steel NIJ III+
         if (serverItem._id === "656fa8d700d62bcd2e024084" || serverItem._id === "656fa0fb498d1b7e3e071d9c") {
@@ -456,8 +465,10 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.015
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -6;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
-
 
         //UHMWPE NIJ III
         if (serverItem._id === "656fae5f7c2d57afe200c0d7" || serverItem._id === "656fac30c6baea13cd07e10c") {
@@ -466,6 +477,9 @@ export class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.16;
             serverItem._props.ArmorMaterial = 'UHMWPE';
+            serverItem._props.speedPenaltyPercent = -8;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -11;
         }
         //UHMWPE NIJ III+
         if (serverItem._id === "656faf0ca0dce000a2020f77" || serverItem._id === "656fad8c498d1b7e3e071da0") {
@@ -474,6 +488,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.16;
             serverItem._props.ArmorMaterial = 'UHMWPE';
+            serverItem._props.speedPenaltyPercent = -9;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -12;
         }
         //UHMWPE NIJ IV (BSG bullshit, not sure if this is even a thing IRL)
         if (serverItem._id === "656fafe3498d1b7e3e071da4") {
@@ -482,6 +499,9 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.16;
             serverItem._props.ArmorMaterial = 'UHMWPE';
+            serverItem._props.speedPenaltyPercent = -10;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -13;
         }
 
         //Combined NIJ III
@@ -492,6 +512,9 @@ export class Armor {
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle"
+            serverItem._props.speedPenaltyPercent = -10;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
         //Combined NIJ III+
         if (serverItem._id === "656fa61e94b480b8a500c0e8") {
@@ -501,6 +524,9 @@ export class Armor {
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle"
+            serverItem._props.speedPenaltyPercent = -10;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
         //Combined NIJ IV
         if (serverItem._id === "656fa53d94b480b8a500c0e4") {
@@ -510,6 +536,9 @@ export class Armor {
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle"
+            serverItem._props.speedPenaltyPercent = -10;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
 
         //Ceramic NIJ III
@@ -519,6 +548,9 @@ export class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -12;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
         //Ceramic NIJ III+
         if (serverItem._id === "656fb0bd7c2d57afe200c0dc") {
@@ -527,6 +559,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -12;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
         //Ceramic NIJ IV
         if (serverItem._id === "") {
@@ -535,6 +570,9 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -12;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
 
         //SAPI
@@ -544,6 +582,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -10;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
         //SSAPI Side
         if (serverItem._id === "6557458f83942d705f0c4962") {
@@ -552,6 +593,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -2;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
 
         //ESAPI
@@ -561,6 +605,9 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -10;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
         //ESBI Side
         if (serverItem._id === "64afdb577bb3bfe8fe03fd1d") {
@@ -569,8 +616,10 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -2;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
-
         //XSAPI
         if (serverItem._id === "xsapi_chest") {
             serverItem._props.Durability = 160;
@@ -578,6 +627,9 @@ export class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -10;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
 
         //Osprey MK4A Plate
@@ -587,6 +639,9 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.1;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -8;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -8;
         }
 
         //6B12 (used by 6B23-1, should be class 8 with taking aramid into account)
@@ -596,6 +651,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -20;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -10;
         }
 
         //6B13 (back)
@@ -605,6 +663,9 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -7;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
 
         //6B33 (used by 6B13)
@@ -614,6 +675,9 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -12;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -10;
         }
 
         //6B23-2 (back)
@@ -623,6 +687,9 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -6;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
 
         //Granit 4 Front
@@ -632,6 +699,9 @@ export class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -12;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -10;
         }
         //Granit 4 Back
         if (serverItem._id === "656efaf54772930db4031ff5") {
@@ -640,6 +710,9 @@ export class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -7;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0
         }
 
         //Granit BR4
@@ -649,6 +722,9 @@ export class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -9;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -7;
         }
 
         //Granit 4RS Front
@@ -658,6 +734,9 @@ export class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -12;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -10;
         }
         //Granit 4RS Back
         if (serverItem._id === "654a4a964b446df1ad03f192") {
@@ -666,6 +745,9 @@ export class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.15;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -7;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0
         }
 
         //Granit BR5
@@ -675,6 +757,9 @@ export class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -9;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -7;
         }
         //Granit Side
         if (serverItem._id === "64afd81707e2cf40e903a316") {
@@ -683,6 +768,9 @@ export class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
 
         //korund VM Front
@@ -692,6 +780,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -20;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -10;
         }
         //korund VM Back
         if (serverItem._id === "657b2797c3dbcb01d60c35ea") {
@@ -700,6 +791,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -6;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //korund VM Side
         if (serverItem._id === "654a4f8bc721968a4404ef18") {
@@ -708,6 +802,9 @@ export class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = 3.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
 
         //korund VM-K Front
@@ -717,6 +814,9 @@ export class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -20;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -10;
         }
         //korund VM-K Back
         if (serverItem._id === "657b28d25f444d6dff0c6c77") {
@@ -725,6 +825,9 @@ export class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.13;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -6;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0
         }
 
         //Zhuk-3 Front
@@ -734,6 +837,9 @@ export class Armor {
             serverItem._props.armorClass = 6;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -12;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -10;
         }
     }
 
@@ -1421,7 +1527,7 @@ export class Armor {
             serverItem._props.BluntThroughput = 0.26 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 1.305;
+            serverItem._props.Weight = 0.95;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 60 * duraModifier, 3 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //Ratnik-BSh Covered 6B47
@@ -1435,7 +1541,7 @@ export class Armor {
             serverItem._props.BluntThroughput = 0.26 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 1.3;
+            serverItem._props.Weight = 0.96;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 60 * duraModifier, 3 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //// Class 4 ////

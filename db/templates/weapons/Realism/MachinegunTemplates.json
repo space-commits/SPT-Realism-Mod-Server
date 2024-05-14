@@ -170,7 +170,7 @@
         "WeaponAllowADS": false,
         "Weight": 2.458,
         "DurabilityBurnRatio": 0.1,
-        "AutoROF": 650,
+        "AutoROF": 700,
         "SemiROF": 370,
         "LoyaltyLevel": 4,
         "BaseReloadSpeedMulti": 1,

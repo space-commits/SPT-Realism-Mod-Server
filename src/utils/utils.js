@@ -146,7 +146,8 @@ class ModTracker {
 }
 exports.ModTracker = ModTracker;
 class ProfileTracker {
-    static level = 1;
+    static averagePlayerLevel = 1;
+    static playerRecord = {};
 }
 exports.ProfileTracker = ProfileTracker;
 class ConfigChecker {

@@ -109,20 +109,18 @@ class JsonHandler {
         this.callHelper(GrenadeLauncherTemplates, this.itemDB(), this.weapPusherHelper);
     }
     pushGearToServer() {
-        if (modConfig.realistic_ballistics == true) {
-            this.callHelper(armorChestrigTemplates, this.itemDB(), this.gearPusherHelper);
-            this.callHelper(armorComponentsTemplates, this.itemDB(), this.gearPusherHelper);
-            this.callHelper(armorPlateTemplates, this.itemDB(), this.gearPusherHelper);
-            this.callHelper(helmetTemplates, this.itemDB(), this.gearPusherHelper);
-            this.callHelper(armorVestsTemplates, this.itemDB(), this.gearPusherHelper);
-            this.callHelper(armorMasksTemplates, this.itemDB(), this.gearPusherHelper);
-            this.callHelper(chestrigTemplates, this.itemDB(), this.gearPusherHelper);
-            this.callHelper(cosmeticsTemplates, this.itemDB(), this.gearPusherHelper);
-        }
+        this.callHelper(armorChestrigTemplates, this.itemDB(), this.gearPusherHelper);
+        this.callHelper(armorComponentsTemplates, this.itemDB(), this.gearPusherHelper);
+        this.callHelper(armorPlateTemplates, this.itemDB(), this.gearPusherHelper);
+        this.callHelper(helmetTemplates, this.itemDB(), this.gearPusherHelper);
+        this.callHelper(armorVestsTemplates, this.itemDB(), this.gearPusherHelper);
+        this.callHelper(armorMasksTemplates, this.itemDB(), this.gearPusherHelper);
+        this.callHelper(chestrigTemplates, this.itemDB(), this.gearPusherHelper);
+        this.callHelper(cosmeticsTemplates, this.itemDB(), this.gearPusherHelper);
+        this.callHelper(bagTemplates, this.itemDB(), this.gearPusherHelper);
         if (modConfig.headset_changes == true) {
             this.callHelper(headsetTemplates, this.itemDB(), this.gearPusherHelper);
         }
-        this.callHelper(bagTemplates, this.itemDB(), this.gearPusherHelper);
     }
     callHelper(template, serverTemplates, funPusherHelper) {
         for (let i in template) {
@@ -223,7 +221,7 @@ class JsonHandler {
                     if (fileItem?.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
                     }
-                    if (fileItem?.WeapType !== undefined && fileItem.OperationType !== "manual" && fileItem.OperationType !== "tubefed") {
+                    if (fileItem?.WeapType !== undefined && fileItem.OperationType !== "manual" && fileItem.OperationType !== "tubefed-m") {
                         serverItem._props.CanQueueSecondShot = true;
                     }
                     let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
@@ -236,29 +234,28 @@ class JsonHandler {
             }
         }
     }
-    processUserJsonFiles() {
-        const folderPath = path.join(__dirname, '..', '..', 'db', 'put_new_stuff_here');
+    processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'put_new_stuff_here')) {
         fs.readdir(folderPath, (err, files) => {
             if (err) {
-                console.error(`Error reading directory ${folderPath}: ${err}`);
+                this.logger.error(`Error reading directory ${folderPath}: ${err}`);
                 return;
             }
             files.forEach((file) => {
                 const filePath = path.join(folderPath, file);
                 fs.stat(filePath, (err, stats) => {
                     if (err) {
-                        console.error(`Error getting file stats for ${filePath}: ${err}`);
+                        this.logger.error(`Error getting file stats for ${filePath}: ${err}`);
                         return;
                     }
                     if (stats.isDirectory()) {
                         // Recursively call self for subfolders
-                        this.processUserJsonFiles();
+                        this.processUserJsonFiles(filePath);
                     }
                     else if (file.endsWith('.json')) {
                         // Process JSON file
                         fs.readFile(filePath, 'utf8', (err, data) => {
                             if (err) {
-                                console.error(`Error reading file ${filePath}: ${err}`);
+                                this.logger.error(`Error reading file ${filePath}: ${err}`);
                                 return;
                             }
                             try {
@@ -266,14 +263,16 @@ class JsonHandler {
                                 for (let i in jsonData) {
                                     if (jsonData[i].WeapType != undefined) {
                                         this.weapPusherHelper(jsonData[i], this.itemDB());
+                                        this.logger.warning("found weapon");
                                     }
                                     if (jsonData[i].ModType != undefined) {
                                         this.modPusherHelper(jsonData[i], this.itemDB());
+                                        this.logger.warning("found mod");
                                     }
                                 }
                             }
                             catch (err) {
-                                console.error(`Error parsing JSON in file ${filePath}: ${err}`);
+                                this.logger.error(`Error parsing JSON in file ${filePath}: ${err}`);
                             }
                         });
                     }
