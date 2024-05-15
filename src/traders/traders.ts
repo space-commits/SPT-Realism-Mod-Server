@@ -675,16 +675,9 @@ export class RandomizeTraderAssort {
                 item.upd.StackObjectsCount = 0;
             }
             else {
-                item.upd.StackObjectsCount = Math.round(this.utils.pickRandNumInRange(min * stockModifier, max * stockModifier));
+                let modifiedStackCount =  Math.round(this.utils.pickRandNumInRange(min * stockModifier, max * stockModifier));
+                item.upd.StackObjectsCount = Math.max(modifiedStackCount, max * 1.2);
             }
-
-            this.logger.warning(`==========`);
-            this.logger.warning(`Item ` + this.itemDB[item._tpl]._name);
-            this.logger.warning(`stockModifier ` + stockModifier);
-            this.logger.warning(`oddsModifier ` + oddsModifier);
-            this.logger.warning(`stasck amount ` + item.upd.StackObjectsCount);
-            this.logger.warning(`==========`);
-
         }
     }
 
