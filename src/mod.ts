@@ -101,7 +101,7 @@ const foodBuffs = require("../db/items/buffs_food.json");
 const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
 
-let validatedClient = false;
+let adjustedTradersOnStart = false;
 
 export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
@@ -236,9 +236,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
-                        const profileData = profileHelper.getFullProfile(sessionID)
+                        const profileData = profileHelper.getFullProfile(sessionID);
 
-                        this.checkPlayerLevel(profileData, pmcData, logger, true);
+                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
 
                         try {
 
@@ -279,10 +279,14 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             }
                             this.checkForEvents(logger, seasonalEventsService);
 
-                            if (validatedClient == false) {
-                                randomizeTraderAssort.adjustTraderStockAtServerStart();
+                            if (adjustedTradersOnStart == false) {
+                                let pmcData: IPmcData[] = [];
+                                ProfileTracker.profileIds.forEach(element => {
+                                    pmcData.push(profileHelper.getPmcProfile(element));
+                                });
+                                randomizeTraderAssort.adjustTraderStockAtServerStart(pmcData);
                             }
-                            validatedClient = true;
+                            adjustedTradersOnStart = true;
 
                             const traders: string[] = (ragfairServer as any).getUpdateableTraders();
                             for (let traderID in traders) {
@@ -404,7 +408,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             let mapType = "";
 
                             //update global player level
-                            this.checkPlayerLevel(profileData, pmcData, logger);
+                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
 
                             if (matchInfo.timeVariant === "PAST") {
                                 realTime = getTime(time, 12);
@@ -501,7 +505,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
              
                         //update global player level
-                        this.checkPlayerLevel(profileData, pmcData, logger);
+                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
 
                         try {
 
@@ -809,7 +813,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    private checkPlayerLevel(profileData: IAkiProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
+    private checkPlayerLevel(sessionID: string, profileData: IAkiProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
         let level = 1;
         if (pmcData?.Info?.Level !== undefined) {
             level = pmcData.Info.Level;
@@ -822,6 +826,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             playerCount += 1;
         });
         ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
+        ProfileTracker.profileIds.push(sessionID);
+
         if (shouldLog) {
             logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
         }

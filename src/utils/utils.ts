@@ -146,6 +146,7 @@ export class ModTracker{
 
 
 export class ProfileTracker{
+    static profileIds: string[] = [];
     static averagePlayerLevel: number = 1;
     static playerRecord: Record<string, number> = {};
 }

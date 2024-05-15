@@ -60,7 +60,7 @@ const foodItems = require("../db/items/food_items.json");
 const foodBuffs = require("../db/items/buffs_food.json");
 const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
-let validatedClient = false;
+let adjustedTradersOnStart = false;
 class Main {
     modLoader;
     preAkiLoad(container) {
@@ -174,7 +174,7 @@ class Main {
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
-                    this.checkPlayerLevel(profileData, pmcData, logger, true);
+                    this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
                     try {
                         if (modConfig.backup_profiles == true) {
                             this.backupProfile(profileData, logger);
@@ -205,10 +205,14 @@ class Main {
                             }
                         }
                         this.checkForEvents(logger, seasonalEventsService);
-                        if (validatedClient == false) {
-                            randomizeTraderAssort.adjustTraderStockAtServerStart();
+                        if (adjustedTradersOnStart == false) {
+                            let pmcData = [];
+                            utils_1.ProfileTracker.profileIds.forEach(element => {
+                                pmcData.push(profileHelper.getPmcProfile(element));
+                            });
+                            randomizeTraderAssort.adjustTraderStockAtServerStart(pmcData);
                         }
-                        validatedClient = true;
+                        adjustedTradersOnStart = true;
                         const traders = ragfairServer.getUpdateableTraders();
                         for (let traderID in traders) {
                             ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
@@ -302,7 +306,7 @@ class Main {
                         let realTime = "";
                         let mapType = "";
                         //update global player level
-                        this.checkPlayerLevel(profileData, pmcData, logger);
+                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                         if (matchInfo.timeVariant === "PAST") {
                             realTime = getTime(time, 12);
                         }
@@ -382,7 +386,7 @@ class Main {
                     const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                     logger.warning("============== " + matchInfo.keyId);
                     //update global player level
-                    this.checkPlayerLevel(profileData, pmcData, logger);
+                    this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                     try {
                         if (modConfig.tiered_flea == true) {
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, utils_1.ProfileTracker.averagePlayerLevel);
@@ -628,7 +632,7 @@ class Main {
             logger.warning("Happy Halloween!");
         }
     }
-    checkPlayerLevel(profileData, pmcData, logger, shouldLog = false) {
+    checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
         let level = 1;
         if (pmcData?.Info?.Level !== undefined) {
             level = pmcData.Info.Level;
@@ -641,6 +645,7 @@ class Main {
             playerCount += 1;
         });
         utils_1.ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
+        utils_1.ProfileTracker.profileIds.push(sessionID);
         if (shouldLog) {
             logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
         }

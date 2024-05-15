@@ -370,19 +370,29 @@ class RandomizeTraderAssort {
     itemDB = this.tables.templates.items;
     arrays = new arrays_1.Arrays(this.tables);
     utils = new utils_1.Utils(this.tables, this.arrays);
-    adjustTraderStockAtServerStart() {
+    getAverageLL(pmcData, traderId) {
+        let totalLL = 0;
+        let playerCount = 0;
+        pmcData.forEach(element => {
+            playerCount++;
+            totalLL += element.TradersInfo[traderId].loyaltyLevel;
+        });
+        return totalLL / playerCount;
+    }
+    adjustTraderStockAtServerStart(pmcData) {
         if (seasonalevents_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
         }
         for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР" && this.tables.traders[trader].base.nickname !== "Fence") {
+            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР" && this.tables.traders[trader].base.nickname.toLocaleLowerCase() !== "fence") {
                 let assortItems = this.tables.traders[trader].assort.items;
+                let ll = this.getAverageLL(pmcData, trader);
                 for (let item in assortItems) {
                     let itemId = assortItems[item]._id;
                     let itemTemplId = assortItems[item]._tpl;
                     if (modConfig.randomize_trader_stock == true) {
                         if (assortItems[item].upd?.StackObjectsCount !== undefined) {
-                            this.randomizeStockHelper(assortItems[item]);
+                            this.randomizeStockHelper(assortItems[item], ll);
                         }
                         if (assortItems[item].upd?.UnlimitedCount !== undefined) {
                             assortItems[item].upd.UnlimitedCount = false;
@@ -408,125 +418,174 @@ class RandomizeTraderAssort {
             }
         }
     }
-    randomizeStockHelper(item) {
+    getLLStackableBonus(ll) {
+        switch (ll) {
+            case 1:
+                return 1;
+            case 2:
+                return 1.25;
+            case 3:
+                return 1.5;
+            case 4:
+                return 1.75;
+        }
+        return 1;
+    }
+    getLLOutOfStockBonus(ll) {
+        switch (ll) {
+            case 1:
+            case 2:
+                return 0;
+            case 3:
+                return 1;
+            case 4:
+                return 2;
+        }
+        return 0;
+    }
+    randomizeStockHelper(item, averageLL) {
         let itemParent = this.itemDB[item._tpl]?._parent;
         if (!itemParent) {
             this.logger.warning(`Realism Mod: Unable to randomize stock for: ${item._tpl}, has no _parent / item does not exist in db`);
             return;
         }
+        const llStockFactor = Math.max(averageLL - 1, 1);
+        const llStackableFactor = this.getLLStackableBonus(averageLL);
+        const llOutOfStockFactor = this.getLLOutOfStockBonus(averageLL);
         //ammo
-        this.randomizeAmmoStock(itemParent, item);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
+        this.randomizeAmmoStock(itemParent, item, llStackableFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
         //weapons
         for (let id in this.arrays.weaponParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+            this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
         //weapon mods
         for (let id in this.arrays.modParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+            this.randomizeStock(itemParent, this.arrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
         //gear
         for (let id in this.arrays.gearParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+            this.randomizeStock(itemParent, this.arrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
         //barter items
         for (let id in this.arrays.barterParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
+            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
         //keys 
         for (let id in this.arrays.keyParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+            this.randomizeStock(itemParent, this.arrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
         //maps
-        this.randomizeStock(itemParent, enums_1.ParentClasses.MAP, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.MAP, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         //nvg + thermals:
-        this.randomizeStock(itemParent, enums_1.ParentClasses.NIGHTVISION, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.SPECIAL_SCOPE, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.THEMALVISION, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.NIGHTVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.SPECIAL_SCOPE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.THEMALVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         //magazine
         if (itemParent === enums_1.ParentClasses.MAGAZINE) {
             let magCap = this.itemDB[item._tpl]?._props?.Cartridges[0]._max_count;
             if (magCap <= 35) {
-                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier, 4 + modConfig.rand_stock_modifier);
+                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 4 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
             }
             else if (magCap > 35 && magCap <= 45) {
-                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier, 3 + modConfig.rand_stock_modifier);
+                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
             }
             else {
-                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
             }
         }
         //medical
-        this.randomizeStock(itemParent, enums_1.ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier, 3 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
         //special items
-        this.randomizeStock(itemParent, enums_1.ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier, 6 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, 6 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         //grenades
-        this.randomizeStock(itemParent, enums_1.ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier, 3 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
         //money
-        this.randomizeStock(itemParent, enums_1.ParentClasses.MONEY, item, 1500 * modConfig.rand_stackable_modifier, 150000 * modConfig.rand_stackable_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.MONEY, item, 1500 * modConfig.rand_stock_modifier_min, 150000 * modConfig.rand_stackable_modifier, llOutOfStockFactor);
         //container
-        this.randomizeStock(itemParent, enums_1.ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier, 1 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         //provisions
-        this.randomizeStock(itemParent, enums_1.ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier, 2 + modConfig.rand_stock_modifier);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
     }
-    randomizeAmmoStock(assortItemParent, item) {
+    randomizeAmmoStock(assortItemParent, item, llStackableFactor, llStockFactor) {
         if (assortItemParent === enums_1.ParentClasses.AMMO && item.slotId !== "cartridges") {
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 60 * modConfig.rand_stackable_modifier, 150 * modConfig.rand_stackable_modifier, 2);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x19mm, 50 * modConfig.rand_stackable_modifier, 130 * modConfig.rand_stackable_modifier, 3);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 60);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 55);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._45ACP, 50 * modConfig.rand_stackable_modifier, 130 * modConfig.rand_stackable_modifier, 3);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._357mag, 25 * modConfig.rand_stackable_modifier, 50 * modConfig.rand_stackable_modifier, 4);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._46x30mm, 40 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 50);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._57x28mm, 40 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 50);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 60 * modConfig.rand_stackable_modifier, 140 * modConfig.rand_stackable_modifier, 2);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._366TKM, 60 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 3);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x39mm, 50 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 55);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._68x51mm, 30 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 65);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x51mm, 30 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 65);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x54rmm, 40 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 4, true, 69);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._300BLK, 30 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 53);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._556x45mm, 40 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 60);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._545x39mm, 50 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4, true, 60);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._127x108mm, 10 * modConfig.rand_stackable_modifier, 40 * modConfig.rand_stackable_modifier, 4);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._127x55mm, 20 * modConfig.rand_stackable_modifier, 120 * modConfig.rand_stackable_modifier, 4);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._12ga, 25 * modConfig.rand_stackable_modifier, 40 * modConfig.rand_stackable_modifier, 3);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._20ga, 40 * modConfig.rand_stackable_modifier, 80 * modConfig.rand_stackable_modifier, 2);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._23x75mm, 4 * modConfig.rand_stackable_modifier, 12 * modConfig.rand_stackable_modifier, 4);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier, 2 * modConfig.rand_stackable_modifier, 4);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier, 3 * modConfig.rand_stackable_modifier, 4);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._338mag, 10 * modConfig.rand_stackable_modifier, 25 * modConfig.rand_stackable_modifier, 4);
+            let llOutOfStockFactor = llStockFactor * 10;
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 150 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 45);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x19mm, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 130 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 50, 58);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._45ACP, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 130 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._357mag, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._46x30mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._57x28mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 140 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._366TKM, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 55, 110);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x39mm, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55, 95);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._68x51mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 80 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x51mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 80 * modConfig.rand_stackable_modifier * llStackableFactor, 60 - llOutOfStockFactor, 60, 120);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x54rmm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 80 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 68, 120);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._300BLK, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 53, 100);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._556x45mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._545x39mm, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 65, 100);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._127x55mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 51);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._12ga, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 160);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._20ga, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 80 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._23x75mm, 4 * modConfig.rand_stackable_modifier * llStackableFactor, 12 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 2 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._338mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 70, 120);
         }
     }
-    randomizeAmmoStockHelper(item, caliber, min, max, outOfStockChance, usePenFactor = false, penThreshold = 50) {
+    randomizeAmmoStockHelper(item, caliber, min, max, outOfStockChance, penThreshold = 0, damageThreshold = 0) {
         if (this.itemDB[item._tpl]._props.Caliber === caliber) {
-            let oddsModifier = 0;
+            let oddsModifier = 1;
             let stockModifier = 1;
-            if (usePenFactor == true) {
-                if (this.itemDB[item._tpl]._props.PenetrationPower <= penThreshold) {
-                    oddsModifier = 2;
-                }
-                stockModifier = penThreshold / this.itemDB[item._tpl]._props.PenetrationPower;
+            let damage = this.itemDB[item._tpl]._props.Damage * this.itemDB[item._tpl]._props.ProjectileCount;
+            const useDamageInstead = damageThreshold > 0 && damage >= damageThreshold;
+            if (penThreshold > 0 && !useDamageInstead) {
+                let pen = this.itemDB[item._tpl]._props.PenetrationPower;
+                stockModifier *= penThreshold / pen;
+                oddsModifier *= pen / penThreshold;
             }
-            let randNum = this.utils.pickRandNumOneInTen();
-            if (randNum <= (outOfStockChance - oddsModifier)) {
+            if (useDamageInstead) {
+                stockModifier *= damageThreshold / damage;
+                oddsModifier *= damage / damageThreshold;
+            }
+            let randNum = this.utils.pickRandNumInRange(0, 100);
+            if (randNum <= (outOfStockChance * oddsModifier)) {
                 item.upd.StackObjectsCount = 0;
             }
             else {
-                item.upd.StackObjectsCount = Math.round(this.utils.pickRandNumInRange(min, max * stockModifier));
+                item.upd.StackObjectsCount = Math.round(this.utils.pickRandNumInRange(min * stockModifier, max * stockModifier));
             }
+            this.logger.warning(`==========`);
+            this.logger.warning(`Item ` + this.itemDB[item._tpl]._name);
+            this.logger.warning(`stockModifier ` + stockModifier);
+            this.logger.warning(`oddsModifier ` + oddsModifier);
+            this.logger.warning(`stasck amount ` + item.upd.StackObjectsCount);
+            this.logger.warning(`==========`);
         }
     }
-    randomizeStock(assortItemParent, catParent, item, min, max) {
+    //re-roll based on ll level
+    getStockCount(allowedAttemps, attempt, min, max) {
+        let stockCount = this.utils.pickRandNumInRange(min, max);
+        if (stockCount == 0 && attempt < allowedAttemps) {
+            return this.getStockCount(allowedAttemps, attempt + 1, min, max);
+        }
+        else {
+            return stockCount;
+        }
+    }
+    randomizeStock(assortItemParent, catParent, item, min, max, llFactor) {
         if (assortItemParent === catParent) {
-            item.upd.StackObjectsCount = this.utils.pickRandNumInRange(min, max);
+            item.upd.StackObjectsCount = this.getStockCount(llFactor, 0, min, max);
         }
     }
     setAndRandomizeCost(utils, itemTemplId, barter, setBasePrice) {
@@ -608,21 +667,26 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     myResetExpiredTrader(trader) {
         const traderId = trader.base._id;
         trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
+        let pmcData = [];
+        utils_1.ProfileTracker.profileIds.forEach(element => {
+            pmcData.push(this.profileHelper.getPmcProfile(element));
+        });
         if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            trader.assort.items = this.modifyTraderAssorts(trader, this.logger);
+            trader.assort.items = this.modifyTraderAssorts(trader, this.logger, pmcData);
         }
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
         trader.base.refreshTraderRagfairOffers = true;
         //seems like manually refreshing ragfair is necessary. 
         this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
     }
-    modifyTraderAssorts(trader, logger) {
+    modifyTraderAssorts(trader, logger, pmcData) {
         const tables = this.databaseServer.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new arrays_1.Arrays(tables);
         const utils = new utils_1.Utils(tables, arrays);
         let assortItems = trader.assort.items;
         let assortBarters = trader.assort.barter_scheme;
+        let averageLL = randomTraderAss.getAverageLL(pmcData, trader.base._id);
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;
             for (let lvl in ll) {
@@ -635,7 +699,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             let itemTemplId = assortItems[i]._tpl;
             if (modConfig.randomize_trader_stock == true) {
                 if (item.upd?.StackObjectsCount !== undefined) {
-                    randomTraderAss.randomizeStockHelper(item);
+                    randomTraderAss.randomizeStockHelper(item, averageLL);
                 }
                 if (item.upd?.UnlimitedCount !== undefined) {
                     item.upd.UnlimitedCount = false;
