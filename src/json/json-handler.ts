@@ -274,11 +274,9 @@ export class JsonHandler {
                                 for (let i in jsonData) {
                                     if (jsonData[i].WeapType != undefined) {
                                         this.weapPusherHelper(jsonData[i], this.itemDB());
-                                        this.logger.warning("found weapon");
                                     }
                                     if (jsonData[i].ModType != undefined) {
                                         this.modPusherHelper(jsonData[i], this.itemDB());
-                                        this.logger.warning("found mod");
                                     }
                                 }
                             } catch (err) {

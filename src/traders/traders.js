@@ -8,6 +8,7 @@ const utils_1 = require("../utils/utils");
 const enums_1 = require("../utils/enums");
 const RagfairCallbacks_1 = require("C:/snapshot/project/obj/callbacks/RagfairCallbacks");
 const seasonalevents_1 = require("../misc/seasonalevents");
+const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const modConfig = require("../../config/config.json");
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
@@ -377,7 +378,11 @@ class RandomizeTraderAssort {
             playerCount++;
             totalLL += element.TradersInfo[traderId].loyaltyLevel;
         });
-        return totalLL / playerCount;
+        let avgLL = totalLL / playerCount;
+        if (modConfig.logEverything) {
+            this.logger.logWithColor(`Realism Mod: average LL for trader ${this.tables.traders[traderId].base.nickname} is ${avgLL}}`, LogTextColor_1.LogTextColor.GREEN);
+        }
+        return avgLL;
     }
     adjustTraderStockAtServerStart(pmcData) {
         if (seasonalevents_1.EventTracker.isChristmas == true) {
@@ -563,7 +568,8 @@ class RandomizeTraderAssort {
                 item.upd.StackObjectsCount = 0;
             }
             else {
-                item.upd.StackObjectsCount = Math.round(this.utils.pickRandNumInRange(min * stockModifier, max * stockModifier));
+                let modifiedStackCount = Math.round(this.utils.pickRandNumInRange(min * stockModifier, max * stockModifier));
+                item.upd.StackObjectsCount = Math.max(modifiedStackCount, max * 1.2);
             }
         }
     }

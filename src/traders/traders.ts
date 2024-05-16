@@ -17,6 +17,7 @@ import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
 import { EventTracker } from "../misc/seasonalevents";
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
+import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
 
 
 const modConfig = require("../../config/config.json");
@@ -463,7 +464,13 @@ export class RandomizeTraderAssort {
             totalLL += element.TradersInfo[traderId].loyaltyLevel;
         });
 
-        return totalLL / playerCount;
+        let avgLL = totalLL / playerCount;
+
+        if(modConfig.logEverything){
+            this.logger.logWithColor(`Realism Mod: average LL for trader ${this.tables.traders[traderId].base.nickname} is ${avgLL}}`, LogTextColor.GREEN);
+        }
+
+        return avgLL;
     }
 
 
