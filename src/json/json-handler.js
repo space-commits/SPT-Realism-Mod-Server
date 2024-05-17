@@ -1,32 +1,13 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsonHandler = void 0;
 const enums_1 = require("../utils/enums");
-const fs = __importStar(require("fs"));
-const path = __importStar(require("path"));
+const fs = require('fs');
+const path = require('path');
+const util = require('util');
+const readdir = util.promisify(fs.readdir);
+const stat = util.promisify(fs.stat);
+const readFile = util.promisify(fs.readFile);
 const modConfig = require("../../config/config.json");
 const weapPath = modConfig.weap_preset;
 const attPath = modConfig.att_preset;
@@ -128,7 +109,7 @@ class JsonHandler {
             funPusherHelper(fileItem, serverTemplates);
         }
     }
-    gearPusherHelper(fileItem, serverTemplates) {
+    gearPusherHelper(fileItem, serverTemplates, logger) {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
@@ -150,12 +131,12 @@ class JsonHandler {
                 serverItem._props.Ergonomics = fileItem.Ergonomics;
                 serverItem._props.Accuracy = fileItem.Accuracy;
                 serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor : 1;
-                serverItem._props.CoolFactor = fileItem.CoolFactor != null ? fileItem.CoolFactor : 1;
+                serverItem._props.HeatFactor = fileItem.HeatFactor != undefined ? fileItem.HeatFactor : 1;
+                serverItem._props.CoolFactor = fileItem.CoolFactor != undefined ? fileItem.CoolFactor : 1;
                 serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
                 // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
                 // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
-                serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
+                serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != undefined ? fileItem.DurabilityBurnModificator : 1;
                 serverItem._props.BlocksFolding = fileItem.BlocksFolding;
                 serverItem._props.Weight = fileItem.Weight;
                 serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
@@ -237,49 +218,32 @@ class JsonHandler {
             }
         }
     }
-    processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'put_new_stuff_here')) {
-        fs.readdir(folderPath, (err, files) => {
-            if (err) {
-                this.logger.error(`Error reading directory ${folderPath}: ${err}`);
-                return;
-            }
-            files.forEach((file) => {
+    async processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'put_new_stuff_here')) {
+        try {
+            const files = await readdir(folderPath);
+            for (const file of files) {
                 const filePath = path.join(folderPath, file);
-                fs.stat(filePath, (err, stats) => {
-                    if (err) {
-                        this.logger.error(`Error getting file stats for ${filePath}: ${err}`);
-                        return;
+                const stats = await stat(filePath);
+                if (stats.isDirectory()) {
+                    await this.processUserJsonFiles(filePath); // Recursively call self for subfolders
+                }
+                else if (file.endsWith('.json')) {
+                    const data = await readFile(filePath, 'utf8');
+                    const jsonData = JSON.parse(data);
+                    for (let i in jsonData) {
+                        if (jsonData[i].WeapType !== undefined) {
+                            this.weapPusherHelper(jsonData[i], this.itemDB());
+                        }
+                        if (jsonData[i].ModType !== undefined) {
+                            this.modPusherHelper(jsonData[i], this.itemDB());
+                        }
                     }
-                    if (stats.isDirectory()) {
-                        // Recursively call self for subfolders
-                        this.processUserJsonFiles(filePath);
-                    }
-                    else if (file.endsWith('.json')) {
-                        // Process JSON file
-                        fs.readFile(filePath, 'utf8', (err, data) => {
-                            if (err) {
-                                this.logger.error(`Error reading file ${filePath}: ${err}`);
-                                return;
-                            }
-                            try {
-                                const jsonData = JSON.parse(data);
-                                for (let i in jsonData) {
-                                    if (jsonData[i].WeapType != undefined) {
-                                        this.weapPusherHelper(jsonData[i], this.itemDB());
-                                    }
-                                    if (jsonData[i].ModType != undefined) {
-                                        this.modPusherHelper(jsonData[i], this.itemDB());
-                                    }
-                                }
-                            }
-                            catch (err) {
-                                this.logger.error(`Error parsing JSON in file ${filePath}: ${err}`);
-                            }
-                        });
-                    }
-                });
-            });
-        });
+                }
+            }
+        }
+        catch (err) {
+            this.logger.error(`Error processing files in directory ${folderPath}: ${err}`);
+        }
     }
 }
 exports.JsonHandler = JsonHandler;

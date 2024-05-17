@@ -25,7 +25,7 @@
         "HipAccuracyRestorationDelay": 0.2,
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
-        "ShotgunDispersion": 0.8,
+        "ShotgunDispersion": 1,
         "Velocity": 0,
         "RecoilDamping": 0.83,
         "RecoilHandDamping": 0.52,

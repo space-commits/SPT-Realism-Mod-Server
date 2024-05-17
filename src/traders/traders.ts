@@ -633,26 +633,26 @@ export class RandomizeTraderAssort {
 
         if (assortItemParent === ParentClasses.AMMO && item.slotId !== "cartridges") {
             let llOutOfStockFactor = llStockFactor * 10;
-            this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 45);
-            this.randomizeAmmoStockHelper(item, Calibers._9x19mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 105 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 50, 58);
-            this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 35 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._9x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55);
-            this.randomizeAmmoStockHelper(item, Calibers._45ACP, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 105 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55);
-            this.randomizeAmmoStockHelper(item, Calibers._357mag, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
-            this.randomizeAmmoStockHelper(item, Calibers._46x30mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._366TKM, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 120 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 55, 110);
-            this.randomizeAmmoStockHelper(item, Calibers._762x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55, 95);
-            this.randomizeAmmoStockHelper(item, Calibers._68x51mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, Calibers._762x51mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 75 * modConfig.rand_stackable_modifier * llStackableFactor, 60 - llOutOfStockFactor, 60, 120);
-            this.randomizeAmmoStockHelper(item, Calibers._762x54rmm, 35 * modConfig.rand_stackable_modifier * llStackableFactor, 80 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 68, 120);
-            this.randomizeAmmoStockHelper(item, Calibers._300BLK, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 53, 100);
-            this.randomizeAmmoStockHelper(item, Calibers._556x45mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
-            this.randomizeAmmoStockHelper(item, Calibers._545x39mm, 50 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 65, 100);
-            this.randomizeAmmoStockHelper(item, Calibers._127x55mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 51);
-            this.randomizeAmmoStockHelper(item, Calibers._12ga, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 160);
-            this.randomizeAmmoStockHelper(item, Calibers._20ga, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 80 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 45);
+            this.randomizeAmmoStockHelper(item, Calibers._9x19mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 50, 58);
+            this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50);
+            this.randomizeAmmoStockHelper(item, Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55);
+            this.randomizeAmmoStockHelper(item, Calibers._45ACP, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55);
+            this.randomizeAmmoStockHelper(item, Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
+            this.randomizeAmmoStockHelper(item, Calibers._46x30mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
+            this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
+            this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50);
+            this.randomizeAmmoStockHelper(item, Calibers._366TKM, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 55, 110);
+            this.randomizeAmmoStockHelper(item, Calibers._762x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55, 95);
+            this.randomizeAmmoStockHelper(item, Calibers._68x51mm, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, Calibers._762x51mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 65 * modConfig.rand_stackable_modifier * llStackableFactor, 60 - llOutOfStockFactor, 60, 120);
+            this.randomizeAmmoStockHelper(item, Calibers._762x54rmm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 68, 120);
+            this.randomizeAmmoStockHelper(item, Calibers._300BLK, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 53, 100);
+            this.randomizeAmmoStockHelper(item, Calibers._556x45mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
+            this.randomizeAmmoStockHelper(item, Calibers._545x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 65, 100);
+            this.randomizeAmmoStockHelper(item, Calibers._127x55mm, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 51);
+            this.randomizeAmmoStockHelper(item, Calibers._12ga, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 160);
+            this.randomizeAmmoStockHelper(item, Calibers._20ga, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._23x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 5 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 2 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
@@ -683,7 +683,7 @@ export class RandomizeTraderAssort {
             }
             else {
                 let modifiedStackCount =  Math.round(this.utils.pickRandNumInRange(min * stockModifier, max * stockModifier));
-                item.upd.StackObjectsCount = Math.max(modifiedStackCount, max * 1.2);
+                item.upd.StackObjectsCount = Math.round(Math.max(modifiedStackCount,  max * 1.2));
             }
         }
     }

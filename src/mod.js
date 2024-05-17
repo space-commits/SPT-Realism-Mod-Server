@@ -489,8 +489,12 @@ class Main {
         const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations);
         const gear = new gear_1.Gear(arrays, tables, logger);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new description_gen_1.DescriptionGen(tables, modConfig);
+        const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
+        // jsonGen.attTemplatesCodeGen();
+        // jsonGen.weapTemplatesCodeGen();
+        // jsonGen.gearTemplatesCodeGen();
+        // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
@@ -499,21 +503,8 @@ class Main {
             attachBase.loadAttCompat();
             attachBase.loadCaliberConversions();
         }
-        // jsonGen.attTemplatesCodeGen();
-        // jsonGen.weapTemplatesCodeGen();
-        // jsonGen.gearTemplatesCodeGen();
-        // jsonGen.ammoTemplatesCodeGen();
-        jsonHand.processUserJsonFiles();
-        if (modConfig.recoil_attachment_overhaul) {
+        if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            jsonHand.pushModsToServer();
-            jsonHand.pushWeaponsToServer();
-        }
-        jsonHand.pushGearToServer();
-        descGen.descriptionGen();
-        if (modConfig.realistic_ballistics == true) {
-            ammo.loadAmmoStats();
-            armor.loadArmor();
             bots.setBotHealth();
         }
         if (modConfig.headgear_conflicts == true) {
@@ -564,17 +555,8 @@ class Main {
         bots.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
-        if (modConfig.malf_changes == true) {
-            ammo.loadAmmoStatAdjustments();
-            weaponsGlobals.loadGlobalMalfChanges();
-        }
         if (modConfig.trader_repair_changes == true) {
             traders.loadTraderRepairs();
-        }
-        if (modConfig.recoil_attachment_overhaul) {
-            ammo.loadAmmoFirerateChanges();
-            quests.fixMechancicQuests();
-            ammo.grenadeTweaks();
         }
         if (modConfig.headset_changes) {
             gear.loadHeadsetTweaks();
@@ -590,15 +572,37 @@ class Main {
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }
-        traders.loadTraderRefreshTimes();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
+        traders.loadTraderRefreshTimes();
         itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
+        (async () => {
+            await jsonHand.processUserJsonFiles();
+            if (modConfig.recoil_attachment_overhaul) {
+                jsonHand.pushModsToServer();
+                jsonHand.pushWeaponsToServer();
+            }
+            jsonHand.pushGearToServer();
+            descGen.descriptionGen();
+            if (modConfig.realistic_ballistics == true) {
+                ammo.loadAmmoStats();
+                armor.loadArmorStats();
+            }
+            if (modConfig.malf_changes == true) {
+                ammo.loadAmmoStatAdjustments();
+                weaponsGlobals.loadGlobalMalfChanges();
+            }
+            if (modConfig.recoil_attachment_overhaul) {
+                ammo.loadAmmoFirerateChanges();
+                quests.fixMechancicQuests();
+                ammo.grenadeTweaks();
+            }
+        })();
     }
     postAkiLoad(container) {
         this.modLoader = container.resolve("PreAkiModLoader");

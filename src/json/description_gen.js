@@ -5,9 +5,11 @@ const enums_1 = require("../utils/enums");
 class DescriptionGen {
     tables;
     modConfig;
-    constructor(tables, modConfig) {
+    logger;
+    constructor(tables, modConfig, logger) {
         this.tables = tables;
         this.modConfig = modConfig;
+        this.logger = logger;
     }
     itemDB() {
         return this.tables.templates.items;

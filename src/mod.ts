@@ -503,7 +503,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                         logger.warning("============== " + matchInfo.keyId);
 
-             
+
                         //update global player level
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
 
@@ -631,8 +631,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const maps = new Spawns(logger, tables, modConfig, tables.locations);
         const gear = new Gear(arrays, tables, logger);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new DescriptionGen(tables, modConfig);
+        const descGen = new DescriptionGen(tables, modConfig, logger);
         const jsonHand = new JsonHandler(tables, logger);
+        // jsonGen.attTemplatesCodeGen();
+        // jsonGen.weapTemplatesCodeGen();
+        // jsonGen.gearTemplatesCodeGen();
+        // jsonGen.ammoTemplatesCodeGen();
 
         // this.dllChecker(logger, modConfig);
 
@@ -644,25 +648,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             attachBase.loadCaliberConversions();
         }
 
-        // jsonGen.attTemplatesCodeGen();
-        // jsonGen.weapTemplatesCodeGen();
-        // jsonGen.gearTemplatesCodeGen();
-        // jsonGen.ammoTemplatesCodeGen();
-
-        jsonHand.processUserJsonFiles();
-        
-        if (modConfig.recoil_attachment_overhaul) {
+        if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            jsonHand.pushModsToServer();
-            jsonHand.pushWeaponsToServer();
-        }
-        jsonHand.pushGearToServer();
-        descGen.descriptionGen();
-
-        if (modConfig.realistic_ballistics == true) {
-      
-            ammo.loadAmmoStats();
-            armor.loadArmor();
             bots.setBotHealth();
         }
 
@@ -685,7 +672,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             bots.loadBots();
         }
-
 
         if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
@@ -729,20 +715,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
 
-        if (modConfig.malf_changes == true) {
-            ammo.loadAmmoStatAdjustments();
-            weaponsGlobals.loadGlobalMalfChanges();
-        }
-
         if (modConfig.trader_repair_changes == true) {
             traders.loadTraderRepairs();
         }
 
-        if (modConfig.recoil_attachment_overhaul) {
-            ammo.loadAmmoFirerateChanges();
-            quests.fixMechancicQuests();
-            ammo.grenadeTweaks();
-        }
         if (modConfig.headset_changes) {
             gear.loadHeadsetTweaks();
         }
@@ -761,11 +737,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             traders.addItemsToAssorts();
         }
 
-        traders.loadTraderRefreshTimes();
-
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
+
+        traders.loadTraderRefreshTimes();
 
         itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
@@ -773,6 +749,32 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
 
+        (async () => {
+            await jsonHand.processUserJsonFiles();
+
+            if (modConfig.recoil_attachment_overhaul) {
+                jsonHand.pushModsToServer();
+                jsonHand.pushWeaponsToServer();
+            }
+            jsonHand.pushGearToServer();
+            descGen.descriptionGen();
+
+            if (modConfig.realistic_ballistics == true) {
+                ammo.loadAmmoStats();
+                armor.loadArmorStats();
+            }
+
+            if (modConfig.malf_changes == true) {
+                ammo.loadAmmoStatAdjustments();
+                weaponsGlobals.loadGlobalMalfChanges();
+            }
+
+            if (modConfig.recoil_attachment_overhaul) {
+                ammo.loadAmmoFirerateChanges();
+                quests.fixMechancicQuests();
+                ammo.grenadeTweaks();
+            }
+        })();
     }
 
     public postAkiLoad(container: DependencyContainer) {

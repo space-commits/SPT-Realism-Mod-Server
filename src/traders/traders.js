@@ -569,7 +569,7 @@ class RandomizeTraderAssort {
             }
             else {
                 let modifiedStackCount = Math.round(this.utils.pickRandNumInRange(min * stockModifier, max * stockModifier));
-                item.upd.StackObjectsCount = Math.max(modifiedStackCount, max * 1.2);
+                item.upd.StackObjectsCount = Math.round(Math.max(modifiedStackCount, max * 1.2));
             }
         }
     }

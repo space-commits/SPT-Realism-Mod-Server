@@ -27,7 +27,7 @@ class Armor {
     armMat() {
         return this.globalDB().ArmorMaterials;
     }
-    loadArmor() {
+    loadArmorStats() {
         //Armor Destructibility values
         this.armMat().Glass.Destructibility = 0.45;
         this.armMat().Aramid.Destructibility = 0.33;
@@ -1137,7 +1137,7 @@ class Armor {
             serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -1.33;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -16;
+            serverItem._props.weaponErgonomicPenalty = -18;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';

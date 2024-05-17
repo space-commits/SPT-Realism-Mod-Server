@@ -944,7 +944,7 @@ class Ammo {
             if (serverItem._id === "573719df2459775a626ccbc2") {
                 serverItem._props.PenetrationPower = 35;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 43;
+                serverItem._props.Damage = 45;
                 serverItem._props.InitialSpeed = 480;
                 serverItem._props.RicochetChance = 0.44;
                 serverItem._props.FragmentationChance = 0.38;
@@ -964,9 +964,9 @@ class Ammo {
             }
             //PM PMM 7n16
             if (serverItem._id === "57371aab2459775a77142f22") {
-                serverItem._props.PenetrationPower = 47;
+                serverItem._props.PenetrationPower = 50;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 49;
+                serverItem._props.Damage = 60;
                 serverItem._props.InitialSpeed = 420;
                 serverItem._props.RicochetChance = 0.45;
                 serverItem._props.FragmentationChance = 0.31;
@@ -980,7 +980,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 5;
+                    serverItem._props.DurabilityBurnModificator = 4;
                     serverItem._props.HeatFactor = 1.6;
                 }
             }

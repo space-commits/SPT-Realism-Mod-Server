@@ -4,8 +4,12 @@ import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { ConfigChecker } from "../utils/utils";
 
-import * as fs from 'fs';
-import * as path from 'path';
+const fs = require('fs');
+const path = require('path');
+const util = require('util');
+const readdir = util.promisify(fs.readdir);
+const stat = util.promisify(fs.stat);
+const readFile = util.promisify(fs.readFile);
 
 const modConfig = require("../../config/config.json");
 const weapPath = modConfig.weap_preset;
@@ -117,7 +121,7 @@ export class JsonHandler {
         }
     }
 
-    private gearPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>) {
+    private gearPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>, logger: ILogger) {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
@@ -125,7 +129,7 @@ export class JsonHandler {
             serverItem._props.speedPenaltyPercent = fileItem.speedPenaltyPercent;
             serverItem._props.mousePenalty = fileItem.mousePenalty;
             serverItem._props.weaponErgonomicPenalty = fileItem.weaponErgonomicPenalty;
-   
+
             let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
                 fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.HasExtraArmor?.toString() || "false"];
@@ -144,12 +148,12 @@ export class JsonHandler {
                 serverItem._props.Ergonomics = fileItem.Ergonomics;
                 serverItem._props.Accuracy = fileItem.Accuracy;
                 serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
-                serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor : 1;
-                serverItem._props.CoolFactor = fileItem.CoolFactor != null ? fileItem.CoolFactor : 1;
+                serverItem._props.HeatFactor = fileItem.HeatFactor != undefined ? fileItem.HeatFactor : 1;
+                serverItem._props.CoolFactor = fileItem.CoolFactor != undefined ? fileItem.CoolFactor : 1;
                 serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
                 // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
                 // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
-                serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator;
+                serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != undefined ? fileItem.DurabilityBurnModificator : 1;
                 serverItem._props.BlocksFolding = fileItem.BlocksFolding;
                 serverItem._props.Weight = fileItem.Weight;
                 serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
@@ -183,8 +187,8 @@ export class JsonHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
-            if (serverConfItems[0] !== "SPTRM") {
 
+            if (serverConfItems[0] !== "SPTRM") {
                 if (modConfig.malf_changes == true) {
                     serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
                     serverItem._props.HeatFactorGun = fileItem.HeatFactorGun;
@@ -227,7 +231,7 @@ export class JsonHandler {
                     if (fileItem?.weapFireType !== undefined) {
                         serverItem._props.weapFireType = fileItem.weapFireType;
                     }
-                    if(fileItem?.WeapType !== undefined && fileItem.OperationType !== "manual" && fileItem.OperationType !== "tubefed-m"){
+                    if (fileItem?.WeapType !== undefined && fileItem.OperationType !== "manual" && fileItem.OperationType !== "tubefed-m") {
                         serverItem._props.CanQueueSecondShot = true;
                     }
 
@@ -244,48 +248,31 @@ export class JsonHandler {
         }
     }
 
-    public processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'put_new_stuff_here')) {
-        fs.readdir(folderPath, (err, files) => {
-            if (err) {
-                this.logger.error(`Error reading directory ${folderPath}: ${err}`);
-                return;
-            }
-            files.forEach((file) => {
+    public async processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'put_new_stuff_here')) {
+        try {
+            const files = await readdir(folderPath);
+            for (const file of files) {
                 const filePath = path.join(folderPath, file);
+                const stats = await stat(filePath);
 
-                fs.stat(filePath, (err, stats) => {
-                    if (err) {
-                        this.logger.error(`Error getting file stats for ${filePath}: ${err}`);
-                        return;
-                    }
+                if (stats.isDirectory()) {
+                    await this.processUserJsonFiles(filePath); // Recursively call self for subfolders
+                } else if (file.endsWith('.json')) {
+                    const data = await readFile(filePath, 'utf8');
+                    const jsonData = JSON.parse(data);
 
-                    if (stats.isDirectory()) {
-                        // Recursively call self for subfolders
-                        this.processUserJsonFiles(filePath);
-                    } else if (file.endsWith('.json')) {
-                        // Process JSON file
-                        fs.readFile(filePath, 'utf8', (err, data) => {
-                            if (err) {
-                                this.logger.error(`Error reading file ${filePath}: ${err}`);
-                                return;
-                            }
-                            try {
-                                const jsonData = JSON.parse(data);
-                                for (let i in jsonData) {
-                                    if (jsonData[i].WeapType != undefined) {
-                                        this.weapPusherHelper(jsonData[i], this.itemDB());
-                                    }
-                                    if (jsonData[i].ModType != undefined) {
-                                        this.modPusherHelper(jsonData[i], this.itemDB());
-                                    }
-                                }
-                            } catch (err) {
-                                this.logger.error(`Error parsing JSON in file ${filePath}: ${err}`);
-                            }
-                        });
+                    for (let i in jsonData) {
+                        if (jsonData[i].WeapType !== undefined) {
+                            this.weapPusherHelper(jsonData[i], this.itemDB());
+                        }
+                        if (jsonData[i].ModType !== undefined) {
+                            this.modPusherHelper(jsonData[i], this.itemDB());
+                        }
                     }
-                });
-            });
-        });
+                }
+            }
+        } catch (err) {
+            this.logger.error(`Error processing files in directory ${folderPath}: ${err}`);
+        }
     }
 }
