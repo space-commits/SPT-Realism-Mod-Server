@@ -1619,7 +1619,7 @@ export class BotLoader {
 
         if (this.modConfig.bot_loot_changes === true) {
             this.raiderBase.inventory.items = raiderLO.raiderLO1.inventory.items;
-            this.raiderBase.generation = lootOdds.tier3;
+            this.raiderBase.generation = lootOdds.tier4;
         }
 
         this.botConf().equipment["pmcbot"].faceShieldIsActiveChancePercent = 100;
@@ -1683,7 +1683,7 @@ export class BotLoader {
 
         if (this.modConfig.bot_loot_changes === true) {
             this.raiderBase.inventory.items = raiderLO.raiderLO2.inventory.items;
-            this.raiderBase.generation = lootOdds.tier4;
+            this.raiderBase.generation = lootOdds.tier5;
         }
 
         this.botConf().equipment["pmcbot"].faceShieldIsActiveChancePercent = 100;
@@ -1814,7 +1814,7 @@ export class BotLoader {
 
         if (this.modConfig.bot_loot_changes === true) {
             this.rogueBase.inventory.items = rogueLO.rogueLO1.inventory.items;
-            this.rogueBase.generation = lootOdds.tier3;
+            this.rogueBase.generation = lootOdds.tier4;
         }
 
         this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 100;
@@ -1860,7 +1860,7 @@ export class BotLoader {
 
         if (this.modConfig.bot_loot_changes === true) {
             this.rogueBase.inventory.items = rogueLO.rogueLO2.inventory.items;
-            this.rogueBase.generation = lootOdds.tier4;
+            this.rogueBase.generation = lootOdds.tier5;
         }
 
         this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 100;
@@ -2754,7 +2754,7 @@ export class BotLoader {
             this.saniBase.inventory.items = saniLO.sanitarLO1.inventory.items;
             this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO1.inventory.items;
             this.saniBase.generation = lootOdds.boss;
-            this.saniFollowerBase.generation = lootOdds.tier3;
+            this.saniFollowerBase.generation = lootOdds.tier4;
         }
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
@@ -2799,7 +2799,7 @@ export class BotLoader {
             this.saniBase.inventory.items = saniLO.sanitarLO2.inventory.items;
             this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO2.inventory.items;
             this.saniBase.generation = lootOdds.boss;
-            this.saniFollowerBase.generation = lootOdds.tier3;
+            this.saniFollowerBase.generation = lootOdds.tier4;
         }
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
@@ -2844,7 +2844,7 @@ export class BotLoader {
             this.saniBase.inventory.items = saniLO.sanitarLO3.inventory.items;
             this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO3.inventory.items;
             this.saniBase.generation = lootOdds.boss;
-            this.saniFollowerBase.generation = lootOdds.tier3;
+            this.saniFollowerBase.generation = lootOdds.tier5;
         }
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
@@ -2934,7 +2934,7 @@ export class BotLoader {
             this.reshBase.inventory.items = reshLO.reshallaLO2.inventory.items;
             this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO2.inventory.items;
             this.reshBase.generation = lootOdds.boss;
-            this.reshFollowerBase.generation = lootOdds.tier3;
+            this.reshFollowerBase.generation = lootOdds.tier4;
         }
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
@@ -2980,7 +2980,7 @@ export class BotLoader {
             this.reshBase.inventory.items = reshLO.reshallaLO3.inventory.items;
             this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO3.inventory.items;
             this.reshBase.generation = lootOdds.boss;
-            this.reshFollowerBase.generation = lootOdds.tier3;
+            this.reshFollowerBase.generation = lootOdds.tier5;
         }
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
