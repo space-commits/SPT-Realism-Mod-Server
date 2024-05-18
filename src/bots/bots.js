@@ -194,6 +194,10 @@ class BotLoader {
         this.botConf().maxBotCap = rmBotConfig.maxBotCapHigh;
         this.botConf().presetBatch = rmBotConfig.presetBatch;
     }
+    testBotCap() {
+        this.botConf().maxBotCap = rmBotConfig.testBotCap;
+        this.botConf().presetBatch = rmBotConfig.presetBatch;
+    }
     increasePerformance() {
         this.botConf().maxBotCap = rmBotConfig.maxBotCapLow;
         this.botConf().presetBatch = rmBotConfig.presetBatch;
@@ -829,7 +833,7 @@ class BotLoader {
         this.scavBase.chances = scavLO.scavLO3.chances;
         if (this.modConfig.bot_loot_changes === true) {
             this.scavBase.inventory.items = scavLO.scavLO3.inventory.items;
-            this.scavBase.generation = lootOdds.tier1;
+            this.scavBase.generation = lootOdds.scav;
         }
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.weaponMods.mod_flashlight = 80;

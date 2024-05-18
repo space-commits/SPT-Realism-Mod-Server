@@ -5,9 +5,11 @@ const enums_1 = require("../utils/enums");
 class DescriptionGen {
     tables;
     modConfig;
-    constructor(tables, modConfig) {
+    logger;
+    constructor(tables, modConfig, logger) {
         this.tables = tables;
         this.modConfig = modConfig;
+        this.logger = logger;
     }
     itemDB() {
         return this.tables.templates.items;
@@ -84,11 +86,12 @@ class DescriptionGen {
                     if (item._props.ConflictingItems[1] === "true") {
                         locale[`${templateItem}` + " Description"] = "This faceshield allows the use of sights while using any stock in the extended position." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
-                    if (item._props.ConflictingItems[1] === "false") {
+                    else {
                         locale[`${templateItem}` + " Description"] = "This faceshield does NOT allow the use of sights while using a stock in the extended/unfolded position, unless the weapon/stock allows it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
+                    locale[`${templateItem}` + " Description"] = "This faceshield gives penalties to sprint speed if it is deployed. Ergo penalty only applies if deployed." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR || item._parent === enums_1.ParentClasses.FACECOVER) {
+                if ((item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR || item._parent === enums_1.ParentClasses.FACECOVER) && item._props.HasHinge == false) {
                     if (item._props.ConflictingItems[1] === "false") {
                         locale[`${templateItem}` + " Description"] = "This gear item blocks the use of sights while using a stock in the extended/unfolded position, unless the weapon/stock allows it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }

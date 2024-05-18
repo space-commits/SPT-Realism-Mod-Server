@@ -60,7 +60,7 @@ const foodItems = require("../db/items/food_items.json");
 const foodBuffs = require("../db/items/buffs_food.json");
 const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
-let validatedClient = false;
+let adjustedTradersOnStart = false;
 class Main {
     modLoader;
     preAkiLoad(container) {
@@ -174,11 +174,7 @@ class Main {
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
-                    let level = 1;
-                    if (pmcData?.Info?.Level !== undefined) {
-                        level = pmcData.Info.Level;
-                    }
-                    utils_1.ProfileTracker.level = level;
+                    this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
                     try {
                         if (modConfig.backup_profiles == true) {
                             this.backupProfile(profileData, logger);
@@ -209,19 +205,23 @@ class Main {
                             }
                         }
                         this.checkForEvents(logger, seasonalEventsService);
-                        if (validatedClient == false) {
-                            randomizeTraderAssort.adjustTraderStockAtServerStart();
+                        if (adjustedTradersOnStart == false) {
+                            let pmcData = [];
+                            utils_1.ProfileTracker.profileIds.forEach(element => {
+                                pmcData.push(profileHelper.getPmcProfile(element));
+                            });
+                            randomizeTraderAssort.adjustTraderStockAtServerStart(pmcData);
                         }
-                        validatedClient = true;
+                        adjustedTradersOnStart = true;
                         const traders = ragfairServer.getUpdateableTraders();
                         for (let traderID in traders) {
                             ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
                         }
                         if (modConfig.tiered_flea == true) {
-                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
+                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         if (modConfig.boss_spawns == true) {
-                            maps.setBossSpawnChance(level);
+                            maps.setBossSpawnChance(utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
@@ -234,7 +234,26 @@ class Main {
                     }
                 }
             }
-        ], "RealismMod");
+        ], "aki");
+        staticRouterModService.registerStaticRouter("runOnGameLogout", [
+            {
+                url: "/client/game/logout",
+                action: (url, info, sessionID, output) => {
+                    const profileHelper = container.resolve("ProfileHelper");
+                    const profileData = profileHelper.getFullProfile(sessionID);
+                    let playerCount = 0;
+                    let cumulativePlayerLevel = 0;
+                    delete utils_1.ProfileTracker.playerRecord[profileData.info.id];
+                    Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
+                        cumulativePlayerLevel += value;
+                        playerCount += 1;
+                    });
+                    utils_1.ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
+                    logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
+                    return output;
+                }
+            }
+        ], "aki");
         staticRouterModService.registerStaticRouter("runAtProfileCreation", [
             {
                 url: "/client/game/profile/create",
@@ -262,7 +281,7 @@ class Main {
                     }
                 }
             }
-        ], "RealismMod");
+        ], "aki");
         staticRouterModService.registerStaticRouter("runAtRaidStart", [
             {
                 url: "/client/raid/configuration",
@@ -279,12 +298,15 @@ class Main {
                         const utils = new utils_1.Utils(postLoadTables, arrays);
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
+                        const profileData = profileHelper.getFullProfile(sessionID);
                         const time = weatherController.generate().time; //apparently regenerates weather?
                         // const time = weatherController.getCurrentInRaidTime; //better way?
                         // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
                         utils_1.RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                         let realTime = "";
                         let mapType = "";
+                        //update global player level
+                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                         if (matchInfo.timeVariant === "PAST") {
                             realTime = getTime(time, 12);
                         }
@@ -330,7 +352,7 @@ class Main {
                             pmcConf.convertIntoPmcChance["assault"].min = 100;
                             pmcConf.convertIntoPmcChance["assault"].max = 100;
                         }
-                        logger.warning("Player Level = " + utils_1.ProfileTracker.level);
+                        logger.warning("Avg. Player Level = " + utils_1.ProfileTracker.averagePlayerLevel);
                         logger.warning("Map Name = " + matchInfo.location);
                         logger.warning("Map Type  = " + mapType);
                         logger.warning("Time " + time);
@@ -343,7 +365,7 @@ class Main {
                     }
                 }
             }
-        ], "RealismMod");
+        ], "aki");
         staticRouterModService.registerStaticRouter("runAtRaidEnd", [
             {
                 url: "/raid/profile/save",
@@ -359,13 +381,15 @@ class Main {
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
-                    let level = 1;
-                    if (pmcData?.Info?.Level !== undefined) {
-                        level = pmcData.Info.Level;
-                    }
+                    const profileData = profileHelper.getFullProfile(sessionID);
+                    const appContext = container.resolve("ApplicationContext");
+                    const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
+                    logger.warning("============== " + matchInfo.keyId);
+                    //update global player level
+                    this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                     try {
                         if (modConfig.tiered_flea == true) {
-                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, level);
+                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         player.correctNegativeHP(pmcData);
                         if (modConfig.realistic_player_health == true) {
@@ -382,7 +406,7 @@ class Main {
                     }
                 }
             }
-        ], "pmc");
+        ], "aki");
     }
     backupProfile(profileData, logger) {
         const profileFileData = JSON.stringify(profileData, null, 4);
@@ -465,8 +489,12 @@ class Main {
         const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations);
         const gear = new gear_1.Gear(arrays, tables, logger);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new description_gen_1.DescriptionGen(tables, modConfig);
+        const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
+        // jsonGen.attTemplatesCodeGen();
+        // jsonGen.weapTemplatesCodeGen();
+        // jsonGen.gearTemplatesCodeGen();
+        // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
@@ -475,23 +503,10 @@ class Main {
             attachBase.loadAttCompat();
             attachBase.loadCaliberConversions();
         }
-        // jsonGen.attTemplatesCodeGen();
-        // jsonGen.weapTemplatesCodeGen();
-        // jsonGen.gearTemplatesCodeGen();
-        // jsonGen.ammoTemplatesCodeGen();
-        jsonHand.processUserJsonFiles();
-        if (modConfig.realistic_ballistics == true) {
+        if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            ammo.loadAmmoStats();
-            armor.loadArmor();
             bots.setBotHealth();
         }
-        if (modConfig.recoil_attachment_overhaul) {
-            jsonHand.pushModsToServer();
-            jsonHand.pushWeaponsToServer();
-        }
-        jsonHand.pushGearToServer();
-        descGen.descriptionGen();
         if (modConfig.headgear_conflicts == true) {
             gear.loadGearConflicts();
         }
@@ -507,7 +522,11 @@ class Main {
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }
-        if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) {
+        if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
+            logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
+            bots.testBotCap();
+        }
+        else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) {
             bots.increaseBotCap();
         }
         else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) {
@@ -536,17 +555,8 @@ class Main {
         bots.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
-        if (modConfig.malf_changes == true) {
-            ammo.loadAmmoStatAdjustments();
-            weaponsGlobals.loadGlobalMalfChanges();
-        }
         if (modConfig.trader_repair_changes == true) {
             traders.loadTraderRepairs();
-        }
-        if (modConfig.recoil_attachment_overhaul) {
-            ammo.loadAmmoFirerateChanges();
-            quests.fixMechancicQuests();
-            ammo.grenadeTweaks();
         }
         if (modConfig.headset_changes) {
             gear.loadHeadsetTweaks();
@@ -562,15 +572,37 @@ class Main {
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }
-        traders.loadTraderRefreshTimes();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
+        traders.loadTraderRefreshTimes();
         itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
+        (async () => {
+            await jsonHand.processUserJsonFiles();
+            if (modConfig.recoil_attachment_overhaul) {
+                jsonHand.pushModsToServer();
+                jsonHand.pushWeaponsToServer();
+            }
+            jsonHand.pushGearToServer();
+            descGen.descriptionGen();
+            if (modConfig.realistic_ballistics == true) {
+                ammo.loadAmmoStats();
+                armor.loadArmorStats();
+            }
+            if (modConfig.malf_changes == true) {
+                ammo.loadAmmoStatAdjustments();
+                weaponsGlobals.loadGlobalMalfChanges();
+            }
+            if (modConfig.recoil_attachment_overhaul) {
+                ammo.loadAmmoFirerateChanges();
+                quests.fixMechancicQuests();
+                ammo.grenadeTweaks();
+            }
+        })();
     }
     postAkiLoad(container) {
         this.modLoader = container.resolve("PreAkiModLoader");
@@ -602,6 +634,24 @@ class Main {
         }
         if (seasonalevents_1.EventTracker.isHalloween == true) {
             logger.warning("Happy Halloween!");
+        }
+    }
+    checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
+        let level = 1;
+        if (pmcData?.Info?.Level !== undefined) {
+            level = pmcData.Info.Level;
+        }
+        let playerCount = 0;
+        let cumulativePlayerLevel = 0;
+        utils_1.ProfileTracker.playerRecord[profileData.info.id] = level;
+        Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
+            cumulativePlayerLevel += value;
+            playerCount += 1;
+        });
+        utils_1.ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
+        utils_1.ProfileTracker.profileIds.push(sessionID);
+        if (shouldLog) {
+            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
         }
     }
     checkProfile(pmcData, pmcEXP, utils, player, logger) {

@@ -367,7 +367,7 @@
             "Value": -2.5
         }
     ],
-    "AHF1M": [
+    "Buffs_AHF1M": [
         {
             "AbsoluteValue": true,
             "BuffType": "RemoveAllBloodLosses",

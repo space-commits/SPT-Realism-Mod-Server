@@ -1,7 +1,7 @@
 node_modules/
 types/
 ProfileBackups/
-
+db/put_new_stuff_here/
 *.py
 *.zip
 *.bundle

@@ -121,6 +121,8 @@
         "Dispersion": -2,
         "Ergonomics": 9,
         "Accuracy": 5,
+        "HeatFactor": 0.95,
+        "CoolFactor": 1.04,
         "ConflictingItems": [
             "6183fc15d3a39d50044c13e9",
             "618168b350224f204c1da4d8"
@@ -1416,6 +1418,8 @@
         "Dispersion": -3,
         "Ergonomics": 16,
         "Accuracy": 7,
+        "HeatFactor": 0.98,
+        "CoolFactor": 1.06,
         "ConflictingItems": [
             "61816dfa6ef05c2ce828f1ad",
             "6183fc15d3a39d50044c13e9",

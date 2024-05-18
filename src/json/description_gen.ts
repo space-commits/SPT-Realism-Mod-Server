@@ -1,17 +1,18 @@
 import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
 import { ParentClasses } from "../utils/enums";
 import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 
 export class DescriptionGen {
 
-    constructor(private tables: IDatabaseTables, private modConfig: any) { }
+    constructor(private tables: IDatabaseTables, private modConfig: any, private logger: ILogger) { }
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
     }
 
     public descriptionGen() {
-        for (let lang in this.tables.locales.global) { 
+        for (let lang in this.tables.locales.global) {
             this.descriptionGenHelper(lang);
         }
     }
@@ -20,12 +21,13 @@ export class DescriptionGen {
         let locale = this.tables.locales.global[lang];
         for (let templateItem in this.itemDB()) {
             let item = this.itemDB()[templateItem];
-
             if (item._parent === ParentClasses.AMMO && item._props.ammoHear === 1) {
                 locale[`${templateItem}` + " Description"] = "This ammunition is subsonic and is in a calibre that requires special attachments or modifications in order to be cycled reliably." + `\n\n${locale[`${templateItem}` + " Description"]}`;
             }
             if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
                 let modType = item._props.ConflictingItems[1];
+
+
                 if (modType === "DI") {
                     locale[`${templateItem}` + " Description"] = "This weapon uses a direct impingement gas system, therefore mounted suppressors have increased durabiltiy burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
@@ -84,18 +86,19 @@ export class DescriptionGen {
                     if (item._props.ConflictingItems[1] === "true") {
                         locale[`${templateItem}` + " Description"] = "This faceshield allows the use of sights while using any stock in the extended position." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
-                    if (item._props.ConflictingItems[1] === "false") {
+                    else {
                         locale[`${templateItem}` + " Description"] = "This faceshield does NOT allow the use of sights while using a stock in the extended/unfolded position, unless the weapon/stock allows it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
+                    locale[`${templateItem}` + " Description"] = "This faceshield gives penalties to sprint speed if it is deployed. Ergo penalty only applies if deployed." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (item._parent === ParentClasses.ARMOREDEQUIPMENT || item._parent === ParentClasses.HEADWEAR || item._parent === ParentClasses.FACECOVER) {
+                if ((item._parent === ParentClasses.ARMOREDEQUIPMENT || item._parent === ParentClasses.HEADWEAR || item._parent === ParentClasses.FACECOVER) && item._props.HasHinge == false) {
                     if (item._props.ConflictingItems[1] === "false") {
                         locale[`${templateItem}` + " Description"] = "This gear item blocks the use of sights while using a stock in the extended/unfolded position, unless the weapon/stock allows it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
                 }
             }
 
-            if(item._parent === ParentClasses.STIMULATOR && this.modConfig.stim_changes === true){
+            if (item._parent === ParentClasses.STIMULATOR && this.modConfig.stim_changes === true) {
                 //generic
                 if (item._id === "5fca13ca637ee0341a484f46" || item._id === "637b612fb7afa97bfc3d7005" || item._id === "637b6251104668754b72f8f9") {
                     locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, cerebral contusion or swelling of the brain, hand tremors, slowed metatbolism, increased levels of stress, weakened immune system, dyspnea, chronic inflammation, and overall reduced vitality.";
@@ -105,7 +108,7 @@ export class DescriptionGen {
                     locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, hand tremors, and increased suspetibility to bruising, injury and tissue damage.";
                 }
                 //damage
-                if (item._id === "5ed515ece452db0eb56fc028" || item._id === "637b6179104668754b72f8f5" ) {
+                if (item._id === "5ed515ece452db0eb56fc028" || item._id === "637b6179104668754b72f8f5") {
                     locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include cerebral contusion or swelling of the brain, hand tremors, reduced concentration, attention and perception, reduced vitality, rapid deterioration of organ function and necrosis.";
                 }
                 //adrenal

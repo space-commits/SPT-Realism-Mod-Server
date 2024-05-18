@@ -113,7 +113,7 @@ class TieredFlea {
     updateFlea(logger, ragfairOfferGen, container, arrays, level) {
         if (level === undefined) {
             this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
-            logger.info("Realism Mod: Fleamarket Tier Set To Default  (tier 0)");
+            logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
         }
         if (level !== undefined) {
             if (level < 5) {

@@ -27,7 +27,7 @@ class Armor {
     armMat() {
         return this.globalDB().ArmorMaterials;
     }
-    loadArmor() {
+    loadArmorStats() {
         //Armor Destructibility values
         this.armMat().Glass.Destructibility = 0.45;
         this.armMat().Aramid.Destructibility = 0.33;
@@ -107,7 +107,7 @@ class Armor {
                     break;
                 }
                 if (plateCollidor.includes("back")) {
-                    serverItem._props.armorColliders.push("RibcageUp");
+                    serverItem._props.armorColliders.push("SpineTop");
                     break;
                 }
                 if (plateCollidor.includes("left")) {
@@ -224,7 +224,7 @@ class Armor {
             this.modifyAramid(serverItem, 4, 100, 0.45);
         }
         //Strandhogg
-        if (serverItem._id === "544a5caa4bdc2d1a388b4568") {
+        if (serverItem._id === "61bcc89aef0f505f0c6cd0fc") {
             this.modifyAramid(serverItem, 4, 95, 0.3);
         }
         //AVS
@@ -411,6 +411,9 @@ class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.08;
             serverItem._props.ArmorMaterial = 'Titan';
+            serverItem._props.speedPenaltyPercent = -1;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -2;
         }
         //Titanium NIJ III+ (BSG's bullshit)
         if (serverItem._id === "656fa99800d62bcd2e024088") {
@@ -419,6 +422,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.08;
             serverItem._props.ArmorMaterial = 'Titan';
+            serverItem._props.speedPenaltyPercent = -1;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -2;
         }
         //Steel NIJ III
         if (serverItem._id === "656f9d5900d62bcd2e02407c" || serverItem._id === "656fa76500d62bcd2e024080") {
@@ -427,6 +433,9 @@ class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.025;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -1.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -2;
         }
         //Steel NIJ III+
         if (serverItem._id === "656fa8d700d62bcd2e024084" || serverItem._id === "656fa0fb498d1b7e3e071d9c") {
@@ -435,6 +444,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.015;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -1.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -2;
         }
         //UHMWPE NIJ III
         if (serverItem._id === "656fae5f7c2d57afe200c0d7" || serverItem._id === "656fac30c6baea13cd07e10c") {
@@ -443,6 +455,9 @@ class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.16;
             serverItem._props.ArmorMaterial = 'UHMWPE';
+            serverItem._props.speedPenaltyPercent = -2;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
         }
         //UHMWPE NIJ III+
         if (serverItem._id === "656faf0ca0dce000a2020f77" || serverItem._id === "656fad8c498d1b7e3e071da0") {
@@ -451,6 +466,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.16;
             serverItem._props.ArmorMaterial = 'UHMWPE';
+            serverItem._props.speedPenaltyPercent = -2.25;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5.5;
         }
         //UHMWPE NIJ IV (BSG bullshit, not sure if this is even a thing IRL)
         if (serverItem._id === "656fafe3498d1b7e3e071da4") {
@@ -459,6 +477,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.16;
             serverItem._props.ArmorMaterial = 'UHMWPE';
+            serverItem._props.speedPenaltyPercent = -2.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -6;
         }
         //Combined NIJ III
         if (serverItem._id === "656f9fa0498d1b7e3e071d98") {
@@ -468,6 +489,9 @@ class Armor {
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle";
+            serverItem._props.speedPenaltyPercent = -2.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Combined NIJ III+
         if (serverItem._id === "656fa61e94b480b8a500c0e8") {
@@ -477,6 +501,9 @@ class Armor {
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle";
+            serverItem._props.speedPenaltyPercent = -2.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Combined NIJ IV
         if (serverItem._id === "656fa53d94b480b8a500c0e4") {
@@ -486,6 +513,9 @@ class Armor {
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Prefab.path = "assets/content/items/equipment/plate_pgd_esapi_iv_sa_medium/item_equipment_plate_pgd_esapi_iv_sa_medium.bundle";
+            serverItem._props.speedPenaltyPercent = -2.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Ceramic NIJ III
         if (serverItem._id === "656fb21fa0dce000a2020f7c") {
@@ -494,6 +524,9 @@ class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Ceramic NIJ III+
         if (serverItem._id === "656fb0bd7c2d57afe200c0dc") {
@@ -502,6 +535,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Ceramic NIJ IV
         if (serverItem._id === "") {
@@ -510,6 +546,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //SAPI
         if (serverItem._id === "655746010177119f4a097ff7") {
@@ -518,6 +557,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //SSAPI Side
         if (serverItem._id === "6557458f83942d705f0c4962") {
@@ -526,6 +568,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -0.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //ESAPI
         if (serverItem._id === "64afdcb83efdfea28601d041") {
@@ -534,6 +579,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //ESBI Side
         if (serverItem._id === "64afdb577bb3bfe8fe03fd1d") {
@@ -542,6 +590,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -0.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //XSAPI
         if (serverItem._id === "xsapi_chest") {
@@ -550,6 +601,9 @@ class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.14;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Osprey MK4A Plate
         if (serverItem._id === "mk4a_plate") {
@@ -558,6 +612,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.1;
             serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.speedPenaltyPercent = -2.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
         }
         //6B12 (used by 6B23-1, should be class 8 with taking aramid into account)
         if (serverItem._id === "654a4dea7c17dec2f50cc86a") {
@@ -566,6 +623,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -7.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
         }
         //6B13 (back)
         if (serverItem._id === "656efd66034e8e01c407f35c") {
@@ -574,6 +634,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -1.75;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //6B33 (used by 6B13)
         if (serverItem._id === "656f603f94b480b8a500c0d6") {
@@ -582,6 +645,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
         }
         //6B23-2 (back)
         if (serverItem._id === "657b22485f444d6dff0c6c2f") {
@@ -590,6 +656,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -1.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //Granit 4 Front
         if (serverItem._id === "656f611f94b480b8a500c0db") {
@@ -598,6 +667,9 @@ class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
         }
         //Granit 4 Back
         if (serverItem._id === "656efaf54772930db4031ff5") {
@@ -606,6 +678,9 @@ class Armor {
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -1.75;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //Granit BR4
         if (serverItem._id === "65573fa5655447403702a816") {
@@ -614,6 +689,9 @@ class Armor {
             serverItem._props.armorClass = 9;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -2.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -3.5;
         }
         //Granit 4RS Front
         if (serverItem._id === "656f63c027aed95beb08f62c") {
@@ -622,6 +700,9 @@ class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.125;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
         }
         //Granit 4RS Back
         if (serverItem._id === "654a4a964b446df1ad03f192") {
@@ -630,6 +711,9 @@ class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.15;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -1.75;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //Granit BR5
         if (serverItem._id === "64afc71497cf3a403c01ff38") {
@@ -638,6 +722,9 @@ class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -2.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -3.5;
         }
         //Granit Side
         if (serverItem._id === "64afd81707e2cf40e903a316") {
@@ -646,6 +733,9 @@ class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -0.75;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //korund VM Front
         if (serverItem._id === "656f664200d62bcd2e024077") {
@@ -654,6 +744,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -7.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
         }
         //korund VM Back
         if (serverItem._id === "657b2797c3dbcb01d60c35ea") {
@@ -662,6 +755,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -1.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //korund VM Side
         if (serverItem._id === "654a4f8bc721968a4404ef18") {
@@ -670,6 +766,9 @@ class Armor {
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -0.85;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //korund VM-K Front
         if (serverItem._id === "656f66b5c6baea13cd07e108") {
@@ -678,6 +777,9 @@ class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.12;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -7.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
         }
         //korund VM-K Back
         if (serverItem._id === "657b28d25f444d6dff0c6c77") {
@@ -686,6 +788,9 @@ class Armor {
             serverItem._props.armorClass = 10;
             serverItem._props.BluntThroughput = 0.13;
             serverItem._props.ArmorMaterial = 'Ceramic';
+            serverItem._props.speedPenaltyPercent = -1.5;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = 0;
         }
         //Zhuk-3 Front
         if (serverItem._id === "656f57dc27aed95beb08f628") {
@@ -694,6 +799,9 @@ class Armor {
             serverItem._props.armorClass = 6;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.speedPenaltyPercent = -3;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -5;
         }
     }
     loadGlasses(serverItem) {
@@ -765,9 +873,9 @@ class Armor {
             serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 2 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.5;
+            serverItem._props.speedPenaltyPercent = -1.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.5;
+            serverItem._props.weaponErgonomicPenalty = -16;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -778,9 +886,9 @@ class Armor {
             serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 2 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.175;
+            serverItem._props.speedPenaltyPercent = -0.35;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.175;
+            serverItem._props.weaponErgonomicPenalty = -1.2;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -791,9 +899,9 @@ class Armor {
             serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 2 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.19;
+            serverItem._props.speedPenaltyPercent = -0.38;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.19;
+            serverItem._props.weaponErgonomicPenalty = -1;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -805,9 +913,9 @@ class Armor {
             serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 3 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.2;
+            serverItem._props.speedPenaltyPercent = -0.4;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -4;
+            serverItem._props.weaponErgonomicPenalty = -9;
             serverItem._props.BluntThroughput = 0.04 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -818,9 +926,9 @@ class Armor {
             serverItem._props.Durability = 25 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 3 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.61;
+            serverItem._props.speedPenaltyPercent = -1.22;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.61;
+            serverItem._props.weaponErgonomicPenalty = -14;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -831,9 +939,9 @@ class Armor {
             serverItem._props.Durability = 22 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 3 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.125;
+            serverItem._props.speedPenaltyPercent = -0.252;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.125;
+            serverItem._props.weaponErgonomicPenalty = -13;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -844,9 +952,9 @@ class Armor {
             serverItem._props.Durability = 22 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 3 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.125;
+            serverItem._props.speedPenaltyPercent = -0.252;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.125;
+            serverItem._props.weaponErgonomicPenalty = -13;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -858,9 +966,9 @@ class Armor {
             serverItem._props.Durability = 25 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.55;
+            serverItem._props.speedPenaltyPercent = -1.1;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.55;
+            serverItem._props.weaponErgonomicPenalty = -12;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -871,9 +979,9 @@ class Armor {
             serverItem._props.Durability = 35 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.6;
+            serverItem._props.speedPenaltyPercent = -1.15;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.6;
+            serverItem._props.weaponErgonomicPenalty = -10;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -884,9 +992,9 @@ class Armor {
             serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.6;
+            serverItem._props.speedPenaltyPercent = -1.2;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -5;
+            serverItem._props.weaponErgonomicPenalty = -14;
             serverItem._props.BluntThroughput = 0.01 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -897,9 +1005,9 @@ class Armor {
             serverItem._props.Durability = 40 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.4;
+            serverItem._props.speedPenaltyPercent = -0.8;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -4;
+            serverItem._props.weaponErgonomicPenalty = -10;
             serverItem._props.BluntThroughput = 0.05;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -910,9 +1018,9 @@ class Armor {
             serverItem._props.Durability = 35 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.7;
+            serverItem._props.speedPenaltyPercent = -1.4;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.7;
+            serverItem._props.weaponErgonomicPenalty = -20;
             serverItem._props.BluntThroughput = 0.03 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
@@ -923,9 +1031,9 @@ class Armor {
             serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.6;
+            serverItem._props.speedPenaltyPercent = -1.2;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.6;
+            serverItem._props.weaponErgonomicPenalty = -18;
             serverItem._props.BluntThroughput = 0.03;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
@@ -936,9 +1044,9 @@ class Armor {
             serverItem._props.Durability = 14 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.15;
+            serverItem._props.speedPenaltyPercent = -0.3;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.15;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.08 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -949,9 +1057,9 @@ class Armor {
             serverItem._props.Durability = 8 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.085;
+            serverItem._props.speedPenaltyPercent = -0.172;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.085;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.08 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -962,9 +1070,9 @@ class Armor {
             serverItem._props.Durability = 8 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.085;
+            serverItem._props.speedPenaltyPercent = -0.172;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.085;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.08 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -976,9 +1084,9 @@ class Armor {
             serverItem._props.Durability = 25 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.325;
+            serverItem._props.speedPenaltyPercent = -0.65;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -2;
+            serverItem._props.weaponErgonomicPenalty = -8;
             serverItem._props.BluntThroughput = 0.025 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -989,9 +1097,9 @@ class Armor {
             serverItem._props.Durability = 40 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.6;
+            serverItem._props.speedPenaltyPercent = -1.2;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.6;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.025 * bluntModifier;
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.2;
@@ -1001,9 +1109,9 @@ class Armor {
             serverItem._props.Durability = 20 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.5;
+            serverItem._props.speedPenaltyPercent = -1;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.5;
+            serverItem._props.weaponErgonomicPenalty = -8;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -1014,9 +1122,9 @@ class Armor {
             serverItem._props.Durability = 35 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.9;
+            serverItem._props.speedPenaltyPercent = -1.8;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.9;
+            serverItem._props.weaponErgonomicPenalty = -14;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -1027,9 +1135,9 @@ class Armor {
             serverItem._props.Durability = 60 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.65;
+            serverItem._props.speedPenaltyPercent = -1.33;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.65;
+            serverItem._props.weaponErgonomicPenalty = -18;
             serverItem._props.BluntThroughput = 0.0;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
@@ -1040,9 +1148,9 @@ class Armor {
             serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.55;
+            serverItem._props.speedPenaltyPercent = -1.1;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.55;
+            serverItem._props.weaponErgonomicPenalty = -28;
             serverItem._props.BluntThroughput = 0.02 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -1053,9 +1161,9 @@ class Armor {
             serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.55;
+            serverItem._props.speedPenaltyPercent = -1.1;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.55;
+            serverItem._props.weaponErgonomicPenalty = -28;
             serverItem._props.BluntThroughput = 0.02 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -1066,9 +1174,9 @@ class Armor {
             serverItem._props.Durability = 25 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.38;
+            serverItem._props.speedPenaltyPercent = -0.76;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.38;
+            serverItem._props.weaponErgonomicPenalty = -7;
             serverItem._props.BluntThroughput = 0.04 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1079,9 +1187,9 @@ class Armor {
             serverItem._props.Durability = 15 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.125;
+            serverItem._props.speedPenaltyPercent = -0.25;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.125;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.08 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1092,9 +1200,9 @@ class Armor {
             serverItem._props.Durability = 30 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.34;
+            serverItem._props.speedPenaltyPercent = -0.59;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.34;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.12 * bluntModifier;
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 0.59;
@@ -1105,9 +1213,9 @@ class Armor {
             serverItem._props.Durability = 32 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 7 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.75;
+            serverItem._props.speedPenaltyPercent = -0.45;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.12 * bluntModifier;
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.Weight = 0.45;
@@ -1117,9 +1225,9 @@ class Armor {
             serverItem._props.Durability = 36 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 7 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.5;
+            serverItem._props.speedPenaltyPercent = -0.99;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -3.2;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.07 * bluntModifier;
             serverItem._props.ArmorMaterial = 'Ceramic';
             serverItem._props.Weight = 0.99;
@@ -1199,7 +1307,9 @@ class Armor {
             serverItem._props.Durability = 40 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 1 + classModifier;
+            serverItem._props.speedPenaltyPercent = -5.78;
             serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -4;
             serverItem._props.BluntThroughput = 0.14 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Combined';
@@ -1212,9 +1322,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.95;
+            serverItem._props.speedPenaltyPercent = -1.9;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.95;
+            serverItem._props.weaponErgonomicPenalty = -4;
             serverItem._props.BluntThroughput = 0.1 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1226,9 +1336,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.75;
+            serverItem._props.speedPenaltyPercent = -1.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.weaponErgonomicPenalty = -8;
             serverItem._props.BluntThroughput = 0.15 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1240,9 +1350,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.225;
+            serverItem._props.speedPenaltyPercent = -0.45;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.225;
+            serverItem._props.weaponErgonomicPenalty = -0.2;
             serverItem._props.BluntThroughput = 0.25 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1255,7 +1365,9 @@ class Armor {
             serverItem._props.Durability = 80 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 2 + classModifier;
+            serverItem._props.speedPenaltyPercent = -10.28;
             serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -10;
             serverItem._props.BluntThroughput = 0.25 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1271,9 +1383,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.65;
+            serverItem._props.speedPenaltyPercent = -1.3;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.65;
+            serverItem._props.weaponErgonomicPenalty = -9;
             serverItem._props.BluntThroughput = 0.16 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1286,9 +1398,9 @@ class Armor {
             serverItem._props.Durability = 100 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 3 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.9;
+            serverItem._props.speedPenaltyPercent = -9.8;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.9;
+            serverItem._props.weaponErgonomicPenalty = -9;
             serverItem._props.BluntThroughput = 0.35 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1305,9 +1417,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.1;
+            serverItem._props.speedPenaltyPercent = -2.2;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.1;
+            serverItem._props.weaponErgonomicPenalty = -2;
             serverItem._props.BluntThroughput = 0.22 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1319,9 +1431,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.6;
+            serverItem._props.speedPenaltyPercent = -1.2;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.6;
+            serverItem._props.weaponErgonomicPenalty = -4.5;
             serverItem._props.BluntThroughput = 0.28 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1333,9 +1445,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.475;
+            serverItem._props.speedPenaltyPercent = -0.95;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.475;
+            serverItem._props.weaponErgonomicPenalty = -0.18;
             serverItem._props.BluntThroughput = 0.3 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1347,9 +1459,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.25;
+            serverItem._props.speedPenaltyPercent = -1.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.25;
+            serverItem._props.weaponErgonomicPenalty = -2;
             serverItem._props.BluntThroughput = 0.075 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -1361,13 +1473,13 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.65;
+            serverItem._props.speedPenaltyPercent = -0.95;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.65;
+            serverItem._props.weaponErgonomicPenalty = -0.5;
             serverItem._props.BluntThroughput = 0.26 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 1.305;
+            serverItem._props.Weight = 0.95;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 60 * duraModifier, 3 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //Ratnik-BSh Covered 6B47
@@ -1375,13 +1487,13 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.65;
+            serverItem._props.speedPenaltyPercent = -0.96;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.65;
+            serverItem._props.weaponErgonomicPenalty = -0.5;
             serverItem._props.BluntThroughput = 0.26 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 1.3;
+            serverItem._props.Weight = 0.96;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 60 * duraModifier, 3 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //// Class 4 ////
@@ -1390,9 +1502,9 @@ class Armor {
             serverItem._props.Durability = 64 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.75;
+            serverItem._props.speedPenaltyPercent = -15.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.weaponErgonomicPenalty = -20;
             serverItem._props.BluntThroughput = 0.07 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
@@ -1410,9 +1522,9 @@ class Armor {
             serverItem._props.Durability = 68 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.9;
+            serverItem._props.speedPenaltyPercent = -15.8;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.9;
+            serverItem._props.weaponErgonomicPenalty = -20;
             serverItem._props.BluntThroughput = 0.07 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
@@ -1430,9 +1542,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.4;
+            serverItem._props.speedPenaltyPercent = -0.8;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.4;
+            serverItem._props.weaponErgonomicPenalty = 0;
             serverItem._props.BluntThroughput = 0.23 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1444,9 +1556,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.75;
+            serverItem._props.speedPenaltyPercent = -3.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.75;
+            serverItem._props.weaponErgonomicPenalty = -4.5;
             serverItem._props.BluntThroughput = 0.07 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -1458,9 +1570,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.45;
+            serverItem._props.speedPenaltyPercent = -0.9;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.45;
+            serverItem._props.weaponErgonomicPenalty = -0.35;
             serverItem._props.BluntThroughput = 0.21 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1472,9 +1584,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.45;
+            serverItem._props.speedPenaltyPercent = -0.9;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.45;
+            serverItem._props.weaponErgonomicPenalty = -0.35;
             serverItem._props.BluntThroughput = 0.21 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1486,9 +1598,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.44;
+            serverItem._props.speedPenaltyPercent = -0.88;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.44;
+            serverItem._props.weaponErgonomicPenalty = -0.45;
             serverItem._props.BluntThroughput = 0.19 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1500,9 +1612,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.56;
+            serverItem._props.speedPenaltyPercent = -1.12;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.56;
+            serverItem._props.weaponErgonomicPenalty = -0.2;
             serverItem._props.BluntThroughput = 0.18 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1514,9 +1626,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.7;
+            serverItem._props.speedPenaltyPercent = -1.4;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.7;
+            serverItem._props.weaponErgonomicPenalty = -1.25;
             serverItem._props.BluntThroughput = 0.14 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1528,9 +1640,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.71;
+            serverItem._props.speedPenaltyPercent = -1.42;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.71;
+            serverItem._props.weaponErgonomicPenalty = -1.25;
             serverItem._props.BluntThroughput = 0.14 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1542,9 +1654,9 @@ class Armor {
             serverItem._props.Durability = 60 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.8;
+            serverItem._props.speedPenaltyPercent = -10.1;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.weaponErgonomicPenalty = -10;
             serverItem._props.BluntThroughput = 0.4 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1560,9 +1672,9 @@ class Armor {
             serverItem._props.Durability = 120 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
-            serverItem._props.speedPenaltyPercent = -0.8;
+            serverItem._props.speedPenaltyPercent = -13.1;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.weaponErgonomicPenalty = -15;
             serverItem._props.BluntThroughput = 0.5 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1577,9 +1689,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1;
+            serverItem._props.speedPenaltyPercent = -8.6;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -5;
+            serverItem._props.weaponErgonomicPenalty = -9;
             serverItem._props.BluntThroughput = 0.24 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1591,13 +1703,13 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.7;
+            serverItem._props.speedPenaltyPercent = -2.4;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.7;
+            serverItem._props.weaponErgonomicPenalty = -4;
             serverItem._props.BluntThroughput = 0.23 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 3.4;
+            serverItem._props.Weight = 2.4;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 100 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //ULACH Black
@@ -1605,9 +1717,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.95;
+            serverItem._props.speedPenaltyPercent = -1.9;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.95;
+            serverItem._props.weaponErgonomicPenalty = -1.75;
             serverItem._props.BluntThroughput = 0.13 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1619,9 +1731,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.95;
+            serverItem._props.speedPenaltyPercent = -1.9;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.95;
+            serverItem._props.weaponErgonomicPenalty = -1.75;
             serverItem._props.BluntThroughput = 0.13 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1633,9 +1745,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.75;
+            serverItem._props.speedPenaltyPercent = -1.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.weaponErgonomicPenalty = -1.5;
             serverItem._props.BluntThroughput = 0.145 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1647,9 +1759,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.75;
+            serverItem._props.speedPenaltyPercent = -1.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.75;
+            serverItem._props.weaponErgonomicPenalty = -1.5;
             serverItem._props.BluntThroughput = 0.145 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
@@ -1661,7 +1773,7 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.25;
+            serverItem._props.speedPenaltyPercent = -2.4;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.25;
             serverItem._props.BluntThroughput = 0.165 * bluntModifier;
@@ -1675,9 +1787,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.59;
+            serverItem._props.speedPenaltyPercent = -1.18;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.59;
+            serverItem._props.weaponErgonomicPenalty = -0.15;
             serverItem._props.BluntThroughput = 0.195 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1689,9 +1801,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.59;
+            serverItem._props.speedPenaltyPercent = -1.18;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.59;
+            serverItem._props.weaponErgonomicPenalty = -0.15;
             serverItem._props.BluntThroughput = 0.195 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1703,9 +1815,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.585;
+            serverItem._props.speedPenaltyPercent = -1.17;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.585;
+            serverItem._props.weaponErgonomicPenalty = 0.5;
             serverItem._props.BluntThroughput = 0.19 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1717,9 +1829,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.48;
+            serverItem._props.speedPenaltyPercent = -0.96;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.48;
+            serverItem._props.weaponErgonomicPenalty = 0.7;
             serverItem._props.BluntThroughput = 0.18 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Combined';
@@ -1731,9 +1843,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.9;
+            serverItem._props.speedPenaltyPercent = -1.2;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -0.9;
+            serverItem._props.weaponErgonomicPenalty = 1;
             serverItem._props.BluntThroughput = 0.085 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -1745,9 +1857,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.85;
+            serverItem._props.speedPenaltyPercent = -3.7;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.85;
+            serverItem._props.weaponErgonomicPenalty = -5;
             serverItem._props.BluntThroughput = 0.099 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -1759,7 +1871,7 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.85;
+            serverItem._props.speedPenaltyPercent = -3.7;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -1.85;
             serverItem._props.BluntThroughput = 0.099 * bluntModifier;
@@ -1773,13 +1885,13 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -2;
+            serverItem._props.speedPenaltyPercent = -2.8;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -2;
+            serverItem._props.weaponErgonomicPenalty = -6;
             serverItem._props.BluntThroughput = 0.072 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
-            serverItem._props.Weight = 4;
+            serverItem._props.Weight = 2.8;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 40 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'ArmoredSteel');
         }
         //Rys-T
@@ -1787,9 +1899,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.25;
+            serverItem._props.speedPenaltyPercent = -2.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.25;
+            serverItem._props.weaponErgonomicPenalty = -5;
             serverItem._props.BluntThroughput = 0.085 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Titan';
@@ -1801,9 +1913,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.3;
+            serverItem._props.speedPenaltyPercent = -2.6;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.3;
+            serverItem._props.weaponErgonomicPenalty = -7;
             serverItem._props.BluntThroughput = 0.05 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -1815,9 +1927,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.3;
+            serverItem._props.speedPenaltyPercent = -2.6;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -1.3;
+            serverItem._props.weaponErgonomicPenalty = -7;
             serverItem._props.BluntThroughput = 0.05 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
@@ -1830,9 +1942,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -2.25;
+            serverItem._props.speedPenaltyPercent = -4.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -2.25;
+            serverItem._props.weaponErgonomicPenalty = -8;
             serverItem._props.BluntThroughput = 0.14 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';

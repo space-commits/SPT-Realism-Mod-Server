@@ -83,6 +83,20 @@
         "sandbox": 12,
         "default": 15
     },
+    "testBotCap": {
+        "factory4_day": 1,
+        "factory4_night": 1,
+        "bigmap": 1,
+        "woods": 1,
+        "shoreline": 1,
+        "lighthouse": 1,
+        "rezervbase": 1,
+        "interchange": 1,
+        "laboratory": 1,
+        "tarkovstreets": 1,
+        "sandbox": 1,
+        "default": 1
+    },
     "lootNValue": {
         "scav": 3,
         "pmc": 2.5,
