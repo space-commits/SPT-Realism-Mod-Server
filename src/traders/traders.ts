@@ -359,9 +359,7 @@ export class Traders {
                 "parentId": "hideout",
                 "slotId": "hideout",
                 "upd": {
-                    "BuyRestrictionMax": buyRestriction,
-                    "BuyRestrictionCurrent": 0,
-                    "StackObjectsCount": 1
+                    "StackObjectsCount": buyRestriction
                 }
             }
         );
@@ -420,9 +418,7 @@ export class Traders {
                 "parentId": "hideout",
                 "slotId": "hideout",
                 "upd": {
-                    "BuyRestrictionMax": buyRestriction,
-                    "BuyRestrictionCurrent": 0,
-                    "StackObjectsCount": 1
+                    "StackObjectsCount": buyRestriction
                 }
             }
         );
@@ -523,9 +519,9 @@ export class RandomizeTraderAssort {
             case 2:
                 return 1.05;
             case 3:
-                return 1.15;
+                return 1.12;
             case 4:
-                return 1.3;
+                return 1.25;
         }
         return 1;
     }
@@ -646,14 +642,14 @@ export class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, Calibers._762x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55, 95);
             this.randomizeAmmoStockHelper(item, Calibers._68x51mm, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._762x51mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 65 * modConfig.rand_stackable_modifier * llStackableFactor, 60 - llOutOfStockFactor, 60, 120);
-            this.randomizeAmmoStockHelper(item, Calibers._762x54rmm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 68, 120);
+            this.randomizeAmmoStockHelper(item, Calibers._762x54rmm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 65, 120);
             this.randomizeAmmoStockHelper(item, Calibers._300BLK, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 53, 100);
             this.randomizeAmmoStockHelper(item, Calibers._556x45mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
-            this.randomizeAmmoStockHelper(item, Calibers._545x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 65, 100);
+            this.randomizeAmmoStockHelper(item, Calibers._545x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
             this.randomizeAmmoStockHelper(item, Calibers._127x55mm, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 51);
-            this.randomizeAmmoStockHelper(item, Calibers._12ga, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 160);
-            this.randomizeAmmoStockHelper(item, Calibers._20ga, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, Calibers._23x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 5 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, Calibers._12ga, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 150);
+            this.randomizeAmmoStockHelper(item, Calibers._20ga, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor);
+            this.randomizeAmmoStockHelper(item, Calibers._23x75mm, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 2 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
@@ -683,7 +679,14 @@ export class RandomizeTraderAssort {
             }
             else {
                 let modifiedStackCount =  Math.round(this.utils.pickRandNumInRange(min * stockModifier, max * stockModifier));
-                item.upd.StackObjectsCount = Math.round(Math.max(modifiedStackCount,  max * 1.2));
+                item.upd.StackObjectsCount = Math.round(Math.min(modifiedStackCount,  max * 1.2));
+            }
+
+            if (item.upd.hasOwnProperty('BuyRestrictionCurrent')) {
+                delete item.upd.BuyRestrictionCurrent;
+            }
+            if (item.upd.hasOwnProperty('BuyRestrictionMax')) {
+                delete item.upd.BuyRestrictionMax;
             }
         }
     }
@@ -702,6 +705,13 @@ export class RandomizeTraderAssort {
     private randomizeStock(assortItemParent: string, catParent: string, item: Item, min: number, max: number, llFactor: number) {
         if (assortItemParent === catParent) {
             item.upd.StackObjectsCount = this.getStockCount(llFactor, 0, min, max);
+
+            if (item.upd.hasOwnProperty('BuyRestrictionCurrent')) {
+                delete item.upd.BuyRestrictionCurrent;
+            }
+            if (item.upd.hasOwnProperty('BuyRestrictionMax')) {
+                delete item.upd.BuyRestrictionCurrent;
+            }
         }
     }
 
