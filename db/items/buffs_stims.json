@@ -355,7 +355,7 @@
             "Delay": 165,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.1
+            "Value": 0.2
         },
         {
             "AbsoluteValue": false,
@@ -364,7 +364,7 @@
             "Delay": 15,
             "Duration": 300,
             "SkillName": "",
-            "Value": -2.5
+            "Value": -0.8
         }
     ],
     "Buffs_AHF1M": [
@@ -384,7 +384,7 @@
             "Delay": 10,
             "Duration": 300,
             "SkillName": "Vitality",
-            "Value": 20
+            "Value": 25
         },
         {
             "AbsoluteValue": true,
@@ -393,7 +393,7 @@
             "Delay": 10,
             "Duration": 300,
             "SkillName": "Health",
-            "Value": 20
+            "Value": 25
         },
         {
             "AbsoluteValue": true,
@@ -411,7 +411,7 @@
             "Delay": 10,
             "Duration": 300,
             "SkillName": "",
-            "Value": 0.2
+            "Value": 0.1
         },
         {
             "AbsoluteValue": false,
@@ -420,7 +420,7 @@
             "Delay": 10,
             "Duration": 300,
             "SkillName": "",
-            "Value": -4
+            "Value": -0.6
         }
     ],
     "Buffs_3bTG": [
@@ -1799,7 +1799,7 @@
             "Delay": 1,
             "Duration": 600,
             "SkillName": "",
-            "Value": -5
+            "Value": -0.9
         },
         {
             "AbsoluteValue": true,
@@ -1891,7 +1891,7 @@
             "Delay": 1,
             "Duration": 600,
             "SkillName": "",
-            "Value": -4
+            "Value": -0.8
         },
         {
             "AbsoluteValue": true,

@@ -749,6 +749,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
 
+        //have to run this async to ensure correct load order
         (async () => {
             await jsonHand.processUserJsonFiles();
 

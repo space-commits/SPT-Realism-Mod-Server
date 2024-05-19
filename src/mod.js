@@ -581,6 +581,7 @@ class Main {
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
+        //have to run this async to ensure correct load order
         (async () => {
             await jsonHand.processUserJsonFiles();
             if (modConfig.recoil_attachment_overhaul) {

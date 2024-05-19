@@ -467,10 +467,9 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 35,
         "Ergonomics": 0,
         "Weight": 0.043,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 35
     },
     "6529109524cbe3c74a05e5b7": {
         "ItemID": "6529109524cbe3c74a05e5b7",
@@ -478,9 +477,8 @@
         "ModType": "",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
-        "FixSpeed": 30,
         "Ergonomics": 0,
         "Weight": 0.035,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 30
     }
 }

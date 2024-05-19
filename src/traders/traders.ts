@@ -21,28 +21,25 @@ import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
 
 
 const modConfig = require("../../config/config.json");
-const weapPath = modConfig.weap_preset;
-const attPath = modConfig.att_preset;
-const gearPath = modConfig.gear_preset;
 
-const AssaultRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/AssaultRifleTemplates.json");
-const AssaultCarbineTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/AssaultCarbineTemplates.json");
-const MachinegunTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/MachinegunTemplates.json");
-const MarksmanRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/MarksmanRifleTemplates.json");
-const PistolTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/PistolTemplates.json");
-const ShotgunTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/ShotgunTemplates.json");
-const SMGTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SMGTemplates.json");
-const SniperRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SniperRifleTemplates.json");
-const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SpecialWeaponTemplates.json");
-const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
+const AssaultRifleTemplates = require("../../db/templates/weapons/AssaultRifleTemplates.json");
+const AssaultCarbineTemplates = require("../../db/templates/weapons/AssaultCarbineTemplates.json");
+const MachinegunTemplates = require("../../db/templates/weapons/MachinegunTemplates.json");
+const MarksmanRifleTemplates = require("../../db/templates/weapons/MarksmanRifleTemplates.json");
+const PistolTemplates = require("../../db/templates/weapons/PistolTemplates.json");
+const ShotgunTemplates = require("../../db/templates/weapons/ShotgunTemplates.json");
+const SMGTemplates = require("../../db/templates/weapons/SMGTemplates.json");
+const SniperRifleTemplates = require("../../db/templates/weapons/SniperRifleTemplates.json");
+const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeaponTemplates.json");
+const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
 
-const armorComponentsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorComponentsTemplates.json");
-const armorChestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorChestrigTemplates.json");
-const helmetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/helmetTemplates.json");
-const armorVestsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorVestsTemplates.json");
-const armorMasksTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorMasksTemplates.json");
-const chestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/chestrigTemplates.json");
-const headsetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/headsetTemplates.json");
+const armorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
+const armorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
+const helmetTemplates = require("../../db/templates/gear/helmetTemplates.json");
+const armorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates.json");
+const armorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
+const chestrigTemplates = require("../../db/templates/gear/chestrigTemplates.json");
+const headsetTemplates = require("../../db/templates/gear/headsetTemplates.json");
 
 const ammoDB = require("../../db/templates/ammo/ammoTemplates.json");
 

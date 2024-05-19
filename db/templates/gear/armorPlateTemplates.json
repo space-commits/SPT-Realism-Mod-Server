@@ -10,7 +10,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64ad2dac6f9247c2f4012439": {
         "ItemID": "64ad2dac6f9247c2f4012439",
@@ -23,7 +24,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64ad2dba0b9840e4c80c2485": {
         "ItemID": "64ad2dba0b9840e4c80c2485",
@@ -36,7 +38,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64ad2dc66f9247c2f401243d": {
         "ItemID": "64ad2dc66f9247c2f401243d",
@@ -49,7 +52,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64ad2dd30b9840e4c80c2489": {
         "ItemID": "64ad2dd30b9840e4c80c2489",
@@ -62,7 +66,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64afc71497cf3a403c01ff38": {
         "ItemID": "64afc71497cf3a403c01ff38",
@@ -77,7 +82,8 @@
         "ArmorClass": "Br5",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64afd81707e2cf40e903a316": {
         "ItemID": "64afd81707e2cf40e903a316",
@@ -91,7 +97,8 @@
         "ArmorClass": "Br5",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64afdb577bb3bfe8fe03fd1d": {
         "ItemID": "64afdb577bb3bfe8fe03fd1d",
@@ -105,7 +112,8 @@
         "ArmorClass": "ESBI",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "xsapi_chest": {
         "ItemID": "xsapi_chest",
@@ -119,7 +127,8 @@
         "ArmorClass": "XSAPI",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "mk4a_plate": {
         "ItemID": "mk4a_plate",
@@ -133,7 +142,8 @@
         "ArmorClass": "Mk4A",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64afdcb83efdfea28601d041": {
         "ItemID": "64afdcb83efdfea28601d041",
@@ -147,7 +157,8 @@
         "ArmorClass": "ESAPI",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64afee8e9f589807e30dc68a": {
         "ItemID": "64afee8e9f589807e30dc68a",
@@ -160,7 +171,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64afeecb977493a0ee026213": {
         "ItemID": "64afeecb977493a0ee026213",
@@ -173,7 +185,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64afef49977493a0ee026217": {
         "ItemID": "64afef49977493a0ee026217",
@@ -186,7 +199,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64b111fe1be308f1800688c1": {
         "ItemID": "64b111fe1be308f1800688c1",
@@ -199,7 +213,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "64b11c08506a73f6a10f9364": {
         "ItemID": "64b11c08506a73f6a10f9364",
@@ -212,7 +227,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a4a964b446df1ad03f192": {
         "ItemID": "654a4a964b446df1ad03f192",
@@ -226,7 +242,8 @@
         "ArmorClass": "4RS",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a4dea7c17dec2f50cc86a": {
         "ItemID": "654a4dea7c17dec2f50cc86a",
@@ -240,7 +257,8 @@
         "ArmorClass": "GOST 5",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a4f8bc721968a4404ef18": {
         "ItemID": "654a4f8bc721968a4404ef18",
@@ -254,7 +272,8 @@
         "ArmorClass": "GOST 5",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a8976f414fcea4004d78b": {
         "ItemID": "654a8976f414fcea4004d78b",
@@ -267,7 +286,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a8ae00337d53f9102c2aa": {
         "ItemID": "654a8ae00337d53f9102c2aa",
@@ -280,7 +300,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a8b0b0337d53f9102c2ae": {
         "ItemID": "654a8b0b0337d53f9102c2ae",
@@ -293,7 +314,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a8b3df414fcea4004d78f": {
         "ItemID": "654a8b3df414fcea4004d78f",
@@ -306,7 +328,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a8b60f414fcea4004d793": {
         "ItemID": "654a8b60f414fcea4004d793",
@@ -319,7 +342,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a8b80f414fcea4004d797": {
         "ItemID": "654a8b80f414fcea4004d797",
@@ -332,7 +356,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a8ba90337d53f9102c2b2": {
         "ItemID": "654a8ba90337d53f9102c2b2",
@@ -345,7 +370,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a8bc5f414fcea4004d79b": {
         "ItemID": "654a8bc5f414fcea4004d79b",
@@ -358,7 +384,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a90aff4f81a421b0a7c86": {
         "ItemID": "654a90aff4f81a421b0a7c86",
@@ -371,7 +398,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a91068e1ce698150fd1e2": {
         "ItemID": "654a91068e1ce698150fd1e2",
@@ -384,7 +412,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "654a9189bcc67a392b056c79": {
         "ItemID": "654a9189bcc67a392b056c79",
@@ -397,7 +426,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6551fec55d0cf82e51014288": {
         "ItemID": "6551fec55d0cf82e51014288",
@@ -410,7 +440,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "655200ba0ef76cf7be09d528": {
         "ItemID": "655200ba0ef76cf7be09d528",
@@ -423,7 +454,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65573fa5655447403702a816": {
         "ItemID": "65573fa5655447403702a816",
@@ -437,7 +469,8 @@
         "ArmorClass": "Br4",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6557458f83942d705f0c4962": {
         "ItemID": "6557458f83942d705f0c4962",
@@ -451,7 +484,8 @@
         "ArmorClass": "SSAPI",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "655746010177119f4a097ff7": {
         "ItemID": "655746010177119f4a097ff7",
@@ -465,7 +499,8 @@
         "ArmorClass": "SAPI",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6557519ac9b1d9bdcb0777e1": {
         "ItemID": "6557519ac9b1d9bdcb0777e1",
@@ -478,7 +513,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "655751db58aa1b6dbd0cc295": {
         "ItemID": "655751db58aa1b6dbd0cc295",
@@ -491,7 +527,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656efaf54772930db4031ff5": {
         "ItemID": "656efaf54772930db4031ff5",
@@ -505,7 +542,8 @@
         "ArmorClass": "GOST 4",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656efd66034e8e01c407f35c": {
         "ItemID": "656efd66034e8e01c407f35c",
@@ -519,7 +557,8 @@
         "ArmorClass": "GOST 5A",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656f57dc27aed95beb08f628": {
         "ItemID": "656f57dc27aed95beb08f628",
@@ -533,7 +572,8 @@
         "ArmorClass": "GOST 3",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656f603f94b480b8a500c0d6": {
         "ItemID": "656f603f94b480b8a500c0d6",
@@ -547,7 +587,8 @@
         "ArmorClass": "GOST 5A",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656f611f94b480b8a500c0db": {
         "ItemID": "656f611f94b480b8a500c0db",
@@ -561,7 +602,8 @@
         "ArmorClass": "GOST 4",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656f63c027aed95beb08f62c": {
         "ItemID": "656f63c027aed95beb08f62c",
@@ -575,7 +617,8 @@
         "ArmorClass": "4RS",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656f664200d62bcd2e024077": {
         "ItemID": "656f664200d62bcd2e024077",
@@ -589,7 +632,8 @@
         "ArmorClass": "GOST 5",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656f66b5c6baea13cd07e108": {
         "ItemID": "656f66b5c6baea13cd07e108",
@@ -603,7 +647,8 @@
         "ArmorClass": "GOST 6A",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656f9d5900d62bcd2e02407c": {
         "ItemID": "656f9d5900d62bcd2e02407c",
@@ -617,7 +662,8 @@
         "ArmorClass": "NIJ III",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656f9fa0498d1b7e3e071d98": {
         "ItemID": "656f9fa0498d1b7e3e071d98",
@@ -631,7 +677,8 @@
         "ArmorClass": "NIJ III",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fa0fb498d1b7e3e071d9c": {
         "ItemID": "656fa0fb498d1b7e3e071d9c",
@@ -645,7 +692,8 @@
         "ArmorClass": "NIJ III+",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fa25e94b480b8a500c0e0": {
         "ItemID": "656fa25e94b480b8a500c0e0",
@@ -659,7 +707,8 @@
         "ArmorClass": "NIJ III",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fa53d94b480b8a500c0e4": {
         "ItemID": "656fa53d94b480b8a500c0e4",
@@ -673,7 +722,8 @@
         "ArmorClass": "NIJ IV",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fa61e94b480b8a500c0e8": {
         "ItemID": "656fa61e94b480b8a500c0e8",
@@ -687,7 +737,8 @@
         "ArmorClass": "NIJ III+",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fa76500d62bcd2e024080": {
         "ItemID": "656fa76500d62bcd2e024080",
@@ -701,7 +752,8 @@
         "ArmorClass": "NIJ III",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fa8d700d62bcd2e024084": {
         "ItemID": "656fa8d700d62bcd2e024084",
@@ -715,7 +767,8 @@
         "ArmorClass": "NIJ III+",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fa99800d62bcd2e024088": {
         "ItemID": "656fa99800d62bcd2e024088",
@@ -729,7 +782,8 @@
         "ArmorClass": "NIJ III+",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fac30c6baea13cd07e10c": {
         "ItemID": "656fac30c6baea13cd07e10c",
@@ -743,7 +797,8 @@
         "ArmorClass": "NIJ III",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fad8c498d1b7e3e071da0": {
         "ItemID": "656fad8c498d1b7e3e071da0",
@@ -757,7 +812,8 @@
         "ArmorClass": "NIJ III",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fae5f7c2d57afe200c0d7": {
         "ItemID": "656fae5f7c2d57afe200c0d7",
@@ -771,7 +827,8 @@
         "ArmorClass": "NIJ III",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656faf0ca0dce000a2020f77": {
         "ItemID": "656faf0ca0dce000a2020f77",
@@ -785,7 +842,8 @@
         "ArmorClass": "NIJ III+",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fafe3498d1b7e3e071da4": {
         "ItemID": "656fafe3498d1b7e3e071da4",
@@ -799,7 +857,8 @@
         "ArmorClass": "NIJ IV",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fb0bd7c2d57afe200c0dc": {
         "ItemID": "656fb0bd7c2d57afe200c0dc",
@@ -814,7 +873,8 @@
 ,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fb21fa0dce000a2020f7c": {
         "ItemID": "656fb21fa0dce000a2020f7c",
@@ -828,7 +888,8 @@
         "ArmorClass": "NIJ III",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fd7c32668ef0402028fb9": {
         "ItemID": "656fd7c32668ef0402028fb9",
@@ -841,7 +902,8 @@
         "SpallReduction": 0.15,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "656fd89bf5a9631d4e042575": {
         "ItemID": "656fd89bf5a9631d4e042575",
@@ -854,7 +916,8 @@
         "SpallReduction": 0.15,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65702f87722744627e05cdb8": {
         "ItemID": "65702f87722744627e05cdb8",
@@ -867,7 +930,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65702fe593b7ea9c330f4ce8": {
         "ItemID": "65702fe593b7ea9c330f4ce8",
@@ -880,7 +944,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570305d93b7ea9c330f4ced": {
         "ItemID": "6570305d93b7ea9c330f4ced",
@@ -893,7 +958,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65703472c9030b928a0a8a78": {
         "ItemID": "65703472c9030b928a0a8a78",
@@ -906,7 +972,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65703d866584602f7d057a8a": {
         "ItemID": "65703d866584602f7d057a8a",
@@ -919,7 +986,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65703fa06584602f7d057a8e": {
         "ItemID": "65703fa06584602f7d057a8e",
@@ -932,7 +1000,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65703fe46a912c8b5c03468b": {
         "ItemID": "65703fe46a912c8b5c03468b",
@@ -945,7 +1014,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657040374e67e8ec7a0d261c": {
         "ItemID": "657040374e67e8ec7a0d261c",
@@ -958,7 +1028,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657044e971369562b300ce9b": {
         "ItemID": "657044e971369562b300ce9b",
@@ -971,7 +1042,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657045741bd9beedc40b7299": {
         "ItemID": "657045741bd9beedc40b7299",
@@ -984,7 +1056,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657045b97e80617cee095bda": {
         "ItemID": "657045b97e80617cee095bda",
@@ -997,7 +1070,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570460471369562b300ce9f": {
         "ItemID": "6570460471369562b300ce9f",
@@ -1010,7 +1084,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570495b45d573133d0d6adb": {
         "ItemID": "6570495b45d573133d0d6adb",
@@ -1023,7 +1098,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657049d23425b19bbc0502f0": {
         "ItemID": "657049d23425b19bbc0502f0",
@@ -1036,7 +1112,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65704de13e7bba58ea0285c8": {
         "ItemID": "65704de13e7bba58ea0285c8",
@@ -1049,7 +1126,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65705c3c14f2ed6d7d0b7738": {
         "ItemID": "65705c3c14f2ed6d7d0b7738",
@@ -1062,7 +1140,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65705c777260e1139e091408": {
         "ItemID": "65705c777260e1139e091408",
@@ -1075,7 +1154,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65705cb314f2ed6d7d0b773c": {
         "ItemID": "65705cb314f2ed6d7d0b773c",
@@ -1088,7 +1168,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65705cea4916448ae1050897": {
         "ItemID": "65705cea4916448ae1050897",
@@ -1101,7 +1182,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570653e89fd4926380b733e": {
         "ItemID": "6570653e89fd4926380b733e",
@@ -1114,7 +1196,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570658a89fd4926380b7346": {
         "ItemID": "6570658a89fd4926380b7346",
@@ -1127,7 +1210,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65707fc348c7a887f2010432": {
         "ItemID": "65707fc348c7a887f2010432",
@@ -1140,7 +1224,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570800612755ae0d907acf8": {
         "ItemID": "6570800612755ae0d907acf8",
@@ -1153,7 +1238,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65708070f65e2491bf00972c": {
         "ItemID": "65708070f65e2491bf00972c",
@@ -1166,7 +1252,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657080a212755ae0d907ad04": {
         "ItemID": "657080a212755ae0d907ad04",
@@ -1179,7 +1266,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657080ca12755ae0d907ad5e": {
         "ItemID": "657080ca12755ae0d907ad5e",
@@ -1192,7 +1280,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65708122f65e2491bf009755": {
         "ItemID": "65708122f65e2491bf009755",
@@ -1205,7 +1294,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65708165696fe382cf073255": {
         "ItemID": "65708165696fe382cf073255",
@@ -1218,7 +1308,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657087577f6d4590ac0d2109": {
         "ItemID": "657087577f6d4590ac0d2109",
@@ -1231,7 +1322,8 @@
         "SpallReduction": 0.22,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570880f4a747dbb63005ee5": {
         "ItemID": "6570880f4a747dbb63005ee5",
@@ -1244,7 +1336,8 @@
         "SpallReduction": 0.22,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65708afe4a747dbb63005eee": {
         "ItemID": "65708afe4a747dbb63005eee",
@@ -1257,7 +1350,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65708b4c4a747dbb63005ef3": {
         "ItemID": "65708b4c4a747dbb63005ef3",
@@ -1270,7 +1364,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570df294cc0d2ab1e05ed74": {
         "ItemID": "6570df294cc0d2ab1e05ed74",
@@ -1283,7 +1378,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570df9c615f54368b04fca9": {
         "ItemID": "6570df9c615f54368b04fca9",
@@ -1296,7 +1392,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e025615f54368b04fcb0": {
         "ItemID": "6570e025615f54368b04fcb0",
@@ -1309,7 +1406,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e0610b57c03ec90b96ef": {
         "ItemID": "6570e0610b57c03ec90b96ef",
@@ -1322,7 +1420,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e479a6560e4ee50c2b02": {
         "ItemID": "6570e479a6560e4ee50c2b02",
@@ -1335,7 +1434,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e5100b57c03ec90b970a": {
         "ItemID": "6570e5100b57c03ec90b970a",
@@ -1348,7 +1448,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e5674cc0d2ab1e05edbb": {
         "ItemID": "6570e5674cc0d2ab1e05edbb",
@@ -1361,7 +1462,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e59b0b57c03ec90b970e": {
         "ItemID": "6570e59b0b57c03ec90b970e",
@@ -1374,7 +1476,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e83223c1f638ef0b0ede": {
         "ItemID": "6570e83223c1f638ef0b0ede",
@@ -1387,7 +1490,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e87c23c1f638ef0b0ee2": {
         "ItemID": "6570e87c23c1f638ef0b0ee2",
@@ -1400,7 +1504,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e8a623c1f638ef0b0ee6": {
         "ItemID": "6570e8a623c1f638ef0b0ee6",
@@ -1413,7 +1518,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e8e7ab49e964120b4563": {
         "ItemID": "6570e8e7ab49e964120b4563",
@@ -1426,7 +1532,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570e90b3a5689d85f08db97": {
         "ItemID": "6570e90b3a5689d85f08db97",
@@ -1439,7 +1546,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570f30b0921c914bf07964c": {
         "ItemID": "6570f30b0921c914bf07964c",
@@ -1452,7 +1560,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570f35cd67d0309980a7acb": {
         "ItemID": "6570f35cd67d0309980a7acb",
@@ -1465,7 +1574,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570f3890b4ae5847f060dad": {
         "ItemID": "6570f3890b4ae5847f060dad",
@@ -1478,7 +1588,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570f3bb0b4ae5847f060db2": {
         "ItemID": "6570f3bb0b4ae5847f060db2",
@@ -1491,7 +1602,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570f6e774d84423df065f21": {
         "ItemID": "6570f6e774d84423df065f21",
@@ -1504,7 +1616,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570f71dd67d0309980a7af8": {
         "ItemID": "6570f71dd67d0309980a7af8",
@@ -1517,7 +1630,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570f74774d84423df065f25": {
         "ItemID": "6570f74774d84423df065f25",
@@ -1530,7 +1644,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570f79c4c65ab77a6015121": {
         "ItemID": "6570f79c4c65ab77a6015121",
@@ -1543,7 +1658,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570fa1f4c65ab77a601512f": {
         "ItemID": "6570fa1f4c65ab77a601512f",
@@ -1556,7 +1672,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570fae34c65ab77a6015146": {
         "ItemID": "6570fae34c65ab77a6015146",
@@ -1569,7 +1686,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570fb22584a51c23e03251f": {
         "ItemID": "6570fb22584a51c23e03251f",
@@ -1582,7 +1700,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570fb6ad3eefd23430f8c7c": {
         "ItemID": "6570fb6ad3eefd23430f8c7c",
@@ -1595,7 +1714,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570fb8f4c65ab77a601514d": {
         "ItemID": "6570fb8f4c65ab77a601514d",
@@ -1608,7 +1728,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570fbdd74d84423df065f60": {
         "ItemID": "6570fbdd74d84423df065f60",
@@ -1621,7 +1742,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6570fc41d3eefd23430f8c83": {
         "ItemID": "6570fc41d3eefd23430f8c83",
@@ -1634,7 +1756,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657112234269e9a568089eac": {
         "ItemID": "657112234269e9a568089eac",
@@ -1647,7 +1770,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657112a4818110db4600aa66": {
         "ItemID": "657112a4818110db4600aa66",
@@ -1660,7 +1784,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657112ce22996eaf110881fb": {
         "ItemID": "657112ce22996eaf110881fb",
@@ -1673,7 +1798,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657112fa818110db4600aa6b": {
         "ItemID": "657112fa818110db4600aa6b",
@@ -1686,7 +1812,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571133d22996eaf11088200": {
         "ItemID": "6571133d22996eaf11088200",
@@ -1699,7 +1826,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571138e818110db4600aa71": {
         "ItemID": "6571138e818110db4600aa71",
@@ -1712,7 +1840,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571199565daf6aa960c9b10": {
         "ItemID": "6571199565daf6aa960c9b10",
@@ -1725,7 +1854,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657119d49eb8c145180dbb95": {
         "ItemID": "657119d49eb8c145180dbb95",
@@ -1738,7 +1868,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657119fea330b8c9060f7afc": {
         "ItemID": "657119fea330b8c9060f7afc",
@@ -1751,7 +1882,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65711b07a330b8c9060f7b01": {
         "ItemID": "65711b07a330b8c9060f7b01",
@@ -1764,7 +1896,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65711b489eb8c145180dbb9d": {
         "ItemID": "65711b489eb8c145180dbb9d",
@@ -1777,7 +1910,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65711b706d197c216005b31c": {
         "ItemID": "65711b706d197c216005b31c",
@@ -1790,7 +1924,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65711b9b65daf6aa960c9b1b": {
         "ItemID": "65711b9b65daf6aa960c9b1b",
@@ -1803,7 +1938,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65711bc79eb8c145180dbba1": {
         "ItemID": "65711bc79eb8c145180dbba1",
@@ -1816,7 +1952,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571b27a6d84a2b8b6007f92": {
         "ItemID": "6571b27a6d84a2b8b6007f92",
@@ -1829,7 +1966,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571baa74cb80d995d0a1490": {
         "ItemID": "6571baa74cb80d995d0a1490",
@@ -1842,7 +1980,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571baac6d84a2b8b6007fa3": {
         "ItemID": "6571baac6d84a2b8b6007fa3",
@@ -1855,7 +1994,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571bab0f41985531a038091": {
         "ItemID": "6571bab0f41985531a038091",
@@ -1868,7 +2008,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571babb4076795e5e07383f": {
         "ItemID": "6571babb4076795e5e07383f",
@@ -1881,7 +2022,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571babf4cb80d995d0a1494": {
         "ItemID": "6571babf4cb80d995d0a1494",
@@ -1894,7 +2036,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571bac34076795e5e073843": {
         "ItemID": "6571bac34076795e5e073843",
@@ -1907,7 +2050,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571dbd388ead79fcf091d71": {
         "ItemID": "6571dbd388ead79fcf091d71",
@@ -1920,7 +2064,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571dbda88ead79fcf091d75": {
         "ItemID": "6571dbda88ead79fcf091d75",
@@ -1933,7 +2078,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571dbe07c02ae206002502e": {
         "ItemID": "6571dbe07c02ae206002502e",
@@ -1946,7 +2092,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571dbeaee8ec43d520cf89e": {
         "ItemID": "6571dbeaee8ec43d520cf89e",
@@ -1959,7 +2106,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6571dbef88ead79fcf091d79": {
         "ItemID": "6571dbef88ead79fcf091d79",
@@ -1972,7 +2120,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572e048371fccfbf909d5d8": {
         "ItemID": "6572e048371fccfbf909d5d8",
@@ -1985,7 +2134,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572e059371fccfbf909d5dc": {
         "ItemID": "6572e059371fccfbf909d5dc",
@@ -1998,7 +2148,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572e06219b4b511af012f89": {
         "ItemID": "6572e06219b4b511af012f89",
@@ -2011,7 +2162,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572e06819b4b511af012f8d": {
         "ItemID": "6572e06819b4b511af012f8d",
@@ -2024,7 +2176,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572e5221b5bc1185508c24f": {
         "ItemID": "6572e5221b5bc1185508c24f",
@@ -2037,7 +2190,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572e52f73c0eabb700109a0": {
         "ItemID": "6572e52f73c0eabb700109a0",
@@ -2050,7 +2204,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572e53c73c0eabb700109a4": {
         "ItemID": "6572e53c73c0eabb700109a4",
@@ -2063,7 +2218,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572e54873c0eabb700109a8": {
         "ItemID": "6572e54873c0eabb700109a8",
@@ -2076,7 +2232,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572eb0e55beba16bc04079f": {
         "ItemID": "6572eb0e55beba16bc04079f",
@@ -2089,7 +2246,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572eb1b04ee6483ef039882": {
         "ItemID": "6572eb1b04ee6483ef039882",
@@ -2102,7 +2260,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572eb3004ee6483ef039886": {
         "ItemID": "6572eb3004ee6483ef039886",
@@ -2115,7 +2274,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572eb3b04ee6483ef03988a": {
         "ItemID": "6572eb3b04ee6483ef03988a",
@@ -2128,7 +2288,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572eb865b5eac12f10a03ee": {
         "ItemID": "6572eb865b5eac12f10a03ee",
@@ -2141,7 +2302,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572f1ca4c8d903cc60c874e": {
         "ItemID": "6572f1ca4c8d903cc60c874e",
@@ -2154,7 +2316,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572f1d60103b4a3270332db": {
         "ItemID": "6572f1d60103b4a3270332db",
@@ -2167,7 +2330,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572f1e10103b4a3270332df": {
         "ItemID": "6572f1e10103b4a3270332df",
@@ -2180,7 +2344,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572f1edea457732140ce875": {
         "ItemID": "6572f1edea457732140ce875",
@@ -2193,7 +2358,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572f1f7ea457732140ce879": {
         "ItemID": "6572f1f7ea457732140ce879",
@@ -2206,7 +2372,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572fc809a866b80ab07eb59": {
         "ItemID": "6572fc809a866b80ab07eb59",
@@ -2219,7 +2386,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572fc8c9a866b80ab07eb5d": {
         "ItemID": "6572fc8c9a866b80ab07eb5d",
@@ -2232,7 +2400,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572fc989a866b80ab07eb61": {
         "ItemID": "6572fc989a866b80ab07eb61",
@@ -2245,7 +2414,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6572fca39a866b80ab07eb65": {
         "ItemID": "6572fca39a866b80ab07eb65",
@@ -2258,7 +2428,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65730c0e292ecadbfa09ad49": {
         "ItemID": "65730c0e292ecadbfa09ad49",
@@ -2271,7 +2442,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65730c2213a2f660f60bea96": {
         "ItemID": "65730c2213a2f660f60bea96",
@@ -2284,7 +2456,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65730c2b292ecadbfa09ad50": {
         "ItemID": "65730c2b292ecadbfa09ad50",
@@ -2297,7 +2470,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65730c35292ecadbfa09ad54": {
         "ItemID": "65730c35292ecadbfa09ad54",
@@ -2310,7 +2484,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6573101e292ecadbfa09b389": {
         "ItemID": "6573101e292ecadbfa09b389",
@@ -2323,7 +2498,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6573102b292ecadbfa09b38d": {
         "ItemID": "6573102b292ecadbfa09b38d",
@@ -2336,7 +2512,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731038292ecadbfa09b391": {
         "ItemID": "65731038292ecadbfa09b391",
@@ -2349,7 +2526,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731045f31d5be00e08a75a": {
         "ItemID": "65731045f31d5be00e08a75a",
@@ -2362,7 +2540,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731b46cea9255e2102360a": {
         "ItemID": "65731b46cea9255e2102360a",
@@ -2375,7 +2554,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731b4fcea9255e2102360e": {
         "ItemID": "65731b4fcea9255e2102360e",
@@ -2388,7 +2568,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731b576e709cddd001ec3f": {
         "ItemID": "65731b576e709cddd001ec3f",
@@ -2401,7 +2582,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731b60ff6dc44a7d068c4a": {
         "ItemID": "65731b60ff6dc44a7d068c4a",
@@ -2414,7 +2596,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731b666e709cddd001ec43": {
         "ItemID": "65731b666e709cddd001ec43",
@@ -2427,7 +2610,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731b6b6042b0f210020ef6": {
         "ItemID": "65731b6b6042b0f210020ef6",
@@ -2440,7 +2624,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65731b716e709cddd001ec47": {
         "ItemID": "65731b716e709cddd001ec47",
@@ -2453,7 +2638,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657322988c1cc6dcd9098b2d": {
         "ItemID": "657322988c1cc6dcd9098b2d",
@@ -2466,7 +2652,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657322a4cea9255e21023651": {
         "ItemID": "657322a4cea9255e21023651",
@@ -2479,7 +2666,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657322acd9d89ff7ac0d961b": {
         "ItemID": "657322acd9d89ff7ac0d961b",
@@ -2492,7 +2680,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657322b7d9d89ff7ac0d961f": {
         "ItemID": "657322b7d9d89ff7ac0d961f",
@@ -2505,7 +2694,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65732688d9d89ff7ac0d9c4c": {
         "ItemID": "65732688d9d89ff7ac0d9c4c",
@@ -2518,7 +2708,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657326978c1cc6dcd9098b56": {
         "ItemID": "657326978c1cc6dcd9098b56",
@@ -2531,7 +2722,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657326a28c1cc6dcd9098b5a": {
         "ItemID": "657326a28c1cc6dcd9098b5a",
@@ -2544,7 +2736,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657326b08c1cc6dcd9098b5e": {
         "ItemID": "657326b08c1cc6dcd9098b5e",
@@ -2557,7 +2750,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657326bc5d3a3129fb05f36b": {
         "ItemID": "657326bc5d3a3129fb05f36b",
@@ -2570,7 +2764,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65732de75d3a3129fb05f3dd": {
         "ItemID": "65732de75d3a3129fb05f3dd",
@@ -2583,7 +2778,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65732df4d0acf75aea06c87b": {
         "ItemID": "65732df4d0acf75aea06c87b",
@@ -2596,7 +2792,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65732e05d0acf75aea06c87f": {
         "ItemID": "65732e05d0acf75aea06c87f",
@@ -2609,7 +2806,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65732e0f6784ca384b0167ad": {
         "ItemID": "65732e0f6784ca384b0167ad",
@@ -2622,7 +2820,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65732e215d3a3129fb05f3e1": {
         "ItemID": "65732e215d3a3129fb05f3e1",
@@ -2635,7 +2834,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65732e30dd8739f6440ef383": {
         "ItemID": "65732e30dd8739f6440ef383",
@@ -2648,7 +2848,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65733312ca0ca984940a2d53": {
         "ItemID": "65733312ca0ca984940a2d53",
@@ -2661,7 +2862,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657333232cc8dfad2c0a3d97": {
         "ItemID": "657333232cc8dfad2c0a3d97",
@@ -2674,7 +2876,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657333302cc8dfad2c0a3d9b": {
         "ItemID": "657333302cc8dfad2c0a3d9b",
@@ -2687,7 +2890,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6573333eca0ca984940a2d57": {
         "ItemID": "6573333eca0ca984940a2d57",
@@ -2700,7 +2904,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6573334aca0ca984940a2d5b": {
         "ItemID": "6573334aca0ca984940a2d5b",
@@ -2713,7 +2918,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65733375b7a8d286530e3dd7": {
         "ItemID": "65733375b7a8d286530e3dd7",
@@ -2726,7 +2932,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6573337f2cc8dfad2c0a3da7": {
         "ItemID": "6573337f2cc8dfad2c0a3da7",
@@ -2739,7 +2946,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575bc88c6700bd6b40e8a57": {
         "ItemID": "6575bc88c6700bd6b40e8a57",
@@ -2752,7 +2960,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575bca0dc9932aed601c5d7": {
         "ItemID": "6575bca0dc9932aed601c5d7",
@@ -2765,7 +2974,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c2adefc786cd9101a5d9": {
         "ItemID": "6575c2adefc786cd9101a5d9",
@@ -2778,7 +2988,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c2be52b7f8c76a05ee25": {
         "ItemID": "6575c2be52b7f8c76a05ee25",
@@ -2791,7 +3002,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c2cd52b7f8c76a05ee29": {
         "ItemID": "6575c2cd52b7f8c76a05ee29",
@@ -2804,7 +3016,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c2d852b7f8c76a05ee2d": {
         "ItemID": "6575c2d852b7f8c76a05ee2d",
@@ -2817,7 +3030,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c2e4efc786cd9101a5dd": {
         "ItemID": "6575c2e4efc786cd9101a5dd",
@@ -2830,7 +3044,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c2f7efc786cd9101a5e1": {
         "ItemID": "6575c2f7efc786cd9101a5e1",
@@ -2843,7 +3058,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c30352b7f8c76a05ee31": {
         "ItemID": "6575c30352b7f8c76a05ee31",
@@ -2856,7 +3072,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c31b52b7f8c76a05ee35": {
         "ItemID": "6575c31b52b7f8c76a05ee35",
@@ -2869,7 +3086,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c326c6700bd6b40e8a80": {
         "ItemID": "6575c326c6700bd6b40e8a80",
@@ -2882,7 +3100,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c342efc786cd9101a5e5": {
         "ItemID": "6575c342efc786cd9101a5e5",
@@ -2895,7 +3114,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c34bc6700bd6b40e8a84": {
         "ItemID": "6575c34bc6700bd6b40e8a84",
@@ -2908,7 +3128,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c35bc6700bd6b40e8a88": {
         "ItemID": "6575c35bc6700bd6b40e8a88",
@@ -2921,7 +3142,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c366c6700bd6b40e8a8c": {
         "ItemID": "6575c366c6700bd6b40e8a8c",
@@ -2934,7 +3156,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c373dc9932aed601c5ec": {
         "ItemID": "6575c373dc9932aed601c5ec",
@@ -2947,7 +3170,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c385dc9932aed601c5f0": {
         "ItemID": "6575c385dc9932aed601c5f0",
@@ -2960,7 +3184,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c390efc786cd9101a5e9": {
         "ItemID": "6575c390efc786cd9101a5e9",
@@ -2973,7 +3198,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c3b3dc9932aed601c5f4": {
         "ItemID": "6575c3b3dc9932aed601c5f4",
@@ -2986,7 +3212,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c3beefc786cd9101a5ed": {
         "ItemID": "6575c3beefc786cd9101a5ed",
@@ -2999,7 +3226,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c3cdc6700bd6b40e8a90": {
         "ItemID": "6575c3cdc6700bd6b40e8a90",
@@ -3012,7 +3240,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c3dfdc9932aed601c5f8": {
         "ItemID": "6575c3dfdc9932aed601c5f8",
@@ -3025,7 +3254,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c3ec52b7f8c76a05ee39": {
         "ItemID": "6575c3ec52b7f8c76a05ee39",
@@ -3038,7 +3268,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c3fd52b7f8c76a05ee3d": {
         "ItemID": "6575c3fd52b7f8c76a05ee3d",
@@ -3051,7 +3282,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575c40c52b7f8c76a05ee41": {
         "ItemID": "6575c40c52b7f8c76a05ee41",
@@ -3064,7 +3296,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ce3716c2762fba0057fd": {
         "ItemID": "6575ce3716c2762fba0057fd",
@@ -3077,7 +3310,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ce45dc9932aed601c616": {
         "ItemID": "6575ce45dc9932aed601c616",
@@ -3090,7 +3324,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ce5016c2762fba005802": {
         "ItemID": "6575ce5016c2762fba005802",
@@ -3103,7 +3338,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ce5befc786cd9101a671": {
         "ItemID": "6575ce5befc786cd9101a671",
@@ -3116,7 +3352,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ce6f16c2762fba005806": {
         "ItemID": "6575ce6f16c2762fba005806",
@@ -3129,7 +3366,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ce8bdc9932aed601c61e": {
         "ItemID": "6575ce8bdc9932aed601c61e",
@@ -3142,7 +3380,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ce9db15fef3dd4051628": {
         "ItemID": "6575ce9db15fef3dd4051628",
@@ -3155,7 +3394,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575cea8b15fef3dd405162c": {
         "ItemID": "6575cea8b15fef3dd405162c",
@@ -3168,7 +3408,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d561b15fef3dd4051670": {
         "ItemID": "6575d561b15fef3dd4051670",
@@ -3181,7 +3422,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d56b16c2762fba005818": {
         "ItemID": "6575d56b16c2762fba005818",
@@ -3194,7 +3436,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d57a16c2762fba00581c": {
         "ItemID": "6575d57a16c2762fba00581c",
@@ -3207,7 +3450,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d589b15fef3dd4051674": {
         "ItemID": "6575d589b15fef3dd4051674",
@@ -3220,7 +3464,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d598b15fef3dd4051678": {
         "ItemID": "6575d598b15fef3dd4051678",
@@ -3233,7 +3478,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d5a616c2762fba005820": {
         "ItemID": "6575d5a616c2762fba005820",
@@ -3246,7 +3492,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d5b316c2762fba005824": {
         "ItemID": "6575d5b316c2762fba005824",
@@ -3259,7 +3506,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d5bd16c2762fba005828": {
         "ItemID": "6575d5bd16c2762fba005828",
@@ -3272,7 +3520,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d9a79e27f4a85e08112d": {
         "ItemID": "6575d9a79e27f4a85e08112d",
@@ -3285,7 +3534,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d9b8945bf78edd04c427": {
         "ItemID": "6575d9b8945bf78edd04c427",
@@ -3298,7 +3548,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d9c40546f8b1de093dee": {
         "ItemID": "6575d9c40546f8b1de093dee",
@@ -3311,7 +3562,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d9cf0546f8b1de093df2": {
         "ItemID": "6575d9cf0546f8b1de093df2",
@@ -3324,7 +3576,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d9d8945bf78edd04c42b": {
         "ItemID": "6575d9d8945bf78edd04c42b",
@@ -3337,7 +3590,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d9e7945bf78edd04c42f": {
         "ItemID": "6575d9e7945bf78edd04c42f",
@@ -3350,7 +3604,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575d9f816c2762fba00588d": {
         "ItemID": "6575d9f816c2762fba00588d",
@@ -3363,7 +3618,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575da07945bf78edd04c433": {
         "ItemID": "6575da07945bf78edd04c433",
@@ -3376,7 +3632,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575da159e27f4a85e081131": {
         "ItemID": "6575da159e27f4a85e081131",
@@ -3389,7 +3646,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575dd3e9e27f4a85e081142": {
         "ItemID": "6575dd3e9e27f4a85e081142",
@@ -3402,7 +3660,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575dd519e27f4a85e081146": {
         "ItemID": "6575dd519e27f4a85e081146",
@@ -3415,7 +3674,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575dd64945bf78edd04c438": {
         "ItemID": "6575dd64945bf78edd04c438",
@@ -3428,7 +3688,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575dd6e9d3a0ddf660b9047": {
         "ItemID": "6575dd6e9d3a0ddf660b9047",
@@ -3441,7 +3702,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575dd769d3a0ddf660b904b": {
         "ItemID": "6575dd769d3a0ddf660b904b",
@@ -3454,7 +3716,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575dd800546f8b1de093df6": {
         "ItemID": "6575dd800546f8b1de093df6",
@@ -3467,7 +3730,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575dd94945bf78edd04c43c": {
         "ItemID": "6575dd94945bf78edd04c43c",
@@ -3480,7 +3744,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575e71760703324250610c3": {
         "ItemID": "6575e71760703324250610c3",
@@ -3493,7 +3758,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575e72660703324250610c7": {
         "ItemID": "6575e72660703324250610c7",
@@ -3506,7 +3772,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ea3060703324250610da": {
         "ItemID": "6575ea3060703324250610da",
@@ -3519,7 +3786,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ea4cf6a13a7b7100adc4": {
         "ItemID": "6575ea4cf6a13a7b7100adc4",
@@ -3532,7 +3800,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ea5cf6a13a7b7100adc8": {
         "ItemID": "6575ea5cf6a13a7b7100adc8",
@@ -3545,7 +3814,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ea6760703324250610de": {
         "ItemID": "6575ea6760703324250610de",
@@ -3558,7 +3828,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ea719c7cad336508e418": {
         "ItemID": "6575ea719c7cad336508e418",
@@ -3571,7 +3842,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ea7c60703324250610e2": {
         "ItemID": "6575ea7c60703324250610e2",
@@ -3584,7 +3856,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ef599c7cad336508e453": {
         "ItemID": "6575ef599c7cad336508e453",
@@ -3597,7 +3870,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ef6bf6a13a7b7100b093": {
         "ItemID": "6575ef6bf6a13a7b7100b093",
@@ -3610,7 +3884,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ef78da698a4e980677eb": {
         "ItemID": "6575ef78da698a4e980677eb",
@@ -3623,7 +3898,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575ef7f9c7cad336508e457": {
         "ItemID": "6575ef7f9c7cad336508e457",
@@ -3636,7 +3912,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575f24ff6a13a7b7100b09e": {
         "ItemID": "6575f24ff6a13a7b7100b09e",
@@ -3649,7 +3926,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575f25ada698a4e98067836": {
         "ItemID": "6575f25ada698a4e98067836",
@@ -3662,7 +3940,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575f2649cfdfe416f0399b8": {
         "ItemID": "6575f2649cfdfe416f0399b8",
@@ -3675,7 +3954,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575f26d9c7cad336508e480": {
         "ItemID": "6575f26d9c7cad336508e480",
@@ -3688,7 +3968,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575f5cbf6a13a7b7100b0bf": {
         "ItemID": "6575f5cbf6a13a7b7100b0bf",
@@ -3701,7 +3982,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6575f5e1da698a4e98067869": {
         "ItemID": "6575f5e1da698a4e98067869",
@@ -3714,7 +3996,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65764275d8537eb26a0355e9": {
         "ItemID": "65764275d8537eb26a0355e9",
@@ -3727,7 +4010,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657642b0e6d5dd75f40688a5": {
         "ItemID": "657642b0e6d5dd75f40688a5",
@@ -3740,7 +4024,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6576434820cc24d17102b148": {
         "ItemID": "6576434820cc24d17102b148",
@@ -3753,7 +4038,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657643732bc38ef78e076477": {
         "ItemID": "657643732bc38ef78e076477",
@@ -3766,7 +4052,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657643a220cc24d17102b14c": {
         "ItemID": "657643a220cc24d17102b14c",
@@ -3779,7 +4066,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65764a4cd8537eb26a0355ee": {
         "ItemID": "65764a4cd8537eb26a0355ee",
@@ -3792,7 +4080,8 @@
         "SpallReduction": 0.3,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65764bc22bc38ef78e076485": {
         "ItemID": "65764bc22bc38ef78e076485",
@@ -3805,7 +4094,8 @@
         "SpallReduction": 0.3,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65764c39526e320fbe035777": {
         "ItemID": "65764c39526e320fbe035777",
@@ -3818,7 +4108,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65764c6b526e320fbe03577b": {
         "ItemID": "65764c6b526e320fbe03577b",
@@ -3831,7 +4122,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65764e1e2bc38ef78e076489": {
         "ItemID": "65764e1e2bc38ef78e076489",
@@ -3844,7 +4136,8 @@
         "SpallReduction": 0.33,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65764fae2bc38ef78e07648d": {
         "ItemID": "65764fae2bc38ef78e07648d",
@@ -3857,7 +4150,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6576500f526e320fbe03577f": {
         "ItemID": "6576500f526e320fbe03577f",
@@ -3870,7 +4164,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "6576504b526e320fbe035783": {
         "ItemID": "6576504b526e320fbe035783",
@@ -3883,7 +4178,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657b22485f444d6dff0c6c2f": {
         "ItemID": "657b22485f444d6dff0c6c2f",
@@ -3897,7 +4193,8 @@
         "ArmorClass": "GOST 5A",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657b2797c3dbcb01d60c35ea": {
         "ItemID": "657b2797c3dbcb01d60c35ea",
@@ -3911,7 +4208,8 @@
         "ArmorClass": "GOST 5",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657b28d25f444d6dff0c6c77": {
         "ItemID": "657b28d25f444d6dff0c6c77",
@@ -3925,7 +4223,8 @@
         "ArmorClass": "GOST 6A",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba096e57570b7f80a17fb": {
         "ItemID": "657ba096e57570b7f80a17fb",
@@ -3938,7 +4237,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba145e57570b7f80a17ff": {
         "ItemID": "657ba145e57570b7f80a17ff",
@@ -3951,7 +4251,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba18923918923cb0df568": {
         "ItemID": "657ba18923918923cb0df568",
@@ -3964,7 +4265,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba2eef58ba5a625010798": {
         "ItemID": "657ba2eef58ba5a625010798",
@@ -3977,7 +4279,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba34b9ba22f103e08139b": {
         "ItemID": "657ba34b9ba22f103e08139b",
@@ -3990,7 +4293,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba50c23918923cb0df56c": {
         "ItemID": "657ba50c23918923cb0df56c",
@@ -4003,7 +4307,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba5439ba22f103e08139f": {
         "ItemID": "657ba5439ba22f103e08139f",
@@ -4016,7 +4321,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba57af58ba5a62501079e": {
         "ItemID": "657ba57af58ba5a62501079e",
@@ -4029,7 +4335,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba6c3c6f689d3a205b857": {
         "ItemID": "657ba6c3c6f689d3a205b857",
@@ -4042,7 +4349,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba737b7e9ca9a02045bf6": {
         "ItemID": "657ba737b7e9ca9a02045bf6",
@@ -4055,7 +4363,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba75e23918923cb0df573": {
         "ItemID": "657ba75e23918923cb0df573",
@@ -4068,7 +4377,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba85ecfcf63c951052da7": {
         "ItemID": "657ba85ecfcf63c951052da7",
@@ -4081,7 +4391,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba8bccfcf63c951052dab": {
         "ItemID": "657ba8bccfcf63c951052dab",
@@ -4094,7 +4405,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657ba8eab7e9ca9a02045bfd": {
         "ItemID": "657ba8eab7e9ca9a02045bfd",
@@ -4107,7 +4419,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657baaf0b7e9ca9a02045c02": {
         "ItemID": "657baaf0b7e9ca9a02045c02",
@@ -4120,7 +4433,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bab6ec6f689d3a205b85f": {
         "ItemID": "657bab6ec6f689d3a205b85f",
@@ -4133,7 +4447,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657babc6f58ba5a6250107a2": {
         "ItemID": "657babc6f58ba5a6250107a2",
@@ -4146,7 +4461,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bae18b7e9ca9a02045c0a": {
         "ItemID": "657bae18b7e9ca9a02045c0a",
@@ -4159,7 +4475,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657baeaacfcf63c951052db3": {
         "ItemID": "657baeaacfcf63c951052db3",
@@ -4172,7 +4489,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657baecbc6f689d3a205b863": {
         "ItemID": "657baecbc6f689d3a205b863",
@@ -4185,7 +4503,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bb70486c7f9ef7a009936": {
         "ItemID": "657bb70486c7f9ef7a009936",
@@ -4198,7 +4517,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bb79ba1c61ee0c303631a": {
         "ItemID": "657bb79ba1c61ee0c303631a",
@@ -4211,7 +4531,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bb7d7b30eca9763051176": {
         "ItemID": "657bb7d7b30eca9763051176",
@@ -4224,7 +4545,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bb92fa1c61ee0c303631f": {
         "ItemID": "657bb92fa1c61ee0c303631f",
@@ -4237,7 +4559,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bb99db30eca976305117f": {
         "ItemID": "657bb99db30eca976305117f",
@@ -4250,7 +4573,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bbad7a1c61ee0c3036323": {
         "ItemID": "657bbad7a1c61ee0c3036323",
@@ -4263,7 +4587,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bbb31b30eca9763051183": {
         "ItemID": "657bbb31b30eca9763051183",
@@ -4276,7 +4601,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bbcc9a1c61ee0c3036327": {
         "ItemID": "657bbcc9a1c61ee0c3036327",
@@ -4289,7 +4615,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bbcffbbd440df880b2dd5": {
         "ItemID": "657bbcffbbd440df880b2dd5",
@@ -4302,7 +4629,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bbe73a1c61ee0c303632b": {
         "ItemID": "657bbe73a1c61ee0c303632b",
@@ -4315,7 +4643,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bbed0aab96fccee08be96": {
         "ItemID": "657bbed0aab96fccee08be96",
@@ -4328,7 +4657,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bbefeb30eca9763051189": {
         "ItemID": "657bbefeb30eca9763051189",
@@ -4341,7 +4671,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bc06daab96fccee08be9b": {
         "ItemID": "657bc06daab96fccee08be9b",
@@ -4354,7 +4685,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bc0d8a1c61ee0c303632f": {
         "ItemID": "657bc0d8a1c61ee0c303632f",
@@ -4367,7 +4699,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bc107aab96fccee08be9f": {
         "ItemID": "657bc107aab96fccee08be9f",
@@ -4380,7 +4713,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bc285aab96fccee08bea3": {
         "ItemID": "657bc285aab96fccee08bea3",
@@ -4393,7 +4727,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bc2c5a1c61ee0c3036333": {
         "ItemID": "657bc2c5a1c61ee0c3036333",
@@ -4406,7 +4741,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657bc2e7b30eca976305118d": {
         "ItemID": "657bc2e7b30eca976305118d",
@@ -4419,7 +4755,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f8a8d7db258e5600fe33d": {
         "ItemID": "657f8a8d7db258e5600fe33d",
@@ -4432,7 +4769,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f8b05f4c82973640b2348": {
         "ItemID": "657f8b05f4c82973640b2348",
@@ -4445,7 +4783,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f8b43f92cd718b70154fb": {
         "ItemID": "657f8b43f92cd718b70154fb",
@@ -4458,7 +4797,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f8b94f92cd718b70154ff": {
         "ItemID": "657f8b94f92cd718b70154ff",
@@ -4471,7 +4811,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f8ec5f4c82973640b234c": {
         "ItemID": "657f8ec5f4c82973640b234c",
@@ -4484,7 +4825,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f8f10f4c82973640b2350": {
         "ItemID": "657f8f10f4c82973640b2350",
@@ -4497,7 +4839,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f925dada5fadd1f07a57a": {
         "ItemID": "657f925dada5fadd1f07a57a",
@@ -4510,7 +4853,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f92acada5fadd1f07a57e": {
         "ItemID": "657f92acada5fadd1f07a57e",
@@ -4523,7 +4867,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f92e7f4c82973640b2354": {
         "ItemID": "657f92e7f4c82973640b2354",
@@ -4536,7 +4881,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f95bff92cd718b701550c": {
         "ItemID": "657f95bff92cd718b701550c",
@@ -4549,7 +4895,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f9605f4c82973640b2358": {
         "ItemID": "657f9605f4c82973640b2358",
@@ -4562,7 +4909,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f9897f4c82973640b235e": {
         "ItemID": "657f9897f4c82973640b235e",
@@ -4575,7 +4923,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f98fbada5fadd1f07a585": {
         "ItemID": "657f98fbada5fadd1f07a585",
@@ -4588,7 +4937,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f9a55c6679fefb3051e19": {
         "ItemID": "657f9a55c6679fefb3051e19",
@@ -4601,7 +4951,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f9a94ada5fadd1f07a589": {
         "ItemID": "657f9a94ada5fadd1f07a589",
@@ -4614,7 +4965,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f9c78ada5fadd1f07a58d": {
         "ItemID": "657f9c78ada5fadd1f07a58d",
@@ -4627,7 +4979,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f9cb587e11c61f70bfaca": {
         "ItemID": "657f9cb587e11c61f70bfaca",
@@ -4640,7 +4993,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f9eb7e9433140ad0baf86": {
         "ItemID": "657f9eb7e9433140ad0baf86",
@@ -4653,7 +5007,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657f9ef6c6679fefb3051e1f": {
         "ItemID": "657f9ef6c6679fefb3051e1f",
@@ -4666,7 +5021,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657fa009d4caf976440afe3a": {
         "ItemID": "657fa009d4caf976440afe3a",
@@ -4679,7 +5035,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657fa04ac6679fefb3051e24": {
         "ItemID": "657fa04ac6679fefb3051e24",
@@ -4692,7 +5049,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657fa07387e11c61f70bface": {
         "ItemID": "657fa07387e11c61f70bface",
@@ -4705,7 +5063,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657fa0fcd4caf976440afe3e": {
         "ItemID": "657fa0fcd4caf976440afe3e",
@@ -4718,7 +5077,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657fa168e9433140ad0baf8e": {
         "ItemID": "657fa168e9433140ad0baf8e",
@@ -4731,7 +5091,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "657fa186d4caf976440afe42": {
         "ItemID": "657fa186d4caf976440afe42",
@@ -4744,7 +5105,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "658188edf026a90c1708c827": {
         "ItemID": "658188edf026a90c1708c827",
@@ -4757,7 +5119,8 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "65818e4e566d2de69901b1b1": {
         "ItemID": "65818e4e566d2de69901b1b1",
@@ -4771,6 +5134,7 @@
         "SpallReduction": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     }
 }

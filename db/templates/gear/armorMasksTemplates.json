@@ -11,7 +11,8 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "603409c80ca681766b6a0fb2": {
         "ItemID": "603409c80ca681766b6a0fb2",
@@ -25,7 +26,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "5b432be65acfc433000ed01f": {
         "ItemID": "5b432be65acfc433000ed01f",
@@ -39,7 +41,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "59e770b986f7742cbd762754": {
         "ItemID": "59e770b986f7742cbd762754",
@@ -53,7 +56,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "5c1a1cc52e221602b3136e3d": {
         "ItemID": "5c1a1cc52e221602b3136e3d",
@@ -67,7 +71,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "62a61c988ec41a51b34758d5": {
         "ItemID": "62a61c988ec41a51b34758d5",
@@ -81,7 +86,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "5c0d32fcd174af02a1659c75": {
         "ItemID": "5c0d32fcd174af02a1659c75",
@@ -95,7 +101,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "5d5fca1ea4b93635fd598c07": {
         "ItemID": "5d5fca1ea4b93635fd598c07",
@@ -109,6 +116,7 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     }
 }
