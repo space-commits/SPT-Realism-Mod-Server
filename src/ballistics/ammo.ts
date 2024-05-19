@@ -750,7 +750,7 @@ export class Ammo {
             }
             //PM PSV
             if (serverItem._id === "5737207f24597760ff7b25f2") {
-                serverItem._props.PenetrationPower = 10;
+                serverItem._props.PenetrationPower = 15;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 47;
                 serverItem._props.InitialSpeed = 280;
@@ -773,7 +773,7 @@ export class Ammo {
             }
             //PM P gzh
             if (serverItem._id === "573719762459775a626ccbc1") {
-                serverItem._props.PenetrationPower = 14;
+                serverItem._props.PenetrationPower = 17;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 37;
                 serverItem._props.InitialSpeed = 302;
@@ -796,7 +796,7 @@ export class Ammo {
             }
             //PM PSO gzh
             if (serverItem._id === "57371f8d24597761006c6a81") {
-                serverItem._props.PenetrationPower = 16;
+                serverItem._props.PenetrationPower = 19;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 38;
                 serverItem._props.InitialSpeed = 315;
@@ -819,7 +819,7 @@ export class Ammo {
             }
             //PM PS gs PPO
             if (serverItem._id === "57371f2b24597761224311f1") {
-                serverItem._props.PenetrationPower = 17;
+                serverItem._props.PenetrationPower = 20;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 54;
                 serverItem._props.InitialSpeed = 330;
@@ -865,7 +865,7 @@ export class Ammo {
             }
             //PM PPe gzh
             if (serverItem._id === "57371b192459775a9f58a5e0") {
-                serverItem._props.PenetrationPower = 12;
+                serverItem._props.PenetrationPower = 15;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 60;
                 serverItem._props.InitialSpeed = 297;
@@ -888,7 +888,7 @@ export class Ammo {
             }
             //PM PPT gzh
             if (serverItem._id === "57371e4124597760ff7b25f1") {
-                serverItem._props.PenetrationPower = 15;
+                serverItem._props.PenetrationPower = 18;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 37;
                 serverItem._props.InitialSpeed = 301;
@@ -911,7 +911,7 @@ export class Ammo {
             }
             //PM Pst gzh
             if (serverItem._id === "5737201124597760fc4431f1") {
-                serverItem._props.PenetrationPower = 26;
+                serverItem._props.PenetrationPower = 28;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 39;
                 serverItem._props.InitialSpeed = 298;
@@ -934,7 +934,7 @@ export class Ammo {
             }
             //PM RG028 gzh
             if (serverItem._id === "573720e02459776143012541") {
-                serverItem._props.PenetrationPower = 28;
+                serverItem._props.PenetrationPower = 33;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 50;
                 serverItem._props.InitialSpeed = 325;
@@ -957,7 +957,7 @@ export class Ammo {
             }
             //PM 9 BZT gzh
             if (serverItem._id === "573718ba2459775a75491131") {
-                serverItem._props.PenetrationPower = 33;
+                serverItem._props.PenetrationPower = 37;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 46;
                 serverItem._props.InitialSpeed = 325;
@@ -980,7 +980,7 @@ export class Ammo {
             }
             //PM PBM
             if (serverItem._id === "573719df2459775a626ccbc2") {
-                serverItem._props.PenetrationPower = 35;
+                serverItem._props.PenetrationPower = 42;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 45;
                 serverItem._props.InitialSpeed = 480;

@@ -3890,7 +3890,7 @@
         "HeatFactor": 0.98,
         "CoolFactor": 0.98,
         "DurabilityBurnModificator": 0.98,
-        "Velocity": -3.1,
+        "Velocity": 3.1,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.83,

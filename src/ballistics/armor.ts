@@ -427,10 +427,10 @@ export class Armor {
         ////////Plates//////////
         //Titanium NIJ III (BSG's bullshit)
         if (serverItem._id === "656fa25e94b480b8a500c0e0") {
-            serverItem._props.Durability = 100;
+            serverItem._props.Durability = 110;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 7;
-            serverItem._props.BluntThroughput = 0.08
+            serverItem._props.BluntThroughput = 0.08;
             serverItem._props.ArmorMaterial = 'Titan';
             serverItem._props.speedPenaltyPercent = -1;
             serverItem._props.mousePenalty = 0;
@@ -438,10 +438,10 @@ export class Armor {
         }
         //Titanium NIJ III+ (BSG's bullshit)
         if (serverItem._id === "656fa99800d62bcd2e024088") {
-            serverItem._props.Durability = 125;
+            serverItem._props.Durability = 130;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 8;
-            serverItem._props.BluntThroughput = 0.08
+            serverItem._props.BluntThroughput = 0.08;
             serverItem._props.ArmorMaterial = 'Titan';
             serverItem._props.speedPenaltyPercent = -1;
             serverItem._props.mousePenalty = 0;
