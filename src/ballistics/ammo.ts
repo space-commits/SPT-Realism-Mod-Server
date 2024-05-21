@@ -3193,7 +3193,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
-                    serverItem._props.HeatFactor = 1.18;
+                    serverItem._props.HeatFactor = 1.025;
                 }
             }
             // US
@@ -3239,7 +3239,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.2;
-                    serverItem._props.HeatFactor = 1.18;
+                    serverItem._props.HeatFactor = 1.05;
                 }
             }
             // T
@@ -3285,7 +3285,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
-                    serverItem._props.HeatFactor = 1;
+                    serverItem._props.HeatFactor = 1.05;
                 }
             }
             // PP
@@ -3308,7 +3308,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.1;
-                    serverItem._props.HeatFactor = 1.04;
+                    serverItem._props.HeatFactor = 1.07;
                 }
             }
             // BP
@@ -3354,7 +3354,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.1;
-                    serverItem._props.HeatFactor = 1;
+                    serverItem._props.HeatFactor = 1.15;
                 }
             }
             // BS
@@ -3377,7 +3377,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
-                    serverItem._props.HeatFactor = 1.08;
+                    serverItem._props.HeatFactor = 1.17;
                 }
             }
             // 7N40
@@ -3399,7 +3399,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.8;
-                    serverItem._props.HeatFactor = 1;
+                    serverItem._props.HeatFactor = 1.1;
                 }
             }
             // 7N39 PPBS
@@ -3422,7 +3422,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.6;
-                    serverItem._props.HeatFactor = 1.1;
+                    serverItem._props.HeatFactor = 1.18;
                 }
             }
             //// 6.8x51 ////
@@ -3495,7 +3495,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
-                    serverItem._props.HeatFactor = 1;
+                    serverItem._props.HeatFactor = 1.12;
                 }
             }
             // 55 HP 
@@ -3518,7 +3518,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
-                    serverItem._props.HeatFactor = 1;
+                    serverItem._props.HeatFactor = 1.08;
                 }
             }
             // Mk 255 Mod 0
@@ -3633,7 +3633,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.2;
-                    serverItem._props.HeatFactor = 1;
+                    serverItem._props.HeatFactor = 1.04;
                 }
             }
             // M855
@@ -3656,7 +3656,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.3;
-                    serverItem._props.HeatFactor = 1;
+                    serverItem._props.HeatFactor = 1.07;
                 }
             }
             // M855A1 
@@ -3679,7 +3679,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 7;
-                    serverItem._props.HeatFactor = 1.1;
+                    serverItem._props.HeatFactor = 1.15;
                 }
             }
             // M995 
@@ -3702,7 +3702,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 4;
-                    serverItem._props.HeatFactor = 1.06;
+                    serverItem._props.HeatFactor = 1.12;
                 }
             }
             // SSA AP 

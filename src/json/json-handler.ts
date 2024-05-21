@@ -167,19 +167,19 @@ export class JsonHandler {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
 
-            serverItem._props.Ergonomics = fileItem.Ergonomics;
-            serverItem._props.Accuracy = fileItem.Accuracy;
-            serverItem._props.CenterOfImpact = fileItem.CenterOfImpact;
+            serverItem._props.Ergonomics = fileItem.Ergonomics != undefined ? fileItem.Ergonomics : 0;
+            serverItem._props.Accuracy = fileItem.Accuracy != undefined ? fileItem.Accuracy : 0;
+            serverItem._props.CenterOfImpact = fileItem.CenterOfImpact != undefined ? fileItem.CenterOfImpact : 0.05;
             serverItem._props.HeatFactor = fileItem.HeatFactor != undefined ? fileItem.HeatFactor : 1;
             serverItem._props.CoolFactor = fileItem.CoolFactor != undefined ? fileItem.CoolFactor : 1;
-            serverItem._props.MalfunctionChance = fileItem.MagMalfunctionChance;
+            serverItem._props.MalfunctionChance = fileItem.MalfunctionChance != undefined ? fileItem.MalfunctionChance : 0;
             // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
             // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
             serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != undefined ? fileItem.DurabilityBurnModificator : 1;
-            serverItem._props.BlocksFolding = fileItem.BlocksFolding;
-            serverItem._props.Weight = fileItem.Weight;
-            serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion;
-            serverItem._props.Loudness = fileItem.Loudness;
+            serverItem._props.BlocksFolding = fileItem.BlocksFolding != undefined ? fileItem.BlocksFolding : false;
+            serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : 0;
+            serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion != undefined ? fileItem.ShotgunDispersion : 1;
+            serverItem._props.Loudness = fileItem.Loudness != undefined ? fileItem.Loudness : 0;
 
             let isScope = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
             if (isScope != true) {
@@ -251,7 +251,7 @@ export class JsonHandler {
                 if (fileItem?.weapFireType !== undefined) {
                     serverItem._props.weapFireType = fileItem.weapFireType;
                 }
-                if (fileItem?.WeapType !== undefined && fileItem.OperationType !== "manual" && fileItem.OperationType !== "tubefed-m") {
+                if (fileItem?.WeapType !== undefined && fileItem.IsManuallyOperated == false && fileItem.OperationType !== "tubefed-m") {
                     serverItem._props.CanQueueSecondShot = true;
                 }
 

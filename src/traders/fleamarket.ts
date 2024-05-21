@@ -347,6 +347,7 @@ export class TieredFlea {
             this.canSellHelmParts(true, serverItem);
             this.canSellPlates(true, serverItem);
             this.canSellSMG(true, serverItem);
+            this.canSellDMR(true, serverItem)
             this.canSellMelee(true, serverItem);
             this.canSellHouseholdGoods(true, serverItem);
             this.canSellBuildingMats(true, serverItem);

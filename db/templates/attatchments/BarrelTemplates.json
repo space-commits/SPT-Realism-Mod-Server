@@ -331,7 +331,7 @@
     "5de65547883dde217541644b": {
         "ItemID": "5de65547883dde217541644b",
         "Name": "barrel_vpo215_600mm_366tkm",
-        "ModType": "366",
+        "ModType": "366TKM",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,

@@ -879,7 +879,7 @@
     "57f4c844245977379d5c14d1": {
         "ItemID": "57f4c844245977379d5c14d1",
         "Name": "weapon_zmz_pp-9_9x18pmm",
-        "WeapType": "highP",
+        "WeapType": "",
         "OperationType": "magForward",
         "WeapAccuracy": 0,
         "BaseTorque": -0.25,

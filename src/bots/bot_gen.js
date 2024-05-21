@@ -900,12 +900,15 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         const tierChecker = new utils_1.BotTierTracker();
         const tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : botRole === "assault" ? tierChecker.getTier(botRole) : 4;
         const armorPlateWeight = modConfig.realistic_ballistics == true ? armorPlateWeights.realisticWeights : armorPlateWeights.standardWeights;
+        this.logger.warning("==role " + botRole);
+        this.logger.warning("tier " + tier);
         // Get the front/back/side weights based on bots level
         const plateSlotWeights = armorPlateWeight.find((x) => tier >= x.levelRange.min && tier <= x.levelRange.max);
         if (!plateSlotWeights) {
             // No weights, return original array of plate tpls
             result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
             result.plateModTpls = existingPlateTplPool;
+            this.logger.warning("no plateSlotWeights ");
             return result;
         }
         // Get the specific plate slot weights (front/back/side)
@@ -914,24 +917,31 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
             // No weights, return original array of plate tpls
             result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
             result.plateModTpls = existingPlateTplPool;
+            this.logger.warning("no plateWeights ");
             return result;
         }
         // Choose a plate level based on weighting
         const chosenArmorPlateLevel = this.weightedRandomHelper.getWeightedValue(plateWeights);
+        this.logger.warning("target armor level " + chosenArmorPlateLevel);
+        this.logger.warning("modSlot " + modSlot);
         // Convert the array of ids into database items
-        const platesFromDb = existingPlateTplPool.map((x) => this.itemHelper.getItem(x)[1]);
+        const platesFromDb = existingPlateTplPool.map((plateTpl) => this.itemHelper.getItem(plateTpl)[1]);
+        this.logger.warning("platesFromDb count " + platesFromDb.length);
+        platesFromDb.forEach(e => {
+            this.logger.warning("possible plate " + e._name);
+            this.logger.warning("potential armor class " + e._props.armorClass);
+        });
         // Filter plates to the chosen level based on its armorClass property
-        let filteredPlates = platesFromDb.filter((x) => x._props.armorClass === chosenArmorPlateLevel);
+        const filteredPlates = platesFromDb.filter((item) => item._props.armorClass == chosenArmorPlateLevel);
+        this.logger.warning("filteredPlates count " + filteredPlates.length);
         //try again with a higher level
         if (filteredPlates.length === 0) {
-            let nextArmorLevel = Number(chosenArmorPlateLevel) + 1;
-            filteredPlates = platesFromDb.filter((x) => x._props.armorClass === nextArmorLevel.toString());
-        }
-        if (filteredPlates.length === 0) {
             this.logger.debug(`Plate filter was too restrictive for armor: ${armorItem._id}, unable to find plates of level: ${chosenArmorPlateLevel}. Using mod items default plate`);
+            this.logger.warning("getting default plate ");
             const relatedItemDbModSlot = armorItem._props.Slots.find((slot) => slot._name.toLowerCase() === modSlot);
             const defaultPlate = relatedItemDbModSlot._props.filters[0].Plate;
             if (!defaultPlate) {
+                this.logger.warning("no default plate ");
                 // No relevant plate found after filtering AND no default plate
                 // Last attempt, get default preset and see if it has a plate default
                 const defaultPreset = this.presetHelper.getDefaultPreset(armorItem._id);
@@ -952,7 +962,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         }
         // Only return the items ids
         result.result = IFilterPlateModsForSlotByLevelResult_1.Result.SUCCESS;
-        result.plateModTpls = filteredPlates.map((x) => x._id);
+        result.plateModTpls = filteredPlates.map((item) => item._id);
         return result;
     }
     myGenerateModsForEquipment(equipment, parentId, parentTemplate, settings, shouldForceSpawn = false, botRole, pmcTier) {

@@ -34,7 +34,7 @@ class Quests {
     }
     fixMechancicQuests() {
         for (let i in this.questDB()) {
-            if (!this.questDB()[i].QuestName.includes("Gunsmith"))
+            if (!this.questDB()[i].type.toLowerCase().includes("weaponassembly"))
                 continue;
             let quest = this.questDB()[i];
             if (!quest?.conditions?.AvailableForFinish)
