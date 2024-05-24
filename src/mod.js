@@ -517,7 +517,7 @@ class Main {
             maps.loadSpawnChanges();
         }
         if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdrops();
+            airdrop.loadAirdropChanges();
         }
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();

@@ -25,7 +25,7 @@ export class Ammo {
             if (serverItem._id === "64b8ee384b75259c590fa89b") {
                 serverItem._props.PenetrationPower = 10;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.ProjectileCount = 34;
+                serverItem._props.ProjectileCount = 26;
                 serverItem._props.Damage = 5;
                 serverItem._props.InitialSpeed = 285;
                 serverItem._props.BallisticCoeficient = 0.01;
@@ -34,7 +34,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 0.4;
                 serverItem._props.HeavyBleedingDelta = 1;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ammoAccr = -75;
+                serverItem._props.ammoAccr = -80;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -15;
                 serverItem._props.Tracer = true;
@@ -52,7 +52,7 @@ export class Ammo {
             if (serverItem._id === "5d6e6911a4b9361bd5780d52") {
                 serverItem._props.PenetrationPower = 4;
                 serverItem._props.ArmorDamage = 0.5;
-                serverItem._props.ProjectileCount = 20;
+                serverItem._props.ProjectileCount = 18;
                 serverItem._props.Damage = 7;
                 serverItem._props.InitialSpeed = 300;
                 serverItem._props.BallisticCoeficient = 0.009;
@@ -61,7 +61,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 0.47;
                 serverItem._props.HeavyBleedingDelta = 0.8;
                 serverItem._props.LightBleedingDelta = 1;
-                serverItem._props.ammoAccr = -100;
+                serverItem._props.ammoAccr = -110;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -20;
 
@@ -78,14 +78,14 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 8;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.ProjectileCount = 24;
-                serverItem._props.Damage = 8;
+                serverItem._props.Damage = 7;
                 serverItem._props.InitialSpeed = 330;
                 serverItem._props.RicochetChance = 0.35;
                 serverItem._props.FragmentationChance = 0.25;
                 serverItem._props.BulletMassGram = 0.9;
                 serverItem._props.HeavyBleedingDelta = 0.2;
                 serverItem._props.LightBleedingDelta = 0.7;
-                serverItem._props.ammoAccr = -40;
+                serverItem._props.ammoAccr = -45;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -10;
 
@@ -109,7 +109,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 1.9;
                 serverItem._props.HeavyBleedingDelta = 0.3;
                 serverItem._props.LightBleedingDelta = 0.9;
-                serverItem._props.ammoAccr = -10;
+                serverItem._props.ammoAccr = -15;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 0;
 
@@ -157,7 +157,7 @@ export class Ammo {
                 serverItem._props.BulletMassGram = 2.1;
                 serverItem._props.HeavyBleedingDelta = 0.4;
                 serverItem._props.LightBleedingDelta = 0.9;
-                serverItem._props.ammoAccr = 25;
+                serverItem._props.ammoAccr = 35;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
 

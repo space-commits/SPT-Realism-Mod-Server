@@ -19,7 +19,7 @@ import { container } from "tsyringe";
 export class Airdrops {
     constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
 
-    public loadAirdrops() {
+    public loadAirdropChanges() {
         this.airConf.airdropChancePercent.bigmap = 10;
         this.airConf.airdropChancePercent.woods = 15;
         this.airConf.airdropChancePercent.lighthouse = 15;

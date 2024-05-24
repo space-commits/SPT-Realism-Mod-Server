@@ -247,11 +247,12 @@ export class JsonHandler {
                 serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
                 serverItem._props.CameraSnap = 1;
                 serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
+                serverItem._props.CanQueueSecondShot = fileItem.CanQueueSecondShot != null ?  fileItem.CanQueueSecondShot : serverItem._props.CanQueueSecondShot;
 
                 if (fileItem?.weapFireType !== undefined) {
                     serverItem._props.weapFireType = fileItem.weapFireType;
                 }
-                if (fileItem?.WeapType !== undefined && fileItem.IsManuallyOperated == false && fileItem.OperationType !== "tubefed-m") {
+                if (fileItem?.WeapType !== undefined && (fileItem.IsManuallyOperated == false || fileItem.OperationType === "tubefed-m")) {
                     serverItem._props.CanQueueSecondShot = true;
                 }
 

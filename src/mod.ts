@@ -199,20 +199,20 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             }, { frequency: "Always" });
         }
 
-        if (modConfig.airdrop_changes == true) {
-            const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
-            const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-            const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
-            const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-            const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
+        // if (modConfig.airdrop_changes == true) {
+        //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
+        //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
+        //     const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
+        //     const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+        //     const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+        //     const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
 
-            container.afterResolution("LocationController", (_t, result: LocationController) => {
-                result.getAirdropLoot = (): IAirdropLootResult => {
-                    return airdropController.myGetAirdropLoot();
-                }
-            }, { frequency: "Always" });
-        }
+        //     container.afterResolution("LocationController", (_t, result: LocationController) => {
+        //         result.getAirdropLoot = (): IAirdropLootResult => {
+        //             return airdropController.myGetAirdropLoot();
+        //         }
+        //     }, { frequency: "Always" });
+        // }
 
         staticRouterModService.registerStaticRouter(
             "CheckProfile",
@@ -665,9 +665,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             maps.loadSpawnChanges();
         }
 
-        if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdrops();
-        }
+        // if (modConfig.airdrop_changes == true) {
+        //     airdrop.loadAirdropChanges();
+        // }
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             bots.loadBots();
