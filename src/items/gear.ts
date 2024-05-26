@@ -76,7 +76,7 @@ export class Gear {
                 serverItem._props.AmbientVolume = -2.35;
                 serverItem._props.CompressorGain = 6;
                 serverItem._props.CompressorVolume = -4;
-                serverItem._props.CompressorTreshold = -25;
+                serverItem._props.CompressorTreshold = -26;
             }
 
             //Peltor ComTac 2
@@ -104,7 +104,7 @@ export class Gear {
                 serverItem._props.DryVolume = -51;
                 serverItem._props.AmbientVolume = -2.65;
                 serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -21;
+                serverItem._props.CompressorTreshold = -22;
             }
 
             //FAST RAC
@@ -114,7 +114,7 @@ export class Gear {
                 serverItem._props.DryVolume = -52;
                 serverItem._props.AmbientVolume = -2.75;
                 serverItem._props.CompressorGain = 9;
-                serverItem._props.CompressorTreshold = -22;
+                serverItem._props.CompressorTreshold = -23;
             }
 
             //Opsmen Earmor M32
@@ -124,7 +124,7 @@ export class Gear {
                 serverItem._props.DryVolume = -55;
                 serverItem._props.AmbientVolume = -2.85;
                 serverItem._props.CompressorGain = 9;
-                serverItem._props.CompressorTreshold = -23;
+                serverItem._props.CompressorTreshold = -24;
             }
 
             //Walker Razor Digital Headset
@@ -134,7 +134,7 @@ export class Gear {
                 serverItem._props.DryVolume = -56;
                 serverItem._props.AmbientVolume = -2.9;
                 serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -23;
+                serverItem._props.CompressorTreshold = -24;
             }
 
             //Walker XCEL 500BT
@@ -144,7 +144,7 @@ export class Gear {
                 serverItem._props.DryVolume = -57;
                 serverItem._props.AmbientVolume = -3;
                 serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -24;
+                serverItem._props.CompressorTreshold = -25;
             }
         }
 

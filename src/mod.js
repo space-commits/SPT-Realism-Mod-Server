@@ -141,19 +141,19 @@ class Main {
                 };
             }, { frequency: "Always" });
         }
-        if (modConfig.airdrop_changes == true) {
-            const locationGenerator = container.resolve("LocationGenerator");
-            const lootGenerator = container.resolve("LootGenerator");
-            const raidTimeAdjustmentService = container.resolve("RaidTimeAdjustmentService");
-            const appContext = container.resolve("ApplicationContext");
-            const itemFilterService = container.resolve("ItemFilterService");
-            const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext);
-            container.afterResolution("LocationController", (_t, result) => {
-                result.getAirdropLoot = () => {
-                    return airdropController.myGetAirdropLoot();
-                };
-            }, { frequency: "Always" });
-        }
+        // if (modConfig.airdrop_changes == true) {
+        //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
+        //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
+        //     const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
+        //     const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+        //     const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+        //     const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
+        //     container.afterResolution("LocationController", (_t, result: LocationController) => {
+        //         result.getAirdropLoot = (): IAirdropLootResult => {
+        //             return airdropController.myGetAirdropLoot();
+        //         }
+        //     }, { frequency: "Always" });
+        // }
         staticRouterModService.registerStaticRouter("CheckProfile", [
             {
                 url: "/client/game/version/validate",
@@ -516,9 +516,9 @@ class Main {
         if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
             maps.loadSpawnChanges();
         }
-        if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdropChanges();
-        }
+        // if (modConfig.airdrop_changes == true) {
+        //     airdrop.loadAirdropChanges();
+        // }
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }

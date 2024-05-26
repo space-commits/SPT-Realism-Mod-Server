@@ -72,7 +72,7 @@ class Gear {
                 serverItem._props.AmbientVolume = -2.35;
                 serverItem._props.CompressorGain = 6;
                 serverItem._props.CompressorVolume = -4;
-                serverItem._props.CompressorTreshold = -30;
+                serverItem._props.CompressorTreshold = -26;
             }
             //Peltor ComTac 2
             if (serverItem._id === "5645bcc04bdc2d363b8b4572") {
@@ -97,7 +97,7 @@ class Gear {
                 serverItem._props.DryVolume = -51;
                 serverItem._props.AmbientVolume = -2.65;
                 serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -23;
+                serverItem._props.CompressorTreshold = -22;
             }
             //FAST RAC
             if (serverItem._id === "5a16b9fffcdbcb0176308b34") {
@@ -106,7 +106,7 @@ class Gear {
                 serverItem._props.DryVolume = -52;
                 serverItem._props.AmbientVolume = -2.75;
                 serverItem._props.CompressorGain = 9;
-                serverItem._props.CompressorTreshold = -24;
+                serverItem._props.CompressorTreshold = -23;
             }
             //Opsmen Earmor M32
             if (serverItem._id === "6033fa48ffd42c541047f728") {
@@ -115,7 +115,7 @@ class Gear {
                 serverItem._props.DryVolume = -55;
                 serverItem._props.AmbientVolume = -2.85;
                 serverItem._props.CompressorGain = 9;
-                serverItem._props.CompressorTreshold = -25;
+                serverItem._props.CompressorTreshold = -24;
             }
             //Walker Razor Digital Headset
             if (serverItem._id === "5e4d34ca86f774264f758330") {
@@ -124,7 +124,7 @@ class Gear {
                 serverItem._props.DryVolume = -56;
                 serverItem._props.AmbientVolume = -2.9;
                 serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -26;
+                serverItem._props.CompressorTreshold = -24;
             }
             //Walker XCEL 500BT
             if (serverItem._id === "5f60cd6cf2bcbb675b00dac6") {
@@ -133,7 +133,7 @@ class Gear {
                 serverItem._props.DryVolume = -57;
                 serverItem._props.AmbientVolume = -3;
                 serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -27;
+                serverItem._props.CompressorTreshold = -25;
             }
         }
     }

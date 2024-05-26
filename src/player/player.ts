@@ -196,14 +196,14 @@ export class Player {
         }
 
         if (this.modConfig.weight_limits_changes == true) {
-            this.globalDB().Stamina.WalkOverweightLimits["x"] = 55;
+            this.globalDB().Stamina.WalkOverweightLimits["x"] = 50;
             this.globalDB().Stamina.WalkOverweightLimits["y"] = 75;
+            this.globalDB().Stamina.WalkSpeedOverweightLimits["x"] = 32;
+            this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 75;
             this.globalDB().Stamina.BaseOverweightLimits["x"] = 24;
             this.globalDB().Stamina.BaseOverweightLimits["y"] = 65;
             this.globalDB().Stamina.SprintOverweightLimits["x"] = 15;
             this.globalDB().Stamina.SprintOverweightLimits["y"] = 30;
-            this.globalDB().Stamina.WalkSpeedOverweightLimits["x"] = 32;
-            this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 90;
         }
 
         if(this.modConfig.enable_stances == true){

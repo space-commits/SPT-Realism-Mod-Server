@@ -127,6 +127,9 @@ class JsonHandler {
             if (serverItem._props?.ArmorMaterial != undefined) {
                 serverItem._props.ArmorMaterial = fileItem.ArmorMaterial != undefined ? fileItem.ArmorMaterial : serverItem._props.ArmorMaterial;
             }
+            if (serverItem._props?.Weight != undefined) {
+                serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : serverItem._props.Weight;
+            }
             let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
                 fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.HasNeckArmor?.toString() || "false", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.HasExtraArmor?.toString() || "false"];
