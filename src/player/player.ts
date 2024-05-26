@@ -214,7 +214,7 @@ export class Player {
         if (this.modConfig.movement_changes == true) {
 
             this.globalDB().WalkSpeed["x"] = 0.59;
-            this.globalDB().WalkSpeed["y"] = 0.84;
+            this.globalDB().WalkSpeed["y"] = 0.81;
             this.globalDB().SprintSpeed["x"] = 0.05;
             this.globalDB().SprintSpeed["y"] = 0.5;
 
