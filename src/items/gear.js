@@ -14,6 +14,14 @@ class Gear {
     itemDB() {
         return this.tables.templates.items;
     }
+    loadMaskChanges() {
+        //GP-5
+        this.itemDB()["5b432c305acfc40019478128"]._props.FaceShieldComponent = true;
+        this.itemDB()["5b432c305acfc40019478128"]._props.FaceShieldMask = "Narrow";
+        //GP-7
+        this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldComponent = true;
+        this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldMask = "Narrow";
+    }
     loadGearConflicts() {
         let confMasks = this.arrays.conflMasks;
         let confHats = this.arrays.conflHats;

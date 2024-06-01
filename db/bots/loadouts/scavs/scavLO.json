@@ -418,6 +418,11 @@
             "64119d90dcf48d656f0aa275"
           ]
         },
+        "64119d1f2c6d6f921a0929f8": {
+          "mod_sight_front": [
+            "64119d672c6d6f921a0929fb"
+          ]
+        },
         "643ea5b23db6f9f57107d9fd": {
           "mod_barrel": [
             "6410758c857473525b08bb77"
@@ -1923,6 +1928,11 @@
           ],
           "mod_sight_rear": [
             "64119d90dcf48d656f0aa275"
+          ]
+        },
+        "64119d1f2c6d6f921a0929f8": {
+          "mod_sight_front": [
+            "64119d672c6d6f921a0929fb"
           ]
         },
         "643ea5b23db6f9f57107d9fd": {
@@ -3733,6 +3743,11 @@
           ],
           "mod_sight_rear": [
             "64119d90dcf48d656f0aa275"
+          ]
+        },
+        "64119d1f2c6d6f921a0929f8": {
+          "mod_sight_front": [
+            "64119d672c6d6f921a0929fb"
           ]
         },
         "643ea5b23db6f9f57107d9fd": {

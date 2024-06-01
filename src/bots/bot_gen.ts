@@ -141,9 +141,10 @@ export class BotGen extends BotGenerator {
     //skew the tiering of PMCs based on map
     private botTierMapFactor(tier: number, utils: Utils): number {
 
-        const hightier: string[] = ["rezervbase", "reservebase", "tarkovstreets"];
-        const midtier: string[] = ["factory4_night"];
-        const lowtier: string[] = ["bigmap", "customs", "interchange", "lighthouse"];
+        const highTier: string[] = ["rezervbase", "reservebase", "tarkovstreets"];
+        const midTier: string[] = ["factory4_night"];
+        const lowTier: string[] = ["bigmap", "customs", "interchange", "lighthouse"];
+        const ratTier: string[] = ["woods", "shoreline"];
 
         let rndNum = utils.pickRandNumOneInTen();
         if (RaidInfoTracker.mapName === "sandbox") { //me being superstitious 
@@ -152,14 +153,17 @@ export class BotGen extends BotGenerator {
         if (RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 4 && hightier.includes(RaidInfoTracker.mapName)) {
+        else if (rndNum <= 3 && highTier.includes(RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 2 && (midtier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
+        else if (rndNum <= 2 && (midTier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 1 && lowtier.includes(RaidInfoTracker.mapName)) {
+        else if (rndNum <= 1 && lowTier.includes(RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
+        }
+        else if (rndNum <= 3 && ratTier.includes(RaidInfoTracker.mapName)) {
+            tier = Math.max(tier - 1, 1);
         }
         return tier;
     }

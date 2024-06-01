@@ -640,6 +640,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         // this.dllChecker(logger, modConfig);
 
+        gear.loadMaskChanges();
+
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();

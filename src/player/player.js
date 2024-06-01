@@ -159,20 +159,20 @@ class Player {
         }
     }
     loadPlayerStats() {
-        if (this.modConfig.enable_stances == true || this.modConfig.movement_changes == true) {
+        if (this.modConfig.enable_stances == true || this.modConfig.movement_changes == true || this.modConfig.recoil_attachment_overhaul) {
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
             this.globalDB().Stamina.AimDrainRate = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
-            this.globalDB().AimPunchMagnitude = 9.5;
+            this.globalDB().AimPunchMagnitude = 10;
         }
         if (this.modConfig.weight_limits_changes == true) {
-            this.globalDB().Stamina.WalkOverweightLimits["x"] = 50;
+            this.globalDB().Stamina.WalkOverweightLimits["x"] = 54;
             this.globalDB().Stamina.WalkOverweightLimits["y"] = 75;
             this.globalDB().Stamina.WalkSpeedOverweightLimits["x"] = 32;
-            this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 75;
+            this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 80;
             this.globalDB().Stamina.BaseOverweightLimits["x"] = 24;
             this.globalDB().Stamina.BaseOverweightLimits["y"] = 65;
             this.globalDB().Stamina.SprintOverweightLimits["x"] = 15;
@@ -184,7 +184,7 @@ class Player {
         }
         if (this.modConfig.movement_changes == true) {
             this.globalDB().WalkSpeed["x"] = 0.59;
-            this.globalDB().WalkSpeed["y"] = 0.8;
+            this.globalDB().WalkSpeed["y"] = 0.85;
             this.globalDB().SprintSpeed["x"] = 0.05;
             this.globalDB().SprintSpeed["y"] = 0.5;
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
@@ -254,8 +254,8 @@ class Player {
         }
         if (this.modConfig.realistic_ballistics == true) {
             this.globalDB().LegsOverdamage = 3.1; // 2
-            this.globalDB().HandsOverdamage = 2.5; //0.56
-            this.globalDB().StomachOverdamage = 3.1; //2.8
+            this.globalDB().HandsOverdamage = 2.55; //0.56
+            this.globalDB().StomachOverdamage = 3.4; //2.8
         }
         if (this.modConfig.realistic_player_health == true) {
             const health = this.globalDB().Health.Effects;

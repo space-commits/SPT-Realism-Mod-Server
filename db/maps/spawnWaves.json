@@ -1541,8 +1541,8 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 0,
-            "slots_max": 4,
-            "slots_min": 0,
+            "slots_max": 6,
+            "slots_min": 3,
             "time_max": 20,
             "time_min": 1
         },

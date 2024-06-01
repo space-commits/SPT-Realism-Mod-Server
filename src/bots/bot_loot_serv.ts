@@ -77,6 +77,8 @@ export class BotLootGen extends BotLootGenerator {
         const itemCounts = botJsonTemplate.generation.items;
         const botItemLimits = this.getItemSpawnLimitsForBot(botRole);
 
+        let vestMedsCount = 0;
+
         const backpackLootCount = Number(this.weightedRandomHelper.getWeightedValue<number>(itemCounts.backpackLoot.weights));
         const pocketLootCount = Number(this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights));
         const vestLootCount = this.weightedRandomHelper.getWeightedValue<number>(itemCounts.vestLoot.weights);
@@ -542,7 +544,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // No whitelist, find and assign from combined item pool
         if (Object.keys(vestHealingItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(vestLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (
                     this.isMedicalItem(itemTemplate._props)
@@ -561,7 +563,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // No whitelist, find and assign from combined item pool
         if (Object.keys(pocketHealingItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(pocketLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (
                     this.isMedicalItem(itemTemplate._props)
@@ -600,7 +602,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // no whitelist, find and assign from combined item pool
         if (Object.keys(vestDrugItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(vestLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses.DRUGS) {
                     vestDrugItems[tpl] = weight;
@@ -615,7 +617,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // no whitelist, find and assign from combined item pool
         if (Object.keys(pocketDrugItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(pocketLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses.DRUGS) {
                     pocketDrugItems[tpl] = weight;
@@ -630,7 +632,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // no whitelist, find and assign from combined item pool
         if (Object.keys(bagDrugItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(backpackLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses.DRUGS) {
                     bagDrugItems[tpl] = weight;
@@ -646,7 +648,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // No whitelist, find and assign from combined item pool
         if (Object.keys(vestStimItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(vestLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses.STIMULATOR) {
                     vestStimItems[tpl] = weight;
@@ -661,7 +663,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // No whitelist, find and assign from combined item pool
         if (Object.keys(pocketStimItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(pocketLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses.STIMULATOR) {
                     pocketStimItems[tpl] = weight;
@@ -676,7 +678,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // No whitelist, find and assign from combined item pool
         if (Object.keys(bagStimItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(backpackLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (this.isMedicalItem(itemTemplate._props) && itemTemplate._parent === BaseClasses.STIMULATOR) {
                     bagStimItems[tpl] = weight;
@@ -692,7 +694,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // no whitelist, find and assign from combined item pool
         if (Object.keys(vestGrenadeItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(vestLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (this.isGrenade(itemTemplate._props)) {
                     vestGrenadeItems[tpl] = weight;
@@ -706,7 +708,7 @@ export class MyLootCache extends BotLootCacheService {
 
         // no whitelist, find and assign from combined item pool
         if (Object.keys(pocketGrenadeItems).length === 0) {
-            for (const [tpl, weight] of Object.entries(combinedLootPool)) {
+            for (const [tpl, weight] of Object.entries(pocketLootPool)) {
                 const itemTemplate = this.itemHelper.getItem(tpl)[1];
                 if (this.isGrenade(itemTemplate._props)) {
                     pocketGrenadeItems[tpl] = weight;

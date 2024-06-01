@@ -573,6 +573,8 @@
         "speedPenaltyPercent": -30,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -10,
+        "IsGasMask": true,
+        "GasProtection": 0.25,
         "TemplateType": "gear"
     },
     "5bd071d786f7747e707b93a3": {
@@ -627,24 +629,28 @@
         "ItemID": "5b432c305acfc40019478128",
         "Name": "item_equipment_facecover_gasmask_GP5",
         "AllowADS": true,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
         "speedPenaltyPercent": -30,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -6,
+        "IsGasMask": true,
+        "GasProtection": 0.9,
         "TemplateType": "gear"
     },
     "60363c0c92ec1c31037959f5": {
         "ItemID": "60363c0c92ec1c31037959f5",
         "Name": "item_equipment_facecover_gasmask_gp7",
         "AllowADS": true,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
         "speedPenaltyPercent": -25,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -4,
+        "IsGasMask": true,
+        "GasProtection": 1,
         "TemplateType": "gear"
     },
     "62a09e08de7ac81993580532": {

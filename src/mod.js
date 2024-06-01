@@ -496,6 +496,7 @@ class Main {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
+        gear.loadMaskChanges();
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();

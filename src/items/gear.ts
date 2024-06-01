@@ -12,6 +12,18 @@ export class Gear {
         return this.tables.templates.items;
     }
 
+    public loadMaskChanges() {
+
+        //GP-5
+        this.itemDB()["5b432c305acfc40019478128"]._props.FaceShieldComponent = true;
+        this.itemDB()["5b432c305acfc40019478128"]._props.FaceShieldMask = "Narrow";
+
+        //GP-7
+        this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldComponent = true;
+        this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldMask = "Narrow";
+
+    }
+
     public loadGearConflicts() {
 
         let confMasks = this.arrays.conflMasks;
@@ -45,11 +57,11 @@ export class Gear {
 
         for (let item in this.itemDB()) {
             if (this.itemDB()[item]._parent === ParentClasses.HEADWEAR) {
-                for(let c in this.itemDB()[item]._props.ConflictingItems){
+                for (let c in this.itemDB()[item]._props.ConflictingItems) {
                     let confItem = this.itemDB()[item]._props.ConflictingItems[c];
-                    if( this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === ParentClasses.HEADSET){
+                    if (this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === ParentClasses.HEADSET) {
                         this.itemDB()[item]._props.ConflictingItems[c] = "";
-                    }                    
+                    }
                 }
             }
         }
@@ -58,7 +70,7 @@ export class Gear {
     public loadHeadsetTweaks() {
         for (let item in this.itemDB()) {
             let serverItem = this.itemDB()[item];
-            
+
             //Sordin
             if (serverItem._id === "5aa2ba71e5b5b000137b758f") {
                 serverItem._props.Distortion = 0.1;

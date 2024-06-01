@@ -810,7 +810,7 @@ class Armor {
         if (serverItem._id === "5b432be65acfc433000ed01f") {
             serverItem._props.Durability = 30;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 2;
+            serverItem._props.armorClass = 3;
             serverItem._props.BluntThroughput = 0.025;
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.armorColliders = ['Eyes'];
@@ -1612,13 +1612,13 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.12;
+            serverItem._props.speedPenaltyPercent = -0.69;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.2;
             serverItem._props.BluntThroughput = 0.18 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
-            serverItem._props.Weight = 1.12;
+            serverItem._props.Weight = 0.69;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 55 * duraModifier, 4 + classModifier, serverItem._props.BluntThroughput, 'UHMWPE');
         }
         //TC-2001

@@ -50,7 +50,6 @@ const traderRepairs = require("../../db/traders/repair/traderRepair.json");
 const fenceLimits = require("../../db/traders/fence/fenceLimits.json");
 const buyCat = require("../../db/traders/buy_categories.json");
 
-
 const prapId = "54cb50c76803fa8b248b4571";
 const theraId = "54cb57776803fa99248b456e";
 const skierId = "58330581ace78e27b8b10cee";
@@ -221,10 +220,10 @@ export class Traders {
 
         if (this.modConf.recoil_attachment_overhaul == true) {
             //jaeger
-            this.assortItemPusher(jaegId, "mosin_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 5000);
-            this.assortItemPusher(jaegId, "6kh4_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+            this.assortItemPusher(jaegId, "mosin_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 5000);
+            this.assortItemPusher(jaegId, "6kh4_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 4000);
             // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
-            this.assortItemPusher(jaegId, "m9_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+            this.assortItemPusher(jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         }
 
 
@@ -454,7 +453,11 @@ export class RandomizeTraderAssort {
 
         pmcData.forEach(element => {
             playerCount++;
-            totalLL += element.TradersInfo[traderId].loyaltyLevel;
+            if(element?.TradersInfo != null && element?.TradersInfo != undefined){
+                let ll = element?.TradersInfo[traderId]?.loyaltyLevel;
+                totalLL += ll !== null && ll !== undefined? ll : 1;
+            }
+            totalLL += 1;
         });
 
         let avgLL = totalLL / playerCount;
