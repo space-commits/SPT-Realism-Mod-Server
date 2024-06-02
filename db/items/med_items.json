@@ -63,8 +63,13 @@
             "RadExposure": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0
+                "fadeOut": 0.1
             },
+            "Intoxication": {
+                "delay": 10,
+                "duration": 300,
+                "fadeOut": 0.1
+              },
             "Contusion": {
                 "delay": 10,
                 "duration": 300,

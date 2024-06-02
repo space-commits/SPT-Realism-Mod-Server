@@ -60,6 +60,7 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
         const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
         const itemCounts = botJsonTemplate.generation.items;
         const botItemLimits = this.getItemSpawnLimitsForBot(botRole);
+        let vestMedsCount = 0;
         const backpackLootCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.backpackLoot.weights));
         const pocketLootCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights));
         const vestLootCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);

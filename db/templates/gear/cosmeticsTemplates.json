@@ -636,7 +636,7 @@
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -6,
         "IsGasMask": true,
-        "GasProtection": 0.9,
+        "GasProtection": 0.97,
         "TemplateType": "gear"
     },
     "60363c0c92ec1c31037959f5": {

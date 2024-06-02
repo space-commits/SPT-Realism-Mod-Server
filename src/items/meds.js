@@ -87,6 +87,19 @@ class Consumables {
         };
         //Propitol
         this.itemDB()["5c0e530286f7747fa1419862"]._props.effects_damage = {};
+        //Blue Blood
+        this.itemDB()["637b6251104668754b72f8f9"]._props.effects_damage = {
+            "RadExposure": {
+                "delay": 10,
+                "duration": 300,
+                "fadeOut": 0.25
+            },
+            "Intoxication": {
+                "delay": 10,
+                "duration": 300,
+                "fadeOut": 0.25
+            }
+        };
     }
     loadFood() {
         for (const buffName in this.buffsFood) {
@@ -199,7 +212,13 @@ class Consumables {
             if (serverItem._id === "5d1b376e86f774252519444e") {
                 serverItem._props.StimulatorBuffs = this.foodItems.moonshine.StimulatorBuffs;
                 serverItem._props.effects_health = {};
-                serverItem._props.effects_damage = {};
+                serverItem._props.effects_damage = {
+                    "RadExposure": {
+                        "delay": 10,
+                        "duration": 300,
+                        "fadeOut": 0.02
+                    }
+                };
                 serverItem._props.MaxResource = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "alcohol");
@@ -253,7 +272,13 @@ class Consumables {
             if (serverItem._id === "5d40407c86f774318526545a") {
                 serverItem._props.StimulatorBuffs = this.foodItems.vodka.StimulatorBuffs;
                 serverItem._props.effects_health = {};
-                serverItem._props.effects_damage = {};
+                serverItem._props.effects_damage = {
+                    "RadExposure": {
+                        "delay": 10,
+                        "duration": 300,
+                        "fadeOut": 0.01
+                    }
+                };
                 serverItem._props.MaxResource = 1;
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "alcohol");
