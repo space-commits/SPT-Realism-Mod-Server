@@ -189,7 +189,7 @@ export class Player {
     
             this.globalDB().Stamina.AimDrainRate = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
-            this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.3;
+            this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.35;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
 
             this.globalDB().AimPunchMagnitude = 10;
@@ -208,7 +208,7 @@ export class Player {
 
         if(this.modConfig.enable_stances == true){
             this.globalDB().Stamina.Capacity = 100;
-            this.globalDB().Stamina.BaseRestorationRate = 10;
+            this.globalDB().Stamina.BaseRestorationRate = 7;
         }
 
         if (this.modConfig.movement_changes == true) {

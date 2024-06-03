@@ -122,27 +122,27 @@ export class JsonHandler {
             serverItem._props.mousePenalty = fileItem.mousePenalty;
             serverItem._props.weaponErgonomicPenalty = fileItem.weaponErgonomicPenalty;
 
-            if(serverItem._props?.armorClass != undefined){
+            if (serverItem._props?.armorClass != undefined) {
                 serverItem._props.armorClass = fileItem.ArmorLevel != undefined ? fileItem.ArmorLevel : serverItem._props.armorClass;
             }
 
-            if(serverItem._props?.Durability != undefined){
+            if (serverItem._props?.Durability != undefined) {
                 serverItem._props.Durability = fileItem.Durability != undefined ? fileItem.Durability : serverItem._props.Durability;
             }
 
-            if(serverItem._props?.MaxDurability != undefined){
+            if (serverItem._props?.MaxDurability != undefined) {
                 serverItem._props.MaxDurability = fileItem.Durability != undefined ? fileItem.Durability : serverItem._props.MaxDurability;
             }
 
-            if(serverItem._props?.BluntThroughput != undefined){
+            if (serverItem._props?.BluntThroughput != undefined) {
                 serverItem._props.BluntThroughput = fileItem.BluntThroughput != undefined ? fileItem.BluntThroughput : serverItem._props.BluntThroughput;
             }
 
-            if(serverItem._props?.ArmorMaterial != undefined){
+            if (serverItem._props?.ArmorMaterial != undefined) {
                 serverItem._props.ArmorMaterial = fileItem.ArmorMaterial != undefined ? fileItem.ArmorMaterial : serverItem._props.ArmorMaterial;
             }
 
-            if(serverItem._props?.Weight != undefined){
+            if (serverItem._props?.Weight != undefined) {
                 serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : serverItem._props.Weight;
             }
 
@@ -251,7 +251,7 @@ export class JsonHandler {
                 serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
                 serverItem._props.CameraSnap = 1;
                 serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
-                serverItem._props.CanQueueSecondShot = fileItem.CanQueueSecondShot != null ?  fileItem.CanQueueSecondShot : serverItem._props.CanQueueSecondShot;
+                serverItem._props.CanQueueSecondShot = fileItem.CanQueueSecondShot != null ? fileItem.CanQueueSecondShot : serverItem._props.CanQueueSecondShot;
 
                 if (fileItem?.weapFireType !== undefined) {
                     serverItem._props.weapFireType = fileItem.weapFireType;

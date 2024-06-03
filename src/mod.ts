@@ -144,9 +144,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             [
                 {
                     url: "/RealismMod/GetInfo",
-                    action: (url, info, sessionId, output) => {
+                    action: (url, info, sessionID, output) => {
 
                         try {
+                            modConfig.profile_id = sessionID;
                             return jsonUtil.serialize(modConfig);
                         } catch (err) {
                             console.error("Failed to read config file", err);

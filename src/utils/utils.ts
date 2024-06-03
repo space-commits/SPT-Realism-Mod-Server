@@ -111,7 +111,7 @@ export class Utils {
     }
 
     public pickRandNumOneInTen(): number {
-        return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+        return Math.floor(Math.random() * 10);
     }
 
     public writeConfigJSON(data: any, filePath: string) {

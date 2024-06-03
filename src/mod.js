@@ -95,8 +95,9 @@ class Main {
         router.registerDynamicRouter("loadResources", [
             {
                 url: "/RealismMod/GetInfo",
-                action: (url, info, sessionId, output) => {
+                action: (url, info, sessionID, output) => {
                     try {
+                        modConfig.profile_id = sessionID;
                         return jsonUtil.serialize(modConfig);
                     }
                     catch (err) {

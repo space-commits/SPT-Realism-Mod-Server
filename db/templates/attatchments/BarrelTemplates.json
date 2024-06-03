@@ -872,7 +872,7 @@
     "5fbbfabed5cb881a7363194e": {
         "ItemID": "5fbbfabed5cb881a7363194e",
         "Name": "barrel_mcx_171mm_762x35",
-        "ModType": "300",
+        "ModType": "762x35",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 4,
         "AutoROF": 1.5,
@@ -897,7 +897,7 @@
     "5fbbfacda56d053a3543f799": {
         "ItemID": "5fbbfacda56d053a3543f799",
         "Name": "barrel_mcx_229mm_762x35",
-        "ModType": "300",
+        "ModType": "762x35",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
@@ -921,7 +921,7 @@
     "mechMCX_229mm": {
         "ItemID": "mechMCX_229mm",
         "Name": "mechMCX_229mm",
-        "ModType": "556",
+        "ModType": "556x45NATO",
         "VerticalRecoil": 10,
         "HorizontalRecoil": -5,
         "AutoROF": 1.5,
@@ -947,7 +947,7 @@
     "mechMCX_171mm": {
         "ItemID": "mechMCX_171mm",
         "Name": "mechMCX_171mm",
-        "ModType": "556",
+        "ModType": "556x45NATO",
         "VerticalRecoil": 10,
         "HorizontalRecoil": -4,
         "AutoROF": 2,
@@ -2128,7 +2128,7 @@
     "mechAUG_417": {
         "ItemID": "mechAUG_417",
         "Name": "barrel_aug_steyr_a3_417mm_300blk",
-        "ModType": "300",
+        "ModType": "762x35",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 5,
         "CameraRecoil": 5,
@@ -2154,7 +2154,7 @@
     "mechMDR_406": {
         "ItemID": "mechMDR_406",
         "Name": "barrel_mdr_dt_406mm_300blk",
-        "ModType": "300",
+        "ModType": "762x35",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 5,
         "CameraRecoil": 5,
@@ -4138,7 +4138,7 @@
     "mechSpear_330mm": {
         "ItemID": "mechSpear_330mm",
         "Name": "barrel_mcx_sig_spear_330mm_762x51",
-        "ModType": "308",
+        "ModType": "762x51",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 15,
         "CameraRecoil": 15,
