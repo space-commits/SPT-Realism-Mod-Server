@@ -115,7 +115,7 @@ class Utils {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     pickRandNumOneInTen() {
-        return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+        return Math.floor(Math.random() * 10);
     }
     writeConfigJSON(data, filePath) {
         const baseFolderPath = path.resolve(path.join(__dirname, '../../'));

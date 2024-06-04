@@ -637,6 +637,7 @@
         "weaponErgonomicPenalty": -6,
         "IsGasMask": true,
         "GasProtection": 0.97,
+        "MaskToUse": "gp5",
         "TemplateType": "gear"
     },
     "60363c0c92ec1c31037959f5": {
@@ -651,18 +652,7 @@
         "weaponErgonomicPenalty": -4,
         "IsGasMask": true,
         "GasProtection": 1,
-        "TemplateType": "gear"
-    },
-    "62a09e08de7ac81993580532": {
-        "ItemID": "62a09e08de7ac81993580532",
-        "Name": "item_equipment_facecover_glorious",
-        "AllowADS": true,
-        "LoyaltyLevel": 4,
-        "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
+        "MaskToUse": "gp5",
         "TemplateType": "gear"
     },
     "6176a48d732a664031271438": {

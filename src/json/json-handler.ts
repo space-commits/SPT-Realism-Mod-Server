@@ -148,7 +148,7 @@ export class JsonHandler {
 
             let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
-                fileItem?.HasHitSecondaryArmor?.toString() || "false", fileItem?.GasProtection?.toString() || "0", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.IsGasMask?.toString() || "false"];
+                fileItem?.MaskToUse?.toString() || "", fileItem?.GasProtection?.toString() || "0", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.IsGasMask?.toString() || "false"];
 
             let combinedArr = armorPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;

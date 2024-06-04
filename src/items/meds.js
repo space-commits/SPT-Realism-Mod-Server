@@ -97,7 +97,7 @@ class Consumables {
             "Intoxication": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.25
+                "fadeOut": 0.4
             }
         };
     }

@@ -1,4 +1,49 @@
 {
+    "62a09e08de7ac81993580532": {
+        "ItemID": "62a09e08de7ac81993580532",
+        "Name": "item_equipment_facecover_glorious",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "ReloadSpeedMulti": 1,
+        "BlocksMouth": true,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "MaskToUse": "atomic",
+        "TemplateType": "gear"
+    },
+    "6570aead4d84f81fd002a033": {
+        "ItemID": "6570aead4d84f81fd002a033",
+        "Name": "item_equipment_death_mask",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "Unclassified",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "BlocksMouth": true,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "MaskToUse": "atomic",
+        "TemplateType": "gear"
+    },
+    "657089638db3adca1009f4ca": {
+        "ItemID": "657089638db3adca1009f4ca",
+        "Name": "item_equipment_atomic",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "NIJ IIIA",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "BlocksMouth": true,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "MaskToUse": "atomic",
+        "TemplateType": "gear"
+    },
     "5b432b2f5acfc4771e1c6622": {
         "ItemID": "5b432b2f5acfc4771e1c6622",
         "Name": "item_equipment_facecover_shatteredmask",
@@ -12,6 +57,7 @@
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0,
+        "MaskToUse": "atomic",
         "TemplateType": "gear"
     },
     "603409c80ca681766b6a0fb2": {

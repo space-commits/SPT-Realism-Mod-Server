@@ -253,6 +253,7 @@
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0,
+        "MaskToUse": "ronin",
         "TemplateType": "gear"
     },
     "5ac8d6885acfc400180ae7b0": {
