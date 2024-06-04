@@ -187,8 +187,7 @@ export class BotGen extends BotGenerator {
             }
         });
     }
-
-
+    
     public myGeneratePlayerScav(sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase {
         let bot = this.getCloneOfBotBase();
         bot.Info.Settings.BotDifficulty = difficulty;
