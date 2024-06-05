@@ -50,6 +50,8 @@ export class Gear {
         let confNVG = this.arrays.conflNVGomponents
         let armorCompArr = [];
 
+        this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems = this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems.filter(i => i !== "5e4bfc1586f774264f7582d3");
+
         for (let item in this.itemDB()) {
             let serverItem = this.itemDB()[item];
             if (serverItem._parent === ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {

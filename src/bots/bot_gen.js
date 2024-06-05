@@ -431,10 +431,9 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
                 randomisationDetails: randomistionDetails
             }, botRole, pmcTier);
         }
-        // Generate below in specific order
         this.myGenerateEquipment({
-            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.HEADWEAR,
-            rootEquipmentPool: templateInventory.equipment.Headwear,
+            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.FACE_COVER,
+            rootEquipmentPool: templateInventory.equipment.FaceCover,
             modPool: templateInventory.mods,
             spawnChances: equipmentChances,
             botRole: botRole,
@@ -443,9 +442,10 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
             botEquipmentConfig: botEquipConfig,
             randomisationDetails: randomistionDetails
         }, botRole, pmcTier);
+        // Generate below in specific order
         this.myGenerateEquipment({
-            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.FACE_COVER,
-            rootEquipmentPool: templateInventory.equipment.FaceCover,
+            rootEquipmentSlot: EquipmentSlots_1.EquipmentSlots.HEADWEAR,
+            rootEquipmentPool: templateInventory.equipment.Headwear,
             modPool: templateInventory.mods,
             spawnChances: equipmentChances,
             botRole: botRole,

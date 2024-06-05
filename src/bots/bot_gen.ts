@@ -187,7 +187,7 @@ export class BotGen extends BotGenerator {
             }
         });
     }
-    
+
     public myGeneratePlayerScav(sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase {
         let bot = this.getCloneOfBotBase();
         bot.Info.Settings.BotDifficulty = difficulty;
@@ -551,10 +551,9 @@ export class BotInvGen extends BotInventoryGenerator {
                 pmcTier);
         }
 
-        // Generate below in specific order
         this.myGenerateEquipment({
-            rootEquipmentSlot: EquipmentSlots.HEADWEAR,
-            rootEquipmentPool: templateInventory.equipment.Headwear,
+            rootEquipmentSlot: EquipmentSlots.FACE_COVER,
+            rootEquipmentPool: templateInventory.equipment.FaceCover,
             modPool: templateInventory.mods,
             spawnChances: equipmentChances,
             botRole: botRole,
@@ -566,9 +565,10 @@ export class BotInvGen extends BotInventoryGenerator {
             botRole,
             pmcTier);
 
+        // Generate below in specific order
         this.myGenerateEquipment({
-            rootEquipmentSlot: EquipmentSlots.FACE_COVER,
-            rootEquipmentPool: templateInventory.equipment.FaceCover,
+            rootEquipmentSlot: EquipmentSlots.HEADWEAR,
+            rootEquipmentPool: templateInventory.equipment.Headwear,
             modPool: templateInventory.mods,
             spawnChances: equipmentChances,
             botRole: botRole,
@@ -624,8 +624,6 @@ export class BotInvGen extends BotInventoryGenerator {
     }
 
     private myGenerateEquipment(settings: IGenerateEquipmentProperties, botRole: string, pmcTier: number): void {
-
-
         const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         const botWeaponModLimitService = container.resolve<BotWeaponModLimitService>("BotWeaponModLimitService");
@@ -1192,28 +1190,25 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
 
         // Filter plates to the chosen level based on its armorClass property
         const filteredPlates = platesFromDb.filter((item) => item._props.armorClass == chosenArmorPlateLevel);
-       
+
         //try again with a higher level
         if (filteredPlates.length === 0) {
             this.logger.debug(
                 `Plate filter was too restrictive for armor: ${armorItem._id}, unable to find plates of level: ${chosenArmorPlateLevel}. Using mod items default plate`,
             );
-            
+
             const relatedItemDbModSlot = armorItem._props.Slots.find((slot) => slot._name.toLowerCase() === modSlot);
             const defaultPlate = relatedItemDbModSlot._props.filters[0].Plate;
-            if (!defaultPlate)
-            {   
+            if (!defaultPlate) {
                 // No relevant plate found after filtering AND no default plate
 
                 // Last attempt, get default preset and see if it has a plate default
                 const defaultPreset = this.presetHelper.getDefaultPreset(armorItem._id);
-                if (defaultPreset)
-                {
+                if (defaultPreset) {
                     const relatedPresetSlot = defaultPreset._items.find((item) =>
                         item.slotId?.toLowerCase() === modSlot
                     );
-                    if (relatedPresetSlot)
-                    {
+                    if (relatedPresetSlot) {
                         result.result = Result.SUCCESS;
                         result.plateModTpls = [relatedPresetSlot._tpl];
 
