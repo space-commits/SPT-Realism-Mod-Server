@@ -92,6 +92,10 @@ import { Armor } from "./ballistics/armor";
 
 import * as path from 'path';
 import * as fs from 'fs';
+import { MyLootCache } from "./bots/bot_loot_serv";
+import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
+import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
+import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -392,6 +396,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
+                            const localisationService = container.resolve<LocalisationService>("LocalisationService");
+                            const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+                            const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
+                            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new Arrays(postLoadTables);
@@ -400,6 +408,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
 
+                            const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                            myGetLootCache.myClearCache();
+    
                             const time = weatherController.generate().time; //apparently regenerates weather?
                             // const time = weatherController.getCurrentInRaidTime; //better way?
                             // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
@@ -490,6 +501,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadTables = postLoadDBServer.getTables();
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
+                        const localisationService = container.resolve<LocalisationService>("LocalisationService");
+                        const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+                        const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
+                        const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
@@ -499,14 +514,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID)
 
-                        const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-                        const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
-                        logger.warning("============== " + matchInfo.keyId);
-
+                        const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                        myGetLootCache.myClearCache();
 
                         //update global player level
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
-
                         try {
 
                             if (modConfig.tiered_flea == true) {

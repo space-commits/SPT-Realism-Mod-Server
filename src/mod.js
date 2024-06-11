@@ -53,6 +53,7 @@ const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
 const path = __importStar(require("path"));
 const fs = __importStar(require("fs"));
+const bot_loot_serv_1 = require("./bots/bot_loot_serv");
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -292,6 +293,10 @@ class Main {
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
+                        const localisationService = container.resolve("LocalisationService");
+                        const ragfairPriceService = container.resolve("RagfairPriceService");
+                        const pmcLootGenerator = container.resolve("PMCLootGenerator");
+                        const itemHelper = container.resolve("ItemHelper");
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.Arrays(postLoadTables);
@@ -299,6 +304,8 @@ class Main {
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
+                        const myGetLootCache = new bot_loot_serv_1.MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                        myGetLootCache.myClearCache();
                         const time = weatherController.generate().time; //apparently regenerates weather?
                         // const time = weatherController.getCurrentInRaidTime; //better way?
                         // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
@@ -374,6 +381,10 @@ class Main {
                     const postLoadTables = postLoadDBServer.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
+                    const localisationService = container.resolve("LocalisationService");
+                    const ragfairPriceService = container.resolve("RagfairPriceService");
+                    const pmcLootGenerator = container.resolve("PMCLootGenerator");
+                    const itemHelper = container.resolve("ItemHelper");
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
@@ -382,9 +393,8 @@ class Main {
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
-                    const appContext = container.resolve("ApplicationContext");
-                    const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
-                    logger.warning("============== " + matchInfo.keyId);
+                    const myGetLootCache = new bot_loot_serv_1.MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                    myGetLootCache.myClearCache();
                     //update global player level
                     this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                     try {

@@ -14,7 +14,6 @@ const arrays_1 = require("../utils/arrays");
 const bots_1 = require("./bots");
 // import { BotLootGen } from "./bot_loot_serv";
 const EquipmentSlots_1 = require("C:/snapshot/project/obj/models/enums/EquipmentSlots");
-const seasonalevents_1 = require("../misc/seasonalevents");
 const ModSpawn_1 = require("C:/snapshot/project/obj/models/enums/ModSpawn");
 const ExhaustableArray_1 = require("C:/snapshot/project/obj/models/spt/server/ExhaustableArray");
 const IFilterPlateModsForSlotByLevelResult_1 = require("C:/snapshot/project/obj/generators/IFilterPlateModsForSlotByLevelResult");
@@ -265,7 +264,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const botEquipmentModPoolService = tsyringe_1.container.resolve("BotEquipmentModPoolService");
         const botEquipmentModGenerator = tsyringe_1.container.resolve("BotEquipmentModGenerator");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
-        const seasonalEvents = new seasonalevents_1.SeasonalEventsHandler();
+        // const seasonalEvents = new SeasonalEventsHandler();
         const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseServer);
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseServer, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
         const botRole = botGenerationDetails.role.toLowerCase();

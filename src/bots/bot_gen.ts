@@ -335,7 +335,7 @@ export class BotGen extends BotGenerator {
         const botEquipmentModPoolService = container.resolve<BotEquipmentModPoolService>("BotEquipmentModPoolService");
         const botEquipmentModGenerator = container.resolve<BotEquipmentModGenerator>("BotEquipmentModGenerator");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-        const seasonalEvents = new SeasonalEventsHandler();
+        // const seasonalEvents = new SeasonalEventsHandler();
 
         const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseServer);
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseServer, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);

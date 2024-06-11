@@ -388,11 +388,10 @@ export class MyLootCache extends BotLootCacheService {
         };
     }
 
-    public override clearCache(): void {
+    public myClearCache(): void {
         this.myLootCache = {};
         this.lootCache = {};
     }
-
 
     public getLootCache(botRole: string, isPmc: boolean, lootType: MyLootCacheType, botJsonTemplate: IBotType): Record<string, number> {
 

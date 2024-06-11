@@ -161,7 +161,7 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
             currencyItems: {}
         };
     }
-    clearCache() {
+    myClearCache() {
         this.myLootCache = {};
         this.lootCache = {};
     }

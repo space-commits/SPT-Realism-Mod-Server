@@ -450,7 +450,7 @@ export class BotLoader {
             tier = utils.probabilityWeighter(tierArray, [10, 30, 60]);
         }
 
-        if (type === "sanitar") {
+        if (type === "reshalla") {
             if (tier == 1) {
                 bots.reshallaLoad1();
             }
@@ -540,7 +540,7 @@ export class BotLoader {
         }
     }
 
-    public updateBots(pmcData: IPmcData, logger: ILogger, config, bots: BotLoader, helper: Utils) {
+    public updateBots(pmcData: IPmcData, logger: ILogger, config: any, bots: BotLoader, helper: Utils) {
         let property = pmcData?.Info?.Level;
         if (property === undefined) {
             bots.botConfig1();
@@ -833,13 +833,16 @@ export class BotLoader {
     }
 
     public scavLoad1() {
-        this.scavBase.inventory.Ammo = scavLO.scavLO1.inventory.Ammo;
-        this.scavBase.inventory.equipment = scavLO.scavLO1.inventory.equipment;
-        this.scavBase.inventory.mods = scavLO.scavLO1.inventory.mods;
-        this.scavBase.chances = scavLO.scavLO1.chances;
+
+        let tier1Json = JSON.parse(JSON.stringify(scavLO.scavLO1));
+        
+        this.scavBase.inventory.Ammo = tier1Json.inventory.Ammo;
+        this.scavBase.inventory.equipment = tier1Json.inventory.equipment;
+        this.scavBase.inventory.mods = tier1Json.inventory.mods;
+        this.scavBase.chances = tier1Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.scavBase.inventory.items = scavLO.scavLO1.inventory.items;
+            this.scavBase.inventory.items = tier1Json.inventory.items;
             this.scavBase.generation = lootOdds.scav;
         }
 
@@ -858,7 +861,7 @@ export class BotLoader {
         }
 
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
-            this.scavBase.inventory.items = scavLO.scavLO1.inventory.dynamic_looting;
+            this.scavBase.inventory.items = tier1Json.inventory.dynamic_looting;
             this.scavBase.generation.items.backpackLoot.weights = lootOdds.dynamic_scav.items.backpackLoot.weights;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
             this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
@@ -873,13 +876,16 @@ export class BotLoader {
     }
 
     public scavLoad2() {
-        this.scavBase.inventory.Ammo = scavLO.scavLO2.inventory.Ammo;
-        this.scavBase.inventory.equipment = scavLO.scavLO2.inventory.equipment;
-        this.scavBase.inventory.mods = scavLO.scavLO2.inventory.mods;
-        this.scavBase.chances = scavLO.scavLO2.chances;
+
+        let tier2Json = JSON.parse(JSON.stringify(scavLO.scavLO2));
+
+        this.scavBase.inventory.Ammo = tier2Json.inventory.Ammo;
+        this.scavBase.inventory.equipment = tier2Json.inventory.equipment;
+        this.scavBase.inventory.mods = tier2Json.inventory.mods;
+        this.scavBase.chances = tier2Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.scavBase.inventory.items = scavLO.scavLO2.inventory.items;
+            this.scavBase.inventory.items = tier2Json.inventory.items;
             this.scavBase.generation = lootOdds.scav;
         }
 
@@ -898,7 +904,7 @@ export class BotLoader {
         }
 
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
-            this.scavBase.inventory.items = scavLO.scavLO2.inventory.dynamic_looting;
+            this.scavBase.inventory.items = tier2Json.inventory.dynamic_looting;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
             this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
@@ -912,13 +918,16 @@ export class BotLoader {
     }
 
     public scavLoad3() {
-        this.scavBase.inventory.Ammo = scavLO.scavLO3.inventory.Ammo;
-        this.scavBase.inventory.equipment = scavLO.scavLO3.inventory.equipment;
-        this.scavBase.inventory.mods = scavLO.scavLO3.inventory.mods;
-        this.scavBase.chances = scavLO.scavLO3.chances;
+
+        let tier3Json = JSON.parse(JSON.stringify(scavLO.scavLO3));
+
+        this.scavBase.inventory.Ammo = tier3Json.inventory.Ammo;
+        this.scavBase.inventory.equipment = tier3Json.inventory.equipment;
+        this.scavBase.inventory.mods = tier3Json.inventory.mods;
+        this.scavBase.chances = tier3Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.scavBase.inventory.items = scavLO.scavLO3.inventory.items;
+            this.scavBase.inventory.items = tier3Json.inventory.items;
             this.scavBase.generation = lootOdds.scav;
         }
 
@@ -937,7 +946,7 @@ export class BotLoader {
         }
 
         if (this.modConfig.dynamic_loot_scavs === true && this.modConfig.bot_loot_changes === true) {
-            this.scavBase.inventory.items = scavLO.scavLO3.inventory.dynamic_looting;
+            this.scavBase.inventory.items = tier3Json.inventory.dynamic_looting;
             this.scavBase.generation.items.vestLoot.weights = lootOdds.dynamic_scav.items.vestLoot.weights;
             this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
@@ -951,17 +960,20 @@ export class BotLoader {
     }
 
     public usecLoad1(botJsonTemplate: IBotType) {
-        botJsonTemplate.inventory.Ammo = usecLO.usecLO1.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = usecLO.usecLO1.inventory.equipment;
-        botJsonTemplate.inventory.mods = usecLO.usecLO1.inventory.mods;
-        botJsonTemplate.chances = usecLO.usecLO1.chances;
-        botJsonTemplate.appearance.body = usecLO.usecLO1.appearance.body;
-        botJsonTemplate.appearance.feet = usecLO.usecLO1.appearance.feet;
+
+        let tier1Json = JSON.parse(JSON.stringify(usecLO.usecLO1));
+
+        botJsonTemplate.inventory.Ammo = tier1Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier1Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier1Json.inventory.mods;
+        botJsonTemplate.chances = tier1Json.chances;
+        botJsonTemplate.appearance.body = tier1Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier1Json.appearance.feet;
         botJsonTemplate.appearance.voice = usecLO.appearance.voice;
-        botJsonTemplate.experience.level = usecLO.usecLO1.experience.level;
+        botJsonTemplate.experience.level = tier1Json.experience.level;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.items;
+            botJsonTemplate.inventory.items = tier1Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier1;
         }
         if (this.modConfig.add_keys === true) {
@@ -997,7 +1009,7 @@ export class BotLoader {
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO1.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier1Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1006,12 +1018,12 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover = { "5b432c305acfc40019478128": 10, "59e7715586f7742ee5789605": 5 }
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.FaceCover =  usecLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1020,17 +1032,20 @@ export class BotLoader {
     }
 
     public usecLoad2(botJsonTemplate: IBotType) {
-        botJsonTemplate.inventory.Ammo = usecLO.usecLO2.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = usecLO.usecLO2.inventory.equipment;
-        botJsonTemplate.inventory.mods = usecLO.usecLO2.inventory.mods;
-        botJsonTemplate.chances = usecLO.usecLO2.chances;
-        botJsonTemplate.appearance.body = usecLO.usecLO2.appearance.body;
-        botJsonTemplate.appearance.feet = usecLO.usecLO2.appearance.feet;
+
+        let tier2Json = JSON.parse(JSON.stringify(usecLO.usecLO2));
+
+        botJsonTemplate.inventory.Ammo = tier2Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier2Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier2Json.inventory.mods;
+        botJsonTemplate.chances = tier2Json.chances;
+        botJsonTemplate.appearance.body = tier2Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier2Json.appearance.feet;
         botJsonTemplate.appearance.voice = usecLO.appearance.voice;
-        botJsonTemplate.experience.level = usecLO.usecLO2.experience.level;
+        botJsonTemplate.experience.level = tier2Json.experience.level;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.items;
+            botJsonTemplate.inventory.items = tier2Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier2;
         }
         if (this.modConfig.add_keys === true) {
@@ -1065,17 +1080,17 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_cqb;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO2.inventory.FirstPrimaryWeapon_outdoor;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO2.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier2Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1084,12 +1099,12 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, "59e7715586f7742ee5789605": 5 }
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.FaceCover =  usecLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1098,17 +1113,20 @@ export class BotLoader {
     }
 
     public usecLoad3(botJsonTemplate: IBotType) {
-        botJsonTemplate.inventory.Ammo = usecLO.usecLO3.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = usecLO.usecLO3.inventory.equipment;
-        botJsonTemplate.inventory.mods = usecLO.usecLO3.inventory.mods;
-        botJsonTemplate.chances = usecLO.usecLO3.chances;
-        botJsonTemplate.appearance.body = usecLO.usecLO3.appearance.body;
-        botJsonTemplate.appearance.feet = usecLO.usecLO3.appearance.feet;
+
+        let tier3Json = JSON.parse(JSON.stringify(usecLO.usecLO3));
+
+        botJsonTemplate.inventory.Ammo = tier3Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier3Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier3Json.inventory.mods;
+        botJsonTemplate.chances = tier3Json.chances;
+        botJsonTemplate.appearance.body = tier3Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier3Json.appearance.feet;
         botJsonTemplate.appearance.voice = usecLO.appearance.voice;
-        botJsonTemplate.experience.level = usecLO.usecLO3.experience.level;
+        botJsonTemplate.experience.level = tier3Json.experience.level;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.items;
+            botJsonTemplate.inventory.items = tier3Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier3;
         }
         if (this.modConfig.add_keys === true) {
@@ -1124,7 +1142,7 @@ export class BotLoader {
             botJsonTemplate.chances.weaponMods.mod_tactical = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO3.inventory.Headwear_night;
+            botJsonTemplate.inventory.equipment.Headwear = tier3Json.inventory.Headwear_night;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 100;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
@@ -1151,18 +1169,18 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO3.inventory.Headwear_cqb;
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_cqb;
+            botJsonTemplate.inventory.equipment.Headwear = tier3Json.inventory.Headwear_cqb;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO3.inventory.FirstPrimaryWeapon_outdoor;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO3.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier3Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1175,8 +1193,8 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.FaceCover =  usecLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1185,17 +1203,20 @@ export class BotLoader {
     }
 
     public usecLoad4(botJsonTemplate: IBotType) {
-        botJsonTemplate.inventory.Ammo = usecLO.usecLO4.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = usecLO.usecLO4.inventory.equipment;
-        botJsonTemplate.inventory.mods = usecLO.usecLO4.inventory.mods;
-        botJsonTemplate.chances = usecLO.usecLO4.chances;
-        botJsonTemplate.appearance.body = usecLO.usecLO4.appearance.body;
-        botJsonTemplate.appearance.feet = usecLO.usecLO4.appearance.feet;
+
+        let tier4Json = JSON.parse(JSON.stringify(usecLO.usecLO4));
+
+        botJsonTemplate.inventory.Ammo = tier4Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier4Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier4Json.inventory.mods;
+        botJsonTemplate.chances = tier4Json.chances;
+        botJsonTemplate.appearance.body = tier4Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier4Json.appearance.feet;
         botJsonTemplate.appearance.voice = usecLO.appearance.voice;
-        botJsonTemplate.experience.level = usecLO.usecLO4.experience.level;
+        botJsonTemplate.experience.level = tier4Json.experience.level;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
+            botJsonTemplate.inventory.items = tier4Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier4;
         }
 
@@ -1212,7 +1233,7 @@ export class BotLoader {
             botJsonTemplate.chances.weaponMods.mod_tactical = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_night;
+            botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_night;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -1232,18 +1253,18 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_cqb;
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
+            botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_cqb;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_outdoor;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier4Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1256,8 +1277,8 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.FaceCover =  usecLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1267,16 +1288,19 @@ export class BotLoader {
 
     public usecLoad5(botJsonTemplate: IBotType) {
 
-        botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
-        botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
-        botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_usec.body;
-        botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_usec.feet;
+        let tier4Json = JSON.parse(JSON.stringify(usecLO.usecLO4));
+        let tier5Json = JSON.parse(JSON.stringify(tier5LO.tier5LO));
+
+        botJsonTemplate.inventory.Ammo = tier5Json.inventory.Ammo;
+        botJsonTemplate.inventory.items = tier4Json.inventory.items;
+        botJsonTemplate.appearance.body = tier5Json.appearance_usec.body;
+        botJsonTemplate.appearance.feet = tier5Json.appearance_usec.feet;
         botJsonTemplate.appearance.voice = usecLO.appearance.voice;
 
         this.tier5PMCLoad(botJsonTemplate);
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
+            botJsonTemplate.inventory.items = tier4Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier5;
         }
 
@@ -1285,7 +1309,7 @@ export class BotLoader {
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier4Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1300,17 +1324,20 @@ export class BotLoader {
 
 
     public bearLoad1(botJsonTemplate: IBotType) {
-        botJsonTemplate.inventory.Ammo = bearLO.bearLO1.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = bearLO.bearLO1.inventory.equipment;
-        botJsonTemplate.inventory.mods = bearLO.bearLO1.inventory.mods;
-        botJsonTemplate.chances = bearLO.bearLO1.chances;
-        botJsonTemplate.appearance.body = bearLO.bearLO1.appearance.body;
-        botJsonTemplate.appearance.feet = bearLO.bearLO1.appearance.feet;
-        botJsonTemplate.experience.level = bearLO.bearLO1.experience.level;
+
+        let tier1Json = JSON.parse(JSON.stringify(bearLO.bearLO1));
+
+        botJsonTemplate.inventory.Ammo = tier1Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier1Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier1Json.inventory.mods;
+        botJsonTemplate.chances = tier1Json.chances;
+        botJsonTemplate.appearance.body = tier1Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier1Json.appearance.feet;
+        botJsonTemplate.experience.level = tier1Json.experience.level;
         botJsonTemplate.appearance.voice = bearLO.LowTierVoice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO1.inventory.items;
+            botJsonTemplate.inventory.items = tier1Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier1;
         }
 
@@ -1346,7 +1373,7 @@ export class BotLoader {
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO1.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier1Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1355,12 +1382,12 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover = { "5b432c305acfc40019478128": 10, "59e7715586f7742ee5789605": 5 }
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1369,17 +1396,20 @@ export class BotLoader {
     }
 
     public bearLoad2(botJsonTemplate: IBotType) {
-        botJsonTemplate.inventory.Ammo = bearLO.bearLO2.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = bearLO.bearLO2.inventory.equipment;
-        botJsonTemplate.inventory.mods = bearLO.bearLO2.inventory.mods;
-        botJsonTemplate.chances = bearLO.bearLO2.chances;
-        botJsonTemplate.appearance.body = bearLO.bearLO2.appearance.body;
-        botJsonTemplate.appearance.feet = bearLO.bearLO2.appearance.feet;
-        botJsonTemplate.experience.level = bearLO.bearLO2.experience.level;
+
+        let tier2Json = JSON.parse(JSON.stringify(bearLO.bearLO2));
+
+        botJsonTemplate.inventory.Ammo = tier2Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier2Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier2Json.inventory.mods;
+        botJsonTemplate.chances = tier2Json.chances;
+        botJsonTemplate.appearance.body = tier2Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier2Json.appearance.feet;
+        botJsonTemplate.experience.level = tier2Json.experience.level;
         botJsonTemplate.appearance.voice = bearLO.LowTierVoice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO2.inventory.items;
+            botJsonTemplate.inventory.items = tier2Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier2;
         }
 
@@ -1413,17 +1443,17 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_cqb;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO2.inventory.FirstPrimaryWeapon_outdoor;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO2.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier2Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1432,12 +1462,12 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, "59e7715586f7742ee5789605": 5 }
+            botJsonTemplate.inventory.equipment.FaceCover =  bearLO.FaceCoverLabs;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1446,17 +1476,20 @@ export class BotLoader {
     }
 
     public bearLoad3(botJsonTemplate: IBotType) {
-        botJsonTemplate.inventory.Ammo = bearLO.bearLO3.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = bearLO.bearLO3.inventory.equipment;
-        botJsonTemplate.inventory.mods = bearLO.bearLO3.inventory.mods;
-        botJsonTemplate.chances = bearLO.bearLO3.chances;
-        botJsonTemplate.appearance.body = bearLO.bearLO3.appearance.body;
-        botJsonTemplate.appearance.feet = bearLO.bearLO3.appearance.feet;
-        botJsonTemplate.experience.level = bearLO.bearLO3.experience.level;
+
+        let tier3Json = JSON.parse(JSON.stringify(bearLO.bearLO2));
+
+        botJsonTemplate.inventory.Ammo = tier3Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier3Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier3Json.inventory.mods;
+        botJsonTemplate.chances = tier3Json.chances;
+        botJsonTemplate.appearance.body = tier3Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier3Json.appearance.feet;
+        botJsonTemplate.experience.level = tier3Json.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO3.inventory.items;
+            botJsonTemplate.inventory.items = tier3Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier3;
         }
 
@@ -1473,7 +1506,7 @@ export class BotLoader {
             botJsonTemplate.chances.weaponMods.mod_tactical = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = bearLO.bearLO3.inventory.Headwear_night;
+            botJsonTemplate.inventory.equipment.Headwear = tier3Json.inventory.Headwear_night;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 100;
 
@@ -1494,17 +1527,17 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_cqb;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO3.inventory.FirstPrimaryWeapon_outdoor;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO3.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier3Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1513,13 +1546,12 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapName === "laboratory") {
-            this.logger.warning("IS LABS");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.FaceCover =  bearLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1528,17 +1560,20 @@ export class BotLoader {
     }
 
     public bearLoad4(botJsonTemplate: IBotType) {
-        botJsonTemplate.inventory.Ammo = bearLO.bearLO4.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = bearLO.bearLO4.inventory.equipment;
-        botJsonTemplate.inventory.mods = bearLO.bearLO4.inventory.mods;
-        botJsonTemplate.chances = bearLO.bearLO4.chances;
-        botJsonTemplate.appearance.body = bearLO.bearLO4.appearance.body;
-        botJsonTemplate.appearance.feet = bearLO.bearLO4.appearance.feet;
-        botJsonTemplate.experience.level = bearLO.bearLO4.experience.level;
+
+        let tier4Json = JSON.parse(JSON.stringify(bearLO.bearLO4));
+
+        botJsonTemplate.inventory.Ammo = tier4Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier4Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier4Json.inventory.mods;
+        botJsonTemplate.chances = tier4Json.chances;
+        botJsonTemplate.appearance.body = tier4Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier4Json.appearance.feet;
+        botJsonTemplate.experience.level = tier4Json.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.items;
+            botJsonTemplate.inventory.items = tier4Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier4;
         }
 
@@ -1556,7 +1591,7 @@ export class BotLoader {
             botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
+            botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_night;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
@@ -1574,17 +1609,17 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier4Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1593,13 +1628,12 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapName === "laboratory") {
-            this.logger.warning("IS LABS");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.FaceCover =  bearLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1609,12 +1643,15 @@ export class BotLoader {
 
     public bearLoad5(botJsonTemplate: IBotType) {
 
-        botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_bear.body;
-        botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_bear.feet
+        let tier4Json = JSON.parse(JSON.stringify(bearLO.bearLO4));
+        let tier5Json = JSON.parse(JSON.stringify(tier5LO.tier5LO));
+
+        botJsonTemplate.appearance.body = tier5Json.appearance_bear.body;
+        botJsonTemplate.appearance.feet = tier5Json.appearance_bear.feet
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.items;
+            botJsonTemplate.inventory.items = tier4Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier5;
         }
 
@@ -1625,7 +1662,7 @@ export class BotLoader {
         this.tier5PMCLoad(botJsonTemplate);
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier4Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1640,28 +1677,30 @@ export class BotLoader {
 
     private tier5PMCLoad(botJsonTemplate: IBotType) {
 
-        botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
-        botJsonTemplate.chances = tier5LO.tier5LO.chances;
-        botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
-        botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
+        let tier5Json = JSON.parse(JSON.stringify(tier5LO.tier5LO));
+
+        botJsonTemplate.experience.level = tier5Json.experience.level;
+        botJsonTemplate.chances = tier5Json.chances;
+        botJsonTemplate.inventory.mods = tier5Json.inventory.mods;
+        botJsonTemplate.inventory.Ammo = tier5Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment =tier5Json.inventory.equipment;
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_night;
+            botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_night;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
             if (RaidInfoTracker.mapType === "urban") {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
-                botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
+                botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_cqb;
             }
             if (RaidInfoTracker.mapType === "cqb") {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
-                botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
+                botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_cqb;
             }
             if (RaidInfoTracker.mapType === "outdoor") {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 25;
@@ -1681,28 +1720,30 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapName === "laboratory") {
-            this.logger.warning("IS LABS");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
-            botJsonTemplate.inventory.equipment.Eyewear = {}
+            botJsonTemplate.inventory.equipment.FaceCover =  bearLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.Eyewear = {};
         }
     }
 
     public raiderLoad1() {
-        this.raiderBase.inventory.Ammo = raiderLO.raiderLO1.inventory.Ammo;
-        this.raiderBase.inventory.equipment = raiderLO.raiderLO1.inventory.equipment;
-        this.raiderBase.inventory.mods = raiderLO.raiderLO1.inventory.mods;
-        this.raiderBase.chances = raiderLO.raiderLO1.chances;
+
+        let tier1Json = JSON.parse(JSON.stringify(raiderLO.raiderLO1));
+
+        this.raiderBase.inventory.Ammo = tier1Json.inventory.Ammo;
+        this.raiderBase.inventory.equipment = tier1Json.inventory.equipment;
+        this.raiderBase.inventory.mods = tier1Json.inventory.mods;
+        this.raiderBase.chances = tier1Json.chances;
         this.raiderBase.appearance.body = raiderLO.appearance.body;
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
         this.raiderBase.appearance.voice = raiderLO.appearance.voice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.raiderBase.inventory.items = raiderLO.raiderLO1.inventory.items;
+            this.raiderBase.inventory.items = tier1Json.inventory.items;
             this.raiderBase.generation = lootOdds.tier4;
         }
 
@@ -1714,7 +1755,7 @@ export class BotLoader {
             this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 50;
             this.botConf().equipment["pmcbot"].nvgIsActiveChanceDayPercent = 100;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_cqb;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_cqb;
             this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 70;
             this.raiderBase.chances.equipmentMods.mod_nvg = 70;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 50;
@@ -1741,13 +1782,13 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_urban;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_cqb;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO1.inventory.FirstPrimaryWeapon_outdoor;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "reservebase") {
@@ -1755,8 +1796,8 @@ export class BotLoader {
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_002 = 0;
-            this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
-            this.raiderBase.inventory.equipment.Eyewear = {}
+            this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.raiderBase.inventory.equipment.Eyewear = {};
         }
 
         BotTierTracker.raiderTier = 1;
@@ -1765,17 +1806,20 @@ export class BotLoader {
         }
     }
     public raiderLoad2() {
-        this.raiderBase.inventory.Ammo = raiderLO.raiderLO2.inventory.Ammo;
-        this.raiderBase.inventory.equipment = raiderLO.raiderLO2.inventory.equipment;
-        this.raiderBase.inventory.mods = raiderLO.raiderLO2.inventory.mods;
-        this.raiderBase.chances = raiderLO.raiderLO2.chances;
+
+        let tier2Json = JSON.parse(JSON.stringify(raiderLO.raiderLO2));
+
+        this.raiderBase.inventory.Ammo = tier2Json.inventory.Ammo;
+        this.raiderBase.inventory.equipment = tier2Json.inventory.equipment;
+        this.raiderBase.inventory.mods = tier2Json.inventory.mods;
+        this.raiderBase.chances = tier2Json.chances;
         this.raiderBase.appearance.body = raiderLO.appearance.body;
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
         this.raiderBase.appearance.voice = raiderLO.appearance.voice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.raiderBase.inventory.items = raiderLO.raiderLO2.inventory.items;
+            this.raiderBase.inventory.items = tier2Json.inventory.items;
             this.raiderBase.generation = lootOdds.tier5;
         }
 
@@ -1787,7 +1831,7 @@ export class BotLoader {
             this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 25;
             this.botConf().equipment["pmcbot"].nvgIsActiveChanceDayPercent = 100;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_cqb;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_cqb;
             this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 50;
             this.raiderBase.chances.equipmentMods.mod_nvg = 80;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 50;
@@ -1814,13 +1858,13 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_urban;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_cqb;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO2.inventory.FirstPrimaryWeapon_outdoor;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "reservebase") {
@@ -1828,8 +1872,8 @@ export class BotLoader {
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_002 = 0;
-            this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
-            this.raiderBase.inventory.equipment.Eyewear = {}
+            this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.raiderBase.inventory.equipment.Eyewear = {};
         }
 
         BotTierTracker.raiderTier = 2;
@@ -1839,17 +1883,20 @@ export class BotLoader {
     }
 
     public raiderLoad3() {
-        this.raiderBase.inventory.Ammo = raiderLO.raiderLO3.inventory.Ammo;
-        this.raiderBase.inventory.equipment = raiderLO.raiderLO3.inventory.equipment;
-        this.raiderBase.inventory.mods = raiderLO.raiderLO3.inventory.mods;
-        this.raiderBase.chances = raiderLO.raiderLO3.chances;
+
+        let tier3Json = JSON.parse(JSON.stringify(raiderLO.raiderLO3));
+
+        this.raiderBase.inventory.Ammo = tier3Json.inventory.Ammo;
+        this.raiderBase.inventory.equipment = tier3Json.inventory.equipment;
+        this.raiderBase.inventory.mods = tier3Json.inventory.mods;
+        this.raiderBase.chances = tier3Json.chances;
         this.raiderBase.appearance.body = raiderLO.appearance.body;
         this.raiderBase.appearance.feet = raiderLO.appearance.feet;
         this.raiderBase.appearance.head = raiderLO.appearance.head;
         this.raiderBase.appearance.voice = raiderLO.appearance.voice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.raiderBase.inventory.items = raiderLO.raiderLO3.inventory.items;
+            this.raiderBase.inventory.items = tier3Json.inventory.items;
             this.raiderBase.generation = lootOdds.tier5;
         }
 
@@ -1861,7 +1908,7 @@ export class BotLoader {
             this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmcbot"].nvgIsActiveChanceDayPercent = 100;
         } else if (RaidInfoTracker.mapName === "factory4_night") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_cqb;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_cqb;
             this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 0;
             this.raiderBase.chances.equipmentMods.mod_nvg = 100;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 60;
@@ -1888,13 +1935,13 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "urban") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_urban;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (RaidInfoTracker.mapType === "cqb") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_cqb;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = raiderLO.raiderLO3.inventory.FirstPrimaryWeapon_outdoor;
+            this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
         if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "reservebase") {
@@ -1902,8 +1949,8 @@ export class BotLoader {
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_002 = 0;
-            this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
-            this.raiderBase.inventory.equipment.Eyewear = {}
+            this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.raiderBase.inventory.equipment.Eyewear = {};
         }
 
         BotTierTracker.raiderTier = 3;
@@ -1914,17 +1961,20 @@ export class BotLoader {
 
 
     public rogueLoad1() {
-        this.rogueBase.inventory.Ammo = rogueLO.rogueLO1.inventory.Ammo;
-        this.rogueBase.inventory.equipment = rogueLO.rogueLO1.inventory.equipment;
-        this.rogueBase.inventory.mods = rogueLO.rogueLO1.inventory.mods;;
-        this.rogueBase.chances = rogueLO.rogueLO1.chances;
+
+        let tier1Json = JSON.parse(JSON.stringify(rogueLO.rogueLO1));
+
+        this.rogueBase.inventory.Ammo = tier1Json.inventory.Ammo;
+        this.rogueBase.inventory.equipment = tier1Json.inventory.equipment;
+        this.rogueBase.inventory.mods = tier1Json.inventory.mods;;
+        this.rogueBase.chances = tier1Json.chances;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.rogueBase.inventory.items = rogueLO.rogueLO1.inventory.items;
+            this.rogueBase.inventory.items = tier1Json.inventory.items;
             this.rogueBase.generation = lootOdds.tier4;
         }
 
@@ -1960,17 +2010,20 @@ export class BotLoader {
 
 
     public rogueLoad2() {
-        this.rogueBase.inventory.Ammo = rogueLO.rogueLO2.inventory.Ammo;
-        this.rogueBase.inventory.equipment = rogueLO.rogueLO2.inventory.equipment;
-        this.rogueBase.inventory.mods = rogueLO.rogueLO2.inventory.mods;
-        this.rogueBase.chances = rogueLO.rogueLO2.chances;
+
+        let tier2Json = JSON.parse(JSON.stringify(rogueLO.rogueLO2));
+
+        this.rogueBase.inventory.Ammo = tier2Json.inventory.Ammo;
+        this.rogueBase.inventory.equipment = tier2Json.inventory.equipment;
+        this.rogueBase.inventory.mods = tier2Json.inventory.mods;
+        this.rogueBase.chances = tier2Json.chances;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.rogueBase.inventory.items = rogueLO.rogueLO2.inventory.items;
+            this.rogueBase.inventory.items = tier2Json.inventory.items;
             this.rogueBase.generation = lootOdds.tier5;
         }
 
@@ -2005,18 +2058,21 @@ export class BotLoader {
     }
 
     public rogueLoad3() {
-        this.rogueBase.inventory.Ammo = rogueLO.rogueLO3.inventory.Ammo;
-        this.rogueBase.inventory.equipment = rogueLO.rogueLO3.inventory.equipment;
-        this.rogueBase.inventory.items = rogueLO.rogueLO3.inventory.items;
-        this.rogueBase.inventory.mods = rogueLO.rogueLO3.inventory.mods;
-        this.rogueBase.chances = rogueLO.rogueLO3.chances;
+
+        let tier3Json = JSON.parse(JSON.stringify(rogueLO.rogueLO3));
+
+        this.rogueBase.inventory.Ammo = tier3Json.inventory.Ammo;
+        this.rogueBase.inventory.equipment = tier3Json.inventory.equipment;
+        this.rogueBase.inventory.items = tier3Json.inventory.items;
+        this.rogueBase.inventory.mods = tier3Json.inventory.mods;
+        this.rogueBase.chances = tier3Json.chances;
         this.rogueBase.appearance.body = rogueLO.appearance.body;
         this.rogueBase.appearance.feet = rogueLO.appearance.feet;
         this.rogueBase.appearance.head = rogueLO.appearance.head;
         this.rogueBase.appearance.voice = rogueLO.appearance.voice;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.rogueBase.inventory.items = rogueLO.rogueLO3.inventory.items;
+            this.rogueBase.inventory.items = tier3Json.inventory.items;
             this.rogueBase.generation = lootOdds.tier5;
         }
 
@@ -2051,30 +2107,35 @@ export class BotLoader {
     }
 
     public goonsLoad1() {
-        this.knightBase.inventory.Ammo = knightLO.knightLO1.inventory.Ammo;
-        this.knightBase.inventory.equipment = knightLO.knightLO1.inventory.equipment;
-        this.knightBase.inventory.mods = knightLO.knightLO1.inventory.mods;
-        this.knightBase.chances = knightLO.knightLO1.chances;
+
+        let knight1Json = JSON.parse(JSON.stringify(knightLO.knightLO1));
+        let bird1Json = JSON.parse(JSON.stringify(birdeyeLO.birdeyeLO1));
+        let pipe1Json = JSON.parse(JSON.stringify(bigpipeLO.bigpipeLO1));
+
+        this.knightBase.inventory.Ammo = knight1Json.inventory.Ammo;
+        this.knightBase.inventory.equipment = knight1Json.inventory.equipment;
+        this.knightBase.inventory.mods = knight1Json.inventory.mods;
+        this.knightBase.chances = knight1Json.chances;
         this.botConf().equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
 
         const randNum = this.utils.pickRandNumOneInTen();
 
-        this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO1.inventory.Ammo;
-        this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO1.inventory.equipment;
-        this.bigpipeBase.inventory.mods = bigpipeLO.bigpipeLO1.inventory.mods;
-        this.bigpipeBase.chances = bigpipeLO.bigpipeLO1.chances;
+        this.bigpipeBase.inventory.Ammo = pipe1Json.inventory.Ammo;
+        this.bigpipeBase.inventory.equipment = pipe1Json.inventory.equipment;
+        this.bigpipeBase.inventory.mods = pipe1Json.inventory.mods;
+        this.bigpipeBase.chances = pipe1Json.chances;
         this.botConf().equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
 
-        this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO1.inventory.Ammo;
-        this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO1.inventory.equipment;
-        this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO1.inventory.mods;
-        this.birdeyeBase.chances = birdeyeLO.birdeyeLO1.chances;
+        this.birdeyeBase.inventory.Ammo = bird1Json.inventory.Ammo;
+        this.birdeyeBase.inventory.equipment = bird1Json.inventory.equipment;
+        this.birdeyeBase.inventory.mods = bird1Json.inventory.mods;
+        this.birdeyeBase.chances = bird1Json.chances;
         this.botConf().equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.knightBase.inventory.items = knightLO.knightLO1.inventory.items;
-            this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO1.inventory.items;
-            this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO1.inventory.items;
+            this.knightBase.inventory.items = knight1Json.inventory.items;
+            this.bigpipeBase.inventory.items = pipe1Json.inventory.items;
+            this.birdeyeBase.inventory.items = bird1Json.inventory.items;
             this.knightBase.generation = lootOdds.boss;
             this.bigpipeBase.generation = lootOdds.boss;
             this.birdeyeBase.generation = lootOdds.boss;
@@ -2221,16 +2282,16 @@ export class BotLoader {
 
 
         if (RaidInfoTracker.mapType === "cqb") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird1Json.inventory.FirstPrimaryWeapon_cqb;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
         }
         if (RaidInfoTracker.mapType === "urban") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_urban;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird1Json.inventory.FirstPrimaryWeapon_urban;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
             this.birdeyeBase.chances.equipmentMods.mod_equipment_000 = 0;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO1.inventory.FirstPrimaryWeapon_outdoor;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird1Json.inventory.FirstPrimaryWeapon_outdoor;
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
 
@@ -2241,29 +2302,34 @@ export class BotLoader {
     }
 
     public goonsLoad2() {
-        this.knightBase.inventory.Ammo = knightLO.knightLO2.inventory.Ammo;
-        this.knightBase.inventory.equipment = knightLO.knightLO2.inventory.equipment;
-        this.knightBase.inventory.mods = knightLO.knightLO2.inventory.mods;
-        this.knightBase.chances = knightLO.knightLO2.chances;
+
+        let knight2Json = JSON.parse(JSON.stringify(knightLO.knightLO2));
+        let bird2Json = JSON.parse(JSON.stringify(birdeyeLO.birdeyeLO2));
+        let pipe2Json = JSON.parse(JSON.stringify(bigpipeLO.bigpipeLO2));
+
+        this.knightBase.inventory.Ammo = knight2Json.inventory.Ammo;
+        this.knightBase.inventory.equipment = knight2Json.inventory.equipment;
+        this.knightBase.inventory.mods = knight2Json.inventory.mods;
+        this.knightBase.chances = knight2Json.chances;
         this.botConf().equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
         const randNum = this.utils.pickRandNumOneInTen();
 
-        this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO2.inventory.Ammo;
-        this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO2.inventory.equipment;
-        this.bigpipeBase.inventory.mods = bigpipeLO.bigpipeLO2.inventory.mods;
-        this.bigpipeBase.chances = bigpipeLO.bigpipeLO2.chances;
+        this.bigpipeBase.inventory.Ammo = pipe2Json.inventory.Ammo;
+        this.bigpipeBase.inventory.equipment = pipe2Json.inventory.equipment;
+        this.bigpipeBase.inventory.mods = pipe2Json.inventory.mods;
+        this.bigpipeBase.chances = pipe2Json.chances;
         this.botConf().equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
 
-        this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO2.inventory.Ammo;
-        this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO2.inventory.equipment;
-        this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO2.inventory.mods;
-        this.birdeyeBase.chances = birdeyeLO.birdeyeLO2.chances;
+        this.birdeyeBase.inventory.Ammo = bird2Json.inventory.Ammo;
+        this.birdeyeBase.inventory.equipment = bird2Json.inventory.equipment;
+        this.birdeyeBase.inventory.mods = bird2Json.inventory.mods;
+        this.birdeyeBase.chances = bird2Json.chances;
         this.botConf().equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO2.inventory.items;
+            this.birdeyeBase.inventory.items = bird2Json.inventory.items;
             this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO2.inventory.items;
-            this.knightBase.inventory.items = knightLO.knightLO2.inventory.items;
+            this.knightBase.inventory.items = knight2Json.inventory.items;
             this.knightBase.generation = lootOdds.boss;
             this.bigpipeBase.generation = lootOdds.boss;
             this.birdeyeBase.generation = lootOdds.boss;
@@ -2410,16 +2476,16 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "cqb") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird2Json.inventory.FirstPrimaryWeapon_cqb;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
         }
         if (RaidInfoTracker.mapType === "urban") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_urban;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird2Json.inventory.FirstPrimaryWeapon_urban;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
             this.birdeyeBase.chances.equipmentMods.mod_equipment_000 = 0;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO2.inventory.FirstPrimaryWeapon_outdoor;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird2Json.inventory.FirstPrimaryWeapon_outdoor;
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
 
@@ -2431,30 +2497,35 @@ export class BotLoader {
     }
 
     public goonsLoad3() {
-        this.knightBase.inventory.Ammo = knightLO.knightLO3.inventory.Ammo;
-        this.knightBase.inventory.equipment = knightLO.knightLO3.inventory.equipment;
-        this.knightBase.inventory.mods = knightLO.knightLO3.inventory.mods;
-        this.knightBase.chances = knightLO.knightLO3.chances;
+
+        let knight3Json = JSON.parse(JSON.stringify(knightLO.knightLO3));
+        let bird3Json = JSON.parse(JSON.stringify(birdeyeLO.birdeyeLO3));
+        let pipe3Json = JSON.parse(JSON.stringify(bigpipeLO.bigpipeLO3));
+
+        this.knightBase.inventory.Ammo = knight3Json.inventory.Ammo;
+        this.knightBase.inventory.equipment = knight3Json.inventory.equipment;
+        this.knightBase.inventory.mods = knight3Json.inventory.mods;
+        this.knightBase.chances = knight3Json.chances;
         this.botConf().equipment["bossknight"].faceShieldIsActiveChancePercent = 100;
         const randNum = this.utils.pickRandNumOneInTen();
 
-        this.bigpipeBase.inventory.Ammo = bigpipeLO.bigpipeLO3.inventory.Ammo;
-        this.bigpipeBase.inventory.equipment = bigpipeLO.bigpipeLO3.inventory.equipment;
-        this.bigpipeBase.inventory.mods = bigpipeLO.bigpipeLO3.inventory.mods;
-        this.bigpipeBase.chances = bigpipeLO.bigpipeLO3.chances;
+        this.bigpipeBase.inventory.Ammo = pipe3Json.inventory.Ammo;
+        this.bigpipeBase.inventory.equipment = pipe3Json.inventory.equipment;
+        this.bigpipeBase.inventory.mods = pipe3Json.inventory.mods;
+        this.bigpipeBase.chances = pipe3Json.chances;
         this.botConf().equipment["followerbigpipe"].faceShieldIsActiveChancePercent = 100;
 
-        this.birdeyeBase.inventory.Ammo = birdeyeLO.birdeyeLO3.inventory.Ammo;
-        this.birdeyeBase.inventory.equipment = birdeyeLO.birdeyeLO3.inventory.equipment;
-        this.birdeyeBase.inventory.mods = birdeyeLO.birdeyeLO3.inventory.mods;
-        this.birdeyeBase.chances = birdeyeLO.birdeyeLO3.chances;
+        this.birdeyeBase.inventory.Ammo = bird3Json.inventory.Ammo;
+        this.birdeyeBase.inventory.equipment = bird3Json.inventory.equipment;
+        this.birdeyeBase.inventory.mods = bird3Json.inventory.mods;
+        this.birdeyeBase.chances = bird3Json.chances;
         this.botConf().equipment["followerbirdeye"].faceShieldIsActiveChancePercent = 100;
 
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.birdeyeBase.inventory.items = birdeyeLO.birdeyeLO3.inventory.items;
-            this.bigpipeBase.inventory.items = bigpipeLO.bigpipeLO3.inventory.items;
-            this.knightBase.inventory.items = knightLO.knightLO3.inventory.items;
+            this.birdeyeBase.inventory.items = bird3Json.inventory.items;
+            this.bigpipeBase.inventory.items = pipe3Json.inventory.items;
+            this.knightBase.inventory.items = knight3Json.inventory.items;
             this.knightBase.generation = lootOdds.boss;
             this.bigpipeBase.generation = lootOdds.boss;
             this.birdeyeBase.generation = lootOdds.boss;
@@ -2605,16 +2676,16 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapType === "cqb") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_cqb;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird3Json.inventory.FirstPrimaryWeapon_cqb;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
         }
         if (RaidInfoTracker.mapType === "urban") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_urban;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird3Json.inventory.FirstPrimaryWeapon_urban;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
             this.birdeyeBase.chances.equipmentMods.mod_equipment_000 = 0;
         }
         if (RaidInfoTracker.mapType === "outdoor") {
-            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = birdeyeLO.birdeyeLO3.inventory.FirstPrimaryWeapon_outdoor;
+            this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird3Json.inventory.FirstPrimaryWeapon_outdoor;
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
 
@@ -2625,13 +2696,16 @@ export class BotLoader {
     }
 
     public killaLoad1() {
-        this.killaBase.inventory.Ammo = killaLO.killaLO1.inventory.Ammo;
-        this.killaBase.inventory.equipment = killaLO.killaLO1.inventory.equipment;
-        this.killaBase.inventory.mods = killaLO.killaLO1.inventory.mods;
-        this.killaBase.chances = killaLO.killaLO1.chances;
+
+        let killa1Json = JSON.parse(JSON.stringify(killaLO.killaLO1));
+
+        this.killaBase.inventory.Ammo = killa1Json.inventory.Ammo;
+        this.killaBase.inventory.equipment = killa1Json.inventory.equipment;
+        this.killaBase.inventory.mods = killa1Json.inventory.mods;
+        this.killaBase.chances = killa1Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.killaBase.inventory.items = killaLO.killaLO1.inventory.items;
+            this.killaBase.inventory.items = killa1Json.inventory.items;
             this.killaBase.generation = lootOdds.boss;
         }
 
@@ -2651,7 +2725,7 @@ export class BotLoader {
             this.killaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_002 = 0;
-            this.killaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
+            this.killaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
         }
 
         BotTierTracker.killaTier = 1;
@@ -2661,13 +2735,16 @@ export class BotLoader {
     }
 
     public killaLoad2() {
-        this.killaBase.inventory.Ammo = killaLO.killaLO2.inventory.Ammo;
-        this.killaBase.inventory.equipment = killaLO.killaLO2.inventory.equipment;
-        this.killaBase.inventory.mods = killaLO.killaLO2.inventory.mods;
-        this.killaBase.chances = killaLO.killaLO2.chances;
+
+        let killa2Json = JSON.parse(JSON.stringify(killaLO.killaLO2));
+
+        this.killaBase.inventory.Ammo = killa2Json.inventory.Ammo;
+        this.killaBase.inventory.equipment = killa2Json.inventory.equipment;
+        this.killaBase.inventory.mods = killa2Json.inventory.mods;
+        this.killaBase.chances = killa2Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.killaBase.inventory.items = killaLO.killaLO2.inventory.items;
+            this.killaBase.inventory.items = killa2Json.inventory.items;
             this.killaBase.generation = lootOdds.boss;
         }
 
@@ -2697,13 +2774,16 @@ export class BotLoader {
     }
 
     public killaLoad3() {
-        this.killaBase.inventory.Ammo = killaLO.killaLO3.inventory.Ammo;
-        this.killaBase.inventory.equipment = killaLO.killaLO3.inventory.equipment;
-        this.killaBase.inventory.mods = killaLO.killaLO3.inventory.mods;
-        this.killaBase.chances = killaLO.killaLO3.chances;
+
+        let killa3Json = JSON.parse(JSON.stringify(killaLO.killaLO3));
+
+        this.killaBase.inventory.Ammo = killa3Json.inventory.Ammo;
+        this.killaBase.inventory.equipment = killa3Json.inventory.equipment;
+        this.killaBase.inventory.mods = killa3Json.inventory.mods;
+        this.killaBase.chances = killa3Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.killaBase.inventory.items = killaLO.killaLO3.inventory.items;
+            this.killaBase.inventory.items = killa3Json.inventory.items;
             this.killaBase.generation = lootOdds.boss;
         }
 
@@ -2733,17 +2813,20 @@ export class BotLoader {
     }
 
     public tagillaLoad1() {
-        this.tagillaBase.inventory.Ammo = tagillaLO.tagillaLO1.inventory.Ammo;
-        this.tagillaBase.inventory.equipment = tagillaLO.tagillaLO1.inventory.equipment;
-        this.tagillaBase.inventory.mods = tagillaLO.tagillaLO1.inventory.mods;
-        this.tagillaBase.chances = tagillaLO.tagillaLO1.chances;
+
+        let tagilla1Json = JSON.parse(JSON.stringify(tagillaLO.tagillaLO1));
+
+        this.tagillaBase.inventory.Ammo = tagilla1Json.inventory.Ammo;
+        this.tagillaBase.inventory.equipment = tagilla1Json.inventory.equipment;
+        this.tagillaBase.inventory.mods = tagilla1Json.inventory.mods;
+        this.tagillaBase.chances = tagilla1Json.chances;
 
         if (EventTracker.isHalloween) {
             this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 }
         }
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.tagillaBase.inventory.items = tagillaLO.tagillaLO1.inventory.items;
+            this.tagillaBase.inventory.items = tagilla1Json.inventory.items;
             this.tagillaBase.generation = lootOdds.boss;
         }
 
@@ -2790,17 +2873,20 @@ export class BotLoader {
     }
 
     public tagillaLoad2() {
-        this.tagillaBase.inventory.Ammo = tagillaLO.tagillaLO2.inventory.Ammo;
-        this.tagillaBase.inventory.equipment = tagillaLO.tagillaLO2.inventory.equipment;
-        this.tagillaBase.inventory.mods = tagillaLO.tagillaLO2.inventory.mods;
-        this.tagillaBase.chances = tagillaLO.tagillaLO2.chances;
+        
+        let tagilla2Json = JSON.parse(JSON.stringify(tagillaLO.tagillaLO1));
+
+        this.tagillaBase.inventory.Ammo = tagilla2Json.inventory.Ammo;
+        this.tagillaBase.inventory.equipment = tagilla2Json.inventory.equipment;
+        this.tagillaBase.inventory.mods = tagilla2Json.inventory.mods;
+        this.tagillaBase.chances = tagilla2Json.chances;
 
         if (EventTracker.isHalloween) {
             this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 }
         }
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.tagillaBase.inventory.items = tagillaLO.tagillaLO2.inventory.items;
+            this.tagillaBase.inventory.items = tagilla2Json.inventory.items;
             this.tagillaBase.generation = lootOdds.boss;
         }
 
@@ -2844,17 +2930,20 @@ export class BotLoader {
     }
 
     public tagillaLoad3() {
-        this.tagillaBase.inventory.Ammo = tagillaLO.tagillaLO3.inventory.Ammo;
-        this.tagillaBase.inventory.equipment = tagillaLO.tagillaLO3.inventory.equipment;
-        this.tagillaBase.inventory.mods = tagillaLO.tagillaLO3.inventory.mods;
-        this.tagillaBase.chances = tagillaLO.tagillaLO3.chances;
+
+        let tagilla3Json = JSON.parse(JSON.stringify(tagillaLO.tagillaLO3));
+
+        this.tagillaBase.inventory.Ammo = tagilla3Json.inventory.Ammo;
+        this.tagillaBase.inventory.equipment = tagilla3Json.inventory.equipment;
+        this.tagillaBase.inventory.mods = tagilla3Json.inventory.mods;
+        this.tagillaBase.chances = tagilla3Json.chances;
 
         if (EventTracker.isHalloween) {
             this.tagillaBase.inventory.equipment.Scabbard = { "63495c500c297e20065a08b1": 1 }
         }
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.tagillaBase.inventory.items = tagillaLO.tagillaLO3.inventory.items;
+            this.tagillaBase.inventory.items = tagilla3Json.inventory.items;
             this.tagillaBase.generation = lootOdds.boss;
         }
 
@@ -2898,19 +2987,23 @@ export class BotLoader {
     }
 
     public sanitarLoad1() {
-        this.saniBase.inventory.Ammo = saniLO.sanitarLO1.inventory.Ammo;
-        this.saniBase.inventory.equipment = saniLO.sanitarLO1.inventory.equipment;
-        this.saniBase.inventory.mods = saniLO.sanitarLO1.inventory.mods;
-        this.saniBase.chances = saniLO.sanitarLO1.chances;
 
-        this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO1.inventory.Ammo;
-        this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO1.inventory.equipment;
-        this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO1.inventory.mods;
-        this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO1.chances;
+        let sanitar1Json = JSON.parse(JSON.stringify(saniLO.sanitarLO1));
+        let follower1Json = JSON.parse(JSON.stringify(saniFollowerLO.sanitarfollowerLO1));
+
+        this.saniBase.inventory.Ammo = sanitar1Json.inventory.Ammo;
+        this.saniBase.inventory.equipment = sanitar1Json.inventory.equipment;
+        this.saniBase.inventory.mods = sanitar1Json.inventory.mods;
+        this.saniBase.chances = sanitar1Json.chances;
+
+        this.saniFollowerBase.inventory.Ammo = follower1Json.inventory.Ammo;
+        this.saniFollowerBase.inventory.equipment = follower1Json.inventory.equipment;
+        this.saniFollowerBase.inventory.mods = follower1Json.inventory.mods;
+        this.saniFollowerBase.chances = follower1Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.saniBase.inventory.items = saniLO.sanitarLO1.inventory.items;
-            this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO1.inventory.items;
+            this.saniBase.inventory.items = sanitar1Json.inventory.items;
+            this.saniFollowerBase.inventory.items = follower1Json.inventory.items;
             this.saniBase.generation = lootOdds.boss;
             this.saniFollowerBase.generation = lootOdds.tier4;
         }
@@ -2962,19 +3055,23 @@ export class BotLoader {
     }
 
     public sanitarLoad2() {
-        this.saniBase.inventory.Ammo = saniLO.sanitarLO2.inventory.Ammo;
-        this.saniBase.inventory.equipment = saniLO.sanitarLO2.inventory.equipment;
-        this.saniBase.inventory.mods = saniLO.sanitarLO2.inventory.mods;
-        this.saniBase.chances = saniLO.sanitarLO2.chances;
 
-        this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO2.inventory.Ammo;
-        this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO2.inventory.equipment;
-        this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO2.inventory.mods;
-        this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO2.chances;
+        let sanitar2Json = JSON.parse(JSON.stringify(saniLO.sanitarLO2));
+        let follower2Json = JSON.parse(JSON.stringify(saniFollowerLO.sanitarfollowerLO2));
+
+        this.saniBase.inventory.Ammo = sanitar2Json.inventory.Ammo;
+        this.saniBase.inventory.equipment = sanitar2Json.inventory.equipment;
+        this.saniBase.inventory.mods = sanitar2Json.inventory.mods;
+        this.saniBase.chances = sanitar2Json.chances;
+
+        this.saniFollowerBase.inventory.Ammo = follower2Json.inventory.Ammo;
+        this.saniFollowerBase.inventory.equipment = follower2Json.inventory.equipment;
+        this.saniFollowerBase.inventory.mods = follower2Json.inventory.mods;
+        this.saniFollowerBase.chances = follower2Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.saniBase.inventory.items = saniLO.sanitarLO2.inventory.items;
-            this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO2.inventory.items;
+            this.saniBase.inventory.items = sanitar2Json.inventory.items;
+            this.saniFollowerBase.inventory.items = follower2Json.inventory.items;
             this.saniBase.generation = lootOdds.boss;
             this.saniFollowerBase.generation = lootOdds.tier4;
         }
@@ -3026,19 +3123,23 @@ export class BotLoader {
     }
 
     public sanitarLoad3() {
-        this.saniBase.inventory.Ammo = saniLO.sanitarLO3.inventory.Ammo;
-        this.saniBase.inventory.equipment = saniLO.sanitarLO3.inventory.equipment;
-        this.saniBase.inventory.mods = saniLO.sanitarLO3.inventory.mods;
-        this.saniBase.chances = saniLO.sanitarLO3.chances;
 
-        this.saniFollowerBase.inventory.Ammo = saniFollowerLO.sanitarfollowerLO3.inventory.Ammo;
-        this.saniFollowerBase.inventory.equipment = saniFollowerLO.sanitarfollowerLO3.inventory.equipment;
-        this.saniFollowerBase.inventory.mods = saniFollowerLO.sanitarfollowerLO3.inventory.mods;
-        this.saniFollowerBase.chances = saniFollowerLO.sanitarfollowerLO3.chances;
+        let sanitar3Json = JSON.parse(JSON.stringify(saniLO.sanitarLO3));
+        let follower3Json = JSON.parse(JSON.stringify(saniFollowerLO.sanitarfollowerLO3));
+
+        this.saniBase.inventory.Ammo = sanitar3Json.inventory.Ammo;
+        this.saniBase.inventory.equipment = sanitar3Json.inventory.equipment;
+        this.saniBase.inventory.mods = sanitar3Json.inventory.mods;
+        this.saniBase.chances = sanitar3Json.chances;
+
+        this.saniFollowerBase.inventory.Ammo = follower3Json.inventory.Ammo;
+        this.saniFollowerBase.inventory.equipment = follower3Json.inventory.equipment;
+        this.saniFollowerBase.inventory.mods = follower3Json.inventory.mods;
+        this.saniFollowerBase.chances = follower3Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.saniBase.inventory.items = saniLO.sanitarLO3.inventory.items;
-            this.saniFollowerBase.inventory.items = saniFollowerLO.sanitarfollowerLO3.inventory.items;
+            this.saniBase.inventory.items = sanitar3Json.inventory.items;
+            this.saniFollowerBase.inventory.items = follower3Json.inventory.items;
             this.saniBase.generation = lootOdds.boss;
             this.saniFollowerBase.generation = lootOdds.tier5;
         }
@@ -3070,7 +3171,7 @@ export class BotLoader {
             this.saniBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
-            this.saniBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
+            this.saniBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, }
             this.saniBase.inventory.equipment.Headwear = {}
             this.saniBase.inventory.equipment.Eyewear = {}
 
@@ -3079,7 +3180,7 @@ export class BotLoader {
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_000 = 0;
-            this.saniFollowerBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
+            this.saniFollowerBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, }
             this.saniFollowerBase.inventory.equipment.Eyewear = {}
         }
 
@@ -3090,18 +3191,22 @@ export class BotLoader {
     }
 
     public reshallaLoad1() {
-        this.reshBase.inventory.Ammo = reshLO.reshallaLO1.inventory.Ammo;
-        this.reshBase.inventory.equipment = reshLO.reshallaLO1.inventory.equipment;
-        this.reshBase.inventory.mods = reshLO.reshallaLO1.inventory.mods;
-        this.reshBase.chances = reshLO.reshallaLO1.chances;
-        this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO1.inventory.Ammo;
-        this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO1.inventory.equipment;
-        this.reshFollowerBase.inventory.mods = reshFollowerLO.reshallafollowerLO1.inventory.mods;
-        this.reshFollowerBase.chances = reshFollowerLO.reshallafollowerLO1.chances;
+
+        let resh1Json = JSON.parse(JSON.stringify(reshLO.reshallaLO1));
+        let follower1Json = JSON.parse(JSON.stringify(reshFollowerLO.reshallafollowerLO1));
+
+        this.reshBase.inventory.Ammo = resh1Json.inventory.Ammo;
+        this.reshBase.inventory.equipment = resh1Json.inventory.equipment;
+        this.reshBase.inventory.mods = resh1Json.inventory.mods;
+        this.reshBase.chances = resh1Json.chances;
+        this.reshFollowerBase.inventory.Ammo = follower1Json.inventory.Ammo;
+        this.reshFollowerBase.inventory.equipment = follower1Json.inventory.equipment;
+        this.reshFollowerBase.inventory.mods = follower1Json.inventory.mods;
+        this.reshFollowerBase.chances = follower1Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.reshBase.inventory.items = reshLO.reshallaLO1.inventory.items;
-            this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO1.inventory.items;
+            this.reshBase.inventory.items = resh1Json.inventory.items;
+            this.reshFollowerBase.inventory.items = follower1Json.inventory.items;
             this.reshBase.generation = lootOdds.boss;
             this.reshFollowerBase.generation = lootOdds.tier3;
         }
@@ -3135,19 +3240,23 @@ export class BotLoader {
     }
 
     public reshallaLoad2() {
-        this.reshBase.inventory.Ammo = reshLO.reshallaLO2.inventory.Ammo;
-        this.reshBase.inventory.equipment = reshLO.reshallaLO2.inventory.equipment;
-        this.reshBase.inventory.mods = reshLO.reshallaLO2.inventory.mods;
-        this.reshBase.chances = reshLO.reshallaLO2.chances;
 
-        this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO2.inventory.Ammo;
-        this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO2.inventory.equipment;
-        this.reshFollowerBase.inventory.mods = reshFollowerLO.reshallafollowerLO2.inventory.mods;
-        this.reshFollowerBase.chances = reshFollowerLO.reshallafollowerLO2.chances;
+        let resh2Json = JSON.parse(JSON.stringify(reshLO.reshallaLO2));
+        let follower2Json = JSON.parse(JSON.stringify(reshFollowerLO.reshallafollowerLO2));
+
+        this.reshBase.inventory.Ammo = resh2Json.inventory.Ammo;
+        this.reshBase.inventory.equipment = resh2Json.inventory.equipment;
+        this.reshBase.inventory.mods = resh2Json.inventory.mods;
+        this.reshBase.chances = resh2Json.chances;
+
+        this.reshFollowerBase.inventory.Ammo = follower2Json.inventory.Ammo;
+        this.reshFollowerBase.inventory.equipment = follower2Json.inventory.equipment;
+        this.reshFollowerBase.inventory.mods = follower2Json.inventory.mods;
+        this.reshFollowerBase.chances = follower2Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.reshBase.inventory.items = reshLO.reshallaLO2.inventory.items;
-            this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO2.inventory.items;
+            this.reshBase.inventory.items = resh2Json.inventory.items;
+            this.reshFollowerBase.inventory.items = follower2Json.inventory.items;
             this.reshBase.generation = lootOdds.boss;
             this.reshFollowerBase.generation = lootOdds.tier4;
         }
@@ -3181,19 +3290,23 @@ export class BotLoader {
     }
 
     public reshallaLoad3() {
-        this.reshBase.inventory.Ammo = reshLO.reshallaLO3.inventory.Ammo;
-        this.reshBase.inventory.equipment = reshLO.reshallaLO3.inventory.equipment;
-        this.reshBase.inventory.mods = reshLO.reshallaLO3.inventory.mods;
-        this.reshBase.chances = reshLO.reshallaLO3.chances;
 
-        this.reshFollowerBase.inventory.Ammo = reshFollowerLO.reshallafollowerLO3.inventory.Ammo;
-        this.reshFollowerBase.inventory.equipment = reshFollowerLO.reshallafollowerLO3.inventory.equipment;
-        this.reshFollowerBase.inventory.mods = reshFollowerLO.reshallafollowerLO3.inventory.mods;
-        this.reshFollowerBase.chances = reshFollowerLO.reshallafollowerLO3.chances;
+        let resh3Json = JSON.parse(JSON.stringify(reshLO.reshallaLO3));
+        let follower3Json = JSON.parse(JSON.stringify(reshFollowerLO.reshallafollowerLO3));
+
+        this.reshBase.inventory.Ammo = resh3Json.inventory.Ammo;
+        this.reshBase.inventory.equipment = resh3Json.inventory.equipment;
+        this.reshBase.inventory.mods = resh3Json.inventory.mods;
+        this.reshBase.chances = resh3Json.chances;
+
+        this.reshFollowerBase.inventory.Ammo = follower3Json.inventory.Ammo;
+        this.reshFollowerBase.inventory.equipment = follower3Json.inventory.equipment;
+        this.reshFollowerBase.inventory.mods = follower3Json.inventory.mods;
+        this.reshFollowerBase.chances = follower3Json.chances;
 
         if (this.modConfig.bot_loot_changes === true) {
-            this.reshBase.inventory.items = reshLO.reshallaLO3.inventory.items;
-            this.reshFollowerBase.inventory.items = reshFollowerLO.reshallafollowerLO3.inventory.items;
+            this.reshBase.inventory.items = resh3Json.inventory.items;
+            this.reshFollowerBase.inventory.items = follower3Json.inventory.items;
             this.reshBase.generation = lootOdds.boss;
             this.reshFollowerBase.generation = lootOdds.tier5;
         }

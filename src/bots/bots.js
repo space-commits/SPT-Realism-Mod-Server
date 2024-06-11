@@ -412,7 +412,7 @@ class BotLoader {
         if (pmcData.Info.Level >= 35) {
             tier = utils.probabilityWeighter(tierArray, [10, 30, 60]);
         }
-        if (type === "sanitar") {
+        if (type === "reshalla") {
             if (tier == 1) {
                 bots.reshallaLoad1();
             }
@@ -914,11 +914,11 @@ class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover = { "5b432c305acfc40019478128": 10, "59e7715586f7742ee5789605": 5 };
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
+            botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
         }
         if (this.modConfig.logEverything == true) {
@@ -986,11 +986,12 @@ class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, "59e7715586f7742ee5789605": 5 };
+            this.logger.warning("USEC 2 IS LABS");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
+            botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
         }
         if (this.modConfig.logEverything == true) {
@@ -1068,11 +1069,12 @@ class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("USEC 3 IS LABS");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
         }
         if (this.modConfig.logEverything == true) {
@@ -1080,16 +1082,17 @@ class BotLoader {
         }
     }
     usecLoad4(botJsonTemplate) {
-        botJsonTemplate.inventory.Ammo = usecLO.usecLO4.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = usecLO.usecLO4.inventory.equipment;
-        botJsonTemplate.inventory.mods = usecLO.usecLO4.inventory.mods;
-        botJsonTemplate.chances = usecLO.usecLO4.chances;
-        botJsonTemplate.appearance.body = usecLO.usecLO4.appearance.body;
-        botJsonTemplate.appearance.feet = usecLO.usecLO4.appearance.feet;
+        let tier4Json = JSON.parse(JSON.stringify(usecLO.usecLO4));
+        botJsonTemplate.inventory.Ammo = tier4Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier4Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier4Json.inventory.mods;
+        botJsonTemplate.chances = tier4Json.chances;
+        botJsonTemplate.appearance.body = tier4Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier4Json.appearance.feet;
         botJsonTemplate.appearance.voice = usecLO.appearance.voice;
-        botJsonTemplate.experience.level = usecLO.usecLO4.experience.level;
+        botJsonTemplate.experience.level = tier4Json.experience.level;
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
+            botJsonTemplate.inventory.items = tier4Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier4;
         }
         if (this.modConfig.add_keys === true) {
@@ -1104,7 +1107,7 @@ class BotLoader {
             botJsonTemplate.chances.weaponMods.mod_tactical = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_night;
+            botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_night;
         }
         else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
@@ -1124,17 +1127,17 @@ class BotLoader {
             }
         }
         if (utils_1.RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (utils_1.RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.Headwear = usecLO.usecLO4.inventory.Headwear_cqb;
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_cqb;
+            botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_cqb;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = usecLO.usecLO4.inventory.FirstPrimaryWeapon_outdoor;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_outdoor;
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier4Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1142,11 +1145,12 @@ class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("USEC 4 IS LABS");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
         }
         if (this.modConfig.logEverything == true) {
@@ -1154,21 +1158,23 @@ class BotLoader {
         }
     }
     usecLoad5(botJsonTemplate) {
-        botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
-        botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
-        botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_usec.body;
-        botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_usec.feet;
+        let tier4Json = JSON.parse(JSON.stringify(usecLO.usecLO4));
+        let tier5Json = JSON.parse(JSON.stringify(tier5LO.tier5LO));
+        botJsonTemplate.inventory.Ammo = tier5Json.inventory.Ammo;
+        botJsonTemplate.inventory.items = tier4Json.inventory.items;
+        botJsonTemplate.appearance.body = tier5Json.appearance_usec.body;
+        botJsonTemplate.appearance.feet = tier5Json.appearance_usec.feet;
         botJsonTemplate.appearance.voice = usecLO.appearance.voice;
         this.tier5PMCLoad(botJsonTemplate);
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.items;
+            botJsonTemplate.inventory.items = tier4Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier5;
         }
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier4_PMC_Keys };
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = usecLO.usecLO4.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier4Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1231,7 +1237,8 @@ class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover = { "5b432c305acfc40019478128": 10, "59e7715586f7742ee5789605": 5 };
+            this.logger.warning("BEAR 1 IS LABS");
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1301,7 +1308,8 @@ class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, "59e7715586f7742ee5789605": 5 };
+            this.logger.warning("BEAR 2 IS LABS");
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1375,12 +1383,12 @@ class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
-            this.logger.warning("IS LABS");
+            this.logger.warning("BEAR IS LABS 3");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
         }
         if (this.modConfig.logEverything == true) {
@@ -1388,16 +1396,17 @@ class BotLoader {
         }
     }
     bearLoad4(botJsonTemplate) {
-        botJsonTemplate.inventory.Ammo = bearLO.bearLO4.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = bearLO.bearLO4.inventory.equipment;
-        botJsonTemplate.inventory.mods = bearLO.bearLO4.inventory.mods;
-        botJsonTemplate.chances = bearLO.bearLO4.chances;
-        botJsonTemplate.appearance.body = bearLO.bearLO4.appearance.body;
-        botJsonTemplate.appearance.feet = bearLO.bearLO4.appearance.feet;
-        botJsonTemplate.experience.level = bearLO.bearLO4.experience.level;
+        let tier4Json = JSON.parse(JSON.stringify(bearLO.bearLO4));
+        botJsonTemplate.inventory.Ammo = tier4Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier4Json.inventory.equipment;
+        botJsonTemplate.inventory.mods = tier4Json.inventory.mods;
+        botJsonTemplate.chances = tier4Json.chances;
+        botJsonTemplate.appearance.body = tier4Json.appearance.body;
+        botJsonTemplate.appearance.feet = tier4Json.appearance.feet;
+        botJsonTemplate.experience.level = tier4Json.experience.level;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.items;
+            botJsonTemplate.inventory.items = tier4Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier4;
         }
         if (this.modConfig.add_keys === true) {
@@ -1413,7 +1422,7 @@ class BotLoader {
             botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = bearLO.bearLO4.inventory.Headwear_night;
+            botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_night;
         }
         else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
@@ -1431,16 +1440,16 @@ class BotLoader {
             }
         }
         if (utils_1.RaidInfoTracker.mapType === "urban") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_urban;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_urban;
         }
         if (utils_1.RaidInfoTracker.mapType === "cqb") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_cqb;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_cqb;
         }
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
-            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = bearLO.bearLO4.inventory.FirstPrimaryWeapon_outdoor;
+            botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_outdoor;
         }
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier4Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1448,12 +1457,11 @@ class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
-            this.logger.warning("IS LABS");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
         }
         if (this.modConfig.logEverything == true) {
@@ -1461,11 +1469,13 @@ class BotLoader {
         }
     }
     bearLoad5(botJsonTemplate) {
-        botJsonTemplate.appearance.body = tier5LO.tier5LO.appearance_bear.body;
-        botJsonTemplate.appearance.feet = tier5LO.tier5LO.appearance_bear.feet;
+        let tier4Json = JSON.parse(JSON.stringify(bearLO.bearLO4));
+        let tier5Json = JSON.parse(JSON.stringify(tier5LO.tier5LO));
+        botJsonTemplate.appearance.body = tier5Json.appearance_bear.body;
+        botJsonTemplate.appearance.feet = tier5Json.appearance_bear.feet;
         botJsonTemplate.appearance.voice = bearLO.HighTierVoice;
         if (this.modConfig.bot_loot_changes === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.items;
+            botJsonTemplate.inventory.items = tier4Json.inventory.items;
             botJsonTemplate.generation = lootOdds.tier5;
         }
         if (this.modConfig.add_keys === true) {
@@ -1473,7 +1483,7 @@ class BotLoader {
         }
         this.tier5PMCLoad(botJsonTemplate);
         if (this.modConfig.dynamic_loot_pmcs === true) {
-            botJsonTemplate.inventory.items = bearLO.bearLO4.inventory.dynamic_looting;
+            botJsonTemplate.inventory.items = tier4Json.inventory.dynamic_looting;
             botJsonTemplate.generation.items.backpackLoot.weights = lootOdds.dynamic.items.backpackLoot.weights;
             botJsonTemplate.generation.items.vestLoot.weights = lootOdds.dynamic.items.vestLoot.weights;
             botJsonTemplate.generation.items.pocketLoot.weights = lootOdds.dynamic.items.pocketLoot.weights;
@@ -1485,28 +1495,29 @@ class BotLoader {
         }
     }
     tier5PMCLoad(botJsonTemplate) {
-        botJsonTemplate.experience.level = tier5LO.tier5LO.experience.level;
-        botJsonTemplate.chances = tier5LO.tier5LO.chances;
-        botJsonTemplate.inventory.mods = tier5LO.tier5LO.inventory.mods;
-        botJsonTemplate.inventory.Ammo = tier5LO.tier5LO.inventory.Ammo;
-        botJsonTemplate.inventory.equipment = tier5LO.tier5LO.inventory.equipment;
+        let tier5Json = JSON.parse(JSON.stringify(tier5LO.tier5LO));
+        botJsonTemplate.experience.level = tier5Json.experience.level;
+        botJsonTemplate.chances = tier5Json.chances;
+        botJsonTemplate.inventory.mods = tier5Json.inventory.mods;
+        botJsonTemplate.inventory.Ammo = tier5Json.inventory.Ammo;
+        botJsonTemplate.inventory.equipment = tier5Json.inventory.equipment;
         if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
-            botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_night;
+            botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_night;
         }
         else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
             if (utils_1.RaidInfoTracker.mapType === "urban") {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
-                botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
+                botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_cqb;
             }
             if (utils_1.RaidInfoTracker.mapType === "cqb") {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
-                botJsonTemplate.inventory.equipment.Headwear = tier5LO.tier5LO.inventory.Headwear_cqb;
+                botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_cqb;
             }
             if (utils_1.RaidInfoTracker.mapType === "outdoor") {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 25;
@@ -1524,13 +1535,15 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_outdoor;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
-            this.logger.warning("IS LABS");
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+        }
+        for (const [key, value] of Object.entries(botJsonTemplate.inventory.equipment.FaceCover)) {
+            this.logger.warning(`${key}: ${value}`);
         }
     }
     raiderLoad1() {
@@ -2371,6 +2384,7 @@ class BotLoader {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("killa labs");
             this.killaBase.chances.equipmentMods.mod_equipment = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2402,6 +2416,7 @@ class BotLoader {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("killa labs");
             this.killaBase.chances.equipmentMods.mod_equipment = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2433,6 +2448,7 @@ class BotLoader {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("killa labs");
             this.killaBase.chances.equipmentMods.mod_equipment = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2484,6 +2500,7 @@ class BotLoader {
             this.botConf().equipment["bosstagilla"].lightIsActiveDayChancePercent = 100;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("tagilla labs");
             this.tagillaBase.chances.equipmentMods.mod_equipment = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2532,6 +2549,7 @@ class BotLoader {
             this.botConf().equipment["bosstagilla"].lightIsActiveDayChancePercent = 100;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("tagilla labs");
             this.tagillaBase.chances.equipmentMods.mod_equipment = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2580,6 +2598,7 @@ class BotLoader {
             this.botConf().equipment["bosstagilla"].lightIsActiveDayChancePercent = 100;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("tagilla labs");
             this.tagillaBase.chances.equipmentMods.mod_equipment = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2626,6 +2645,7 @@ class BotLoader {
         }
         this.botConf().equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("sanitar labs");
             this.saniBase.chances.equipmentMods.mod_equipment = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2682,6 +2702,7 @@ class BotLoader {
         }
         this.botConf().equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("sanitar labs");
             this.saniBase.chances.equipmentMods.mod_equipment = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2738,12 +2759,13 @@ class BotLoader {
         }
         this.botConf().equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
+            this.logger.warning("sanitar labs");
             this.saniBase.chances.equipmentMods.mod_equipment = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
-            this.saniBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.saniBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, };
             this.saniBase.inventory.equipment.Headwear = {};
             this.saniBase.inventory.equipment.Eyewear = {};
             this.saniFollowerBase.chances.equipmentMods.mod_equipment = 0;
@@ -2751,7 +2773,7 @@ class BotLoader {
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_000 = 0;
-            this.saniFollowerBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.saniFollowerBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, };
             this.saniFollowerBase.inventory.equipment.Eyewear = {};
         }
         utils_1.BotTierTracker.sanitarTier = 3;

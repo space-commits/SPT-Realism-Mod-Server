@@ -9,8 +9,8 @@
             "max": 100
         },
         "Temperature": {
-            "min": 29,
-            "max": 29
+            "min": 31,
+            "max": 31
         },
         "BodyParts": [
             {
