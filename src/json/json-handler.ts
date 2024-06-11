@@ -53,11 +53,18 @@ const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeapon
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
 
 export class JsonHandler {
-    constructor(private tables: IDatabaseTables, private logger: ILogger) { }
+    constructor(private tables: IDatabaseTables, private logger: ILogger) {
+        this.gearPusherHelper = this.gearPusherHelper.bind(this);
+        this.ammoPusherHelper = this.ammoPusherHelper.bind(this);
+        this.modPusherHelper = this.modPusherHelper.bind(this);
+        this.weapPusherHelper = this.weapPusherHelper.bind(this);
+    }
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
     }
+
+    modifiedItems: { [key: string]: any } = {};
 
     public pushModsToServer() {
         this.callHelper(MuzzleDeviceTemplates, this.itemDB(), this.modPusherHelper);
@@ -118,6 +125,16 @@ export class JsonHandler {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
 
+            if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
+                return;
+            }
+
+            if (fileItem.TemplateID != undefined) {
+                fileItem = this.modifiedItems[fileItem.TemplateID];
+            }
+
+            this.modifiedItems[fileItem.ItemID] = fileItem;
+
             serverItem._props.speedPenaltyPercent = fileItem.speedPenaltyPercent;
             serverItem._props.mousePenalty = fileItem.mousePenalty;
             serverItem._props.weaponErgonomicPenalty = fileItem.weaponErgonomicPenalty;
@@ -146,6 +163,19 @@ export class JsonHandler {
                 serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : serverItem._props.Weight;
             }
 
+            if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
+                serverItem._props.FaceShieldComponent = true;
+                serverItem._props.FaceShieldMask = "NoMask";
+            }
+            else if (fileItem?.MaskToUse !== undefined) {
+                serverItem._props.FaceShieldComponent = true;
+                serverItem._props.FaceShieldMask = "Narrow";
+            }
+
+            if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
+                return;
+            }
+
             let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.HasStomachArmor?.toString() || "false",
                 fileItem?.MaskToUse?.toString() || "", fileItem?.GasProtection?.toString() || "0", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.IsGasMask?.toString() || "false"];
@@ -170,6 +200,16 @@ export class JsonHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
+
+            if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
+                return;
+            }
+
+            if (fileItem.TemplateID != undefined) {
+                fileItem = this.modifiedItems[fileItem.TemplateID];
+            }
+
+            this.modifiedItems[fileItem.ItemID] = fileItem;
 
             serverItem._props.Ergonomics = fileItem.Ergonomics != undefined ? fileItem.Ergonomics : 0;
             serverItem._props.Accuracy = fileItem.Accuracy != undefined ? fileItem.Accuracy : 0;
@@ -212,6 +252,16 @@ export class JsonHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
+
+            if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
+                return;
+            }
+
+            if (fileItem.TemplateID != undefined) {
+                fileItem = this.modifiedItems[fileItem.TemplateID];
+            }
+
+            this.modifiedItems[fileItem.ItemID] = fileItem;
 
             if (modConfig.malf_changes == true) {
                 serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;

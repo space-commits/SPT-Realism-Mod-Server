@@ -594,12 +594,12 @@ class Main {
         weaponsGlobals.loadGlobalWeps();
         //have to run this async to ensure correct load order
         (async () => {
-            await jsonHand.processUserJsonFiles();
             if (modConfig.recoil_attachment_overhaul) {
                 jsonHand.pushModsToServer();
                 jsonHand.pushWeaponsToServer();
             }
             jsonHand.pushGearToServer();
+            await jsonHand.processUserJsonFiles();
             descGen.descriptionGen();
             if (modConfig.realistic_ballistics == true) {
                 ammo.loadAmmoStats();
