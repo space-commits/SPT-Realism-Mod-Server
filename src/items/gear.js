@@ -37,6 +37,11 @@ class Gear {
         this.itemDB()["6570aead4d84f81fd002a033"]._props.FaceShieldComponent = true;
         this.itemDB()["6570aead4d84f81fd002a033"]._props.FaceShieldMask = "Narrow";
     }
+    loadSpecialSlotChanges() {
+        this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
+            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+        });
+    }
     loadGearConflicts() {
         let confMasks = this.arrays.conflMasks;
         let confHats = this.arrays.conflHats;

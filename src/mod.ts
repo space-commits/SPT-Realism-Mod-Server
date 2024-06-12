@@ -653,6 +653,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         // this.dllChecker(logger, modConfig);
 
         gear.loadMaskChanges();
+        gear.loadSpecialSlotChanges();
 
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
@@ -885,6 +886,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             if (modname.includes("SWAG")) {
                 ModTracker.swagPresent = true;
                 logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor.GREEN);
+            }
+            if (modname.includes("TacticalGearComponent")) {
+                ModTracker.tgcPresent = true;
+                logger.logWithColor("Realism: TGC Detected, Making Adjustments", LogTextColor.GREEN);
             }
             if (modname.includes("AlgorithmicLevelProgression")) {
                 ModTracker.alpPresent = true;

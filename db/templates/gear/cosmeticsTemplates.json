@@ -574,7 +574,8 @@
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -10,
         "IsGasMask": true,
-        "GasProtection": 0.25,
+        "GasProtection": 0.4,
+        "RadProtection": 0.15,
         "TemplateType": "gear"
     },
     "5bd071d786f7747e707b93a3": {
@@ -636,7 +637,8 @@
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -6,
         "IsGasMask": true,
-        "GasProtection": 0.97,
+        "GasProtection": 0.9,
+        "RadProtection": 0.6,
         "MaskToUse": "gp5",
         "TemplateType": "gear"
     },
@@ -652,6 +654,7 @@
         "weaponErgonomicPenalty": -4,
         "IsGasMask": true,
         "GasProtection": 1,
+        "RadProtection": 0.5,
         "MaskToUse": "gp5",
         "TemplateType": "gear"
     },

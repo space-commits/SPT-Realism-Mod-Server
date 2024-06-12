@@ -507,6 +507,7 @@ class Main {
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
         gear.loadMaskChanges();
+        gear.loadSpecialSlotChanges();
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
@@ -699,6 +700,10 @@ class Main {
             if (modname.includes("SWAG")) {
                 utils_1.ModTracker.swagPresent = true;
                 logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+            }
+            if (modname.includes("TacticalGearComponent")) {
+                utils_1.ModTracker.tgcPresent = true;
+                logger.logWithColor("Realism: TGC Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("AlgorithmicLevelProgression")) {
                 utils_1.ModTracker.alpPresent = true;

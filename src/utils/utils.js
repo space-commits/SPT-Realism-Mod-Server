@@ -141,6 +141,7 @@ class ModTracker {
     static batteryModPresent = false;
     static sainPresent = false;
     static swagPresent = false;
+    static tgcPresent = false;
     static qtbPresent = false;
     static alpPresent = false;
 }
