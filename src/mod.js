@@ -685,10 +685,10 @@ class Main {
     checkForMods(preAkiModLoader, logger, modConf) {
         const activeMods = preAkiModLoader.getImportedModDetails();
         for (const modname in activeMods) {
-            if (modname.includes("Jiro-BatterySystem")) {
-                utils_1.ModTracker.batteryModPresent = true;
-                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
-            }
+            // if (modname.includes("Jiro-BatterySystem")) {
+            //     ModTracker.batteryModPresent = true;
+            //     logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
+            // }
             if (modname.includes("Solarint-SAIN-ServerMod")) {
                 utils_1.ModTracker.sainPresent = true;
                 logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);

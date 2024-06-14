@@ -871,10 +871,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     private checkForMods(preAkiModLoader: PreAkiModLoader, logger: ILogger, modConf: any) {
         const activeMods = preAkiModLoader.getImportedModDetails();
         for (const modname in activeMods) {
-            if (modname.includes("Jiro-BatterySystem")) {
-                ModTracker.batteryModPresent = true;
-                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
-            }
+            // if (modname.includes("Jiro-BatterySystem")) {
+            //     ModTracker.batteryModPresent = true;
+            //     logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
+            // }
             if (modname.includes("Solarint-SAIN-ServerMod")) {
                 ModTracker.sainPresent = true;
                 logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor.GREEN);
