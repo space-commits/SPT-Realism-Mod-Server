@@ -509,14 +509,15 @@ export class RandomizeTraderAssort {
                 let assortItems = this.tables.traders[trader].assort.items;
                 let ll = this.getAverageLL(pmcData, trader);
                 for (let item in assortItems) {
-                    let itemId = assortItems[item]._id;
-                    let itemTemplId = assortItems[item]._tpl;
+                    let assortItem = assortItems[item];
+                    let itemId = assortItem._id;
+                    let itemTemplId =assortItem._tpl;
                     if (modConfig.randomize_trader_stock == true) {
-                        if (assortItems[item].upd?.StackObjectsCount !== undefined) {
-                            this.randomizeStockHelper(assortItems[item], ll);
+                        if (assortItem.upd?.StackObjectsCount !== undefined) {
+                            this.randomizeStockHelper(assortItem, ll);
                         }
-                        if (assortItems[item].upd?.UnlimitedCount !== undefined) {
-                            assortItems[item].upd.UnlimitedCount = false;
+                        if (assortItem.upd?.UnlimitedCount !== undefined) {
+                            assortItem.upd.UnlimitedCount = false;
                         }
                     }
                     if (modConfig.randomize_trader_prices == true || modConfig.adjust_trader_prices) {
@@ -525,7 +526,6 @@ export class RandomizeTraderAssort {
                             if (barter !== undefined) {
                                 this.setAndRandomizeCost(this.utils, itemTemplId, barter, true);
                             }
-
                         }
                     }
                 }

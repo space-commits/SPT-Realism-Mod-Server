@@ -1551,7 +1551,7 @@
         "Dispersion": 14,
         "CameraRecoil": 0.038,
         "VisualMulti": 1.075,
-        "Convergence": 14.4,
+        "Convergence": 14,
         "RecoilAngle": 89,
         "BaseMalfunctionChance": 0.1,
         "HeatFactorGun": 0.22,

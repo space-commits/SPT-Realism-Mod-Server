@@ -95,14 +95,14 @@
         "Name": "patron_12x70_buckshot_65",
         "LoyaltyLevel": 3,
         "TemplateType": "ammo",
-        "BasePriceModifier": 6
+        "BasePriceModifier": 7
     },
     "5d6e6806a4b936088465b17e": {
         "ItemID": "5d6e6806a4b936088465b17e",
         "Name": "patron_12x70_buckshot_85",
         "LoyaltyLevel": 4,
         "TemplateType": "ammo",
-        "BasePriceModifier": 5
+        "BasePriceModifier": 4
     },
     "5d6e68dea4b9361bcc29e659": {
         "ItemID": "5d6e68dea4b9361bcc29e659",
@@ -158,14 +158,14 @@
         "Name": "patron_12x70_slug_grizzly_40",
         "LoyaltyLevel": 5,
         "TemplateType": "ammo",
-        "BasePriceModifier": 6
+        "BasePriceModifier": 8
     },
     "5d6e68b3a4b9361bca7e50b5": {
         "ItemID": "5d6e68b3a4b9361bca7e50b5",
         "Name": "patron_12x70_slug_hp_copper",
         "LoyaltyLevel": 4,
         "TemplateType": "ammo",
-        "BasePriceModifier": 3
+        "BasePriceModifier": 5
     },
     "5d6e6891a4b9361bd473feea": {
         "ItemID": "5d6e6891a4b9361bd473feea",
@@ -781,7 +781,7 @@
         "Name": "patron_762x39_mai_ap",
         "LoyaltyLevel": 5,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 0.5
     },
     "5a6086ea4f39f99cd479502f": {
         "ItemID": "5a6086ea4f39f99cd479502f",
@@ -830,7 +830,7 @@
         "Name": "patron_762x51_ultra_nosler",
         "LoyaltyLevel": 5,
         "TemplateType": "ammo",
-        "BasePriceModifier": 8
+        "BasePriceModifier": 6.5
     },
     "5e023d34e8a400319a28ed44": {
         "ItemID": "5e023d34e8a400319a28ed44",
@@ -2083,14 +2083,14 @@
         "Name": "item_ammo_box_12g_25_slug_hp_copper",
         "LoyaltyLevel": 2,
         "TemplateType": "ammo",
-        "BasePriceModifier": 3
+        "BasePriceModifier": 5
     },
     "6570247ebfc87b3a34093229": {
         "ItemID": "6570247ebfc87b3a34093229",
         "Name": "item_ammo_box_12g_25_slug_superformance",
         "LoyaltyLevel": 2,
         "TemplateType": "ammo",
-        "BasePriceModifier": 4
+        "BasePriceModifier": 6
     },
     "657024831419851aef03e703": {
         "ItemID": "657024831419851aef03e703",
