@@ -6,10 +6,12 @@ class Gear {
     arrays;
     tables;
     logger;
-    constructor(arrays, tables, logger) {
+    modConfig;
+    constructor(arrays, tables, logger, modConfig) {
         this.arrays = arrays;
         this.tables = tables;
         this.logger = logger;
+        this.modConfig = modConfig;
     }
     itemDB() {
         return this.tables.templates.items;
@@ -46,39 +48,40 @@ class Gear {
         let confMasks = this.arrays.conflMasks;
         let confHats = this.arrays.conflHats;
         let confNVG = this.arrays.conflNVGomponents;
+        let confMaskOverlays = this.arrays.confMaskOverlays;
         let armorCompArr = [];
+        //remove certain helmets from GP7 conflicts
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems = this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems.filter(i => i !== "5e4bfc1586f774264f7582d3");
         for (let item in this.itemDB()) {
             let serverItem = this.itemDB()[item];
-            if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {
-                armorCompArr.push(serverItem._id);
-            }
-        }
-        for (let nvg in confNVG) {
-            for (let item in this.itemDB()) {
-                let serverItem = this.itemDB()[item];
-                if (serverItem._id === confNVG[nvg]) {
+            if (this.modConfig.headgear_conflicts == true) {
+                if (serverItem._parent === enums_1.ParentClasses.HEADWEAR) {
+                    for (let c in serverItem._props.ConflictingItems) {
+                        let confItem = serverItem._props.ConflictingItems[c];
+                        if (this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === enums_1.ParentClasses.HEADSET) {
+                            serverItem._props.ConflictingItems[c] = "";
+                        }
+                    }
+                }
+                if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {
+                    armorCompArr.push(serverItem._id);
+                }
+                if (confNVG.includes(serverItem._id)) {
                     let confItems = serverItem._props.ConflictingItems;
                     serverItem._props.ConflictingItems = confItems.concat(armorCompArr);
                 }
-            }
-        }
-        for (let hat in confHats) {
-            for (let item in this.itemDB()) {
-                if (this.itemDB()[item]._id === confHats[hat]) {
+                if (confHats.includes(serverItem._id)) {
                     let confItems = this.itemDB()[item]._props.ConflictingItems;
                     this.itemDB()[item]._props.ConflictingItems = confMasks.concat(confItems);
                 }
             }
-        }
-        for (let item in this.itemDB()) {
-            if (this.itemDB()[item]._parent === enums_1.ParentClasses.HEADWEAR) {
-                for (let c in this.itemDB()[item]._props.ConflictingItems) {
-                    let confItem = this.itemDB()[item]._props.ConflictingItems[c];
-                    if (this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === enums_1.ParentClasses.HEADSET) {
-                        this.itemDB()[item]._props.ConflictingItems[c] = "";
+            //custom mask overlays will bug out if using actual faceshield at the same time
+            if (serverItem._props.FaceShieldComponent == true) {
+                confMaskOverlays.forEach(element => {
+                    if (serverItem._id !== element) {
+                        serverItem._props.ConflictingItems.push(element);
                     }
-                }
+                });
             }
         }
     }

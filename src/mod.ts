@@ -641,7 +641,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Spawns(logger, tables, modConfig, tables.locations);
-        const gear = new Gear(arrays, tables, logger);
+        const gear = new Gear(arrays, tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
         const jsonHand = new JsonHandler(tables, logger);
@@ -666,10 +666,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
             bots.setBotHealth();
-        }
-
-        if (modConfig.headgear_conflicts == true) {
-            gear.loadGearConflicts();
         }
 
         if (modConfig.open_zones_fix == true && !ModTracker.swagPresent) {
@@ -744,10 +740,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         //traders
         traders.loadTraderTweaks();
-
-        if (modConfig.change_trader_ll == true) {
-            traders.setLoyaltyLevels();
-        }
+        traders.setBaseOfferValues();
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }

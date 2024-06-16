@@ -131,48 +131,80 @@ class Traders {
         this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
         this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
         for (let ll in this.tables.traders[prapId].base.loyaltyLevels) {
-            this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 1.5;
+            this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 0.5;
         }
         for (let ll in this.tables.traders[skierId].base.loyaltyLevels) {
-            this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.5;
+            this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.25;
         }
         for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
-            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 2;
+            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 0.8;
         }
     }
-    setLoyaltyLevels() {
-        this.loyaltyLevelHelper(ammoDB, false);
-        this.loyaltyLevelHelper(weapTemplatesArr, true);
-        this.loyaltyLevelHelper(gearTemlplatesArr, true);
+    setBaseOfferValues() {
+        for (let t in this.tables.traders) {
+            let trader = this.tables.traders[t];
+            if (trader?.assort?.items === undefined || trader.base.name === "БТР" || trader.base.nickname === "Fence")
+                continue;
+            if (modConfig.change_trader_ll == true) {
+                this.setLoyaltyLevels(trader);
+            }
+            this.setBasePrices(trader);
+        }
     }
-    loyaltyLevelHelper(db, multifile) {
+    setBasePrices(trader) {
+        if (modConfig.realistic_ballistics == true) {
+            this.setBasePrice(ammoDB, trader);
+        }
+    }
+    setBasePrice(db, trader) {
+        for (let item in trader.assort.items) { //loop offers
+            if (trader.assort.items[item].parentId !== "hideout")
+                continue;
+            let offer = trader.assort.items[item];
+            let offerId = offer._id;
+            let offerTpl = offer._tpl;
+            if (db[offerTpl]) {
+                let barter = trader?.assort?.barter_scheme[offerId][0][0];
+                if (this.itemDB()[barter?._tpl]?._parent !== enums_1.ParentClasses.MONEY)
+                    continue;
+                let templateItem = db[offerTpl];
+                let priceModifier = templateItem?.BasePriceModifier !== undefined ? templateItem?.BasePriceModifier : 1;
+                barter.count *= priceModifier;
+            }
+        }
+    }
+    setLoyaltyLevels(trader) {
+        this.loyaltyLevelHelper(ammoDB, false, trader);
+        this.loyaltyLevelHelper(weapTemplatesArr, true, trader);
+        this.loyaltyLevelHelper(gearTemlplatesArr, true, trader);
+    }
+    loyaltyLevelHelper(db, multifile, trader) {
         if (multifile == false) {
-            this.setLL(db);
+            this.setLL(db, trader);
         }
         else {
             for (let files in db) {
                 let file = db[files];
-                this.setLL(file);
+                this.setLL(file, trader);
             }
         }
     }
-    setLL(file) {
-        for (let item in file) {
-            let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
-            let itemID = file[item].ItemID;
-            for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР" && this.tables.traders[trader].base.nickname !== "Fence") {
-                    for (let item in this.tables.traders[trader].assort.items) {
-                        if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
-                            let id = this.tables.traders[trader].assort.items[item]._id;
-                            if (this.itemDB()[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
-                                this.tables.traders[trader].assort.loyal_level_items[id] = Math.max(1, loyaltyLvl - 1);
-                            }
-                            else {
-                                this.tables.traders[trader].assort.loyal_level_items[id] = Math.min(4, loyaltyLvl);
-                            }
-                        }
-                    }
+    setLL(db, trader) {
+        for (let item in trader.assort.items) {
+            if (trader.assort.items[item].parentId !== "hideout")
+                continue;
+            let offer = trader.assort.items[item];
+            let offerId = offer._id;
+            let offerTpl = offer._tpl;
+            if (db[offerTpl]) {
+                let barter = trader?.assort?.barter_scheme[offerId][0][0];
+                let templateItem = db[offerTpl];
+                let loyaltyLvl = templateItem?.LoyaltyLevel !== undefined ? templateItem?.LoyaltyLevel : 3;
+                if (this.itemDB()[barter?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
+                    trader.assort.loyal_level_items[offerId] = Math.max(1, loyaltyLvl - 1);
+                }
+                else {
+                    trader.assort.loyal_level_items[offerId] = Math.min(4, loyaltyLvl);
                 }
             }
         }
@@ -680,6 +712,8 @@ exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     pristineAssorts;
     myResetExpiredTrader(trader) {
+        if (trader.base.name === "БТР")
+            return;
         const traderId = trader.base._id;
         trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
         let pmcData = [];

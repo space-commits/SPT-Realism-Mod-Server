@@ -923,7 +923,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Ops-Core FAST Visor
         if (serverItem._id === "5a16b672fcdbcb001912fa83") {
@@ -937,7 +936,6 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 0.35;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Caiman Fixed Arm Visor
         if (serverItem._id === "5f60bf4558eff926626a60f2") {
@@ -951,7 +949,6 @@ export class Armor {
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 0.38;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //// Class 3 ////
         //Heavy Trooper mask
@@ -979,7 +976,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1.22;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //TW EXFIL Visor Black
         if (serverItem._id === "5e00cdd986f7747473332240") {
@@ -993,7 +989,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 0.252;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //TW EXFIL Visor Coyote
         if (serverItem._id === "5e01f37686f774773c6f6c15") {
@@ -1007,7 +1002,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 0.252;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //// Class 4 ////
         //Zsh Visor
@@ -1022,7 +1016,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1.1;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Tor-2 Visor
         if (serverItem._id === "65719f9ef392ad76c50a2ec8") {
@@ -1036,7 +1029,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1.15;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Novasteel/Neosteel Mandible
         if (serverItem._id === "6570a88c8f221f3b210353b7") {
@@ -1076,7 +1068,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Weight = 1.4;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Rys-T Visor
         if (serverItem._id === "5f60c85b58eff926626a60f7") {
@@ -1090,7 +1081,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.Weight = 1.2;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //FAST Side Armor
         if (serverItem._id === "5a16badafcdbcb001865f72d") {
@@ -1169,7 +1159,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Vulkan-5 Visor
         if (serverItem._id === "5ca2113f86f7740b2547e1d2") {
@@ -1183,7 +1172,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1.8;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Ops-Core Multi-Hit Visor
         if (serverItem._id === "5a16b7e1fcdbcb00165aa6c9") {
@@ -1197,7 +1185,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1.33;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Maska Visor
         if (serverItem._id === "5c0919b50db834001b7ce3b9") {
@@ -1211,7 +1198,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
             serverItem._props.Weight = 1.1;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Maska Killa Visor
         if (serverItem._id === "5c0e842486f77443a74d2976") {
@@ -1225,7 +1211,6 @@ export class Armor {
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';
             serverItem._props.Weight = 1.1;
-            serverItem._props.ConflictingItems.push("5b432c305acfc40019478128", "60363c0c92ec1c31037959f5");
         }
         //Crye Airframe Chops
         if (serverItem._id === "5c178a942e22164bef5ceca3") {

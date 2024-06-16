@@ -309,6 +309,18 @@ export class Arrays {
         "5a16b8a9fcdbcb00165aa6ca"
     ]
 
+    public confMaskOverlays = [
+        "5b432c305acfc40019478128", 
+        "60363c0c92ec1c31037959f5", 
+        "CCG_GAS_MASK_GP9",
+        "CCG_GAS_MASK_MCU2P", 
+        "CCG_GAS_MASK_SGE400",
+        "6570aead4d84f81fd002a033", 
+        "657089638db3adca1009f4ca",
+        "62a09e08de7ac81993580532", 
+        "5b432b2f5acfc4771e1c6622"
+    ]
+
     public conflHats = [
         "60bf74184a63fc79b60c57f6",
         "5df8a58286f77412631087ed",

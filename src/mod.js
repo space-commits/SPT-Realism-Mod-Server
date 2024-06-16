@@ -497,7 +497,7 @@ class Main {
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations);
-        const gear = new gear_1.Gear(arrays, tables, logger);
+        const gear = new gear_1.Gear(arrays, tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
@@ -518,9 +518,6 @@ class Main {
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
             bots.setBotHealth();
-        }
-        if (modConfig.headgear_conflicts == true) {
-            gear.loadGearConflicts();
         }
         if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
             maps.openZonesFix();
@@ -578,9 +575,7 @@ class Main {
         }
         //traders
         traders.loadTraderTweaks();
-        if (modConfig.change_trader_ll == true) {
-            traders.setLoyaltyLevels();
-        }
+        traders.setBaseOfferValues();
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }

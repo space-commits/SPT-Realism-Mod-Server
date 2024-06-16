@@ -2489,7 +2489,7 @@ class BotLoader {
             this.tagillaBase.generation = lootOdds.boss;
         }
         const randnum = this.utils.pickRandNumOneInTen();
-        if (randnum >= 8) {
+        if (randnum >= 9) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
             this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;
             this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 0;
@@ -2541,7 +2541,7 @@ class BotLoader {
             this.tagillaBase.generation = lootOdds.boss;
         }
         const randnum = this.utils.pickRandNumOneInTen();
-        if (randnum >= 5) {
+        if (randnum >= 7) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
             this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;
             this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 0;
@@ -2590,7 +2590,7 @@ class BotLoader {
             this.tagillaBase.generation = lootOdds.boss;
         }
         const randnum = this.utils.pickRandNumOneInTen();
-        if (randnum >= 3) {
+        if (randnum >= 5) {
             this.tagillaBase.inventory.equipment.Headwear["5f60c74e3b85f6263c145586"] = 1;
             this.tagillaBase.inventory.equipment.Headwear["60a7acf20c5cb24b01346648"] = 0;
             this.tagillaBase.inventory.equipment.FaceCover["60a7ad2a2198820d95707a2e"] = 0;
