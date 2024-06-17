@@ -166,17 +166,25 @@ export class JsonHandler {
             if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
                 serverItem._props.FaceShieldComponent = true;
                 serverItem._props.FaceShieldMask = "NoMask";
+                serverItem._props.armorClass = 1;
+                serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
             }
             else if (fileItem?.MaskToUse !== undefined) {
+                if (fileItem.MaskToUse == "ronin") {
+                    serverItem._props.FaceShieldMask = "NoMask";
+                }
+                else {
+                    serverItem._props.FaceShieldMask = "Narrow";
+                }
                 serverItem._props.FaceShieldComponent = true;
-                serverItem._props.FaceShieldMask = "Narrow";
+
             }
 
             if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
                 return;
             }
 
-            if(fileItem.ItemID === "60363c0c92ec1c31037959f5" && ModTracker.tgcPresent){
+            if (fileItem.ItemID === "60363c0c92ec1c31037959f5" && ModTracker.tgcPresent) {
                 fileItem.GasProtection = 0.95;
             }
 
@@ -312,6 +320,10 @@ export class JsonHandler {
                 }
                 if (fileItem?.WeapType !== undefined && (fileItem.IsManuallyOperated == false || fileItem.OperationType === "tubefed-m")) {
                     serverItem._props.CanQueueSecondShot = true;
+                }
+
+                if (fileItem.MasteryCategory != undefined && modConfig.mastery_changes == true) {
+                    this.tables.globals.config.Mastering.find(m => m.Name === fileItem.MasteryCategory).Templates.push(fileItem.ItemID);
                 }
 
                 let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",

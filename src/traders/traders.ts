@@ -144,7 +144,7 @@ export class Traders {
     }
 
     public loadTraderRepairs() {
-        this.tables.traders[prapId].base.repair = traderRepairs.Prapor;
+        this.tables.traders[prapId].base.repair = traderRepairs.PraporRepair;
         this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
         this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
 
@@ -155,7 +155,7 @@ export class Traders {
             this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.25
         }
         for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
-            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 0.8
+            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 0.85
         }
     }
 

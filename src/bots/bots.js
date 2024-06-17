@@ -428,7 +428,7 @@ class BotLoader {
                 bots.sanitarLoad1();
             }
             if (tier == 2) {
-                bots.sanitarLoad3();
+                bots.sanitarLoad2();
             }
             if (tier == 3) {
                 bots.sanitarLoad3();
@@ -924,6 +924,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
@@ -997,6 +998,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
@@ -1080,6 +1082,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
@@ -1155,6 +1158,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
@@ -1247,6 +1251,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
@@ -1318,6 +1323,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
@@ -1393,6 +1399,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
@@ -1466,6 +1473,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
@@ -1544,6 +1552,7 @@ class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
+            botJsonTemplate.chances.equipment.FaceCover = 100;
         }
     }
     raiderLoad1() {
@@ -2405,6 +2414,7 @@ class BotLoader {
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.killaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.killaBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.killaTier = 1;
         if (this.modConfig.logEverything == true) {
@@ -2437,6 +2447,7 @@ class BotLoader {
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.killaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.killaBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.killaTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -2469,6 +2480,7 @@ class BotLoader {
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.killaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.killaBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.killaTier = 3;
         if (this.modConfig.logEverything == true) {
@@ -2521,6 +2533,7 @@ class BotLoader {
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.tagillaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.tagillaBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.tagillaTier = 1;
         if (this.modConfig.logEverything == true) {
@@ -2570,6 +2583,7 @@ class BotLoader {
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.tagillaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.tagillaBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.tagillaTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -2619,6 +2633,7 @@ class BotLoader {
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.tagillaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
+            this.tagillaBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.tagillaTier = 3;
         if (this.modConfig.logEverything == true) {
@@ -2670,6 +2685,7 @@ class BotLoader {
             this.saniBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.saniBase.inventory.equipment.Headwear = {};
             this.saniBase.inventory.equipment.Eyewear = {};
+            this.saniBase.chances.equipment.FaceCover = 100;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2677,6 +2693,7 @@ class BotLoader {
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniFollowerBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.saniFollowerBase.inventory.equipment.Eyewear = {};
+            this.saniFollowerBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.sanitarTier = 1;
         if (this.modConfig.logEverything == true) {
@@ -2728,6 +2745,7 @@ class BotLoader {
             this.saniBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.saniBase.inventory.equipment.Headwear = {};
             this.saniBase.inventory.equipment.Eyewear = {};
+            this.saniBase.chances.equipment.FaceCover = 100;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2735,6 +2753,7 @@ class BotLoader {
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniFollowerBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.saniFollowerBase.inventory.equipment.Eyewear = {};
+            this.saniFollowerBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.sanitarTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -2783,16 +2802,18 @@ class BotLoader {
             this.saniBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
-            this.saniBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, };
+            this.saniBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.saniBase.inventory.equipment.Headwear = {};
             this.saniBase.inventory.equipment.Eyewear = {};
+            this.saniBase.chances.equipment.FaceCover = 100;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.saniFollowerBase.chances.equipmentMods.mod_equipment_000 = 0;
-            this.saniFollowerBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1, };
+            this.saniFollowerBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.saniFollowerBase.inventory.equipment.Eyewear = {};
+            this.saniFollowerBase.chances.equipment.FaceCover = 100;
         }
         utils_1.BotTierTracker.sanitarTier = 3;
         if (this.modConfig.logEverything == true) {

@@ -87,6 +87,9 @@ class Consumables {
         };
         //Propitol
         this.itemDB()["5c0e530286f7747fa1419862"]._props.effects_damage = {};
+        //PNB
+        this.itemDB()["637b6179104668754b72f8f5"]._props.effects_damage = {};
+        this.itemDB()["637b6179104668754b72f8f5"]._props.effects_health = {};
         //Blue Blood
         this.itemDB()["637b6251104668754b72f8f9"]._props.effects_damage = {
             "RadExposure": {
@@ -98,6 +101,14 @@ class Consumables {
                 "delay": 10,
                 "duration": 300,
                 "fadeOut": 0.3
+            }
+        };
+        //Antidote
+        this.itemDB()["5fca138c2a7b221b2852a5c6"]._props.effects_damage = {
+            "Intoxication": {
+                "delay": 5,
+                "duration": 150,
+                "fadeOut": 0.15
             }
         };
     }

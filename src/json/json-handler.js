@@ -146,10 +146,17 @@ class JsonHandler {
             if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
                 serverItem._props.FaceShieldComponent = true;
                 serverItem._props.FaceShieldMask = "NoMask";
+                serverItem._props.armorClass = 1;
+                serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
             }
             else if (fileItem?.MaskToUse !== undefined) {
+                if (fileItem.MaskToUse == "ronin") {
+                    serverItem._props.FaceShieldMask = "NoMask";
+                }
+                else {
+                    serverItem._props.FaceShieldMask = "Narrow";
+                }
                 serverItem._props.FaceShieldComponent = true;
-                serverItem._props.FaceShieldMask = "Narrow";
             }
             if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
                 return;
@@ -269,6 +276,9 @@ class JsonHandler {
                 }
                 if (fileItem?.WeapType !== undefined && (fileItem.IsManuallyOperated == false || fileItem.OperationType === "tubefed-m")) {
                     serverItem._props.CanQueueSecondShot = true;
+                }
+                if (fileItem.MasteryCategory != undefined && modConfig.mastery_changes == true) {
+                    this.tables.globals.config.Mastering.find(m => m.Name === fileItem.MasteryCategory).Templates.push(fileItem.ItemID);
                 }
                 let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
                     fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.7", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",

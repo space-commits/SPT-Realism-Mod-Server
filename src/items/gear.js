@@ -23,6 +23,7 @@ class Gear {
         //GP-7
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldComponent = true;
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldMask = "NoMask";
+        this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldMask = "NoMask";
         //Ronin
         this.itemDB()["5b4329f05acfc47a86086aa1"]._props.FaceShieldComponent = true;
         this.itemDB()["5b4329f05acfc47a86086aa1"]._props.FaceShieldMask = "NoMask";
