@@ -622,7 +622,7 @@ class RandomizeTraderAssort {
     randomizeStock(assortItemParent, catParent, item, min, max, llFactor) {
         if (assortItemParent === catParent) {
             //items aren't out of stock often enough, this artifically increases the chance of being out of stock
-            if (this.utils.pickRandNumOneInTen() < (5 - llFactor)) {
+            if (this.utils.pickRandNumOneInTen() < (4 - llFactor)) {
                 item.upd.StackObjectsCount = 0 + min;
             }
             else {

@@ -7,12 +7,12 @@ const BotLootGenerator_1 = require("C:/snapshot/project/obj/generators/BotLootGe
 const tsyringe_1 = require("C:/snapshot/project/node_modules/tsyringe");
 const EquipmentSlots_1 = require("C:/snapshot/project/obj/models/enums/EquipmentSlots");
 class MyBotLootCache {
+    combinedPoolLoot;
     specialItems;
     secureLoot;
     backpackLoot;
     pocketLoot;
     vestLoot;
-    combinedPoolLoot;
     vestGrenadeItems;
     pocketGrenadeItems;
     vestHealingItems;
@@ -31,12 +31,12 @@ class MyBotLootCache {
 exports.MyBotLootCache = MyBotLootCache;
 var MyLootCacheType;
 (function (MyLootCacheType) {
+    MyLootCacheType["COMBINED"] = "Combined";
     MyLootCacheType["SPECIAL"] = "Special";
     MyLootCacheType["SECURE"] = "SecuredContainer";
     MyLootCacheType["BACKPACK"] = "Backpack";
     MyLootCacheType["POCKET"] = "Pocket";
     MyLootCacheType["VEST"] = "Vest";
-    MyLootCacheType["COMBINED"] = "Combined";
     MyLootCacheType["VEST_GRENADE_ITEMS"] = "VestGrenadeItems";
     MyLootCacheType["POCKET_GRENADE_ITEMS"] = "PocketGrenadeItems";
     MyLootCacheType["VEST_HEALING_ITEMS"] = "VestHealingItems";

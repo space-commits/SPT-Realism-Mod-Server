@@ -611,11 +611,11 @@
         "SemiROF": 350,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.1,
+        "BaseChamberSpeedMulti": 1.15,
         "MinChamberSpeed": 0.8,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1,
+        "BaseChamberCheckSpeed": 1.15,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.012,
         "RecoilIntensity": 0.39

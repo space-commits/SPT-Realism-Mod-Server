@@ -835,7 +835,7 @@ export class BotLoader {
     public scavLoad1() {
 
         let tier1Json = JSON.parse(JSON.stringify(scavLO.scavLO1));
-        
+
         this.scavBase.inventory.Ammo = tier1Json.inventory.Ammo;
         this.scavBase.inventory.equipment = tier1Json.inventory.equipment;
         this.scavBase.inventory.mods = tier1Json.inventory.mods;
@@ -1022,7 +1022,7 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover =  usecLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
@@ -1104,7 +1104,7 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover =  usecLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
@@ -1195,7 +1195,7 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover =  usecLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
@@ -1280,7 +1280,7 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover =  usecLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
@@ -1467,7 +1467,7 @@ export class BotLoader {
         }
 
         if (RaidInfoTracker.mapName === "laboratory") {
-            botJsonTemplate.inventory.equipment.FaceCover =  bearLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1483,7 +1483,7 @@ export class BotLoader {
 
     public bearLoad3(botJsonTemplate: IBotType) {
 
-        let tier3Json = JSON.parse(JSON.stringify(bearLO.bearLO2));
+        let tier3Json = JSON.parse(JSON.stringify(bearLO.bearLO3));
 
         botJsonTemplate.inventory.Ammo = tier3Json.inventory.Ammo;
         botJsonTemplate.inventory.equipment = tier3Json.inventory.equipment;
@@ -1556,7 +1556,7 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover =  bearLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
@@ -1639,7 +1639,7 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover =  bearLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
@@ -1691,7 +1691,7 @@ export class BotLoader {
         botJsonTemplate.chances = tier5Json.chances;
         botJsonTemplate.inventory.mods = tier5Json.inventory.mods;
         botJsonTemplate.inventory.Ammo = tier5Json.inventory.Ammo;
-        botJsonTemplate.inventory.equipment =tier5Json.inventory.equipment;
+        botJsonTemplate.inventory.equipment = tier5Json.inventory.equipment;
 
         if (RaidInfoTracker.TOD === "night" || RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 100;
@@ -1732,7 +1732,7 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
-            botJsonTemplate.inventory.equipment.FaceCover =  bearLO.FaceCoverLabs;
+            botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
@@ -1800,7 +1800,9 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "reservebase") {
+        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" 
+            || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
+            || RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1876,7 +1878,9 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "reservebase") {
+        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" 
+            || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
+            || RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1953,7 +1957,9 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" || RaidInfoTracker.mapName === "reservebase") {
+        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" 
+            || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
+            || RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2886,8 +2892,8 @@ export class BotLoader {
     }
 
     public tagillaLoad2() {
-        
-        let tagilla2Json = JSON.parse(JSON.stringify(tagillaLO.tagillaLO1));
+
+        let tagilla2Json = JSON.parse(JSON.stringify(tagillaLO.tagillaLO2));
 
         this.tagillaBase.inventory.Ammo = tagilla2Json.inventory.Ammo;
         this.tagillaBase.inventory.equipment = tagilla2Json.inventory.equipment;

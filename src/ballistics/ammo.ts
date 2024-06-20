@@ -3013,7 +3013,7 @@ export class Ammo {
             }
             // T45M
             if (serverItem._id === "59e4cf5286f7741778269d8a") {
-                serverItem._props.PenetrationPower = 53;
+                serverItem._props.PenetrationPower = 54;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 90;
                 serverItem._props.InitialSpeed = 725;
@@ -3563,7 +3563,7 @@ export class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.5;
+                    serverItem._props.DurabilityBurnModificator = 1.8;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -3678,7 +3678,7 @@ export class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 7;
+                    serverItem._props.DurabilityBurnModificator = 8;
                     serverItem._props.HeatFactor = 1.15;
                 }
             }
@@ -3701,7 +3701,7 @@ export class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 4;
+                    serverItem._props.DurabilityBurnModificator = 3.5;
                     serverItem._props.HeatFactor = 1.12;
                 }
             }

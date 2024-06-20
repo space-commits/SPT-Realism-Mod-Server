@@ -192,7 +192,7 @@ export class Player {
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.35;
             this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
 
-            this.globalDB().AimPunchMagnitude = 10;
+            this.globalDB().AimPunchMagnitude = 11;
         }
 
         if (this.modConfig.weight_limits_changes == true) {
@@ -217,6 +217,8 @@ export class Player {
             this.globalDB().WalkSpeed["y"] = 0.85;
             this.globalDB().SprintSpeed["x"] = 0.05;
             this.globalDB().SprintSpeed["y"] = 0.5;
+
+            this.globalDB().Stamina.SprintDrainRate = 4.5;
 
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB().Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight

@@ -10,13 +10,14 @@ import { container, inject } from "tsyringe";
 import { EquipmentSlots } from "@spt-aki/models/enums/EquipmentSlots";
 
 export class MyBotLootCache {
+    combinedPoolLoot: Record<string, number>;
+
     specialItems: Record<string, number>;
     secureLoot: Record<string, number>;
     backpackLoot: Record<string, number>;
     pocketLoot: Record<string, number>;
     vestLoot: Record<string, number>;
 
-    combinedPoolLoot: Record<string, number>;
     vestGrenadeItems: Record<string, number>;
     pocketGrenadeItems: Record<string, number>;
 
@@ -38,12 +39,14 @@ export class MyBotLootCache {
 }
 
 export const enum MyLootCacheType {
+   
+    COMBINED = "Combined",
+
     SPECIAL = "Special",
     SECURE = "SecuredContainer",
     BACKPACK = "Backpack",
     POCKET = "Pocket",
     VEST = "Vest",
-    COMBINED = "Combined",
 
     VEST_GRENADE_ITEMS = "VestGrenadeItems",
     POCKET_GRENADE_ITEMS = "PocketGrenadeItems",

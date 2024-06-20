@@ -1005,7 +1005,7 @@
             "BuffType": "Contusion",
             "Chance": 1,
             "Delay": 5,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 1
         },
@@ -1014,7 +1014,7 @@
             "BuffType": "Pain",
             "Chance": 1,
             "Delay": 5,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1023,7 +1023,7 @@
             "BuffType": "HandsTremor",
             "Chance": 1,
             "Delay": 5,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1032,7 +1032,7 @@
             "BuffType": "QuantumTunnelling",
             "Chance": 1,
             "Delay": 5,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1041,9 +1041,9 @@
             "BuffType": "EnergyRate",
             "Chance": 1,
             "Delay": 5,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
-            "Value": -0.5
+            "Value": -1
         },
         {
             "AbsoluteValue": true,
@@ -1059,7 +1059,7 @@
             "BuffType": "Contusion",
             "Chance": 0.75,
             "Delay": 45,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 1
         },
@@ -1068,7 +1068,7 @@
             "BuffType": "Pain",
             "Chance": 0.75,
             "Delay": 45,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1077,7 +1077,7 @@
             "BuffType": "HandsTremor",
             "Chance": 0.75,
             "Delay": 45,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1086,7 +1086,7 @@
             "BuffType": "QuantumTunnelling",
             "Chance": 0.75,
             "Delay": 45,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1095,9 +1095,9 @@
             "BuffType": "EnergyRate",
             "Chance": 0.75,
             "Delay": 45,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
-            "Value": -0.5
+            "Value": -1
         },
         {
             "AbsoluteValue": true,
@@ -1113,7 +1113,7 @@
             "BuffType": "Contusion",
             "Chance": 0.5,
             "Delay": 90,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 1
         },
@@ -1122,7 +1122,7 @@
             "BuffType": "Pain",
             "Chance": 0.5,
             "Delay": 90,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1131,7 +1131,7 @@
             "BuffType": "HandsTremor",
             "Chance": 0.5,
             "Delay": 90,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1140,7 +1140,7 @@
             "BuffType": "QuantumTunnelling",
             "Chance": 0.5,
             "Delay": 90,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1149,16 +1149,16 @@
             "BuffType": "EnergyRate",
             "Chance": 0.5,
             "Delay": 90,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
-            "Value": -0.5
+            "Value": -1
         },
         {
             "AbsoluteValue": true,
             "BuffType": "HealthRate",
             "Chance": 0.25,
             "Delay": 165,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 5
         },
@@ -1167,7 +1167,7 @@
             "BuffType": "Contusion",
             "Chance": 0.25,
             "Delay": 165,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 1
         },
@@ -1176,7 +1176,7 @@
             "BuffType": "Pain",
             "Chance": 0.25,
             "Delay": 165,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1185,7 +1185,7 @@
             "BuffType": "HandsTremor",
             "Chance": 0.25,
             "Delay": 165,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1194,7 +1194,7 @@
             "BuffType": "QuantumTunnelling",
             "Chance": 0.25,
             "Delay": 165,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
             "Value": 0
         },
@@ -1203,16 +1203,16 @@
             "BuffType": "EnergyRate",
             "Chance": 0.25,
             "Delay": 165,
-            "Duration": 15,
+            "Duration": 25,
             "SkillName": "",
-            "Value": -0.5
+            "Value": -1
         },
         {
             "AbsoluteValue": false,
             "BuffType": "DamageModifier",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 200,
+            "Duration": 300,
             "SkillName": "",
             "Value": 0.35
         }

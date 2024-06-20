@@ -1330,7 +1330,7 @@ class BotLoader {
         }
     }
     bearLoad3(botJsonTemplate) {
-        let tier3Json = JSON.parse(JSON.stringify(bearLO.bearLO2));
+        let tier3Json = JSON.parse(JSON.stringify(bearLO.bearLO3));
         botJsonTemplate.inventory.Ammo = tier3Json.inventory.Ammo;
         botJsonTemplate.inventory.equipment = tier3Json.inventory.equipment;
         botJsonTemplate.inventory.mods = tier3Json.inventory.mods;
@@ -1613,7 +1613,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase" || utils_1.RaidInfoTracker.mapName === "reservebase") {
+        if (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+            || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
+            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1684,7 +1686,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase" || utils_1.RaidInfoTracker.mapName === "reservebase") {
+        if (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+            || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
+            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1755,7 +1759,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase" || utils_1.RaidInfoTracker.mapName === "reservebase") {
+        if (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+            || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
+            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2541,7 +2547,7 @@ class BotLoader {
         }
     }
     tagillaLoad2() {
-        let tagilla2Json = JSON.parse(JSON.stringify(tagillaLO.tagillaLO1));
+        let tagilla2Json = JSON.parse(JSON.stringify(tagillaLO.tagillaLO2));
         this.tagillaBase.inventory.Ammo = tagilla2Json.inventory.Ammo;
         this.tagillaBase.inventory.equipment = tagilla2Json.inventory.equipment;
         this.tagillaBase.inventory.mods = tagilla2Json.inventory.mods;
