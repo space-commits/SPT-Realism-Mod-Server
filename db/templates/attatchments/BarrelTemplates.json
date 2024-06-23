@@ -2915,7 +2915,7 @@
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
-        "Convergence": 0,
+        "Convergence": 10,
         "Accuracy": 0,
         "CenterOfImpact": 0.4,
         "HeatFactor": 1.14,

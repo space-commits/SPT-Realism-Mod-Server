@@ -672,9 +672,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             maps.openZonesFix();
         }
 
-        if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
-            maps.loadSpawnChanges();
-        }
+        maps.loadSpawnChanges();
 
         // if (modConfig.airdrop_changes == true) {
         //     airdrop.loadAirdropChanges();
@@ -699,7 +697,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.botNames();
         }
 
-        if (ModTracker.swagPresent == false && (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween)) {
+        if (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween) {
             bots.forceBossSpawns();
         }
 

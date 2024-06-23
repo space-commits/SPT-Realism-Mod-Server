@@ -69,7 +69,8 @@ export class Spawns {
 
     public loadSpawnChanges() {
 
-        if (this.modConf.boss_spawns == true && ModTracker.swagPresent == false) {
+        //&& ModTracker.swagPresent == false
+        if (this.modConf.boss_spawns == true) {
             this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;
             this.tables.locations.factory4_day.base.BossLocationSpawn = bossSpawns.FactoryDayBossLocationSpawn;
             this.tables.locations.factory4_night.base.BossLocationSpawn = bossSpawns.FactoryNightBossLocationSpawn;
@@ -83,7 +84,7 @@ export class Spawns {
         }
 
         //SPT does its own custom PMC waves, this couble be doubling up or interfering in some way
-        if (this.modConf.spawn_waves == true && ModTracker.swagPresent == false) {
+        if (this.modConf.spawn_waves == true && ModTracker.swagPresent == false && ModTracker.qtbPresent == false) {
             this.tables.locations.bigmap.base.waves = spawnWaves.CustomsWaves;
             this.tables.locations.lighthouse.base.waves = spawnWaves.LighthouseWaves;
             this.tables.locations.factory4_day.base.waves = spawnWaves.FactoryWaves;

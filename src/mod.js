@@ -522,9 +522,7 @@ class Main {
         if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
             maps.openZonesFix();
         }
-        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
-            maps.loadSpawnChanges();
-        }
+        maps.loadSpawnChanges();
         // if (modConfig.airdrop_changes == true) {
         //     airdrop.loadAirdropChanges();
         // }
@@ -544,7 +542,7 @@ class Main {
         if (modConfig.bot_names == true) {
             bots.botNames();
         }
-        if (utils_1.ModTracker.swagPresent == false && (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween)) {
+        if (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween) {
             bots.forceBossSpawns();
         }
         if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {

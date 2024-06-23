@@ -987,19 +987,6 @@ class Armor {
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1.15;
         }
-        //Novasteel/Neosteel Mandible
-        if (serverItem._id === "6570a88c8f221f3b210353b7") {
-            serverItem._props.Durability = 2 * duraModifier;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -1.2;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -14;
-            serverItem._props.BluntThroughput = 0.01 * bluntModifier;
-            serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'ArmoredSteel';
-            serverItem._props.Weight = 1.2;
-        }
         //FAST Mandible
         if (serverItem._id === "5a16ba61fcdbcb098008728a") {
             serverItem._props.Durability = 40 * duraModifier;
@@ -1079,6 +1066,19 @@ class Armor {
             serverItem._props.Weight = 0.172;
         }
         //// Class 5 ////
+        //Novasteel/Neosteel Mandible
+        if (serverItem._id === "6570a88c8f221f3b210353b7") {
+            serverItem._props.Durability = 30 * duraModifier;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 5 + classModifier;
+            serverItem._props.speedPenaltyPercent = -1.2;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -14;
+            serverItem._props.BluntThroughput = 0.01 * bluntModifier;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.Weight = 1.2;
+        }
         //Caiman Mandible
         if (serverItem._id === "5f60c076f2bcbb675b00dac2") {
             serverItem._props.Durability = 25 * duraModifier;

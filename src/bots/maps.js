@@ -69,7 +69,8 @@ class Spawns {
         }
     }
     loadSpawnChanges() {
-        if (this.modConf.boss_spawns == true && utils_1.ModTracker.swagPresent == false) {
+        //&& ModTracker.swagPresent == false
+        if (this.modConf.boss_spawns == true) {
             this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;
             this.tables.locations.factory4_day.base.BossLocationSpawn = bossSpawns.FactoryDayBossLocationSpawn;
             this.tables.locations.factory4_night.base.BossLocationSpawn = bossSpawns.FactoryNightBossLocationSpawn;
@@ -82,7 +83,7 @@ class Spawns {
             this.tables.locations.tarkovstreets.base.BossLocationSpawn = bossSpawns.StreetsBossLocationSpawn;
         }
         //SPT does its own custom PMC waves, this couble be doubling up or interfering in some way
-        if (this.modConf.spawn_waves == true && utils_1.ModTracker.swagPresent == false) {
+        if (this.modConf.spawn_waves == true && utils_1.ModTracker.swagPresent == false && utils_1.ModTracker.qtbPresent == false) {
             this.tables.locations.bigmap.base.waves = spawnWaves.CustomsWaves;
             this.tables.locations.lighthouse.base.waves = spawnWaves.LighthouseWaves;
             this.tables.locations.factory4_day.base.waves = spawnWaves.FactoryWaves;
