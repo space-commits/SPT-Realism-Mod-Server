@@ -6,9 +6,9 @@
         "excluded_category": [],
         "excluded_id_list": [],
         "price_rate": 0,
-        "quality": "1.2"
+        "quality": "1"
     },
-    "Prapor": {
+    "PraporRepair": {
         "availability": true,
         "currency": "5449016a4bdc2d6f028b456f",
         "currency_coefficient": 1,
@@ -24,6 +24,6 @@
         "excluded_category": [],
         "excluded_id_list": [],
         "price_rate": 0,
-        "quality": "0"
+        "quality": "0.1"
     }
 }

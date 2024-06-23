@@ -3,7 +3,7 @@
         "ItemID": "633ec7c2a6918cb895019c6c",
         "Name": "weapon_kbp_rsh_12_127x55",
         "WeapType": "pistol",
-        "OperationType": "manual",
+        "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": -3,
         "HasShoulderContact": false,
@@ -26,7 +26,7 @@
         "HipAccuracyRestorationSpeed": 7,
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 20,
-        "Velocity": -12,
+        "Velocity": -10,
         "RecoilDamping": 0.81,
         "RecoilHandDamping": 0.57,
         "WeaponAllowADS": false,
@@ -34,7 +34,7 @@
         "DurabilityBurnRatio": 0.01,
         "AutoROF": 350,
         "SemiROF": 300,
-        "DoubleActionAccuracyPenalty": 1.5,
+        "DoubleActionAccuracyPenalty": 2.5,
         "LoyaltyLevel": 5,
         "BaseReloadSpeedMulti": 1,
         "BaseChamberSpeedMulti": 1,
@@ -44,7 +44,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.432,
+        "RecoilIntensity": 0.645,
         "RecoilCenter": {
             "x": 0,
             "y": -0.4,
@@ -55,7 +55,7 @@
         "ItemID": "624c2e8614da335f1e034d8c",
         "Name": "weapon_chiappa_rhino_200ds_9x19",
         "WeapType": "pistol",
-        "OperationType": "manual",
+        "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": -1,
         "HasShoulderContact": false,
@@ -86,7 +86,7 @@
         "DurabilityBurnRatio": 0.01,
         "AutoROF": 400,
         "SemiROF": 400,
-        "DoubleActionAccuracyPenalty": 1.5,
+        "DoubleActionAccuracyPenalty": 2.5,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
         "BaseChamberSpeedMulti": 1,
@@ -96,7 +96,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.43,
+        "RecoilIntensity": 0.645,
         "RecoilCenter": {
             "x": 0,
             "y": -0.4,
@@ -107,7 +107,7 @@
         "ItemID": "61a4c8884f95bc3b2c5dc96f",
         "Name": "weapon_chiappa_rhino_50ds_9x33R",
         "WeapType": "pistol",
-        "OperationType": "manual",
+        "OperationType": "",
         "WeapAccuracy": 0,
         "BaseTorque": -4,
         "HasShoulderContact": false,
@@ -138,7 +138,7 @@
         "DurabilityBurnRatio": 0.02,
         "AutoROF": 400,
         "SemiROF": 400,
-        "DoubleActionAccuracyPenalty": 1.5,
+        "DoubleActionAccuracyPenalty": 2.5,
         "LoyaltyLevel": 2,
         "BaseReloadSpeedMulti": 1,
         "BaseChamberSpeedMulti": 1,
@@ -148,7 +148,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.45,
+        "RecoilIntensity": 0.675,
         "RecoilCenter": {
             "x": 0,
             "y": -0.3,
@@ -199,7 +199,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.34
     },
     "5f36a0e5fbf956000b716b65": {
         "ItemID": "5f36a0e5fbf956000b716b65",
@@ -245,7 +245,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.34
     },
     "6193a720f8ee7e52e42109ed": {
         "ItemID": "6193a720f8ee7e52e42109ed",
@@ -283,7 +283,7 @@
         "AutoROF": 30,
         "SemiROF": 380,
         "LoyaltyLevel": 4,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 1.1,
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.8,
         "MaxChamberSpeed": 1.5,
@@ -291,7 +291,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.35
     },
     "5cadc190ae921500103bb3b6": {
         "ItemID": "5cadc190ae921500103bb3b6",
@@ -337,7 +337,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.35
     },
     "5a7ae0c351dfba0017554310": {
         "ItemID": "5a7ae0c351dfba0017554310",
@@ -383,7 +383,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.011,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.38
     },
     "5b1fa9b25acfc40018633c01": {
         "ItemID": "5b1fa9b25acfc40018633c01",
@@ -402,7 +402,7 @@
         "Convergence": 18,
         "RecoilAngle": 93,
         "BaseMalfunctionChance": 0.1,
-        "HeatFactorGun": 0.2,
+        "HeatFactorGun": 0.45,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.1,
         "CoolFactorGunMods": 1,
@@ -429,7 +429,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.011,
-        "RecoilIntensity": 0.2
+        "RecoilIntensity": 0.31
     },
     "63088377b5cd696784087147": {
         "ItemID": "63088377b5cd696784087147",
@@ -475,7 +475,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.39
     },
     "602a9740da11d6478d5a06dc": {
         "ItemID": "602a9740da11d6478d5a06dc",
@@ -521,7 +521,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.008,
-        "RecoilIntensity": 0.225,
+        "RecoilIntensity": 0.32,
         "RecoilCenter": {
             "x": 0,
             "y": -0.35,
@@ -572,7 +572,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.009,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.41
     },
     "576a581d2459771e7b1bc4f1": {
         "ItemID": "576a581d2459771e7b1bc4f1",
@@ -611,14 +611,14 @@
         "SemiROF": 350,
         "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
-        "BaseChamberSpeedMulti": 1.1,
+        "BaseChamberSpeedMulti": 1.15,
         "MinChamberSpeed": 0.8,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1,
+        "BaseChamberCheckSpeed": 1.15,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.012,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.39
     },
     "5d3eb3b0a4b93615055e84d2": {
         "ItemID": "5d3eb3b0a4b93615055e84d2",
@@ -664,7 +664,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25,
+        "RecoilIntensity": 0.26,
         "RecoilCenter": {
             "x": 0,
             "y": -0.36,
@@ -715,7 +715,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25,
+        "RecoilIntensity": 0.26,
         "RecoilCenter": {
             "x": 0,
             "y": -0.36,
@@ -766,7 +766,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.263
+        "RecoilIntensity": 0.37
     },
     "571a12c42459771f627b58a0": {
         "ItemID": "571a12c42459771f627b58a0",
@@ -812,7 +812,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.31
+        "RecoilIntensity": 0.4
     },
     "5b3b713c5acfc4330140bd8d": {
         "ItemID": "5b3b713c5acfc4330140bd8d",
@@ -858,7 +858,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.31
+        "RecoilIntensity": 0.4
     },
     "5448bd6b4bdc2dfc2f8b4569": {
         "ItemID": "5448bd6b4bdc2dfc2f8b4569",
@@ -874,7 +874,7 @@
         "Dispersion": 8,
         "CameraRecoil": 0.004,
         "VisualMulti": 3,
-        "Convergence": 16,
+        "Convergence": 18,
         "RecoilAngle": 92,
         "BaseMalfunctionChance": 0,
         "HeatFactorGun": 0.25,
@@ -904,7 +904,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.008,
-        "RecoilIntensity": 0.3
+        "RecoilIntensity": 0.39
     },
     "579204f224597773d619e051": {
         "ItemID": "579204f224597773d619e051",
@@ -920,7 +920,7 @@
         "Dispersion": 8,
         "CameraRecoil": 0.004,
         "VisualMulti": 3,
-        "Convergence": 16,
+        "Convergence": 18,
         "RecoilAngle": 92,
         "BaseMalfunctionChance": 0,
         "HeatFactorGun": 0.25,
@@ -950,7 +950,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.008,
-        "RecoilIntensity": 0.3
+        "RecoilIntensity": 0.39
     },
     "56e0598dd2720bb5668b45a6": {
         "ItemID": "56e0598dd2720bb5668b45a6",
@@ -996,7 +996,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.3
+        "RecoilIntensity": 0.39
     },
     "5a17f98cfcdbcb0980087290": {
         "ItemID": "5a17f98cfcdbcb0980087290",
@@ -1009,10 +1009,10 @@
         "Ergonomics": 70,
         "VerticalRecoil": 330,
         "HorizontalRecoil": 165,
-        "Dispersion": 7,
+        "Dispersion": 4,
         "CameraRecoil": 0.003,
-        "VisualMulti": 2,
-        "Convergence": 10,
+        "VisualMulti": 2.5,
+        "Convergence": 15,
         "RecoilAngle": 94,
         "BaseMalfunctionChance": 0.15,
         "HeatFactorGun": 0.2,
@@ -1042,7 +1042,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.15
+        "RecoilIntensity": 0.25
     },
     "5abccb7dd8ce87001773e277": {
         "ItemID": "5abccb7dd8ce87001773e277",
@@ -1055,10 +1055,10 @@
         "Ergonomics": 70,
         "VerticalRecoil": 300,
         "HorizontalRecoil": 165,
-        "Dispersion": 7,
+        "Dispersion": 4,
         "CameraRecoil": 0.003,
-        "VisualMulti": 2,
-        "Convergence": 10,
+        "VisualMulti": 2.5,
+        "Convergence": 15,
         "RecoilAngle": 94,
         "BaseMalfunctionChance": 0.15,
         "HeatFactorGun": 0.2,
@@ -1088,6 +1088,6 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.15
+        "RecoilIntensity": 0.25
     }
 }

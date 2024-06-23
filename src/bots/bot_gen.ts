@@ -141,9 +141,10 @@ export class BotGen extends BotGenerator {
     //skew the tiering of PMCs based on map
     private botTierMapFactor(tier: number, utils: Utils): number {
 
-        const hightier: string[] = ["rezervbase", "reservebase", "tarkovstreets"];
-        const midtier: string[] = ["factory4_night"];
-        const lowtier: string[] = ["bigmap", "customs", "interchange", "lighthouse"];
+        const highTier: string[] = ["rezervbase", "reservebase", "tarkovstreets"];
+        const midTier: string[] = ["factory4_night"];
+        const lowTier: string[] = ["bigmap", "customs", "interchange", "lighthouse"];
+        const ratTier: string[] = ["woods", "shoreline"];
 
         let rndNum = utils.pickRandNumOneInTen();
         if (RaidInfoTracker.mapName === "sandbox") { //me being superstitious 
@@ -152,14 +153,17 @@ export class BotGen extends BotGenerator {
         if (RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 4 && hightier.includes(RaidInfoTracker.mapName)) {
+        else if (rndNum <= 3 && highTier.includes(RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 2 && (midtier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
+        else if (rndNum <= 2 && (midTier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 1 && lowtier.includes(RaidInfoTracker.mapName)) {
+        else if (rndNum <= 1 && lowTier.includes(RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
+        }
+        else if (rndNum <= 3 && ratTier.includes(RaidInfoTracker.mapName)) {
+            tier = Math.max(tier - 1, 1);
         }
         return tier;
     }
@@ -183,7 +187,6 @@ export class BotGen extends BotGenerator {
             }
         });
     }
-
 
     public myGeneratePlayerScav(sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase {
         let bot = this.getCloneOfBotBase();
@@ -231,7 +234,7 @@ export class BotGen extends BotGenerator {
 
         const botRole = botGenerationDetails.role.toLowerCase();
         const isPMC = this.botHelper.isBotPmc(botRole);
-        
+
         let pmcTier = 1;
         if (isPMC) {
 
@@ -332,7 +335,7 @@ export class BotGen extends BotGenerator {
         const botEquipmentModPoolService = container.resolve<BotEquipmentModPoolService>("BotEquipmentModPoolService");
         const botEquipmentModGenerator = container.resolve<BotEquipmentModGenerator>("BotEquipmentModGenerator");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-        const seasonalEvents = new SeasonalEventsHandler();
+        // const seasonalEvents = new SeasonalEventsHandler();
 
         const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseServer);
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseServer, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
@@ -548,10 +551,9 @@ export class BotInvGen extends BotInventoryGenerator {
                 pmcTier);
         }
 
-        // Generate below in specific order
         this.myGenerateEquipment({
-            rootEquipmentSlot: EquipmentSlots.HEADWEAR,
-            rootEquipmentPool: templateInventory.equipment.Headwear,
+            rootEquipmentSlot: EquipmentSlots.FACE_COVER,
+            rootEquipmentPool: templateInventory.equipment.FaceCover,
             modPool: templateInventory.mods,
             spawnChances: equipmentChances,
             botRole: botRole,
@@ -563,9 +565,10 @@ export class BotInvGen extends BotInventoryGenerator {
             botRole,
             pmcTier);
 
+        // Generate below in specific order
         this.myGenerateEquipment({
-            rootEquipmentSlot: EquipmentSlots.FACE_COVER,
-            rootEquipmentPool: templateInventory.equipment.FaceCover,
+            rootEquipmentSlot: EquipmentSlots.HEADWEAR,
+            rootEquipmentPool: templateInventory.equipment.Headwear,
             modPool: templateInventory.mods,
             spawnChances: equipmentChances,
             botRole: botRole,
@@ -621,8 +624,6 @@ export class BotInvGen extends BotInventoryGenerator {
     }
 
     private myGenerateEquipment(settings: IGenerateEquipmentProperties, botRole: string, pmcTier: number): void {
-
-
         const botWeaponGeneratorHelper = container.resolve<BotWeaponGeneratorHelper>("BotWeaponGeneratorHelper");
         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         const botWeaponModLimitService = container.resolve<BotWeaponModLimitService>("BotWeaponModLimitService");
@@ -1153,9 +1154,9 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         if (!this.itemHelper.isRemovablePlateSlot(modSlot)) {
             result.result = Result.NOT_PLATE_HOLDING_SLOT;
             result.plateModTpls = existingPlateTplPool;
-
             return result;
         }
+
         const tierChecker = new BotTierTracker();
         const tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : botRole === "assault" ? tierChecker.getTier(botRole) : 4;
         const armorPlateWeight: IArmorPlateWeights[] = modConfig.realistic_ballistics == true ? armorPlateWeights.realisticWeights : armorPlateWeights.standardWeights;
@@ -1169,7 +1170,6 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
             // No weights, return original array of plate tpls
             result.result = Result.LACKS_PLATE_WEIGHTS;
             result.plateModTpls = existingPlateTplPool;
-
             return result;
         }
 
@@ -1179,7 +1179,6 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
             // No weights, return original array of plate tpls
             result.result = Result.LACKS_PLATE_WEIGHTS;
             result.plateModTpls = existingPlateTplPool;
-
             return result;
         }
 
@@ -1187,17 +1186,12 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         const chosenArmorPlateLevel = this.weightedRandomHelper.getWeightedValue<string>(plateWeights);
 
         // Convert the array of ids into database items
-        const platesFromDb = existingPlateTplPool.map((x) => this.itemHelper.getItem(x)[1]);
+        const platesFromDb = existingPlateTplPool.map((plateTpl) => this.itemHelper.getItem(plateTpl)[1]);
 
         // Filter plates to the chosen level based on its armorClass property
-        let filteredPlates = platesFromDb.filter((x) => x._props.armorClass === chosenArmorPlateLevel);
+        const filteredPlates = platesFromDb.filter((item) => item._props.armorClass == chosenArmorPlateLevel);
 
         //try again with a higher level
-        if (filteredPlates.length === 0) {
-            let nextArmorLevel: number = Number(chosenArmorPlateLevel) + 1;
-            filteredPlates = platesFromDb.filter((x) => x._props.armorClass === nextArmorLevel.toString());
-        }
-
         if (filteredPlates.length === 0) {
             this.logger.debug(
                 `Plate filter was too restrictive for armor: ${armorItem._id}, unable to find plates of level: ${chosenArmorPlateLevel}. Using mod items default plate`,
@@ -1235,7 +1229,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
 
         // Only return the items ids
         result.result = Result.SUCCESS;
-        result.plateModTpls = filteredPlates.map((x) => x._id);
+        result.plateModTpls = filteredPlates.map((item) => item._id);
 
         return result;
     }

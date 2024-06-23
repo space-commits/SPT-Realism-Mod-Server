@@ -1729,7 +1729,7 @@
     "63c6adcfb4ba094317063742": {
         "ItemID": "63c6adcfb4ba094317063742",
         "Name": "sight_rear_pm_izhmeh_pm_std",
-        "ModType": "",
+        "ModType": "sight",
         "AimSpeed": 0,
         "Accuracy": 0,
         "ConflictingItems": [
@@ -1741,7 +1741,7 @@
     "6513f153e63f29908d0ffaba": {
         "ItemID": "6513f153e63f29908d0ffaba",
         "Name": "sight_rear_rpd_zid_rpd_std",
-        "ModType": "",
+        "ModType": "sight",
         "AimSpeed": 0,
         "Accuracy": 0,
         "ConflictingItems": [],

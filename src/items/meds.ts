@@ -77,6 +77,33 @@ export class Consumables {
         };
         //Propitol
         this.itemDB()["5c0e530286f7747fa1419862"]._props.effects_damage = {};
+
+        //PNB
+        this.itemDB()["637b6179104668754b72f8f5"]._props.effects_damage = {};
+        this.itemDB()["637b6179104668754b72f8f5"]._props.effects_health = {};
+
+        //Blue Blood
+        this.itemDB()["637b6251104668754b72f8f9"]._props.effects_damage = {
+            "RadExposure": {
+                "delay": 10,
+                "duration": 300,
+                "fadeOut": 0.1
+            },
+            "Intoxication": {
+                "delay": 10,
+                "duration": 300,
+                "fadeOut": 0.3
+            }
+        }
+
+        //Antidote
+        this.itemDB()["5fca138c2a7b221b2852a5c6"]._props.effects_damage = {
+            "Intoxication": {
+                "delay": 5,
+                "duration": 150,
+                "fadeOut": 0.15
+            }
+        }
     }
 
 
@@ -193,31 +220,103 @@ export class Consumables {
             if (serverItem._id === "5d1b376e86f774252519444e") {
                 serverItem._props.StimulatorBuffs = this.foodItems.moonshine.StimulatorBuffs;
                 serverItem._props.effects_health = {};
+                serverItem._props.effects_damage = {
+                    "RadExposure": {
+                        "delay": 10,
+                        "duration": 300,
+                        "fadeOut": 0.015
+                    }
+                };
                 serverItem._props.MaxResource = 1;
+                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
+                serverItem._props.ConflictingItems.splice(1, 0, "alcohol");
+                serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
+                serverItem._props.ConflictingItems.splice(4, 0, "true");
+                serverItem._props.ConflictingItems.splice(5, 0, "600"); // full duration
+                serverItem._props.ConflictingItems.splice(6, 0, "20"); // wait period reduction
+                serverItem._props.ConflictingItems.splice(7, 0, "120"); // effect period
+                serverItem._props.ConflictingItems.splice(8, 0, "0.65"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
             }
             //Jack
             if (serverItem._id === "5d403f9186f7743cac3f229b") {
                 serverItem._props.StimulatorBuffs = this.foodItems.jack.StimulatorBuffs;
                 serverItem._props.effects_health = {};
+                serverItem._props.effects_damage = {};
                 serverItem._props.MaxResource = 1;
+                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
+                serverItem._props.ConflictingItems.splice(1, 0, "alcohol");
+                serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
+                serverItem._props.ConflictingItems.splice(4, 0, "true");
+                serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
+                serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period reduction
+                serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
+                serverItem._props.ConflictingItems.splice(8, 0, "0.2"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
             }
             //Vodka (Bad)
             if (serverItem._id === "614451b71e5874611e2c7ae5") {
                 serverItem._props.StimulatorBuffs = this.foodItems.vodka_bad.StimulatorBuffs;
                 serverItem._props.effects_health = {};
+                serverItem._props.effects_damage = {};
                 serverItem._props.MaxResource = 1;
+                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
+                serverItem._props.ConflictingItems.splice(1, 0, "alcohol");
+                serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
+                serverItem._props.ConflictingItems.splice(4, 0, "true");
+                serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
+                serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period reduction
+                serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
+                serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "20"); // strength
             }
             //Vodka
             if (serverItem._id === "5d40407c86f774318526545a") {
                 serverItem._props.StimulatorBuffs = this.foodItems.vodka.StimulatorBuffs;
                 serverItem._props.effects_health = {};
+                serverItem._props.effects_damage = {
+                    "RadExposure": {
+                        "delay": 10,
+                        "duration": 300,
+                        "fadeOut": 0.01
+                    }
+                };
                 serverItem._props.MaxResource = 1;
+                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
+                serverItem._props.ConflictingItems.splice(1, 0, "alcohol");
+                serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
+                serverItem._props.ConflictingItems.splice(4, 0, "true");
+                serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
+                serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period reduction
+                serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
+                serverItem._props.ConflictingItems.splice(8, 0, "0.2"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
             }
             //Beer
             if (serverItem._id === "62a09f32621468534a797acb") {
                 serverItem._props.StimulatorBuffs = this.foodItems.beer.StimulatorBuffs;
                 serverItem._props.effects_health = {};
+                serverItem._props.effects_damage = {};
                 serverItem._props.MaxResource = 1;
+                serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
+                serverItem._props.ConflictingItems.splice(1, 0, "alcohol");
+                serverItem._props.ConflictingItems.splice(2, 0, "none");
+                serverItem._props.ConflictingItems.splice(3, 0, "0");
+                serverItem._props.ConflictingItems.splice(4, 0, "true");
+                serverItem._props.ConflictingItems.splice(5, 0, "300"); // full duration
+                serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period reduction
+                serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
+                serverItem._props.ConflictingItems.splice(8, 0, "0.05"); // tunnel vision strength
+                serverItem._props.ConflictingItems.splice(9, 0, "20"); // delay
+                serverItem._props.ConflictingItems.splice(10, 0, "2.5"); // strength
             }
             ////Foods////
             //Sweet//
@@ -392,7 +491,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(6, 0, "20"); // wait period reduction
                 serverItem._props.ConflictingItems.splice(7, 0, "120"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.35"); // tunnel vision strength
-                serverItem._props.ConflictingItems.splice(9, 0, "25"); // delay
+                serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
             }
             //Ibuprofen
@@ -412,7 +511,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(6, 0, "15"); // wait period reduction
                 serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.05"); // tunnel vision strength
-                serverItem._props.ConflictingItems.splice(9, 0, "40"); // delay
+                serverItem._props.ConflictingItems.splice(9, 0, "20"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "5"); // strength
             }
             //AI-2
@@ -433,7 +532,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(6, 0, "0"); // HP restore amount
                 serverItem._props.ConflictingItems.splice(7, 0, "135"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
-                serverItem._props.ConflictingItems.splice(9, 0, "10"); // delay
+                serverItem._props.ConflictingItems.splice(9, 0, "7"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "15"); // strength
             }
             //Morphine
@@ -453,7 +552,7 @@ export class Consumables {
                 serverItem._props.ConflictingItems.splice(6, 0, "30"); // wait period reduction
                 serverItem._props.ConflictingItems.splice(7, 0, "270"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.55"); // tunnel vision strength
-                serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
+                serverItem._props.ConflictingItems.splice(9, 0, "12"); // delay
                 serverItem._props.ConflictingItems.splice(10, 0, "30"); // strength
             }
             ///Medicines///

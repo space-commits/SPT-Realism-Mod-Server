@@ -1355,7 +1355,7 @@
     "609bab8b455afd752b2e6138": {
         "ItemID": "609bab8b455afd752b2e6138",
         "Name": "scope_all_torrey_pines_logic_t12_w_30hz",
-        "ModType": "",
+        "ModType": "sight",
         "AimSpeed": -8,
         "Accuracy": -25,
         "ConflictingItems": [],
@@ -1473,7 +1473,7 @@
     "6544d4187c5457729210d277": {
         "ItemID": "6544d4187c5457729210d277",
         "Name": "scope_dovetail_aksion_ekp_1s_03",
-        "ModType": "",
+        "ModType": "sight",
         "AimSpeed": -6.5,
         "Accuracy": -16,
         "ConflictingItems": [
@@ -1498,7 +1498,7 @@
     "655f13e0a246670fb0373245": {
         "ItemID": "655f13e0a246670fb0373245",
         "Name": "scope_all_wilcox_boss_xe_hp",
-        "ModType": "",
+        "ModType": "sight",
         "AimSpeed": 5,
         "Accuracy": 5,
         "ConflictingItems": [],
@@ -1508,7 +1508,7 @@
     "6567e7681265c8a131069b0f": {
         "ItemID": "6567e7681265c8a131069b0f",
         "Name": "scope_30mm_sig_tango6t_1_6x24",
-        "ModType": "",
+        "ModType": "sight",
         "AimSpeed": -10,
         "Accuracy": 14,
         "ConflictingItems": [

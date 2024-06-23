@@ -10,26 +10,23 @@ const RagfairCallbacks_1 = require("C:/snapshot/project/obj/callbacks/RagfairCal
 const seasonalevents_1 = require("../misc/seasonalevents");
 const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const modConfig = require("../../config/config.json");
-const weapPath = modConfig.weap_preset;
-const attPath = modConfig.att_preset;
-const gearPath = modConfig.gear_preset;
-const AssaultRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/AssaultRifleTemplates.json");
-const AssaultCarbineTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/AssaultCarbineTemplates.json");
-const MachinegunTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/MachinegunTemplates.json");
-const MarksmanRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/MarksmanRifleTemplates.json");
-const PistolTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/PistolTemplates.json");
-const ShotgunTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/ShotgunTemplates.json");
-const SMGTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SMGTemplates.json");
-const SniperRifleTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SniperRifleTemplates.json");
-const SpecialWeaponTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/SpecialWeaponTemplates.json");
-const GrenadeLauncherTemplates = require("../../db/templates/weapons/" + `${weapPath}` + "/GrenadeLauncherTemplates.json");
-const armorComponentsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorComponentsTemplates.json");
-const armorChestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorChestrigTemplates.json");
-const helmetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/helmetTemplates.json");
-const armorVestsTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorVestsTemplates.json");
-const armorMasksTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/armorMasksTemplates.json");
-const chestrigTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/chestrigTemplates.json");
-const headsetTemplates = require("../../db/templates/gear/" + `${gearPath}` + "/headsetTemplates.json");
+const AssaultRifleTemplates = require("../../db/templates/weapons/AssaultRifleTemplates.json");
+const AssaultCarbineTemplates = require("../../db/templates/weapons/AssaultCarbineTemplates.json");
+const MachinegunTemplates = require("../../db/templates/weapons/MachinegunTemplates.json");
+const MarksmanRifleTemplates = require("../../db/templates/weapons/MarksmanRifleTemplates.json");
+const PistolTemplates = require("../../db/templates/weapons/PistolTemplates.json");
+const ShotgunTemplates = require("../../db/templates/weapons/ShotgunTemplates.json");
+const SMGTemplates = require("../../db/templates/weapons/SMGTemplates.json");
+const SniperRifleTemplates = require("../../db/templates/weapons/SniperRifleTemplates.json");
+const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeaponTemplates.json");
+const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
+const armorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
+const armorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
+const helmetTemplates = require("../../db/templates/gear/helmetTemplates.json");
+const armorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates.json");
+const armorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
+const chestrigTemplates = require("../../db/templates/gear/chestrigTemplates.json");
+const headsetTemplates = require("../../db/templates/gear/headsetTemplates.json");
 const ammoDB = require("../../db/templates/ammo/ammoTemplates.json");
 const weapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
 const gearTemlplatesArr = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates, chestrigTemplates, headsetTemplates];
@@ -130,52 +127,84 @@ class Traders {
         }
     }
     loadTraderRepairs() {
-        this.tables.traders[prapId].base.repair = traderRepairs.Prapor;
+        this.tables.traders[prapId].base.repair = traderRepairs.PraporRepair;
         this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
         this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
         for (let ll in this.tables.traders[prapId].base.loyaltyLevels) {
-            this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 1.5;
+            this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 0.5;
         }
         for (let ll in this.tables.traders[skierId].base.loyaltyLevels) {
-            this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.5;
+            this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.25;
         }
         for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
-            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 2;
+            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 0.85;
         }
     }
-    setLoyaltyLevels() {
-        this.loyaltyLevelHelper(ammoDB, false);
-        this.loyaltyLevelHelper(weapTemplatesArr, true);
-        this.loyaltyLevelHelper(gearTemlplatesArr, true);
+    setBaseOfferValues() {
+        for (let t in this.tables.traders) {
+            let trader = this.tables.traders[t];
+            if (trader?.assort?.items === undefined || trader.base.name === "БТР" || trader.base.nickname === "Fence")
+                continue;
+            if (modConfig.change_trader_ll == true) {
+                this.setLoyaltyLevels(trader);
+            }
+            this.setBasePrices(trader);
+        }
     }
-    loyaltyLevelHelper(db, multifile) {
+    setBasePrices(trader) {
+        if (modConfig.realistic_ballistics == true) {
+            this.setBasePrice(ammoDB, trader);
+        }
+    }
+    setBasePrice(db, trader) {
+        for (let item in trader.assort.items) { //loop offers
+            if (trader.assort.items[item].parentId !== "hideout")
+                continue;
+            let offer = trader.assort.items[item];
+            let offerId = offer._id;
+            let offerTpl = offer._tpl;
+            if (db[offerTpl]) {
+                let barter = trader?.assort?.barter_scheme[offerId][0][0];
+                if (this.itemDB()[barter?._tpl]?._parent !== enums_1.ParentClasses.MONEY)
+                    continue;
+                let templateItem = db[offerTpl];
+                let priceModifier = templateItem?.BasePriceModifier !== undefined ? templateItem?.BasePriceModifier : 1;
+                barter.count *= priceModifier;
+            }
+        }
+    }
+    setLoyaltyLevels(trader) {
+        this.loyaltyLevelHelper(ammoDB, false, trader);
+        this.loyaltyLevelHelper(weapTemplatesArr, true, trader);
+        this.loyaltyLevelHelper(gearTemlplatesArr, true, trader);
+    }
+    loyaltyLevelHelper(db, multifile, trader) {
         if (multifile == false) {
-            this.setLL(db);
+            this.setLL(db, trader);
         }
         else {
             for (let files in db) {
                 let file = db[files];
-                this.setLL(file);
+                this.setLL(file, trader);
             }
         }
     }
-    setLL(file) {
-        for (let item in file) {
-            let loyaltyLvl = file[item]?.LoyaltyLevel !== undefined ? file[item]?.LoyaltyLevel : 3;
-            let itemID = file[item].ItemID;
-            for (let trader in this.tables.traders) {
-                if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР" && this.tables.traders[trader].base.nickname !== "Fence") {
-                    for (let item in this.tables.traders[trader].assort.items) {
-                        if (this.tables.traders[trader].assort.items[item].parentId === "hideout" && this.tables.traders[trader].assort.items[item]._tpl === itemID) {
-                            let id = this.tables.traders[trader].assort.items[item]._id;
-                            if (this.itemDB()[this.tables.traders[trader]?.assort?.barter_scheme[id][0][0]?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
-                                this.tables.traders[trader].assort.loyal_level_items[id] = Math.max(1, loyaltyLvl - 1);
-                            }
-                            else {
-                                this.tables.traders[trader].assort.loyal_level_items[id] = Math.min(4, loyaltyLvl);
-                            }
-                        }
-                    }
+    setLL(db, trader) {
+        for (let item in trader.assort.items) {
+            if (trader.assort.items[item].parentId !== "hideout")
+                continue;
+            let offer = trader.assort.items[item];
+            let offerId = offer._id;
+            let offerTpl = offer._tpl;
+            if (db[offerTpl]) {
+                let barter = trader?.assort?.barter_scheme[offerId][0][0];
+                let templateItem = db[offerTpl];
+                let loyaltyLvl = templateItem?.LoyaltyLevel !== undefined ? templateItem?.LoyaltyLevel : 3;
+                if (this.itemDB()[barter?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
+                    trader.assort.loyal_level_items[offerId] = Math.max(1, loyaltyLvl - 1);
+                }
+                else {
+                    trader.assort.loyal_level_items[offerId] = Math.min(4, loyaltyLvl);
                 }
             }
         }
@@ -196,10 +225,10 @@ class Traders {
         }
         if (this.modConf.recoil_attachment_overhaul == true) {
             //jaeger
-            this.assortItemPusher(jaegId, "mosin_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 5000);
-            this.assortItemPusher(jaegId, "6kh4_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+            this.assortItemPusher(jaegId, "mosin_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 5000);
+            this.assortItemPusher(jaegId, "6kh4_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 4000);
             // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
-            this.assortItemPusher(jaegId, "m9_bayonet", 2, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+            this.assortItemPusher(jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         }
         //ragman//
         if (this.modConf.realistic_ballistics == true) {
@@ -372,7 +401,11 @@ class RandomizeTraderAssort {
         let playerCount = 0;
         pmcData.forEach(element => {
             playerCount++;
-            totalLL += element.TradersInfo[traderId].loyaltyLevel;
+            if (element?.TradersInfo != null && element?.TradersInfo != undefined) {
+                let ll = element?.TradersInfo[traderId]?.loyaltyLevel;
+                totalLL += ll !== null && ll !== undefined ? ll : 1;
+            }
+            totalLL += 1;
         });
         let avgLL = totalLL / playerCount;
         if (modConfig.logEverything) {
@@ -389,14 +422,15 @@ class RandomizeTraderAssort {
                 let assortItems = this.tables.traders[trader].assort.items;
                 let ll = this.getAverageLL(pmcData, trader);
                 for (let item in assortItems) {
-                    let itemId = assortItems[item]._id;
-                    let itemTemplId = assortItems[item]._tpl;
+                    let assortItem = assortItems[item];
+                    let itemId = assortItem._id;
+                    let itemTemplId = assortItem._tpl;
                     if (modConfig.randomize_trader_stock == true) {
-                        if (assortItems[item].upd?.StackObjectsCount !== undefined) {
-                            this.randomizeStockHelper(assortItems[item], ll);
+                        if (assortItem.upd?.StackObjectsCount !== undefined) {
+                            this.randomizeStockHelper(assortItem, ll);
                         }
-                        if (assortItems[item].upd?.UnlimitedCount !== undefined) {
-                            assortItems[item].upd.UnlimitedCount = false;
+                        if (assortItem.upd?.UnlimitedCount !== undefined) {
+                            assortItem.upd.UnlimitedCount = false;
                         }
                     }
                     if (modConfig.randomize_trader_prices == true || modConfig.adjust_trader_prices) {
@@ -455,7 +489,7 @@ class RandomizeTraderAssort {
         const llOutOfStockFactor = this.getLLOutOfStockBonus(averageLL);
         //ammo
         this.randomizeAmmoStock(itemParent, item, llStackableFactor, llOutOfStockFactor);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         //weapons
         for (let id in this.arrays.weaponParentIDs) {
             this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
@@ -470,7 +504,7 @@ class RandomizeTraderAssort {
         }
         //barter items
         for (let id in this.arrays.barterParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
         //keys 
         for (let id in this.arrays.keyParentIDs) {
@@ -486,38 +520,38 @@ class RandomizeTraderAssort {
         if (itemParent === enums_1.ParentClasses.MAGAZINE) {
             let magCap = this.itemDB[item._tpl]?._props?.Cartridges[0]._max_count;
             if (magCap <= 35) {
-                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 4 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
             }
             else if (magCap > 35 && magCap <= 45) {
-                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
             }
             else {
                 this.randomizeStock(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
             }
         }
         //medical
-        this.randomizeStock(itemParent, enums_1.ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
         //special items
-        this.randomizeStock(itemParent, enums_1.ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, 6 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
         this.randomizeStock(itemParent, enums_1.ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         this.randomizeStock(itemParent, enums_1.ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         //grenades
-        this.randomizeStock(itemParent, enums_1.ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
         //money
         this.randomizeStock(itemParent, enums_1.ParentClasses.MONEY, item, 1500 * modConfig.rand_stock_modifier_min, 150000 * modConfig.rand_stackable_modifier, llOutOfStockFactor);
         //container
         this.randomizeStock(itemParent, enums_1.ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         this.randomizeStock(itemParent, enums_1.ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         //provisions
-        this.randomizeStock(itemParent, enums_1.ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStock(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
     }
     randomizeAmmoStock(assortItemParent, item, llStackableFactor, llStockFactor) {
         if (assortItemParent === enums_1.ParentClasses.AMMO && item.slotId !== "cartridges") {
             let llOutOfStockFactor = llStockFactor * 10;
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 45);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 20);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x19mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 50, 58);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55);
@@ -587,7 +621,13 @@ class RandomizeTraderAssort {
     }
     randomizeStock(assortItemParent, catParent, item, min, max, llFactor) {
         if (assortItemParent === catParent) {
-            item.upd.StackObjectsCount = this.getStockCount(llFactor, 0, min, max);
+            //items aren't out of stock often enough, this artifically increases the chance of being out of stock
+            if (this.utils.pickRandNumOneInTen() < (4 - llFactor)) {
+                item.upd.StackObjectsCount = 0 + min;
+            }
+            else {
+                item.upd.StackObjectsCount = this.getStockCount(llFactor, 0, min, max);
+            }
             if (item.upd.hasOwnProperty('BuyRestrictionCurrent')) {
                 delete item.upd.BuyRestrictionCurrent;
             }
@@ -673,6 +713,8 @@ exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     pristineAssorts;
     myResetExpiredTrader(trader) {
+        if (trader.base.name === "БТР")
+            return;
         const traderId = trader.base._id;
         trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
         let pmcData = [];

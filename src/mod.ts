@@ -92,6 +92,10 @@ import { Armor } from "./ballistics/armor";
 
 import * as path from 'path';
 import * as fs from 'fs';
+import { MyLootCache } from "./bots/bot_loot_serv";
+import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
+import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
+import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -144,7 +148,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             [
                 {
                     url: "/RealismMod/GetInfo",
-                    action: (url, info, sessionId, output) => {
+                    action: (url, info, sessionID, output) => {
 
                         try {
                             return jsonUtil.serialize(modConfig);
@@ -199,20 +203,20 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             }, { frequency: "Always" });
         }
 
-        if (modConfig.airdrop_changes == true) {
-            const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
-            const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-            const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
-            const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-            const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
+        // if (modConfig.airdrop_changes == true) {
+        //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
+        //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
+        //     const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
+        //     const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+        //     const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+        //     const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
 
-            container.afterResolution("LocationController", (_t, result: LocationController) => {
-                result.getAirdropLoot = (): IAirdropLootResult => {
-                    return airdropController.myGetAirdropLoot();
-                }
-            }, { frequency: "Always" });
-        }
+        //     container.afterResolution("LocationController", (_t, result: LocationController) => {
+        //         result.getAirdropLoot = (): IAirdropLootResult => {
+        //             return airdropController.myGetAirdropLoot();
+        //         }
+        //     }, { frequency: "Always" });
+        // }
 
         staticRouterModService.registerStaticRouter(
             "CheckProfile",
@@ -392,6 +396,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
+                            const localisationService = container.resolve<LocalisationService>("LocalisationService");
+                            const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+                            const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
+                            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new Arrays(postLoadTables);
@@ -400,6 +408,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
 
+                            const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                            myGetLootCache.myClearCache();
+    
                             const time = weatherController.generate().time; //apparently regenerates weather?
                             // const time = weatherController.getCurrentInRaidTime; //better way?
                             // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
@@ -490,6 +501,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const postLoadTables = postLoadDBServer.getTables();
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
+                        const localisationService = container.resolve<LocalisationService>("LocalisationService");
+                        const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+                        const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
+                        const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
@@ -499,14 +514,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID)
 
-                        const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-                        const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
-                        logger.warning("============== " + matchInfo.keyId);
-
+                        const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                        myGetLootCache.myClearCache();
 
                         //update global player level
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
-
                         try {
 
                             if (modConfig.tiered_flea == true) {
@@ -629,7 +641,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Spawns(logger, tables, modConfig, tables.locations);
-        const gear = new Gear(arrays, tables, logger);
+        const gear = new Gear(arrays, tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
         const jsonHand = new JsonHandler(tables, logger);
@@ -639,6 +651,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         // jsonGen.ammoTemplatesCodeGen();
 
         // this.dllChecker(logger, modConfig);
+
+        gear.loadMaskChanges();
+        gear.loadSpecialSlotChanges();
 
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
@@ -653,21 +668,15 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.setBotHealth();
         }
 
-        if (modConfig.headgear_conflicts == true) {
-            gear.loadGearConflicts();
-        }
-
         if (modConfig.open_zones_fix == true && !ModTracker.swagPresent) {
             maps.openZonesFix();
         }
 
-        if (!ModTracker.qtbPresent && !ModTracker.swagPresent) {
-            maps.loadSpawnChanges();
-        }
+        maps.loadSpawnChanges();
 
-        if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdrops();
-        }
+        // if (modConfig.airdrop_changes == true) {
+        //     airdrop.loadAirdropChanges();
+        // }
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             bots.loadBots();
@@ -688,7 +697,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             bots.botNames();
         }
 
-        if (ModTracker.swagPresent == false && (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween)) {
+        if (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween) {
             bots.forceBossSpawns();
         }
 
@@ -729,10 +738,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         //traders
         traders.loadTraderTweaks();
-
-        if (modConfig.change_trader_ll == true) {
-            traders.setLoyaltyLevels();
-        }
+        traders.setBaseOfferValues();
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }
@@ -749,14 +755,16 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
 
+        //have to run this async to ensure correct load order
         (async () => {
-            await jsonHand.processUserJsonFiles();
-
             if (modConfig.recoil_attachment_overhaul) {
                 jsonHand.pushModsToServer();
                 jsonHand.pushWeaponsToServer();
             }
             jsonHand.pushGearToServer();
+            
+            await jsonHand.processUserJsonFiles();
+
             descGen.descriptionGen();
 
             if (modConfig.realistic_ballistics == true) {
@@ -854,10 +862,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     private checkForMods(preAkiModLoader: PreAkiModLoader, logger: ILogger, modConf: any) {
         const activeMods = preAkiModLoader.getImportedModDetails();
         for (const modname in activeMods) {
-            if (modname.includes("Jiro-BatterySystem")) {
-                ModTracker.batteryModPresent = true;
-                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
-            }
+            // if (modname.includes("Jiro-BatterySystem")) {
+            //     ModTracker.batteryModPresent = true;
+            //     logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
+            // }
             if (modname.includes("Solarint-SAIN-ServerMod")) {
                 ModTracker.sainPresent = true;
                 logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor.GREEN);
@@ -869,6 +877,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             if (modname.includes("SWAG")) {
                 ModTracker.swagPresent = true;
                 logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor.GREEN);
+            }
+            if (modname.includes("TacticalGearComponent")) {
+                ModTracker.tgcPresent = true;
+                logger.logWithColor("Realism: TGC Detected, Making Adjustments", LogTextColor.GREEN);
             }
             if (modname.includes("AlgorithmicLevelProgression")) {
                 ModTracker.alpPresent = true;

@@ -111,7 +111,7 @@ export class Utils {
     }
 
     public pickRandNumOneInTen(): number {
-        return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+        return Math.floor(Math.random() * 10);
     }
 
     public writeConfigJSON(data: any, filePath: string) {
@@ -140,6 +140,7 @@ export class ModTracker{
     static batteryModPresent: boolean = false;
     static sainPresent: boolean = false;
     static swagPresent: boolean = false;
+    static tgcPresent: boolean = false;
     static qtbPresent: boolean = false;
     static alpPresent: boolean = false;
 }

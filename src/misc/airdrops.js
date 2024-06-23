@@ -16,7 +16,7 @@ class Airdrops {
         this.modConfig = modConfig;
         this.airConf = airConf;
     }
-    loadAirdrops() {
+    loadAirdropChanges() {
         this.airConf.airdropChancePercent.bigmap = 10;
         this.airConf.airdropChancePercent.woods = 15;
         this.airConf.airdropChancePercent.lighthouse = 15;

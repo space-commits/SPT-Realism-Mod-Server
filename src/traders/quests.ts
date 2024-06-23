@@ -33,8 +33,7 @@ export class Quests {
 
     public fixMechancicQuests() {
         for (let i in this.questDB()) {
-
-            if (!this.questDB()[i].QuestName.includes("Gunsmith")) continue;
+            if (!this.questDB()[i].type.toLowerCase().includes("weaponassembly")) continue;
             let quest = this.questDB()[i];
             if (!quest?.conditions?.AvailableForFinish) continue;
             for(let j in quest.conditions.AvailableForFinish){

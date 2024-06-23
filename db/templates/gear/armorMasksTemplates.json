@@ -1,4 +1,49 @@
 {
+    "62a09e08de7ac81993580532": {
+        "ItemID": "62a09e08de7ac81993580532",
+        "Name": "item_equipment_facecover_glorious",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "ReloadSpeedMulti": 1,
+        "BlocksMouth": true,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "MaskToUse": "atomic",
+        "TemplateType": "gear"
+    },
+    "6570aead4d84f81fd002a033": {
+        "ItemID": "6570aead4d84f81fd002a033",
+        "Name": "item_equipment_death_mask",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "Unclassified",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "BlocksMouth": true,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "MaskToUse": "atomic",
+        "TemplateType": "gear"
+    },
+    "657089638db3adca1009f4ca": {
+        "ItemID": "657089638db3adca1009f4ca",
+        "Name": "item_equipment_atomic",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ArmorClass": "NIJ IIIA",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "BlocksMouth": true,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "MaskToUse": "atomic",
+        "TemplateType": "gear"
+    },
     "5b432b2f5acfc4771e1c6622": {
         "ItemID": "5b432b2f5acfc4771e1c6622",
         "Name": "item_equipment_facecover_shatteredmask",
@@ -11,7 +56,9 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "MaskToUse": "atomic",
+        "TemplateType": "gear"
     },
     "603409c80ca681766b6a0fb2": {
         "ItemID": "603409c80ca681766b6a0fb2",
@@ -25,11 +72,27 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "5b432be65acfc433000ed01f": {
         "ItemID": "5b432be65acfc433000ed01f",
         "Name": "tactical_glass",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "Anti-Shatter Resistance V50 ≥ 350 m/s",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1,
+        "Price": 0,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
+    "59e770b986f7742cbd762754": {
+        "ItemID": "59e770b986f7742cbd762754",
+        "Name": "item_equipment_glasses_6B34",
         "AllowADS": true,
         "LoyaltyLevel": 1,
         "ArmorClass": "Unclassified",
@@ -39,21 +102,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
-    },
-    "59e770b986f7742cbd762754": {
-        "ItemID": "59e770b986f7742cbd762754",
-        "Name": "item_equipment_glasses_6B34",
-        "AllowADS": true,
-        "LoyaltyLevel": 3,
-        "ArmorClass": "Anti-Shatter Resistance V50 ≥ 250 m/s",
-        "CanSpall": false,
-        "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "5c1a1cc52e221602b3136e3d": {
         "ItemID": "5c1a1cc52e221602b3136e3d",
@@ -67,7 +117,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "62a61c988ec41a51b34758d5": {
         "ItemID": "62a61c988ec41a51b34758d5",
@@ -81,7 +132,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "5c0d32fcd174af02a1659c75": {
         "ItemID": "5c0d32fcd174af02a1659c75",
@@ -95,7 +147,8 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     },
     "5d5fca1ea4b93635fd598c07": {
         "ItemID": "5d5fca1ea4b93635fd598c07",
@@ -109,6 +162,7 @@
         "Price": 0,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     }
 }

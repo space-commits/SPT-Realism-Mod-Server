@@ -2,7 +2,7 @@
     "5e81c539cb2b95385c177553": {
         "ItemID": "5e81c539cb2b95385c177553",
         "Name": "catch_m1911_colt_m1911a1_std",
-        "ModType": "slide_release",
+        "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
@@ -25,7 +25,7 @@
     "5f3e777688ca2d00ad199d25": {
         "ItemID": "5f3e777688ca2d00ad199d25",
         "Name": "catch_m1911_colt_m45a1_std",
-        "ModType": "slide_release",
+        "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,
@@ -48,7 +48,7 @@
     "5ef3553c43cb350a955a7ccb": {
         "ItemID": "5ef3553c43cb350a955a7ccb",
         "Name": "catch_m1911_wilson_extended_slide_stop",
-        "ModType": "slide_release",
+        "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,

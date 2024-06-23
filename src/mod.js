@@ -53,6 +53,7 @@ const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
 const path = __importStar(require("path"));
 const fs = __importStar(require("fs"));
+const bot_loot_serv_1 = require("./bots/bot_loot_serv");
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -95,7 +96,7 @@ class Main {
         router.registerDynamicRouter("loadResources", [
             {
                 url: "/RealismMod/GetInfo",
-                action: (url, info, sessionId, output) => {
+                action: (url, info, sessionID, output) => {
                     try {
                         return jsonUtil.serialize(modConfig);
                     }
@@ -141,19 +142,19 @@ class Main {
                 };
             }, { frequency: "Always" });
         }
-        if (modConfig.airdrop_changes == true) {
-            const locationGenerator = container.resolve("LocationGenerator");
-            const lootGenerator = container.resolve("LootGenerator");
-            const raidTimeAdjustmentService = container.resolve("RaidTimeAdjustmentService");
-            const appContext = container.resolve("ApplicationContext");
-            const itemFilterService = container.resolve("ItemFilterService");
-            const airdropController = new airdrops_1.AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext);
-            container.afterResolution("LocationController", (_t, result) => {
-                result.getAirdropLoot = () => {
-                    return airdropController.myGetAirdropLoot();
-                };
-            }, { frequency: "Always" });
-        }
+        // if (modConfig.airdrop_changes == true) {
+        //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
+        //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
+        //     const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
+        //     const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+        //     const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+        //     const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
+        //     container.afterResolution("LocationController", (_t, result: LocationController) => {
+        //         result.getAirdropLoot = (): IAirdropLootResult => {
+        //             return airdropController.myGetAirdropLoot();
+        //         }
+        //     }, { frequency: "Always" });
+        // }
         staticRouterModService.registerStaticRouter("CheckProfile", [
             {
                 url: "/client/game/version/validate",
@@ -292,6 +293,10 @@ class Main {
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
+                        const localisationService = container.resolve("LocalisationService");
+                        const ragfairPriceService = container.resolve("RagfairPriceService");
+                        const pmcLootGenerator = container.resolve("PMCLootGenerator");
+                        const itemHelper = container.resolve("ItemHelper");
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.Arrays(postLoadTables);
@@ -299,6 +304,8 @@ class Main {
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
+                        const myGetLootCache = new bot_loot_serv_1.MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                        myGetLootCache.myClearCache();
                         const time = weatherController.generate().time; //apparently regenerates weather?
                         // const time = weatherController.getCurrentInRaidTime; //better way?
                         // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
@@ -374,6 +381,10 @@ class Main {
                     const postLoadTables = postLoadDBServer.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
+                    const localisationService = container.resolve("LocalisationService");
+                    const ragfairPriceService = container.resolve("RagfairPriceService");
+                    const pmcLootGenerator = container.resolve("PMCLootGenerator");
+                    const itemHelper = container.resolve("ItemHelper");
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
@@ -382,9 +393,8 @@ class Main {
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
-                    const appContext = container.resolve("ApplicationContext");
-                    const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
-                    logger.warning("============== " + matchInfo.keyId);
+                    const myGetLootCache = new bot_loot_serv_1.MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                    myGetLootCache.myClearCache();
                     //update global player level
                     this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                     try {
@@ -487,7 +497,7 @@ class Main {
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations);
-        const gear = new gear_1.Gear(arrays, tables, logger);
+        const gear = new gear_1.Gear(arrays, tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
         const jsonHand = new json_handler_1.JsonHandler(tables, logger);
@@ -496,6 +506,8 @@ class Main {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
+        gear.loadMaskChanges();
+        gear.loadSpecialSlotChanges();
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
@@ -507,18 +519,13 @@ class Main {
             itemCloning.createCustomPlates();
             bots.setBotHealth();
         }
-        if (modConfig.headgear_conflicts == true) {
-            gear.loadGearConflicts();
-        }
         if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
             maps.openZonesFix();
         }
-        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
-            maps.loadSpawnChanges();
-        }
-        if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdrops();
-        }
+        maps.loadSpawnChanges();
+        // if (modConfig.airdrop_changes == true) {
+        //     airdrop.loadAirdropChanges();
+        // }
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }
@@ -535,7 +542,7 @@ class Main {
         if (modConfig.bot_names == true) {
             bots.botNames();
         }
-        if (utils_1.ModTracker.swagPresent == false && (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween)) {
+        if (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween) {
             bots.forceBossSpawns();
         }
         if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {
@@ -566,9 +573,7 @@ class Main {
         }
         //traders
         traders.loadTraderTweaks();
-        if (modConfig.change_trader_ll == true) {
-            traders.setLoyaltyLevels();
-        }
+        traders.setBaseOfferValues();
         if (modConfig.add_cust_trader_items == true) {
             traders.addItemsToAssorts();
         }
@@ -581,13 +586,14 @@ class Main {
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
+        //have to run this async to ensure correct load order
         (async () => {
-            await jsonHand.processUserJsonFiles();
             if (modConfig.recoil_attachment_overhaul) {
                 jsonHand.pushModsToServer();
                 jsonHand.pushWeaponsToServer();
             }
             jsonHand.pushGearToServer();
+            await jsonHand.processUserJsonFiles();
             descGen.descriptionGen();
             if (modConfig.realistic_ballistics == true) {
                 ammo.loadAmmoStats();
@@ -672,10 +678,10 @@ class Main {
     checkForMods(preAkiModLoader, logger, modConf) {
         const activeMods = preAkiModLoader.getImportedModDetails();
         for (const modname in activeMods) {
-            if (modname.includes("Jiro-BatterySystem")) {
-                utils_1.ModTracker.batteryModPresent = true;
-                logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
-            }
+            // if (modname.includes("Jiro-BatterySystem")) {
+            //     ModTracker.batteryModPresent = true;
+            //     logger.logWithColor("Realism: Jiro Battery Mod Detected, Making Adjustments", LogTextColor.GREEN);
+            // }
             if (modname.includes("Solarint-SAIN-ServerMod")) {
                 utils_1.ModTracker.sainPresent = true;
                 logger.logWithColor("Realism: SAIN Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
@@ -687,6 +693,10 @@ class Main {
             if (modname.includes("SWAG")) {
                 utils_1.ModTracker.swagPresent = true;
                 logger.logWithColor("Realism: SWAG Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
+            }
+            if (modname.includes("TacticalGearComponent")) {
+                utils_1.ModTracker.tgcPresent = true;
+                logger.logWithColor("Realism: TGC Detected, Making Adjustments", LogTextColor_1.LogTextColor.GREEN);
             }
             if (modname.includes("AlgorithmicLevelProgression")) {
                 utils_1.ModTracker.alpPresent = true;

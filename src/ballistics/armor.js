@@ -406,7 +406,7 @@ class Armor {
         ////////Plates//////////
         //Titanium NIJ III (BSG's bullshit)
         if (serverItem._id === "656fa25e94b480b8a500c0e0") {
-            serverItem._props.Durability = 100;
+            serverItem._props.Durability = 110;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 7;
             serverItem._props.BluntThroughput = 0.08;
@@ -417,7 +417,7 @@ class Armor {
         }
         //Titanium NIJ III+ (BSG's bullshit)
         if (serverItem._id === "656fa99800d62bcd2e024088") {
-            serverItem._props.Durability = 125;
+            serverItem._props.Durability = 130;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 8;
             serverItem._props.BluntThroughput = 0.08;
@@ -810,7 +810,7 @@ class Armor {
         if (serverItem._id === "5b432be65acfc433000ed01f") {
             serverItem._props.Durability = 30;
             serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 2;
+            serverItem._props.armorClass = 3;
             serverItem._props.BluntThroughput = 0.025;
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.armorColliders = ['Eyes'];
@@ -987,19 +987,6 @@ class Armor {
             serverItem._props.ArmorMaterial = 'Glass';
             serverItem._props.Weight = 1.15;
         }
-        //Novasteel/Neosteel Mandible
-        if (serverItem._id === "6570a88c8f221f3b210353b7") {
-            serverItem._props.Durability = 20 * duraModifier;
-            serverItem._props.MaxDurability = serverItem._props.Durability;
-            serverItem._props.armorClass = 4 + classModifier;
-            serverItem._props.speedPenaltyPercent = -1.2;
-            serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -14;
-            serverItem._props.BluntThroughput = 0.01 * bluntModifier;
-            serverItem._props.DeafStrength = "High";
-            serverItem._props.ArmorMaterial = 'ArmoredSteel';
-            serverItem._props.Weight = 1.2;
-        }
         //FAST Mandible
         if (serverItem._id === "5a16ba61fcdbcb098008728a") {
             serverItem._props.Durability = 40 * duraModifier;
@@ -1015,7 +1002,7 @@ class Armor {
         }
         //Altyn Visor
         if (serverItem._id === "5aa7e373e5b5b000137b76f0") {
-            serverItem._props.Durability = 35 * duraModifier;
+            serverItem._props.Durability = 38 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -1.4;
@@ -1028,7 +1015,7 @@ class Armor {
         }
         //Rys-T Visor
         if (serverItem._id === "5f60c85b58eff926626a60f7") {
-            serverItem._props.Durability = 30 * duraModifier;
+            serverItem._props.Durability = 33 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -1.2;
@@ -1079,6 +1066,19 @@ class Armor {
             serverItem._props.Weight = 0.172;
         }
         //// Class 5 ////
+        //Novasteel/Neosteel Mandible
+        if (serverItem._id === "6570a88c8f221f3b210353b7") {
+            serverItem._props.Durability = 30 * duraModifier;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 5 + classModifier;
+            serverItem._props.speedPenaltyPercent = -1.2;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -14;
+            serverItem._props.BluntThroughput = 0.01 * bluntModifier;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.Weight = 1.2;
+        }
         //Caiman Mandible
         if (serverItem._id === "5f60c076f2bcbb675b00dac2") {
             serverItem._props.Durability = 25 * duraModifier;
@@ -1132,7 +1132,7 @@ class Armor {
         }
         //Ops-Core Multi-Hit Visor
         if (serverItem._id === "5a16b7e1fcdbcb00165aa6c9") {
-            serverItem._props.Durability = 60 * duraModifier;
+            serverItem._props.Durability = 65 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -1.33;
@@ -1612,13 +1612,13 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -1.12;
+            serverItem._props.speedPenaltyPercent = -0.69;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.2;
             serverItem._props.BluntThroughput = 0.18 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
-            serverItem._props.Weight = 1.12;
+            serverItem._props.Weight = 0.69;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 55 * duraModifier, 4 + classModifier, serverItem._props.BluntThroughput, 'UHMWPE');
         }
         //TC-2001

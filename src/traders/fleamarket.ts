@@ -141,31 +141,31 @@ export class TieredFlea {
                 this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
                 logger.info("Realism mod: Fleamarket Locked At Tier 0");
             }
-            else if (level <= 10) {
+            else if (level < 10) {
                 this.fleaHelper(this.flea1.bind(this), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 1 Unlocked");
             }
-            else if (level <= 15) {
+            else if (level < 15) {
                 this.fleaHelper(this.flea2.bind(this), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 2 Unlocked");
             }
-            else if (level <= 20) {
+            else if (level < 20) {
                 this.fleaHelper(this.flea3.bind(this), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 3 Unlocked");
             }
-            else if (level <= 25) {
+            else if (level < 25) {
                 this.fleaHelper(this.flea4.bind(this), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 4 Unlocked");
             }
-            else if (level <= 30) {
+            else if (level < 30) {
                 this.fleaHelper(this.flea5.bind(this), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 5 Unlocked");
             }
-            else if (level <= 35) {
+            else if (level < 35) {
                 this.fleaHelper(this.flea6.bind(this), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 6 Unlocked");
             }
-            else if (level <= 40) {
+            else if (level < 40) {
                 this.fleaHelper(this.flea7.bind(this), ragfairOfferGen, container);
                 logger.info("Realism Mod: Fleamarket Tier 7 Unlocked");
             }
@@ -347,6 +347,7 @@ export class TieredFlea {
             this.canSellHelmParts(true, serverItem);
             this.canSellPlates(true, serverItem);
             this.canSellSMG(true, serverItem);
+            this.canSellDMR(true, serverItem)
             this.canSellMelee(true, serverItem);
             this.canSellHouseholdGoods(true, serverItem);
             this.canSellBuildingMats(true, serverItem);
