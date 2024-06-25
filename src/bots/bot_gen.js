@@ -776,7 +776,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
         }
         catch {
-            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, it is not a problem to report.`);
+            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, do not report this.`);
             this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
             let preset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {
@@ -861,7 +861,7 @@ class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
             };
         }
         if (itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7") {
-            itemProperties.Resource = { Value: Math.floor(Math.random() * 100), UnitsConsumed: 0 };
+            itemProperties.Resource = { Value: Math.floor(Math.random() * 61) + 35, UnitsConsumed: 0 };
         }
         if (itemTemplate._parent === BaseClasses_1.BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses_1.BaseClasses.TACTICAL_COMBO) {
             if ((parentWeaponClass === BaseClasses_1.BaseClasses.PISTOL && equipmentSlot.toLowerCase() === "holster") || equipmentSlot.toLowerCase() === "secondprimaryweapon") {

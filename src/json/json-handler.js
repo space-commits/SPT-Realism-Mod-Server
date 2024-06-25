@@ -143,20 +143,22 @@ class JsonHandler {
             if (serverItem._props?.Weight != undefined) {
                 serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : serverItem._props.Weight;
             }
-            if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
-                serverItem._props.FaceShieldComponent = true;
-                serverItem._props.FaceShieldMask = "NoMask";
-                serverItem._props.armorClass = 1;
-                serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
-            }
-            else if (fileItem?.MaskToUse !== undefined) {
-                if (fileItem.MaskToUse == "ronin") {
+            if (modConfig.enable_hazard_zones || modConfig.realistic_ballistics) {
+                if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
+                    serverItem._props.FaceShieldComponent = true;
                     serverItem._props.FaceShieldMask = "NoMask";
+                    serverItem._props.armorClass = 1;
+                    serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
                 }
-                else {
-                    serverItem._props.FaceShieldMask = "Narrow";
+                else if (fileItem?.MaskToUse !== undefined) {
+                    if (fileItem.MaskToUse == "ronin") {
+                        serverItem._props.FaceShieldMask = "NoMask";
+                    }
+                    else {
+                        serverItem._props.FaceShieldMask = "Narrow";
+                    }
+                    serverItem._props.FaceShieldComponent = true;
                 }
-                serverItem._props.FaceShieldComponent = true;
             }
             if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
                 return;

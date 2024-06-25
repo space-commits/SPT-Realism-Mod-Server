@@ -657,9 +657,6 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             gear.loadSpecialSlotChanges();
 			gear.addSlotsToGasMasks();
         }
-        if(modConfig.enable_hazard_zones || modConfig.realistic_ballistics){
-            gear.loadMaskChanges();
-        }
  
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();

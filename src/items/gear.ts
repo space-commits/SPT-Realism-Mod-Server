@@ -12,37 +12,6 @@ export class Gear {
         return this.tables.templates.items;
     }
 
-    public loadMaskChanges() {
-
-        //GP-5
-        this.itemDB()["5b432c305acfc40019478128"]._props.FaceShieldComponent = true;
-        this.itemDB()["5b432c305acfc40019478128"]._props.FaceShieldMask = "NoMask";
-
-        //GP-7
-        this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldComponent = true;
-        this.itemDB()["60363c0c92ec1c31037959f5"]._props.FaceShieldMask = "NoMask";
-
-        //Ronin
-        this.itemDB()["5b4329f05acfc47a86086aa1"]._props.FaceShieldComponent = true;
-        this.itemDB()["5b4329f05acfc47a86086aa1"]._props.FaceShieldMask = "NoMask";
-
-        //Atomic
-        this.itemDB()["657089638db3adca1009f4ca"]._props.FaceShieldComponent = true;
-        this.itemDB()["657089638db3adca1009f4ca"]._props.FaceShieldMask = "Narrow";
-
-        //Glorious
-        this.itemDB()["62a09e08de7ac81993580532"]._props.FaceShieldComponent = true;
-        this.itemDB()["62a09e08de7ac81993580532"]._props.FaceShieldMask = "Narrow";
-
-        //Shattered
-        this.itemDB()["5b432b2f5acfc4771e1c6622"]._props.FaceShieldComponent = true;
-        this.itemDB()["5b432b2f5acfc4771e1c6622"]._props.FaceShieldMask = "Narrow";
-
-        //Death
-        this.itemDB()["6570aead4d84f81fd002a033"]._props.FaceShieldComponent = true;
-        this.itemDB()["6570aead4d84f81fd002a033"]._props.FaceShieldMask = "Narrow";
-    }
-
     public addSlotsToGasMasks(){
 
         //gas mask filter
