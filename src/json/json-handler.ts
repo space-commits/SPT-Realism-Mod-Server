@@ -52,7 +52,7 @@ const SniperRifleTemplates = require("../../db/templates/weapons/SniperRifleTemp
 const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
 
-export class JsonHandler {
+export class ItemStatHandler {
     constructor(private tables: IDatabaseTables, private logger: ILogger) {
         this.gearPusherHelper = this.gearPusherHelper.bind(this);
         this.ammoPusherHelper = this.ammoPusherHelper.bind(this);
@@ -120,6 +120,29 @@ export class JsonHandler {
         }
     }
 
+    private addGasFilterSlot(item: ITemplateItem) {
+        item._props.Slots.push(
+            {
+                "_name": "mod_equipment",
+                "_id": "6679dbe64276cec33ee8ff85",
+                "_parent": item._id,
+                "_props": {
+                    "filters": [
+                        {
+                            "Shift": 0,
+                            "Filter": [
+                                "590c595c86f7747884343ad7"
+                            ]
+                        }
+                    ]
+                },
+                "_required": false,
+                "_mergeSlotWithChildren": false,
+                "_proto": "55d30c4c4bdc2db4468b457e"
+            }
+        );
+    }
+
     private gearPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>) {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
@@ -169,6 +192,9 @@ export class JsonHandler {
                     serverItem._props.FaceShieldMask = "NoMask";
                     serverItem._props.armorClass = 1;
                     serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
+                    serverItem._props.MaxDurability = 50;
+                    serverItem._props.Durability = serverItem._props.MaxDurability;
+                    this.addGasFilterSlot(serverItem);
                 }
                 else if (fileItem?.MaskToUse !== undefined) {
                     if (fileItem.MaskToUse == "ronin") {

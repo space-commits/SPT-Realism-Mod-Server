@@ -86,7 +86,7 @@ import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
 import { DescriptionGen } from "./json/description_gen";
-import { JsonHandler } from "./json/json-handler";
+import { ItemStatHandler } from "./json/json-handler";
 import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
 
@@ -644,7 +644,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const gear = new Gear(arrays, tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
-        const jsonHand = new JsonHandler(tables, logger);
+        const jsonHand = new ItemStatHandler(tables, logger);
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
@@ -655,7 +655,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         if(modConfig.enable_hazard_zones){
             gear.loadSpecialSlotChanges();
-			gear.addSlotsToGasMasks();
+			gear.addResourceToGasMaskFilters();
         }
  
         if (modConfig.recoil_attachment_overhaul == true) {

@@ -500,7 +500,7 @@ class Main {
         const gear = new gear_1.Gear(arrays, tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
-        const jsonHand = new json_handler_1.JsonHandler(tables, logger);
+        const jsonHand = new json_handler_1.ItemStatHandler(tables, logger);
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
@@ -508,7 +508,7 @@ class Main {
         // this.dllChecker(logger, modConfig);
         if (modConfig.enable_hazard_zones) {
             gear.loadSpecialSlotChanges();
-            gear.addSlotsToGasMasks();
+            gear.addResourceToGasMaskFilters();
         }
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();

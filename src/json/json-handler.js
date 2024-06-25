@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonHandler = void 0;
+exports.ItemStatHandler = void 0;
 const enums_1 = require("../utils/enums");
 const utils_1 = require("../utils/utils");
 const fs = require('fs');
@@ -46,7 +46,7 @@ const SMGTemplates = require("../../db/templates/weapons/SMGTemplates.json");
 const SniperRifleTemplates = require("../../db/templates/weapons/SniperRifleTemplates.json");
 const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
-class JsonHandler {
+class ItemStatHandler {
     tables;
     logger;
     constructor(tables, logger) {
@@ -111,6 +111,26 @@ class JsonHandler {
             funPusherHelper(fileItem, serverTemplates);
         }
     }
+    addGasFilterSlot(item) {
+        item._props.Slots.push({
+            "_name": "mod_equipment",
+            "_id": "6679dbe64276cec33ee8ff85",
+            "_parent": item._id,
+            "_props": {
+                "filters": [
+                    {
+                        "Shift": 0,
+                        "Filter": [
+                            "590c595c86f7747884343ad7"
+                        ]
+                    }
+                ]
+            },
+            "_required": false,
+            "_mergeSlotWithChildren": false,
+            "_proto": "55d30c4c4bdc2db4468b457e"
+        });
+    }
     gearPusherHelper(fileItem, serverTemplates) {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
@@ -149,6 +169,9 @@ class JsonHandler {
                     serverItem._props.FaceShieldMask = "NoMask";
                     serverItem._props.armorClass = 1;
                     serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
+                    serverItem._props.MaxDurability = 50;
+                    serverItem._props.Durability = serverItem._props.MaxDurability;
+                    this.addGasFilterSlot(serverItem);
                 }
                 else if (fileItem?.MaskToUse !== undefined) {
                     if (fileItem.MaskToUse == "ronin") {
@@ -325,5 +348,5 @@ class JsonHandler {
         }
     }
 }
-exports.JsonHandler = JsonHandler;
+exports.ItemStatHandler = ItemStatHandler;
 //# sourceMappingURL=json-handler.js.map
