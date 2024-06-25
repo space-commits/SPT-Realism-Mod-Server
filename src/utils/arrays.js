@@ -283,6 +283,13 @@ class Arrays {
         "5c11046cd174af02a012e42b",
         "5a16b8a9fcdbcb00165aa6ca"
     ];
+    gasMasks = [
+        "CCG_GAS_MASK_GP9",
+        "CCG_GAS_MASK_MCU2P",
+        "CCG_GAS_MASK_SGE400",
+        "5b432c305acfc40019478128",
+        "60363c0c92ec1c31037959f5"
+    ];
     confMaskOverlays = [
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",

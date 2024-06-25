@@ -43,6 +43,38 @@ export class Gear {
         this.itemDB()["6570aead4d84f81fd002a033"]._props.FaceShieldMask = "Narrow";
     }
 
+    public addSlotsToGasMasks(){
+
+        //gas mask filter
+        this.itemDB()["590c595c86f7747884343ad7"]._props.MaxResource = 100;
+        this.itemDB()["590c595c86f7747884343ad7"]._props.Resource = 100;
+
+        this.arrays.gasMasks.forEach(g => {
+            if(this.itemDB()[g]){
+                this.itemDB()[g]._props.Slots.push(
+                    {
+                        "_name": "mod_equipment",
+                        "_id": "6679dbe64276cec33ee8ff85",
+                        "_parent": g,
+                        "_props": {
+                            "filters": [
+                                {
+                                    "Shift": 0,
+                                    "Filter": [
+                                        "590c595c86f7747884343ad7"
+                                    ]
+                                }
+                            ]
+                        },
+                        "_required": false,
+                        "_mergeSlotWithChildren": false,
+                        "_proto": "55d30c4c4bdc2db4468b457e"
+                    }
+                ); 
+            }
+        });
+    }
+
     public loadSpecialSlotChanges() {
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");

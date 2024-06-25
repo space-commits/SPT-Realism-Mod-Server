@@ -697,7 +697,8 @@ export class BotInvGen extends BotInventoryGenerator {
                     settings,
                     false,
                     botRole,
-                    pmcTier
+                    pmcTier,
+                    myBotGenHelper
                 );
                 settings.inventory.items.push(...items);
             }
@@ -1108,6 +1109,10 @@ export class BotGenHelper extends BotGeneratorHelper {
             };
         }
 
+        if(itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7"){
+            itemProperties.Resource = { Value: Math.floor(Math.random() * 61) + 35, UnitsConsumed: 0};
+        }
+
         if (itemTemplate._parent === BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses.TACTICAL_COMBO) {
             if ((parentWeaponClass === BaseClasses.PISTOL && equipmentSlot.toLowerCase() === "holster") || equipmentSlot.toLowerCase() === "secondprimaryweapon") {
                 // stops pistols in holster having lights on
@@ -1234,7 +1239,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         return result;
     }
 
-    public myGenerateModsForEquipment(equipment: Item[], parentId: string, parentTemplate: ITemplateItem, settings: IGenerateEquipmentProperties, shouldForceSpawn = false, botRole: string, pmcTier: number): Item[] {
+    public myGenerateModsForEquipment(equipment: Item[], parentId: string, parentTemplate: ITemplateItem, settings: IGenerateEquipmentProperties, shouldForceSpawn = false, botRole: string, pmcTier: number, botGenHelper: BotGenHelper): Item[] {
         let forceSpawn = shouldForceSpawn;
 
         const compatibleModsPool = settings.modPool[parentTemplate._id];
@@ -1264,6 +1269,12 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
                 settings.spawnChances.equipmentMods,
                 settings.botEquipmentConfig,
             );
+
+            //if the gear takes a gas mask filter, it's a gas mask, force spawn
+            if (compatibleModsPool[modSlotName].includes("590c595c86f7747884343ad7")) {
+                forceSpawn = true;
+            }
+
             if (modSpawnResult === ModSpawn.SKIP && !forceSpawn) {
                 continue;
             }
@@ -1340,12 +1351,19 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
 
             // Generate new id to ensure all items are unique on bot
             const modId = this.hashUtil.generate();
-            equipment.push(this.createModItem(modId, modTpl, parentId, modSlotName, modTemplate[1], settings.botRole));
+            let newItem = {
+                _id: modId,
+                _tpl: modTpl,
+                parentId: parentId,
+                slotId: modSlotName,
+                ...botGenHelper.myGenerateExtraPropertiesForItem(modTemplate[1], settings.botRole), //need to call my version of genExtraProps
+            };
+            equipment.push(newItem);
 
             // Does the item being added have possible child mods?
             if (Object.keys(settings.modPool).includes(modTpl)) {
                 // Call self recursively with item being checkced item we just added to bot
-                this.myGenerateModsForEquipment(equipment, modId, modTemplate[1], settings, forceSpawn, botRole, pmcTier);
+                this.myGenerateModsForEquipment(equipment, modId, modTemplate[1], settings, forceSpawn, botRole, pmcTier, botGenHelper);
             }
         }
 
