@@ -4,7 +4,7 @@ import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
 import { EquipmentFilters, IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
 import { BotTierTracker, Utils, RaidInfoTracker, ModTracker } from "../utils/utils";
-import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
+import { IBotType, Inventory } from "@spt-aki/models/eft/common/tables/IBotType";
 import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
 import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
 import { ILocations } from "@spt-aki/models/spt/server/ILocations";
@@ -409,6 +409,18 @@ export class BotLoader {
             this.botConfPMC().isUsec = 100;
             this.logger.warning("All USEC");
         }
+    }
+
+    private pushGasMaskFilters(inventory: Inventory) {
+        this.arrays.gasMasks.forEach(g => {
+            if (!inventory.mods[g]) {
+                inventory.mods[g] = {
+                    "mod_equipment": [
+                        "590c595c86f7747884343ad7"
+                    ]
+                }
+            }
+        });
     }
 
     private setBotTier(pmcData, bots: BotLoader, helper: Utils) {
@@ -869,6 +881,10 @@ export class BotLoader {
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.scavBase.inventory);
+        }
+
         BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad1 loaded");
@@ -911,6 +927,10 @@ export class BotLoader {
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.scavBase.inventory);
+        }
+
         BotTierTracker.scavTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad2 loaded");
@@ -951,6 +971,10 @@ export class BotLoader {
             this.scavBase.generation.items.pocketLoot.weights = lootOdds.dynamic_scav.items.pocketLoot.weights;
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.scavBase.inventory);
         }
 
         BotTierTracker.scavTier = 3;
@@ -1017,7 +1041,7 @@ export class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1025,6 +1049,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1099,7 +1127,7 @@ export class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1107,6 +1135,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1190,7 +1222,7 @@ export class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1198,6 +1230,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1275,7 +1311,7 @@ export class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1283,6 +1319,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = usecLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1385,7 +1425,7 @@ export class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
@@ -1393,6 +1433,10 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1466,7 +1510,7 @@ export class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
@@ -1474,6 +1518,10 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1551,7 +1599,7 @@ export class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1559,6 +1607,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1634,7 +1686,7 @@ export class BotLoader {
             botJsonTemplate.generation.items.food.weights = lootOdds.dynamic.items.food.weights;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1642,6 +1694,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = bearLO.FaceCoverLabs;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -1727,7 +1783,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5LO.tier5LO.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1736,6 +1792,11 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(botJsonTemplate.inventory);
+        }
+
     }
 
     public raiderLoad1() {
@@ -1800,7 +1861,7 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" 
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
             || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
             || RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
@@ -1811,11 +1872,16 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.Eyewear = {};
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.raiderBase.inventory);
+        }
+
         BotTierTracker.raiderTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("raiderLoad1 loaded");
         }
     }
+    
     public raiderLoad2() {
 
         let tier2Json = JSON.parse(JSON.stringify(raiderLO.raiderLO2));
@@ -1878,7 +1944,7 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" 
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
             || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
             || RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
@@ -1887,6 +1953,10 @@ export class BotLoader {
             this.raiderBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.raiderBase.inventory.equipment.Eyewear = {};
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.raiderBase.inventory);
         }
 
         BotTierTracker.raiderTier = 2;
@@ -1957,7 +2027,7 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase" 
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
             || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
             || RaidInfoTracker.mapName === "factory4_day") {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
@@ -1968,6 +2038,10 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.Eyewear = {};
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.raiderBase.inventory);
+        }
+        
         BotTierTracker.raiderTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("raiderLoad3 loaded");
@@ -2017,6 +2091,10 @@ export class BotLoader {
             }
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.rogueBase.inventory);
+        }
+        
         BotTierTracker.rogueTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("rogueLoad1 loaded");
@@ -2064,6 +2142,10 @@ export class BotLoader {
                 this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 30;
                 this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 0;
             }
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.rogueBase.inventory);
         }
 
         BotTierTracker.rogueTier = 2;
@@ -2115,6 +2197,10 @@ export class BotLoader {
             }
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.rogueBase.inventory);
+        }
+        
         BotTierTracker.rogueTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("rogueLoad3 loaded");
@@ -2310,6 +2396,12 @@ export class BotLoader {
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.rogueBase.inventory);
+            this.pushGasMaskFilters(this.bigpipeBase.inventory);
+            this.pushGasMaskFilters(this.knightBase.inventory);
+        }
+        
         BotTierTracker.goonsTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("goonsLoad1 loaded");
@@ -2504,6 +2596,11 @@ export class BotLoader {
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.rogueBase.inventory);
+            this.pushGasMaskFilters(this.bigpipeBase.inventory);
+            this.pushGasMaskFilters(this.knightBase.inventory);
+        }
 
         BotTierTracker.goonsTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -2704,6 +2801,12 @@ export class BotLoader {
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.rogueBase.inventory);
+            this.pushGasMaskFilters(this.bigpipeBase.inventory);
+            this.pushGasMaskFilters(this.knightBase.inventory);
+        }
+
         BotTierTracker.goonsTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("goonsLoad3 loaded");
@@ -2735,13 +2838,17 @@ export class BotLoader {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.killaBase.chances.equipmentMods.mod_equipment = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.killaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.killaBase.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.killaBase.inventory);
         }
 
         BotTierTracker.killaTier = 1;
@@ -2775,13 +2882,17 @@ export class BotLoader {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.killaBase.chances.equipmentMods.mod_equipment = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_002 = 0;
             this.killaBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 }
             this.killaBase.chances.equipment.FaceCover = 100;
+        }
+
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.killaBase.inventory);
         }
 
         BotTierTracker.killaTier = 2;
@@ -2815,7 +2926,7 @@ export class BotLoader {
             this.botConf().equipment["bosskilla"].lightIsActiveDayChancePercent = 100;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.killaBase.chances.equipmentMods.mod_equipment = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.killaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2824,6 +2935,10 @@ export class BotLoader {
             this.killaBase.chances.equipment.FaceCover = 100;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.killaBase.inventory);
+        }
+        
         BotTierTracker.killaTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("killaLoad3 loaded");
@@ -2876,7 +2991,7 @@ export class BotLoader {
             this.botConf().equipment["bosstagilla"].lightIsActiveDayChancePercent = 100;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.tagillaBase.chances.equipmentMods.mod_equipment = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2885,6 +3000,10 @@ export class BotLoader {
             this.tagillaBase.chances.equipment.FaceCover = 100;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.tagillaBase.inventory);
+        }
+        
         BotTierTracker.tagillaTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("tagillaLoad1 loaded");
@@ -2934,7 +3053,7 @@ export class BotLoader {
             this.botConf().equipment["bosstagilla"].lightIsActiveDayChancePercent = 100;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.tagillaBase.chances.equipmentMods.mod_equipment = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2943,6 +3062,10 @@ export class BotLoader {
             this.tagillaBase.chances.equipment.FaceCover = 100;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.tagillaBase.inventory);
+        }
+        
         BotTierTracker.tagillaTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("tagillaLoad2 loaded");
@@ -2992,7 +3115,7 @@ export class BotLoader {
             this.botConf().equipment["bosstagilla"].lightIsActiveDayChancePercent = 100;
         }
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.tagillaBase.chances.equipmentMods.mod_equipment = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.tagillaBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -3001,6 +3124,10 @@ export class BotLoader {
             this.tagillaBase.chances.equipment.FaceCover = 100;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.tagillaBase.inventory);
+        }
+        
         BotTierTracker.tagillaTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("tagillaLoad3 loaded");
@@ -3050,7 +3177,7 @@ export class BotLoader {
 
         this.botConf().equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.saniBase.chances.equipmentMods.mod_equipment = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -3071,6 +3198,11 @@ export class BotLoader {
             this.saniFollowerBase.chances.equipment.FaceCover = 100;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.saniFollowerBase.inventory);
+            this.pushGasMaskFilters(this.saniBase.inventory);
+        }
+        
         BotTierTracker.sanitarTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("saintarLoad1 loaded");
@@ -3120,7 +3252,7 @@ export class BotLoader {
 
         this.botConf().equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.saniBase.chances.equipmentMods.mod_equipment = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -3141,6 +3273,11 @@ export class BotLoader {
             this.saniFollowerBase.chances.equipment.FaceCover = 100;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.saniFollowerBase.inventory);
+            this.pushGasMaskFilters(this.saniBase.inventory);
+        }
+        
         BotTierTracker.sanitarTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("saintarLoad2 loaded");
@@ -3190,7 +3327,7 @@ export class BotLoader {
 
         this.botConf().equipment["followersanitar"].faceShieldIsActiveChancePercent = 100;
 
-        if (RaidInfoTracker.mapName === "laboratory") {
+        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory") {
             this.saniBase.chances.equipmentMods.mod_equipment = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.saniBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -3211,6 +3348,11 @@ export class BotLoader {
             this.saniFollowerBase.chances.equipment.FaceCover = 100;
         }
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.saniFollowerBase.inventory);
+            this.pushGasMaskFilters(this.saniBase.inventory);
+        }
+        
         BotTierTracker.sanitarTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("sanitarLoad3 loaded");
@@ -3260,6 +3402,11 @@ export class BotLoader {
 
         this.botConf().equipment["followerbully"].faceShieldIsActiveChancePercent = 100;
 
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.reshFollowerBase.inventory);
+            this.pushGasMaskFilters(this.reshBase.inventory);
+        }
+        
         BotTierTracker.reshallaTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("reshallaLoad1 loaded");
@@ -3308,8 +3455,11 @@ export class BotLoader {
             }
         }
 
-        this.botConf().equipment["followerbully"].faceShieldIsActiveChancePercent = 100;
-
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.reshFollowerBase.inventory);
+            this.pushGasMaskFilters(this.reshBase.inventory);
+        }
+        
         BotTierTracker.reshallaTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("reshallaLoad2 loaded");
@@ -3358,8 +3508,11 @@ export class BotLoader {
             }
         }
 
-        this.botConf().equipment["followerbully"].faceShieldIsActiveChancePercent = 100;
-
+        if (this.modConfig.enable_hazard_zones) {
+            this.pushGasMaskFilters(this.reshFollowerBase.inventory);
+            this.pushGasMaskFilters(this.reshBase.inventory);
+        }
+        
         BotTierTracker.reshallaTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("reshallaLoad3 loaded");

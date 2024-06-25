@@ -410,7 +410,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
                             const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                             myGetLootCache.myClearCache();
-    
+
                             const time = weatherController.generate().time; //apparently regenerates weather?
                             // const time = weatherController.getCurrentInRaidTime; //better way?
                             // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
@@ -652,6 +652,10 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         // this.dllChecker(logger, modConfig);
 
+        if (modConfig.enable_hazard_zones == true) {
+            gear.addSlotsToGasMasks();
+        }
+
         gear.loadMaskChanges();
         gear.loadSpecialSlotChanges();
 
@@ -762,7 +766,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 jsonHand.pushWeaponsToServer();
             }
             jsonHand.pushGearToServer();
-            
+
             await jsonHand.processUserJsonFiles();
 
             descGen.descriptionGen();

@@ -506,6 +506,9 @@ class Main {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
+        if (modConfig.enable_hazard_zones == true) {
+            gear.addSlotsToGasMasks();
+        }
         gear.loadMaskChanges();
         gear.loadSpecialSlotChanges();
         if (modConfig.recoil_attachment_overhaul == true) {
