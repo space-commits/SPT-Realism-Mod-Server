@@ -652,12 +652,15 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         // this.dllChecker(logger, modConfig);
 
-
-        if(modConfig.enable_hazard_zones){
-            gear.loadSpecialSlotChanges();
-			gear.addResourceToGasMaskFilters();
+        if (modConfig.enable_hazard_zones) {
+            quests.loadHazardQuests();
         }
- 
+
+        if (modConfig.enable_hazard_zones) {
+            gear.loadSpecialSlotChanges();
+            gear.addResourceToGasMaskFilters();
+        }
+
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();

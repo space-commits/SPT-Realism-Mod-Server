@@ -22,7 +22,6 @@ export class Gear {
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
         });
-
     }
 
     public loadGearConflicts() {
@@ -35,7 +34,6 @@ export class Gear {
 
         //remove certain helmets from GP7 conflicts
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems = this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems.filter(i => i !== "5e4bfc1586f774264f7582d3");
-
 
         for (let item in this.itemDB()) {
             let serverItem = this.itemDB()[item];

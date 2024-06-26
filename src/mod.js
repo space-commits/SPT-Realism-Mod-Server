@@ -507,6 +507,9 @@ class Main {
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
         if (modConfig.enable_hazard_zones) {
+            quests.loadHazardQuests();
+        }
+        if (modConfig.enable_hazard_zones) {
             gear.loadSpecialSlotChanges();
             gear.addResourceToGasMaskFilters();
         }
