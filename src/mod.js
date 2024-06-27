@@ -176,7 +176,9 @@ class Main {
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
-                    quests.resetHazardQuests(profileData);
+                    if (modConfig.enable_hazard_zones) {
+                        quests.resetHazardQuests(profileData);
+                    }
                     this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
                     try {
                         if (modConfig.backup_profiles == true) {

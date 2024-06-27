@@ -25,7 +25,7 @@ class Quests {
             locale["667c643869df8111b81cb6dc acceptPlayerMessage"] = "";
             locale["667c643869df8111b81cb6dc declinePlayerMessage"] = "";
             locale["667c643869df8111b81cb6dc completePlayerMessage"] = "";
-            locale["667c643869df8111b81cb6dc name"] = "Emergency Treatment Part - 1";
+            locale["667c643869df8111b81cb6dc name"] = "Emergency Treatment - Part 1";
             locale["667c643869df8111b81cb6dc description"] = "Come in, young man. I understand that you've been poking around where you shouldn't be. Don't you know that radiation is bad for your health? Listen, we're in a tight spot and don't have all the supplies needed to treat you and your...acquaintance?. You'll have to find them yourself. We won't be able to treat you again for some time, so be more cautious. Your treatment is free of charge, as a favor. One that will be repaid.";
             locale["667c643869df8111b81cb6dc failMessageText"] = "";
             locale["667c643869df8111b81cb6dc successMessageText"] = "That should be your last round of treatment. How do you feel? Better? It will take some time to heal. I hope you learned your lesson. Remember that I won't be able to treat you again for quite some time. Take this Geiger counter, it seems like you'll need this. You will repay me in time.";
@@ -43,10 +43,10 @@ class Quests {
             locale["667dbbc9c62a7c2ee8fe25b2 acceptPlayerMessage"] = "";
             locale["667dbbc9c62a7c2ee8fe25b2 declinePlayerMessage"] = "";
             locale["667dbbc9c62a7c2ee8fe25b2 completePlayerMessage"] = "";
-            locale["667dbbc9c62a7c2ee8fe25b2 name"] = "Emergency Treatment Part - 2";
-            locale["667dbbc9c62a7c2ee8fe25b2 description"] = "I see you didn't take my advice from the last time...no matter, we can treat you again. There's just that favor you owe me from the last time; I'll need you to bring in extra supplies for our humanitarian efforts. If you want us to treat that 'aquaintance' of yours again, you'll need to bring extra. He harrassed my staff, that cannot stand. Let's take a look...your veins...what have you doen to yourself? I'll need a LEDX to find where to stick the needle.";
+            locale["667dbbc9c62a7c2ee8fe25b2 name"] = "Emergency Treatment - Part 2";
+            locale["667dbbc9c62a7c2ee8fe25b2 description"] = "I see you didn't take my advice from the last time... no matter, we can treat you again. There's just that favor you owe me; I'll need you to bring in extra supplies for our humanitarian efforts. If you want us to treat that 'acquaintance' of yours again, you'll need to bring extra. He harassed my staff, that cannot stand. Let's take a look... your veins... what have you done to yourself? I'll need a LEDX to find where to stick the needle.";
             locale["667dbbc9c62a7c2ee8fe25b2 failMessageText"] = "";
-            locale["667dbbc9c62a7c2ee8fe25b2 successMessageText"] = "That concludes your treatment, come back with more supplies if you're thick headed enough to fall into a reactor again. Keep the LEDX, it's contaminated, bring it back with you if you need further treatment.";
+            locale["667dbbc9c62a7c2ee8fe25b2 successMessageText"] = "That concludes your treatment. Come back with more supplies if you're thick-headed enough to fall into a reactor again. Keep the LEDX; it's contaminated. Bring it back with you if you need further treatment.";
             locale["667dbd0f03f16a45c34872e6"] = "Find medical bloodsets";
             locale["667dbd121abe6984e4cfeb16"] = "Handover medical bloodesets";
             locale["667dbd1fd887653711b72b54"] = "Find portable defibrillator";
