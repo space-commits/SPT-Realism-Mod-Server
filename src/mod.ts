@@ -237,11 +237,16 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
+                        const quests = new Quests(logger, postLoadTables, modConfig);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
 
+                        if(modConfig.enable_hazard_zones){
+                            quests.resetHazardQuests(profileData);
+                        }
+         
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
 
                         try {

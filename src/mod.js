@@ -171,10 +171,12 @@ class Main {
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const maps = new maps_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
+                    const quests = new quests_1.Quests(logger, postLoadTables, modConfig);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
+                    quests.resetHazardQuests(profileData);
                     this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
                     try {
                         if (modConfig.backup_profiles == true) {
