@@ -154,11 +154,16 @@ export class BotLoader {
         this.botConf().playerScavBrainType = pmcTypes.playerScavBrainType;
         this.botConf().chanceAssaultScavHasPlayerScavName = 0;
 
+        if (this.modConfig.enable_hazard_zones == true) {
+            this.pushFiltersToAllBots();
+        }
+
         // for (let i in this.lootBlacklist()) {
         //     this.botConfPMC().vestLoot.blacklist.push(this.lootBlacklist()[i]);
         //     this.botConfPMC().pocketLoot.blacklist.push(this.lootBlacklist()[i]);
         //     this.botConfPMC().backpackLoot.blacklist.push(this.lootBlacklist()[i]);
         // }
+
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("Bots Loaded");
@@ -408,6 +413,21 @@ export class BotLoader {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance
             this.botConfPMC().isUsec = 100;
             this.logger.warning("All USEC");
+        }
+    }
+
+    public pushFiltersToAllBots() {
+        const bots = this.tables.bots.types;
+        for (let i in bots) {
+            this.arrays.gasMasks.forEach(g => {
+                if (!bots[i].inventory.mods[g]) {
+                    bots[i].inventory.mods[g] = {
+                        "mod_equipment": [
+                            "590c595c86f7747884343ad7"
+                        ]
+                    }
+                }
+            });
         }
     }
 
@@ -1881,7 +1901,7 @@ export class BotLoader {
             this.logger.info("raiderLoad1 loaded");
         }
     }
-    
+
     public raiderLoad2() {
 
         let tier2Json = JSON.parse(JSON.stringify(raiderLO.raiderLO2));
@@ -2041,7 +2061,7 @@ export class BotLoader {
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(this.raiderBase.inventory);
         }
-        
+
         BotTierTracker.raiderTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("raiderLoad3 loaded");
@@ -2094,7 +2114,7 @@ export class BotLoader {
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(this.rogueBase.inventory);
         }
-        
+
         BotTierTracker.rogueTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("rogueLoad1 loaded");
@@ -2200,7 +2220,7 @@ export class BotLoader {
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(this.rogueBase.inventory);
         }
-        
+
         BotTierTracker.rogueTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("rogueLoad3 loaded");
@@ -2401,7 +2421,7 @@ export class BotLoader {
             this.pushGasMaskFilters(this.bigpipeBase.inventory);
             this.pushGasMaskFilters(this.knightBase.inventory);
         }
-        
+
         BotTierTracker.goonsTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("goonsLoad1 loaded");
@@ -2938,7 +2958,7 @@ export class BotLoader {
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(this.killaBase.inventory);
         }
-        
+
         BotTierTracker.killaTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("killaLoad3 loaded");
@@ -3003,7 +3023,7 @@ export class BotLoader {
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(this.tagillaBase.inventory);
         }
-        
+
         BotTierTracker.tagillaTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("tagillaLoad1 loaded");
@@ -3065,7 +3085,7 @@ export class BotLoader {
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(this.tagillaBase.inventory);
         }
-        
+
         BotTierTracker.tagillaTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("tagillaLoad2 loaded");
@@ -3127,7 +3147,7 @@ export class BotLoader {
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(this.tagillaBase.inventory);
         }
-        
+
         BotTierTracker.tagillaTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("tagillaLoad3 loaded");
@@ -3202,7 +3222,7 @@ export class BotLoader {
             this.pushGasMaskFilters(this.saniFollowerBase.inventory);
             this.pushGasMaskFilters(this.saniBase.inventory);
         }
-        
+
         BotTierTracker.sanitarTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("saintarLoad1 loaded");
@@ -3277,7 +3297,7 @@ export class BotLoader {
             this.pushGasMaskFilters(this.saniFollowerBase.inventory);
             this.pushGasMaskFilters(this.saniBase.inventory);
         }
-        
+
         BotTierTracker.sanitarTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("saintarLoad2 loaded");
@@ -3352,7 +3372,7 @@ export class BotLoader {
             this.pushGasMaskFilters(this.saniFollowerBase.inventory);
             this.pushGasMaskFilters(this.saniBase.inventory);
         }
-        
+
         BotTierTracker.sanitarTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("sanitarLoad3 loaded");
@@ -3406,7 +3426,7 @@ export class BotLoader {
             this.pushGasMaskFilters(this.reshFollowerBase.inventory);
             this.pushGasMaskFilters(this.reshBase.inventory);
         }
-        
+
         BotTierTracker.reshallaTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("reshallaLoad1 loaded");
@@ -3459,7 +3479,7 @@ export class BotLoader {
             this.pushGasMaskFilters(this.reshFollowerBase.inventory);
             this.pushGasMaskFilters(this.reshBase.inventory);
         }
-        
+
         BotTierTracker.reshallaTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("reshallaLoad2 loaded");
@@ -3512,7 +3532,7 @@ export class BotLoader {
             this.pushGasMaskFilters(this.reshFollowerBase.inventory);
             this.pushGasMaskFilters(this.reshBase.inventory);
         }
-        
+
         BotTierTracker.reshallaTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("reshallaLoad3 loaded");

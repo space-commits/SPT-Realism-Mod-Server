@@ -1109,8 +1109,8 @@ export class BotGenHelper extends BotGeneratorHelper {
             };
         }
 
-        if(itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7"){
-            itemProperties.Resource = { Value: Math.floor(Math.random() * 61) + 35, UnitsConsumed: 0};
+        if (itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7") {
+            itemProperties.Resource = { Value: Math.floor(Math.random() * 61) + 35, UnitsConsumed: 0 };
         }
 
         if (itemTemplate._parent === BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses.TACTICAL_COMBO) {
@@ -1151,11 +1151,15 @@ export class BotGenHelper extends BotGeneratorHelper {
 
 export class BotEquipGenHelper extends BotEquipmentModGenerator {
 
+
+
+
+
     private myFilterPlateModsForSlotByLevel(settings: IGenerateEquipmentProperties, modSlot: string, existingPlateTplPool: string[], armorItem: ITemplateItem, botRole: string, pmcTier: number): IFilterPlateModsForSlotByLevelResult {
 
         const result: IFilterPlateModsForSlotByLevelResult = { result: Result.UNKNOWN_FAILURE, plateModTpls: null };
 
-        // Not pmc or not a plate slot, return original mod pool array
+        // not a plate slot, return original mod pool array
         if (!this.itemHelper.isRemovablePlateSlot(modSlot)) {
             result.result = Result.NOT_PLATE_HOLDING_SLOT;
             result.plateModTpls = existingPlateTplPool;
@@ -1163,11 +1167,32 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         }
 
         const tierChecker = new BotTierTracker();
-        const tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : botRole === "assault" ? tierChecker.getTier(botRole) : 4;
-        const armorPlateWeight: IArmorPlateWeights[] = modConfig.realistic_ballistics == true ? armorPlateWeights.realisticWeights : armorPlateWeights.standardWeights;
+
+        let armorPlates: IArmorPlateWeights[] = modConfig.realistic_ballistics == true ? armorPlateWeights.pmcWeights : armorPlateWeights.standardWeights;
+        let tier = 1;
+
+        if (botRole === "sptbear" || botRole === "sptusec") {
+            tier = pmcTier;
+        }
+        else {
+            tier = tierChecker.getTier(botRole);
+            if (modConfig.realistic_ballistics) {
+                if (botRole.toLowerCase().includes("follower") || botRole == "exusec" || botRole == "pmcbot") {
+                    armorPlates = armorPlateWeights.followerWeights;
+                }
+
+                if (botRole.toLowerCase().includes("boss")) {
+                    armorPlates = armorPlateWeights.bossWeights;
+                }
+
+                if (botRole == "assault" || botRole == "marksman") {
+                    armorPlates = armorPlateWeights.scavWeights;
+                }
+            }
+        }
 
         // Get the front/back/side weights based on bots level
-        const plateSlotWeights = armorPlateWeight.find((x) =>
+        const plateSlotWeights = armorPlates.find((x) =>
             tier >= x.levelRange.min && tier <= x.levelRange.max
         );
 

@@ -230,6 +230,11 @@ class Traders {
             // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
             this.assortItemPusher(jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         }
+        if (this.modConf.enable_hazard_zones == true) {
+            this.assortItemPusher(theraId, "59e7715586f7742ee5789605", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(jaegId, "590c595c86f7747884343ad7", 1, "5449016a4bdc2d6f028b456f", 3, false, 35000);
+            this.assortItemPusher(jaegId, "5b432c305acfc40019478128", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
+        }
         //ragman//
         if (this.modConf.realistic_ballistics == true) {
             this.assortItemPusher(ragmId, "xsapi_chest", 1, "5449016a4bdc2d6f028b456f", 4, false, 70000);

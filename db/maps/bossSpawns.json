@@ -197,9 +197,14 @@
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "4",
-            "Time": 10,
+            "Time": -1,
             "Supports": null,
-            "RandomTimeSpawn": false
+            "RandomTimeSpawn": false,
+            "Delay": 0,
+            "ForceSpawn": false,
+            "IgnoreMaxBots": false,
+            "TriggerId": "",
+            "TriggerName": ""
         },
         {
             "BossName": "pmcBot",

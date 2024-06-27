@@ -897,17 +897,34 @@ exports.BotGenHelper = BotGenHelper;
 class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenerator {
     myFilterPlateModsForSlotByLevel(settings, modSlot, existingPlateTplPool, armorItem, botRole, pmcTier) {
         const result = { result: IFilterPlateModsForSlotByLevelResult_1.Result.UNKNOWN_FAILURE, plateModTpls: null };
-        // Not pmc or not a plate slot, return original mod pool array
+        // not a plate slot, return original mod pool array
         if (!this.itemHelper.isRemovablePlateSlot(modSlot)) {
             result.result = IFilterPlateModsForSlotByLevelResult_1.Result.NOT_PLATE_HOLDING_SLOT;
             result.plateModTpls = existingPlateTplPool;
             return result;
         }
         const tierChecker = new utils_1.BotTierTracker();
-        const tier = botRole === "sptbear" || botRole === "sptusec" ? pmcTier : botRole === "assault" ? tierChecker.getTier(botRole) : 4;
-        const armorPlateWeight = modConfig.realistic_ballistics == true ? armorPlateWeights.realisticWeights : armorPlateWeights.standardWeights;
+        let armorPlates = modConfig.realistic_ballistics == true ? armorPlateWeights.pmcWeights : armorPlateWeights.standardWeights;
+        let tier = 1;
+        if (botRole === "sptbear" || botRole === "sptusec") {
+            tier = pmcTier;
+        }
+        else {
+            tier = tierChecker.getTier(botRole);
+            if (modConfig.realistic_ballistics) {
+                if (botRole.toLowerCase().includes("follower") || botRole == "exusec" || botRole == "pmcbot") {
+                    armorPlates = armorPlateWeights.followerWeights;
+                }
+                if (botRole.toLowerCase().includes("boss")) {
+                    armorPlates = armorPlateWeights.bossWeights;
+                }
+                if (botRole == "assault" || botRole == "marksman") {
+                    armorPlates = armorPlateWeights.scavWeights;
+                }
+            }
+        }
         // Get the front/back/side weights based on bots level
-        const plateSlotWeights = armorPlateWeight.find((x) => tier >= x.levelRange.min && tier <= x.levelRange.max);
+        const plateSlotWeights = armorPlates.find((x) => tier >= x.levelRange.min && tier <= x.levelRange.max);
         if (!plateSlotWeights) {
             // No weights, return original array of plate tpls
             result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
