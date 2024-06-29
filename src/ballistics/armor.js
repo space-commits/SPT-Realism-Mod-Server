@@ -1817,7 +1817,7 @@ class Armor {
             serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.17;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = 0.5;
+            serverItem._props.weaponErgonomicPenalty = -0.5;
             serverItem._props.BluntThroughput = 0.19 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'UHMWPE';
@@ -1831,7 +1831,7 @@ class Armor {
             serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -0.96;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = 0.7;
+            serverItem._props.weaponErgonomicPenalty = -0.7;
             serverItem._props.BluntThroughput = 0.18 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Combined';

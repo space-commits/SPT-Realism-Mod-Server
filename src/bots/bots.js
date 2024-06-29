@@ -147,6 +147,9 @@ class BotLoader {
         this.botConfPMC().backpackLoot.blacklist = [];
         this.botConf().playerScavBrainType = pmcTypes.playerScavBrainType;
         this.botConf().chanceAssaultScavHasPlayerScavName = 0;
+        if (this.modConfig.enable_hazard_zones == true) {
+            this.pushFiltersToAllBots();
+        }
         // for (let i in this.lootBlacklist()) {
         //     this.botConfPMC().vestLoot.blacklist.push(this.lootBlacklist()[i]);
         //     this.botConfPMC().pocketLoot.blacklist.push(this.lootBlacklist()[i]);
@@ -373,6 +376,20 @@ class BotLoader {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmcTest.convertIntoPmcChance;
             this.botConfPMC().isUsec = 100;
             this.logger.warning("All USEC");
+        }
+    }
+    pushFiltersToAllBots() {
+        const bots = this.tables.bots.types;
+        for (let i in bots) {
+            this.arrays.gasMasks.forEach(g => {
+                if (!bots[i].inventory.mods[g]) {
+                    bots[i].inventory.mods[g] = {
+                        "mod_equipment": [
+                            "590c595c86f7747884343ad7"
+                        ]
+                    };
+                }
+            });
         }
     }
     pushGasMaskFilters(inventory) {

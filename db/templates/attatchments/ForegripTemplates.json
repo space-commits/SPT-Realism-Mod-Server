@@ -400,7 +400,7 @@
         "RecoilAngle": -5,
         "AimSpeed": -28,
         "Ergonomics": 24,
-        "Accuracy": 0,
+        "Accuracy": -20,
         "ConflictingItems": [],
         "Weight": 0.185,
         "LoyaltyLevel": 0,

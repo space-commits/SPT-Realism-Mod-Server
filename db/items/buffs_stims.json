@@ -325,25 +325,43 @@
             "AbsoluteValue": true,
             "BuffType": "RemoveAllBloodLosses",
             "Chance": 1,
-            "Delay": 15,
+            "Delay": 10,
             "Duration": 150,
             "SkillName": "",
             "Value": 0
         },
         {
             "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 150,
+            "SkillName": "",
+            "Value": 0.5
+        },
+        {
+            "AbsoluteValue": true,
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 15,
+            "Delay": 10,
             "Duration": 150,
             "SkillName": "Vitality",
             "Value": 20
         },
         {
+            "AbsoluteValue": false,
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.8
+        },
+        {
             "AbsoluteValue": true,
             "BuffType": "HydrationRate",
             "Chance": 1,
-            "Delay": 165,
+            "Delay": 160,
             "Duration": 300,
             "SkillName": "",
             "Value": -0.15
@@ -352,19 +370,10 @@
             "AbsoluteValue": false,
             "BuffType": "DamageModifier",
             "Chance": 1,
-            "Delay": 165,
+            "Delay": 160,
             "Duration": 300,
             "SkillName": "",
             "Value": 0.2
-        },
-        {
-            "AbsoluteValue": false,
-            "BuffType": "StaminaRate",
-            "Chance": 1,
-            "Delay": 15,
-            "Duration": 300,
-            "SkillName": "",
-            "Value": -0.8
         }
     ],
     "Buffs_AHF1M": [
@@ -372,16 +381,25 @@
             "AbsoluteValue": true,
             "BuffType": "RemoveAllBloodLosses",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 5,
             "Duration": 300,
             "SkillName": "",
             "Value": 0
         },
         {
             "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 1,
+            "Delay": 5,
+            "Duration": 100,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "AbsoluteValue": true,
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 5,
             "Duration": 300,
             "SkillName": "Vitality",
             "Value": 25
@@ -390,7 +408,7 @@
             "AbsoluteValue": true,
             "BuffType": "SkillRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 5,
             "Duration": 300,
             "SkillName": "Health",
             "Value": 25
@@ -399,7 +417,7 @@
             "AbsoluteValue": true,
             "BuffType": "HydrationRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 5,
             "Duration": 300,
             "SkillName": "",
             "Value": -0.2
@@ -408,7 +426,7 @@
             "AbsoluteValue": false,
             "BuffType": "DamageModifier",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 5,
             "Duration": 300,
             "SkillName": "",
             "Value": 0.1
@@ -417,7 +435,7 @@
             "AbsoluteValue": false,
             "BuffType": "StaminaRate",
             "Chance": 1,
-            "Delay": 10,
+            "Delay": 5,
             "Duration": 300,
             "SkillName": "",
             "Value": -0.6
@@ -735,8 +753,8 @@
             "Chance": 1,
             "Delay": 10,
             "Duration": 300,
-            "SkillName": "Metabolism",
-            "Value": 10
+            "SkillName": "Immunity",
+            "Value": 15
         },
         {
             "AbsoluteValue": true,
@@ -763,7 +781,7 @@
             "Delay": 310,
             "Duration": 300,
             "SkillName": "Health",
-            "Value": -50
+            "Value": -25
         },
         {
             "AbsoluteValue": true,
@@ -772,7 +790,7 @@
             "Delay": 310,
             "Duration": 300,
             "SkillName": "Immunity",
-            "Value": -50
+            "Value": -25
         },
         {
             "AbsoluteValue": true,
@@ -782,6 +800,15 @@
             "Duration": 300,
             "SkillName": "",
             "Value": -0.2
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": -0.15
         }
     ],
     "Buffs_MULE": [

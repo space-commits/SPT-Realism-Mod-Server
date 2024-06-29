@@ -86,7 +86,7 @@ import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
 import { DescriptionGen } from "./json/description_gen";
-import { JsonHandler } from "./json/json-handler";
+import { ItemStatHandler } from "./json/json-handler";
 import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
 
@@ -237,11 +237,16 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
+                        const quests = new Quests(logger, postLoadTables, modConfig);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
 
+                        if(modConfig.enable_hazard_zones){
+                            quests.resetHazardQuests(profileData);
+                        }
+         
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
 
                         try {
@@ -644,7 +649,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const gear = new Gear(arrays, tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
-        const jsonHand = new JsonHandler(tables, logger);
+        const jsonHand = new ItemStatHandler(tables, logger);
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
@@ -652,12 +657,14 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
         // this.dllChecker(logger, modConfig);
 
-        if (modConfig.enable_hazard_zones == true) {
-            gear.addSlotsToGasMasks();
+        if (modConfig.enable_hazard_zones) {
+            quests.loadHazardQuests();
         }
 
-        gear.loadMaskChanges();
-        gear.loadSpecialSlotChanges();
+        if (modConfig.enable_hazard_zones) {
+            gear.loadSpecialSlotChanges();
+            gear.addResourceToGasMaskFilters();
+        }
 
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();

@@ -171,10 +171,14 @@ class Main {
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const maps = new maps_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
+                    const quests = new quests_1.Quests(logger, postLoadTables, modConfig);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
+                    if (modConfig.enable_hazard_zones) {
+                        quests.resetHazardQuests(profileData);
+                    }
                     this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
                     try {
                         if (modConfig.backup_profiles == true) {
@@ -500,17 +504,19 @@ class Main {
         const gear = new gear_1.Gear(arrays, tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
-        const jsonHand = new json_handler_1.JsonHandler(tables, logger);
+        const jsonHand = new json_handler_1.ItemStatHandler(tables, logger);
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
-        if (modConfig.enable_hazard_zones == true) {
-            gear.addSlotsToGasMasks();
+        if (modConfig.enable_hazard_zones) {
+            quests.loadHazardQuests();
         }
-        gear.loadMaskChanges();
-        gear.loadSpecialSlotChanges();
+        if (modConfig.enable_hazard_zones) {
+            gear.loadSpecialSlotChanges();
+            gear.addResourceToGasMaskFilters();
+        }
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();

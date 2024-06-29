@@ -653,7 +653,7 @@
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -4,
         "IsGasMask": true,
-        "GasProtection": 1,
+        "GasProtection": 0.96,
         "RadProtection": 0.4,
         "MaskToUse": "gp5",
         "TemplateType": "gear"
