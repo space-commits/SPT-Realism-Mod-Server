@@ -1504,7 +1504,7 @@
         "HorizontalRecoil": 180,
         "Dispersion": 9,
         "CameraRecoil": 0.0308,
-        "VisualMulti": 1,
+        "VisualMulti": 1.03,
         "Convergence": 15.2,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.09,
@@ -1535,7 +1535,7 @@
         "BaseChamberCheckSpeed": 0.9,
         "BaseFixSpeed": 0.85,
         "OffsetRotation": 0.009,
-        "RecoilIntensity": 0.13
+        "RecoilIntensity": 0.133
     },
     "5fbcc1d9016cce60e8341ab3": {
         "ItemID": "5fbcc1d9016cce60e8341ab3",

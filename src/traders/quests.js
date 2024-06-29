@@ -26,9 +26,9 @@ class Quests {
             locale["667c643869df8111b81cb6dc declinePlayerMessage"] = "";
             locale["667c643869df8111b81cb6dc completePlayerMessage"] = "";
             locale["667c643869df8111b81cb6dc name"] = "Emergency Treatment - Part 1";
-            locale["667c643869df8111b81cb6dc description"] = "Come in, young man. I understand that you've been poking around where you shouldn't be. Don't you know that radiation is bad for your health? Listen, we're in a tight spot and don't have all the supplies needed to treat you and your...acquaintance?. You'll have to find them yourself. We won't be able to treat you again for some time, so be more cautious. Your treatment is free of charge, as a favor. One that will be repaid.";
+            locale["667c643869df8111b81cb6dc description"] = "Come in, young man. I understand that you've been poking around where you shouldn't be. Don't you know that radiation is bad for your health? Listen, we're in a tight spot and don't have all the supplies needed to treat you and your...acquaintance? You'll have to find them yourself. We won't be able to treat you again for some time, so be more cautious. Your treatment is free of charge, as a favor. One that will be repaid.";
             locale["667c643869df8111b81cb6dc failMessageText"] = "";
-            locale["667c643869df8111b81cb6dc successMessageText"] = "That should be your last round of treatment. How do you feel? Better? It will take some time to heal. I hope you learned your lesson. Remember that I won't be able to treat you again for quite some time. Take this Geiger counter, it seems like you'll need this. You will repay me in time.";
+            locale["667c643869df8111b81cb6dc successMessageText"] = "That should be your last round of treatment. How do you feel? Better? It will take some time to heal. I hope you learned your lesson. Remember that I won't be able to treat you again for quite some time. Take this Geiger counter, it seems like you'll need it. You will repay me in time.";
             locale["667c7ce693045db42891c99b"] = "Find medical bloodsets";
             locale["667c7cf226f52aef063b5ef7"] = "Handover medical bloodesets";
             locale["667c8a4f226f02988be6a482"] = "Find disposable syringes";
