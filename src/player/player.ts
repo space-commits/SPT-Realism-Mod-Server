@@ -18,9 +18,6 @@ export class Player {
     public defaultStomaHealth;
     public defaultArmHealth;
     public defaultLegHealth;
-    public defaultHydration;
-    public defaultHydro;
-    public defaultEnergy;
     public defaultTemp;
     public headHealth;
     public chestHealth;
@@ -40,9 +37,6 @@ export class Player {
         this.defaultStomaHealth = healthTemplate.BodyParts.Stomach.Health.Maximum;
         this.defaultArmHealth = healthTemplate.BodyParts.LeftArm.Health.Maximum;
         this.defaultLegHealth = healthTemplate.BodyParts.LeftLeg.Health.Maximum;
-        this.defaultHydration = healthTemplate.Hydration.Maximum;
-        this.defaultHydro = healthTemplate.Hydration.Maximum;
-        this.defaultEnergy = healthTemplate.Energy.Maximum;
         this.defaultTemp = healthTemplate.Temperature.Maximum;
         this.headHealth = botHealth.health.BodyParts[0].Head.max * modConfig.player_hp_multi;
         this.chestHealth = botHealth.health.BodyParts[0].Chest.max * modConfig.player_hp_multi;
@@ -72,7 +66,7 @@ export class Player {
     }
 
     public setPlayerHealth(pmcData: IPmcData, scavData: IPmcData) {
-      
+
         //revert to defaults
         if (this.modConfig.realistic_player_health == false && this.modConfig.revert_hp == true) {
           

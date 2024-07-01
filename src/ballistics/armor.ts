@@ -228,8 +228,12 @@ export class Armor {
         if (serverItem._id === "59e7635f86f7742cbf2c1095") {
             this.modifyAramid(serverItem, 4, 80, 0.25);
         }
+        //DRD
+        if (serverItem._id === "62a09d79de7ac81993580530") {
+            this.modifyAramid(serverItem, 1, 10, 1);
+        }
         //PACA
-        if (serverItem._id === "5648a7494bdc2d9d488b4583" || serverItem._id === "607f20859ee58b18e41ecd90" || serverItem._id === "62a09d79de7ac81993580530") {
+        if (serverItem._id === "5648a7494bdc2d9d488b4583" || serverItem._id === "607f20859ee58b18e41ecd90") {
             this.modifyAramid(serverItem, 4, 100, 0.35);
         }
         //Press
@@ -1366,7 +1370,7 @@ export class Armor {
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Combined';
             serverItem._props.armorColliders = [
-                "HeadCommon"
+                "Face"
             ];
         }
         //Kolpak
@@ -1420,14 +1424,13 @@ export class Armor {
             serverItem._props.speedPenaltyPercent = -10.28;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -10;
-            serverItem._props.BluntThroughput = 0.25 * bluntModifier;
+            serverItem._props.BluntThroughput = 0.5 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.armorColliders = [
                 "ParietalHead",
-                "Ears",
-                "Jaws",
-                "HeadCommon"
+                "Face",
+                "Jaw"
             ];
         }
         //Djeta
@@ -1453,15 +1456,14 @@ export class Armor {
             serverItem._props.speedPenaltyPercent = -9.8;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -9;
-            serverItem._props.BluntThroughput = 0.35 * bluntModifier;
+            serverItem._props.BluntThroughput = 0.4 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 1.8;
             serverItem._props.armorColliders = [
                 "Jaw",
-                "Ears",
                 "ParietalHead",
-                "HeadCommon"
+                "Face"
             ];
         }
         //UN Helmet
@@ -1565,8 +1567,7 @@ export class Armor {
                 "Eyes",
                 "Jaw",
                 "Ears",
-                "ParietalHead",
-                "HeadCommon"
+                "ParietalHead"
             ];
         }
         //Tagilla's Welding Mask "Gorilla"
@@ -1585,8 +1586,7 @@ export class Armor {
                 "Eyes",
                 "Jaw",
                 "Ears",
-                "ParietalHead",
-                "HeadCommon"
+                "ParietalHead"
             ];
         }
         //NFM HJELM
@@ -1703,37 +1703,38 @@ export class Armor {
         }
         //Death Shadow mask
         if (serverItem._id === "6570aead4d84f81fd002a033") {
-            serverItem._props.Durability = 60 * duraModifier;
+            serverItem._props.Durability = 40 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 4 + classModifier;
             serverItem._props.speedPenaltyPercent = -10.1;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -10;
-            serverItem._props.BluntThroughput = 0.4 * bluntModifier;
+            serverItem._props.BluntThroughput = 0.6 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 2.1;
             serverItem._props.armorColliders = [
-                "Eyes",
-                "HeadCommon"
+                "Face",
+                "Jaw"
             ];
         }
         //// Class 5 ////
         //Atomic Defense ballistic mask
         if (serverItem._id === "657089638db3adca1009f4ca") {
-            serverItem._props.Durability = 120 * duraModifier;
+            serverItem._props.Durability = 80 * duraModifier;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 5 + classModifier;
             serverItem._props.speedPenaltyPercent = -13.1;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -15;
-            serverItem._props.BluntThroughput = 0.5 * bluntModifier;
+            serverItem._props.BluntThroughput = 0.8 * bluntModifier;
             serverItem._props.DeafStrength = "Low";
             serverItem._props.ArmorMaterial = 'Aramid';
             serverItem._props.Weight = 2.1;
             serverItem._props.armorColliders = [
                 "Jaw",
-                "HeadCommon"
+                "Face",
+                "ParietalHead"
             ];
         }
         //Ronin

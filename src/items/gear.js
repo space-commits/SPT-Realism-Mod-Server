@@ -58,7 +58,7 @@ class Gear {
                 }
             }
             //custom mask overlays will bug out if using actual faceshield at the same time
-            if (serverItem._props.FaceShieldComponent == true) {
+            if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true) && serverItem._props.FaceShieldComponent == true) {
                 confMaskOverlays.forEach(element => {
                     if (serverItem._id !== element) {
                         serverItem._props.ConflictingItems.push(element);

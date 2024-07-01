@@ -12,7 +12,7 @@ export class Gear {
         return this.tables.templates.items;
     }
 
-    public addResourceToGasMaskFilters(){
+    public addResourceToGasMaskFilters() {
         //gas mask filter
         this.itemDB()["590c595c86f7747884343ad7"]._props.MaxResource = 100;
         this.itemDB()["590c595c86f7747884343ad7"]._props.Resource = 100;
@@ -64,7 +64,7 @@ export class Gear {
             }
 
             //custom mask overlays will bug out if using actual faceshield at the same time
-            if (serverItem._props.FaceShieldComponent == true) {
+            if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true) && serverItem._props.FaceShieldComponent == true) {
                 confMaskOverlays.forEach(element => {
                     if (serverItem._id !== element) {
                         serverItem._props.ConflictingItems.push(element);

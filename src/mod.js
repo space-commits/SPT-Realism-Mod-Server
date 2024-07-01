@@ -193,20 +193,14 @@ class Main {
                                 if (modConfig.revert_med_changes == true && modConfig.med_changes == false) {
                                     this.revertMeds(pmcData, utils);
                                     this.revertMeds(scavData, utils);
-                                    modConfig.revert_med_changes = false;
+                                    this.revertHydroEnergy(pmcData, postLoadTables);
+                                    this.revertHydroEnergy(scavData, postLoadTables);
+                                    modConfig.revert_med_changes = true;
                                     utils.writeConfigJSON(modConfig, 'config/config.json');
                                     logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                 }
                                 this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
                                 this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
-                                if (modConfig.med_changes == false && modConfig.revert_hp == true) {
-                                    pmcData.Health.Hydration.Maximum = player.defaultHydration;
-                                    pmcData.Health.Energy.Maximum = player.defaultEnergy;
-                                    if (pmcData.Health.Energy.Current > pmcData.Health.Energy.Maximum) {
-                                        pmcData.Health.Hydration.Current = player.defaultHydration;
-                                        pmcData.Health.Energy.Current = player.defaultEnergy;
-                                    }
-                                }
                             }
                         }
                         this.checkForEvents(logger, seasonalEventsService);
@@ -617,6 +611,7 @@ class Main {
                 quests.fixMechancicQuests();
                 ammo.grenadeTweaks();
             }
+            gear.loadGearConflicts();
         })();
     }
     postAkiLoad(container) {
@@ -638,8 +633,19 @@ class Main {
     //         }
     //     }
     // }
-    revertMeds(pmcData, utils) {
-        utils.revertMedItems(pmcData);
+    revertMeds(profileData, utils) {
+        utils.revertMedItems(profileData);
+    }
+    revertHydroEnergy(profileData, tables) {
+        const healthTemplate = tables.templates.profiles.Standard.bear.character.Health;
+        const defaultHydration = healthTemplate.Hydration.Maximum;
+        const defaultEnergy = healthTemplate.Energy.Maximum;
+        profileData.Health.Hydration.Maximum = defaultHydration;
+        profileData.Health.Energy.Maximum = defaultEnergy;
+        if (profileData.Health.Energy.Current > profileData.Health.Energy.Maximum) {
+            profileData.Health.Hydration.Current = defaultHydration;
+            profileData.Health.Energy.Current = defaultEnergy;
+        }
     }
     checkForEvents(logger, seasonalEventsService) {
         seasonalevents_1.EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
