@@ -860,7 +860,7 @@ class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
                 HpPercent: this.getRandomizedResourceValue(itemTemplate._props.MaxResource, this.botConfig.lootItemResourceRandomization[botRole]?.food)
             };
         }
-        if (itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7") {
+        if (modConfig.enable_hazard_zones && itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7") {
             itemProperties.Resource = { Value: Math.floor(Math.random() * 61) + 35, UnitsConsumed: 0 };
         }
         if (itemTemplate._parent === BaseClasses_1.BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses_1.BaseClasses.TACTICAL_COMBO) {
@@ -994,7 +994,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
             }
             const modSpawnResult = this.shouldModBeSpawned(itemSlotTemplate, modSlotName.toLowerCase(), settings.spawnChances.equipmentMods, settings.botEquipmentConfig);
             //if the gear takes a gas mask filter, it's a gas mask, force spawn
-            if (compatibleModsPool[modSlotName].includes("590c595c86f7747884343ad7")) {
+            if (modConfig.enable_hazard_zones && compatibleModsPool[modSlotName].includes("590c595c86f7747884343ad7")) {
                 forceSpawn = true;
             }
             if (modSpawnResult === ModSpawn_1.ModSpawn.SKIP && !forceSpawn) {

@@ -1881,9 +1881,9 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
             || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
-            || RaidInfoTracker.mapName === "factory4_day") {
+            || RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1964,9 +1964,9 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
             || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
-            || RaidInfoTracker.mapName === "factory4_day") {
+            || RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -2047,9 +2047,9 @@ export class BotLoader {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
-        if (this.modConfig.enable_hazard_zones == true && RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (RaidInfoTracker.mapName === "laboratory" || RaidInfoTracker.mapName === "rezervbase"
             || RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "factory4_night"
-            || RaidInfoTracker.mapName === "factory4_day") {
+            || RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;

@@ -912,6 +912,6 @@ export class TraderRefresh extends TraderAssortHelper {
     }
 
     private randomizePricesAtRefresh(randomTraderAss: RandomizeTraderAssort, utils: Utils, itemTemplId: string, barter: IBarterScheme[][]): void {
-        randomTraderAss.setAndRandomizeCost(utils, itemTemplId, barter, false);
+        randomTraderAss.setAndRandomizeCost(utils, itemTemplId, barter, true);
     }
 }

@@ -1677,9 +1677,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConfig.enable_hazard_zones == true && utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
             || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
-            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
+            || utils_1.RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1753,9 +1753,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConfig.enable_hazard_zones == true && utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
             || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
-            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
+            || utils_1.RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1829,9 +1829,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConfig.enable_hazard_zones == true && utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
             || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
-            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
+            || utils_1.RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
