@@ -1,8 +1,8 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
-import { IArmorMaterials, IConfig } from "@spt-aki/models/eft/common/IGlobals";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { IArmorMaterials, IConfig } from "@spt/models/eft/common/IGlobals";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 const validHelmetSlots = [
     "helmet_top",

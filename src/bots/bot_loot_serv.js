@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MyLootCache = exports.BotLootGen = exports.MyLootCacheType = exports.MyBotLootCache = void 0;
+exports.MyLootCacheService = exports.BotLootGen = exports.MyLootCacheType = exports.MyBotLootCache = void 0;
 const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
 const BotLootCacheService_1 = require("C:/snapshot/project/obj/services/BotLootCacheService");
 const BotLootGenerator_1 = require("C:/snapshot/project/obj/generators/BotLootGenerator");
@@ -57,10 +57,18 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
         const jsonUtil = tsyringe_1.container.resolve("JsonUtil");
         const pmcLootGenerator = tsyringe_1.container.resolve("PMCLootGenerator");
         const ragfairPriceService = tsyringe_1.container.resolve("RagfairPriceService");
-        const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
+        const databaseServer = tsyringe_1.container.resolve("DatabaseServer");
+        const myGetLootCache = new MyLootCacheService(this.logger, this.itemHelper, databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService, this.cloner);
         const itemCounts = botJsonTemplate.generation.items;
+        if (!itemCounts.backpackLoot.weights || !itemCounts.pocketLoot.weights
+            || !itemCounts.vestLoot.weights || !itemCounts.specialItems.weights
+            || !itemCounts.healing.weights || !itemCounts.drugs.weights
+            || !itemCounts.food.weights || !itemCounts.drink.weights
+            || !itemCounts.currency.weights || !itemCounts.stims.weights || !itemCounts.grenades.weights) {
+            this.logger.warning(this.localisationService.getText("bot-unable_to_generate_bot_loot", botRole));
+            return;
+        }
         const botItemLimits = this.getItemSpawnLimitsForBot(botRole);
-        let vestMedsCount = 0;
         const backpackLootCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.backpackLoot.weights));
         const pocketLootCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.pocketLoot.weights));
         const vestLootCount = this.weightedRandomHelper.getWeightedValue(itemCounts.vestLoot.weights);
@@ -79,11 +87,11 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
         const foodItemCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.food.weights));
         const drinkItemCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.drink.weights));
         const currencyItemCount = Number(this.weightedRandomHelper.getWeightedValue(itemCounts.currency.weights));
-        const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);
         const currenySlots = [EquipmentSlots_1.EquipmentSlots.POCKETS];
         const provisionSlotsScav = [EquipmentSlots_1.EquipmentSlots.POCKETS, EquipmentSlots_1.EquipmentSlots.BACKPACK];
         const provisionSlots = [EquipmentSlots_1.EquipmentSlots.BACKPACK];
         const provisionSlotsToUse = botRole === "assault" ? provisionSlotsScav : provisionSlots;
+        const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);
         const containersIdFull = new Set();
         // Forced pmc healing loot
         if (isPmc && this.pmcConfig.forceHealingItemsIntoSecure) {
@@ -132,7 +140,7 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
     }
 }
 exports.BotLootGen = BotLootGen;
-class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
+class MyLootCacheService extends BotLootCacheService_1.BotLootCacheService {
     myLootCache = {};
     myBotRoleExistsInCache(botRole) {
         return !!this.myLootCache[botRole];
@@ -240,7 +248,7 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
                 }));
                 break;
         }
-        return this.jsonUtil.clone(result);
+        return this.cloner.clone(result);
     }
     myAddLootToCache(botRole, isPmc, botJsonTemplate) {
         const lootPool = botJsonTemplate.inventory.items;
@@ -557,5 +565,5 @@ class MyLootCache extends BotLootCacheService_1.BotLootCacheService {
         this.myLootCache[botRole].currencyItems = currencyItems;
     }
 }
-exports.MyLootCache = MyLootCache;
+exports.MyLootCacheService = MyLootCacheService;
 //# sourceMappingURL=bot_loot_serv.js.map

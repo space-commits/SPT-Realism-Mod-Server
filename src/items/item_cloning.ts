@@ -1,11 +1,9 @@
 
-
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { IHideoutProduction } from "@spt-aki/models/eft/hideout/IHideoutProduction";
-import { IQuest } from "@spt-aki/models/eft/common/tables/IQuest";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { JsonUtil } from "@spt/utils/JsonUtil";
+import { IQuest } from "@spt/models/eft/common/tables/IQuest";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class ItemCloning {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private jsonUtil: JsonUtil, private medItems, private crafts) { }

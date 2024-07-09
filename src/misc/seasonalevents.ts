@@ -1,4 +1,4 @@
-import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
+import { IBotType } from "@spt/models/eft/common/tables/IBotType";
 
 export class EventTracker {
     static isChristmas: boolean = false;

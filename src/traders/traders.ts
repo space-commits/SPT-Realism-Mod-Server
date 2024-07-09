@@ -1,23 +1,23 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { ITraderConfig } from "@spt-aki/models/spt/config/ITraderConfig";
-import { IBarterScheme, ITrader, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrader";
+import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
+import { IBarterScheme, ITrader, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { container } from "tsyringe";
 import { Arrays } from "../utils/arrays";
-import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
+import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { Utils, ProfileTracker } from "../utils/utils";
 import { Calibers, ParentClasses } from "../utils/enums";
-import { RagfairServer } from "@spt-aki/servers/RagfairServer";
-import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
-import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
-import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
-import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { RagfairServer } from "@spt/servers/RagfairServer";
+import { ISearchRequestData } from "@spt/models/eft/ragfair/ISearchRequestData";
+import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
+import { IGetOffersResult } from "@spt/models/eft/ragfair/IGetOffersResult";
+import { RagfairCallbacks } from "@spt/callbacks/RagfairCallbacks";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { EventTracker } from "../misc/seasonalevents";
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 
 
 const modConfig = require("../../config/config.json");
@@ -846,7 +846,7 @@ export class TraderRefresh extends TraderAssortHelper {
         if (trader.base.name === "БТР") return;
 
         const traderId = trader.base._id;
-        trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
+        trader.assort = this.cloner.clone(this.traderAssortService.getPristineTraderAssort(traderId));
 
         let pmcData: IPmcData[] = [];
 
@@ -868,7 +868,7 @@ export class TraderRefresh extends TraderAssortHelper {
     }
 
     private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): Item[] {
-        const tables = this.databaseServer.getTables();
+        const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new Arrays(tables);
         const utils = new Utils(tables, arrays);

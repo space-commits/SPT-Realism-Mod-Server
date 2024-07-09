@@ -1,10 +1,10 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { IRepairConfig } from "@spt-aki/models/spt/config/IRepairConfig";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { IRepairConfig } from "@spt/models/spt/config/IRepairConfig";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { ConfigChecker } from "../utils/utils";
-import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { IConfig } from "@spt/models/eft/common/IGlobals";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 const mastering = require("../../db/items/mastering.json");
 

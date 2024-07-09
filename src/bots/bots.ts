@@ -1,15 +1,15 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { ConfigServer } from "@spt-aki/servers/ConfigServer";
-import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
-import { EquipmentFilters, IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
+import { ConfigServer } from "@spt/servers/ConfigServer";
+import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
+import { EquipmentFilters, IBotConfig } from "@spt/models/spt/config/IBotConfig";
 import { BotTierTracker, Utils, RaidInfoTracker, ModTracker } from "../utils/utils";
-import { IBotType, Inventory } from "@spt-aki/models/eft/common/tables/IBotType";
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
-import { ILocations } from "@spt-aki/models/spt/server/ILocations";
+import { IBotType, Inventory } from "@spt/models/eft/common/tables/IBotType";
+import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
+import { ILocations } from "@spt/models/spt/server/ILocations";
 import { EventTracker } from "../misc/seasonalevents";
 import { Arrays } from "../utils/arrays";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
 
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
@@ -457,6 +457,7 @@ export class BotLoader {
     private setBotTierHelper(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
         let tier = 1;
         let tierArray = [1, 2, 3];
+
         if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
             tier = utils.probabilityWeighter(tierArray, [100, 0, 0]);
         }
@@ -684,12 +685,12 @@ export class BotLoader {
 
         if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false && ModTracker.swagPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
             }
             if (RaidInfoTracker.TOD === "night") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
         }
 
@@ -767,12 +768,12 @@ export class BotLoader {
 
         if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false && ModTracker.swagPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
             }
             if (RaidInfoTracker.TOD === "night") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
         }
 
@@ -850,12 +851,12 @@ export class BotLoader {
 
         if (this.modConfig.pmc_types == true && ModTracker.sainPresent == false && ModTracker.swagPresent == false) {
             if (RaidInfoTracker.TOD === "day") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
             }
             if (RaidInfoTracker.TOD === "night") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
             }
         }
 

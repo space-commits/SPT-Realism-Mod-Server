@@ -721,7 +721,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         if (trader.base.name === "БТР")
             return;
         const traderId = trader.base._id;
-        trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
+        trader.assort = this.cloner.clone(this.traderAssortService.getPristineTraderAssort(traderId));
         let pmcData = [];
         utils_1.ProfileTracker.profileIds.forEach(element => {
             pmcData.push(this.profileHelper.getPmcProfile(element));
@@ -735,7 +735,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
     }
     modifyTraderAssorts(trader, logger, pmcData) {
-        const tables = this.databaseServer.getTables();
+        const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new arrays_1.Arrays(tables);
         const utils = new utils_1.Utils(tables, arrays);
@@ -776,7 +776,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         return assortItems;
     }
     randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter) {
-        randomTraderAss.setAndRandomizeCost(utils, itemTemplId, barter, false);
+        randomTraderAss.setAndRandomizeCost(utils, itemTemplId, barter, true);
     }
 }
 exports.TraderRefresh = TraderRefresh;

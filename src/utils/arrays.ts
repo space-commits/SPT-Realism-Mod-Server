@@ -1,5 +1,5 @@
-import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IBotType } from "@spt/models/eft/common/tables/IBotType";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 
 export class Arrays {
 

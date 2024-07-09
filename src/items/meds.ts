@@ -1,7 +1,7 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
-import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { IConfig } from "@spt/models/eft/common/IGlobals";
 
 export class Consumables {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private medItems, private foodItems, private buffMeds, private buffsFood, private buffsStims) { }

@@ -1,9 +1,8 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
-
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { Arrays } from "../utils/arrays";
 import { ParentClasses } from "../utils/enums";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class Gear {
     constructor(private arrays: Arrays, private tables: IDatabaseTables, private logger: ILogger, private modConfig: any) { }
