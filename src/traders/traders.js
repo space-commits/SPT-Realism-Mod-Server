@@ -143,7 +143,7 @@ class Traders {
     setBaseOfferValues() {
         for (let t in this.tables.traders) {
             let trader = this.tables.traders[t];
-            if (trader?.assort?.items === undefined || trader.base.name === "БТР" || trader.base.nickname === "Fence")
+            if (trader?.assort?.items === undefined || trader.base.nickname === "БТР" || trader.base.nickname.toLowerCase() === "fence")
                 continue;
             if (modConfig.change_trader_ll == true) {
                 this.setLoyaltyLevels(trader);
@@ -420,10 +420,10 @@ class RandomizeTraderAssort {
     }
     adjustTraderStockAtServerStart(pmcData) {
         if (seasonalevents_1.EventTracker.isChristmas == true) {
-            this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
+            this.logger.warning("====== Christmas Sale, Everything 15% Off! ======");
         }
         for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР" && this.tables.traders[trader].base.nickname.toLocaleLowerCase() !== "fence") {
+            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.nickname !== "БТР" && this.tables.traders[trader].base.nickname.toLocaleLowerCase() !== "fence") {
                 let assortItems = this.tables.traders[trader].assort.items;
                 let ll = this.getAverageLL(pmcData, trader);
                 for (let item in assortItems) {
@@ -642,22 +642,23 @@ class RandomizeTraderAssort {
         }
     }
     setAndRandomizeCost(utils, itemTemplId, barter, setBasePrice) {
-        if (this.itemDB[barter[0][0]._tpl]._parent === enums_1.ParentClasses.MONEY) {
+        let barterItem = barter[0][0];
+        if (this.itemDB[barterItem._tpl]._parent === enums_1.ParentClasses.MONEY) {
             let randNum = utils.pickRandNumOneInTen();
-            let cost = barter[0][0].count;
+            let cost = barterItem.count;
             if (setBasePrice == true && modConfig.adjust_trader_prices == true) {
-                this.adjustPriceByCategory(barter[0][0], itemTemplId, cost);
+                this.adjustPriceByCategory(barterItem, itemTemplId, cost);
             }
             if (modConfig.randomize_trader_prices == true) {
                 if (randNum >= 8) {
-                    barter[0][0].count = cost * modConfig.rand_cost_increase;
+                    barterItem.count = cost * modConfig.rand_cost_increase;
                 }
                 else if (randNum <= 3) {
-                    barter[0][0].count = cost * modConfig.rand_cost_discount;
+                    barterItem.count = cost * modConfig.rand_cost_discount;
                 }
             }
             if (seasonalevents_1.EventTracker.isChristmas == true) {
-                barter[0][0].count = barter[0][0].count * 0.9;
+                barterItem.count = barterItem.count * 0.85;
             }
         }
     }
@@ -718,7 +719,7 @@ exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     pristineAssorts;
     myResetExpiredTrader(trader) {
-        if (trader.base.name === "БТР")
+        if (trader.base.nickname === "БТР")
             return;
         const traderId = trader.base._id;
         trader.assort = this.cloner.clone(this.traderAssortService.getPristineTraderAssort(traderId));
@@ -766,9 +767,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
                 if (barter !== undefined) {
-                    //roll randomization of prices several times for better potential spread of prices
-                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
-                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
+                    //roll randomization of prices several times for better potential spread of prices...nah, that seems really stupid
                     this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
                 }
             }

@@ -2,7 +2,7 @@
     "name": "SPT Realism Mod",
     "version": "1.4.0",
     "main": "src/mod.js",
-    "license": "CC BY-NC-SA",
+    "license": "CC BY-NC-ND 4.0",
     "author": "Fontaine",
     "sptVersion": "3.9.0",
     "loadBefore": [],
