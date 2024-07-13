@@ -21,6 +21,9 @@ export class Gear {
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
         });
+        this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
+            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+        });
     }
 
     public loadGearConflicts() {
