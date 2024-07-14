@@ -159,7 +159,6 @@ class BotGen extends BotGenerator_1.BotGenerator {
         return bot;
     }
     myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
-        this.logger.warning("==========================================================================================");
         const postLoadDBServer = tsyringe_1.container.resolve("DatabaseServer");
         const tables = postLoadDBServer.getTables();
         const arrays = new arrays_1.Arrays(tables);
@@ -184,11 +183,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
             if (pmcTier === 1) {
                 if (isUSEC) {
                     botLoader.usecLoad1(botJsonTemplateClone);
-                    this.logger.warning("usecLoad1 ");
                 }
                 else {
                     botLoader.bearLoad1(botJsonTemplateClone);
-                    this.logger.warning("bearLoad1 ");
                 }
                 if (changeDiffi == true) {
                     preparedBotBase.Info.Settings.BotDifficulty = "normal";
@@ -197,11 +194,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
             else if (pmcTier === 2) {
                 if (isUSEC) {
                     botLoader.usecLoad2(botJsonTemplateClone);
-                    this.logger.warning("usecLoad2 ");
                 }
                 else {
                     botLoader.bearLoad2(botJsonTemplateClone);
-                    this.logger.warning("bearLoad2 ");
                 }
                 if (changeDiffi == true) {
                     preparedBotBase.Info.Settings.BotDifficulty = "normal";
@@ -210,11 +205,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
             else if (pmcTier === 3) {
                 if (isUSEC) {
                     botLoader.usecLoad3(botJsonTemplateClone);
-                    this.logger.warning("usecLoad3 ");
                 }
                 else {
                     botLoader.bearLoad3(botJsonTemplateClone);
-                    this.logger.warning("bearLoad3 ");
                 }
                 if (changeDiffi == true) {
                     preparedBotBase.Info.Settings.BotDifficulty = "hard";
@@ -223,11 +216,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
             else if (pmcTier === 4) {
                 if (isUSEC) {
                     botLoader.usecLoad4(botJsonTemplateClone);
-                    this.logger.warning("usecLoad4 ");
                 }
                 else {
                     botLoader.bearLoad4(botJsonTemplateClone);
-                    this.logger.warning("bearLoad4 ");
                 }
                 if (changeDiffi == true) {
                     preparedBotBase.Info.Settings.BotDifficulty = "hard";
@@ -236,11 +227,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
             else if (pmcTier === 5) {
                 if (isUSEC) {
                     botLoader.usecLoad5(botJsonTemplateClone);
-                    this.logger.warning("usecLoad5 ");
                 }
                 else {
                     botLoader.bearLoad5(botJsonTemplateClone);
-                    this.logger.warning("bearLoad5 ");
                 }
                 if (changeDiffi == true) {
                     preparedBotBase.Info.Settings.BotDifficulty = "impossible";
