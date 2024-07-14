@@ -1300,7 +1300,7 @@
         "BaseChamberCheckSpeed": 0.95,
         "BaseFixSpeed": 0.94,
         "OffsetRotation": 0.0045,
-        "RecoilIntensity": 0.2
+        "RecoilIntensity": 0.215
     },
     "6165ac306ef05c2ce828ef74": {
         "ItemID": "6165ac306ef05c2ce828ef74",
@@ -1346,7 +1346,7 @@
         "BaseChamberCheckSpeed": 0.95,
         "BaseFixSpeed": 0.94,
         "OffsetRotation": 0.0045,
-        "RecoilIntensity": 0.2
+        "RecoilIntensity": 0.215
     },
     "5c488a752e221602b412af63": {
         "ItemID": "5c488a752e221602b412af63",

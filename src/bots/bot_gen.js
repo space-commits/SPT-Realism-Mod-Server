@@ -19,6 +19,7 @@ const IFilterPlateModsForSlotByLevelResult_1 = require("C:/snapshot/project/obj/
 const bot_loot_serv_1 = require("./bot_loot_serv");
 const GameEditions_1 = require("C:/snapshot/project/obj/models/enums/GameEditions");
 const ItemTpl_1 = require("C:/snapshot/project/obj/models/enums/ItemTpl");
+const MemberCategory_1 = require("C:/snapshot/project/obj/models/enums/MemberCategory");
 const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 const modConfig = require("../../config/config.json");
@@ -251,6 +252,41 @@ class BotGen extends BotGenerator_1.BotGenerator {
         this.addArmorInserts(botJsonTemplateClone.inventory.mods);
         return this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);
     }
+    setBotMemberAndGameEdition(botInfo, pmcTier) {
+        // Special case
+        if (botInfo.Nickname.toLowerCase() === "nikita") {
+            botInfo.GameVersion = GameEditions_1.GameEditions.UNHEARD;
+            botInfo.MemberCategory = MemberCategory_1.MemberCategory.DEVELOPER;
+            return botInfo.GameVersion;
+        }
+        switch (pmcTier) {
+            case 1:
+                botInfo.GameVersion = GameEditions_1.GameEditions.STANDARD;
+                botInfo.MemberCategory = MemberCategory_1.MemberCategory.DEFAULT;
+                break;
+            case 2:
+                botInfo.GameVersion = GameEditions_1.GameEditions.LEFT_BEHIND;
+                botInfo.MemberCategory = MemberCategory_1.MemberCategory.DEFAULT;
+                break;
+            case 3:
+                botInfo.GameVersion = GameEditions_1.GameEditions.PREPARE_FOR_ESCAPE;
+                botInfo.MemberCategory = MemberCategory_1.MemberCategory.DEFAULT;
+                break;
+            case 4:
+                botInfo.GameVersion = GameEditions_1.GameEditions.EDGE_OF_DARKNESS;
+                botInfo.MemberCategory = MemberCategory_1.MemberCategory.UNIQUE_ID;
+                break;
+            case 5:
+                botInfo.GameVersion = GameEditions_1.GameEditions.UNHEARD;
+                botInfo.MemberCategory = MemberCategory_1.MemberCategory.UNHEARD;
+                break;
+            default:
+                botInfo.MemberCategory = Number.parseInt(this.weightedRandomHelper.getWeightedValue(this.pmcConfig.accountTypeWeight), 10);
+        }
+        // Ensure selected category matches
+        botInfo.SelectedMemberCategory = botInfo.MemberCategory;
+        return botInfo.GameVersion;
+    }
     myGenerateBot(sessionId, bot, botJsonTemplate, botGenerationDetails, pmcTier) {
         const botWeaponGenerator = tsyringe_1.container.resolve("BotWeaponGenerator");
         const botLootGenerator = tsyringe_1.container.resolve("BotLootGenerator");
@@ -296,7 +332,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         bot.Skills = this.generateSkills(botJsonTemplate.skills); // TODO: fix bad type, bot jsons store skills in dict, output needs to be array
         if (botGenerationDetails.isPmc) {
             bot.Info.IsStreamerModeAvailable = true; // Set to true so client patches can pick it up later - client sometimes alters botrole to assaultGroup
-            this.setRandomisedGameVersionAndCategory(bot.Info);
+            this.setBotMemberAndGameEdition(bot.Info, pmcTier);
             if (bot.Info.GameVersion === GameEditions_1.GameEditions.UNHEARD) {
                 this.addAdditionalPocketLootWeightsForUnheardBot(botJsonTemplate);
             }
@@ -933,7 +969,8 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         let armorPlates = modConfig.realistic_ballistics == true ? armorPlateWeights.pmcWeights : armorPlateWeights.standardWeights;
         let tier = 1;
         const role = botRole.toLowerCase();
-        if (role === "bear" || role === "usec") {
+        this.logger.warning("role " + role);
+        if (role === "pmcbear" || role === "pmcusec") {
             tier = pmcTier;
         }
         else {
@@ -950,9 +987,11 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
                 }
             }
         }
+        this.logger.warning("tier " + tier);
         // Get the front/back/side weights based on bots level
         const plateSlotWeights = armorPlates.find((x) => tier >= x.levelRange.min && tier <= x.levelRange.max);
         if (!plateSlotWeights) {
+            this.logger.warning("No plateSlotWeights ");
             // No weights, return original array of plate tpls
             result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
             result.plateModTpls = existingPlateTplPool;
@@ -961,6 +1000,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         // Get the specific plate slot weights (front/back/side)
         const plateWeights = plateSlotWeights[modSlot];
         if (!plateWeights) {
+            this.logger.warning("No plateWeights ");
             // No weights, return original array of plate tpls
             result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
             result.plateModTpls = existingPlateTplPool;
@@ -968,6 +1008,7 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         }
         // Choose a plate level based on weighting
         const chosenArmorPlateLevel = this.weightedRandomHelper.getWeightedValue(plateWeights);
+        this.logger.warning("No plateWeights " + chosenArmorPlateLevel);
         // Convert the array of ids into database items
         const platesFromDb = existingPlateTplPool.map((plateTpl) => this.itemHelper.getItem(plateTpl)[1]);
         // Filter plates to the chosen level based on its armorClass property

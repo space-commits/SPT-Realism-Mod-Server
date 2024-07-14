@@ -23,7 +23,7 @@ import { BotLevelGenerator } from "@spt/generators/BotLevelGenerator";
 import { BotInventoryGenerator } from "@spt/generators/BotInventoryGenerator";
 import { MinMax } from "@spt/models/common/MinMax";
 import { IRandomisedBotLevelResult } from "@spt/models/eft/bot/IRandomisedBotLevelResult";
-import { IBotBase, Inventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
+import { IBotBase, Info, Inventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
 import { BotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
 import { BaseClasses } from "@spt/models/enums/BaseClasses";
 import { DurabilityLimitsHelper } from "@spt/helpers/DurabilityLimitsHelper";
@@ -56,6 +56,7 @@ import { ItemTpl } from "@spt/models/enums/ItemTpl";
 import { IGenerateEquipmentProperties } from "@spt/models/spt/bots/IGenerateEquipmentProperties";
 import { IModToSpawnRequest } from "@spt/models/spt/bots/IModToSpawnRequest";
 import { IGenerateWeaponRequest } from "@spt/models/spt/bots/IGenerateWeaponRequest";
+import { MemberCategory } from "@spt/models/enums/MemberCategory";
 
 const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
@@ -323,6 +324,49 @@ export class BotGen extends BotGenerator {
         return this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);
     }
 
+    private setBotMemberAndGameEdition(botInfo: Info, pmcTier: number): string {
+        // Special case
+        if (botInfo.Nickname.toLowerCase() === "nikita") {
+            botInfo.GameVersion = GameEditions.UNHEARD;
+            botInfo.MemberCategory = MemberCategory.DEVELOPER;
+
+            return botInfo.GameVersion;
+        }
+
+        switch (pmcTier) {
+            case 1:
+                botInfo.GameVersion = GameEditions.STANDARD;
+                botInfo.MemberCategory = MemberCategory.DEFAULT;
+                break;
+            case 2:
+                botInfo.GameVersion = GameEditions.LEFT_BEHIND;
+                botInfo.MemberCategory = MemberCategory.DEFAULT;
+                break;
+            case 3:
+                botInfo.GameVersion = GameEditions.PREPARE_FOR_ESCAPE;
+                botInfo.MemberCategory = MemberCategory.DEFAULT;
+                break;
+            case 4:
+                botInfo.GameVersion = GameEditions.EDGE_OF_DARKNESS;
+                botInfo.MemberCategory = MemberCategory.UNIQUE_ID;
+                break;
+            case 5:
+                botInfo.GameVersion = GameEditions.UNHEARD;
+                botInfo.MemberCategory = MemberCategory.UNHEARD;
+                break;
+            default:
+                botInfo.MemberCategory = Number.parseInt(
+                    this.weightedRandomHelper.getWeightedValue(this.pmcConfig.accountTypeWeight),
+                    10,
+                );
+        }
+
+        // Ensure selected category matches
+        botInfo.SelectedMemberCategory = botInfo.MemberCategory;
+
+        return botInfo.GameVersion;
+    }
+
     private myGenerateBot(sessionId: string, bot: IBotBase, botJsonTemplate: IBotType, botGenerationDetails: BotGenerationDetails, pmcTier: number): IBotBase {
         const botWeaponGenerator = container.resolve<BotWeaponGenerator>("BotWeaponGenerator");
         const botLootGenerator = container.resolve<BotLootGenerator>("BotLootGenerator");
@@ -381,7 +425,7 @@ export class BotGen extends BotGenerator {
 
         if (botGenerationDetails.isPmc) {
             bot.Info.IsStreamerModeAvailable = true; // Set to true so client patches can pick it up later - client sometimes alters botrole to assaultGroup
-            this.setRandomisedGameVersionAndCategory(bot.Info);
+            this.setBotMemberAndGameEdition(bot.Info, pmcTier);
             if (bot.Info.GameVersion === GameEditions.UNHEARD) {
                 this.addAdditionalPocketLootWeightsForUnheardBot(botJsonTemplate);
             }
@@ -1211,7 +1255,7 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
 
         const role = botRole.toLowerCase();
 
-        if (role === "bear" || role === "usec") {
+        if (role === "pmcbear" || role === "pmcusec") {
             tier = pmcTier;
         }
         else {
