@@ -32,8 +32,11 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
         let exp = 0;
         let level = 1;
         if (bot.Info.Settings.Role === "bear" || bot.Info.Settings.Role === "usec") {
-            if (utils_1.RaidInfoTracker.mapName === "sandbox" && utils_1.ProfileTracker.averagePlayerLevel <= 15) {
+            if (utils_1.RaidInfoTracker.mapName === "sandbox" && utils_1.ProfileTracker.averagePlayerLevel <= 20) {
                 level = this.randomUtil.getInt(1, 15);
+            }
+            else if (utils_1.RaidInfoTracker.mapName === "sandbox_high" && utils_1.ProfileTracker.averagePlayerLevel > 20) {
+                level = this.randomUtil.getInt(20, levelDetails.max);
             }
             else {
                 level = this.randomUtil.getInt(levelDetails.min, levelDetails.max);
@@ -63,7 +66,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
         const gzTiers = [89, 10, 1, 0, 0];
-        if (utils_1.RaidInfoTracker.mapName === "sandbox" && playerLevel <= 15) {
+        if (utils_1.RaidInfoTracker.mapName === "sandbox" && playerLevel <= 20) {
             tier = utils.probabilityWeighter(tierArray, gzTiers);
         }
         else if (playerLevel <= 5) {
@@ -969,7 +972,6 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         let armorPlates = modConfig.realistic_ballistics == true ? armorPlateWeights.pmcWeights : armorPlateWeights.standardWeights;
         let tier = 1;
         const role = botRole.toLowerCase();
-        this.logger.warning("role " + role);
         if (role === "pmcbear" || role === "pmcusec") {
             tier = pmcTier;
         }
@@ -987,11 +989,9 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
                 }
             }
         }
-        this.logger.warning("tier " + tier);
         // Get the front/back/side weights based on bots level
         const plateSlotWeights = armorPlates.find((x) => tier >= x.levelRange.min && tier <= x.levelRange.max);
         if (!plateSlotWeights) {
-            this.logger.warning("No plateSlotWeights ");
             // No weights, return original array of plate tpls
             result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
             result.plateModTpls = existingPlateTplPool;
@@ -1000,7 +1000,6 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         // Get the specific plate slot weights (front/back/side)
         const plateWeights = plateSlotWeights[modSlot];
         if (!plateWeights) {
-            this.logger.warning("No plateWeights ");
             // No weights, return original array of plate tpls
             result.result = IFilterPlateModsForSlotByLevelResult_1.Result.LACKS_PLATE_WEIGHTS;
             result.plateModTpls = existingPlateTplPool;
@@ -1008,7 +1007,6 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         }
         // Choose a plate level based on weighting
         const chosenArmorPlateLevel = this.weightedRandomHelper.getWeightedValue(plateWeights);
-        this.logger.warning("No plateWeights " + chosenArmorPlateLevel);
         // Convert the array of ids into database items
         const platesFromDb = existingPlateTplPool.map((plateTpl) => this.itemHelper.getItem(plateTpl)[1]);
         // Filter plates to the chosen level based on its armorClass property

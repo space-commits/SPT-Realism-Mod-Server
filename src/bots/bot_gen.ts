@@ -75,8 +75,11 @@ export class GenBotLvl extends BotLevelGenerator {
         let level = 1;
 
         if (bot.Info.Settings.Role === "bear" || bot.Info.Settings.Role === "usec") {
-            if (RaidInfoTracker.mapName === "sandbox" && ProfileTracker.averagePlayerLevel <= 15) {
+            if (RaidInfoTracker.mapName === "sandbox" && ProfileTracker.averagePlayerLevel <= 20) {
                 level = this.randomUtil.getInt(1, 15);
+            }
+            else if (RaidInfoTracker.mapName === "sandbox_high" && ProfileTracker.averagePlayerLevel > 20) {
+                level = this.randomUtil.getInt(20, levelDetails.max);
             }
             else {
                 level = this.randomUtil.getInt(levelDetails.min, levelDetails.max);
@@ -111,7 +114,7 @@ export class BotGen extends BotGenerator {
         let tier = 1;
         let tierArray = [1, 2, 3, 4, 5];
         const gzTiers = [89, 10, 1, 0, 0];
-        if (RaidInfoTracker.mapName === "sandbox" && playerLevel <= 15) {
+        if (RaidInfoTracker.mapName === "sandbox" && playerLevel <= 20) {
             tier = utils.probabilityWeighter(tierArray, gzTiers);
         }
         else if (playerLevel <= 5) {
