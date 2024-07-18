@@ -27,7 +27,9 @@ export class DescriptionGen {
             if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
                 let modType = item._props.ConflictingItems[1];
 
-
+                if (modType === "bipod") {
+                    locale[`${templateItem}` + " Description"] = "Bipods give increased cover detection range, as well as stability and recoil control when mounting." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
                 if (modType === "DI") {
                     locale[`${templateItem}` + " Description"] = "This weapon uses a direct impingement gas system, therefore mounted suppressors have increased durabiltiy burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
