@@ -1,13 +1,14 @@
-import { BaseClasses } from "@spt-aki/models/enums/BaseClasses";
-import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
-import { BotLootCacheService } from "@spt-aki/services/BotLootCacheService";
-import { BotLootGenerator } from "@spt-aki/generators/BotLootGenerator";
-import { Inventory as PmcInventory } from "@spt-aki/models/eft/common/tables/IBotBase";
-import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
-import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
+import { BaseClasses } from "@spt/models/enums/BaseClasses";
+import { IBotType } from "@spt/models/eft/common/tables/IBotType";
+import { BotLootCacheService } from "@spt/services/BotLootCacheService";
+import { BotLootGenerator } from "@spt/generators/BotLootGenerator";
+import { Inventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
+import { JsonUtil } from "@spt/utils/JsonUtil";
+import { PMCLootGenerator } from "@spt/generators/PMCLootGenerator";
+import { RagfairPriceService } from "@spt/services/RagfairPriceService";
 import { container, inject } from "tsyringe";
-import { EquipmentSlots } from "@spt-aki/models/enums/EquipmentSlots";
+import { EquipmentSlots } from "@spt/models/enums/EquipmentSlots";
+import { DatabaseServer } from "@spt/servers/DatabaseServer";
 
 export class MyBotLootCache {
     combinedPoolLoot: Record<string, number>;
@@ -39,7 +40,7 @@ export class MyBotLootCache {
 }
 
 export const enum MyLootCacheType {
-   
+
     COMBINED = "Combined",
 
     SPECIAL = "Special",
@@ -75,12 +76,22 @@ export class BotLootGen extends BotLootGenerator {
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
         const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
-        const myGetLootCache = new MyLootCache(this.logger, jsonUtil, this.itemHelper, this.databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService);
+        const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+        const myGetLootCache = new MyLootCacheService(this.logger, this.itemHelper, databaseServer, pmcLootGenerator, this.localisationService, ragfairPriceService, this.cloner);
 
         const itemCounts = botJsonTemplate.generation.items;
-        const botItemLimits = this.getItemSpawnLimitsForBot(botRole);
 
-        let vestMedsCount = 0;
+        if (
+            !itemCounts.backpackLoot.weights || !itemCounts.pocketLoot.weights
+            || !itemCounts.vestLoot.weights || !itemCounts.specialItems.weights
+            || !itemCounts.healing.weights || !itemCounts.drugs.weights
+            || !itemCounts.food.weights || !itemCounts.drink.weights
+            || !itemCounts.currency.weights || !itemCounts.stims.weights || !itemCounts.grenades.weights) {
+            this.logger.warning(this.localisationService.getText("bot-unable_to_generate_bot_loot", botRole));
+            return;
+        }
+
+        const botItemLimits = this.getItemSpawnLimitsForBot(botRole);
 
         const backpackLootCount = Number(this.weightedRandomHelper.getWeightedValue<number>(itemCounts.backpackLoot.weights));
         const pocketLootCount = Number(this.weightedRandomHelper.getWeightedValue<number>(itemCounts.pocketLoot.weights));
@@ -107,11 +118,12 @@ export class BotLootGen extends BotLootGenerator {
 
         const currencyItemCount = Number(this.weightedRandomHelper.getWeightedValue<number>(itemCounts.currency.weights));
 
-        const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);
         const currenySlots = [EquipmentSlots.POCKETS];
         const provisionSlotsScav = [EquipmentSlots.POCKETS, EquipmentSlots.BACKPACK];
         const provisionSlots = [EquipmentSlots.BACKPACK];
         const provisionSlotsToUse = botRole === "assault" ? provisionSlotsScav : provisionSlots;
+        
+        const containersBotHasAvailable = this.getAvailableContainersBotCanStoreItemsIn(botInventory);
         const containersIdFull = new Set<string>();
 
         // Forced pmc healing loot
@@ -358,7 +370,7 @@ export class BotLootGen extends BotLootGenerator {
     }
 }
 
-export class MyLootCache extends BotLootCacheService {
+export class MyLootCacheService extends BotLootCacheService {
 
     protected myLootCache: Record<string, MyBotLootCache> = {};
 
@@ -475,10 +487,11 @@ export class MyLootCache extends BotLootCacheService {
                 );
                 break;
         }
-        return this.jsonUtil.clone(result);
+        return this.cloner.clone(result);
     }
 
     private myAddLootToCache(botRole: string, isPmc: boolean, botJsonTemplate: IBotType): void {
+      
         const lootPool = botJsonTemplate.inventory.items;
 
         const specialLootPool: Record<string, number> = {};

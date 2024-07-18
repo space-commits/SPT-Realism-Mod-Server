@@ -32,6 +32,9 @@
         },
         "sandbox": {
             "assault": 1
+        },
+        "sandbox_high": {
+            "assault": 1
         }
     },
     "pmcTypeTimmy": {
@@ -84,6 +87,22 @@
                     "crazyAssaultEvent": 0
                 },
                 "sandbox": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
+                "sandbox_high": {
                     "bossSanitar": 10,
                     "bossTagilla": 1,
                     "bossBully": 10,
@@ -259,6 +278,22 @@
                     "crazyAssaultEvent": 0
                 },
                 "sandbox": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
+                "sandbox_high": {
                     "bossSanitar": 10,
                     "bossTagilla": 1,
                     "bossBully": 10,
@@ -451,6 +486,22 @@
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0
                 },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
                 "laboratory": {
                     "bossSanitar": 10,
                     "bossTagilla": 1,
@@ -621,6 +672,22 @@
                     "bossKilla": 1,
                     "bossKnight": 1,
                     "followerBirdEye": 5,
+                    "followerBigPipe": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
                     "followerBigPipe": 1,
                     "arenaFighter": 0,
                     "arenaFighterEvent": 0,
@@ -822,6 +889,22 @@
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0
                 },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
                 "interchange": {
                     "bossKilla": 7,
                     "bossSanitar": 1,
@@ -1001,6 +1084,22 @@
                     "cursedAssault": 0,
                     "followerBigPipe": 7,
                     "gifter": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
                     "arenaFighter": 0,
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0
@@ -1187,6 +1286,22 @@
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 2,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
                     "arenaFighter": 0,
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0
@@ -1380,6 +1495,22 @@
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 2,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
                     "arenaFighter": 0,
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0
@@ -1577,6 +1708,22 @@
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0
                 },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
                 "interchange": {
                     "bossKilla": 15,
                     "bossSanitar": 1,
@@ -1756,6 +1903,22 @@
                     "cursedAssault": 1,
                     "followerBigPipe": 15,
                     "gifter": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
                     "arenaFighter": 0,
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0
@@ -1944,6 +2107,22 @@
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0
                 },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
                 "interchange": {
                     "bossKilla": 15,
                     "bossSanitar": 15,
@@ -2128,6 +2307,22 @@
                     "followerBigPipe": 10,
                     "bossBully": 15,
                     "gifter": 1,
+                    "arenaFighter": 0,
+                    "arenaFighterEvent": 0,
+                    "crazyAssaultEvent": 0
+                },
+                "sandbox_high": {
+                    "bossSanitar": 10,
+                    "bossTagilla": 1,
+                    "bossBully": 10,
+                    "gifter": 1,
+                    "followerKojaniy": 5,
+                    "assault": 20,
+                    "sectantPriest": 1,
+                    "bossKilla": 1,
+                    "bossKnight": 1,
+                    "followerBirdEye": 1,
+                    "followerBigPipe": 1,
                     "arenaFighter": 0,
                     "arenaFighterEvent": 0,
                     "crazyAssaultEvent": 0

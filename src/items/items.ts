@@ -1,15 +1,15 @@
 
 
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";
-import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
-import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
-import { HandbookItem } from "@spt-aki/models/eft/common/tables/IHandbookBase";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
-import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
-import { IItemConfig } from "@spt-aki/models/spt/config/IItemConfig";
-import { Arrays } from "src/utils/arrays";
+import { IInventoryConfig } from "@spt/models/spt/config/IInventoryConfig";
+import { IInRaidConfig } from "@spt/models/spt/config/IInRaidConfig";
+import { IConfig } from "@spt/models/eft/common/IGlobals";
+import { HandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
+import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
+import { Arrays } from "../utils/arrays";
 
 const myTemplates = require("../../db/templates/new_items/items.json");
 const myLocales = require("../../db/templates/new_items/en.json");

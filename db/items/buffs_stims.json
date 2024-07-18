@@ -609,15 +609,6 @@
     ],
     "Buffs_Meldonin": [
         {
-            "AbsoluteValue": false,
-            "BuffType": "DamageModifier",
-            "Chance": 1,
-            "Delay": 310,
-            "Duration": 300,
-            "SkillName": "",
-            "Value": 0.1
-        },
-        {
             "AbsoluteValue": true,
             "BuffType": "SkillRate",
             "Chance": 1,
@@ -695,7 +686,7 @@
             "Chance": 1,
             "Delay": 315,
             "Duration": 300,
-            "SkillName": "Strength",
+            "SkillName": "Endurance",
             "Value": -15
         },
         {
@@ -1499,16 +1490,7 @@
             "Delay": 600,
             "Duration": 300,
             "SkillName": "",
-            "Value": 6
-        },
-        {
-            "AbsoluteValue": true,
-            "BuffType": "BodyTemperature",
-            "Chance": 1,
-            "Delay": 600,
-            "Duration": 300,
-            "SkillName": "",
-            "Value": -0.1
+            "Value": 4
         },
         {
             "AbsoluteValue": true,

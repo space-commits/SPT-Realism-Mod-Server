@@ -25,6 +25,9 @@ class Gear {
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
         });
+        this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
+            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+        });
     }
     loadGearConflicts() {
         let confMasks = this.arrays.conflMasks;
@@ -58,7 +61,7 @@ class Gear {
                 }
             }
             //custom mask overlays will bug out if using actual faceshield at the same time
-            if (serverItem._props.FaceShieldComponent == true) {
+            if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true) && serverItem._props.FaceShieldComponent == true) {
                 confMaskOverlays.forEach(element => {
                     if (serverItem._id !== element) {
                         serverItem._props.ConflictingItems.push(element);

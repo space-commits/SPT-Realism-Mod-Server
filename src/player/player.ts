@@ -1,13 +1,11 @@
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { JsonUtil } from "@spt-aki/utils/JsonUtil";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { JsonUtil } from "@spt/utils/JsonUtil";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { Utils } from "../utils/utils";
-import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
-import { IEquipmentBuild } from "@spt-aki/models/eft/profile/IAkiProfile";
-import { IProfileTemplates } from "@spt-aki/models/eft/common/tables/IProfileTemplate";
+import { IConfig } from "@spt/models/eft/common/IGlobals";
 
 const botHealth = require("../../db/bots/botHealth.json");
 
@@ -18,9 +16,6 @@ export class Player {
     public defaultStomaHealth;
     public defaultArmHealth;
     public defaultLegHealth;
-    public defaultHydration;
-    public defaultHydro;
-    public defaultEnergy;
     public defaultTemp;
     public headHealth;
     public chestHealth;
@@ -40,9 +35,6 @@ export class Player {
         this.defaultStomaHealth = healthTemplate.BodyParts.Stomach.Health.Maximum;
         this.defaultArmHealth = healthTemplate.BodyParts.LeftArm.Health.Maximum;
         this.defaultLegHealth = healthTemplate.BodyParts.LeftLeg.Health.Maximum;
-        this.defaultHydration = healthTemplate.Hydration.Maximum;
-        this.defaultHydro = healthTemplate.Hydration.Maximum;
-        this.defaultEnergy = healthTemplate.Energy.Maximum;
         this.defaultTemp = healthTemplate.Temperature.Maximum;
         this.headHealth = botHealth.health.BodyParts[0].Head.max * modConfig.player_hp_multi;
         this.chestHealth = botHealth.health.BodyParts[0].Chest.max * modConfig.player_hp_multi;
@@ -72,7 +64,7 @@ export class Player {
     }
 
     public setPlayerHealth(pmcData: IPmcData, scavData: IPmcData) {
-      
+
         //revert to defaults
         if (this.modConfig.realistic_player_health == false && this.modConfig.revert_hp == true) {
           

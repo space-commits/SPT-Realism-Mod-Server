@@ -28,13 +28,10 @@ class Quests {
             locale["667c643869df8111b81cb6dc name"] = "Emergency Treatment - Part 1";
             locale["667c643869df8111b81cb6dc description"] = "Come in, young man. I understand that you've been poking around where you shouldn't be. Don't you know that radiation is bad for your health? Listen, we're in a tight spot and don't have all the supplies needed to treat you and your...acquaintance? You'll have to find them yourself. We won't be able to treat you again for some time, so be more cautious. Your treatment is free of charge, as a favor. One that will be repaid.";
             locale["667c643869df8111b81cb6dc failMessageText"] = "";
-            locale["667c643869df8111b81cb6dc successMessageText"] = "That should be your last round of treatment. How do you feel? Better? It will take some time to heal. I hope you learned your lesson. Remember that I won't be able to treat you again for quite some time. Take this Geiger counter, it seems like you'll need it. You will repay me in time.";
-            locale["667c7ce693045db42891c99b"] = "Find medical bloodsets";
-            locale["667c7cf226f52aef063b5ef7"] = "Handover medical bloodesets";
-            locale["667c8a4f226f02988be6a482"] = "Find disposable syringes";
-            locale["667c8a4420b5c29111af4bc7"] = "Handover disposable syringes";
-            locale["667c8a41dbc6a66603768af7"] = "Find piles of meds";
-            locale["667c8a3a189a9ffd2a5eea23"] = "Handover piles of meds";
+            locale["667c643869df8111b81cb6dc successMessageText"] = "That should be your last round of treatment. How do you feel? Better? It will take some time to heal. I hope you learned your lesson. Remember that I won't be able to treat you again for quite some time. Take these old AI-2s, they contain Potassium Iodide to treat low levels of radiation. It looks like you'll need them. You will repay me in time.";
+            locale["667c7cf226f52aef063b5ef7"] = "Handover Medical Bloodsets";
+            locale["667c8a4420b5c29111af4bc7"] = "Handover Disposable Syringes";
+            locale["667c8a3a189a9ffd2a5eea23"] = "Handover Piles of Meds";
         }
         //treatment part 2
         this.questDB()["667dbbc9c62a7c2ee8fe25b2"] = hazardQuests["667dbbc9c62a7c2ee8fe25b2"];
@@ -47,16 +44,44 @@ class Quests {
             locale["667dbbc9c62a7c2ee8fe25b2 description"] = "I see you didn't take my advice from the last time... no matter, we can treat you again. There's just that favor you owe me; I'll need you to bring in extra supplies for our humanitarian efforts. If you want us to treat that 'acquaintance' of yours again, you'll need to bring extra. He harassed my staff, that cannot stand. Let's take a look... your veins... what have you done to yourself? I'll need a LEDX to find where to stick the needle.";
             locale["667dbbc9c62a7c2ee8fe25b2 failMessageText"] = "";
             locale["667dbbc9c62a7c2ee8fe25b2 successMessageText"] = "That concludes your treatment. Come back with more supplies if you're thick-headed enough to fall into a reactor again. Keep the LEDX; it's contaminated. Bring it back with you if you need further treatment.";
-            locale["667dbd0f03f16a45c34872e6"] = "Find medical bloodsets";
-            locale["667dbd121abe6984e4cfeb16"] = "Handover medical bloodesets";
-            locale["667dbd1fd887653711b72b54"] = "Find portable defibrillator";
-            locale["667dbd23ef00ab79d3afb149"] = "Handover portable defibrillator";
-            locale["667dbd16ae96dbbf206281dd"] = "Find piles of meds";
-            locale["667dbd1bb1aeca0bfbb408a7"] = "Handover piles of meds";
-            locale["667dbd28dbd98039702a5901"] = "Find LEDX";
-            locale["667dbd2bedbb6aa6a6e862eb"] = "Handover Find LEDX";
-            locale["667dbd31fbb23d6798b20391"] = "Find Ophthalmoscope";
+            locale["667dbd121abe6984e4cfeb16"] = "Handover Medical Bloodsets";
+            locale["667dbd23ef00ab79d3afb149"] = "Handover Portable Defibrillator";
+            locale["667dbd1bb1aeca0bfbb408a7"] = "Handover Piles of Meds";
+            locale["667dbd2bedbb6aa6a6e862eb"] = "Handover LEDX";
             locale["667dbd367520b900ee16550e"] = "Handover Ophthalmoscope";
+        }
+        //find gas
+        this.questDB()["6681c5127b9973f80c7c7d12"] = hazardQuests["6681c5127b9973f80c7c7d12"];
+        for (let i in this.tables.locales.global) {
+            let locale = this.tables.locales.global[i];
+            locale["6681c5127b9973f80c7c7d12 acceptPlayerMessage"] = "";
+            locale["6681c5127b9973f80c7c7d12 declinePlayerMessage"] = "";
+            locale["6681c5127b9973f80c7c7d12 completePlayerMessage"] = "";
+            locale["6681c5127b9973f80c7c7d12 name"] = "Safety Technician - Part 1";
+            locale["6681c5127b9973f80c7c7d12 description"] = "Greetings, mercenary. I have some easy work for you. Even before the Contract Wars we've had patients coming in wtih respiratory distress and other strange symptoms. Fatigue, tunnel vision, and even in some cases rapid organ failure..." +
+                " The mayhem you and your...company? helped inflict on the region made that a low priority, we were more concerned about patching up gunshot wounds." +
+                "\n\nHowever, we've had a recent influx of patients showing those same symptoms from all that time ago; I need to you to find the source of this contamination. We're unsure if this is connected to the water contamination you helped as remediate before."
+                + "\n\nThere used to be a chemical plant in the factory and warehouse complex next to the Customs road, near the UN checkpoint. It was owned by TerraGroup corporation or one of its subsidiaries, I'm sure you're familar with them. This could be one of the sources of the contamination. Their trademark is plastered all over, you can't miss it. I need you to locate some of the infrastructure used to manufacture and distribute chemical products. I will send in my people to take samples once you've done so.";
+            locale["6681c5127b9973f80c7c7d12 failMessageText"] = "";
+            locale["6681c5127b9973f80c7c7d12 successMessageText"] = "Thank you mercenary. My people have confirmed the substances that were manufactured here are a match for what some of our patients have been contaminated with. This has grave implications...but that does not concern you. I may have more work for you.";
+            locale["6681c60bf1e98af2b3def8cc"] = "Find The Infrastructure Used For Distribution";
+            locale["6682854b9ad02262e978d803"] = "Find The Pumping Station Used For Manufacture";
+        }
+        //find rads
+        this.questDB()["6681d150fd1d7f0b7e5ae953"] = hazardQuests["6681d150fd1d7f0b7e5ae953"];
+        for (let i in this.tables.locales.global) {
+            let locale = this.tables.locales.global[i];
+            locale["6681d150fd1d7f0b7e5ae953 acceptPlayerMessage"] = "";
+            locale["6681d150fd1d7f0b7e5ae953 declinePlayerMessage"] = "";
+            locale["6681d150fd1d7f0b7e5ae953 completePlayerMessage"] = "";
+            locale["6681d150fd1d7f0b7e5ae953 name"] = "Safety Technician - Part 2";
+            locale["6681d150fd1d7f0b7e5ae953 description"] = "My people found more than just a chemical manufacturing plant. Manifests found on site indicated that there was more outbound cargo, headed outside the Tarkov region. From our contacts outside, it seems that the train did not make it to its destination."
+                + " We don't know which route they would have taken, the Customs area is crisscrossed by many rail lines. What we do know is that included in the cargo was not just toxic substances, but also radioactive materials. I don't dare to speculate there intended purpose was."
+                + "\n\nI need you to locate the train that was carrying this cargo, so my people can safely dispose of it before it gets into the wrong hands. In addition we heard from a reliable informant that some of the cargo was taken towards another location by some...unscrupulous locals; a large warehouse near the river. We're not sure how far they made it. The cargo will be marked as TerraGroup's property.";
+            locale["6681d150fd1d7f0b7e5ae953 failMessageText"] = "";
+            locale["6681d150fd1d7f0b7e5ae953 successMessageText"] = "My people will be sent to the crash site and move in to retrieve the cargo immediately. I hope you understand that this is a delicate matter and needs to be kept between us. I also hope that you wore a respirator at a minimum and didn't touch anything...";
+            locale["6681d1e23a21783b8b9c14ba"] = "Find The Train Carrying TerraGroup Cargo";
+            locale["6682859c9d440e2a1e92fc89"] = "Find The Stolen Radioactive Cargo";
         }
     }
     resetHazardQuests(profile) {

@@ -199,14 +199,14 @@
         "Name": "item_equipment_armor_drd",
         "AllowADS": true,
         "LoyaltyLevel": 4,
-        "ArmorClass": "VSM",
+        "ArmorClass": "Unclassified",
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.95,
-        "speedPenaltyPercent": 0.3,
+        "Comfort": 1,
+        "speedPenaltyPercent": -3,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0.2,
+        "weaponErgonomicPenalty": -8,
         "TemplateType": "gear"
     },
     "5b44cd8b86f774503d30cba2": {

@@ -1,71 +1,68 @@
 import { DependencyContainer } from "tsyringe";
-import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
-import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
-import { ConfigServer } from "@spt-aki/servers/ConfigServer";
-import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
-import type { StaticRouterModService } from "@spt-aki/services/mod/staticRouter/StaticRouterModService";
-import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
-import { HttpResponseUtil } from "@spt-aki/utils/HttpResponseUtil";
-import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
-import { ITraderConfig } from "@spt-aki/models/spt/config/ITraderConfig";
-import { IAirdropConfig } from "@spt-aki/models/spt/config/IAirdropConfig";
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { RandomUtil } from "@spt-aki/utils/RandomUtil";
-import { HashUtil } from "@spt-aki/utils/HashUtil";
-import { WeightedRandomHelper } from "@spt-aki/helpers/WeightedRandomHelper";
-import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
-import { BotEquipmentFilterService } from "@spt-aki/services/BotEquipmentFilterService";
-import { DynamicRouterModService } from "@spt-aki/services/mod/dynamicRouter/DynamicRouterModService"
-import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
-import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod";
-import { ApplicationContext } from "@spt-aki/context/ApplicationContext";
-import { IGetRaidConfigurationRequestData } from "@spt-aki/models/eft/match/IGetRaidConfigurationRequestData";
-import { WeatherController } from "@spt-aki/controllers/WeatherController";
-import { ContextVariableType } from "@spt-aki/context/ContextVariableType";
-import { LocalisationService } from "@spt-aki/services/LocalisationService";
-import { IInventoryConfig } from "@spt-aki/models/spt/config/IInventoryConfig";
-import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
-import { MathUtil } from "@spt-aki/utils/MathUtil";
-import { TimeUtil } from "@spt-aki/utils/TimeUtil";
-import { AssortHelper } from "@spt-aki/helpers/AssortHelper";
-import { RagfairAssortGenerator } from "@spt-aki/generators/RagfairAssortGenerator";
-import { TraderHelper } from "@spt-aki/helpers/TraderHelper";
-import { FenceService } from "@spt-aki/services/FenceService";
-import { TraderAssortService } from "@spt-aki/services/TraderAssortService";
-import { PaymentHelper } from "@spt-aki/helpers/PaymentHelper";
-import { ITrader } from "@spt-aki/models/eft/common/tables/ITrader";
-import { TraderPurchasePersisterService } from "@spt-aki/services/TraderPurchasePersisterService";
-import { RagfairServer } from "@spt-aki/servers/RagfairServer";;
-import { BotHelper } from "@spt-aki/helpers/BotHelper";
-import { IBotBase } from "@spt-aki/models/eft/common/tables/IBotBase";
-import { BotLevelGenerator } from "@spt-aki/generators/BotLevelGenerator";
-import { BotGenerationDetails } from "@spt-aki/models/spt/bots/BotGenerationDetails";
-import { SeasonalEventService } from "@spt-aki/services/SeasonalEventService";
-import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
-import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
-import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
-import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
-import { RagfairController } from "@spt-aki/controllers/RagfairController";
-import { LocationController } from "@spt-aki/controllers/LocationController";
-import { LocationGenerator } from "@spt-aki/generators/LocationGenerator";
-import { LootGenerator } from "@spt-aki/generators/LootGenerator";
-import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
-import { BotInventoryGenerator } from "@spt-aki/generators/BotInventoryGenerator";
-import { BotDifficultyHelper } from "@spt-aki/helpers/BotDifficultyHelper";
-import { BotGenerator } from "@spt-aki/generators/BotGenerator";
-import { IAirdropLootResult } from "@spt-aki/models/eft/location/IAirdropLootResult";
-import { IPmcConfig } from "@spt-aki/models/spt/config/IPmcConfig";
-import { RagfairTaxService } from "@spt-aki/services/RagfairTaxService";
-import { IInRaidConfig } from "@spt-aki/models/spt/config/IInRaidConfig";
-import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
-import { RaidTimeAdjustmentService } from "@spt-aki/services/RaidTimeAdjustmentService";
-import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
-import { ItemFilterService } from "@spt-aki/services/ItemFilterService";
-import { IItemConfig } from "@spt-aki/models/spt/config/IItemConfig";
-import { IBotType } from "@spt-aki/models/eft/common/tables/IBotType";
+import { IPreSptLoadMod } from "@spt/models/external/IPreSptLoadMod";
+import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
+import { DatabaseServer } from "@spt/servers/DatabaseServer";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
+import { ConfigServer } from "@spt/servers/ConfigServer";
+import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
+import type { StaticRouterModService } from "@spt/services/mod/staticRouter/StaticRouterModService";
+import { ProfileHelper } from "@spt/helpers/ProfileHelper";
+import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
+import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
+import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
+import { IAirdropConfig } from "@spt/models/spt/config/IAirdropConfig";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { RandomUtil } from "@spt/utils/RandomUtil";
+import { HashUtil } from "@spt/utils/HashUtil";
+import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
+import { JsonUtil } from "@spt/utils/JsonUtil";
+import { RagfairOfferGenerator } from "@spt/generators/RagfairOfferGenerator";
+import { BotEquipmentFilterService } from "@spt/services/BotEquipmentFilterService";
+import { DynamicRouterModService } from "@spt/services/mod/dynamicRouter/DynamicRouterModService"
+import { PreSptModLoader } from "@spt/loaders/PreSptModLoader";
+import { IPostSptLoadMod } from "@spt/models/external/IPostSptLoadMod";
+import { ApplicationContext } from "@spt/context/ApplicationContext";
+import { IGetRaidConfigurationRequestData } from "@spt/models/eft/match/IGetRaidConfigurationRequestData";
+import { WeatherController } from "@spt/controllers/WeatherController";
+import { ContextVariableType } from "@spt/context/ContextVariableType";
+import { LocalisationService } from "@spt/services/LocalisationService";
+import { IInventoryConfig } from "@spt/models/spt/config/IInventoryConfig";
+import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
+import { MathUtil } from "@spt/utils/MathUtil";
+import { TimeUtil } from "@spt/utils/TimeUtil";
+import { AssortHelper } from "@spt/helpers/AssortHelper";
+import { RagfairAssortGenerator } from "@spt/generators/RagfairAssortGenerator";
+import { TraderHelper } from "@spt/helpers/TraderHelper";
+import { FenceService } from "@spt/services/FenceService";
+import { TraderAssortService } from "@spt/services/TraderAssortService";
+import { PaymentHelper } from "@spt/helpers/PaymentHelper";
+import { ITrader } from "@spt/models/eft/common/tables/ITrader";
+import { TraderPurchasePersisterService } from "@spt/services/TraderPurchasePersisterService";
+import { RagfairServer } from "@spt/servers/RagfairServer";;
+import { BotHelper } from "@spt/helpers/BotHelper";
+import { IBotBase } from "@spt/models/eft/common/tables/IBotBase";
+import { BotLevelGenerator } from "@spt/generators/BotLevelGenerator";
+import { BotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
+import { SeasonalEventService } from "@spt/services/SeasonalEventService";
+import { ISearchRequestData } from "@spt/models/eft/ragfair/ISearchRequestData";
+import { RagfairCallbacks } from "@spt/callbacks/RagfairCallbacks";
+import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
+import { IGetOffersResult } from "@spt/models/eft/ragfair/IGetOffersResult";
+import { RagfairController } from "@spt/controllers/RagfairController";
+import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
+import { BotInventoryGenerator } from "@spt/generators/BotInventoryGenerator";
+import { BotDifficultyHelper } from "@spt/helpers/BotDifficultyHelper";
+import { BotGenerator } from "@spt/generators/BotGenerator";
+import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
+import { RagfairTaxService } from "@spt/services/RagfairTaxService";
+import { IInRaidConfig } from "@spt/models/spt/config/IInRaidConfig";
+import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
+import { LogBackgroundColor } from "@spt/models/spt/logging/LogBackgroundColor";
+import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
+import { IBotType } from "@spt/models/eft/common/tables/IBotType";
+
+import * as path from 'path';
+import * as fs from 'fs';
 
 import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
@@ -80,7 +77,7 @@ import { ItemsClass } from "./items/items";
 import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
-import { AirdropLootgen, Airdrops } from "./misc/airdrops";
+import { Airdrops } from "./misc/airdrops";
 import { Spawns } from "./bots/maps";
 import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
@@ -89,13 +86,14 @@ import { DescriptionGen } from "./json/description_gen";
 import { ItemStatHandler } from "./json/json-handler";
 import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
-
-import * as path from 'path';
-import * as fs from 'fs';
-import { MyLootCache } from "./bots/bot_loot_serv";
-import { PMCLootGenerator } from "@spt-aki/generators/PMCLootGenerator";
-import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
-import { RagfairPriceService } from "@spt-aki/services/RagfairPriceService";
+import { MyLootCacheService } from "./bots/bot_loot_serv";
+import { PMCLootGenerator } from "@spt/generators/PMCLootGenerator";
+import { ItemHelper } from "@spt/helpers/ItemHelper";
+import { RagfairPriceService } from "@spt/services/RagfairPriceService";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { DatabaseService } from "@spt/services/DatabaseService";
+import { ICloner } from "@spt/utils/cloners/ICloner";
+import { ItemFilterService } from "@spt/services/ItemFilterService";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -107,11 +105,11 @@ const modConfig = require("../config/config.json");
 
 let adjustedTradersOnStart = false;
 
-export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
+export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
-    private modLoader: PreAkiModLoader;
+    private modLoader: PreSptModLoader;
 
-    public preAkiLoad(container: DependencyContainer): void {
+    public preSptLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
@@ -121,10 +119,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const staticRouterModService = container.resolve<StaticRouterModService>("StaticRouterModService");
         const HttpResponse = container.resolve<HttpResponseUtil>("HttpResponseUtil");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
-        const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+        const databaseService = container.resolve<DatabaseService>("DatabaseService");
         const localisationService = container.resolve<LocalisationService>("LocalisationService");
         const fleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+        const cloner = container.resolve<ICloner>("PrimaryCloner");
         const assortHelper = container.resolve<AssortHelper>("AssortHelper");
         const paymentHelper = container.resolve<PaymentHelper>("PaymentHelper");
         const mathUtil = container.resolve<MathUtil>("MathUtil");
@@ -135,20 +134,21 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         const traderPurchasePefrsisterService = container.resolve<TraderPurchasePersisterService>("TraderPurchasePersisterService");
         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
-        const router = container.resolve<DynamicRouterModService>("DynamicRouterModService");
-        const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
-        const traderRefersh = new TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
+        const dynamicRouter = container.resolve<DynamicRouterModService>("DynamicRouterModService");
+        const preSptModLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
+        const traderRefersh = new TraderRefresh(logger, mathUtil, timeUtil, databaseService, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, 
+            traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer, cloner);
         const flea = new FleaChangesPreDBLoad(logger, fleaConf, modConfig);
 
-        this.checkForMods(preAkiModLoader, logger, modConfig);
+        this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
 
-        router.registerDynamicRouter(
+        dynamicRouter.registerDynamicRouter(
             "loadResources",
             [
                 {
                     url: "/RealismMod/GetInfo",
-                    action: (url, info, sessionID, output) => {
+                    action: async (url, info, sessionID, output) => {
 
                         try {
                             return jsonUtil.serialize(modConfig);
@@ -168,7 +168,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             const botHelper = container.resolve<BotHelper>("BotHelper");
             const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
             const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
-            const botGen = new BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
+            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");            const botGen = new BotGen(
+                logger, hashUtil, randomUtil, timeUtil, 
+                profileHelper, databaseService, botInventoryGenerator, 
+                botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, 
+                botHelper, botDifficultyHelper, seasonalEventService,
+                localisationService, itemFilterService, configServer, cloner);
 
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
                 result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase => {
@@ -195,7 +200,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             const ragfairController = container.resolve<RagfairController>("RagfairController");
             const ragfairTaxServ = container.resolve<RagfairTaxService>("RagfairTaxService");
             const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
-            const ragFairCallback = new RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, ragfairTaxServ, configServer);
+            const ragFairCallback = new RagCallback(httpResponse, ragfairServer, ragfairController, ragfairTaxServ, configServer);
             container.afterResolution("RagfairCallbacks", (_t, result: RagfairCallbacks) => {
                 result.search = (url: string, info: ISearchRequestData, sessionID: string): IGetBodyResponseData<IGetOffersResult> => {
                     return ragFairCallback.mySearch(url, info, sessionID);
@@ -223,12 +228,12 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             [
                 {
                     url: "/client/game/version/validate",
-                    action: (url, info, sessionID, output) => {
+                    action: async (url, info, sessionID, output) => {
 
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
-                        const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
+                        const postLoadDBServer = container.resolve<DatabaseService>("DatabaseService");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
                         const postLoadTables = postLoadDBServer.getTables();
@@ -268,22 +273,15 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                                     if (modConfig.revert_med_changes == true && modConfig.med_changes == false) {
                                         this.revertMeds(pmcData, utils);
                                         this.revertMeds(scavData, utils);
-                                        modConfig.revert_med_changes = false;
+                                        this.revertHydroEnergy(pmcData, postLoadTables);
+                                        this.revertHydroEnergy(scavData, postLoadTables);
+                                        modConfig.revert_med_changes = true;
                                         utils.writeConfigJSON(modConfig, 'config/config.json');
                                         logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                     }
 
                                     this.checkProfile(pmcData, pmcData.Info.Experience, utils, player, logger);
                                     this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
-
-                                    if (modConfig.med_changes == false && modConfig.revert_hp == true) {
-                                        pmcData.Health.Hydration.Maximum = player.defaultHydration
-                                        pmcData.Health.Energy.Maximum = player.defaultEnergy;
-                                        if (pmcData.Health.Energy.Current > pmcData.Health.Energy.Maximum) {
-                                            pmcData.Health.Hydration.Current = player.defaultHydration
-                                            pmcData.Health.Energy.Current = player.defaultEnergy;
-                                        }
-                                    }
                                 }
                             }
                             this.checkForEvents(logger, seasonalEventsService);
@@ -329,7 +327,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             [
                 {
                     url: "/client/game/logout",
-                    action: (url, info, sessionID, output) => {
+                    action: async (url, info, sessionID, output) => {
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const profileData = profileHelper.getFullProfile(sessionID)
 
@@ -355,11 +353,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             [
                 {
                     url: "/client/game/profile/create",
-                    action: (url, info, sessionID, output) => {
+                    action: async (url, info, sessionID, output) => {
 
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-                        const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
-                        const postLoadtables = postLoadDBServer.getTables();
+                        const postLoadDBService = container.resolve<DatabaseService>("DatabaseService");
+                        const postLoadtables = postLoadDBService.getTables();
                         const arrays = new Arrays(postLoadtables);
                         const utils = new Utils(postLoadtables, arrays);
                         const player = new Player(logger, postLoadtables, modConfig, medItems, utils);
@@ -393,11 +391,11 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             [
                 {
                     url: "/client/raid/configuration",
-                    action: (url, info, sessionID, output) => {
+                    action: async (url, info, sessionID, output) => {
 
                         try {
-                            const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
-                            const postLoadTables = postLoadDBServer.getTables();
+                            const postLoadDBService = container.resolve<DatabaseService>("DatabaseService");
+                            const postLoadTables = postLoadDBService.getTables();
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
@@ -413,8 +411,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
 
-                            const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
-                            myGetLootCache.myClearCache();
+                            //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
+                            // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                            // myGetLootCache.myClearCache();
 
                             const time = weatherController.generate().time; //apparently regenerates weather?
                             // const time = weatherController.getCurrentInRaidTime; //better way?
@@ -501,9 +500,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
             [
                 {
                     url: "/raid/profile/save",
-                    action: (url, info, sessionID, output) => {
-                        const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
-                        const postLoadTables = postLoadDBServer.getTables();
+                    action: async (url, info, sessionID, output) => {
+                        const postLoadDBService = container.resolve<DatabaseService>("DatabaseService");
+                        const postLoadTables = postLoadDBService.getTables();
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
                         const localisationService = container.resolve<LocalisationService>("LocalisationService");
@@ -519,8 +518,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID)
 
-                        const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
-                        myGetLootCache.myClearCache();
+                        //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
+                        // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                        // myGetLootCache.myClearCache();
 
                         //update global player level
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
@@ -553,7 +553,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         );
     }
 
-    private backupProfile(profileData: IAkiProfile, logger: ILogger) {
+    private backupProfile(profileData: ISptProfile, logger: ILogger) {
         const profileFileData = JSON.stringify(profileData, null, 4)
         let index = 0;
         if (index == 0) {
@@ -582,7 +582,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     }
 
 
-    private profileBackupHelper(profileFileData: string, pathforProfile: string, profileData: IAkiProfile, logger: ILogger) {
+    private profileBackupHelper(profileFileData: string, pathforProfile: string, profileData: ISptProfile, logger: ILogger) {
         let date = new Date();
         let time = date.toLocaleTimeString();
         let edit_time = time.replaceAll(" ", "_");
@@ -606,7 +606,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
 
 
 
-    // public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
+    // public async postSptLoadAsync(container: DependencyContainer): Promise<void> {
     //     const logger = container.resolve<ILogger>("WinstonLogger");
 
     //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
@@ -619,9 +619,9 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     public postDBLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
-        const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+        const databaseService = container.resolve<DatabaseService>("DatabaseService");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
-        const tables = databaseServer.getTables();
+        const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig<IInRaidConfig>(ConfigTypes.IN_RAID);
@@ -793,11 +793,13 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
                 quests.fixMechancicQuests();
                 ammo.grenadeTweaks();
             }
+
+            gear.loadGearConflicts();
         })();
     }
 
-    public postAkiLoad(container: DependencyContainer) {
-        this.modLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
+    public postSptLoad(container: DependencyContainer) {
+        this.modLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
     }
 
     //unsure if I still need to do this or not, now that configuration has been expanded
@@ -819,8 +821,21 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
     //     }
     // }
 
-    private revertMeds(pmcData: IPmcData, utils: Utils) {
-        utils.revertMedItems(pmcData);
+    private revertMeds(profileData: IPmcData, utils: Utils) {
+        utils.revertMedItems(profileData);
+    }
+
+    private revertHydroEnergy(profileData: IPmcData, tables: IDatabaseTables){
+        const healthTemplate = tables.templates.profiles.Standard.bear.character.Health;
+        const defaultHydration = healthTemplate.Hydration.Maximum;
+        const defaultEnergy = healthTemplate.Energy.Maximum;
+        profileData.Health.Hydration.Maximum = defaultHydration
+        profileData.Health.Energy.Maximum = defaultEnergy;
+        
+        if (profileData.Health.Energy.Current > profileData.Health.Energy.Maximum) {
+            profileData.Health.Hydration.Current = defaultHydration
+            profileData.Health.Energy.Current = defaultEnergy;
+        }
     }
 
     private checkForEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
@@ -834,7 +849,7 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    private checkPlayerLevel(sessionID: string, profileData: IAkiProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
+    private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
         let level = 1;
         if (pmcData?.Info?.Level !== undefined) {
             level = pmcData.Info.Level;
@@ -870,8 +885,8 @@ export class Main implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod {
         }
     }
 
-    private checkForMods(preAkiModLoader: PreAkiModLoader, logger: ILogger, modConf: any) {
-        const activeMods = preAkiModLoader.getImportedModDetails();
+    private checkForMods(preSptModLoader: PreSptModLoader, logger: ILogger, modConf: any) {
+        const activeMods = preSptModLoader.getImportedModDetails();
         for (const modname in activeMods) {
             // if (modname.includes("Jiro-BatterySystem")) {
             //     ModTracker.batteryModPresent = true;

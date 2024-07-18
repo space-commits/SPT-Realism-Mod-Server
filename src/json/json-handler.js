@@ -169,9 +169,11 @@ class ItemStatHandler {
                     serverItem._props.FaceShieldMask = "NoMask";
                     serverItem._props.armorClass = 1;
                     serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
-                    serverItem._props.MaxDurability = 50;
+                    serverItem._props.MaxDurability = 25;
                     serverItem._props.Durability = serverItem._props.MaxDurability;
-                    this.addGasFilterSlot(serverItem);
+                    if (modConfig.enable_hazard_zones) {
+                        this.addGasFilterSlot(serverItem);
+                    }
                 }
                 else if (fileItem?.MaskToUse !== undefined) {
                     if (fileItem.MaskToUse == "ronin") {

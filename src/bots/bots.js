@@ -631,12 +631,12 @@ class BotLoader {
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
             }
             if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
         }
         if (this.modConfig.logEverything == true) {
@@ -702,12 +702,12 @@ class BotLoader {
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
             }
             if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
         }
         if (this.modConfig.logEverything == true) {
@@ -773,12 +773,12 @@ class BotLoader {
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
             if (utils_1.RaidInfoTracker.TOD === "day") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
             }
             if (utils_1.RaidInfoTracker.TOD === "night") {
-                this.botConfPMC().pmcType.sptusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
-                this.botConfPMC().pmcType.sptbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
+                this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
+                this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
             }
         }
         if (this.modConfig.logEverything == true) {
@@ -1677,9 +1677,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConfig.enable_hazard_zones == true && utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
             || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
-            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
+            || utils_1.RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1753,9 +1753,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConfig.enable_hazard_zones == true && utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
             || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
-            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
+            || utils_1.RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;
@@ -1829,9 +1829,9 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapType === "outdoor") {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
-        if (this.modConfig.enable_hazard_zones == true && utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
+        if (this.modConfig.enable_hazard_zones == true && (utils_1.RaidInfoTracker.mapName === "laboratory" || utils_1.RaidInfoTracker.mapName === "rezervbase"
             || utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "factory4_night"
-            || utils_1.RaidInfoTracker.mapName === "factory4_day") {
+            || utils_1.RaidInfoTracker.mapName === "factory4_day")) {
             this.raiderBase.chances.equipmentMods.mod_equipment = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 = 0;
             this.raiderBase.chances.equipmentMods.mod_equipment_001 = 0;

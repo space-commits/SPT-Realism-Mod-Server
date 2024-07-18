@@ -13,8 +13,8 @@
         "Dispersion": 15,
         "CameraRecoil": 0.015,
         "VisualMulti": 2.5,
-        "Convergence": 12,
-        "RecoilAngle": 90,
+        "Convergence": 10,
+        "RecoilAngle": 100,
         "BaseMalfunctionChance": 0,
         "HeatFactorGun": 0.1,
         "HeatFactorByShot": 1,
@@ -199,7 +199,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.34
+        "RecoilIntensity": 0.33
     },
     "5f36a0e5fbf956000b716b65": {
         "ItemID": "5f36a0e5fbf956000b716b65",
@@ -245,7 +245,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.34
+        "RecoilIntensity": 0.33
     },
     "6193a720f8ee7e52e42109ed": {
         "ItemID": "6193a720f8ee7e52e42109ed",
@@ -291,7 +291,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.35
+        "RecoilIntensity": 0.34
     },
     "5cadc190ae921500103bb3b6": {
         "ItemID": "5cadc190ae921500103bb3b6",
@@ -521,7 +521,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.008,
-        "RecoilIntensity": 0.32,
+        "RecoilIntensity": 0.3,
         "RecoilCenter": {
             "x": 0,
             "y": -0.35,
@@ -572,7 +572,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.009,
-        "RecoilIntensity": 0.41
+        "RecoilIntensity": 0.38
     },
     "576a581d2459771e7b1bc4f1": {
         "ItemID": "576a581d2459771e7b1bc4f1",
@@ -664,7 +664,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.26,
+        "RecoilIntensity": 0.245,
         "RecoilCenter": {
             "x": 0,
             "y": -0.36,
@@ -715,7 +715,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.26,
+        "RecoilIntensity": 0.245,
         "RecoilCenter": {
             "x": 0,
             "y": -0.36,

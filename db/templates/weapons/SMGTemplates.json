@@ -519,7 +519,7 @@
         "Ergonomics": 82,
         "VerticalRecoil": 28,
         "HorizontalRecoil": 90,
-        "Dispersion": 10,
+        "Dispersion": 11,
         "CameraRecoil": 0.052,
         "VisualMulti": 1.3,
         "Convergence": 20,
@@ -552,7 +552,7 @@
         "BaseChamberCheckSpeed": 0.9,
         "BaseFixSpeed": 0.9,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.255
     },
     "5fc3e272f8b6a877a729eac5": {
         "ItemID": "5fc3e272f8b6a877a729eac5",

@@ -14,9 +14,6 @@ class Player {
     defaultStomaHealth;
     defaultArmHealth;
     defaultLegHealth;
-    defaultHydration;
-    defaultHydro;
-    defaultEnergy;
     defaultTemp;
     headHealth;
     chestHealth;
@@ -39,9 +36,6 @@ class Player {
         this.defaultStomaHealth = healthTemplate.BodyParts.Stomach.Health.Maximum;
         this.defaultArmHealth = healthTemplate.BodyParts.LeftArm.Health.Maximum;
         this.defaultLegHealth = healthTemplate.BodyParts.LeftLeg.Health.Maximum;
-        this.defaultHydration = healthTemplate.Hydration.Maximum;
-        this.defaultHydro = healthTemplate.Hydration.Maximum;
-        this.defaultEnergy = healthTemplate.Energy.Maximum;
         this.defaultTemp = healthTemplate.Temperature.Maximum;
         this.headHealth = botHealth.health.BodyParts[0].Head.max * modConfig.player_hp_multi;
         this.chestHealth = botHealth.health.BodyParts[0].Chest.max * modConfig.player_hp_multi;
