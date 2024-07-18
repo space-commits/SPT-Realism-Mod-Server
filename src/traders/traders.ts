@@ -1,23 +1,23 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { ITraderConfig } from "@spt-aki/models/spt/config/ITraderConfig";
-import { IBarterScheme, ITrader, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrader";
+import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
+import { IBarterScheme, ITrader, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { container } from "tsyringe";
 import { Arrays } from "../utils/arrays";
-import { TraderAssortHelper } from "@spt-aki/helpers/TraderAssortHelper";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
+import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { Utils, ProfileTracker } from "../utils/utils";
 import { Calibers, ParentClasses } from "../utils/enums";
-import { RagfairServer } from "@spt-aki/servers/RagfairServer";
-import { ISearchRequestData } from "@spt-aki/models/eft/ragfair/ISearchRequestData";
-import { IGetBodyResponseData } from "@spt-aki/models/eft/httpResponse/IGetBodyResponseData";
-import { IGetOffersResult } from "@spt-aki/models/eft/ragfair/IGetOffersResult";
-import { RagfairCallbacks } from "@spt-aki/callbacks/RagfairCallbacks";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { RagfairServer } from "@spt/servers/RagfairServer";
+import { ISearchRequestData } from "@spt/models/eft/ragfair/ISearchRequestData";
+import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
+import { IGetOffersResult } from "@spt/models/eft/ragfair/IGetOffersResult";
+import { RagfairCallbacks } from "@spt/callbacks/RagfairCallbacks";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { EventTracker } from "../misc/seasonalevents";
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 
 
 const modConfig = require("../../config/config.json");
@@ -162,7 +162,7 @@ export class Traders {
     public setBaseOfferValues() {
         for (let t in this.tables.traders) {
             let trader = this.tables.traders[t];
-            if (trader?.assort?.items === undefined || trader.base.name === "БТР" || trader.base.nickname === "Fence") continue;
+            if (trader?.assort?.items === undefined || trader.base.nickname === "БТР" || trader.base.nickname.toLowerCase() === "fence") continue;
             if (modConfig.change_trader_ll == true) {
                 this.setLoyaltyLevels(trader);
             }
@@ -507,10 +507,10 @@ export class RandomizeTraderAssort {
 
     public adjustTraderStockAtServerStart(pmcData: IPmcData[]) {
         if (EventTracker.isChristmas == true) {
-            this.logger.warning("====== Christmas Sale, Everything 10% Off! ======");
+            this.logger.warning("====== Christmas Sale, Everything 15% Off! ======");
         }
         for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.name !== "БТР" && this.tables.traders[trader].base.nickname.toLocaleLowerCase() !== "fence") {
+            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.nickname !== "БТР" && this.tables.traders[trader].base.nickname.toLocaleLowerCase() !== "fence") {
                 let assortItems = this.tables.traders[trader].assort.items;
                 let ll = this.getAverageLL(pmcData, trader);
                 for (let item in assortItems) {
@@ -758,29 +758,29 @@ export class RandomizeTraderAssort {
     }
 
     public setAndRandomizeCost(utils: Utils, itemTemplId: string, barter: IBarterScheme[][], setBasePrice: boolean) {
-
-        if (this.itemDB[barter[0][0]._tpl]._parent === ParentClasses.MONEY) {
+       
+        let barterItem = barter[0][0];
+        if (this.itemDB[barterItem._tpl]._parent === ParentClasses.MONEY) {
             let randNum = utils.pickRandNumOneInTen();
-            let cost = barter[0][0].count;
+            let cost = barterItem.count;
             if (setBasePrice == true && modConfig.adjust_trader_prices == true) {
-                this.adjustPriceByCategory(barter[0][0], itemTemplId, cost);
+                this.adjustPriceByCategory(barterItem, itemTemplId, cost);
             }
             if (modConfig.randomize_trader_prices == true) {
                 if (randNum >= 8) {
-                    barter[0][0].count = cost * modConfig.rand_cost_increase;
+                    barterItem.count = cost * modConfig.rand_cost_increase;
                 }
                 else if (randNum <= 3) {
-                    barter[0][0].count = cost * modConfig.rand_cost_discount;
+                    barterItem.count = cost * modConfig.rand_cost_discount;
                 }
             }
             if (EventTracker.isChristmas == true) {
-                barter[0][0].count = barter[0][0].count * 0.9;
+                barterItem.count = barterItem.count * 0.85;
             }
         }
     }
 
     private adjustPriceByCategory(barter: IBarterScheme, itemTemplId: string, cost: number) {
-
         if (this.itemDB[itemTemplId]._parent === ParentClasses.AMMO) {
             barter.count = cost * 2;
         }
@@ -843,10 +843,10 @@ export class TraderRefresh extends TraderAssortHelper {
 
     public myResetExpiredTrader(trader: ITrader) {
 
-        if (trader.base.name === "БТР") return;
+        if (trader.base.nickname === "БТР") return;
 
         const traderId = trader.base._id;
-        trader.assort = this.jsonUtil.clone(this.traderAssortService.getPristineTraderAssort(traderId));
+        trader.assort = this.cloner.clone(this.traderAssortService.getPristineTraderAssort(traderId));
 
         let pmcData: IPmcData[] = [];
 
@@ -868,7 +868,7 @@ export class TraderRefresh extends TraderAssortHelper {
     }
 
     private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): Item[] {
-        const tables = this.databaseServer.getTables();
+        const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const arrays = new Arrays(tables);
         const utils = new Utils(tables, arrays);
@@ -901,9 +901,7 @@ export class TraderRefresh extends TraderAssortHelper {
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
                 if (barter !== undefined) {
-                    //roll randomization of prices several times for better potential spread of prices
-                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
-                    this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
+                    //roll randomization of prices several times for better potential spread of prices...nah, that seems really stupid
                     this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
                 }
             }

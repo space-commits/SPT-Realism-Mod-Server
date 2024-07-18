@@ -105,7 +105,7 @@ class TieredFlea {
         fetchTier();
         ragfairOfferGen.generateDynamicOffers();
         for (let traderID in traders) {
-            if (this.tables.traders[traders[traderID]]?.assort && this.tables.traders[traders[traderID]].base.name !== "БТР") {
+            if (this.tables.traders[traders[traderID]]?.assort && this.tables.traders[traders[traderID]].base.nickname !== "БТР") {
                 ragfairOfferGen.generateFleaOffersForTrader(traders[traderID]);
             }
         }

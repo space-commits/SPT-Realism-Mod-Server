@@ -1,8 +1,8 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
-import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { IConfig } from "@spt/models/eft/common/IGlobals";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class Ammo {
 

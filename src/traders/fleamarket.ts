@@ -1,15 +1,14 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
-import { RagfairOfferHolder } from "@spt-aki/utils/RagfairOfferHolder";
+import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ParentClasses } from "../utils/enums";
-import { RagfairOfferGenerator } from "@spt-aki/generators/RagfairOfferGenerator";
-import { RagfairServer } from "@spt-aki/servers/RagfairServer";
-import { RagfairOfferService } from "@spt-aki/services/RagfairOfferService";
+import { RagfairOfferGenerator } from "@spt/generators/RagfairOfferGenerator";
+import { RagfairServer } from "@spt/servers/RagfairServer";
+import { RagfairOfferService } from "@spt/services/RagfairOfferService";
 import { DependencyContainer } from "tsyringe";
 import { Arrays } from "../utils/arrays";
-import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { IConfig } from "@spt/models/eft/common/IGlobals";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 const custFleaConfig = require("../../db/traders/ragfair/flea_config.json");
 
@@ -125,7 +124,7 @@ export class TieredFlea {
         fetchTier();
         ragfairOfferGen.generateDynamicOffers();
         for (let traderID in traders) {
-            if(this.tables.traders[traders[traderID]]?.assort && this.tables.traders[traders[traderID]].base.name !== "БТР"){
+            if(this.tables.traders[traders[traderID]]?.assort && this.tables.traders[traders[traderID]].base.nickname !== "БТР"){
                 ragfairOfferGen.generateFleaOffersForTrader(traders[traderID]);
             }
         }

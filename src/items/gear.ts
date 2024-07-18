@@ -1,9 +1,8 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
-
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { Arrays } from "../utils/arrays";
 import { ParentClasses } from "../utils/enums";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class Gear {
     constructor(private arrays: Arrays, private tables: IDatabaseTables, private logger: ILogger, private modConfig: any) { }
@@ -20,6 +19,9 @@ export class Gear {
 
     public loadSpecialSlotChanges() {
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
+            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+        });
+        this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
         });
     }

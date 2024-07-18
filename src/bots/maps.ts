@@ -1,7 +1,6 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ILocations } from "@spt-aki/models/spt/server/ILocations";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { ILocations } from "@spt/models/spt/server/ILocations";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { EventTracker } from "../misc/seasonalevents";
 import { ModTracker } from "../utils/utils";
 
 

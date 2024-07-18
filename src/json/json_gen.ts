@@ -1,10 +1,9 @@
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { Arrays } from "../utils/arrays";
 import { Utils } from "../utils/utils";
 import { ParentClasses } from "../utils/enums";
-import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
 
 const modConfig = require("../../config/config.json");
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");

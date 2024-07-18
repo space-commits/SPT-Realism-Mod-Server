@@ -1,7 +1,7 @@
-import { IQuest } from "@spt-aki/models/eft/common/tables/IQuest";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IQuest } from "@spt/models/eft/common/tables/IQuest";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { IAkiProfile } from "@spt-aki/models/eft/profile/IAkiProfile";
+import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
 
 const hazardQuests = require("../../db/quests/rad_treatment.json");
 
@@ -93,7 +93,7 @@ export class Quests {
         }
     }
 
-    public resetHazardQuests(profile: IAkiProfile) {
+    public resetHazardQuests(profile: ISptProfile) {
         const pmc = profile.characters.pmc;
 
         let questCompleted = false;

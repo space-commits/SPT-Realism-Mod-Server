@@ -1,8 +1,8 @@
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { Utils } from "src/utils/utils";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { Arrays } from "../utils/arrays";
-import { ITemplateItem, Slot } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+import { ITemplateItem, Slot } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class AttachmentBase {
 

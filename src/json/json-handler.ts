@@ -1,8 +1,8 @@
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
-import { ConfigChecker, ModTracker } from "../utils/utils";
+import { ModTracker } from "../utils/utils";
 
 const fs = require('fs');
 const path = require('path');

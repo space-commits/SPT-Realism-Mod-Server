@@ -29,6 +29,8 @@ const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVa
 ;
 const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
+const path = __importStar(require("path"));
+const fs = __importStar(require("fs"));
 const attatchment_base_1 = require("./weapons/attatchment_base");
 const fleamarket_1 = require("./traders/fleamarket");
 const utils_1 = require("./utils/utils");
@@ -51,9 +53,6 @@ const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
 const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
-const path = __importStar(require("path"));
-const fs = __importStar(require("fs"));
-const bot_loot_serv_1 = require("./bots/bot_loot_serv");
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -64,7 +63,7 @@ const modConfig = require("../config/config.json");
 let adjustedTradersOnStart = false;
 class Main {
     modLoader;
-    preAkiLoad(container) {
+    preSptLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const jsonUtil = container.resolve("JsonUtil");
         const hashUtil = container.resolve("HashUtil");
@@ -73,10 +72,11 @@ class Main {
         const staticRouterModService = container.resolve("StaticRouterModService");
         const HttpResponse = container.resolve("HttpResponseUtil");
         const configServer = container.resolve("ConfigServer");
-        const databaseServer = container.resolve("DatabaseServer");
+        const databaseService = container.resolve("DatabaseService");
         const localisationService = container.resolve("LocalisationService");
         const fleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const profileHelper = container.resolve("ProfileHelper");
+        const cloner = container.resolve("PrimaryCloner");
         const assortHelper = container.resolve("AssortHelper");
         const paymentHelper = container.resolve("PaymentHelper");
         const mathUtil = container.resolve("MathUtil");
@@ -87,16 +87,16 @@ class Main {
         const traderPurchasePefrsisterService = container.resolve("TraderPurchasePersisterService");
         const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
         const ragfairAssortGenerator = container.resolve("RagfairAssortGenerator");
-        const router = container.resolve("DynamicRouterModService");
-        const preAkiModLoader = container.resolve("PreAkiModLoader");
-        const traderRefersh = new traders_1.TraderRefresh(logger, jsonUtil, mathUtil, timeUtil, databaseServer, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer);
+        const dynamicRouter = container.resolve("DynamicRouterModService");
+        const preSptModLoader = container.resolve("PreSptModLoader");
+        const traderRefersh = new traders_1.TraderRefresh(logger, mathUtil, timeUtil, databaseService, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer, cloner);
         const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
-        this.checkForMods(preAkiModLoader, logger, modConfig);
+        this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
-        router.registerDynamicRouter("loadResources", [
+        dynamicRouter.registerDynamicRouter("loadResources", [
             {
                 url: "/RealismMod/GetInfo",
-                action: (url, info, sessionID, output) => {
+                action: async (url, info, sessionID, output) => {
                     try {
                         return jsonUtil.serialize(modConfig);
                     }
@@ -113,7 +113,8 @@ class Main {
             const botHelper = container.resolve("BotHelper");
             const botEquipmentFilterService = container.resolve("BotEquipmentFilterService");
             const seasonalEventService = container.resolve("SeasonalEventService");
-            const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, jsonUtil, profileHelper, databaseServer, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, configServer);
+            const itemFilterService = container.resolve("ItemFilterService");
+            const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, profileHelper, databaseService, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, itemFilterService, configServer, cloner);
             container.afterResolution("BotGenerator", (_t, result) => {
                 result.prepareAndGenerateBot = (sessionId, botGenerationDetails) => {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
@@ -135,7 +136,7 @@ class Main {
             const ragfairController = container.resolve("RagfairController");
             const ragfairTaxServ = container.resolve("RagfairTaxService");
             const ragfairServer = container.resolve("RagfairServer");
-            const ragFairCallback = new traders_1.RagCallback(httpResponse, jsonUtil, ragfairServer, ragfairController, ragfairTaxServ, configServer);
+            const ragFairCallback = new traders_1.RagCallback(httpResponse, ragfairServer, ragfairController, ragfairTaxServ, configServer);
             container.afterResolution("RagfairCallbacks", (_t, result) => {
                 result.search = (url, info, sessionID) => {
                     return ragFairCallback.mySearch(url, info, sessionID);
@@ -158,11 +159,11 @@ class Main {
         staticRouterModService.registerStaticRouter("CheckProfile", [
             {
                 url: "/client/game/version/validate",
-                action: (url, info, sessionID, output) => {
+                action: async (url, info, sessionID, output) => {
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const profileHelper = container.resolve("ProfileHelper");
                     const seasonalEventsService = container.resolve("SeasonalEventService");
-                    const postLoadDBServer = container.resolve("DatabaseServer");
+                    const postLoadDBServer = container.resolve("DatabaseService");
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const ragfairServer = container.resolve("RagfairServer");
                     const postLoadTables = postLoadDBServer.getTables();
@@ -237,7 +238,7 @@ class Main {
         staticRouterModService.registerStaticRouter("runOnGameLogout", [
             {
                 url: "/client/game/logout",
-                action: (url, info, sessionID, output) => {
+                action: async (url, info, sessionID, output) => {
                     const profileHelper = container.resolve("ProfileHelper");
                     const profileData = profileHelper.getFullProfile(sessionID);
                     let playerCount = 0;
@@ -256,10 +257,10 @@ class Main {
         staticRouterModService.registerStaticRouter("runAtProfileCreation", [
             {
                 url: "/client/game/profile/create",
-                action: (url, info, sessionID, output) => {
+                action: async (url, info, sessionID, output) => {
                     const profileHelper = container.resolve("ProfileHelper");
-                    const postLoadDBServer = container.resolve("DatabaseServer");
-                    const postLoadtables = postLoadDBServer.getTables();
+                    const postLoadDBService = container.resolve("DatabaseService");
+                    const postLoadtables = postLoadDBService.getTables();
                     const arrays = new arrays_1.Arrays(postLoadtables);
                     const utils = new utils_1.Utils(postLoadtables, arrays);
                     const player = new player_1.Player(logger, postLoadtables, modConfig, medItems, utils);
@@ -284,10 +285,10 @@ class Main {
         staticRouterModService.registerStaticRouter("runAtRaidStart", [
             {
                 url: "/client/raid/configuration",
-                action: (url, info, sessionID, output) => {
+                action: async (url, info, sessionID, output) => {
                     try {
-                        const postLoadDBServer = container.resolve("DatabaseServer");
-                        const postLoadTables = postLoadDBServer.getTables();
+                        const postLoadDBService = container.resolve("DatabaseService");
+                        const postLoadTables = postLoadDBService.getTables();
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
@@ -302,8 +303,9 @@ class Main {
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
-                        const myGetLootCache = new bot_loot_serv_1.MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
-                        myGetLootCache.myClearCache();
+                        //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
+                        // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                        // myGetLootCache.myClearCache();
                         const time = weatherController.generate().time; //apparently regenerates weather?
                         // const time = weatherController.getCurrentInRaidTime; //better way?
                         // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
@@ -374,9 +376,9 @@ class Main {
         staticRouterModService.registerStaticRouter("runAtRaidEnd", [
             {
                 url: "/raid/profile/save",
-                action: (url, info, sessionID, output) => {
-                    const postLoadDBServer = container.resolve("DatabaseServer");
-                    const postLoadTables = postLoadDBServer.getTables();
+                action: async (url, info, sessionID, output) => {
+                    const postLoadDBService = container.resolve("DatabaseService");
+                    const postLoadTables = postLoadDBService.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const localisationService = container.resolve("LocalisationService");
@@ -391,8 +393,9 @@ class Main {
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
-                    const myGetLootCache = new bot_loot_serv_1.MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
-                    myGetLootCache.myClearCache();
+                    //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
+                    // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
+                    // myGetLootCache.myClearCache();
                     //update global player level
                     this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                     try {
@@ -458,7 +461,7 @@ class Main {
             }
         });
     }
-    // public async postAkiLoadAsync(container: DependencyContainer): Promise<void> {
+    // public async postSptLoadAsync(container: DependencyContainer): Promise<void> {
     //     const logger = container.resolve<ILogger>("WinstonLogger");
     //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
     //     const tables = databaseServer.getTables();
@@ -468,9 +471,9 @@ class Main {
     // }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
-        const databaseServer = container.resolve("DatabaseServer");
+        const databaseService = container.resolve("DatabaseService");
         const configServer = container.resolve("ConfigServer");
-        const tables = databaseServer.getTables();
+        const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.IN_RAID);
@@ -614,8 +617,8 @@ class Main {
             gear.loadGearConflicts();
         })();
     }
-    postAkiLoad(container) {
-        this.modLoader = container.resolve("PreAkiModLoader");
+    postSptLoad(container) {
+        this.modLoader = container.resolve("PreSptModLoader");
     }
     //unsure if I still need to do this or not, now that configuration has been expanded
     // private dllChecker(logger: ILogger, modConfig: any) {
@@ -690,8 +693,8 @@ class Main {
             logger.info("Realism Mod: Profile Checked");
         }
     }
-    checkForMods(preAkiModLoader, logger, modConf) {
-        const activeMods = preAkiModLoader.getImportedModDetails();
+    checkForMods(preSptModLoader, logger, modConf) {
+        const activeMods = preSptModLoader.getImportedModDetails();
         for (const modname in activeMods) {
             // if (modname.includes("Jiro-BatterySystem")) {
             //     ModTracker.batteryModPresent = true;

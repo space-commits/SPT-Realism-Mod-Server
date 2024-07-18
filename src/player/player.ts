@@ -1,13 +1,11 @@
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { JsonUtil } from "@spt-aki/utils/JsonUtil";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { JsonUtil } from "@spt/utils/JsonUtil";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { Utils } from "../utils/utils";
-import { IConfig } from "@spt-aki/models/eft/common/IGlobals";
-import { IEquipmentBuild } from "@spt-aki/models/eft/profile/IAkiProfile";
-import { IProfileTemplates } from "@spt-aki/models/eft/common/tables/IProfileTemplate";
+import { IConfig } from "@spt/models/eft/common/IGlobals";
 
 const botHealth = require("../../db/bots/botHealth.json");
 
