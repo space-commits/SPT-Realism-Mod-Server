@@ -122,7 +122,7 @@ class DescriptionGen {
                     locale[`${templateItem}` + " Description"] = `${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, hand tremors, reduced concentration, attention and perception, dyspnea, chronic inflammation, and hematuria with clot retention.";
                 }
                 //weight
-                if (item._id === "5ed51652f6c34d2cc26336a1") {
+                if (item._id === "5ed51652f6c34d2cc26336a1" || "66507eabf5ddb0818b085b68") {
                     locale[`${templateItem}` + " Description"] = `${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include tunnel vision, hand tremors, reduced concentration, slowed metabolism, dyspnea, chronic fatigue, and asthenia.";
                 }
                 //performance
