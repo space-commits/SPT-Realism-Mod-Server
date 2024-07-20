@@ -802,6 +802,53 @@
             "Value": -0.15
         }
     ],
+    "Buffs_2A2bTG": [
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 900,
+            "SkillName": "Attention",
+            "Value": 15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 900,
+            "SkillName": "Perception",
+            "Value": 15
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "WeightLimit",
+            "Chance": 1,
+            "Delay": 15,
+            "Duration": 900,
+            "SkillName": "",
+            "Value": 0.15
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 10,
+            "Duration": 900,
+            "SkillName": "",
+            "Value": -0.1
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "QuantumTunnelling",
+            "Chance": 1,
+            "Delay": 910,
+            "Duration": 300,
+            "SkillName": "",
+            "Value": 0
+        }
+    ],
     "Buffs_MULE": [
         {
             "AbsoluteValue": false,
@@ -810,7 +857,7 @@
             "Delay": 30,
             "Duration": 900,
             "SkillName": "",
-            "Value": 0.5
+            "Value": 0.35
         },
         {
             "AbsoluteValue": true,
@@ -1845,6 +1892,15 @@
             "Duration": 600,
             "SkillName": "",
             "Value": -10
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "WeightLimit",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "SkillName": "",
+            "Value": -0.3
         }
     ],
     "Buffs_Performance": [
