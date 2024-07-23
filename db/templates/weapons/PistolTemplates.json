@@ -262,7 +262,7 @@
         "CameraRecoil": 0.003,
         "VisualMulti": 2,
         "Convergence": 17,
-        "RecoilAngle": 94,
+        "RecoilAngle": 92,
         "BaseMalfunctionChance": 0,
         "HeatFactorGun": 0.2,
         "HeatFactorByShot": 1,
@@ -291,7 +291,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.34
+        "RecoilIntensity": 0.33
     },
     "5cadc190ae921500103bb3b6": {
         "ItemID": "5cadc190ae921500103bb3b6",

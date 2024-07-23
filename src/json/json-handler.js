@@ -131,6 +131,29 @@ class ItemStatHandler {
             "_proto": "55d30c4c4bdc2db4468b457e"
         });
     }
+    handleMasks(fileItem, serverItem) {
+        if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
+            serverItem._props.FaceShieldComponent = true;
+            serverItem._props.FaceShieldMask = "NoMask";
+            serverItem._props.armorClass = 1;
+            serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
+            serverItem._props.MaxDurability = 25;
+            serverItem._props.RepairCost = 200;
+            serverItem._props.Durability = serverItem._props.MaxDurability;
+            if (modConfig.enable_hazard_zones) {
+                this.addGasFilterSlot(serverItem);
+            }
+        }
+        else if (fileItem?.MaskToUse !== undefined) {
+            if (fileItem.MaskToUse == "ronin") {
+                serverItem._props.FaceShieldMask = "NoMask";
+            }
+            else {
+                serverItem._props.FaceShieldMask = "Narrow";
+            }
+            serverItem._props.FaceShieldComponent = true;
+        }
+    }
     gearPusherHelper(fileItem, serverTemplates) {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
@@ -164,26 +187,7 @@ class ItemStatHandler {
                 serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : serverItem._props.Weight;
             }
             if (modConfig.enable_hazard_zones || modConfig.realistic_ballistics) {
-                if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
-                    serverItem._props.FaceShieldComponent = true;
-                    serverItem._props.FaceShieldMask = "NoMask";
-                    serverItem._props.armorClass = 1;
-                    serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
-                    serverItem._props.MaxDurability = 25;
-                    serverItem._props.Durability = serverItem._props.MaxDurability;
-                    if (modConfig.enable_hazard_zones) {
-                        this.addGasFilterSlot(serverItem);
-                    }
-                }
-                else if (fileItem?.MaskToUse !== undefined) {
-                    if (fileItem.MaskToUse == "ronin") {
-                        serverItem._props.FaceShieldMask = "NoMask";
-                    }
-                    else {
-                        serverItem._props.FaceShieldMask = "Narrow";
-                    }
-                    serverItem._props.FaceShieldComponent = true;
-                }
+                this.handleMasks(fileItem, serverItem);
             }
             if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
                 return;

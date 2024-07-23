@@ -18,13 +18,13 @@ class Spawns {
     }
     setBossSpawnChance(level) {
         if (level <= 5) {
-            this.bossSpawnHelper(0.1);
+            this.bossSpawnHelper(0);
         }
         else if (level <= 10) {
-            this.bossSpawnHelper(0.2);
+            this.bossSpawnHelper(0.1);
         }
         else if (level <= 15) {
-            this.bossSpawnHelper(0.3);
+            this.bossSpawnHelper(0.25);
         }
         else if (level <= 20) {
             this.bossSpawnHelper(0.5);

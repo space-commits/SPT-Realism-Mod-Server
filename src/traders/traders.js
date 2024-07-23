@@ -410,7 +410,6 @@ class RandomizeTraderAssort {
                 let ll = element?.TradersInfo[traderId]?.loyaltyLevel;
                 totalLL += ll !== null && ll !== undefined ? ll : 1;
             }
-            totalLL += 1;
         });
         let avgLL = totalLL / playerCount;
         if (modConfig.logEverything) {

@@ -143,6 +143,30 @@ export class ItemStatHandler {
         );
     }
 
+    private handleMasks(fileItem: any, serverItem: ITemplateItem){
+        if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
+            serverItem._props.FaceShieldComponent = true;
+            serverItem._props.FaceShieldMask = "NoMask";
+            serverItem._props.armorClass = 1;
+            serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
+            serverItem._props.MaxDurability = 25;
+            serverItem._props.RepairCost = 200;
+            serverItem._props.Durability = serverItem._props.MaxDurability;
+            if(modConfig.enable_hazard_zones){
+                this.addGasFilterSlot(serverItem);
+            }
+        }
+        else if (fileItem?.MaskToUse !== undefined) {
+            if (fileItem.MaskToUse == "ronin") {
+                serverItem._props.FaceShieldMask = "NoMask";
+            }
+            else {
+                serverItem._props.FaceShieldMask = "Narrow";
+            }
+            serverItem._props.FaceShieldComponent = true;
+        }
+    }
+
     private gearPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>) {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
@@ -187,27 +211,7 @@ export class ItemStatHandler {
             }
 
             if (modConfig.enable_hazard_zones || modConfig.realistic_ballistics) {
-                if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
-                    serverItem._props.FaceShieldComponent = true;
-                    serverItem._props.FaceShieldMask = "NoMask";
-                    serverItem._props.armorClass = 1;
-                    serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
-                    serverItem._props.MaxDurability = 25;
-                    serverItem._props.Durability = serverItem._props.MaxDurability;
-                    if(modConfig.enable_hazard_zones){
-                        this.addGasFilterSlot(serverItem);
-                    }
-                }
-                else if (fileItem?.MaskToUse !== undefined) {
-                    if (fileItem.MaskToUse == "ronin") {
-                        serverItem._props.FaceShieldMask = "NoMask";
-                    }
-                    else {
-                        serverItem._props.FaceShieldMask = "Narrow";
-                    }
-                    serverItem._props.FaceShieldComponent = true;
-                }
-
+                this.handleMasks(fileItem, serverItem);
             }
 
             if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {

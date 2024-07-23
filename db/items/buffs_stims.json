@@ -810,7 +810,7 @@
             "Delay": 10,
             "Duration": 900,
             "SkillName": "Attention",
-            "Value": 15
+            "Value": 40
         },
         {
             "AbsoluteValue": true,
@@ -819,7 +819,7 @@
             "Delay": 10,
             "Duration": 900,
             "SkillName": "Perception",
-            "Value": 15
+            "Value": 40
         },
         {
             "AbsoluteValue": false,
