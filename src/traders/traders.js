@@ -27,7 +27,7 @@ const armorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates
 const armorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
 const chestrigTemplates = require("../../db/templates/gear/chestrigTemplates.json");
 const headsetTemplates = require("../../db/templates/gear/headsetTemplates.json");
-const ammoDB = require("../../db/templates/ammo/ammoTemplates.json");
+const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
 const weapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
 const gearTemlplatesArr = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates, chestrigTemplates, headsetTemplates];
 const traderRepairs = require("../../db/traders/repair/traderRepair.json");
@@ -145,7 +145,7 @@ class Traders {
     setBaseOfferValues() {
         for (let i in this.tables.traders) {
             let trader = this.tables.traders[i];
-            if (trader?.assort?.items === undefined || trader.base.nickname === "БТР" || trader.base.nickname !== "Arena" || trader.base.nickname.toLowerCase() === "fence")
+            if (trader?.assort?.items === undefined || trader.base.nickname === "БТР" || trader.base.nickname === "Arena" || trader.base.nickname.toLowerCase() === "fence")
                 continue;
             if (modConfig.change_trader_ll == true) {
                 this.setLoyaltyLevels(trader);
@@ -155,7 +155,7 @@ class Traders {
     }
     setBasePrices(trader) {
         if (modConfig.realistic_ballistics == true) {
-            this.setBasePrice(ammoDB, trader);
+            this.setBasePrice(ammoTemplates, trader);
         }
     }
     setBasePrice(db, trader) {
@@ -176,31 +176,31 @@ class Traders {
         }
     }
     setLoyaltyLevels(trader) {
-        this.loyaltyLevelHelper(ammoDB, false, trader);
+        this.loyaltyLevelHelper(ammoTemplates, false, trader);
         this.loyaltyLevelHelper(weapTemplatesArr, true, trader);
         this.loyaltyLevelHelper(gearTemlplatesArr, true, trader);
     }
-    loyaltyLevelHelper(db, multifile, trader) {
+    loyaltyLevelHelper(template, multifile, trader) {
         if (multifile == false) {
-            this.setLL(db, trader);
+            this.setLL(template, trader);
         }
         else {
-            for (let files in db) {
-                let file = db[files];
+            for (let files in template) {
+                let file = template[files];
                 this.setLL(file, trader);
             }
         }
     }
-    setLL(db, trader) {
+    setLL(template, trader) {
         for (let item in trader.assort.items) {
             if (trader.assort.items[item].parentId !== "hideout")
                 continue;
             let offer = trader.assort.items[item];
             let offerId = offer._id;
             let offerTpl = offer._tpl;
-            if (db[offerTpl]) {
+            if (template[offerTpl]) {
                 let barter = trader?.assort?.barter_scheme[offerId][0][0];
-                let templateItem = db[offerTpl];
+                let templateItem = template[offerTpl];
                 let loyaltyLvl = templateItem?.LoyaltyLevel !== undefined ? templateItem?.LoyaltyLevel : 3;
                 if (this.itemDB()[barter?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
                     trader.assort.loyal_level_items[offerId] = Math.max(1, loyaltyLvl - 1);
@@ -699,7 +699,7 @@ class RandomizeTraderAssort {
             barter.count = cost * 0.6;
         }
     }
-    randomizeLL(ll, i, logger) {
+    randomizeLL(ll, i) {
         let level = ll[i];
         let randNum = this.utils.pickRandNumOneInTen();
         if (randNum <= 2) {
@@ -748,7 +748,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;
             for (let lvl in ll) {
-                randomTraderAss.randomizeLL(ll, lvl, logger);
+                randomTraderAss.randomizeLL(ll, lvl);
             }
         }
         for (let i in assortItems) {
@@ -769,7 +769,6 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
                 if (barter !== undefined) {
-                    //roll randomization of prices several times for better potential spread of prices...nah, that seems really stupid
                     this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
                 }
             }
