@@ -945,7 +945,7 @@
     "6513f037e06849f06c0957d7": {
         "ItemID": "6513f037e06849f06c0957d7",
         "Name": "bipod_rpd_zid_rpd_std",
-        "ModType": "",
+        "ModType": "bipod",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "AutoROF": 0,

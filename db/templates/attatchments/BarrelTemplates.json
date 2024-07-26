@@ -4118,7 +4118,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 5,
         "CameraRecoil": 5,
-        "AutoROF": 2.5,
+        "AutoROF": 5,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "Convergence": 0,
