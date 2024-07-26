@@ -41,6 +41,7 @@ const mechId = "5a7c2eca46aef81a7ca2145d";
 const ragmId = "5ac3b934156ae10c4430e83c";
 const jaegId = "5c0647fdd443bc2504c2d371";
 const fenceId = "579dc571d53a0658a154fbec";
+const refId = "6617beeaa9cfa777ca915b7c";
 class Traders {
     logger;
     tables;
@@ -84,6 +85,7 @@ class Traders {
             this.modifyTraderBuyPrice(skierId, this.utils.pickRandNumInRange(65, 70));
             this.modifyTraderBuyPrice(mechId, this.utils.pickRandNumInRange(69, 69));
             this.modifyTraderBuyPrice(fenceId, this.utils.pickRandNumInRange(80, 90));
+            this.modifyTraderBuyPrice(refId, this.utils.pickRandNumInRange(99, 100));
         }
         if (modConfig.nerf_fence == true) {
             this.traderConf.fence.discountOptions.assortSize = 10;
@@ -141,9 +143,9 @@ class Traders {
         }
     }
     setBaseOfferValues() {
-        for (let t in this.tables.traders) {
-            let trader = this.tables.traders[t];
-            if (trader?.assort?.items === undefined || trader.base.nickname === "БТР" || trader.base.nickname.toLowerCase() === "fence")
+        for (let i in this.tables.traders) {
+            let trader = this.tables.traders[i];
+            if (trader?.assort?.items === undefined || trader.base.nickname === "БТР" || trader.base.nickname !== "Arena" || trader.base.nickname.toLowerCase() === "fence")
                 continue;
             if (modConfig.change_trader_ll == true) {
                 this.setLoyaltyLevels(trader);
@@ -421,10 +423,11 @@ class RandomizeTraderAssort {
         if (seasonalevents_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 15% Off! ======");
         }
-        for (let trader in this.tables.traders) {
-            if (this.tables.traders[trader].assort?.items !== undefined && this.tables.traders[trader].base.nickname !== "БТР" && this.tables.traders[trader].base.nickname.toLocaleLowerCase() !== "fence") {
-                let assortItems = this.tables.traders[trader].assort.items;
-                let ll = this.getAverageLL(pmcData, trader);
+        for (let i in this.tables.traders) {
+            let trader = this.tables.traders[i];
+            if (trader.assort?.items !== undefined && trader.base.nickname !== "БТР" && trader.base.nickname !== "Arena" && trader.base.nickname.toLocaleLowerCase() !== "fence") {
+                let assortItems = trader.assort.items;
+                let ll = this.getAverageLL(pmcData, i);
                 for (let item in assortItems) {
                     let assortItem = assortItems[item];
                     let itemId = assortItem._id;
@@ -438,8 +441,8 @@ class RandomizeTraderAssort {
                         }
                     }
                     if (modConfig.randomize_trader_prices == true || modConfig.adjust_trader_prices) {
-                        if (this.tables.traders[trader]?.assort?.barter_scheme) {
-                            let barter = this.tables.traders[trader].assort.barter_scheme[itemId];
+                        if (trader?.assort?.barter_scheme) {
+                            let barter = trader.assort.barter_scheme[itemId];
                             if (barter !== undefined) {
                                 this.setAndRandomizeCost(this.utils, itemTemplId, barter, true);
                             }
@@ -448,8 +451,8 @@ class RandomizeTraderAssort {
                 }
             }
             if (modConfig.randomize_trader_ll == true) {
-                if (this.tables.traders[trader].assort?.loyal_level_items !== undefined) {
-                    let ll = this.tables.traders[trader].assort.loyal_level_items;
+                if (trader.assort?.loyal_level_items !== undefined) {
+                    let ll = trader.assort.loyal_level_items;
                     for (let lvl in ll) {
                         this.randomizeLL(ll, lvl, this.logger);
                     }
@@ -718,7 +721,7 @@ exports.RagCallback = RagCallback;
 class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
     pristineAssorts;
     myResetExpiredTrader(trader) {
-        if (trader.base.nickname === "БТР")
+        if (trader.base.nickname === "БТР" || trader.base.nickname === "Arena")
             return;
         const traderId = trader.base._id;
         trader.assort = this.cloner.clone(this.traderAssortService.getPristineTraderAssort(traderId));

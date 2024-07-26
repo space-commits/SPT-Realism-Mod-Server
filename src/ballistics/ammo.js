@@ -2931,7 +2931,7 @@ class Ammo {
             // PP
             if (serverItem._id === "64b7af434b75259c590fa893") {
                 serverItem._props.PenetrationPower = 63;
-                serverItem._props.ArmorDamage = 1;
+                serverItem._props.ArmorDamage = 0.95;
                 serverItem._props.Damage = 83;
                 serverItem._props.InitialSpeed = 732;
                 serverItem._props.RicochetChance = 0.17;
@@ -2952,7 +2952,7 @@ class Ammo {
             }
             // BP
             if (serverItem._id === "59e0d99486f7744a32234762") {
-                serverItem._props.PenetrationPower = 66;
+                serverItem._props.PenetrationPower = 70;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 80;
                 serverItem._props.InitialSpeed = 740;
@@ -2963,7 +2963,7 @@ class Ammo {
                 serverItem._props.LightBleedingDelta = 0.65;
                 serverItem._props.ammoAccr = -5;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 12;
+                serverItem._props.ammoRec = 14;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
@@ -2974,18 +2974,18 @@ class Ammo {
             }
             // MAI AP
             if (serverItem._id === "601aa3d2b2bcb34913271e6d") {
-                serverItem._props.PenetrationPower = 71;
-                serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 77;
-                serverItem._props.InitialSpeed = 800;
-                serverItem._props.RicochetChance = 0.47;
+                serverItem._props.PenetrationPower = 80;
+                serverItem._props.ArmorDamage = 0.8;
+                serverItem._props.Damage = 70;
+                serverItem._props.InitialSpeed = 875;
+                serverItem._props.RicochetChance = 0.6;
                 serverItem._props.FragmentationChance = 0;
-                serverItem._props.BulletMassGram = 7.9;
+                serverItem._props.BulletMassGram = 7.2;
                 serverItem._props.HeavyBleedingDelta = 0.29;
                 serverItem._props.LightBleedingDelta = 0.63;
-                serverItem._props.ammoAccr = -20;
+                serverItem._props.ammoAccr = -40;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 14;
+                serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.7;
                     serverItem._props.MisfireChance = 0;

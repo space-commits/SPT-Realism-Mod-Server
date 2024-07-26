@@ -258,8 +258,11 @@ class Player {
             health.Wound.WorkingTime = 3600;
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.Wound.ThresholdMax, mult);
-            health.LightBleeding.HealthLoopTime = 10;
+            health.LightBleeding.HealthLoopTime = 8;
             health.LightBleeding.DamageHealth = 0.65;
+            health.LightBleeding.DamageEnergy = 0.65;
+            health.HeavyBleeding.DamageHealth = 0.95;
+            health.HeavyBleeding.DamageEnergy = 1;
             this.globalDB().Health.Effects.Fracture.BulletHitProbability.Threshold /= mult;
             this.globalDB().Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult);
             this.debuffMul(health.Fracture.FallingProbability, 0.95);
