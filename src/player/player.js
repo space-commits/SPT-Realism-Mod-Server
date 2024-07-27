@@ -260,9 +260,9 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMax, mult);
             health.LightBleeding.HealthLoopTime = 8;
             health.LightBleeding.DamageHealth = 0.65;
-            health.LightBleeding.DamageEnergy = 0.65;
+            health.LightBleeding.DamageEnergy = 1;
             health.HeavyBleeding.DamageHealth = 0.95;
-            health.HeavyBleeding.DamageEnergy = 1;
+            health.HeavyBleeding.DamageEnergy = 2;
             this.globalDB().Health.Effects.Fracture.BulletHitProbability.Threshold /= mult;
             this.globalDB().Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult);
             this.debuffMul(health.Fracture.FallingProbability, 0.95);
