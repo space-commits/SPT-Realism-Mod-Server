@@ -35,16 +35,16 @@ export class Spawns {
             this.bossSpawnHelper(0.6);
         }
         else if (level <= 40) {
-            this.bossSpawnHelper(0.8);
+            this.bossSpawnHelper(0.7);
         }
         else if (level <= 45) {
-            this.bossSpawnHelper(0.9);
+            this.bossSpawnHelper(0.8);
         }
         else if (level <= 50) {
-            this.bossSpawnHelper(1.05);
+            this.bossSpawnHelper(0.9);
         }
         else if (level > 50) {
-            this.bossSpawnHelper(1.1);
+            this.bossSpawnHelper(1);
         }
     }
 
@@ -59,7 +59,7 @@ export class Spawns {
                     }
                     else {
                         chance = Math.round(this.mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(1, Math.min(chance, 100));
+                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(0, Math.min(chance, 100));
                     }
                 }
             }

@@ -477,7 +477,7 @@ class RandomizeTraderAssort {
                 if (trader.assort?.loyal_level_items !== undefined) {
                     let ll = trader.assort.loyal_level_items;
                     for (let lvl in ll) {
-                        this.randomizeLL(ll, lvl, this.logger);
+                        this.randomizeLL(ll, lvl);
                     }
                 }
             }

@@ -287,19 +287,20 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0
+                "fadeOut": 0,
+                "cost": 1
             },
             "HeavyBleeding": {
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 3
             },
             "Fracture": {
                 "delay": 10,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 3
             }
         },
         "StimulatorBuffs": "Buffs_grizzly",
