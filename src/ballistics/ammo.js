@@ -1557,7 +1557,7 @@ class Ammo {
             if (serverItem._id === "5ba2678ad4351e44f824b344") {
                 serverItem._props.PenetrationPower = 44;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 40;
+                serverItem._props.Damage = 41;
                 serverItem._props.InitialSpeed = 620;
                 serverItem._props.RicochetChance = 0.39;
                 serverItem._props.FragmentationChance = 0;
@@ -1601,7 +1601,7 @@ class Ammo {
             if (serverItem._id === "5ba26835d4351e0035628ff5") {
                 serverItem._props.PenetrationPower = 52;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 38;
+                serverItem._props.Damage = 39;
                 serverItem._props.InitialSpeed = 680;
                 serverItem._props.RicochetChance = 0.45;
                 serverItem._props.FragmentationChance = 0;
@@ -2606,7 +2606,7 @@ class Ammo {
                 serverItem._props.BulletMassGram = 9.8;
                 serverItem._props.HeavyBleedingDelta = 0.34;
                 serverItem._props.LightBleedingDelta = 0.73;
-                serverItem._props.ammoAccr = 22;
+                serverItem._props.ammoAccr = 32;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 12;
                 if (this.modConf.malf_changes == true) {
@@ -3041,7 +3041,7 @@ class Ammo {
             }
             // PRS
             if (serverItem._id === "56dff338d2720bbd668b4569") {
-                serverItem._props.PenetrationPower = 46;
+                serverItem._props.PenetrationPower = 44;
                 serverItem._props.ArmorDamage = 0.5;
                 serverItem._props.Damage = 64;
                 serverItem._props.InitialSpeed = 910;
@@ -3083,28 +3083,6 @@ class Ammo {
                     serverItem._props.HeatFactor = 1;
                 }
             }
-            // FMJ
-            if (serverItem._id === "56dff0bed2720bb0668b4567") {
-                serverItem._props.PenetrationPower = 55;
-                serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 77;
-                serverItem._props.InitialSpeed = 905;
-                serverItem._props.RicochetChance = 0.23;
-                serverItem._props.FragmentationChance = 0.37;
-                serverItem._props.BulletMassGram = 3.9;
-                serverItem._props.HeavyBleedingDelta = 0.35;
-                serverItem._props.LightBleedingDelta = 0.75;
-                serverItem._props.ammoAccr = -15;
-                serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 4;
-                if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
-                    serverItem._props.MisfireChance = 0;
-                    serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
-                    serverItem._props.HeatFactor = 1.05;
-                }
-            }
             // T
             if (serverItem._id === "56dff4a2d2720bbd668b456a") {
                 serverItem._props.PenetrationPower = 54;
@@ -3125,6 +3103,28 @@ class Ammo {
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1;
                     serverItem._props.HeatFactor = 1;
+                }
+            }
+            // FMJ
+            if (serverItem._id === "56dff0bed2720bb0668b4567") {
+                serverItem._props.PenetrationPower = 55;
+                serverItem._props.ArmorDamage = 1;
+                serverItem._props.Damage = 77;
+                serverItem._props.InitialSpeed = 905;
+                serverItem._props.RicochetChance = 0.23;
+                serverItem._props.FragmentationChance = 0.37;
+                serverItem._props.BulletMassGram = 3.9;
+                serverItem._props.HeavyBleedingDelta = 0.35;
+                serverItem._props.LightBleedingDelta = 0.75;
+                serverItem._props.ammoAccr = -15;
+                serverItem._props.ammoHear = 0;
+                serverItem._props.ammoRec = 4;
+                if (this.modConf.malf_changes == true) {
+                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MisfireChance = 0;
+                    serverItem._props.MalfFeedChance = 0;
+                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.HeatFactor = 1.05;
                 }
             }
             // PS
@@ -3151,7 +3151,7 @@ class Ammo {
             }
             // PP
             if (serverItem._id === "56dff2ced2720bb4668b4567") {
-                serverItem._props.PenetrationPower = 64;
+                serverItem._props.PenetrationPower = 65;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 66;
                 serverItem._props.InitialSpeed = 880;
@@ -3261,7 +3261,7 @@ class Ammo {
             }
             // 7N39 PPBS
             if (serverItem._id === "5c0d5e4486f77478390952fe") {
-                serverItem._props.PenetrationPower = 80;
+                serverItem._props.PenetrationPower = 84;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 63;
                 serverItem._props.InitialSpeed = 850;
@@ -3748,12 +3748,14 @@ class Ammo {
                 serverItem._props.Contusion.x = 1.5;
                 serverItem._props.Contusion.y = 14;
                 serverItem._props.Contusion.z = 20;
+                serverItem._props.weight = 0.31;
             }
             //rgd
             if (serverItem._id === "5448be9a4bdc2dfd2f8b456a") {
                 serverItem._props.Contusion.x = 2;
                 serverItem._props.Contusion.y = 18;
                 serverItem._props.Contusion.z = 25;
+                serverItem._props.weight = 0.31;
             }
             //rgo
             if (serverItem._id === "618a431df1eb8e24b8741deb") {

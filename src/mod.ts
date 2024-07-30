@@ -275,7 +275,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                         this.revertMeds(scavData, utils);
                                         this.revertHydroEnergy(pmcData, postLoadTables);
                                         this.revertHydroEnergy(scavData, postLoadTables);
-                                        modConfig.revert_med_changes = true;
+                                        modConfig.revert_med_changes = false;
                                         utils.writeConfigJSON(modConfig, 'config/config.json');
                                         logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                     }
@@ -685,9 +685,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         maps.loadSpawnChanges();
 
-        // if (modConfig.airdrop_changes == true) {
-        //     airdrop.loadAirdropChanges();
-        // }
+        if (modConfig.airdrop_changes == true) {
+            airdrop.loadAirdropChanges();
+        }
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             bots.loadBots();

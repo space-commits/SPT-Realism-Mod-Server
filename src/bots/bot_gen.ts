@@ -350,12 +350,9 @@ export class BotGen extends BotGenerator {
                 botInfo.MemberCategory = MemberCategory.DEFAULT;
                 break;
             case 4:
+            case 5:
                 botInfo.GameVersion = GameEditions.EDGE_OF_DARKNESS;
                 botInfo.MemberCategory = MemberCategory.UNIQUE_ID;
-                break;
-            case 5:
-                botInfo.GameVersion = GameEditions.UNHEARD;
-                botInfo.MemberCategory = MemberCategory.UNHEARD;
                 break;
             default:
                 botInfo.MemberCategory = Number.parseInt(

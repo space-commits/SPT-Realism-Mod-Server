@@ -276,12 +276,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
                 botInfo.MemberCategory = MemberCategory_1.MemberCategory.DEFAULT;
                 break;
             case 4:
+            case 5:
                 botInfo.GameVersion = GameEditions_1.GameEditions.EDGE_OF_DARKNESS;
                 botInfo.MemberCategory = MemberCategory_1.MemberCategory.UNIQUE_ID;
-                break;
-            case 5:
-                botInfo.GameVersion = GameEditions_1.GameEditions.UNHEARD;
-                botInfo.MemberCategory = MemberCategory_1.MemberCategory.UNHEARD;
                 break;
             default:
                 botInfo.MemberCategory = Number.parseInt(this.weightedRandomHelper.getWeightedValue(this.pmcConfig.accountTypeWeight), 10);

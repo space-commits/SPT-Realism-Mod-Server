@@ -156,6 +156,7 @@ class Player {
         if (this.modConfig.enable_stances == true || this.modConfig.movement_changes == true || this.modConfig.recoil_attachment_overhaul) {
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
+            this.globalDB().Stamina.HandsRestoration = 2.25;
             this.globalDB().Stamina.AimDrainRate = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.35;
@@ -260,9 +261,9 @@ class Player {
             this.debuffMul(health.Wound.ThresholdMax, mult);
             health.LightBleeding.HealthLoopTime = 8;
             health.LightBleeding.DamageHealth = 0.65;
-            health.LightBleeding.DamageEnergy = 1;
+            health.LightBleeding.DamageEnergy = 0.85;
             health.HeavyBleeding.DamageHealth = 0.95;
-            health.HeavyBleeding.DamageEnergy = 2;
+            health.HeavyBleeding.DamageEnergy = 2.25;
             this.globalDB().Health.Effects.Fracture.BulletHitProbability.Threshold /= mult;
             this.globalDB().Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult);
             this.debuffMul(health.Fracture.FallingProbability, 0.95);
