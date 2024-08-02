@@ -500,6 +500,7 @@ export class RandomizeTraderAssort {
     private itemDB = this.tables.templates.items;
     private arrays = new Arrays(this.tables);
     private utils = new Utils(this.tables, this.arrays);
+    public OffsettedPlayerCount: number = 0;  // add OffsettedPlayerCount to adjust stock based on player count
 
 
     public getAverageLL(pmcData: IPmcData[], traderId: string): number {
@@ -524,11 +525,33 @@ export class RandomizeTraderAssort {
         return avgLL;
     }
 
+    /**
+    * Get player count offset to adjust stock based on connected player count (Fika compatibility)
+    * 
+    * @param pmcData - Array of IPmcData
+    * @returns real player count (excludes dedicated client profiles) subtracted by 1
+    */
+    public updateOffsettedPlayerCount(pmcData: IPmcData[]) {
+        const playerCount = pmcData.filter(element =>
+            element?.Info?.LowerNickname?.toLowerCase()?.startsWith('dedicated_') !== true
+        ).length;
+
+        // Ensure OffsettedPlayerCount wont be less than 0 (eg when players are not connected), and subtract 1 from playerCount, because the mod is designed already for 1 player and we dont want to add extra stock for 1 player
+        const updatedOffsettedPlayerCount = Math.max(playerCount - 1, 0);
+
+        // log info
+        //this.logger.logWithColor(`Realism Mod: Trades set for player count: ${playerCount}`, LogTextColor.GREEN);
+        this.OffsettedPlayerCount = updatedOffsettedPlayerCount;
+    }
 
     public adjustTraderStockAtServerStart(pmcData: IPmcData[]) {
         if (EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 15% Off! ======");
         }
+
+        // Get player count offset to adjust stock based on player count
+        this.updateOffsettedPlayerCount(pmcData);
+
         for (let i in this.tables.traders) {
             let trader = this.tables.traders[i];
             if (trader.assort?.items !== undefined && trader.base.nickname !== "БТР" && trader.base.nickname !== "Arena" && trader.base.nickname.toLocaleLowerCase() !== "fence") {
@@ -608,77 +631,77 @@ export class RandomizeTraderAssort {
 
         //ammo
         this.randomizeAmmoStock(itemParent, item, llStackableFactor, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
 
         //weapons
         for (let id in this.arrays.weaponParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
         }
 
         //weapon mods
         for (let id in this.arrays.modParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStock(itemParent, this.arrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
         }
 
         //gear
         for (let id in this.arrays.gearParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStock(itemParent, this.arrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
         }
 
         //barter items
         for (let id in this.arrays.barterParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
         }
 
         //keys 
         for (let id in this.arrays.keyParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStock(itemParent, this.arrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
         }
 
         //maps
-        this.randomizeStock(itemParent, ParentClasses.MAP, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.MAP, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
 
         //nvg + thermals:
-        this.randomizeStock(itemParent, ParentClasses.NIGHTVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.SPECIAL_SCOPE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.THEMALVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.NIGHTVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.SPECIAL_SCOPE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.THEMALVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
 
         //magazine
         if (itemParent === ParentClasses.MAGAZINE) {
             let magCap = this.itemDB[item._tpl]?._props?.Cartridges[0]._max_count;
             if (magCap <= 35) {
-                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
             } else if (magCap > 35 && magCap <= 45) {
-                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
             }
             else {
-                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStock(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
             }
         }
 
         //medical
-        this.randomizeStock(itemParent, ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
 
         //special items
-        this.randomizeStock(itemParent, ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
 
         //grenades
-        this.randomizeStock(itemParent, ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
 
         //money
         this.randomizeStock(itemParent, ParentClasses.MONEY, item, 1500 * modConfig.rand_stock_modifier_min, 150000 * modConfig.rand_stackable_modifier, llOutOfStockFactor);
 
         //container
-        this.randomizeStock(itemParent, ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount, llOutOfStockFactor);
 
         //provisions
-        this.randomizeStock(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
+        this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + this.OffsettedPlayerCount + llStockFactor, llOutOfStockFactor);
     }
 
     private randomizeAmmoStock(assortItemParent: string, item: Item, llStackableFactor: number, llStockFactor: number) {
@@ -904,6 +927,10 @@ export class TraderRefresh extends TraderAssortHelper {
                 randomTraderAss.randomizeLL(ll, lvl);
             }
         }
+
+        // Update the offsetted player count to adjust stock based on player count
+        randomTraderAss.updateOffsettedPlayerCount(pmcData);
+
         for (let i in assortItems) {
             let item = assortItems[i];
             let itemId = assortItems[i]._id;
