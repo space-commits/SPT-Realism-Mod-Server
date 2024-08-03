@@ -526,21 +526,29 @@ export class RandomizeTraderAssort {
     }
 
     /**
-    * Get player count offset to adjust stock based on connected player count (Fika compatibility)
-    * 
-    * @param pmcData - Array of IPmcData
-    * @returns real player count (excludes dedicated client profiles) subtracted by 1
+    * Set Offsetted player count to adjust trader stock based on connected player amount (Fika compatibility)
     */
     public updateOffsettedPlayerCount(pmcData: IPmcData[]) {
-        const playerCount = pmcData.filter(element =>
-            element?.Info?.LowerNickname?.toLowerCase()?.startsWith('dedicated_') !== true
-        ).length;
+
+        // get online profile ids
+        let onlinePlayerIdsList = [];
+        Object.keys(ProfileTracker.playerRecord).forEach(key => {
+            onlinePlayerIdsList.push(key);
+        });
+
+        // filter out dedicated clients and unfinished profiles
+        const onlinePlayerIds = new Set(onlinePlayerIdsList);
+        const onlinePlayerNicknames = pmcData
+            .filter(element => onlinePlayerIds.has(element._id) && element?.Info?.LowerNickname !== undefined && !element?.Info?.LowerNickname?.toLowerCase()?.startsWith('dedicated_'))
+            .map(element => element.Info.LowerNickname);
+
+        const realPlayerCount = onlinePlayerNicknames.length;
 
         // Ensure OffsettedPlayerCount wont be less than 0 (eg when players are not connected), and subtract 1 from playerCount, because the mod is designed already for 1 player and we dont want to add extra stock for 1 player
-        const updatedOffsettedPlayerCount = Math.max(playerCount - 1, 0);
+        const updatedOffsettedPlayerCount = Math.max(realPlayerCount - 1, 0);
 
-        // log info
-        //this.logger.logWithColor(`Realism Mod: Trades set for player count: ${playerCount}`, LogTextColor.GREEN);
+        this.logger.logWithColor(`Realism Mod: Trades set for player count: ${realPlayerCount}`, LogTextColor.GREEN);
+        // update OffsettedPlayerCount
         this.OffsettedPlayerCount = updatedOffsettedPlayerCount;
     }
 
