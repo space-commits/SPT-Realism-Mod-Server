@@ -547,7 +547,9 @@ export class RandomizeTraderAssort {
         // Ensure OffsettedPlayerCount wont be less than 0 (eg when players are not connected), and subtract 1 from playerCount, because the mod is designed already for 1 player and we dont want to add extra stock for 1 player
         const updatedOffsettedPlayerCount = Math.max(realPlayerCount - 1, 0);
 
-        this.logger.logWithColor(`Realism Mod: Trades set for player count: ${realPlayerCount}`, LogTextColor.GREEN);
+        // Log player count
+        //this.logger.logWithColor(`Realism Mod: Trades set for player count: ${realPlayerCount}`, LogTextColor.GREEN);
+
         // update OffsettedPlayerCount
         this.OffsettedPlayerCount = updatedOffsettedPlayerCount;
     }
