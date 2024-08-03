@@ -527,6 +527,7 @@ export class RandomizeTraderAssort {
 
     /**
     * Set Offsetted player count to adjust trader stock based on connected player amount (Fika compatibility)
+    * Player Count is first calculated and then offsetted by -1, because the mod is designed already for 1 player and we dont want to add extra stock for 1 player
     */
     public updateOffsettedPlayerCount(pmcData: IPmcData[]) {
 
