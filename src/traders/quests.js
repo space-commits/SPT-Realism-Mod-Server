@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Quests = void 0;
-const hazardQuests = require("../../db/quests/rad_treatment.json");
+const treatmentQuests = require("../../db/quests/rad_treatment.json");
+const exploreQuests = require("../../db/quests/zone_exploration.json");
 class Quests {
     logger;
     tables;
@@ -17,9 +18,10 @@ class Quests {
     questDB() {
         return this.tables.templates.quests;
     }
+    //automate locales in future
     loadHazardQuests() {
         //treatment part 1
-        this.questDB()["667c643869df8111b81cb6dc"] = hazardQuests["667c643869df8111b81cb6dc"];
+        this.questDB()["667c643869df8111b81cb6dc"] = treatmentQuests["667c643869df8111b81cb6dc"];
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
             locale["667c643869df8111b81cb6dc acceptPlayerMessage"] = "";
@@ -34,7 +36,7 @@ class Quests {
             locale["667c8a3a189a9ffd2a5eea23"] = "Handover piles of meds";
         }
         //treatment part 2
-        this.questDB()["667dbbc9c62a7c2ee8fe25b2"] = hazardQuests["667dbbc9c62a7c2ee8fe25b2"];
+        this.questDB()["667dbbc9c62a7c2ee8fe25b2"] = treatmentQuests["667dbbc9c62a7c2ee8fe25b2"];
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
             locale["667dbbc9c62a7c2ee8fe25b2 acceptPlayerMessage"] = "";
@@ -51,7 +53,7 @@ class Quests {
             locale["667dbd367520b900ee16550e"] = "Handover ophthalmoscope";
         }
         //find gas
-        this.questDB()["6681c5127b9973f80c7c7d12"] = hazardQuests["6681c5127b9973f80c7c7d12"];
+        this.questDB()["6681c5127b9973f80c7c7d12"] = exploreQuests["6681c5127b9973f80c7c7d12"];
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
             locale["6681c5127b9973f80c7c7d12 acceptPlayerMessage"] = "";
@@ -68,7 +70,7 @@ class Quests {
             locale["6682854b9ad02262e978d803"] = "Find the pumping station used For manufacture";
         }
         //find rads
-        this.questDB()["6681d150fd1d7f0b7e5ae953"] = hazardQuests["6681d150fd1d7f0b7e5ae953"];
+        this.questDB()["6681d150fd1d7f0b7e5ae953"] = exploreQuests["6681d150fd1d7f0b7e5ae953"];
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
             locale["6681d150fd1d7f0b7e5ae953 acceptPlayerMessage"] = "";

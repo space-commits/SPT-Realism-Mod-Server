@@ -22,14 +22,16 @@ export class WeaponsGlobals {
 
         this.globalDB().Malfunction.DurRangeToIgnoreMalfs["x"] = 98;
         this.globalDB().Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
-        this.globalDB().Overheat.MaxCOIIncreaseMult = 4;
+        this.globalDB().Overheat.MaxCOIIncreaseMult = 3;
         this.globalDB().Overheat.FirerateReduceMinMult = 1;
-        this.globalDB().Overheat.FirerateReduceMaxMult = 1.2;
-        this.globalDB().Overheat.FirerateOverheatBorder = 100;
-        this.globalDB().Overheat.AutoshotChance = 0.4;
-        this.globalDB().Overheat.OverheatProblemsStart = 70;
-        this.globalDB().Overheat.MinWearOnOverheat = 0.2;
-        this.globalDB().Overheat.MaxWearOnOverheat = 0.4;
+        this.globalDB().Overheat.FirerateReduceMaxMult = 1.12;
+        this.globalDB().Overheat.FirerateOverheatBorder = 25;
+        this.globalDB().Overheat.OverheatProblemsStart = 50;
+        this.globalDB().Overheat.OverheatWearLimit = 0.85;
+        this.globalDB().Overheat.MinWearOnOverheat = 0;
+        this.globalDB().Overheat.MaxWearOnOverheat = 0.2;
+        this.globalDB().Overheat.AutoshotChance = 0.5;
+        this.globalDB().Overheat.AutoshotPossibilityDuration = 4;
 
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];

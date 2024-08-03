@@ -1508,7 +1508,7 @@
         "Convergence": 15.2,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.09,
-        "HeatFactorGun": 0.26,
+        "HeatFactorGun": 0.35,
         "HeatFactorByShot": 1,
         "CoolFactorGun": 0.07,
         "CoolFactorGunMods": 1,

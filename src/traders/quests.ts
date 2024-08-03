@@ -3,7 +3,8 @@ import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
 
-const hazardQuests = require("../../db/quests/rad_treatment.json");
+const treatmentQuests = require("../../db/quests/rad_treatment.json");
+const exploreQuests = require("../../db/quests/zone_exploration.json");
 
 export class Quests {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf) { }
@@ -15,10 +16,11 @@ export class Quests {
         return this.tables.templates.quests;
     }
 
+    //automate locales in future
     public loadHazardQuests() {
 
         //treatment part 1
-        this.questDB()["667c643869df8111b81cb6dc"] = hazardQuests["667c643869df8111b81cb6dc"];
+        this.questDB()["667c643869df8111b81cb6dc"] = treatmentQuests["667c643869df8111b81cb6dc"];
 
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
@@ -36,7 +38,7 @@ export class Quests {
         }
 
         //treatment part 2
-        this.questDB()["667dbbc9c62a7c2ee8fe25b2"] = hazardQuests["667dbbc9c62a7c2ee8fe25b2"];
+        this.questDB()["667dbbc9c62a7c2ee8fe25b2"] = treatmentQuests["667dbbc9c62a7c2ee8fe25b2"];
 
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
@@ -56,7 +58,7 @@ export class Quests {
 
 
         //find gas
-        this.questDB()["6681c5127b9973f80c7c7d12"] = hazardQuests["6681c5127b9973f80c7c7d12"];
+        this.questDB()["6681c5127b9973f80c7c7d12"] = exploreQuests["6681c5127b9973f80c7c7d12"];
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
             locale["6681c5127b9973f80c7c7d12 acceptPlayerMessage"] = "";
@@ -74,7 +76,7 @@ export class Quests {
         }
 
         //find rads
-        this.questDB()["6681d150fd1d7f0b7e5ae953"] = hazardQuests["6681d150fd1d7f0b7e5ae953"];
+        this.questDB()["6681d150fd1d7f0b7e5ae953"] = exploreQuests["6681d150fd1d7f0b7e5ae953"];
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
             locale["6681d150fd1d7f0b7e5ae953 acceptPlayerMessage"] = "";
