@@ -543,7 +543,8 @@ export class RandomizeTraderAssort {
             .filter(element => onlinePlayerIds.has(element._id) && element?.Info?.LowerNickname !== undefined && !element?.Info?.LowerNickname?.toLowerCase()?.startsWith('dedicated_'))
             .map(element => element.Info.LowerNickname);
 
-        const realPlayerCount = onlinePlayerNicknames.length;
+        // as pmcData contain duplicates (same id data multiple times) resulting in duplicates in the list, we need to filter out duplicates by using Set
+        const realPlayerCount = new Set(onlinePlayerNicknames).size;
 
         // Ensure OffsettedPlayerCount wont be less than 0 (eg when players are not connected), and subtract 1 from playerCount, because the mod is designed already for 1 player and we dont want to add extra stock for 1 player
         const updatedOffsettedPlayerCount = Math.max(realPlayerCount - 1, 0);
