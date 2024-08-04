@@ -122,7 +122,7 @@
     "5ea16d4d5aad6446a939753d": {
         "ItemID": "5ea16d4d5aad6446a939753d",
         "Name": "charge_ar15_geissele_ach",
-        "ModType": "",
+        "ModType": "gas",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
         "FixSpeed": 0,
@@ -199,7 +199,7 @@
     "5f633ff5c444ce7e3c30a006": {
         "ItemID": "5f633ff5c444ce7e3c30a006",
         "Name": "charge_ar15_rainer_arms_avalanche_mod2",
-        "ModType": "",
+        "ModType": "gas",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
         "FixSpeed": 0,
@@ -272,7 +272,7 @@
     "5fbcc640016cce60e8341acc": {
         "ItemID": "5fbcc640016cce60e8341acc",
         "Name": "charge_mcx_sig_mcx_std",
-        "ModType": "",
+        "ModType": "gas",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
         "FixSpeed": 0,
@@ -362,7 +362,7 @@
     "5c5db6b32e221600102611a0": {
         "ItemID": "5c5db6b32e221600102611a0",
         "Name": "charge_mpx_geissele_sch",
-        "ModType": "",
+        "ModType": "gas",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
         "FixSpeed": 0,
@@ -464,7 +464,7 @@
     "651bf5617b3b552ef6712cb7": {
         "ItemID": "651bf5617b3b552ef6712cb7",
         "Name": "charge_ar15_dd_grip_n_rip_charging_handle",
-        "ModType": "",
+        "ModType": "gas",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
@@ -474,7 +474,7 @@
     "6529109524cbe3c74a05e5b7": {
         "ItemID": "6529109524cbe3c74a05e5b7",
         "Name": "charge_spear_sig_spear_std",
-        "ModType": "",
+        "ModType": "gas",
         "ReloadSpeed": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
