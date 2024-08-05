@@ -5325,7 +5325,7 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Flash": 30
+        "Flash": 50
     },
     "5a9fbb84a2750c00137fa685": {
         "ItemID": "5a9fbb84a2750c00137fa685",
@@ -5352,7 +5352,7 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Flash": 30
+        "Flash": 40
     },
     "5e01ea19e9dc277128008c0b": {
         "ItemID": "5e01ea19e9dc277128008c0b",
@@ -5379,7 +5379,7 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Flash": 30
+        "Flash": 50
     },
     "5a9fbb74a2750c0032157181": {
         "ItemID": "5a9fbb74a2750c0032157181",
@@ -5406,7 +5406,7 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Flash": 30
+        "Flash": 60
     },
     "5a9fb739a2750c003215717f": {
         "ItemID": "5a9fb739a2750c003215717f",
@@ -5460,7 +5460,7 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Flash": 30
+        "Flash": 45
     },
     "5a34fe59c4a282000b1521a2": {
         "ItemID": "5a34fe59c4a282000b1521a2",
