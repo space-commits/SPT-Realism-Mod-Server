@@ -1007,12 +1007,12 @@
         "BaseTorque": -2.5,
         "HasShoulderContact": false,
         "Ergonomics": 70,
-        "VerticalRecoil": 330,
+        "VerticalRecoil": 300,
         "HorizontalRecoil": 165,
         "Dispersion": 4,
         "CameraRecoil": 0.003,
         "VisualMulti": 2.5,
-        "Convergence": 15,
+        "Convergence": 20,
         "RecoilAngle": 94,
         "BaseMalfunctionChance": 0.15,
         "HeatFactorGun": 0.2,
@@ -1026,7 +1026,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 15.1,
-        "RecoilDamping": 0.7,
+        "RecoilDamping": 0.69,
         "RecoilHandDamping": 0.5,
         "WeaponAllowADS": false,
         "Weight": 0.86,
@@ -1042,7 +1042,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.23
     },
     "5abccb7dd8ce87001773e277": {
         "ItemID": "5abccb7dd8ce87001773e277",
@@ -1058,7 +1058,7 @@
         "Dispersion": 4,
         "CameraRecoil": 0.003,
         "VisualMulti": 2.5,
-        "Convergence": 15,
+        "Convergence": 20,
         "RecoilAngle": 94,
         "BaseMalfunctionChance": 0.15,
         "HeatFactorGun": 0.2,
@@ -1072,7 +1072,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 16.1,
-        "RecoilDamping": 0.7,
+        "RecoilDamping": 0.69,
         "RecoilHandDamping": 0.5,
         "WeaponAllowADS": false,
         "Weight": 0.81,
@@ -1088,6 +1088,6 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25
+        "RecoilIntensity": 0.23
     }
 }

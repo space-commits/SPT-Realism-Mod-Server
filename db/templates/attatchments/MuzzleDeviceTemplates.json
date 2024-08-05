@@ -5244,7 +5244,7 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Flash": -80
+        "Flash": -50
     },
     "5c7e8fab2e22165df16b889b": {
         "ItemID": "5c7e8fab2e22165df16b889b",
@@ -6808,7 +6808,7 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Flash": -80
+        "Flash": -40
     },
     "5a27b6bec4a282000e496f78": {
         "ItemID": "5a27b6bec4a282000e496f78",
