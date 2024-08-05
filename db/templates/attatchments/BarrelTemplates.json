@@ -22,7 +22,8 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "646371faf2404ab67905c8e9": {
         "ItemID": "646371faf2404ab67905c8e9",
@@ -452,7 +453,8 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -60
     },
     "611a30addbdd8440277441dc": {
         "ItemID": "611a30addbdd8440277441dc",

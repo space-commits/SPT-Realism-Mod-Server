@@ -67,8 +67,7 @@ export class GenBotLvl extends BotLevelGenerator {
     public genBotLvl(levelDetails: MinMax, botGenerationDetails: BotGenerationDetails, bot: IBotBase): IRandomisedBotLevelResult {
 
         const expTable = this.databaseService.getGlobals().config.exp.level.exp_table;
-        const highestLevel = this.getHighestRelativeBotLevel(botGenerationDetails, levelDetails, expTable.length);
-        const lowestLevel = this.getLowestRelativeBotLevel(botGenerationDetails, levelDetails, expTable.length);
+        const botLevelRange = this.getRelativeBotLevelRange(botGenerationDetails, levelDetails, expTable.length);
 
         // Get random level based on the exp table.
         let exp = 0;
@@ -86,7 +85,7 @@ export class GenBotLvl extends BotLevelGenerator {
             }
         }
         else {
-            level = this.randomUtil.getInt(lowestLevel, highestLevel);
+            level = this.randomUtil.getInt(botLevelRange.min, botLevelRange.max);
         }
 
         for (let i = 0; i < level; i++) {

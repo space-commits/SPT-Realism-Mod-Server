@@ -26,8 +26,7 @@ const modConfig = require("../../config/config.json");
 class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
     genBotLvl(levelDetails, botGenerationDetails, bot) {
         const expTable = this.databaseService.getGlobals().config.exp.level.exp_table;
-        const highestLevel = this.getHighestRelativeBotLevel(botGenerationDetails, levelDetails, expTable.length);
-        const lowestLevel = this.getLowestRelativeBotLevel(botGenerationDetails, levelDetails, expTable.length);
+        const botLevelRange = this.getRelativeBotLevelRange(botGenerationDetails, levelDetails, expTable.length);
         // Get random level based on the exp table.
         let exp = 0;
         let level = 1;
@@ -43,7 +42,7 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
             }
         }
         else {
-            level = this.randomUtil.getInt(lowestLevel, highestLevel);
+            level = this.randomUtil.getInt(botLevelRange.min, botLevelRange.max);
         }
         for (let i = 0; i < level; i++) {
             exp += expTable[i].exp;

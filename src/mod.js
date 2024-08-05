@@ -539,10 +539,10 @@ class Main {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
             bots.testBotCap();
         }
-        else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) {
+        else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false && utils_1.ModTracker.qtbPresent == false) {
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) {
+        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false && utils_1.ModTracker.qtbPresent == false) {
             bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {

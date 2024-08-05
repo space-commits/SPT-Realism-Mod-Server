@@ -130,10 +130,11 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "CameraRecoil": -1,
-        "ChamberSpeed": 36,
+        "CameraRecoil": 0,
+        "ChamberSpeed": 34,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 22
     },
     "5bb20dbcd4351e44f824c04e": {
         "ItemID": "5bb20dbcd4351e44f824c04e",
@@ -161,10 +162,11 @@
         "Weight": 0.035,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "CameraRecoil": -1,
+        "CameraRecoil": 0,
         "ChamberSpeed": 33,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -10
     },
     "5b2240bf5acfc40dc528af69": {
         "ItemID": "5b2240bf5acfc40dc528af69",
@@ -209,7 +211,8 @@
         "HorizontalRecoil": 0,
         "ChamberSpeed": 34,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -30
     },
     "62811d61578c54356d6d67ea": {
         "ItemID": "62811d61578c54356d6d67ea",
@@ -282,7 +285,8 @@
         "HorizontalRecoil": 0,
         "ChamberSpeed": 23,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -18
     },
     "6181688c6c780c1e710c9b04": {
         "ItemID": "6181688c6c780c1e710c9b04",
@@ -370,10 +374,11 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "CameraRecoil": -1,
+        "CameraRecoil": 0,
         "ChamberSpeed": 37,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -20
     },
     "58949edd86f77409483e16a9": {
         "ItemID": "58949edd86f77409483e16a9",
@@ -469,7 +474,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.043,
-        "ChamberSpeed": 35
+        "ChamberSpeed": 36,
+        "Flash": -18
     },
     "6529109524cbe3c74a05e5b7": {
         "ItemID": "6529109524cbe3c74a05e5b7",
@@ -479,6 +485,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.035,
-        "ChamberSpeed": 30
+        "ChamberSpeed": 30,
+        "Flash": -15
     }
 }
