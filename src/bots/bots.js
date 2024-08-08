@@ -207,6 +207,7 @@ class BotLoader {
         this.botConf().maxBotCap = rmBotConfig.maxBotCapLow;
         this.botConf().presetBatch = rmBotConfig.presetBatch;
     }
+    //stops bots from bleeding out too often with medical changes enabled
     setBotHealth() {
         for (let bot in this.arrays.botArr) {
             let botType = this.arrays.botArr[bot];

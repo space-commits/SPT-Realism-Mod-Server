@@ -1178,7 +1178,7 @@
         "Dispersion": 13,
         "CameraRecoil": 0.045,
         "VisualMulti": 0.85,
-        "Convergence": 16,
+        "Convergence": 15,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.06,
         "HeatFactorGun": 0.22,
@@ -1224,7 +1224,7 @@
         "Dispersion": 13,
         "CameraRecoil": 0.045,
         "VisualMulti": 0.85,
-        "Convergence": 16,
+        "Convergence": 15,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.087,
         "HeatFactorGun": 0.22,
@@ -1268,9 +1268,9 @@
         "VerticalRecoil": 115.5,
         "HorizontalRecoil": 240,
         "Dispersion": 14,
-        "CameraRecoil": 0.055,
+        "CameraRecoil": 0.0525,
         "VisualMulti": 0.8,
-        "Convergence": 11.7,
+        "Convergence": 10.7,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.04,
         "HeatFactorGun": 0.3,
@@ -1300,7 +1300,7 @@
         "BaseChamberCheckSpeed": 0.95,
         "BaseFixSpeed": 0.94,
         "OffsetRotation": 0.0045,
-        "RecoilIntensity": 0.215
+        "RecoilIntensity": 0.21
     },
     "6165ac306ef05c2ce828ef74": {
         "ItemID": "6165ac306ef05c2ce828ef74",
@@ -1314,9 +1314,9 @@
         "VerticalRecoil": 115.5,
         "HorizontalRecoil": 240,
         "Dispersion": 14,
-        "CameraRecoil": 0.055,
+        "CameraRecoil": 0.0525,
         "VisualMulti": 0.8,
-        "Convergence": 11.7,
+        "Convergence": 10.7,
         "RecoilAngle": 90,
         "BaseMalfunctionChance": 0.04,
         "HeatFactorGun": 0.3,
@@ -1346,7 +1346,7 @@
         "BaseChamberCheckSpeed": 0.95,
         "BaseFixSpeed": 0.94,
         "OffsetRotation": 0.0045,
-        "RecoilIntensity": 0.215
+        "RecoilIntensity": 0.21
     },
     "5c488a752e221602b412af63": {
         "ItemID": "5c488a752e221602b412af63",

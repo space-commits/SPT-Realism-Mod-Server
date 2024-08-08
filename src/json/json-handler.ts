@@ -346,6 +346,7 @@ export class ItemStatHandler {
                 serverItem._props.RecoilReturnPathOffsetHandRotation = fileItem.OffsetRotation;
                 serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
                 serverItem._props.CameraSnap = 1;
+                serverItem._props.RecoilPosZMult = 1.5;
                 serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
                 serverItem._props.CanQueueSecondShot = fileItem.CanQueueSecondShot != null ? fileItem.CanQueueSecondShot : serverItem._props.CanQueueSecondShot;
 

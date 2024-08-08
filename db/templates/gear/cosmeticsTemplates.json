@@ -649,7 +649,7 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": -10,
+        "speedPenaltyPercent": -2.5,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -4,
         "IsGasMask": true,

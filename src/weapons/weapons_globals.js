@@ -70,16 +70,19 @@ class WeaponsGlobals {
             this.globalDB().Mastering = mastering.Mastering;
         }
         if (this.modConf.recoil_attachment_overhaul == true) {
-            this.globalDB().Aiming.RecoilXIntensityByPose["x"] = 1.1;
-            this.globalDB().Aiming.RecoilXIntensityByPose["y"] = 0.9;
-            this.globalDB().Aiming.RecoilXIntensityByPose["z"] = 1;
-            this.globalDB().Aiming.RecoilYIntensityByPose["x"] = 0.9;
+            // vertical
+            this.globalDB().Aiming.RecoilXIntensityByPose["x"] = 1.15; //prone
+            this.globalDB().Aiming.RecoilXIntensityByPose["y"] = 0.7; //crouch
+            this.globalDB().Aiming.RecoilXIntensityByPose["z"] = 1; //stand
+            //spread
+            this.globalDB().Aiming.RecoilYIntensityByPose["x"] = 1.05;
             this.globalDB().Aiming.RecoilYIntensityByPose["y"] = 1.1;
             this.globalDB().Aiming.RecoilYIntensityByPose["z"] = 1;
-            this.globalDB().Aiming.RecoilZIntensityByPose["x"] = 0.75;
-            this.globalDB().Aiming.RecoilZIntensityByPose["y"] = 1.2;
+            //rearward 
+            this.globalDB().Aiming.RecoilZIntensityByPose["x"] = 0.7;
+            this.globalDB().Aiming.RecoilZIntensityByPose["y"] = 1.35;
             this.globalDB().Aiming.RecoilZIntensityByPose["z"] = 1;
-            this.globalDB().Aiming.ProceduralIntensityByPose["x"] = 0.15;
+            this.globalDB().Aiming.ProceduralIntensityByPose["x"] = 0.2;
             this.globalDB().Aiming.ProceduralIntensityByPose["y"] = 0.7;
             this.globalDB().Aiming.AimProceduralIntensity = 1;
             this.globalDB().Aiming.RecoilCrank = true;
