@@ -22,7 +22,8 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "646371faf2404ab67905c8e9": {
         "ItemID": "646371faf2404ab67905c8e9",
@@ -452,7 +453,8 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -60
     },
     "611a30addbdd8440277441dc": {
         "ItemID": "611a30addbdd8440277441dc",
@@ -3389,7 +3391,7 @@
             "5bae13bad4351e00320204af"
         ],
         "Ergonomics": 0,
-        "Weight": 0.9,
+        "Weight": 0.81,
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 0,
@@ -3413,7 +3415,7 @@
         "Velocity": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 1.5,
+        "Weight": 1.3,
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 0,
@@ -3440,7 +3442,7 @@
             "5bfd384c0db834001a6691d3"
         ],
         "Ergonomics": 0,
-        "Weight": 1.7,
+        "Weight": 1.53,
         "ShotgunDispersion": 1.9,
         "Loudness": 0,
         "LoyaltyLevel": 0,
@@ -4118,7 +4120,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 5,
         "CameraRecoil": 5,
-        "AutoROF": 2.5,
+        "AutoROF": 5,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "Convergence": 0,

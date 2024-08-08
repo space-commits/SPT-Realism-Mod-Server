@@ -250,8 +250,8 @@
         },
         "assault": {
             "armor": {
-                "maxDelta": 10,
-                "minDelta": 0,
+                "maxDelta": 40,
+                "minDelta": 10,
                 "minLimitPercent": 15
             },
             "weapon": {

@@ -1,0 +1,307 @@
+{
+    "6681d150fd1d7f0b7e5ae953": {
+        "QuestName": "Rad Exploration",
+        "_id": "6681d150fd1d7f0b7e5ae953",
+        "acceptPlayerMessage": "6681d150fd1d7f0b7e5ae953 acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6681d150fd1d7f0b7e5ae953 changeQuestMessageText",
+        "completePlayerMessage": "6681d150fd1d7f0b7e5ae953 completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6681d2074a0dff5f20d9b3ef",
+                                "target": "CustomsRadTrain2",
+                                "value": 1
+                            }
+                        ],
+                        "id": "6681d1ffa93ab0ea3cb3a94a"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6681d1e23a21783b8b9c14ba",
+                    "index": 0,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6682858d0f4a290c9351bff0",
+                                "target": "CustomsCratesBigRed",
+                                "value": 1
+                            }
+                        ],
+                        "id": "668285964ba678936ad394f1"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6682859c9d440e2a1e92fc89",
+                    "index": 1,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [
+                {
+                    "availableAfter": 0,
+                    "conditionType": "Quest",
+                    "dispersion": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6681d27ec51212ea55a3c619",
+                    "index": 1,
+                    "parentId": "",
+                    "status": [
+                        4
+                    ],
+                    "target": "6681c5127b9973f80c7c7d12",
+                    "visibilityConditions": []
+                }
+            ],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6681d150fd1d7f0b7e5ae953 declinePlayerMessage",
+        "description": "6681d150fd1d7f0b7e5ae953 description",
+        "failMessageText": "6681d150fd1d7f0b7e5ae953 failMessageText",
+        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6681d150fd1d7f0b7e5ae953 name",
+        "note": "6681d150fd1d7f0b7e5ae953 note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [
+                {
+                    "findInRaid": true,
+                    "id": "6681d18297dfaf4c068df113",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6681d16743120262f0628a93",
+                            "_tpl": "5672cb724bdc2dc2088b456b",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6681d16743120262f0628a93",
+                    "type": "Item",
+                    "value": "1"
+                }
+            ],
+            "Success": [
+                {
+                    "id": "6681d18686762020ba680703",
+                    "index": 0,
+                    "type": "Experience",
+                    "value": "1100"
+                },
+                {
+                    "id": "6681d18ba49e654a1cef4feb",
+                    "index": 1,
+                    "target": "54cb57776803fa99248b456e",
+                    "type": "TraderStanding",
+                    "value": "0.01"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "6681d18f38956841c5f3d212",
+                    "index": 2,
+                    "items": [
+                        {
+                            "_id": "6681d1966cfd062bdcede100",
+                            "_tpl": "5449016a4bdc2d6f028b456f",
+                            "upd": {
+                                "StackObjectsCount": 15000
+                            }
+                        }
+                    ],
+                    "target": "6681d1966cfd062bdcede100",
+                    "type": "Item",
+                    "value": "15000"
+                }
+            ]
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6681d150fd1d7f0b7e5ae953 startedMessageText",
+        "successMessageText": "6681d150fd1d7f0b7e5ae953 successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "Discover"
+    },
+    "6681c5127b9973f80c7c7d12": {
+        "QuestName": "Gas Exploration",
+        "_id": "6681c5127b9973f80c7c7d12",
+        "acceptPlayerMessage": "6681c5127b9973f80c7c7d12 acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6681c5127b9973f80c7c7d12 changeQuestMessageText",
+        "completePlayerMessage": "6681c5127b9973f80c7c7d12 completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6681c5fe967f4a1143548c84",
+                                "target": "CustomsChemTrain1",
+                                "value": 1
+                            }
+                        ],
+                        "id": "6681c60720e7eca52e943e7b"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6681c60bf1e98af2b3def8cc",
+                    "index": 0,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "66828530cdc4c6b3b886f6c1",
+                                "target": "CustomsPumpRoom",
+                                "value": 1
+                            }
+                        ],
+                        "id": "66828543179ade74b3bd5575"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6682854b9ad02262e978d803",
+                    "index": 1,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [
+                
+                {
+                    "availableAfter": 0,
+                    "conditionType": "Quest",
+                    "dispersion": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6681df9d4871f02b9401734b",
+                    "index": 1,
+                    "parentId": "",
+                    "status": [
+                        4
+                    ],
+                    "target": "596a204686f774576d4c95de",
+                    "visibilityConditions": []
+                }
+            ],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6681c5127b9973f80c7c7d12 declinePlayerMessage",
+        "description": "6681c5127b9973f80c7c7d12 description",
+        "failMessageText": "6681c5127b9973f80c7c7d12 failMessageText",
+        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6681c5127b9973f80c7c7d12 name",
+        "note": "6681c5127b9973f80c7c7d12 note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [
+                {
+                    "findInRaid": true,
+                    "id": "6681d07cf46c5b19c0b3dce3",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6681d0615b1a86114b271591",
+                            "_tpl": "590a3efd86f77437d351a25b",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6681d0615b1a86114b271591",
+                    "type": "Item",
+                    "value": "1"
+                }
+            ],
+            "Success": [
+                {
+                    "id": "6681d087be373fd0e9f74732",
+                    "index": 0,
+                    "type": "Experience",
+                    "value": "1000"
+                },
+                {
+                    "id": "65846f341e25c52cb72f8084",
+                    "index": 1,
+                    "target": "54cb57776803fa99248b456e",
+                    "type": "TraderStanding",
+                    "value": "0.01"
+                },
+                {
+                    "findInRaid": true,
+                    "id": "6681d0c0a42a5026ff836f46",
+                    "index": 2,
+                    "items": [
+                        {
+                            "_id": "6681d0b761a6e320c3a625d0",
+                            "_tpl": "5449016a4bdc2d6f028b456f",
+                            "upd": {
+                                "StackObjectsCount": 10000
+                            }
+                        }
+                    ],
+                    "target": "6681d0b761a6e320c3a625d0",
+                    "type": "Item",
+                    "value": "10000"
+                }
+            ]
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6681c5127b9973f80c7c7d12 startedMessageText",
+        "successMessageText": "6681c5127b9973f80c7c7d12 successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "Discover"
+    }
+}

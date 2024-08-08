@@ -18,7 +18,8 @@
         "Ergonomics": 0,
         "Weight": 0.141,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -18
     },
     "61702f1b67085e45ef140b26": {
         "ItemID": "61702f1b67085e45ef140b26",
@@ -39,7 +40,8 @@
         "Ergonomics": 0,
         "Weight": 0.17,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -20
     },
     "5a01ad4786f77450561fda02": {
         "ItemID": "5a01ad4786f77450561fda02",
@@ -60,7 +62,8 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -10
     },
     "649ec107961514b22506b10c": {
         "ItemID": "649ec107961514b22506b10c",
@@ -186,7 +189,8 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -20
     },
     "59ccfdba86f7747f2109a587": {
         "ItemID": "59ccfdba86f7747f2109a587",
@@ -228,7 +232,8 @@
         "Ergonomics": 4,
         "Weight": 0.55,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -17
     },
     "5cf656f2d7f00c06585fb6eb": {
         "ItemID": "5cf656f2d7f00c06585fb6eb",
@@ -249,7 +254,8 @@
         "Ergonomics": 14,
         "Weight": 0.385,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -15
     },
     "5d4aab30a4b9365435358c55": {
         "ItemID": "5d4aab30a4b9365435358c55",
@@ -270,7 +276,8 @@
         "Ergonomics": 14,
         "Weight": 0.385,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -15
     },
     "628a83c29179c324ed269508": {
         "ItemID": "628a83c29179c324ed269508",
@@ -291,7 +298,8 @@
         "Ergonomics": 12.5,
         "Weight": 0.48,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -18
     },
     "59d36a0086f7747e673f3946": {
         "ItemID": "59d36a0086f7747e673f3946",
@@ -335,7 +343,8 @@
         "Ergonomics": 0,
         "Weight": 0.095,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 5
     },
     "5dfa3d45dfc58d14537c20b0": {
         "ItemID": "5dfa3d45dfc58d14537c20b0",
@@ -358,7 +367,8 @@
         "Ergonomics": 0,
         "Weight": 0.049,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -5
     },
     "5a34fbadc4a28200741e230a": {
         "ItemID": "5a34fbadc4a28200741e230a",
@@ -385,7 +395,8 @@
         "Ergonomics": 0,
         "Weight": 0.218,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -25
     },
     "5ae30e795acfc408fb139a0b": {
         "ItemID": "5ae30e795acfc408fb139a0b",
@@ -419,12 +430,13 @@
         "Name": "gas_block_ar15_dd_mk12_low_profile",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
+        "HorizontalRecoil": 5,
+        "Dispersion": 2,
+        "CameraRecoil": 7,
         "AutoROF": 3,
         "SemiROF": 5,
         "Convergence": 8,
-        "ModMalfunctionChance": -7.5,
+        "ModMalfunctionChance": -10,
         "CanCycleSubs": false,
         "Accuracy": 0,
         "HeatFactor": 0.995,
@@ -434,7 +446,8 @@
         "Ergonomics": 0,
         "Weight": 0.053,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "63d3ce281fe77d0f2801859e": {
         "ItemID": "63d3ce281fe77d0f2801859e",
@@ -442,6 +455,7 @@
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -5,
+        "CameraRecoil": -5,
         "Dispersion": 0,
         "AutoROF": -1.5,
         "SemiROF": -1,
@@ -456,7 +470,8 @@
         "Ergonomics": 0,
         "Weight": 0.05,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -10
     },
     "5d00ec68d7ad1a04a067e5be": {
         "ItemID": "5d00ec68d7ad1a04a067e5be",
@@ -473,13 +488,14 @@
         "Accuracy": 0,
         "HeatFactor": 0.99,
         "CoolFactor": 1.008,
-        "DurabilityBurnModificator": 0.75,
+        "DurabilityBurnModificator": 0.8,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.064,
         "Convergence": -10,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -25
     },
     "56ea8d2fd2720b7c698b4570": {
         "ItemID": "56ea8d2fd2720b7c698b4570",
@@ -527,7 +543,8 @@
         "Ergonomics": 0,
         "Weight": 0.06,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -15
     },
     "5fbc210bf24b94483f726481": {
         "ItemID": "5fbc210bf24b94483f726481",
@@ -548,7 +565,8 @@
         "Ergonomics": 0,
         "Weight": 0.049,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -20
     },
     "5fc2360f900b1d5091531e19": {
         "ItemID": "5fc2360f900b1d5091531e19",
@@ -671,6 +689,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.049,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "Flash": -16
     }
 }

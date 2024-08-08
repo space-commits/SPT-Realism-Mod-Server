@@ -110,9 +110,9 @@
         "MeleeDamage": 60,
         "MeleePen": 19
     },
-    "imi_uzi_thread": {
-        "ItemID": "imi_uzi_thread",
-        "Name": "IMI Uzi Barrel thread",
+    "64527a263d52156624001fd7": {
+        "ItemID": "64527a263d52156624001fd7",
+        "Name": "muzzle_9a91_kbp_hanguard_retainer",
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
@@ -123,25 +123,27 @@
         "ModMalfunctionChance": 0,
         "CanCycleSubs": false,
         "Accuracy": 5,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 0.99,
+        "HeatFactor": 0.99,
+        "CoolFactor": 1.01,
+        "DurabilityBurnModificator": 0.97,
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.05,
+        "Weight": 0.01,
+        "ModShotDispersion": 0,
         "Loudness": 0,
         "Convergence": 0,
-        "LoyaltyLevel": 0
+        "Price": 0,
+        "LoyaltyLevel": 1
     },
-    "muzzle_vepr12_molot": {
-        "ItemID": "muzzle_vepr12_molot",
-        "Name": "muzzle_vepr12_molot",
+    "62e2a754b6c0ee2f230cee0f": {
+        "ItemID": "62e2a754b6c0ee2f230cee0f",
+        "Name": "muzzle_sr2m_tochmash_hand_stop_9x21",
         "ModType": "",
-        "VerticalRecoil": -7,
-        "HorizontalRecoil": -10,
-        "Dispersion": -20,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
@@ -154,23 +156,27 @@
         "Velocity": 0,
         "RecoilAngle": 0,
         "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.1,
-        "Loudness": 13
+        "Ergonomics": 5,
+        "Weight": 0.087,
+        "ModShotDispersion": 0,
+        "Loudness": -5,
+        "Convergence": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
-    "muzzle_l85a2_556x45": {
-        "ItemID": "muzzle_l85a2_556x45",
-        "Name": "muzzle_l85a2_556x45",
+    "630f27f04f3f6281050b94d7": {
+        "ItemID": "630f27f04f3f6281050b94d7",
+        "Name": "muzzle_aug_ratworx_suppressor_adapter_556x45",
         "ModType": "",
-        "VerticalRecoil": -7,
-        "HorizontalRecoil": -5,
-        "Dispersion": -10,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "CanCycleSubs": false,
-        "Accuracy": 0,
+        "Accuracy": -2.5,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
@@ -178,22 +184,26 @@
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.064,
-        "Loudness": 4
+        "Weight": 0.12,
+        "ModShotDispersion": 0,
+        "Loudness": 0,
+        "Convergence": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
-    "muzzle_famas_flash_hider": {
-        "ItemID": "muzzle_famas_flash_hider",
-        "Name": "muzzle_famas_flash_hider",
+    "mechRatWorx": {
+        "ItemID": "mechRatWorx",
+        "Name": "muzzle_aug_ratworx_suppressor_adapter_300BLK",
         "ModType": "",
-        "VerticalRecoil": -6,
-        "HorizontalRecoil": -5,
-        "Dispersion": -18,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "CanCycleSubs": false,
-        "Accuracy": 0,
+        "Accuracy": -2.5,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
@@ -201,8 +211,12 @@
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.07,
-        "Loudness": 4
+        "Weight": 0.12,
+        "ModShotDispersion": 0,
+        "Loudness": 0,
+        "Convergence": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
     },
     "57f3c7e024597738ea4ba286": {
         "ItemID": "57f3c7e024597738ea4ba286",
@@ -465,6 +479,33 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "Price": 0
+    },
+    "6513f0f5e63f29908d0ffab8": {
+        "ItemID": "6513f0f5e63f29908d0ffab8",
+        "Name": "muzzle_rpd_zid_thread_protector_762x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 5,
+        "HeatFactor": 0.99,
+        "CoolFactor": 1.01,
+        "DurabilityBurnModificator": 0.98,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.01,
+        "ModShotDispersion": 0,
+        "Loudness": 0,
+        "Convergence": 0,
+        "Price": 0,
+        "LoyaltyLevel": 1
     },
     "5b363dea5acfc4771e1c5e7e": {
         "ItemID": "5b363dea5acfc4771e1c5e7e",
@@ -1194,32 +1235,6 @@
         "LoyaltyLevel": 0,
         "Price": 0
     },
-    "5c0fafb6d174af02a96260ba": {
-        "ItemID": "5c0fafb6d174af02a96260ba",
-        "Name": "muzzle_ar15_adar_2_15_std_556x45",
-        "ModType": "",
-        "VerticalRecoil": -5.5,
-        "HorizontalRecoil": -6,
-        "Dispersion": -10,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": -15,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.064,
-        "Loudness": 4,
-        "Convergence": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
-    },
     "5cc82796e24e8d000f5859a8": {
         "ItemID": "5cc82796e24e8d000f5859a8",
         "Name": "muzzle_p90_fn_p90_std_57x28",
@@ -1244,7 +1259,8 @@
         "Loudness": 9,
         "Convergence": 11,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "5c48a2a42e221602b66d1e07": {
         "ItemID": "5c48a2a42e221602b66d1e07",
@@ -1270,7 +1286,8 @@
         "Loudness": 5,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -70
     },
     "5dcbe965e4ed22586443a79d": {
         "ItemID": "5dcbe965e4ed22586443a79d",
@@ -1296,7 +1313,8 @@
         "Loudness": 5,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -70
     },
     "5a0d716f1526d8000d26b1e2": {
         "ItemID": "5a0d716f1526d8000d26b1e2",
@@ -1322,7 +1340,8 @@
         "Loudness": 5,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "5f2aa4559b44de6b1b4e68d1": {
         "ItemID": "5f2aa4559b44de6b1b4e68d1",
@@ -1348,7 +1367,8 @@
         "Loudness": 6,
         "Convergence": 8.5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "58949dea86f77409483e16a8": {
         "ItemID": "58949dea86f77409483e16a8",
@@ -1374,7 +1394,35 @@
         "Loudness": 4,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -45
+    },
+    "5c0fafb6d174af02a96260ba": {
+        "ItemID": "5c0fafb6d174af02a96260ba",
+        "Name": "muzzle_ar15_adar_2_15_std_556x45",
+        "ModType": "",
+        "VerticalRecoil": -5.5,
+        "HorizontalRecoil": -6,
+        "Dispersion": -10,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": -15,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.064,
+        "Loudness": 4,
+        "Convergence": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "Flash": -45
     },
     "544a38634bdc2d58388b4568": {
         "ItemID": "544a38634bdc2d58388b4568",
@@ -1400,7 +1448,8 @@
         "Loudness": 4,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -45
     },
     "56ea8180d2720bf2698b456a": {
         "ItemID": "56ea8180d2720bf2698b456a",
@@ -1426,7 +1475,8 @@
         "Loudness": 4,
         "Convergence": 7.5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -40
     },
     "5ba26acdd4351e003562908e": {
         "ItemID": "5ba26acdd4351e003562908e",
@@ -1452,7 +1502,8 @@
         "Loudness": 4,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -55
     },
     "5dfa3cd1b33c0951220c079b": {
         "ItemID": "5dfa3cd1b33c0951220c079b",
@@ -1478,7 +1529,8 @@
         "Loudness": 6,
         "Convergence": 5.5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -60
     },
     "61713308d92c473c770214a0": {
         "ItemID": "61713308d92c473c770214a0",
@@ -1504,33 +1556,8 @@
         "Loudness": 6,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "5fbbc3324e8a554c40648348": {
-        "ItemID": "5fbbc3324e8a554c40648348",
-        "Name": "muzzle_vector_kriss_flash_hider_std_9x19",
-        "ModType": "",
-        "VerticalRecoil": -7.5,
-        "HorizontalRecoil": -9,
-        "Dispersion": -14,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.064,
-        "Loudness": 11,
-        "Convergence": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -65
     },
     "560e620e4bdc2d724b8b456b": {
         "ItemID": "560e620e4bdc2d724b8b456b",
@@ -1556,7 +1583,8 @@
         "Loudness": 9,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -65
     },
     "5c471bfc2e221602b21d4e17": {
         "ItemID": "5c471bfc2e221602b21d4e17",
@@ -1582,7 +1610,8 @@
         "Loudness": 8,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -30
     },
     "615d8df08004cc50514c3236": {
         "ItemID": "615d8df08004cc50514c3236",
@@ -1608,7 +1637,8 @@
         "Loudness": 22,
         "Convergence": 12.5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -30
     },
     "5c07c5ed0db834001b73571c": {
         "ItemID": "5c07c5ed0db834001b73571c",
@@ -1634,7 +1664,8 @@
         "Loudness": 11,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -85
     },
     "622f0ee47762f55aaa68ac87": {
         "ItemID": "622f0ee47762f55aaa68ac87",
@@ -1660,7 +1691,35 @@
         "Loudness": 4,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -40
+    },
+    "622f07cfae33bc505b2c4dd5": {
+        "ItemID": "622f07cfae33bc505b2c4dd5",
+        "Name": "muzzle_g36_hk_incomplete_flash_hider_556x45",
+        "ModType": "",
+        "VerticalRecoil": -7,
+        "HorizontalRecoil": -7,
+        "Dispersion": -10,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 3,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.063,
+        "Loudness": 5,
+        "Convergence": 1,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "Flash": -50
     },
     "622f128cec80d870d349b4e8": {
         "ItemID": "622f128cec80d870d349b4e8",
@@ -1683,24 +1742,25 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "Loudness": 5,
+        "Loudness": 4,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -60
     },
-    "622f07cfae33bc505b2c4dd5": {
-        "ItemID": "622f07cfae33bc505b2c4dd5",
-        "Name": "muzzle_g36_hk_incomplete_flash_hider_556x45",
+    "5fbbc3324e8a554c40648348": {
+        "ItemID": "5fbbc3324e8a554c40648348",
+        "Name": "muzzle_vector_kriss_flash_hider_std_9x19",
         "ModType": "",
-        "VerticalRecoil": -7,
-        "HorizontalRecoil": -6,
-        "Dispersion": -10,
+        "VerticalRecoil": -7.5,
+        "HorizontalRecoil": -9,
+        "Dispersion": -14,
         "CameraRecoil": 0,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "CanCycleSubs": false,
-        "Accuracy": 3,
+        "Accuracy": 0,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
@@ -1708,11 +1768,12 @@
         "RecoilAngle": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.063,
-        "Loudness": 4,
+        "Weight": 0.064,
+        "Loudness": 11,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -60
     },
     "5fb65424956329274326f316": {
         "ItemID": "5fb65424956329274326f316",
@@ -1738,7 +1799,8 @@
         "Loudness": 11,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -60
     },
     "5b7d68af5acfc400170e30c3": {
         "ItemID": "5b7d68af5acfc400170e30c3",
@@ -1764,7 +1826,8 @@
         "Loudness": 7,
         "Convergence": 7,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -30
     },
     "626a74340be03179a165e30c": {
         "ItemID": "626a74340be03179a165e30c",
@@ -1790,7 +1853,120 @@
         "Loudness": 4,
         "Convergence": 8,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -40
+    },
+    "630f2872911356c17d06abc5": {
+        "ItemID": "630f2872911356c17d06abc5",
+        "Name": "muzzle_aug_steyr_a1_closed_flash_hider_556x45",
+        "ModType": "barrel_2slot",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -5,
+        "Dispersion": -5,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.063,
+        "ModShotDispersion": 0,
+        "Loudness": 4,
+        "Convergence": 6,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "Flash": -50
+    },
+    "630f28f0cadb1fe05e06f004": {
+        "ItemID": "630f28f0cadb1fe05e06f004",
+        "Name": "muzzle_aug_steyr_a3_closed_flash_hider_556x45",
+        "ModType": "barrel_2slot",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -5.5,
+        "Dispersion": -5.5,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.064,
+        "ModShotDispersion": 0,
+        "Loudness": 5,
+        "Convergence": 6,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "Flash": -60
+    },
+    "630f291b9f66a28b37094bb8": {
+        "ItemID": "630f291b9f66a28b37094bb8",
+        "Name": "muzzle_aug_steyr_a3_muzzle_brake_556x45",
+        "ModType": "barrel_2slot",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -3,
+        "Dispersion": -7,
+        "CameraRecoil": -2,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.074,
+        "ModShotDispersion": 0,
+        "Loudness": 16,
+        "Convergence": 11,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "Flash": 15
+    },
+    "6386120cd6baa055ad1e201c": {
+        "ItemID": "6386120cd6baa055ad1e201c",
+        "Name": "muzzle_ar15_griffin_gatelok_hammer_comp_556x45",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -7,
+        "Dispersion": -6,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": -1,
+        "Weight": 0.068,
+        "ModShotDispersion": 0,
+        "Loudness": 5,
+        "Convergence": 4,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "Flash": -45
     },
     "618178aa1cb55961fa0fdc80": {
         "ItemID": "618178aa1cb55961fa0fdc80",
@@ -1804,7 +1980,7 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "CanCycleSubs": false,
-        "Accuracy": -15,
+        "Accuracy": -20,
         "HeatFactor": 1,
         "CoolFactor": 1,
         "DurabilityBurnModificator": 1,
@@ -1816,7 +1992,8 @@
         "Loudness": 10,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -70
     },
     "5addbb6e5acfc408fb1393fd": {
         "ItemID": "5addbb6e5acfc408fb1393fd",
@@ -1842,7 +2019,8 @@
         "Loudness": 6,
         "Convergence": 7,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -80
     },
     "5beec3420db834001b095429": {
         "ItemID": "5beec3420db834001b095429",
@@ -1868,7 +2046,8 @@
         "Loudness": 12,
         "Convergence": 13,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -55
     },
     "618407a850224f204c1da549": {
         "ItemID": "618407a850224f204c1da549",
@@ -1894,7 +2073,8 @@
         "Loudness": 8,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -40
     },
     "615d8e2f1cb55961fa0fd9a4": {
         "ItemID": "615d8e2f1cb55961fa0fd9a4",
@@ -1920,7 +2100,8 @@
         "Loudness": 16,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -20
     },
     "626667e87379c44d557b7550": {
         "ItemID": "626667e87379c44d557b7550",
@@ -1946,7 +2127,8 @@
         "Loudness": 10,
         "Convergence": 8,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -65
     },
     "5c6d710d2e22165df16b81e7": {
         "ItemID": "5c6d710d2e22165df16b81e7",
@@ -1972,7 +2154,8 @@
         "Loudness": 18,
         "Convergence": 9,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "5c7fb51d2e2216001219ce11": {
         "ItemID": "5c7fb51d2e2216001219ce11",
@@ -1998,7 +2181,8 @@
         "Loudness": 12,
         "Convergence": 7,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -65
     },
     "5ea172e498dacb342978818e": {
         "ItemID": "5ea172e498dacb342978818e",
@@ -2024,7 +2208,8 @@
         "Loudness": 14,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -65
     },
     "5c7e5f112e221600106f4ede": {
         "ItemID": "5c7e5f112e221600106f4ede",
@@ -2050,7 +2235,8 @@
         "Loudness": 11,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -67
     },
     "5a34fd2bc4a282329a73b4c5": {
         "ItemID": "5a34fd2bc4a282329a73b4c5",
@@ -2076,7 +2262,8 @@
         "Loudness": 11,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -67
     },
     "609269c3b0e443224b421cc1": {
         "ItemID": "609269c3b0e443224b421cc1",
@@ -2102,7 +2289,8 @@
         "Loudness": 10,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -60
     },
     "6405ff6bd4578826ec3e377a": {
         "ItemID": "6405ff6bd4578826ec3e377a",
@@ -2128,7 +2316,8 @@
         "Loudness": 39,
         "Convergence": 18,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5b7d693d5acfc43bca706a3d": {
         "ItemID": "5b7d693d5acfc43bca706a3d",
@@ -2154,7 +2343,8 @@
         "Loudness": 20,
         "Convergence": 13,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -35
     },
     "5b3a16655acfc40016387a2a": {
         "ItemID": "5b3a16655acfc40016387a2a",
@@ -2182,7 +2372,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 10,
         "MeleePen": 8,
-        "Price": 0
+        "Price": 0,
+        "Flash": -45
     },
     "5b099b7d5acfc400186331e4": {
         "ItemID": "5b099b7d5acfc400186331e4",
@@ -2208,7 +2399,8 @@
         "Loudness": 12,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -45
     },
     "5addbba15acfc400185c2854": {
         "ItemID": "5addbba15acfc400185c2854",
@@ -2234,7 +2426,8 @@
         "Loudness": 14,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "5addbbb25acfc40015621bd9": {
         "ItemID": "5addbbb25acfc40015621bd9",
@@ -2260,7 +2453,8 @@
         "Loudness": 15,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -65
     },
     "5fbcbcf593164a5b6278efb2": {
         "ItemID": "5fbcbcf593164a5b6278efb2",
@@ -2286,7 +2480,8 @@
         "Loudness": 7,
         "Convergence": 5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -35
     },
     "5fbcbd02900b1d5091531dd3": {
         "ItemID": "5fbcbd02900b1d5091531dd3",
@@ -2312,7 +2507,8 @@
         "Loudness": 18,
         "Convergence": 5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5fbcbd10ab884124df0cd563": {
         "ItemID": "5fbcbd10ab884124df0cd563",
@@ -2338,7 +2534,8 @@
         "Loudness": 24,
         "Convergence": 9,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 18
     },
     "6130c43c67085e45ef1405a1": {
         "ItemID": "6130c43c67085e45ef1405a1",
@@ -2364,7 +2561,8 @@
         "Loudness": 24,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -40
     },
     "5f633f791b231926f2329f13": {
         "ItemID": "5f633f791b231926f2329f13",
@@ -2390,7 +2588,8 @@
         "Loudness": 70,
         "Convergence": 40,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "5d026791d7ad1a04a067ea63": {
         "ItemID": "5d026791d7ad1a04a067ea63",
@@ -2416,7 +2615,8 @@
         "Loudness": 39,
         "Convergence": 7,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "5a9ea27ca2750c00137fa672": {
         "ItemID": "5a9ea27ca2750c00137fa672",
@@ -2442,7 +2642,8 @@
         "Loudness": 27,
         "Convergence": 5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "mechSpikes_366": {
         "ItemID": "mechSpikes_366",
@@ -2468,7 +2669,8 @@
         "Loudness": 27,
         "Convergence": 5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5c4ee3d62e2216152006f302": {
         "ItemID": "5c4ee3d62e2216152006f302",
@@ -2494,7 +2696,8 @@
         "Loudness": 33,
         "Convergence": 16,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "5998597786f77414ea6da093": {
         "ItemID": "5998597786f77414ea6da093",
@@ -2520,7 +2723,8 @@
         "Loudness": 30,
         "Convergence": 14,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 5
     },
     "6492ef63cfcf7c89e701abf1": {
         "ItemID": "6492ef63cfcf7c89e701abf1",
@@ -2548,7 +2752,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 8.5,
         "MeleePen": 7,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5649ab884bdc2ded0b8b457f": {
         "ItemID": "5649ab884bdc2ded0b8b457f",
@@ -2576,7 +2781,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 8.5,
         "MeleePen": 7,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "mechDTK_366": {
         "ItemID": "mechDTK_366",
@@ -2604,7 +2810,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 8.5,
         "MeleePen": 7,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5cc9a96cd7f00c011c04e04a": {
         "ItemID": "5cc9a96cd7f00c011c04e04a",
@@ -2630,7 +2837,8 @@
         "Loudness": 34,
         "Convergence": 16,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "612e0e55a112697a4b3a66e7": {
         "ItemID": "612e0e55a112697a4b3a66e7",
@@ -2658,7 +2866,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 9,
         "MeleePen": 6,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "612e0e3c290d254f5e6b291d": {
         "ItemID": "612e0e3c290d254f5e6b291d",
@@ -2686,7 +2895,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 8,
         "MeleePen": 6,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5bbdb8bdd4351e4502011460": {
         "ItemID": "5bbdb8bdd4351e4502011460",
@@ -2712,7 +2922,8 @@
         "Loudness": 30,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "5c7951452e221644f31bfd5c": {
         "ItemID": "5c7951452e221644f31bfd5c",
@@ -2738,7 +2949,8 @@
         "Loudness": 37,
         "Convergence": 26,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5cff9e5ed7ad1a09407397d4": {
         "ItemID": "5cff9e5ed7ad1a09407397d4",
@@ -2764,7 +2976,8 @@
         "Loudness": 40,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5d1f819086f7744b355c219b": {
         "ItemID": "5d1f819086f7744b355c219b",
@@ -2790,7 +3003,8 @@
         "Loudness": 40,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5c878ebb2e2216001219d48a": {
         "ItemID": "5c878ebb2e2216001219d48a",
@@ -2816,7 +3030,8 @@
         "Loudness": 33,
         "Convergence": 15,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5c878e9d2e2216000f201903": {
         "ItemID": "5c878e9d2e2216000f201903",
@@ -2842,12 +3057,13 @@
         "Loudness": 33,
         "Convergence": 15,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "612e0cfc8004cc50514c2d9e": {
         "ItemID": "612e0cfc8004cc50514c2d9e",
         "Name": "muzzle_ar15_awc_psr_muzzle_brake_556x45",
-        "ModType": "",
+        "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -15,
         "Dispersion": -20,
@@ -2868,7 +3084,8 @@
         "Loudness": 40,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "612e0d3767085e45ef14057f": {
         "ItemID": "612e0d3767085e45ef14057f",
@@ -2894,7 +3111,8 @@
         "Loudness": 40,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "612e0d81290d254f5e6b291a": {
         "ItemID": "612e0d81290d254f5e6b291a",
@@ -2920,7 +3138,8 @@
         "Loudness": 40,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "5cf6935bd7f00c06585fb791": {
         "ItemID": "5cf6935bd7f00c06585fb791",
@@ -2946,7 +3165,8 @@
         "Loudness": 30,
         "Convergence": 25,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "5888996c24597754281f9419": {
         "ItemID": "5888996c24597754281f9419",
@@ -2972,7 +3192,8 @@
         "Loudness": 60,
         "Convergence": 10,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5cc9ad73d7f00c000e2579d4": {
         "ItemID": "5cc9ad73d7f00c000e2579d4",
@@ -2998,7 +3219,36 @@
         "Loudness": 27,
         "Convergence": 10,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
+    },
+    "64119d1f2c6d6f921a0929f8": {
+        "ItemID": "64119d1f2c6d6f921a0929f8",
+        "Name": "muzzle_svt40_toz_std_762x54r",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -7,
+        "Dispersion": -5,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.07,
+        "ModShotDispersion": 0,
+        "Loudness": 25,
+        "Convergence": 12,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "Flash": 20
     },
     "5cdd7685d7f00c000f260ed2": {
         "ItemID": "5cdd7685d7f00c000f260ed2",
@@ -3025,7 +3275,8 @@
         "Convergence": 0,
         "LoyaltyLevel": 0,
         "MeleeDamage": 3,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "59e61eb386f77440d64f5daf": {
         "ItemID": "59e61eb386f77440d64f5daf",
@@ -3051,7 +3302,8 @@
         "Loudness": 15,
         "Convergence": 12,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 0
     },
     "mechSlant_366": {
         "ItemID": "mechSlant_366",
@@ -3077,7 +3329,8 @@
         "Loudness": 15,
         "Convergence": 12,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 0
     },
     "6492efb8cfcf7c89e701abf3": {
         "ItemID": "6492efb8cfcf7c89e701abf3",
@@ -3103,7 +3356,8 @@
         "Loudness": 15,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -55
     },
     "6492efe46cc7e29a6f03b2a0": {
         "ItemID": "6492efe46cc7e29a6f03b2a0",
@@ -3127,9 +3381,10 @@
         "Ergonomics": 0,
         "Weight": 0.063,
         "Loudness": 15,
-        "Convergence": 0,
+        "Convergence": 5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -35
     },
     "59d64fc686f774171b243fe2": {
         "ItemID": "59d64fc686f774171b243fe2",
@@ -3155,7 +3410,8 @@
         "Loudness": 15,
         "Convergence": 12,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 0
     },
     "5ac72e615acfc43f67248aa0": {
         "ItemID": "5ac72e615acfc43f67248aa0",
@@ -3164,7 +3420,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -7,
-        "CameraRecoil": 0,
+        "CameraRecoil": -5,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -3179,9 +3435,10 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 22,
-        "Convergence": 7,
+        "Convergence": 8,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "649ec2af961514b22506b10f": {
         "ItemID": "649ec2af961514b22506b10f",
@@ -3190,7 +3447,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -7,
         "Dispersion": -10,
-        "CameraRecoil": 0,
+        "CameraRecoil": -6,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -3208,7 +3465,8 @@
         "Convergence": 9,
         "LoyaltyLevel": 0,
         "MeleeDamage": 7,
-        "Price": 0
+        "Price": 0,
+        "Flash": 0
     },
     "5ac7655e5acfc40016339a19": {
         "ItemID": "5ac7655e5acfc40016339a19",
@@ -3217,7 +3475,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -7,
-        "CameraRecoil": 0,
+        "CameraRecoil": -5,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -3232,9 +3490,10 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 22,
-        "Convergence": 7,
+        "Convergence": 8,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5ac72e7d5acfc40016339a02": {
         "ItemID": "5ac72e7d5acfc40016339a02",
@@ -3243,7 +3502,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -7,
-        "CameraRecoil": 0,
+        "CameraRecoil": -5,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -3258,9 +3517,10 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 22,
-        "Convergence": 7,
+        "Convergence": 8,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5649aa744bdc2ded0b8b457e": {
         "ItemID": "5649aa744bdc2ded0b8b457e",
@@ -3269,7 +3529,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -10,
         "Dispersion": -7,
-        "CameraRecoil": 0,
+        "CameraRecoil": -5,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -3284,9 +3544,10 @@
         "Ergonomics": 0,
         "Weight": 0.1,
         "Loudness": 22,
-        "Convergence": 7,
+        "Convergence": 8,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "57dc324a24597759501edc20": {
         "ItemID": "57dc324a24597759501edc20",
@@ -3312,7 +3573,8 @@
         "Loudness": 18,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -10
     },
     "5ac72e725acfc400180ae701": {
         "ItemID": "5ac72e725acfc400180ae701",
@@ -3338,7 +3600,8 @@
         "Loudness": 18,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -10
     },
     "5ac72e945acfc43f3b691116": {
         "ItemID": "5ac72e945acfc43f3b691116",
@@ -3364,7 +3627,8 @@
         "Loudness": 18,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -10
     },
     "5ac72e895acfc43b321d4bd5": {
         "ItemID": "5ac72e895acfc43b321d4bd5",
@@ -3390,7 +3654,8 @@
         "Loudness": 18,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -15
     },
     "5f633f68f5750b524b45f112": {
         "ItemID": "5f633f68f5750b524b45f112",
@@ -3416,7 +3681,8 @@
         "Loudness": 70,
         "Convergence": 40,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "mechJMAC_366": {
         "ItemID": "mechJMAC_366",
@@ -3442,7 +3708,8 @@
         "Loudness": 70,
         "Convergence": 40,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "5f6372e2865db925d54f3869": {
         "ItemID": "5f6372e2865db925d54f3869",
@@ -3468,7 +3735,8 @@
         "Loudness": 30,
         "Convergence": 13,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5a7c147ce899ef00150bd8b8": {
         "ItemID": "5a7c147ce899ef00150bd8b8",
@@ -3496,7 +3764,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 4,
         "MeleePen": 5,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5caf17c9ae92150b30006be1": {
         "ItemID": "5caf17c9ae92150b30006be1",
@@ -3522,7 +3791,8 @@
         "Loudness": 50,
         "Convergence": 25,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5d02676dd7ad1a049e54f6dc": {
         "ItemID": "5d02676dd7ad1a049e54f6dc",
@@ -3548,7 +3818,8 @@
         "Loudness": 36,
         "Convergence": 20,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 22
     },
     "5d02677ad7ad1a04a15c0f95": {
         "ItemID": "5d02677ad7ad1a04a15c0f95",
@@ -3574,7 +3845,8 @@
         "Loudness": 36,
         "Convergence": 20,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 22
     },
     "5998598e86f7740b3f498a86": {
         "ItemID": "5998598e86f7740b3f498a86",
@@ -3600,7 +3872,8 @@
         "Loudness": 20,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 4
     },
     "60337f5dce399e10262255d1": {
         "ItemID": "60337f5dce399e10262255d1",
@@ -3626,7 +3899,8 @@
         "Loudness": 50,
         "Convergence": 38,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5cf6937cd7f00c056c53fb39": {
         "ItemID": "5cf6937cd7f00c056c53fb39",
@@ -3652,7 +3926,8 @@
         "Loudness": 55,
         "Convergence": 12,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5df35e7f2a78646d96665dd4": {
         "ItemID": "5df35e7f2a78646d96665dd4",
@@ -3678,7 +3953,8 @@
         "Loudness": 65,
         "Convergence": 30,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "615d8f5dd92c473c770212ef": {
         "ItemID": "615d8f5dd92c473c770212ef",
@@ -3704,7 +3980,8 @@
         "Loudness": 27,
         "Convergence": 12,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 26
     },
     "6065c6e7132d4d12c81fd8e1": {
         "ItemID": "6065c6e7132d4d12c81fd8e1",
@@ -3730,7 +4007,8 @@
         "Loudness": 32,
         "Convergence": 12,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5d440625a4b9361eec4ae6c5": {
         "ItemID": "5d440625a4b9361eec4ae6c5",
@@ -3756,7 +4034,94 @@
         "Loudness": 33,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
+    },
+    "64942bfc6ee699f6890dff95": {
+        "ItemID": "64942bfc6ee699f6890dff95",
+        "Name": "muzzle_ak_vector_vr_05t_762x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -30,
+        "Dispersion": 0,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.116,
+        "ModShotDispersion": 0,
+        "Loudness": 40,
+        "Convergence": 15,
+        "Price": 0,
+        "LoyaltyLevel": 1,
+        "Flash": 32
+    },
+    "64943b74e9998d641b0412ed": {
+        "ItemID": "64943b74e9998d641b0412ed",
+        "Name": "muzzle_ar15_walkerdr_nero_556_inconel_556x45",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -12,
+        "Dispersion": 0,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [
+            "5c78f2882e22165df16b832e"
+        ],
+        "Ergonomics": 0,
+        "Weight": 0.108,
+        "ModShotDispersion": 0,
+        "Loudness": 22,
+        "Convergence": 10,
+        "Price": 0,
+        "LoyaltyLevel": 1,
+        "Flash": 15
+    },
+    "6529113b5ae2ae97b80fdf39": {
+        "ItemID": "6529113b5ae2ae97b80fdf39",
+        "Name": "muzzle_ar10_sig_clutch_lok_qd_flash_hider_68x51",
+        "ModType": "muzzle_supp_adapter",
+        "VerticalRecoil": -2.5,
+        "HorizontalRecoil": -1,
+        "Dispersion": -3,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 3,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.122,
+        "ModShotDispersion": 0,
+        "Loudness": 9,
+        "Convergence": 0,
+        "Price": 0,
+        "LoyaltyLevel": 1,
+        "Flash": -15
     },
     "5d443f8fa4b93678dd4a01aa": {
         "ItemID": "5d443f8fa4b93678dd4a01aa",
@@ -3782,7 +4147,8 @@
         "Loudness": 33,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "5bc5a35cd4351e450201232f": {
         "ItemID": "5bc5a35cd4351e450201232f",
@@ -3808,7 +4174,8 @@
         "Loudness": 72,
         "Convergence": 25,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "5bbdb83fd4351e44f824c44b": {
         "ItemID": "5bbdb83fd4351e44f824c44b",
@@ -3834,7 +4201,8 @@
         "Loudness": 63,
         "Convergence": 19,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 35
     },
     "5bc5a351d4351e003477a414": {
         "ItemID": "5bc5a351d4351e003477a414",
@@ -3860,7 +4228,8 @@
         "Loudness": 50,
         "Convergence": 38,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5c78f2882e22165df16b832e": {
         "ItemID": "5c78f2882e22165df16b832e",
@@ -3886,7 +4255,8 @@
         "Loudness": -15,
         "Convergence": 4,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -20
     },
     "5aafa1c2e5b5b00015042a56": {
         "ItemID": "5aafa1c2e5b5b00015042a56",
@@ -3912,7 +4282,8 @@
         "Loudness": 16,
         "Convergence": 15,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "607ffb988900dc2d9a55b6e4": {
         "ItemID": "607ffb988900dc2d9a55b6e4",
@@ -3938,7 +4309,8 @@
         "Loudness": 34,
         "Convergence": 10,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "628a66b41d5e41750e314f34": {
         "ItemID": "628a66b41d5e41750e314f34",
@@ -3964,7 +4336,8 @@
         "Loudness": 37,
         "Convergence": 15,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "62812081d23f207deb0ab216": {
         "ItemID": "62812081d23f207deb0ab216",
@@ -3990,7 +4363,8 @@
         "Loudness": 55,
         "Convergence": 15,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 35
     },
     "5addbb825acfc408fb139400": {
         "ItemID": "5addbb825acfc408fb139400",
@@ -4016,7 +4390,8 @@
         "Loudness": 45,
         "Convergence": 27,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 35
     },
     "5fc23636016cce60e8341b05": {
         "ItemID": "5fc23636016cce60e8341b05",
@@ -4042,7 +4417,8 @@
         "Loudness": 60,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 29
     },
     "5cdd7693d7f00c0010373aa5": {
         "ItemID": "5cdd7693d7f00c0010373aa5",
@@ -4068,7 +4444,8 @@
         "Loudness": 50,
         "Convergence": 26,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "5addbb945acfc4001a5fc44e": {
         "ItemID": "5addbb945acfc4001a5fc44e",
@@ -4094,7 +4471,8 @@
         "Loudness": 40,
         "Convergence": 27,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 38
     },
     "63ac5c9658d0485fc039f0b8": {
         "ItemID": "63ac5c9658d0485fc039f0b8",
@@ -4121,7 +4499,8 @@
         "Loudness": 75,
         "Convergence": 28,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "5f6339d53ada5942720e2dc3": {
         "ItemID": "5f6339d53ada5942720e2dc3",
@@ -4147,7 +4526,8 @@
         "Loudness": -18,
         "Convergence": 2,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -60
     },
     "5cf78496d7f00c065703d6ca": {
         "ItemID": "5cf78496d7f00c065703d6ca",
@@ -4199,7 +4579,8 @@
         "Loudness": -20,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "615d8eb350224f204c1da1cf": {
         "ItemID": "615d8eb350224f204c1da1cf",
@@ -4225,7 +4606,8 @@
         "Loudness": -25,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 5
     },
     "62669bccdb9ebb4daa44cd14": {
         "ItemID": "62669bccdb9ebb4daa44cd14",
@@ -4251,7 +4633,8 @@
         "Loudness": -25,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 5
     },
     "5cc9b815d7f00c000e2579d6": {
         "ItemID": "5cc9b815d7f00c000e2579d6",
@@ -4277,7 +4660,8 @@
         "Loudness": -15,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -80
     },
     "5943eeeb86f77412d6384f6b": {
         "ItemID": "5943eeeb86f77412d6384f6b",
@@ -4305,7 +4689,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 4,
         "MeleePen": 5,
-        "Price": 0
+        "Price": 0,
+        "Flash": -70
     },
     "5943ee5a86f77413872d25ec": {
         "ItemID": "5943ee5a86f77413872d25ec",
@@ -4333,7 +4718,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 4,
         "MeleePen": 5,
-        "Price": 0
+        "Price": 0,
+        "Flash": -70
     },
     "56ea6fafd2720b844b8b4593": {
         "ItemID": "56ea6fafd2720b844b8b4593",
@@ -4359,7 +4745,8 @@
         "Loudness": -22,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -80
     },
     "5a7037338dc32e000d46d257": {
         "ItemID": "5a7037338dc32e000d46d257",
@@ -4385,7 +4772,8 @@
         "Loudness": 45,
         "Convergence": 30,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5a7ad0c451dfba0013379712": {
         "ItemID": "5a7ad0c451dfba0013379712",
@@ -4411,7 +4799,8 @@
         "Loudness": 55,
         "Convergence": 40,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "5a7b32a2e899ef00135e345a": {
         "ItemID": "5a7b32a2e899ef00135e345a",
@@ -4451,7 +4840,8 @@
         "Loudness": 30,
         "Convergence": 25,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5a7ad1fb51dfba0013379715": {
         "ItemID": "5a7ad1fb51dfba0013379715",
@@ -4477,7 +4867,8 @@
         "Loudness": 30,
         "Convergence": 12.5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 32
     },
     "5a705e128dc32e000d46d258": {
         "ItemID": "5a705e128dc32e000d46d258",
@@ -4511,7 +4902,8 @@
         "Loudness": 14,
         "Convergence": 9,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5a70366c8dc32e001207fb06": {
         "ItemID": "5a70366c8dc32e001207fb06",
@@ -4537,7 +4929,8 @@
         "Loudness": 35,
         "Convergence": 20,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5bffd7ed0db834001d23ebf9": {
         "ItemID": "5bffd7ed0db834001d23ebf9",
@@ -4565,7 +4958,8 @@
         "Loudness": 20,
         "Convergence": 25,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "5ef61964ec7f42238c31e0c1": {
         "ItemID": "5ef61964ec7f42238c31e0c1",
@@ -4593,7 +4987,8 @@
         "Loudness": 20,
         "Convergence": 25,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 22
     },
     "5c6beec32e221601da3578f2": {
         "ItemID": "5c6beec32e221601da3578f2",
@@ -4627,7 +5022,8 @@
         "Loudness": 12,
         "Convergence": 15,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 17
     },
     "619d36da53b4d42ee724fae4": {
         "ItemID": "619d36da53b4d42ee724fae4",
@@ -4681,7 +5077,8 @@
         "Loudness": 20,
         "Convergence": 6.5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "59fb137a86f7740adb646af1": {
         "ItemID": "59fb137a86f7740adb646af1",
@@ -4690,7 +5087,7 @@
         "VerticalRecoil": -20,
         "HorizontalRecoil": 0,
         "Dispersion": -15,
-        "CameraRecoil": -30,
+        "CameraRecoil": -22.5,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -4710,7 +5107,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 12,
         "MeleePen": 8,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "58272d7f2459774f6311ddfd": {
         "ItemID": "58272d7f2459774f6311ddfd",
@@ -4719,7 +5117,7 @@
         "VerticalRecoil": -15,
         "HorizontalRecoil": -20,
         "Dispersion": 0,
-        "CameraRecoil": -20,
+        "CameraRecoil": -15,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -4737,7 +5135,8 @@
         "Loudness": 50,
         "Convergence": 20,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "5c0111ab0db834001966914d": {
         "ItemID": "5c0111ab0db834001966914d",
@@ -4790,7 +5189,8 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -15
     },
     "5abcc328d8ce8700194394f3": {
         "ItemID": "5abcc328d8ce8700194394f3",
@@ -4816,7 +5216,8 @@
         "Loudness": -25.5,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "58aeac1b86f77457c419f475": {
         "ItemID": "58aeac1b86f77457c419f475",
@@ -4842,7 +5243,8 @@
         "Loudness": -51,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -50
     },
     "5c7e8fab2e22165df16b889b": {
         "ItemID": "5c7e8fab2e22165df16b889b",
@@ -4868,7 +5270,8 @@
         "Loudness": -26,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "6171367e1cb55961fa0fdb36": {
         "ItemID": "6171367e1cb55961fa0fdb36",
@@ -4894,7 +5297,8 @@
         "Loudness": -34,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -5
     },
     "5f63407e1b231926f2329f15": {
         "ItemID": "5f63407e1b231926f2329f15",
@@ -4920,7 +5324,8 @@
         "Loudness": -17,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 50
     },
     "5a9fbb84a2750c00137fa685": {
         "ItemID": "5a9fbb84a2750c00137fa685",
@@ -4946,7 +5351,8 @@
         "Loudness": -15,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 40
     },
     "5e01ea19e9dc277128008c0b": {
         "ItemID": "5e01ea19e9dc277128008c0b",
@@ -4972,7 +5378,8 @@
         "Loudness": -19,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 50
     },
     "5a9fbb74a2750c0032157181": {
         "ItemID": "5a9fbb74a2750c0032157181",
@@ -4998,7 +5405,8 @@
         "Loudness": -13,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 60
     },
     "5a9fb739a2750c003215717f": {
         "ItemID": "5a9fb739a2750c003215717f",
@@ -5024,7 +5432,8 @@
         "Loudness": -19.5,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5a9fbacda2750c00141e080f": {
         "ItemID": "5a9fbacda2750c00141e080f",
@@ -5050,7 +5459,8 @@
         "Loudness": -14.4,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 45
     },
     "5a34fe59c4a282000b1521a2": {
         "ItemID": "5a34fe59c4a282000b1521a2",
@@ -5076,7 +5486,8 @@
         "Loudness": -40,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -16
     },
     "5ba26ae8d4351e00367f9bdb": {
         "ItemID": "5ba26ae8d4351e00367f9bdb",
@@ -5102,7 +5513,8 @@
         "Loudness": -40,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "57c44dd02459772d2e0ae249": {
         "ItemID": "57c44dd02459772d2e0ae249",
@@ -5128,7 +5540,8 @@
         "Loudness": -25,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 50
     },
     "57838c962459774a1651ec63": {
         "ItemID": "57838c962459774a1651ec63",
@@ -5154,7 +5567,8 @@
         "Loudness": -28,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 45
     },
     "5cff9e84d7ad1a049e54ed55": {
         "ItemID": "5cff9e84d7ad1a049e54ed55",
@@ -5180,7 +5594,8 @@
         "Loudness": -36.4,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 3
     },
     "59fb257e86f7742981561852": {
         "ItemID": "59fb257e86f7742981561852",
@@ -5206,7 +5621,8 @@
         "Loudness": -16,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 18
     },
     "63877c99e785640d436458ea": {
         "ItemID": "63877c99e785640d436458ea",
@@ -5233,7 +5649,8 @@
         "Loudness": -44,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -25
     },
     "5c7955c22e221644f31bfd5e": {
         "ItemID": "5c7955c22e221644f31bfd5e",
@@ -5259,7 +5676,8 @@
         "Loudness": -42,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -15
     },
     "56e05b06d2720bb2668b4586": {
         "ItemID": "56e05b06d2720bb2668b4586",
@@ -5285,7 +5703,8 @@
         "Loudness": -35,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "57dbb57e2459774673234890": {
         "ItemID": "57dbb57e2459774673234890",
@@ -5311,7 +5730,8 @@
         "Loudness": -28,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 4
     },
     "57da93632459771cb65bf83f": {
         "ItemID": "57da93632459771cb65bf83f",
@@ -5337,7 +5757,8 @@
         "Loudness": -28,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 4
     },
     "626673016f1edc06f30cf6d5": {
         "ItemID": "626673016f1edc06f30cf6d5",
@@ -5354,7 +5775,7 @@
         "Accuracy": -5,
         "HeatFactor": 1.1,
         "CoolFactor": 1.05,
-        "DurabilityBurnModificator": 1.14,
+        "DurabilityBurnModificator": 1.1,
         "Velocity": 0.7,
         "RecoilAngle": 0,
         "ConflictingItems": [
@@ -5365,7 +5786,8 @@
         "Loudness": -29,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 12
     },
     "55d617094bdc2d89028b4568": {
         "ItemID": "55d617094bdc2d89028b4568",
@@ -5382,7 +5804,7 @@
         "Accuracy": -8,
         "HeatFactor": 1.14,
         "CoolFactor": 1,
-        "DurabilityBurnModificator": 1.22,
+        "DurabilityBurnModificator": 1.12,
         "Velocity": 1.1,
         "RecoilAngle": 0,
         "ConflictingItems": [],
@@ -5390,7 +5812,8 @@
         "Weight": 0.51,
         "Loudness": -35,
         "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 0,
+        "Flash": 12
     },
     "5c6165902e22160010261b28": {
         "ItemID": "5c6165902e22160010261b28",
@@ -5416,7 +5839,8 @@
         "Loudness": -31,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 12
     },
     "5e208b9842457a4a7a33d074": {
         "ItemID": "5e208b9842457a4a7a33d074",
@@ -5442,7 +5866,8 @@
         "Loudness": -28,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "615d8f8567085e45ef1409ca": {
         "ItemID": "615d8f8567085e45ef1409ca",
@@ -5472,7 +5897,8 @@
         "Loudness": -25.5,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 8
     },
     "593d489686f7745c6255d58a": {
         "ItemID": "593d489686f7745c6255d58a",
@@ -5498,7 +5924,8 @@
         "Loudness": -29,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "593d493f86f7745e6b2ceb22": {
         "ItemID": "593d493f86f7745e6b2ceb22",
@@ -5524,7 +5951,8 @@
         "Loudness": -28,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "593d490386f7745ee97a1555": {
         "ItemID": "593d490386f7745ee97a1555",
@@ -5550,7 +5978,8 @@
         "Loudness": -27,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "64c196ad26a15b84aa07132f": {
         "ItemID": "64c196ad26a15b84aa07132f",
@@ -5576,7 +6005,8 @@
         "Loudness": -28.7,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "55d6190f4bdc2d87028b4567": {
         "ItemID": "55d6190f4bdc2d87028b4567",
@@ -5604,7 +6034,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 9,
         "MeleePen": 9,
-        "Price": 0
+        "Price": 0,
+        "Flash": 6
     },
     "55d614004bdc2d86028b4568": {
         "ItemID": "55d614004bdc2d86028b4568",
@@ -5632,7 +6063,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 9,
         "MeleePen": 9,
-        "Price": 0
+        "Price": 0,
+        "Flash": 3
     },
     "59bffbb386f77435b379b9c2": {
         "ItemID": "59bffbb386f77435b379b9c2",
@@ -5658,7 +6090,8 @@
         "Loudness": -39,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -10
     },
     "5fbe760793164a5b6278efc8": {
         "ItemID": "5fbe760793164a5b6278efc8",
@@ -5684,7 +6117,8 @@
         "Loudness": -33,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 3
     },
     "5fbe7618d6fa9c00c571bb6c": {
         "ItemID": "5fbe7618d6fa9c00c571bb6c",
@@ -5712,7 +6146,8 @@
         "LoyaltyLevel": 0,
         "MeleeDamage": 8,
         "MeleePen": 7,
-        "Price": 0
+        "Price": 0,
+        "Flash": 2.25
     },
     "5ea17bbc09aa976f2e7a51cd": {
         "ItemID": "5ea17bbc09aa976f2e7a51cd",
@@ -5738,7 +6173,8 @@
         "Loudness": -34,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 3
     },
     "602a97060ddce744014caf6f": {
         "ItemID": "602a97060ddce744014caf6f",
@@ -5764,7 +6200,8 @@
         "Loudness": -30,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "5cebec00d7f00c065c53522a": {
         "ItemID": "5cebec00d7f00c065c53522a",
@@ -5790,7 +6227,8 @@
         "Loudness": -32,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "57f3c8cc2459773ec4480328": {
         "ItemID": "57f3c8cc2459773ec4480328",
@@ -5816,7 +6254,8 @@
         "Loudness": -32,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 25
     },
     "5caf187cae92157c28402e43": {
         "ItemID": "5caf187cae92157c28402e43",
@@ -5842,7 +6281,8 @@
         "Loudness": -34,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "57ffb0e42459777d047111c5": {
         "ItemID": "57ffb0e42459777d047111c5",
@@ -5868,7 +6308,8 @@
         "Loudness": -40,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5a0d63621526d8dba31fe3bf": {
         "ItemID": "5a0d63621526d8dba31fe3bf",
@@ -5894,7 +6335,8 @@
         "Loudness": -44,
         "Convergence": 5,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5b86a0e586f7745b600ccb23": {
         "ItemID": "5b86a0e586f7745b600ccb23",
@@ -5920,7 +6362,8 @@
         "Loudness": -30,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "5c4eecc32e221602b412b440": {
         "ItemID": "5c4eecc32e221602b412b440",
@@ -5946,7 +6389,8 @@
         "Loudness": -32,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 6.25
     },
     "5a7ad74e51dfba0015068f45": {
         "ItemID": "5a7ad74e51dfba0015068f45",
@@ -5985,7 +6429,8 @@
         "Loudness": -26,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5a32a064c4a28200741e22de": {
         "ItemID": "5a32a064c4a28200741e22de",
@@ -6011,7 +6456,8 @@
         "Loudness": -35,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 5
     },
     "571a28e524597720b4066567": {
         "ItemID": "571a28e524597720b4066567",
@@ -6037,7 +6483,8 @@
         "Loudness": -19,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5d44064fa4b9361e4f6eb8b5": {
         "ItemID": "5d44064fa4b9361e4f6eb8b5",
@@ -6063,7 +6510,8 @@
         "Loudness": -28,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 7
     },
     "5d3ef698a4b9361182109872": {
         "ItemID": "5d3ef698a4b9361182109872",
@@ -6089,7 +6537,8 @@
         "Loudness": -31,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "62811fa609427b40ab14e765": {
         "ItemID": "62811fa609427b40ab14e765",
@@ -6115,7 +6564,8 @@
         "Loudness": -32,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "59bfc5c886f7743bf6794e62": {
         "ItemID": "59bfc5c886f7743bf6794e62",
@@ -6141,7 +6591,8 @@
         "Loudness": -27,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5dfa3d2b0dee1b22f862eade": {
         "ItemID": "5dfa3d2b0dee1b22f862eade",
@@ -6158,7 +6609,7 @@
         "Accuracy": -7,
         "HeatFactor": 1.15,
         "CoolFactor": 1.06,
-        "DurabilityBurnModificator": 1.18,
+        "DurabilityBurnModificator": 1.14,
         "Velocity": 0.85,
         "RecoilAngle": 0,
         "ConflictingItems": [],
@@ -6167,7 +6618,8 @@
         "Loudness": -36,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5de8f2d5b74cd90030650c72": {
         "ItemID": "5de8f2d5b74cd90030650c72",
@@ -6193,7 +6645,8 @@
         "Loudness": -30,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 10
     },
     "5a33a8ebc4a282000c5a950d": {
         "ItemID": "5a33a8ebc4a282000c5a950d",
@@ -6219,7 +6672,8 @@
         "Loudness": -31,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "6130c4d51cb55961fa0fd49f": {
         "ItemID": "6130c4d51cb55961fa0fd49f",
@@ -6245,7 +6699,8 @@
         "Loudness": -34,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "564caa3d4bdc2d17108b458e": {
         "ItemID": "564caa3d4bdc2d17108b458e",
@@ -6271,7 +6726,8 @@
         "Loudness": -25,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 30
     },
     "5fc4b9b17283c4046c5814d7": {
         "ItemID": "5fc4b9b17283c4046c5814d7",
@@ -6297,7 +6753,8 @@
         "Loudness": -35,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "60926df0132d4d12c81fd9df": {
         "ItemID": "60926df0132d4d12c81fd9df",
@@ -6323,7 +6780,8 @@
         "Loudness": -32,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 5.5
     },
     "5926d33d86f77410de68ebc0": {
         "ItemID": "5926d33d86f77410de68ebc0",
@@ -6349,7 +6807,8 @@
         "Loudness": -45,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": -40
     },
     "5a27b6bec4a282000e496f78": {
         "ItemID": "5a27b6bec4a282000e496f78",
@@ -6375,7 +6834,8 @@
         "Loudness": -28.7,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 15
     },
     "59c0ec5b86f77435b128bfca": {
         "ItemID": "59c0ec5b86f77435b128bfca",
@@ -6402,7 +6862,8 @@
         "Loudness": -26,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 20
     },
     "5b363dd25acfc4001a598fd2": {
         "ItemID": "5b363dd25acfc4001a598fd2",
@@ -6433,167 +6894,8 @@
         "Loudness": -31,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "54490a4d4bdc2dbc018b4573": {
-        "ItemID": "54490a4d4bdc2dbc018b4573",
-        "Name": "silencer_silencerco_sparrow_22lr",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -2,
-        "Dispersion": -2,
-        "CameraRecoil": -2,
-        "AutoROF": 1,
-        "SemiROF": 1,
-        "ModMalfunctionChance": -10,
-        "CanCycleSubs": false,
-        "Accuracy": 22,
-        "HeatFactor": 1.12,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1.2,
-        "Velocity": 0.25,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.184,
-        "Loudness": -31,
         "Price": 0,
-        "LoyaltyLevel": 0
-    },
-    "630f291b9f66a28b37094bb8": {
-        "ItemID": "630f291b9f66a28b37094bb8",
-        "Name": "muzzle_aug_steyr_a3_muzzle_brake_556x45",
-        "ModType": "barrel_2slot",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -3,
-        "Dispersion": -7,
-        "CameraRecoil": -2,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.074,
-        "ModShotDispersion": 0,
-        "Loudness": 16,
-        "Convergence": 11,
-        "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "630f2872911356c17d06abc5": {
-        "ItemID": "630f2872911356c17d06abc5",
-        "Name": "muzzle_aug_steyr_a1_closed_flash_hider_556x45",
-        "ModType": "barrel_2slot",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
-        "Dispersion": -5,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.063,
-        "ModShotDispersion": 0,
-        "Loudness": 4,
-        "Convergence": 6,
-        "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "630f28f0cadb1fe05e06f004": {
-        "ItemID": "630f28f0cadb1fe05e06f004",
-        "Name": "muzzle_aug_steyr_a3_closed_flash_hider_556x45",
-        "ModType": "barrel_2slot",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -5.5,
-        "Dispersion": -5.5,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.064,
-        "ModShotDispersion": 0,
-        "Loudness": 5,
-        "Convergence": 6,
-        "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "630f27f04f3f6281050b94d7": {
-        "ItemID": "630f27f04f3f6281050b94d7",
-        "Name": "muzzle_aug_ratworx_suppressor_adapter_556x45",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": -2.5,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.12,
-        "ModShotDispersion": 0,
-        "Loudness": 0,
-        "Convergence": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "mechRatWorx": {
-        "ItemID": "mechRatWorx",
-        "Name": "muzzle_aug_ratworx_suppressor_adapter_300BLK",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": -2.5,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.12,
-        "ModShotDispersion": 0,
-        "Loudness": 0,
-        "Convergence": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "Flash": 25
     },
     "634eba08f69c710e0108d386": {
         "ItemID": "634eba08f69c710e0108d386",
@@ -6622,7 +6924,8 @@
         "Loudness": -27,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 7.5
     },
     "630f2982cdb9e392db0cbcc7": {
         "ItemID": "630f2982cdb9e392db0cbcc7",
@@ -6652,34 +6955,8 @@
         "Loudness": -30,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "6386120cd6baa055ad1e201c": {
-        "ItemID": "6386120cd6baa055ad1e201c",
-        "Name": "muzzle_ar15_griffin_gatelok_hammer_comp_556x45",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -7,
-        "Dispersion": -6,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": -1,
-        "Weight": 0.068,
-        "ModShotDispersion": 0,
-        "Loudness": 5,
-        "Convergence": 4,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Flash": 7
     },
     "638612b607dfed1ccb7206ba": {
         "ItemID": "638612b607dfed1ccb7206ba",
@@ -6708,278 +6985,8 @@
         "Loudness": -30,
         "Convergence": 0,
         "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "62e2a754b6c0ee2f230cee0f": {
-        "ItemID": "62e2a754b6c0ee2f230cee0f",
-        "Name": "muzzle_sr2m_tochmash_hand_stop_9x21",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 5,
-        "Weight": 0.087,
-        "ModShotDispersion": 0,
-        "Loudness": -5,
-        "Convergence": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "62e2a7138e1ac9380579c122": {
-        "ItemID": "62e2a7138e1ac9380579c122",
-        "Name": "silencer_sr2m_tochmash_suppressor_9x21",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -5,
-        "Dispersion": -8,
-        "CameraRecoil": -5,
-        "AutoROF": 1.8,
-        "SemiROF": 2.8,
-        "ModMalfunctionChance": -19,
-        "CanCycleSubs": false,
-        "Accuracy": 1,
-        "HeatFactor": 1.15,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1.19,
-        "Velocity": 0.9,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.575,
-        "ModShotDispersion": 0,
-        "Loudness": -24,
-        "Convergence": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "5580239d4bdc2de7118b4583": {
-        "ItemID": "5580239d4bdc2de7118b4583",
-        "Name": "muzzle_tkpd_izhmash_93x64",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.151,
-        "ModShotDispersion": 0,
-        "Loudness": 0,
         "Price": 0,
-        "LoyaltyLevel": 0
-    },
-    "64119d1f2c6d6f921a0929f8": {
-        "ItemID": "64119d1f2c6d6f921a0929f8",
-        "Name": "muzzle_svt40_toz_std_762x54r",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -7,
-        "Dispersion": -5,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.07,
-        "ModShotDispersion": 0,
-        "Loudness": 25,
-        "Convergence": 12,
-        "LoyaltyLevel": 0,
-        "Price": 0
-    },
-    "64527a263d52156624001fd7": {
-        "ItemID": "64527a263d52156624001fd7",
-        "Name": "muzzle_9a91_kbp_hanguard_retainer",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 5,
-        "HeatFactor": 0.99,
-        "CoolFactor": 1.01,
-        "DurabilityBurnModificator": 0.97,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.01,
-        "ModShotDispersion": 0,
-        "Loudness": 0,
-        "Convergence": 0,
-        "Price": 0,
-        "LoyaltyLevel": 1
-    },
-    "64527a3a7da7133e5a09ca99": {
-        "ItemID": "64527a3a7da7133e5a09ca99",
-        "Name": "silencer_9a91_kbp_9a91_silencer_9x39",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -8,
-        "Dispersion": -4,
-        "CameraRecoil": -10,
-        "AutoROF": 3.5,
-        "SemiROF": 2,
-        "ModMalfunctionChance": -10,
-        "CanCycleSubs": false,
-        "Accuracy": -10,
-        "HeatFactor": 1.2,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1.25,
-        "Velocity": 1.5,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.496,
-        "ModShotDispersion": 0,
-        "Loudness": -35,
-        "Convergence": 0,
-        "Price": 0,
-        "LoyaltyLevel": 1
-    },
-    "64942bfc6ee699f6890dff95": {
-        "ItemID": "64942bfc6ee699f6890dff95",
-        "Name": "muzzle_ak_vector_vr_05t_762x39",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -30,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.116,
-        "ModShotDispersion": 0,
-        "Loudness": 40,
-        "Convergence": 15,
-        "Price": 0,
-        "LoyaltyLevel": 1
-    },
-    "64943b74e9998d641b0412ed": {
-        "ItemID": "64943b74e9998d641b0412ed",
-        "Name": "muzzle_ar15_walkerdr_nero_556_inconel_556x45",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -12,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 0,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [
-            "5c78f2882e22165df16b832e"
-        ],
-        "Ergonomics": 0,
-        "Weight": 0.108,
-        "ModShotDispersion": 0,
-        "Loudness": 22,
-        "Convergence": 10,
-        "Price": 0,
-        "LoyaltyLevel": 1
-    },
-    "6513f0f5e63f29908d0ffab8": {
-        "ItemID": "6513f0f5e63f29908d0ffab8",
-        "Name": "muzzle_rpd_zid_thread_protector_762x39",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 5,
-        "HeatFactor": 0.99,
-        "CoolFactor": 1.01,
-        "DurabilityBurnModificator": 0.98,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.01,
-        "ModShotDispersion": 0,
-        "Loudness": 0,
-        "Convergence": 0,
-        "Price": 0,
-        "LoyaltyLevel": 1
-    },
-    "6529113b5ae2ae97b80fdf39": {
-        "ItemID": "6529113b5ae2ae97b80fdf39",
-        "Name": "muzzle_ar10_sig_clutch_lok_qd_flash_hider_68x51",
-        "ModType": "muzzle_supp_adapter",
-        "VerticalRecoil": -2.5,
-        "HorizontalRecoil": -1,
-        "Dispersion": -3,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": 3,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.122,
-        "ModShotDispersion": 0,
-        "Loudness": 9,
-        "Convergence": 0,
-        "Price": 0,
-        "LoyaltyLevel": 1
+        "Flash": 5
     },
     "652911e650dc782999054b9d": {
         "ItemID": "652911e650dc782999054b9d",
@@ -7006,6 +7013,115 @@
         "Loudness": -30,
         "Convergence": 0,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "Flash": 7.5
+    },
+    "62e2a7138e1ac9380579c122": {
+        "ItemID": "62e2a7138e1ac9380579c122",
+        "Name": "silencer_sr2m_tochmash_suppressor_9x21",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -5,
+        "Dispersion": -8,
+        "CameraRecoil": -5,
+        "AutoROF": 1.8,
+        "SemiROF": 2.8,
+        "ModMalfunctionChance": -19,
+        "CanCycleSubs": false,
+        "Accuracy": 1,
+        "HeatFactor": 1.15,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1.19,
+        "Velocity": 0.9,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.575,
+        "ModShotDispersion": 0,
+        "Loudness": -24,
+        "Convergence": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "Flash": 30
+    },
+    "64527a3a7da7133e5a09ca99": {
+        "ItemID": "64527a3a7da7133e5a09ca99",
+        "Name": "silencer_9a91_kbp_9a91_silencer_9x39",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -8,
+        "Dispersion": -4,
+        "CameraRecoil": -10,
+        "AutoROF": 3.5,
+        "SemiROF": 2,
+        "ModMalfunctionChance": -10,
+        "CanCycleSubs": false,
+        "Accuracy": -10,
+        "HeatFactor": 1.2,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1.25,
+        "Velocity": 1.5,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.496,
+        "ModShotDispersion": 0,
+        "Loudness": -35,
+        "Convergence": 0,
+        "Price": 0,
+        "LoyaltyLevel": 1,
+        "Flash": 60
+    },
+    "54490a4d4bdc2dbc018b4573": {
+        "ItemID": "54490a4d4bdc2dbc018b4573",
+        "Name": "silencer_silencerco_sparrow_22lr",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -2,
+        "Dispersion": -2,
+        "CameraRecoil": -2,
+        "AutoROF": 1,
+        "SemiROF": 1,
+        "ModMalfunctionChance": -10,
+        "CanCycleSubs": false,
+        "Accuracy": 22,
+        "HeatFactor": 1.12,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1.2,
+        "Velocity": 0.25,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.184,
+        "Loudness": -31,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "5580239d4bdc2de7118b4583": {
+        "ItemID": "5580239d4bdc2de7118b4583",
+        "Name": "muzzle_tkpd_izhmash_93x64",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "CameraRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CanCycleSubs": false,
+        "Accuracy": 0,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": 0,
+        "RecoilAngle": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.151,
+        "ModShotDispersion": 0,
+        "Loudness": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0,
+        "Flash": 50
     }
 }

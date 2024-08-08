@@ -14,37 +14,37 @@ export class Spawns {
 
     public setBossSpawnChance(level: number) {
         if (level <= 5) {
-            this.bossSpawnHelper(0.1);
+            this.bossSpawnHelper(0);
         }
         else if (level <= 10) {
-            this.bossSpawnHelper(0.2);
+            this.bossSpawnHelper(0.05);
         }
         else if (level <= 15) {
-            this.bossSpawnHelper(0.3);
+            this.bossSpawnHelper(0.1);
         }
         else if (level <= 20) {
-            this.bossSpawnHelper(0.5);
+            this.bossSpawnHelper(0.2);
         }
         else if (level <= 25) {
-            this.bossSpawnHelper(0.6);
+            this.bossSpawnHelper(0.3);
         }
         else if (level <= 30) {
-            this.bossSpawnHelper(0.7);
+            this.bossSpawnHelper(0.4);
         }
         else if (level <= 35) {
-            this.bossSpawnHelper(0.9);
+            this.bossSpawnHelper(0.6);
         }
         else if (level <= 40) {
-            this.bossSpawnHelper(0.95);
+            this.bossSpawnHelper(0.7);
         }
         else if (level <= 45) {
-            this.bossSpawnHelper(1);
+            this.bossSpawnHelper(0.8);
         }
         else if (level <= 50) {
-            this.bossSpawnHelper(1.05);
+            this.bossSpawnHelper(0.9);
         }
         else if (level > 50) {
-            this.bossSpawnHelper(1.1);
+            this.bossSpawnHelper(1);
         }
     }
 
@@ -59,7 +59,7 @@ export class Spawns {
                     }
                     else {
                         chance = Math.round(this.mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(1, Math.min(chance, 100));
+                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(0, Math.min(chance, 100));
                     }
                 }
             }

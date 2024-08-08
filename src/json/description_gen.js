@@ -27,14 +27,14 @@ class DescriptionGen {
                 locale[`${templateItem}` + " Description"] = "This ammunition is subsonic and is in a calibre that requires special attachments or modifications in order to be cycled reliably." + `\n\n${locale[`${templateItem}` + " Description"]}`;
             }
             if (item._props.ConflictingItems != undefined && item._props.ConflictingItems[0] === "SPTRM") {
-                let modType = item._props.ConflictingItems[1];
-                if (modType === "bipod") {
+                let type = item._props.ConflictingItems[1];
+                if (type === "bipod") {
                     locale[`${templateItem}` + " Description"] = "Bipods give increased cover detection range, as well as stability and recoil control when mounting." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "DI") {
+                if (type === "DI") {
                     locale[`${templateItem}` + " Description"] = "This weapon uses a direct impingement gas system, therefore mounted suppressors have increased durabiltiy burn." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "short_AK") {
+                if (type === "short_AK") {
                     locale[`${templateItem}` + " Description"] = "This weapon has a short barrel with a low dwell time, and therefore has reduced reliability. It is recommended to use this weapon with a booster attached, or at least a suppressor." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if ((item._parent === enums_1.ParentClasses.SILENCER || item._parent === enums_1.ParentClasses.FLASH_HIDER || item._parent === enums_1.ParentClasses.COMPENSATOR) && item._props.ConflictingItems[8] !== "0") {
@@ -49,40 +49,43 @@ class DescriptionGen {
                 // if (modType === "gasblock_downgassed") {
                 //     locale[`${templateItem}` + " Description"] = "This gasblock makes the rifle under-gassed, reducing recoil but also reducing reliability. It has increased negative effects on short barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 // }
-                if (modType === "short_barrel") {
+                if (type === "short_barrel") {
                     locale[`${templateItem}` + " Description"] = "Short barrels benefit from muzzle boosters, improving reliability but at the cost of increased durability burn and increased rate of fire." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "booster") {
+                if (type === "gas") {
+                    locale[`${templateItem}` + " Description"] = "This charging handle reduces gas/smoke when firing suppressed." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                }
+                if (type === "booster") {
                     locale[`${templateItem}` + " Description"] = "This muzzle device is a booster. It gives the full firerate, malfunction and durabiltiy burn stats on short barreled rifles, and a reduced amount on longer barreled rifles." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "muzzle_supp_adapter" || modType === "sig_taper_brake" || modType === "barrel_2slot") {
+                if (type === "muzzle_supp_adapter" || type === "sig_taper_brake" || type === "barrel_2slot") {
                     locale[`${templateItem}` + " Description"] = "This muzzle device is an adapter, it will lose all its stats except accuracy if a suppressor is attached to it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "shot_pump_grip_adapt") {
+                if (type === "shot_pump_grip_adapt") {
                     locale[`${templateItem}` + " Description"] = "If a foregrip is attached to this pump grip there will be a bonus to chamber/pump speed." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "buffer_adapter" || modType === "stock_adapter" || modType === "grip_stock_adapter") {
+                if (type === "buffer_adapter" || type === "stock_adapter" || type === "grip_stock_adapter") {
                     locale[`${templateItem}` + " Description"] = "This adapater changes the recoil profile of the weapon by raising or lowering the stock in line with the barrel. It will not impart any stats unless a stock is attached. If it has a pistol grip slot, the pistol grip provides a bonus to ergo, recoil and chamber/pump/bolt speed stats if attached." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "hydraulic_buffer") {
+                if (type === "hydraulic_buffer") {
                     locale[`${templateItem}` + " Description"] = "This hydraulic buffer loses all its stats recoil reduction stats if not places on a shotgun, sniper rifle or assault carbine. The malfunction chance stat only applies to non-manually operated firearms." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "buffer") {
+                if (type === "buffer") {
                     locale[`${templateItem}` + " Description"] = "This buffer tube loses its recoil, firerate and durability burn stats if not placed on a weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "buffer_stock") {
+                if (type === "buffer_stock") {
                     locale[`${templateItem}` + " Description"] = "This stock loses its firerate and durability burn stats if not placed on weapon system that uses a recoil buffer (M4, ADAR, MK47, SR25, STM etc.)." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "stock" && item._props.ConflictingItems[15] === "true") {
+                if (type === "stock" && item._props.ConflictingItems[15] === "true") {
                     locale[`${templateItem}` + " Description"] = "This stock allows aiming down sights with any faceshield." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "foregrip_adapter") {
+                if (type === "foregrip_adapter") {
                     locale[`${templateItem}` + " Description"] = "This adapter will lose its negative ergo stat if a grip is attached to it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "sight") {
+                if (type === "sight") {
                     locale[`${templateItem}` + " Description"] = "ADS speed and accuracy modifiers only apply when this sight is in use." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
-                if (modType === "mount") {
+                if (type === "mount") {
                     locale[`${templateItem}` + " Description"] = "Accuracy modifier only applies when the sight mounted to it is in use." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if ((item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR || item._parent === enums_1.ParentClasses.FACECOVER) && item._props.HasHinge == true) {
@@ -92,7 +95,7 @@ class DescriptionGen {
                     else {
                         locale[`${templateItem}` + " Description"] = "This faceshield does NOT allow the use of sights while using a stock in the extended/unfolded position, unless the weapon/stock allows it." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                     }
-                    locale[`${templateItem}` + " Description"] = "This faceshield gives penalties to sprint speed if it is deployed. Ergo penalty only applies if deployed." + `\n\n${locale[`${templateItem}` + " Description"]}`;
+                    locale[`${templateItem}` + " Description"] = "This faceshield gives additional penalties to movement speed when deployed deployed. Ergo penalty only applies when deployed." + `\n\n${locale[`${templateItem}` + " Description"]}`;
                 }
                 if ((item._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT || item._parent === enums_1.ParentClasses.HEADWEAR || item._parent === enums_1.ParentClasses.FACECOVER) && item._props.HasHinge == false) {
                     if (item._props.ConflictingItems[1] === "false") {
@@ -122,7 +125,7 @@ class DescriptionGen {
                     locale[`${templateItem}` + " Description"] = `${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, hand tremors, reduced concentration, attention and perception, dyspnea, chronic inflammation, and hematuria with clot retention.";
                 }
                 //weight
-                if (item._id === "5ed51652f6c34d2cc26336a1") {
+                if (item._id === "5ed51652f6c34d2cc26336a1" || "66507eabf5ddb0818b085b68") {
                     locale[`${templateItem}` + " Description"] = `${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include tunnel vision, hand tremors, reduced concentration, slowed metabolism, dyspnea, chronic fatigue, and asthenia.";
                 }
                 //performance

@@ -196,7 +196,7 @@ class Main {
                                     this.revertMeds(scavData, utils);
                                     this.revertHydroEnergy(pmcData, postLoadTables);
                                     this.revertHydroEnergy(scavData, postLoadTables);
-                                    modConfig.revert_med_changes = true;
+                                    modConfig.revert_med_changes = false;
                                     utils.writeConfigJSON(modConfig, 'config/config.json');
                                     logger.info("Realism Mod: Meds in Inventory/Stash Reverted To Defaults");
                                 }
@@ -529,9 +529,9 @@ class Main {
             maps.openZonesFix();
         }
         maps.loadSpawnChanges();
-        // if (modConfig.airdrop_changes == true) {
-        //     airdrop.loadAirdropChanges();
-        // }
+        if (modConfig.airdrop_changes == true) {
+            airdrop.loadAirdropChanges();
+        }
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }
@@ -539,10 +539,10 @@ class Main {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
             bots.testBotCap();
         }
-        else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) {
+        else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false && utils_1.ModTracker.qtbPresent == false) {
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) {
+        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false && utils_1.ModTracker.qtbPresent == false) {
             bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {

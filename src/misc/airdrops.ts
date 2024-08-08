@@ -20,13 +20,13 @@ export class Airdrops {
     constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
 
     public loadAirdropChanges() {
-        this.airConf.airdropChancePercent.bigmap = 10;
-        this.airConf.airdropChancePercent.woods = 15;
-        this.airConf.airdropChancePercent.lighthouse = 15;
-        this.airConf.airdropChancePercent.shoreline = 15;
-        this.airConf.airdropChancePercent.interchange = 5;
-        this.airConf.airdropChancePercent.reserve = 5;
-        this.airConf.airdropChancePercent.tarkovStreets = 15;
+        this.airConf.airdropChancePercent.bigmap = 5;
+        this.airConf.airdropChancePercent.woods = 7;
+        this.airConf.airdropChancePercent.lighthouse = 7;
+        this.airConf.airdropChancePercent.shoreline = 7;
+        this.airConf.airdropChancePercent.interchange = 2;
+        this.airConf.airdropChancePercent.reserve = 2;
+        this.airConf.airdropChancePercent.tarkovStreets = 10;
 
         this.airConf.planeVolume = 0.2;
 

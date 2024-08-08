@@ -219,9 +219,9 @@
     "5d6e6a5fa4b93614ec501745": {
         "ItemID": "5d6e6a5fa4b93614ec501745",
         "Name": "patron_20x70_slug_broadhead",
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 2,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 0.95
     },
     "5d6e6a53a4b9361bd473feec": {
         "ItemID": "5d6e6a53a4b9361bd473feec",
@@ -240,9 +240,9 @@
     "5d6e6a05a4b93618084f58d0": {
         "ItemID": "5d6e6a05a4b93618084f58d0",
         "Name": "patron_20x70_slug_star",
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 2,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 1.5
     },
     "5e85aa1a988a8701445df1f5": {
         "ItemID": "5e85aa1a988a8701445df1f5",
@@ -459,7 +459,7 @@
         "Name": "patron_545x39_BT",
         "LoyaltyLevel": 3,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 0.85
     },
     "56dff0bed2720bb0668b4567": {
         "ItemID": "56dff0bed2720bb0668b4567",
@@ -473,7 +473,7 @@
         "Name": "patron_545x39_HP",
         "LoyaltyLevel": 4,
         "TemplateType": "ammo",
-        "BasePriceModifier": 7
+        "BasePriceModifier": 7.2
     },
     "56dff2ced2720bb4668b4567": {
         "ItemID": "56dff2ced2720bb4668b4567",
@@ -1087,7 +1087,7 @@
     "62330bfadc5883093563729b": {
         "ItemID": "62330bfadc5883093563729b",
         "Name": "patron_9x33r_hp",
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 2,
         "TemplateType": "ammo",
         "BasePriceModifier": 2
     },
@@ -1101,9 +1101,9 @@
     "62330c40bdd19b369e1e53d1": {
         "ItemID": "62330c40bdd19b369e1e53d1",
         "Name": "patron_9x33r_sp",
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 1,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1.5
+        "BasePriceModifier": 1.7
     },
     "5c0d688c86f77413ae3407b2": {
         "ItemID": "5c0d688c86f77413ae3407b2",

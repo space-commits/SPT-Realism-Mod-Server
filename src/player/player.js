@@ -156,6 +156,7 @@ class Player {
         if (this.modConfig.enable_stances == true || this.modConfig.movement_changes == true || this.modConfig.recoil_attachment_overhaul) {
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
+            this.globalDB().Stamina.HandsRestoration = 2.5;
             this.globalDB().Stamina.AimDrainRate = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.35;
@@ -229,9 +230,9 @@ class Player {
             }
         }
         if (this.modConfig.fall_damage_changes == true) {
-            this.globalDB().Health.Falling.DamagePerMeter = 11;
-            this.globalDB().Health.Falling.SafeHeight = 2.1;
-            this.globalDB().Stamina.SafeHeightOverweight = 1.9;
+            this.globalDB().Health.Falling.DamagePerMeter = 10;
+            this.globalDB().Health.Falling.SafeHeight = 2.2;
+            this.globalDB().Stamina.SafeHeightOverweight = 2;
         }
         if (this.modConfig.no_fall_damage == true) {
             this.globalDB().Health.Falling.DamagePerMeter = 0;
@@ -258,11 +259,14 @@ class Player {
             health.Wound.WorkingTime = 3600;
             this.debuffMul(health.Wound.ThresholdMin, mult);
             this.debuffMul(health.Wound.ThresholdMax, mult);
-            health.LightBleeding.HealthLoopTime = 10;
+            health.LightBleeding.HealthLoopTime = 8;
             health.LightBleeding.DamageHealth = 0.65;
+            health.LightBleeding.DamageEnergy = 0.85;
+            health.HeavyBleeding.DamageHealth = 0.95;
+            health.HeavyBleeding.DamageEnergy = 2.25;
             this.globalDB().Health.Effects.Fracture.BulletHitProbability.Threshold /= mult;
             this.globalDB().Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult);
-            this.debuffMul(health.Fracture.FallingProbability, 0.95);
+            this.debuffMul(health.Fracture.FallingProbability, 0.85);
             this.debuffMul(health.HeavyBleeding.Probability, 1.55);
             this.debuffMul(health.LightBleeding.Probability, 2.1);
             this.debuffMul(health.Wound.ThresholdMax, mult);

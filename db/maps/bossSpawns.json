@@ -208,7 +208,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 20,
+            "BossChance": 10,
             "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -220,7 +220,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 20,
+            "BossChance": 15,
             "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -235,7 +235,7 @@
         },
         {
             "BossName": "bossKnight",
-            "BossChance": 15,
+            "BossChance": 10,
             "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -319,7 +319,7 @@
             "RandomTimeSpawn": false
         },
         {
-            "BossChance": 20,
+            "BossChance": 10,
             "BossDifficult": "normal",
             "BossEscortAmount": "3,4",
             "BossEscortDifficult": "normal",
@@ -667,7 +667,7 @@
         },
         {
             "BossName": "bossKnight",
-            "BossChance": 40,
+            "BossChance": 35,
             "BossZone": "Zone_TreatmentContainers,Zone_Chalet,Zone_Village,Zone_Bridge,Zone_OldHouse,Zone_LongRoad,Zone_DestroyedHouse",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -887,7 +887,7 @@
         },
         {
             "BossName": "bossKnight",
-            "BossChance": 25,
+            "BossChance": 20,
             "BossZone": "ZoneIsland,ZoneGasStation,ZoneMeteoStation,ZonePowerStation,ZoneBusStation,ZoneRailWays,ZoneForestTruck,ZoneForestSpawn",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -991,7 +991,7 @@
         },
         {
             "BossName": "bossKnight",
-            "BossChance": 25,
+            "BossChance": 20,
             "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneMiniHouse,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",

@@ -203,11 +203,12 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0
+                "fadeOut": 0,
+                "cost": 1
             }
         },
         "StimulatorBuffs": "",
-        "MaxHpResource": 4,
+        "MaxHpResource": 8,
         "medUseTime": 6,
         "hpResourceRate": 0
     },
@@ -217,17 +218,18 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0
+                "fadeOut": 0,
+                "cost": 1
             },
             "HeavyBleeding": {
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 3
             }
         },
         "StimulatorBuffs": "Buffs_salewa",
-        "MaxHpResource": 10,
+        "MaxHpResource": 14,
         "medUseTime": 6,
         "hpResourceRate": 0
     },
@@ -237,18 +239,19 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0
+                "fadeOut": 0,
+                "cost": 1
             },
             "HeavyBleeding": {
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 3
             }
         },
         "StimulatorBuffs": "Buffs_IFAK",
-        "MaxHpResource": 7,
-        "medUseTime": 5,
+        "MaxHpResource": 10,
+        "medUseTime": 5.5,
         "hpResourceRate": 0
     },
     "AFAK": {
@@ -257,7 +260,8 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0
+                "fadeOut": 0,
+                "cost": 1
             },
             "HeavyBleeding": {
                 "delay": 5,
@@ -273,8 +277,8 @@
             }
         },
         "StimulatorBuffs": "Buffs_AFAK",
-        "MaxHpResource": 6,
-        "medUseTime": 5.5,
+        "MaxHpResource": 8,
+        "medUseTime": 4.5,
         "hpResourceRate": 0
     },
     "grizzly": {
@@ -283,19 +287,20 @@
             "LightBleeding": {
                 "delay": 10,
                 "duration": 0,
-                "fadeOut": 0
+                "fadeOut": 0,
+                "cost": 1
             },
             "HeavyBleeding": {
                 "delay": 5,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 3
             },
             "Fracture": {
                 "delay": 10,
                 "duration": 0,
                 "fadeOut": 0,
-                "cost": 2
+                "cost": 3
             }
         },
         "StimulatorBuffs": "Buffs_grizzly",

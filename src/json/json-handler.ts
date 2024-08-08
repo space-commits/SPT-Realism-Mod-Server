@@ -143,6 +143,30 @@ export class ItemStatHandler {
         );
     }
 
+    private handleMasks(fileItem: any, serverItem: ITemplateItem){
+        if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
+            serverItem._props.FaceShieldComponent = true;
+            serverItem._props.FaceShieldMask = "NoMask";
+            serverItem._props.armorClass = 1;
+            serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
+            serverItem._props.MaxDurability = 25;
+            serverItem._props.RepairCost = 200;
+            serverItem._props.Durability = serverItem._props.MaxDurability;
+            if(modConfig.enable_hazard_zones){
+                this.addGasFilterSlot(serverItem);
+            }
+        }
+        else if (fileItem?.MaskToUse !== undefined) {
+            if (fileItem.MaskToUse == "ronin") {
+                serverItem._props.FaceShieldMask = "NoMask";
+            }
+            else {
+                serverItem._props.FaceShieldMask = "Narrow";
+            }
+            serverItem._props.FaceShieldComponent = true;
+        }
+    }
+
     private gearPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>) {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID];
@@ -187,27 +211,7 @@ export class ItemStatHandler {
             }
 
             if (modConfig.enable_hazard_zones || modConfig.realistic_ballistics) {
-                if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
-                    serverItem._props.FaceShieldComponent = true;
-                    serverItem._props.FaceShieldMask = "NoMask";
-                    serverItem._props.armorClass = 1;
-                    serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
-                    serverItem._props.MaxDurability = 25;
-                    serverItem._props.Durability = serverItem._props.MaxDurability;
-                    if(modConfig.enable_hazard_zones){
-                        this.addGasFilterSlot(serverItem);
-                    }
-                }
-                else if (fileItem?.MaskToUse !== undefined) {
-                    if (fileItem.MaskToUse == "ronin") {
-                        serverItem._props.FaceShieldMask = "NoMask";
-                    }
-                    else {
-                        serverItem._props.FaceShieldMask = "Narrow";
-                    }
-                    serverItem._props.FaceShieldComponent = true;
-                }
-
+                this.handleMasks(fileItem, serverItem);
             }
 
             if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
@@ -283,7 +287,7 @@ export class ItemStatHandler {
             let modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
                 fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
                 fileItem?.Convergence?.toString() || "0", fileItem?.CanCycleSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0",
-                fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0"];
+                fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0", fileItem?.Flash?.toString() || "0"];
 
             let combinedArr = modPropertyValues.concat(serverConfItems)
             serverItem._props.ConflictingItems = combinedArr;
@@ -342,6 +346,7 @@ export class ItemStatHandler {
                 serverItem._props.RecoilReturnPathOffsetHandRotation = fileItem.OffsetRotation;
                 serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
                 serverItem._props.CameraSnap = 1;
+                serverItem._props.RecoilPosZMult = 1.5;
                 serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
                 serverItem._props.CanQueueSecondShot = fileItem.CanQueueSecondShot != null ? fileItem.CanQueueSecondShot : serverItem._props.CanQueueSecondShot;
 

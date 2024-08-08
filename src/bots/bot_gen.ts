@@ -67,8 +67,7 @@ export class GenBotLvl extends BotLevelGenerator {
     public genBotLvl(levelDetails: MinMax, botGenerationDetails: BotGenerationDetails, bot: IBotBase): IRandomisedBotLevelResult {
 
         const expTable = this.databaseService.getGlobals().config.exp.level.exp_table;
-        const highestLevel = this.getHighestRelativeBotLevel(botGenerationDetails, levelDetails, expTable.length);
-        const lowestLevel = this.getLowestRelativeBotLevel(botGenerationDetails, levelDetails, expTable.length);
+        const botLevelRange = this.getRelativeBotLevelRange(botGenerationDetails, levelDetails, expTable.length);
 
         // Get random level based on the exp table.
         let exp = 0;
@@ -86,7 +85,7 @@ export class GenBotLvl extends BotLevelGenerator {
             }
         }
         else {
-            level = this.randomUtil.getInt(lowestLevel, highestLevel);
+            level = this.randomUtil.getInt(botLevelRange.min, botLevelRange.max);
         }
 
         for (let i = 0; i < level; i++) {
@@ -350,12 +349,9 @@ export class BotGen extends BotGenerator {
                 botInfo.MemberCategory = MemberCategory.DEFAULT;
                 break;
             case 4:
+            case 5:
                 botInfo.GameVersion = GameEditions.EDGE_OF_DARKNESS;
                 botInfo.MemberCategory = MemberCategory.UNIQUE_ID;
-                break;
-            case 5:
-                botInfo.GameVersion = GameEditions.UNHEARD;
-                botInfo.MemberCategory = MemberCategory.UNHEARD;
                 break;
             default:
                 botInfo.MemberCategory = Number.parseInt(
