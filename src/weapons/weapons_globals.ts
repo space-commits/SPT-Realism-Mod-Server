@@ -79,7 +79,7 @@ export class WeaponsGlobals {
         if (this.modConf.recoil_attachment_overhaul == true) {
             // vertical
             this.globalDB().Aiming.RecoilXIntensityByPose["x"] = 1.1; //prone
-            this.globalDB().Aiming.RecoilXIntensityByPose["y"] = 0.75; //crouch
+            this.globalDB().Aiming.RecoilXIntensityByPose["y"] = 0.78; //crouch
             this.globalDB().Aiming.RecoilXIntensityByPose["z"] = 1; //stand
             //spread
             this.globalDB().Aiming.RecoilYIntensityByPose["x"] = 1.05;
