@@ -28,6 +28,11 @@ class Gear {
         this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
         });
+        if (this.itemDB()["a8edfb0bce53d103d3f62b9b"]) {
+            this.itemDB()["a8edfb0bce53d103d3f62b9b"]._props.Slots.forEach(slot => {
+                slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+            });
+        }
     }
     loadGearConflicts() {
         let confMasks = this.arrays.conflMasks;

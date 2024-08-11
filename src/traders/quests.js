@@ -162,6 +162,10 @@ class Quests {
                     condition["durability"].value = 1;
                     condition["durability"].compareMethod = ">=";
                 }
+                if (condition["baseAccuracy"]) {
+                    condition["baseAccuracy"].value = -1;
+                    condition["baseAccuracy"].compareMethod = ">=";
+                }
             }
             let id = this.questDB()[i]._id;
             let desc = this.localesEN()[id + " description"];
