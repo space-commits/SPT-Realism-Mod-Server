@@ -87,12 +87,12 @@ export class Consumables {
             "RadExposure": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.1
+                "fadeOut": 0.06
             },
             "Intoxication": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.3
+                "fadeOut": 0.12
             }
         }
 
@@ -101,7 +101,7 @@ export class Consumables {
             "Intoxication": {
                 "delay": 5,
                 "duration": 150,
-                "fadeOut": 0.15
+                "fadeOut": 0.25
             }
         }
     }

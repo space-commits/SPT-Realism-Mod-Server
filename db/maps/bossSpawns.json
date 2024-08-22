@@ -162,7 +162,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 30,
+            "BossChance": 40,
             "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -190,7 +190,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 25,
+            "BossChance": 35,
             "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -833,7 +833,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 30,
+            "BossChance": 40,
             "BossZone": "ZoneForestGasStation,ZoneForestSpawn",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -846,7 +846,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 30,
+            "BossChance": 40,
             "BossZone": "ZoneSanatorium1,ZoneSanatorium2",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -963,7 +963,7 @@
         },
         {
             "BossName": "sectantPriest",
-            "BossChance": 30,
+            "BossChance": 40,
             "BossZone": "ZoneMiniHouse,ZoneBrokenVill",
             "BossPlayer": false,
             "BossDifficult": "normal",

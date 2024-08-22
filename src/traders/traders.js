@@ -146,7 +146,7 @@ class Traders {
     loadTraderRefreshTimes() {
         for (let trader in this.traderConf.updateTime) {
             this.traderConf.updateTime[trader].seconds.min = modConfig.trader_refresh_time;
-            this.traderConf.updateTime[trader].seconds.max = modConfig.trader_refresh_time;
+            this.traderConf.updateTime[trader].seconds.max = modConfig.trader_refresh_time * 1.5;
         }
     }
     loadTraderRepairs() {
