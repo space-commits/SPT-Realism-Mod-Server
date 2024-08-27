@@ -1943,9 +1943,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -4.5;
+            serverItem._props.speedPenaltyPercent = -6;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -8;
+            serverItem._props.weaponErgonomicPenalty = -12;
             serverItem._props.BluntThroughput = 0.14 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';

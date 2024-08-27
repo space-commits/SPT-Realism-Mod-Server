@@ -758,7 +758,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             attachBase.loadAttRequirements();
         }
 
-        if (modConfig.trader_refresh_time === 0) {
+        if (modConfig.trader_refresh_time > 0) {
             traders.loadTraderRefreshTimes();
         }
 

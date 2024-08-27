@@ -586,7 +586,7 @@ class Main {
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             attachBase.loadAttRequirements();
         }
-        if (modConfig.trader_refresh_time === 0) {
+        if (modConfig.trader_refresh_time > 0) {
             traders.loadTraderRefreshTimes();
         }
         itemsClass.loadItemBlacklists();
