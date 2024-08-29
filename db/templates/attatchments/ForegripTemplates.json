@@ -1,4 +1,34 @@
 {
+    "6565c0c2ff7eb7070409084c": {
+        "ItemID": "6565c0c2ff7eb7070409084c",
+        "Name": "foregrip_sr3m_tochmash_sr3m_std_plum",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -4,
+        "Dispersion": -2.5,
+        "AimSpeed": 0,
+        "Ergonomics": 4,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.08,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
+    "65329ebcc0d50d0c9204ace1": {
+        "ItemID": "65329ebcc0d50d0c9204ace1",
+        "Name": "foregrip_sr3m_tochmash_sr3m_std",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -4,
+        "Dispersion": -2.5,
+        "AimSpeed": 0,
+        "Ergonomics": 4,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.08,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
     "5c7fc87d2e221644f31c0298": {
         "ItemID": "5c7fc87d2e221644f31c0298",
         "Name": "foregrip_all_bcm_mod_3",

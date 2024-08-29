@@ -1,4 +1,36 @@
 {
+    "669fa435803b94fb5d0e3a76": {
+        "ItemID": "669fa435803b94fb5d0e3a76",
+        "Name": "mag_deagle_magnum_research_l5_std_9x33r_9",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.18,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
+    "668fe5c5f35310705d02b696": {
+        "ItemID": "668fe5c5f35310705d02b696",
+        "Name": "mag_deagle_magnum_research_std_127x33_7",
+        "ModType": "",
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.18,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
     "646372518610c40fc20204e8": {
         "ItemID": "646372518610c40fc20204e8",
         "Name": "mag_pkm_zid_pk_std_762x54r_100",

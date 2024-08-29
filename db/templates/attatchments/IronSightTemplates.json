@@ -1,4 +1,32 @@
 {
+    "668fe5ec4315934ba10c6f96": {
+        "ItemID": "668fe5ec4315934ba10c6f96",
+        "Name": "sight_front_deagle_magnum_research_std",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.005,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "668fe5e1800f0244f9036e46": {
+        "ItemID": "668fe5e1800f0244f9036e46",
+        "Name": "sight_rear_deagle_magnum_research_std",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.006,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "6492fb8253acae0af00a29b6": {
         "ItemID": "6492fb8253acae0af00a29b6",
         "Name": "sight_rear_pk_zid_pk_std",

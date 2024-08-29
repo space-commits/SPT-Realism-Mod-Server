@@ -317,19 +317,6 @@
                 }
             ],
             "RandomTimeSpawn": false
-        },
-        {
-            "BossChance": 10,
-            "BossDifficult": "normal",
-            "BossEscortAmount": "3,4",
-            "BossEscortDifficult": "normal",
-            "BossEscortType": "arenaFighterEvent",
-            "BossName": "arenaFighterEvent",
-            "BossPlayer": false,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
-            "RandomTimeSpawn": false,
-            "Supports": null,
-            "Time": 10
         }
     ],
     "FactoryDayBossLocationSpawn": [
@@ -932,19 +919,6 @@
             "RandomTimeSpawn": false,
             "Supports": null,
             "Time": 5
-        },
-        {
-            "BossChance": 20,
-            "BossDifficult": "normal",
-            "BossEscortAmount": "3,4",
-            "BossEscortDifficult": "normal",
-            "BossEscortType": "arenaFighterEvent",
-            "BossName": "arenaFighterEvent",
-            "BossPlayer": false,
-            "BossZone": "ZoneStartVillage,ZoneGasStation,ZoneForestGasStation,ZonePowerStation",
-            "RandomTimeSpawn": false,
-            "Supports": null,
-            "Time": 5
         }
     ],
     "WoodsBossLocationSpawn": [
@@ -1023,19 +997,6 @@
                 }
             ],
             "RandomTimeSpawn": true
-        },
-        {
-            "BossChance": 15,
-            "BossDifficult": "normal",
-            "BossEscortAmount": "3,4",
-            "BossEscortDifficult": "normal",
-            "BossEscortType": "arenaFighterEvent",
-            "BossName": "arenaFighterEvent",
-            "BossPlayer": false,
-            "BossZone": "ZoneMiniHouse,ZoneClearVill,ZoneRoad,ZoneBrokenVill,ZoneScavBase2",
-            "RandomTimeSpawn": false,
-            "Supports": null,
-            "Time": -1
         }
     ],
     "LabsBossLocationSpawn": [

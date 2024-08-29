@@ -1,42 +1,29 @@
 {
-    "pistolgrip_m1014": {
-        "ItemID": "pistolgrip_m1014",
-        "Name": "pistolgrip_m1014",
+    "66a0da76b6f47fcfeb025e96": {
+        "ItemID": "66a0da76b6f47fcfeb025e96",
+        "Name": "pistolgrip_deagle_hogue_rubber_grips_ergo",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
+        "HorizontalRecoil": -5,
+        "Dispersion": -5,
         "AimSpeed": 0,
-        "Ergonomics": 6,
+        "Ergonomics": 4,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.134
+        "Weight": 0.12
     },
-    "pistolgrip_vepr12_molot": {
-        "ItemID": "pistolgrip_vepr12_molot",
-        "Name": "pistolgrip_vepr12_molot",
+    "668fe5d42a0f85eea407cc16": {
+        "ItemID": "668fe5d42a0f85eea407cc16",
+        "Name": "pistolgrip_deagle_hogue_rubber_grips",
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 3,
-        "Accuracy": 0,
+        "Ergonomics": 8,
+        "Accuracy": 5,
         "ConflictingItems": [],
-        "Weight": 0.065
-    },
-    "pistolgrip_l85a2": {
-        "ItemID": "pistolgrip_l85a2",
-        "Name": "pistolgrip_l85a2",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "AimSpeed": 0,
-        "Ergonomics": 2.5,
-        "Accuracy": 0,
-        "ConflictingItems": [],
-        "Weight": 0.08
+        "Weight": 0.11
     },
     "619f4ab2d25cbd424731fb95": {
         "ItemID": "619f4ab2d25cbd424731fb95",
