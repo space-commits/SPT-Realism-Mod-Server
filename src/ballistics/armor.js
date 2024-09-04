@@ -1274,7 +1274,7 @@ class Armor {
     loadHelmets(serverItem, tables) {
         const classModifier = this.modConf.buff_helmets === true ? 1 : 0;
         const duraModifier = this.modConf.buff_helmets === true ? 1.25 : 1;
-        const bluntModifier = this.modConf.buff_helmets === true ? 0.65 : 0.75;
+        const bluntModifier = this.modConf.buff_helmets === true ? 0.7 : 0.75;
         ///// HELMETS //////
         //// Class 0 ////
         //Beanie

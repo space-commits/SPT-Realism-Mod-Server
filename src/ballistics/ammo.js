@@ -1508,7 +1508,7 @@ class Ammo {
                     serverItem._props.HeatFactor = 1;
                 }
             }
-            //// .50 AR ////
+            //// .50 AE ////
             //JHP
             if (serverItem._id === "66a0d1c87d0d369e270bb9de") {
                 serverItem._props.PenetrationPower = 30;
