@@ -156,7 +156,7 @@ class Player {
         if (this.modConfig.enable_stances == true || this.modConfig.movement_changes == true || this.modConfig.recoil_attachment_overhaul) {
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
-            this.globalDB().Stamina.HandsRestoration = 2.5;
+            this.globalDB().Stamina.HandsRestoration = 3;
             this.globalDB().Stamina.AimDrainRate = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
             this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.35;

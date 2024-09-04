@@ -95,7 +95,7 @@ class Consumables {
             "RadExposure": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.06
+                "fadeOut": 0.12
             },
             "Intoxication": {
                 "delay": 10,
@@ -227,7 +227,7 @@ class Consumables {
                     "RadExposure": {
                         "delay": 10,
                         "duration": 300,
-                        "fadeOut": 0.015
+                        "fadeOut": 0.03
                     }
                 };
                 serverItem._props.MaxResource = 1;
@@ -287,7 +287,7 @@ class Consumables {
                     "RadExposure": {
                         "delay": 10,
                         "duration": 300,
-                        "fadeOut": 0.01
+                        "fadeOut": 0.02
                     }
                 };
                 serverItem._props.MaxResource = 1;

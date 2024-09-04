@@ -924,7 +924,7 @@
     "WoodsBossLocationSpawn": [
         {
             "BossName": "bossKojaniy",
-            "BossChance": 40,
+            "BossChance": 50,
             "BossZone": "ZoneWoodCutter",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -950,7 +950,7 @@
         },
         {
             "BossName": "exUsec",
-            "BossChance": 25,
+            "BossChance": 20,
             "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneMiniHouse,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -965,7 +965,7 @@
         },
         {
             "BossName": "bossKnight",
-            "BossChance": 20,
+            "BossChance": 15,
             "BossZone": "ZoneClearVill,ZoneHouse,ZoneScavBase2,ZoneHouse,ZoneRoad,ZoneMiniHouse,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",

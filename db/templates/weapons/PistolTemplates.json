@@ -202,7 +202,7 @@
         "CameraRecoil": 0.015,
         "VisualMulti": 2.5,
         "Convergence": 15,
-        "RecoilAngle": 90,
+        "RecoilAngle": 91,
         "BaseMalfunctionChance": 0.2,
         "HeatFactorGun": 0.4,
         "HeatFactorByShot": 1,
