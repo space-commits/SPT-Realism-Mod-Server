@@ -57,9 +57,9 @@
                     "onlyFoundInRaid": false,
                     "parentId": "",
                     "target": [
-                        "5c052e6986f7746b207bc3c9"
+                        "619cc01e0a7c3a1a2731940c"
                     ],
-                    "value": 1,
+                    "value": 5,
                     "visibilityConditions": []
                 },
                 {
@@ -76,24 +76,6 @@
                     "parentId": "",
                     "target": [
                         "5c0530ee86f774697952d952"
-                    ],
-                    "value": 1,
-                    "visibilityConditions": []
-                },
-                {
-                    "conditionType": "HandoverItem",
-                    "dogtagLevel": 0,
-                    "dynamicLocale": false,
-                    "globalQuestCounterId": "",
-                    "id": "667dbd367520b900ee16550e",
-                    "index": 4,
-                    "isEncoded": false,
-                    "maxDurability": 100,
-                    "minDurability": 0,
-                    "onlyFoundInRaid": false,
-                    "parentId": "",
-                    "target": [
-                        "5af0534a86f7743b6f354284"
                     ],
                     "value": 1,
                     "visibilityConditions": []
