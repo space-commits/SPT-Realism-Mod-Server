@@ -47,10 +47,9 @@ class Quests {
             locale["667dbbc9c62a7c2ee8fe25b2 failMessageText"] = "";
             locale["667dbbc9c62a7c2ee8fe25b2 successMessageText"] = "That concludes your treatment. Come back with more supplies if you're thick-headed enough to fall into a reactor again. Keep the LEDX; it's contaminated. Bring it back with you if you need further treatment.";
             locale["667dbd121abe6984e4cfeb16"] = "Handover medical bloodsets";
-            locale["667dbd23ef00ab79d3afb149"] = "Handover portable defibrillator";
+            locale["667dbd23ef00ab79d3afb149"] = "Handover medical tools";
             locale["667dbd1bb1aeca0bfbb408a7"] = "Handover piles of meds";
             locale["667dbd2bedbb6aa6a6e862eb"] = "Handover LEDX";
-            locale["667dbd367520b900ee16550e"] = "Handover ophthalmoscope";
         }
         //find gas
         this.questDB()["6681c5127b9973f80c7c7d12"] = exploreQuests["6681c5127b9973f80c7c7d12"];
