@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Quests = void 0;
 const treatmentQuests = require("../../db/quests/rad_treatment.json");
 const exploreQuests = require("../../db/quests/zone_exploration.json");
+const dynamicZoneQuests = require("../../db/quests/dynamic_zones.json");
 class Quests {
     logger;
     tables;
@@ -80,9 +81,30 @@ class Quests {
                 + " We don't know which route they would have taken, the Customs area is crisscrossed by many rail lines. What we do know is that included in the cargo was not just toxic substances, but also radioactive materials. I don't dare to speculate what their intended purpose was."
                 + "\n\nI need you to locate the train that was carrying this cargo, so my people can safely dispose of it before it gets into the wrong hands. In addition we heard from a reliable informant that some of the cargo was taken towards another location by some...unscrupulous locals; a large warehouse near the river. We're not sure how far they made it. The cargo will be marked as TerraGroup's property.";
             locale["6681d150fd1d7f0b7e5ae953 failMessageText"] = "";
-            locale["6681d150fd1d7f0b7e5ae953 successMessageText"] = "My people will be sent to the crash site and move in to retrieve the cargo immediately. I hope you understand that this is a delicate matter and needs to be kept between us. I also hope that you wore a respirator at a minimum and didn't touch anything...";
+            locale["6681d150fd1d7f0b7e5ae953 successMessageText"] = "My people will be sent to the derailment and move in to retrieve the cargo immediately. I hope you understand that this is a delicate matter and needs to be kept between us. I also hope that you wore a respirator at a minimum and didn't touch anything...";
             locale["6681d1e23a21783b8b9c14ba"] = "Find the train carrying TerraGroup cargo";
             locale["6682859c9d440e2a1e92fc89"] = "Find The stolen radioactive cargo";
+        }
+        //find dynamic zones (triggers dynamic zones to start spawning)
+        this.questDB()["66dad1a18cbba6e558486336"] = dynamicZoneQuests["66dad1a18cbba6e558486336"];
+        for (let i in this.tables.locales.global) {
+            let locale = this.tables.locales.global[i];
+            locale["66dad1a18cbba6e558486336 acceptPlayerMessage"] = "";
+            locale["66dad1a18cbba6e558486336 declinePlayerMessage"] = "";
+            locale["66dad1a18cbba6e558486336 completePlayerMessage"] = "";
+            locale["66dad1a18cbba6e558486336 name"] = "Health And Safety";
+            locale["66dad1a18cbba6e558486336 description"] = "I need you to listen to everything I am about to tell you very, very carefully, this is not the time to ignore what I have to say. If you don't, then whatever happens is on you."
+                + "\n\nI can not tell you exaclty what we discovered at the derailment, this is too sensitive of a matter. I hope you understand, and that you know you can trust me. What I can tell you is that the train derailment was not an accident, and according to the manifest many materials are missing. There were other trains that did not make it, I can't disclose how I know.";
+            +"\n\nSomeone is hiring the locals to move these illicit materials.I need you to find the sites where they are unloading and loading these materials. We need to find out where they're being taken to. Sources tell me that these sites can disappear as quickly as they appeared. There are many different possible locations, you might have to check the same areas multiple times in order to catch them.";
+            +"\n\nAre you listening? Good. These materials are extremely hazardous, radioactive. There is something ...unusual about the substances invovled, almost as if the air around it is contaminated. If you are not careful and prepare accordingly, you will likely die a slow agonizing death. As a doctor I am not prone to hyperbole. We lack the resources to treat severe radiation poisoning. If you fall ill, pray that you can somehow conjure up all the supplies needed to treat you.";
+            locale["66dad1a18cbba6e558486336 failMessageText"] = "";
+            locale["66dad1a18cbba6e558486336 successMessageText"] = "You survived the contamination and found the sites? I was worried I would have to hire some other mercenaries to complete the task. Please take no offense, I am merely speaking pragmatically. Remain cautious, I have a suspicion you'll be encountering many more of these sites for some time to come.";
+            locale["66dad1c505699b23af0ec446"] = "Find a loading site on Customs";
+            locale["66dad1cb72e715b2f7ae7d0a"] = "Place marker in a loading site on Customs";
+            locale["66ddb2de064eeae93da154ca"] = "Find a loading site on Shoreline";
+            locale["66ddb5a5a0c634bb0c8b1b11"] = "Place marker in a loading site on Shoreline";
+            locale["66ddb5cce3de442223979ac8"] = "Find a loading site on Interchange";
+            locale["66ddb5d04e6c5562e560f705"] = "Place marker in a loading site on Interchange";
         }
     }
     resetHazardQuests(profile) {

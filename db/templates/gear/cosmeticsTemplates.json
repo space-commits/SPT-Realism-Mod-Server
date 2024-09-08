@@ -638,7 +638,7 @@
         "weaponErgonomicPenalty": -6,
         "IsGasMask": true,
         "GasProtection": 0.84,
-        "RadProtection": 0.75,
+        "RadProtection": 0.61,
         "MaskToUse": "gp5",
         "TemplateType": "gear"
     },
@@ -654,7 +654,7 @@
         "weaponErgonomicPenalty": -4,
         "IsGasMask": true,
         "GasProtection": 0.96,
-        "RadProtection": 0.65,
+        "RadProtection": 0.5,
         "MaskToUse": "gp5",
         "TemplateType": "gear"
     },

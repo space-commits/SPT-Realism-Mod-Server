@@ -149,6 +149,7 @@ export class Consumables {
             if (serverItem._id === "5d1b33a686f7742523398398") {
                 serverItem._props.StimulatorBuffs = this.foodItems.purewater.StimulatorBuffs;
                 serverItem._props.effects_health = {};
+                serverItem._props.effects_damage = {};
                 serverItem._props.MaxResource = 1;
             }
             //Energy//
