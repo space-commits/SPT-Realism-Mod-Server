@@ -823,6 +823,25 @@
         "LoyaltyLevel": 0,
         "Price": 0
     },
+    "66012d9a3dff5074ed002e33": {
+        "ItemID": "66012d9a3dff5074ed002e33",
+        "Name": "bipod_m60_usord_m60e4_std",
+        "ModType": "bipod",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "AimSpeed": 0,
+        "ReloadSpeed": 0,
+        "Ergonomics": 0,
+        "Accuracy": 20,
+        "ConflictingItems": [],
+        "FixSpeed": 0,
+        "Weight": 0.537,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
     "6464d870bb2c580352070cc4": {
         "ItemID": "6464d870bb2c580352070cc4",
         "Name": "bipod_pkm_zid_pk_std",

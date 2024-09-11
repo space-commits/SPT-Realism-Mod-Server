@@ -10,6 +10,17 @@
         "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
+    "66b5f68de98be930d701c00e": {
+        "ItemID": "66b5f68de98be930d701c00e",
+        "Name": "item_equipment_headset_liberator",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "dB": "26",
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
     "5aa2ba71e5b5b000137b758f": {
         "ItemID": "5aa2ba71e5b5b000137b758f",
         "Name": "headphones_MSA",
@@ -27,6 +38,51 @@
         "AllowADS": true,
         "LoyaltyLevel": 4,
         "dB": "22",
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
+    
+    "66b5f69ea7f72d197e70bcdb": {
+        "ItemID": "66b5f69ea7f72d197e70bcdb",
+        "Name": "helmet_team_wendy_comtac_v_headset",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "dB": "23",
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
+    "66b5f693acff495a294927e3": {
+        "ItemID": "66b5f693acff495a294927e3",
+        "Name": "item_equipment_headset_comtac_v",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "dB": "23",
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
+    "66b5f6985891c84aab75ca76": {
+        "ItemID": "66b5f6985891c84aab75ca76",
+        "Name": "item_equipment_headset_comtac_vi",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "dB": "23",
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
+    "66b5f6a28ca68c6461709ed8": {
+        "ItemID": "66b5f6a28ca68c6461709ed8",
+        "Name": "helmet_team_wendy_comtac_vi_headset",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "dB": "23",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0,

@@ -1,4 +1,46 @@
 {
+    "660126a98f2b23af220b27e7": {
+        "ItemID": "660126a98f2b23af220b27e7",
+        "Name": "sight_front_m60_usord_m60e6_front_sight_rail",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.078,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "6601268bc752a02bbe05e686": {
+        "ItemID": "6601268bc752a02bbe05e686",
+        "Name": "sight_front_m60_usord_m60e4_std",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.084,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
+    "6601265f98a610c1aa0ea637": {
+        "ItemID": "6601265f98a610c1aa0ea637",
+        "Name": "sight_rear_m60_usord_m60_std",
+        "ModType": "sight",
+        "AimSpeed": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.092,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Price": 0,
+        "LoyaltyLevel": 0
+    },
     "668fe5ec4315934ba10c6f96": {
         "ItemID": "668fe5ec4315934ba10c6f96",
         "Name": "sight_front_deagle_magnum_research_std",
