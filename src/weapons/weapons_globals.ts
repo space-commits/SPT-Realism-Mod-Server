@@ -26,7 +26,7 @@ export class WeaponsGlobals {
         this.globalDB().Overheat.FirerateReduceMinMult = 1;
         this.globalDB().Overheat.FirerateReduceMaxMult = 1.12;
         this.globalDB().Overheat.FirerateOverheatBorder = 25;
-        this.globalDB().Overheat.OverheatProblemsStart = 50;
+        this.globalDB().Overheat.OverheatProblemsStart = 40;
         this.globalDB().Overheat.OverheatWearLimit = 0.85;
         this.globalDB().Overheat.MinWearOnOverheat = 0;
         this.globalDB().Overheat.MaxWearOnOverheat = 0.2;
@@ -51,8 +51,7 @@ export class WeaponsGlobals {
                 serverItem._props.MinRepairKitDegradation = 0;
                 serverItem._props.MaxRepairKitDegradation = 0.0001;
                 serverItem._props.RepairComplexity = 0;
-                serverItem._props.HeatFactorGun *= 1.5;
-                serverItem._props.CoolFactorGun *= 1.5;
+                serverItem._props.HeatFactorGun *= 2.5;
                 // serverItem._props.BaseMalfunctionChance *= 1;
             }
             if (serverItem._parent === ParentClasses.REPAIRKITS) {

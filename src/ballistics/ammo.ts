@@ -2861,7 +2861,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
-                    serverItem._props.HeatFactor = 1.06;
+                    serverItem._props.HeatFactor = 1.12;
                 }
             }
             // BPZ FMJ
@@ -2884,7 +2884,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.3;
-                    serverItem._props.HeatFactor = 1.06;
+                    serverItem._props.HeatFactor = 1.08;
                 }
             }
             // TPZ SP
@@ -2954,7 +2954,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.05;
-                    serverItem._props.HeatFactor = 1.02;
+                    serverItem._props.HeatFactor = 1.05;
                 }
             }
             // M61
@@ -2977,7 +2977,7 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 1.4;
-                    serverItem._props.HeatFactor = 1.04;
+                    serverItem._props.HeatFactor = 1.1;
                 }
             }
             // M993
@@ -2999,8 +2999,8 @@ export class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
-                    serverItem._props.HeatFactor = 1;
+                    serverItem._props.DurabilityBurnModificator = 3;
+                    serverItem._props.HeatFactor = 1.3;
                 }
             }
             //// 7.62x39 ////
@@ -3491,7 +3491,7 @@ export class Ammo {
             if (serverItem._id === "5c0d5e4486f77478390952fe") {
                 serverItem._props.PenetrationPower = 84;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 63;
+                serverItem._props.Damage = 62;
                 serverItem._props.InitialSpeed = 850;
                 serverItem._props.RicochetChance = 0.37;
                 serverItem._props.FragmentationChance = 0.19;
@@ -3748,7 +3748,7 @@ export class Ammo {
             if (serverItem._id === "54527ac44bdc2d36668b4567") {
                 serverItem._props.PenetrationPower = 74;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 78;
+                serverItem._props.Damage = 79;
                 serverItem._props.InitialSpeed = 942;
                 serverItem._props.RicochetChance = 0.3;
                 serverItem._props.FragmentationChance = 0.5;

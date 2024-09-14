@@ -1,6 +1,6 @@
 {
     "6681d150fd1d7f0b7e5ae953": {
-        "QuestName": "Rad Exploration",
+        "QuestName": "Safety Technician - Part 2",
         "_id": "6681d150fd1d7f0b7e5ae953",
         "acceptPlayerMessage": "6681d150fd1d7f0b7e5ae953 acceptPlayerMessage",
         "canShowNotificationsInGame": true,
@@ -152,7 +152,7 @@
         "type": "Discover"
     },
     "6681c5127b9973f80c7c7d12": {
-        "QuestName": "Gas Exploration",
+        "QuestName": "Safety Technician - Part 1",
         "_id": "6681c5127b9973f80c7c7d12",
         "acceptPlayerMessage": "6681c5127b9973f80c7c7d12 acceptPlayerMessage",
         "canShowNotificationsInGame": true,

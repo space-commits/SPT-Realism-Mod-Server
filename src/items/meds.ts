@@ -87,7 +87,7 @@ export class Consumables {
             "RadExposure": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.12
+                "fadeOut": 0.14
             },
             "Intoxication": {
                 "delay": 10,
