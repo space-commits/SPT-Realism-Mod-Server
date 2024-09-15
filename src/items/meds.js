@@ -95,12 +95,12 @@ class Consumables {
             "RadExposure": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.14
+                "fadeOut": 0.1
             },
             "Intoxication": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.12
+                "fadeOut": 0.08
             }
         };
         //Antidote
@@ -108,7 +108,7 @@ class Consumables {
             "Intoxication": {
                 "delay": 5,
                 "duration": 150,
-                "fadeOut": 0.25
+                "fadeOut": 0.15
             }
         };
     }

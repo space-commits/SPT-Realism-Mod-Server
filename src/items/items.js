@@ -171,24 +171,6 @@ class ItemsClass {
                 // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
         }
-        this.itemDB()["66ac9d9740e27931602042d4"]._props.Slots.push({
-            "_name": "mod_equipment",
-            "_id": "66e5576384868ad2ba97e718",
-            "_parent": "66ac9d9740e27931602042d4",
-            "_props": {
-                "filters": [
-                    {
-                        "Shift": 0,
-                        "Filter": [
-                            "5e831507ea0a7c419c2f9bd9"
-                        ]
-                    }
-                ]
-            },
-            "_required": false,
-            "_mergeSlotWithChildren": false,
-            "_proto": "55d30c4c4bdc2db4468b457e"
-        });
     }
     loadItemBlacklists() {
         for (let i in this.arrays.blacklistedItems) {

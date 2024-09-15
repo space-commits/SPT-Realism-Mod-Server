@@ -992,7 +992,7 @@ class Ammo {
                 serverItem._props.Damage = 63;
                 serverItem._props.InitialSpeed = 385;
                 serverItem._props.RicochetChance = 0.22;
-                serverItem._props.FragmentationChance = 0.25;
+                serverItem._props.FragmentationChance = 0.35;
                 serverItem._props.BulletMassGram = 5.96;
                 serverItem._props.HeavyBleedingDelta = 0.27;
                 serverItem._props.LightBleedingDelta = 0.59;
@@ -1368,7 +1368,7 @@ class Ammo {
                 serverItem._props.Damage = 47;
                 serverItem._props.InitialSpeed = 254;
                 serverItem._props.RicochetChance = 0.25;
-                serverItem._props.FragmentationChance = 0.1;
+                serverItem._props.FragmentationChance = 0.15;
                 serverItem._props.BulletMassGram = 14.9;
                 serverItem._props.HeavyBleedingDelta = 0.24;
                 serverItem._props.LightBleedingDelta = 0.53;
@@ -1387,10 +1387,10 @@ class Ammo {
             if (serverItem._id === "5e81f423763d9f754677bf2e") {
                 serverItem._props.PenetrationPower = 30;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 55;
+                serverItem._props.Damage = 58;
                 serverItem._props.InitialSpeed = 290;
                 serverItem._props.RicochetChance = 0.17;
-                serverItem._props.FragmentationChance = 0.15;
+                serverItem._props.FragmentationChance = 0.1;
                 serverItem._props.BulletMassGram = 14.9;
                 serverItem._props.HeavyBleedingDelta = 0.25;
                 serverItem._props.LightBleedingDelta = 0.55;
@@ -1409,10 +1409,10 @@ class Ammo {
             if (serverItem._id === "5efb0cabfb3e451d70735af5") {
                 serverItem._props.PenetrationPower = 51;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 50;
+                serverItem._props.Damage = 55;
                 serverItem._props.InitialSpeed = 365;
                 serverItem._props.RicochetChance = 0.32;
-                serverItem._props.FragmentationChance = 0.1;
+                serverItem._props.FragmentationChance = 0.2;
                 serverItem._props.BulletMassGram = 13.8;
                 serverItem._props.HeavyBleedingDelta = 0.18;
                 serverItem._props.LightBleedingDelta = 0.41;

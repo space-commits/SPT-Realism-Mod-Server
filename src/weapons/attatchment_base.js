@@ -121,6 +121,10 @@ class AttachmentBase {
             "mod_stock_002",
             "mod_stock_001",
         ];
+        const doubleShotguns = [
+            "64748cb8de82c85eaf0a273a",
+            "5580223e4bdc2d1c128b457f"
+        ];
         let stocksArr = [];
         let firstSlotstocksArr = [];
         let defaultStocks = this.itemDB()["5649be884bdc2d79388b4577"]._props.Slots[0]._props.filters[0].Filter;
@@ -188,19 +192,6 @@ class AttachmentBase {
                     }
                 }
             }
-            if (serverItem._id === "64748cb8de82c85eaf0a273a" || serverItem._id === "5580223e4bdc2d1c128b457f") {
-                serverItem._props.Slots[0]._props.filters[0].Filter = [
-                    "5580169d4bdc2d9d138b4585",
-                    "55d447bb4bdc2d892f8b456f",
-                    "611a30addbdd8440277441dc",
-                    "64748d02d1c009260702b526"
-                ];
-            }
-            for (let item in cantedMountConfWeaps) {
-                if (serverItem._id === cantedMountConfWeaps[item]) {
-                    serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
-                }
-            }
             if (serverItem._props.weapClass === "pistol") {
                 serverItem._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
             }
@@ -213,6 +204,45 @@ class AttachmentBase {
         this.itemDB()["mechMDR_406"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
         this.itemDB()["mechAUG_417"]._props.Slots[0]._props.filters[0].Filter = ["mechRatWorx"];
         this.itemDB()["mechRatWorx"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
+        //weapons that should not accept canted mount in rear sight slot
+        for (let item of cantedMountConfWeaps) {
+            this.itemDB()[item]._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");
+        }
+        //allow any barrels on the DB shotguns
+        for (let item of doubleShotguns) {
+            this.itemDB()[item]._props.Slots[0]._props.filters[0].Filter = [
+                "5580169d4bdc2d9d138b4585",
+                "55d447bb4bdc2d892f8b456f",
+                "611a30addbdd8440277441dc",
+                "64748d02d1c009260702b526"
+            ];
+        }
+        //push meds to AK tourniquet stock
+        if (this.itemDB()["66ac9d9740e27931602042d4"]) {
+            this.itemDB()["66ac9d9740e27931602042d4"]._props.Slots.push({
+                "_name": "mod_equipment",
+                "_id": "66e5576384868ad2ba97e718",
+                "_parent": "66ac9d9740e27931602042d4",
+                "_props": {
+                    "filters": [
+                        {
+                            "Shift": 0,
+                            "Filter": [
+                                "5e831507ea0a7c419c2f9bd9",
+                                "60098af40accd37ef2175f27",
+                                "5e8488fa988a8701445df1e4",
+                                "5751a25924597722c463c472",
+                                "544fb25a4bdc2dfb738b4567",
+                                "544fb3364bdc2d34748b456a"
+                            ]
+                        }
+                    ]
+                },
+                "_required": false,
+                "_mergeSlotWithChildren": false,
+                "_proto": "55d30c4c4bdc2db4468b457e"
+            });
+        }
     }
     loadAttRequirements() {
         let requiredMods = [
