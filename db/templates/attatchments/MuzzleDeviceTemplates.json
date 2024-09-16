@@ -7009,7 +7009,7 @@
         "CameraRecoil": -14,
         "AutoROF": 1,
         "SemiROF": 1,
-        "ModMalfunctionChance": -10,
+        "ModMalfunctionChance": -20,
         "CanCycleSubs": false,
         "Accuracy": 9,
         "HeatFactor": 1.13,

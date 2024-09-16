@@ -633,7 +633,7 @@
             "Delay": 1,
             "Duration": 75.0,
             "SkillName": "",
-            "Value": 0.115
+            "Value": -0.115
         },
         {
             "AbsoluteValue": true,

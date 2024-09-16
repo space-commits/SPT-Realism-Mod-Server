@@ -259,7 +259,6 @@ export class ItemStatHandler {
             serverItem._props.HeatFactor = fileItem.HeatFactor != undefined ? fileItem.HeatFactor : 1;
             serverItem._props.CoolFactor = fileItem.CoolFactor != undefined ? fileItem.CoolFactor : 1;
             serverItem._props.MalfunctionChance = fileItem.MalfunctionChance != undefined ? fileItem.MalfunctionChance : 0;
-            // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
             // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
             serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != undefined ? fileItem.DurabilityBurnModificator : 1;
             serverItem._props.BlocksFolding = fileItem.BlocksFolding != undefined ? fileItem.BlocksFolding : false;

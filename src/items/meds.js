@@ -95,12 +95,14 @@ class Consumables {
             "RadExposure": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.1
+                "fadeOut": 0.1,
+                "healthPenaltyMax": 69
             },
             "Intoxication": {
                 "delay": 10,
                 "duration": 300,
-                "fadeOut": 0.08
+                "fadeOut": 0.08,
+                "healthPenaltyMax": 69
             }
         };
         //Antidote
@@ -108,7 +110,8 @@ class Consumables {
             "Intoxication": {
                 "delay": 5,
                 "duration": 150,
-                "fadeOut": 0.15
+                "fadeOut": 0.15,
+                "healthPenaltyMax": 69
             }
         };
     }
@@ -228,7 +231,8 @@ class Consumables {
                     "RadExposure": {
                         "delay": 10,
                         "duration": 300,
-                        "fadeOut": 0.03
+                        "fadeOut": 0.03,
+                        "healthPenaltyMax": 69
                     }
                 };
                 serverItem._props.MaxResource = 1;
@@ -242,7 +246,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(7, 0, "120"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.65"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "15"); // strength
             }
             //Jack
             if (serverItem._id === "5d403f9186f7743cac3f229b") {
@@ -260,7 +264,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.2"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "10"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "9"); // strength
             }
             //Vodka (Bad)
             if (serverItem._id === "614451b71e5874611e2c7ae5") {
@@ -278,7 +282,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(7, 0, "60"); // effect period
                 serverItem._props.ConflictingItems.splice(8, 0, "0.5"); // tunnel vision strength
                 serverItem._props.ConflictingItems.splice(9, 0, "15"); // delay
-                serverItem._props.ConflictingItems.splice(10, 0, "20"); // strength
+                serverItem._props.ConflictingItems.splice(10, 0, "15"); // strength
             }
             //Vodka
             if (serverItem._id === "5d40407c86f774318526545a") {
@@ -288,7 +292,8 @@ class Consumables {
                     "RadExposure": {
                         "delay": 10,
                         "duration": 300,
-                        "fadeOut": 0.02
+                        "fadeOut": 0.02,
+                        "healthPenaltyMax": 69
                     }
                 };
                 serverItem._props.MaxResource = 1;
