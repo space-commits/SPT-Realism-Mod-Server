@@ -52,6 +52,7 @@ class Ammo {
             //Flechette
             if (serverItem._id === "5d6e6911a4b9361bd5780d52") {
                 serverItem._props.PenetrationPower = 4;
+                serverItem._props.PenetrationPowerDiviation = 10;
                 serverItem._props.ArmorDamage = 0.5;
                 serverItem._props.ProjectileCount = 18;
                 serverItem._props.Damage = 7;
@@ -179,6 +180,7 @@ class Ammo {
                 serverItem._props.ammoAccr = -40;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 14;
+                serverItem._props.BallisticCoeficient = 0.1;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;

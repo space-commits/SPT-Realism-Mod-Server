@@ -213,9 +213,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 80,
                 "highestMax": 100,
-                "maxDelta": 10,
+                "maxDelta": 20,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -255,8 +255,8 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 90,
-                "highestMax": 100,
+                "lowestMax": 70,
+                "highestMax": 90,
                 "maxDelta": 20,
                 "minDelta": 5,
                 "minLimitPercent": 15
@@ -283,10 +283,10 @@
                 "minLimitPercent": 5
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
+                "lowestMax": 70,
+                "highestMax": 90,
                 "maxDelta": 20,
-                "minDelta": 0,
+                "minDelta": 5,
                 "minLimitPercent": 15
             }
         },
@@ -385,11 +385,11 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 70,
                 "highestMax": 100,
-                "maxDelta": 10,
+                "maxDelta": 30,
                 "minDelta": 0,
-                "minLimitPercent": 15
+                "minLimitPercent": 20
             }
         },
         "boss": {
@@ -422,16 +422,16 @@
         },
         "assault": {
             "armor": {
-                "maxDelta": 10,
-                "minDelta": 0,
-                "minLimitPercent": 15
+                "maxDelta": 50,
+                "minDelta": 20,
+                "minLimitPercent": 25
             },
             "weapon": {
-                "lowestMax": 85,
-                "highestMax": 100,
-                "maxDelta": 20,
-                "minDelta": 5,
-                "minLimitPercent": 15
+                "lowestMax": 60,
+                "highestMax": 80,
+                "maxDelta": 30,
+                "minDelta": 10,
+                "minLimitPercent": 20
             }
         },
         "cursedassault": {
@@ -455,11 +455,11 @@
                 "minLimitPercent": 5
             },
             "weapon": {
-                "lowestMax": 90,
-                "highestMax": 100,
-                "maxDelta": 20,
-                "minDelta": 0,
-                "minLimitPercent": 15
+                "lowestMax": 60,
+                "highestMax": 80,
+                "maxDelta": 30,
+                "minDelta": 10,
+                "minLimitPercent": 20
             }
         },
         "pmcbot": {
@@ -541,11 +541,11 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 98,
-                "highestMax": 100,
-                "maxDelta": 10,
-                "minDelta": 0,
-                "minLimitPercent": 15
+                "lowestMax": 40,
+                "highestMax": 70,
+                "maxDelta": 50,
+                "minDelta": 20,
+                "minLimitPercent": 30
             }
         },
         "pmc": {
@@ -557,11 +557,11 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
+                "lowestMax": 60,
                 "highestMax": 100,
-                "maxDelta": 10,
+                "maxDelta": 40,
                 "minDelta": 0,
-                "minLimitPercent": 15
+                "minLimitPercent": 25
             }
         },
         "boss": {
@@ -594,16 +594,16 @@
         },
         "assault": {
             "armor": {
-                "maxDelta": 15,
-                "minDelta": 0,
-                "minLimitPercent": 15
+                "maxDelta": 60,
+                "minDelta": 30,
+                "minLimitPercent": 35
             },
             "weapon": {
-                "lowestMax": 80,
-                "highestMax": 100,
-                "maxDelta": 20,
-                "minDelta": 5,
-                "minLimitPercent": 15
+                "lowestMax": 40,
+                "highestMax": 70,
+                "maxDelta": 40,
+                "minDelta": 20,
+                "minLimitPercent": 30
             }
         },
         "cursedassault": {
@@ -627,11 +627,11 @@
                 "minLimitPercent": 5
             },
             "weapon": {
-                "lowestMax": 85,
-                "highestMax": 100,
-                "maxDelta": 20,
-                "minDelta": 0,
-                "minLimitPercent": 15
+                "lowestMax": 40,
+                "highestMax": 70,
+                "maxDelta": 40,
+                "minDelta": 20,
+                "minLimitPercent": 30
             }
         },
         "pmcbot": {
