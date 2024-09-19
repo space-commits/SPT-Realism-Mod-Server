@@ -60,6 +60,26 @@ class Traders {
     itemDB() {
         return this.tables.templates.items;
     }
+    modifyInsurance(insurance) {
+        insurance.returnChancePercent =
+            {
+                "54cb50c76803fa8b248b4571": 30,
+                "54cb57776803fa99248b456e": 80
+            };
+        insurance.minAttachmentRoublePriceToBeTaken = 1000;
+        insurance.chanceNoAttachmentsTakenPercent = 10;
+        insurance.runIntervalSeconds = 600;
+        this.tables.traders[prapId].base.insurance.min_return_hour = 2;
+        this.tables.traders[prapId].base.insurance.max_return_hour = 3;
+        this.tables.traders[theraId].base.insurance.min_return_hour = 1;
+        this.tables.traders[theraId].base.insurance.max_return_hour = 1;
+        this.tables.traders[prapId].base.loyaltyLevels.forEach(ll => {
+            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
+        });
+        this.tables.traders[theraId].base.loyaltyLevels.forEach(ll => {
+            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.5);
+        });
+    }
     modifyTraderBuyPrice(traderId, basePrice) {
         for (let i in this.tables.traders[traderId].base.loyaltyLevels) {
             let multi = Number(i);
@@ -160,7 +180,7 @@ class Traders {
             this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.25;
         }
         for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
-            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 0.85;
+            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 0.9;
         }
     }
     setBaseOfferValues() {

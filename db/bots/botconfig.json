@@ -197,9 +197,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 98,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 80,
+                "highestMax": 90,
+                "maxDelta": 50,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -213,9 +213,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 80,
-                "highestMax": 100,
-                "maxDelta": 20,
+                "lowestMax": 85,
+                "highestMax": 95,
+                "maxDelta": 50,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -227,9 +227,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 100,
+                "lowestMax": 80,
                 "highestMax": 100,
-                "maxDelta": 0,
+                "maxDelta": 30,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -241,9 +241,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 80,
+                "highestMax": 95,
+                "maxDelta": 40,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -255,9 +255,9 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 70,
+                "lowestMax": 60,
                 "highestMax": 90,
-                "maxDelta": 20,
+                "maxDelta": 25,
                 "minDelta": 5,
                 "minLimitPercent": 15
             }
@@ -297,9 +297,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 85,
+                "highestMax": 95,
+                "maxDelta": 40,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -311,11 +311,11 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 80,
+                "highestMax": 95,
+                "maxDelta": 40,
                 "minDelta": 0,
-                "minLimitPercent": 15
+                "minLimitPercent": 155
             }
         },
         "sectantpriest": {
@@ -325,23 +325,23 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 20,
-                "minDelta": 5,
+                "lowestMax": 80,
+                "highestMax": 95,
+                "maxDelta": 30,
+                "minDelta": 0,
                 "minLimitPercent": 15
             }
         },
         "sectantwarrior": {
             "armor": {
-                "maxDelta": 10,
+                "maxDelta": 15,
                 "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 90,
-                "highestMax": 100,
-                "maxDelta": 20,
+                "lowestMax": 70,
+                "highestMax": 90,
+                "maxDelta": 45,
                 "minDelta": 5,
                 "minLimitPercent": 15
             }
@@ -369,9 +369,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 98,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 85,
+                "highestMax": 95,
+                "maxDelta": 40,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -385,11 +385,11 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 70,
-                "highestMax": 100,
-                "maxDelta": 30,
+                "lowestMax": 80,
+                "highestMax": 90,
+                "maxDelta": 40,
                 "minDelta": 0,
-                "minLimitPercent": 20
+                "minLimitPercent": 15
             }
         },
         "boss": {
@@ -399,9 +399,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 100,
+                "lowestMax": 80,
                 "highestMax": 100,
-                "maxDelta": 0,
+                "maxDelta": 35,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -413,16 +413,16 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 80,
+                "highestMax": 90,
+                "maxDelta": 45,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
         },
         "assault": {
             "armor": {
-                "maxDelta": 50,
+                "maxDelta": 40,
                 "minDelta": 20,
                 "minLimitPercent": 25
             },
@@ -469,9 +469,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 80,
+                "highestMax": 90,
+                "maxDelta": 40,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -483,37 +483,37 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 75,
+                "highestMax": 90,
+                "maxDelta": 40,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
         },
         "sectantpriest": {
             "armor": {
-                "maxDelta": 10,
-                "minDelta": 0,
-                "minLimitPercent": 15
-            },
-            "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 20,
-                "minDelta": 5,
-                "minLimitPercent": 15
-            }
-        },
-        "sectantwarrior": {
-            "armor": {
                 "maxDelta": 15,
                 "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 85,
-                "highestMax": 100,
+                "lowestMax": 80,
+                "highestMax": 90,
+                "maxDelta": 35,
+                "minDelta": 0,
+                "minLimitPercent": 15
+            }
+        },
+        "sectantwarrior": {
+            "armor": {
                 "maxDelta": 20,
+                "minDelta": 0,
+                "minLimitPercent": 15
+            },
+            "weapon": {
+                "lowestMax": 60,
+                "highestMax": 85,
+                "maxDelta": 45,
                 "minDelta": 5,
                 "minLimitPercent": 15
             }
@@ -541,11 +541,11 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 40,
-                "highestMax": 70,
-                "maxDelta": 50,
-                "minDelta": 20,
-                "minLimitPercent": 30
+                "lowestMax": 85,
+                "highestMax": 95,
+                "maxDelta": 30,
+                "minDelta": 0,
+                "minLimitPercent": 15
             }
         },
         "pmc": {
@@ -557,11 +557,11 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 60,
-                "highestMax": 100,
-                "maxDelta": 40,
+                "lowestMax": 80,
+                "highestMax": 95,
+                "maxDelta": 45,
                 "minDelta": 0,
-                "minLimitPercent": 25
+                "minLimitPercent": 15
             }
         },
         "boss": {
@@ -571,9 +571,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 100,
+                "lowestMax": 80,
                 "highestMax": 100,
-                "maxDelta": 0,
+                "maxDelta": 40,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -585,9 +585,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 75,
+                "highestMax": 90,
+                "maxDelta": 45,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -599,7 +599,7 @@
                 "minLimitPercent": 35
             },
             "weapon": {
-                "lowestMax": 40,
+                "lowestMax": 30,
                 "highestMax": 70,
                 "maxDelta": 40,
                 "minDelta": 20,
@@ -641,9 +641,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 75,
+                "highestMax": 90,
+                "maxDelta": 40,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -655,37 +655,38 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 95,
-                "highestMax": 100,
-                "maxDelta": 10,
+                "lowestMax": 70,
+                "highestMax": 90,
+                "maxDelta": 40,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
         },
         "sectantpriest": {
             "armor": {
-                "maxDelta": 10,
+                "maxDelta": 20,
                 "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 90,
-                "highestMax": 100,
-                "maxDelta": 20,
-                "minDelta": 5,
+                "lowestMax": 70,
+                "highestMax": 85
+                ,
+                "maxDelta": 40,
+                "minDelta": 0,
                 "minLimitPercent": 15
             }
         },
         "sectantwarrior": {
             "armor": {
-                "maxDelta": 15,
+                "maxDelta": 25,
                 "minDelta": 0,
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 85,
-                "highestMax": 100,
-                "maxDelta": 20,
+                "lowestMax": 60,
+                "highestMax": 85,
+                "maxDelta": 50,
                 "minDelta": 5,
                 "minLimitPercent": 15
             }

@@ -94,6 +94,15 @@ import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { ICloner } from "@spt/utils/cloners/ICloner";
 import { ItemFilterService } from "@spt/services/ItemFilterService";
+import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
+import { InsuranceController } from "@spt/controllers/InsuranceController";
+import { InsuranceOverride } from "./traders/insurance";
+import { PaymentService } from "@spt/services/PaymentService";
+import { DialogueHelper } from "@spt/helpers/DialogueHelper";
+import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
+import { SaveServer } from "@spt/servers/SaveServer";
+import { MailSendService } from "@spt/services/MailSendService";
+import { InsuranceService } from "@spt/services/InsuranceService";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -206,6 +215,28 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     return ragFairCallback.mySearch(url, info, sessionID);
                 }
             }, { frequency: "Always" });
+        }
+
+        if (modConfig.insurance_changes == true) {
+            const eventOutputHolder = container.resolve<EventOutputHolder>("HttpResponseUtil");
+            const saveServer = container.resolve<SaveServer>("SaveServer");
+            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+            const insruanceService = container.resolve<InsuranceService>("InsuranceService");
+            const mailSendService = container.resolve<MailSendService>("MailSendService");
+            const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+            const localizationService = container.resolve<LocalisationService>("LocalisationService");
+            const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
+            const paymentService = container.resolve<PaymentService>("PaymentService");
+    
+            const insuranceOverride = new InsuranceOverride(
+                logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper, 
+                dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
+    
+            container.afterResolution("InsuranceController", (_t, result: InsuranceController) => {
+                result.processReturnByProfile = (sessionID: string): void => {
+                    return insuranceOverride.myProcessReturnByProfile(sessionID);
+                }
+            }, { frequency: "Always" });    
         }
 
         // if (modConfig.airdrop_changes == true) {
@@ -629,6 +660,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
+        const insConf = configServer.getConfig<IInsuranceConfig>(ConfigTypes.INSURANCE);
         const arrays = new Arrays(tables);
         const utils = new Utils(tables, arrays);
         const ammo = new Ammo(logger, tables, modConfig);
@@ -748,6 +780,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
 
         //traders
+        if (modConfig.insurance_changes) traders.modifyInsurance(insConf);
         traders.loadTraderTweaks();
         traders.setBaseOfferValues();
         if (modConfig.add_cust_trader_items == true) {
@@ -803,25 +836,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     public postSptLoad(container: DependencyContainer) {
         this.modLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
     }
-
-    //unsure if I still need to do this or not, now that configuration has been expanded
-    // private dllChecker(logger: ILogger, modConfig: any) {
-
-    //     ConfigChecker.dllIsPresent = true;
-
-    //     const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
-    //     if (fs.existsSync(realismdll)) {
-    //         ConfigChecker.dllIsPresent = true;
-    //         if (modConfig.recoil_attachment_overhaul == false) {
-    //             logger.info("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
-    //         }
-    //     } else {
-    //         ConfigChecker.dllIsPresent = false;
-    //         if (modConfig.recoil_attachment_overhaul == true) {
-    //             logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
-    //         }
-    //     }
-    // }
 
     private revertMeds(profileData: IPmcData, utils: Utils) {
         utils.revertMedItems(profileData);

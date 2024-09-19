@@ -51,7 +51,7 @@ class WeaponsGlobals {
                 serverItem._props.MaxRepairKitDegradation = 0.0001;
                 serverItem._props.RepairComplexity = 0;
                 serverItem._props.HeatFactorGun *= 2.5;
-                serverItem._props.HeatFactorGun *= 2.5;
+                serverItem._props.CoolFactorGun *= 2;
             }
             if (serverItem._parent === enums_1.ParentClasses.REPAIRKITS) {
                 serverItem._props.RepairQuality = 0;

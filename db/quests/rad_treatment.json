@@ -63,23 +63,7 @@
                     "visibilityConditions": []
                 }
             ],
-            "AvailableForStart": [
-                {
-                    "availableAfter": 0,
-                    "conditionType": "Quest",
-                    "dispersion": 0,
-                    "dynamicLocale": false,
-                    "globalQuestCounterId": "",
-                    "id": "6681d2f2782b9d00253aa2f1",
-                    "index": 1,
-                    "parentId": "",
-                    "status": [
-                        4
-                    ],
-                    "target": "6681d150fd1d7f0b7e5ae953",
-                    "visibilityConditions": []
-                }
-            ],
+            "AvailableForStart": [],
             "Fail": []
         },
         "declinePlayerMessage": "667c643869df8111b81cb6dc declinePlayerMessage",

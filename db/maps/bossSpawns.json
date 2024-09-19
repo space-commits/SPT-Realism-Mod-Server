@@ -745,7 +745,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 40,
+            "BossChance": 30,
             "BossZone": "ZoneBunkerStorage",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -760,7 +760,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 100,
+            "BossChance": 60,
             "BossZone": "ZoneRailStrorage",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -775,7 +775,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 100,
+            "BossChance": 60,
             "BossZone": "ZoneSubCommand",
             "BossPlayer": false,
             "BossDifficult": "normal",
@@ -790,7 +790,7 @@
         },
         {
             "BossName": "pmcBot",
-            "BossChance": 40,
+            "BossChance": 30,
             "BossZone": "ZoneSubCommand",
             "BossPlayer": false,
             "BossDifficult": "normal",

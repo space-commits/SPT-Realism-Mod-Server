@@ -27,10 +27,10 @@ class Spawns {
             this.bossSpawnHelper(0.1);
         }
         else if (level <= 20) {
-            this.bossSpawnHelper(0.2);
+            this.bossSpawnHelper(0.15);
         }
         else if (level <= 25) {
-            this.bossSpawnHelper(0.3);
+            this.bossSpawnHelper(0.25);
         }
         else if (level <= 30) {
             this.bossSpawnHelper(0.4);

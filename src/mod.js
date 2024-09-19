@@ -53,6 +53,7 @@ const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
 const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
+const insurance_1 = require("./traders/insurance");
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -140,6 +141,23 @@ class Main {
             container.afterResolution("RagfairCallbacks", (_t, result) => {
                 result.search = (url, info, sessionID) => {
                     return ragFairCallback.mySearch(url, info, sessionID);
+                };
+            }, { frequency: "Always" });
+        }
+        if (modConfig.insurance_changes == true) {
+            const eventOutputHolder = container.resolve("HttpResponseUtil");
+            const saveServer = container.resolve("SaveServer");
+            const itemHelper = container.resolve("ItemHelper");
+            const insruanceService = container.resolve("InsuranceService");
+            const mailSendService = container.resolve("MailSendService");
+            const ragfairPriceService = container.resolve("RagfairPriceService");
+            const localizationService = container.resolve("LocalisationService");
+            const dialogueHelper = container.resolve("DialogueHelper");
+            const paymentService = container.resolve("PaymentService");
+            const insuranceOverride = new insurance_1.InsuranceOverride(logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper, dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
+            container.afterResolution("InsuranceController", (_t, result) => {
+                result.processReturnByProfile = (sessionID) => {
+                    return insuranceOverride.myProcessReturnByProfile(sessionID);
                 };
             }, { frequency: "Always" });
         }
@@ -481,6 +499,7 @@ class Main {
         const jsonUtil = container.resolve("JsonUtil");
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
+        const insConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INSURANCE);
         const arrays = new arrays_1.Arrays(tables);
         const utils = new utils_1.Utils(tables, arrays);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
@@ -578,6 +597,8 @@ class Main {
             quests.removeFIRQuestRequire();
         }
         //traders
+        if (modConfig.insurance_changes)
+            traders.modifyInsurance(insConf);
         traders.loadTraderTweaks();
         traders.setBaseOfferValues();
         if (modConfig.add_cust_trader_items == true) {
@@ -622,22 +643,6 @@ class Main {
     postSptLoad(container) {
         this.modLoader = container.resolve("PreSptModLoader");
     }
-    //unsure if I still need to do this or not, now that configuration has been expanded
-    // private dllChecker(logger: ILogger, modConfig: any) {
-    //     ConfigChecker.dllIsPresent = true;
-    //     const realismdll = path.join(__dirname, '../../../../BepInEx/plugins/RealismMod.dll');
-    //     if (fs.existsSync(realismdll)) {
-    //         ConfigChecker.dllIsPresent = true;
-    //         if (modConfig.recoil_attachment_overhaul == false) {
-    //             logger.info("Realism Mod: RealismMod.dll is present at path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is disabled, the mod may behave unpredictably.");
-    //         }
-    //     } else {
-    //         ConfigChecker.dllIsPresent = false;
-    //         if (modConfig.recoil_attachment_overhaul == true) {
-    //             logger.error("Realism Mod: RealismMod.dll is missing form path: " + realismdll + ", but 'Recoil, Ballistics and Attachment Overhaul' is enabled, server will disable these changes.");
-    //         }
-    //     }
-    // }
     revertMeds(profileData, utils) {
         utils.revertMedItems(profileData);
     }
