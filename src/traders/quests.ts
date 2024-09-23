@@ -36,6 +36,7 @@ export class Quests {
             locale["667c7cf226f52aef063b5ef7"] = "Handover medical bloodsets";
             locale["667c8a4420b5c29111af4bc7"] = "Handover disposable syringes";
             locale["667c8a3a189a9ffd2a5eea23"] = "Handover piles of meds";
+            locale["5a3fc03286f77414d64f9941"] = "This quest will reset radiation and toxicity for PMC and Scav.";
         }
 
         //treatment part 2
@@ -54,6 +55,7 @@ export class Quests {
             locale["667dbd23ef00ab79d3afb149"] = "Handover medical tools";
             locale["667dbd1bb1aeca0bfbb408a7"] = "Handover piles of meds";
             locale["667dbd2bedbb6aa6a6e862eb"] = "Handover LEDX";
+            locale["66edf0495148faf0d5d3a75d"] = "This quest will reset radiation and toxicity for PMC and Scav. This Quest is repeatable.";
         }
 
 
@@ -68,11 +70,11 @@ export class Quests {
             locale["6681c5127b9973f80c7c7d12 description"] = "Greetings, mercenary. I have some easy work for you. Even before the Contract Wars we've had patients coming in with respiratory distress and other strange symptoms. Fatigue, tunnel vision, and even in some cases rapid organ failure..." +
                 " The mayhem you and your...company? helped inflict on the region made that a low priority, we were more concerned about patching up gunshot wounds." +
                 "\n\nHowever, we've had a recent influx of patients showing those same symptoms from all that time ago; I need you to find the source of this contamination. We're unsure if this is connected to the water contamination you helped as remediate before."
-                + "\n\nThere used to be a chemical plant in the factory and warehouse complex next to the Customs road, near the UN checkpoint. It was owned by TerraGroup corporation or one of its subsidiaries, I'm sure you're familiar with them. This could be one of the sources of the contamination. Their trademark is plastered all over, you can't miss it. I need you to locate some of the infrastructure used to manufacture and distribute chemical products. I will send in my people to take samples once you've done so.";
+                + "\n\nThere used to be a chemical plant in the factory and warehouse complex next to the Customs road, between the checkpoint and the petrol station. It was owned by TerraGroup corporation or one of its subsidiaries, I'm sure you're familiar with them. This could be one of the sources of the contamination. Their trademark is featured all over, you can't miss it. I need you to locate some of the infrastructure used to manufacture and store chemical products. I will send in my people to take samples once you've done so.";
             locale["6681c5127b9973f80c7c7d12 failMessageText"] = "";
             locale["6681c5127b9973f80c7c7d12 successMessageText"] = "Thank you mercenary. My people have confirmed the substances that were manufactured here are a match for what some of our patients have been contaminated with. This has grave implications...but that does not concern you. I may have more work for you.";
-            locale["6681c60bf1e98af2b3def8cc"] = "Find the infrastructure used for distribution";
-            locale["6682854b9ad02262e978d803"] = "Find the pumping station used For manufacture";
+            locale["6681c60bf1e98af2b3def8cc"] = "Find the infrastructure used for manufacture";
+            locale["6682854b9ad02262e978d803"] = "Find the infrastructure used for storage";
         }
 
         //find rads
@@ -112,6 +114,7 @@ export class Quests {
             locale["66ddb5a5a0c634bb0c8b1b11"] = "Place marker in a loading site on Shoreline";
             locale["66ddb5cce3de442223979ac8"] = "Find a loading site on Interchange";
             locale["66ddb5d04e6c5562e560f705"] = "Place marker in a loading site on Interchange";
+            locale["66edf085bc2977dd40c64c48"] = "On accepting this quest dynamic hazard zones will spawn.";
         }
     }
 

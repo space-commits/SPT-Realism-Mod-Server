@@ -169,7 +169,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "6681c5fe967f4a1143548c84",
-                                "target": "CustomsChemTrain1",
+                                "target": "CustomsSwitchWarehouse",
                                 "value": 1
                             }
                         ],
@@ -195,7 +195,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "66828530cdc4c6b3b886f6c1",
-                                "target": "CustomsPumpRoom",
+                                "target": "CustomsWarehouse3",
                                 "value": 1
                             }
                         ],

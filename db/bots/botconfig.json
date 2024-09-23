@@ -213,9 +213,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 85,
+                "lowestMax": 80,
                 "highestMax": 95,
-                "maxDelta": 50,
+                "maxDelta": 20,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -227,9 +227,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 80,
+                "lowestMax": 90,
                 "highestMax": 100,
-                "maxDelta": 30,
+                "maxDelta": 10,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -243,7 +243,7 @@
             "weapon": {
                 "lowestMax": 80,
                 "highestMax": 95,
-                "maxDelta": 40,
+                "maxDelta": 20,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -299,7 +299,7 @@
             "weapon": {
                 "lowestMax": 85,
                 "highestMax": 95,
-                "maxDelta": 40,
+                "maxDelta": 20,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -313,7 +313,7 @@
             "weapon": {
                 "lowestMax": 80,
                 "highestMax": 95,
-                "maxDelta": 40,
+                "maxDelta": 20,
                 "minDelta": 0,
                 "minLimitPercent": 155
             }
@@ -327,7 +327,7 @@
             "weapon": {
                 "lowestMax": 80,
                 "highestMax": 95,
-                "maxDelta": 30,
+                "maxDelta": 15,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -341,7 +341,7 @@
             "weapon": {
                 "lowestMax": 70,
                 "highestMax": 90,
-                "maxDelta": 45,
+                "maxDelta": 20,
                 "minDelta": 5,
                 "minLimitPercent": 15
             }
@@ -385,9 +385,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 80,
+                "lowestMax": 75,
                 "highestMax": 90,
-                "maxDelta": 40,
+                "maxDelta": 25,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -399,9 +399,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 80,
+                "lowestMax": 85,
                 "highestMax": 100,
-                "maxDelta": 35,
+                "maxDelta": 15,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -415,7 +415,7 @@
             "weapon": {
                 "lowestMax": 80,
                 "highestMax": 90,
-                "maxDelta": 45,
+                "maxDelta": 22,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -471,7 +471,7 @@
             "weapon": {
                 "lowestMax": 80,
                 "highestMax": 90,
-                "maxDelta": 40,
+                "maxDelta": 25,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -485,7 +485,7 @@
             "weapon": {
                 "lowestMax": 75,
                 "highestMax": 90,
-                "maxDelta": 40,
+                "maxDelta": 25,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -499,7 +499,7 @@
             "weapon": {
                 "lowestMax": 80,
                 "highestMax": 90,
-                "maxDelta": 35,
+                "maxDelta": 17,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -513,7 +513,7 @@
             "weapon": {
                 "lowestMax": 60,
                 "highestMax": 85,
-                "maxDelta": 45,
+                "maxDelta": 22,
                 "minDelta": 5,
                 "minLimitPercent": 15
             }
@@ -557,9 +557,9 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 80,
+                "lowestMax": 70,
                 "highestMax": 95,
-                "maxDelta": 45,
+                "maxDelta": 30,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -573,7 +573,7 @@
             "weapon": {
                 "lowestMax": 80,
                 "highestMax": 100,
-                "maxDelta": 40,
+                "maxDelta": 20,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -587,7 +587,7 @@
             "weapon": {
                 "lowestMax": 75,
                 "highestMax": 90,
-                "maxDelta": 45,
+                "maxDelta": 25,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -643,7 +643,7 @@
             "weapon": {
                 "lowestMax": 75,
                 "highestMax": 90,
-                "maxDelta": 40,
+                "maxDelta": 27,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -657,7 +657,7 @@
             "weapon": {
                 "lowestMax": 70,
                 "highestMax": 90,
-                "maxDelta": 40,
+                "maxDelta": 27,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -672,7 +672,7 @@
                 "lowestMax": 70,
                 "highestMax": 85
                 ,
-                "maxDelta": 40,
+                "maxDelta": 20,
                 "minDelta": 0,
                 "minLimitPercent": 15
             }
@@ -686,7 +686,7 @@
             "weapon": {
                 "lowestMax": 60,
                 "highestMax": 85,
-                "maxDelta": 50,
+                "maxDelta": 25,
                 "minDelta": 5,
                 "minLimitPercent": 15
             }

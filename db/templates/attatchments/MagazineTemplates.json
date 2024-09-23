@@ -2362,7 +2362,7 @@
         "ModType": "",
         "ReloadSpeed": -18,
         "Ergonomics": -6,
-        "MalfunctionChance": 1,
+        "MalfunctionChance": 0.8,
         "LoadUnloadModifier": -10,
         "CheckTimeModifier": 20,
         "ConflictingItems": [],

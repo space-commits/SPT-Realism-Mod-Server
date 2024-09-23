@@ -64,10 +64,10 @@ class Traders {
         insurance.returnChancePercent =
             {
                 "54cb50c76803fa8b248b4571": 30,
-                "54cb57776803fa99248b456e": 80
+                "54cb57776803fa99248b456e": 90
             };
         insurance.minAttachmentRoublePriceToBeTaken = 1000;
-        insurance.chanceNoAttachmentsTakenPercent = 10;
+        insurance.chanceNoAttachmentsTakenPercent = 15;
         insurance.runIntervalSeconds = 600;
         this.tables.traders[prapId].base.insurance.min_return_hour = 2;
         this.tables.traders[prapId].base.insurance.max_return_hour = 3;
@@ -77,7 +77,7 @@ class Traders {
             ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
         });
         this.tables.traders[theraId].base.loyaltyLevels.forEach(ll => {
-            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.5);
+            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
         });
     }
     modifyTraderBuyPrice(traderId, basePrice) {
@@ -606,7 +606,8 @@ class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._45ACP, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 100);
+            this.randomizeAmmoStockHelper(item, enums_1.Calibers._50AE, 8 * modConfig.rand_stackable_modifier * llStackableFactor, 28 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._46x30mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._57x28mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
             this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50);

@@ -34,18 +34,19 @@ const SniperRifleTemplates = require("../../db/templates/weapons/SniperRifleTemp
 const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
 
-const armorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
-const armorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
-const helmetTemplates = require("../../db/templates/gear/helmetTemplates.json");
-const armorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates.json");
-const armorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
-const chestrigTemplates = require("../../db/templates/gear/chestrigTemplates.json");
-const headsetTemplates = require("../../db/templates/gear/headsetTemplates.json");
+const ArmorPlateTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
+const ArmorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
+const ArmorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
+const HelmetTemplates = require("../../db/templates/gear/helmetTemplates.json");
+const ArmorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates.json");
+const ArmorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
+const ChestrigTemplates = require("../../db/templates/gear/chestrigTemplates.json");
+const HeadsetTemplates = require("../../db/templates/gear/headsetTemplates.json");
 
-const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
+const AmmoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
 
-const weapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
-const gearTemlplatesArr = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates, chestrigTemplates, headsetTemplates];
+const WeapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
+const GearTemlplatesArr = [ArmorPlateTemplates, ArmorComponentsTemplates, ArmorChestrigTemplates, HelmetTemplates, ArmorVestsTemplates, ArmorMasksTemplates, ChestrigTemplates, HeadsetTemplates];
 
 const traderRepairs = require("../../db/traders/repair/traderRepair.json");
 const fenceLimits = require("../../db/traders/fence/fenceLimits.json");
@@ -73,10 +74,10 @@ export class Traders {
         insurance.returnChancePercent =
         {
             "54cb50c76803fa8b248b4571": 30,
-            "54cb57776803fa99248b456e": 80
+            "54cb57776803fa99248b456e": 90
         };
         insurance.minAttachmentRoublePriceToBeTaken = 1000;
-        insurance.chanceNoAttachmentsTakenPercent = 10;
+        insurance.chanceNoAttachmentsTakenPercent = 15;
         insurance.runIntervalSeconds = 600;
 
         this.tables.traders[prapId].base.insurance.min_return_hour = 2;
@@ -89,7 +90,7 @@ export class Traders {
             ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
         });
         this.tables.traders[theraId].base.loyaltyLevels.forEach(ll => {
-            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.5);
+            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
         });
     }
 
@@ -221,7 +222,7 @@ export class Traders {
 
 
     public setBasePrices(trader: ITrader) {
-        if (modConfig.realistic_ballistics == true) this.setBasePrice(ammoTemplates, trader);
+        if (modConfig.realistic_ballistics == true) this.setBasePrice(AmmoTemplates, trader);
     }
 
     public setBasePrice(db: any[], trader: ITrader) {
@@ -241,9 +242,9 @@ export class Traders {
     }
 
     public setLoyaltyLevels(trader: ITrader) {
-        if (modConfig.realistic_ballistics == true) this.loyaltyLevelHelper(ammoTemplates, false, trader);
-        if (modConfig.recoil_attachment_overhaul == true) this.loyaltyLevelHelper(weapTemplatesArr, true, trader);
-        if (modConfig.realistic_ballistics == true) this.loyaltyLevelHelper(gearTemlplatesArr, true, trader);
+        if (modConfig.realistic_ballistics == true) this.loyaltyLevelHelper(AmmoTemplates, false, trader);
+        if (modConfig.recoil_attachment_overhaul == true) this.loyaltyLevelHelper(WeapTemplatesArr, true, trader);
+        if (modConfig.realistic_ballistics == true) this.loyaltyLevelHelper(GearTemlplatesArr, true, trader);
     }
 
     private loyaltyLevelHelper(template: any[], multifile: boolean, trader: ITrader) {
@@ -716,7 +717,8 @@ export class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50);
             this.randomizeAmmoStockHelper(item, Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55);
             this.randomizeAmmoStockHelper(item, Calibers._45ACP, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55);
-            this.randomizeAmmoStockHelper(item, Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
+            this.randomizeAmmoStockHelper(item, Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 100);
+            this.randomizeAmmoStockHelper(item, Calibers._50AE, 8 * modConfig.rand_stackable_modifier * llStackableFactor, 28 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
             this.randomizeAmmoStockHelper(item, Calibers._46x30mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
             this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
             this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50);
@@ -736,6 +738,7 @@ export class RandomizeTraderAssort {
             this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
             this.randomizeAmmoStockHelper(item, Calibers._338mag, 5 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 70, 120);
+
         }
     }
 

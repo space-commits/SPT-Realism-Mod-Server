@@ -23,7 +23,7 @@ class WeaponsGlobals {
         this.globalDB().Malfunction.DurRangeToIgnoreMalfs["y"] = 100;
         this.globalDB().Malfunction.AmmoMalfChanceMult = 1;
         this.globalDB().Malfunction.MagazineMalfChanceMult = 1;
-        this.globalDB().Overheat.MaxCOIIncreaseMult = 3;
+        this.globalDB().Overheat.MaxCOIIncreaseMult = 2.5;
         this.globalDB().Overheat.FirerateReduceMinMult = 1;
         this.globalDB().Overheat.FirerateReduceMaxMult = 1.12;
         this.globalDB().Overheat.FirerateOverheatBorder = 25;
@@ -51,7 +51,7 @@ class WeaponsGlobals {
                 serverItem._props.MaxRepairKitDegradation = 0.0001;
                 serverItem._props.RepairComplexity = 0;
                 serverItem._props.HeatFactorGun *= 2.5;
-                serverItem._props.CoolFactorGun *= 2;
+                serverItem._props.CoolFactorGun *= 4;
             }
             if (serverItem._parent === enums_1.ParentClasses.REPAIRKITS) {
                 serverItem._props.RepairQuality = 0;

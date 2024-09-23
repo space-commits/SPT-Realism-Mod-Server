@@ -39,7 +39,7 @@
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
                     "id": "66dad1cb72e715b2f7ae7d0a",
-                    "index": 0,
+                    "index": 1,
                     "parentId": "",
                     "plantTime": 10,
                     "target": [
@@ -68,7 +68,7 @@
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
                     "id": "66ddb2de064eeae93da154ca",
-                    "index": 0,
+                    "index": 2,
                     "oneSessionOnly": false,
                     "parentId": "",
                     "type": "Exploration",
@@ -80,7 +80,7 @@
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
                     "id": "66ddb5a5a0c634bb0c8b1b11",
-                    "index": 0,
+                    "index": 3,
                     "parentId": "",
                     "plantTime": 10,
                     "target": [
@@ -109,7 +109,7 @@
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
                     "id": "66ddb5cce3de442223979ac8",
-                    "index": 0,
+                    "index": 4,
                     "oneSessionOnly": false,
                     "parentId": "",
                     "type": "Exploration",
@@ -121,7 +121,7 @@
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
                     "id": "66ddb5d04e6c5562e560f705",
-                    "index": 0,
+                    "index": 5,
                     "parentId": "",
                     "plantTime": 10,
                     "target": [
@@ -130,6 +130,32 @@
                     "value": 1,
                     "visibilityConditions": [],
                     "zoneId": "dynamicinterchange"
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "66edf0883e72fc804557172d",
+                                "target": "",
+                                "value": 1
+                            }
+                        ],
+                        "id": "66edf091a21ab7201a37ba8d"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "66edf085bc2977dd40c64c48",
+                    "index": 6,
+                    "oneSessionOnly": false,
+                    "parentId": "66ddb5d04e6c5562e560f705",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
                 }
             ],
             "AvailableForStart": [

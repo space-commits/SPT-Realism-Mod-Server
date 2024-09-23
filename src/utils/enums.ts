@@ -126,5 +126,6 @@ export const enum Calibers {
     _26x75mm = "Caliber26x75",
     _12ga = "Caliber12g",
     _20ga = "Caliber20g",
-    _23x75mm = "Caliber23x75"
+    _23x75mm = "Caliber23x75",
+    _50AE = "Caliber127x33",
 }
