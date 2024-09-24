@@ -20,16 +20,17 @@ const SMGTemplates = require("../../db/templates/weapons/SMGTemplates.json");
 const SniperRifleTemplates = require("../../db/templates/weapons/SniperRifleTemplates.json");
 const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
-const armorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
-const armorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
-const helmetTemplates = require("../../db/templates/gear/helmetTemplates.json");
-const armorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates.json");
-const armorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
-const chestrigTemplates = require("../../db/templates/gear/chestrigTemplates.json");
-const headsetTemplates = require("../../db/templates/gear/headsetTemplates.json");
-const ammoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
-const weapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
-const gearTemlplatesArr = [armorComponentsTemplates, armorChestrigTemplates, helmetTemplates, armorVestsTemplates, armorMasksTemplates, chestrigTemplates, headsetTemplates];
+const ArmorPlateTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
+const ArmorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
+const ArmorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
+const HelmetTemplates = require("../../db/templates/gear/helmetTemplates.json");
+const ArmorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates.json");
+const ArmorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
+const ChestrigTemplates = require("../../db/templates/gear/chestrigTemplates.json");
+const HeadsetTemplates = require("../../db/templates/gear/headsetTemplates.json");
+const AmmoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
+const WeapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
+const GearTemlplatesArr = [ArmorPlateTemplates, ArmorComponentsTemplates, ArmorChestrigTemplates, HelmetTemplates, ArmorVestsTemplates, ArmorMasksTemplates, ChestrigTemplates, HeadsetTemplates];
 const traderRepairs = require("../../db/traders/repair/traderRepair.json");
 const fenceLimits = require("../../db/traders/fence/fenceLimits.json");
 const buyCat = require("../../db/traders/buy_categories.json");
@@ -196,7 +197,7 @@ class Traders {
     }
     setBasePrices(trader) {
         if (modConfig.realistic_ballistics == true)
-            this.setBasePrice(ammoTemplates, trader);
+            this.setBasePrice(AmmoTemplates, trader);
     }
     setBasePrice(db, trader) {
         for (let item in trader.assort.items) { //loop offers
@@ -217,11 +218,11 @@ class Traders {
     }
     setLoyaltyLevels(trader) {
         if (modConfig.realistic_ballistics == true)
-            this.loyaltyLevelHelper(ammoTemplates, false, trader);
+            this.loyaltyLevelHelper(AmmoTemplates, false, trader);
         if (modConfig.recoil_attachment_overhaul == true)
-            this.loyaltyLevelHelper(weapTemplatesArr, true, trader);
+            this.loyaltyLevelHelper(WeapTemplatesArr, true, trader);
         if (modConfig.realistic_ballistics == true)
-            this.loyaltyLevelHelper(gearTemlplatesArr, true, trader);
+            this.loyaltyLevelHelper(GearTemlplatesArr, true, trader);
     }
     loyaltyLevelHelper(template, multifile, trader) {
         if (multifile == false) {
