@@ -1,4 +1,32 @@
 {
+    "66a0d1f88486c69fce00fdf6": {
+        "ItemID": "66a0d1f88486c69fce00fdf6",
+        "Name": "patron_127x33_jsp",
+        "LoyaltyLevel": 3,
+        "TemplateType": "ammo",
+        "BasePriceModifier": 1
+    },
+    "66a0d1e0ed648d72fe064d06": {
+        "ItemID": "66a0d1e0ed648d72fe064d06",
+        "Name": "patron_127x33_cooper",
+        "LoyaltyLevel": 3,
+        "TemplateType": "ammo",
+        "BasePriceModifier": 1
+    },
+    "66a0d1c87d0d369e270bb9de": {
+        "ItemID": "66a0d1c87d0d369e270bb9de",
+        "Name": "patron_127x33_jhp",
+        "LoyaltyLevel": 4,
+        "TemplateType": "ammo",
+        "BasePriceModifier": 1
+    },
+    "668fe62ac62660a5d8071446": {
+        "ItemID": "668fe62ac62660a5d8071446",
+        "Name": "patron_127x33_fmj",
+        "LoyaltyLevel": 2,
+        "TemplateType": "ammo",
+        "BasePriceModifier": 1
+    },
     "5656eb674bdc2d35148b457c": {
         "ItemID": "5656eb674bdc2d35148b457c",
         "Name": "40 VOG-25",
@@ -534,9 +562,9 @@
     "54527a984bdc2d4e668b4567": {
         "ItemID": "54527a984bdc2d4e668b4567",
         "Name": "patron_556x45_M855",
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 1.5
     },
     "54527ac44bdc2d36668b4567": {
         "ItemID": "54527ac44bdc2d36668b4567",

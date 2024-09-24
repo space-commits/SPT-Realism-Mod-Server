@@ -191,11 +191,13 @@ class Armor {
             "5c0e722886f7740458316a57",
             "628b9c7d45122232a872358f",
             "5e4ac41886f77406a511c9a8",
-            "5b44cad286f77402a54ae7e5"
+            "5b44cad286f77402a54ae7e5",
+            "66b6295178bbc0200425f995"
         ];
         let carriersSlim = [
             "64a5366719bab53bd203bf33",
             "628cd624459354321c4b7fa2",
+            "66b6295a8ca68c6461709efa",
             "628b9784bcf6e2659e09b8a2",
             "64a536392d2c4e6e970f4121",
             "61bc85697113f767765c7fe7",
@@ -203,7 +205,7 @@ class Armor {
             "609e860ebd219504d8507525",
             "5e4abb5086f77406975c9342",
             "6038b4b292ec1c3103795a0b",
-            "5fd4c474dd870108a754b241"
+            "5fd4c474dd870108a754b241",
         ];
         if (carriersSlim.includes(serverItem._id)) {
             this.modifyAramid(serverItem, 3, 50, 0.25);
@@ -226,6 +228,10 @@ class Armor {
         //Press
         if (serverItem._id === "5c0e5edb86f77461f55ed1f7") {
             this.modifyAramid(serverItem, 4, 100, 0.45);
+        }
+        //Stich Profi Plate Carrier V2 Black
+        if (serverItem._id === "66b6296d7994640992013b17") {
+            this.modifyAramid(serverItem, 4, 100, 0.33);
         }
         //Strandhogg
         if (serverItem._id === "61bcc89aef0f505f0c6cd0fc") {
@@ -1274,7 +1280,7 @@ class Armor {
     loadHelmets(serverItem, tables) {
         const classModifier = this.modConf.buff_helmets === true ? 1 : 0;
         const duraModifier = this.modConf.buff_helmets === true ? 1.25 : 1;
-        const bluntModifier = this.modConf.buff_helmets === true ? 0.65 : 0.75;
+        const bluntModifier = this.modConf.buff_helmets === true ? 0.7 : 0.75;
         ///// HELMETS //////
         //// Class 0 ////
         //Beanie
@@ -1685,6 +1691,20 @@ class Armor {
                 "ParietalHead"
             ];
         }
+        //Ronin old
+        if (serverItem._id === "66bdc28a0b603c26902b2011") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -8.6;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -9;
+            serverItem._props.BluntThroughput = 0.24 * bluntModifier;
+            serverItem._props.DeafStrength = "High";
+            serverItem._props.ArmorMaterial = 'Aramid';
+            serverItem._props.Weight = 1.6;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 80 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
+        }
         //Ronin
         if (serverItem._id === "5b4329f05acfc47a86086aa1") {
             serverItem._props.Durability = 0;
@@ -1825,6 +1845,20 @@ class Armor {
             serverItem._props.Weight = 1.17;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 65 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'UHMWPE');
         }
+        //Ballistic Armor Co Bastion
+        if (serverItem._id === "66b5f65ca7f72d197e70bcd6" || serverItem._id === "66b5f661af44ca0014063c05" || serverItem._id === "66b5f666cad6f002ab7214c2") {
+            serverItem._props.Durability = 0;
+            serverItem._props.MaxDurability = serverItem._props.Durability;
+            serverItem._props.armorClass = 0;
+            serverItem._props.speedPenaltyPercent = -1;
+            serverItem._props.mousePenalty = 0;
+            serverItem._props.weaponErgonomicPenalty = -0.6;
+            serverItem._props.BluntThroughput = 0.15 * bluntModifier;
+            serverItem._props.DeafStrength = "None";
+            serverItem._props.ArmorMaterial = 'Combined';
+            serverItem._props.Weight = 1.44;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 50 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Combined');
+        }
         //Diamond Age
         if (serverItem._id === "5ea17ca01412a1425304d1c0") {
             serverItem._props.Durability = 0;
@@ -1943,9 +1977,9 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -4.5;
+            serverItem._props.speedPenaltyPercent = -6;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -8;
+            serverItem._props.weaponErgonomicPenalty = -12;
             serverItem._props.BluntThroughput = 0.14 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Combined';

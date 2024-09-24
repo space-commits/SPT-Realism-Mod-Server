@@ -1,42 +1,29 @@
 {
-    "pistolgrip_m1014": {
-        "ItemID": "pistolgrip_m1014",
-        "Name": "pistolgrip_m1014",
+    "66a0da76b6f47fcfeb025e96": {
+        "ItemID": "66a0da76b6f47fcfeb025e96",
+        "Name": "pistolgrip_deagle_hogue_rubber_grips_ergo",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
+        "HorizontalRecoil": -5,
+        "Dispersion": -5,
         "AimSpeed": 0,
-        "Ergonomics": 6,
+        "Ergonomics": 4,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.134
+        "Weight": 0.12
     },
-    "pistolgrip_vepr12_molot": {
-        "ItemID": "pistolgrip_vepr12_molot",
-        "Name": "pistolgrip_vepr12_molot",
+    "668fe5d42a0f85eea407cc16": {
+        "ItemID": "668fe5d42a0f85eea407cc16",
+        "Name": "pistolgrip_deagle_hogue_rubber_grips",
         "ModType": "",
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 3,
-        "Accuracy": 0,
+        "Ergonomics": 8,
+        "Accuracy": 5,
         "ConflictingItems": [],
-        "Weight": 0.065
-    },
-    "pistolgrip_l85a2": {
-        "ItemID": "pistolgrip_l85a2",
-        "Name": "pistolgrip_l85a2",
-        "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "AimSpeed": 0,
-        "Ergonomics": 2.5,
-        "Accuracy": 0,
-        "ConflictingItems": [],
-        "Weight": 0.08
+        "Weight": 0.11
     },
     "619f4ab2d25cbd424731fb95": {
         "ItemID": "619f4ab2d25cbd424731fb95",
@@ -1676,8 +1663,99 @@
         "Dispersion": 0,
         "AimSpeed": 0,
         "Ergonomics": 6,
-        "Accuracy": 0,
+        "Accuracy": 2,
         "ConflictingItems": [],
         "Weight": 0.08
+    },
+    "669946c157df3e2b4e0a0dc5": {
+        "ItemID": "669946c157df3e2b4e0a0dc5",
+        "Name": "pistolgrip_uzi_iwi_uzi_cover_std",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 2,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.07
+    },
+    "6601257f1347bc1a5f0f4db6": {
+        "ItemID": "6601257f1347bc1a5f0f4db6",
+        "Name": "pistolgrip_m60_usord_m60e4_trigger_group",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.101
+    },
+    "6615208aa031cbb5570e346a": {
+        "ItemID": "6615208aa031cbb5570e346a",
+        "Name": "pistolgrip_m60_usord_m60e6_trigger_group",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 0,
+        "Accuracy": 5,
+        "ConflictingItems": [],
+        "Weight": 0.098
+    },
+    "66152153a031cbb5570e346f": {
+        "ItemID": "66152153a031cbb5570e346f",
+        "Name": "pistolgrip_m60_usord_m60e6_trigger_group_fde",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 0,
+        "Accuracy": 5,
+        "ConflictingItems": [],
+        "Weight": 0.098
+    },
+    "660125bf1d087a96c60a54db": {
+        "ItemID": "660125bf1d087a96c60a54db",
+        "Name": "pistolgrip_m60_usord_m60e4_std",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 4.5,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.039
+    },
+    "66152060a031cbb5570e3466": {
+        "ItemID": "66152060a031cbb5570e3466",
+        "Name": "pistolgrip_m60_usord_m60e6_std",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 6,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.042
+    },
+    "6615211ca031cbb5570e346d": {
+        "ItemID": "6615211ca031cbb5570e346d",
+        "Name": "pistolgrip_m60_usord_m60e6_std_fde",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 6,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.042
     }
 }

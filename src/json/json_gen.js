@@ -424,7 +424,7 @@ class JsonGen {
         let CenterOfImpact = serverItem._props.CenterOfImpact;
         let HeatFactor = serverItem._props.HeatFactor;
         let CoolFactor = serverItem._props.CoolFactor;
-        let MagMalfunctionChance = serverItem._props.MalfunctionChance;
+        let MalfunctionChance = serverItem._props.MalfunctionChance;
         let LoadUnloadModifier = serverItem._props.LoadUnloadModifier;
         let CheckTimeModifier = serverItem._props.CheckTimeModifier;
         let DurabilityBurnModificator = serverItem._props.DurabilityBurnModificator;
@@ -558,7 +558,7 @@ class JsonGen {
                 ModType,
                 ReloadSpeed,
                 Ergonomics,
-                MagMalfunctionChance,
+                MalfunctionChance,
                 LoadUnloadModifier,
                 CheckTimeModifier,
                 ConflictingItems,
@@ -703,7 +703,7 @@ class JsonGen {
                 CenterOfImpact,
                 HeatFactor,
                 CoolFactor,
-                MagMalfunctionChance,
+                MalfunctionChance,
                 LoadUnloadModifier,
                 CheckTimeModifier,
                 DurabilityBurnModificator,

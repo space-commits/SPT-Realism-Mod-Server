@@ -552,6 +552,19 @@
         "LoyaltyLevel": 0,
         "Price": 0
     },
+    "65f05b9d39dab9e9ec049cfd": {
+        "ItemID": "65f05b9d39dab9e9ec049cfd",
+        "Name": "scope_dovetail_komz_rusak",
+        "ModType": "sight",
+        "AimSpeed": -10,
+        "Accuracy": -10,
+        "Ergonomics": 0,
+        "Weight": 0.24,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    },
     "5947db3f86f77447880cf76f": {
         "ItemID": "5947db3f86f77447880cf76f",
         "Name": "scope_dovetail_aksion_ekp_8_02",

@@ -446,44 +446,47 @@ export class BotLoader {
         });
     }
 
-    private setBotTier(pmcData, bots: BotLoader, helper: Utils) {
-        this.setBotTierHelper(pmcData, "scav", bots, helper);
-        this.setBotTierHelper(pmcData, "raider", bots, helper);
-        this.setBotTierHelper(pmcData, "rogue", bots, helper);
-        this.setBotTierHelper(pmcData, "goons", bots, helper);
-        this.setBotTierHelper(pmcData, "killa", bots, helper);
-        this.setBotTierHelper(pmcData, "tagilla", bots, helper);
-        this.setBotTierHelper(pmcData, "sanitar", bots, helper);
-        this.setBotTierHelper(pmcData, "reshalla", bots, helper);
+    private setBossTiers(pmcData, bots: BotLoader, helper: Utils) {
+        this.setBossTierHelper(pmcData, "scav", bots, helper);
+        this.setBossTierHelper(pmcData, "raider", bots, helper);
+        this.setBossTierHelper(pmcData, "rogue", bots, helper);
+        this.setBossTierHelper(pmcData, "goons", bots, helper);
+        this.setBossTierHelper(pmcData, "killa", bots, helper);
+        this.setBossTierHelper(pmcData, "tagilla", bots, helper);
+        this.setBossTierHelper(pmcData, "sanitar", bots, helper);
+        this.setBossTierHelper(pmcData, "reshalla", bots, helper);
     }
 
-    private setBotTierHelper(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
+    private setBossTierHelper(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
         let tier = 1;
         let tierArray = [1, 2, 3];
 
-        if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 5) {
+        if (pmcData.Info.Level <= 5) {
             tier = utils.probabilityWeighter(tierArray, [100, 0, 0]);
         }
-        if (pmcData.Info.Level >= 5 && pmcData.Info.Level < 10) {
-            tier = utils.probabilityWeighter(tierArray, [80, 20, 0]);
+        if (pmcData.Info.Level <= 10) {
+            tier = utils.probabilityWeighter(tierArray, [100, 0, 0]);
         }
-        if (pmcData.Info.Level >= 10 && pmcData.Info.Level < 15) {
-            tier = utils.probabilityWeighter(tierArray, [70, 20, 10]);
+        if (pmcData.Info.Level <= 15) {
+            tier = utils.probabilityWeighter(tierArray, [90, 10, 0]);
         }
-        if (pmcData.Info.Level >= 15 && pmcData.Info.Level < 20) {
+        if (pmcData.Info.Level <= 20) {
+            tier = utils.probabilityWeighter(tierArray, [60, 30, 0]);
+        }
+        if (pmcData.Info.Level <= 25) {
             tier = utils.probabilityWeighter(tierArray, [50, 40, 10]);
         }
-        if (pmcData.Info.Level >= 20 && pmcData.Info.Level < 25) {
+        if (pmcData.Info.Level <= 30) {
             tier = utils.probabilityWeighter(tierArray, [40, 40, 20]);
         }
-        if (pmcData.Info.Level >= 25 && pmcData.Info.Level < 30) {
-            tier = utils.probabilityWeighter(tierArray, [30, 40, 30]);
+        if (pmcData.Info.Level <= 35) {
+            tier = utils.probabilityWeighter(tierArray, [20, 40, 40]);
         }
-        if (pmcData.Info.Level >= 30 && pmcData.Info.Level < 35) {
+        if (pmcData.Info.Level <= 40) {
             tier = utils.probabilityWeighter(tierArray, [20, 30, 50]);
         }
-        if (pmcData.Info.Level >= 35) {
-            tier = utils.probabilityWeighter(tierArray, [10, 30, 60]);
+        if (pmcData.Info.Level > 40) {
+            tier = utils.probabilityWeighter(tierArray, [10, 20, 70]);
         }
 
         if (type === "reshalla") {
@@ -600,16 +603,16 @@ export class BotLoader {
                 logger.warning("Realism Mod: Bots Are In Test Mode");
             }
             if (config.bot_testing == false) {
-                if (pmcData.Info.Level >= 0 && pmcData.Info.Level < 15) {
+                if (pmcData.Info.Level <= 16) {
                     bots.botConfig1();
                 }
-                if (pmcData.Info.Level >= 16 && pmcData.Info.Level < 25) {
+                if (pmcData.Info.Level <= 35) {
                     bots.botConfig2();
                 }
-                if (pmcData.Info.Level >= 26) {
+                if (pmcData.Info.Level > 35) {
                     bots.botConfig3();
                 }
-                this.setBotTier(pmcData, bots, helper);
+                this.setBossTiers(pmcData, bots, helper);
                 if (config.logEverything == true) {
                     logger.info("Realism Mod: Bot Tiers Have Been Set");
                 }
@@ -1075,6 +1078,10 @@ export class BotLoader {
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
 
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
+        }
+
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
@@ -1159,6 +1166,11 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...usecLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["5b432c305acfc40019478128"] = 5; //gp5
+            botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
 
         if (this.modConfig.enable_hazard_zones) {
@@ -1256,6 +1268,12 @@ export class BotLoader {
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
 
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 5; //gp7
+            botJsonTemplate.inventory.equipment.FaceCover["5b432c305acfc40019478128"] = 15; //gp5
+            botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 5; //resp
+        }
+
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
@@ -1343,6 +1361,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...usecLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
         }
 
         if (this.modConfig.enable_hazard_zones) {
@@ -1456,6 +1478,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
+        
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
+        }
 
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(botJsonTemplate.inventory);
@@ -1540,6 +1566,11 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment_002 = 0;
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["5b432c305acfc40019478128"] = 5; //gp5
+            botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
 
         if (this.modConfig.enable_hazard_zones) {
@@ -1631,6 +1662,12 @@ export class BotLoader {
             botJsonTemplate.chances.equipment.FaceCover = 100;
         }
 
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 5; //gp7
+            botJsonTemplate.inventory.equipment.FaceCover["5b432c305acfc40019478128"] = 15; //gp5
+            botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 5; //resp
+        }
+
         if (this.modConfig.enable_hazard_zones) {
             this.pushGasMaskFilters(botJsonTemplate.inventory);
         }
@@ -1716,6 +1753,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...bearLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
         }
 
         if (this.modConfig.enable_hazard_zones) {
@@ -1813,6 +1854,10 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...bearLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+        }
+
+        if(RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase"){
+            botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
         }
 
         if (this.modConfig.enable_hazard_zones) {

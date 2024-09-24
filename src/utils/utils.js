@@ -68,34 +68,28 @@ class Utils {
                     this.correctMedicalRes(profileItem, playerXP, logger);
                 }
                 if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent !== undefined) {
-                    this.correcProvisionRes(profileItem, playerXP, logger);
+                    this.correctProvisionRes(profileItem, playerXP, logger);
                 }
             }
         }
     }
-    correcProvisionRes(profileItem, playerXP, logger) {
+    correctProvisionRes(profileItem, playerXP, logger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined) {
-            if (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0) {
-                profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
-            }
+        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
+            profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
         }
     }
     correctMedicalRes(profileItem, playerXP, logger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined) {
-            if (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0) {
-                profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
-            }
+        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
+            profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
         }
     }
     correctDuraHelper(profileItem, playerXP) {
-        for (let j in this.itemDB()) {
-            let serverItem = this.itemDB()[j];
-            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (playerXP == 0)) {
-                profileItem.upd.Repairable.Durability = serverItem._props.Durability;
-                profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;
-            }
+        let templateItem = this.itemDB()[profileItem._tpl];
+        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
+            profileItem.upd.Repairable.Durability = templateItem._props.Durability;
+            profileItem.upd.Repairable.MaxDurability = templateItem._props.MaxDurability;
         }
     }
     probabilityWeighter(items, weights) {

@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemStatHandler = void 0;
 const enums_1 = require("../utils/enums");
-const utils_1 = require("../utils/utils");
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
@@ -192,9 +191,6 @@ class ItemStatHandler {
             if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
                 return;
             }
-            if (fileItem.ItemID === "60363c0c92ec1c31037959f5" && utils_1.ModTracker.tgcPresent) {
-                fileItem.GasProtection = 0.95;
-            }
             let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
                 fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.RadProtection?.toString() || "0",
                 fileItem?.MaskToUse?.toString() || "", fileItem?.GasProtection?.toString() || "0", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.IsGasMask?.toString() || "false"];
@@ -228,7 +224,6 @@ class ItemStatHandler {
             serverItem._props.HeatFactor = fileItem.HeatFactor != undefined ? fileItem.HeatFactor : 1;
             serverItem._props.CoolFactor = fileItem.CoolFactor != undefined ? fileItem.CoolFactor : 1;
             serverItem._props.MalfunctionChance = fileItem.MalfunctionChance != undefined ? fileItem.MalfunctionChance : 0;
-            // serverItem._props.LoadUnloadModifier = fileItem.LoadUnloadModifier;
             // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
             serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != undefined ? fileItem.DurabilityBurnModificator : 1;
             serverItem._props.BlocksFolding = fileItem.BlocksFolding != undefined ? fileItem.BlocksFolding : false;

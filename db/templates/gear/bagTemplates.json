@@ -363,10 +363,22 @@
         "ItemID": "545cdae64bdc2d39198b4568",
         "Name": "bigBackpack",
         "AllowADS": true,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.87,
+        "Comfort": 0.78,
         "speedPenaltyPercent": -3,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
+    "66b5f22b78bbc0200425f904": {
+        "ItemID": "66b5f22b78bbc0200425f904",
+        "Name": "item_equipment_backpack_camelback_trizip_multicam",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.79,
+        "speedPenaltyPercent": -2.5,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
@@ -379,6 +391,18 @@
         "ReloadSpeedMulti": 1,
         "Comfort": 1.08,
         "speedPenaltyPercent": -0.6,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
+    "66a9f98f3bd5a41b162030f4": {
+        "ItemID": "66a9f98f3bd5a41b162030f4",
+        "Name": "backpack_partizan",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.15,
+        "speedPenaltyPercent": -1,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"

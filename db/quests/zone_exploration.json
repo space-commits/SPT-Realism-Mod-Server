@@ -1,6 +1,6 @@
 {
     "6681d150fd1d7f0b7e5ae953": {
-        "QuestName": "Rad Exploration",
+        "QuestName": "Safety Technician - Part 2",
         "_id": "6681d150fd1d7f0b7e5ae953",
         "acceptPlayerMessage": "6681d150fd1d7f0b7e5ae953 acceptPlayerMessage",
         "canShowNotificationsInGame": true,
@@ -116,14 +116,14 @@
                     "id": "6681d18686762020ba680703",
                     "index": 0,
                     "type": "Experience",
-                    "value": "1100"
+                    "value": "1500"
                 },
                 {
                     "id": "6681d18ba49e654a1cef4feb",
                     "index": 1,
                     "target": "54cb57776803fa99248b456e",
                     "type": "TraderStanding",
-                    "value": "0.01"
+                    "value": "0.015"
                 },
                 {
                     "findInRaid": true,
@@ -134,13 +134,13 @@
                             "_id": "6681d1966cfd062bdcede100",
                             "_tpl": "5449016a4bdc2d6f028b456f",
                             "upd": {
-                                "StackObjectsCount": 15000
+                                "StackObjectsCount": 25000
                             }
                         }
                     ],
                     "target": "6681d1966cfd062bdcede100",
                     "type": "Item",
-                    "value": "15000"
+                    "value": "25000"
                 }
             ]
         },
@@ -152,7 +152,7 @@
         "type": "Discover"
     },
     "6681c5127b9973f80c7c7d12": {
-        "QuestName": "Gas Exploration",
+        "QuestName": "Safety Technician - Part 1",
         "_id": "6681c5127b9973f80c7c7d12",
         "acceptPlayerMessage": "6681c5127b9973f80c7c7d12 acceptPlayerMessage",
         "canShowNotificationsInGame": true,
@@ -169,7 +169,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "6681c5fe967f4a1143548c84",
-                                "target": "CustomsChemTrain1",
+                                "target": "CustomsSwitchWarehouse",
                                 "value": 1
                             }
                         ],
@@ -195,7 +195,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "66828530cdc4c6b3b886f6c1",
-                                "target": "CustomsPumpRoom",
+                                "target": "CustomsWarehouse3",
                                 "value": 1
                             }
                         ],
@@ -287,13 +287,13 @@
                             "_id": "6681d0b761a6e320c3a625d0",
                             "_tpl": "5449016a4bdc2d6f028b456f",
                             "upd": {
-                                "StackObjectsCount": 10000
+                                "StackObjectsCount": 15000
                             }
                         }
                     ],
                     "target": "6681d0b761a6e320c3a625d0",
                     "type": "Item",
-                    "value": "10000"
+                    "value": "15000"
                 }
             ]
         },

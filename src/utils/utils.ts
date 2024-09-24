@@ -17,16 +17,14 @@ export class Utils {
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
     }
-    
-    public getInt(min: number, max: number): number
-    {
+
+    public getInt(min: number, max: number): number {
         min = Math.ceil(min);
         max = Math.floor(max);
         return (max > min) ? Math.floor(Math.random() * (max - min + 1) + min) : min;
     }
-    
-    public getArrayValue<T>(arr: T[]): T
-    {
+
+    public getArrayValue<T>(arr: T[]): T {
         return arr[this.getInt(0, arr.length - 1)];
     }
 
@@ -35,7 +33,7 @@ export class Utils {
             for (let i in playerData.Inventory.items) {
                 if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
                     let templateItem = this.itemDB()[playerData.Inventory.items[i]._tpl];
-                    if(templateItem !== null && templateItem !== undefined){
+                    if (templateItem !== null && templateItem !== undefined) {
                         playerData.Inventory.items[i].upd.MedKit.HpResource = templateItem._props.MaxHpResource;
                     }
                 }
@@ -53,44 +51,35 @@ export class Utils {
                 if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
                     this.correctMedicalRes(profileItem, playerXP, logger);
                 }
-                if(modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent !== undefined){
-                    this.correcProvisionRes(profileItem, playerXP, logger);
+                if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent !== undefined) {
+                    this.correctProvisionRes(profileItem, playerXP, logger);
                 }
             }
         }
     }
 
-    private correcProvisionRes(profileItem: Item, playerXP: number, logger: ILogger) {
+    private correctProvisionRes(profileItem: Item, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if(templateItem !== null && templateItem !== undefined){
-            if(profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0 ){
-                profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
-            }
+        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
+            profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
         }
     }
 
 
     private correctMedicalRes(profileItem: Item, playerXP: number, logger: ILogger) {
-
         let templateItem = this.itemDB()[profileItem._tpl];
-        if(templateItem !== null && templateItem !== undefined){
-            if(profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0 ){
-                profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
-            }
-      
+        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
+            profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
         }
     }
 
     private correctDuraHelper(profileItem: Item, playerXP: number) {
-        for (let j in this.itemDB()) {
-            let serverItem = this.itemDB()[j]
-            if (profileItem._tpl === serverItem._id && profileItem.upd.Repairable.Durability > serverItem._props.MaxDurability || (playerXP == 0)) {
-                profileItem.upd.Repairable.Durability = serverItem._props.Durability;
-                profileItem.upd.Repairable.MaxDurability = serverItem._props.MaxDurability;
-            }
+        let templateItem = this.itemDB()[profileItem._tpl]
+        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
+            profileItem.upd.Repairable.Durability = templateItem._props.Durability;
+            profileItem.upd.Repairable.MaxDurability = templateItem._props.MaxDurability;
         }
     }
-
 
     public probabilityWeighter(items: any, weights: number[]): any {
         function add(a, b) { return a + b; }
@@ -136,7 +125,7 @@ export class Utils {
 }
 
 
-export class ModTracker{
+export class ModTracker {
     static batteryModPresent: boolean = false;
     static sainPresent: boolean = false;
     static swagPresent: boolean = false;
@@ -146,7 +135,7 @@ export class ModTracker{
 }
 
 
-export class ProfileTracker{
+export class ProfileTracker {
     static profileIds: string[] = [];
     static averagePlayerLevel: number = 1;
     static playerRecord: Record<string, number> = {};

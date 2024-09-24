@@ -186,7 +186,6 @@ export class ItemsClass {
         }
     }
 
-
     public loadItemBlacklists(){
         for(let i in this.arrays.blacklistedItems){
             this.itemConfig.blacklist.push(this.arrays.blacklistedItems[i]);

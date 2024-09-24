@@ -24,7 +24,7 @@ export class Gear {
         this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
         });
-        if(this.itemDB()["a8edfb0bce53d103d3f62b9b"]) {
+        if (this.itemDB()["a8edfb0bce53d103d3f62b9b"]) {
             this.itemDB()["a8edfb0bce53d103d3f62b9b"]._props.Slots.forEach(slot => {
                 slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
             });
@@ -151,6 +151,56 @@ export class Gear {
                 serverItem._props.AmbientVolume = -2.85;
                 serverItem._props.CompressorGain = 9;
                 serverItem._props.CompressorTreshold = -24;
+            }
+
+            //Safariland Liberator HP 2
+            if (serverItem._id === "66b5f68de98be930d701c00e") {
+                serverItem._props.Distortion = 0.15;
+                serverItem._props.Resonance = 2;
+                serverItem._props.DryVolume = -55; //according to refiews, it's official rating is too generous
+                serverItem._props.AmbientVolume = -2.8;
+                serverItem._props.CompressorGain = 10;
+                serverItem._props.CompressorTreshold = -23;
+            }
+
+            //Comtac VI helmet
+            if (serverItem._id === "66b5f6a28ca68c6461709ed8") {
+                serverItem._props.Distortion = 0.18;
+                serverItem._props.Resonance = 1.6;
+                serverItem._props.DryVolume = -56;
+                serverItem._props.AmbientVolume = -2.95;
+                serverItem._props.CompressorGain = 10;
+                serverItem._props.CompressorTreshold = -25;
+            }
+
+            //Comtac VI
+            if (serverItem._id === "66b5f6985891c84aab75ca76") {
+                serverItem._props.Distortion = 0.18;
+                serverItem._props.Resonance = 1.6;
+                serverItem._props.DryVolume = -56;
+                serverItem._props.AmbientVolume = -2.95;
+                serverItem._props.CompressorGain = 10;
+                serverItem._props.CompressorTreshold = -25;
+            }
+
+            //Comtac V helmet
+            if (serverItem._id === "66b5f69ea7f72d197e70bcdb") {
+                serverItem._props.Distortion = 0.2;
+                serverItem._props.Resonance = 1.7;
+                serverItem._props.DryVolume = -56;
+                serverItem._props.AmbientVolume = -2.9;
+                serverItem._props.CompressorGain = 9.5;
+                serverItem._props.CompressorTreshold = -25;
+            }
+
+            //Comtac V 
+            if (serverItem._id === "66b5f693acff495a294927e3") {
+                serverItem._props.Distortion = 0.2;
+                serverItem._props.Resonance = 1.7;
+                serverItem._props.DryVolume = -56;
+                serverItem._props.AmbientVolume = -2.9;
+                serverItem._props.CompressorGain = 9.5;
+                serverItem._props.CompressorTreshold = -25;
             }
 
             //Walker Razor Digital Headset

@@ -139,6 +139,51 @@ class Gear {
                 serverItem._props.CompressorGain = 9;
                 serverItem._props.CompressorTreshold = -24;
             }
+            //Safariland Liberator HP 2
+            if (serverItem._id === "66b5f68de98be930d701c00e") {
+                serverItem._props.Distortion = 0.15;
+                serverItem._props.Resonance = 2;
+                serverItem._props.DryVolume = -55; //according to refiews, it's official rating is too generous
+                serverItem._props.AmbientVolume = -2.8;
+                serverItem._props.CompressorGain = 10;
+                serverItem._props.CompressorTreshold = -23;
+            }
+            //Comtac VI helmet
+            if (serverItem._id === "66b5f6a28ca68c6461709ed8") {
+                serverItem._props.Distortion = 0.18;
+                serverItem._props.Resonance = 1.6;
+                serverItem._props.DryVolume = -56;
+                serverItem._props.AmbientVolume = -2.95;
+                serverItem._props.CompressorGain = 10;
+                serverItem._props.CompressorTreshold = -25;
+            }
+            //Comtac VI
+            if (serverItem._id === "66b5f6985891c84aab75ca76") {
+                serverItem._props.Distortion = 0.18;
+                serverItem._props.Resonance = 1.6;
+                serverItem._props.DryVolume = -56;
+                serverItem._props.AmbientVolume = -2.95;
+                serverItem._props.CompressorGain = 10;
+                serverItem._props.CompressorTreshold = -25;
+            }
+            //Comtac V helmet
+            if (serverItem._id === "66b5f69ea7f72d197e70bcdb") {
+                serverItem._props.Distortion = 0.2;
+                serverItem._props.Resonance = 1.7;
+                serverItem._props.DryVolume = -56;
+                serverItem._props.AmbientVolume = -2.9;
+                serverItem._props.CompressorGain = 9.5;
+                serverItem._props.CompressorTreshold = -25;
+            }
+            //Comtac V 
+            if (serverItem._id === "66b5f693acff495a294927e3") {
+                serverItem._props.Distortion = 0.2;
+                serverItem._props.Resonance = 1.7;
+                serverItem._props.DryVolume = -56;
+                serverItem._props.AmbientVolume = -2.9;
+                serverItem._props.CompressorGain = 9.5;
+                serverItem._props.CompressorTreshold = -25;
+            }
             //Walker Razor Digital Headset
             if (serverItem._id === "5e4d34ca86f774264f758330") {
                 serverItem._props.Distortion = 0.12;

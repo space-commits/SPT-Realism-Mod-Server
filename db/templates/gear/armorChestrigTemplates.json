@@ -134,6 +134,36 @@
         "weaponErgonomicPenalty": -2.5,
         "TemplateType": "gear"
     },
+    "66b6295178bbc0200425f995": {
+        "ItemID": "66b6295178bbc0200425f995",
+        "Name": "item_equipment_rig_stich_defense_mod2",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1.08,
+        "Comfort": 0.77,
+        "speedPenaltyPercent": -0.9,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1.2,
+        "TemplateType": "gear"
+    },
+    "66b6296d7994640992013b17": {
+        "ItemID": "66b6296d7994640992013b17",
+        "Name": "item_equipment_rig_stich_profi_plate_carrier_v2",
+        "AllowADS": true,
+        "LoyaltyLevel": 3,
+        "ArmorClass": "",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1.13,
+        "Comfort": 0.8,
+        "speedPenaltyPercent": -2.1,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -1.55,
+        "TemplateType": "gear"
+    },
     "5e4ac41886f77406a511c9a8": {
         "ItemID": "5e4ac41886f77406a511c9a8",
         "Name": "item_equipment_armor_arscpc",
@@ -293,10 +323,25 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.08,
-        "Comfort": 0.74,
+        "Comfort": 0.8,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
+    },
+    "66b6295a8ca68c6461709efa": {
+        "ItemID": "66b6295a8ca68c6461709efa",
+        "Name": "item_equipment_rig_tt_plate_carrier_mk_3",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "ArmorClass": "NIJ III+",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1.04,
+        "Comfort": 0.7,
+        "speedPenaltyPercent": -0.15,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -0.25,
         "TemplateType": "gear"
     },
     "639343fce101f4caa40a4ef3": {
