@@ -433,7 +433,7 @@
         "HorizontalRecoil": 5,
         "Dispersion": 2,
         "CameraRecoil": 7,
-        "AutoROF": 3,
+        "AutoROF": 3,   
         "SemiROF": 5,
         "Convergence": 8,
         "ModMalfunctionChance": -10,

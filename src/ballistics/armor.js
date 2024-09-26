@@ -738,11 +738,11 @@ class Armor {
         }
         //Granit Side
         if (serverItem._id === "64afd81707e2cf40e903a316") {
-            serverItem._props.Durability = 50;
+            serverItem._props.Durability = 45;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 10;
-            serverItem._props.BluntThroughput = 0.05;
-            serverItem._props.ArmorMaterial = 'ArmoredSteel';
+            serverItem._props.BluntThroughput = 0.15;
+            serverItem._props.ArmorMaterial = 'Ceramic';
             serverItem._props.speedPenaltyPercent = -0.75;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = 0;

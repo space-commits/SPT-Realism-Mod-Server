@@ -302,6 +302,7 @@ export class BotLoader {
         this.botHPMultiHelper(this.arrays.midBotHPArr, this.modConfig.mid_bot_hp_multi);
         this.botHPMultiHelper(this.arrays.bossBotArr, this.modConfig.boss_bot_hp_multi);
 
+        //sanity check
         if (this.modConfig.logEverything == true) {
             this.logger.info("Killa chest health = " + this.tables.bots.types["bosskilla"].health.BodyParts[0].Chest.max);
             this.logger.info("Killa vitality = " + this.tables.bots.types["bosskilla"].skills.Common["Vitality"].min);

@@ -1367,7 +1367,7 @@ class Ammo {
             if (serverItem._id === "5efb0d4f4bc50b58e81710f3") {
                 serverItem._props.PenetrationPower = 24;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 47;
+                serverItem._props.Damage = 48;
                 serverItem._props.InitialSpeed = 254;
                 serverItem._props.RicochetChance = 0.25;
                 serverItem._props.FragmentationChance = 0.15;
@@ -1411,7 +1411,7 @@ class Ammo {
             if (serverItem._id === "5efb0cabfb3e451d70735af5") {
                 serverItem._props.PenetrationPower = 51;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.Damage = 55;
+                serverItem._props.Damage = 56;
                 serverItem._props.InitialSpeed = 365;
                 serverItem._props.RicochetChance = 0.32;
                 serverItem._props.FragmentationChance = 0.2;

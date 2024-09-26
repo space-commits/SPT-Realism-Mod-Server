@@ -688,21 +688,6 @@
                 }
             ],
             "RandomTimeSpawn": true
-        },
-        {
-            "BossChance": 15,
-            "BossDifficult": "normal",
-            "BossEscortAmount": "2",
-            "BossEscortDifficult": "normal",
-            "BossEscortType": "crazyAssaultEvent",
-            "BossName": "crazyAssaultEvent",
-            "BossPlayer": false,
-            "BossZone": "Zone_OldHouse",
-            "RandomTimeSpawn": false,
-            "Supports": null,
-            "Time": -1,
-            "TriggerId": "",
-            "TriggerName": ""
         }
     ],
     "ReserveBossLocationSpawn": [
@@ -906,19 +891,6 @@
                 }
             ],
             "RandomTimeSpawn": true
-        },
-        {
-            "BossChance": 15,
-            "BossDifficult": "normal",
-            "BossEscortAmount": "2",
-            "BossEscortDifficult": "normal",
-            "BossEscortType": "crazyAssaultEvent",
-            "BossName": "crazyAssaultEvent",
-            "BossPlayer": false,
-            "BossZone": "ZoneForestTruck",
-            "RandomTimeSpawn": false,
-            "Supports": null,
-            "Time": 5
         }
     ],
     "WoodsBossLocationSpawn": [
