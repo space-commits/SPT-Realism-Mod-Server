@@ -1,11 +1,11 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
-import { Arrays } from "../utils/arrays";
+import { StaticArrays } from "../utils/arrays";
 import { ParentClasses } from "../utils/enums";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class Gear {
-    constructor(private arrays: Arrays, private tables: IDatabaseTables, private logger: ILogger, private modConfig: any) { }
+    constructor(private tables: IDatabaseTables, private logger: ILogger, private modConfig: any) { }
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
@@ -33,10 +33,6 @@ export class Gear {
 
     public loadGearConflicts() {
 
-        let confMasks = this.arrays.conflMasks;
-        let confHats = this.arrays.conflHats;
-        let confNVG = this.arrays.conflNVGomponents
-        let confMaskOverlays = this.arrays.confMaskOverlays
         let armorCompArr = [];
 
         //remove certain helmets from GP7 conflicts
@@ -59,20 +55,20 @@ export class Gear {
                     armorCompArr.push(serverItem._id);
                 }
 
-                if (confNVG.includes(serverItem._id)) {
+                if (StaticArrays.conflNVGomponents.includes(serverItem._id)) {
                     let confItems = serverItem._props.ConflictingItems;
                     serverItem._props.ConflictingItems = confItems.concat(armorCompArr)
                 }
 
-                if (confHats.includes(serverItem._id)) {
+                if (StaticArrays.conflHats.includes(serverItem._id)) {
                     let confItems = this.itemDB()[item]._props.ConflictingItems;
-                    this.itemDB()[item]._props.ConflictingItems = confMasks.concat(confItems);
+                    this.itemDB()[item]._props.ConflictingItems = StaticArrays.conflMasks.concat(confItems);
                 }
             }
 
             //custom mask overlays will bug out if using actual faceshield at the same time
             if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true) && serverItem._props.FaceShieldComponent == true) {
-                confMaskOverlays.forEach(element => {
+                StaticArrays.confMaskOverlays.forEach(element => {
                     if (serverItem._id !== element) {
                         serverItem._props.ConflictingItems.push(element);
                     }

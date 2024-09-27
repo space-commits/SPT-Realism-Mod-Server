@@ -3,7 +3,6 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { IBarterScheme, ITrader, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { container } from "tsyringe";
-import { Arrays } from "../utils/arrays";
 import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
 import { Item } from "@spt/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
@@ -19,6 +18,7 @@ import { EventTracker } from "../misc/seasonalevents";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
+import { StaticArrays } from "../utils/arrays";
 
 
 const modConfig = require("../../config/config.json");
@@ -63,7 +63,7 @@ const fenceId = "579dc571d53a0658a154fbec";
 const refId = "6617beeaa9cfa777ca915b7c";
 
 export class Traders {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private utils: Utils) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private utils: Utils) { }
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
@@ -525,9 +525,7 @@ export class RandomizeTraderAssort {
     private logger = container.resolve<ILogger>("WinstonLogger");
     private tables = this.databaseServer.getTables();
     private itemDB = this.tables.templates.items;
-    private arrays = new Arrays(this.tables);
-    private utils = new Utils(this.tables, this.arrays);
-
+    private utils = new Utils(this.tables);
 
     public getAverageLL(pmcData: IPmcData[], traderId: string): number {
 
@@ -638,28 +636,28 @@ export class RandomizeTraderAssort {
         this.randomizeStock(itemParent, ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier, llOutOfStockFactor);
 
         //weapons
-        for (let id in this.arrays.weaponParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.weaponParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //weapon mods
-        for (let id in this.arrays.modParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.modParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //gear
-        for (let id in this.arrays.gearParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.gearParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //barter items
-        for (let id in this.arrays.barterParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.barterParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //keys 
-        for (let id in this.arrays.keyParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.keyParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //maps
@@ -920,8 +918,7 @@ export class TraderRefresh extends TraderAssortHelper {
     private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): Item[] {
         const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
-        const arrays = new Arrays(tables);
-        const utils = new Utils(tables, arrays);
+        const utils = new Utils(tables);
 
         let assortItems = trader.assort.items;
         let assortBarters = trader.assort.barter_scheme;

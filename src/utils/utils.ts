@@ -1,7 +1,6 @@
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { Item } from "@spt/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { Arrays } from "./arrays";
 import * as path from 'path';
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -11,7 +10,7 @@ const modConfig = require("../../config/config.json");
 
 export class Utils {
 
-    constructor(private tables: IDatabaseTables, private arrays: Arrays) { }
+    constructor(private tables: IDatabaseTables) { }
 
 
     itemDB(): Record<string, ITemplateItem> {
@@ -124,7 +123,6 @@ export class Utils {
     }
 }
 
-
 export class ModTracker {
     static batteryModPresent: boolean = false;
     static sainPresent: boolean = false;
@@ -133,7 +131,6 @@ export class ModTracker {
     static qtbPresent: boolean = false;
     static alpPresent: boolean = false;
 }
-
 
 export class ProfileTracker {
     static profileIds: string[] = [];

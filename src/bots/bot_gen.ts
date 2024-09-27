@@ -2,7 +2,7 @@
 import { BotWeaponGenerator } from "@spt/generators/BotWeaponGenerator";
 import { container } from "tsyringe";
 import { ITemplateItem, Slot } from "@spt/models/eft/common/tables/ITemplateItem";
-import { Chances, Generation, IBotType, Inventory, Mods, ModsChances } from "@spt/models/eft/common/tables/IBotType";
+import { Chances, Equipment, Generation, IBotType, Inventory, Mods, ModsChances } from "@spt/models/eft/common/tables/IBotType";
 import { Item, Upd } from "@spt/models/eft/common/tables/IItem";
 import { ProbabilityHelper } from "@spt/helpers/ProbabilityHelper";
 import { GenerateWeaponResult } from "@spt/models/spt/bots/GenerateWeaponResult";
@@ -29,7 +29,7 @@ import { BaseClasses } from "@spt/models/enums/BaseClasses";
 import { DurabilityLimitsHelper } from "@spt/helpers/DurabilityLimitsHelper";
 import { ApplicationContext } from "@spt/context/ApplicationContext";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
-import { Arrays } from "../utils/arrays";
+import { BotArrays, StaticArrays } from "../utils/arrays";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { BotLoader } from "./bots";
 import { BotLootGenerator } from "@spt/generators/BotLootGenerator";
@@ -57,6 +57,7 @@ import { IGenerateEquipmentProperties } from "@spt/models/spt/bots/IGenerateEqui
 import { IModToSpawnRequest } from "@spt/models/spt/bots/IModToSpawnRequest";
 import { IGenerateWeaponRequest } from "@spt/models/spt/bots/IGenerateWeaponRequest";
 import { MemberCategory } from "@spt/models/enums/MemberCategory";
+import { EventTracker } from "../misc/seasonalevents";
 
 const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
@@ -176,9 +177,47 @@ export class BotGen extends BotGenerator {
         return tier;
     }
 
+    //for events where bots will need gas masks at all times
+    private addGasMasksToBots(equipment: Equipment, chances: Chances, botRole: string, isPmc: boolean, pmcTier: number) {
+
+        let gasMaskTier = 0;
+
+        if (isPmc) {
+            gasMaskTier = pmcTier <= 2 ? 1 : pmcTier == 3 ? 2 : 3;
+        }
+        else {
+            let isHighTier = botRole.includes("boss") || botRole.includes("pmc") || botRole.includes("exusec");
+            let isMidTier = botRole.includes("follower") || botRole.includes("sectant");
+            gasMaskTier = isHighTier ? 3 : isMidTier ? 2 : 1;
+        }
+        
+        equipment.FaceCover = gasMaskTier == 3 ? StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? StaticArrays.gasEventMasksMed : StaticArrays.gasEventMasksLow;
+        
+        if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
+            equipment.FaceCover["CCG_GAS_MASK_GP9"] = 1;
+            equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 1;
+        }
+
+        chances.equipment.FaceCover = 100;
+        chances.equipmentMods.mod_equipment = 0;
+        chances.equipmentMods.mod_equipment_000 = 0;
+        chances.equipmentMods.mod_equipment_001 = 0;
+        chances.equipmentMods.mod_equipment_002 = 0;
+    }
+
+    //yeah too lazy to manually add gas mask filters too
+    private pushGasMaskFilter(mods: Mods) {
+        StaticArrays.gasMasks.forEach(g => {
+            mods[g] = {
+                "mod_equipment": [
+                    "590c595c86f7747884343ad7"
+                ]
+            }
+        });
+    }
+
     //too lazy to manually add the json for new armor slots
     private addArmorInserts(mods: Mods) {
-
         Object.keys(armorTemplate).forEach(outerKey => {
             // If the outer key exists in mods, compare inner keys
             if (mods[outerKey]) {
@@ -214,6 +253,7 @@ export class BotGen extends BotGenerator {
         };
 
         this.addArmorInserts(botTemplate.inventory.mods);
+        this.pushGasMaskFilter(botTemplate.inventory.mods);
         bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
 
         return bot;
@@ -221,8 +261,8 @@ export class BotGen extends BotGenerator {
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase {
         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables = postLoadDBServer.getTables();
-        const arrays = new Arrays(tables);
-        const utils = new Utils(tables, arrays);
+        const arrays = new BotArrays(tables);
+        const utils = new Utils(tables);
         const botLoader = new BotLoader(this.logger, tables, this.configServer, modConfig, arrays, utils);
 
         const preparedBotBase = this.getPreparedBotBase(
@@ -322,7 +362,10 @@ export class BotGen extends BotGenerator {
         //instead of manually editing all my bot loadout json with the new armor plates/inserts, I programatically generated a file with all the json
         //and then I combine the armor json with the bot's mods json
         //this is highly ineffecient as I am doing it per bot generated, not ideal but for now it works until I figure out a better way
+
+        if (EventTracker.isGasEvent) this.addGasMasksToBots(botJsonTemplateClone.inventory.equipment, botJsonTemplateClone.chances, botRole.toLocaleLowerCase(), isPMC, pmcTier);
         this.addArmorInserts(botJsonTemplateClone.inventory.mods);
+        this.pushGasMaskFilter(botJsonTemplateClone.inventory.mods);
 
         return this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);
     }

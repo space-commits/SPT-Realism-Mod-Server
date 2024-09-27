@@ -67,7 +67,7 @@ import * as fs from 'fs';
 import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
 import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
-import { Arrays } from "./utils/arrays"
+import { BotArrays, StaticArrays } from "./utils/arrays"
 import { Consumables } from "./items/meds";
 import { Player } from "./player/player"
 import { WeaponsGlobals } from "./weapons/weapons_globals"
@@ -111,6 +111,7 @@ const foodItems = require("../db/items/food_items.json");
 const foodBuffs = require("../db/items/buffs_food.json");
 const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
+const realismInfo = require("../data/info.json");
 
 let adjustedTradersOnStart = false;
 
@@ -153,12 +154,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         flea.loadFleaConfig();
 
         dynamicRouter.registerDynamicRouter(
-            "loadResources",
+            "realismGetConfig",
             [
                 {
-                    url: "/RealismMod/GetInfo",
+                    url: "/RealismMod/GetConfig",
                     action: async (url, info, sessionID, output) => {
-
                         try {
                             return jsonUtil.serialize(modConfig);
                         } catch (err) {
@@ -168,7 +168,29 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 }
             ],
             "RealismMod"
-        )
+        );
+
+        dynamicRouter.registerDynamicRouter(
+            "realismGetInfo",
+            [
+                {
+                    url: "/RealismMod/GetInfo",
+                    action: async (url, info, sessionID, output) => {
+                        try {
+                            realismInfo.IsHalloween = EventTracker.isHalloween;
+                            realismInfo.IsHalloween = EventTracker.isChristmas;
+                            realismInfo.AveragePlayerLevel = ProfileTracker.averagePlayerLevel;
+                            realismInfo.DoGasEvent = EventTracker.isGasEvent;
+
+                            return jsonUtil.serialize(realismInfo);
+                        } catch (err) {
+                            console.error("Failed to read config file", err);
+                        }
+                    }
+                }
+            ],
+            "RealismMod"
+        );
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
@@ -268,8 +290,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
                         const postLoadTables = postLoadDBServer.getTables();
-                        const arrays = new Arrays(postLoadTables);
-                        const utils = new Utils(postLoadTables, arrays);
+                        const utils = new Utils(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
@@ -315,7 +336,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                     this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
                                 }
                             }
-                            this.checkForEvents(logger, seasonalEventsService);
+                            this.checkForSeasonalEvents(logger, seasonalEventsService);
 
                             if (adjustedTradersOnStart == false) {
                                 let pmcData: IPmcData[] = [];
@@ -332,7 +353,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             }
 
                             if (modConfig.tiered_flea == true) {
-                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, ProfileTracker.averagePlayerLevel);
+                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
                             }
                             if (modConfig.boss_spawns == true) {
                                 maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
@@ -389,8 +410,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const postLoadDBService = container.resolve<DatabaseService>("DatabaseService");
                         const postLoadtables = postLoadDBService.getTables();
-                        const arrays = new Arrays(postLoadtables);
-                        const utils = new Utils(postLoadtables, arrays);
+                        const utils = new Utils(postLoadtables);
                         const player = new Player(logger, postLoadtables, modConfig, medItems, utils);
 
                         const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -436,8 +456,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
-                            const arrays = new Arrays(postLoadTables);
-                            const utils = new Utils(postLoadTables, arrays);
+                            const arrays = new BotArrays(postLoadTables);
+                            const utils = new Utils(postLoadTables);
                             const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
@@ -484,13 +504,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 return TOD;
                             }
 
-                            if (arrays.cqbMaps.includes(RaidInfoTracker.mapName)) {
+                            if (StaticArrays.cqbMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = "cqb";
                             }
-                            if (arrays.outdoorMaps.includes(RaidInfoTracker.mapName)) {
+                            if (StaticArrays.outdoorMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = "outdoor";
                             }
-                            if (arrays.urbanMaps.includes(RaidInfoTracker.mapName)) {
+                            if (StaticArrays.urbanMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = "urban";
                             }
 
@@ -507,6 +527,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 pmcConf.convertIntoPmcChance["assault"].min = 100;
                                 pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
+
+                            this.shouldDoGasEvent(utils, RaidInfoTracker.mapName);
 
                             logger.warning("Avg. Player Level = " + ProfileTracker.averagePlayerLevel);
                             logger.warning("Map Name = " + matchInfo.location);
@@ -541,9 +563,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
                         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
-                        const arrays = new Arrays(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
-                        const utils = new Utils(postLoadTables, arrays);
+                        const utils = new Utils(postLoadTables);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -558,7 +579,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
 
                             if (modConfig.tiered_flea == true) {
-                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, ProfileTracker.averagePlayerLevel);
+                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
                             }
 
                             player.correctNegativeHP(pmcData);
@@ -661,24 +682,24 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const insConf = configServer.getConfig<IInsuranceConfig>(ConfigTypes.INSURANCE);
-        const arrays = new Arrays(tables);
-        const utils = new Utils(tables, arrays);
+        const arrays = new BotArrays(tables);
+        const utils = new Utils(tables);
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
-        const attachBase = new AttachmentBase(logger, tables, arrays, modConfig, utils);
+        const attachBase = new AttachmentBase(logger, tables, modConfig, utils);
         const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf, arrays);
+        const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf);
         const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
-        const jsonGen = new JsonGen(logger, tables, modConfig, utils, arrays);
+        const jsonGen = new JsonGen(logger, tables, modConfig, utils);
         const fleaChangesPreDB = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new Quests(logger, tables, modConfig);
-        const traders = new Traders(logger, tables, modConfig, traderConf, arrays, utils);
+        const traders = new Traders(logger, tables, modConfig, traderConf, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Spawns(logger, tables, modConfig, tables.locations);
-        const gear = new Gear(arrays, tables, logger, modConfig);
+        const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
         const jsonHand = new ItemStatHandler(tables, logger);
@@ -854,7 +875,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
     }
 
-    private checkForEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
+    private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
         EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (EventTracker.isChristmas == true) {
@@ -863,6 +884,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         if (EventTracker.isHalloween == true) {
             logger.warning("Happy Halloween!");
         }
+    }
+
+    public shouldDoGasEvent(utils: Utils, map: string) {
+        let rndNum = utils.pickRandNumInRange(1, 1000);
+        let odds = EventTracker.isHalloween ? 500 : 1000;
+        let isWrongMap = map.includes("laboratory") || map.includes("factory");
+        EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
     }
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Arrays = void 0;
-class Arrays {
+exports.StaticArrays = exports.BotArrays = void 0;
+class BotArrays {
     tables;
     bossBotArr;
     botArr;
@@ -110,12 +110,15 @@ class Arrays {
             botDB["bossboar"]
         ];
     }
-    outdoorMaps = [
+}
+exports.BotArrays = BotArrays;
+class StaticArrays {
+    static outdoorMaps = [
         "shoreline",
         "woods",
         "lighthouse"
     ];
-    urbanMaps = [
+    static urbanMaps = [
         "bigmap",
         "customs",
         "rezervbase",
@@ -125,14 +128,14 @@ class Arrays {
         "sandbox",
         "sandbox_high"
     ];
-    cqbMaps = [
+    static cqbMaps = [
         "factory",
         "factory4_night",
         "factory4_day",
         "laboratory",
         "interchange"
     ];
-    traderIDs = [
+    static traderIDs = [
         "54cb50c76803fa8b248b4571",
         "54cb57776803fa99248b456e",
         "579dc571d53a0658a154fbec",
@@ -142,7 +145,7 @@ class Arrays {
         "5ac3b934156ae10c4430e83c",
         "5c0647fdd443bc2504c2d371"
     ];
-    blacklistedItems = [
+    static blacklistedItems = [
         "generic_debuff",
         "performance_debuff",
         "weight_debuff",
@@ -151,7 +154,7 @@ class Arrays {
         "adrenal_debuff",
         "regen_debuff"
     ];
-    stashMeds = [
+    static stashMeds = [
         "544fb37f4bdc2dee738b4567",
         "5af0548586f7743a532b7e99",
         "5e8488fa988a8701445df1e4",
@@ -167,11 +170,11 @@ class Arrays {
         "5d02778e86f774203e7dedbe",
         "5d02797c86f774203f38e30a"
     ];
-    keyParentIDs = [
+    static keyParentIDs = [
         "5c164d2286f774194c5e69fa",
         "5c99f98d86f7745c314214b3",
     ];
-    gearParentIDs = [
+    static gearParentIDs = [
         "5448e5284bdc2dcb718b4567",
         "5448e54d4bdc2dcc718b4568",
         "57bef4c42459772e8d35a53b",
@@ -183,7 +186,7 @@ class Arrays {
         "5448e5724bdc2ddf718b4568",
         "644120aa86ffbe10ee032b6f"
     ];
-    barterParentIDs = [
+    static barterParentIDs = [
         "590c745b86f7743cc433c5f2",
         "57864ada245977548638de91",
         "57864a66245977548f04a81f",
@@ -195,7 +198,7 @@ class Arrays {
         "57864a3d24597754843f8721",
         "5448ecbe4bdc2d60728b4568"
     ];
-    weaponParentIDs = [
+    static weaponParentIDs = [
         "5447b5e04bdc2d62278b4567",
         "5447b5f14bdc2d61278b4567",
         "5447b5cf4bdc2d65278b4567",
@@ -209,7 +212,7 @@ class Arrays {
         "5447e1d04bdc2dff2f8b4567",
         "617f1ef5e8b54b0998387733"
     ];
-    modParentIDs = [
+    static modParentIDs = [
         "550aa4bf4bdc2dd6348b456b",
         "550aa4dd4bdc2dc9348b4569",
         "550aa4cd4bdc2dd8348b456c",
@@ -236,7 +239,7 @@ class Arrays {
         "610720f290b75a49ff2e5e25",
         "627a137bf21bc425b06ab944"
     ];
-    equipmentSlots = {
+    static equipmentSlots = {
         Headwear: "Headwear",
         Earpiece: "Earpiece",
         FaceCover: "FaceCover",
@@ -252,7 +255,7 @@ class Arrays {
         Holster: "Holster",
         Scabbard: "Scabbard"
     };
-    modTypes = {
+    static modTypes = {
         "FlashHider": "550aa4bf4bdc2dd6348b456b",
         "MuzzleCombo": "550aa4dd4bdc2dc9348b4569",
         "Silencer": "550aa4cd4bdc2dd8348b456c",
@@ -279,19 +282,32 @@ class Arrays {
         "CylinderMagazine": "610720f290b75a49ff2e5e25",
         "GrenadeLauncherMagazine": "627a137bf21bc425b06ab944"
     };
-    conflNVGomponents = [
+    static conflNVGomponents = [
         "5c0695860db834001b735461",
         "5c11046cd174af02a012e42b",
         "5a16b8a9fcdbcb00165aa6ca"
     ];
-    gasMasks = [
+    static gasMasks = [
         "CCG_GAS_MASK_GP9",
         "CCG_GAS_MASK_MCU2P",
         "CCG_GAS_MASK_SGE400",
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5"
     ];
-    confMaskOverlays = [
+    static gasEventMasksLow = {
+        "60363c0c92ec1c31037959f5": 1,
+        "59e7715586f7742ee5789605": 10
+    };
+    static gasEventMasksHigh = {
+        "60363c0c92ec1c31037959f5": 10,
+        "59e7715586f7742ee5789605": 4
+    };
+    static gasEventMasksMed = {
+        "60363c0c92ec1c31037959f5": 4,
+        "5b432c305acfc40019478128": 4,
+        "59e7715586f7742ee5789605": 10
+    };
+    static confMaskOverlays = [
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",
         "CCG_GAS_MASK_GP9",
@@ -302,7 +318,7 @@ class Arrays {
         "62a09e08de7ac81993580532",
         "5b432b2f5acfc4771e1c6622"
     ];
-    conflHats = [
+    static conflHats = [
         "60bf74184a63fc79b60c57f6",
         "5df8a58286f77412631087ed",
         "5d96141523f0ea1b7f2aacab",
@@ -330,7 +346,7 @@ class Arrays {
         "61c18db6dfd64163ea78fbb4",
         "5aa2ba46e5b5b000137b758d"
     ];
-    conflMasks = [
+    static conflMasks = [
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",
         "5b432b6c5acfc4001a599bf0",
@@ -344,5 +360,5 @@ class Arrays {
         "5b4326435acfc433000ed01d"
     ];
 }
-exports.Arrays = Arrays;
+exports.StaticArrays = StaticArrays;
 //# sourceMappingURL=arrays.js.map

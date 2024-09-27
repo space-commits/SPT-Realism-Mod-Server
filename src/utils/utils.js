@@ -29,10 +29,8 @@ const fs = require('fs');
 const modConfig = require("../../config/config.json");
 class Utils {
     tables;
-    arrays;
-    constructor(tables, arrays) {
+    constructor(tables) {
         this.tables = tables;
-        this.arrays = arrays;
     }
     itemDB() {
         return this.tables.templates.items;

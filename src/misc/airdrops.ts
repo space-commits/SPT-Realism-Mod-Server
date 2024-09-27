@@ -8,7 +8,6 @@ import { ParentClasses } from "../utils/enums";
 import { IPreset } from "@spt/models/eft/common/IGlobals";
 import { LocationController } from "@spt/controllers/LocationController";
 import { Utils, RaidInfoTracker } from "../utils/utils";
-import { Arrays } from "../utils/arrays";
 import { IAirdropLootResult } from "@spt/models/eft/location/IAirdropLootResult";
 import { AirdropTypeEnum } from "@spt/models/enums/AirdropType";
 import { RandomUtil } from "@spt/utils/RandomUtil";

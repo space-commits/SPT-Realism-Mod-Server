@@ -61,6 +61,7 @@ const foodItems = require("../db/items/food_items.json");
 const foodBuffs = require("../db/items/buffs_food.json");
 const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
+const realismInfo = require("../data/info.json");
 let adjustedTradersOnStart = false;
 class Main {
     modLoader;
@@ -94,12 +95,29 @@ class Main {
         const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
-        dynamicRouter.registerDynamicRouter("loadResources", [
+        dynamicRouter.registerDynamicRouter("realismGetConfig", [
+            {
+                url: "/RealismMod/GetConfig",
+                action: async (url, info, sessionID, output) => {
+                    try {
+                        return jsonUtil.serialize(modConfig);
+                    }
+                    catch (err) {
+                        console.error("Failed to read config file", err);
+                    }
+                }
+            }
+        ], "RealismMod");
+        dynamicRouter.registerDynamicRouter("realismGetInfo", [
             {
                 url: "/RealismMod/GetInfo",
                 action: async (url, info, sessionID, output) => {
                     try {
-                        return jsonUtil.serialize(modConfig);
+                        realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
+                        realismInfo.IsHalloween = seasonalevents_1.EventTracker.isChristmas;
+                        realismInfo.AveragePlayerLevel = utils_1.ProfileTracker.averagePlayerLevel;
+                        realismInfo.DoGasEvent = seasonalevents_1.EventTracker.isGasEvent;
+                        return jsonUtil.serialize(realismInfo);
                     }
                     catch (err) {
                         console.error("Failed to read config file", err);
@@ -185,8 +203,7 @@ class Main {
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const ragfairServer = container.resolve("RagfairServer");
                     const postLoadTables = postLoadDBServer.getTables();
-                    const arrays = new arrays_1.Arrays(postLoadTables);
-                    const utils = new utils_1.Utils(postLoadTables, arrays);
+                    const utils = new utils_1.Utils(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const maps = new maps_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
@@ -222,7 +239,7 @@ class Main {
                                 this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
                             }
                         }
-                        this.checkForEvents(logger, seasonalEventsService);
+                        this.checkForSeasonalEvents(logger, seasonalEventsService);
                         if (adjustedTradersOnStart == false) {
                             let pmcData = [];
                             utils_1.ProfileTracker.profileIds.forEach(element => {
@@ -236,7 +253,7 @@ class Main {
                             ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
                         }
                         if (modConfig.tiered_flea == true) {
-                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, utils_1.ProfileTracker.averagePlayerLevel);
+                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         if (modConfig.boss_spawns == true) {
                             maps.setBossSpawnChance(utils_1.ProfileTracker.averagePlayerLevel);
@@ -279,8 +296,7 @@ class Main {
                     const profileHelper = container.resolve("ProfileHelper");
                     const postLoadDBService = container.resolve("DatabaseService");
                     const postLoadtables = postLoadDBService.getTables();
-                    const arrays = new arrays_1.Arrays(postLoadtables);
-                    const utils = new utils_1.Utils(postLoadtables, arrays);
+                    const utils = new utils_1.Utils(postLoadtables);
                     const player = new player_1.Player(logger, postLoadtables, modConfig, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
@@ -316,8 +332,8 @@ class Main {
                         const itemHelper = container.resolve("ItemHelper");
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
-                        const arrays = new arrays_1.Arrays(postLoadTables);
-                        const utils = new utils_1.Utils(postLoadTables, arrays);
+                        const arrays = new arrays_1.BotArrays(postLoadTables);
+                        const utils = new utils_1.Utils(postLoadTables);
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
@@ -357,13 +373,13 @@ class Main {
                             }
                             return TOD;
                         }
-                        if (arrays.cqbMaps.includes(utils_1.RaidInfoTracker.mapName)) {
+                        if (arrays_1.StaticArrays.cqbMaps.includes(utils_1.RaidInfoTracker.mapName)) {
                             mapType = "cqb";
                         }
-                        if (arrays.outdoorMaps.includes(utils_1.RaidInfoTracker.mapName)) {
+                        if (arrays_1.StaticArrays.outdoorMaps.includes(utils_1.RaidInfoTracker.mapName)) {
                             mapType = "outdoor";
                         }
-                        if (arrays.urbanMaps.includes(utils_1.RaidInfoTracker.mapName)) {
+                        if (arrays_1.StaticArrays.urbanMaps.includes(utils_1.RaidInfoTracker.mapName)) {
                             mapType = "urban";
                         }
                         utils_1.RaidInfoTracker.TOD = getTOD(realTime);
@@ -377,6 +393,7 @@ class Main {
                             pmcConf.convertIntoPmcChance["assault"].min = 100;
                             pmcConf.convertIntoPmcChance["assault"].max = 100;
                         }
+                        this.shouldDoGasEvent(utils, utils_1.RaidInfoTracker.mapName);
                         logger.warning("Avg. Player Level = " + utils_1.ProfileTracker.averagePlayerLevel);
                         logger.warning("Map Name = " + matchInfo.location);
                         logger.warning("Map Type  = " + mapType);
@@ -404,9 +421,8 @@ class Main {
                     const pmcLootGenerator = container.resolve("PMCLootGenerator");
                     const itemHelper = container.resolve("ItemHelper");
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
-                    const arrays = new arrays_1.Arrays(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
-                    const utils = new utils_1.Utils(postLoadTables, arrays);
+                    const utils = new utils_1.Utils(postLoadTables);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
@@ -418,7 +434,7 @@ class Main {
                     this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                     try {
                         if (modConfig.tiered_flea == true) {
-                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, arrays, utils_1.ProfileTracker.averagePlayerLevel);
+                            tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         player.correctNegativeHP(pmcData);
                         if (modConfig.realistic_player_health == true) {
@@ -500,24 +516,24 @@ class Main {
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const insConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INSURANCE);
-        const arrays = new arrays_1.Arrays(tables);
-        const utils = new utils_1.Utils(tables, arrays);
+        const arrays = new arrays_1.BotArrays(tables);
+        const utils = new utils_1.Utils(tables);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
-        const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, arrays, modConfig, utils);
+        const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, modConfig, utils);
         const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
-        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf, arrays);
+        const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf);
         const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
         const weaponsGlobals = new weapons_globals_1.WeaponsGlobals(logger, tables, modConfig);
         const fleaChangesPostDB = new fleamarket_1.FleaChangesPostDBLoad(logger, tables, modConfig, aKIFleaConf);
-        const jsonGen = new json_gen_1.JsonGen(logger, tables, modConfig, utils, arrays);
+        const jsonGen = new json_gen_1.JsonGen(logger, tables, modConfig, utils);
         const fleaChangesPreDB = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
-        const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, arrays, utils);
+        const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
         const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations);
-        const gear = new gear_1.Gear(arrays, tables, logger, modConfig);
+        const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
         const jsonHand = new json_handler_1.ItemStatHandler(tables, logger);
@@ -657,7 +673,7 @@ class Main {
             profileData.Health.Energy.Current = defaultEnergy;
         }
     }
-    checkForEvents(logger, seasonalEventsService) {
+    checkForSeasonalEvents(logger, seasonalEventsService) {
         seasonalevents_1.EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         seasonalevents_1.EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (seasonalevents_1.EventTracker.isChristmas == true) {
@@ -666,6 +682,12 @@ class Main {
         if (seasonalevents_1.EventTracker.isHalloween == true) {
             logger.warning("Happy Halloween!");
         }
+    }
+    shouldDoGasEvent(utils, map) {
+        let rndNum = utils.pickRandNumInRange(1, 1000);
+        let odds = seasonalevents_1.EventTracker.isHalloween ? 500 : 1000;
+        let isWrongMap = map.includes("laboratory") || map.includes("factory");
+        seasonalevents_1.EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
     }
     checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
         let level = 1;

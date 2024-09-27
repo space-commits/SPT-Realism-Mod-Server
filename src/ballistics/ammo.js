@@ -51,7 +51,7 @@ class Ammo {
             }
             //Flechette
             if (serverItem._id === "5d6e6911a4b9361bd5780d52") {
-                serverItem._props.PenetrationPower = 4;
+                serverItem._props.PenetrationPower = 8;
                 serverItem._props.PenetrationPowerDiviation = 10;
                 serverItem._props.ArmorDamage = 0.5;
                 serverItem._props.ProjectileCount = 18;
