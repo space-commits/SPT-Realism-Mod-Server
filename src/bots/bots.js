@@ -8,8 +8,8 @@ const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
 const tier5LO = require("../../db/bots/loadouts/PMCs/tier5PMC.json");
-const raiderLO = require("../../db/bots/loadouts/raiders_rogues/raiderLO.json");
-const rogueLO = require("../../db/bots/loadouts/raiders_rogues/rogueLO.json");
+const raiderLO = require("../../db/bots/loadouts/special/raiderLO.json");
+const rogueLO = require("../../db/bots/loadouts/special/rogueLO.json");
 const knightLO = require("../../db/bots/loadouts/bosses/goons/knightLO.json");
 const bigpipeLO = require("../../db/bots/loadouts/bosses/goons/bigpipeLO.json");
 const birdeyeLO = require("../../db/bots/loadouts/bosses/goons/birdeyeLO.json");
@@ -160,26 +160,11 @@ class BotLoader {
     }
     forceBossSpawns() {
         for (let i in this.mapDB()) {
-            if (this.mapDB()[i].base?.BossLocationSpawn !== undefined) {
-                let bossSpawn = this.mapDB()[i].BossLocationSpawn;
+            let mapBase = this.mapDB()[i]?.base;
+            if (mapBase != undefined && mapBase?.BossLocationSpawn !== undefined) {
+                let bossSpawn = mapBase.BossLocationSpawn;
                 for (let k in bossSpawn) {
                     bossSpawn[k].BossChance = 100;
-                }
-            }
-        }
-    }
-    increaseHalloweenBossSpawns() {
-        for (let i in this.mapDB()) {
-            if (this.mapDB()[i].base?.BossLocationSpawn !== undefined) {
-                let bossSpawn = this.mapDB()[i].BossLocationSpawn;
-                for (let k in bossSpawn) {
-                    let boss = bossSpawn[k];
-                    if (boss.BossName.includes("sectant")) {
-                        boss.BossChance = 100;
-                    }
-                    else {
-                        boss.BossChance = Math.min(boss.BossChance * 1.5, 90);
-                    }
                 }
             }
         }
@@ -200,11 +185,14 @@ class BotLoader {
         }
     }
     bossDifficulty() {
-        for (let i in this.mapDB) {
-            if (this.mapDB[i].base?.BossLocationSpawn !== undefined) {
-                for (let k in this.mapDB[i].base.BossLocationSpawn) {
-                    this.mapDB[i].base.BossLocationSpawn[k].BossDifficult = "hard";
-                    this.mapDB[i].base.BossLocationSpawn[k].BossEscortDifficult = "hard";
+        for (let i in this.mapDB()) {
+            let mapBase = this.mapDB()[i]?.base;
+            if (mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
+                let bossLocationSpawn = mapBase.BossLocationSpawn;
+                for (let k in bossLocationSpawn) {
+                    let boss = bossLocationSpawn[k];
+                    boss.BossDifficult = "hard";
+                    boss.BossEscortDifficult = "hard";
                 }
             }
         }

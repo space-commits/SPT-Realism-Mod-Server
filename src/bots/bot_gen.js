@@ -138,9 +138,10 @@ class BotGen extends BotGenerator_1.BotGenerator {
         }
         equipment.FaceCover = gasMaskTier == 3 ? arrays_1.StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? arrays_1.StaticArrays.gasEventMasksMed : arrays_1.StaticArrays.gasEventMasksLow;
         if (utils_1.ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
-            equipment.FaceCover["CCG_GAS_MASK_GP9"] = 1;
-            equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 1;
+            equipment.FaceCover["CCG_GAS_MASK_GP9"] = 2;
+            equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 2;
         }
+        chances.equipment.Eyewear = 0;
         chances.equipment.FaceCover = 100;
         chances.equipmentMods.mod_equipment = 0;
         chances.equipmentMods.mod_equipment_000 = 0;

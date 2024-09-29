@@ -299,8 +299,8 @@ class StaticArrays {
         "59e7715586f7742ee5789605": 10
     };
     static gasEventMasksHigh = {
-        "60363c0c92ec1c31037959f5": 10,
-        "59e7715586f7742ee5789605": 4
+        "60363c0c92ec1c31037959f5": 6,
+        "59e7715586f7742ee5789605": 2
     };
     static gasEventMasksMed = {
         "60363c0c92ec1c31037959f5": 4,

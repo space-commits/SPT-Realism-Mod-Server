@@ -114,7 +114,7 @@ class Main {
                 action: async (url, info, sessionID, output) => {
                     try {
                         realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
-                        realismInfo.IsHalloween = seasonalevents_1.EventTracker.isChristmas;
+                        realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
                         realismInfo.AveragePlayerLevel = utils_1.ProfileTracker.averagePlayerLevel;
                         realismInfo.DoGasEvent = seasonalevents_1.EventTracker.isGasEvent;
                         return jsonUtil.serialize(realismInfo);
@@ -198,7 +198,6 @@ class Main {
                 action: async (url, info, sessionID, output) => {
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
                     const profileHelper = container.resolve("ProfileHelper");
-                    const seasonalEventsService = container.resolve("SeasonalEventService");
                     const postLoadDBServer = container.resolve("DatabaseService");
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const ragfairServer = container.resolve("RagfairServer");
@@ -239,7 +238,6 @@ class Main {
                                 this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
                             }
                         }
-                        this.checkForSeasonalEvents(logger, seasonalEventsService);
                         if (adjustedTradersOnStart == false) {
                             let pmcData = [];
                             utils_1.ProfileTracker.profileIds.forEach(element => {
@@ -542,6 +540,8 @@ class Main {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
+        const seasonalEventsService = container.resolve("SeasonalEventService");
+        this.checkForSeasonalEvents(logger, seasonalEventsService);
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
         }
@@ -583,7 +583,7 @@ class Main {
         if (modConfig.bot_names == true) {
             bots.botNames();
         }
-        if (modConfig.guarantee_boss_spawn == true || seasonalevents_1.EventTracker.isHalloween) {
+        if (modConfig.guarantee_boss_spawn == true) {
             bots.forceBossSpawns();
         }
         if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {
@@ -675,17 +675,29 @@ class Main {
     }
     checkForSeasonalEvents(logger, seasonalEventsService) {
         seasonalevents_1.EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
-        seasonalevents_1.EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        seasonalevents_1.EventTracker.isHalloween = true; // seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (seasonalevents_1.EventTracker.isChristmas == true) {
             logger.warning("Merry Christmas!");
         }
         if (seasonalevents_1.EventTracker.isHalloween == true) {
-            logger.warning("Happy Halloween!");
+            const skull = `
+   _______     
+  /       \\   
+ /  O   O  \\  
+|     ^     | 
+|    ---    | 
+ \\_________/  
+   |     |    
+   |_____|    
+  /       \\   
+ /_/|   |\\_\\  
+`;
+            logger.warning("Happy Halloween!" + "\n" + skull);
         }
     }
     shouldDoGasEvent(utils, map) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = seasonalevents_1.EventTracker.isHalloween ? 500 : 1000;
+        let odds = seasonalevents_1.EventTracker.isHalloween ? 1000 : 1000;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
         seasonalevents_1.EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
     }

@@ -2,6 +2,7 @@ import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILocations } from "@spt/models/spt/server/ILocations";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ModTracker } from "../utils/utils";
+import { EventTracker } from "../misc/seasonalevents";
 
 
 const botZones = require("../../db/maps/spawnZones.json");
@@ -50,16 +51,30 @@ export class Spawns {
 
     private bossSpawnHelper(chanceMulti: number) {
         for (let i in this.mapDB) {
-            if (i !== "lighthouse" && i !== "laboratory" && this.mapDB[i].base?.BossLocationSpawn !== undefined) {
-                for (let k in this.mapDB[i].base.BossLocationSpawn) {
-                    let chance = this.mapDB[i].base.BossLocationSpawn[k].BossChance;
-                    if (this.mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== undefined && this.mapDB[i].base.BossLocationSpawn[k]?.TriggerId !== "") {
-                        chance = Math.round(this.mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti * 2);
-                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(10, Math.min(chance, 100));
+            let mapBase = this.mapDB[i]?.base;
+            if (i !== "lighthouse" && i !== "laboratory" && mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
+                for (let k in mapBase.BossLocationSpawn) {
+                    let bossSpawnLocation = mapBase.BossLocationSpawn[k];
+                    let chance = bossSpawnLocation.BossChance;
+
+                    
+                    if (EventTracker.isHalloween) {
+                        if (bossSpawnLocation.BossName.includes("sectant")) {
+                            bossSpawnLocation.BossChance = 100;
+                            this.logger.warning("sectant " + bossSpawnLocation.BossChance);
+                        }
+                        else {
+                            chance = Math.round(bossSpawnLocation.BossChance * 0.1)
+                            bossSpawnLocation.BossChance = Math.max(0, Math.min(chance, 100));
+                        }
+                    }
+                    else if (bossSpawnLocation?.TriggerId !== undefined && bossSpawnLocation?.TriggerId !== "") {
+                        chance = Math.round(bossSpawnLocation.BossChance * chanceMulti * 2);
+                        bossSpawnLocation.BossChance = Math.max(10, Math.min(chance, 100));
                     }
                     else {
-                        chance = Math.round(this.mapDB[i].base.BossLocationSpawn[k].BossChance * chanceMulti);
-                        this.mapDB[i].base.BossLocationSpawn[k].BossChance = Math.max(0, Math.min(chance, 100));
+                        chance = Math.round(bossSpawnLocation.BossChance * chanceMulti);
+                        bossSpawnLocation.BossChance = Math.max(0, Math.min(chance, 100));
                     }
                 }
             }

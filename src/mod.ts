@@ -178,7 +178,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     action: async (url, info, sessionID, output) => {
                         try {
                             realismInfo.IsHalloween = EventTracker.isHalloween;
-                            realismInfo.IsHalloween = EventTracker.isChristmas;
+                            realismInfo.isChristmas = EventTracker.isChristmas;
                             realismInfo.AveragePlayerLevel = ProfileTracker.averagePlayerLevel;
                             realismInfo.DoGasEvent = EventTracker.isGasEvent;
 
@@ -285,7 +285,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-                        const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                         const postLoadDBServer = container.resolve<DatabaseService>("DatabaseService");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
@@ -336,7 +335,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                     this.checkProfile(scavData, pmcData.Info.Experience, utils, player, logger);
                                 }
                             }
-                            this.checkForSeasonalEvents(logger, seasonalEventsService);
 
                             if (adjustedTradersOnStart == false) {
                                 let pmcData: IPmcData[] = [];
@@ -710,6 +708,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         // this.dllChecker(logger, modConfig);
 
+        const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
+        this.checkForSeasonalEvents(logger, seasonalEventsService);
+
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
         }
@@ -761,7 +762,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             bots.botNames();
         }
 
-        if (modConfig.guarantee_boss_spawn == true || EventTracker.isHalloween) {
+        if (modConfig.guarantee_boss_spawn == true) {
             bots.forceBossSpawns();
         }
 
@@ -877,18 +878,31 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
         EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
-        EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        EventTracker.isHalloween = true; // seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (EventTracker.isChristmas == true) {
             logger.warning("Merry Christmas!");
         }
         if (EventTracker.isHalloween == true) {
-            logger.warning("Happy Halloween!");
+            const skull = `
+   _______     
+  /       \\   
+ /  O   O  \\  
+|     ^     | 
+|    ---    | 
+ \\_________/  
+   |     |    
+   |_____|    
+  /       \\   
+ /_/|   |\\_\\  
+`;
+
+            logger.logWithColor(skull, LogTextColor.MAGENTA);
         }
     }
 
     public shouldDoGasEvent(utils: Utils, map: string) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = EventTracker.isHalloween ? 500 : 1000;
+        let odds = EventTracker.isHalloween ? 1000 : 2;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
         EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
     }
