@@ -163,6 +163,9 @@ class BotTierTracker {
     static tagillaTier = 1;
     static sanitarTier = 1;
     static reshallaTier = 1;
+    static cultTier = 1;
+    static cultistBaseJson = 0;
+    static priestBaseJson = 0;
     getTier(botType) {
         if (botType === "assault") {
             return BotTierTracker.scavTier;
@@ -182,11 +185,14 @@ class BotTierTracker {
         if (botType === "bosstagilla") {
             return BotTierTracker.tagillaTier;
         }
-        if (botType === "bosssanitar" || botType === "followersanitar") {
+        if (botType.includes("sanitar")) {
             return BotTierTracker.sanitarTier;
         }
-        if (botType === "bossbully" || botType === "followerbully") {
+        if (botType.includes("bully")) {
             return BotTierTracker.reshallaTier;
+        }
+        if (botType.includes("sectant")) {
+            return BotTierTracker.cultTier;
         }
         return 2;
     }

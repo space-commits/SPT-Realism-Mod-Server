@@ -902,7 +902,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     public shouldDoGasEvent(utils: Utils, map: string) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = EventTracker.isHalloween ? 1000 : 2;
+        let odds = EventTracker.isHalloween ? 600 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
         EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
     }

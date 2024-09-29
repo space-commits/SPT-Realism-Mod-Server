@@ -190,9 +190,9 @@ export class BotGen extends BotGenerator {
             let isMidTier = botRole.includes("follower") || botRole.includes("sectant");
             gasMaskTier = isHighTier ? 3 : isMidTier ? 2 : 1;
         }
-        
+
         equipment.FaceCover = gasMaskTier == 3 ? StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? StaticArrays.gasEventMasksMed : StaticArrays.gasEventMasksLow;
-        
+
         if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
             equipment.FaceCover["CCG_GAS_MASK_GP9"] = 2;
             equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 2;
@@ -259,6 +259,12 @@ export class BotGen extends BotGenerator {
 
         return bot;
     }
+
+    private assignPMCtier(utils: Utils, pmcTier: number, botRole: string, botLoader: BotLoader, preparedBotBase: IBotBase, botJsonTemplateClone: IBotType) {
+
+    }
+
+
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase {
         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables = postLoadDBServer.getTables();
@@ -281,8 +287,8 @@ export class BotGen extends BotGenerator {
         const isPMC = this.botHelper.isBotPmc(botRole);
 
         let pmcTier = 1;
-        if (isPMC) {
 
+        if (isPMC) {
             const baseTier = (this.getPMCTier(utils));
             pmcTier = ProfileTracker.averagePlayerLevel <= 10 ? baseTier : this.botTierMapFactor(baseTier, utils);
             const isUSEC = this.isBotUSEC(botRole);
@@ -293,59 +299,34 @@ export class BotGen extends BotGenerator {
             }
 
             if (pmcTier === 1) {
-                if (isUSEC) {
-                    botLoader.usecLoad1(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad1(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "normal";
-                }
+                if (isUSEC) botLoader.usecLoad1(botJsonTemplateClone);
+                else botLoader.bearLoad1(botJsonTemplateClone);
+
+                if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "normal";
             }
             else if (pmcTier === 2) {
-                if (isUSEC) {
-                    botLoader.usecLoad2(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad2(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "normal";
-                }
+                if (isUSEC) botLoader.usecLoad2(botJsonTemplateClone);
+                else botLoader.bearLoad2(botJsonTemplateClone);
+
+                if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "normal";
             }
             else if (pmcTier === 3) {
-                if (isUSEC) {
-                    botLoader.usecLoad3(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad3(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "hard";
-                }
+                if (isUSEC) botLoader.usecLoad3(botJsonTemplateClone);
+                else botLoader.bearLoad3(botJsonTemplateClone);
+
+                if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "hard";
             }
             else if (pmcTier === 4) {
-                if (isUSEC) {
-                    botLoader.usecLoad4(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad4(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "hard";
-                }
+                if (isUSEC) botLoader.usecLoad4(botJsonTemplateClone);
+                else botLoader.bearLoad4(botJsonTemplateClone);
+
+                if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "hard";
             }
             else if (pmcTier === 5) {
-                if (isUSEC) {
-                    botLoader.usecLoad5(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad5(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "impossible";
-                }
+                if (isUSEC) botLoader.usecLoad5(botJsonTemplateClone);
+                else botLoader.bearLoad5(botJsonTemplateClone);
+
+                if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "impossible";
             }
 
             if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
@@ -1040,8 +1021,24 @@ export class BotWepGen extends BotWeaponGenerator {
         }
     }
 
-    private myGetPresetWeaponMods(weaponTpl: string, equipmentSlot: string, weaponParentId: string, itemTemplate: ITemplateItem, botRole: string, pmcTier: number): Item[] {
+    private getCultistPresets(botrole: string): string {
+        const isPriest = botrole.includes("riest");
+        const baseJson = isPriest ? BotTierTracker.priestBaseJson : BotTierTracker.cultistBaseJson;
+     
+        this.logger.warning(" isPriest " + isPriest);
+        this.logger.warning(" baseJson " + baseJson);
 
+        if (baseJson == 0) return "pmcusec";
+        else if (baseJson == 1) return "pmcbear";
+
+        if (isPriest && baseJson == 2) return "exusec";
+        else if (isPriest) return "pmcbot";
+
+        if (baseJson == 2) return "pmcusec";
+        else return "pmcbear";
+    }
+
+    private myGetPresetWeaponMods(weaponTpl: string, equipmentSlot: string, weaponParentId: string, itemTemplate: ITemplateItem, botRole: string, pmcTier: number): Item[] {
         const logger = container.resolve<ILogger>("WinstonLogger");
         const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
         const appContext = container.resolve<ApplicationContext>("ApplicationContext");
@@ -1049,12 +1046,12 @@ export class BotWepGen extends BotWeaponGenerator {
         const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseService, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, appContext, this.localisationService, this.configServer);
+        const tracker = new BotTierTracker();
 
         const tables = this.databaseService.getTables();
 
-        const tierChecker = new BotTierTracker();
         const role = botRole.toLowerCase();
-        let tier = role.includes("bear") || role.includes("usec") ? pmcTier : tierChecker.getTier(botRole);
+        let tier = role.includes("bear") || role.includes("usec") ? pmcTier : tracker.getTier(botRole);
 
         if (modConfig.logEverything == true) {
             this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
@@ -1067,7 +1064,7 @@ export class BotWepGen extends BotWeaponGenerator {
         let weaponPresets = [];
         try {
             let preset: IPreset;
-            let botName = tier === 5 ? "tier5pmc" : botRole;
+            let botName = tier === 5 ? "tier5pmc" : botRole.includes("sectant") ? this.getCultistPresets(botRole) : botRole;
             let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
 
             for (let presetObj in presetFile) {
@@ -1305,15 +1302,13 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         else {
             tier = tierChecker.getTier(botRole);
             if (modConfig.realistic_ballistics) {
-                if (role.includes("follower") || role == "exusec" || role == "pmcbot") {
+                if (role.includes("follower") || role == "exusec" || role == "pmcbot" || role.includes("sectantwarrior")) {
                     armorPlates = armorPlateWeights.followerWeights;
                 }
-
-                if (role.includes("boss")) {
+                else if (role.includes("boss") || role.includes("priest")) {
                     armorPlates = armorPlateWeights.bossWeights;
                 }
-
-                if (role == "assault" || role == "marksman") {
+                else {
                     armorPlates = armorPlateWeights.scavWeights;
                 }
             }

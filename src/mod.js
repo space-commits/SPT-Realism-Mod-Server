@@ -692,12 +692,12 @@ class Main {
   /       \\   
  /_/|   |\\_\\  
 `;
-            logger.warning("Happy Halloween!" + "\n" + skull);
+            logger.logWithColor(skull, LogTextColor_1.LogTextColor.MAGENTA);
         }
     }
     shouldDoGasEvent(utils, map) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = seasonalevents_1.EventTracker.isHalloween ? 1000 : 1000;
+        let odds = seasonalevents_1.EventTracker.isHalloween ? 600 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
         seasonalevents_1.EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
     }

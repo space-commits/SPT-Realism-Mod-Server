@@ -14,32 +14,32 @@
             "IgnoreMaxBots": false,
             "RandomTimeSpawn": false,
             "Supports": [
-              {
-                "BossEscortAmount": "2",
-                "BossEscortDifficult": [
-                  "normal"
-                ],
-                "BossEscortType": "followerKolontayAssault"
-              },
-              {
-                "BossEscortAmount": "2",
-                "BossEscortDifficult": [
-                  "normal"
-                ],
-                "BossEscortType": "followerKolontaySecurity"
-              },
-              {
-                "BossEscortAmount": "0",
-                "BossEscortDifficult": [
-                  "normal"
-                ],
-                "BossEscortType": "followerGluharScout"
-              }
+                {
+                    "BossEscortAmount": "2",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortType": "followerKolontayAssault"
+                },
+                {
+                    "BossEscortAmount": "2",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortType": "followerKolontaySecurity"
+                },
+                {
+                    "BossEscortAmount": "0",
+                    "BossEscortDifficult": [
+                        "normal"
+                    ],
+                    "BossEscortType": "followerGluharScout"
+                }
             ],
             "Time": -1,
             "TriggerId": "",
             "TriggerName": ""
-          },
+        },
         {
             "BossChance": 35,
             "BossDifficult": "normal",
@@ -168,7 +168,7 @@
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
@@ -191,12 +191,12 @@
         {
             "BossName": "sectantPriest",
             "BossChance": 35,
-            "BossZone": "ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad",
+            "BossZone": "ZoneBrige, ZoneFactoryCenter, ZoneFactorySide, ZoneScavBase, ZoneDormitory, ZoneCustoms, ZoneGasStation, ZoneBlockPost, ZoneTankSquare, ZoneOldAZS, ZoneCrossRoad, ZoneWade",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
+            "BossEscortAmount":  "4,4,4,3,3,3,3,3,5",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false,
@@ -427,7 +427,7 @@
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "3,4,5",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
             "Time": -1,
             "RandomTimeSpawn": false
         },
@@ -526,6 +526,19 @@
             "BossEscortType": "followerBully",
             "BossEscortDifficult": "normal",
             "BossEscortAmount": "4",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "sectantPriest",
+            "BossChance": 1,
+            "BossZone": "ZonePowerStation,ZoneTrucks,ZoneCenterBot,ZoneOLI,ZoneIDEA,ZoneGoshan,ZoneIDEAPark,ZoneOLIPark",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
@@ -688,6 +701,19 @@
                 }
             ],
             "RandomTimeSpawn": true
+        },
+        {
+            "BossName": "sectantPriest",
+            "BossChance": 30,
+            "BossZone": "Zone_Chalet,Zone_Village,Zone_Bridge,Zone_OldHouse,Zone_LongRoad,Zone_DestroyedHouse",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
         }
     ],
     "ReserveBossLocationSpawn": [
@@ -787,6 +813,19 @@
             "TriggerName": "interactObject",
             "Supports": null,
             "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "sectantPriest",
+            "BossChance": 10,
+            "BossZone": "ZoneRailStrorage,ZonePTOR1,ZonePTOR2,ZoneBarrack,ZoneSubStorage",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
         }
     ],
     "ShorelineBossLocationSpawn": [
@@ -806,12 +845,12 @@
         {
             "BossName": "sectantPriest",
             "BossChance": 40,
-            "BossZone": "ZoneForestGasStation,ZoneForestSpawn",
+            "BossZone": "ZoneGasStation,ZoneForestGasStation,ZoneForestSpawn,ZoneGreenHouses,ZoneForestTruck,ZoneBusStation",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
@@ -819,12 +858,12 @@
         {
             "BossName": "sectantPriest",
             "BossChance": 40,
-            "BossZone": "ZoneSanatorium1,ZoneSanatorium2",
+            "BossZone": "ZoneSanatorium1,ZoneSanatorium2,ZonePort,ZoneMeteoStation",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
@@ -910,12 +949,25 @@
         {
             "BossName": "sectantPriest",
             "BossChance": 40,
-            "BossZone": "ZoneMiniHouse,ZoneBrokenVill",
+            "BossZone": "ZoneClearVill,ZoneScavBase2,ZoneRoad,ZoneBigRocks",
             "BossPlayer": false,
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "4",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
+            "Time": -1,
+            "Supports": null,
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "sectantPriest",
+            "BossChance": 40,
+            "BossZone": "ZoneMiniHouse,ZoneBrokenVill,ZoneHouse",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
@@ -1231,6 +1283,19 @@
             "Time": -1,
             "TriggerId": "autoId_00632_EXFIL",
             "TriggerName": "interactObject",
+            "RandomTimeSpawn": false
+        },
+        {
+            "BossName": "sectantPriest",
+            "BossChance": 1,
+            "BossZone": "ZoneRailStrorage,ZonePTOR1,ZonePTOR2,ZoneBarrack,ZoneSubStorage",
+            "BossPlayer": false,
+            "BossDifficult": "normal",
+            "BossEscortType": "BotZoneFloor1, BotZoneFloor2",
+            "BossEscortDifficult": "normal",
+            "BossEscortAmount": "4,4,4,3,3,3,3,3,5",
+            "Time": -1,
+            "Supports": null,
             "RandomTimeSpawn": false
         }
     ]

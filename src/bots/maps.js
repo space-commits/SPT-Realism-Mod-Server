@@ -54,20 +54,18 @@ class Spawns {
     }
     bossSpawnHelper(chanceMulti) {
         for (let i in this.mapDB) {
-            this.logger.warning("==map " + i);
             let mapBase = this.mapDB[i]?.base;
             if (i !== "lighthouse" && i !== "laboratory" && mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
-                this.logger.warning("==map 2==");
                 for (let k in mapBase.BossLocationSpawn) {
                     let bossSpawnLocation = mapBase.BossLocationSpawn[k];
                     let chance = bossSpawnLocation.BossChance;
                     if (seasonalevents_1.EventTracker.isHalloween) {
                         if (bossSpawnLocation.BossName.includes("sectant")) {
                             bossSpawnLocation.BossChance = 100;
-                            this.logger.warning("sectant " + bossSpawnLocation.BossChance);
                         }
                         else {
-                            bossSpawnLocation.BossChance = 0;
+                            chance = Math.round(bossSpawnLocation.BossChance * 0.1);
+                            bossSpawnLocation.BossChance = Math.max(0, Math.min(chance, 100));
                         }
                     }
                     else if (bossSpawnLocation?.TriggerId !== undefined && bossSpawnLocation?.TriggerId !== "") {
@@ -78,8 +76,6 @@ class Spawns {
                         chance = Math.round(bossSpawnLocation.BossChance * chanceMulti);
                         bossSpawnLocation.BossChance = Math.max(0, Math.min(chance, 100));
                     }
-                    this.logger.warning("what is name " + bossSpawnLocation.BossName);
-                    this.logger.warning("chance " + bossSpawnLocation.BossChance);
                 }
             }
         }

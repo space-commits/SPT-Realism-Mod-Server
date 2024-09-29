@@ -196,6 +196,8 @@ class BotGen extends BotGenerator_1.BotGenerator {
         bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
         return bot;
     }
+    assignPMCtier(utils, pmcTier, botRole, botLoader, preparedBotBase, botJsonTemplateClone) {
+    }
     myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
         const postLoadDBServer = tsyringe_1.container.resolve("DatabaseServer");
         const tables = postLoadDBServer.getTables();
@@ -220,59 +222,44 @@ class BotGen extends BotGenerator_1.BotGenerator {
                 pmcTier = modConfig.bot_test_tier;
             }
             if (pmcTier === 1) {
-                if (isUSEC) {
+                if (isUSEC)
                     botLoader.usecLoad1(botJsonTemplateClone);
-                }
-                else {
+                else
                     botLoader.bearLoad1(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
+                if (changeDiffi == true)
                     preparedBotBase.Info.Settings.BotDifficulty = "normal";
-                }
             }
             else if (pmcTier === 2) {
-                if (isUSEC) {
+                if (isUSEC)
                     botLoader.usecLoad2(botJsonTemplateClone);
-                }
-                else {
+                else
                     botLoader.bearLoad2(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
+                if (changeDiffi == true)
                     preparedBotBase.Info.Settings.BotDifficulty = "normal";
-                }
             }
             else if (pmcTier === 3) {
-                if (isUSEC) {
+                if (isUSEC)
                     botLoader.usecLoad3(botJsonTemplateClone);
-                }
-                else {
+                else
                     botLoader.bearLoad3(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
+                if (changeDiffi == true)
                     preparedBotBase.Info.Settings.BotDifficulty = "hard";
-                }
             }
             else if (pmcTier === 4) {
-                if (isUSEC) {
+                if (isUSEC)
                     botLoader.usecLoad4(botJsonTemplateClone);
-                }
-                else {
+                else
                     botLoader.bearLoad4(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
+                if (changeDiffi == true)
                     preparedBotBase.Info.Settings.BotDifficulty = "hard";
-                }
             }
             else if (pmcTier === 5) {
-                if (isUSEC) {
+                if (isUSEC)
                     botLoader.usecLoad5(botJsonTemplateClone);
-                }
-                else {
+                else
                     botLoader.bearLoad5(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
+                if (changeDiffi == true)
                     preparedBotBase.Info.Settings.BotDifficulty = "impossible";
-                }
             }
             if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
                 botJsonTemplateClone.inventory.equipment.FirstPrimaryWeapon = {};
@@ -797,6 +784,24 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
         }
     }
+    getCultistPresets(botrole) {
+        const isPriest = botrole.includes("riest");
+        const baseJson = isPriest ? utils_1.BotTierTracker.priestBaseJson : utils_1.BotTierTracker.cultistBaseJson;
+        this.logger.warning(" isPriest " + isPriest);
+        this.logger.warning(" baseJson " + baseJson);
+        if (baseJson == 0)
+            return "pmcusec";
+        else if (baseJson == 1)
+            return "pmcbear";
+        if (isPriest && baseJson == 2)
+            return "exusec";
+        else if (isPriest)
+            return "pmcbot";
+        if (baseJson == 2)
+            return "pmcusec";
+        else
+            return "pmcbear";
+    }
     myGetPresetWeaponMods(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole, pmcTier) {
         const logger = tsyringe_1.container.resolve("WinstonLogger");
         const durabilityLimitsHelper = tsyringe_1.container.resolve("DurabilityLimitsHelper");
@@ -805,10 +810,10 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         const containerHelper = tsyringe_1.container.resolve("ContainerHelper");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseService, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, appContext, this.localisationService, this.configServer);
+        const tracker = new utils_1.BotTierTracker();
         const tables = this.databaseService.getTables();
-        const tierChecker = new utils_1.BotTierTracker();
         const role = botRole.toLowerCase();
-        let tier = role.includes("bear") || role.includes("usec") ? pmcTier : tierChecker.getTier(botRole);
+        let tier = role.includes("bear") || role.includes("usec") ? pmcTier : tracker.getTier(botRole);
         if (modConfig.logEverything == true) {
             this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
             this.logger.warning(`//////////////////////////////${tier}///////////////////////////////////`);
@@ -819,7 +824,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         let weaponPresets = [];
         try {
             let preset;
-            let botName = tier === 5 ? "tier5pmc" : botRole;
+            let botName = tier === 5 ? "tier5pmc" : botRole.includes("sectant") ? this.getCultistPresets(botRole) : botRole;
             let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
             for (let presetObj in presetFile) {
                 this.reformatPreset(presetFile, presetObj);
@@ -1013,13 +1018,13 @@ class BotEquipGenHelper extends BotEquipmentModGenerator_1.BotEquipmentModGenera
         else {
             tier = tierChecker.getTier(botRole);
             if (modConfig.realistic_ballistics) {
-                if (role.includes("follower") || role == "exusec" || role == "pmcbot") {
+                if (role.includes("follower") || role == "exusec" || role == "pmcbot" || role.includes("sectantwarrior")) {
                     armorPlates = armorPlateWeights.followerWeights;
                 }
-                if (role.includes("boss")) {
+                else if (role.includes("boss") || role.includes("priest")) {
                     armorPlates = armorPlateWeights.bossWeights;
                 }
-                if (role == "assault" || role == "marksman") {
+                else {
                     armorPlates = armorPlateWeights.scavWeights;
                 }
             }

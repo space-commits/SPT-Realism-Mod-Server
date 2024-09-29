@@ -61,7 +61,6 @@ export class Spawns {
                     if (EventTracker.isHalloween) {
                         if (bossSpawnLocation.BossName.includes("sectant")) {
                             bossSpawnLocation.BossChance = 100;
-                            this.logger.warning("sectant " + bossSpawnLocation.BossChance);
                         }
                         else {
                             chance = Math.round(bossSpawnLocation.BossChance * 0.1)

@@ -325,10 +325,10 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 88,
-                "highestMax": 95,
-                "maxDelta": 15,
-                "minDelta": 0,
+                "lowestMax": 85,
+                "highestMax": 94,
+                "maxDelta": 20,
+                "minDelta": 5,
                 "minLimitPercent": 15
             }
         },
@@ -339,9 +339,9 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 85,
-                "highestMax": 95,
-                "maxDelta": 20,
+                "lowestMax": 84,
+                "highestMax": 90,
+                "maxDelta": 25,
                 "minDelta": 5,
                 "minLimitPercent": 15
             }
@@ -497,10 +497,10 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 84,
-                "highestMax": 94,
-                "maxDelta": 17,
-                "minDelta": 0,
+                "lowestMax": 82,
+                "highestMax": 92,
+                "maxDelta": 25,
+                "minDelta": 5,
                 "minLimitPercent": 15
             }
         },
@@ -512,9 +512,9 @@
             },
             "weapon": {
                 "lowestMax": 80,
-                "highestMax": 90,
-                "maxDelta": 22,
-                "minDelta": 5,
+                "highestMax": 88,
+                "maxDelta": 30,
+                "minDelta": 10,
                 "minLimitPercent": 15
             }
         },
@@ -671,22 +671,22 @@
             "weapon": {
                 "lowestMax": 80,
                 "highestMax": 90,
-                "maxDelta": 20,
-                "minDelta": 0,
+                "maxDelta": 30,
+                "minDelta": 10,
                 "minLimitPercent": 15
             }
         },
         "sectantwarrior": {
             "armor": {
-                "maxDelta": 25,
-                "minDelta": 0,
+                "maxDelta": 20,
+                "minDelta": 5,
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 80,
+                "lowestMax": 78,
                 "highestMax": 85,
-                "maxDelta": 25,
-                "minDelta": 5,
+                "maxDelta": 35,
+                "minDelta": 15,
                 "minLimitPercent": 15
             }
         },
