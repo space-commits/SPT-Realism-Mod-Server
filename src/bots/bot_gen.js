@@ -132,8 +132,8 @@ class BotGen extends BotGenerator_1.BotGenerator {
             gasMaskTier = pmcTier <= 2 ? 1 : pmcTier == 3 ? 2 : 3;
         }
         else {
-            let isHighTier = botRole.includes("boss") || botRole.includes("pmc") || botRole.includes("exusec");
-            let isMidTier = botRole.includes("follower") || botRole.includes("sectant");
+            let isHighTier = botRole.includes("boss") || botRole.includes("pmc") || botRole.includes("exusec") || botRole.includes("priest");
+            let isMidTier = botRole.includes("follower") || botRole.includes("warrior");
             gasMaskTier = isHighTier ? 3 : isMidTier ? 2 : 1;
         }
         equipment.FaceCover = gasMaskTier == 3 ? arrays_1.StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? arrays_1.StaticArrays.gasEventMasksMed : arrays_1.StaticArrays.gasEventMasksLow;
@@ -196,7 +196,60 @@ class BotGen extends BotGenerator_1.BotGenerator {
         bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
         return bot;
     }
-    assignPMCtier(utils, pmcTier, botRole, botLoader, preparedBotBase, botJsonTemplateClone) {
+    assignPMCtier(utils, botRole, botLoader, preparedBotBase, botJsonTemplateClone) {
+        const baseTier = (this.getPMCTier(utils));
+        const isUSEC = this.isBotUSEC(botRole);
+        const changeDiffi = modConfig.pmc_difficulty == true && utils_1.ModTracker.sainPresent == false;
+        let pmcTier = utils_1.ProfileTracker.averagePlayerLevel <= 10 ? baseTier : this.botTierMapFactor(baseTier, utils);
+        if (modConfig.bot_testing == true) {
+            pmcTier = modConfig.bot_test_tier;
+        }
+        if (pmcTier === 1) {
+            if (isUSEC)
+                botLoader.usecLoad1(botJsonTemplateClone);
+            else
+                botLoader.bearLoad1(botJsonTemplateClone);
+            if (changeDiffi == true)
+                preparedBotBase.Info.Settings.BotDifficulty = "normal";
+        }
+        else if (pmcTier === 2) {
+            if (isUSEC)
+                botLoader.usecLoad2(botJsonTemplateClone);
+            else
+                botLoader.bearLoad2(botJsonTemplateClone);
+            if (changeDiffi == true)
+                preparedBotBase.Info.Settings.BotDifficulty = "normal";
+        }
+        else if (pmcTier === 3) {
+            if (isUSEC)
+                botLoader.usecLoad3(botJsonTemplateClone);
+            else
+                botLoader.bearLoad3(botJsonTemplateClone);
+            if (changeDiffi == true)
+                preparedBotBase.Info.Settings.BotDifficulty = "hard";
+        }
+        else if (pmcTier === 4) {
+            if (isUSEC)
+                botLoader.usecLoad4(botJsonTemplateClone);
+            else
+                botLoader.bearLoad4(botJsonTemplateClone);
+            if (changeDiffi == true)
+                preparedBotBase.Info.Settings.BotDifficulty = "hard";
+        }
+        else if (pmcTier === 5) {
+            if (isUSEC)
+                botLoader.usecLoad5(botJsonTemplateClone);
+            else
+                botLoader.bearLoad5(botJsonTemplateClone);
+            if (changeDiffi == true)
+                preparedBotBase.Info.Settings.BotDifficulty = "impossible";
+        }
+        if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
+            botJsonTemplateClone.inventory.equipment.FirstPrimaryWeapon = {};
+            botJsonTemplateClone.inventory.equipment.SecondPrimaryWeapon = {};
+            botJsonTemplateClone.inventory.equipment.Holster = {};
+        }
+        return pmcTier;
     }
     myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
         const postLoadDBServer = tsyringe_1.container.resolve("DatabaseServer");
@@ -214,58 +267,16 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const isPMC = this.botHelper.isBotPmc(botRole);
         let pmcTier = 1;
         if (isPMC) {
-            const baseTier = (this.getPMCTier(utils));
-            pmcTier = utils_1.ProfileTracker.averagePlayerLevel <= 10 ? baseTier : this.botTierMapFactor(baseTier, utils);
-            const isUSEC = this.isBotUSEC(botRole);
-            const changeDiffi = modConfig.pmc_difficulty == true && utils_1.ModTracker.sainPresent == false;
-            if (modConfig.bot_testing == true) {
-                pmcTier = modConfig.bot_test_tier;
-            }
-            if (pmcTier === 1) {
-                if (isUSEC)
-                    botLoader.usecLoad1(botJsonTemplateClone);
-                else
-                    botLoader.bearLoad1(botJsonTemplateClone);
-                if (changeDiffi == true)
-                    preparedBotBase.Info.Settings.BotDifficulty = "normal";
-            }
-            else if (pmcTier === 2) {
-                if (isUSEC)
-                    botLoader.usecLoad2(botJsonTemplateClone);
-                else
-                    botLoader.bearLoad2(botJsonTemplateClone);
-                if (changeDiffi == true)
-                    preparedBotBase.Info.Settings.BotDifficulty = "normal";
-            }
-            else if (pmcTier === 3) {
-                if (isUSEC)
-                    botLoader.usecLoad3(botJsonTemplateClone);
-                else
-                    botLoader.bearLoad3(botJsonTemplateClone);
-                if (changeDiffi == true)
-                    preparedBotBase.Info.Settings.BotDifficulty = "hard";
-            }
-            else if (pmcTier === 4) {
-                if (isUSEC)
-                    botLoader.usecLoad4(botJsonTemplateClone);
-                else
-                    botLoader.bearLoad4(botJsonTemplateClone);
-                if (changeDiffi == true)
-                    preparedBotBase.Info.Settings.BotDifficulty = "hard";
-            }
-            else if (pmcTier === 5) {
-                if (isUSEC)
-                    botLoader.usecLoad5(botJsonTemplateClone);
-                else
-                    botLoader.bearLoad5(botJsonTemplateClone);
-                if (changeDiffi == true)
-                    preparedBotBase.Info.Settings.BotDifficulty = "impossible";
-            }
-            if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
-                botJsonTemplateClone.inventory.equipment.FirstPrimaryWeapon = {};
-                botJsonTemplateClone.inventory.equipment.SecondPrimaryWeapon = {};
-                botJsonTemplateClone.inventory.equipment.Holster = {};
-            }
+            pmcTier = this.assignPMCtier(utils, botRole, botLoader, preparedBotBase, botJsonTemplateClone);
+        }
+        if (botRole.includes("sectant")) {
+            const isPriest = botRole.includes("riest");
+            if (utils_1.BotTierTracker.cultTier == 1)
+                botLoader.cultistsLoad1(botJsonTemplateClone, isPriest);
+            else if (utils_1.BotTierTracker.cultTier == 2)
+                botLoader.cultistsLoad2(botJsonTemplateClone, isPriest);
+            else if (utils_1.BotTierTracker.cultTier == 3)
+                botLoader.cultistsLoad3(botJsonTemplateClone, isPriest);
         }
         if (modConfig.logEverything == true) {
             this.logger.warning("bot " + botRole);
@@ -279,6 +290,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         this.addArmorInserts(botJsonTemplateClone.inventory.mods);
         this.pushGasMaskFilter(botJsonTemplateClone.inventory.mods);
         return this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);
+        ;
     }
     setBotMemberAndGameEdition(botInfo, pmcTier) {
         // Special case
@@ -787,8 +799,6 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     getCultistPresets(botrole) {
         const isPriest = botrole.includes("riest");
         const baseJson = isPriest ? utils_1.BotTierTracker.priestBaseJson : utils_1.BotTierTracker.cultistBaseJson;
-        this.logger.warning(" isPriest " + isPriest);
-        this.logger.warning(" baseJson " + baseJson);
         if (baseJson == 0)
             return "pmcusec";
         else if (baseJson == 1)

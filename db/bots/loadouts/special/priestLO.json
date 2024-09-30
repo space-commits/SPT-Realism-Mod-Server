@@ -46,6 +46,24 @@
         ]
     },
     "priestLO1": {
+        "appearance": {
+            "body": {
+                "5fb53cc97b5d1342ee24bd63": 1
+              },
+              "feet": {
+                "5fb535bd1c69e5198e234125": 1,
+                "5fb535cf1c69e5198e234126": 10
+              },
+              "hands": {
+                "5cc2e68f14c02e28b47de290": 1
+              },
+              "head": {
+                "5fb52a3a1c69e5198e234118": 1
+              },
+              "voice": {
+                "SectantPriest": 1
+              }
+        },
         "inventory": {
             "Ammo": {
                 "Caliber12g": {
@@ -201,6 +219,7 @@
                     "63626d904aa74b8fe30ab426": 1
                 },
                 "ArmorVest": {
+                    "5e9dacf986f774054d6b89f4": 1,
                     "5648a7494bdc2d9d488b4583": 10,
                     "5e4abb5086f77406975c9342": 5,
                     "63737f448b28897f2802b874": 5,
@@ -396,6 +415,27 @@
         }
     },
     "priestLO2": {
+        "appearance": {
+            "body": {
+                "5fb53cc97b5d1342ee24bd63": 1
+              },
+              "feet": {
+                "5fb535bd1c69e5198e234125": 1,
+                "5fb535cf1c69e5198e234126": 10,
+                "5d1f593286f7743014162044": 1,
+                "5d1f591186f7744bcc048755": 1,
+                "5f5e40a06760b4138443b341": 1
+              },
+              "hands": {
+                "5cc2e68f14c02e28b47de290": 1
+              },
+              "head": {
+                "5fb52a3a1c69e5198e234118": 1
+              },
+              "voice": {
+                "SectantPriest": 1
+              }
+        },
         "inventory": {
             "Ammo": {
                 "Caliber12g": {
@@ -549,6 +589,7 @@
                     "63626d904aa74b8fe30ab426": 1
                 },
                 "ArmorVest": {
+                    "5e9dacf986f774054d6b89f4": 1,
                     "5648a7494bdc2d9d488b4583": 3,
                     "5e4abb5086f77406975c9342": 5,
                     "63737f448b28897f2802b874": 5,
@@ -560,6 +601,7 @@
                 "Eyewear": {},
                 "ArmBand": {},
                 "TacticalVest": {
+                    "628d0618d1ba6e4fa07ce5a4": 1,
                     "64a536392d2c4e6e970f4121": 1,
                     "64a5366719bab53bd203bf33": 1,
                     "628cd624459354321c4b7fa2": 2,
@@ -747,6 +789,26 @@
         }
     },
     "priestLO3": {
+        "appearance": {
+            "body": {
+                "5fb53cc97b5d1342ee24bd63": 1
+              },
+              "feet": {
+                "5fb535cf1c69e5198e234126": 8,
+                "5d1f593286f7743014162044": 1,
+                "5d1f591186f7744bcc048755": 1,
+                "5f5e40a06760b4138443b341": 1
+              },
+              "hands": {
+                "5cc2e68f14c02e28b47de290": 1
+              },
+              "head": {
+                "5fb52a3a1c69e5198e234118": 1
+              },
+              "voice": {
+                "SectantPriest": 1
+              }
+        },
         "inventory": {
             "Ammo": {
                 "Caliber12g": {
@@ -904,6 +966,7 @@
                     "63626d904aa74b8fe30ab426": 1
                 },
                 "ArmorVest": {
+                    "5e9dacf986f774054d6b89f4": 1,
                     "5648a7494bdc2d9d488b4583": 1,
                     "5e4abb5086f77406975c9342": 5,
                     "63737f448b28897f2802b874": 5,
@@ -915,6 +978,7 @@
                 "Eyewear": {},
                 "ArmBand": {},
                 "TacticalVest": {
+                    "628d0618d1ba6e4fa07ce5a4": 1,
                     "64a536392d2c4e6e970f4121": 1,
                     "64a5366719bab53bd203bf33": 1,
                     "628cd624459354321c4b7fa2": 2,

@@ -102,8 +102,8 @@ class Main {
                     try {
                         return jsonUtil.serialize(modConfig);
                     }
-                    catch (err) {
-                        console.error("Failed to read config file", err);
+                    catch (e) {
+                        console.error("Failed to read config file", e);
                     }
                 }
             }
@@ -119,8 +119,8 @@ class Main {
                         realismInfo.DoGasEvent = seasonalevents_1.EventTracker.isGasEvent;
                         return jsonUtil.serialize(realismInfo);
                     }
-                    catch (err) {
-                        console.error("Failed to read config file", err);
+                    catch (e) {
+                        console.error("Failed to read info file", e);
                     }
                 }
             }
@@ -697,7 +697,7 @@ class Main {
     }
     shouldDoGasEvent(utils, map) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = seasonalevents_1.EventTracker.isHalloween ? 600 : 1;
+        let odds = seasonalevents_1.EventTracker.isHalloween ? 650 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
         seasonalevents_1.EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
     }

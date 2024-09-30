@@ -325,7 +325,7 @@ class BotLoader {
             this.tagillaLoad1();
             this.sanitarLoad1();
             this.reshallaLoad1();
-            this.cultistsLoad1();
+            utils_1.BotTierTracker.cultTier = 1;
             this.logger.warning(`Tier ${tier} Test Selected`);
         }
         if (tier == 2) {
@@ -338,7 +338,7 @@ class BotLoader {
             this.tagillaLoad2();
             this.sanitarLoad2();
             this.reshallaLoad2();
-            this.cultistsLoad2();
+            utils_1.BotTierTracker.cultTier = 2;
             this.logger.warning(`Tier ${tier} Test Selected`);
         }
         if (tier == 3) {
@@ -351,7 +351,7 @@ class BotLoader {
             this.tagillaLoad3();
             this.sanitarLoad3();
             this.reshallaLoad3();
-            this.cultistsLoad3();
+            utils_1.BotTierTracker.cultTier = 3;
             this.logger.warning(`Tier ${tier} Test Selected`);
         }
         if (tier == 4 || tier == 5) {
@@ -364,7 +364,7 @@ class BotLoader {
             this.tagillaLoad3();
             this.sanitarLoad3();
             this.reshallaLoad3();
-            this.cultistsLoad3();
+            utils_1.BotTierTracker.cultTier = 4;
             this.logger.warning(`Tier ${tier} Test Selected`);
         }
         if (this.modConfig.bot_test_weps_enabled == false) {
@@ -438,11 +438,12 @@ class BotLoader {
         }
         if (type === "cult") {
             if (tier == 1)
-                bots.cultistsLoad1();
+                utils_1.BotTierTracker.cultTier = 1;
             if (tier == 2)
-                bots.cultistsLoad2();
+                utils_1.BotTierTracker.cultTier = 2;
             if (tier == 3)
-                bots.cultistsLoad3();
+                utils_1.BotTierTracker.cultTier = 3;
+            return;
         }
         if (type === "reshalla") {
             if (tier == 1)
@@ -451,6 +452,7 @@ class BotLoader {
                 bots.reshallaLoad2();
             if (tier == 3)
                 bots.reshallaLoad3();
+            return;
         }
         if (type === "sanitar") {
             if (tier == 1)
@@ -459,6 +461,7 @@ class BotLoader {
                 bots.sanitarLoad2();
             if (tier == 3)
                 bots.sanitarLoad3();
+            return;
         }
         if (type === "tagilla") {
             if (tier == 1)
@@ -467,6 +470,7 @@ class BotLoader {
                 bots.tagillaLoad2();
             if (tier == 3)
                 bots.tagillaLoad3();
+            return;
         }
         if (type === "killa") {
             if (tier == 1)
@@ -475,6 +479,7 @@ class BotLoader {
                 bots.killaLoad2();
             if (tier == 3)
                 bots.killaLoad3();
+            return;
         }
         if (type === "goons") {
             if (tier == 1)
@@ -483,6 +488,7 @@ class BotLoader {
                 bots.goonsLoad2();
             if (tier == 3)
                 bots.goonsLoad3();
+            return;
         }
         if (type === "raider") {
             if (tier == 1)
@@ -491,6 +497,7 @@ class BotLoader {
                 bots.raiderLoad2();
             if (tier == 3)
                 bots.raiderLoad3();
+            return;
         }
         if (type === "rogue") {
             if (tier == 1)
@@ -499,6 +506,7 @@ class BotLoader {
                 bots.rogueLoad2();
             if (tier == 3)
                 bots.rogueLoad3();
+            return;
         }
         if (type === "scav") {
             if (tier == 1)
@@ -507,6 +515,7 @@ class BotLoader {
                 bots.scavLoad2();
             if (tier == 3)
                 bots.scavLoad3();
+            return;
         }
     }
     updateBots(pmcData, logger, config, bots, helper) {
@@ -2996,7 +3005,6 @@ class BotLoader {
         }
     }
     assignRandomCultLO(botJsonTemplate, tier, isPriest) {
-        this.logger.warning("==getting random cultist tier");
         const roleNumber = this.utils.pickRandNumInRange(0, 3);
         const pmcTierModifierMin = isPriest ? Math.min(tier, 4) : Math.max(tier, 2);
         const pmcTierModifierMax = isPriest ? Math.min(tier + 2, 4) : Math.max(tier, 2);
@@ -3020,8 +3028,6 @@ class BotLoader {
                     3: bearJson,
                 };
         const role = roles[roleNumber];
-        this.logger.warning(" tier " + tier);
-        this.logger.warning(" role " + roleNumber);
         botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = role.inventory.equipment.FirstPrimaryWeapon;
         botJsonTemplate.inventory.equipment.SecondPrimaryWeapon = role.inventory.equipment.SecondPrimaryWeapon;
         botJsonTemplate.inventory.equipment.Holster = role.inventory.equipment.Holster;
@@ -3044,88 +3050,68 @@ class BotLoader {
         botJsonTemplate.inventory.equipment.Scabbard = clonedLO.inventory.equipment.Scabbard;
         botJsonTemplate.inventory.equipment.Pockets = clonedLO.inventory.equipment.Pockets;
     }
-    cultistsLoad1() {
-        let cultistJson = JSON.parse(JSON.stringify(cultistLO.cultLO1));
-        let prietJson = JSON.parse(JSON.stringify(priestLO.priestLO1));
-        this.cultistHelper(cultistJson, this.cultBase);
-        this.cultistHelper(prietJson, this.priestBase);
-        this.priestBase.inventory.Ammo = prietJson.inventory.Ammo;
-        this.priestBase.chances = prietJson.chances;
-        if (this.utils.pickRandNumInRange(1, 100) > 70)
-            this.assignRandomCultLO(this.priestBase, 1, true);
-        this.cultBase.inventory.Ammo = cultistJson.inventory.Ammo;
-        this.cultBase.chances = cultistJson.chances;
-        if (this.utils.pickRandNumInRange(1, 100) > 80)
-            this.assignRandomCultLO(this.cultBase, 1, false);
+    cultistsLoad1(botJsonTemplate, isPriest) {
+        const clonedJson = isPriest ? JSON.parse(JSON.stringify(priestLO.priestLO1)) : JSON.parse(JSON.stringify(cultistLO.cultLO1));
+        const odds = isPriest ? 30 : 60;
+        this.cultistHelper(clonedJson, botJsonTemplate);
+        if (isPriest)
+            botJsonTemplate.appearance = clonedJson.appearance;
+        botJsonTemplate.inventory.Ammo = clonedJson.inventory.Ammo;
+        botJsonTemplate.chances = clonedJson.chances;
+        if (odds > this.utils.pickRandNumInRange(1, 100))
+            this.assignRandomCultLO(botJsonTemplate, 1, isPriest);
         if (this.modConfig.bot_loot_changes === true) {
-            this.priestBase.inventory.items = prietJson.inventory.items;
-            this.priestBase.generation = lootOdds.boss;
-            this.cultBase.inventory.items = cultistJson.inventory.items;
-            this.cultBase.generation = lootOdds.tier1;
+            botJsonTemplate.inventory.items = clonedJson.inventory.items;
+            botJsonTemplate.generation = isPriest ? lootOdds.boss : lootOdds.tier2;
         }
         this.botConf().equipment["sectantpriest"].lightIsActiveDayChancePercent = 0;
         this.botConf().equipment["sectantwarrior"].lightIsActiveDayChancePercent = 0;
         this.botConf().equipment["sectantpriest"].laserIsActiveChancePercent = 0;
         this.botConf().equipment["sectantwarrior"].laserIsActiveChancePercent = 0;
-        utils_1.BotTierTracker.cultTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("cultLoad1 loaded");
         }
     }
-    cultistsLoad2() {
-        let cultistJson = JSON.parse(JSON.stringify(cultistLO.cultLO2));
-        let prietJson = JSON.parse(JSON.stringify(priestLO.priestLO2));
-        this.cultistHelper(cultistJson, this.cultBase);
-        this.cultistHelper(prietJson, this.priestBase);
-        this.priestBase.inventory.Ammo = prietJson.inventory.Ammo;
-        this.priestBase.chances = prietJson.chances;
-        if (this.utils.pickRandNumInRange(1, 100) > 65)
-            this.assignRandomCultLO(this.priestBase, 2, true);
-        this.cultBase.inventory.Ammo = cultistJson.inventory.Ammo;
-        this.cultBase.chances = cultistJson.chances;
-        if (this.utils.pickRandNumInRange(1, 100) > 70)
-            this.assignRandomCultLO(this.cultBase, 2, false);
+    cultistsLoad2(botJsonTemplate, isPriest) {
+        const clonedJson = isPriest ? JSON.parse(JSON.stringify(priestLO.priestLO2)) : JSON.parse(JSON.stringify(cultistLO.cultLO2));
+        const odds = isPriest ? 40 : 65;
+        this.cultistHelper(clonedJson, botJsonTemplate);
+        if (isPriest)
+            botJsonTemplate.appearance = clonedJson.appearance;
+        botJsonTemplate.inventory.Ammo = clonedJson.inventory.Ammo;
+        botJsonTemplate.chances = clonedJson.chances;
+        if (odds > this.utils.pickRandNumInRange(1, 100))
+            this.assignRandomCultLO(botJsonTemplate, 2, isPriest);
         if (this.modConfig.bot_loot_changes === true) {
-            this.priestBase.inventory.items = prietJson.inventory.items;
-            this.priestBase.generation = lootOdds.boss;
-            this.cultBase.inventory.items = cultistJson.inventory.items;
-            this.cultBase.generation = lootOdds.tier1;
+            botJsonTemplate.inventory.items = clonedJson.inventory.items;
+            botJsonTemplate.generation = isPriest ? lootOdds.boss : lootOdds.tier2;
         }
         this.botConf().equipment["sectantpriest"].lightIsActiveDayChancePercent = 0;
         this.botConf().equipment["sectantwarrior"].lightIsActiveDayChancePercent = 0;
         this.botConf().equipment["sectantpriest"].laserIsActiveChancePercent = 0;
         this.botConf().equipment["sectantwarrior"].laserIsActiveChancePercent = 0;
-        utils_1.BotTierTracker.cultTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("cultLoad2 loaded");
         }
     }
-    cultistsLoad3() {
-        let cultistJson = JSON.parse(JSON.stringify(cultistLO.cultLO3));
-        let prietJson = JSON.parse(JSON.stringify(priestLO.priestLO3));
-        this.cultistHelper(cultistJson, this.cultBase);
-        this.cultistHelper(prietJson, this.priestBase);
-        this.priestBase.inventory.Ammo = prietJson.inventory.Ammo;
-        this.priestBase.chances = prietJson.chances;
-        if (this.utils.pickRandNumInRange(1, 100) > 60)
-            if (this.utils.pickRandNumInRange(1, 100) > 80)
-                this.assignRandomCultLO(this.priestBase, 3, true);
-        this.cultBase.inventory.Ammo = cultistJson.inventory.Ammo;
-        this.cultBase.chances = cultistJson.chances;
-        if (this.utils.pickRandNumInRange(1, 100) > 60)
-            if (this.utils.pickRandNumInRange(1, 100) > 80)
-                this.assignRandomCultLO(this.cultBase, 3, false);
+    cultistsLoad3(botJsonTemplate, isPriest) {
+        const clonedJson = isPriest ? JSON.parse(JSON.stringify(priestLO.priestLO3)) : JSON.parse(JSON.stringify(cultistLO.cultLO3));
+        const odds = isPriest ? 50 : 70;
+        this.cultistHelper(clonedJson, botJsonTemplate);
+        if (isPriest)
+            botJsonTemplate.appearance = clonedJson.appearance;
+        botJsonTemplate.inventory.Ammo = clonedJson.inventory.Ammo;
+        botJsonTemplate.chances = clonedJson.chances;
+        if (odds > this.utils.pickRandNumInRange(1, 100))
+            this.assignRandomCultLO(botJsonTemplate, 3, isPriest);
         if (this.modConfig.bot_loot_changes === true) {
-            this.priestBase.inventory.items = prietJson.inventory.items;
-            this.priestBase.generation = lootOdds.boss;
-            this.cultBase.inventory.items = cultistJson.inventory.items;
-            this.cultBase.generation = lootOdds.tier2;
+            botJsonTemplate.inventory.items = clonedJson.inventory.items;
+            botJsonTemplate.generation = isPriest ? lootOdds.boss : lootOdds.tier2;
         }
         this.botConf().equipment["sectantpriest"].lightIsActiveDayChancePercent = 0;
         this.botConf().equipment["sectantwarrior"].lightIsActiveDayChancePercent = 0;
         this.botConf().equipment["sectantpriest"].laserIsActiveChancePercent = 0;
         this.botConf().equipment["sectantwarrior"].laserIsActiveChancePercent = 0;
-        utils_1.BotTierTracker.cultTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("cultLoad3 loaded");
         }

@@ -161,8 +161,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     action: async (url, info, sessionID, output) => {
                         try {
                             return jsonUtil.serialize(modConfig);
-                        } catch (err) {
-                            console.error("Failed to read config file", err);
+                        } catch (e) {
+                            console.error("Failed to read config file", e);
                         }
                     }
                 }
@@ -183,8 +183,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             realismInfo.DoGasEvent = EventTracker.isGasEvent;
 
                             return jsonUtil.serialize(realismInfo);
-                        } catch (err) {
-                            console.error("Failed to read config file", err);
+                        } catch (e) {
+                            console.error("Failed to read info file", e);
                         }
                     }
                 }
@@ -902,7 +902,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     public shouldDoGasEvent(utils: Utils, map: string) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = EventTracker.isHalloween ? 600 : 1;
+        let odds = EventTracker.isHalloween ? 650 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
         EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
     }
