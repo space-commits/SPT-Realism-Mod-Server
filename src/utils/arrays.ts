@@ -322,7 +322,7 @@ export class StaticArrays {
 
     static gasEventMasksLow: Record<string, number> = {
         "60363c0c92ec1c31037959f5": 1,
-        "59e7715586f7742ee5789605": 8
+        "59e7715586f7742ee5789605": 6
     };
 
     static gasEventMasksHigh: Record<string, number> = {
@@ -331,9 +331,9 @@ export class StaticArrays {
     };
 
     static gasEventMasksMed: Record<string, number> = {
-        "60363c0c92ec1c31037959f5": 4,
+        "60363c0c92ec1c31037959f5": 3,
         "5b432c305acfc40019478128": 2,
-        "59e7715586f7742ee5789605": 8
+        "59e7715586f7742ee5789605": 7
     };
 
     static confMaskOverlays = [

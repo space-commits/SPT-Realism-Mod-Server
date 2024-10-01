@@ -1135,7 +1135,7 @@ class Ammo {
                 serverItem._props.ammoRec = 12;
                 serverItem._props.Weight = 0.0083;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.4;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 11;
@@ -1422,7 +1422,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 15;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.5;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 16;

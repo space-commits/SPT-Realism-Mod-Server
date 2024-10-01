@@ -58,7 +58,7 @@ export class Spawns {
                     let chance = bossSpawnLocation.BossChance;
 
                     
-                    if (EventTracker.isHalloween) {
+                    if (EventTracker.doGasEvent) {
                         if (bossSpawnLocation.BossName.includes("sectant")) {
                             bossSpawnLocation.BossChance = 100;
                         }

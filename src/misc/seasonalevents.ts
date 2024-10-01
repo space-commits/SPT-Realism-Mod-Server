@@ -3,7 +3,7 @@ import { IBotType } from "@spt/models/eft/common/tables/IBotType";
 export class EventTracker {
     static isChristmas: boolean = false;
     static isHalloween: boolean = false;
-    static isGasEvent: boolean = false;
+    static doGasEvent: boolean = false;
 }
 
 export class SeasonalEventsHandler {

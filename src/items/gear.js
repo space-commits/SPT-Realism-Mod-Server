@@ -21,15 +21,18 @@ class Gear {
         this.itemDB()["590c595c86f7747884343ad7"]._props.Resource = 100;
     }
     loadSpecialSlotChanges() {
+        const gasId = "590a3efd86f77437d351a25b";
+        const geingerId = "5672cb724bdc2dc2088b456b";
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
-            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+            slot._props.filters[0].Filter.push(gasId, geingerId);
         });
         this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
-            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+            slot._props.filters[0].Filter.push(gasId, geingerId);
         });
+        //SVM pockets compatbility
         if (this.itemDB()["a8edfb0bce53d103d3f62b9b"]) {
             this.itemDB()["a8edfb0bce53d103d3f62b9b"]._props.Slots.forEach(slot => {
-                slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+                slot._props.filters[0].Filter.push(gasId, geingerId);
             });
         }
     }

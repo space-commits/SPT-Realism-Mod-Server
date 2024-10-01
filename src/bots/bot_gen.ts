@@ -354,7 +354,7 @@ export class BotGen extends BotGenerator {
         //and then I combine the armor json with the bot's mods json
         //this is highly ineffecient as I am doing it per bot generated, not ideal but for now it works until I figure out a better way
 
-        if (EventTracker.isGasEvent) this.addGasMasksToBots(botJsonTemplateClone.inventory.equipment, botJsonTemplateClone.chances, botRole.toLocaleLowerCase(), isPMC, pmcTier);
+        if (EventTracker.doGasEvent) this.addGasMasksToBots(botJsonTemplateClone.inventory.equipment, botJsonTemplateClone.chances, botRole.toLocaleLowerCase(), isPMC, pmcTier);
         this.addArmorInserts(botJsonTemplateClone.inventory.mods);
         this.pushGasMaskFilter(botJsonTemplateClone.inventory.mods);
 

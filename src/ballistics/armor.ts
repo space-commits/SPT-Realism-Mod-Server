@@ -1932,7 +1932,7 @@ export class Armor {
             serverItem._props.armorClass = 0;
             serverItem._props.speedPenaltyPercent = -1.2;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = 1;
+            serverItem._props.weaponErgonomicPenalty = -1;
             serverItem._props.BluntThroughput = 0.085 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'ArmoredSteel';

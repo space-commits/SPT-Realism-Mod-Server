@@ -276,7 +276,7 @@
                 "Backpack": 0,
                 "FirstPrimaryWeapon": 100,
                 "SecondPrimaryWeapon": 0,
-                "Holster": 5,
+                "Holster": 0,
                 "Scabbard": 100,
                 "Pockets": 100,
                 "SecuredContainer": 100
@@ -573,7 +573,7 @@
                 "Backpack": 0,
                 "FirstPrimaryWeapon": 100,
                 "SecondPrimaryWeapon": 0,
-                "Holster": 10,
+                "Holster": 0,
                 "Scabbard": 100,
                 "Pockets": 100,
                 "SecuredContainer": 100
@@ -871,7 +871,7 @@
                 "Backpack": 0,
                 "FirstPrimaryWeapon": 100,
                 "SecondPrimaryWeapon": 0,
-                "Holster": 20,
+                "Holster": 0,
                 "Scabbard": 100,
                 "Pockets": 100,
                 "SecuredContainer": 100

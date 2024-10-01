@@ -116,7 +116,7 @@ class Main {
                         realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
                         realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
                         realismInfo.AveragePlayerLevel = utils_1.ProfileTracker.averagePlayerLevel;
-                        realismInfo.DoGasEvent = seasonalevents_1.EventTracker.isGasEvent;
+                        realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;
                         return jsonUtil.serialize(realismInfo);
                     }
                     catch (e) {
@@ -697,9 +697,9 @@ class Main {
     }
     shouldDoGasEvent(utils, map) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = seasonalevents_1.EventTracker.isHalloween ? 650 : 1;
+        let odds = seasonalevents_1.EventTracker.isHalloween ? 1000 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
-        seasonalevents_1.EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
+        seasonalevents_1.EventTracker.doGasEvent = odds >= rndNum && !isWrongMap;
     }
     checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
         let level = 1;

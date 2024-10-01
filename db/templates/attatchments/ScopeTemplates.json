@@ -276,7 +276,7 @@
         "ItemID": "64785e7c19d732620e045e15",
         "Name": "scope_all_elcan_specter_hco",
         "ModType": "sight",
-        "AimSpeed": 0,
+        "AimSpeed": 5,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,

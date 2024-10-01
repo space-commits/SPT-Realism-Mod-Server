@@ -180,8 +180,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             realismInfo.IsHalloween = EventTracker.isHalloween;
                             realismInfo.isChristmas = EventTracker.isChristmas;
                             realismInfo.AveragePlayerLevel = ProfileTracker.averagePlayerLevel;
-                            realismInfo.DoGasEvent = EventTracker.isGasEvent;
-
+                            realismInfo.DoGasEvent = EventTracker.doGasEvent;
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
                             console.error("Failed to read info file", e);
@@ -902,9 +901,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     public shouldDoGasEvent(utils: Utils, map: string) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = EventTracker.isHalloween ? 650 : 1;
+        let odds = EventTracker.isHalloween ? 1000 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
-        EventTracker.isGasEvent = odds >= rndNum && !isWrongMap;
+        EventTracker.doGasEvent = odds >= rndNum && !isWrongMap;
     }
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {

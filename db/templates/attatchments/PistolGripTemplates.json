@@ -258,7 +258,7 @@
         "HorizontalRecoil": -10,
         "Dispersion": 10,
         "AimSpeed": 0,
-        "Ergonomics": 15,
+        "Ergonomics": 7.5,
         "Accuracy": -10,
         "ConflictingItems": [],
         "Weight": 0.08,
@@ -473,7 +473,8 @@
         "ConflictingItems": [],
         "Weight": 0.15,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 15
     },
     "623c3be0484b5003161840dc": {
         "ItemID": "623c3be0484b5003161840dc",
@@ -818,7 +819,8 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 7.5
     },
     "59db3b0886f77429d72fb895": {
         "ItemID": "59db3b0886f77429d72fb895",
@@ -1118,7 +1120,8 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 15
     },
     "5c6d7b3d2e221600114c9b7d": {
         "ItemID": "5c6d7b3d2e221600114c9b7d",

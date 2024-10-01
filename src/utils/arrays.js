@@ -296,16 +296,16 @@ class StaticArrays {
     ];
     static gasEventMasksLow = {
         "60363c0c92ec1c31037959f5": 1,
-        "59e7715586f7742ee5789605": 8
+        "59e7715586f7742ee5789605": 6
     };
     static gasEventMasksHigh = {
         "60363c0c92ec1c31037959f5": 6,
         "59e7715586f7742ee5789605": 2
     };
     static gasEventMasksMed = {
-        "60363c0c92ec1c31037959f5": 4,
+        "60363c0c92ec1c31037959f5": 3,
         "5b432c305acfc40019478128": 2,
-        "59e7715586f7742ee5789605": 8
+        "59e7715586f7742ee5789605": 7
     };
     static confMaskOverlays = [
         "5b432c305acfc40019478128",

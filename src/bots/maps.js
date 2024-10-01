@@ -59,7 +59,7 @@ class Spawns {
                 for (let k in mapBase.BossLocationSpawn) {
                     let bossSpawnLocation = mapBase.BossLocationSpawn[k];
                     let chance = bossSpawnLocation.BossChance;
-                    if (seasonalevents_1.EventTracker.isHalloween) {
+                    if (seasonalevents_1.EventTracker.doGasEvent) {
                         if (bossSpawnLocation.BossName.includes("sectant")) {
                             bossSpawnLocation.BossChance = 100;
                         }

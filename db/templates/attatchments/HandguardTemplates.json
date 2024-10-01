@@ -82,7 +82,8 @@
         "ConflictingItems": [],
         "Weight": 0.18,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 15
     },
     "66993149558c59581e03c028": {
         "ItemID": "66993149558c59581e03c028",
@@ -99,7 +100,8 @@
         "ConflictingItems": [],
         "Weight": 0.18,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 15
     },
     "6565c3ab977bcc2dbb01c2e7": {
         "ItemID": "6565c3ab977bcc2dbb01c2e7",

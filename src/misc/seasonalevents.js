@@ -4,7 +4,7 @@ exports.SeasonalEventsHandler = exports.EventTracker = void 0;
 class EventTracker {
     static isChristmas = false;
     static isHalloween = false;
-    static isGasEvent = false;
+    static doGasEvent = false;
 }
 exports.EventTracker = EventTracker;
 class SeasonalEventsHandler {
