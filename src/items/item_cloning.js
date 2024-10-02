@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemCloning = void 0;
+const arrays_1 = require("../utils/arrays");
 class ItemCloning {
     logger;
     tables;
@@ -110,6 +111,67 @@ class ItemCloning {
         this.addToLocale("mk4a_plate", "Osprey MK4 Ballistic Plate", "Osprey MK4 Plate", "Plates designed for use with the Osrpey series of body armor, issued to the British Armed Forces.");
         this.pushItemToSlots("64afdcb83efdfea28601d041", "mk4a_plate");
     }
+    createCustomHazardItems() {
+        const terraGroupDislaimer = "\n\nLegal Disclaimer: \n\nThis product is the property of Terragroup Corporation. Unauthorized possession, modification, or tampering with this instrument is strictly prohibited and is a violation of Terragroup's licensing agreements. Violators will be held legally accountable for their actions. Please be advised that this unit is remotely monitored and tracked by Terragroup Corporation to ensure compliance with all legal regulations.\"";
+        //Radiological Assessment and Monitoring Unit
+        const ramuId = "66fd521442055447e2304fda";
+        this.cloneGenericItem("5c05308086f7746b2101e90b", ramuId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
+        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 1);
+        this.addToLocale(ramuId, "Radiological Assessment and Monitoring Unit", "RAMU", "\"The Radiological Assessment and Monitoring Unit (RAMU) is a radiological device developed by TerraGroup corporation which combines different technologies to measure and record radiation levels, radiation type and determine isotopes." + terraGroupDislaimer);
+        const ramu = this.itemDB()[ramuId];
+        ramu._props.Height = 2;
+        ramu._props.Width = 2;
+        ramu._props.Weight = 3.1;
+        ramu._props.CanSellOnRagfair = false;
+        //Gas Assessment and Monitoring Unit
+        const gamuId = "66fd571a05370c3ee1a1c613";
+        this.cloneGenericItem("5c05308086f7746b2101e90b", gamuId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
+        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 1);
+        this.addToLocale(gamuId, "Gas Assessment and Monitoring Unit", "GAMU", "\"The Gas Assessment and Monitoring Unit (GAMU) is a device developed by TerraGroup corporation which combines different technologies to measure and record hazardous volatile organic and ingorganic compounds." + terraGroupDislaimer);
+        const gamu = this.itemDB()[gamuId];
+        gamu._props.Height = 2;
+        gamu._props.Width = 2;
+        gamu._props.Weight = 2.1;
+        gamu._props.CanSellOnRagfair = false;
+        //Radiological Sample
+        const radSampleId = "66fd57171f981640e667fbe2";
+        this.cloneGenericItem("5c05308086f7746b2101e90b", radSampleId, "orange", "assets/content/items/quest/item_quest_chemcontainer/item_quest_chemcontainer.bundle");
+        this.addToHandbook(radSampleId, "5b47574386f77428ca22b2ef", 1000000);
+        this.addToLocale(radSampleId, "Sample of Radiological Material", "Rad. Sample", "A sample of an unknown radiologicaassets/content/items/quest/item_quest_container_carbon_case/item_quest_container_carbon_case.bundlel materials being used for God knows what. Incredibly valuable to those with loose morals or a death wish.");
+        const radSample = this.itemDB()[radSampleId];
+        radSample._props.Height = 2;
+        radSample._props.Width = 1;
+        radSample._props.Weight = 4.32;
+        radSample._props.CanSellOnRagfair = false;
+        //Gas Sample
+        const gasSampleId = "66fd588956f73c4f38dd07ae";
+        this.cloneGenericItem("5c05308086f7746b2101e90b", gasSampleId, "green", "assets/content/items/quest/item_quest_chemcontainer/item_quest_chemcontainer.bundle"); //replace with chemical sample quest item when spt v3.10 releases
+        this.addToHandbook(gasSampleId, "5b47574386f77428ca22b2ef", 25000);
+        this.addToLocale(gasSampleId, "Sample Of Hazardous Material", "Tox. Sample", "A sample of an unknown hazardous substance. Inside the container you can tell it's highly viscuous, but becomes volatile when disturbed. You have an intense migraine and can feel your throat closing up after handling it...the container doesn't seem to be fully airtight");
+        const gasSample = this.itemDB()[gasSampleId];
+        gasSample._props.Height = 2;
+        gasSample._props.Width = 1;
+        gasSample._props.Weight = 1.5;
+        gasSample._props.CanSellOnRagfair = false;
+        //Safe Container
+        const containerId = "66fd588d397ed74159826cf0";
+        this.cloneGenericItem("59fb042886f7746c5005a7b2", containerId, "violet", "assets/content/items/quest/item_quest_container_carbon_case/item_quest_container_carbon_case.bundle");
+        this.addToHandbook(containerId, "5b5f6fa186f77409407a7eb7", 1);
+        this.addToLocale(containerId, "SAFE Container", "SAFE Container", "\"The Shielded And Fortified Environment (SAFE) container is capable of safely and securely storing hazardous materials including radiological, biological, and chemical hazards." + terraGroupDislaimer);
+        const container = this.itemDB()[containerId];
+        container._props.Height = 2;
+        container._props.Width = 2;
+        container._props.CanSellOnRagfair = false;
+        container._props.Weight = 5;
+        const grid = container._props.Grids[0];
+        grid._props.cellsH = 5;
+        grid._props.cellsV = 2;
+        grid._props.filters[0].Filter = [];
+        grid._props.filters[0].Filter.push(radSampleId, gasSampleId);
+        arrays_1.StaticArrays.secureContainers.forEach(s => {
+            this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
+        });
+    }
     createCustomAttachments() {
         //Mechanic SKS .366 TKM Barrel
         this.cloneGenericItem("634f02331f9f536910079b51", "mechSKS_366", "violet");
@@ -215,10 +277,12 @@ class ItemCloning {
             }
         }
     }
-    cloneGenericItem(itemToClone, newItemID, color) {
+    cloneGenericItem(itemToClone, newItemID, color = "default", prefabPath = "") {
         this.cloneItem(itemToClone, newItemID);
         let itemID = this.itemDB()[newItemID];
         itemID._props.BackgroundColor = color;
+        if (prefabPath != "")
+            itemID._props.Prefab.path = prefabPath;
         if (this.modConfig.logEverything == true) {
             this.logger.info("Item " + itemID._id + " Added");
         }

@@ -505,12 +505,13 @@ class Main {
         const logger = container.resolve("WinstonLogger");
         const databaseService = container.resolve("DatabaseService");
         const configServer = container.resolve("ConfigServer");
+        const weatherConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.WEATHER);
+        const jsonUtil = container.resolve("JsonUtil");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.IN_RAID);
         const itemConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.ITEM);
-        const jsonUtil = container.resolve("JsonUtil");
         const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const insConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INSURANCE);
@@ -541,13 +542,14 @@ class Main {
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
         const seasonalEventsService = container.resolve("SeasonalEventService");
-        this.checkForSeasonalEvents(logger, seasonalEventsService);
+        this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig);
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
         }
         if (modConfig.enable_hazard_zones) {
             gear.loadSpecialSlotChanges();
             gear.addResourceToGasMaskFilters();
+            itemCloning.createCustomHazardItems();
         }
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
@@ -673,33 +675,33 @@ class Main {
             profileData.Health.Energy.Current = defaultEnergy;
         }
     }
-    checkForSeasonalEvents(logger, seasonalEventsService) {
+    checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig) {
         seasonalevents_1.EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         seasonalevents_1.EventTracker.isHalloween = true; // seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (seasonalevents_1.EventTracker.isChristmas == true) {
             logger.warning("Merry Christmas!");
         }
         if (seasonalevents_1.EventTracker.isHalloween == true) {
+            weatherConfig.overrideSeason = 1;
             const skull = `
    _______     
-  /       \\   
- /  O   O  \\  
+  /      \\   
+ /  O   O \\  
 |     ^     | 
 |    ---    | 
- \\_________/  
+\\_________/  
    |     |    
-   |_____|    
+   |_   _|    
   /       \\   
- /_/|   |\\_\\  
-`;
+ /_/|   |\\_\\`;
             logger.logWithColor(skull, LogTextColor_1.LogTextColor.MAGENTA);
         }
     }
-    shouldDoGasEvent(utils, map) {
+    shouldDoGasEvent(utils, map, pmcData) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = seasonalevents_1.EventTracker.isHalloween ? 1000 : 1;
+        let baseChance = seasonalevents_1.EventTracker.isHalloween ? 10 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
-        seasonalevents_1.EventTracker.doGasEvent = odds >= rndNum && !isWrongMap;
+        seasonalevents_1.EventTracker.doGasEvent = baseChance >= rndNum && !isWrongMap;
     }
     checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
         let level = 1;

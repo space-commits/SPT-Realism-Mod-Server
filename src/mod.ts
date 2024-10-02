@@ -103,6 +103,7 @@ import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
 import { SaveServer } from "@spt/servers/SaveServer";
 import { MailSendService } from "@spt/services/MailSendService";
 import { InsuranceService } from "@spt/services/InsuranceService";
+import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -146,7 +147,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const ragfairAssortGenerator = container.resolve<RagfairAssortGenerator>("RagfairAssortGenerator");
         const dynamicRouter = container.resolve<DynamicRouterModService>("DynamicRouterModService");
         const preSptModLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
-        const traderRefersh = new TraderRefresh(logger, mathUtil, timeUtil, databaseService, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, 
+        const traderRefersh = new TraderRefresh(logger, mathUtil, timeUtil, databaseService, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator,
             traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer, cloner);
         const flea = new FleaChangesPreDBLoad(logger, fleaConf, modConfig);
 
@@ -198,10 +199,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const botHelper = container.resolve<BotHelper>("BotHelper");
             const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
             const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
-            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");            const botGen = new BotGen(
-                logger, hashUtil, randomUtil, timeUtil, 
-                profileHelper, databaseService, botInventoryGenerator, 
-                botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, 
+            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService"); const botGen = new BotGen(
+                logger, hashUtil, randomUtil, timeUtil,
+                profileHelper, databaseService, botInventoryGenerator,
+                botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
                 botHelper, botDifficultyHelper, seasonalEventService,
                 localisationService, itemFilterService, configServer, cloner);
 
@@ -248,16 +249,16 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const localizationService = container.resolve<LocalisationService>("LocalisationService");
             const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
             const paymentService = container.resolve<PaymentService>("PaymentService");
-    
+
             const insuranceOverride = new InsuranceOverride(
-                logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper, 
+                logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper,
                 dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
-    
+
             container.afterResolution("InsuranceController", (_t, result: InsuranceController) => {
                 result.processReturnByProfile = (sessionID: string): void => {
                     return insuranceOverride.myProcessReturnByProfile(sessionID);
                 }
-            }, { frequency: "Always" });    
+            }, { frequency: "Always" });
         }
 
         // if (modConfig.airdrop_changes == true) {
@@ -298,10 +299,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
 
-                        if(modConfig.enable_hazard_zones){
+                        if (modConfig.enable_hazard_zones) {
                             quests.resetHazardQuests(profileData);
                         }
-         
+
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
 
                         try {
@@ -670,12 +671,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const logger = container.resolve<ILogger>("WinstonLogger");
         const databaseService = container.resolve<DatabaseService>("DatabaseService");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
+        const weatherConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<IWeatherConfig>(ConfigTypes.WEATHER);
+        const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig<IInRaidConfig>(ConfigTypes.IN_RAID);
         const itemConf = configServer.getConfig<IItemConfig>(ConfigTypes.ITEM);
-        const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const insConf = configServer.getConfig<IInsuranceConfig>(ConfigTypes.INSURANCE);
@@ -708,7 +710,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         // this.dllChecker(logger, modConfig);
 
         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
-        this.checkForSeasonalEvents(logger, seasonalEventsService);
+        this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig);
 
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
@@ -717,6 +719,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         if (modConfig.enable_hazard_zones) {
             gear.loadSpecialSlotChanges();
             gear.addResourceToGasMaskFilters();
+            itemCloning.createCustomHazardItems();
         }
 
         if (modConfig.recoil_attachment_overhaul == true) {
@@ -862,48 +865,48 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         utils.revertMedItems(profileData);
     }
 
-    private revertHydroEnergy(profileData: IPmcData, tables: IDatabaseTables){
+    private revertHydroEnergy(profileData: IPmcData, tables: IDatabaseTables) {
         const healthTemplate = tables.templates.profiles.Standard.bear.character.Health;
         const defaultHydration = healthTemplate.Hydration.Maximum;
         const defaultEnergy = healthTemplate.Energy.Maximum;
         profileData.Health.Hydration.Maximum = defaultHydration
         profileData.Health.Energy.Maximum = defaultEnergy;
-        
+
         if (profileData.Health.Energy.Current > profileData.Health.Energy.Maximum) {
             profileData.Health.Hydration.Current = defaultHydration
             profileData.Health.Energy.Current = defaultEnergy;
         }
     }
 
-    private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService) {
+    private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, weatherConfig: IWeatherConfig) {
         EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         EventTracker.isHalloween = true; // seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (EventTracker.isChristmas == true) {
             logger.warning("Merry Christmas!");
         }
         if (EventTracker.isHalloween == true) {
+            weatherConfig.overrideSeason = 1;
             const skull = `
    _______     
-  /       \\   
- /  O   O  \\  
+  /      \\   
+ /  O   O \\  
 |     ^     | 
 |    ---    | 
- \\_________/  
+\\_________/  
    |     |    
-   |_____|    
+   |_   _|    
   /       \\   
- /_/|   |\\_\\  
-`;
+ /_/|   |\\_\\`;
 
             logger.logWithColor(skull, LogTextColor.MAGENTA);
         }
     }
 
-    public shouldDoGasEvent(utils: Utils, map: string) {
+    public shouldDoGasEvent(utils: Utils, map: string, pmcData: IPmcData) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let odds = EventTracker.isHalloween ? 1000 : 1;
+        let baseChance = EventTracker.isHalloween ? 10 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
-        EventTracker.doGasEvent = odds >= rndNum && !isWrongMap;
+        EventTracker.doGasEvent = baseChance >= rndNum && !isWrongMap;
     }
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {

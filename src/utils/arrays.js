@@ -359,6 +359,13 @@ class StaticArrays {
         "5ab8f39486f7745cd93a1cca",
         "5b4326435acfc433000ed01d"
     ];
+    static secureContainers = [
+        "5857a8b324597729ab0a0e7d",
+        "544a11ac4bdc2d470e8b456a",
+        "5c093ca986f7740a1867ab12",
+        "59db794186f77448bc595262",
+        "5857a8bc2459772bad15db29"
+    ];
 }
 exports.StaticArrays = StaticArrays;
 //# sourceMappingURL=arrays.js.map

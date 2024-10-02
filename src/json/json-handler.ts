@@ -305,7 +305,8 @@ export class ItemStatHandler {
             this.modifiedItems[fileItem.ItemID] = fileItem;
 
             if (modConfig.malf_changes == true) {
-                serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
+                const malfChance = fileItem.BaseMalfunctionChance >= 0.1 ? fileItem.BaseMalfunctionChance * 0.01 : fileItem.BaseMalfunctionChance; //a lot of weapon patches are using old malf values
+                serverItem._props.BaseMalfunctionChance = malfChance;
                 serverItem._props.HeatFactorGun = fileItem.HeatFactorGun;
                 serverItem._props.HeatFactorByShot = fileItem.HeatFactorByShot;
                 serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;

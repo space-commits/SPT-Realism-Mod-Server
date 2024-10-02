@@ -48,7 +48,7 @@ class FleaChangesPreDBLoad {
         }
         else if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = true;
-            this.fleaConf.dynamic.blacklist.custom.push("generic_debuff", "performance_debuff", "weight_debuff", "clotting_debuff", "damage_debuff", "adrenal_debuff", "regen_debuff");
+            this.fleaConf.dynamic.blacklist.custom.push("generic_debuff", "performance_debuff", "weight_debuff", "clotting_debuff", "damage_debuff", "adrenal_debuff", "regen_debuff", "66fd521442055447e2304fda", "66fd571a05370c3ee1a1c613", "66fd57171f981640e667fbe2", "66fd588956f73c4f38dd07ae", "66fd588d397ed74159826cf0");
         }
         if (this.modConfig.flea_changes == true) {
             //disabled due to SPT changes
