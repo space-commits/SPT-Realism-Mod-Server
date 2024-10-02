@@ -34,7 +34,6 @@ export class FleaChangesPostDBLoad {
     }
 }
 
-
 export class FleaChangesPreDBLoad {
 
     constructor(private logger: ILogger, private fleaConf: IRagfairConfig, private modConfig) { }

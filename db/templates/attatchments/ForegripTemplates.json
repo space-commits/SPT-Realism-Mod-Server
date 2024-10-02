@@ -489,7 +489,8 @@
         "Weight": 0.1,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": 10.5
+        "AimStability": 5,
+        "Handling": 4.5
     },
     "5c1bc5fb2e221602b1779b32": {
         "ItemID": "5c1bc5fb2e221602b1779b32",
@@ -505,25 +506,8 @@
         "Weight": 0.122,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": 9,
-        "Handling": 1.5
-    },
-    "5c1bc7432e221602b412949d": {
-        "ItemID": "5c1bc7432e221602b412949d",
-        "Name": "foregrip_all_zenit_rk_5",
-        "ModType": "",
-        "VerticalRecoil": -3,
-        "HorizontalRecoil": -2,
-        "Dispersion": 0,
-        "AimSpeed": 0,
-        "Ergonomics": 6.6,
-        "Accuracy": 0,
-        "ConflictingItems": [],
-        "Weight": 0.105,
-        "LoyaltyLevel": 0,
-        "Price": 0,
-        "AimStability": 6,
-        "Handling": 5.25
+        "AimStability": 4,
+        "Handling": 5.5
     },
     "5c1bc4812e22164bef5cfde7": {
         "ItemID": "5c1bc4812e22164bef5cfde7",
@@ -539,25 +523,25 @@
         "Weight": 0.133,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": 7.75,
-        "Handling": 3
+        "AimStability": 3.5,
+        "Handling": 6
     },
-    "5c1cd46f2e22164bef5cfedb": {
-        "ItemID": "5c1cd46f2e22164bef5cfedb",
-        "Name": "foregrip_all_zenit_b25u_rk_1",
+    "5c1bc7432e221602b412949d": {
+        "ItemID": "5c1bc7432e221602b412949d",
+        "Name": "foregrip_all_zenit_rk_5",
         "ModType": "",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -14,
-        "Dispersion": 12,
-        "Ergonomics": 0,
-        "RecoilAngle": -5,
-        "AimSpeed": -50,
+        "VerticalRecoil": -3,
+        "HorizontalRecoil": -2,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 6.6,
+        "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.185,
+        "Weight": 0.105,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": -50,
-        "Handling": 50
+        "AimStability": 3,
+        "Handling": 6.5
     },
     "5c1bc5612e221602b5429350": {
         "ItemID": "5c1bc5612e221602b5429350",
@@ -573,7 +557,8 @@
         "Weight": 0.155,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Handling": 11
+        "AimStability": 2,
+        "Handling": 7
     },
     "5c1bc5af2e221602b412949b": {
         "ItemID": "5c1bc5af2e221602b412949b",
@@ -589,8 +574,25 @@
         "Weight": 0.175,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": -15,
-        "Handling": 22.5
+        "AimStability": -10,
+        "Handling": 17
+    },
+    "5c1cd46f2e22164bef5cfedb": {
+        "ItemID": "5c1cd46f2e22164bef5cfedb",
+        "Name": "foregrip_all_zenit_b25u_rk_1",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -14,
+        "Dispersion": 12,
+        "Ergonomics": 0,
+        "RecoilAngle": -5,
+        "AimSpeed": -50,
+        "ConflictingItems": [],
+        "Weight": 0.185,
+        "LoyaltyLevel": 0,
+        "Price": 0,
+        "AimStability": -25,
+        "Handling": 45
     },
     "6281212a09427b40ab14e770": {
         "ItemID": "6281212a09427b40ab14e770",
