@@ -526,7 +526,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
 
-                            this.shouldDoGasEvent(utils, RaidInfoTracker.mapName);
+                            this.shouldDoGasEvent(utils, RaidInfoTracker.mapName, pmcData);
 
                             logger.warning("Avg. Player Level = " + ProfileTracker.averagePlayerLevel);
                             logger.warning("Map Name = " + matchInfo.location);
@@ -888,13 +888,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             weatherConfig.overrideSeason = 1;
             const skull = `
    _______     
-  /      \\   
- /  O   O \\  
-|     ^     | 
-|    ---    | 
-\\_________/  
+  /       \\   
+ /  O   O  \\  
+ |    ^    | 
+ |   ---   | 
+  \\___ ___/  
    |     |    
-   |_   _|    
+   |__ __|    
   /       \\   
  /_/|   |\\_\\`;
 

@@ -391,7 +391,7 @@ class Main {
                             pmcConf.convertIntoPmcChance["assault"].min = 100;
                             pmcConf.convertIntoPmcChance["assault"].max = 100;
                         }
-                        this.shouldDoGasEvent(utils, utils_1.RaidInfoTracker.mapName);
+                        this.shouldDoGasEvent(utils, utils_1.RaidInfoTracker.mapName, pmcData);
                         logger.warning("Avg. Player Level = " + utils_1.ProfileTracker.averagePlayerLevel);
                         logger.warning("Map Name = " + matchInfo.location);
                         logger.warning("Map Type  = " + mapType);
@@ -685,13 +685,13 @@ class Main {
             weatherConfig.overrideSeason = 1;
             const skull = `
    _______     
-  /      \\   
- /  O   O \\  
-|     ^     | 
-|    ---    | 
-\\_________/  
+  /       \\   
+ /  O   O  \\  
+ |    ^    | 
+ |   ---   | 
+  \\___ ___/  
    |     |    
-   |_   _|    
+   |__ __|    
   /       \\   
  /_/|   |\\_\\`;
             logger.logWithColor(skull, LogTextColor_1.LogTextColor.MAGENTA);

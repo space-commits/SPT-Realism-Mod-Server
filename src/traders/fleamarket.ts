@@ -57,7 +57,9 @@ export class FleaChangesPreDBLoad {
                 "66fd571a05370c3ee1a1c613",
                 "66fd57171f981640e667fbe2",
                 "66fd588956f73c4f38dd07ae",
-                 "66fd588d397ed74159826cf0"
+                "66fd588d397ed74159826cf0",
+                "670120df4f0c4c37e6be90ae",
+                "670120ce354987453daf3d0c"
             );
         }
 

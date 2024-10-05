@@ -79,11 +79,25 @@ class Traders {
             ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
         });
     }
-    modifyTraderBuyPrice(traderId, basePrice) {
+    modifyTraderBuyPriceHelper(traderId, basePrice) {
         for (let i in this.tables.traders[traderId].base.loyaltyLevels) {
             let multi = Number(i);
-            this.tables.traders[traderId].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(basePrice - (multi * 5)), 40);
+            this.tables.traders[traderId].base.loyaltyLevels[i].buy_price_coef = Math.round(this.utils.clampNumber(basePrice - (multi * 5), 40, 100));
         }
+    }
+    modifyTraderBuyPrice() {
+        //consistent but low
+        this.modifyTraderBuyPriceHelper(mechId, this.utils.pickRandNumInRange(67, 72));
+        this.modifyTraderBuyPriceHelper(jaegId, this.utils.pickRandNumInRange(70, 75));
+        //decent but inconsistent
+        this.modifyTraderBuyPriceHelper(theraId, this.utils.pickRandNumInRange(62, 77));
+        this.modifyTraderBuyPriceHelper(ragmId, this.utils.pickRandNumInRange(62, 77));
+        //high but inconsistent
+        this.modifyTraderBuyPriceHelper(skierId, this.utils.pickRandNumInRange(58, 80));
+        this.modifyTraderBuyPriceHelper(prapId, this.utils.pickRandNumInRange(60, 78));
+        //low
+        this.modifyTraderBuyPriceHelper(fenceId, this.utils.pickRandNumInRange(80, 90));
+        this.modifyTraderBuyPriceHelper(refId, this.utils.pickRandNumInRange(85, 95));
     }
     loadTraderTweaks() {
         if (modConfig.change_buy_categories == true) {
@@ -96,15 +110,7 @@ class Traders {
             this.tables.traders[mechId].base.items_buy.category = buyCat.mechanic;
         }
         if (modConfig.change_buy_price == true) {
-            this.modifyTraderBuyPrice(pkId, this.utils.pickRandNumInRange(69, 73));
-            this.modifyTraderBuyPrice(ragmId, this.utils.pickRandNumInRange(69, 73));
-            this.modifyTraderBuyPrice(jaegId, this.utils.pickRandNumInRange(75, 80));
-            this.modifyTraderBuyPrice(prapId, this.utils.pickRandNumInRange(65, 75));
-            this.modifyTraderBuyPrice(theraId, this.utils.pickRandNumInRange(78, 84));
-            this.modifyTraderBuyPrice(skierId, this.utils.pickRandNumInRange(65, 70));
-            this.modifyTraderBuyPrice(mechId, this.utils.pickRandNumInRange(69, 69));
-            this.modifyTraderBuyPrice(fenceId, this.utils.pickRandNumInRange(80, 90));
-            this.modifyTraderBuyPrice(refId, this.utils.pickRandNumInRange(99, 100));
+            this.modifyTraderBuyPrice();
         }
         if (modConfig.nerf_fence == true) {
             this.traderConf.fence.discountOptions.assortSize = 10;
@@ -275,6 +281,7 @@ class Traders {
             this.assortItemPusher(jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         }
         if (this.modConf.enable_hazard_zones == true) {
+            this.assortItemPusher(theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 3, false, 200000);
             this.assortItemPusher(theraId, "59e7715586f7742ee5789605", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
             this.assortItemPusher(jaegId, "590c595c86f7747884343ad7", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
             this.assortItemPusher(jaegId, "5b432c305acfc40019478128", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);

@@ -102,6 +102,10 @@ export class Utils {
         return Math.floor(Math.random() * 10);
     }
 
+    public clampNumber(value: number, min: number, max: number): number {
+        return Math.max(min, Math.min(value, max));
+    }
+
     public writeConfigJSON(data: any, filePath: string) {
         const baseFolderPath = path.resolve(path.join(__dirname, '../../'));
         fs.writeFile(path.join(baseFolderPath, filePath), JSON.stringify(data, null, 4), function (err) {

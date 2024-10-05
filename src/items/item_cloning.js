@@ -111,67 +111,6 @@ class ItemCloning {
         this.addToLocale("mk4a_plate", "Osprey MK4 Ballistic Plate", "Osprey MK4 Plate", "Plates designed for use with the Osrpey series of body armor, issued to the British Armed Forces.");
         this.pushItemToSlots("64afdcb83efdfea28601d041", "mk4a_plate");
     }
-    createCustomHazardItems() {
-        const terraGroupDislaimer = "\n\nLegal Disclaimer: \n\nThis product is the property of Terragroup Corporation. Unauthorized possession, modification, or tampering with this instrument is strictly prohibited and is a violation of Terragroup's licensing agreements. Violators will be held legally accountable for their actions. Please be advised that this unit is remotely monitored and tracked by Terragroup Corporation to ensure compliance with all legal regulations.\"";
-        //Radiological Assessment and Monitoring Unit
-        const ramuId = "66fd521442055447e2304fda";
-        this.cloneGenericItem("5c05308086f7746b2101e90b", ramuId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 1);
-        this.addToLocale(ramuId, "Radiological Assessment and Monitoring Unit", "RAMU", "\"The Radiological Assessment and Monitoring Unit (RAMU) is a radiological device developed by TerraGroup corporation which combines different technologies to measure and record radiation levels, radiation type and determine isotopes." + terraGroupDislaimer);
-        const ramu = this.itemDB()[ramuId];
-        ramu._props.Height = 2;
-        ramu._props.Width = 2;
-        ramu._props.Weight = 3.1;
-        ramu._props.CanSellOnRagfair = false;
-        //Gas Assessment and Monitoring Unit
-        const gamuId = "66fd571a05370c3ee1a1c613";
-        this.cloneGenericItem("5c05308086f7746b2101e90b", gamuId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
-        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 1);
-        this.addToLocale(gamuId, "Gas Assessment and Monitoring Unit", "GAMU", "\"The Gas Assessment and Monitoring Unit (GAMU) is a device developed by TerraGroup corporation which combines different technologies to measure and record hazardous volatile organic and ingorganic compounds." + terraGroupDislaimer);
-        const gamu = this.itemDB()[gamuId];
-        gamu._props.Height = 2;
-        gamu._props.Width = 2;
-        gamu._props.Weight = 2.1;
-        gamu._props.CanSellOnRagfair = false;
-        //Radiological Sample
-        const radSampleId = "66fd57171f981640e667fbe2";
-        this.cloneGenericItem("5c05308086f7746b2101e90b", radSampleId, "orange", "assets/content/items/quest/item_quest_chemcontainer/item_quest_chemcontainer.bundle");
-        this.addToHandbook(radSampleId, "5b47574386f77428ca22b2ef", 1000000);
-        this.addToLocale(radSampleId, "Sample of Radiological Material", "Rad. Sample", "A sample of an unknown radiologicaassets/content/items/quest/item_quest_container_carbon_case/item_quest_container_carbon_case.bundlel materials being used for God knows what. Incredibly valuable to those with loose morals or a death wish.");
-        const radSample = this.itemDB()[radSampleId];
-        radSample._props.Height = 2;
-        radSample._props.Width = 1;
-        radSample._props.Weight = 4.32;
-        radSample._props.CanSellOnRagfair = false;
-        //Gas Sample
-        const gasSampleId = "66fd588956f73c4f38dd07ae";
-        this.cloneGenericItem("5c05308086f7746b2101e90b", gasSampleId, "green", "assets/content/items/quest/item_quest_chemcontainer/item_quest_chemcontainer.bundle"); //replace with chemical sample quest item when spt v3.10 releases
-        this.addToHandbook(gasSampleId, "5b47574386f77428ca22b2ef", 25000);
-        this.addToLocale(gasSampleId, "Sample Of Hazardous Material", "Tox. Sample", "A sample of an unknown hazardous substance. Inside the container you can tell it's highly viscuous, but becomes volatile when disturbed. You have an intense migraine and can feel your throat closing up after handling it...the container doesn't seem to be fully airtight");
-        const gasSample = this.itemDB()[gasSampleId];
-        gasSample._props.Height = 2;
-        gasSample._props.Width = 1;
-        gasSample._props.Weight = 1.5;
-        gasSample._props.CanSellOnRagfair = false;
-        //Safe Container
-        const containerId = "66fd588d397ed74159826cf0";
-        this.cloneGenericItem("59fb042886f7746c5005a7b2", containerId, "violet", "assets/content/items/quest/item_quest_container_carbon_case/item_quest_container_carbon_case.bundle");
-        this.addToHandbook(containerId, "5b5f6fa186f77409407a7eb7", 1);
-        this.addToLocale(containerId, "SAFE Container", "SAFE Container", "\"The Shielded And Fortified Environment (SAFE) container is capable of safely and securely storing hazardous materials including radiological, biological, and chemical hazards." + terraGroupDislaimer);
-        const container = this.itemDB()[containerId];
-        container._props.Height = 2;
-        container._props.Width = 2;
-        container._props.CanSellOnRagfair = false;
-        container._props.Weight = 5;
-        const grid = container._props.Grids[0];
-        grid._props.cellsH = 5;
-        grid._props.cellsV = 2;
-        grid._props.filters[0].Filter = [];
-        grid._props.filters[0].Filter.push(radSampleId, gasSampleId);
-        arrays_1.StaticArrays.secureContainers.forEach(s => {
-            this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
-        });
-    }
     createCustomAttachments() {
         //Mechanic SKS .366 TKM Barrel
         this.cloneGenericItem("634f02331f9f536910079b51", "mechSKS_366", "violet");
@@ -237,6 +176,90 @@ class ItemCloning {
         this.addToHandbook("mechJMAC_366", "5b5f724c86f774093f2ecf15", 20000);
         this.addToLocale("mechJMAC_366", "Mechanic's Custom .366 TKM JMac RRD-4C", ".366 TKM RRD-4C", "Mechanic bored out this compensator to accomodate .366 TKM.");
         this.pushItemToSlots("5a9fbb74a2750c0032157181", "mechJMAC_366");
+    }
+    createCustomHazardItems() {
+        const terraGroupDislaimer = "\n\nLegal Disclaimer: \n\nThis product is the property of Terragroup Corporation. Unauthorized possession, modification, or tampering with this instrument is strictly prohibited and is a violation of Terragroup's licensing agreements. Violators will be held legally responsible for their actions. Please be advised that this unit is remotely monitored and tracked by Terragroup Corporation to ensure compliance with all legal regulations.\"";
+        const dataNotification = "This unit has been deployed and is full of data. Some traders may find the data contained within valuable.\n\n";
+        //Radiological Assessment and Monitoring Unit
+        const ramuId = "66fd521442055447e2304fda";
+        const remuDescript = "\"The Radiological Assessment and Monitoring Unit (RAMU) is a radiological device developed by TerraGroup corporation which combines different technologies to measure and record radiation levels, radiation type and determine isotopes." + terraGroupDislaimer;
+        this.cloneGenericItem("5c05308086f7746b2101e90b", ramuId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
+        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 15000);
+        this.addToLocale(ramuId, "Radiological Assessment and Monitoring Unit", "RAMU", remuDescript);
+        const ramu = this.itemDB()[ramuId];
+        ramu._props.Height = 2;
+        ramu._props.Width = 2;
+        ramu._props.Weight = 3.1;
+        ramu._props.CanSellOnRagfair = false;
+        const ramuDataId = "670120ce354987453daf3d0c";
+        this.cloneGenericItem(ramuId, ramuDataId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
+        this.addToHandbook(ramuDataId, "5b5f794b86f77409407a7f92", 100000);
+        this.addToLocale(ramuDataId, "Radiological Assessment and Monitoring Unit (With Data)", "RAMU (Data)", dataNotification + remuDescript);
+        const ramuData = this.itemDB()[ramuDataId];
+        //Gas Assessment and Monitoring Unit
+        const gamuId = "66fd571a05370c3ee1a1c613";
+        const gamuDescript = "\"The Gas Assessment and Monitoring Unit (GAMU) is a device developed by TerraGroup corporation which combines different technologies to measure and record hazardous volatile organic and ingorganic compounds." + terraGroupDislaimer;
+        this.cloneGenericItem("5c05308086f7746b2101e90b", gamuId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
+        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 15000);
+        this.addToLocale(gamuId, "Gas Assessment and Monitoring Unit", "GAMU", gamuDescript);
+        const gamu = this.itemDB()[gamuId];
+        gamu._props.Height = 2;
+        gamu._props.Width = 2;
+        gamu._props.Weight = 2.1;
+        gamu._props.CanSellOnRagfair = false;
+        const gamuIdData = "670120df4f0c4c37e6be90ae";
+        this.cloneGenericItem(gamuId, gamuIdData, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
+        this.addToHandbook(gamuIdData, "5b47574386f77428ca22b2ef", 80000);
+        this.addToLocale(gamuIdData, "Gas Assessment and Monitoring Unit (With Data)", "GAMU (Data)", dataNotification + gamuDescript);
+        const gamuData = this.itemDB()[gamuIdData];
+        //Radiological Sample
+        const radSampleId = "66fd57171f981640e667fbe2";
+        this.cloneGenericItem("5c05308086f7746b2101e90b", radSampleId, "orange", "assets/content/items/quest/item_quest_chemcontainer/item_quest_chemcontainer.bundle");
+        this.addToHandbook(radSampleId, "5b47574386f77428ca22b2ef", 300000);
+        this.addToLocale(radSampleId, "Sample of Radiological Material", "Rad. Sample", "A sample of an unknown radiologicaassets/content/items/quest/item_quest_container_carbon_case/item_quest_container_carbon_case.bundlel materials being used for God knows what. Incredibly valuable to those with loose morals or a death wish.");
+        const radSample = this.itemDB()[radSampleId];
+        radSample._props.Height = 2;
+        radSample._props.Width = 1;
+        radSample._props.Weight = 4.32;
+        radSample._props.CanSellOnRagfair = false;
+        //Gas Sample
+        const gasSampleId = "66fd588956f73c4f38dd07ae";
+        this.cloneGenericItem("5c05308086f7746b2101e90b", gasSampleId, "green", "assets/content/items/quest/item_quest_chemcontainer/item_quest_chemcontainer.bundle"); //replace with chemical sample quest item when spt v3.10 releases
+        this.addToHandbook(gasSampleId, "5b47574386f77428ca22b2ef", 150000);
+        this.addToLocale(gasSampleId, "Sample Of Hazardous Material", "Tox. Sample", "A sample of an unknown hazardous substance. Inside the container you can tell it's highly viscuous, but becomes volatile when disturbed. You have an intense migraine and can feel your throat closing up after handling it...the container doesn't seem to be fully airtight");
+        const gasSample = this.itemDB()[gasSampleId];
+        gasSample._props.Height = 2;
+        gasSample._props.Width = 1;
+        gasSample._props.Weight = 1.27;
+        gasSample._props.CanSellOnRagfair = false;
+        //Safe Container
+        const containerId = "66fd588d397ed74159826cf0";
+        this.cloneGenericItem("59fb042886f7746c5005a7b2", containerId, "violet", "assets/content/items/quest/item_quest_container_carbon_case/item_quest_container_carbon_case.bundle");
+        this.addToHandbook(containerId, "5b5f6fa186f77409407a7eb7", 50000);
+        this.addToLocale(containerId, "SAFE Container", "SAFE Container", "\"The Shielded And Fortified Environment (SAFE) container is capable of safely and securely storing hazardous materials including radiological, biological, and chemical hazards." + terraGroupDislaimer);
+        const container = this.itemDB()[containerId];
+        container._props.Height = 2;
+        container._props.Width = 2;
+        container._props.CanSellOnRagfair = false;
+        container._props.Weight = 10.2;
+        const grid = container._props.Grids[0];
+        grid._props.cellsH = 5;
+        grid._props.cellsV = 2;
+        grid._props.filters[0].Filter = [];
+        grid._props.filters[0].Filter.push(radSampleId, gasSampleId);
+        arrays_1.StaticArrays.secureContainers.forEach(s => {
+            this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
+        });
+        const skierId = "58330581ace78e27b8b10cee";
+        const theraId = "54cb57776803fa99248b456e";
+        const traders = this.tables.traders;
+        arrays_1.StaticArrays.traders.forEach(t => {
+            if (t === skierId || t === theraId)
+                return;
+            traders[t].base.items_buy_prohibited.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c");
+        });
+        traders[skierId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");
+        traders[theraId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");
     }
     addCustomWeapsToQuests(originalWeapon, weapToAdd) {
         for (let q in this.questDB()) {

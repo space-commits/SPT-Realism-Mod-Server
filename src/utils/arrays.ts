@@ -146,18 +146,7 @@ export class StaticArrays {
         "laboratory",
         "interchange"
     ]
-
-    static traderIDs = [
-        "54cb50c76803fa8b248b4571",
-        "54cb57776803fa99248b456e",
-        "579dc571d53a0658a154fbec",
-        "58330581ace78e27b8b10cee",
-        "5935c25fb3acc3127c3d8cd9",
-        "5a7c2eca46aef81a7ca2145d",
-        "5ac3b934156ae10c4430e83c",
-        "5c0647fdd443bc2504c2d371"
-    ];
-
+    
     static blacklistedItems = [
         "generic_debuff",
         "performance_debuff",
@@ -335,6 +324,18 @@ export class StaticArrays {
         "5b432c305acfc40019478128": 2,
         "59e7715586f7742ee5789605": 7
     };
+    
+    static traders = [
+        "54cb50c76803fa8b248b4571",
+        "54cb57776803fa99248b456e",
+        "58330581ace78e27b8b10cee",
+        "5935c25fb3acc3127c3d8cd9",
+        "5a7c2eca46aef81a7ca2145d",
+        "5ac3b934156ae10c4430e83c",
+        "5c0647fdd443bc2504c2d371",
+        "579dc571d53a0658a154fbec",
+        "6617beeaa9cfa777ca915b7c"
+    ]
 
     static confMaskOverlays = [
         "5b432c305acfc40019478128",

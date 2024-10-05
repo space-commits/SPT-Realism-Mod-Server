@@ -109,6 +109,9 @@ class Utils {
     pickRandNumOneInTen() {
         return Math.floor(Math.random() * 10);
     }
+    clampNumber(value, min, max) {
+        return Math.max(min, Math.min(value, max));
+    }
     writeConfigJSON(data, filePath) {
         const baseFolderPath = path.resolve(path.join(__dirname, '../../'));
         fs.writeFile(path.join(baseFolderPath, filePath), JSON.stringify(data, null, 4), function (err) {
