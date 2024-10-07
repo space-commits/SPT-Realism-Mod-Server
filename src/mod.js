@@ -698,6 +698,57 @@ class Main {
         }
     }
     shouldDoGasEvent(utils, map, pmcData) {
+        let baseGasChance = 0;
+        let boostRaiderSpawns = false;
+        let didExplosion = false;
+        pmcData.Quests.forEach(q => {
+            //bad omens part 1
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 50;
+                }
+            }
+            //bad omens part 2
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 100;
+                }
+            }
+            //bad omens part 3
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 200;
+                }
+            }
+            //former patients
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 100;
+                }
+            }
+            //do no harm
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 200;
+                }
+                else if (q.status === 4) {
+                    baseGasChance = 100;
+                }
+            }
+            //blue flame part 1
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    boostRaiderSpawns = true;
+                }
+            }
+            //blue flame part 2
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 4) {
+                    baseGasChance = 0;
+                    didExplosion = true;
+                }
+            }
+        });
         let rndNum = utils.pickRandNumInRange(1, 1000);
         let baseChance = seasonalevents_1.EventTracker.isHalloween ? 1000 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");

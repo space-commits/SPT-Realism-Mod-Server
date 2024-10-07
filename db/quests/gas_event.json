@@ -322,7 +322,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "6702b305d640431e1833e85f",
-                                "target": "CustomsMarkedRoom",
+                                "target": "DormsMarkedCameraPlant",
                                 "value": 1
                             }
                         ],
@@ -357,7 +357,7 @@
                     ],
                     "value": 1,
                     "visibilityConditions": [],
-                    "zoneId": "CustomsMarkedRoom"
+                    "zoneId": "DormsMarkedCameraPlant"
                 },
                 {
                     "completeInSeconds": 0,
@@ -368,7 +368,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "6702b319dc9b3df845dc204e",
-                                "target": "ShorelineMarked",
+                                "target": "SwampChurchCameraPlant",
                                 "value": 1
                             }
                         ],
@@ -403,7 +403,7 @@
                     ],
                     "value": 1,
                     "visibilityConditions": [],
-                    "zoneId": "ShorelineMarked"
+                    "zoneId": "SwampChurchCameraPlant"
                 },
                 {
                     "completeInSeconds": 0,
@@ -506,7 +506,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "6702b3458ab88b3a52829046",
-                                "target": "ReserveMarkedBunker",
+                                "target": "BunkerMarkedRoomCameraPlant",
                                 "value": 1
                             }
                         ],
@@ -541,7 +541,7 @@
                     ],
                     "value": 1,
                     "visibilityConditions": [],
-                    "zoneId": "ReserveMarkedBunker"
+                    "zoneId": "BunkerMarkedRoomCameraPlant"
                 }
             ],
             "AvailableForStart": [],

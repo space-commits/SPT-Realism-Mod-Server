@@ -4,6 +4,10 @@ export class EventTracker {
     static isChristmas: boolean = false;
     static isHalloween: boolean = false;
     static doGasEvent: boolean = false;
+    static hasExploded: boolean = false;
+    static increaseRaiderSpawns: boolean = false;
+    static increaseCultistSpawns: boolean = false;
+    static isPreExplosion: boolean = false;
 }
 
 export class SeasonalEventsHandler {

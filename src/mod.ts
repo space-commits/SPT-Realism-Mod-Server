@@ -104,6 +104,7 @@ import { SaveServer } from "@spt/servers/SaveServer";
 import { MailSendService } from "@spt/services/MailSendService";
 import { InsuranceService } from "@spt/services/InsuranceService";
 import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
+import { info } from "console";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -182,6 +183,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             realismInfo.isChristmas = EventTracker.isChristmas;
                             realismInfo.AveragePlayerLevel = ProfileTracker.averagePlayerLevel;
                             realismInfo.DoGasEvent = EventTracker.doGasEvent;
+                            realismInfo.HasExploded = EventTracker.hasExploded;
+                            realismInfo.IsPreExplosion = EventTracker.isPreExplosion;
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
                             console.error("Failed to read info file", e);
@@ -526,7 +529,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
 
-                            this.shouldDoGasEvent(utils, RaidInfoTracker.mapName, pmcData);
+                            this.shouldDoGasEvent(utils, RaidInfoTracker.mapName, pmcData, logger);
 
                             logger.warning("Avg. Player Level = " + ProfileTracker.averagePlayerLevel);
                             logger.warning("Map Name = " + matchInfo.location);
@@ -902,11 +905,72 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
     }
 
-    public shouldDoGasEvent(utils: Utils, map: string, pmcData: IPmcData) {
+    public shouldDoGasEvent(utils: Utils, map: string, pmcData: IPmcData, logger: ILogger) {
+
+        let baseGasChance = 0;
+        pmcData.Quests.forEach(q => {
+            //bad omens part 1
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 50;
+                }
+            }
+            //bad omens part 2
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 100;
+                }
+            }
+            //bad omens part 3
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 200;
+                }
+            }
+            //former patients
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 100;
+                }
+            }
+            //do no harm
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 2) {
+                    baseGasChance += 200;
+                }
+                else if(q.status === 4){
+                    baseGasChance = 100;
+                }
+            }
+            //blue flame part 1
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                if (q.status === 4) {
+                    EventTracker.increaseRaiderSpawns = true;
+                }
+            }
+            //blue flame part 2
+            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                let startedQuest = q.status === 2;
+                let completedQuest = q.status === 4;
+                let didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
+                if (didExplosion || completedQuest) {
+                    baseGasChance = 0;
+                    EventTracker.increaseRaiderSpawns = false;
+                    EventTracker.hasExploded = true;
+                }   
+                EventTracker.isPreExplosion = startedQuest;
+            }
+        });
+
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let baseChance = EventTracker.isHalloween ? 1000 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
-        EventTracker.doGasEvent = baseChance >= rndNum && !isWrongMap;
+        EventTracker.doGasEvent = baseGasChance >= rndNum && !isWrongMap;
+
+        logger.warning("baseGasChance " + baseGasChance);
+        logger.warning("boostRaiderSpawns " + EventTracker.increaseRaiderSpawns);
+        logger.warning("isPreExplosion " +  EventTracker.isPreExplosion);
+        logger.warning("hasExplode " + EventTracker.hasExploded);
+        logger.warning("doGasEvent " + EventTracker.doGasEvent);
     }
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
