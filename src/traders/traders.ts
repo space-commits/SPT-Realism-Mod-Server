@@ -314,7 +314,7 @@ export class Traders {
         }
 
         if (this.modConf.enable_hazard_zones == true) {
-            this.assortItemPusher(theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 3, false, 200000);
+            //safe container this.assortItemPusher(theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 3, false, 200000);
             this.assortItemPusher(theraId, "59e7715586f7742ee5789605", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
             this.assortItemPusher(jaegId, "590c595c86f7747884343ad7", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
             this.assortItemPusher(jaegId, "5b432c305acfc40019478128", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);

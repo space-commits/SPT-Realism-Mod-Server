@@ -4,6 +4,7 @@ exports.Quests = void 0;
 const treatmentQuests = require("../../db/quests/rad_treatment.json");
 const exploreQuests = require("../../db/quests/zone_exploration.json");
 const dynamicZoneQuests = require("../../db/quests/dynamic_zones.json");
+const gasEventQuests = require("../../db/quests/gas_event.json");
 class Quests {
     logger;
     tables;
@@ -21,10 +22,131 @@ class Quests {
     }
     //automate locales in future
     loadHazardQuests() {
+        //gas event part 1
+        this.questDB()["6702afe9504c9aca4ed75d9a"] = gasEventQuests["6702afe9504c9aca4ed75d9a"];
+        //gas event part 1
+        this.questDB()["6702b0a1b9fb4619debd0697"] = gasEventQuests["6702b0a1b9fb4619debd0697"];
+        //gas event part 3
+        this.questDB()["6702b0e9601acf629d212eeb"] = gasEventQuests["6702b0e9601acf629d212eeb"];
+        //gas event part 4
+        this.questDB()["6702b8b3c0f2f525d988e428"] = gasEventQuests["6702b8b3c0f2f525d988e428"];
+        //gas event part 5
+        this.questDB()["6702b3b624c7ac4e2d3e9c37"] = gasEventQuests["6702b3b624c7ac4e2d3e9c37"];
+        //gas event part 6
+        this.questDB()["6702b3e4aff397fa3e666fa5"] = gasEventQuests["6702b3e4aff397fa3e666fa5"];
+        //gas event part 7
+        this.questDB()["6702b4a27d4a4a89fce96fbc"] = gasEventQuests["6702b4a27d4a4a89fce96fbc"];
         //treatment part 1
         this.questDB()["667c643869df8111b81cb6dc"] = treatmentQuests["667c643869df8111b81cb6dc"];
+        //treatment part 2
+        this.questDB()["667dbbc9c62a7c2ee8fe25b2"] = treatmentQuests["667dbbc9c62a7c2ee8fe25b2"];
+        //find gas
+        this.questDB()["6681c5127b9973f80c7c7d12"] = exploreQuests["6681c5127b9973f80c7c7d12"];
+        //find rads
+        this.questDB()["6681d150fd1d7f0b7e5ae953"] = exploreQuests["6681d150fd1d7f0b7e5ae953"];
+        //find dynamic zones (triggers dynamic zones to start spawning)
+        this.questDB()["66dad1a18cbba6e558486336"] = dynamicZoneQuests["66dad1a18cbba6e558486336"];
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
+            //gas event part 1
+            //if hallowen, make this quest available immediately, otherwise dependent on previous hazard quests
+            locale["6702afe9504c9aca4ed75d9a acceptPlayerMessage"] = "";
+            locale["6702afe9504c9aca4ed75d9a declinePlayerMessage"] = "";
+            locale["6702afe9504c9aca4ed75d9a completePlayerMessage"] = "";
+            locale["6702afe9504c9aca4ed75d9a name"] = "Bad Omens - Part 1";
+            locale["6702afe9504c9aca4ed75d9a description"] = "We have a situation on our hands here. We've had an influx of new patients, more than usual, all describing respiratory distrees."
+                + " They all claim that their symptoms started when a thick fog descended on their village...supersticious villager talk between you and me, an old man was ranting about dark figures lurking in the fog."
+                + " Can you believe it! However, their symptoms are very real. I need you to bring us supplies for their treatment, we are running low.";
+            locale["6702afe9504c9aca4ed75d9a failMessageText"] = "";
+            locale["6702afe9504c9aca4ed75d9a successMessageText"] = "The patients are stable and recovering well. However I remain concerned as to the origin of their symptoms...we've seen them before. We've collected blood samples from the patients to confirm...";
+            locale["6702b0062a10e8202cc9c063"] = "Handover piles of meds";
+            locale["6702b00eaa02eb7ffdabab6d"] = "Handover disposable syringes";
+            locale["6702b01112e0e5412edc40b2"] = "Handover silicon tubing";
+            locale["6702b0159bb4fbdf2e467147"] = "Handover bottles of hydrogen peroxide";
+            locale["6702b0215240c197de5026dd"] = "This quest will start a chain of events";
+            //gas event part 2
+            locale["6702b0a1b9fb4619debd0697 acceptPlayerMessage"] = "";
+            locale["6702b0a1b9fb4619debd0697 declinePlayerMessage"] = "";
+            locale["6702b0a1b9fb4619debd0697 completePlayerMessage"] = "";
+            locale["6702b0a1b9fb4619debd0697 name"] = "Bad Omens - Part 2";
+            locale["6702b0a1b9fb4619debd0697 description"] = "More and more patients are coming in, all with the same symptoms as before. It doesn't matter how much supplies you bring us, this is not sustainable."
+                + " I no longer doubt that this is a wide scale environmental hazard, some sort of hazardous fog is accumulating during periods calm weather. More patients are describing auditory and visual hallucinations, I do not yet know if this is some form of mass hysteria or if the hazardous substance is neurotoxic."
+                + "\n\nThe blood tests came back inconclusive as a match for the samples we've collected previously. We need to figure out the origin of this contaimination. I am giving you a GAMU device to collect readings in the field. You need to go to the factory complex at Customs where you previously found Terragroup manfucturinmg and storage."
+                + "\n\nPlace the device on the ground and activate it, then wait for it to finish processing which can take some time. These devices are unreliable, sometimes they can stall and need to be restarted so you need to stay nearby. I do not have many of these on hand, do not lose them.";
+            locale["6702b0a1b9fb4619debd0697 failMessageText"] = "";
+            locale["6702b0a1b9fb4619debd0697 successMessageText"] = "Thank you, young man. This data will prove invaluable. Unfortunately this will not aid our patients in the short term. Come back to seem me to discuss this.";
+            locale["6702b0c6ef3aa9366e629f9c"] = "Handover GAMU device with data";
+            //gas event part 3
+            locale["6702b0e9601acf629d212eeb acceptPlayerMessage"] = "";
+            locale["6702b0e9601acf629d212eeb declinePlayerMessage"] = "";
+            locale["6702b0e9601acf629d212eeb completePlayerMessage"] = "";
+            locale["6702b0e9601acf629d212eeb name"] = "Bad Omens - Part 3";
+            locale["6702b0e9601acf629d212eeb description"] = "The sitatuion is critical. Forecasts suggest calm weather approaching, this means the contaminated fog can accumulate. We are being overwhelmed with patients to the point tha we've had to start tapping into our medical supply stockpiles."
+                + " Instances of this contaminated fog is becoming more and more frequent. If you find yourself caught in it, find the nearest shelter and remain indoors, the concentration of the hazard will be reduced."
+                + "\n\n n order to begin effectively treating our patients we will need samples of the original hazardous substance. You will find them in areas where hazardous materials were being stored, manufactured, used or collected by my former collegues.";
+            locale["6702b0e9601acf629d212eeb failMessageText"] = "";
+            locale["6702b0e9601acf629d212eeb successMessageText"] = "We'll be able to reverse engineer the toxin from these samples. I suspect that you don't care for humanitarian efforts, but regardless you will benefit from this too.";
+            locale["6702b0fef881e41d2b389bee"] = "Handover 5 samples of hazardous materials";
+            //gas event part 4
+            locale["6702b8b3c0f2f525d988e428 acceptPlayerMessage"] = "";
+            locale["6702b8b3c0f2f525d988e428 declinePlayerMessage"] = "";
+            locale["6702b8b3c0f2f525d988e428 completePlayerMessage"] = "";
+            locale["6702b8b3c0f2f525d988e428 name"] = "Former Patients";
+            locale["6702b8b3c0f2f525d988e428 description"] = "Analyses of the samples confirms that this substance is an neuro-toxic agent. It is not toxic to plant life, all animal life is affected. If you don't hear or see any birdlife, you know you're in the midst of it...If you are exposed to it, you cannot rely on your senses, auditory hallucinations are common. However...a patient came in hysterical over what they claim they saw in the fog."
+                + " Naturally I would dismiss such claims and sedate the patient, but they had recored them on their phone...I can't go into detail why, I'm sure you understand, but I have my suspicions as to who is behind this and who it was in that recording. I need you to confirm it. Needless to say you need to practice discretion here, do not be seen.";
+            locale["6702b8b3c0f2f525d988e428 failMessageText"] = "";
+            locale["6702b8b3c0f2f525d988e428 successMessageText"] = "My suspicions have been confrimed...they are behind this, unless someone else is putting them up to it...What I saw on these cameras will scar me for the rest of my life. These are sick, sick men. They weren't always like this, they were made this way. This act of terrorism may just be the beginning. They keep muttering incantaions about a 'blue flame'...I'm sure more will be revealed in time.";
+            locale["6702b30d5376ef5b6f661de3"] = "Find the marked room in the dorms on Customs";
+            locale["6702b30fb8d60f93f5c6124c"] = "Plant a wi-fi camera in the marked room in the dorms on Customs";
+            locale["6702b3229a6adda650f9413d"] = "Find the marked room in the Shoreline resort";
+            locale["6702b3258017122356622905"] = "Plant a wi-fi camera in the marked room in the Shoreline resort";
+            locale["6702b33092f96b8ffcc9ab37"] = "Find the marked room in the Tarkov apartments";
+            locale["6702b332a22fc611f1c37045"] = "Plant a wi-fi camera in the marked room in the Tarkov apartments";
+            locale["6702b33e951abed9d20c2741"] = "Find the marked circle in the lost village on Woods";
+            locale["6702b3402c47f1bef20161b6"] = "Plant a wi-fi camera at the marked circle in the lost village on Woods";
+            locale["6702b3458ab88b3a52829046"] = "Find the marked room in the bunker on Reserve";
+            locale["6702b34b09f951485e97945f"] = "Plant a wi-fi camera in the marked room in the bunker on Reserve";
+            //gas event part 5
+            locale["6702b3b624c7ac4e2d3e9c37 acceptPlayerMessage"] = "";
+            locale["6702b3b624c7ac4e2d3e9c37 declinePlayerMessage"] = "";
+            locale["6702b3b624c7ac4e2d3e9c37 completePlayerMessage"] = "";
+            locale["6702b3b624c7ac4e2d3e9c37 name"] = "Do No Harm";
+            locale["6702b3b624c7ac4e2d3e9c37 description"] = "Come in. Sit down. If I may be frank, where the fuck did you plant these cameras? I thought this sort of work was part of your former 'employment'? Why the hell did you think planting these cameras out in the open where they can easily be discovered was a good idea??"
+                + " They found them. The cameras. They're now out in force, cutting down anyone they suspect of spying on them...PMCs, civlilans, it doesn't matter to them. This is on you, and you will fix it."
+                + "\n\nWe do not know where they're sourcing the contaminants from. We do not know how they are distributing it over such a wide area. What we do know is that they are planning something big, and that they need to be stopped.";
+            locale["6702b3b624c7ac4e2d3e9c37 failMessageText"] = "";
+            locale["6702b3b624c7ac4e2d3e9c37 successMessageText"] = "I want you to know that this blood is on your hands. If the cameras were not discovered, all of this could have been avoided. Either way, they seem to have retreated and the contamination with them...for now. They will be back, and we still have recordings from the cameras to go over.";
+            locale["6702b3d010baa251b5fbb933"] = "Kill 50 Cultists";
+            //Halloween only
+            //gas event part 6
+            locale["6702b3e4aff397fa3e666fa5 acceptPlayerMessage"] = "";
+            locale["6702b3e4aff397fa3e666fa5 declinePlayerMessage"] = "";
+            locale["6702b3e4aff397fa3e666fa5 completePlayerMessage"] = "";
+            locale["6702b3e4aff397fa3e666fa5 name"] = "Blue Flame - Part 1";
+            locale["6702b3e4aff397fa3e666fa5 description"] = "These people, these...cultists...some of them were former patients of mine. What was done to them is not my fault, you understand? They voluntered for TerraGroup medical studies. It was my job to monitor and assess them, treat them when I was allowed..."
+                + " I suppose we all have blood on our hands now, don't we? What matters is what we do to rectify our mistakes, that we end this once and for all."
+                + "\n\n Their leaders, their 'priests', speak in riddles and tongues. They use coded language to communicate between cells, but I believe we've cracked their cipher based on the footage we managed to capture before the cameras were discovered."
+                + " If they are planning what we suspect they are, we are all in grave danger. Whatever loyalties or enemies you have won't matter anymore. However I do not operate on assumption, I am a medical professional. I need to you to collect samples and data to confirm what they're planning. You need to go to the TerraGroup Laboratory and search for radioactive materials.";
+            locale["6702b3e4aff397fa3e666fa5 failMessageText"] = "";
+            locale["6702b3e4aff397fa3e666fa5 successMessageText"] = "The derailed trains, the loading and unloading sites for radioactive treatments...the EMP that knocked out the grid in the Tarkov region all that time ago...Oh my God...";
+            locale["6702b4488d22a77322a28e0e"] = "Handover 3 samples of radioactive materials from Labs";
+            locale["6702b44f711820e614d5b1b4"] = "Handover RAMU device with data from Labs";
+            //Halloween only
+            //gas event part 7
+            locale["6702b4a27d4a4a89fce96fbc acceptPlayerMessage"] = "";
+            locale["6702b4a27d4a4a89fce96fbc declinePlayerMessage"] = "";
+            locale["6702b4a27d4a4a89fce96fbc completePlayerMessage"] = "";
+            locale["6702b4a27d4a4a89fce96fbc name"] = "Blue Flame - Part 2";
+            locale["6702b4a27d4a4a89fce96fbc description"] = "It all comes down to this. If we fail, we are all dead. There is no way to evacuate the civilians that remain in Tarkov, Cultists are stalking the routes out of the region, and exchanging fire with UN and RUAF forces."
+                + " They must know what we've disovered, that we know about their sick 'prophecy'. My usual channels of communication with the outside world have been severed, and with the inceeased levels of violence UN and RUAF commands are unresponsive."
+                + " Whatsmore, you going to TerraGroup's facility has really stirred up the hornets nest, Raiders are searching for you."
+                + "\n\nWe have only one shot at this. We have to make contact with the outside world and warn them, to ask for help. I must confess that I've had a lot more dealings with the TerraGroup corporation than I've let on, as I'm sure you've surmised. I know a lot about them, their former operations, before they left me here to rot. What I do know is that they have unauthorised Low Earth Orbit satelites."
+                + " If we can find and use a powerful sateline dish to establish a comm link, my people can repurpose and hijack the satelite to establish contact outside of the Tarkov region. The next time the a satelite will be overhead is October 31st at midnight and will only be available a few days after that."
+                + "\n\nThe satelite dishes on top of the Shoreline resort should work. We need clear skies, those nights are forecast to be clear. I will give you a device for establishing the comm link and transmiting the authorization codes. Do. Not. Lose. The. Device. I hope I do not need to remind you that if you are to fail, it's over for all of us.";
+            locale["6702b4a27d4a4a89fce96fbc failMessageText"] = "";
+            locale["6702b4a27d4a4a89fce96fbc successMessageText"] = "Vires in Scientia. Scientia est fortis. Et oculus spectans deus nobis.";
+            locale["6702b4c1fda5e39ba46ccf35"] = "Establish a comm link with the outside world";
+            //treatment part 1
             locale["667c643869df8111b81cb6dc acceptPlayerMessage"] = "";
             locale["667c643869df8111b81cb6dc declinePlayerMessage"] = "";
             locale["667c643869df8111b81cb6dc completePlayerMessage"] = "";
@@ -36,11 +158,7 @@ class Quests {
             locale["667c8a4420b5c29111af4bc7"] = "Handover disposable syringes";
             locale["667c8a3a189a9ffd2a5eea23"] = "Handover piles of meds";
             locale["5a3fc03286f77414d64f9941"] = "This quest will reset radiation and toxicity for PMC and Scav.";
-        }
-        //treatment part 2
-        this.questDB()["667dbbc9c62a7c2ee8fe25b2"] = treatmentQuests["667dbbc9c62a7c2ee8fe25b2"];
-        for (let i in this.tables.locales.global) {
-            let locale = this.tables.locales.global[i];
+            //treatment part 2
             locale["667dbbc9c62a7c2ee8fe25b2 acceptPlayerMessage"] = "";
             locale["667dbbc9c62a7c2ee8fe25b2 declinePlayerMessage"] = "";
             locale["667dbbc9c62a7c2ee8fe25b2 completePlayerMessage"] = "";
@@ -53,28 +171,20 @@ class Quests {
             locale["667dbd1bb1aeca0bfbb408a7"] = "Handover piles of meds";
             locale["667dbd2bedbb6aa6a6e862eb"] = "Handover LEDX";
             locale["66edf0495148faf0d5d3a75d"] = "This quest will reset radiation and toxicity for PMC and Scav. This Quest is repeatable.";
-        }
-        //find gas
-        this.questDB()["6681c5127b9973f80c7c7d12"] = exploreQuests["6681c5127b9973f80c7c7d12"];
-        for (let i in this.tables.locales.global) {
-            let locale = this.tables.locales.global[i];
+            //find gas
             locale["6681c5127b9973f80c7c7d12 acceptPlayerMessage"] = "";
             locale["6681c5127b9973f80c7c7d12 declinePlayerMessage"] = "";
             locale["6681c5127b9973f80c7c7d12 completePlayerMessage"] = "";
             locale["6681c5127b9973f80c7c7d12 name"] = "Safety Technician - Part 1";
             locale["6681c5127b9973f80c7c7d12 description"] = "Greetings, mercenary. I have some easy work for you. Even before the Contract Wars we've had patients coming in with respiratory distress and other strange symptoms. Fatigue, tunnel vision, and even in some cases rapid organ failure..." +
-                " The mayhem you and your...company? helped inflict on the region made that a low priority, we were more concerned about patching up gunshot wounds." +
-                "\n\nHowever, we've had a recent influx of patients showing those same symptoms from all that time ago; I need you to find the source of this contamination. We're unsure if this is connected to the water contamination you helped as remediate before."
+                " The mayhem you and your...company? helped inflict on the region made that a low priority, we were more concerned about patching up gunshot wounds."
+                + "\n\nHowever, we've had a recent influx of patients showing those same symptoms from all that time ago; I need you to find the source of this contamination. We're unsure if this is connected to the water contamination you helped as remediate before."
                 + "\n\nThere used to be a chemical plant in the factory and warehouse complex next to the Customs road, between the checkpoint and the petrol station. It was owned by TerraGroup corporation or one of its subsidiaries, I'm sure you're familiar with them. This could be one of the sources of the contamination. Their trademark is featured all over, you can't miss it. I need you to locate some of the infrastructure used to manufacture and store chemical products. I will send in my people to take samples once you've done so.";
             locale["6681c5127b9973f80c7c7d12 failMessageText"] = "";
             locale["6681c5127b9973f80c7c7d12 successMessageText"] = "Thank you mercenary. My people have confirmed the substances that were manufactured here are a match for what some of our patients have been contaminated with. This has grave implications...but that does not concern you. I may have more work for you.";
             locale["6681c60bf1e98af2b3def8cc"] = "Find the infrastructure used for manufacture";
             locale["6682854b9ad02262e978d803"] = "Find the infrastructure used for storage";
-        }
-        //find rads
-        this.questDB()["6681d150fd1d7f0b7e5ae953"] = exploreQuests["6681d150fd1d7f0b7e5ae953"];
-        for (let i in this.tables.locales.global) {
-            let locale = this.tables.locales.global[i];
+            //find rads
             locale["6681d150fd1d7f0b7e5ae953 acceptPlayerMessage"] = "";
             locale["6681d150fd1d7f0b7e5ae953 declinePlayerMessage"] = "";
             locale["6681d150fd1d7f0b7e5ae953 completePlayerMessage"] = "";
@@ -86,11 +196,7 @@ class Quests {
             locale["6681d150fd1d7f0b7e5ae953 successMessageText"] = "My people will be sent to the derailment and move in to retrieve the cargo immediately. I hope you understand that this is a delicate matter and needs to be kept between us. I also hope that you wore a respirator at a minimum and didn't touch anything...";
             locale["6681d1e23a21783b8b9c14ba"] = "Find the train carrying TerraGroup cargo";
             locale["6682859c9d440e2a1e92fc89"] = "Find The stolen radioactive cargo";
-        }
-        //find dynamic zones (triggers dynamic zones to start spawning)
-        this.questDB()["66dad1a18cbba6e558486336"] = dynamicZoneQuests["66dad1a18cbba6e558486336"];
-        for (let i in this.tables.locales.global) {
-            let locale = this.tables.locales.global[i];
+            //find dynamic zones (triggers dynamic zones to start spawning)
             locale["66dad1a18cbba6e558486336 acceptPlayerMessage"] = "";
             locale["66dad1a18cbba6e558486336 declinePlayerMessage"] = "";
             locale["66dad1a18cbba6e558486336 completePlayerMessage"] = "";

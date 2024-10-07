@@ -741,9 +741,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         maps.loadSpawnChanges();
 
-        if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdropChanges();
-        }
+        // if (modConfig.airdrop_changes == true) {
+        //     airdrop.loadAirdropChanges();
+        // }
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             bots.loadBots();
@@ -904,7 +904,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     public shouldDoGasEvent(utils: Utils, map: string, pmcData: IPmcData) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let baseChance = EventTracker.isHalloween ? 10 : 1;
+        let baseChance = EventTracker.isHalloween ? 1000 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
         EventTracker.doGasEvent = baseChance >= rndNum && !isWrongMap;
     }

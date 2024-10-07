@@ -566,9 +566,9 @@ class Main {
             maps.openZonesFix();
         }
         maps.loadSpawnChanges();
-        if (modConfig.airdrop_changes == true) {
-            airdrop.loadAirdropChanges();
-        }
+        // if (modConfig.airdrop_changes == true) {
+        //     airdrop.loadAirdropChanges();
+        // }
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }
@@ -699,7 +699,7 @@ class Main {
     }
     shouldDoGasEvent(utils, map, pmcData) {
         let rndNum = utils.pickRandNumInRange(1, 1000);
-        let baseChance = seasonalevents_1.EventTracker.isHalloween ? 10 : 1;
+        let baseChance = seasonalevents_1.EventTracker.isHalloween ? 1000 : 1;
         let isWrongMap = map.includes("laboratory") || map.includes("factory");
         seasonalevents_1.EventTracker.doGasEvent = baseChance >= rndNum && !isWrongMap;
     }

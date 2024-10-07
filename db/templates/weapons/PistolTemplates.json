@@ -559,7 +559,7 @@
         "RecoilDamping": 0.74,
         "RecoilHandDamping": 0.43,
         "WeaponAllowADS": false,
-        "Weight": 0.231,
+        "Weight": 0.439,
         "DurabilityBurnRatio": 0.15,
         "AutoROF": 30,
         "SemiROF": 370,

@@ -1,0 +1,838 @@
+{
+    "6702afe9504c9aca4ed75d9a": {
+        "QuestName": "Bad Omens - Part 1",
+        "_id": "6702afe9504c9aca4ed75d9a",
+        "acceptPlayerMessage": "6702afe9504c9aca4ed75d9a acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6702afe9504c9aca4ed75d9a changeQuestMessageText",
+        "completePlayerMessage": "6702afe9504c9aca4ed75d9a completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b0062a10e8202cc9c063",
+                    "index": 0,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "5d1b3a5d86f774252167ba22"
+                    ],
+                    "value": 5,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b00eaa02eb7ffdabab6d",
+                    "index": 1,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "5d1b3f2d86f774253763b735"
+                    ],
+                    "value": 4,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b01112e0e5412edc40b2",
+                    "index": 2,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "5d1b39a386f774252339976f"
+                    ],
+                    "value": 5,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b0159bb4fbdf2e467147",
+                    "index": 3,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "59e361e886f774176c10a2a5"
+                    ],
+                    "value": 2,
+                    "visibilityConditions": []
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6702b018f77f355eb6401e01",
+                                "target": "",
+                                "value": 1
+                            }
+                        ],
+                        "id": "6702b01f0689f4ffaae7e2cf"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b0215240c197de5026dd",
+                    "index": 4,
+                    "oneSessionOnly": false,
+                    "parentId": "6702b0159bb4fbdf2e467147",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6702afe9504c9aca4ed75d9a declinePlayerMessage",
+        "description": "6702afe9504c9aca4ed75d9a description",
+        "failMessageText": "6702afe9504c9aca4ed75d9a failMessageText",
+        "image": "/files/quest/icon/63ab02b8972364554162a22e.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6702afe9504c9aca4ed75d9a name",
+        "note": "6702afe9504c9aca4ed75d9a note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [],
+            "Success": []
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6702afe9504c9aca4ed75d9a startedMessageText",
+        "successMessageText": "6702afe9504c9aca4ed75d9a successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "PickUp"
+    },
+    "6702b0a1b9fb4619debd0697": {
+        "QuestName": "Bad Omens - Part 2",
+        "_id": "6702b0a1b9fb4619debd0697",
+        "acceptPlayerMessage": "6702b0a1b9fb4619debd0697 acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6702b0a1b9fb4619debd0697 changeQuestMessageText",
+        "completePlayerMessage": "6702b0a1b9fb4619debd0697 completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b0c6ef3aa9366e629f9c",
+                    "index": 0,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "670120df4f0c4c37e6be90ae"
+                    ],
+                    "value": 1,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6702b0a1b9fb4619debd0697 declinePlayerMessage",
+        "description": "6702b0a1b9fb4619debd0697 description",
+        "failMessageText": "6702b0a1b9fb4619debd0697 failMessageText",
+        "image": "/files/quest/icon/59689f8f86f7740d121082d7.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6702b0a1b9fb4619debd0697 name",
+        "note": "6702b0a1b9fb4619debd0697 note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [
+                {
+                    "id": "6702b08c74616c550a7b9be1",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6702b081bf932a06eecf8fac",
+                            "_tpl": "66fd571a05370c3ee1a1c613"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "6702b081bf932a06eecf8fac",
+                    "traderId": "54cb57776803fa99248b456e",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "findInRaid": true,
+                    "id": "6702b25dab92238b85407d1b",
+                    "index": 1,
+                    "items": [
+                        {
+                            "_id": "6702b26e9bf2fea3c2e54100",
+                            "_tpl": "66fd571a05370c3ee1a1c613",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6702b26e9bf2fea3c2e54100",
+                    "type": "Item",
+                    "value": "1"
+                }
+            ],
+            "Success": []
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6702b0a1b9fb4619debd0697 startedMessageText",
+        "successMessageText": "6702b0a1b9fb4619debd0697 successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "PickUp"
+    },
+    "6702b0e9601acf629d212eeb": {
+        "QuestName": "Bad Omens - Part 3",
+        "_id": "6702b0e9601acf629d212eeb",
+        "acceptPlayerMessage": "6702b0e9601acf629d212eeb acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6702b0e9601acf629d212eeb changeQuestMessageText",
+        "completePlayerMessage": "6702b0e9601acf629d212eeb completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b0fef881e41d2b389bee",
+                    "index": 0,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "66fd588956f73c4f38dd07ae"
+                    ],
+                    "value": 5,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6702b0e9601acf629d212eeb declinePlayerMessage",
+        "description": "6702b0e9601acf629d212eeb description",
+        "failMessageText": "6702b0e9601acf629d212eeb failMessageText",
+        "image": "/files/quest/icon/5979d36d86f7746d093ddd7a.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6702b0e9601acf629d212eeb name",
+        "note": "6702b0e9601acf629d212eeb note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [
+                {
+                    "id": "6702b0d814c128a084502838",
+                    "index": 5,
+                    "items": [
+                        {
+                            "_id": "6702b0df6e1b86be6f8c0e87",
+                            "_tpl": "66fd588d397ed74159826cf0"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "6702b0df6e1b86be6f8c0e87",
+                    "traderId": "54cb57776803fa99248b456e",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "findInRaid": true,
+                    "id": "6702b2a5cd59fd0b38e0ba5a",
+                    "index": 1,
+                    "items": [
+                        {
+                            "_id": "6702b2a867173088ee02f987",
+                            "_tpl": "66fd588d397ed74159826cf0",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6702b2a867173088ee02f987",
+                    "type": "Item",
+                    "value": "1"
+                }
+            ],
+            "Success": []
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6702b0e9601acf629d212eeb startedMessageText",
+        "successMessageText": "6702b0e9601acf629d212eeb successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "PickUp"
+    },
+    "6702b8b3c0f2f525d988e428": {
+        "QuestName": "Former Patients",
+        "_id": "6702b8b3c0f2f525d988e428",
+        "acceptPlayerMessage": "6702b8b3c0f2f525d988e428 acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6702b8b3c0f2f525d988e428 changeQuestMessageText",
+        "completePlayerMessage": "6702b8b3c0f2f525d988e428 completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6702b305d640431e1833e85f",
+                                "target": "CustomsMarkedRoom",
+                                "value": 1
+                            }
+                        ],
+                        "id": "6702b30859ca17efbb310da5"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b30d5376ef5b6f661de3",
+                    "index": 0,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "LeaveItemAtLocation",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b30fb8d60f93f5c6124c",
+                    "index": 1,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "plantTime": 1,
+                    "target": [
+                        "5b4391a586f7745321235ab2"
+                    ],
+                    "value": 1,
+                    "visibilityConditions": [],
+                    "zoneId": "CustomsMarkedRoom"
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6702b319dc9b3df845dc204e",
+                                "target": "ShorelineMarked",
+                                "value": 1
+                            }
+                        ],
+                        "id": "6702b31e0f1dc8a3f8a7b09b"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b3229a6adda650f9413d",
+                    "index": 2,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "LeaveItemAtLocation",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b3258017122356622905",
+                    "index": 1,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "plantTime": 1,
+                    "target": [
+                        "5b4391a586f7745321235ab2"
+                    ],
+                    "value": 1,
+                    "visibilityConditions": [],
+                    "zoneId": "ShorelineMarked"
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6702b32a48369c8229bdc1db",
+                                "target": "StreetsMarked2",
+                                "value": 1
+                            }
+                        ],
+                        "id": "6702b32dc19407f4d19773ec"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b33092f96b8ffcc9ab37",
+                    "index": 4,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "LeaveItemAtLocation",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b332a22fc611f1c37045",
+                    "index": 1,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "plantTime": 1,
+                    "target": [
+                        "5b4391a586f7745321235ab2"
+                    ],
+                    "value": 1,
+                    "visibilityConditions": [],
+                    "zoneId": "StreetsMarked2"
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6702b3394a0fb91fcb109636",
+                                "target": "WooodsMarked2",
+                                "value": 1
+                            }
+                        ],
+                        "id": "6702b33cf7d1eacd12eb4798"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b33e951abed9d20c2741",
+                    "index": 6,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "LeaveItemAtLocation",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b3402c47f1bef20161b6",
+                    "index": 1,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "plantTime": 1,
+                    "target": [
+                        "5b4391a586f7745321235ab2"
+                    ],
+                    "value": 1,
+                    "visibilityConditions": [],
+                    "zoneId": "WooodsMarked2"
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6702b3458ab88b3a52829046",
+                                "target": "ReserveMarkedBunker",
+                                "value": 1
+                            }
+                        ],
+                        "id": "66dad1be791d8e7b506ec18f"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b3458ab88b3a52829046",
+                    "index": 8,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "LeaveItemAtLocation",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b34b09f951485e97945f",
+                    "index": 1,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "plantTime": 1,
+                    "target": [
+                        "5b4391a586f7745321235ab2"
+                    ],
+                    "value": 1,
+                    "visibilityConditions": [],
+                    "zoneId": "ReserveMarkedBunker"
+                }
+            ],
+            "AvailableForStart": [],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6702b8b3c0f2f525d988e428 declinePlayerMessage",
+        "description": "6702b8b3c0f2f525d988e428 description",
+        "failMessageText": "6702b8b3c0f2f525d988e428 failMessageText",
+        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6702b8b3c0f2f525d988e428 name",
+        "note": "6702b8b3c0f2f525d988e428 note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [
+                {
+                    "findInRaid": true,
+                    "id": "6702b35a9dcc87597020e70a",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6702b35d60ce3c0bf19b350f",
+                            "_tpl": "5b4391a586f7745321235ab2",
+                            "upd": {
+                                "StackObjectsCount": 8
+                            }
+                        }
+                    ],
+                    "target": "6702b35d60ce3c0bf19b350f",
+                    "type": "Item",
+                    "value": "8"
+                }
+            ],
+            "Success": []
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6702b8b3c0f2f525d988e428 startedMessageText",
+        "successMessageText": "6702b8b3c0f2f525d988e428 successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "Discover"
+    },
+    "6702b3b624c7ac4e2d3e9c37": {
+        "QuestName": "Do No Harm",
+        "_id": "6702b3b624c7ac4e2d3e9c37",
+        "acceptPlayerMessage": "6702b3b624c7ac4e2d3e9c37 acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6702b3b624c7ac4e2d3e9c37 changeQuestMessageText",
+        "completePlayerMessage": "6702b3b624c7ac4e2d3e9c37 completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "bodyPart": [],
+                                "compareMethod": ">=",
+                                "conditionType": "Kills",
+                                "daytime": {
+                                    "from": 0,
+                                    "to": 0
+                                },
+                                "distance": {
+                                    "compareMethod": ">=",
+                                    "value": 0
+                                },
+                                "dynamicLocale": false,
+                                "enemyEquipmentExclusive": [],
+                                "enemyEquipmentInclusive": [],
+                                "enemyHealthEffects": [],
+                                "id": "6702b3c8f7a6c3c4f8f96b04",
+                                "resetOnSessionEnd": false,
+                                "savageRole": [
+                                    "sectantWarrior",
+                                    "sectantPriest"
+                                ],
+                                "target": "Savage",
+                                "value": 1,
+                                "weapon": [],
+                                "weaponCaliber": [],
+                                "weaponModsExclusive": [],
+                                "weaponModsInclusive": []
+                            }
+                        ],
+                        "id": "6702b3cd286df82f97c99a89"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b3d010baa251b5fbb933",
+                    "index": 0,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Elimination",
+                    "value": 50,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6702b3b624c7ac4e2d3e9c37 declinePlayerMessage",
+        "description": "6702b3b624c7ac4e2d3e9c37 description",
+        "failMessageText": "6702b3b624c7ac4e2d3e9c37 failMessageText",
+        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6702b3b624c7ac4e2d3e9c37 name",
+        "note": "6702b3b624c7ac4e2d3e9c37 note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [],
+            "Success": []
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6702b3b624c7ac4e2d3e9c37 startedMessageText",
+        "successMessageText": "6702b3b624c7ac4e2d3e9c37 successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "Elimination"
+    },
+    "6702b3e4aff397fa3e666fa5": {
+        "QuestName": "Blue Flame - Part 1",
+        "_id": "6702b3e4aff397fa3e666fa5",
+        "acceptPlayerMessage": "6702b3e4aff397fa3e666fa5 acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6702b3e4aff397fa3e666fa5 changeQuestMessageText",
+        "completePlayerMessage": "6702b3e4aff397fa3e666fa5 completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b4488d22a77322a28e0e",
+                    "index": 0,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "66fd57171f981640e667fbe2"
+                    ],
+                    "value": 3,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b44f711820e614d5b1b4",
+                    "index": 1,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "670120ce354987453daf3d0c"
+                    ],
+                    "value": 1,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6702b3e4aff397fa3e666fa5 declinePlayerMessage",
+        "description": "6702b3e4aff397fa3e666fa5 description",
+        "failMessageText": "6702b3e4aff397fa3e666fa5 failMessageText",
+        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6702b3e4aff397fa3e666fa5 name",
+        "note": "6702b3e4aff397fa3e666fa5 note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [
+                {
+                    "id": "6702b483d1bca9782a6327f0",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6702b4861e1b23980becbedb",
+                            "_tpl": "66fd521442055447e2304fda"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "6702b4861e1b23980becbedb",
+                    "traderId": "54cb57776803fa99248b456e",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "findInRaid": true,
+                    "id": "6702b48a4816174486d80c4b",
+                    "index": 1,
+                    "items": [
+                        {
+                            "_id": "6702b48d1ad4f721434784b1",
+                            "_tpl": "66fd521442055447e2304fda",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6702b48d1ad4f721434784b1",
+                    "type": "Item",
+                    "value": "1"
+                }
+            ],
+            "Success": []
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6702b3e4aff397fa3e666fa5 startedMessageText",
+        "successMessageText": "6702b3e4aff397fa3e666fa5 successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "PickUp"
+    },
+    "6702b4a27d4a4a89fce96fbc": {
+        "QuestName": "Blue Flame - Part 1",
+        "_id": "6702b4a27d4a4a89fce96fbc",
+        "acceptPlayerMessage": "6702b4a27d4a4a89fce96fbc acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6702b4a27d4a4a89fce96fbc changeQuestMessageText",
+        "completePlayerMessage": "6702b4a27d4a4a89fce96fbc completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6702fc00a67f26d8c576780d",
+                                "target": "SateliteCommsLinkEstablished",
+                                "value": 1
+                            }
+                        ],
+                        "id": "6702fc05f8de5247a6160439"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6702b4c1fda5e39ba46ccf35",
+                    "index": 0,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6702b4a27d4a4a89fce96fbc declinePlayerMessage",
+        "description": "6702b4a27d4a4a89fce96fbc description",
+        "failMessageText": "6702b4a27d4a4a89fce96fbc failMessageText",
+        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6702b4a27d4a4a89fce96fbc name",
+        "note": "6702b4a27d4a4a89fce96fbc note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [],
+            "Success": []
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6702b4a27d4a4a89fce96fbc startedMessageText",
+        "successMessageText": "6702b4a27d4a4a89fce96fbc successMessageText",
+        "traderId": "54cb57776803fa99248b456e",
+        "type": "Exploration"
+    }
+}

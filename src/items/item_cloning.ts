@@ -298,7 +298,7 @@ export class ItemCloning {
         const ramuId = "66fd521442055447e2304fda";
         const remuDescript = "\"The Radiological Assessment and Monitoring Unit (RAMU) is a radiological device developed by TerraGroup corporation which combines different technologies to measure and record radiation levels, radiation type and determine isotopes." + terraGroupDislaimer;
         this.cloneGenericItem("5c05308086f7746b2101e90b", ramuId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 15000);
+        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 50000);
         this.addToLocale(ramuId, "Radiological Assessment and Monitoring Unit", "RAMU", remuDescript);
         const ramu = this.itemDB()[ramuId];
         ramu._props.Height = 2;
@@ -308,7 +308,7 @@ export class ItemCloning {
 
         const ramuDataId = "670120ce354987453daf3d0c";
         this.cloneGenericItem(ramuId, ramuDataId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuDataId, "5b5f794b86f77409407a7f92", 100000);
+        this.addToHandbook(ramuDataId, "5b5f794b86f77409407a7f92", 180000);
         this.addToLocale(ramuDataId, "Radiological Assessment and Monitoring Unit (With Data)", "RAMU (Data)", dataNotification + remuDescript);
         const ramuData = this.itemDB()[ramuDataId];
 
@@ -316,7 +316,7 @@ export class ItemCloning {
         const gamuId = "66fd571a05370c3ee1a1c613";
         const gamuDescript = "\"The Gas Assessment and Monitoring Unit (GAMU) is a device developed by TerraGroup corporation which combines different technologies to measure and record hazardous volatile organic and ingorganic compounds." + terraGroupDislaimer;
         this.cloneGenericItem("5c05308086f7746b2101e90b", gamuId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
-        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 15000);
+        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 30000);
         this.addToLocale(gamuId, "Gas Assessment and Monitoring Unit", "GAMU", gamuDescript);
         const gamu = this.itemDB()[gamuId];
         gamu._props.Height = 2;
@@ -326,7 +326,7 @@ export class ItemCloning {
 
         const gamuIdData = "670120df4f0c4c37e6be90ae";
         this.cloneGenericItem(gamuId, gamuIdData, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
-        this.addToHandbook(gamuIdData, "5b47574386f77428ca22b2ef", 80000);
+        this.addToHandbook(gamuIdData, "5b47574386f77428ca22b2ef", 100000);
         this.addToLocale(gamuIdData, "Gas Assessment and Monitoring Unit (With Data)", "GAMU (Data)", dataNotification + gamuDescript);
         const gamuData = this.itemDB()[gamuIdData];
 
@@ -355,7 +355,7 @@ export class ItemCloning {
         //Safe Container
         const containerId = "66fd588d397ed74159826cf0";
         this.cloneGenericItem("59fb042886f7746c5005a7b2", containerId, "violet", "assets/content/items/quest/item_quest_container_carbon_case/item_quest_container_carbon_case.bundle");
-        this.addToHandbook(containerId, "5b5f6fa186f77409407a7eb7", 50000);
+        this.addToHandbook(containerId, "5b5f6fa186f77409407a7eb7", 25000);
         this.addToLocale(containerId, "SAFE Container", "SAFE Container", "\"The Shielded And Fortified Environment (SAFE) container is capable of safely and securely storing hazardous materials including radiological, biological, and chemical hazards." + terraGroupDislaimer);
         const container = this.itemDB()[containerId];
         container._props.Height = 2;
@@ -368,6 +368,14 @@ export class ItemCloning {
         grid._props.filters[0].Filter = [];
         grid._props.filters[0].Filter.push(radSampleId, gasSampleId);
 
+        //Makeshift Transmitter
+        const transmitterId = "6703082a766cb6d11310094e";
+        this.cloneGenericItem("63a0b2eabea67a6d93009e52", transmitterId, "green", "assets/content/items/quest/item_quest_radio_repeater/item_quest_radio_repeater.bundle"); 
+        this.addToHandbook(transmitterId, "5b47574386f77428ca22b2ef", 15000);
+        this.addToLocale(transmitterId, "Makeshift Transmitter", "Transmitter", "A makeshift transmitter that could reach the outside world if connected to a powerful enough satelite dish");
+        const transmitter = this.itemDB()[transmitterId];
+        transmitter._props.CanSellOnRagfair = false;
+
         StaticArrays.secureContainers.forEach(s => {
             this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
         });
@@ -378,11 +386,11 @@ export class ItemCloning {
         const traders = this.tables.traders;
         StaticArrays.traders.forEach(t => {
             if (t === skierId || t === theraId) return;
-            traders[t].base.items_buy_prohibited.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c");
+            traders[t].base.items_buy_prohibited.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c","6703082a766cb6d11310094e");
         });
 
         traders[skierId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");
-        traders[theraId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");       
+        traders[theraId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");
     }
 
     private addCustomWeapsToQuests(originalWeapon: string, weapToAdd: string) {
