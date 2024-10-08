@@ -71,29 +71,46 @@ export class Traders {
         return this.tables.templates.items;
     }
 
-
     public modifyInsurance(insurance: IInsuranceConfig) {
-        insurance.returnChancePercent =
+
+        insurance.returnChancePercent[fenceId] = 10;
+        this.tables.traders[fenceId].base.loyaltyLevels.forEach(ll => {
+            ll.insurance_price_coef = 14;
+        });
+
+        this.tables.traders[fenceId].base.insurance =
         {
-            "54cb50c76803fa8b248b4571": 30,
-            "54cb57776803fa99248b456e": 90
+            "availability": true,
+            "excluded_category": [
+                "62e9103049c018f425059f38"
+            ],
+            "max_return_hour": 3,
+            "max_storage_time": 96,
+            "min_payment": 0,
+            "min_return_hour": 1
         };
-        insurance.minAttachmentRoublePriceToBeTaken = 1000;
-        insurance.chanceNoAttachmentsTakenPercent = 15;
-        insurance.runIntervalSeconds = 600;
 
-        this.tables.traders[prapId].base.insurance.min_return_hour = 2;
-        this.tables.traders[prapId].base.insurance.max_return_hour = 3;
+        if (modConfig.insurance_price_coef) {
+            insurance.minAttachmentRoublePriceToBeTaken = 1000;
+            insurance.chanceNoAttachmentsTakenPercent = 15;
+            insurance.runIntervalSeconds = 600;
 
-        this.tables.traders[theraId].base.insurance.min_return_hour = 1;
-        this.tables.traders[theraId].base.insurance.max_return_hour = 1;
+            this.tables.traders[prapId].base.insurance.min_return_hour = 2;
+            this.tables.traders[prapId].base.insurance.max_return_hour = 3;
 
-        this.tables.traders[prapId].base.loyaltyLevels.forEach(ll => {
-            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
-        });
-        this.tables.traders[theraId].base.loyaltyLevels.forEach(ll => {
-            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
-        });
+            this.tables.traders[theraId].base.insurance.min_return_hour = 1;
+            this.tables.traders[theraId].base.insurance.max_return_hour = 1;
+
+            this.tables.traders[prapId].base.loyaltyLevels.forEach(ll => {
+                ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
+            });
+            this.tables.traders[theraId].base.loyaltyLevels.forEach(ll => {
+                ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
+            });
+
+            insurance.returnChancePercent[prapId] = 30;
+            insurance.returnChancePercent[theraId] = 90;
+        }
     }
 
     private modifyTraderBuyPriceHelper(traderId: string, basePrice: number) {
@@ -152,22 +169,22 @@ export class Traders {
                     "3": 100,
                     "4": 100,
                     "5": 100,
-                    "6": 50,
-                    "7": 30,
-                    "8": 15,
+                    "6": 40,
+                    "7": 20,
+                    "8": 10,
                     "9": 5,
-                    "10": 2
+                    "10": 1
                 }
             }
             this.traderConf.fence.armorMaxDurabilityPercentMinMax.current.min = 10;
-            this.traderConf.fence.armorMaxDurabilityPercentMinMax.current.max = 80;
-            this.traderConf.fence.armorMaxDurabilityPercentMinMax.max.min = 40;
-            this.traderConf.fence.armorMaxDurabilityPercentMinMax.max.max = 90;
+            this.traderConf.fence.armorMaxDurabilityPercentMinMax.current.max = 50;
+            this.traderConf.fence.armorMaxDurabilityPercentMinMax.max.min = 30;
+            this.traderConf.fence.armorMaxDurabilityPercentMinMax.max.max = 70;
 
             this.traderConf.fence.weaponDurabilityPercentMinMax.current.min = 10;
             this.traderConf.fence.weaponDurabilityPercentMinMax.current.max = 100;
             this.traderConf.fence.weaponDurabilityPercentMinMax.max.min = 50;
-            this.traderConf.fence.weaponDurabilityPercentMinMax.max.max = 95;
+            this.traderConf.fence.weaponDurabilityPercentMinMax.max.max = 90;
 
             //ammo
             this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 60;
@@ -314,7 +331,9 @@ export class Traders {
         }
 
         if (this.modConf.enable_hazard_zones == true) {
-            //safe container this.assortItemPusher(theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 3, false, 200000);
+            this.assortItemPusher(theraId, "66fd521442055447e2304fda", 1, "5449016a4bdc2d6f028b456f", 3, false, 50000); // ramu
+            this.assortItemPusher(theraId, "66fd571a05370c3ee1a1c613", 1, "5449016a4bdc2d6f028b456f", 3, false, 25000); // gamu
+            this.assortItemPusher(theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 3, false, 200000); // safe container 
             this.assortItemPusher(theraId, "59e7715586f7742ee5789605", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
             this.assortItemPusher(jaegId, "590c595c86f7747884343ad7", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
             this.assortItemPusher(jaegId, "5b432c305acfc40019478128", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);

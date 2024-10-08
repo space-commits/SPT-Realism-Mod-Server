@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Airdrops = void 0;
+const seasonalevents_1 = require("./seasonalevents");
 class Airdrops {
     logger;
     modConfig;
@@ -11,13 +12,17 @@ class Airdrops {
         this.airConf = airConf;
     }
     loadAirdropChanges() {
-        this.airConf.airdropChancePercent.bigmap = 5;
-        this.airConf.airdropChancePercent.woods = 7;
-        this.airConf.airdropChancePercent.lighthouse = 7;
-        this.airConf.airdropChancePercent.shoreline = 7;
-        this.airConf.airdropChancePercent.interchange = 2;
-        this.airConf.airdropChancePercent.reserve = 2;
-        this.airConf.airdropChancePercent.tarkovStreets = 10;
+        //fucks up the story
+        if (seasonalevents_1.EventTracker.isHalloween) {
+            this.logger.warning("===============disabling airdrops");
+            this.airConf.airdropChancePercent.bigmap = 0;
+            this.airConf.airdropChancePercent.woods = 0;
+            this.airConf.airdropChancePercent.lighthouse = 0;
+            this.airConf.airdropChancePercent.shoreline = 0;
+            this.airConf.airdropChancePercent.interchange = 0;
+            this.airConf.airdropChancePercent.reserve = 0;
+            this.airConf.airdropChancePercent.sandbox = 0;
+        }
         this.airConf.planeVolume = 0.2;
         this.airConf.airdropMinStartTimeSeconds = 300;
         this.airConf.airdropMaxStartTimeSeconds = 2400;
@@ -163,7 +168,7 @@ exports.Airdrops = Airdrops;
 //         let min = item._props.StackMinRandom;
 //         let max = item._props.StackMaxSize;
 //         if(item._parent === "5485a8684bdc2da71d8b4567"){
-//             min = max / 2;           
+//             min = max / 2;
 //         }
 //         if (options.itemStackLimits[item._id]) {
 //             min = options.itemStackLimits[item._id].min;

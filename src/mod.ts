@@ -179,12 +179,19 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     url: "/RealismMod/GetInfo",
                     action: async (url, info, sessionID, output) => {
                         try {
+                            const pmcData = profileHelper.getPmcProfile(sessionID);
+                            this.checkEventQuests(pmcData);
+                            realismInfo.IsNightTime = RaidInfoTracker.TOD == "night";
                             realismInfo.IsHalloween = EventTracker.isHalloween;
                             realismInfo.isChristmas = EventTracker.isChristmas;
-                            realismInfo.AveragePlayerLevel = ProfileTracker.averagePlayerLevel;
                             realismInfo.DoGasEvent = EventTracker.doGasEvent;
-                            realismInfo.HasExploded = EventTracker.hasExploded;
-                            realismInfo.IsPreExplosion = EventTracker.isPreExplosion;
+                            realismInfo.HasExploded = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.hasExploded;
+                            realismInfo.IsPreExplosion = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.isPreExplosion;
+                            logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
+                            logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
+                            logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
+                            logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
+                            logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
                             console.error("Failed to read info file", e);
@@ -291,28 +298,26 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const postLoadDBServer = container.resolve<DatabaseService>("DatabaseService");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
+                        const weatherConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<IWeatherConfig>(ConfigTypes.WEATHER);
+                        const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                         const postLoadTables = postLoadDBServer.getTables();
                         const utils = new Utils(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
-                        const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations);
+                        const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
                         const quests = new Quests(logger, postLoadTables, modConfig);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
-
-                        if (modConfig.enable_hazard_zones) {
-                            quests.resetHazardQuests(profileData);
-                        }
-
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
 
                         try {
 
-                            if (modConfig.backup_profiles == true) {
-                                this.backupProfile(profileData, logger);
-                            }
+                            if (modConfig.backup_profiles == true) this.backupProfile(profileData, logger);
+                            if (modConfig.enable_hazard_zones) quests.resetRepeatableQuests(profileData);
+                            this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig);
+                            this.tryLockTradersForEvent(pmcData, logger);
 
                             const healthProp = pmcData?.Health;
                             const hydroProp = pmcData?.Health?.Hydration;
@@ -559,10 +564,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const postLoadTables = postLoadDBService.getTables();
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
-                        const localisationService = container.resolve<LocalisationService>("LocalisationService");
-                        const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
-                        const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
-                        const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+                        // const localisationService = container.resolve<LocalisationService>("LocalisationService");
+                        // const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+                        // const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
+                        // const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const utils = new Utils(postLoadTables);
@@ -570,6 +575,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID)
+                        const quests = new Quests(logger, postLoadTables, modConfig);
 
                         //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                         // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
@@ -583,12 +589,19 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
                             }
 
+                            if (modConfig.enable_hazard_zones) {
+                                quests.resetRepeatableQuests(profileData);
+                            }
+
+                            this.checkEventQuests(pmcData);
+
                             player.correctNegativeHP(pmcData);
 
                             if (modConfig.realistic_player_health == true) {
                                 player.setNewScavHealth(scavData);
                             }
 
+                            this.tryLockTradersForEvent(pmcData, logger);
 
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Updated at Raid End");
@@ -674,8 +687,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const logger = container.resolve<ILogger>("WinstonLogger");
         const databaseService = container.resolve<DatabaseService>("DatabaseService");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
-        const weatherConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<IWeatherConfig>(ConfigTypes.WEATHER);
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
+        const weatherConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<IWeatherConfig>(ConfigTypes.WEATHER);
+        const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
@@ -700,7 +714,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, utils);
         const airdrop = new Airdrops(logger, modConfig, airConf);
-        const maps = new Spawns(logger, tables, modConfig, tables.locations);
+        const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
@@ -712,8 +726,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         // this.dllChecker(logger, modConfig);
 
-        const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
-        this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig);
+        this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig, true);
 
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
@@ -744,9 +757,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         maps.loadSpawnChanges();
 
-        // if (modConfig.airdrop_changes == true) {
-        //     airdrop.loadAirdropChanges();
-        // }
+        airdrop.loadAirdropChanges();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             bots.loadBots();
@@ -807,7 +818,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
 
         //traders
-        if (modConfig.insurance_changes) traders.modifyInsurance(insConf);
+        traders.modifyInsurance(insConf);
         traders.loadTraderTweaks();
         traders.setBaseOfferValues();
         if (modConfig.add_cust_trader_items == true) {
@@ -881,13 +892,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
     }
 
-    private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, weatherConfig: IWeatherConfig) {
+    private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
         EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
-        EventTracker.isHalloween = true; // seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
-        if (EventTracker.isChristmas == true) {
+        EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        if (EventTracker.isChristmas == true && logGreetings) {
             logger.warning("Merry Christmas!");
         }
-        if (EventTracker.isHalloween == true) {
+        if (EventTracker.isHalloween == true && logGreetings) {
             weatherConfig.overrideSeason = 1;
             const skull = `
    _______     
@@ -905,8 +916,37 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
     }
 
-    public shouldDoGasEvent(utils: Utils, map: string, pmcData: IPmcData, logger: ILogger) {
+    public tryLockTradersForEvent(pmcData: IPmcData, logger: ILogger) {
+        let completedQuest;
+        let didExplosion;
+        let shouldDisableTraders = true;
 
+        if (pmcData?.Quests == null || pmcData?.Quests === undefined) return;
+
+        pmcData.Quests.forEach(q => {
+            //blue flame part 2
+            if (q.qid === "6702b4a27d4a4a89fce96fbc") {
+                completedQuest = q.status === 4;
+                didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
+            }
+        });
+
+        if (!EventTracker.isHalloween || completedQuest || !didExplosion) {
+            shouldDisableTraders = false;
+        }
+
+        for (const traderId in pmcData.TradersInfo) {
+            const trader = pmcData.TradersInfo[traderId];
+            if (traderId === "579dc571d53a0658a154fbec") continue;
+            trader.disabled = shouldDisableTraders;
+        }
+        logger.warning("isHalloween? " + EventTracker.isHalloween);
+        logger.warning("completedQuest? " + completedQuest);
+        logger.warning("didExplosion? " + didExplosion);
+        logger.warning("disable traders? " + shouldDisableTraders);
+    }
+
+    public checkEventQuests(pmcData: IPmcData): number {
         let baseGasChance = 0;
         pmcData.Quests.forEach(q => {
             //bad omens part 1
@@ -916,61 +956,69 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 }
             }
             //bad omens part 2
-            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+            if (q.qid === "6702b0a1b9fb4619debd0697") {
                 if (q.status === 2) {
                     baseGasChance += 100;
                 }
             }
             //bad omens part 3
-            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+            if (q.qid === "6702b0e9601acf629d212eeb") {
                 if (q.status === 2) {
                     baseGasChance += 200;
                 }
             }
             //former patients
-            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+            if (q.qid === "6702b8b3c0f2f525d988e428") {
                 if (q.status === 2) {
                     baseGasChance += 100;
                 }
             }
             //do no harm
-            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+            if (q.qid === "6702b3b624c7ac4e2d3e9c37") {
                 if (q.status === 2) {
-                    baseGasChance += 200;
+                    baseGasChance = 1000;
                 }
-                else if(q.status === 4){
+                else if (q.status === 4) {
                     baseGasChance = 100;
                 }
             }
             //blue flame part 1
-            if (q.qid === "6702afe9504c9aca4ed75d9a") {
+            if (q.qid === "6702b3e4aff397fa3e666fa5") {
                 if (q.status === 4) {
-                    EventTracker.increaseRaiderSpawns = true;
+                    EventTracker.increaseRaiderSpawns = EventTracker.isHalloween;
                 }
             }
             //blue flame part 2
-            if (q.qid === "6702afe9504c9aca4ed75d9a") {
-                let startedQuest = q.status === 2;
-                let completedQuest = q.status === 4;
-                let didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
+            if (q.qid === "6702b4a27d4a4a89fce96fbc") {
+                const startedQuest = q.status === 2;
+                const completedQuest = q.status === 4;
+                const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
                 if (didExplosion || completedQuest) {
                     baseGasChance = 0;
                     EventTracker.increaseRaiderSpawns = false;
                     EventTracker.hasExploded = true;
-                }   
+                }
                 EventTracker.isPreExplosion = startedQuest;
+                if (completedQuest) {
+                    EventTracker.endExplosionEvent = true;
+                }
             }
         });
+        return baseGasChance;
+    }
 
-        let rndNum = utils.pickRandNumInRange(1, 1000);
-        let isWrongMap = map.includes("laboratory") || map.includes("factory");
+    public shouldDoGasEvent(utils: Utils, map: string, pmcData: IPmcData, logger: ILogger) {
+        const baseGasChance = this.checkEventQuests(pmcData);
+        const rndNum = utils.pickRandNumInRange(1, 1000);
+        const isWrongMap = map.includes("laboratory") || map.includes("factory");
         EventTracker.doGasEvent = baseGasChance >= rndNum && !isWrongMap;
 
         logger.warning("baseGasChance " + baseGasChance);
         logger.warning("boostRaiderSpawns " + EventTracker.increaseRaiderSpawns);
-        logger.warning("isPreExplosion " +  EventTracker.isPreExplosion);
+        logger.warning("isPreExplosion " + EventTracker.isPreExplosion);
         logger.warning("hasExplode " + EventTracker.hasExploded);
         logger.warning("doGasEvent " + EventTracker.doGasEvent);
+        logger.warning("endExplosionEvent " + EventTracker.endExplosionEvent);
     }
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {

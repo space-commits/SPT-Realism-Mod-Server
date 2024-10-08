@@ -11,11 +11,13 @@ class Spawns {
     tables;
     modConf;
     mapDB;
-    constructor(logger, tables, modConf, mapDB) {
+    utils;
+    constructor(logger, tables, modConf, mapDB, utils) {
         this.logger = logger;
         this.tables = tables;
         this.modConf = modConf;
         this.mapDB = mapDB;
+        this.utils = utils;
     }
     setBossSpawnChance(level) {
         if (level <= 5) {
@@ -53,35 +55,49 @@ class Spawns {
         }
     }
     bossSpawnHelper(chanceMulti) {
+        //refresh boss spawn chances
+        this.loadBossSpawnChanges();
         for (let i in this.mapDB) {
             let mapBase = this.mapDB[i]?.base;
-            if (i !== "lighthouse" && i !== "laboratory" && mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
+            if (mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
                 for (let k in mapBase.BossLocationSpawn) {
                     let bossSpawnLocation = mapBase.BossLocationSpawn[k];
-                    let chance = bossSpawnLocation.BossChance;
-                    if (seasonalevents_1.EventTracker.doGasEvent) {
-                        if (bossSpawnLocation.BossName.includes("sectant")) {
-                            bossSpawnLocation.BossChance = 100;
+                    let chance = 0;
+                    if (i !== "lighthouse" && i !== "laboratory") {
+                        if (bossSpawnLocation?.TriggerId !== undefined && bossSpawnLocation?.TriggerId !== "") {
+                            chance = bossSpawnLocation.BossChance * chanceMulti * 2;
+                        }
+                        if (seasonalevents_1.EventTracker.doGasEvent) {
+                            chance = bossSpawnLocation.BossChance * 0.1;
                         }
                         else {
-                            chance = Math.round(bossSpawnLocation.BossChance * 0.1);
-                            bossSpawnLocation.BossChance = Math.max(0, Math.min(chance, 100));
+                            chance = bossSpawnLocation.BossChance * chanceMulti;
                         }
                     }
-                    else if (bossSpawnLocation?.TriggerId !== undefined && bossSpawnLocation?.TriggerId !== "") {
-                        chance = Math.round(bossSpawnLocation.BossChance * chanceMulti * 2);
-                        bossSpawnLocation.BossChance = Math.max(10, Math.min(chance, 100));
+                    //gas event
+                    if (seasonalevents_1.EventTracker.doGasEvent && bossSpawnLocation.BossName.includes("sectant")) {
+                        if (seasonalevents_1.EventTracker.increaseCultistSpawns && bossSpawnLocation.BossChance == 0)
+                            chance = 50;
+                        else
+                            chance = 100;
                     }
-                    else {
-                        chance = Math.round(bossSpawnLocation.BossChance * chanceMulti);
-                        bossSpawnLocation.BossChance = Math.max(0, Math.min(chance, 100));
+                    //raider event
+                    if (seasonalevents_1.EventTracker.increaseRaiderSpawns && bossSpawnLocation.BossName.includes("pmcBot")) {
+                        if (bossSpawnLocation.BossChance == 0)
+                            chance = 50;
+                        else
+                            chance = 100;
                     }
+                    //nuke
+                    if (seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.hasExploded) {
+                        chance = bossSpawnLocation.BossChance * 0.1;
+                    }
+                    bossSpawnLocation.BossChance = Math.round(this.utils.clampNumber(chance, 0, 100));
                 }
             }
         }
     }
-    loadSpawnChanges() {
-        //&& ModTracker.swagPresent == false
+    loadBossSpawnChanges() {
         if (this.modConf.boss_spawns == true) {
             this.tables.locations.bigmap.base.BossLocationSpawn = bossSpawns.CustomsBossLocationSpawn;
             this.tables.locations.factory4_day.base.BossLocationSpawn = bossSpawns.FactoryDayBossLocationSpawn;
@@ -94,6 +110,10 @@ class Spawns {
             this.tables.locations.woods.base.BossLocationSpawn = bossSpawns.WoodsBossLocationSpawn;
             this.tables.locations.tarkovstreets.base.BossLocationSpawn = bossSpawns.StreetsBossLocationSpawn;
         }
+    }
+    loadSpawnChanges() {
+        //&& ModTracker.swagPresent == false
+        this.loadBossSpawnChanges();
         //SPT does its own custom PMC waves, this couble be doubling up or interfering in some way
         if (this.modConf.spawn_waves == true && utils_1.ModTracker.swagPresent == false && utils_1.ModTracker.qtbPresent == false) {
             this.tables.locations.bigmap.base.waves = spawnWaves.CustomsWaves;

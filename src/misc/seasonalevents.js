@@ -5,6 +5,11 @@ class EventTracker {
     static isChristmas = false;
     static isHalloween = false;
     static doGasEvent = false;
+    static hasExploded = false;
+    static increaseRaiderSpawns = false;
+    static increaseCultistSpawns = false;
+    static isPreExplosion = false;
+    static endExplosionEvent = false;
 }
 exports.EventTracker = EventTracker;
 class SeasonalEventsHandler {

@@ -298,7 +298,7 @@ export class ItemCloning {
         const ramuId = "66fd521442055447e2304fda";
         const remuDescript = "\"The Radiological Assessment and Monitoring Unit (RAMU) is a radiological device developed by TerraGroup corporation which combines different technologies to measure and record radiation levels, radiation type and determine isotopes." + terraGroupDislaimer;
         this.cloneGenericItem("5c05308086f7746b2101e90b", ramuId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 50000);
+        this.addToHandbook(ramuId, "5b47574386f77428ca22b2ef", 10000);
         this.addToLocale(ramuId, "Radiological Assessment and Monitoring Unit", "RAMU", remuDescript);
         const ramu = this.itemDB()[ramuId];
         ramu._props.Height = 2;
@@ -308,7 +308,7 @@ export class ItemCloning {
 
         const ramuDataId = "670120ce354987453daf3d0c";
         this.cloneGenericItem(ramuId, ramuDataId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuDataId, "5b5f794b86f77409407a7f92", 180000);
+        this.addToHandbook(ramuDataId, "5b47574386f77428ca22b2ef", 180000);
         this.addToLocale(ramuDataId, "Radiological Assessment and Monitoring Unit (With Data)", "RAMU (Data)", dataNotification + remuDescript);
         const ramuData = this.itemDB()[ramuDataId];
 
@@ -316,7 +316,7 @@ export class ItemCloning {
         const gamuId = "66fd571a05370c3ee1a1c613";
         const gamuDescript = "\"The Gas Assessment and Monitoring Unit (GAMU) is a device developed by TerraGroup corporation which combines different technologies to measure and record hazardous volatile organic and ingorganic compounds." + terraGroupDislaimer;
         this.cloneGenericItem("5c05308086f7746b2101e90b", gamuId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
-        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 30000);
+        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 10000);
         this.addToLocale(gamuId, "Gas Assessment and Monitoring Unit", "GAMU", gamuDescript);
         const gamu = this.itemDB()[gamuId];
         gamu._props.Height = 2;
@@ -324,11 +324,11 @@ export class ItemCloning {
         gamu._props.Weight = 2.1;
         gamu._props.CanSellOnRagfair = false;
 
-        const gamuIdData = "670120df4f0c4c37e6be90ae";
-        this.cloneGenericItem(gamuId, gamuIdData, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
-        this.addToHandbook(gamuIdData, "5b47574386f77428ca22b2ef", 100000);
-        this.addToLocale(gamuIdData, "Gas Assessment and Monitoring Unit (With Data)", "GAMU (Data)", dataNotification + gamuDescript);
-        const gamuData = this.itemDB()[gamuIdData];
+        const gamuDataId = "670120df4f0c4c37e6be90ae";
+        this.cloneGenericItem(gamuId, gamuDataId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
+        this.addToHandbook(gamuDataId, "5b47574386f77428ca22b2ef", 100000);
+        this.addToLocale(gamuDataId, "Gas Assessment and Monitoring Unit (With Data)", "GAMU (Data)", dataNotification + gamuDescript);
+        const gamuData = this.itemDB()[gamuDataId];
 
         //Radiological Sample
         const radSampleId = "66fd57171f981640e667fbe2";
@@ -378,6 +378,7 @@ export class ItemCloning {
 
         StaticArrays.secureContainers.forEach(s => {
             this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
+            this.itemDB()[s]._props.Grids[0]._props.filters[0].ExcludedFilter.push(ramuId, gamuId, ramuDataId, gamuDataId);
         });
 
         const skierId = "58330581ace78e27b8b10cee";

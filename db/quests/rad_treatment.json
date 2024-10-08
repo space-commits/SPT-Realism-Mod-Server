@@ -1,6 +1,101 @@
 {
+    "6705425a0351f9f55b7d8c61": {
+        "QuestName": "Illicit Procedures",
+        "_id": "6705425a0351f9f55b7d8c61",
+        "acceptPlayerMessage": "6705425a0351f9f55b7d8c61 acceptPlayerMessage",
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "6705425a0351f9f55b7d8c61 changeQuestMessageText",
+        "completePlayerMessage": "6705425a0351f9f55b7d8c61 completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "conditionType": "HandoverItem",
+                    "dogtagLevel": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "670542841b112dda237d2131",
+                    "index": 0,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "target": [
+                        "5449016a4bdc2d6f028b456f"
+                    ],
+                    "value": 100000,
+                    "visibilityConditions": []
+                },
+                {
+                    "completeInSeconds": 0,
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "670542a46e1bc85675bd589a",
+                                "target": "",
+                                "value": 1
+                            }
+                        ],
+                        "id": "670542a950884f1437f25e81"
+                    },
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "670542a1b4fecacfd3a6729a",
+                    "index": 3,
+                    "oneSessionOnly": false,
+                    "parentId": "670542841b112dda237d2131",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                }
+            ],
+            "AvailableForStart": [
+                {
+                    "availableAfter": 0,
+                    "conditionType": "Quest",
+                    "dispersion": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "670542af4a9ab8713a9b0294",
+                    "index": 1,
+                    "parentId": "",
+                    "status": [
+                        3
+                    ],
+                    "target": "6702b4a27d4a4a89fce96fbc",
+                    "visibilityConditions": []
+                }
+            ],
+            "Fail": []
+        },
+        "declinePlayerMessage": "6705425a0351f9f55b7d8c61 declinePlayerMessage",
+        "description": "6705425a0351f9f55b7d8c61 description",
+        "failMessageText": "6705425a0351f9f55b7d8c61 failMessageText",
+        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "any",
+        "name": "6705425a0351f9f55b7d8c61 name",
+        "note": "6705425a0351f9f55b7d8c61 note",
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [],
+            "Success": []
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "6705425a0351f9f55b7d8c61 startedMessageText",
+        "successMessageText": "6705425a0351f9f55b7d8c61 successMessageText",
+        "traderId": "579dc571d53a0658a154fbec",
+        "type": "PickUp"
+    },
     "667c643869df8111b81cb6dc": {
-        "QuestName": "Treatment Part 1",
+        "QuestName": "Emergency Treatment - Part 1",
         "_id": "667c643869df8111b81cb6dc",
         "acceptPlayerMessage": "667c643869df8111b81cb6dc acceptPlayerMessage",
         "canShowNotificationsInGame": true,
@@ -133,7 +228,7 @@
         "type": "PickUp"
     },
     "667dbbc9c62a7c2ee8fe25b2": {
-        "QuestName": "Treatment Part 2",
+        "QuestName": "Emergency Treatment - Part 2",
         "_id": "667dbbc9c62a7c2ee8fe25b2",
         "acceptPlayerMessage": "667dbbc9c62a7c2ee8fe25b2 acceptPlayerMessage",
         "canShowNotificationsInGame": true,

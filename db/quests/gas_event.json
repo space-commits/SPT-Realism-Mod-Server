@@ -156,7 +156,7 @@
                     "target": [
                         "670120df4f0c4c37e6be90ae"
                     ],
-                    "value": 1,
+                    "value": 4,
                     "visibilityConditions": []
                 }
             ],
@@ -200,13 +200,13 @@
                             "_id": "6702b26e9bf2fea3c2e54100",
                             "_tpl": "66fd571a05370c3ee1a1c613",
                             "upd": {
-                                "StackObjectsCount": 1
+                                "StackObjectsCount": 4
                             }
                         }
                     ],
                     "target": "6702b26e9bf2fea3c2e54100",
                     "type": "Item",
-                    "value": "1"
+                    "value": "4"
                 }
             ],
             "Success": []
@@ -242,7 +242,7 @@
                     "target": [
                         "66fd588956f73c4f38dd07ae"
                     ],
-                    "value": 5,
+                    "value": 8,
                     "visibilityConditions": []
                 }
             ],
@@ -550,7 +550,7 @@
         "declinePlayerMessage": "6702b8b3c0f2f525d988e428 declinePlayerMessage",
         "description": "6702b8b3c0f2f525d988e428 description",
         "failMessageText": "6702b8b3c0f2f525d988e428 failMessageText",
-        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "image": "/files/quest/icon/63ab1f1676588f3cf341c460.jpg",
         "instantComplete": false,
         "isKey": false,
         "location": "any",
@@ -651,7 +651,7 @@
         "declinePlayerMessage": "6702b3b624c7ac4e2d3e9c37 declinePlayerMessage",
         "description": "6702b3b624c7ac4e2d3e9c37 description",
         "failMessageText": "6702b3b624c7ac4e2d3e9c37 failMessageText",
-        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "image": "/files/quest/icon/59675e7b86f77414b25fb049.png",
         "instantComplete": false,
         "isKey": false,
         "location": "any",
@@ -722,7 +722,7 @@
         "declinePlayerMessage": "6702b3e4aff397fa3e666fa5 declinePlayerMessage",
         "description": "6702b3e4aff397fa3e666fa5 description",
         "failMessageText": "6702b3e4aff397fa3e666fa5 failMessageText",
-        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "image": "/files/quest/icon/63ab1047160cc610ba035e05.jpg",
         "instantComplete": false,
         "isKey": false,
         "location": "any",
@@ -732,6 +732,23 @@
         "rewards": {
             "Fail": [],
             "Started": [
+                {
+                    "findInRaid": true,
+                    "id": "67050789f31ebecfceef1184",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6705078d71aa73bd1ee450e3",
+                            "_tpl": "5c94bbff86f7747ee735c08f",
+                            "upd": {
+                                "StackObjectsCount": 4
+                            }
+                        }
+                    ],
+                    "target": "6705078d71aa73bd1ee450e3",
+                    "type": "Item",
+                    "value": "8"
+                },
                 {
                     "id": "6702b483d1bca9782a6327f0",
                     "index": 0,
@@ -775,7 +792,7 @@
         "type": "PickUp"
     },
     "6702b4a27d4a4a89fce96fbc": {
-        "QuestName": "Blue Flame - Part 1",
+        "QuestName": "Blue Flame - Part 2",
         "_id": "6702b4a27d4a4a89fce96fbc",
         "acceptPlayerMessage": "6702b4a27d4a4a89fce96fbc acceptPlayerMessage",
         "canShowNotificationsInGame": true,
@@ -792,7 +809,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "6702fc00a67f26d8c576780d",
-                                "target": "SateliteCommsLinkEstablished",
+                                "target": "SateliteCommLinkEstablished",
                                 "value": 1
                             }
                         ],
@@ -816,7 +833,7 @@
         "declinePlayerMessage": "6702b4a27d4a4a89fce96fbc declinePlayerMessage",
         "description": "6702b4a27d4a4a89fce96fbc description",
         "failMessageText": "6702b4a27d4a4a89fce96fbc failMessageText",
-        "image": "/files/quest/icon/642d82abead645348e204ff5.jpg",
+        "image": "/files/quest/icon/5ac4d8f186f774422237860d.jpg",
         "instantComplete": false,
         "isKey": false,
         "location": "any",
@@ -825,8 +842,33 @@
         "restartable": false,
         "rewards": {
             "Fail": [],
-            "Started": [],
-            "Success": []
+            "Started": [
+                {
+                    "findInRaid": true,
+                    "id": "67050789f31ebecfceef1184",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6705078d71aa73bd1ee450e3",
+                            "_tpl": "6703082a766cb6d11310094e",
+                            "upd": {
+                                "StackObjectsCount": 2
+                            }
+                        }
+                    ],
+                    "target": "6705078d71aa73bd1ee450e3",
+                    "type": "Item",
+                    "value": "2"
+                }
+            ],
+            "Success": [
+                {
+                    "id": "6705552238ff4246035e4f55",
+                    "index": 5,
+                    "target": "6705551c3d8179f4bdf93e10",
+                    "type": "Achievement"
+                }
+            ]
         },
         "secretQuest": false,
         "side": "Pmc",

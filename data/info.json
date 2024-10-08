@@ -2,7 +2,7 @@
     "IsHalloween": false,
     "IsChristmas": false,
     "DoGasEvent": false,
-    "AveragePlayerLevel": 1,
     "HasExploded": false,
-    "IsPreExplosion": false
+    "IsPreExplosion": false,
+    "IsNightTime": false
 }

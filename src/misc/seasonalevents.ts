@@ -8,6 +8,7 @@ export class EventTracker {
     static increaseRaiderSpawns: boolean = false;
     static increaseCultistSpawns: boolean = false;
     static isPreExplosion: boolean = false;
+    static endExplosionEvent: boolean = false;
 }
 
 export class SeasonalEventsHandler {

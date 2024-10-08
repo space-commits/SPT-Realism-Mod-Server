@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Quests = void 0;
+const seasonalevents_1 = require("../misc/seasonalevents");
 const treatmentQuests = require("../../db/quests/rad_treatment.json");
 const exploreQuests = require("../../db/quests/zone_exploration.json");
 const dynamicZoneQuests = require("../../db/quests/dynamic_zones.json");
 const gasEventQuests = require("../../db/quests/gas_event.json");
+const achievments = require("../../db/quests/achievements.json");
 class Quests {
     logger;
     tables;
@@ -20,22 +22,30 @@ class Quests {
     questDB() {
         return this.tables.templates.quests;
     }
+    pushAchievemnts() {
+        achievments.forEach(a => {
+            this.tables.templates.achievements.push(a);
+        });
+        for (let i in this.tables.locales.global) {
+            let locale = this.tables.locales.global[i];
+            //achievement
+            locale["6705551c3d8179f4bdf93e10 name"] = "The Blue Flame";
+            locale["6705551c3d8179f4bdf93e10 description"] = "Completed the Realism Mod Halloween event";
+        }
+    }
     //automate locales in future
     loadHazardQuests() {
-        //gas event part 1
+        this.pushAchievemnts();
+        //Bad Omens - Part 1
         this.questDB()["6702afe9504c9aca4ed75d9a"] = gasEventQuests["6702afe9504c9aca4ed75d9a"];
-        //gas event part 1
+        //Bad Omens - Part 2
         this.questDB()["6702b0a1b9fb4619debd0697"] = gasEventQuests["6702b0a1b9fb4619debd0697"];
-        //gas event part 3
+        //Bad Omens - Part 3
         this.questDB()["6702b0e9601acf629d212eeb"] = gasEventQuests["6702b0e9601acf629d212eeb"];
-        //gas event part 4
+        //Former Patients
         this.questDB()["6702b8b3c0f2f525d988e428"] = gasEventQuests["6702b8b3c0f2f525d988e428"];
-        //gas event part 5
+        //Do No Harm
         this.questDB()["6702b3b624c7ac4e2d3e9c37"] = gasEventQuests["6702b3b624c7ac4e2d3e9c37"];
-        //gas event part 6
-        this.questDB()["6702b3e4aff397fa3e666fa5"] = gasEventQuests["6702b3e4aff397fa3e666fa5"];
-        //gas event part 7
-        this.questDB()["6702b4a27d4a4a89fce96fbc"] = gasEventQuests["6702b4a27d4a4a89fce96fbc"];
         //treatment part 1
         this.questDB()["667c643869df8111b81cb6dc"] = treatmentQuests["667c643869df8111b81cb6dc"];
         //treatment part 2
@@ -46,10 +56,19 @@ class Quests {
         this.questDB()["6681d150fd1d7f0b7e5ae953"] = exploreQuests["6681d150fd1d7f0b7e5ae953"];
         //find dynamic zones (triggers dynamic zones to start spawning)
         this.questDB()["66dad1a18cbba6e558486336"] = dynamicZoneQuests["66dad1a18cbba6e558486336"];
+        if (seasonalevents_1.EventTracker.isHalloween) {
+            //Illicit Procedures
+            this.questDB()["6705425a0351f9f55b7d8c61"] = treatmentQuests["6705425a0351f9f55b7d8c61"];
+            //Blue Flame - Part 1
+            this.questDB()["6702b3e4aff397fa3e666fa5"] = gasEventQuests["6702b3e4aff397fa3e666fa5"];
+        }
+        //this quest is halloween only, but is dependent on part 1, will make sure it can't be completed client side
+        //Blue Flame - Part 2
+        this.questDB()["6702b4a27d4a4a89fce96fbc"] = gasEventQuests["6702b4a27d4a4a89fce96fbc"];
         for (let i in this.tables.locales.global) {
             let locale = this.tables.locales.global[i];
-            //gas event part 1
             //if hallowen, make this quest available immediately, otherwise dependent on previous hazard quests
+            //Bad Omens - Part 1
             locale["6702afe9504c9aca4ed75d9a acceptPlayerMessage"] = "";
             locale["6702afe9504c9aca4ed75d9a declinePlayerMessage"] = "";
             locale["6702afe9504c9aca4ed75d9a completePlayerMessage"] = "";
@@ -64,7 +83,7 @@ class Quests {
             locale["6702b01112e0e5412edc40b2"] = "Handover silicon tubing";
             locale["6702b0159bb4fbdf2e467147"] = "Handover bottles of hydrogen peroxide";
             locale["6702b0215240c197de5026dd"] = "This quest will start a chain of events";
-            //gas event part 2
+            //Bad Omens - Part 2
             locale["6702b0a1b9fb4619debd0697 acceptPlayerMessage"] = "";
             locale["6702b0a1b9fb4619debd0697 declinePlayerMessage"] = "";
             locale["6702b0a1b9fb4619debd0697 completePlayerMessage"] = "";
@@ -74,9 +93,9 @@ class Quests {
                 + "\n\nThe blood tests came back inconclusive as a match for the samples we've collected previously. We need to figure out the origin of this contaimination. I am giving you a GAMU device to collect readings in the field. You need to go to the factory complex at Customs where you previously found Terragroup manfucturinmg and storage."
                 + "\n\nPlace the device on the ground and activate it, then wait for it to finish processing which can take some time. These devices are unreliable, sometimes they can stall and need to be restarted so you need to stay nearby. I do not have many of these on hand, do not lose them.";
             locale["6702b0a1b9fb4619debd0697 failMessageText"] = "";
-            locale["6702b0a1b9fb4619debd0697 successMessageText"] = "Thank you, young man. This data will prove invaluable. Unfortunately this will not aid our patients in the short term. Come back to seem me to discuss this. If you collect any more data, you will get a fair price for it.";
+            locale["6702b0a1b9fb4619debd0697 successMessageText"] = "Thank you, young man. This data will prove invaluable. Unfortunately this will not aid our patients in the short term. Come back to see me to discuss this. If you collect any more data, you will get a fair price for it.";
             locale["6702b0c6ef3aa9366e629f9c"] = "Handover GAMU device with data";
-            //gas event part 3
+            //Bad Omens - Part 3
             locale["6702b0e9601acf629d212eeb acceptPlayerMessage"] = "";
             locale["6702b0e9601acf629d212eeb declinePlayerMessage"] = "";
             locale["6702b0e9601acf629d212eeb completePlayerMessage"] = "";
@@ -87,7 +106,7 @@ class Quests {
             locale["6702b0e9601acf629d212eeb failMessageText"] = "";
             locale["6702b0e9601acf629d212eeb successMessageText"] = "We'll be able to reverse engineer the toxin from these samples. I suspect that you don't care for humanitarian efforts, but regardless you will benefit from this too.";
             locale["6702b0fef881e41d2b389bee"] = "Handover 5 samples of hazardous materials";
-            //gas event part 4
+            //Former Patients
             locale["6702b8b3c0f2f525d988e428 acceptPlayerMessage"] = "";
             locale["6702b8b3c0f2f525d988e428 declinePlayerMessage"] = "";
             locale["6702b8b3c0f2f525d988e428 completePlayerMessage"] = "";
@@ -106,7 +125,7 @@ class Quests {
             locale["6702b3402c47f1bef20161b6"] = "Plant a wi-fi camera at the marked circle in the lost village";
             locale["6702b3458ab88b3a52829046"] = "Find the marked room used for broadcasting in Reserve";
             locale["6702b34b09f951485e97945f"] = "Plant a wi-fi camera at the marked room";
-            //gas event part 5
+            //Do No Harm
             locale["6702b3b624c7ac4e2d3e9c37 acceptPlayerMessage"] = "";
             locale["6702b3b624c7ac4e2d3e9c37 declinePlayerMessage"] = "";
             locale["6702b3b624c7ac4e2d3e9c37 completePlayerMessage"] = "";
@@ -118,7 +137,7 @@ class Quests {
             locale["6702b3b624c7ac4e2d3e9c37 successMessageText"] = "I want you to know that this blood is on your hands. If the cameras were not discovered, all of this could have been avoided. Either way, they seem to reduced their operations...for now. There will be less instances of contamination I suspsct, but they will be back, and we still have recordings from the cameras to go over.";
             locale["6702b3d010baa251b5fbb933"] = "Kill 50 Cultists";
             //Halloween only
-            //gas event part 6
+            //Blue Flame - Part 1
             locale["6702b3e4aff397fa3e666fa5 acceptPlayerMessage"] = "";
             locale["6702b3e4aff397fa3e666fa5 declinePlayerMessage"] = "";
             locale["6702b3e4aff397fa3e666fa5 completePlayerMessage"] = "";
@@ -132,7 +151,7 @@ class Quests {
             locale["6702b4488d22a77322a28e0e"] = "Handover 3 samples of radioactive materials from Labs";
             locale["6702b44f711820e614d5b1b4"] = "Handover RAMU device with data from Labs";
             //Halloween only
-            //gas event part 7
+            //Blue Flame - Part 2
             locale["6702b4a27d4a4a89fce96fbc acceptPlayerMessage"] = "";
             locale["6702b4a27d4a4a89fce96fbc declinePlayerMessage"] = "";
             locale["6702b4a27d4a4a89fce96fbc completePlayerMessage"] = "";
@@ -142,7 +161,7 @@ class Quests {
                 + " Whatsmore, you going to TerraGroup's facility has really stirred up the hornet's nest, Raiders are searching for you. I fear TerraGroup is still actively involved in all this in some way..."
                 + "\n\nWe have only one shot at this. We have to make contact with the outside world and warn them, to ask for help. I must confess that I've had a lot more dealings with the TerraGroup corporation than I've let on, as I'm sure you've surmised. I know a lot about them, their former operations, before they left me here to rot. What I do know is that they have unauthorised Low Earth Orbit satelites."
                 + " If we can find and use a powerful sateline dish to establish a comm link, my people can repurpose and hijack the satelite to establish contact outside of the Tarkov region. The next time the satelite will be overhead is October 31st at midnight and will only be available for a few days after that."
-                + "\n\nThe satelite dishes on top of the Shoreline resort should work. We need clear skies, those nights are forecast to be clear. I will give you a device for establishing the comm link and transmiting the authorization codes. Do. Not. Lose. The. Device. I hope I do not need to remind you that if you are to fail, it's over for all of us.";
+                + "\n\nThe Shoreline area has a number of satelite dishes. The dish needs to be facing south, and we also need clear skies, those nights are forecast to be clear. I will give you a device for establishing the comm link and transmiting the authorization codes. Do. Not. Lose. The. Device. I hope I do not need to remind you that if you are to fail, it's over for all of us.";
             locale["6702b4a27d4a4a89fce96fbc failMessageText"] = "";
             locale["6702b4a27d4a4a89fce96fbc successMessageText"] = "Vires in Scientia. Scientia est fortis. Et oculus spectans deus nobis.";
             locale["6702b4c1fda5e39ba46ccf35"] = "Establish a comm link with the outside world";
@@ -214,14 +233,33 @@ class Quests {
             locale["66ddb5cce3de442223979ac8"] = "Find a loading site on Interchange";
             locale["66ddb5d04e6c5562e560f705"] = "Place marker in a loading site on Interchange";
             locale["66edf085bc2977dd40c64c48"] = "On accepting this quest dynamic hazard zones will spawn.";
+            //Illicit Procedures
+            locale["6705425a0351f9f55b7d8c61 acceptPlayerMessage"] = "";
+            locale["6705425a0351f9f55b7d8c61 declinePlayerMessage"] = "";
+            locale["6705425a0351f9f55b7d8c61 completePlayerMessage"] = "";
+            locale["6705425a0351f9f55b7d8c61 name"] = "Illicit Procedures";
+            locale["6705425a0351f9f55b7d8c61 description"] = "Well, well, well...quite the situation you've created, haha! Look at you, you're all fucked up! I'd say you're lucky to have survived that, but I'm thinking you'd rather be dead right about now."
+                + " Look, I've put many contingencies in place over the years, even for something like this. Don't be so hard on yourself, you and that doctor of yours got played. There are forces at play here you just don't understand."
+                + " Makes no odds to me, I'm a survivor, I can thrive in any environment. If anything you did me a favor getting rid of those bottom feeders."
+                + " What's that? Oh right, right the treatment! Yeah I can treat ye, but it'll cost you. Cash is still king baby, haha!";
+            locale["6705425a0351f9f55b7d8c61 failMessageText"] = "";
+            locale["6705425a0351f9f55b7d8c61 successMessageText"] = "Don't forget to come see me when you've irradiated your balls again haha!";
+            locale["670542841b112dda237d2131"] = "Handover roubles";
+            locale["670542a1b4fecacfd3a6729a"] = "This quest will reset radiation and toxicity for PMC and Scav. This Quest is repeatable.";
         }
     }
-    resetHazardQuests(profile) {
+    resetRepeatableQuests(profile) {
+        const questsToRepeat = ["667dbbc9c62a7c2ee8fe25b2", "6705425a0351f9f55b7d8c61"];
+        questsToRepeat.forEach(qid => {
+            this.resetQuestHelper(profile, qid);
+        });
+    }
+    resetQuestHelper(profile, questId) {
         const pmc = profile.characters.pmc;
         let questCompleted = false;
         for (let q in pmc.Quests) {
             let quest = pmc.Quests[q];
-            if (quest.qid === "667dbbc9c62a7c2ee8fe25b2") {
+            if (quest.qid === questId) {
                 if (quest.status === 4) {
                     questCompleted = true;
                     quest.status = 2;
@@ -238,7 +276,7 @@ class Quests {
             return;
         //TaskConditionCounters
         for (let key in pmc.TaskConditionCounters) {
-            if (pmc.TaskConditionCounters[key].sourceId === "667dbbc9c62a7c2ee8fe25b2") {
+            if (pmc.TaskConditionCounters[key].sourceId === questId) {
                 delete pmc.TaskConditionCounters[key];
             }
         }

@@ -184,7 +184,7 @@ class ItemCloning {
         const ramuId = "66fd521442055447e2304fda";
         const remuDescript = "\"The Radiological Assessment and Monitoring Unit (RAMU) is a radiological device developed by TerraGroup corporation which combines different technologies to measure and record radiation levels, radiation type and determine isotopes." + terraGroupDislaimer;
         this.cloneGenericItem("5c05308086f7746b2101e90b", ramuId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 50000);
+        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 10000);
         this.addToLocale(ramuId, "Radiological Assessment and Monitoring Unit", "RAMU", remuDescript);
         const ramu = this.itemDB()[ramuId];
         ramu._props.Height = 2;
@@ -200,7 +200,7 @@ class ItemCloning {
         const gamuId = "66fd571a05370c3ee1a1c613";
         const gamuDescript = "\"The Gas Assessment and Monitoring Unit (GAMU) is a device developed by TerraGroup corporation which combines different technologies to measure and record hazardous volatile organic and ingorganic compounds." + terraGroupDislaimer;
         this.cloneGenericItem("5c05308086f7746b2101e90b", gamuId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
-        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 30000);
+        this.addToHandbook(gamuId, "5b47574386f77428ca22b2ef", 10000);
         this.addToLocale(gamuId, "Gas Assessment and Monitoring Unit", "GAMU", gamuDescript);
         const gamu = this.itemDB()[gamuId];
         gamu._props.Height = 2;
@@ -256,6 +256,7 @@ class ItemCloning {
         transmitter._props.CanSellOnRagfair = false;
         arrays_1.StaticArrays.secureContainers.forEach(s => {
             this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
+            this.itemDB()[s]._props.Grids[0]._props.filters[0].ExcludedFilter.push(ramuId, gamuId);
         });
         const skierId = "58330581ace78e27b8b10cee";
         const theraId = "54cb57776803fa99248b456e";
