@@ -100,6 +100,7 @@ class Main {
                 url: "/RealismMod/GetConfig",
                 action: async (url, info, sessionID, output) => {
                     try {
+                        logger.warning("==================getting config ");
                         return jsonUtil.serialize(modConfig);
                     }
                     catch (e) {
@@ -118,7 +119,6 @@ class Main {
                         realismInfo.IsNightTime = utils_1.RaidInfoTracker.TOD == "night";
                         realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
                         realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
-                        realismInfo.AveragePlayerLevel = utils_1.ProfileTracker.averagePlayerLevel;
                         realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;
                         realismInfo.HasExploded = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.hasExploded;
                         realismInfo.IsPreExplosion = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.isPreExplosion;
@@ -741,62 +741,64 @@ class Main {
     }
     checkEventQuests(pmcData) {
         let baseGasChance = 0;
-        pmcData.Quests.forEach(q => {
-            //bad omens part 1
-            if (q.qid === "6702afe9504c9aca4ed75d9a") {
-                if (q.status === 2) {
-                    baseGasChance += 50;
+        if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
+            pmcData.Quests.forEach(q => {
+                //bad omens part 1
+                if (q.qid === "6702afe9504c9aca4ed75d9a") {
+                    if (q.status === 2) {
+                        baseGasChance += 50;
+                    }
                 }
-            }
-            //bad omens part 2
-            if (q.qid === "6702b0a1b9fb4619debd0697") {
-                if (q.status === 2) {
-                    baseGasChance += 100;
+                //bad omens part 2
+                if (q.qid === "6702b0a1b9fb4619debd0697") {
+                    if (q.status === 2) {
+                        baseGasChance += 100;
+                    }
                 }
-            }
-            //bad omens part 3
-            if (q.qid === "6702b0e9601acf629d212eeb") {
-                if (q.status === 2) {
-                    baseGasChance += 200;
+                //bad omens part 3
+                if (q.qid === "6702b0e9601acf629d212eeb") {
+                    if (q.status === 2) {
+                        baseGasChance += 200;
+                    }
                 }
-            }
-            //former patients
-            if (q.qid === "6702b8b3c0f2f525d988e428") {
-                if (q.status === 2) {
-                    baseGasChance += 100;
+                //former patients
+                if (q.qid === "6702b8b3c0f2f525d988e428") {
+                    if (q.status === 2) {
+                        baseGasChance += 100;
+                    }
                 }
-            }
-            //do no harm
-            if (q.qid === "6702b3b624c7ac4e2d3e9c37") {
-                if (q.status === 2) {
-                    baseGasChance = 1000;
+                //do no harm
+                if (q.qid === "6702b3b624c7ac4e2d3e9c37") {
+                    if (q.status === 2) {
+                        baseGasChance = 1000;
+                    }
+                    else if (q.status === 4) {
+                        baseGasChance = 100;
+                    }
                 }
-                else if (q.status === 4) {
-                    baseGasChance = 100;
+                //blue flame part 1
+                if (q.qid === "6702b3e4aff397fa3e666fa5") {
+                    if (q.status === 4) {
+                        seasonalevents_1.EventTracker.increaseRaiderSpawns = seasonalevents_1.EventTracker.isHalloween;
+                    }
                 }
-            }
-            //blue flame part 1
-            if (q.qid === "6702b3e4aff397fa3e666fa5") {
-                if (q.status === 4) {
-                    seasonalevents_1.EventTracker.increaseRaiderSpawns = seasonalevents_1.EventTracker.isHalloween;
+                //blue flame part 2
+                if (q.qid === "6702b4a27d4a4a89fce96fbc") {
+                    const startedQuest = q.status === 2;
+                    const completedQuest = q.status === 4;
+                    const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
+                    if (didExplosion || completedQuest) {
+                        baseGasChance = 0;
+                        seasonalevents_1.EventTracker.increaseRaiderSpawns = false;
+                        seasonalevents_1.EventTracker.hasExploded = true;
+                    }
+                    seasonalevents_1.EventTracker.isPreExplosion = startedQuest;
+                    if (completedQuest) {
+                        seasonalevents_1.EventTracker.endExplosionEvent = true;
+                    }
                 }
-            }
-            //blue flame part 2
-            if (q.qid === "6702b4a27d4a4a89fce96fbc") {
-                const startedQuest = q.status === 2;
-                const completedQuest = q.status === 4;
-                const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
-                if (didExplosion || completedQuest) {
-                    baseGasChance = 0;
-                    seasonalevents_1.EventTracker.increaseRaiderSpawns = false;
-                    seasonalevents_1.EventTracker.hasExploded = true;
-                }
-                seasonalevents_1.EventTracker.isPreExplosion = startedQuest;
-                if (completedQuest) {
-                    seasonalevents_1.EventTracker.endExplosionEvent = true;
-                }
-            }
-        });
+            });
+        }
         return baseGasChance;
     }
     shouldDoGasEvent(utils, map, pmcData, logger) {

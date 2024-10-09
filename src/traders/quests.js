@@ -89,12 +89,13 @@ class Quests {
             locale["6702b0a1b9fb4619debd0697 completePlayerMessage"] = "";
             locale["6702b0a1b9fb4619debd0697 name"] = "Bad Omens - Part 2";
             locale["6702b0a1b9fb4619debd0697 description"] = "More and more patients are coming in, all with the same symptoms as before. It doesn't matter how much supplies you bring us, this is not sustainable."
-                + " I no longer doubt that this is a wide scale environmental hazard, some sort of hazardous fog is accumulating during periods calm weather. More patients are describing auditory and visual hallucinations, I do not yet know if this is some form of mass hysteria or if the hazardous substance is neurotoxic."
-                + "\n\nThe blood tests came back inconclusive as a match for the samples we've collected previously. We need to figure out the origin of this contaimination. I am giving you a GAMU device to collect readings in the field. You need to go to the factory complex at Customs where you previously found Terragroup manfucturinmg and storage."
-                + "\n\nPlace the device on the ground and activate it, then wait for it to finish processing which can take some time. These devices are unreliable, sometimes they can stall and need to be restarted so you need to stay nearby. I do not have many of these on hand, do not lose them.";
+                + " I no longer doubt that this is a wide scale environmental hazard, some sort of hazardous fog is accumulating during periods of calm weather. More patients are describing auditory and visual hallucinations, I do not yet know if this is some form of mass hysteria or if the hazardous substance is neurotoxic."
+                + "\n\nThe blood tests came back inconclusive as a match for the samples we've collected previously. We need to figure out the origin of this contaimination. I am giving you a GAMU device to collect readings in the field. You need to test in areas where large quantiies of toxic materials have been stored or manufactured."
+                + " There's point getting multiple readings from the same location, try different areas."
+                + "\n\nPlace the devices on the ground and activate it, then wait for them to finish processing which can take some time. These devices are unreliable, sometimes they can stall and need to be reactivated so you need to stay nearby. I do not have many of these on hand, do not lose them.";
             locale["6702b0a1b9fb4619debd0697 failMessageText"] = "";
             locale["6702b0a1b9fb4619debd0697 successMessageText"] = "Thank you, young man. This data will prove invaluable. Unfortunately this will not aid our patients in the short term. Come back to see me to discuss this. If you collect any more data, you will get a fair price for it.";
-            locale["6702b0c6ef3aa9366e629f9c"] = "Handover GAMU device with data";
+            locale["6702b0c6ef3aa9366e629f9c"] = "Handover GAMU devices with data";
             //Bad Omens - Part 3
             locale["6702b0e9601acf629d212eeb acceptPlayerMessage"] = "";
             locale["6702b0e9601acf629d212eeb declinePlayerMessage"] = "";
@@ -105,7 +106,7 @@ class Quests {
                 + "\n\nIn order to begin effectively treating our patients we will need samples of the original hazardous substance. You will find them in areas where hazardous materials were being stored, manufactured, used or collected by my former collegues.";
             locale["6702b0e9601acf629d212eeb failMessageText"] = "";
             locale["6702b0e9601acf629d212eeb successMessageText"] = "We'll be able to reverse engineer the toxin from these samples. I suspect that you don't care for humanitarian efforts, but regardless you will benefit from this too.";
-            locale["6702b0fef881e41d2b389bee"] = "Handover 5 samples of hazardous materials";
+            locale["6702b0fef881e41d2b389bee"] = "Handover samples of hazardous materials";
             //Former Patients
             locale["6702b8b3c0f2f525d988e428 acceptPlayerMessage"] = "";
             locale["6702b8b3c0f2f525d988e428 declinePlayerMessage"] = "";

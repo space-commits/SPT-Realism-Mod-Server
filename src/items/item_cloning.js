@@ -184,7 +184,7 @@ class ItemCloning {
         const ramuId = "66fd521442055447e2304fda";
         const remuDescript = "\"The Radiological Assessment and Monitoring Unit (RAMU) is a radiological device developed by TerraGroup corporation which combines different technologies to measure and record radiation levels, radiation type and determine isotopes." + terraGroupDislaimer;
         this.cloneGenericItem("5c05308086f7746b2101e90b", ramuId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuId, "5b5f794b86f77409407a7f92", 10000);
+        this.addToHandbook(ramuId, "5b47574386f77428ca22b2ef", 10000);
         this.addToLocale(ramuId, "Radiological Assessment and Monitoring Unit", "RAMU", remuDescript);
         const ramu = this.itemDB()[ramuId];
         ramu._props.Height = 2;
@@ -193,7 +193,7 @@ class ItemCloning {
         ramu._props.CanSellOnRagfair = false;
         const ramuDataId = "670120ce354987453daf3d0c";
         this.cloneGenericItem(ramuId, ramuDataId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuDataId, "5b5f794b86f77409407a7f92", 180000);
+        this.addToHandbook(ramuDataId, "5b47574386f77428ca22b2ef", 180000);
         this.addToLocale(ramuDataId, "Radiological Assessment and Monitoring Unit (With Data)", "RAMU (Data)", dataNotification + remuDescript);
         const ramuData = this.itemDB()[ramuDataId];
         //Gas Assessment and Monitoring Unit
@@ -207,11 +207,11 @@ class ItemCloning {
         gamu._props.Width = 2;
         gamu._props.Weight = 2.1;
         gamu._props.CanSellOnRagfair = false;
-        const gamuIdData = "670120df4f0c4c37e6be90ae";
-        this.cloneGenericItem(gamuId, gamuIdData, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
-        this.addToHandbook(gamuIdData, "5b47574386f77428ca22b2ef", 100000);
-        this.addToLocale(gamuIdData, "Gas Assessment and Monitoring Unit (With Data)", "GAMU (Data)", dataNotification + gamuDescript);
-        const gamuData = this.itemDB()[gamuIdData];
+        const gamuDataId = "670120df4f0c4c37e6be90ae";
+        this.cloneGenericItem(gamuId, gamuDataId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
+        this.addToHandbook(gamuDataId, "5b47574386f77428ca22b2ef", 100000);
+        this.addToLocale(gamuDataId, "Gas Assessment and Monitoring Unit (With Data)", "GAMU (Data)", dataNotification + gamuDescript);
+        const gamuData = this.itemDB()[gamuDataId];
         //Radiological Sample
         const radSampleId = "66fd57171f981640e667fbe2";
         this.cloneGenericItem("5c05308086f7746b2101e90b", radSampleId, "orange", "assets/content/items/quest/item_quest_chemcontainer/item_quest_chemcontainer.bundle");
@@ -256,7 +256,7 @@ class ItemCloning {
         transmitter._props.CanSellOnRagfair = false;
         arrays_1.StaticArrays.secureContainers.forEach(s => {
             this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
-            this.itemDB()[s]._props.Grids[0]._props.filters[0].ExcludedFilter.push(ramuId, gamuId);
+            this.itemDB()[s]._props.Grids[0]._props.filters[0].ExcludedFilter.push(ramuId, gamuId, ramuDataId, gamuDataId);
         });
         const skierId = "58330581ace78e27b8b10cee";
         const theraId = "54cb57776803fa99248b456e";
@@ -267,7 +267,7 @@ class ItemCloning {
             traders[t].base.items_buy_prohibited.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c", "6703082a766cb6d11310094e");
         });
         traders[skierId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");
-        traders[theraId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");
+        traders[theraId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c");
     }
     addCustomWeapsToQuests(originalWeapon, weapToAdd) {
         for (let q in this.questDB()) {
