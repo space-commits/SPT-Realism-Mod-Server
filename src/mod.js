@@ -692,7 +692,7 @@ class Main {
     }
     checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig, logGreetings = false) {
         seasonalevents_1.EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
-        seasonalevents_1.EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        seasonalevents_1.EventTracker.isHalloween = true; //seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (seasonalevents_1.EventTracker.isChristmas == true && logGreetings) {
             logger.warning("Merry Christmas!");
         }

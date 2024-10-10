@@ -4,6 +4,7 @@ import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import * as path from 'path';
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
+import crypto from "node:crypto";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
@@ -117,13 +118,11 @@ export class Utils {
     }
 
     public genId(): string {
-        let result = '';
-        let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let charactersLength = characters.length;
-        for (let i = 0; i < 24; i++) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-        return result;
+        const shasum = crypto.createHash("sha256");
+        const time = Math.random() * Math.floor(new Date().getTime() / 1000);
+
+        shasum.update(time.toString());
+        return shasum.digest("hex").substring(0, 24);
     }
 }
 

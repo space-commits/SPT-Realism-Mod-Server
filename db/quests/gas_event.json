@@ -181,12 +181,12 @@
                     "index": 0,
                     "items": [
                         {
-                            "_id": "6702b081bf932a06eecf8fac",
+                            "_id": "67082dc8dc5160ef041094dc",
                             "_tpl": "66fd571a05370c3ee1a1c613"
                         }
                     ],
                     "loyaltyLevel": 1,
-                    "target": "6702b081bf932a06eecf8fac",
+                    "target": "67082dc8dc5160ef041094dc",
                     "traderId": "54cb57776803fa99248b456e",
                     "type": "AssortmentUnlock",
                     "unknown": false
@@ -267,12 +267,12 @@
                     "index": 5,
                     "items": [
                         {
-                            "_id": "6702b0df6e1b86be6f8c0e87",
+                            "_id": "67082dcf37314df7bb087eb6",
                             "_tpl": "66fd588d397ed74159826cf0"
                         }
                     ],
                     "loyaltyLevel": 1,
-                    "target": "6702b0df6e1b86be6f8c0e87",
+                    "target": "67082dcf37314df7bb087eb6",
                     "traderId": "54cb57776803fa99248b456e",
                     "type": "AssortmentUnlock",
                     "unknown": false
@@ -741,25 +741,40 @@
                             "_id": "6705078d71aa73bd1ee450e3",
                             "_tpl": "5c94bbff86f7747ee735c08f",
                             "upd": {
-                                "StackObjectsCount": 4
+                                "StackObjectsCount": 2
                             }
                         }
                     ],
                     "target": "6705078d71aa73bd1ee450e3",
                     "type": "Item",
-                    "value": "8"
+                    "value": "2"
+                },
+                {
+                    "id": "6708344d60787e5fba76bf19",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "670834442b46cad0e1daa3d9",
+                            "_tpl": "5c94bbff86f7747ee735c08f"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "670834442b46cad0e1daa3d9",
+                    "traderId": "54cb57776803fa99248b456e",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
                 },
                 {
                     "id": "6702b483d1bca9782a6327f0",
                     "index": 0,
                     "items": [
                         {
-                            "_id": "6702b4861e1b23980becbedb",
+                            "_id": "67082da3d6c13d04351f4897",
                             "_tpl": "66fd521442055447e2304fda"
                         }
                     ],
                     "loyaltyLevel": 1,
-                    "target": "6702b4861e1b23980becbedb",
+                    "target": "67082da3d6c13d04351f4897",
                     "traderId": "54cb57776803fa99248b456e",
                     "type": "AssortmentUnlock",
                     "unknown": false

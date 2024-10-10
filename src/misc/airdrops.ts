@@ -22,8 +22,7 @@ export class Airdrops {
     public loadAirdropChanges() {
 
         //fucks up the story
-        if (EventTracker.isHalloween) {
-            this.logger.warning("===============disabling airdrops");
+        if (EventTracker.isHalloween && this.modConfig.enable_hazard_zones) {
             this.airConf.airdropChancePercent.bigmap = 0;
             this.airConf.airdropChancePercent.woods = 0;
             this.airConf.airdropChancePercent.lighthouse = 0;

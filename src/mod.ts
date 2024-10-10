@@ -895,7 +895,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
         EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
-        EventTracker.isHalloween = seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+        EventTracker.isHalloween = true;//seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (EventTracker.isChristmas == true && logGreetings) {
             logger.warning("Merry Christmas!");
         }

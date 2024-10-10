@@ -273,69 +273,76 @@ class Traders {
             }
         }
     }
+    addQuestAssortUnlock(assortId, questId, traderId, addToStarted) {
+        const questAssort = this.tables.traders[traderId].questassort;
+        const type = addToStarted ? "started" : "success";
+        questAssort[type][assortId] = questId;
+    }
     addItemsToAssorts() {
         if (this.modConf.food_changes) {
-            this.assortItemPusher(jaegId, "544fb62a4bdc2dfb738b4568", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
-            this.assortItemPusher(jaegId, "60098b1705871270cd5352a1", 2, "5449016a4bdc2d6f028b456f", 2, false, 18000);
-            this.assortItemPusher(jaegId, "5448fee04bdc2dbc018b4567", 2, "5449016a4bdc2d6f028b456f", 3, false, 25000);
-            this.assortItemPusher(jaegId, "57347d692459774491567cf1", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
-            this.assortItemPusher(jaegId, "57347d7224597744596b4e72", 2, "5449016a4bdc2d6f028b456f", 2, false, 15000);
-            this.assortItemPusher(jaegId, "590c5d4b86f774784e1b9c45", 2, "5449016a4bdc2d6f028b456f", 3, false, 30000);
-            this.assortItemPusher(pkId, "590c5f0d86f77413997acfab", 2, "5696686a4bdc2da3298b456a", 3, false, 250);
+            this.assortItemPusher(this.utils.genId(), jaegId, "544fb62a4bdc2dfb738b4568", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "60098b1705871270cd5352a1", 2, "5449016a4bdc2d6f028b456f", 2, false, 18000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "5448fee04bdc2dbc018b4567", 2, "5449016a4bdc2d6f028b456f", 3, false, 25000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "57347d692459774491567cf1", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "57347d7224597744596b4e72", 2, "5449016a4bdc2d6f028b456f", 2, false, 15000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "590c5d4b86f774784e1b9c45", 2, "5449016a4bdc2d6f028b456f", 3, false, 30000);
+            this.assortItemPusher(this.utils.genId(), pkId, "590c5f0d86f77413997acfab", 2, "5696686a4bdc2da3298b456a", 3, false, 250);
         }
         if (this.modConf.med_changes == true) {
             //Skier//
-            this.assortItemPusher(skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
+            this.assortItemPusher(this.utils.genId(), skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
         }
         if (this.modConf.recoil_attachment_overhaul == true) {
             //jaeger
-            this.assortItemPusher(jaegId, "mosin_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 5000);
-            this.assortItemPusher(jaegId, "6kh4_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 4000);
-            // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
-            this.assortItemPusher(jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "mosin_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 5000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "6kh4_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         }
         if (this.modConf.enable_hazard_zones == true) {
-            this.assortItemPusher(theraId, "66fd521442055447e2304fda", 1, "5449016a4bdc2d6f028b456f", 3, false, 50000); // ramu
-            this.assortItemPusher(theraId, "66fd571a05370c3ee1a1c613", 1, "5449016a4bdc2d6f028b456f", 3, false, 25000); // gamu
-            this.assortItemPusher(theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 3, false, 200000); // safe container 
-            this.assortItemPusher(theraId, "59e7715586f7742ee5789605", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
-            this.assortItemPusher(jaegId, "590c595c86f7747884343ad7", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
-            this.assortItemPusher(jaegId, "5b432c305acfc40019478128", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
+            this.assortBarterPusher("670834442b46cad0e1daa3d9", theraId, "5c94bbff86f7747ee735c08f", 1, ["5fc64ea372b0dd78d51159dc"], 4, 1);
+            this.addQuestAssortUnlock("670834442b46cad0e1daa3d9", "6702b3e4aff397fa3e666fa5", theraId, true);
+            if (seasonalevents_1.EventTracker.isHalloween) {
+                this.assortItemPusher("67082da3d6c13d04351f4897", theraId, "66fd521442055447e2304fda", 2, "5449016a4bdc2d6f028b456f", 3, false, 50000); // ramu
+                this.addQuestAssortUnlock("67082da3d6c13d04351f4897", "6702b3e4aff397fa3e666fa5", theraId, true);
+            }
+            this.assortItemPusher("67082dc8dc5160ef041094dc", theraId, "66fd571a05370c3ee1a1c613", 3, "5449016a4bdc2d6f028b456f", 3, false, 25000); // gamu
+            this.addQuestAssortUnlock("67082dc8dc5160ef041094dc", "6702b0a1b9fb4619debd0697", theraId, true);
+            this.assortItemPusher("67082dcf37314df7bb087eb6", theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 3, false, 200000); // safe container 
+            this.addQuestAssortUnlock("67082dcf37314df7bb087eb6", "6702b0e9601acf629d212eeb", theraId, true);
+            this.assortItemPusher(this.utils.genId(), theraId, "59e7715586f7742ee5789605", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "590c595c86f7747884343ad7", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "5b432c305acfc40019478128", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
         }
         //ragman//
         if (this.modConf.realistic_ballistics == true) {
-            this.assortItemPusher(ragmId, "xsapi_chest", 1, "5449016a4bdc2d6f028b456f", 4, false, 70000);
-            this.assortItemPusher(ragmId, "mk4a_plate", 1, "5449016a4bdc2d6f028b456f", 4, false, 30000);
-            // this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
-            // this.assortNestedItemPusher(ragmId, "5e00c1ad86f774747333222c", { "5e01f31d86f77465cf261343": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 4, true, undefined, 1.25, { "5c0558060db834001b735271": "mod_nvg" });
-            // this.assortNestedItemPusher(ragmId, "5ea05cf85ad9772e6624305d", { "5a16badafcdbcb001865f72d": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25, { "5ea058e01dbce517f324b3e2": "mod_nvg" });
-            // this.assortNestedItemPusher(ragmId, "5aa7cfc0e5b5b00015693143", { "5a16b8a9fcdbcb00165aa6ca": "mod_nvg", "5a16b93dfcdbcbcae6687261": "mod_nvg", "57235b6f24597759bf5a30f1": "mod_nvg" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.3);
+            this.assortItemPusher(this.utils.genId(), ragmId, "xsapi_chest", 1, "5449016a4bdc2d6f028b456f", 4, false, 70000);
+            this.assortItemPusher(this.utils.genId(), ragmId, "mk4a_plate", 1, "5449016a4bdc2d6f028b456f", 4, false, 30000);
         }
         if (this.modConf.recoil_attachment_overhaul == true) {
             //mechanic//
             //guns
-            this.assortItemPusher(mechId, "mechOPSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 12500);
-            this.assortItemPusher(mechId, "mechSKSv1", 1, "5449016a4bdc2d6f028b456f", 1, false, 10000);
-            this.assortItemPusher(mechId, "mechSTM9v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 15000);
-            this.assortItemPusher(mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
-            this.assortItemPusher(mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechOPSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 12500);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSKSv1", 1, "5449016a4bdc2d6f028b456f", 1, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSTM9v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
             //attachments            
-            this.assortItemPusher(mechId, "mechRatWorx", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
-            this.assortItemPusher(mechId, "mechSKS_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
-            this.assortItemPusher(mechId, "mechVPO_23", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
-            this.assortItemPusher(mechId, "mechAUG_417", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
-            this.assortItemPusher(mechId, "mechMDR_406", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(mechId, "mechSpear_330mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
-            this.assortItemPusher(mechId, "mechMCX_171mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(mechId, "mechMCX_229mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 15000);
-            this.assortItemPusher(mechId, "mechSlant_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
-            this.assortItemPusher(mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
-            this.assortItemPusher(mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
-            this.assortItemPusher(mechId, "mechJMAC_366", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechRatWorx", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSKS_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechVPO_23", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechAUG_417", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechMDR_406", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSpear_330mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechMCX_171mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechMCX_229mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSlant_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechJMAC_366", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
             //skier//
             //guns
-            this.assortItemPusher(skierId, "Skier209", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
+            this.assortItemPusher(this.utils.genId(), skierId, "Skier209", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
         }
         //scopes
         this.assortNestedItemPusher(mechId, "616584766ef05c2ce828ef57", { "5c7d560b2e22160bc12c6139": "mod_scope", "5c7d55de2e221644f31bff68": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25);
@@ -390,15 +397,13 @@ class Traders {
             }
         }
     }
-    assortBarterPusher(trader, itemId, buyRestriction, barters, loyalLvl) {
+    assortBarterPusher(assortId, trader, itemId, buyRestriction, barters, quantity, loyalLvl) {
         let assort = this.tables.traders[trader].assort;
-        let assortId = this.utils.genId();
-        this.assortBarterHelper(assort, assortId, barters, loyalLvl, itemId, buyRestriction);
+        this.assortBarterHelper(assort, assortId, barters, loyalLvl, itemId, buyRestriction, quantity);
     }
-    assortBarterHelper(assort, assortId, barters, loyalLvl, itemId, buyRestriction) {
-        if (loyalLvl === 5 && modConfig.randomize_trader_ll != true) {
+    assortBarterHelper(assort, assortId, barters, loyalLvl, itemId, buyRestriction, quantity) {
+        if (loyalLvl === 5 && modConfig.randomize_trader_ll != true)
             loyalLvl = 4;
-        }
         assort.items.push({
             "_id": assortId,
             "_tpl": itemId,
@@ -411,7 +416,7 @@ class Traders {
         let barterItems = [];
         for (let barter in barters) {
             barterItems.push({
-                "count": 1,
+                "count": quantity,
                 "_tpl": barters[barter]
             });
         }
@@ -421,9 +426,8 @@ class Traders {
             ];
         assort.loyal_level_items[assortId] = loyalLvl;
     }
-    assortItemPusher(trader, itemId, buyRestriction, saleCurrency, loyalLvl, useHandbookPrice, price = 0, priceMulti = 1) {
+    assortItemPusher(assortId, trader, itemId, buyRestriction, saleCurrency, loyalLvl, useHandbookPrice, price = 0, priceMulti = 1) {
         let assort = this.tables.traders[trader].assort;
-        let assortId = this.utils.genId();
         if (useHandbookPrice == true) {
             price += this.handBookPriceLookup(itemId);
         }
@@ -622,36 +626,63 @@ class RandomizeTraderAssort {
     randomizeAmmoStock(assortItemParent, item, llStackableFactor, llStockFactor) {
         if (assortItemParent === enums_1.ParentClasses.AMMO && item.slotId !== "cartridges") {
             let llOutOfStockFactor = llStockFactor * 10;
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 20);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x19mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 50, 58);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._45ACP, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 100);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._50AE, 8 * modConfig.rand_stackable_modifier * llStackableFactor, 28 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._46x30mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._57x28mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._366TKM, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 55, 110);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55, 95);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._68x51mm, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x51mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 65 * modConfig.rand_stackable_modifier * llStackableFactor, 60 - llOutOfStockFactor, 60, 120);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x54rmm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 65, 120);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._300BLK, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 53, 100);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._556x45mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._545x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._127x55mm, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 51);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._12ga, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 150);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._20ga, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._23x75mm, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 2 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, enums_1.Calibers._338mag, 5 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 70, 120);
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 20))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x19mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 50, 58))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x21mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._45ACP, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 100))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._50AE, 8 * modConfig.rand_stackable_modifier * llStackableFactor, 28 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._46x30mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._57x28mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x25mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._366TKM, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 55, 110))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55, 95))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._68x51mm, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x51mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 65 * modConfig.rand_stackable_modifier * llStackableFactor, 60 - llOutOfStockFactor, 60, 120))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._762x54rmm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 65, 120))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._300BLK, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 53, 100))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._556x45mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._545x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._127x55mm, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 51))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._12ga, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 150))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._20ga, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._23x75mm, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 2 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor))
+                return;
+            if (this.randomizeAmmoStockHelper(item, enums_1.Calibers._338mag, 5 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 70, 120))
+                return;
+            this.randomizeAmmoStockHelper(item, "", 40 * modConfig.rand_stackable_modifier * llStackableFactor, 80 * modConfig.rand_stackable_modifier * llStackableFactor, 25 - llOutOfStockFactor, 60, 60);
         }
     }
-    randomizeAmmoStockHelper(item, caliber, min, max, outOfStockChance, penThreshold = 0, damageThreshold = 0) {
-        if (this.itemDB[item._tpl]._props.Caliber === caliber) {
+    randomizeAmmoStockHelper(item, caliber, min, max, outOfStockChance, penThreshold = 0, damageThreshold = 0, dontCheckCaliber = false) {
+        if (dontCheckCaliber == true || this.itemDB[item._tpl]._props.Caliber === caliber) {
             let oddsModifier = 1;
             let stockModifier = 1;
             let damage = this.itemDB[item._tpl]._props.Damage * this.itemDB[item._tpl]._props.ProjectileCount;
@@ -679,7 +710,9 @@ class RandomizeTraderAssort {
             if (item.upd.hasOwnProperty('BuyRestrictionMax')) {
                 delete item.upd.BuyRestrictionMax;
             }
+            return true;
         }
+        return false;
     }
     //re-roll based on ll level
     getStockCount(allowedAttemps, attempt, min, max) {

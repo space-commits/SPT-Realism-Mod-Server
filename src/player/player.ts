@@ -192,10 +192,10 @@ export class Player {
             this.globalDB().Stamina.WalkOverweightLimits["x"] = 54;
             this.globalDB().Stamina.WalkOverweightLimits["y"] = 75;
             this.globalDB().Stamina.WalkSpeedOverweightLimits["x"] = 32;
-            this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 80;
+            this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 79;
             this.globalDB().Stamina.BaseOverweightLimits["x"] = 24;
             this.globalDB().Stamina.BaseOverweightLimits["y"] = 65;
-            this.globalDB().Stamina.SprintOverweightLimits["x"] = 15;
+            this.globalDB().Stamina.SprintOverweightLimits["x"] = 16;
             this.globalDB().Stamina.SprintOverweightLimits["y"] = 30;
         }
 
@@ -206,12 +206,12 @@ export class Player {
 
         if (this.modConfig.movement_changes == true) {
 
-            this.globalDB().WalkSpeed["x"] = 0.59;
-            this.globalDB().WalkSpeed["y"] = 0.85;
+            this.globalDB().WalkSpeed["x"] = 0.58;
+            this.globalDB().WalkSpeed["y"] = 0.69;
             this.globalDB().SprintSpeed["x"] = 0.05;
-            this.globalDB().SprintSpeed["y"] = 0.5;
+            this.globalDB().SprintSpeed["y"] = 0.49;
 
-            this.globalDB().Stamina.SprintDrainRate = 4.5;
+            this.globalDB().Stamina.SprintDrainRate = 4.65;
 
             this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
             this.globalDB().Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
@@ -225,16 +225,16 @@ export class Player {
             this.globalDB().Stamina.SprintAccelerationLowerLimit = 0.2;
             this.globalDB().Stamina.SprintSpeedLowerLimit = 0.02;
 
-            this.globalDB().Inertia.SpeedLimitAfterFallMin["x"] *= 0.45;
-            this.globalDB().Inertia.SpeedLimitAfterFallMin["y"] *= 0.45;
+            this.globalDB().Inertia.SpeedLimitAfterFallMin["x"] = 0.135;
+            this.globalDB().Inertia.SpeedLimitAfterFallMin["y"] = 0.45;
 
-            this.globalDB().Inertia.SpeedLimitAfterFallMax["x"] *= 0.45;
+            this.globalDB().Inertia.SpeedLimitAfterFallMax["x"] = 1.8;
 
-            this.globalDB().Inertia.SpeedLimitDurationMin["x"] *= 1.5;
-            this.globalDB().Inertia.SpeedLimitDurationMin["y"] *= 1.5;
+            this.globalDB().Inertia.SpeedLimitDurationMin["x"] = 0.49;
+            this.globalDB().Inertia.SpeedLimitDurationMin["y"] = 0.82;
 
-            this.globalDB().Inertia.SpeedLimitDurationMax["x"] *= 2;
-            this.globalDB().Inertia.SpeedLimitDurationMax["y"] *= 2;
+            this.globalDB().Inertia.SpeedLimitDurationMax["x"] = 4;
+            this.globalDB().Inertia.SpeedLimitDurationMax["y"] = 2.4;
 
             this.globalDB().Inertia.SpeedInertiaAfterJump["x"] = 0.98;
             this.globalDB().Inertia.SpeedInertiaAfterJump["y"] = 1.47;
@@ -242,36 +242,36 @@ export class Player {
             this.globalDB().Inertia.BaseJumpPenalty = 0.55;
             this.globalDB().Inertia.BaseJumpPenaltyDuration = 0.75;
 
-            this.globalDB().Inertia.SprintBrakeInertia["y"] = 100;
+            this.globalDB().Inertia.SprintBrakeInertia["y"] = 110;
 
-            this.globalDB().Inertia.SprintTransitionMotionPreservation["x"] = 0.812;
-            this.globalDB().Inertia.SprintTransitionMotionPreservation["y"] = 1.045;
+            this.globalDB().Inertia.SprintTransitionMotionPreservation["x"] = 0.84;
+            this.globalDB().Inertia.SprintTransitionMotionPreservation["y"] = 1.09;
 
             this.globalDB().Inertia.PreSprintAccelerationLimits["x"] = 2.52;
             this.globalDB().Inertia.PreSprintAccelerationLimits["y"] = 1.43;
 
             this.globalDB().Inertia.SprintAccelerationLimits["x"] = 0.38;
 
-            this.globalDB().Inertia.SideTime["x"] = 0.76;
-            this.globalDB().Inertia.SideTime["y"] = 0.38;
+            this.globalDB().Inertia.SideTime["x"] = 1.14;
+            this.globalDB().Inertia.SideTime["y"] = 0.57;
             this.globalDB().Inertia.MinDirectionBlendTime = 0.19;
-            this.globalDB().Inertia.WalkInertia["x"] = 0.0385;
-            this.globalDB().Inertia.WalkInertia["y"] = 0.385;
+            this.globalDB().Inertia.WalkInertia["x"] = 0.04;
+            this.globalDB().Inertia.WalkInertia["y"] = 0.39;
 
-            this.globalDB().Inertia.TiltInertiaMaxSpeed["x"] = 1.2;
-            this.globalDB().Inertia.TiltInertiaMaxSpeed["y"] = 1;
-            this.globalDB().Inertia.TiltMaxSideBackSpeed["x"] = 2.4;
-            this.globalDB().Inertia.TiltMaxSideBackSpeed["y"] = 1.6;
-            this.globalDB().Inertia.TiltStartSideBackSpeed["x"] = 1.6;
-            this.globalDB().Inertia.TiltStartSideBackSpeed["y"] = 1;
-            this.globalDB().Inertia.InertiaTiltCurveMin["y"] = 0.44;
-            this.globalDB().Inertia.InertiaTiltCurveMax["y"] = 0.1;
+            this.globalDB().Inertia.TiltInertiaMaxSpeed["x"] = 1.08;
+            this.globalDB().Inertia.TiltInertiaMaxSpeed["y"] = 0.9;
+            this.globalDB().Inertia.TiltMaxSideBackSpeed["x"] = 2.16;
+            this.globalDB().Inertia.TiltMaxSideBackSpeed["y"] = 1.44;
+            this.globalDB().Inertia.TiltStartSideBackSpeed["x"] = 1.44;
+            this.globalDB().Inertia.TiltStartSideBackSpeed["y"] = 0.9;
+            this.globalDB().Inertia.InertiaTiltCurveMin["y"] = 0.396;
+            this.globalDB().Inertia.InertiaTiltCurveMax["y"] = 0.09;
 
             this.globalDB().Inertia.InertiaBackwardCoef["x"] = 0.8;
             this.globalDB().Inertia.InertiaBackwardCoef["y"] = 0.6;
 
             this.globalDB().Inertia.InertiaLimits["y"] = 70;
-            this.globalDB().Inertia.InertiaLimits["z"] = 0.5; // set this lower to allow max weight to reach a higher max speed and have acceleration
+            this.globalDB().Inertia.InertiaLimits["z"] = 0.49; // set this lower to allow max weight to reach a higher max speed and have acceleration
 
             if (this.modConfig.logEverything == true) {
                 this.logger.info("Movement Changes Enabled");

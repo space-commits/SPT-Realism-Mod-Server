@@ -22,9 +22,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotTierTracker = exports.RaidInfoTracker = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
 const path = __importStar(require("path"));
+const node_crypto_1 = __importDefault(require("node:crypto"));
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
 class Utils {
@@ -122,13 +126,10 @@ class Utils {
         });
     }
     genId() {
-        let result = '';
-        let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let charactersLength = characters.length;
-        for (let i = 0; i < 24; i++) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-        return result;
+        const shasum = node_crypto_1.default.createHash("sha256");
+        const time = Math.random() * Math.floor(new Date().getTime() / 1000);
+        shasum.update(time.toString());
+        return shasum.digest("hex").substring(0, 24);
     }
 }
 exports.Utils = Utils;
