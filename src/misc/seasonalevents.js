@@ -5,9 +5,9 @@ class EventTracker {
     static isChristmas = false;
     static isHalloween = false;
     static doGasEvent = false;
+    static doExtraCultistSpawns = false;
     static hasExploded = false;
-    static increaseRaiderSpawns = false;
-    static increaseCultistSpawns = false;
+    static doExtraRaiderSpawns = false;
     static isPreExplosion = false;
     static endExplosionEvent = false;
 }

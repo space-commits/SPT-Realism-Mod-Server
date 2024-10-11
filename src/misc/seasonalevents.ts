@@ -4,9 +4,9 @@ export class EventTracker {
     static isChristmas: boolean = false;
     static isHalloween: boolean = false;
     static doGasEvent: boolean = false;
+    static doExtraCultistSpawns: boolean = false;
     static hasExploded: boolean = false;
-    static increaseRaiderSpawns: boolean = false;
-    static increaseCultistSpawns: boolean = false;
+    static doExtraRaiderSpawns: boolean = false;
     static isPreExplosion: boolean = false;
     static endExplosionEvent: boolean = false;
 }

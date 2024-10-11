@@ -78,7 +78,7 @@ import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
 import { Airdrops } from "./misc/airdrops";
-import { Spawns } from "./bots/maps";
+import { Spawns } from "./bots/spawns";
 import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
@@ -105,6 +105,7 @@ import { MailSendService } from "@spt/services/MailSendService";
 import { InsuranceService } from "@spt/services/InsuranceService";
 import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
 import { info } from "console";
+import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -179,15 +180,25 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 {
                     url: "/RealismMod/GetInfo",
                     action: async (url, info, sessionID, output) => {
-                        try {
+                        try {    
+                            const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+                            const postLoadDBServer = container.resolve<DatabaseService>("DatabaseService");
+                            const postLoadTables = postLoadDBServer.getTables();
+                            const utils = new Utils(postLoadTables);
                             const pmcData = profileHelper.getPmcProfile(sessionID);
-                            this.checkEventQuests(pmcData);
+                            this.getEventData(pmcData, logger, utils);
+
                             realismInfo.IsNightTime = RaidInfoTracker.TOD == "night";
                             realismInfo.IsHalloween = EventTracker.isHalloween;
                             realismInfo.isChristmas = EventTracker.isChristmas;
                             realismInfo.DoGasEvent = EventTracker.doGasEvent;
                             realismInfo.HasExploded = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.hasExploded;
                             realismInfo.IsPreExplosion = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.isPreExplosion;
+                            realismInfo.DoExtraRaiders = EventTracker.isHalloween && EventTracker.doExtraRaiderSpawns;
+                            realismInfo.DoExtraCultists = EventTracker.isHalloween && EventTracker.doExtraCultistSpawns;
+
+                            logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
+                            logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
                             logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
                             logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
                             logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
@@ -457,10 +468,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
                             const weatherController = container.resolve<WeatherController>("WeatherController");
-                            const localisationService = container.resolve<LocalisationService>("LocalisationService");
-                            const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
-                            const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
-                            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new BotArrays(postLoadTables);
@@ -534,8 +541,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 pmcConf.convertIntoPmcChance["assault"].min = 100;
                                 pmcConf.convertIntoPmcChance["assault"].max = 100;
                             }
-
-                            this.shouldDoGasEvent(utils, RaidInfoTracker.mapName, pmcData, logger);
 
                             logger.warning("Avg. Player Level = " + ProfileTracker.averagePlayerLevel);
                             logger.warning("Map Name = " + matchInfo.location);
@@ -690,6 +695,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const configServer = container.resolve<ConfigServer>("ConfigServer");
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const weatherConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<IWeatherConfig>(ConfigTypes.WEATHER);
+        const locationConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ILocationConfig>(ConfigTypes.LOCATION);
         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
@@ -756,7 +762,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             maps.openZonesFix();
         }
 
-        maps.loadSpawnChanges();
+        maps.loadSpawnChanges(locationConfig);
 
         airdrop.loadAirdropChanges();
 
@@ -979,15 +985,17 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 if (q.qid === "6702b3b624c7ac4e2d3e9c37") {
                     if (q.status === 2) {
                         baseGasChance = 1000;
+                        EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (q.status === 4) {
-                        baseGasChance = 100;
+                        baseGasChance = EventTracker.isHalloween ? 300 : 100;
                     }
                 }
                 //blue flame part 1
                 if (q.qid === "6702b3e4aff397fa3e666fa5") {
                     if (q.status === 4) {
-                        EventTracker.increaseRaiderSpawns = EventTracker.isHalloween;
+                        baseGasChance = 100;
+                        EventTracker.doExtraRaiderSpawns = EventTracker.isHalloween;
                     }
                 }
                 //blue flame part 2
@@ -995,12 +1003,12 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     const startedQuest = q.status === 2;
                     const completedQuest = q.status === 4;
                     const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
+
+                    EventTracker.isPreExplosion = startedQuest;
                     if (didExplosion || completedQuest) {
-                        baseGasChance = 0;
-                        EventTracker.increaseRaiderSpawns = false;
+                        EventTracker.doExtraRaiderSpawns = false;
                         EventTracker.hasExploded = true;
                     }
-                    EventTracker.isPreExplosion = startedQuest;
                     if (completedQuest) {
                         EventTracker.endExplosionEvent = true;
                     }
@@ -1011,14 +1019,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         return baseGasChance;
     }
 
-    public shouldDoGasEvent(utils: Utils, map: string, pmcData: IPmcData, logger: ILogger) {
-        const baseGasChance = this.checkEventQuests(pmcData);
-        const rndNum = utils.pickRandNumInRange(1, 1000);
-        const isWrongMap = map.includes("laboratory") || map.includes("factory");
-        EventTracker.doGasEvent = baseGasChance >= rndNum && !isWrongMap;
-
-        logger.warning("baseGasChance " + baseGasChance);
-        logger.warning("boostRaiderSpawns " + EventTracker.increaseRaiderSpawns);
+    public getEventData(pmcData: IPmcData, logger: ILogger, utils: Utils) {
+        const gasChance = this.checkEventQuests(pmcData);
+        EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
+        logger.warning("boostRaiderSpawns " + EventTracker.doExtraRaiderSpawns);
         logger.warning("isPreExplosion " + EventTracker.isPreExplosion);
         logger.warning("hasExplode " + EventTracker.hasExploded);
         logger.warning("doGasEvent " + EventTracker.doGasEvent);

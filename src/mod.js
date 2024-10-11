@@ -45,7 +45,7 @@ const json_gen_1 = require("./json/json_gen");
 const quests_1 = require("./traders/quests");
 const traders_1 = require("./traders/traders");
 const airdrops_1 = require("./misc/airdrops");
-const maps_1 = require("./bots/maps");
+const spawns_1 = require("./bots/spawns");
 const gear_1 = require("./items/gear");
 const seasonalevents_1 = require("./misc/seasonalevents");
 const item_cloning_1 = require("./items/item_cloning");
@@ -114,14 +114,22 @@ class Main {
                 url: "/RealismMod/GetInfo",
                 action: async (url, info, sessionID, output) => {
                     try {
+                        const profileHelper = container.resolve("ProfileHelper");
+                        const postLoadDBServer = container.resolve("DatabaseService");
+                        const postLoadTables = postLoadDBServer.getTables();
+                        const utils = new utils_1.Utils(postLoadTables);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
-                        this.checkEventQuests(pmcData);
+                        this.getEventData(pmcData, logger, utils);
                         realismInfo.IsNightTime = utils_1.RaidInfoTracker.TOD == "night";
                         realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
                         realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
                         realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;
                         realismInfo.HasExploded = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.hasExploded;
                         realismInfo.IsPreExplosion = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.isPreExplosion;
+                        realismInfo.DoExtraRaiders = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraRaiderSpawns;
+                        realismInfo.DoExtraCultists = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraCultistSpawns;
+                        logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
+                        logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
                         logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
                         logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
                         logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
@@ -217,7 +225,7 @@ class Main {
                     const utils = new utils_1.Utils(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
-                    const maps = new maps_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
+                    const maps = new spawns_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
                     const quests = new quests_1.Quests(logger, postLoadTables, modConfig);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -336,10 +344,6 @@ class Main {
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
                         const weatherController = container.resolve("WeatherController");
-                        const localisationService = container.resolve("LocalisationService");
-                        const ragfairPriceService = container.resolve("RagfairPriceService");
-                        const pmcLootGenerator = container.resolve("PMCLootGenerator");
-                        const itemHelper = container.resolve("ItemHelper");
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.BotArrays(postLoadTables);
@@ -403,7 +407,6 @@ class Main {
                             pmcConf.convertIntoPmcChance["assault"].min = 100;
                             pmcConf.convertIntoPmcChance["assault"].max = 100;
                         }
-                        this.shouldDoGasEvent(utils, utils_1.RaidInfoTracker.mapName, pmcData, logger);
                         logger.warning("Avg. Player Level = " + utils_1.ProfileTracker.averagePlayerLevel);
                         logger.warning("Map Name = " + matchInfo.location);
                         logger.warning("Map Type  = " + mapType);
@@ -525,6 +528,7 @@ class Main {
         const configServer = container.resolve("ConfigServer");
         const jsonUtil = container.resolve("JsonUtil");
         const weatherConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.WEATHER);
+        const locationConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.LOCATION);
         const seasonalEventsService = container.resolve("SeasonalEventService");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
@@ -550,7 +554,7 @@ class Main {
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, utils);
         const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
-        const maps = new maps_1.Spawns(logger, tables, modConfig, tables.locations, utils);
+        const maps = new spawns_1.Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
@@ -583,7 +587,7 @@ class Main {
         if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
             maps.openZonesFix();
         }
-        maps.loadSpawnChanges();
+        maps.loadSpawnChanges(locationConfig);
         airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
@@ -771,15 +775,17 @@ class Main {
                 if (q.qid === "6702b3b624c7ac4e2d3e9c37") {
                     if (q.status === 2) {
                         baseGasChance = 1000;
+                        seasonalevents_1.EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (q.status === 4) {
-                        baseGasChance = 100;
+                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 300 : 100;
                     }
                 }
                 //blue flame part 1
                 if (q.qid === "6702b3e4aff397fa3e666fa5") {
                     if (q.status === 4) {
-                        seasonalevents_1.EventTracker.increaseRaiderSpawns = seasonalevents_1.EventTracker.isHalloween;
+                        baseGasChance = 100;
+                        seasonalevents_1.EventTracker.doExtraRaiderSpawns = seasonalevents_1.EventTracker.isHalloween;
                     }
                 }
                 //blue flame part 2
@@ -787,12 +793,11 @@ class Main {
                     const startedQuest = q.status === 2;
                     const completedQuest = q.status === 4;
                     const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
+                    seasonalevents_1.EventTracker.isPreExplosion = startedQuest;
                     if (didExplosion || completedQuest) {
-                        baseGasChance = 0;
-                        seasonalevents_1.EventTracker.increaseRaiderSpawns = false;
+                        seasonalevents_1.EventTracker.doExtraRaiderSpawns = false;
                         seasonalevents_1.EventTracker.hasExploded = true;
                     }
-                    seasonalevents_1.EventTracker.isPreExplosion = startedQuest;
                     if (completedQuest) {
                         seasonalevents_1.EventTracker.endExplosionEvent = true;
                     }
@@ -801,13 +806,10 @@ class Main {
         }
         return baseGasChance;
     }
-    shouldDoGasEvent(utils, map, pmcData, logger) {
-        const baseGasChance = this.checkEventQuests(pmcData);
-        const rndNum = utils.pickRandNumInRange(1, 1000);
-        const isWrongMap = map.includes("laboratory") || map.includes("factory");
-        seasonalevents_1.EventTracker.doGasEvent = baseGasChance >= rndNum && !isWrongMap;
-        logger.warning("baseGasChance " + baseGasChance);
-        logger.warning("boostRaiderSpawns " + seasonalevents_1.EventTracker.increaseRaiderSpawns);
+    getEventData(pmcData, logger, utils) {
+        const gasChance = this.checkEventQuests(pmcData);
+        seasonalevents_1.EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
+        logger.warning("boostRaiderSpawns " + seasonalevents_1.EventTracker.doExtraRaiderSpawns);
         logger.warning("isPreExplosion " + seasonalevents_1.EventTracker.isPreExplosion);
         logger.warning("hasExplode " + seasonalevents_1.EventTracker.hasExploded);
         logger.warning("doGasEvent " + seasonalevents_1.EventTracker.doGasEvent);

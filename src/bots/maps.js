@@ -82,7 +82,7 @@ class Spawns {
                             chance = 100;
                     }
                     //raider event
-                    if (seasonalevents_1.EventTracker.increaseRaiderSpawns && bossSpawnLocation.BossName.includes("pmcBot")) {
+                    if (seasonalevents_1.EventTracker.doExtraRaiderSpawns && bossSpawnLocation.BossName.includes("pmcBot")) {
                         if (bossSpawnLocation.BossChance == 0)
                             chance = 50;
                         else

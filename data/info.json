@@ -4,5 +4,6 @@
     "DoGasEvent": false,
     "HasExploded": false,
     "IsPreExplosion": false,
-    "IsNightTime": false
+    "DoExtraRaiders": false,
+    "DoExtraCultists": false
 }
