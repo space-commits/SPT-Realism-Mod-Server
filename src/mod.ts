@@ -106,6 +106,7 @@ import { InsuranceService } from "@spt/services/InsuranceService";
 import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
 import { info } from "console";
 import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig";
+import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -180,7 +181,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 {
                     url: "/RealismMod/GetInfo",
                     action: async (url, info, sessionID, output) => {
-                        try {    
+                        try {
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const postLoadDBServer = container.resolve<DatabaseService>("DatabaseService");
                             const postLoadTables = postLoadDBServer.getTables();
@@ -311,6 +312,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
                         const weatherConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<IWeatherConfig>(ConfigTypes.WEATHER);
+                        const seeasonalEventConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ISeasonalEventConfig>(ConfigTypes.SEASONAL_EVENT);
                         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                         const postLoadTables = postLoadDBServer.getTables();
                         const utils = new Utils(postLoadTables);
@@ -328,7 +330,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
                             if (modConfig.backup_profiles == true) this.backupProfile(profileData, logger);
                             if (modConfig.enable_hazard_zones) quests.resetRepeatableQuests(profileData);
-                            this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig);
+                            this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig);
                             this.tryLockTradersForEvent(pmcData, logger);
 
                             const healthProp = pmcData?.Health;
@@ -696,6 +698,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const weatherConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<IWeatherConfig>(ConfigTypes.WEATHER);
         const locationConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ILocationConfig>(ConfigTypes.LOCATION);
+        const seeasonalEventConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ISeasonalEventConfig>(ConfigTypes.SEASONAL_EVENT);
         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
@@ -733,7 +736,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         // this.dllChecker(logger, modConfig);
 
-        this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig, true);
+        this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig, true);
 
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
@@ -899,9 +902,20 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
     }
 
-    private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
+    private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, seasonalConfig: ISeasonalEventConfig, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
+
+        const currentDate = new Date();
+        const halloweenStart = new Date(currentDate.getFullYear(), 9, 13);// FOR TESTING ========================= set to 20th
+        const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
+
+        if (currentDate >= halloweenStart && currentDate <= halloweenEnd) {
+            seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
+
+            EventTracker.isHalloween = true;
+        }
+
         EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
-        EventTracker.isHalloween = true;//seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
+
         if (EventTracker.isChristmas == true && logGreetings) {
             logger.warning("Merry Christmas!");
         }
@@ -957,59 +971,63 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         let baseGasChance = 0;
         if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
             pmcData.Quests.forEach(q => {
+                const isStarted = q.status === 2;
+                const isCompleted = q.status === 4;
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
-                    if (q.status === 2) {
-                        baseGasChance += 50;
+                    if (isStarted || isCompleted) {
+                        baseGasChance += 100;
                     }
                 }
                 //bad omens part 2
                 if (q.qid === "6702b0a1b9fb4619debd0697") {
-                    if (q.status === 2) {
-                        baseGasChance += 100;
+                    if (isStarted || isCompleted) {
+                        baseGasChance += 150;
                     }
                 }
                 //bad omens part 3
                 if (q.qid === "6702b0e9601acf629d212eeb") {
-                    if (q.status === 2) {
+                    if (isStarted || isCompleted) {
                         baseGasChance += 200;
                     }
                 }
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
-                    if (q.status === 2) {
+                    if (isStarted || isCompleted) {
+                        baseGasChance += 100;
+                    }
+                }
+                //critical mass
+                if (q.qid === "670ae811bd43cbf026768126") {
+                    if (isStarted || isCompleted) {
                         baseGasChance += 100;
                     }
                 }
                 //do no harm
                 if (q.qid === "6702b3b624c7ac4e2d3e9c37") {
-                    if (q.status === 2) {
+                    if (isStarted) {
                         baseGasChance = 1000;
                         EventTracker.doExtraCultistSpawns = true;
                     }
-                    else if (q.status === 4) {
+                    else if (isCompleted) {
                         baseGasChance = EventTracker.isHalloween ? 300 : 100;
                     }
                 }
                 //blue flame part 1
                 if (q.qid === "6702b3e4aff397fa3e666fa5") {
-                    if (q.status === 4) {
-                        baseGasChance = 100;
+                    if (isCompleted) {
                         EventTracker.doExtraRaiderSpawns = EventTracker.isHalloween;
                     }
                 }
                 //blue flame part 2
                 if (q.qid === "6702b4a27d4a4a89fce96fbc") {
-                    const startedQuest = q.status === 2;
-                    const completedQuest = q.status === 4;
                     const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
-
-                    EventTracker.isPreExplosion = startedQuest;
-                    if (didExplosion || completedQuest) {
+                    EventTracker.isPreExplosion = isStarted;
+                    if (didExplosion || isCompleted) {
                         EventTracker.doExtraRaiderSpawns = false;
                         EventTracker.hasExploded = true;
                     }
-                    if (completedQuest) {
+                    if (isCompleted) {
                         EventTracker.endExplosionEvent = true;
                     }
                 }

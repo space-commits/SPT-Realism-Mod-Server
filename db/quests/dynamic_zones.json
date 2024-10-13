@@ -265,13 +265,13 @@
                             "_id": "66dad20568ce447f27bb53d2",
                             "_tpl": "5755356824597772cb798962",
                             "upd": {
-                                "StackObjectsCount": 4
+                                "StackObjectsCount": 5
                             }
                         }
                     ],
                     "target": "66dad20568ce447f27bb53d2",
                     "type": "Item",
-                    "value": "4"
+                    "value": "5"
                 },
                 {
                     "findInRaid": true,

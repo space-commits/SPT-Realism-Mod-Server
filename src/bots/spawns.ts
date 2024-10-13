@@ -57,7 +57,6 @@ export class Spawns {
 
         for (let i in this.mapDB) {
             let mapBase = this.mapDB[i]?.base;
-            this.logger.warning("=======================-------MAP : " + i);
             if (mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
                 for (let k in mapBase.BossLocationSpawn) {
                     let bossSpawnLocation = mapBase.BossLocationSpawn[k];
@@ -70,11 +69,7 @@ export class Spawns {
                             chance = bossSpawnLocation.BossChance * chanceMulti;
                         }
                     }
-                    
                     bossSpawnLocation.BossChance = Math.round(this.utils.clampNumber(chance, 0, 100));
-                    this.logger.warning("------------------------");
-                    this.logger.warning("Boss: " + bossSpawnLocation.BossName);
-                    this.logger.warning("Chance: " + bossSpawnLocation.BossChance);
                 }
             }
         }
@@ -129,7 +124,6 @@ export class Spawns {
         if (this.modConf.logEverything == true) {
             this.logger.info("OpenZones Fix Enabled");
         }
-
     }
 
 }

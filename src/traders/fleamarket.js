@@ -216,7 +216,6 @@ class TieredFlea {
             this.canSellArmbands(true, serverItem);
             this.canSellLube(true, serverItem);
             this.canSellMedicalSupplies(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
             this.canSellIrons(true, serverItem);
         }
@@ -246,7 +245,6 @@ class TieredFlea {
             this.canSellTools(true, serverItem);
             this.canSellHelmet(true, serverItem);
             this.canSellSMG(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
             this.canSellIrons(true, serverItem);
         }
@@ -278,7 +276,6 @@ class TieredFlea {
             this.canSellHelmParts(true, serverItem);
             this.canSellPlates(true, serverItem);
             this.canSellSMG(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellHouseholdGoods(true, serverItem);
             this.canSellBuildingMats(true, serverItem);
             this.canSellBags(true, serverItem);
@@ -320,7 +317,6 @@ class TieredFlea {
             this.canSellPlates(true, serverItem);
             this.canSellSMG(true, serverItem);
             this.canSellDMR(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellHouseholdGoods(true, serverItem);
             this.canSellBuildingMats(true, serverItem);
             this.canSellBags(true, serverItem);
@@ -343,6 +339,7 @@ class TieredFlea {
             this.canSellInfo(true, serverItem);
             this.canSellKeys(true, serverItem);
             this.canSellIrons(true, serverItem);
+            this.canSellMelee(true, serverItem);
         }
     }
     fleaFullUnlock() {

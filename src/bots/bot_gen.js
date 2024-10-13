@@ -332,8 +332,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const botEquipmentModPoolService = tsyringe_1.container.resolve("BotEquipmentModPoolService");
         const botEquipmentModGenerator = tsyringe_1.container.resolve("BotEquipmentModGenerator");
         const itemHelper = tsyringe_1.container.resolve("ItemHelper");
+        const mathUtil = tsyringe_1.container.resolve("MathUtil");
         // const seasonalEvents = new SeasonalEventsHandler();
-        const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseService);
+        const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseService, mathUtil);
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseService, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
         const botRole = botGenerationDetails.role.toLowerCase();
         const botLevel = genBotLvl.genBotLvl(botJsonTemplate.experience.level, botGenerationDetails, bot);

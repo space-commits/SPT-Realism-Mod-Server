@@ -220,6 +220,7 @@ class Main {
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const ragfairServer = container.resolve("RagfairServer");
                     const weatherConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.WEATHER);
+                    const seeasonalEventConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.SEASONAL_EVENT);
                     const seasonalEventsService = container.resolve("SeasonalEventService");
                     const postLoadTables = postLoadDBServer.getTables();
                     const utils = new utils_1.Utils(postLoadTables);
@@ -237,7 +238,7 @@ class Main {
                             this.backupProfile(profileData, logger);
                         if (modConfig.enable_hazard_zones)
                             quests.resetRepeatableQuests(profileData);
-                        this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig);
+                        this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig);
                         this.tryLockTradersForEvent(pmcData, logger);
                         const healthProp = pmcData?.Health;
                         const hydroProp = pmcData?.Health?.Hydration;
@@ -529,6 +530,7 @@ class Main {
         const jsonUtil = container.resolve("JsonUtil");
         const weatherConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.WEATHER);
         const locationConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.LOCATION);
+        const seeasonalEventConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.SEASONAL_EVENT);
         const seasonalEventsService = container.resolve("SeasonalEventService");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
@@ -564,7 +566,7 @@ class Main {
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
         // this.dllChecker(logger, modConfig);
-        this.checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig, true);
+        this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig, true);
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
         }
@@ -694,9 +696,15 @@ class Main {
             profileData.Health.Energy.Current = defaultEnergy;
         }
     }
-    checkForSeasonalEvents(logger, seasonalEventsService, weatherConfig, logGreetings = false) {
+    checkForSeasonalEvents(logger, seasonalEventsService, seasonalConfig, weatherConfig, logGreetings = false) {
+        const currentDate = new Date();
+        const halloweenStart = new Date(currentDate.getFullYear(), 9, 13); // FOR TESTING ========================= set to 20th
+        const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
+        if (currentDate >= halloweenStart && currentDate <= halloweenEnd) {
+            seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
+            seasonalevents_1.EventTracker.isHalloween = true;
+        }
         seasonalevents_1.EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
-        seasonalevents_1.EventTracker.isHalloween = true; //seasonalEventsService.halloweenEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (seasonalevents_1.EventTracker.isChristmas == true && logGreetings) {
             logger.warning("Merry Christmas!");
         }
@@ -747,58 +755,63 @@ class Main {
         let baseGasChance = 0;
         if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
             pmcData.Quests.forEach(q => {
+                const isStarted = q.status === 2;
+                const isCompleted = q.status === 4;
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
-                    if (q.status === 2) {
-                        baseGasChance += 50;
+                    if (isStarted || isCompleted) {
+                        baseGasChance += 100;
                     }
                 }
                 //bad omens part 2
                 if (q.qid === "6702b0a1b9fb4619debd0697") {
-                    if (q.status === 2) {
-                        baseGasChance += 100;
+                    if (isStarted || isCompleted) {
+                        baseGasChance += 150;
                     }
                 }
                 //bad omens part 3
                 if (q.qid === "6702b0e9601acf629d212eeb") {
-                    if (q.status === 2) {
+                    if (isStarted || isCompleted) {
                         baseGasChance += 200;
                     }
                 }
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
-                    if (q.status === 2) {
+                    if (isStarted || isCompleted) {
+                        baseGasChance += 100;
+                    }
+                }
+                //critical mass
+                if (q.qid === "670ae811bd43cbf026768126") {
+                    if (isStarted || isCompleted) {
                         baseGasChance += 100;
                     }
                 }
                 //do no harm
                 if (q.qid === "6702b3b624c7ac4e2d3e9c37") {
-                    if (q.status === 2) {
+                    if (isStarted) {
                         baseGasChance = 1000;
                         seasonalevents_1.EventTracker.doExtraCultistSpawns = true;
                     }
-                    else if (q.status === 4) {
+                    else if (isCompleted) {
                         baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 300 : 100;
                     }
                 }
                 //blue flame part 1
                 if (q.qid === "6702b3e4aff397fa3e666fa5") {
-                    if (q.status === 4) {
-                        baseGasChance = 100;
+                    if (isCompleted) {
                         seasonalevents_1.EventTracker.doExtraRaiderSpawns = seasonalevents_1.EventTracker.isHalloween;
                     }
                 }
                 //blue flame part 2
                 if (q.qid === "6702b4a27d4a4a89fce96fbc") {
-                    const startedQuest = q.status === 2;
-                    const completedQuest = q.status === 4;
                     const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
-                    seasonalevents_1.EventTracker.isPreExplosion = startedQuest;
-                    if (didExplosion || completedQuest) {
+                    seasonalevents_1.EventTracker.isPreExplosion = isStarted;
+                    if (didExplosion || isCompleted) {
                         seasonalevents_1.EventTracker.doExtraRaiderSpawns = false;
                         seasonalevents_1.EventTracker.hasExploded = true;
                     }
-                    if (completedQuest) {
+                    if (isCompleted) {
                         seasonalevents_1.EventTracker.endExplosionEvent = true;
                     }
                 }

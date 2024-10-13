@@ -1436,7 +1436,8 @@
         "ConflictingItems": [],
         "Weight": 0.397,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 6
     },
     "5bb20e70d4351e0035629f8f": {
         "ItemID": "5bb20e70d4351e0035629f8f",
@@ -2236,7 +2237,8 @@
         "ConflictingItems": [],
         "Weight": 0.148,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 5
     },
     "5c87a07c2e2216001219d4a2": {
         "ItemID": "5c87a07c2e2216001219d4a2",
@@ -2302,7 +2304,8 @@
         "ConflictingItems": [],
         "Weight": 0.481,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 3.5
     },
     "5ac50c185acfc400163398d4": {
         "ItemID": "5ac50c185acfc400163398d4",
@@ -2502,7 +2505,8 @@
         "ConflictingItems": [],
         "Weight": 0.449,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 8
     },
     "59ecc3dd86f7746dc827481c": {
         "ItemID": "59ecc3dd86f7746dc827481c",
@@ -2524,7 +2528,8 @@
         "ConflictingItems": [],
         "Weight": 0.519,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 8
     },
     "5b04473a5acfc40018632f70": {
         "ItemID": "5b04473a5acfc40018632f70",
@@ -2789,7 +2794,7 @@
         "Weight": 0.425,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": 9
+        "AimStability": 10
     },
     "6087e2a5232e5a31c233d552": {
         "ItemID": "6087e2a5232e5a31c233d552",
@@ -2879,7 +2884,8 @@
         "ConflictingItems": [],
         "Weight": 0.55,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 5
     },
     "61825d136ef05c2ce828f1cc": {
         "ItemID": "61825d136ef05c2ce828f1cc",
@@ -5121,7 +5127,8 @@
             "5c0e2ff6d174af02a1659d4a",
             "5a33e75ac4a2826c6e06d759"
         ],
-        "Weight": 0.227
+        "Weight": 0.227,
+        "AimStability": 6
     },
     "6516e971a3d4c6497930b450": {
         "ItemID": "6516e971a3d4c6497930b450",
@@ -5144,7 +5151,8 @@
             "5c0e2ff6d174af02a1659d4a",
             "5a33e75ac4a2826c6e06d759"
         ],
-        "Weight": 0.227
+        "Weight": 0.227,
+        "AimStability": 6
     },
     "6516e9bc5901745209404287": {
         "ItemID": "6516e9bc5901745209404287",

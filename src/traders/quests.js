@@ -44,6 +44,8 @@ class Quests {
         this.questDB()["6702b0e9601acf629d212eeb"] = gasEventQuests["6702b0e9601acf629d212eeb"];
         //Former Patients
         this.questDB()["6702b8b3c0f2f525d988e428"] = gasEventQuests["6702b8b3c0f2f525d988e428"];
+        //Critical Mass
+        this.questDB()["670ae811bd43cbf026768126"] = gasEventQuests["670ae811bd43cbf026768126"];
         //Do No Harm
         this.questDB()["6702b3b624c7ac4e2d3e9c37"] = gasEventQuests["6702b3b624c7ac4e2d3e9c37"];
         //treatment part 1
@@ -80,7 +82,7 @@ class Quests {
             locale["6702afe9504c9aca4ed75d9a successMessageText"] = "The patients are stable and recovering well. However I remain concerned as to the origin of their symptoms...we've seen them before. We've collected blood samples from the patients to confirm...";
             locale["6702b0062a10e8202cc9c063"] = "Handover piles of meds";
             locale["6702b00eaa02eb7ffdabab6d"] = "Handover disposable syringes";
-            locale["6702b01112e0e5412edc40b2"] = "Handover silicon tubing";
+            locale["6702b01112e0e5412edc40b2"] = "Handover silicone tubing";
             locale["6702b0159bb4fbdf2e467147"] = "Handover bottles of hydrogen peroxide";
             locale["6702b0215240c197de5026dd"] = "This quest will start a chain of events";
             //Bad Omens - Part 2
@@ -91,7 +93,7 @@ class Quests {
             locale["6702b0a1b9fb4619debd0697 description"] = "More and more patients are coming in, all with the same symptoms as before. It doesn't matter how much supplies you bring us, this is not sustainable."
                 + " I no longer doubt that this is a wide scale environmental hazard, some sort of hazardous fog is accumulating during periods of calm weather. More patients are describing auditory and visual hallucinations, I do not yet know if this is some form of mass hysteria or if the hazardous substance is neurotoxic."
                 + "\n\nThe blood tests came back inconclusive as a match for the samples we've collected previously. We need to figure out the origin of this contaimination. I am giving you a GAMU device to collect readings in the field. You need to test in areas where large quantiies of toxic materials have been stored or manufactured."
-                + " There's point getting multiple readings from the same location, try different areas."
+                + " There's no point getting multiple readings from the same location, try different areas. Also it must be placed in araes of sufficient contamination, prioritize sources of contamination rather than just where it has accumulated."
                 + "\n\nPlace the devices on the ground and activate it, then wait for them to finish processing which can take some time. These devices are unreliable, sometimes they can stall and need to be reactivated so you need to stay nearby. I do not have many of these on hand, do not lose them.";
             locale["6702b0a1b9fb4619debd0697 failMessageText"] = "";
             locale["6702b0a1b9fb4619debd0697 successMessageText"] = "Thank you, young man. This data will prove invaluable. Unfortunately this will not aid our patients in the short term. Come back to see me to discuss this. If you collect any more data, you will get a fair price for it.";
@@ -113,7 +115,8 @@ class Quests {
             locale["6702b8b3c0f2f525d988e428 completePlayerMessage"] = "";
             locale["6702b8b3c0f2f525d988e428 name"] = "Former Patients";
             locale["6702b8b3c0f2f525d988e428 description"] = "Analysis of the samples confirms that this substance is an neuro-toxic agent. It is not toxic to plant life, all animal life is affected. If you don't hear or see any birdlife, a complete silence, you know you're in the midst of it...If you are exposed to it, you cannot rely on your senses, auditory hallucinations are common. However...a patient came in hysterical over what they claim they saw in the fog."
-                + " Naturally I would dismiss such claims and sedate the patient, but they had recored them on their phone...I can't go into detail why, I'm sure you understand, but I have my suspicions as to who is behind this and who it was in that recording. I need you to confirm it. Needless to say you need to practice discretion here, do not be seen.";
+                + " Naturally I would dismiss such claims and sedate the patient, but they had recorded them on their phone...I can't go into detail why, I'm sure you understand, but I have my suspicions as to who is behind this and who it was in that recording. I need you to confirm it."
+                + "\n\nYou need to plant cameras with remote access in or near their hideouts. My personnel will put themselves at great risk to collect the data remotely, so needless to say you need to practice discretion here, do not be seen.";
             locale["6702b8b3c0f2f525d988e428 failMessageText"] = "";
             locale["6702b8b3c0f2f525d988e428 successMessageText"] = "My suspicions have been confrimed...they are behind this, unless someone else is putting them up to it...What I saw on these cameras will scar me for the rest of my life. These are sick, sick men. They weren't always like this, they were made this way. This act of terrorism may just be the beginning. They keep muttering incantaions about a 'blue flame'...I'm sure more will be revealed in time.";
             locale["6702b30d5376ef5b6f661de3"] = "Find the marked room in the Customs area";
@@ -126,17 +129,28 @@ class Quests {
             locale["6702b3402c47f1bef20161b6"] = "Plant a wi-fi camera at the marked circle in the lost village";
             locale["6702b3458ab88b3a52829046"] = "Find the marked room used for broadcasting in Reserve";
             locale["6702b34b09f951485e97945f"] = "Plant a wi-fi camera at the marked room";
+            //Critical Mass
+            locale["670ae811bd43cbf026768126 acceptPlayerMessage"] = "";
+            locale["670ae811bd43cbf026768126 declinePlayerMessage"] = "";
+            locale["670ae811bd43cbf026768126 completePlayerMessage"] = "";
+            locale["670ae811bd43cbf026768126 name"] = "Critical Mass";
+            locale["670ae811bd43cbf026768126 description"] = "Close the door behind you. My people have trawled through the footage we've collected so far. They communicate in coded language, in some sort of cipher. We have made preliminary attemps at decoding it. From what we've gathered, they were the ones targetting the rail networks leading out of Tarkov."
+                + " There are mentions of transporting radiological materials, but we have no been able to decipher from and to where or the specific composition of these materials."
+                + " I need you to find these sights and place a RAMU device to collect data. They work much the same as the GAMU devices you used before. These sights are likely to be highly radioactive, practice caution. Also do everything you can to avoid contact, we can't afford for them to know we're tracking their movements.";
+            locale["670ae811bd43cbf026768126 failMessageText"] = "";
+            locale["670ae811bd43cbf026768126 successMessageText"] = ".";
+            locale["670ae82794523bfa0846cc5a"] = "Handover RAMU devices with data";
             //Do No Harm
             locale["6702b3b624c7ac4e2d3e9c37 acceptPlayerMessage"] = "";
             locale["6702b3b624c7ac4e2d3e9c37 declinePlayerMessage"] = "";
             locale["6702b3b624c7ac4e2d3e9c37 completePlayerMessage"] = "";
             locale["6702b3b624c7ac4e2d3e9c37 name"] = "Do No Harm";
-            locale["6702b3b624c7ac4e2d3e9c37 description"] = "Come in. Sit down. If I may be frank, where the fuck did you plant these cameras? I thought this sort of work was part of your former 'employment'? Why the hell did you think planting these cameras out in the open where they can easily be discovered was a good idea??"
+            locale["6702b3b624c7ac4e2d3e9c37 description"] = "Come in. Sit down. If I may be frank, where the fuck did you plant those cameras? I thought this sort of work was part of your former 'employment'? Why the hell did you think planting these cameras out in the open where they can easily be discovered was a good idea?"
                 + " They found them. The cameras. They're now out in force, cutting down anyone they suspect of spying on them...PMCs, civilians, it doesn't matter to them. This is on you, and you will fix it."
-                + "\n\nWe do not know where they're sourcing the contaminants from. We do not know how they are distributing it over such a wide area. What we do know is that they are planning something big, and that they need to be stopped.";
+                + "\n\nWe do not know where they're sourcing the contaminants from. We do not know how they are distributing it over such a wide area. We do not know why they're collecting radioactive materials. What we do know is that they are planning something big, and that they need to be stopped. I didn't want any of this to happen, I didn't want any more bloodshed.";
             locale["6702b3b624c7ac4e2d3e9c37 failMessageText"] = "";
-            locale["6702b3b624c7ac4e2d3e9c37 successMessageText"] = "I want you to know that this blood is on your hands. If the cameras were not discovered, all of this could have been avoided. Either way, they seem to reduced their operations...for now. There will be less instances of contamination I suspsct, but they will be back, and we still have recordings from the cameras to go over.";
-            locale["6702b3d010baa251b5fbb933"] = "Kill 50 Cultists";
+            locale["6702b3b624c7ac4e2d3e9c37 successMessageText"] = "I want you to know that this blood is on your hands. If the cameras were not discovered, all of this could have been avoided. Either way, they seem to have reduced their operations...for now. There will be less instances of contamination I suspsct, but they will be back, and we still haven't cracked their cipher.";
+            locale["6702b3d010baa251b5fbb933"] = "Kill 40 Cultists";
             //Halloween only
             //Blue Flame - Part 1
             locale["6702b3e4aff397fa3e666fa5 acceptPlayerMessage"] = "";

@@ -58,6 +58,7 @@ import { IModToSpawnRequest } from "@spt/models/spt/bots/IModToSpawnRequest";
 import { IGenerateWeaponRequest } from "@spt/models/spt/bots/IGenerateWeaponRequest";
 import { MemberCategory } from "@spt/models/enums/MemberCategory";
 import { EventTracker } from "../misc/seasonalevents";
+import { MathUtil } from "@spt/utils/MathUtil";
 
 const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
@@ -409,9 +410,10 @@ export class BotGen extends BotGenerator {
         const botEquipmentModPoolService = container.resolve<BotEquipmentModPoolService>("BotEquipmentModPoolService");
         const botEquipmentModGenerator = container.resolve<BotEquipmentModGenerator>("BotEquipmentModGenerator");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+        const mathUtil = container.resolve<MathUtil>("MathUtil");
         // const seasonalEvents = new SeasonalEventsHandler();
 
-        const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseService);
+        const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseService, mathUtil);
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseService, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
 
         const botRole = botGenerationDetails.role.toLowerCase();
