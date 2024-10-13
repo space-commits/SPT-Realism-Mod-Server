@@ -114,7 +114,7 @@
                     "dispersion": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "66ddfb10495bce36cd091220",
+                    "id": "670c36a255b25bf25424d71a",
                     "index": 1,
                     "parentId": "",
                     "status": [
@@ -248,7 +248,7 @@
                     "dispersion": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "66ddfb10495bce36cd091220",
+                    "id": "670c36a768c43426b1750f6b",
                     "index": 1,
                     "parentId": "",
                     "status": [
@@ -430,7 +430,7 @@
                     "dispersion": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "66ddfb10495bce36cd091220",
+                    "id": "670c36ac9a360ad8da70382a",
                     "index": 1,
                     "parentId": "",
                     "status": [
@@ -824,7 +824,7 @@
                     "dispersion": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "66ddfb10495bce36cd091220",
+                    "id": "670c36ac9a360ad8da70382a",
                     "index": 1,
                     "parentId": "",
                     "status": [
@@ -839,7 +839,7 @@
         "declinePlayerMessage": "6702b8b3c0f2f525d988e428 declinePlayerMessage",
         "description": "6702b8b3c0f2f525d988e428 description",
         "failMessageText": "6702b8b3c0f2f525d988e428 failMessageText",
-        "image": "/files/quest/icon/63ab1f1676588f3cf341c460.jpg",
+        "image": "/files/quest/icon/5a29222486f77456f50d09e7.png",
         "instantComplete": false,
         "isKey": false,
         "location": "any",
@@ -1008,7 +1008,7 @@
                     "dispersion": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "66ddfb10495bce36cd091220",
+                    "id": "670c36b6d1352d185bad6ea6",
                     "index": 1,
                     "parentId": "",
                     "status": [
@@ -1023,7 +1023,7 @@
         "declinePlayerMessage": "670ae811bd43cbf026768126 declinePlayerMessage",
         "description": "670ae811bd43cbf026768126 description",
         "failMessageText": "670ae811bd43cbf026768126 failMessageText",
-        "image": "/files/quest/icon/63ab1047160cc610ba035e05.jpg",
+        "image": "/files/quest/icon/597a172486f774799e5cd153.png",
         "instantComplete": false,
         "isKey": false,
         "location": "any",
@@ -1237,7 +1237,7 @@
                     "dispersion": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "66ddfb10495bce36cd091220",
+                    "id": "670c36bc99e96eedd111c2ec",
                     "index": 1,
                     "parentId": "",
                     "status": [
@@ -1506,7 +1506,7 @@
                     "dispersion": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "66ddfb10495bce36cd091220",
+                    "id": "670c36c14dafdc5ab102461d",
                     "index": 1,
                     "parentId": "",
                     "status": [
@@ -1715,7 +1715,7 @@
                     "dispersion": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "66ddfb10495bce36cd091220",
+                    "id": "670c36c614d046e68a1a0e90",
                     "index": 1,
                     "parentId": "",
                     "status": [
@@ -1839,7 +1839,7 @@
                     "items": [
                         {
                             "_id": "670adda70473ab3ec8623163",
-                            "_tpl": "5c1d0c5f86f7744bb2683cf0",
+                            "_tpl": "5c1d0f4986f7744bb01837fa",
                             "upd": {
                                 "StackObjectsCount": 1
                             }
@@ -1852,26 +1852,8 @@
                 },
                 {
                     "findInRaid": true,
-                    "id": "670addac6bde27f3be9b01b0",
-                    "index": 6,
-                    "items": [
-                        {
-                            "_id": "670addb0f693a3638ef37ffb",
-                            "_tpl": "5c1d0f4986f7744bb01837fa",
-                            "upd": {
-                                "StackObjectsCount": 1
-                            }
-                        }
-                    ],
-                    "target": "670addb0f693a3638ef37ffb",
-                    "type": "Item",
-                    "value": "1",
-                    "unknown": true
-                },
-                {
-                    "findInRaid": true,
                     "id": "670ba314e489196ba3961c32",
-                    "index": 7,
+                    "index": 6,
                     "items": [
                         {
                             "_id": "670ba31aaacbe5c53413efcd",
@@ -1888,7 +1870,7 @@
                 },
                 {
                     "id": "670addb36d7008663b7bff85",
-                    "index": 8,
+                    "index": 7,
                     "items": [
                         {
                             "_id": "670addb68ce2611961186433",

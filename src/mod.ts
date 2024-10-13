@@ -123,6 +123,27 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     private modLoader: PreSptModLoader;
 
+    private setModInfo(logger: ILogger) {
+        realismInfo.IsNightTime = RaidInfoTracker.TOD == "night";
+        realismInfo.IsHalloween = EventTracker.isHalloween;
+        realismInfo.isChristmas = EventTracker.isChristmas;
+        realismInfo.DoGasEvent = EventTracker.doGasEvent;
+        realismInfo.HasExploded = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.hasExploded;
+        realismInfo.IsPreExplosion = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.isPreExplosion;
+        realismInfo.DoExtraRaiders = EventTracker.isHalloween && EventTracker.doExtraRaiderSpawns;
+        realismInfo.DoExtraCultists = EventTracker.isHalloween && EventTracker.doExtraCultistSpawns;
+
+        if(modConfig.logEverything){
+            logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
+            logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
+            logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
+            logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
+            logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
+            logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
+            logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
+        }
+    }
+
     public preSptLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
@@ -188,23 +209,26 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const utils = new Utils(postLoadTables);
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             this.getEventData(pmcData, logger, utils);
+                            this.setModInfo(logger);
 
-                            realismInfo.IsNightTime = RaidInfoTracker.TOD == "night";
-                            realismInfo.IsHalloween = EventTracker.isHalloween;
-                            realismInfo.isChristmas = EventTracker.isChristmas;
-                            realismInfo.DoGasEvent = EventTracker.doGasEvent;
-                            realismInfo.HasExploded = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.hasExploded;
-                            realismInfo.IsPreExplosion = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.isPreExplosion;
-                            realismInfo.DoExtraRaiders = EventTracker.isHalloween && EventTracker.doExtraRaiderSpawns;
-                            realismInfo.DoExtraCultists = EventTracker.isHalloween && EventTracker.doExtraCultistSpawns;
+                            return jsonUtil.serialize(realismInfo);
+                        } catch (e) {
+                            console.error("Failed to read info file", e);
+                        }
+                    }
+                }
+            ],
+            "RealismMod"
+        );
 
-                            logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
-                            logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
-                            logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
-                            logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
-                            logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
-                            logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
-                            logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
+        dynamicRouter.registerDynamicRouter(
+            "realismGetTOD",
+            [
+                {
+                    url: "/RealismMod/GetTimeOfDay",
+                    action: async (url, info, sessionID, output) => {
+                        try {
+                            this.setModInfo(logger);
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
                             console.error("Failed to read info file", e);
@@ -511,7 +535,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             function getTOD(time) {
                                 let TOD = "";
                                 let [h, m] = time.split(':');
-                                if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (RaidInfoTracker.mapName === "factory4_day" || RaidInfoTracker.mapName === "laboratory")) {
+                                if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 21) || (RaidInfoTracker.mapName === "factory4_day" || RaidInfoTracker.mapName === "laboratory")) {
                                     TOD = "day";
                                 }
                                 else {
@@ -905,10 +929,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, seasonalConfig: ISeasonalEventConfig, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
 
         const currentDate = new Date();
-        const halloweenStart = new Date(currentDate.getFullYear(), 9, 13);// FOR TESTING ========================= set to 20th
+        const halloweenStart = new Date(currentDate.getFullYear(), 9, 20);
         const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
 
-        if (currentDate >= halloweenStart && currentDate <= halloweenEnd) {
+        if (modConfig.enable_hazard_zones && currentDate >= halloweenStart && currentDate <= halloweenEnd) {
             seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
 
             EventTracker.isHalloween = true;
@@ -961,14 +985,17 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             if (traderId === "579dc571d53a0658a154fbec") continue;
             trader.disabled = shouldDisableTraders;
         }
-        logger.warning("isHalloween? " + EventTracker.isHalloween);
-        logger.warning("completedQuest? " + completedQuest);
-        logger.warning("didExplosion? " + didExplosion);
-        logger.warning("disable traders? " + shouldDisableTraders);
     }
 
     public checkEventQuests(pmcData: IPmcData): number {
-        let baseGasChance = 0;
+        EventTracker.doGasEvent = false;
+        EventTracker.doExtraCultistSpawns = false;
+        EventTracker.hasExploded = false;
+        EventTracker.doExtraRaiderSpawns = false;
+        EventTracker.isPreExplosion = false;
+        EventTracker.endExplosionEvent = false;
+
+        let baseGasChance = 10;
         if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
             pmcData.Quests.forEach(q => {
                 const isStarted = q.status === 2;
@@ -1040,11 +1067,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     public getEventData(pmcData: IPmcData, logger: ILogger, utils: Utils) {
         const gasChance = this.checkEventQuests(pmcData);
         EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
-        logger.warning("boostRaiderSpawns " + EventTracker.doExtraRaiderSpawns);
-        logger.warning("isPreExplosion " + EventTracker.isPreExplosion);
-        logger.warning("hasExplode " + EventTracker.hasExploded);
-        logger.warning("doGasEvent " + EventTracker.doGasEvent);
-        logger.warning("endExplosionEvent " + EventTracker.endExplosionEvent);
     }
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {

@@ -65,6 +65,25 @@ const realismInfo = require("../data/info.json");
 let adjustedTradersOnStart = false;
 class Main {
     modLoader;
+    setModInfo(logger) {
+        realismInfo.IsNightTime = utils_1.RaidInfoTracker.TOD == "night";
+        realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
+        realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
+        realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;
+        realismInfo.HasExploded = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.hasExploded;
+        realismInfo.IsPreExplosion = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.isPreExplosion;
+        realismInfo.DoExtraRaiders = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraRaiderSpawns;
+        realismInfo.DoExtraCultists = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraCultistSpawns;
+        if (modConfig.logEverything) {
+            logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
+            logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
+            logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
+            logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
+            logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
+            logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
+            logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
+        }
+    }
     preSptLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const jsonUtil = container.resolve("JsonUtil");
@@ -120,21 +139,21 @@ class Main {
                         const utils = new utils_1.Utils(postLoadTables);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         this.getEventData(pmcData, logger, utils);
-                        realismInfo.IsNightTime = utils_1.RaidInfoTracker.TOD == "night";
-                        realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
-                        realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
-                        realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;
-                        realismInfo.HasExploded = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.hasExploded;
-                        realismInfo.IsPreExplosion = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.isPreExplosion;
-                        realismInfo.DoExtraRaiders = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraRaiderSpawns;
-                        realismInfo.DoExtraCultists = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraCultistSpawns;
-                        logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
-                        logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
-                        logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
-                        logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
-                        logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
-                        logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
-                        logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
+                        this.setModInfo(logger);
+                        return jsonUtil.serialize(realismInfo);
+                    }
+                    catch (e) {
+                        console.error("Failed to read info file", e);
+                    }
+                }
+            }
+        ], "RealismMod");
+        dynamicRouter.registerDynamicRouter("realismGetTOD", [
+            {
+                url: "/RealismMod/GetTimeOfDay",
+                action: async (url, info, sessionID, output) => {
+                    try {
+                        this.setModInfo(logger);
                         return jsonUtil.serialize(realismInfo);
                     }
                     catch (e) {
@@ -380,7 +399,7 @@ class Main {
                         function getTOD(time) {
                             let TOD = "";
                             let [h, m] = time.split(':');
-                            if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 22) || (utils_1.RaidInfoTracker.mapName === "factory4_day" || utils_1.RaidInfoTracker.mapName === "laboratory")) {
+                            if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 21) || (utils_1.RaidInfoTracker.mapName === "factory4_day" || utils_1.RaidInfoTracker.mapName === "laboratory")) {
                                 TOD = "day";
                             }
                             else {
@@ -698,9 +717,9 @@ class Main {
     }
     checkForSeasonalEvents(logger, seasonalEventsService, seasonalConfig, weatherConfig, logGreetings = false) {
         const currentDate = new Date();
-        const halloweenStart = new Date(currentDate.getFullYear(), 9, 13); // FOR TESTING ========================= set to 20th
+        const halloweenStart = new Date(currentDate.getFullYear(), 9, 20);
         const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
-        if (currentDate >= halloweenStart && currentDate <= halloweenEnd) {
+        if (modConfig.enable_hazard_zones && currentDate >= halloweenStart && currentDate <= halloweenEnd) {
             seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
             seasonalevents_1.EventTracker.isHalloween = true;
         }
@@ -746,13 +765,15 @@ class Main {
                 continue;
             trader.disabled = shouldDisableTraders;
         }
-        logger.warning("isHalloween? " + seasonalevents_1.EventTracker.isHalloween);
-        logger.warning("completedQuest? " + completedQuest);
-        logger.warning("didExplosion? " + didExplosion);
-        logger.warning("disable traders? " + shouldDisableTraders);
     }
     checkEventQuests(pmcData) {
-        let baseGasChance = 0;
+        seasonalevents_1.EventTracker.doGasEvent = false;
+        seasonalevents_1.EventTracker.doExtraCultistSpawns = false;
+        seasonalevents_1.EventTracker.hasExploded = false;
+        seasonalevents_1.EventTracker.doExtraRaiderSpawns = false;
+        seasonalevents_1.EventTracker.isPreExplosion = false;
+        seasonalevents_1.EventTracker.endExplosionEvent = false;
+        let baseGasChance = 10;
         if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
             pmcData.Quests.forEach(q => {
                 const isStarted = q.status === 2;
@@ -822,11 +843,6 @@ class Main {
     getEventData(pmcData, logger, utils) {
         const gasChance = this.checkEventQuests(pmcData);
         seasonalevents_1.EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
-        logger.warning("boostRaiderSpawns " + seasonalevents_1.EventTracker.doExtraRaiderSpawns);
-        logger.warning("isPreExplosion " + seasonalevents_1.EventTracker.isPreExplosion);
-        logger.warning("hasExplode " + seasonalevents_1.EventTracker.hasExploded);
-        logger.warning("doGasEvent " + seasonalevents_1.EventTracker.doGasEvent);
-        logger.warning("endExplosionEvent " + seasonalevents_1.EventTracker.endExplosionEvent);
     }
     checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
         let level = 1;

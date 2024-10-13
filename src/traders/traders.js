@@ -300,10 +300,10 @@ class Traders {
         }
         if (this.modConf.enable_hazard_zones == true) {
             //blueblood
-            this.assortBarterPusher("670addb68ce2611961186433", theraId, "637b6251104668754b72f8f9", 1, { "590c595c86f7747884343ad7": 3, "5d1b3a5d86f774252167ba22": 2 }, 2);
+            this.assortBarterPusher("670addb68ce2611961186433", theraId, "637b6251104668754b72f8f9", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 2);
             this.addQuestAssortUnlock("670addb68ce2611961186433", "6702b4a27d4a4a89fce96fbc", theraId, true);
             //antidote
-            this.assortBarterPusher("670add019a9f5770dfd8c99a", theraId, "5fca138c2a7b221b2852a5c6", 1, { "590c595c86f7747884343ad7": 3, "5d1b3a5d86f774252167ba22": 2 }, 2);
+            this.assortBarterPusher("670add019a9f5770dfd8c99a", theraId, "5fca138c2a7b221b2852a5c6", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 2);
             this.addQuestAssortUnlock("670add019a9f5770dfd8c99a", "6702b3b624c7ac4e2d3e9c37", theraId, true);
             //gp-7
             this.assortBarterPusher("670aea0db699847f54439bd5", theraId, "60363c0c92ec1c31037959f5", 1, { "619cc01e0a7c3a1a2731940c": 1, "59e361e886f774176c10a2a5": 1, "5d1b3a5d86f774252167ba22": 1 }, 2);

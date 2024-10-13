@@ -68,7 +68,7 @@ export class Quests {
             //Blue Flame - Part 1
             this.questDB()["6702b3e4aff397fa3e666fa5"] = gasEventQuests["6702b3e4aff397fa3e666fa5"];
         }
-        //this quest is halloween only, but is dependent on part 1, will make sure it can't be completed client side
+        //this quest is halloween only, but is dependent on part 1, there are checks client side too
         //Blue Flame - Part 2
         this.questDB()["6702b4a27d4a4a89fce96fbc"] = gasEventQuests["6702b4a27d4a4a89fce96fbc"];
 
@@ -188,8 +188,8 @@ export class Quests {
                 + " They must know what we've disovered, that we know about their sick 'prophecy'. My usual channels of communication with the outside world have been severed, and with the increased levels of violence UN and RUAF commands are unresponsive."
                 + " Whatsmore, you going to TerraGroup's facility has really stirred up the hornet's nest, Raiders are searching for you. I fear TerraGroup is still actively involved in all this in some way..."
                 + "\n\nWe have only one shot at this. We have to make contact with the outside world and warn them, to ask for help. I must confess that I've had a lot more dealings with the TerraGroup corporation than I've let on, as I'm sure you've surmised. I know a lot about them, their former operations, before they left me here to rot. What I do know is that they have unauthorised Low Earth Orbit satelites."
-                + " If we can find and use a powerful sateline dish to establish a comm link, my people can repurpose and hijack the satelite to establish contact outside of the Tarkov region. The next time the satelite will be overhead is October 31st at midnight and will only be available for a few days after that."
-                + "\n\nThe Shoreline area has a number of satelite dishes. The dish needs to be facing south, and we also need clear skies, those nights are forecast to be clear. I will give you a device for establishing the comm link and transmiting the authorization codes. Do. Not. Lose. The. Device. I hope I do not need to remind you that if you are to fail, it's over for all of us.";
+                + " If we can find and use a powerful sateline dish to establish a comm link, my people can repurpose and hijack the satelite to establish contact outside of the Tarkov region. The next time the satelite will be overhead is October 31st and will only be available for a few days after that."
+                + "\n\nThe Shoreline area has a number of satelite dishes. The dish needs to be facing south and have a clear line of sight, and we also need clear skies, those nights are forecast to be clear. I will give you a device for establishing the comm link and transmiting the authorization codes. Do. Not. Lose. The. Device. Mechanic only had enough components to build two of them. I hope I do not need to remind you that if you are to fail, it's over for all of us.";
             locale["6702b4a27d4a4a89fce96fbc failMessageText"] = "";
             locale["6702b4a27d4a4a89fce96fbc successMessageText"] = "Vires in Scientia. Scientia est fortis. Et oculus spectans deus nobis.";
             locale["6702b4c1fda5e39ba46ccf35"] = "Establish a comm link with the outside world";

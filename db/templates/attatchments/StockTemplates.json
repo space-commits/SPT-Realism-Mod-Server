@@ -2506,7 +2506,7 @@
         "Weight": 0.449,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": 8
+        "Handling": 8
     },
     "59ecc3dd86f7746dc827481c": {
         "ItemID": "59ecc3dd86f7746dc827481c",
@@ -2529,7 +2529,7 @@
         "Weight": 0.519,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "Handling": 8
+        "AimStability": 8
     },
     "5b04473a5acfc40018632f70": {
         "ItemID": "5b04473a5acfc40018632f70",
