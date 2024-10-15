@@ -65,25 +65,6 @@ const realismInfo = require("../data/info.json");
 let adjustedTradersOnStart = false;
 class Main {
     modLoader;
-    setModInfo(logger) {
-        realismInfo.IsNightTime = utils_1.RaidInfoTracker.TOD == "night";
-        realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
-        realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
-        realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;
-        realismInfo.HasExploded = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.hasExploded;
-        realismInfo.IsPreExplosion = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.isPreExplosion;
-        realismInfo.DoExtraRaiders = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraRaiderSpawns;
-        realismInfo.DoExtraCultists = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraCultistSpawns;
-        if (modConfig.logEverything) {
-            logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
-            logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
-            logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
-            logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
-            logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
-            logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
-            logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
-        }
-    }
     preSptLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const jsonUtil = container.resolve("JsonUtil");
@@ -119,7 +100,6 @@ class Main {
                 url: "/RealismMod/GetConfig",
                 action: async (url, info, sessionID, output) => {
                     try {
-                        logger.warning("==================getting config ");
                         return jsonUtil.serialize(modConfig);
                     }
                     catch (e) {
@@ -617,10 +597,10 @@ class Main {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
             bots.testBotCap();
         }
-        else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false && utils_1.ModTracker.qtbPresent == false) {
+        else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) { //&& ModTracker.qtbPresent == false
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false && utils_1.ModTracker.qtbPresent == false) {
+        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) { //  && ModTracker.qtbPresent == false
             bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {
@@ -687,7 +667,6 @@ class Main {
                 armor.loadArmorStats();
             }
             if (modConfig.malf_changes == true) {
-                ammo.loadAmmoStatAdjustments();
                 weaponsGlobals.loadGlobalMalfChanges();
             }
             if (modConfig.recoil_attachment_overhaul) {
@@ -700,6 +679,25 @@ class Main {
     }
     postSptLoad(container) {
         this.modLoader = container.resolve("PreSptModLoader");
+    }
+    setModInfo(logger) {
+        realismInfo.IsNightTime = utils_1.RaidInfoTracker.TOD == "night";
+        realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
+        realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
+        realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;
+        realismInfo.HasExploded = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.hasExploded;
+        realismInfo.IsPreExplosion = seasonalevents_1.EventTracker.isHalloween && !seasonalevents_1.EventTracker.endExplosionEvent && seasonalevents_1.EventTracker.isPreExplosion;
+        realismInfo.DoExtraRaiders = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraRaiderSpawns;
+        realismInfo.DoExtraCultists = seasonalevents_1.EventTracker.isHalloween && seasonalevents_1.EventTracker.doExtraCultistSpawns;
+        if (modConfig.logEverything) {
+            logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
+            logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
+            logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
+            logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
+            logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
+            logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
+            logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
+        }
     }
     revertMeds(profileData, utils) {
         utils.revertMedItems(profileData);
@@ -787,25 +785,25 @@ class Main {
                 //bad omens part 2
                 if (q.qid === "6702b0a1b9fb4619debd0697") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 150;
+                        baseGasChance += 100;
                     }
                 }
                 //bad omens part 3
                 if (q.qid === "6702b0e9601acf629d212eeb") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 200;
+                        baseGasChance += 100;
                     }
                 }
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 150;
                     }
                 }
                 //critical mass
                 if (q.qid === "670ae811bd43cbf026768126") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 150;
                     }
                 }
                 //do no harm

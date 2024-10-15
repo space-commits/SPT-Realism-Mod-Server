@@ -121,17 +121,17 @@
     "maxBotCapLow": {
         "factory4_day": 10,
         "factory4_night": 10,
-        "bigmap": 15,
-        "woods": 16,
-        "shoreline": 15,
+        "bigmap": 13,
+        "woods": 15,
+        "shoreline": 14,
         "lighthouse": 12,
         "rezervbase": 12,
-        "interchange": 12,
+        "interchange": 11,
         "laboratory": 14,
         "tarkovstreets": 12,
-        "sandbox": 12,
-        "sandbox_high": 12,
-        "default": 15
+        "sandbox": 10,
+        "sandbox_high": 10,
+        "default": 12
     },
     "testBotCap": {
         "factory4_day": 1,
@@ -724,8 +724,8 @@
         "chanceSameSideIsHostilePercent": 95,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 35,
-                "max": 45
+                "min": 20,
+                "max": 40
             },
             "cursedassault": {
                 "min": 30,
@@ -772,8 +772,8 @@
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 30,
-                "max": 38
+                "min": 25,
+                "max": 35
             },
             "cursedassault": {
                 "min": 28,
@@ -820,7 +820,7 @@
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
             "assault": {
-                "min": 28,
+                "min": 30,
                 "max": 35
             },
             "cursedassault": {

@@ -45,7 +45,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.4;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -70,7 +70,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.75;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 1.2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -116,7 +116,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 1.2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -139,7 +139,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 5.2;
+                    serverItem._props.DurabilityBurnModificator = 3;
                     serverItem._props.HeatFactor = 1.21;
                 }
             }
@@ -162,7 +162,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.4;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.14;
                 }
             }
@@ -185,7 +185,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.2;
+                    serverItem._props.DurabilityBurnModificator = 1.6;
                     serverItem._props.HeatFactor = 1.12;
                 }
             }
@@ -207,7 +207,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 4.3;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.33;
                 }
             }
@@ -230,7 +230,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 6;
+                    serverItem._props.DurabilityBurnModificator = 1.8;
                     serverItem._props.HeatFactor = 1.5;
                 }
             }
@@ -252,7 +252,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3.8;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.28;
                 }
             }
@@ -274,7 +274,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 5;
+                    serverItem._props.DurabilityBurnModificator = 2.4;
                     serverItem._props.HeatFactor = 1.4;
                 }
             }
@@ -296,7 +296,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.7;
+                    serverItem._props.DurabilityBurnModificator = 2.1;
                     serverItem._props.HeatFactor = 1.17;
                 }
             }
@@ -318,7 +318,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 5;
+                    serverItem._props.DurabilityBurnModificator = 2.5;
                     serverItem._props.HeatFactor = 1.4;
                 }
             }
@@ -340,7 +340,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3.6;
+                    serverItem._props.DurabilityBurnModificator = 1.8;
                     serverItem._props.HeatFactor = 1.26;
                 }
             }
@@ -362,7 +362,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.12;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 4.5;
+                    serverItem._props.DurabilityBurnModificator = 2.25;
                     serverItem._props.HeatFactor = 1.35;
                 }
             }
@@ -384,7 +384,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.18;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 5.4;
+                    serverItem._props.DurabilityBurnModificator = 2.2;
                     serverItem._props.HeatFactor = 1.44;
                 }
             }
@@ -406,7 +406,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 11;
+                    serverItem._props.DurabilityBurnModificator = 5;
                     serverItem._props.HeatFactor = 1.5;
                 }
             }
@@ -453,7 +453,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 1.1;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -476,7 +476,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 1.25;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -499,7 +499,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.8;
+                    serverItem._props.DurabilityBurnModificator = 1.4;
                     serverItem._props.HeatFactor = 1.28;
                 }
             }
@@ -510,18 +510,18 @@ class Ammo {
                 serverItem._props.Damage = 176;
                 serverItem._props.InitialSpeed = 415;
                 serverItem._props.RicochetChance = 0.2;
-                serverItem._props.FragmentationChance = 0.4;
+                serverItem._props.FragmentationChance = 0.6;
                 serverItem._props.BulletMassGram = 31.2;
                 serverItem._props.HeavyBleedingDelta = 0.8;
                 serverItem._props.LightBleedingDelta = 1;
                 serverItem._props.ammoAccr = -10;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 20;
+                serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3.3;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.3;
                 }
             }
@@ -538,12 +538,12 @@ class Ammo {
                 serverItem._props.LightBleedingDelta = 1;
                 serverItem._props.ammoAccr = -10;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 8;
+                serverItem._props.ammoRec = 20;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.4;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.04;
                 }
             }
@@ -565,7 +565,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.1;
+                    serverItem._props.DurabilityBurnModificator = 1.4;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -587,7 +587,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.05;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3.2;
+                    serverItem._props.DurabilityBurnModificator = 1.6;
                     serverItem._props.HeatFactor = 1.32;
                 }
             }
@@ -660,7 +660,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 10;
+                    serverItem._props.DurabilityBurnModificator = 5;
                     serverItem._props.HeatFactor = 1.58;
                 }
             }
@@ -696,7 +696,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.3;
+                    serverItem._props.DurabilityBurnModificator = 1.25;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -718,7 +718,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.35;
                     serverItem._props.HeatFactor = 1.62;
                 }
             }
@@ -740,7 +740,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.22;
+                    serverItem._props.DurabilityBurnModificator = 1.15;
                     serverItem._props.HeatFactor = 1.06;
                 }
             }
@@ -784,7 +784,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.15;
+                    serverItem._props.DurabilityBurnModificator = 1.1;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -806,7 +806,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.15;
+                    serverItem._props.DurabilityBurnModificator = 1.12;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -850,7 +850,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.DurabilityBurnModificator = 1.18;
                     serverItem._props.HeatFactor = 1.22;
                 }
             }
@@ -872,7 +872,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.05;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.1;
+                    serverItem._props.DurabilityBurnModificator = 1.08;
                     serverItem._props.HeatFactor = 1.04;
                 }
             }
@@ -894,7 +894,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.5;
+                    serverItem._props.DurabilityBurnModificator = 1.4;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -916,7 +916,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.14;
                 }
             }
@@ -938,7 +938,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.5;
+                    serverItem._props.DurabilityBurnModificator = 1.7;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -960,7 +960,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3;
+                    serverItem._props.DurabilityBurnModificator = 1.9;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -982,7 +982,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 4;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.6;
                 }
             }
@@ -1005,7 +1005,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.7;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.55;
                     serverItem._props.HeatFactor = 1.04;
                 }
             }
@@ -1027,7 +1027,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 12;
+                    serverItem._props.DurabilityBurnModificator = 2.5;
                     serverItem._props.HeatFactor = 1.24;
                 }
             }
@@ -1049,7 +1049,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3;
+                    serverItem._props.DurabilityBurnModificator = 1.4;
                     serverItem._props.HeatFactor = 1.22;
                 }
             }
@@ -1071,7 +1071,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.5;
+                    serverItem._props.DurabilityBurnModificator = 1.1;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -1115,7 +1115,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 5;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -1138,7 +1138,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 11;
+                    serverItem._props.DurabilityBurnModificator = 3;
                     serverItem._props.HeatFactor = 1.24;
                 }
             }
@@ -1160,7 +1160,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 13;
+                    serverItem._props.DurabilityBurnModificator = 4;
                     serverItem._props.HeatFactor = 1.32;
                 }
             }
@@ -1183,7 +1183,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 15;
+                    serverItem._props.DurabilityBurnModificator = 5.5;
                     serverItem._props.HeatFactor = 1.4;
                 }
             }
@@ -1206,7 +1206,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.075;
+                    serverItem._props.DurabilityBurnModificator = 1.35;
                     serverItem._props.HeatFactor = 1.05;
                 }
             }
@@ -1228,7 +1228,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.05;
+                    serverItem._props.DurabilityBurnModificator = 1.1;
                     serverItem._props.HeatFactor = 1.02;
                 }
             }
@@ -1271,7 +1271,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 6;
+                    serverItem._props.DurabilityBurnModificator = 2.25;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -1293,7 +1293,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 6.25;
+                    serverItem._props.DurabilityBurnModificator = 3;
                     serverItem._props.HeatFactor = 1.15;
                 }
             }
@@ -1314,7 +1314,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 7;
+                    serverItem._props.DurabilityBurnModificator = 4;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -1337,7 +1337,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.45;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.8;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -1359,7 +1359,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 12;
+                    serverItem._props.DurabilityBurnModificator = 3;
                     serverItem._props.HeatFactor = 1.12;
                 }
             }
@@ -1425,7 +1425,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 16;
+                    serverItem._props.DurabilityBurnModificator = 6;
                     serverItem._props.HeatFactor = 1.5;
                 }
             }
@@ -1446,7 +1446,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.6;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3.5;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.5;
                 }
             }
@@ -1466,7 +1466,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.5;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.3;
                 }
             }
@@ -1486,7 +1486,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3;
+                    serverItem._props.DurabilityBurnModificator = 1.25;
                     serverItem._props.HeatFactor = 1.4;
                 }
             }
@@ -1698,7 +1698,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.11;
+                    serverItem._props.DurabilityBurnModificator = 1.2;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -1721,7 +1721,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.3;
+                    serverItem._props.DurabilityBurnModificator = 1.2;
                     serverItem._props.HeatFactor = 1.06;
                 }
             }
@@ -1743,7 +1743,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.7;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -1765,7 +1765,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.1;
+                    serverItem._props.DurabilityBurnModificator = 1.85;
                     serverItem._props.HeatFactor = 1.22;
                 }
             }
@@ -1853,7 +1853,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.12;
+                    serverItem._props.DurabilityBurnModificator = 1.25;
                     serverItem._props.HeatFactor = 1.02;
                 }
             }
@@ -1876,7 +1876,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.3;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.04;
                 }
             }
@@ -1898,7 +1898,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 1.3;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -1920,7 +1920,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.8;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.3;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.26;
                 }
             }
@@ -1942,7 +1942,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.5;
+                    serverItem._props.DurabilityBurnModificator = 1.65;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -1964,7 +1964,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -1986,7 +1986,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.05;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2031,7 +2031,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.1;
+                    serverItem._props.DurabilityBurnModificator = 1.25;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2053,7 +2053,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.4;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -2097,7 +2097,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 8;
+                    serverItem._props.DurabilityBurnModificator = 4;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2120,7 +2120,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.DurabilityBurnModificator = 1;
                     serverItem._props.HeatFactor = 1.04;
                 }
             }
@@ -2164,7 +2164,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 8.4;
+                    serverItem._props.DurabilityBurnModificator = 4;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -2186,7 +2186,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 6.5;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2208,7 +2208,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 6.7;
+                    serverItem._props.DurabilityBurnModificator = 2.5;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2230,7 +2230,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 6;
+                    serverItem._props.DurabilityBurnModificator = 3;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2319,7 +2319,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.5;
+                    serverItem._props.DurabilityBurnModificator = 1.35;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -2341,7 +2341,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -2363,7 +2363,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 5;
+                    serverItem._props.DurabilityBurnModificator = 3;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -2452,7 +2452,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 7.4;
+                    serverItem._props.DurabilityBurnModificator = 3.5;
                     serverItem._props.HeatFactor = 1.14;
                 }
             }
@@ -2497,7 +2497,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.5;
+                    serverItem._props.DurabilityBurnModificator = 1.35;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2519,7 +2519,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.48;
                 }
             }
@@ -2542,7 +2542,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.DurabilityBurnModificator = 2.4;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2564,7 +2564,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2586,7 +2586,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.1;
+                    serverItem._props.DurabilityBurnModificator = 1;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2608,7 +2608,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2630,7 +2630,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.4;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -2652,7 +2652,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.5;
+                    serverItem._props.DurabilityBurnModificator = 1.8;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -2674,7 +2674,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.14;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.2;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2696,7 +2696,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.18;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2.6;
+                    serverItem._props.DurabilityBurnModificator = 1.9;
                     serverItem._props.HeatFactor = 1.12;
                 }
             }
@@ -2718,7 +2718,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 12.5;
+                    serverItem._props.DurabilityBurnModificator = 2.4;
                     serverItem._props.HeatFactor = 1.3;
                 }
             }
@@ -2741,7 +2741,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.35;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.4;
+                    serverItem._props.DurabilityBurnModificator = 2.2;
                     serverItem._props.HeatFactor = 1.12;
                 }
             }
@@ -2763,7 +2763,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.9;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -2785,7 +2785,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.3;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -2830,7 +2830,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.05;
+                    serverItem._props.DurabilityBurnModificator = 1.15;
                     serverItem._props.HeatFactor = 1.05;
                 }
             }
@@ -2852,7 +2852,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.4;
+                    serverItem._props.DurabilityBurnModificator = 1.6;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -2874,7 +2874,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3;
+                    serverItem._props.DurabilityBurnModificator = 2.2;
                     serverItem._props.HeatFactor = 1.3;
                 }
             }
@@ -2919,7 +2919,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1.4;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.5;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2941,7 +2941,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.8;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.1;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2963,7 +2963,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.DurabilityBurnModificator = 1;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -2985,7 +2985,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 2;
+                    serverItem._props.DurabilityBurnModificator = 1.25;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -3007,7 +3007,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3;
+                    serverItem._props.DurabilityBurnModificator = 1.4;
                     serverItem._props.HeatFactor = 1.03;
                 }
             }
@@ -3029,7 +3029,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3.3;
+                    serverItem._props.DurabilityBurnModificator = 1.6;
                     serverItem._props.HeatFactor = 1.04;
                 }
             }
@@ -3051,7 +3051,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3.8;
+                    serverItem._props.DurabilityBurnModificator = 2;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -3073,7 +3073,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 9.4;
+                    serverItem._props.DurabilityBurnModificator = 4;
                     serverItem._props.HeatFactor = 1.24;
                 }
             }
@@ -3096,7 +3096,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.25;
+                    serverItem._props.DurabilityBurnModificator = 1.8;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -3118,7 +3118,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 1.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -3140,7 +3140,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.4;
+                    serverItem._props.DurabilityBurnModificator = 1.1;
                     serverItem._props.HeatFactor = 1.025;
                 }
             }
@@ -3184,7 +3184,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 1.3;
                     serverItem._props.HeatFactor = 1;
                 }
             }
@@ -3206,7 +3206,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.DurabilityBurnModificator = 1.15;
                     serverItem._props.HeatFactor = 1.05;
                 }
             }
@@ -3228,7 +3228,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 1.1;
                     serverItem._props.HeatFactor = 1.05;
                 }
             }
@@ -3250,7 +3250,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.1;
+                    serverItem._props.DurabilityBurnModificator = 1.2;
                     serverItem._props.HeatFactor = 1.07;
                 }
             }
@@ -3272,7 +3272,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.15;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.1;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.15;
                 }
             }
@@ -3294,7 +3294,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.18;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.DurabilityBurnModificator = 1.4;
                     serverItem._props.HeatFactor = 1.14;
                 }
             }
@@ -3316,7 +3316,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.22;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.4;
+                    serverItem._props.DurabilityBurnModificator = 1.7;
                     serverItem._props.HeatFactor = 1.17;
                 }
             }
@@ -3360,7 +3360,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.6;
+                    serverItem._props.DurabilityBurnModificator = 2.3;
                     serverItem._props.HeatFactor = 1.18;
                 }
             }
@@ -3407,7 +3407,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 10;
+                    serverItem._props.DurabilityBurnModificator = 5;
                     serverItem._props.HeatFactor = 1.2;
                 }
             }
@@ -3427,7 +3427,7 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 10;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 0.35;
+                    serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
@@ -3449,10 +3449,10 @@ class Ammo {
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = 5;
                 if (this.modConf.malf_changes == true) {
-                    serverItem._props.MalfMisfireChance = 1;
+                    serverItem._props.MalfMisfireChance = 0.5;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.08;
                 }
             }
@@ -3496,7 +3496,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.25;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.8;
+                    serverItem._props.DurabilityBurnModificator = 1.5;
                     serverItem._props.HeatFactor = 1.1;
                 }
             }
@@ -3562,7 +3562,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.05;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.2;
+                    serverItem._props.DurabilityBurnModificator = 1.25;
                     serverItem._props.HeatFactor = 1.04;
                 }
             }
@@ -3584,7 +3584,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.3;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 1.3;
+                    serverItem._props.DurabilityBurnModificator = 1.35;
                     serverItem._props.HeatFactor = 1.07;
                 }
             }
@@ -3606,7 +3606,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 8;
+                    serverItem._props.DurabilityBurnModificator = 3;
                     serverItem._props.HeatFactor = 1.25;
                 }
             }
@@ -3628,7 +3628,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.2;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 3.5;
+                    serverItem._props.DurabilityBurnModificator = 1.8;
                     serverItem._props.HeatFactor = 1.15;
                 }
             }
@@ -3650,7 +3650,7 @@ class Ammo {
                     serverItem._props.MalfMisfireChance = 0.55;
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
-                    serverItem._props.DurabilityBurnModificator = 9;
+                    serverItem._props.DurabilityBurnModificator = 4;
                     serverItem._props.HeatFactor = 1.35;
                 }
             }
@@ -3787,22 +3787,6 @@ class Ammo {
         }
         if (this.modConf.logEverything == true) {
             this.logger.info("Ammo Firerate Stats Loaded");
-        }
-    }
-    loadAmmoStatAdjustments() {
-        for (let i in this.itemDB()) {
-            let serverItem = this.itemDB()[i];
-            if (serverItem._parent === enums_1.ParentClasses.AMMO) {
-                if (serverItem._props?.DurabilityBurnModificator !== undefined) {
-                    let duraBurn = Math.max(1, serverItem._props.DurabilityBurnModificator * 0.55);
-                    let misfireChance = Math.max(0, serverItem._props.MalfMisfireChance *= 0.9);
-                    serverItem._props.DurabilityBurnModificator = duraBurn;
-                    serverItem._props.MalfMisfireChance = misfireChance;
-                }
-            }
-        }
-        if (this.modConf.logEverything == true) {
-            this.logger.info("Global Mafunction Stats Loaded");
         }
     }
     grenadeTweaks() {

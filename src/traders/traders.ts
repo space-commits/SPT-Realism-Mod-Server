@@ -334,13 +334,17 @@ export class Traders {
             this.assortItemPusher(this.utils.genId(), jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         }
 
-        if (this.modConf.enable_hazard_zones == true) { 
+        if (this.modConf.enable_hazard_zones == true) {
+            //trimodol
+            this.assortBarterPusher("670ee6b57b09b6f86184c761", theraId, "637b620db7afa97bfc3d7009", 1, { "59e361e886f774176c10a2a5": 2, "5b4335ba86f7744d2837a264": 1 }, 2)
+            this.addQuestAssortUnlock("670ee6b57b09b6f86184c761", "66dad1a18cbba6e558486336", theraId, true);
+
             //blueblood
             this.assortBarterPusher("670addb68ce2611961186433", theraId, "637b6251104668754b72f8f9", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 2)
             this.addQuestAssortUnlock("670addb68ce2611961186433", "6702b4a27d4a4a89fce96fbc", theraId, true);
 
             //antidote
-            this.assortBarterPusher("670add019a9f5770dfd8c99a", theraId, "5fca138c2a7b221b2852a5c6", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2,  "544fb3f34bdc2d03748b456a": 1}, 2)
+            this.assortBarterPusher("670add019a9f5770dfd8c99a", theraId, "5fca138c2a7b221b2852a5c6", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 2)
             this.addQuestAssortUnlock("670add019a9f5770dfd8c99a", "6702b3b624c7ac4e2d3e9c37", theraId, true);
 
             //gp-7

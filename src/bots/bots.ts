@@ -604,7 +604,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc1.isUsec;
 
-        if (ModTracker.qtbPresent == false && ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) {
+        if (ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         }
 
@@ -688,7 +688,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc2.isUsec;
 
-        if (ModTracker.qtbPresent == false && ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) {
+        if (ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         }
 
@@ -771,7 +771,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc3.isUsec;
 
-        if (ModTracker.qtbPresent == false && ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) {
+        if (ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         }
 

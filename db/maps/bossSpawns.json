@@ -239,6 +239,19 @@
             "Time": -1
         },
         {
+            "BossChance": 50,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "4",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "followerBully",
+            "BossName": "bossBully",
+            "BossPlayer": false,
+            "BossZone": "ZoneScavBase,ZoneDormitory,ZoneGasStation,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare",
+            "RandomTimeSpawn": false,
+            "Supports": null,
+            "Time": -1
+        },
+        {
             "BossName": "sectantPriest",
             "BossChance": 35,
             "BossZone": "ZoneScavBase,ZoneDormitory,ZoneCustoms,ZoneGasStation,ZoneOldAZS,ZoneCrossRoad",
@@ -300,7 +313,7 @@
             "BossDifficult": "normal",
             "BossEscortType": "pmcBot",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount": "2,2,2,2,2,2,3,4",
+            "BossEscortAmount": "1,2,2,2,2,2,2,3,3",
             "Time": 10,
             "RandomTimeSpawn": false
         },

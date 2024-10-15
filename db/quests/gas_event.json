@@ -23,7 +23,7 @@
                     "target": [
                         "5d1b3a5d86f774252167ba22"
                     ],
-                    "value": 5,
+                    "value": 3,
                     "visibilityConditions": []
                 },
                 {
@@ -41,7 +41,7 @@
                     "target": [
                         "5d1b3f2d86f774253763b735"
                     ],
-                    "value": 4,
+                    "value": 2,
                     "visibilityConditions": []
                 },
                 {
@@ -59,7 +59,7 @@
                     "target": [
                         "5d1b39a386f774252339976f"
                     ],
-                    "value": 3,
+                    "value": 2,
                     "visibilityConditions": []
                 },
                 {
@@ -77,7 +77,7 @@
                     "target": [
                         "59e361e886f774176c10a2a5"
                     ],
-                    "value": 2,
+                    "value": 1,
                     "visibilityConditions": []
                 },
                 {
@@ -120,7 +120,7 @@
                     "status": [
                         4
                     ],
-                    "target": "6681d150fd1d7f0b7e5ae953",
+                    "target": "66dad1a18cbba6e558486336",
                     "visibilityConditions": []
                 }
             ],

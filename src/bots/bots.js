@@ -583,7 +583,7 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile1;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc1.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc1.isUsec;
-        if (utils_1.ModTracker.qtbPresent == false && utils_1.ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) {
+        if (utils_1.ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         }
         this.botConf().itemSpawnLimits.pmc = pmcLootLimits.PMCLootLimit1;
@@ -654,7 +654,7 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile2;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc2.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc2.isUsec;
-        if (utils_1.ModTracker.qtbPresent == false && utils_1.ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) {
+        if (utils_1.ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         }
         this.botConf().itemSpawnLimits.pmc = pmcLootLimits.PMCLootLimit2;
@@ -725,7 +725,7 @@ class BotLoader {
         this.botConfPMC().chanceSameSideIsHostilePercent = this.modConfig.bot_hostile3;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc3.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc3.isUsec;
-        if (utils_1.ModTracker.qtbPresent == false && utils_1.ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) {
+        if (utils_1.ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         }
         this.botConf().itemSpawnLimits.pmc = pmcLootLimits.PMCLootLimit3;

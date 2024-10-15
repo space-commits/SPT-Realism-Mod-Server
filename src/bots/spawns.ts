@@ -57,11 +57,11 @@ export class Spawns {
 
         for (let i in this.mapDB) {
             let mapBase = this.mapDB[i]?.base;
+            this.logger.warning("============="+i);
             if (mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
                 for (let k in mapBase.BossLocationSpawn) {
                     let bossSpawnLocation = mapBase.BossLocationSpawn[k];
                     let chance = 0;
-
                     if (i !== "lighthouse" && i !== "laboratory") {
                         if (bossSpawnLocation?.TriggerId !== undefined && bossSpawnLocation?.TriggerId !== "") {
                             chance = bossSpawnLocation.BossChance * chanceMulti * 2;
@@ -70,6 +70,8 @@ export class Spawns {
                         }
                     }
                     bossSpawnLocation.BossChance = Math.round(this.utils.clampNumber(chance, 0, 100));
+                    this.logger.warning("name " + bossSpawnLocation.BossName);
+                    this.logger.warning("chance " + bossSpawnLocation.BossChance);
                 }
             }
         }
@@ -96,7 +98,7 @@ export class Spawns {
         this.loadBossSpawnChanges();
 
         //SPT does its own custom PMC waves, this couble be doubling up or interfering in some way
-        if (this.modConf.spawn_waves == true && ModTracker.swagPresent == false && ModTracker.qtbPresent == false) {
+        if (this.modConf.spawn_waves == true && ModTracker.swagPresent == false ) { //&& ModTracker.qtbPresent == false
             locationConfig.customWaves.normal = {}; //get rid of the extra waves of scavs SPT adds for no good reason
             this.tables.locations.bigmap.base.waves = spawnWaves.CustomsWaves;
             this.tables.locations.lighthouse.base.waves = spawnWaves.LighthouseWaves;

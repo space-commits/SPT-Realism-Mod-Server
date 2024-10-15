@@ -123,27 +123,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     private modLoader: PreSptModLoader;
 
-    private setModInfo(logger: ILogger) {
-        realismInfo.IsNightTime = RaidInfoTracker.TOD == "night";
-        realismInfo.IsHalloween = EventTracker.isHalloween;
-        realismInfo.isChristmas = EventTracker.isChristmas;
-        realismInfo.DoGasEvent = EventTracker.doGasEvent;
-        realismInfo.HasExploded = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.hasExploded;
-        realismInfo.IsPreExplosion = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.isPreExplosion;
-        realismInfo.DoExtraRaiders = EventTracker.isHalloween && EventTracker.doExtraRaiderSpawns;
-        realismInfo.DoExtraCultists = EventTracker.isHalloween && EventTracker.doExtraCultistSpawns;
-
-        if(modConfig.logEverything){
-            logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
-            logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
-            logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
-            logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
-            logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
-            logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
-            logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
-        }
-    }
-
     public preSptLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
@@ -185,7 +164,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     url: "/RealismMod/GetConfig",
                     action: async (url, info, sessionID, output) => {
                         try {
-                            logger.warning("==================getting config ");
                             return jsonUtil.serialize(modConfig);
                         } catch (e) {
                             console.error("Failed to read config file", e);
@@ -801,10 +779,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
             bots.testBotCap();
         }
-        else if (modConfig.increased_bot_cap == true && ModTracker.swagPresent == false && ModTracker.qtbPresent == false) {
+        else if (modConfig.increased_bot_cap == true && ModTracker.swagPresent == false) { //&& ModTracker.qtbPresent == false
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true && ModTracker.swagPresent == false && ModTracker.qtbPresent == false) {
+        else if (modConfig.spawn_waves == true && ModTracker.swagPresent == false) { //  && ModTracker.qtbPresent == false
             bots.increasePerformance();
         }
 
@@ -891,7 +869,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
 
             if (modConfig.malf_changes == true) {
-                ammo.loadAmmoStatAdjustments();
                 weaponsGlobals.loadGlobalMalfChanges();
             }
 
@@ -908,6 +885,28 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     public postSptLoad(container: DependencyContainer) {
         this.modLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
     }
+
+    private setModInfo(logger: ILogger) {
+        realismInfo.IsNightTime = RaidInfoTracker.TOD == "night";
+        realismInfo.IsHalloween = EventTracker.isHalloween;
+        realismInfo.isChristmas = EventTracker.isChristmas;
+        realismInfo.DoGasEvent = EventTracker.doGasEvent;
+        realismInfo.HasExploded = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.hasExploded;
+        realismInfo.IsPreExplosion = EventTracker.isHalloween && !EventTracker.endExplosionEvent && EventTracker.isPreExplosion;
+        realismInfo.DoExtraRaiders = EventTracker.isHalloween && EventTracker.doExtraRaiderSpawns;
+        realismInfo.DoExtraCultists = EventTracker.isHalloween && EventTracker.doExtraCultistSpawns;
+
+        if(modConfig.logEverything){
+            logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
+            logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
+            logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
+            logger.warning("realismInfo.HasExploded " + realismInfo.HasExploded);
+            logger.warning("realismInfo.DoGasEvent " + realismInfo.DoGasEvent);
+            logger.warning("realismInfo.IsHalloween " + realismInfo.IsHalloween);
+            logger.warning("realismInfo.IsNightTime " + realismInfo.IsNightTime);
+        }
+    }
+
 
     private revertMeds(profileData: IPmcData, utils: Utils) {
         utils.revertMedItems(profileData);
@@ -1009,25 +1008,25 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 //bad omens part 2
                 if (q.qid === "6702b0a1b9fb4619debd0697") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 150;
+                        baseGasChance += 100;
                     }
                 }
                 //bad omens part 3
                 if (q.qid === "6702b0e9601acf629d212eeb") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 200;
+                        baseGasChance += 100;
                     }
                 }
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 150;
                     }
                 }
                 //critical mass
                 if (q.qid === "670ae811bd43cbf026768126") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 150;
                     }
                 }
                 //do no harm
