@@ -7,7 +7,7 @@ import { ParentClasses } from "../utils/enums";
 import { Utils } from "../utils/utils";
 import { IConfig } from "@spt/models/eft/common/IGlobals";
 
-const botHealth = require("../../db/bots/botHealth.json");
+const realisticHpPools = require("../../db/bots/botHealth.json");
 
 export class Player {
 
@@ -17,31 +17,29 @@ export class Player {
     public defaultArmHealth;
     public defaultLegHealth;
     public defaultTemp;
-    public headHealth;
-    public chestHealth;
-    public stomaHealth;
-    public armHealth;
-    public legHealth;
-    public hydration = 110;
-    public energy = 130;
-    public tempCurr = 30;
-    public tempMax = 30;
+    public realisticHeadHealth;
+    public realisticChestHealth;
+    public realisticStomachHealth;
+    public realisticArmHealth;
+    public realisticLegHealth;
+    public realisticHydration = 110;
+    public realisticEnergy = 130;
+    public realisticTemp = 30;
 
-    
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig,  private medItems, private helper: Utils)  {
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private medItems, private helper: Utils) {
         let healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
-        this.defaultHeadHealth = healthTemplate.BodyParts.Head.Health.Maximum;
-        this.defaultChestHealth = healthTemplate.BodyParts.Chest.Health.Maximum;
-        this.defaultStomaHealth = healthTemplate.BodyParts.Stomach.Health.Maximum;
-        this.defaultArmHealth = healthTemplate.BodyParts.LeftArm.Health.Maximum;
-        this.defaultLegHealth = healthTemplate.BodyParts.LeftLeg.Health.Maximum;
+        this.defaultHeadHealth = healthTemplate.BodyParts.Head.Health.Maximum * modConfig.player_hp_multi;
+        this.defaultChestHealth = healthTemplate.BodyParts.Chest.Health.Maximum * modConfig.player_hp_multi;
+        this.defaultStomaHealth = healthTemplate.BodyParts.Stomach.Health.Maximum * modConfig.player_hp_multi;
+        this.defaultArmHealth = healthTemplate.BodyParts.LeftArm.Health.Maximum * modConfig.player_hp_multi;
+        this.defaultLegHealth = healthTemplate.BodyParts.LeftLeg.Health.Maximum * modConfig.player_hp_multi;
         this.defaultTemp = healthTemplate.Temperature.Maximum;
-        this.headHealth = botHealth.health.BodyParts[0].Head.max * modConfig.player_hp_multi;
-        this.chestHealth = botHealth.health.BodyParts[0].Chest.max * modConfig.player_hp_multi;
-        this.stomaHealth = botHealth.health.BodyParts[0].Stomach.max * modConfig.player_hp_multi;
-        this.armHealth = botHealth.health.BodyParts[0].RightArm.max * modConfig.player_hp_multi;
-        this.legHealth = botHealth.health.BodyParts[0].RightLeg.max * modConfig.player_hp_multi;
-     }
+        this.realisticHeadHealth = realisticHpPools.health.BodyParts[0].Head.max * modConfig.player_hp_multi;
+        this.realisticChestHealth = realisticHpPools.health.BodyParts[0].Chest.max * modConfig.player_hp_multi;
+        this.realisticStomachHealth = realisticHpPools.health.BodyParts[0].Stomach.max * modConfig.player_hp_multi;
+        this.realisticArmHealth = realisticHpPools.health.BodyParts[0].RightArm.max * modConfig.player_hp_multi;
+        this.realisticLegHealth = realisticHpPools.health.BodyParts[0].RightLeg.max * modConfig.player_hp_multi;
+    }
 
     globalDB(): IConfig {
         return this.tables.globals.config;
@@ -59,24 +57,17 @@ export class Player {
         }
     }
 
-    public setNewScavHealth(scavData: IPmcData){
-        this.setPlayerHealthHelper(scavData, true, true);
+    public setNewScavRealisticHealth(scavData: IPmcData) {
+        this.setPlayerHealthHelper(scavData, true, false);
     }
 
     public setPlayerHealth(pmcData: IPmcData, scavData: IPmcData) {
 
         //revert to defaults
         if (this.modConfig.realistic_player_health == false && this.modConfig.revert_hp == true) {
-          
-            //revert max HP
+
             this.setPlayerHealthHelper(pmcData, true, false);
             this.setPlayerHealthHelper(scavData, true, false);
-
-            //if our current HP exceeds what the max should be, revert current HP too
-            if ((pmcData.Health.BodyParts["Chest"].Health.Current > pmcData.Health.BodyParts["Chest"].Health.Maximum) || (scavData.Health.BodyParts["Chest"].Health.Current > scavData.Health.BodyParts["Chest"].Health.Maximum)) {
-                this.setPlayerHealthHelper(pmcData, false, false);
-                this.setPlayerHealthHelper(scavData, false, false);
-            }
 
             this.modConfig.revert_hp = false;
             this.helper.writeConfigJSON(this.modConfig, 'config/config.json');
@@ -88,17 +79,18 @@ export class Player {
 
         //set realistic HP
         if (this.modConfig.realistic_player_health == true) {
-
-            //set our max HP to realistic values
-            this.setPlayerHealthHelper(pmcData, true, true);
-            this.setPlayerHealthHelper(scavData, true, true);
-
             //if we have a new profile, or an existing profile where our HP has not been yet set realistically, also set the current HP to match max values
-            if (pmcData.Info.Experience == 0 || (pmcData.Health.BodyParts["Head"].Health.Current > this.headHealth || scavData.Health.BodyParts["Head"].Health.Current > this.headHealth)) {
-                this.setPlayerHealthHelper(pmcData, false, true);
-                this.setPlayerHealthHelper(scavData, false, true);
+            if (pmcData.Info.Experience == 0 || (pmcData.Health.BodyParts["Head"].Health.Current > this.realisticHeadHealth || scavData.Health.BodyParts["Head"].Health.Current > this.realisticHeadHealth)) {
+                this.setPlayerHealthHelper(pmcData, true, false);
+                this.setPlayerHealthHelper(scavData, true, false);
                 this.logger.info("Realism Mod: Profile Health Has Been Corrected");
             }
+            else {
+                //set only our max HP to realistic values
+                this.setPlayerHealthHelper(pmcData, true, true);
+                this.setPlayerHealthHelper(scavData, true, true);
+            }
+
             if (this.modConfig.logEverything == true) {
                 this.logger.info("Realism Mod: Player Health Has Been Adjusted");
             }
@@ -106,15 +98,13 @@ export class Player {
     }
 
     public correctNewHealth(pmcData: IPmcData, scavData: IPmcData) {
-
-        this.setPlayerHealthHelper(pmcData, true, true, true);
-        this.setPlayerHealthHelper(scavData, true, true, true);
-
+        this.setPlayerHealthHelper(pmcData, true, false);
+        this.setPlayerHealthHelper(scavData, true, false);
         this.logger.info("Realism Mod: New Profile Health Has Been Adjusted");
     }
 
 
-    private setPlayerHealthHelper(playerData: IPmcData, setMax: boolean, setReal: boolean, setMaxCurr: boolean = false) {
+    private setPlayerHealthHelper(playerData: IPmcData, setRealisticHP: boolean, setMaxHPOnly: boolean) {
 
         let head = playerData.Health.BodyParts["Head"].Health;
         let chest = playerData.Health.BodyParts["Chest"].Health;
@@ -124,61 +114,40 @@ export class Player {
         let leftLeg = playerData.Health.BodyParts["LeftLeg"].Health;
         let rightLeg = playerData.Health.BodyParts["RightLeg"].Health;
 
-        //revert to defaults
-        if (setReal == false) {
-            playerData.Health.Temperature.Current = this.defaultTemp
-            playerData.Health.Temperature.Maximum = this.defaultTemp
+        const headHealth = setRealisticHP ? this.realisticHeadHealth : this.defaultHeadHealth;
+        const chestHealth = setRealisticHP ? this.realisticHeadHealth : this.defaultChestHealth;
+        const stomachHealth = setRealisticHP ? this.realisticHeadHealth : this.defaultStomaHealth;
+        const armHealth = setRealisticHP ? this.realisticArmHealth : this.defaultArmHealth;
+        const legHealth = setRealisticHP ? this.realisticLegHealth : this.defaultLegHealth;
 
-            if (setMax == true || setMaxCurr == true) {
-                head.Maximum = this.defaultHeadHealth;
-                chest.Maximum = this.defaultChestHealth;
-                stomach.Maximum = this.defaultStomaHealth;
-                leftArm.Maximum = this.defaultArmHealth;
-                rightArm.Maximum = this.defaultArmHealth;
-                leftLeg.Maximum = this.defaultLegHealth;
-                rightLeg.Maximum = this.defaultLegHealth;
-            }
-            if (setMax == false || setMaxCurr == true) {
-                head.Current = this.defaultHeadHealth;
-                chest.Current = this.defaultChestHealth;
-                stomach.Current = this.defaultStomaHealth;
-                leftArm.Current = this.defaultArmHealth;
-                rightArm.Current = this.defaultArmHealth;
-                leftLeg.Current = this.defaultLegHealth;
-                rightLeg.Current = this.defaultLegHealth;
-            }
+        playerData.Health.Temperature.Current = setRealisticHP ? this.realisticTemp : this.defaultTemp;
+        playerData.Health.Temperature.Maximum = setRealisticHP ? this.realisticTemp : this.defaultTemp;
 
-        } else {
-            playerData.Health.Temperature.Current = this.tempCurr;
-            playerData.Health.Temperature.Maximum = this.tempMax;
+        head.Maximum = headHealth;
+        chest.Maximum = chestHealth;
+        stomach.Maximum = stomachHealth;
+        leftArm.Maximum = armHealth;
+        rightArm.Maximum = armHealth;
+        leftLeg.Maximum = legHealth;
+        rightLeg.Maximum = legHealth;
 
-            if (setMax == true || setMaxCurr == true) {
-                head.Maximum = this.headHealth;
-                chest.Maximum = this.chestHealth;
-                stomach.Maximum = this.stomaHealth;
-                leftArm.Maximum = this.armHealth;
-                rightArm.Maximum = this.armHealth;
-                leftLeg.Maximum = this.legHealth;
-                rightLeg.Maximum = this.legHealth;
-            }
-            if (setMax == false || setMaxCurr == true) {
-                head.Current = this.headHealth;
-                chest.Current = this.chestHealth;
-                stomach.Current = this.stomaHealth;
-                leftArm.Current = this.armHealth;
-                rightArm.Current = this.armHealth;
-                leftLeg.Current = this.legHealth;
-                rightLeg.Current = this.legHealth;
-            }
+        if (setMaxHPOnly == false) {
+            head.Current = headHealth;
+            chest.Current = chestHealth;
+            stomach.Current = stomachHealth;
+            leftArm.Current = armHealth;
+            rightArm.Current = armHealth;
+            leftLeg.Current = legHealth;
+            rightLeg.Current = legHealth;
         }
     }
 
 
     public loadPlayerStats() {
-        if(this.modConfig.enable_stances == true || this.modConfig.movement_changes == true || this.modConfig.recoil_attachment_overhaul){
+        if (this.modConfig.enable_stances == true || this.modConfig.movement_changes == true || this.modConfig.recoil_attachment_overhaul) {
             this.globalDB().Stamina.OxygenCapacity = 525;
             this.globalDB().Stamina.OxygenRestoration = 8.4;
-    
+
             this.globalDB().Stamina.HandsRestoration = 3;
             this.globalDB().Stamina.AimDrainRate = 0.3;
             this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
@@ -199,7 +168,7 @@ export class Player {
             this.globalDB().Stamina.SprintOverweightLimits["y"] = 30;
         }
 
-        if(this.modConfig.enable_stances == true){
+        if (this.modConfig.enable_stances == true) {
             this.globalDB().Stamina.Capacity = 100;
             this.globalDB().Stamina.BaseRestorationRate = 7;
         }
@@ -353,7 +322,7 @@ export class Player {
     }
 
     public playerProfiles(jsonUtil: JsonUtil) {
-        for (let profile in this.tables.templates.profiles){
+        for (let profile in this.tables.templates.profiles) {
             this.correctInventory(this.tables.templates.profiles[profile].bear.character.Inventory.items);
             this.correctInventory(this.tables.templates.profiles[profile].usec.character.Inventory.items);
         }

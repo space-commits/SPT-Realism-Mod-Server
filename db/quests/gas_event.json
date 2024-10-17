@@ -23,7 +23,7 @@
                     "target": [
                         "5d1b3a5d86f774252167ba22"
                     ],
-                    "value": 3,
+                    "value": 2,
                     "visibilityConditions": []
                 },
                 {
@@ -57,7 +57,7 @@
                     "onlyFoundInRaid": false,
                     "parentId": "",
                     "target": [
-                        "5d1b39a386f774252339976f"
+                        "5b4335ba86f7744d2837a264"
                     ],
                     "value": 2,
                     "visibilityConditions": []
@@ -75,9 +75,9 @@
                     "onlyFoundInRaid": false,
                     "parentId": "",
                     "target": [
-                        "59e361e886f774176c10a2a5"
+                        "59e3606886f77417674759a5"
                     ],
-                    "value": 1,
+                    "value": 2,
                     "visibilityConditions": []
                 },
                 {
@@ -194,15 +194,15 @@
                     "items": [
                         {
                             "_id": "66dad20568ce447f27bb53d2",
-                            "_tpl": "590a3efd86f77437d351a25b",
+                            "_tpl": "5449016a4bdc2d6f028b456f",
                             "upd": {
-                                "StackObjectsCount": 1
+                                "StackObjectsCount": 25000
                             }
                         }
                     ],
                     "target": "66dad20568ce447f27bb53d2",
                     "type": "Item",
-                    "value": "1"
+                    "value": "25000"
                 }
             ]
         },
@@ -624,7 +624,7 @@
                     "minDurability": 0,
                     "onlyFoundInRaid": false,
                     "parentId": "",
-                    "plantTime": 1,
+                    "plantTime": 15,
                     "target": [
                         "5b4391a586f7745321235ab2"
                     ],
@@ -670,7 +670,7 @@
                     "minDurability": 0,
                     "onlyFoundInRaid": false,
                     "parentId": "",
-                    "plantTime": 1,
+                    "plantTime": 15,
                     "target": [
                         "5b4391a586f7745321235ab2"
                     ],
@@ -716,7 +716,7 @@
                     "minDurability": 0,
                     "onlyFoundInRaid": false,
                     "parentId": "",
-                    "plantTime": 1,
+                    "plantTime": 15,
                     "target": [
                         "5b4391a586f7745321235ab2"
                     ],
@@ -762,7 +762,7 @@
                     "minDurability": 0,
                     "onlyFoundInRaid": false,
                     "parentId": "",
-                    "plantTime": 1,
+                    "plantTime": 15,
                     "target": [
                         "5b4391a586f7745321235ab2"
                     ],
@@ -808,7 +808,7 @@
                     "minDurability": 0,
                     "onlyFoundInRaid": false,
                     "parentId": "",
-                    "plantTime": 1,
+                    "plantTime": 15,
                     "target": [
                         "5b4391a586f7745321235ab2"
                     ],
@@ -1226,7 +1226,7 @@
                     "oneSessionOnly": false,
                     "parentId": "",
                     "type": "Elimination",
-                    "value": 40,
+                    "value": 30,
                     "visibilityConditions": []
                 }
             ],

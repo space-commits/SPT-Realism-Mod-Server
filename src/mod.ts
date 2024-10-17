@@ -608,7 +608,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             player.correctNegativeHP(pmcData);
 
                             if (modConfig.realistic_player_health == true) {
-                                player.setNewScavHealth(scavData);
+                                player.setNewScavRealisticHealth(scavData);
                             }
 
                             this.tryLockTradersForEvent(pmcData, logger);
@@ -1020,13 +1020,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 150;
+                        baseGasChance += 100;
                     }
                 }
                 //critical mass
                 if (q.qid === "670ae811bd43cbf026768126") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 150;
+                        baseGasChance += 100;
                     }
                 }
                 //do no harm
@@ -1091,11 +1091,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     private checkProfile(pmcData: IPmcData, pmcEXP: number, utils: Utils, player: Player, logger: ILogger) {
         utils.correctItemResources(pmcData, pmcEXP, logger);
         if (modConfig.med_changes == true) {
-            pmcData.Health.Hydration.Maximum = player.hydration;
-            pmcData.Health.Energy.Maximum = player.energy;
+            pmcData.Health.Hydration.Maximum = player.realisticHydration;
+            pmcData.Health.Energy.Maximum = player.realisticEnergy;
             if (pmcData.Info.Experience == 0) {
-                pmcData.Health.Hydration.Current = player.hydration;
-                pmcData.Health.Energy.Current = player.energy
+                pmcData.Health.Hydration.Current = player.realisticHydration;
+                pmcData.Health.Energy.Current = player.realisticEnergy
                 logger.info("Realism Mod: New Profile Meds And Hydration/Energy Adjusted");
             }
         }

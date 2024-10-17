@@ -29,7 +29,7 @@
     "bot_names": true,
     "cyrillic_bear_names": true,
     "tiered_flea": true,
-    "flea_changes": false,
+    "flea_changes": true,
     "change_buy_categories": true,
     "airdrop_changes": true,
     "all_examined": true,

@@ -88,8 +88,8 @@ export class Quests {
             locale["6702afe9504c9aca4ed75d9a successMessageText"] = "The patients are stable and recovering well. However I remain concerned as to the origin of their symptoms...we've seen them before. We've collected blood samples from the patients to confirm...";
             locale["6702b0062a10e8202cc9c063"] = "Handover piles of meds";
             locale["6702b00eaa02eb7ffdabab6d"] = "Handover disposable syringes";
-            locale["6702b01112e0e5412edc40b2"] = "Handover silicone tubing";
-            locale["6702b0159bb4fbdf2e467147"] = "Handover bottles of hydrogen peroxide";
+            locale["6702b01112e0e5412edc40b2"] = "Handover medical bloodsets";
+            locale["6702b0159bb4fbdf2e467147"] = "Handover bottles of saline solution";
             locale["6702b0215240c197de5026dd"] = "This quest will start a chain of events";
 
             //Bad Omens - Part 2
@@ -145,8 +145,8 @@ export class Quests {
             locale["670ae811bd43cbf026768126 completePlayerMessage"] = "";
             locale["670ae811bd43cbf026768126 name"] = "Critical Mass";
             locale["670ae811bd43cbf026768126 description"] = "Close the door behind you. My people have trawled through the footage we've collected so far. They communicate in coded language, in some sort of cipher. We have made preliminary attempts at decoding it. From what we've gathered, they were the ones targeting the rail networks leading out of Tarkov."
-                + " There are mentions of transporting radiological materials, but we have no been able to decipher from and to where or the specific composition of these materials."
-                + " I need you to find these sights and place a RAMU device to collect data. They work much the same as the GAMU devices you used before. These sights are likely to be highly radioactive, practice caution. Also do everything you can to avoid contact, we can't afford for them to know we're tracking their movements.";
+                + " There are mentions of transporting radiological materials, but we have no been able to decipher from and to where or the specific composition of these materials. We believe these the loading and unloading sites you helped us locate previously."
+                + " I need you to place a RAMU device at these sites to collect data. These devices work much the same as the GAMU devices you used before. I'm sure you remember these sights are likely to be highly radioactive, practice caution. Also do everything you can to avoid contact, we can't afford for them to know we're tracking their movements.";
             locale["670ae811bd43cbf026768126 failMessageText"] = "";
             locale["670ae811bd43cbf026768126 successMessageText"] = ".";
             locale["670ae82794523bfa0846cc5a"] = "Handover RAMU devices with data";
@@ -187,9 +187,9 @@ export class Quests {
             locale["6702b4a27d4a4a89fce96fbc description"] = "It all comes down to this. If we fail, we all die. There is no way to evacuate the civilians that remain in Tarkov, Cultists are stalking the routes out of the region, and exchanging fire with UN and RUAF forces."
                 + " They must know what we've discovered, that we know about their sick 'prophecy'. My usual channels of communication with the outside world have been severed, and with the increased levels of violence UN and RUAF commands are unresponsive."
                 + " What’s more, you going to TerraGroup's facility has really stirred up the hornet's nest, Raiders are searching for you. I fear TerraGroup is still actively involved in all this in some way..."
-                + "\n\nWe have only one shot at this. We must make contact with the outside world and warn them, to ask for help. I must confess that I've had a lot more dealings with the TerraGroup corporation than I've let on, as I'm sure you've surmised. I know a lot about them, their former operations, before they left me here to rot. What I do know is that they have unauthorised Low Earth Orbit satellite."
+                + "\n\nWe have only one shot at this. We must make contact with the outside world and warn them, to ask for help. I must confess that I've had a lot more dealings with the TerraGroup corporation than I've let on, as I'm sure you've surmised. I know a lot about them, their former operations, before they left me here to rot. I know that they have unauthorised Low Earth Orbit satellites."
                 + " If we can find and use a powerful satellite dish to establish a comm link, my people can repurpose and hijack the satelite to establish contact outside of the Tarkov region. The next time the satellite will be overhead is October 31st and will only be available for a few days after that."
-                + "\n\nThe Shoreline area has a number of satellite dishes. The dish needs to be facing south and have a clear line of sight, and we also need clear skies, those nights are forecast to be clear. I will give you a device for establishing the comm link and transmitting the authorization codes. Do. Not. Lose. The. Device. Mechanic only had enough componente to build two of them. I hope I do not need to remind you that if you are to fail, it's over for all of us.";
+                + "\n\nThe Shoreline area has a number of satellite dishes. The dish needs to be facing south and have a clear line of sight, those nights are forecast to have the best signal. I will give you a device for establishing the comm link and transmitting the authorization codes. Do. Not. Lose. The. Device. Mechanic only had enough components to build two of them. I hope I do not need to remind you that if you are to fail, it's over for all of us.";
             locale["6702b4a27d4a4a89fce96fbc failMessageText"] = "";
             locale["6702b4a27d4a4a89fce96fbc successMessageText"] = "Vires in Scientia. Scientia est fortis. Et oculus spectans deus nobis.";
             locale["6702b4c1fda5e39ba46ccf35"] = "Establish a comm link with the outside world";

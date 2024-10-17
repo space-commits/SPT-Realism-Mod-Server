@@ -456,7 +456,7 @@ class Main {
                         this.checkEventQuests(pmcData);
                         player.correctNegativeHP(pmcData);
                         if (modConfig.realistic_player_health == true) {
-                            player.setNewScavHealth(scavData);
+                            player.setNewScavRealisticHealth(scavData);
                         }
                         this.tryLockTradersForEvent(pmcData, logger);
                         if (modConfig.logEverything == true) {
@@ -797,13 +797,13 @@ class Main {
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 150;
+                        baseGasChance += 100;
                     }
                 }
                 //critical mass
                 if (q.qid === "670ae811bd43cbf026768126") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 150;
+                        baseGasChance += 100;
                     }
                 }
                 //do no harm
@@ -863,11 +863,11 @@ class Main {
     checkProfile(pmcData, pmcEXP, utils, player, logger) {
         utils.correctItemResources(pmcData, pmcEXP, logger);
         if (modConfig.med_changes == true) {
-            pmcData.Health.Hydration.Maximum = player.hydration;
-            pmcData.Health.Energy.Maximum = player.energy;
+            pmcData.Health.Hydration.Maximum = player.realisticHydration;
+            pmcData.Health.Energy.Maximum = player.realisticEnergy;
             if (pmcData.Info.Experience == 0) {
-                pmcData.Health.Hydration.Current = player.hydration;
-                pmcData.Health.Energy.Current = player.energy;
+                pmcData.Health.Hydration.Current = player.realisticHydration;
+                pmcData.Health.Energy.Current = player.realisticEnergy;
                 logger.info("Realism Mod: New Profile Meds And Hydration/Energy Adjusted");
             }
         }
