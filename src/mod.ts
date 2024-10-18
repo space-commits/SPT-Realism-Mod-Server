@@ -896,7 +896,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         realismInfo.DoExtraRaiders = EventTracker.isHalloween && EventTracker.doExtraRaiderSpawns;
         realismInfo.DoExtraCultists = EventTracker.isHalloween && EventTracker.doExtraCultistSpawns;
 
-        if(modConfig.logEverything){
+        if (modConfig.logEverything) {
             logger.warning("realismInfo.DoExtraRaiders " + realismInfo.DoExtraRaiders);
             logger.warning("realismInfo.DoExtraCultists " + realismInfo.DoExtraCultists);
             logger.warning("realismInfo.IsPreExplosion " + realismInfo.IsPreExplosion);
@@ -926,15 +926,16 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     }
 
     private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, seasonalConfig: ISeasonalEventConfig, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
+        if (modConfig.enable_hazard_zones) {
 
-        const currentDate = new Date();
-        const halloweenStart = new Date(currentDate.getFullYear(), 9, 20);
-        const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
+            const currentDate = new Date();
+            const halloweenStart = new Date(currentDate.getFullYear(), 9, 20);
+            const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
 
-        if (modConfig.enable_hazard_zones && currentDate >= halloweenStart && currentDate <= halloweenEnd) {
-            seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
-
-            EventTracker.isHalloween = true;
+            if (currentDate >= halloweenStart && currentDate <= halloweenEnd) {
+                seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
+                EventTracker.isHalloween = true;
+            }
         }
 
         EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
@@ -1020,7 +1021,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 200;
                     }
                 }
                 //critical mass
@@ -1036,7 +1037,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (isCompleted) {
-                        baseGasChance = EventTracker.isHalloween ? 300 : 100;
+                        baseGasChance = EventTracker.isHalloween ? 2    00 : 25;
                     }
                 }
                 //blue flame part 1

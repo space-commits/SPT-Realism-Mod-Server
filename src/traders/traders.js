@@ -300,40 +300,40 @@ class Traders {
         }
         if (this.modConf.enable_hazard_zones == true) {
             //trimodol
-            this.assortBarterPusher("670ee6b57b09b6f86184c761", theraId, "637b620db7afa97bfc3d7009", 1, { "59e361e886f774176c10a2a5": 2, "5b4335ba86f7744d2837a264": 1 }, 2);
-            this.addQuestAssortUnlock("670ee6b57b09b6f86184c761", "66dad1a18cbba6e558486336", theraId, true);
+            this.assortBarterPusher("670ee6b57b09b6f86184c761", theraId, "637b620db7afa97bfc3d7009", 1, { "59e361e886f774176c10a2a5": 2, "5b4335ba86f7744d2837a264": 1 }, 3);
+            this.addQuestAssortUnlock("670ee6b57b09b6f86184c761", "66dad1a18cbba6e558486336", theraId, false);
             //blueblood
-            this.assortBarterPusher("670addb68ce2611961186433", theraId, "637b6251104668754b72f8f9", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 2);
-            this.addQuestAssortUnlock("670addb68ce2611961186433", "6702b4a27d4a4a89fce96fbc", theraId, true);
+            this.assortBarterPusher("670addb68ce2611961186433", theraId, "637b6251104668754b72f8f9", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 3);
+            this.addQuestAssortUnlock("670addb68ce2611961186433", "6702b4a27d4a4a89fce96fbc", theraId, false);
             //antidote
-            this.assortBarterPusher("670add019a9f5770dfd8c99a", theraId, "5fca138c2a7b221b2852a5c6", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 2);
-            this.addQuestAssortUnlock("670add019a9f5770dfd8c99a", "6702b3b624c7ac4e2d3e9c37", theraId, true);
+            this.assortBarterPusher("670add019a9f5770dfd8c99a", theraId, "5fca138c2a7b221b2852a5c6", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 3);
+            this.addQuestAssortUnlock("670add019a9f5770dfd8c99a", "6702b3b624c7ac4e2d3e9c37", theraId, false);
             //gp-7
-            this.assortBarterPusher("670aea0db699847f54439bd5", theraId, "60363c0c92ec1c31037959f5", 1, { "619cc01e0a7c3a1a2731940c": 1, "59e361e886f774176c10a2a5": 1, "5d1b3a5d86f774252167ba22": 1 }, 2);
-            this.addQuestAssortUnlock("670aea0db699847f54439bd5", "670ae811bd43cbf026768126", theraId, true);
+            this.assortBarterPusher("670aea0db699847f54439bd5", theraId, "60363c0c92ec1c31037959f5", 1, { "619cc01e0a7c3a1a2731940c": 1, "59e361e886f774176c10a2a5": 1, "5d1b3a5d86f774252167ba22": 1 }, 3);
+            this.addQuestAssortUnlock("670aea0db699847f54439bd5", "670ae811bd43cbf026768126", theraId, false);
             //gp-5
             this.assortBarterPusher("670adccd7dbb5881f697b016", theraId, "5b432c305acfc40019478128", 1, { "5d1b3a5d86f774252167ba22": 2 }, 2);
-            this.addQuestAssortUnlock("670adccd7dbb5881f697b016", "6702b8b3c0f2f525d988e428", theraId, true);
+            this.addQuestAssortUnlock("670adccd7dbb5881f697b016", "6702b8b3c0f2f525d988e428", theraId, false);
             if (seasonalevents_1.EventTracker.isHalloween) {
                 //labs access card blue flame part 1
                 this.assortBarterPusher("670834442b46cad0e1daa3d9", theraId, "5c94bbff86f7747ee735c08f", 1, { "5fc64ea372b0dd78d51159dc": 3 }, 1);
                 this.addQuestAssortUnlock("670834442b46cad0e1daa3d9", "6702b3e4aff397fa3e666fa5", theraId, true);
             }
             //Ramu
-            this.assortItemPusher("670ae835f28231d36adcf7fa", theraId, "66fd521442055447e2304fda", 2, "5449016a4bdc2d6f028b456f", 3, false, 50000); // ramu
+            this.assortItemPusher("670ae835f28231d36adcf7fa", theraId, "66fd521442055447e2304fda", 2, "5449016a4bdc2d6f028b456f", 1, false, 50000); // ramu
             this.addQuestAssortUnlock("670ae835f28231d36adcf7fa", "670ae811bd43cbf026768126", theraId, true);
             //gamu
-            this.assortItemPusher("67082dc8dc5160ef041094dc", theraId, "66fd571a05370c3ee1a1c613", 3, "5449016a4bdc2d6f028b456f", 3, false, 25000); // gamu
+            this.assortItemPusher("67082dc8dc5160ef041094dc", theraId, "66fd571a05370c3ee1a1c613", 3, "5449016a4bdc2d6f028b456f", 1, false, 25000); // gamu
             this.addQuestAssortUnlock("67082dc8dc5160ef041094dc", "6702b0a1b9fb4619debd0697", theraId, true);
             //safe
-            this.assortItemPusher("67082dcf37314df7bb087eb6", theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 3, false, 200000); // safe container 
+            this.assortItemPusher("67082dcf37314df7bb087eb6", theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 1, false, 200000); // safe container 
             this.addQuestAssortUnlock("67082dcf37314df7bb087eb6", "6702b0e9601acf629d212eeb", theraId, true);
             //filter
-            this.assortBarterPusher("670adc9a836aebf0d13fd39a", theraId, "590c595c86f7747884343ad7", 1, { "59e7715586f7742ee5789605": 1 }, 1);
-            this.addQuestAssortUnlock("670adc9a836aebf0d13fd39a", "6702b0e9601acf629d212eeb", theraId, true);
+            this.assortBarterPusher("670adc9a836aebf0d13fd39a", theraId, "590c595c86f7747884343ad7", 1, { "59e7715586f7742ee5789605": 2 }, 1);
+            this.addQuestAssortUnlock("670adc9a836aebf0d13fd39a", "6702b0e9601acf629d212eeb", theraId, false);
             //respirator
             this.assortBarterPusher("670afc690965e362b4bbc1df", theraId, "59e7715586f7742ee5789605", 1, { "5d1b3a5d86f774252167ba22": 1 }, 1);
-            this.addQuestAssortUnlock("670afc690965e362b4bbc1df", "6702b0a1b9fb4619debd0697", theraId, true);
+            this.addQuestAssortUnlock("670afc690965e362b4bbc1df", "6702b0a1b9fb4619debd0697", theraId, false);
         }
         //ragman//
         if (this.modConf.realistic_ballistics == true) {

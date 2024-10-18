@@ -714,12 +714,14 @@ class Main {
         }
     }
     checkForSeasonalEvents(logger, seasonalEventsService, seasonalConfig, weatherConfig, logGreetings = false) {
-        const currentDate = new Date();
-        const halloweenStart = new Date(currentDate.getFullYear(), 9, 20);
-        const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
-        if (modConfig.enable_hazard_zones && currentDate >= halloweenStart && currentDate <= halloweenEnd) {
-            seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
-            seasonalevents_1.EventTracker.isHalloween = true;
+        if (modConfig.enable_hazard_zones) {
+            const currentDate = new Date();
+            const halloweenStart = new Date(currentDate.getFullYear(), 9, 20);
+            const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
+            if (currentDate >= halloweenStart && currentDate <= halloweenEnd) {
+                seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
+                seasonalevents_1.EventTracker.isHalloween = true;
+            }
         }
         seasonalevents_1.EventTracker.isChristmas = seasonalEventsService.christmasEventEnabled() && seasonalEventsService.isAutomaticEventDetectionEnabled() ? true : false;
         if (seasonalevents_1.EventTracker.isChristmas == true && logGreetings) {
@@ -797,7 +799,7 @@ class Main {
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 200;
                     }
                 }
                 //critical mass
@@ -813,7 +815,7 @@ class Main {
                         seasonalevents_1.EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (isCompleted) {
-                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 300 : 100;
+                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 200 : 25;
                     }
                 }
                 //blue flame part 1

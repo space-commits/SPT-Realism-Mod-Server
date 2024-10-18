@@ -1355,7 +1355,8 @@
         "ConflictingItems": [],
         "Weight": 0.113,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 4.5
     },
     "5bbde41ed4351e003562b038": {
         "ItemID": "5bbde41ed4351e003562b038",
@@ -1370,7 +1371,8 @@
         "ConflictingItems": [],
         "Weight": 0.16,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 6
     },
     "5cdeac5cd7f00c000f261694": {
         "ItemID": "5cdeac5cd7f00c000f261694",
@@ -1385,7 +1387,8 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 12
     },
     "5addc7db5acfc4001669f279": {
         "ItemID": "5addc7db5acfc4001669f279",
@@ -1400,7 +1403,9 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 8,
+        "Handling": 4
     },
     "57d152ec245977144076ccdf": {
         "ItemID": "57d152ec245977144076ccdf",
@@ -1430,7 +1435,8 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 3
     },
     "5afd7e445acfc4001637e35a": {
         "ItemID": "5afd7e445acfc4001637e35a",
@@ -1445,7 +1451,8 @@
         "ConflictingItems": [],
         "Weight": 0.09,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 6
     },
     "57c44fa82459772d2d75e415": {
         "ItemID": "57c44fa82459772d2d75e415",
@@ -1460,7 +1467,8 @@
         "ConflictingItems": [],
         "Weight": 0.146,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 3
     },
     "5dcbd6dddbd3d91b3e5468de": {
         "ItemID": "5dcbd6dddbd3d91b3e5468de",
@@ -1475,7 +1483,8 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 2
     },
     "5c48a2c22e221602b313fb6c": {
         "ItemID": "5c48a2c22e221602b313fb6c",
@@ -1490,7 +1499,8 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 2
     },
     "5df38a5fb74cd90030650cb6": {
         "ItemID": "5df38a5fb74cd90030650cb6",
@@ -1505,7 +1515,9 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 10,
+        "Handling": 6
     },
     "5a38eecdc4a282329a73b512": {
         "ItemID": "5a38eecdc4a282329a73b512",
@@ -1520,7 +1532,8 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 5
     },
     "5bfe86a20db834001d23e8f7": {
         "ItemID": "5bfe86a20db834001d23e8f7",
@@ -1535,7 +1548,8 @@
         "ConflictingItems": [],
         "Weight": 0.13,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 6
     },
     "5a69a2ed8dc32e000d46d1f1": {
         "ItemID": "5a69a2ed8dc32e000d46d1f1",
@@ -1553,7 +1567,8 @@
         ],
         "Weight": 0.065,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 2
     },
     "5e848d99865c0f329958c83b": {
         "ItemID": "5e848d99865c0f329958c83b",
@@ -1568,7 +1583,8 @@
         "ConflictingItems": [],
         "Weight": 0.15,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 4
     },
     "6259c3d8012d6678ec38eeb8": {
         "ItemID": "6259c3d8012d6678ec38eeb8",
@@ -1583,7 +1599,8 @@
         "ConflictingItems": [],
         "Weight": 0.135,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 6
     },
     "606eef46232e5a31c233d500": {
         "ItemID": "606eef46232e5a31c233d500",
@@ -1601,7 +1618,8 @@
         ],
         "Weight": 0.13,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 2
     },
     "633ec8e4025b096d320a3b1e": {
         "ItemID": "633ec8e4025b096d320a3b1e",
@@ -1616,7 +1634,8 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "Handling": 6
     },
     "637b9c37b7e3bc41b21ce71a": {
         "ItemID": "637b9c37b7e3bc41b21ce71a",
@@ -1647,19 +1666,6 @@
         "Weight": 0.07,
         "LoyaltyLevel": 0,
         "Price": 0
-    },
-    "stock_m1014_buttstock": {
-        "ItemID": "stock_m1014_buttstock",
-        "Name": "stock_m1014_buttstock",
-        "ModType": "",
-        "VerticalRecoil": -44,
-        "HorizontalRecoil": -44,
-        "Dispersion": 0,
-        "AimSpeed": 0,
-        "Ergonomics": 22,
-        "Accuracy": 0,
-        "ConflictingItems": [],
-        "Weight": 0.715
     },
     "6450f21a3d52156624001fcf": {
         "ItemID": "6450f21a3d52156624001fcf",
@@ -1711,7 +1717,8 @@
         "Ergonomics": 5.5,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.132
+        "Weight": 0.132,
+        "Handling": 5
     },
     "6516b129609aaf354b34b3a8": {
         "ItemID": "6516b129609aaf354b34b3a8",
@@ -1737,7 +1744,9 @@
         "Ergonomics": 6,
         "Accuracy": 2,
         "ConflictingItems": [],
-        "Weight": 0.08
+        "Weight": 0.08,
+        "Handling": 2,
+        "AimStability": 3
     },
     "669946c157df3e2b4e0a0dc5": {
         "ItemID": "669946c157df3e2b4e0a0dc5",

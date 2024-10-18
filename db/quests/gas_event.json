@@ -562,7 +562,7 @@
                             "_tpl": "590c595c86f7747884343ad7"
                         }
                     ],
-                    "loyaltyLevel": 1,
+                    "loyaltyLevel": 2,
                     "target": "670adc9a836aebf0d13fd39a",
                     "traderId": "54cb57776803fa99248b456e",
                     "type": "AssortmentUnlock",
@@ -733,7 +733,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "6702b3394a0fb91fcb109636",
-                                "target": "WooodsMarked2",
+                                "target": "WoodsMarkedVillage",
                                 "value": 1
                             }
                         ],
@@ -768,7 +768,7 @@
                     ],
                     "value": 1,
                     "visibilityConditions": [],
-                    "zoneId": "WooodsMarked2"
+                    "zoneId": "WoodsMarkedVillage"
                 },
                 {
                     "completeInSeconds": 0,
@@ -958,7 +958,7 @@
                             "_tpl": "5b432c305acfc40019478128"
                         }
                     ],
-                    "loyaltyLevel": 3,
+                    "loyaltyLevel": 2,
                     "target": "670adccd7dbb5881f697b016",
                     "traderId": "54cb57776803fa99248b456e",
                     "type": "AssortmentUnlock",

@@ -3,7 +3,7 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
-            "SpawnPoints": "ZoneSW01",
+            "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 0,
@@ -19,7 +19,7 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 1,
-            "slots_max": 3,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 10,
             "time_min": 5
@@ -31,7 +31,7 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 2,
-            "slots_max": 3,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 15,
             "time_min": 10
@@ -43,7 +43,7 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 3,
-            "slots_max": 3,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 20,
             "time_min": 15
@@ -55,7 +55,7 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 4,
-            "slots_max": 3,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 10,
             "time_min": 1
@@ -67,7 +67,7 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 5,
-            "slots_max": 3,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 10,
             "time_min": 1
@@ -79,7 +79,7 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 6,
-            "slots_max": 3,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 10,
             "time_min": 1
@@ -91,7 +91,7 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 7,
-            "slots_max": 3,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 10,
             "time_min": 1
@@ -103,7 +103,7 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 8,
-            "slots_max": 3,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 10,
             "time_min": 1
@@ -123,59 +123,11 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
-            "SpawnPoints": "ZoneSnipeCinema",
-            "WildSpawnType": "marksman",
-            "isPlayers": true,
-            "number": 10,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 10,
-            "time_min": 1
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnPoints": "ZoneSnipeCarShowroom",
-            "WildSpawnType": "marksman",
-            "isPlayers": true,
-            "number": 11,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 10,
-            "time_min": 1
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnPoints": "ZoneSnipeBuilding",
-            "WildSpawnType": "marksman",
-            "isPlayers": true,
-            "number": 12,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 10,
-            "time_min": 1
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnPoints": "ZoneSnipeSW01",
-            "WildSpawnType": "marksman",
-            "isPlayers": true,
-            "number": 13,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 10,
-            "time_min": 1
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
             "SpawnPoints": "ZoneSW01",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 17,
-            "slots_max": 3,
+            "number": 10,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -186,8 +138,8 @@
             "SpawnPoints": "ZoneConstruction",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 18,
-            "slots_max": 3,
+            "number": 11,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -198,8 +150,8 @@
             "SpawnPoints": "ZoneCarShowroom",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 19,
-            "slots_max": 3,
+            "number": 12,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -210,8 +162,8 @@
             "SpawnPoints": "ZoneCinema",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 20,
-            "slots_max": 3,
+            "number": 13,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -222,8 +174,8 @@
             "SpawnPoints": "ZoneFactory",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 21,
-            "slots_max": 3,
+            "number": 14,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -234,8 +186,8 @@
             "SpawnPoints": "ZoneHotel_1",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 22,
-            "slots_max": 3,
+            "number": 15,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -246,8 +198,8 @@
             "SpawnPoints": "ZoneHotel_2",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 23,
-            "slots_max": 3,
+            "number": 16,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -258,8 +210,8 @@
             "SpawnPoints": "ZoneConcordia_1",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 24,
-            "slots_max": 3,
+            "number": 17,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -270,8 +222,8 @@
             "SpawnPoints": "ZoneColumn",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 25,
-            "slots_max": 3,
+            "number": 18,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -282,55 +234,7 @@
             "SpawnPoints": "ZoneConcordiaParking",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 26,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 2100,
-            "time_min": 600
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnPoints": "ZoneSnipeCinema",
-            "WildSpawnType": "marksman",
-            "isPlayers": true,
-            "number": 27,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 2100,
-            "time_min": 600
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnPoints": "ZoneSnipeCarShowroom",
-            "WildSpawnType": "marksman",
-            "isPlayers": true,
-            "number": 28,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 2100,
-            "time_min": 600
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnPoints": "ZoneSnipeBuilding",
-            "WildSpawnType": "marksman",
-            "isPlayers": true,
-            "number": 29,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 2100,
-            "time_min": 600
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnPoints": "ZoneSnipeSW01",
-            "WildSpawnType": "marksman",
-            "isPlayers": true,
-            "number": 30,
+            "number": 19,
             "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
@@ -342,8 +246,8 @@
             "SpawnPoints": "ZoneClimova",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 31,
-            "slots_max": 3,
+            "number": 20,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -351,11 +255,11 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
-            "SpawnPoints": "",
+            "SpawnPoints": "ZoneSW01",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 32,
-            "slots_max": 3,
+            "number": 21,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
@@ -366,11 +270,59 @@
             "SpawnPoints": "ZoneMvd",
             "WildSpawnType": "assault",
             "isPlayers": true,
-            "number": 33,
-            "slots_max": 3,
+            "number": 22,
+            "slots_max": 2,
             "slots_min": 0,
             "time_max": 2100,
             "time_min": 600
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "ZoneSnipeCinema",
+            "WildSpawnType": "marksman",
+            "isPlayers": true,
+            "number": 23,
+            "slots_max": 1,
+            "slots_min": 0,
+            "time_max": 900,
+            "time_min": 300
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "ZoneSnipeCarShowroom",
+            "WildSpawnType": "marksman",
+            "isPlayers": true,
+            "number": 24,
+            "slots_max": 1,
+            "slots_min": 0,
+            "time_max": 900,
+            "time_min": 300
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "ZoneSnipeBuilding",
+            "WildSpawnType": "marksman",
+            "isPlayers": true,
+            "number": 25,
+            "slots_max": 1,
+            "slots_min": 0,
+            "time_max": 900,
+            "time_min": 300
+        },
+        {
+            "BotPreset": "hard",
+            "BotSide": "Savage",
+            "SpawnPoints": "ZoneSnipeSW01",
+            "WildSpawnType": "marksman",
+            "isPlayers": true,
+            "number": 26,
+            "slots_max": 1,
+            "slots_min": 0,
+            "time_max": 900,
+            "time_min": 300
         }
     ],
     "ShorelineWaves": [
@@ -1541,9 +1493,9 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 0,
-            "slots_max": 3,
-            "slots_min": 3,
-            "time_max": 20,
+            "slots_max": 5,
+            "slots_min": 1,
+            "time_max": 5,
             "time_min": 1
         },
         {
@@ -1553,10 +1505,10 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 2,
-            "slots_max": 3,
-            "slots_min": 0,
-            "time_max": 300,
-            "time_min": 240
+            "slots_max": 5,
+            "slots_min": 1,
+            "time_max": 10,
+            "time_min": 5
         },
         {
             "BotPreset": "normal",
@@ -1568,7 +1520,7 @@
             "slots_max": 3,
             "slots_min": 0,
             "time_max": 600,
-            "time_min": 360
+            "time_min": 180
         },
         {
             "BotPreset": "hard",

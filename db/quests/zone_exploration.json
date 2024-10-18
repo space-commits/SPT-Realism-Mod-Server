@@ -265,7 +265,6 @@
                 }
             ],
             "AvailableForStart": [
-                
                 {
                     "availableAfter": 0,
                     "conditionType": "Quest",

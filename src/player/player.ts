@@ -13,7 +13,7 @@ export class Player {
 
     public defaultHeadHealth;
     public defaultChestHealth;
-    public defaultStomaHealth;
+    public defaultStomachHealth;
     public defaultArmHealth;
     public defaultLegHealth;
     public defaultTemp;
@@ -28,11 +28,11 @@ export class Player {
 
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private medItems, private helper: Utils) {
         let healthTemplate = this.tables.templates.profiles.Standard.bear.character.Health;
-        this.defaultHeadHealth = healthTemplate.BodyParts.Head.Health.Maximum * modConfig.player_hp_multi;
-        this.defaultChestHealth = healthTemplate.BodyParts.Chest.Health.Maximum * modConfig.player_hp_multi;
-        this.defaultStomaHealth = healthTemplate.BodyParts.Stomach.Health.Maximum * modConfig.player_hp_multi;
-        this.defaultArmHealth = healthTemplate.BodyParts.LeftArm.Health.Maximum * modConfig.player_hp_multi;
-        this.defaultLegHealth = healthTemplate.BodyParts.LeftLeg.Health.Maximum * modConfig.player_hp_multi;
+        this.defaultHeadHealth = healthTemplate.BodyParts.Head.Health.Maximum;
+        this.defaultChestHealth = healthTemplate.BodyParts.Chest.Health.Maximum;
+        this.defaultStomachHealth = healthTemplate.BodyParts.Stomach.Health.Maximum;
+        this.defaultArmHealth = healthTemplate.BodyParts.LeftArm.Health.Maximum;
+        this.defaultLegHealth = healthTemplate.BodyParts.LeftLeg.Health.Maximum;
         this.defaultTemp = healthTemplate.Temperature.Maximum;
         this.realisticHeadHealth = realisticHpPools.health.BodyParts[0].Head.max * modConfig.player_hp_multi;
         this.realisticChestHealth = realisticHpPools.health.BodyParts[0].Chest.max * modConfig.player_hp_multi;
@@ -66,8 +66,8 @@ export class Player {
         //revert to defaults
         if (this.modConfig.realistic_player_health == false && this.modConfig.revert_hp == true) {
 
-            this.setPlayerHealthHelper(pmcData, true, false);
-            this.setPlayerHealthHelper(scavData, true, false);
+            this.setPlayerHealthHelper(pmcData, false, false);
+            this.setPlayerHealthHelper(scavData, false, false);
 
             this.modConfig.revert_hp = false;
             this.helper.writeConfigJSON(this.modConfig, 'config/config.json');
@@ -115,8 +115,8 @@ export class Player {
         let rightLeg = playerData.Health.BodyParts["RightLeg"].Health;
 
         const headHealth = setRealisticHP ? this.realisticHeadHealth : this.defaultHeadHealth;
-        const chestHealth = setRealisticHP ? this.realisticHeadHealth : this.defaultChestHealth;
-        const stomachHealth = setRealisticHP ? this.realisticHeadHealth : this.defaultStomaHealth;
+        const chestHealth = setRealisticHP ? this.realisticChestHealth : this.defaultChestHealth;
+        const stomachHealth = setRealisticHP ? this.realisticStomachHealth : this.defaultStomachHealth;
         const armHealth = setRealisticHP ? this.realisticArmHealth : this.defaultArmHealth;
         const legHealth = setRealisticHP ? this.realisticLegHealth : this.defaultLegHealth;
 
