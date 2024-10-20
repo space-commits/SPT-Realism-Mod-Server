@@ -270,10 +270,12 @@ class Quests {
         }
     }
     resetRepeatableQuests(profile) {
-        const questsToRepeat = ["667dbbc9c62a7c2ee8fe25b2", "6705425a0351f9f55b7d8c61"];
-        questsToRepeat.forEach(qid => {
-            this.resetQuestHelper(profile, qid);
-        });
+        //rad treatment
+        this.resetQuestHelper(profile, "667dbbc9c62a7c2ee8fe25b2");
+        if (seasonalevents_1.EventTracker.isHalloween) {
+            //Illicit Procedures
+            this.resetQuestHelper(profile, "6705425a0351f9f55b7d8c61");
+        }
     }
     resetQuestHelper(profile, questId) {
         const pmc = profile.characters.pmc;

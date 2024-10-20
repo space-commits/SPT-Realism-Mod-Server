@@ -314,11 +314,9 @@ class Traders {
             //gp-5
             this.assortBarterPusher("670adccd7dbb5881f697b016", theraId, "5b432c305acfc40019478128", 1, { "5d1b3a5d86f774252167ba22": 2 }, 2);
             this.addQuestAssortUnlock("670adccd7dbb5881f697b016", "6702b8b3c0f2f525d988e428", theraId, false);
-            if (seasonalevents_1.EventTracker.isHalloween) {
-                //labs access card blue flame part 1
-                this.assortBarterPusher("670834442b46cad0e1daa3d9", theraId, "5c94bbff86f7747ee735c08f", 1, { "5fc64ea372b0dd78d51159dc": 3 }, 1);
-                this.addQuestAssortUnlock("670834442b46cad0e1daa3d9", "6702b3e4aff397fa3e666fa5", theraId, true);
-            }
+            //labs access card blue flame part 1
+            this.assortBarterPusher("670834442b46cad0e1daa3d9", theraId, "5c94bbff86f7747ee735c08f", 1, { "5fc64ea372b0dd78d51159dc": 3 }, 1);
+            this.addQuestAssortUnlock("670834442b46cad0e1daa3d9", "6702b3e4aff397fa3e666fa5", theraId, true);
             //Ramu
             this.assortItemPusher("670ae835f28231d36adcf7fa", theraId, "66fd521442055447e2304fda", 2, "5449016a4bdc2d6f028b456f", 1, false, 50000); // ramu
             this.addQuestAssortUnlock("670ae835f28231d36adcf7fa", "670ae811bd43cbf026768126", theraId, true);

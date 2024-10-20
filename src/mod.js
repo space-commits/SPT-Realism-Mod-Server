@@ -720,7 +720,7 @@ class Main {
         if (modConfig.enable_hazard_zones) {
             const currentDate = new Date();
             const halloweenStart = new Date(currentDate.getFullYear(), 9, 20);
-            const halloweenEnd = new Date(currentDate.getFullYear(), 10, 4);
+            const halloweenEnd = new Date(currentDate.getFullYear(), 10, 5);
             if (currentDate >= halloweenStart && currentDate <= halloweenEnd) {
                 seasonalConfig.enableSeasonalEventDetection = false; //otherwise it enables BSG's summoning event which interferes with my events
                 seasonalevents_1.EventTracker.isHalloween = true;

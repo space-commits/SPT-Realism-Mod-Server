@@ -1717,13 +1717,13 @@
                             "_id": "673d3765e7de3b1c5fc1e349",
                             "_tpl": "5755356824597772cb798962",
                             "upd": {
-                                "StackObjectsCount": 10
+                                "StackObjectsCount": 5
                             }
                         }
                     ],
                     "target": "673d3765e7de3b1c5fc1e349",
                     "type": "Item",
-                    "value": "10"
+                    "value": "5"
                 }
             ]
         },
