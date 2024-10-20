@@ -818,7 +818,7 @@ class Main {
                         seasonalevents_1.EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (isCompleted) {
-                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 200 : 5;
+                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 200 : 10;
                     }
                 }
                 //blue flame part 1

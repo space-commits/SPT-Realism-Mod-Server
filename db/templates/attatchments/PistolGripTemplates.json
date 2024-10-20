@@ -1810,6 +1810,7 @@
         "AimSpeed": 0,
         "Ergonomics": 4.5,
         "Accuracy": 0,
+        "AimStability": 3,
         "ConflictingItems": [],
         "Weight": 0.039
     },
@@ -1823,6 +1824,7 @@
         "AimSpeed": 0,
         "Ergonomics": 6,
         "Accuracy": 0,
+        "Handling": 4,
         "ConflictingItems": [],
         "Weight": 0.042
     },
@@ -1836,6 +1838,7 @@
         "AimSpeed": 0,
         "Ergonomics": 6,
         "Accuracy": 0,
+        "Handling": 4,
         "ConflictingItems": [],
         "Weight": 0.042
     }
