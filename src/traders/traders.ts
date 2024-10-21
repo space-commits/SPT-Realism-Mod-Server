@@ -3,7 +3,6 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { IBarterScheme, ITrader, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { container } from "tsyringe";
-import { Arrays } from "../utils/arrays";
 import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
 import { Item } from "@spt/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
@@ -19,6 +18,9 @@ import { EventTracker } from "../misc/seasonalevents";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
+import { StaticArrays } from "../utils/arrays";
+import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
+import { ConfigServer } from "@spt/servers/ConfigServer";
 
 
 const modConfig = require("../../config/config.json");
@@ -63,42 +65,74 @@ const fenceId = "579dc571d53a0658a154fbec";
 const refId = "6617beeaa9cfa777ca915b7c";
 
 export class Traders {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private array: Arrays, private utils: Utils) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private traderConf: ITraderConfig, private utils: Utils) { }
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
     }
 
-
     public modifyInsurance(insurance: IInsuranceConfig) {
-        insurance.returnChancePercent =
+
+        insurance.returnChancePercent[fenceId] = 10;
+        this.tables.traders[fenceId].base.loyaltyLevels.forEach(ll => {
+            ll.insurance_price_coef = 14;
+        });
+
+        this.tables.traders[fenceId].base.insurance =
         {
-            "54cb50c76803fa8b248b4571": 30,
-            "54cb57776803fa99248b456e": 90
+            "availability": true,
+            "excluded_category": [
+                "62e9103049c018f425059f38"
+            ],
+            "max_return_hour": 3,
+            "max_storage_time": 96,
+            "min_payment": 0,
+            "min_return_hour": 1
         };
-        insurance.minAttachmentRoublePriceToBeTaken = 1000;
-        insurance.chanceNoAttachmentsTakenPercent = 15;
-        insurance.runIntervalSeconds = 600;
 
-        this.tables.traders[prapId].base.insurance.min_return_hour = 2;
-        this.tables.traders[prapId].base.insurance.max_return_hour = 3;
+        if (modConfig.insurance_price_coef) {
+            insurance.minAttachmentRoublePriceToBeTaken = 1000;
+            insurance.chanceNoAttachmentsTakenPercent = 15;
+            insurance.runIntervalSeconds = 600;
 
-        this.tables.traders[theraId].base.insurance.min_return_hour = 1;
-        this.tables.traders[theraId].base.insurance.max_return_hour = 1;
+            this.tables.traders[prapId].base.insurance.min_return_hour = 2;
+            this.tables.traders[prapId].base.insurance.max_return_hour = 3;
 
-        this.tables.traders[prapId].base.loyaltyLevels.forEach(ll => {
-            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
-        });
-        this.tables.traders[theraId].base.loyaltyLevels.forEach(ll => {
-            ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
-        });
+            this.tables.traders[theraId].base.insurance.min_return_hour = 1;
+            this.tables.traders[theraId].base.insurance.max_return_hour = 1;
+
+            this.tables.traders[prapId].base.loyaltyLevels.forEach(ll => {
+                ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
+            });
+            this.tables.traders[theraId].base.loyaltyLevels.forEach(ll => {
+                ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
+            });
+
+            insurance.returnChancePercent[prapId] = 30;
+            insurance.returnChancePercent[theraId] = 90;
+        }
     }
 
-    private modifyTraderBuyPrice(traderId: string, basePrice: number) {
+    private modifyTraderBuyPriceHelper(traderId: string, basePrice: number) {
         for (let i in this.tables.traders[traderId].base.loyaltyLevels) {
             let multi = Number(i);
-            this.tables.traders[traderId].base.loyaltyLevels[i].buy_price_coef = Math.max(Math.round(basePrice - (multi * 5)), 40);
+            this.tables.traders[traderId].base.loyaltyLevels[i].buy_price_coef = Math.round(this.utils.clampNumber(basePrice - (multi * 5), 40, 100));
         }
+    }
+
+    public modifyTraderBuyPrice() {
+        //consistent but low
+        this.modifyTraderBuyPriceHelper(mechId, this.utils.pickRandNumInRange(67, 72));
+        this.modifyTraderBuyPriceHelper(jaegId, this.utils.pickRandNumInRange(70, 75));
+        //decent but inconsistent
+        this.modifyTraderBuyPriceHelper(theraId, this.utils.pickRandNumInRange(62, 77));
+        this.modifyTraderBuyPriceHelper(ragmId, this.utils.pickRandNumInRange(62, 77));
+        //high but inconsistent
+        this.modifyTraderBuyPriceHelper(skierId, this.utils.pickRandNumInRange(58, 80));
+        this.modifyTraderBuyPriceHelper(prapId, this.utils.pickRandNumInRange(60, 78));
+        //low
+        this.modifyTraderBuyPriceHelper(fenceId, this.utils.pickRandNumInRange(80, 90));
+        this.modifyTraderBuyPriceHelper(refId, this.utils.pickRandNumInRange(85, 95));
     }
 
     public loadTraderTweaks() {
@@ -113,15 +147,7 @@ export class Traders {
         }
 
         if (modConfig.change_buy_price == true) {
-            this.modifyTraderBuyPrice(pkId, this.utils.pickRandNumInRange(69, 73));
-            this.modifyTraderBuyPrice(ragmId, this.utils.pickRandNumInRange(69, 73));
-            this.modifyTraderBuyPrice(jaegId, this.utils.pickRandNumInRange(75, 80));
-            this.modifyTraderBuyPrice(prapId, this.utils.pickRandNumInRange(65, 75));
-            this.modifyTraderBuyPrice(theraId, this.utils.pickRandNumInRange(78, 84));
-            this.modifyTraderBuyPrice(skierId, this.utils.pickRandNumInRange(65, 70));
-            this.modifyTraderBuyPrice(mechId, this.utils.pickRandNumInRange(69, 69));
-            this.modifyTraderBuyPrice(fenceId, this.utils.pickRandNumInRange(80, 90));
-            this.modifyTraderBuyPrice(refId, this.utils.pickRandNumInRange(99, 100));
+            this.modifyTraderBuyPrice();
         }
 
         if (modConfig.nerf_fence == true) {
@@ -143,22 +169,22 @@ export class Traders {
                     "3": 100,
                     "4": 100,
                     "5": 100,
-                    "6": 50,
-                    "7": 30,
-                    "8": 15,
+                    "6": 40,
+                    "7": 20,
+                    "8": 10,
                     "9": 5,
-                    "10": 2
+                    "10": 1
                 }
             }
             this.traderConf.fence.armorMaxDurabilityPercentMinMax.current.min = 10;
-            this.traderConf.fence.armorMaxDurabilityPercentMinMax.current.max = 80;
-            this.traderConf.fence.armorMaxDurabilityPercentMinMax.max.min = 40;
-            this.traderConf.fence.armorMaxDurabilityPercentMinMax.max.max = 90;
+            this.traderConf.fence.armorMaxDurabilityPercentMinMax.current.max = 50;
+            this.traderConf.fence.armorMaxDurabilityPercentMinMax.max.min = 30;
+            this.traderConf.fence.armorMaxDurabilityPercentMinMax.max.max = 70;
 
             this.traderConf.fence.weaponDurabilityPercentMinMax.current.min = 10;
             this.traderConf.fence.weaponDurabilityPercentMinMax.current.max = 100;
             this.traderConf.fence.weaponDurabilityPercentMinMax.max.min = 50;
-            this.traderConf.fence.weaponDurabilityPercentMinMax.max.max = 95;
+            this.traderConf.fence.weaponDurabilityPercentMinMax.max.max = 90;
 
             //ammo
             this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 60;
@@ -220,7 +246,6 @@ export class Traders {
         }
     }
 
-
     public setBasePrices(trader: ITrader) {
         if (modConfig.realistic_ballistics == true) this.setBasePrice(AmmoTemplates, trader);
     }
@@ -278,77 +303,117 @@ export class Traders {
         }
     }
 
+    private addQuestAssortUnlock(assortId, questId: string, traderId: string, addToStarted: boolean) {
+        const questAssort = this.tables.traders[traderId].questassort;
+        const type = addToStarted ? "started" : "success";
+        questAssort[type][assortId] = questId;
+    }
+
     public addItemsToAssorts() {
         if (this.modConf.food_changes) {
-            this.assortItemPusher(jaegId, "544fb62a4bdc2dfb738b4568", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
-            this.assortItemPusher(jaegId, "60098b1705871270cd5352a1", 2, "5449016a4bdc2d6f028b456f", 2, false, 18000);
-            this.assortItemPusher(jaegId, "5448fee04bdc2dbc018b4567", 2, "5449016a4bdc2d6f028b456f", 3, false, 25000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "544fb62a4bdc2dfb738b4568", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "60098b1705871270cd5352a1", 2, "5449016a4bdc2d6f028b456f", 2, false, 18000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "5448fee04bdc2dbc018b4567", 2, "5449016a4bdc2d6f028b456f", 3, false, 25000);
 
-            this.assortItemPusher(jaegId, "57347d692459774491567cf1", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
-            this.assortItemPusher(jaegId, "57347d7224597744596b4e72", 2, "5449016a4bdc2d6f028b456f", 2, false, 15000);
-            this.assortItemPusher(jaegId, "590c5d4b86f774784e1b9c45", 2, "5449016a4bdc2d6f028b456f", 3, false, 30000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "57347d692459774491567cf1", 2, "5449016a4bdc2d6f028b456f", 1, false, 12000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "57347d7224597744596b4e72", 2, "5449016a4bdc2d6f028b456f", 2, false, 15000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "590c5d4b86f774784e1b9c45", 2, "5449016a4bdc2d6f028b456f", 3, false, 30000);
 
-            this.assortItemPusher(pkId, "590c5f0d86f77413997acfab", 2, "5696686a4bdc2da3298b456a", 3, false, 250);
+            this.assortItemPusher(this.utils.genId(), pkId, "590c5f0d86f77413997acfab", 2, "5696686a4bdc2da3298b456a", 3, false, 250);
         }
 
         if (this.modConf.med_changes == true) {
             //Skier//
-            this.assortItemPusher(skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
+            this.assortItemPusher(this.utils.genId(), skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
         }
 
         if (this.modConf.recoil_attachment_overhaul == true) {
             //jaeger
-            this.assortItemPusher(jaegId, "mosin_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 5000);
-            this.assortItemPusher(jaegId, "6kh4_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 4000);
-            // this.assortBarterPusher(jaegId, "6kh5_bayonet", 1, ["5bffdc370db834001d23eca8"], 1);
-            this.assortItemPusher(jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "mosin_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 5000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "6kh4_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+            this.assortItemPusher(this.utils.genId(), jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         }
 
         if (this.modConf.enable_hazard_zones == true) {
-            this.assortItemPusher(theraId, "59e7715586f7742ee5789605", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
-            this.assortItemPusher(jaegId, "590c595c86f7747884343ad7", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
-            this.assortItemPusher(jaegId, "5b432c305acfc40019478128", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
+            //trimodol
+            this.assortBarterPusher("670ee6b57b09b6f86184c761", theraId, "637b620db7afa97bfc3d7009", 1, { "59e361e886f774176c10a2a5": 2, "5b4335ba86f7744d2837a264": 1 }, 3)
+            this.addQuestAssortUnlock("670ee6b57b09b6f86184c761", "66dad1a18cbba6e558486336", theraId, false);
+
+            //blueblood
+            this.assortBarterPusher("670addb68ce2611961186433", theraId, "637b6251104668754b72f8f9", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 3)
+            this.addQuestAssortUnlock("670addb68ce2611961186433", "6702b4a27d4a4a89fce96fbc", theraId, false);
+
+            //antidote
+            this.assortBarterPusher("670add019a9f5770dfd8c99a", theraId, "5fca138c2a7b221b2852a5c6", 1, { "590c595c86f7747884343ad7": 2, "5d1b3a5d86f774252167ba22": 2, "544fb3f34bdc2d03748b456a": 1 }, 3)
+            this.addQuestAssortUnlock("670add019a9f5770dfd8c99a", "6702b3b624c7ac4e2d3e9c37", theraId, false);
+
+            //gp-7
+            this.assortBarterPusher("670aea0db699847f54439bd5", theraId, "60363c0c92ec1c31037959f5", 1, { "619cc01e0a7c3a1a2731940c": 1, "59e361e886f774176c10a2a5": 1, "5d1b3a5d86f774252167ba22": 1 }, 3)
+            this.addQuestAssortUnlock("670aea0db699847f54439bd5", "670ae811bd43cbf026768126", theraId, false);
+
+            //gp-5
+            this.assortBarterPusher("670adccd7dbb5881f697b016", theraId, "5b432c305acfc40019478128", 1, { "5d1b3a5d86f774252167ba22": 2 }, 2)
+            this.addQuestAssortUnlock("670adccd7dbb5881f697b016", "6702b8b3c0f2f525d988e428", theraId, false);
+
+            //labs access card blue flame part 1
+            this.assortBarterPusher("670834442b46cad0e1daa3d9", theraId, "5c94bbff86f7747ee735c08f", 1, { "5fc64ea372b0dd78d51159dc": 3 }, 1)
+            this.addQuestAssortUnlock("670834442b46cad0e1daa3d9", "6702b3e4aff397fa3e666fa5", theraId, true);
+
+            //Ramu
+            this.assortItemPusher("670ae835f28231d36adcf7fa", theraId, "66fd521442055447e2304fda", 2, "5449016a4bdc2d6f028b456f", 1, false, 50000); // ramu
+            this.addQuestAssortUnlock("670ae835f28231d36adcf7fa", "670ae811bd43cbf026768126", theraId, true);
+
+            //gamu
+            this.assortItemPusher("67082dc8dc5160ef041094dc", theraId, "66fd571a05370c3ee1a1c613", 3, "5449016a4bdc2d6f028b456f", 1, false, 25000); // gamu
+            this.addQuestAssortUnlock("67082dc8dc5160ef041094dc", "6702b0a1b9fb4619debd0697", theraId, true);
+
+            //safe
+            this.assortItemPusher("67082dcf37314df7bb087eb6", theraId, "66fd588d397ed74159826cf0", 1, "5449016a4bdc2d6f028b456f", 1, false, 200000); // safe container 
+            this.addQuestAssortUnlock("67082dcf37314df7bb087eb6", "6702b0e9601acf629d212eeb", theraId, true);
+
+            //filter
+            this.assortBarterPusher("670adc9a836aebf0d13fd39a", theraId, "590c595c86f7747884343ad7", 1, { "59e7715586f7742ee5789605": 2 }, 1)
+            this.addQuestAssortUnlock("670adc9a836aebf0d13fd39a", "6702b0e9601acf629d212eeb", theraId, false);
+
+            //respirator
+            this.assortBarterPusher("670afc690965e362b4bbc1df", theraId, "59e7715586f7742ee5789605", 1, { "5d1b3a5d86f774252167ba22": 1 }, 1)
+            this.addQuestAssortUnlock("670afc690965e362b4bbc1df", "6702b0a1b9fb4619debd0697", theraId, false);
+
         }
 
         //ragman//
         if (this.modConf.realistic_ballistics == true) {
-            this.assortItemPusher(ragmId, "xsapi_chest", 1, "5449016a4bdc2d6f028b456f", 4, false, 70000);
-            this.assortItemPusher(ragmId, "mk4a_plate", 1, "5449016a4bdc2d6f028b456f", 4, false, 30000);
-
-            // this.assortNestedItemPusher(ragmId, "5ac8d6885acfc400180ae7b0", { "5a16b7e1fcdbcb00165aa6c9": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 3, true, undefined, 1.25);
-            // this.assortNestedItemPusher(ragmId, "5e00c1ad86f774747333222c", { "5e01f31d86f77465cf261343": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 4, true, undefined, 1.25, { "5c0558060db834001b735271": "mod_nvg" });
-            // this.assortNestedItemPusher(ragmId, "5ea05cf85ad9772e6624305d", { "5a16badafcdbcb001865f72d": "mod_equipment_000" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25, { "5ea058e01dbce517f324b3e2": "mod_nvg" });
-            // this.assortNestedItemPusher(ragmId, "5aa7cfc0e5b5b00015693143", { "5a16b8a9fcdbcb00165aa6ca": "mod_nvg", "5a16b93dfcdbcbcae6687261": "mod_nvg", "57235b6f24597759bf5a30f1": "mod_nvg" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.3);
+            this.assortItemPusher(this.utils.genId(), ragmId, "xsapi_chest", 1, "5449016a4bdc2d6f028b456f", 4, false, 70000);
+            this.assortItemPusher(this.utils.genId(), ragmId, "mk4a_plate", 1, "5449016a4bdc2d6f028b456f", 4, false, 30000);
         }
-
 
         if (this.modConf.recoil_attachment_overhaul == true) {
             //mechanic//
             //guns
-            this.assortItemPusher(mechId, "mechOPSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 12500);
-            this.assortItemPusher(mechId, "mechSKSv1", 1, "5449016a4bdc2d6f028b456f", 1, false, 10000);
-            this.assortItemPusher(mechId, "mechSTM9v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 15000);
-            this.assortItemPusher(mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
-            this.assortItemPusher(mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechOPSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 12500);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSKSv1", 1, "5449016a4bdc2d6f028b456f", 1, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSTM9v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
 
             //attachments            
-            this.assortItemPusher(mechId, "mechRatWorx", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
-            this.assortItemPusher(mechId, "mechSKS_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
-            this.assortItemPusher(mechId, "mechVPO_23", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
-            this.assortItemPusher(mechId, "mechAUG_417", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
-            this.assortItemPusher(mechId, "mechMDR_406", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(mechId, "mechSpear_330mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
-            this.assortItemPusher(mechId, "mechMCX_171mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(mechId, "mechMCX_229mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 15000);
-            this.assortItemPusher(mechId, "mechSlant_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
-            this.assortItemPusher(mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
-            this.assortItemPusher(mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
-            this.assortItemPusher(mechId, "mechJMAC_366", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechRatWorx", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSKS_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechVPO_23", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechAUG_417", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechMDR_406", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSpear_330mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechMCX_171mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechMCX_229mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSlant_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "mechJMAC_366", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
 
             //skier//
             //guns
-            this.assortItemPusher(skierId, "Skier209", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
+            this.assortItemPusher(this.utils.genId(), skierId, "Skier209", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
         }
         //scopes
         this.assortNestedItemPusher(mechId, "616584766ef05c2ce828ef57", { "5c7d560b2e22160bc12c6139": "mod_scope", "5c7d55de2e221644f31bff68": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25);
@@ -386,7 +451,6 @@ export class Traders {
 
         this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
 
-
         for (let key in nestedChildItems) {
             let id = this.utils.genId();
             assort.items.push(
@@ -416,21 +480,15 @@ export class Traders {
         }
     }
 
-    private assortBarterPusher(trader: string, itemId: string, buyRestriction: number, barters: string[], loyalLvl: number) {
+    private assortBarterPusher(assortId: string, trader: string, itemId: string, buyRestriction: number, barters: Record<string, number>, loyalLvl: number) {
 
         let assort = this.tables.traders[trader].assort;
-        let assortId = this.utils.genId();
-
         this.assortBarterHelper(assort, assortId, barters, loyalLvl, itemId, buyRestriction);
-
     }
 
-    private assortBarterHelper(assort: ITraderAssort, assortId: string, barters: string[], loyalLvl: number, itemId: string, buyRestriction: number) {
+    private assortBarterHelper(assort: ITraderAssort, assortId: string, barters: Record<string, number>, loyalLvl: number, itemId: string, buyRestriction: number) {
 
-        if (loyalLvl === 5 && modConfig.randomize_trader_ll != true) {
-            loyalLvl = 4;
-        }
-
+        if (loyalLvl === 5 && modConfig.randomize_trader_ll != true) loyalLvl = 4;
         assort.items.push(
             {
                 "_id": assortId,
@@ -445,12 +503,12 @@ export class Traders {
 
         let barterItems = [];
 
-        for (let barter in barters) {
-
+        for (const key in barters) {
+            const value = barters[key];
             barterItems.push(
                 {
-                    "count": 1,
-                    "_tpl": barters[barter]
+                    "count": value,
+                    "_tpl": key
                 }
             );
         }
@@ -464,11 +522,8 @@ export class Traders {
         assort.loyal_level_items[assortId] = loyalLvl;
     }
 
-    private assortItemPusher(trader: string, itemId: string, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbookPrice: boolean, price: number = 0, priceMulti: number = 1) {
-
+    private assortItemPusher(assortId: string, trader: string, itemId: string, buyRestriction: number, saleCurrency: string, loyalLvl: number, useHandbookPrice: boolean, price: number = 0, priceMulti: number = 1) {
         let assort = this.tables.traders[trader].assort;
-        let assortId = this.utils.genId();
-
         if (useHandbookPrice == true) {
             price += this.handBookPriceLookup(itemId);
         }
@@ -525,9 +580,13 @@ export class RandomizeTraderAssort {
     private logger = container.resolve<ILogger>("WinstonLogger");
     private tables = this.databaseServer.getTables();
     private itemDB = this.tables.templates.items;
-    private arrays = new Arrays(this.tables);
-    private utils = new Utils(this.tables, this.arrays);
-
+    private utils = new Utils(this.tables);
+    private assortsToIgnore = [
+        "670ae835f28231d36adcf7fa",
+        "67082dc8dc5160ef041094dc",
+        "670834442b46cad0e1daa3d9",
+        "67082dcf37314df7bb087eb6",
+    ];
 
     public getAverageLL(pmcData: IPmcData[], traderId: string): number {
 
@@ -624,10 +683,13 @@ export class RandomizeTraderAssort {
 
     public randomizeStockHelper(item: Item, averageLL: number) {
         let itemParent = this.itemDB[item._tpl]?._parent;
+
         if (!itemParent) {
             this.logger.warning(`Realism Mod: Unable to randomize stock for: ${item._tpl}, has no _parent / item does not exist in db`);
             return;
         }
+
+        if (EventTracker.isHalloween && this.assortsToIgnore.includes(item._id)) return;
 
         const llStockFactor = Math.max(averageLL - 1, 1);
         const llStackableFactor = this.getLLStackableBonus(averageLL);
@@ -638,28 +700,28 @@ export class RandomizeTraderAssort {
         this.randomizeStock(itemParent, ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier, llOutOfStockFactor);
 
         //weapons
-        for (let id in this.arrays.weaponParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.weaponParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //weapon mods
-        for (let id in this.arrays.modParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.modParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //gear
-        for (let id in this.arrays.gearParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.gearParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //barter items
-        for (let id in this.arrays.barterParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.barterParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //keys 
-        for (let id in this.arrays.keyParentIDs) {
-            this.randomizeStock(itemParent, this.arrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        for (let id in StaticArrays.keyParentIDs) {
+            this.randomizeStock(itemParent, StaticArrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
         }
 
         //maps
@@ -712,38 +774,38 @@ export class RandomizeTraderAssort {
 
         if (assortItemParent === ParentClasses.AMMO && item.slotId !== "cartridges") {
             let llOutOfStockFactor = llStockFactor * 10;
-            this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 20);
-            this.randomizeAmmoStockHelper(item, Calibers._9x19mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 50, 58);
-            this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55);
-            this.randomizeAmmoStockHelper(item, Calibers._45ACP, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55);
-            this.randomizeAmmoStockHelper(item, Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 100);
-            this.randomizeAmmoStockHelper(item, Calibers._50AE, 8 * modConfig.rand_stackable_modifier * llStackableFactor, 28 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120);
-            this.randomizeAmmoStockHelper(item, Calibers._46x30mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50);
-            this.randomizeAmmoStockHelper(item, Calibers._366TKM, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 55, 110);
-            this.randomizeAmmoStockHelper(item, Calibers._762x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55, 95);
-            this.randomizeAmmoStockHelper(item, Calibers._68x51mm, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, Calibers._762x51mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 65 * modConfig.rand_stackable_modifier * llStackableFactor, 60 - llOutOfStockFactor, 60, 120);
-            this.randomizeAmmoStockHelper(item, Calibers._762x54rmm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 65, 120);
-            this.randomizeAmmoStockHelper(item, Calibers._300BLK, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 53, 100);
-            this.randomizeAmmoStockHelper(item, Calibers._556x45mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
-            this.randomizeAmmoStockHelper(item, Calibers._545x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100);
-            this.randomizeAmmoStockHelper(item, Calibers._127x55mm, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 51);
-            this.randomizeAmmoStockHelper(item, Calibers._12ga, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 150);
-            this.randomizeAmmoStockHelper(item, Calibers._20ga, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, Calibers._23x75mm, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 2 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor);
-            this.randomizeAmmoStockHelper(item, Calibers._338mag, 5 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 70, 120);
-
+            if (this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 20)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._9x19mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 50, 58)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._9x21mm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 50)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._9x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._45ACP, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 95 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 49, 55)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._357mag, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 100)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._50AE, 8 * modConfig.rand_stackable_modifier * llStackableFactor, 28 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 0, 120)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._46x30mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._57x28mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 35 - llOutOfStockFactor, 50)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._762x25mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 50)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._366TKM, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 30 - llOutOfStockFactor, 55, 110)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._762x39mm, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 85 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 55, 95)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._68x51mm, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 60 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._762x51mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 65 * modConfig.rand_stackable_modifier * llStackableFactor, 60 - llOutOfStockFactor, 60, 120)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._762x54rmm, 25 * modConfig.rand_stackable_modifier * llStackableFactor, 70 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor, 65, 120)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._300BLK, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 45 - llOutOfStockFactor, 53, 100)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._556x45mm, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._545x39mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 100 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 60, 100)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._127x55mm, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 90 * modConfig.rand_stackable_modifier * llStackableFactor, 40 - llOutOfStockFactor, 51)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._12ga, 10 * modConfig.rand_stackable_modifier * llStackableFactor, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 20 - llOutOfStockFactor, 35, 150)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._20ga, 20 * modConfig.rand_stackable_modifier * llStackableFactor, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 10 - llOutOfStockFactor)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._23x75mm, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 15 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._26x75mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 2 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._40x46mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._40x53mm, 1 * modConfig.rand_stackable_modifier * llStackableFactor, 3 * modConfig.rand_stackable_modifier * llStackableFactor, 55 - llOutOfStockFactor)) return;
+            if (this.randomizeAmmoStockHelper(item, Calibers._338mag, 5 * modConfig.rand_stackable_modifier * llStackableFactor, 30 * modConfig.rand_stackable_modifier * llStackableFactor, 50 - llOutOfStockFactor, 70, 120)) return;
+            this.randomizeAmmoStockHelper(item, "", 40 * modConfig.rand_stackable_modifier * llStackableFactor, 80 * modConfig.rand_stackable_modifier * llStackableFactor, 25 - llOutOfStockFactor, 60, 60)
         }
     }
 
-    private randomizeAmmoStockHelper(item: Item, caliber: string, min: number, max: number, outOfStockChance: number, penThreshold: number = 0, damageThreshold: number = 0) {
-        if (this.itemDB[item._tpl]._props.Caliber === caliber) {
+    private randomizeAmmoStockHelper(item: Item, caliber: string, min: number, max: number, outOfStockChance: number, penThreshold: number = 0, damageThreshold: number = 0, dontCheckCaliber: boolean = false): boolean {
+        if (dontCheckCaliber == true || this.itemDB[item._tpl]._props.Caliber === caliber) {
             let oddsModifier = 1;
             let stockModifier = 1;
             let damage = this.itemDB[item._tpl]._props.Damage * this.itemDB[item._tpl]._props.ProjectileCount;
@@ -773,7 +835,9 @@ export class RandomizeTraderAssort {
             if (item.upd.hasOwnProperty('BuyRestrictionMax')) {
                 delete item.upd.BuyRestrictionMax;
             }
+            return true;
         }
+        return false;
     }
 
     //re-roll based on ll level
@@ -791,7 +855,7 @@ export class RandomizeTraderAssort {
         if (assortItemParent === catParent) {
 
             //items aren't out of stock often enough, this artifically increases the chance of being out of stock
-            if (this.utils.pickRandNumOneInTen() < (4 - llFactor)) {
+            if (this.utils.pickRandNumInRange(0, 100) < (30 - (llFactor * 5))) {
                 item.upd.StackObjectsCount = 0 + min;
             }
             else {
@@ -920,8 +984,7 @@ export class TraderRefresh extends TraderAssortHelper {
     private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): Item[] {
         const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
-        const arrays = new Arrays(tables);
-        const utils = new Utils(tables, arrays);
+        const utils = new Utils(tables);
 
         let assortItems = trader.assort.items;
         let assortBarters = trader.assort.barter_scheme;

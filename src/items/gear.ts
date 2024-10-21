@@ -1,11 +1,11 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
-import { Arrays } from "../utils/arrays";
+import { StaticArrays } from "../utils/arrays";
 import { ParentClasses } from "../utils/enums";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class Gear {
-    constructor(private arrays: Arrays, private tables: IDatabaseTables, private logger: ILogger, private modConfig: any) { }
+    constructor(private tables: IDatabaseTables, private logger: ILogger, private modConfig: any) { }
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
@@ -18,25 +18,25 @@ export class Gear {
     }
 
     public loadSpecialSlotChanges() {
+        const gasId = "590a3efd86f77437d351a25b";
+        const geingerId = "5672cb724bdc2dc2088b456b";
+
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
-            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+            slot._props.filters[0].Filter.push(gasId, geingerId);
         });
         this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
-            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+            slot._props.filters[0].Filter.push(gasId, geingerId);
         });
+        //SVM pockets compatbility
         if (this.itemDB()["a8edfb0bce53d103d3f62b9b"]) {
             this.itemDB()["a8edfb0bce53d103d3f62b9b"]._props.Slots.forEach(slot => {
-                slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+                slot._props.filters[0].Filter.push(gasId, geingerId);
             });
         }
     }
 
     public loadGearConflicts() {
 
-        let confMasks = this.arrays.conflMasks;
-        let confHats = this.arrays.conflHats;
-        let confNVG = this.arrays.conflNVGomponents
-        let confMaskOverlays = this.arrays.confMaskOverlays
         let armorCompArr = [];
 
         //remove certain helmets from GP7 conflicts
@@ -59,20 +59,20 @@ export class Gear {
                     armorCompArr.push(serverItem._id);
                 }
 
-                if (confNVG.includes(serverItem._id)) {
+                if (StaticArrays.conflNVGomponents.includes(serverItem._id)) {
                     let confItems = serverItem._props.ConflictingItems;
                     serverItem._props.ConflictingItems = confItems.concat(armorCompArr)
                 }
 
-                if (confHats.includes(serverItem._id)) {
+                if (StaticArrays.conflHats.includes(serverItem._id)) {
                     let confItems = this.itemDB()[item]._props.ConflictingItems;
-                    this.itemDB()[item]._props.ConflictingItems = confMasks.concat(confItems);
+                    this.itemDB()[item]._props.ConflictingItems = StaticArrays.conflMasks.concat(confItems);
                 }
             }
 
             //custom mask overlays will bug out if using actual faceshield at the same time
             if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true) && serverItem._props.FaceShieldComponent == true) {
-                confMaskOverlays.forEach(element => {
+                StaticArrays.confMaskOverlays.forEach(element => {
                     if (serverItem._id !== element) {
                         serverItem._props.ConflictingItems.push(element);
                     }

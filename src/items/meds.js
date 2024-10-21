@@ -622,7 +622,7 @@ class Consumables {
                 serverItem._props.ConflictingItems.splice(0, 0, "SPTRM");
                 serverItem._props.ConflictingItems.splice(1, 0, "trnqt");
                 serverItem._props.ConflictingItems.splice(2, 0, "trnqt");
-                serverItem._props.ConflictingItems.splice(3, 0, "0.6"); // trqnt damage per tick
+                serverItem._props.ConflictingItems.splice(3, 0, "0.55"); // trqnt damage per tick
                 serverItem._props.ConflictingItems.splice(4, 0, "true");
                 serverItem._props.ConflictingItems.splice(5, 0, "");
                 serverItem._props.ConflictingItems.splice(6, 0, "");

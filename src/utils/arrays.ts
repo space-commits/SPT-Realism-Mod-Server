@@ -1,7 +1,7 @@
 import { IBotType } from "@spt/models/eft/common/tables/IBotType";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 
-export class Arrays {
+export class BotArrays {
 
     public bossBotArr: IBotType[];
     public botArr: IBotType[];
@@ -119,14 +119,16 @@ export class Arrays {
         ];
 
     }
+}
 
-    public outdoorMaps = [
+export class StaticArrays {
+    static outdoorMaps = [
         "shoreline",
         "woods",
         "lighthouse"
     ]
 
-    public urbanMaps = [
+    static urbanMaps = [
         "bigmap",
         "customs",
         "rezervbase",
@@ -137,26 +139,15 @@ export class Arrays {
         "sandbox_high"
     ]
 
-    public cqbMaps = [
+    static cqbMaps = [
         "factory",
         "factory4_night",
         "factory4_day",
         "laboratory",
         "interchange"
     ]
-
-    public traderIDs = [
-        "54cb50c76803fa8b248b4571",
-        "54cb57776803fa99248b456e",
-        "579dc571d53a0658a154fbec",
-        "58330581ace78e27b8b10cee",
-        "5935c25fb3acc3127c3d8cd9",
-        "5a7c2eca46aef81a7ca2145d",
-        "5ac3b934156ae10c4430e83c",
-        "5c0647fdd443bc2504c2d371"
-    ];
-
-    public blacklistedItems = [
+    
+    static blacklistedItems = [
         "generic_debuff",
         "performance_debuff",
         "weight_debuff",
@@ -166,7 +157,7 @@ export class Arrays {
         "regen_debuff"
     ];
 
-    public stashMeds = [
+    static stashMeds = [
         "544fb37f4bdc2dee738b4567",
         "5af0548586f7743a532b7e99",
         "5e8488fa988a8701445df1e4",
@@ -184,12 +175,12 @@ export class Arrays {
     ];
 
 
-    public keyParentIDs = [
+    static keyParentIDs = [
         "5c164d2286f774194c5e69fa",
         "5c99f98d86f7745c314214b3",
     ]
 
-    public gearParentIDs = [
+    static gearParentIDs = [
         "5448e5284bdc2dcb718b4567",
         "5448e54d4bdc2dcc718b4568",
         "57bef4c42459772e8d35a53b",
@@ -203,7 +194,7 @@ export class Arrays {
     ]
 
 
-    public barterParentIDs = [
+    static barterParentIDs = [
         "590c745b86f7743cc433c5f2",
         "57864ada245977548638de91",
         "57864a66245977548f04a81f",
@@ -216,7 +207,7 @@ export class Arrays {
         "5448ecbe4bdc2d60728b4568"
     ]
 
-    public weaponParentIDs = [
+    static weaponParentIDs = [
         "5447b5e04bdc2d62278b4567",
         "5447b5f14bdc2d61278b4567",
         "5447b5cf4bdc2d65278b4567",
@@ -231,7 +222,7 @@ export class Arrays {
         "617f1ef5e8b54b0998387733"
     ]
 
-    public modParentIDs = [
+    static modParentIDs = [
         "550aa4bf4bdc2dd6348b456b",
         "550aa4dd4bdc2dc9348b4569",
         "550aa4cd4bdc2dd8348b456c",
@@ -259,7 +250,7 @@ export class Arrays {
         "627a137bf21bc425b06ab944"
     ]
 
-    public equipmentSlots = {
+    static equipmentSlots = {
         Headwear: "Headwear",
         Earpiece: "Earpiece",
         FaceCover: "FaceCover",
@@ -276,7 +267,7 @@ export class Arrays {
         Scabbard: "Scabbard"
     };
 
-    public modTypes = {
+    static modTypes = {
         "FlashHider": "550aa4bf4bdc2dd6348b456b",
         "MuzzleCombo": "550aa4dd4bdc2dc9348b4569",
         "Silencer": "550aa4cd4bdc2dd8348b456c",
@@ -304,33 +295,61 @@ export class Arrays {
         "GrenadeLauncherMagazine": "627a137bf21bc425b06ab944"
     };
 
-    public conflNVGomponents = [
+    static conflNVGomponents = [
         "5c0695860db834001b735461",
         "5c11046cd174af02a012e42b",
         "5a16b8a9fcdbcb00165aa6ca"
     ]
 
-    public gasMasks = [
+    static gasMasks = [
         "CCG_GAS_MASK_GP9",
-        "CCG_GAS_MASK_MCU2P", 
+        "CCG_GAS_MASK_MCU2P",
         "CCG_GAS_MASK_SGE400",
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5"
     ];
 
-    public confMaskOverlays = [
-        "5b432c305acfc40019478128", 
-        "60363c0c92ec1c31037959f5", 
+    static gasEventMasksLow: Record<string, number> = {
+        "60363c0c92ec1c31037959f5": 1,
+        "59e7715586f7742ee5789605": 6
+    };
+
+    static gasEventMasksHigh: Record<string, number> = {
+        "60363c0c92ec1c31037959f5": 6,
+        "59e7715586f7742ee5789605": 2
+    };
+
+    static gasEventMasksMed: Record<string, number> = {
+        "60363c0c92ec1c31037959f5": 3,
+        "5b432c305acfc40019478128": 2,
+        "59e7715586f7742ee5789605": 7
+    };
+    
+    static traders = [
+        "54cb50c76803fa8b248b4571",
+        "54cb57776803fa99248b456e",
+        "58330581ace78e27b8b10cee",
+        "5935c25fb3acc3127c3d8cd9",
+        "5a7c2eca46aef81a7ca2145d",
+        "5ac3b934156ae10c4430e83c",
+        "5c0647fdd443bc2504c2d371",
+        "579dc571d53a0658a154fbec",
+        "6617beeaa9cfa777ca915b7c"
+    ]
+
+    static confMaskOverlays = [
+        "5b432c305acfc40019478128",
+        "60363c0c92ec1c31037959f5",
         "CCG_GAS_MASK_GP9",
-        "CCG_GAS_MASK_MCU2P", 
+        "CCG_GAS_MASK_MCU2P",
         "CCG_GAS_MASK_SGE400",
-        "6570aead4d84f81fd002a033", 
+        "6570aead4d84f81fd002a033",
         "657089638db3adca1009f4ca",
-        "62a09e08de7ac81993580532", 
+        "62a09e08de7ac81993580532",
         "5b432b2f5acfc4771e1c6622"
     ]
 
-    public conflHats = [
+    static conflHats = [
         "60bf74184a63fc79b60c57f6",
         "5df8a58286f77412631087ed",
         "5d96141523f0ea1b7f2aacab",
@@ -359,7 +378,7 @@ export class Arrays {
         "5aa2ba46e5b5b000137b758d"
     ];
 
-    public conflMasks = [
+    static conflMasks = [
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",
         "5b432b6c5acfc4001a599bf0",
@@ -372,4 +391,13 @@ export class Arrays {
         "5ab8f39486f7745cd93a1cca",
         "5b4326435acfc433000ed01d"
     ];
+
+    static secureContainers = [
+        "5857a8b324597729ab0a0e7d",
+        "544a11ac4bdc2d470e8b456a",
+        "5c093ca986f7740a1867ab12",
+        "59db794186f77448bc595262",
+        "5857a8bc2459772bad15db29"
+    ]
 }
+

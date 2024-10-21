@@ -244,7 +244,7 @@ class ItemStatHandler {
             let modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
                 fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
                 fileItem?.Convergence?.toString() || "0", fileItem?.CanCycleSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0",
-                fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0", fileItem?.Flash?.toString() || "0"];
+                fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0", fileItem?.Flash?.toString() || "0", fileItem?.AimStability?.toString() || "0", fileItem?.Handling?.toString() || "0"];
             let combinedArr = modPropertyValues.concat(serverConfItems);
             serverItem._props.ConflictingItems = combinedArr;
         }
@@ -261,7 +261,8 @@ class ItemStatHandler {
             }
             this.modifiedItems[fileItem.ItemID] = fileItem;
             if (modConfig.malf_changes == true) {
-                serverItem._props.BaseMalfunctionChance = fileItem.BaseMalfunctionChance;
+                const malfChance = fileItem.BaseMalfunctionChance >= 0.1 ? fileItem.BaseMalfunctionChance * 0.01 : fileItem.BaseMalfunctionChance; //a lot of weapon patches are using old malf values
+                serverItem._props.BaseMalfunctionChance = malfChance;
                 serverItem._props.HeatFactorGun = fileItem.HeatFactorGun;
                 serverItem._props.HeatFactorByShot = fileItem.HeatFactorByShot;
                 serverItem._props.CoolFactorGun = fileItem.CoolFactorGun;

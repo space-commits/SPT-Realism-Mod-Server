@@ -8,11 +8,11 @@ import { ParentClasses } from "../utils/enums";
 import { IPreset } from "@spt/models/eft/common/IGlobals";
 import { LocationController } from "@spt/controllers/LocationController";
 import { Utils, RaidInfoTracker } from "../utils/utils";
-import { Arrays } from "../utils/arrays";
 import { IAirdropLootResult } from "@spt/models/eft/location/IAirdropLootResult";
 import { AirdropTypeEnum } from "@spt/models/enums/AirdropType";
 import { RandomUtil } from "@spt/utils/RandomUtil";
 import { container } from "tsyringe";
+import { EventTracker } from "./seasonalevents";
 
 
 
@@ -20,19 +20,23 @@ export class Airdrops {
     constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
 
     public loadAirdropChanges() {
-        this.airConf.airdropChancePercent.bigmap = 5;
-        this.airConf.airdropChancePercent.woods = 7;
-        this.airConf.airdropChancePercent.lighthouse = 7;
-        this.airConf.airdropChancePercent.shoreline = 7;
-        this.airConf.airdropChancePercent.interchange = 2;
-        this.airConf.airdropChancePercent.reserve = 2;
-        this.airConf.airdropChancePercent.tarkovStreets = 10;
+
+        //fucks up the story
+        if (EventTracker.isHalloween && this.modConfig.enable_hazard_zones) {
+            this.airConf.airdropChancePercent.bigmap = 0;
+            this.airConf.airdropChancePercent.woods = 0;
+            this.airConf.airdropChancePercent.lighthouse = 0;
+            this.airConf.airdropChancePercent.shoreline = 0;
+            this.airConf.airdropChancePercent.interchange = 0;
+            this.airConf.airdropChancePercent.reserve = 0;
+            this.airConf.airdropChancePercent.sandbox = 0;
+
+        }
 
         this.airConf.planeVolume = 0.2;
 
         this.airConf.airdropMinStartTimeSeconds = 300;
         this.airConf.airdropMaxStartTimeSeconds = 2400;
-
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("Airdrops Loaded");
@@ -209,7 +213,7 @@ export class Airdrops {
 //         let max = item._props.StackMaxSize;
 
 //         if(item._parent === "5485a8684bdc2da71d8b4567"){
-//             min = max / 2;           
+//             min = max / 2;
 //         }
 
 //         if (options.itemStackLimits[item._id]) {

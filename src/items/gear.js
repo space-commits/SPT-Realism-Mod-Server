@@ -1,14 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Gear = void 0;
+const arrays_1 = require("../utils/arrays");
 const enums_1 = require("../utils/enums");
 class Gear {
-    arrays;
     tables;
     logger;
     modConfig;
-    constructor(arrays, tables, logger, modConfig) {
-        this.arrays = arrays;
+    constructor(tables, logger, modConfig) {
         this.tables = tables;
         this.logger = logger;
         this.modConfig = modConfig;
@@ -22,23 +21,22 @@ class Gear {
         this.itemDB()["590c595c86f7747884343ad7"]._props.Resource = 100;
     }
     loadSpecialSlotChanges() {
+        const gasId = "590a3efd86f77437d351a25b";
+        const geingerId = "5672cb724bdc2dc2088b456b";
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
-            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+            slot._props.filters[0].Filter.push(gasId, geingerId);
         });
         this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
-            slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+            slot._props.filters[0].Filter.push(gasId, geingerId);
         });
+        //SVM pockets compatbility
         if (this.itemDB()["a8edfb0bce53d103d3f62b9b"]) {
             this.itemDB()["a8edfb0bce53d103d3f62b9b"]._props.Slots.forEach(slot => {
-                slot._props.filters[0].Filter.push("5672cb724bdc2dc2088b456b", "590a3efd86f77437d351a25b");
+                slot._props.filters[0].Filter.push(gasId, geingerId);
             });
         }
     }
     loadGearConflicts() {
-        let confMasks = this.arrays.conflMasks;
-        let confHats = this.arrays.conflHats;
-        let confNVG = this.arrays.conflNVGomponents;
-        let confMaskOverlays = this.arrays.confMaskOverlays;
         let armorCompArr = [];
         //remove certain helmets from GP7 conflicts
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems = this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems.filter(i => i !== "5e4bfc1586f774264f7582d3");
@@ -56,18 +54,18 @@ class Gear {
                 if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {
                     armorCompArr.push(serverItem._id);
                 }
-                if (confNVG.includes(serverItem._id)) {
+                if (arrays_1.StaticArrays.conflNVGomponents.includes(serverItem._id)) {
                     let confItems = serverItem._props.ConflictingItems;
                     serverItem._props.ConflictingItems = confItems.concat(armorCompArr);
                 }
-                if (confHats.includes(serverItem._id)) {
+                if (arrays_1.StaticArrays.conflHats.includes(serverItem._id)) {
                     let confItems = this.itemDB()[item]._props.ConflictingItems;
-                    this.itemDB()[item]._props.ConflictingItems = confMasks.concat(confItems);
+                    this.itemDB()[item]._props.ConflictingItems = arrays_1.StaticArrays.conflMasks.concat(confItems);
                 }
             }
             //custom mask overlays will bug out if using actual faceshield at the same time
             if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true) && serverItem._props.FaceShieldComponent == true) {
-                confMaskOverlays.forEach(element => {
+                arrays_1.StaticArrays.confMaskOverlays.forEach(element => {
                     if (serverItem._id !== element) {
                         serverItem._props.ConflictingItems.push(element);
                     }

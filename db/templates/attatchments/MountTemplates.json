@@ -137,7 +137,9 @@
         ],
         "Weight": 0.224,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 4,
+        "Handling": 4
     },
     "5eeb2ff5ea4f8b73c827350b": {
         "ItemID": "5eeb2ff5ea4f8b73c827350b",
@@ -1457,7 +1459,9 @@
         ],
         "Weight": 0.226,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 8,
+        "Handling": 2
     },
     "5f2aa493cd375f14e15eea72": {
         "ItemID": "5f2aa493cd375f14e15eea72",
@@ -2015,7 +2019,7 @@
         "ItemID": "618b9671d14d6d5ab879c5ea",
         "Name": "mount_geissele_geissele_super_precision_top_ring_cap_30mm",
         "ModType": "mount",
-        "Ergonomics": 0.5,
+        "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.02,

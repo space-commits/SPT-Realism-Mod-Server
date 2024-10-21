@@ -4,13 +4,11 @@ exports.AttachmentBase = void 0;
 class AttachmentBase {
     logger;
     tables;
-    arrays;
     modConf;
     utils;
-    constructor(logger, tables, arrays, modConf, utils) {
+    constructor(logger, tables, modConf, utils) {
         this.logger = logger;
         this.tables = tables;
-        this.arrays = arrays;
         this.modConf = modConf;
         this.utils = utils;
     }

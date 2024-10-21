@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemsClass = void 0;
+const arrays_1 = require("../utils/arrays");
 const myTemplates = require("../../db/templates/new_items/items.json");
 const myLocales = require("../../db/templates/new_items/en.json");
 const myHandbook = require("../../db/templates/new_items/handbook.json");
@@ -12,8 +13,7 @@ class ItemsClass {
     raidConf;
     fleaConf;
     itemConfig;
-    arrays;
-    constructor(logger, tables, modConfig, inventoryConf, raidConf, fleaConf, itemConfig, arrays) {
+    constructor(logger, tables, modConfig, inventoryConf, raidConf, fleaConf, itemConfig) {
         this.logger = logger;
         this.tables = tables;
         this.modConfig = modConfig;
@@ -21,7 +21,6 @@ class ItemsClass {
         this.raidConf = raidConf;
         this.fleaConf = fleaConf;
         this.itemConfig = itemConfig;
-        this.arrays = arrays;
     }
     globalDB() {
         return this.tables.globals.config;
@@ -173,9 +172,9 @@ class ItemsClass {
         }
     }
     loadItemBlacklists() {
-        for (let i in this.arrays.blacklistedItems) {
-            this.itemConfig.blacklist.push(this.arrays.blacklistedItems[i]);
-            this.itemConfig.rewardItemBlacklist.push(this.arrays.blacklistedItems[i]);
+        for (let i in arrays_1.StaticArrays.blacklistedItems) {
+            this.itemConfig.blacklist.push(arrays_1.StaticArrays.blacklistedItems[i]);
+            this.itemConfig.rewardItemBlacklist.push(arrays_1.StaticArrays.blacklistedItems[i]);
         }
     }
     loadItemsRestrictions() {

@@ -2,7 +2,7 @@
 import { BotWeaponGenerator } from "@spt/generators/BotWeaponGenerator";
 import { container } from "tsyringe";
 import { ITemplateItem, Slot } from "@spt/models/eft/common/tables/ITemplateItem";
-import { Chances, Generation, IBotType, Inventory, Mods, ModsChances } from "@spt/models/eft/common/tables/IBotType";
+import { Chances, Equipment, Generation, IBotType, Inventory, Mods, ModsChances } from "@spt/models/eft/common/tables/IBotType";
 import { Item, Upd } from "@spt/models/eft/common/tables/IItem";
 import { ProbabilityHelper } from "@spt/helpers/ProbabilityHelper";
 import { GenerateWeaponResult } from "@spt/models/spt/bots/GenerateWeaponResult";
@@ -29,7 +29,7 @@ import { BaseClasses } from "@spt/models/enums/BaseClasses";
 import { DurabilityLimitsHelper } from "@spt/helpers/DurabilityLimitsHelper";
 import { ApplicationContext } from "@spt/context/ApplicationContext";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
-import { Arrays } from "../utils/arrays";
+import { BotArrays, StaticArrays } from "../utils/arrays";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { BotLoader } from "./bots";
 import { BotLootGenerator } from "@spt/generators/BotLootGenerator";
@@ -57,6 +57,8 @@ import { IGenerateEquipmentProperties } from "@spt/models/spt/bots/IGenerateEqui
 import { IModToSpawnRequest } from "@spt/models/spt/bots/IModToSpawnRequest";
 import { IGenerateWeaponRequest } from "@spt/models/spt/bots/IGenerateWeaponRequest";
 import { MemberCategory } from "@spt/models/enums/MemberCategory";
+import { EventTracker } from "../misc/seasonalevents";
+import { MathUtil } from "@spt/utils/MathUtil";
 
 const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
 const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
@@ -176,9 +178,48 @@ export class BotGen extends BotGenerator {
         return tier;
     }
 
+    //for events where bots will need gas masks at all times
+    private addGasMasksToBots(equipment: Equipment, chances: Chances, botRole: string, isPmc: boolean, pmcTier: number) {
+
+        let gasMaskTier = 0;
+
+        if (isPmc) {
+            gasMaskTier = pmcTier <= 2 ? 1 : pmcTier == 3 ? 2 : 3;
+        }
+        else {
+            let isHighTier = botRole.includes("boss") || botRole.includes("pmc") || botRole.includes("exusec") || botRole.includes("priest");
+            let isMidTier = botRole.includes("follower") || botRole.includes("warrior");
+            gasMaskTier = isHighTier ? 3 : isMidTier ? 2 : 1;
+        }
+
+        equipment.FaceCover = gasMaskTier == 3 ? StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? StaticArrays.gasEventMasksMed : StaticArrays.gasEventMasksLow;
+
+        if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
+            equipment.FaceCover["CCG_GAS_MASK_GP9"] = 2;
+            equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 2;
+        }
+
+        chances.equipment.Eyewear = 0;
+        chances.equipment.FaceCover = 100;
+        chances.equipmentMods.mod_equipment = 0;
+        chances.equipmentMods.mod_equipment_000 = 0;
+        chances.equipmentMods.mod_equipment_001 = 0;
+        chances.equipmentMods.mod_equipment_002 = 0;
+    }
+
+    //yeah too lazy to manually add gas mask filters too
+    private pushGasMaskFilter(mods: Mods) {
+        StaticArrays.gasMasks.forEach(g => {
+            mods[g] = {
+                "mod_equipment": [
+                    "590c595c86f7747884343ad7"
+                ]
+            }
+        });
+    }
+
     //too lazy to manually add the json for new armor slots
     private addArmorInserts(mods: Mods) {
-
         Object.keys(armorTemplate).forEach(outerKey => {
             // If the outer key exists in mods, compare inner keys
             if (mods[outerKey]) {
@@ -214,15 +255,68 @@ export class BotGen extends BotGenerator {
         };
 
         this.addArmorInserts(botTemplate.inventory.mods);
+        this.pushGasMaskFilter(botTemplate.inventory.mods);
         bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
 
         return bot;
     }
+
+    private assignPMCtier(utils: Utils, botRole: string, botLoader: BotLoader, preparedBotBase: IBotBase, botJsonTemplateClone: IBotType): number {
+        const baseTier = (this.getPMCTier(utils));
+        const isUSEC = this.isBotUSEC(botRole);
+        const changeDiffi = modConfig.pmc_difficulty == true && ModTracker.sainPresent == false;
+        let pmcTier = ProfileTracker.averagePlayerLevel <= 10 ? baseTier : this.botTierMapFactor(baseTier, utils);
+
+        if (modConfig.bot_testing == true) {
+            pmcTier = modConfig.bot_test_tier;
+        }
+
+        if (pmcTier === 1) {
+            if (isUSEC) botLoader.usecLoad1(botJsonTemplateClone);
+            else botLoader.bearLoad1(botJsonTemplateClone);
+
+            if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "normal";
+        }
+        else if (pmcTier === 2) {
+            if (isUSEC) botLoader.usecLoad2(botJsonTemplateClone);
+            else botLoader.bearLoad2(botJsonTemplateClone);
+
+            if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "normal";
+        }
+        else if (pmcTier === 3) {
+            if (isUSEC) botLoader.usecLoad3(botJsonTemplateClone);
+            else botLoader.bearLoad3(botJsonTemplateClone);
+
+            if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "hard";
+        }
+        else if (pmcTier === 4) {
+            if (isUSEC) botLoader.usecLoad4(botJsonTemplateClone);
+            else botLoader.bearLoad4(botJsonTemplateClone);
+
+            if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "hard";
+        }
+        else if (pmcTier === 5) {
+            if (isUSEC) botLoader.usecLoad5(botJsonTemplateClone);
+            else botLoader.bearLoad5(botJsonTemplateClone);
+
+            if (changeDiffi == true) preparedBotBase.Info.Settings.BotDifficulty = "impossible";
+        }
+
+        if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
+            botJsonTemplateClone.inventory.equipment.FirstPrimaryWeapon = {};
+            botJsonTemplateClone.inventory.equipment.SecondPrimaryWeapon = {};
+            botJsonTemplateClone.inventory.equipment.Holster = {};
+        }
+
+        return pmcTier;
+    }
+
+
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase {
         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables = postLoadDBServer.getTables();
-        const arrays = new Arrays(tables);
-        const utils = new Utils(tables, arrays);
+        const arrays = new BotArrays(tables);
+        const utils = new Utils(tables);
         const botLoader = new BotLoader(this.logger, tables, this.configServer, modConfig, arrays, utils);
 
         const preparedBotBase = this.getPreparedBotBase(
@@ -240,78 +334,16 @@ export class BotGen extends BotGenerator {
         const isPMC = this.botHelper.isBotPmc(botRole);
 
         let pmcTier = 1;
+
         if (isPMC) {
-
-            const baseTier = (this.getPMCTier(utils));
-            pmcTier = ProfileTracker.averagePlayerLevel <= 10 ? baseTier : this.botTierMapFactor(baseTier, utils);
-            const isUSEC = this.isBotUSEC(botRole);
-            const changeDiffi = modConfig.pmc_difficulty == true && ModTracker.sainPresent == false;
-
-            if (modConfig.bot_testing == true) {
-                pmcTier = modConfig.bot_test_tier;
-            }
-
-            if (pmcTier === 1) {
-                if (isUSEC) {
-                    botLoader.usecLoad1(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad1(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "normal";
-                }
-            }
-            else if (pmcTier === 2) {
-                if (isUSEC) {
-                    botLoader.usecLoad2(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad2(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "normal";
-                }
-            }
-            else if (pmcTier === 3) {
-                if (isUSEC) {
-                    botLoader.usecLoad3(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad3(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "hard";
-                }
-            }
-            else if (pmcTier === 4) {
-                if (isUSEC) {
-                    botLoader.usecLoad4(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad4(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "hard";
-                }
-            }
-            else if (pmcTier === 5) {
-                if (isUSEC) {
-                    botLoader.usecLoad5(botJsonTemplateClone);
-                }
-                else {
-                    botLoader.bearLoad5(botJsonTemplateClone);
-                }
-                if (changeDiffi == true) {
-                    preparedBotBase.Info.Settings.BotDifficulty = "impossible";
-                }
-            }
-
-            if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == false) {
-                botJsonTemplateClone.inventory.equipment.FirstPrimaryWeapon = {};
-                botJsonTemplateClone.inventory.equipment.SecondPrimaryWeapon = {};
-                botJsonTemplateClone.inventory.equipment.Holster = {};
-            }
+            pmcTier = this.assignPMCtier(utils, botRole, botLoader, preparedBotBase, botJsonTemplateClone);
+        }
+     
+        if (botRole.includes("sectant")) {
+            const isPriest = botRole.includes("riest");
+            if(BotTierTracker.cultTier == 1) botLoader.cultistsLoad1(botJsonTemplateClone, isPriest);
+            else if(BotTierTracker.cultTier == 2) botLoader.cultistsLoad2(botJsonTemplateClone, isPriest);
+            else if (BotTierTracker.cultTier == 3) botLoader.cultistsLoad3(botJsonTemplateClone, isPriest);
         }
 
         if (modConfig.logEverything == true) {
@@ -322,9 +354,12 @@ export class BotGen extends BotGenerator {
         //instead of manually editing all my bot loadout json with the new armor plates/inserts, I programatically generated a file with all the json
         //and then I combine the armor json with the bot's mods json
         //this is highly ineffecient as I am doing it per bot generated, not ideal but for now it works until I figure out a better way
-        this.addArmorInserts(botJsonTemplateClone.inventory.mods);
 
-        return this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);
+        if (EventTracker.doGasEvent || (EventTracker.hasExploded && !EventTracker.endExplosionEvent) || (EventTracker.isPreExplosion && botRole.toLowerCase() == "pmcbot")) this.addGasMasksToBots(botJsonTemplateClone.inventory.equipment, botJsonTemplateClone.chances, botRole.toLocaleLowerCase(), isPMC, pmcTier);
+        this.addArmorInserts(botJsonTemplateClone.inventory.mods);
+        this.pushGasMaskFilter(botJsonTemplateClone.inventory.mods);
+
+        return this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);;
     }
 
     private setBotMemberAndGameEdition(botInfo: Info, pmcTier: number): string {
@@ -375,9 +410,10 @@ export class BotGen extends BotGenerator {
         const botEquipmentModPoolService = container.resolve<BotEquipmentModPoolService>("BotEquipmentModPoolService");
         const botEquipmentModGenerator = container.resolve<BotEquipmentModGenerator>("BotEquipmentModGenerator");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+        const mathUtil = container.resolve<MathUtil>("MathUtil");
         // const seasonalEvents = new SeasonalEventsHandler();
 
-        const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseService);
+        const genBotLvl = new GenBotLvl(this.logger, this.randomUtil, this.databaseService, mathUtil);
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseService, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.botHelper, this.weightedRandomHelper, itemHelper, localisationService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
 
         const botRole = botGenerationDetails.role.toLowerCase();
@@ -996,8 +1032,21 @@ export class BotWepGen extends BotWeaponGenerator {
         }
     }
 
-    private myGetPresetWeaponMods(weaponTpl: string, equipmentSlot: string, weaponParentId: string, itemTemplate: ITemplateItem, botRole: string, pmcTier: number): Item[] {
+    private getCultistPresets(botrole: string): string {
+        const isPriest = botrole.includes("riest");
+        const baseJson = isPriest ? BotTierTracker.priestBaseJson : BotTierTracker.cultistBaseJson;
 
+        if (baseJson == 0) return "pmcusec";
+        else if (baseJson == 1) return "pmcbear";
+
+        if (isPriest && baseJson == 2) return "exusec";
+        else if (isPriest) return "pmcbot";
+
+        if (baseJson == 2) return "pmcusec";
+        else return "pmcbear";
+    }
+
+    private myGetPresetWeaponMods(weaponTpl: string, equipmentSlot: string, weaponParentId: string, itemTemplate: ITemplateItem, botRole: string, pmcTier: number): Item[] {
         const logger = container.resolve<ILogger>("WinstonLogger");
         const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
         const appContext = container.resolve<ApplicationContext>("ApplicationContext");
@@ -1005,12 +1054,12 @@ export class BotWepGen extends BotWeaponGenerator {
         const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
         const myBotGenHelper = new BotGenHelper(logger, this.randomUtil, this.databaseService, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, appContext, this.localisationService, this.configServer);
+        const tracker = new BotTierTracker();
 
         const tables = this.databaseService.getTables();
 
-        const tierChecker = new BotTierTracker();
         const role = botRole.toLowerCase();
-        let tier = role.includes("bear") || role.includes("usec") ? pmcTier : tierChecker.getTier(botRole);
+        let tier = role.includes("bear") || role.includes("usec") ? pmcTier : tracker.getTier(botRole);
 
         if (modConfig.logEverything == true) {
             this.logger.warning(`//////////////////////////////${botRole}///////////////////////////////////`);
@@ -1023,7 +1072,7 @@ export class BotWepGen extends BotWeaponGenerator {
         let weaponPresets = [];
         try {
             let preset: IPreset;
-            let botName = tier === 5 ? "tier5pmc" : botRole;
+            let botName = tier === 5 ? "tier5pmc" : botRole.includes("sectant") ? this.getCultistPresets(botRole) : botRole;
             let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
 
             for (let presetObj in presetFile) {
@@ -1094,7 +1143,7 @@ export class BotWepGen extends BotWeaponGenerator {
         catch {
             this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, do not report this.`);
             this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
-
+            
             let preset: IPreset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {
                 if (presetObj._items[0]._tpl === weaponTpl) {
@@ -1117,6 +1166,7 @@ export class BotWepGen extends BotWeaponGenerator {
             else {
                 throw new Error(this.localisationService.getText("bot-missing_weapon_preset", weaponTpl));
             }
+
         }
         return weaponMods;
     }
@@ -1261,15 +1311,13 @@ export class BotEquipGenHelper extends BotEquipmentModGenerator {
         else {
             tier = tierChecker.getTier(botRole);
             if (modConfig.realistic_ballistics) {
-                if (role.includes("follower") || role == "exusec" || role == "pmcbot") {
+                if (role.includes("follower") || role == "exusec" || role == "pmcbot" || role.includes("sectantwarrior")) {
                     armorPlates = armorPlateWeights.followerWeights;
                 }
-
-                if (role.includes("boss")) {
+                else if (role.includes("boss") || role.includes("priest")) {
                     armorPlates = armorPlateWeights.bossWeights;
                 }
-
-                if (role == "assault" || role == "marksman") {
+                else {
                     armorPlates = armorPlateWeights.scavWeights;
                 }
             }

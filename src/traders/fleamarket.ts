@@ -6,7 +6,6 @@ import { RagfairOfferGenerator } from "@spt/generators/RagfairOfferGenerator";
 import { RagfairServer } from "@spt/servers/RagfairServer";
 import { RagfairOfferService } from "@spt/services/RagfairOfferService";
 import { DependencyContainer } from "tsyringe";
-import { Arrays } from "../utils/arrays";
 import { IConfig } from "@spt/models/eft/common/IGlobals";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
@@ -35,7 +34,6 @@ export class FleaChangesPostDBLoad {
     }
 }
 
-
 export class FleaChangesPreDBLoad {
 
     constructor(private logger: ILogger, private fleaConf: IRagfairConfig, private modConfig) { }
@@ -54,7 +52,14 @@ export class FleaChangesPreDBLoad {
                 "clotting_debuff",
                 "damage_debuff",
                 "adrenal_debuff",
-                "regen_debuff"
+                "regen_debuff",
+                "66fd521442055447e2304fda",
+                "66fd571a05370c3ee1a1c613",
+                "66fd57171f981640e667fbe2",
+                "66fd588956f73c4f38dd07ae",
+                "66fd588d397ed74159826cf0",
+                "670120df4f0c4c37e6be90ae",
+                "670120ce354987453daf3d0c"
             );
         }
 
@@ -130,7 +135,7 @@ export class TieredFlea {
         }
     }
 
-    public updateFlea(logger: ILogger, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, arrays: Arrays, level: number) {
+    public updateFlea(logger: ILogger, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, level: number) {
         if (level === undefined) {
             this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
             logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
@@ -240,7 +245,6 @@ export class TieredFlea {
             this.canSellArmbands(true, serverItem);
             this.canSellLube(true, serverItem);
             this.canSellMedicalSupplies(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
             this.canSellIrons(true, serverItem);
         }
@@ -271,7 +275,6 @@ export class TieredFlea {
             this.canSellTools(true, serverItem);
             this.canSellHelmet(true, serverItem);
             this.canSellSMG(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
             this.canSellIrons(true, serverItem);
         }
@@ -304,7 +307,6 @@ export class TieredFlea {
             this.canSellHelmParts(true, serverItem);
             this.canSellPlates(true, serverItem);
             this.canSellSMG(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellHouseholdGoods(true, serverItem);
             this.canSellBuildingMats(true, serverItem);
             this.canSellBags(true, serverItem);
@@ -347,7 +349,6 @@ export class TieredFlea {
             this.canSellPlates(true, serverItem);
             this.canSellSMG(true, serverItem);
             this.canSellDMR(true, serverItem)
-            this.canSellMelee(true, serverItem);
             this.canSellHouseholdGoods(true, serverItem);
             this.canSellBuildingMats(true, serverItem);
             this.canSellBags(true, serverItem);
@@ -370,6 +371,7 @@ export class TieredFlea {
             this.canSellInfo(true, serverItem);
             this.canSellKeys(true, serverItem);
             this.canSellIrons(true, serverItem);
+            this.canSellMelee(true, serverItem);
         }
     }
 

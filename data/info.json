@@ -1,0 +1,9 @@
+{
+    "IsHalloween": false,
+    "IsChristmas": false,
+    "DoGasEvent": false,
+    "HasExploded": false,
+    "IsPreExplosion": false,
+    "DoExtraRaiders": false,
+    "DoExtraCultists": false
+}

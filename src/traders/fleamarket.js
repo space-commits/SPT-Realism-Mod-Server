@@ -48,7 +48,7 @@ class FleaChangesPreDBLoad {
         }
         else if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = true;
-            this.fleaConf.dynamic.blacklist.custom.push("generic_debuff", "performance_debuff", "weight_debuff", "clotting_debuff", "damage_debuff", "adrenal_debuff", "regen_debuff");
+            this.fleaConf.dynamic.blacklist.custom.push("generic_debuff", "performance_debuff", "weight_debuff", "clotting_debuff", "damage_debuff", "adrenal_debuff", "regen_debuff", "66fd521442055447e2304fda", "66fd571a05370c3ee1a1c613", "66fd57171f981640e667fbe2", "66fd588956f73c4f38dd07ae", "66fd588d397ed74159826cf0", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c");
         }
         if (this.modConfig.flea_changes == true) {
             //disabled due to SPT changes
@@ -110,7 +110,7 @@ class TieredFlea {
             }
         }
     }
-    updateFlea(logger, ragfairOfferGen, container, arrays, level) {
+    updateFlea(logger, ragfairOfferGen, container, level) {
         if (level === undefined) {
             this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
             logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
@@ -216,7 +216,6 @@ class TieredFlea {
             this.canSellArmbands(true, serverItem);
             this.canSellLube(true, serverItem);
             this.canSellMedicalSupplies(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
             this.canSellIrons(true, serverItem);
         }
@@ -246,7 +245,6 @@ class TieredFlea {
             this.canSellTools(true, serverItem);
             this.canSellHelmet(true, serverItem);
             this.canSellSMG(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellNVGScopes(true, serverItem);
             this.canSellIrons(true, serverItem);
         }
@@ -278,7 +276,6 @@ class TieredFlea {
             this.canSellHelmParts(true, serverItem);
             this.canSellPlates(true, serverItem);
             this.canSellSMG(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellHouseholdGoods(true, serverItem);
             this.canSellBuildingMats(true, serverItem);
             this.canSellBags(true, serverItem);
@@ -320,7 +317,6 @@ class TieredFlea {
             this.canSellPlates(true, serverItem);
             this.canSellSMG(true, serverItem);
             this.canSellDMR(true, serverItem);
-            this.canSellMelee(true, serverItem);
             this.canSellHouseholdGoods(true, serverItem);
             this.canSellBuildingMats(true, serverItem);
             this.canSellBags(true, serverItem);
@@ -343,6 +339,7 @@ class TieredFlea {
             this.canSellInfo(true, serverItem);
             this.canSellKeys(true, serverItem);
             this.canSellIrons(true, serverItem);
+            this.canSellMelee(true, serverItem);
         }
     }
     fleaFullUnlock() {

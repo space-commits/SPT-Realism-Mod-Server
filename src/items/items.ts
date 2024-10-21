@@ -9,14 +9,14 @@ import { HandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
-import { Arrays } from "../utils/arrays";
+import { StaticArrays } from "../utils/arrays";
 
 const myTemplates = require("../../db/templates/new_items/items.json");
 const myLocales = require("../../db/templates/new_items/en.json");
 const myHandbook = require("../../db/templates/new_items/handbook.json");
 
 export class ItemsClass {
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private inventoryConf: IInventoryConfig, private raidConf: IInRaidConfig, private fleaConf: IRagfairConfig, private itemConfig: IItemConfig,  private arrays: Arrays) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private inventoryConf: IInventoryConfig, private raidConf: IInRaidConfig, private fleaConf: IRagfairConfig, private itemConfig: IItemConfig) { }
 
     globalDB(): IConfig {
         return this.tables.globals.config;
@@ -187,9 +187,9 @@ export class ItemsClass {
     }
 
     public loadItemBlacklists(){
-        for(let i in this.arrays.blacklistedItems){
-            this.itemConfig.blacklist.push(this.arrays.blacklistedItems[i]);
-            this.itemConfig.rewardItemBlacklist.push(this.arrays.blacklistedItems[i]);
+        for(let i in StaticArrays.blacklistedItems){
+            this.itemConfig.blacklist.push(StaticArrays.blacklistedItems[i]);
+            this.itemConfig.rewardItemBlacklist.push(StaticArrays.blacklistedItems[i]);
         }
     }
 

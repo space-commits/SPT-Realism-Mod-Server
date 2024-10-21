@@ -1,0 +1,75 @@
+[
+    {
+        "id": "6705551c3d8179f4bdf93e10",
+        "imageUrl": "/files/achievement/Rare_21.png",
+        "assetPath": "",
+        "rewards": [],
+        "conditions": {
+            "availableForFinish": [
+                {
+                    "id": "670554a4a580017a472e0ab8",
+                    "index": 0,
+                    "dynamicLocale": false,
+                    "visibilityConditions": [],
+                    "globalQuestCounterId": "",
+                    "parentId": "",
+                    "value": 5,
+                    "type": "Completion",
+                    "oneSessionOnly": false,
+                    "completeInSeconds": 0,
+                    "doNotResetIfCounterCompleted": false,
+                    "isResetOnConditionFailed": false,
+                    "counter": {
+                        "id": "670554acf2e59f7bf9caba0a",
+                        "conditions": [
+                            {
+                                "id": "670554acf2e59f7bf9caba0a",
+                                "dynamicLocale": false,
+                                "target": "Savage",
+                                "compareMethod": ">=",
+                                "value": 55,
+                                "weapon": [
+                                    "54491bb74bdc2d09088b4567"
+                                ],
+                                "distance": {
+                                    "value": 10000,
+                                    "compareMethod": ">="
+                                },
+                                "weaponModsInclusive": [],
+                                "weaponModsExclusive": [],
+                                "enemyEquipmentInclusive": [],
+                                "enemyEquipmentExclusive": [],
+                                "weaponCaliber": [],
+                                "savageRole": [
+                                    "shooterBTR"
+                                ],
+                                "bodyPart": [
+                                    "Head"
+                                ],
+                                "daytime": {
+                                    "from": 0,
+                                    "to": 0
+                                },
+                                "enemyHealthEffects": [],
+                                "resetOnSessionEnd": false,
+                                "conditionType": "Kills"
+                            }
+                        ]
+                    },
+                    "conditionType": "CounterCreator"
+                }
+            ],
+            "fail": []
+        },
+        "instantComplete": false,
+        "showNotificationsInGame": false,
+        "showProgress": false,
+        "prefab": "",
+        "rarity": "Rare",
+        "hidden": false,
+        "showConditions": false,
+        "progressBarEnabled": false,
+        "side": "All",
+        "index": 3100
+    }
+]

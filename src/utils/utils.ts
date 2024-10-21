@@ -1,17 +1,17 @@
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { Item } from "@spt/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { Arrays } from "./arrays";
 import * as path from 'path';
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
+import crypto from "node:crypto";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
 
 export class Utils {
 
-    constructor(private tables: IDatabaseTables, private arrays: Arrays) { }
+    constructor(private tables: IDatabaseTables) { }
 
 
     itemDB(): Record<string, ITemplateItem> {
@@ -103,6 +103,10 @@ export class Utils {
         return Math.floor(Math.random() * 10);
     }
 
+    public clampNumber(value: number, min: number, max: number): number {
+        return Math.max(min, Math.min(value, max));
+    }
+
     public writeConfigJSON(data: any, filePath: string) {
         const baseFolderPath = path.resolve(path.join(__dirname, '../../'));
         fs.writeFile(path.join(baseFolderPath, filePath), JSON.stringify(data, null, 4), function (err) {
@@ -114,16 +118,13 @@ export class Utils {
     }
 
     public genId(): string {
-        let result = '';
-        let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let charactersLength = characters.length;
-        for (let i = 0; i < 24; i++) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-        return result;
+        const shasum = crypto.createHash("sha256");
+        const time = Math.random() * Math.floor(new Date().getTime() / 1000);
+
+        shasum.update(time.toString());
+        return shasum.digest("hex").substring(0, 24);
     }
 }
-
 
 export class ModTracker {
     static batteryModPresent: boolean = false;
@@ -133,7 +134,6 @@ export class ModTracker {
     static qtbPresent: boolean = false;
     static alpPresent: boolean = false;
 }
-
 
 export class ProfileTracker {
     static profileIds: string[] = [];
@@ -161,6 +161,9 @@ export class BotTierTracker {
     static tagillaTier: number = 1;
     static sanitarTier: number = 1;
     static reshallaTier: number = 1;
+    static cultTier: number = 1;
+    static cultistBaseJson: number = 0;
+    static priestBaseJson: number = 0;
 
     public getTier(botType: string): number {
         if (botType === "assault") {
@@ -181,11 +184,14 @@ export class BotTierTracker {
         if (botType === "bosstagilla") {
             return BotTierTracker.tagillaTier;
         }
-        if (botType === "bosssanitar" || botType === "followersanitar") {
+        if (botType.includes("sanitar")) {
             return BotTierTracker.sanitarTier;
         }
-        if (botType === "bossbully" || botType === "followerbully") {
+        if (botType.includes("bully")) {
             return BotTierTracker.reshallaTier;
+        }
+        if (botType.includes("sectant")) {
+            return BotTierTracker.cultTier;
         }
         return 2;
     }

@@ -1,12 +1,11 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { Utils } from "src/utils/utils";
+import { Utils } from "../utils/utils";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { Arrays } from "../utils/arrays";
 import { ITemplateItem, Slot } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class AttachmentBase {
 
-    constructor(private logger: ILogger, private tables: IDatabaseTables, private arrays: Arrays, private modConf, private utils: Utils) { }
+    constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private utils: Utils) { }
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;

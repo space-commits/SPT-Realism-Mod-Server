@@ -596,7 +596,9 @@
         "DurabilityBurnModificator": 1,
         "Weight": 0.005,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 5,
+        "Handling": 2
     },
     "5d124c1ad7ad1a12227c53a7": {
         "ItemID": "5d124c1ad7ad1a12227c53a7",
@@ -619,7 +621,9 @@
         "DurabilityBurnModificator": 1,
         "Weight": 0.005,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 5,
+        "Handling": 2
     },
     "5d123b70d7ad1a0ee35e0754": {
         "ItemID": "5d123b70d7ad1a0ee35e0754",
@@ -642,7 +646,9 @@
         "DurabilityBurnModificator": 1,
         "Weight": 0.005,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 3,
+        "Handling": 1.5
     },
     "5d124c0ed7ad1a10d168dd9b": {
         "ItemID": "5d124c0ed7ad1a10d168dd9b",
@@ -665,7 +671,9 @@
         "DurabilityBurnModificator": 1,
         "Weight": 0.005,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 3,
+        "Handling": 1.5
     },
     "5d123a3cd7ad1a004e476058": {
         "ItemID": "5d123a3cd7ad1a004e476058",
@@ -688,7 +696,9 @@
         "DurabilityBurnModificator": 1,
         "Weight": 0.005,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 2,
+        "Handling": 1
     },
     "5d124c01d7ad1a115c7d59fb": {
         "ItemID": "5d124c01d7ad1a115c7d59fb",
@@ -711,7 +721,9 @@
         "DurabilityBurnModificator": 1,
         "Weight": 0.005,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "AimStability": 2,
+        "Handling": 1
     },
     "5b3cbc235acfc4001863ac44": {
         "ItemID": "5b3cbc235acfc4001863ac44",
