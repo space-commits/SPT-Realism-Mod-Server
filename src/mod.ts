@@ -1040,7 +1040,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (isCompleted) {
-                        baseGasChance = EventTracker.isHalloween ? 200 : 10;
+                        baseGasChance = EventTracker.isHalloween ? 100 : 10;
                     }
                 }
                 //blue flame part 1
