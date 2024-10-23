@@ -8,7 +8,6 @@ import { Item } from "@spt/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { Utils, ProfileTracker } from "../utils/utils";
 import { Calibers, ParentClasses } from "../utils/enums";
-import { RagfairServer } from "@spt/servers/RagfairServer";
 import { ISearchRequestData } from "@spt/models/eft/ragfair/ISearchRequestData";
 import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
 import { IGetOffersResult } from "@spt/models/eft/ragfair/IGetOffersResult";
@@ -19,9 +18,6 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
 import { StaticArrays } from "../utils/arrays";
-import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
-import { ConfigServer } from "@spt/servers/ConfigServer";
-
 
 const modConfig = require("../../config/config.json");
 

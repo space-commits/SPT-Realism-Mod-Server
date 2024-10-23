@@ -779,7 +779,7 @@ class Main {
         let baseGasChance = 10;
         if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
             pmcData.Quests.forEach(q => {
-                const isStarted = q.status === 2;
+                const isStarted = q.status === 2 || q.status === 3;
                 const isCompleted = q.status === 4;
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
@@ -818,7 +818,7 @@ class Main {
                         seasonalevents_1.EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (isCompleted) {
-                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 200 : 10;
+                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 300 : 10;
                     }
                 }
                 //blue flame part 1
@@ -846,6 +846,8 @@ class Main {
     getEventData(pmcData, logger, utils) {
         const gasChance = this.checkEventQuests(pmcData);
         seasonalevents_1.EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
+        if (modConfig.logEverything)
+            logger.warning("gas chance " + gasChance);
     }
     checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
         let level = 1;

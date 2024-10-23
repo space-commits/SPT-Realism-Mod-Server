@@ -998,10 +998,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         EventTracker.isPreExplosion = false;
         EventTracker.endExplosionEvent = false;
 
-        let baseGasChance = 10;
+        let baseGasChance = EventTracker.isHalloween ? 20 : 5;
         if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
             pmcData.Quests.forEach(q => {
-                const isStarted = q.status === 2;
+                const isStarted = q.status === 2 || q.status === 3;
                 const isCompleted = q.status === 4;
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
@@ -1057,6 +1057,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         EventTracker.doExtraRaiderSpawns = false;
                         EventTracker.hasExploded = true;
                     }
+                    if (didExplosion && !isCompleted) {
+                        baseGasChance = 0;
+                    }
                     if (isCompleted) {
                         EventTracker.endExplosionEvent = true;
                     }
@@ -1070,6 +1073,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     public getEventData(pmcData: IPmcData, logger: ILogger, utils: Utils) {
         const gasChance = this.checkEventQuests(pmcData);
         EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
+        if (modConfig.logEverything) logger.warning("gas chance " + gasChance);
     }
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {

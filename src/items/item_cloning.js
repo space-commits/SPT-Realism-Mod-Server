@@ -193,7 +193,7 @@ class ItemCloning {
         ramu._props.CanSellOnRagfair = false;
         const ramuDataId = "670120ce354987453daf3d0c";
         this.cloneGenericItem(ramuId, ramuDataId, "orange", "assets/content/items/barter/item_barter_electr_controller/quest_gals_d3.bundle");
-        this.addToHandbook(ramuDataId, "5b47574386f77428ca22b2ef", 180000);
+        this.addToHandbook(ramuDataId, "5b47574386f77428ca22b2ef", 350000);
         this.addToLocale(ramuDataId, "Radiological Assessment and Monitoring Unit (With Data)", "RAMU (Data)", dataNotification + remuDescript);
         const ramuData = this.itemDB()[ramuDataId];
         //Gas Assessment and Monitoring Unit
@@ -209,7 +209,7 @@ class ItemCloning {
         gamu._props.CanSellOnRagfair = false;
         const gamuDataId = "670120df4f0c4c37e6be90ae";
         this.cloneGenericItem(gamuId, gamuDataId, "green", "assets/content/items/barter/item_barter_electr_controller/item_barter_electr_controller.bundle");
-        this.addToHandbook(gamuDataId, "5b47574386f77428ca22b2ef", 100000);
+        this.addToHandbook(gamuDataId, "5b47574386f77428ca22b2ef", 220000);
         this.addToLocale(gamuDataId, "Gas Assessment and Monitoring Unit (With Data)", "GAMU (Data)", dataNotification + gamuDescript);
         const gamuData = this.itemDB()[gamuDataId];
         //Radiological Sample
@@ -260,6 +260,7 @@ class ItemCloning {
         });
         const skierId = "58330581ace78e27b8b10cee";
         const theraId = "54cb57776803fa99248b456e";
+        const fenceId = "579dc571d53a0658a154fbec";
         const traders = this.tables.traders;
         arrays_1.StaticArrays.traders.forEach(t => {
             if (t === skierId || t === theraId)
@@ -268,6 +269,7 @@ class ItemCloning {
         });
         traders[skierId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");
         traders[theraId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c");
+        traders[fenceId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c");
     }
     addCustomWeapsToQuests(originalWeapon, weapToAdd) {
         for (let q in this.questDB()) {
