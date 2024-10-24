@@ -130,26 +130,33 @@ class Traders {
             this.traderConf.fence.discountOptions.assortSize = 10;
             this.traderConf.fence.discountOptions.presetPriceMult = 2.5;
             this.traderConf.fence.discountOptions.itemPriceMult = 2;
+            this.traderConf.fence.discountOptions.equipmentPresetMinMax.min = 0;
+            this.traderConf.fence.discountOptions.equipmentPresetMinMax.max = 1;
+            this.traderConf.fence.discountOptions.weaponPresetMinMax.min = 1;
+            this.traderConf.fence.discountOptions.weaponPresetMinMax.max = 4;
+            this.traderConf.fence.regenerateAssortsOnRefresh = true;
+            this.traderConf.fence.equipmentPresetMinMax.min = 0;
+            this.traderConf.fence.equipmentPresetMinMax.max = 0;
             this.traderConf.fence.weaponPresetMinMax.min = 0;
-            this.traderConf.fence.weaponPresetMinMax.max = 4;
-            this.traderConf.fence.partialRefreshChangePercent = 50;
-            this.traderConf.fence.discountOptions.assortSize = 10;
+            this.traderConf.fence.weaponPresetMinMax.max = 2;
+            this.traderConf.fence.partialRefreshChangePercent = 20;
             this.traderConf.fence.assortSize = 30;
             this.traderConf.fence.itemPriceMult = 1.8;
             this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
-            this.traderConf.fence.ammoMaxPenLimit = 60;
+            this.traderConf.fence.blacklist = fenceLimits.blacklist;
             if (modConfig.realistic_ballistics == true) {
+                this.traderConf.fence.ammoMaxPenLimit = 60;
                 this.traderConf.fence.chancePlateExistsInArmorPercent =
                     {
-                        "3": 100,
-                        "4": 100,
-                        "5": 100,
-                        "6": 40,
-                        "7": 20,
-                        "8": 10,
-                        "9": 5,
-                        "10": 1
+                        "3": 50,
+                        "4": 30,
+                        "5": 20,
+                        "6": 15,
+                        "7": 10,
+                        "8": 5,
+                        "9": 0,
+                        "10": 0
                     };
             }
             this.traderConf.fence.armorMaxDurabilityPercentMinMax.current.min = 10;
@@ -160,18 +167,15 @@ class Traders {
             this.traderConf.fence.weaponDurabilityPercentMinMax.current.max = 100;
             this.traderConf.fence.weaponDurabilityPercentMinMax.max.min = 50;
             this.traderConf.fence.weaponDurabilityPercentMinMax.max.max = 90;
+            this.traderConf.fence.itemStackSizeOverrideMinMax = {};
             //ammo
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].min = 60;
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"].max = 200;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5485a8684bdc2da71d8b4567"] = { "min": 40, "max": 200 };
             //ammo box
-            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].min = 1;
-            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"].max = 5;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["543be5cb4bdc2deb348b4568"] = { "min": 1, "max": 5 };
             //magazine
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].min = 1;
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"].max = 10;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"] = { "min": 1, "max": 10 };
             //drugs
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5448f3a14bdc2d27728b4569"].min = 1;
-            this.traderConf.fence.itemStackSizeOverrideMinMax["5448f3a14bdc2d27728b4569"].max = 4;
+            this.traderConf.fence.itemStackSizeOverrideMinMax["5448bc234bdc2d3c308b4569"] = { "min": 1, "max": 5 };
         }
         if (modConfig.change_heal_cost == true) {
             this.tables.globals.config.Health.HealPrice.HealthPointPrice = 100;

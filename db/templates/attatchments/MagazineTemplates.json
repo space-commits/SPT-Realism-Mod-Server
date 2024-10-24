@@ -350,7 +350,7 @@
     "5a966f51a2750c00156aacf6": {
         "ItemID": "5a966f51a2750c00156aacf6",
         "Name": "mag_saiga12_pro_mag_sai_02_12x76_10",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -12,
         "Ergonomics": -2.5,
         "MalfunctionChance": 0.5,
@@ -682,7 +682,7 @@
     "5caf1109ae9215753c44119f": {
         "ItemID": "5caf1109ae9215753c44119f",
         "Name": "mag_ash12_ckib_ash12_std_127x55_20",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -5,
         "Ergonomics": 0,
         "MalfunctionChance": 0.2,
@@ -884,7 +884,7 @@
     "5bfeaa0f0db834001b734927": {
         "ItemID": "5bfeaa0f0db834001b734927",
         "Name": "mag_m700_wyatt_762x51_10",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -5,
         "Ergonomics": 0,
         "MalfunctionChance": 0.1,
@@ -1124,7 +1124,7 @@
     "5addcce35acfc4001a5fc635": {
         "ItemID": "5addcce35acfc4001a5fc635",
         "Name": "mag_m14_triple_k_m14_magazine_762x51_30",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -5,
         "Ergonomics": -2,
         "MalfunctionChance": 0.35,
@@ -1303,7 +1303,7 @@
     "5b7bef5d5acfc43bca7067a3": {
         "ItemID": "5b7bef5d5acfc43bca7067a3",
         "Name": "mag_fal_ds_arms_fal_sa58_762x51_30",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2.5,
         "Ergonomics": 0,
         "MalfunctionChance": 0.35,
@@ -1319,7 +1319,7 @@
     "5b7d37845acfc400170e2f87": {
         "ItemID": "5b7d37845acfc400170e2f87",
         "Name": "mag_fal_sarco_fal_l1a1_orig_762x51_30",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2,
         "Ergonomics": 0,
         "MalfunctionChance": 0.2,
@@ -1367,7 +1367,7 @@
     "5c6592372e221600133e47d7": {
         "ItemID": "5c6592372e221600133e47d7",
         "Name": "mag_stanag_surefire_mag5_556x45_100",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -22,
         "Ergonomics": -12,
         "MalfunctionChance": 2.25,
@@ -1415,7 +1415,7 @@
     "5d1340bdd7ad1a0e8d245aab": {
         "ItemID": "5d1340bdd7ad1a0e8d245aab",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_40_fde",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2,
         "Ergonomics": -2,
         "MalfunctionChance": 0.05,
@@ -1479,7 +1479,7 @@
     "544a378f4bdc2d30388b4567": {
         "ItemID": "544a378f4bdc2d30388b4567",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_40",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2,
         "Ergonomics": -2,
         "MalfunctionChance": 0.05,
@@ -1687,7 +1687,7 @@
     "5c5970672e221602b21d7855": {
         "ItemID": "5c5970672e221602b21d7855",
         "Name": "mag_sks_promag_aalvx35_762x39_35",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -10,
         "Ergonomics": -1.5,
         "MalfunctionChance": 0.7,
@@ -1799,7 +1799,7 @@
     "5b1fb3e15acfc4001637f068": {
         "ItemID": "5b1fb3e15acfc4001637f068",
         "Name": "mag_ak_izhmash_rpk_std_bakelite_762x39_40",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2.5,
         "Ergonomics": -2.5,
         "MalfunctionChance": 0.15,
@@ -1831,7 +1831,7 @@
     "59e5f5a486f7746c530b3ce2": {
         "ItemID": "59e5f5a486f7746c530b3ce2",
         "Name": "mag_ak_izhmash_rpk_std_61_sector_762x39_40",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2.5,
         "Ergonomics": -2.5,
         "MalfunctionChance": 0.13,
@@ -2039,7 +2039,7 @@
     "564ca9df4bdc2d35148b4569": {
         "ItemID": "564ca9df4bdc2d35148b4569",
         "Name": "mag_ak74_izhmash_6L18_545x39_45",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2.5,
         "Ergonomics": -2.5,
         "MalfunctionChance": 0.075,
@@ -2055,7 +2055,7 @@
     "55d481904bdc2d8c2f8b456a": {
         "ItemID": "55d481904bdc2d8c2f8b456a",
         "Name": "mag_ak74_izhmash_6L26_545x39_45",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2.5,
         "Ergonomics": -2.5,
         "MalfunctionChance": 0.075,
@@ -2247,7 +2247,7 @@
     "5a9e81fba2750c00164f6b11": {
         "ItemID": "5a9e81fba2750c00164f6b11",
         "Name": "mag_vss_tochmash_sr3m130_9x39_30",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -5,
         "Ergonomics": 0,
         "MalfunctionChance": 0.3,
@@ -2359,7 +2359,7 @@
     "5a718f958dc32e00094b97e7": {
         "ItemID": "5a718f958dc32e00094b97e7",
         "Name": "mag_glock_sgmt_glock_drum_50_9x19_50",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -18,
         "Ergonomics": -6,
         "MalfunctionChance": 0.8,
@@ -2647,7 +2647,7 @@
     "5c5db6652e221600113fba51": {
         "ItemID": "5c5db6652e221600113fba51",
         "Name": "mag_mpx_tti_sig_mag_w_base_pad_9x19_41",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -2,
         "Ergonomics": -1,
         "MalfunctionChance": 0.15,
@@ -3085,7 +3085,7 @@
     "630e295c984633f1fb0e7c30": {
         "ItemID": "630e295c984633f1fb0e7c30",
         "Name": "mag_aug_steyr_std_556x45_42",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": -3.5,
         "Ergonomics": 0,
         "MalfunctionChance": 0.15,
@@ -3191,7 +3191,7 @@
     "65293c7a17e14363030ad308": {
         "ItemID": "65293c7a17e14363030ad308",
         "Name": "mag_ar10_lancer_l7_awm_762x51_25",
-        "ModType": "",
+        "ModType": "long_mag",
         "ReloadSpeed": 0,
         "Ergonomics": 0,
         "MalfunctionChance": 0.2,

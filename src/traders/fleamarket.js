@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TieredFlea = exports.FleaChangesPreDBLoad = exports.FleaChangesPostDBLoad = void 0;
 const enums_1 = require("../utils/enums");
+const seasonalevents_1 = require("../misc/seasonalevents");
 const custFleaConfig = require("../../db/traders/ragfair/flea_config.json");
 class FleaChangesPostDBLoad {
     logger;
@@ -111,7 +112,7 @@ class TieredFlea {
         }
     }
     updateFlea(logger, ragfairOfferGen, container, level) {
-        if (level === undefined) {
+        if (level === undefined || (seasonalevents_1.EventTracker.hasExploded && !seasonalevents_1.EventTracker.endExplosionEvent)) {
             this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
             logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
         }

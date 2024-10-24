@@ -1453,13 +1453,13 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.95;
+            serverItem._props.speedPenaltyPercent = -0.9;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.18;
             serverItem._props.BluntThroughput = 0.3 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 0.95;
+            serverItem._props.Weight = 0.9;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 52 * duraModifier, 3 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //SSh-68
