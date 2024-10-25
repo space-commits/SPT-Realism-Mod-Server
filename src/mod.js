@@ -238,7 +238,7 @@ class Main {
                         if (modConfig.enable_hazard_zones)
                             quests.resetRepeatableQuests(profileData);
                         this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig);
-                        this.tryLockTradersForEvent(pmcData, logger);
+                        this.tryLockTradersForEvent(pmcData, logger, postLoadTables.globals.config);
                         const healthProp = pmcData?.Health;
                         const hydroProp = pmcData?.Health?.Hydration;
                         if (healthProp !== undefined) {
@@ -461,7 +461,7 @@ class Main {
                         if (modConfig.realistic_player_health == true) {
                             player.setNewScavRealisticHealth(scavData);
                         }
-                        this.tryLockTradersForEvent(pmcData, logger);
+                        this.tryLockTradersForEvent(pmcData, logger, postLoadTables.globals.config);
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
                         }
@@ -746,7 +746,7 @@ class Main {
             logger.logWithColor(skull, LogTextColor_1.LogTextColor.MAGENTA);
         }
     }
-    tryLockTradersForEvent(pmcData, logger) {
+    tryLockTradersForEvent(pmcData, logger, globalConfig) {
         let completedQuest;
         let didExplosion;
         let shouldDisableTraders = true;
@@ -768,6 +768,9 @@ class Main {
                 continue;
             trader.disabled = shouldDisableTraders;
         }
+        if (shouldDisableTraders) {
+            globalConfig.RagFair.minUserLevel = 99;
+        }
     }
     checkEventQuests(pmcData) {
         seasonalevents_1.EventTracker.doGasEvent = false;
@@ -776,10 +779,10 @@ class Main {
         seasonalevents_1.EventTracker.doExtraRaiderSpawns = false;
         seasonalevents_1.EventTracker.isPreExplosion = false;
         seasonalevents_1.EventTracker.endExplosionEvent = false;
-        let baseGasChance = 10;
+        let baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 20 : 5;
         if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
             pmcData.Quests.forEach(q => {
-                const isStarted = q.status === 2;
+                const isStarted = q.status === 2 || q.status === 3;
                 const isCompleted = q.status === 4;
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
@@ -818,7 +821,7 @@ class Main {
                         seasonalevents_1.EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (isCompleted) {
-                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 200 : 10;
+                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 100 : 10;
                     }
                 }
                 //blue flame part 1
@@ -835,6 +838,9 @@ class Main {
                         seasonalevents_1.EventTracker.doExtraRaiderSpawns = false;
                         seasonalevents_1.EventTracker.hasExploded = true;
                     }
+                    if (didExplosion && !isCompleted) {
+                        baseGasChance = 0;
+                    }
                     if (isCompleted) {
                         seasonalevents_1.EventTracker.endExplosionEvent = true;
                     }
@@ -846,6 +852,8 @@ class Main {
     getEventData(pmcData, logger, utils) {
         const gasChance = this.checkEventQuests(pmcData);
         seasonalevents_1.EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
+        if (modConfig.logEverything)
+            logger.warning("gas chance " + gasChance);
     }
     checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
         let level = 1;

@@ -205,7 +205,7 @@ class Armor {
             "609e860ebd219504d8507525",
             "5e4abb5086f77406975c9342",
             "6038b4b292ec1c3103795a0b",
-            "5fd4c474dd870108a754b241",
+            "5fd4c474dd870108a754b241"
         ];
         if (carriersSlim.includes(serverItem._id)) {
             this.modifyAramid(serverItem, 3, 50, 0.25);
@@ -1453,13 +1453,13 @@ class Armor {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -0.95;
+            serverItem._props.speedPenaltyPercent = -0.9;
             serverItem._props.mousePenalty = 0;
             serverItem._props.weaponErgonomicPenalty = -0.18;
             serverItem._props.BluntThroughput = 0.3 * bluntModifier;
             serverItem._props.DeafStrength = "None";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 0.95;
+            serverItem._props.Weight = 0.9;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 52 * duraModifier, 3 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //SSh-68

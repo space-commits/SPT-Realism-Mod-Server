@@ -107,6 +107,7 @@ import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
 import { info } from "console";
 import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig";
 import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
+import { IConfig, IGlobals } from "@spt/models/eft/common/IGlobals";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -333,7 +334,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             if (modConfig.backup_profiles == true) this.backupProfile(profileData, logger);
                             if (modConfig.enable_hazard_zones) quests.resetRepeatableQuests(profileData);
                             this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig);
-                            this.tryLockTradersForEvent(pmcData, logger);
+                            this.tryLockTradersForEvent(pmcData, logger, postLoadTables.globals.config);
 
                             const healthProp = pmcData?.Health;
                             const hydroProp = pmcData?.Health?.Hydration;
@@ -614,7 +615,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 player.setNewScavRealisticHealth(scavData);
                             }
 
-                            this.tryLockTradersForEvent(pmcData, logger);
+                            this.tryLockTradersForEvent(pmcData, logger, postLoadTables.globals.config);
 
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Updated at Raid End");
@@ -964,7 +965,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
     }
 
-    public tryLockTradersForEvent(pmcData: IPmcData, logger: ILogger) {
+    public tryLockTradersForEvent(pmcData: IPmcData, logger: ILogger, globalConfig: IConfig) {
         let completedQuest;
         let didExplosion;
         let shouldDisableTraders = true;
@@ -988,6 +989,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             if (traderId === "579dc571d53a0658a154fbec") continue;
             trader.disabled = shouldDisableTraders;
         }
+
+        if (shouldDisableTraders) {
+            globalConfig.RagFair.minUserLevel = 99;
+        }
     }
 
     public checkEventQuests(pmcData: IPmcData): number {
@@ -998,10 +1003,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         EventTracker.isPreExplosion = false;
         EventTracker.endExplosionEvent = false;
 
-        let baseGasChance = 10;
+        let baseGasChance = EventTracker.isHalloween ? 20 : 5;
         if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
             pmcData.Quests.forEach(q => {
-                const isStarted = q.status === 2;
+                const isStarted = q.status === 2 || q.status === 3;
                 const isCompleted = q.status === 4;
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
@@ -1057,6 +1062,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         EventTracker.doExtraRaiderSpawns = false;
                         EventTracker.hasExploded = true;
                     }
+                    if (didExplosion && !isCompleted) {
+                        baseGasChance = 0;
+                    }
                     if (isCompleted) {
                         EventTracker.endExplosionEvent = true;
                     }
@@ -1070,6 +1078,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     public getEventData(pmcData: IPmcData, logger: ILogger, utils: Utils) {
         const gasChance = this.checkEventQuests(pmcData);
         EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
+        if (modConfig.logEverything) logger.warning("gas chance " + gasChance);
     }
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {

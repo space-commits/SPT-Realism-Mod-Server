@@ -8,6 +8,7 @@ import { RagfairOfferService } from "@spt/services/RagfairOfferService";
 import { DependencyContainer } from "tsyringe";
 import { IConfig } from "@spt/models/eft/common/IGlobals";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { EventTracker } from "../misc/seasonalevents";
 
 const custFleaConfig = require("../../db/traders/ragfair/flea_config.json");
 
@@ -136,7 +137,7 @@ export class TieredFlea {
     }
 
     public updateFlea(logger: ILogger, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, level: number) {
-        if (level === undefined) {
+        if (level === undefined || (EventTracker.hasExploded && !EventTracker.endExplosionEvent)) {
             this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
             logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
         }
