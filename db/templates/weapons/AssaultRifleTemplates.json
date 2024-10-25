@@ -383,7 +383,7 @@
         "WeapType": "",
         "OperationType": "",
         "WeapAccuracy": 0,
-        "BaseTorque": -3.7,
+        "BaseTorque": -3,
         "HasShoulderContact": false,
         "Ergonomics": 80,
         "VerticalRecoil": 78,

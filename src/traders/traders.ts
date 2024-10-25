@@ -152,15 +152,15 @@ export class Traders {
             this.traderConf.fence.discountOptions.presetPriceMult = 2.5;
             this.traderConf.fence.discountOptions.itemPriceMult = 2;
             this.traderConf.fence.discountOptions.equipmentPresetMinMax.min = 0;
-            this.traderConf.fence.discountOptions.equipmentPresetMinMax.max = 1;
-            this.traderConf.fence.discountOptions.weaponPresetMinMax.min = 1;
-            this.traderConf.fence.discountOptions.weaponPresetMinMax.max = 4;
+            this.traderConf.fence.discountOptions.equipmentPresetMinMax.max = 2;
+            this.traderConf.fence.discountOptions.weaponPresetMinMax.min = 0;
+            this.traderConf.fence.discountOptions.weaponPresetMinMax.max = 5;
 
             this.traderConf.fence.regenerateAssortsOnRefresh = true;
             this.traderConf.fence.equipmentPresetMinMax.min = 0;
-            this.traderConf.fence.equipmentPresetMinMax.max = 0;
+            this.traderConf.fence.equipmentPresetMinMax.max = 1;
             this.traderConf.fence.weaponPresetMinMax.min = 0;
-            this.traderConf.fence.weaponPresetMinMax.max = 2;
+            this.traderConf.fence.weaponPresetMinMax.max = 3;
             this.traderConf.fence.partialRefreshChangePercent = 20;
             this.traderConf.fence.assortSize = 30;
             this.traderConf.fence.itemPriceMult = 1.8;
@@ -174,12 +174,12 @@ export class Traders {
                 this.traderConf.fence.ammoMaxPenLimit = 60;
                 this.traderConf.fence.chancePlateExistsInArmorPercent =
                 {
-                    "3": 50,
-                    "4": 30,
-                    "5": 20,
-                    "6": 15,
-                    "7": 10,
-                    "8": 5,
+                    "3": 40,
+                    "4": 20,
+                    "5": 15,
+                    "6": 10,
+                    "7": 5,
+                    "8": 0,
                     "9": 0,
                     "10": 0
                 }
@@ -595,16 +595,19 @@ export class RandomizeTraderAssort {
 
     public getAverageLL(pmcData: IPmcData[], traderId: string): number {
 
-        let totalLL = 0;
-        let playerCount = 0;
+        let totalLL = 1;
+        let playerCount = 1;
 
-        pmcData.forEach(element => {
-            playerCount++;
-            if (element?.TradersInfo != null && element?.TradersInfo != undefined) {
-                let ll = element?.TradersInfo[traderId]?.loyaltyLevel;
-                totalLL += ll !== null && ll !== undefined ? ll : 1;
-            }
-        });
+        if(pmcData){
+            pmcData.forEach(element => {
+                playerCount++;
+                if (element?.TradersInfo != null && element?.TradersInfo != undefined) {
+                    let ll = element?.TradersInfo[traderId]?.loyaltyLevel;
+                    totalLL += ll !== null && ll !== undefined ? ll : 1;
+                }
+            });
+        }
+
 
         let avgLL = totalLL / playerCount;
 

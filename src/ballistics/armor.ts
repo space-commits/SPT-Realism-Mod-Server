@@ -496,7 +496,7 @@ export class Armor {
             serverItem._props.Durability = 135;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 8;
-            serverItem._props.BluntThroughput = 0.16;
+            serverItem._props.BluntThroughput = 0.2;
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.speedPenaltyPercent = -2.25;
             serverItem._props.mousePenalty = 0;

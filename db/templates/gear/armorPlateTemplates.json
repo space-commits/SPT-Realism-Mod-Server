@@ -804,7 +804,7 @@
         "ItemID": "656fad8c498d1b7e3e071da0",
         "Name": "item_equipment_plate_SAPI_Monoclete_PE_4class_frontback",
         "AllowADS": true,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "ReloadSpeedMulti": 1,
         "CanSpall": false,

@@ -1152,7 +1152,7 @@
         "Name": "patron_9x39_sp5",
         "LoyaltyLevel": 2,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 1.2
     },
     "57a0e5022459774d1673f889": {
         "ItemID": "57a0e5022459774d1673f889",
@@ -2732,9 +2732,9 @@
     "6576f96220d53a5b8f3e395e": {
         "ItemID": "6576f96220d53a5b8f3e395e",
         "Name": "patron_9x39_fmj",
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 1,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 0.9
     },
     "6579846c1ec1943afb14c15a": {
         "ItemID": "6579846c1ec1943afb14c15a",
