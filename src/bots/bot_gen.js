@@ -104,23 +104,23 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const midTier = ["factory4_night"];
         const lowTier = ["bigmap", "customs", "interchange", "lighthouse"];
         const ratTier = ["woods", "shoreline"];
-        let rndNum = utils.pickRandNumOneInTen();
+        let rndNum = utils.pickRandNumInRange(0, 101);
         if (utils_1.RaidInfoTracker.mapName === "sandbox") { //me being superstitious 
             return tier;
         }
         if (utils_1.RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 3 && highTier.includes(utils_1.RaidInfoTracker.mapName)) {
+        else if (rndNum <= 30 && highTier.includes(utils_1.RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 2 && (midTier.includes(utils_1.RaidInfoTracker.mapName) || utils_1.RaidInfoTracker.TOD === "night")) {
+        else if (rndNum <= 15 && (midTier.includes(utils_1.RaidInfoTracker.mapName) || utils_1.RaidInfoTracker.TOD === "night")) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 1 && lowTier.includes(utils_1.RaidInfoTracker.mapName)) {
+        else if (rndNum <= 5 && lowTier.includes(utils_1.RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 3 && ratTier.includes(utils_1.RaidInfoTracker.mapName)) {
+        else if (rndNum <= 20 && ratTier.includes(utils_1.RaidInfoTracker.mapName)) {
             tier = Math.max(tier - 1, 1);
         }
         return tier;

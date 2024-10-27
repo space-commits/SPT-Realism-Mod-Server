@@ -156,23 +156,23 @@ export class BotGen extends BotGenerator {
         const lowTier: string[] = ["bigmap", "customs", "interchange", "lighthouse"];
         const ratTier: string[] = ["woods", "shoreline"];
 
-        let rndNum = utils.pickRandNumOneInTen();
+        let rndNum = utils.pickRandNumInRange(0, 101);
         if (RaidInfoTracker.mapName === "sandbox") { //me being superstitious 
             return tier;
         }
         if (RaidInfoTracker.mapName === "laboratory") {
             tier = Math.min(tier + 2, 5);
         }
-        else if (rndNum <= 3 && highTier.includes(RaidInfoTracker.mapName)) {
+        else if (rndNum <= 30 && highTier.includes(RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 2 && (midTier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
+        else if (rndNum <= 15 && (midTier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 1 && lowTier.includes(RaidInfoTracker.mapName)) {
+        else if (rndNum <= 5 && lowTier.includes(RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 3 && ratTier.includes(RaidInfoTracker.mapName)) {
+        else if (rndNum <= 20 && ratTier.includes(RaidInfoTracker.mapName)) {
             tier = Math.max(tier - 1, 1);
         }
         return tier;

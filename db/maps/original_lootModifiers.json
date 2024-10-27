@@ -1,0 +1,42 @@
+{
+    "looseLootMultiplier": {
+        "bigmap": 2,
+        "develop": 1,
+        "factory4_day": 2.5,
+        "factory4_night": 3,
+        "interchange": 2.5,
+        "laboratory": 2.8,
+        "rezervbase": 2.9,
+        "shoreline": 3.7,
+        "woods": 2,
+        "hideout": 0,
+        "lighthouse": 2.8,
+        "privatearea": 1,
+        "suburbs": 1,
+        "tarkovstreets": 3,
+        "terminal": 1,
+        "sandbox": 2.8,
+        "sandbox_high": 2,
+        "town": 0
+    },
+    "staticLootMultiplier": {
+        "bigmap": 1,
+        "develop": 1,
+        "factory4_day": 1,
+        "factory4_night": 1,
+        "interchange": 1,
+        "laboratory": 1,
+        "rezervbase": 1,
+        "shoreline": 1,
+        "woods": 1,
+        "hideout": 0,
+        "lighthouse": 1,
+        "privatearea": 1,
+        "suburbs": 1,
+        "tarkovstreets": 1,
+        "terminal": 1,
+        "sandbox": 1,
+        "sandbox_high": 1,
+        "town": 1
+    }
+}

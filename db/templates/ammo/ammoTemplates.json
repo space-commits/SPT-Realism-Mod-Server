@@ -1124,14 +1124,14 @@
         "Name": "patron_9x33r_jhp",
         "LoyaltyLevel": 2,
         "TemplateType": "ammo",
-        "BasePriceModifier": 2
+        "BasePriceModifier": 1.5
     },
     "62330c40bdd19b369e1e53d1": {
         "ItemID": "62330c40bdd19b369e1e53d1",
         "Name": "patron_9x33r_sp",
         "LoyaltyLevel": 1,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1.7
+        "BasePriceModifier": 1.9
     },
     "5c0d688c86f77413ae3407b2": {
         "ItemID": "5c0d688c86f77413ae3407b2",

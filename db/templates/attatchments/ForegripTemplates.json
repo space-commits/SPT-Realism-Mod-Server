@@ -290,8 +290,8 @@
         "Weight": 0.065,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": 4.5,
-        "Handling": 9
+        "AimStability": 3,
+        "Handling": 5
     },
     "5b057b4f5acfc4771e1bd3e9": {
         "ItemID": "5b057b4f5acfc4771e1bd3e9",
@@ -569,33 +569,33 @@
         "Name": "foregrip_all_zenit_rk_2",
         "ModType": "",
         "VerticalRecoil": -4.5,
-        "HorizontalRecoil": -3,
-        "Dispersion": 4,
+        "HorizontalRecoil": -4,
+        "Dispersion": 6,
         "AimSpeed": -10,
-        "Ergonomics": 2.5,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.175,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": -15,
-        "Handling": 15
+        "AimStability": -10,
+        "Handling": 14
     },
     "5c1cd46f2e22164bef5cfedb": {
         "ItemID": "5c1cd46f2e22164bef5cfedb",
         "Name": "foregrip_all_zenit_b25u_rk_1",
         "ModType": "",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -14,
+        "HorizontalRecoil": -16,
         "Dispersion": 12,
         "Ergonomics": 2,
         "RecoilAngle": -5,
-        "AimSpeed": -35,
+        "AimSpeed": -20,
         "ConflictingItems": [],
         "Weight": 0.185,
         "LoyaltyLevel": 0,
         "Price": 0,
-        "AimStability": -25,
+        "AimStability": -20,
         "Handling": 25
     },
     "6281212a09427b40ab14e770": {
@@ -824,8 +824,8 @@
             "62e7e7bbe6da9612f743f1e0"
         ],
         "Weight": 0.065,
-        "AimStability": 4.5,
-        "Handling": 6
+        "AimStability": 3,
+        "Handling": 5
     },
     "65169d5b30425317755f8e25": {
         "ItemID": "65169d5b30425317755f8e25",
@@ -839,8 +839,8 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.067,
-        "AimStability": 6,
-        "Handling": 4.5
+        "AimStability": 4,
+        "Handling": 4
     },
     "651a8bf3a8520e48047bf708": {
         "ItemID": "651a8bf3a8520e48047bf708",

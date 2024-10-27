@@ -12,7 +12,7 @@
         "HorizontalRecoil": 400,
         "Dispersion": 5,
         "CameraRecoil": 0.1,
-        "VisualMulti": 2,
+        "VisualMulti": 1.35,
         "Convergence": 16,
         "RecoilAngle": 80,
         "BaseMalfunctionChance": 0.002,

@@ -398,6 +398,6 @@ export class StaticArrays {
         "5c093ca986f7740a1867ab12",
         "59db794186f77448bc595262",
         "5857a8bc2459772bad15db29"
-    ]
+    ];
 }
 

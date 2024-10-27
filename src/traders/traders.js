@@ -101,17 +101,17 @@ class Traders {
     }
     modifyTraderBuyPrice() {
         //consistent but low
-        this.modifyTraderBuyPriceHelper(mechId, this.utils.pickRandNumInRange(67, 72));
-        this.modifyTraderBuyPriceHelper(jaegId, this.utils.pickRandNumInRange(70, 75));
+        this.modifyTraderBuyPriceHelper(mechId, this.utils.pickRandNumInRange(60, 65));
+        this.modifyTraderBuyPriceHelper(jaegId, this.utils.pickRandNumInRange(63, 68));
         //decent but inconsistent
-        this.modifyTraderBuyPriceHelper(theraId, this.utils.pickRandNumInRange(62, 77));
-        this.modifyTraderBuyPriceHelper(ragmId, this.utils.pickRandNumInRange(62, 77));
+        this.modifyTraderBuyPriceHelper(theraId, this.utils.pickRandNumInRange(56, 69));
+        this.modifyTraderBuyPriceHelper(ragmId, this.utils.pickRandNumInRange(56, 69));
         //high but inconsistent
-        this.modifyTraderBuyPriceHelper(skierId, this.utils.pickRandNumInRange(58, 80));
-        this.modifyTraderBuyPriceHelper(prapId, this.utils.pickRandNumInRange(60, 78));
+        this.modifyTraderBuyPriceHelper(skierId, this.utils.pickRandNumInRange(52, 72));
+        this.modifyTraderBuyPriceHelper(prapId, this.utils.pickRandNumInRange(54, 70));
         //low
-        this.modifyTraderBuyPriceHelper(fenceId, this.utils.pickRandNumInRange(80, 90));
-        this.modifyTraderBuyPriceHelper(refId, this.utils.pickRandNumInRange(85, 95));
+        this.modifyTraderBuyPriceHelper(fenceId, this.utils.pickRandNumInRange(72, 81));
+        this.modifyTraderBuyPriceHelper(refId, this.utils.pickRandNumInRange(77, 86));
     }
     loadTraderTweaks() {
         if (modConfig.change_buy_categories == true) {
@@ -503,8 +503,8 @@ class RandomizeTraderAssort {
         "67082dcf37314df7bb087eb6",
     ];
     getAverageLL(pmcData, traderId) {
-        let totalLL = 1;
-        let playerCount = 1;
+        let totalLL = 0;
+        let playerCount = 0;
         if (pmcData) {
             pmcData.forEach(element => {
                 playerCount++;
@@ -514,6 +514,10 @@ class RandomizeTraderAssort {
                 }
             });
         }
+        if (isNaN(playerCount))
+            playerCount = 1;
+        if (isNaN(totalLL))
+            totalLL = 1;
         let avgLL = totalLL / playerCount;
         if (modConfig.logEverything) {
             this.logger.logWithColor(`Realism Mod: average LL for trader ${this.tables.traders[traderId].base.nickname} is ${avgLL}}`, LogTextColor_1.LogTextColor.GREEN);

@@ -850,7 +850,7 @@
         "MinChamberSpeed": 0.8,
         "MaxChamberSpeed": 1.5,
         "IsManuallyOperated": false,
-        "BaseChamberCheckSpeed": 1.15,
+        "BaseChamberCheckSpeed": 1.25,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.012,
         "RecoilIntensity": 0.39
