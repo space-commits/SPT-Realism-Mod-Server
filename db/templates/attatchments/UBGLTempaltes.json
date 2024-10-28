@@ -19,7 +19,9 @@
         "ConflictingItems": [],
         "Weight": 1.36,
         "HeatFactor": 1,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "LoyaltyLevel": 5,
+        "Price": 0
     },
     "62e7e7bbe6da9612f743f1e0": {
         "ItemID": "62e7e7bbe6da9612f743f1e0",
@@ -41,6 +43,8 @@
         "ConflictingItems": [],
         "Weight": 1.5,
         "HeatFactor": 1,
-        "CoolFactor": 1
+        "CoolFactor": 1,
+        "LoyaltyLevel": 5,
+        "Price": 0
     }
 }

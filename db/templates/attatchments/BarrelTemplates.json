@@ -21,7 +21,7 @@
         "Weight": 0.374,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": 30
     },
@@ -47,7 +47,7 @@
         "Weight": 0.336,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": 30
     },
@@ -73,7 +73,7 @@
         "Weight": 0.464,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "Flash": 30
     },
@@ -99,7 +99,7 @@
         "Weight": 0.464,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": 30
     },
@@ -125,7 +125,7 @@
         "Weight": 0.464,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": 0
     },
@@ -151,7 +151,7 @@
         "Weight": 2.3,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Flash": 0
     },
@@ -177,7 +177,7 @@
         "Weight": 2.53,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": 0
     },
@@ -203,7 +203,7 @@
         "Weight": 2.1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": 0
     },
@@ -229,7 +229,7 @@
         "Weight": 2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": 0
     },
@@ -255,7 +255,7 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": -50
     },
@@ -280,7 +280,7 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6410758c857473525b08bb77": {
@@ -304,7 +304,7 @@
         "Weight": 1.33,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "mechVPO_23": {
@@ -331,7 +331,7 @@
         "Weight": 1.205,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5de65547883dde217541644b": {
@@ -355,7 +355,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "560836fb4bdc2d773f8b4569": {
@@ -379,7 +379,7 @@
         "Weight": 1.1,
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "622b3858034a3e17ad0b81f5": {
@@ -403,7 +403,7 @@
         "Weight": 0.47,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "560837824bdc2d57468b4568": {
@@ -427,7 +427,7 @@
         "Weight": 1.4,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5cc701d7e4a94900100ac4e7": {
@@ -457,7 +457,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Flash": -60
     },
@@ -482,7 +482,7 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5894a2c386f77427140b8342": {
@@ -511,7 +511,7 @@
         "Weight": 0.25,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "55d447bb4bdc2d892f8b456f": {
@@ -535,7 +535,7 @@
         "Weight": 2.2,
         "ShotgunDispersion": 0.94,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5e848d2eea0a7c419c2f9bfd": {
@@ -559,7 +559,7 @@
         "Weight": 1.23,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5e848d1c264f7c180b5e35a9": {
@@ -583,7 +583,7 @@
         "Weight": 0.91,
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5a34fae7c4a2826c6e06d760": {
@@ -608,7 +608,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "64748d02d1c009260702b526": {
@@ -632,7 +632,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.85,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5580169d4bdc2d9d138b4585": {
@@ -656,7 +656,7 @@
         "Weight": 1.5,
         "ShotgunDispersion": 0.8,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "mechAR15_260mm": {
@@ -681,7 +681,7 @@
         "Weight": 0.6305,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "55d35ee94bdc2d61338b4568": {
@@ -706,7 +706,7 @@
         "Weight": 0.6305,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "63d3ce0446bd475bcb50f55f": {
@@ -731,7 +731,7 @@
         "Weight": 0.509,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0
     },
     "55d3632e4bdc2d972f8b4569": {
@@ -756,7 +756,7 @@
         "Weight": 0.7326,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5c0e2f94d174af029f650d56": {
@@ -784,7 +784,7 @@
         "Weight": 0.9616,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "63d3d44a2a49307baf09386d": {
@@ -816,7 +816,7 @@
         "Weight": 0.78,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0
     },
     "5d440b93a4b9364276578d4b": {
@@ -849,7 +849,7 @@
         "Weight": 0.99,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "55d4491a4bdc2d882f8b456e": {
@@ -873,7 +873,7 @@
         "Weight": 0.7,
         "ShotgunDispersion": 1.22,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5fbbfabed5cb881a7363194e": {
@@ -898,7 +898,7 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5fbbfacda56d053a3543f799": {
@@ -922,7 +922,7 @@
         "Weight": 0.479,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "mechMCX_229mm": {
@@ -948,7 +948,7 @@
         "Weight": 0.489,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "mechMCX_171mm": {
@@ -974,7 +974,7 @@
         "Weight": 0.419,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "588200af24597742fa221dfb": {
@@ -998,7 +998,7 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.2,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5c5db5962e2216000e5e46eb": {
@@ -1027,7 +1027,7 @@
         "Weight": 0.19,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6076c1b9f2cb2e02a42acedc": {
@@ -1051,7 +1051,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.95,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel":20,
         "Price": 0
     },
     "5888945a2459774bf43ba385": {
@@ -1076,7 +1076,7 @@
         "Weight": 2.378,
         "ShotgunDispersion": 1,
         "Loudness": -60,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0
     },
     "5888956924597752983e182d": {
@@ -1102,7 +1102,7 @@
         "Weight": 2.112,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "612368f58b401f4f51239b33": {
@@ -1126,7 +1126,7 @@
         "Weight": 1.55,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5c5db5b82e2216003a0fe71d": {
@@ -1153,7 +1153,7 @@
         "Weight": 0.28,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5cc701aae4a949000e1ea45c": {
@@ -1183,7 +1183,7 @@
         "Weight": 0.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5d440b9fa4b93601354d480c": {
@@ -1216,7 +1216,7 @@
         "Weight": 1.1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5e87071478f43e51ca2de5e1": {
@@ -1240,7 +1240,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.88,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5bb20d9cd4351e00334c9d8a": {
@@ -1270,7 +1270,7 @@
         "Weight": 0.835,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5c6d85e02e22165df16b81f4": {
@@ -1312,7 +1312,7 @@
         "Weight": 0.615,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5bb20d92d4351e00853263eb": {
@@ -1343,7 +1343,7 @@
         "Weight": 0.465,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5bb20da5d4351e0035629dbf": {
@@ -1374,7 +1374,7 @@
         "Weight": 1.03,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5bb20dadd4351e00367faeff": {
@@ -1399,7 +1399,7 @@
         "Weight": 1.05,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5f2aa46b878ef416f538b567": {
@@ -1423,7 +1423,7 @@
         "Weight": 0.91,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "55d448594bdc2d8c2f8b4569": {
@@ -1447,7 +1447,7 @@
         "Weight": 1.1,
         "ShotgunDispersion": 1.12,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5a34f7f1c4a2826c6e06d75d": {
@@ -1472,7 +1472,7 @@
         "Weight": 1.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5608373c4bdc2dc8488b4570": {
@@ -1496,7 +1496,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5c5db5c62e22160012542255": {
@@ -1521,7 +1521,7 @@
         "Weight": 0.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5fc23678ab884124df0cd590": {
@@ -1553,7 +1553,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "560836484bdc2d20478b456e": {
@@ -1577,7 +1577,7 @@
         "Weight": 0.75,
         "ShotgunDispersion": 1.17,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "588200cf2459774414733d55": {
@@ -1601,7 +1601,7 @@
         "Weight": 1.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5c5db5852e2216003a0fe71a": {
@@ -1632,7 +1632,7 @@
         "Weight": 0.16,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "56deec93d2720bec348b4568": {
@@ -1656,7 +1656,7 @@
         "Weight": 1.55,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "588200c224597743990da9ed": {
@@ -1680,7 +1680,7 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "58aeaaa886f7744fc1560f81": {
@@ -1708,7 +1708,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5cadc1c6ae9215000f2775a4": {
@@ -1732,7 +1732,7 @@
         "Weight": 0.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "6194ef39de3cdf1d2614a768": {
@@ -1756,7 +1756,7 @@
         "Weight": 0.113,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6183fd9e8004cc50514c358f": {
@@ -1781,7 +1781,7 @@
         "Weight": 1.05,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5d3eb5b6a4b9361eab311902": {
@@ -1805,7 +1805,7 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6065878ac9cf8012264142fd": {
@@ -1830,7 +1830,7 @@
         "Weight": 1.13,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "60658776f2cb2e02a42ace2b": {
@@ -1862,7 +1862,7 @@
         "Weight": 0.47,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6183b084a112697a4b3a6e6c": {
@@ -1886,7 +1886,7 @@
         "Weight": 1.26,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "560836b64bdc2d57468b4567": {
@@ -1910,7 +1910,7 @@
         "Weight": 0.85,
         "ShotgunDispersion": 1.12,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6183fc15d3a39d50044c13e9": {
@@ -1935,7 +1935,7 @@
         "Weight": 0.9,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "618168b350224f204c1da4d8": {
@@ -1960,7 +1960,7 @@
         "Weight": 1.02,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5a787f25c5856700186c4ab9": {
@@ -1984,7 +1984,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "560835c74bdc2dc8488b456f": {
@@ -2008,7 +2008,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1.18,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6183b0711cb55961fa0fdcad": {
@@ -2033,7 +2033,7 @@
         "Weight": 1.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6183fd911cb55961fa0fdce9": {
@@ -2057,7 +2057,7 @@
         "Weight": 1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5e81c519cb2b95385c177551": {
@@ -2081,7 +2081,7 @@
         "Weight": 0.095,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "622b379bf9cfc87d675d2de5": {
@@ -2106,7 +2106,7 @@
         "Weight": 0.39,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "61702be9faa1272e431522c3": {
@@ -2130,7 +2130,7 @@
         "Weight": 1.24,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "mechAUG_417": {
@@ -2156,7 +2156,7 @@
         "Weight": 0.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "mechMDR_406": {
@@ -2182,7 +2182,7 @@
         "Weight": 0.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5c48a2852e221602b21d5923": {
@@ -2206,7 +2206,7 @@
         "Weight": 0.509,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5dcbe9431e1f4616d354987e": {
@@ -2230,7 +2230,7 @@
         "Weight": 0.62,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "622b38c56762c718e457e246": {
@@ -2255,7 +2255,7 @@
         "Weight": 0.69,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5dfa397fb11454561e39246c": {
@@ -2280,7 +2280,7 @@
         "Weight": 1.6,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6259c2c1d714855d182bad85": {
@@ -2304,7 +2304,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5df917564a9f347bc92edca3": {
@@ -2329,7 +2329,7 @@
         "Weight": 1.02,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "61f4012adfc9f01a816adda1": {
@@ -2353,7 +2353,7 @@
         "Weight": 1.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "55d449444bdc2d962f8b456d": {
@@ -2377,7 +2377,7 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.08,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "668670432b934a68630a7fe8": {
@@ -2401,7 +2401,7 @@
         "Weight": 0.288,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "66867023c3d473265104f384": {
@@ -2425,7 +2425,7 @@
         "Weight": 0.241,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6686700a2b934a68630a7fe6": {
@@ -2449,7 +2449,7 @@
         "Weight": 0.19,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "66866fe776d1a87cd80fd388": {
@@ -2473,7 +2473,7 @@
         "Weight": 0.131,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "668031705014e211b4078046": {
@@ -2497,7 +2497,7 @@
         "Weight": 0.13,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "6698c8b7710a4525fe0e9e55": {
@@ -2521,7 +2521,7 @@
         "Weight": 0.288,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6698c8ab29e062525d0ad8ab": {
@@ -2545,7 +2545,7 @@
         "Weight": 0.15,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6698c89bfbc8142e60024b0e": {
@@ -2569,7 +2569,7 @@
         "Weight": 0.128,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "603372d154072b51b239f9e1": {
@@ -2603,7 +2603,7 @@
         "Weight": 0.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5fbbc366ca32ed67276c1557": {
@@ -2627,7 +2627,7 @@
         "Weight": 0.16,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "603373004e02ce1eaa358814": {
@@ -2653,7 +2653,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6194efe07c6c7b169525f11b": {
@@ -2677,7 +2677,7 @@
         "Weight": 0.122,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5a6b5f868dc32e000a311389": {
@@ -2701,7 +2701,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5c471cb32e221602b177afaa": {
@@ -2725,7 +2725,7 @@
         "Weight": 0.834,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "603372f153a60014f970616d": {
@@ -2755,7 +2755,7 @@
         "Weight": 0.6,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5ea02bb600685063ec28bfa1": {
@@ -2779,7 +2779,7 @@
         "Weight": 0.51,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5fc3e4a27283c4046c5814ab": {
@@ -2803,7 +2803,7 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5608379a4bdc2d26448b4569": {
@@ -2827,7 +2827,7 @@
         "Weight": 1.55,
         "ShotgunDispersion": 0.85,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "571a26d524597720680fbe8a": {
@@ -2851,7 +2851,7 @@
         "Weight": 0.06,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "628121434fa03b6b6c35dc6a": {
@@ -2883,7 +2883,7 @@
         "Weight": 1.93,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5fb653962b1b027b1f50bd03": {
@@ -2907,7 +2907,7 @@
         "Weight": 0.21,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5beec1bd0db834001e6006f3": {
@@ -2931,7 +2931,7 @@
         "Weight": 0.94,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5fb65363d1409e5ca04b54f5": {
@@ -2955,7 +2955,7 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5df256570dee1b22f862e9c4": {
@@ -2979,7 +2979,7 @@
         "Weight": 2.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6194eff92d2c397d6600348b": {
@@ -3003,7 +3003,7 @@
         "Weight": 0.141,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5a787fadc5856700155a6ca1": {
@@ -3027,7 +3027,7 @@
         "Weight": 1.1,
         "ShotgunDispersion": 0.8,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "628121651d5df4475f46a33c": {
@@ -3055,7 +3055,9 @@
         "Ergonomics": 0,
         "Weight": 1.2,
         "ShotgunDispersion": 1,
-        "Loudness": 0
+        "Loudness": 0,
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5a6b5ed88dc32e000c52ec86": {
         "ItemID": "5a6b5ed88dc32e000c52ec86",
@@ -3078,7 +3080,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0
     },
     "5d3eb59ea4b9361c284bb4b2": {
@@ -3102,7 +3104,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5b1fa9ea5acfc40018633c0a": {
@@ -3127,7 +3129,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "56d5a1f7d2720bb3418b456a": {
@@ -3151,7 +3153,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5a787fdfc5856700142fdd9a": {
@@ -3175,7 +3177,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1.25,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5beec2820db834001b095426": {
@@ -3200,7 +3202,7 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "602a95edda11d6478d5a06da": {
@@ -3224,7 +3226,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "560837544bdc2de22e8b456e": {
@@ -3248,7 +3250,7 @@
         "Weight": 1.35,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "602a95fe4e02ce1eaa358729": {
@@ -3272,7 +3274,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "560837154bdc2da74d8b4568": {
@@ -3296,7 +3298,7 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5fbbc383d5cb881a7363194a": {
@@ -3320,7 +3322,7 @@
         "Weight": 0.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "603372b4da11d6478d5a07ff": {
@@ -3356,7 +3358,7 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "587de4282459771bca0ec90b": {
@@ -3380,7 +3382,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5a787ebcc5856700142fdd98": {
@@ -3404,7 +3406,7 @@
         "Weight": 1,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5a787f7ac5856700177af660": {
@@ -3428,7 +3430,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.95,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5a6b5b8a8dc32e001207faf3": {
@@ -3452,7 +3454,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "6281214c1d5df4475f46a33a": {
@@ -3480,7 +3482,9 @@
         "Ergonomics": 0,
         "Weight": 1.45,
         "ShotgunDispersion": 1,
-        "Loudness": 0
+        "Loudness": 0,
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "5a6b60158dc32e000a31138b": {
         "ItemID": "5a6b60158dc32e000a31138b",
@@ -3503,7 +3507,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6281215b4fa03b6b6c35dc6c": {
@@ -3530,7 +3534,7 @@
         ],
         "Ergonomics": 0,
         "Weight": 1.45,
-        "ShotgunDispersion": 1,
+        "ShotgunDispersion": 2,
         "Loudness": 0
     },
     "5bfd4cc90db834001d23e846": {
@@ -3561,7 +3565,7 @@
         "Weight": 0.7,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5bfd4cd60db834001c38f095": {
@@ -3592,7 +3596,7 @@
         "Weight": 0.81,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5bfd4cbe0db834001b73449f": {
@@ -3616,7 +3620,7 @@
         "Weight": 1.3,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5ae09bff5acfc4001562219d": {
@@ -3643,7 +3647,7 @@
         "Weight": 1.53,
         "ShotgunDispersion": 1.9,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5a6b5e468dc32e001207faf5": {
@@ -3667,7 +3671,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "6194f017ed0429009f543eaa": {
@@ -3691,7 +3695,7 @@
         "Weight": 0.163,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "6194f02d9bb3d20b0946d2f0": {
@@ -3715,7 +3719,7 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5f3e7801153b8571434a924c": {
@@ -3739,7 +3743,7 @@
         "Weight": 0.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5f3e77f59103d430b93f94c1": {
@@ -3763,7 +3767,7 @@
         "Weight": 0.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5aaf9d53e5b5b00015042a52": {
@@ -3787,7 +3791,7 @@
         "Weight": 1.04,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5addbac75acfc400194dbc56": {
@@ -3812,7 +3816,7 @@
         "Weight": 1.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5bfebc320db8340019668d79": {
@@ -3836,7 +3840,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5d2703038abbc3105103d94c": {
@@ -3860,7 +3864,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0
     },
     "5d2702e88abbc31ed91efc44": {
@@ -3884,7 +3888,7 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "5bfebc250db834001a6694e1": {
@@ -3908,7 +3912,7 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5b099a765acfc47a8607efe3": {
@@ -3940,7 +3944,7 @@
         "Weight": 0.83,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5b7be1125acfc4001876c0e5": {
@@ -3971,7 +3975,7 @@
         "Weight": 0.96,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0
     },
     "5b7be1265acfc400161d0798": {
@@ -3999,7 +4003,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "571a279b24597720b4066566": {
@@ -4023,7 +4027,7 @@
         "Weight": 0.062,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "5b3baf8f5acfc40dc5296692": {
@@ -4047,7 +4051,7 @@
         "Weight": 0.06,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "6130c3dffaa1272e43151c7d": {
@@ -4071,7 +4075,7 @@
         "Weight": 0.415,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "62e7c7f3c34ea971710c32fc": {
@@ -4096,7 +4100,7 @@
         "Weight": 0.83,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6333f05d1bc0e6217a0e9d34": {
@@ -4120,7 +4124,7 @@
         "Weight": 0.535,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "630e39c3bd357927e4007c15": {
@@ -4144,7 +4148,7 @@
         "Weight": 0.53,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "630764fea987397c0816d219": {
@@ -4168,7 +4172,7 @@
         "Weight": 0.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "mechSKS_366": {
@@ -4194,7 +4198,9 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 10,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "634eff66517ccc8a960fc735": {
         "ItemID": "634eff66517ccc8a960fc735",
@@ -4217,7 +4223,9 @@
         "Weight": 1.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 2,
+        "Price": 0
     },
     "634f02331f9f536910079b51": {
         "ItemID": "634f02331f9f536910079b51",
@@ -4240,7 +4248,9 @@
         "Weight": 1.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "645122f6d4928d46d30be3ff": {
         "ItemID": "645122f6d4928d46d30be3ff",
@@ -4263,7 +4273,9 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "645123013d52156624001fd1": {
         "ItemID": "645123013d52156624001fd1",
@@ -4286,7 +4298,9 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "6513eff1e06849f06c0957d4": {
         "ItemID": "6513eff1e06849f06c0957d4",
@@ -4309,7 +4323,9 @@
         "Weight": 1.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 1,
+        "Price": 0
     },
     "65266fd43341ed9aa903dd56": {
         "ItemID": "65266fd43341ed9aa903dd56",
@@ -4333,7 +4349,9 @@
         "Weight": 1.05,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "mechSpear_330mm": {
         "ItemID": "mechSpear_330mm",
@@ -4358,7 +4376,9 @@
         "Weight": 0.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 3,
+        "Price": 0
     },
     "652910565ae2ae97b80fdf35": {
         "ItemID": "652910565ae2ae97b80fdf35",
@@ -4381,6 +4401,8 @@
         "Weight": 0.479,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 2,
+        "Price": 0
     }
 }

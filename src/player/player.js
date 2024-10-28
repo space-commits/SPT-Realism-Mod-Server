@@ -213,7 +213,7 @@ class Player {
             this.globalDB().Stamina.SafeHeightOverweight = 10000;
         }
         if (this.modConfig.med_changes == true) {
-            this.globalDB().Health.Effects.Existence.EnergyDamage = 1;
+            this.globalDB().Health.Effects.Existence.EnergyDamage = 1.12;
             this.globalDB().Health.Effects.Exhaustion.Damage = 0.25;
             this.globalDB().Health.Effects.Exhaustion.DefaultDelay = 60;
             this.globalDB().Health.Effects.Existence.HydrationDamage = 1.5;

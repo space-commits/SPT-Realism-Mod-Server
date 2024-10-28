@@ -1089,14 +1089,14 @@
         "Name": "patron_9x21_sp11",
         "LoyaltyLevel": 1,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 0.8
     },
     "5a26ac06c4a282000c5a90a8": {
         "ItemID": "5a26ac06c4a282000c5a90a8",
         "Name": "patron_9x21_sp12",
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 3,
         "TemplateType": "ammo",
-        "BasePriceModifier": 1
+        "BasePriceModifier": 2.2
     },
     "5a26ac0ec4a28200741e1e18": {
         "ItemID": "5a26ac0ec4a28200741e1e18",

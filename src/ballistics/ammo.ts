@@ -2335,7 +2335,7 @@ export class Ammo {
             //// .300 BLK ////
             // Whisper
             if (serverItem._id === "6196365d58ef8c428c287da1") {
-                serverItem._props.PenetrationPower = 35;
+                serverItem._props.PenetrationPower = 39;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 62;
                 serverItem._props.InitialSpeed = 300;
@@ -2358,7 +2358,7 @@ export class Ammo {
             }
             // V-Max
             if (serverItem._id === "6196364158ef8c428c287d9f") {
-                serverItem._props.PenetrationPower = 40;
+                serverItem._props.PenetrationPower = 49;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 115;
                 serverItem._props.InitialSpeed = 645;
@@ -2381,7 +2381,7 @@ export class Ammo {
             }
             // BCP FMJ
             if (serverItem._id === "5fbe3ffdf8b6a877a729ea82") {
-                serverItem._props.PenetrationPower = 44;
+                serverItem._props.PenetrationPower = 53;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 79;
                 serverItem._props.InitialSpeed = 516;
@@ -2404,7 +2404,7 @@ export class Ammo {
             }
             // M62 .300blk
             if (serverItem._id === "619636be6db0f2477964e710") {
-                serverItem._props.PenetrationPower = 47;
+                serverItem._props.PenetrationPower = 55;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 76;
                 serverItem._props.InitialSpeed = 556;
@@ -2427,7 +2427,7 @@ export class Ammo {
             }
             // AAC AP
             if (serverItem._id === "5fd20ff893a8961fc660a954") {
-                serverItem._props.PenetrationPower = 55;
+                serverItem._props.PenetrationPower = 59;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 74;
                 serverItem._props.InitialSpeed = 680;
@@ -2445,13 +2445,13 @@ export class Ammo {
                     serverItem._props.MisfireChance = 0;
                     serverItem._props.MalfFeedChance = 0;
                     serverItem._props.DurabilityBurnModificator = 2;
-                    serverItem._props.HeatFactor = 1.2;
+                    serverItem._props.HeatFactor = 1.18;
                 }
             }
             // CBJ
             if (serverItem._id === "64b8725c4b75259c590fa899") {
-                serverItem._props.PenetrationPower = 59;
-                serverItem._props.ArmorDamage = 1;
+                serverItem._props.PenetrationPower = 62;
+                serverItem._props.ArmorDamage = 1.1;
                 serverItem._props.Damage = 70;
                 serverItem._props.InitialSpeed = 725;
                 serverItem._props.RicochetChance = 0.45;

@@ -28,9 +28,26 @@ const ArmorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates
 const ArmorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
 const ChestrigTemplates = require("../../db/templates/gear/chestrigTemplates.json");
 const HeadsetTemplates = require("../../db/templates/gear/headsetTemplates.json");
+const MuzzleDeviceTemplates = require("../../db/templates/attatchments/MuzzleDeviceTemplates.json");
+const BarrelTemplates = require("../../db/templates/attatchments/BarrelTemplates.json");
+const MountTemplates = require("../../db/templates/attatchments/MountTemplates.json");
+const ReceiverTemplates = require("../../db/templates/attatchments/ReceiverTemplates.json");
+const StockTemplates = require("../../db/templates/attatchments/StockTemplates.json");
+const ChargingHandleTemplates = require("../../db/templates/attatchments/ChargingHandleTemplates.json");
+const ScopeTemplates = require("../../db/templates/attatchments/ScopeTemplates.json");
+const IronSightTemplates = require("../../db/templates/attatchments/IronSightTemplates.json");
+const MagazineTemplates = require("../../db/templates/attatchments/MagazineTemplates.json");
+const AuxiliaryModTemplates = require("../../db/templates/attatchments/AuxiliaryModTemplates.json");
+const ForegripTemplates = require("../../db/templates/attatchments/ForegripTemplates.json");
+const PistolGripTemplates = require("../../db/templates/attatchments/PistolGripTemplates.json");
+const GasblockTemplates = require("../../db/templates/attatchments/GasblockTemplates.json");
+const HandguardTemplates = require("../../db/templates/attatchments/HandguardTemplates.json");
+const FlashlightLaserTemplates = require("../../db/templates/attatchments/FlashlightLaserTemplates.json");
+const UBGLTempaltes = require("../../db/templates/attatchments/UBGLTempaltes.json");
 const AmmoTemplates = require("../../db/templates/ammo/ammoTemplates.json");
 const WeapTemplatesArr = [AssaultCarbineTemplates, AssaultRifleTemplates, MachinegunTemplates, MarksmanRifleTemplates, PistolTemplates, ShotgunTemplates, SMGTemplates, SniperRifleTemplates, SpecialWeaponTemplates, GrenadeLauncherTemplates];
 const GearTemlplatesArr = [ArmorPlateTemplates, ArmorComponentsTemplates, ArmorChestrigTemplates, HelmetTemplates, ArmorVestsTemplates, ArmorMasksTemplates, ChestrigTemplates, HeadsetTemplates];
+const attachmentTemplatesArr = [MuzzleDeviceTemplates, BarrelTemplates, MountTemplates, ReceiverTemplates, StockTemplates, ChargingHandleTemplates, ScopeTemplates, IronSightTemplates, MagazineTemplates, AuxiliaryModTemplates, ForegripTemplates, PistolGripTemplates, GasblockTemplates, HandguardTemplates, FlashlightLaserTemplates, UBGLTempaltes];
 const traderRepairs = require("../../db/traders/repair/traderRepair.json");
 const fenceLimits = require("../../db/traders/fence/fenceLimits.json");
 const buyCat = require("../../db/traders/buy_categories.json");
@@ -77,10 +94,10 @@ class Traders {
             };
         if (modConfig.insurance_price_coef) {
             insurance.minAttachmentRoublePriceToBeTaken = 1000;
-            insurance.chanceNoAttachmentsTakenPercent = 15;
-            insurance.runIntervalSeconds = 600;
-            this.tables.traders[prapId].base.insurance.min_return_hour = 2;
-            this.tables.traders[prapId].base.insurance.max_return_hour = 3;
+            insurance.chanceNoAttachmentsTakenPercent = 20;
+            insurance.runIntervalSeconds = 300;
+            this.tables.traders[prapId].base.insurance.min_return_hour = 1;
+            this.tables.traders[prapId].base.insurance.max_return_hour = 2;
             this.tables.traders[theraId].base.insurance.min_return_hour = 1;
             this.tables.traders[theraId].base.insurance.max_return_hour = 1;
             this.tables.traders[prapId].base.loyaltyLevels.forEach(ll => {
@@ -91,6 +108,7 @@ class Traders {
             });
             insurance.returnChancePercent[prapId] = 30;
             insurance.returnChancePercent[theraId] = 90;
+            this.tables.globals.config.Insurance.MaxStorageTimeInHour = 168;
         }
     }
     modifyTraderBuyPriceHelper(traderId, basePrice) {
@@ -241,8 +259,10 @@ class Traders {
     setLoyaltyLevels(trader) {
         if (modConfig.realistic_ballistics == true)
             this.loyaltyLevelHelper(AmmoTemplates, false, trader);
-        if (modConfig.recoil_attachment_overhaul == true)
+        if (modConfig.recoil_attachment_overhaul == true) {
             this.loyaltyLevelHelper(WeapTemplatesArr, true, trader);
+            this.loyaltyLevelHelper(attachmentTemplatesArr, true, trader);
+        }
         if (modConfig.realistic_ballistics == true)
             this.loyaltyLevelHelper(GearTemlplatesArr, true, trader);
     }

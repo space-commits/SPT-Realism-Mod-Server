@@ -112,6 +112,7 @@ import { ILocation } from "@spt/models/eft/common/ILocation";
 import { ILooseLoot } from "@spt/models/eft/common/ILooseLoot";
 import { ILootConfig } from "@spt/models/spt/config/ILootConfig";
 import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
+import { PlayerRaidEndState } from "@spt/models/enums/PlayerRaidEndState";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -617,7 +618,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 quests.resetRepeatableQuests(profileData);
                             }
 
-                            this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info.profile, sessionID, utils, logger);
+                            this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, sessionID, utils, logger);
 
                             this.checkEventQuests(pmcData);
 
@@ -954,25 +955,36 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
     }
 
-    private modifyMapLoot(locationConfig: ILocationConfig, map: string, raidData: IPostRaidPmcData, profileId: string, utils: Utils, logger: ILogger) {
+    private modifyMapLoot(locationConfig: ILocationConfig, map: string, raidData: ISaveProgressRequestData, profileId: string, utils: Utils, logger: ILogger) {
 
         let lootXp = 0;
 
-        const counters = raidData.Stats.Eft.OverallCounters.Items;
-        for (const i in counters) {
-            const counter = counters[i];
-            if (counter.Key.includes("ExpLooting")) {
-                logger.warning("Looting XP " + counter.Value);
-                lootXp = counter.Value;
+        if (raidData.exit !== PlayerRaidEndState.KILLED && raidData.exit !== PlayerRaidEndState.MISSING_IN_ACTION) {
+            const counters = raidData.profile.Stats.Eft.OverallCounters.Items;
+            for (const i in counters) {
+                const counter = counters[i];
+                if (counter.Key.includes("ExpLooting")) {
+                    logger.warning("Looting XP " + counter.Value);
+                    lootXp += counter.Value;
+                }
             }
         }
 
-        const looseModifier = lootXp * 0.002;
-        const staticModifier = lootXp * 0.001;
+        const looseModifier = lootXp * 0.00004;
+        const staticModifier = lootXp * 0.00002;
+        const minLooseLoot = 0.3;
+        const minstaticLoot = 0.4;
+        const looseLootRegenRate = 0.1;
+        const staticLootRegenRate = 0.05;
         const baseLooseLoot: LootMultiplier = baseMapLoot.looseLootMultiplier;
         const baseStaticLoot: LootMultiplier = baseMapLoot.staticLootMultiplier;
         const originalLooseMapModi = baseLooseLoot[map];
         const originalStaticMapModi = baseStaticLoot[map];
+        const mapAliases: { [key: string]: string[] } = {
+            "factory4_day": ["factory4_day", "factory4_night"],
+            "factory4_night": ["factory4_day", "factory4_night"]
+        };
+        const mapsToUpdate: string[] = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
 
         logger.warning("==============" + map + "==============");
         logger.warning("==loose loot modi: " + looseModifier);
@@ -991,29 +1003,31 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
         let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
 
-        logger.warning("current loose loot modi: " + looseLootModis[map]);
-        logger.warning("current static loot modi: " + staticLootModis[map]);
+        mapsToUpdate.forEach((currentMap) => {
+            logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
+            logger.warning("current static loot modi: " + staticLootModis[currentMap]);
 
-        looseLootModis[map] = utils.clampNumber(looseLootModis[map] - looseModifier, 0.1, originalLooseMapModi);
-        staticLootModis[map] = utils.clampNumber(staticLootModis[map] - staticModifier, 0.1, originalStaticMapModi);
+            looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
+            staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
 
-        logger.warning("modified loose loot modi: " + looseLootModis[map]);
-        logger.warning("modified static loot modi: " + staticLootModis[map]);
+            logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
+            logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
+        });
 
         logger.warning("==Regenerating other map loot");
 
         for (const i in playerMapLoot[profileId].staticLootMultiplier) {
             logger.warning("==");
             logger.warning("map " + i);
-            if (i !== map) {
+            if (!mapsToUpdate.includes(i)) {
                 let looseMapLootModis = playerMapLoot[profileId].looseLootMultiplier;
                 let staticMapLootModis = playerMapLoot[profileId].staticLootMultiplier;
 
                 logger.warning("current loose loot modi: " + looseMapLootModis[i]);
                 logger.warning("current static loot modi: " + staticMapLootModis[i]);
 
-                looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + 0.1, 0.1, baseLooseLoot[i]);
-                staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + 0.1, 0.1, baseStaticLoot[i]);
+                looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
+                staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
 
                 logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
                 logger.warning("modified static loot modi: " + staticMapLootModis[i]);

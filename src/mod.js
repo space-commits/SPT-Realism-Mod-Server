@@ -54,6 +54,7 @@ const json_handler_1 = require("./json/json-handler");
 const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
 const insurance_1 = require("./traders/insurance");
+const PlayerRaidEndState_1 = require("C:/snapshot/project/obj/models/enums/PlayerRaidEndState");
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -461,7 +462,7 @@ class Main {
                         if (modConfig.enable_hazard_zones) {
                             quests.resetRepeatableQuests(profileData);
                         }
-                        this.modifyMapLoot(locationConfig, utils_1.RaidInfoTracker.mapName, info.profile, sessionID, utils, logger);
+                        this.modifyMapLoot(locationConfig, utils_1.RaidInfoTracker.mapName, info, sessionID, utils, logger);
                         this.checkEventQuests(pmcData);
                         player.correctNegativeHP(pmcData);
                         if (modConfig.realistic_player_health == true) {
@@ -736,20 +737,31 @@ class Main {
     }
     modifyMapLoot(locationConfig, map, raidData, profileId, utils, logger) {
         let lootXp = 0;
-        const counters = raidData.Stats.Eft.OverallCounters.Items;
-        for (const i in counters) {
-            const counter = counters[i];
-            if (counter.Key.includes("ExpLooting")) {
-                logger.warning("Looting XP " + counter.Key);
-                lootXp = counter.Value;
+        if (raidData.exit !== PlayerRaidEndState_1.PlayerRaidEndState.KILLED && raidData.exit !== PlayerRaidEndState_1.PlayerRaidEndState.MISSING_IN_ACTION) {
+            const counters = raidData.profile.Stats.Eft.OverallCounters.Items;
+            for (const i in counters) {
+                const counter = counters[i];
+                if (counter.Key.includes("ExpLooting")) {
+                    logger.warning("Looting XP " + counter.Value);
+                    lootXp += counter.Value;
+                }
             }
         }
-        const looseModifier = lootXp * 0.001;
-        const staticModifier = lootXp * 0.001;
+        const looseModifier = lootXp * 0.00004;
+        const staticModifier = lootXp * 0.00002;
+        const minLooseLoot = 0.3;
+        const minstaticLoot = 0.4;
+        const looseLootRegenRate = 0.1;
+        const staticLootRegenRate = 0.05;
         const baseLooseLoot = baseMapLoot.looseLootMultiplier;
         const baseStaticLoot = baseMapLoot.staticLootMultiplier;
         const originalLooseMapModi = baseLooseLoot[map];
         const originalStaticMapModi = baseStaticLoot[map];
+        const mapAliases = {
+            "factory4_day": ["factory4_day", "factory4_night"],
+            "factory4_night": ["factory4_day", "factory4_night"]
+        };
+        const mapsToUpdate = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
         logger.warning("==============" + map + "==============");
         logger.warning("==loose loot modi: " + looseModifier);
         logger.warning("==static loot modi: " + staticModifier);
@@ -764,23 +776,25 @@ class Main {
         logger.warning("Found profile entry ");
         let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
         let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
-        logger.warning("current loose loot modi: " + looseLootModis[map]);
-        logger.warning("current static loot modi: " + staticLootModis[map]);
-        looseLootModis[map] = utils.clampNumber(looseLootModis[map] - looseModifier, 0.1, originalLooseMapModi);
-        staticLootModis[map] = utils.clampNumber(staticLootModis[map] - staticModifier, 0.1, originalStaticMapModi);
-        logger.warning("modified loose loot modi: " + looseLootModis[map]);
-        logger.warning("modified static loot modi: " + staticLootModis[map]);
+        mapsToUpdate.forEach((currentMap) => {
+            logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
+            logger.warning("current static loot modi: " + staticLootModis[currentMap]);
+            looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
+            staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
+            logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
+            logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
+        });
         logger.warning("==Regenerating other map loot");
         for (const i in playerMapLoot[profileId].staticLootMultiplier) {
             logger.warning("==");
             logger.warning("map " + i);
-            if (i !== map) {
+            if (!mapsToUpdate.includes(i)) {
                 let looseMapLootModis = playerMapLoot[profileId].looseLootMultiplier;
                 let staticMapLootModis = playerMapLoot[profileId].staticLootMultiplier;
                 logger.warning("current loose loot modi: " + looseMapLootModis[i]);
                 logger.warning("current static loot modi: " + staticMapLootModis[i]);
-                looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + 0.1, 0.1, baseLooseLoot[i]);
-                staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + 0.1, 0.1, baseStaticLoot[i]);
+                looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
+                staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
                 logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
                 logger.warning("modified static loot modi: " + staticMapLootModis[i]);
             }
