@@ -5647,7 +5647,7 @@
         "Weight": 0.81,
         "Loudness": -19,
         "Convergence": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": 50
     },
@@ -6189,7 +6189,7 @@
         "Weight": 0.412,
         "Loudness": -28,
         "Convergence": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": 20
     },

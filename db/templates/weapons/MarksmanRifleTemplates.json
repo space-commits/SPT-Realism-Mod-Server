@@ -538,7 +538,7 @@
         "DurabilityBurnRatio": 0.55,
         "AutoROF": 700,
         "SemiROF": 420,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 3,
         "BaseReloadSpeedMulti": 0.9,
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.75,

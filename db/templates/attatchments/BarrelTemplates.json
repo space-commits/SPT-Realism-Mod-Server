@@ -21,7 +21,7 @@
         "Weight": 0.374,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": 30
     },
@@ -47,7 +47,7 @@
         "Weight": 0.336,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": 30
     },
@@ -99,7 +99,7 @@
         "Weight": 0.464,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": 30
     },
@@ -125,7 +125,7 @@
         "Weight": 0.464,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": 0
     },

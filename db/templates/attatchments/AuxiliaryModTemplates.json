@@ -670,7 +670,7 @@
         "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 3,
         "Handling": 1.5
@@ -720,7 +720,7 @@
         "CoolFactor": 0.98,
         "DurabilityBurnModificator": 1,
         "Weight": 0.005,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 2,
         "Handling": 1

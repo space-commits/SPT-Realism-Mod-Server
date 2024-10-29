@@ -222,7 +222,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.082,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 15
     },
@@ -423,7 +423,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.072,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 5,
         "Handling": 4
@@ -709,7 +709,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.034,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 12
     },
@@ -793,7 +793,7 @@
         ],
         "Weight": 0.127,
         "Handling": 10.5,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "64807a29e5ffe165600abc97": {
@@ -811,7 +811,7 @@
         ],
         "Weight": 0.127,
         "Handling": 10.5,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "648067db042be0705c0b3009": {

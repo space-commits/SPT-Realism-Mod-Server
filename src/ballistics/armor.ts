@@ -221,10 +221,10 @@ export class Armor {
                 "5fd4c474dd870108a754b241"
             ];
         if (carriersSlim.includes(serverItem._id)) {
-            this.modifyAramid(serverItem, 3, 50, 0.25);
+            this.modifyAramid(serverItem, 3, 45, 0.3);
         }
         if (carriers.includes(serverItem._id)) {
-            this.modifyAramid(serverItem, 3, 70, 0.2);
+            this.modifyAramid(serverItem, 3, 60, 0.2);
         }
         //Module
         if (serverItem._id === "59e7635f86f7742cbf2c1095") {
@@ -244,31 +244,31 @@ export class Armor {
         }
         //Stich Profi Plate Carrier V2 Black
         if (serverItem._id === "66b6296d7994640992013b17") {
-            this.modifyAramid(serverItem, 4, 100, 0.33);
+            this.modifyAramid(serverItem, 3, 100, 0.33);
         }
         //Strandhogg
         if (serverItem._id === "61bcc89aef0f505f0c6cd0fc") {
-            this.modifyAramid(serverItem, 4, 95, 0.3);
+            this.modifyAramid(serverItem, 3, 100, 0.2);
         }
         //AVS
         if (serverItem._id === "544a5caa4bdc2d1a388b4568") {
-            this.modifyAramid(serverItem, 4, 105, 0.28);
+            this.modifyAramid(serverItem, 4, 90, 0.28);
         }
         //Kirasa
         if (serverItem._id === "5b44d22286f774172b0c9de8") {
-            this.modifyAramid(serverItem, 5, 100, 0.4);
+            this.modifyAramid(serverItem, 4, 100, 0.4);
         }
         //Thor concealable
         if (serverItem._id === "609e8540d5c319764c2bc2e9") {
-            this.modifyAramid(serverItem, 5, 100, 0.35);
+            this.modifyAramid(serverItem, 4, 100, 0.35);
         }
         //Trooper 
         if (serverItem._id === "5c0e655586f774045612eeb2") {
-            this.modifyAramid(serverItem, 5, 90, 0.35);
+            this.modifyAramid(serverItem, 4, 90, 0.35);
         }
         //Hexatec
         if (serverItem._id === "63737f448b28897f2802b874") {
-            this.modifyAramid(serverItem, 5, 75, 0.3);
+            this.modifyAramid(serverItem, 4, 75, 0.3);
         }
         //Ghzel + Zhuk 6A
         if (serverItem._id === "5ab8e79e86f7742d8b372e78" || serverItem._id === "5c0e625a86f7742d77340f62") {
@@ -314,7 +314,7 @@ export class Armor {
         }
         //RBAV
         if (serverItem._id === "628dc750b910320f4c27a732") {
-            this.modifyAramid(serverItem, 5, 100, 0.3);
+            this.modifyAramid(serverItem, 4, 100, 0.3);
         }
         //Bagariy
         if (serverItem._id === "628d0618d1ba6e4fa07ce5a4") {

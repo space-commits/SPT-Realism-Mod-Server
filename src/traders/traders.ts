@@ -32,7 +32,7 @@ const SniperRifleTemplates = require("../../db/templates/weapons/SniperRifleTemp
 const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeaponTemplates.json");
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
 
-const ArmorPlateTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
+const ArmorPlateTemplates = require("../../db/templates/gear/armorPlateTemplates.json");
 const ArmorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
 const ArmorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
 const HelmetTemplates = require("../../db/templates/gear/helmetTemplates.json");
@@ -292,24 +292,20 @@ export class Traders {
     }
 
     public setLoyaltyLevels(trader: ITrader) {
-        if (modConfig.realistic_ballistics == true) this.loyaltyLevelHelper(AmmoTemplates, false, trader);
-        if (modConfig.recoil_attachment_overhaul == true) 
-            {
-                this.loyaltyLevelHelper(WeapTemplatesArr, true, trader);
-                this.loyaltyLevelHelper(attachmentTemplatesArr, true, trader);
-            }
-        if (modConfig.realistic_ballistics == true) this.loyaltyLevelHelper(GearTemlplatesArr, true, trader);
+        if (modConfig.realistic_ballistics == true) {
+            this.loyaltyLevelHelper([AmmoTemplates], trader);
+            this.loyaltyLevelHelper(GearTemlplatesArr, trader);
+        }
+        if (modConfig.recoil_attachment_overhaul == true) {
+            this.loyaltyLevelHelper(WeapTemplatesArr, trader);
+            this.loyaltyLevelHelper(attachmentTemplatesArr, trader);
+        }
     }
 
-    private loyaltyLevelHelper(template: any[], multifile: boolean, trader: ITrader) {
-        if (multifile == false) {
-            this.setLL(template, trader);
-
-        } else {
-            for (let files in template) {
-                let file = template[files];
-                this.setLL(file, trader);
-            }
+    private loyaltyLevelHelper(template: any[], trader: ITrader) {
+        for (let files in template) {
+            let file = template[files];
+            this.setLL(file, trader);
         }
     }
 
@@ -616,6 +612,11 @@ export class RandomizeTraderAssort {
         "670834442b46cad0e1daa3d9",
         "67082dcf37314df7bb087eb6",
     ];
+    private tempalteIdsToIngore = [
+        "5449016a4bdc2d6f028b456f",
+        "569668774bdc2da2298b4568",
+        "5696686a4bdc2da3298b456a"
+    ];
 
     public getAverageLL(pmcData: IPmcData[], traderId: string): number {
 
@@ -723,7 +724,7 @@ export class RandomizeTraderAssort {
             return;
         }
 
-        if (EventTracker.isHalloween && this.assortsToIgnore.includes(item._id)) return;
+        if ((EventTracker.isHalloween && this.assortsToIgnore.includes(item._id)) ||this.tempalteIdsToIngore.includes(item._tpl)) return;
 
         const llStockFactor = Math.max(averageLL - 1, 1);
         const llStackableFactor = this.getLLStackableBonus(averageLL);
@@ -889,7 +890,7 @@ export class RandomizeTraderAssort {
         if (assortItemParent === catParent) {
 
             //items aren't out of stock often enough, this artifically increases the chance of being out of stock
-            if (this.utils.pickRandNumInRange(0, 100) < (30 - (llFactor * 5))) {
+            if (this.utils.pickRandNumInRange(0, 100) < (20 - (llFactor * 4))) {
                 item.upd.StackObjectsCount = 0 + min;
             }
             else {
@@ -930,37 +931,34 @@ export class RandomizeTraderAssort {
 
     private adjustPriceByCategory(barter: IBarterScheme, itemTemplId: string, cost: number) {
         if (this.itemDB[itemTemplId]._parent === ParentClasses.AMMO) {
-            barter.count = cost * 2;
+            barter.count = cost * 3;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.AMMO_BOX) {
-            barter.count = cost * 2;
+            barter.count = cost * 3;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.DRUGS) {
-            barter.count = cost * 1.5;
+            barter.count = cost * 2;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDKIT) {
-            barter.count = cost * 1.5;
+            barter.count = cost * 2;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDS) {
-            barter.count = cost * 1.5;
+            barter.count = cost * 2;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.STIMULATOR) {
-            barter.count = cost * 1.5;
+            barter.count = cost * 2.5;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDICAL_SUPPLIES) {
-            barter.count = cost * 1.5;
+            barter.count = cost * 2;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.FOOD) {
-            barter.count = cost * 1.5;
+            barter.count = cost * 2;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.DRINK) {
-            barter.count = cost * 1.5;
+            barter.count = cost * 2;
         }
         if (this.itemDB[itemTemplId]._parent === ParentClasses.HEADWEAR) {
-            barter.count = cost * 0.6;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.ARMOREDEQUIPMENT) {
-            barter.count = cost * 0.6;
+            barter.count = cost * 0.55;
         }
     }
 

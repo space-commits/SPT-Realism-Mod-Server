@@ -255,7 +255,7 @@
         "Weight": 0.255,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6477772ea8a38bb2050ed4db": {
@@ -451,7 +451,7 @@
         "Weight": 0.297,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "609a63b6e2ff132951242d09": {
@@ -514,14 +514,14 @@
         "ItemID": "61659f79d92c473c770213ee",
         "Name": "scope_base_aimpoint_pro",
         "ModType": "sight",
-        "AimSpeed": 12,
-        "Accuracy": 10,
+        "AimSpeed": 10,
+        "Accuracy": 8,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5c7d55de2e221644f31bff68": {
@@ -529,7 +529,7 @@
         "Name": "scope_base_aimpooint_comp_m4",
         "ModType": "sight",
         "AimSpeed": 12,
-        "Accuracy": 8,
+        "Accuracy": 10,
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.37,
@@ -578,7 +578,7 @@
         "Weight": 0.273,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 1,
         "Price": 0
     },
     "6113d6c3290d254f5e6b27db": {
@@ -634,7 +634,7 @@
         "Weight": 0.295,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "618a5d5852ecee1505530b2a": {
@@ -716,7 +716,7 @@
         "Weight": 0.094,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "58d399e486f77442e0016fe7": {
@@ -825,7 +825,7 @@
         "Weight": 0.31,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "618a75f0bd321d49084cd399": {

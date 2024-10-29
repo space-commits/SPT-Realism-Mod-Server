@@ -124,7 +124,7 @@
         "Weight": 0.18,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 3,
         "Price": 0
     },
     "668fe5c5f35310705d02b696": {
@@ -140,7 +140,7 @@
         "Weight": 0.18,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 4,
         "Price": 0
     },
     "660ea4453786cc0af808a1be": {
@@ -346,7 +346,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.19,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "5a966f51a2750c00156aacf6": {

@@ -34,6 +34,7 @@ export class WeaponsGlobals {
         this.globalDB().Overheat.MaxWearOnOverheat = 0.2;
         this.globalDB().Overheat.AutoshotChance = 0.5;
         this.globalDB().Overheat.AutoshotPossibilityDuration = 4;
+        this.globalDB().UncheckOnShot = false;
 
         for (let i in this.itemDB) {
             let serverItem = this.itemDB[i];

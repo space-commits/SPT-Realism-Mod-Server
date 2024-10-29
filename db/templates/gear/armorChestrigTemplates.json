@@ -183,7 +183,7 @@
         "ItemID": "5c0e746986f7741453628fe5",
         "Name": "item_equipment_rig_tv110",
         "AllowADS": true,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 4,
         "ArmorClass": "NIJ III",
         "CanSpall": false,
         "SpallReduction": 1,
