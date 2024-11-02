@@ -484,7 +484,7 @@
         "HorizontalRecoil": -2,
         "Dispersion": -2,
         "AimSpeed": 0,
-        "Ergonomics": 0,
+        "Ergonomics": 5,
         "Accuracy": 0,
         "HeatFactor": 1,
         "CoolFactor": 1,

@@ -1,29 +1,26 @@
 {
     "SkierRepair": {
-        "availability": true,
-        "currency": "5449016a4bdc2d6f028b456f",
-        "currency_coefficient": 1,
-        "excluded_category": [],
+        "availability": false,
+        "quality": 1,
         "excluded_id_list": [],
-        "price_rate": 0,
-        "quality": "1"
+        "excluded_category": [],
+        "currency": "5449016a4bdc2d6f028b456f",
+        "currency_coefficient": 1
     },
     "PraporRepair": {
-        "availability": true,
-        "currency": "5449016a4bdc2d6f028b456f",
-        "currency_coefficient": 1,
-        "excluded_category": [],
+        "availability": false,
+        "quality": 1,
         "excluded_id_list": [],
-        "price_rate": 0,
-        "quality": "0.5"
+        "excluded_category": [],
+        "currency": "5449016a4bdc2d6f028b456f",
+        "currency_coefficient": 1
     },
     "MechanicRepair": {
         "availability": true,
-        "currency": "5449016a4bdc2d6f028b456f",
-        "currency_coefficient": 1,
-        "excluded_category": [],
+        "quality": 1,
         "excluded_id_list": [],
-        "price_rate": 0,
-        "quality": "0.15"
+        "excluded_category": [],
+        "currency": "5449016a4bdc2d6f028b456f",
+        "currency_coefficient": 1
     }
 }

@@ -3790,8 +3790,8 @@ class Ammo {
         }
     }
     grenadeTweaks() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             //flash bang
             if (serverItem._id === "619256e5f8af2c1a4e1f5d92") {
                 serverItem._props.Contusion.x = 2;

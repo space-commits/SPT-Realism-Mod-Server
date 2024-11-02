@@ -833,10 +833,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
-
-        if (modConfig.trader_repair_changes == true) {
-            traders.loadTraderRepairs();
-        }
+        
+        traders.loadTraderRepairs();
 
         if (modConfig.headset_changes) {
             gear.loadHeadsetTweaks();

@@ -34,9 +34,10 @@ class WeaponsGlobals {
         this.globalDB().Overheat.AutoshotChance = 0.5;
         this.globalDB().Overheat.AutoshotPossibilityDuration = 4;
         this.globalDB().UncheckOnShot = false;
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === enums_1.ParentClasses.SMG
+                || serverItem._parent === enums_1.ParentClasses.WEAPON
                 || serverItem._parent === enums_1.ParentClasses.SHOTGUN
                 || serverItem._parent === enums_1.ParentClasses.ASSAULT_CARBINE
                 || serverItem._parent === enums_1.ParentClasses.SNIPER_RIFLE
@@ -46,13 +47,15 @@ class WeaponsGlobals {
                 || serverItem._parent === enums_1.ParentClasses.PISTOL
                 || serverItem._parent === enums_1.ParentClasses.GRENADE_LAUNCHER
                 || serverItem._parent === enums_1.ParentClasses.SPECIAL_WEAPON) {
-                serverItem._props.MinRepairDegradation = 0;
-                serverItem._props.MaxRepairDegradation = 0.05;
-                serverItem._props.MinRepairKitDegradation = 0;
-                serverItem._props.MaxRepairKitDegradation = 0.0001;
+                serverItem._props.MinRepairDegradation = 0.1;
+                serverItem._props.MaxRepairDegradation = 0.2;
+                serverItem._props.MinRepairKitDegradation = 0.0;
+                serverItem._props.MaxRepairKitDegradation = 0.1;
                 serverItem._props.RepairComplexity = 0;
-                serverItem._props.HeatFactorGun *= 2.5;
-                serverItem._props.CoolFactorGun *= 4;
+                if (serverItem._props.HeatFactorGun)
+                    serverItem._props.HeatFactorGun *= 2;
+                if (serverItem._props.CoolFactorGun)
+                    serverItem._props.CoolFactorGun *= 2;
             }
             if (serverItem._parent === enums_1.ParentClasses.REPAIRKITS) {
                 serverItem._props.RepairQuality = 0;
@@ -60,8 +63,8 @@ class WeaponsGlobals {
         }
     }
     loadGlobalWeps() {
-        for (let i in this.itemDB) {
-            let serverItem = this.itemDB[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             if (serverItem._parent === enums_1.ParentClasses.KNIFE) {
                 serverItem._props.DeflectionConsumption /= 5;
                 serverItem._props.SlashPenetration += 1;

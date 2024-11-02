@@ -293,19 +293,6 @@
             "Time": -1
         },
         {
-            "BossChance": 50,
-            "BossDifficult": "normal",
-            "BossEscortAmount": "4",
-            "BossEscortDifficult": "normal",
-            "BossEscortType": "followerBully",
-            "BossName": "bossBully",
-            "BossPlayer": false,
-            "BossZone": "ZoneScavBase,ZoneDormitory,ZoneGasStation,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare",
-            "RandomTimeSpawn": false,
-            "Supports": null,
-            "Time": -1
-        },
-        {
             "BossName": "pmcBot",
             "BossChance": 10,
             "BossZone": "ZoneBrige,ZoneCustoms,ZoneFactoryCenter,ZoneFactorySide,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare,ZoneWade,ZoneCrossRoad",

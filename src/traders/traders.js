@@ -92,7 +92,7 @@ class Traders {
                 "min_payment": 0,
                 "min_return_hour": 1
             };
-        if (modConfig.insurance_price_coef) {
+        if (modConfig.insurance_changes) {
             insurance.minAttachmentRoublePriceToBeTaken = 1000;
             insurance.chanceNoAttachmentsTakenPercent = 20;
             insurance.runIntervalSeconds = 300;
@@ -211,17 +211,27 @@ class Traders {
         }
     }
     loadTraderRepairs() {
-        this.tables.traders[prapId].base.repair = traderRepairs.PraporRepair;
-        this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
-        this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
-        for (let ll in this.tables.traders[prapId].base.loyaltyLevels) {
-            this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 0.5;
-        }
-        for (let ll in this.tables.traders[skierId].base.loyaltyLevels) {
-            this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.25;
-        }
-        for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
-            this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 0.9;
+        this.tables.traders[fenceId].base.repair = {
+            "availability": true,
+            "quality": 1,
+            "excluded_id_list": [],
+            "excluded_category": [],
+            "currency": "5449016a4bdc2d6f028b456f",
+            "currency_coefficient": 1
+        };
+        if (modConfig.trader_repair_changes == true) {
+            this.tables.traders[prapId].base.repair = traderRepairs.PraporRepair;
+            this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
+            this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
+            // for (let ll in this.tables.traders[prapId].base.loyaltyLevels) {
+            //     this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 0.5
+            // }
+            // for (let ll in this.tables.traders[skierId].base.loyaltyLevels) {
+            //     this.tables.traders[skierId].base.loyaltyLevels[ll].repair_price_coef *= 0.25
+            // }
+            for (let ll in this.tables.traders[mechId].base.loyaltyLevels) {
+                this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 1;
+            }
         }
     }
     setBaseOfferValues() {

@@ -1,7 +1,7 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
-import { IArmorMaterials, IConfig } from "@spt/models/eft/common/IGlobals";
+import { IArmorMaterials, IArmorType, IConfig } from "@spt/models/eft/common/IGlobals";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 const validHelmetSlots = [
@@ -28,6 +28,14 @@ export class Armor {
 
     public loadArmorStats() {
 
+        for (const key in this.armMat()) {
+            const mat: IArmorType = this.armMat()[key];
+            mat.MinRepairDegradation = 0.5;
+            mat.MaxRepairDegradation = 1;
+            mat.MinRepairKitDegradation = 0.1;
+            mat.MaxRepairKitDegradation = 0.25;
+        }
+   
         //Armor Destructibility values
         this.armMat().Glass.Destructibility = 0.45;
         this.armMat().Aramid.Destructibility = 0.33;
@@ -201,27 +209,26 @@ export class Armor {
                 "5d5d87f786f77427997cfaef",
                 "5ab8dced86f774646209ec87",
                 "5c0e722886f7740458316a57",
-                "628b9c7d45122232a872358f",
                 "5e4ac41886f77406a511c9a8",
                 "5b44cad286f77402a54ae7e5",
-                "66b6295178bbc0200425f995"
+                "66b6295178bbc0200425f995",
+                "628b9784bcf6e2659e09b8a2",
+                "609e860ebd219504d8507525",
             ];
         let carriersSlim =
             [
                 "64a5366719bab53bd203bf33",
                 "628cd624459354321c4b7fa2",
                 "66b6295a8ca68c6461709efa",
-                "628b9784bcf6e2659e09b8a2",
                 "64a536392d2c4e6e970f4121",
                 "61bc85697113f767765c7fe7",
                 "639343fce101f4caa40a4ef3",
-                "609e860ebd219504d8507525",
                 "5e4abb5086f77406975c9342",
                 "6038b4b292ec1c3103795a0b",
                 "5fd4c474dd870108a754b241"
             ];
         if (carriersSlim.includes(serverItem._id)) {
-            this.modifyAramid(serverItem, 3, 45, 0.3);
+            this.modifyAramid(serverItem, 2, 50, 0.2);
         }
         if (carriers.includes(serverItem._id)) {
             this.modifyAramid(serverItem, 3, 60, 0.2);
@@ -246,13 +253,17 @@ export class Armor {
         if (serverItem._id === "66b6296d7994640992013b17") {
             this.modifyAramid(serverItem, 3, 100, 0.33);
         }
+        //Knight
+        if (serverItem._id === "628b9c7d45122232a872358f") {
+            this.modifyAramid(serverItem, 4, 45, 0.3);
+        }
         //Strandhogg
         if (serverItem._id === "61bcc89aef0f505f0c6cd0fc") {
-            this.modifyAramid(serverItem, 3, 100, 0.2);
+            this.modifyAramid(serverItem, 3, 90, 0.2);
         }
         //AVS
         if (serverItem._id === "544a5caa4bdc2d1a388b4568") {
-            this.modifyAramid(serverItem, 4, 90, 0.28);
+            this.modifyAramid(serverItem, 4, 100, 0.28);
         }
         //Kirasa
         if (serverItem._id === "5b44d22286f774172b0c9de8") {
