@@ -2459,7 +2459,7 @@ class Ammo {
             //// 12.7x55 ////
             // PS12A
             if (serverItem._id === "5cadf6e5ae921500113bb973") {
-                serverItem._props.PenetrationPower = 50;
+                serverItem._props.PenetrationPower = 53;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 150;
                 serverItem._props.InitialSpeed = 870;
@@ -2481,7 +2481,7 @@ class Ammo {
             }
             // PS12
             if (serverItem._id === "5cadf6ddae9215051e1c23b2") {
-                serverItem._props.PenetrationPower = 56;
+                serverItem._props.PenetrationPower = 57;
                 serverItem._props.ArmorDamage = 1.05;
                 serverItem._props.Damage = 135;
                 serverItem._props.InitialSpeed = 300;
@@ -2503,7 +2503,7 @@ class Ammo {
             }
             // PS12B
             if (serverItem._id === "5cadf6eeae921500134b2799") {
-                serverItem._props.PenetrationPower = 63;
+                serverItem._props.PenetrationPower = 64;
                 serverItem._props.ArmorDamage = 1.15;
                 serverItem._props.Damage = 125;
                 serverItem._props.InitialSpeed = 570;

@@ -264,7 +264,7 @@ export class BotGen extends BotGenerator {
     private assignPMCtier(utils: Utils, botRole: string, botLoader: BotLoader, preparedBotBase: IBotBase, botJsonTemplateClone: IBotType): number {
         const baseTier = (this.getPMCTier(utils));
         const isUSEC = this.isBotUSEC(botRole);
-        const changeDiffi = modConfig.pmc_difficulty == true && ModTracker.sainPresent == false;
+        const changeDiffi = modConfig.pmc_difficulty == true;
         let pmcTier = ProfileTracker.averagePlayerLevel <= 10 ? baseTier : this.botTierMapFactor(baseTier, utils);
 
         if (modConfig.bot_testing == true) {

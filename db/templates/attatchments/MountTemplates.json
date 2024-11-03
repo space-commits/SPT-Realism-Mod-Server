@@ -528,7 +528,7 @@
         "ItemID": "5a7ad4af51dfba0013379717",
         "Name": "mount_glock_aimtech_base_glock",
         "ModType": "mount",
-        "Ergonomics": 12,
+        "Ergonomics": -12,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12,

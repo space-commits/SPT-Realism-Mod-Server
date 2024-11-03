@@ -87,11 +87,17 @@ class Traders {
                 "excluded_category": [
                     "62e9103049c018f425059f38"
                 ],
-                "max_return_hour": 3,
+                "max_return_hour": 0,
                 "max_storage_time": 96,
                 "min_payment": 0,
-                "min_return_hour": 1
+                "min_return_hour": 0
             };
+        this.tables.traders[fenceId].dialogue["insuranceStart"] = this.tables.traders[prapId].dialogue["insuranceStart"];
+        this.tables.traders[fenceId].dialogue["insuranceFound"] = this.tables.traders[prapId].dialogue["insuranceFound"];
+        this.tables.traders[fenceId].dialogue["insuranceFailed"] = this.tables.traders[prapId].dialogue["insuranceFailed"];
+        this.tables.traders[fenceId].dialogue["insuranceFailedLabs"] = this.tables.traders[prapId].dialogue["insuranceFailedLabs"];
+        this.tables.traders[fenceId].dialogue["insuranceExpired"] = this.tables.traders[prapId].dialogue["insuranceExpired"];
+        this.tables.traders[fenceId].dialogue["insuranceComplete"] = this.tables.traders[prapId].dialogue["insuranceComplete"];
         if (modConfig.insurance_changes) {
             insurance.minAttachmentRoublePriceToBeTaken = 1000;
             insurance.chanceNoAttachmentsTakenPercent = 20;

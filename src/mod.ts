@@ -811,7 +811,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             bots.forceBossSpawns();
         }
 
-        if (modConfig.boss_difficulty == true && !ModTracker.sainPresent) {
+        if (modConfig.boss_difficulty == true) {
             bots.bossDifficulty();
         }
 

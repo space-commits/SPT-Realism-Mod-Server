@@ -619,7 +619,7 @@ class Main {
         if (modConfig.guarantee_boss_spawn == true) {
             bots.forceBossSpawns();
         }
-        if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {
+        if (modConfig.boss_difficulty == true) {
             bots.bossDifficulty();
         }
         if (modConfig.med_changes == true) {
