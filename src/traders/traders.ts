@@ -583,6 +583,12 @@ export class RandomizeTraderAssort {
     private tables = this.databaseServer.getTables();
     private itemDB = this.tables.templates.items;
     private utils = new Utils(this.tables);
+    private assortsToIgnore = [
+            "670ae835f28231d36adcf7fa",
+            "67082dc8dc5160ef041094dc",
+            "670834442b46cad0e1daa3d9",
+            "67082dcf37314df7bb087eb6",
+        ];
 
     public getAverageLL(pmcData: IPmcData[], traderId: string): number {
 
@@ -679,10 +685,13 @@ export class RandomizeTraderAssort {
 
     public randomizeStockHelper(item: Item, averageLL: number) {
         let itemParent = this.itemDB[item._tpl]?._parent;
+
         if (!itemParent) {
             this.logger.warning(`Realism Mod: Unable to randomize stock for: ${item._tpl}, has no _parent / item does not exist in db`);
             return;
         }
+
+        if(EventTracker.isHalloween && this.assortsToIgnore.includes(item._id)) return;
 
         const llStockFactor = Math.max(averageLL - 1, 1);
         const llStackableFactor = this.getLLStackableBonus(averageLL);

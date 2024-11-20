@@ -409,11 +409,14 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         let cumulativePlayerLevel = 0;
                         delete ProfileTracker.playerRecord[profileData.info.id];
                         Object.values(ProfileTracker.playerRecord).forEach(value => {
-                            cumulativePlayerLevel += value;
-                            playerCount += 1;
+                            const playerLevel = Number(value);
+                            if (!isNaN(playerLevel)) {
+                                cumulativePlayerLevel += playerLevel;
+                                playerCount += 1;
+                            }
                         });
 
-                        ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
+                        ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
                         logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
                         return output;
                     }
@@ -539,7 +542,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
 
-                            if (!ModTracker.qtbPresent && !ModTracker.swagPresent && RaidInfoTracker.mapName === "laboratory") {
+                            if (!ModTracker.swagPresent && RaidInfoTracker.mapName === "laboratory") { //!ModTracker.qtbPresent && 
                                 pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
                                 pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
                                 pmcConf.convertIntoPmcChance["assault"].min = 100;
@@ -966,7 +969,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         let didExplosion;
         let shouldDisableTraders = true;
 
-        if (pmcData?.Quests == null || pmcData?.Quests === undefined) return;
+        if (pmcData?.Quests === null || pmcData?.Quests === undefined) return;
 
         pmcData.Quests.forEach(q => {
             //blue flame part 2
@@ -1037,7 +1040,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (isCompleted) {
-                        baseGasChance = EventTracker.isHalloween ? 2    00 : 25;
+                        baseGasChance = EventTracker.isHalloween ? 200 : 5;
                     }
                 }
                 //blue flame part 1

@@ -298,10 +298,13 @@ class Main {
                     let cumulativePlayerLevel = 0;
                     delete utils_1.ProfileTracker.playerRecord[profileData.info.id];
                     Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
-                        cumulativePlayerLevel += value;
-                        playerCount += 1;
+                        const playerLevel = Number(value);
+                        if (!isNaN(playerLevel)) {
+                            cumulativePlayerLevel += playerLevel;
+                            playerCount += 1;
+                        }
                     });
-                    utils_1.ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
+                    utils_1.ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
                     logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
                     return output;
                 }
@@ -401,7 +404,7 @@ class Main {
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
                             bots.updateBots(pmcData, logger, modConfig, bots, utils);
                         }
-                        if (!utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent && utils_1.RaidInfoTracker.mapName === "laboratory") {
+                        if (!utils_1.ModTracker.swagPresent && utils_1.RaidInfoTracker.mapName === "laboratory") { //!ModTracker.qtbPresent && 
                             pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
                             pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
                             pmcConf.convertIntoPmcChance["assault"].min = 100;
@@ -747,7 +750,7 @@ class Main {
         let completedQuest;
         let didExplosion;
         let shouldDisableTraders = true;
-        if (pmcData?.Quests == null || pmcData?.Quests === undefined)
+        if (pmcData?.Quests === null || pmcData?.Quests === undefined)
             return;
         pmcData.Quests.forEach(q => {
             //blue flame part 2
@@ -815,7 +818,7 @@ class Main {
                         seasonalevents_1.EventTracker.doExtraCultistSpawns = true;
                     }
                     else if (isCompleted) {
-                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 200 : 25;
+                        baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 200 : 5;
                     }
                 }
                 //blue flame part 1

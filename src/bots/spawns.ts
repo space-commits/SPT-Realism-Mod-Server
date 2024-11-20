@@ -57,7 +57,6 @@ export class Spawns {
 
         for (let i in this.mapDB) {
             let mapBase = this.mapDB[i]?.base;
-            this.logger.warning("============="+i);
             if (mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
                 for (let k in mapBase.BossLocationSpawn) {
                     let bossSpawnLocation = mapBase.BossLocationSpawn[k];
@@ -68,10 +67,8 @@ export class Spawns {
                         } else {
                             chance = bossSpawnLocation.BossChance * chanceMulti;
                         }
+                        bossSpawnLocation.BossChance = Math.round(this.utils.clampNumber(chance, 0, 100));
                     }
-                    bossSpawnLocation.BossChance = Math.round(this.utils.clampNumber(chance, 0, 100));
-                    this.logger.warning("name " + bossSpawnLocation.BossName);
-                    this.logger.warning("chance " + bossSpawnLocation.BossChance);
                 }
             }
         }

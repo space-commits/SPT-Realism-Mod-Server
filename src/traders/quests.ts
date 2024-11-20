@@ -62,12 +62,21 @@ export class Quests {
         //find dynamic zones (triggers dynamic zones to start spawning)
         this.questDB()["66dad1a18cbba6e558486336"] = dynamicZoneQuests["66dad1a18cbba6e558486336"];
 
-        if (EventTracker.isHalloween) {
-            //Illicit Procedures
-            this.questDB()["6705425a0351f9f55b7d8c61"] = treatmentQuests["6705425a0351f9f55b7d8c61"];
-            //Blue Flame - Part 1
-            this.questDB()["6702b3e4aff397fa3e666fa5"] = gasEventQuests["6702b3e4aff397fa3e666fa5"];
+        //this quest is halloween only,
+        //Illicit Procedures
+        this.questDB()["6705425a0351f9f55b7d8c61"] = treatmentQuests["6705425a0351f9f55b7d8c61"];
+        if (!EventTracker.isHalloween) {
+            this.questDB()["6705425a0351f9f55b7d8c61"].conditions.AvailableForStart[0].value = 99;
         }
+
+        //this quest is halloween only,
+        //Blue Flame - Part 1
+        this.questDB()["6702b3e4aff397fa3e666fa5"] = gasEventQuests["6702b3e4aff397fa3e666fa5"];
+        if (!EventTracker.isHalloween) {
+            this.questDB()["6705425a0351f9f55b7d8c61"].conditions.AvailableForStart[0].value = 99;
+        }
+
+
         //this quest is halloween only, but is dependent on part 1, there are checks client side too
         //Blue Flame - Part 2
         this.questDB()["6702b4a27d4a4a89fce96fbc"] = gasEventQuests["6702b4a27d4a4a89fce96fbc"];
@@ -111,7 +120,7 @@ export class Quests {
             locale["6702b0e9601acf629d212eeb declinePlayerMessage"] = "";
             locale["6702b0e9601acf629d212eeb completePlayerMessage"] = "";
             locale["6702b0e9601acf629d212eeb name"] = "Bad Omens - Part 3";
-            locale["6702b0e9601acf629d212eeb description"] = "The sitatuion is critical. Forecasts suggest calm weather approaching, this means the contaminated fog can accumulate. We are being overwhelmed with patients to the point tha we've had to start tapping into our medical supply stockpiles."
+            locale["6702b0e9601acf629d212eeb description"] = "The sitatuion is critical. Forecasts suggest calm weather approaching, this means the contaminated fog can accumulate. We are being overwhelmed with patients to the point that we've had to start tapping into our medical supply stockpiles."
                 + " Instances of this contaminated fog is becoming more and more frequent. If you find yourself caught in it, find the nearest shelter and remain indoors, the concentration of the hazard will be reduced."
                 + "\n\nIn order to begin effectively treating our patients we will need samples of the original hazardous substance. You will find them in areas where hazardous materials were being stored, manufactured, used or collected by my former colleagues...";
             locale["6702b0e9601acf629d212eeb failMessageText"] = "";
@@ -161,7 +170,7 @@ export class Quests {
                 + "\n\nWe do not know where they're sourcing the contaminants from. We do not know how they are distributing it over such a wide area. We do not know why they're collecting radioactive materials. What we do know is that they are planning something big, and that they need to be stopped. I didn't want any of this to happen, I didn't want any more bloodshed.";
             locale["6702b3b624c7ac4e2d3e9c37 failMessageText"] = "";
             locale["6702b3b624c7ac4e2d3e9c37 successMessageText"] = "I want you to know that this blood is on your hands. If the cameras were not discovered, all of this could have been avoided. Either way, they seem to have reduced their operations...for now. There will be less instances of contamination I suspect, but they will be back, and we still haven't cracked their cipher.";
-            locale["6702b3d010baa251b5fbb933"] = "Kill 40 Cultists";
+            locale["6702b3d010baa251b5fbb933"] = "Kill Cultists";
 
             //Halloween only
             //Blue Flame - Part 1
