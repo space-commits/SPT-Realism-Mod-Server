@@ -590,7 +590,7 @@ class BotLoader {
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 50;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 75;
@@ -619,11 +619,11 @@ class BotLoader {
             }
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
+            if (!utils_1.RaidInfoTracker.isNight) {
                 this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
             }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
+            if (utils_1.RaidInfoTracker.isNight) {
                 this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
                 this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
@@ -661,7 +661,7 @@ class BotLoader {
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 15;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 50;
@@ -690,11 +690,11 @@ class BotLoader {
             }
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
+            if (!utils_1.RaidInfoTracker.isNight) {
                 this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeDay.sptbear;
             }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
+            if (utils_1.RaidInfoTracker.isNight) {
                 this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes2.pmcTypeNight.sptusec;
                 this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes2.pmcTypeNight.sptbear;
             }
@@ -732,7 +732,7 @@ class BotLoader {
         this.usecBase.appearance.head = usecLO.appearance.head;
         this.bearBase.appearance.head = bearLO.appearance.head;
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 100;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 25;
@@ -761,11 +761,11 @@ class BotLoader {
             }
         }
         if (this.modConfig.pmc_types == true && utils_1.ModTracker.sainPresent == false && utils_1.ModTracker.swagPresent == false) {
-            if (utils_1.RaidInfoTracker.TOD === "day") {
+            if (!utils_1.RaidInfoTracker.isNight) {
                 this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes3.pmcTypeDay.sptusec;
                 this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes3.pmcTypeDay.sptbear;
             }
-            if (utils_1.RaidInfoTracker.TOD === "night") {
+            if (utils_1.RaidInfoTracker.isNight) {
                 this.botConfPMC().pmcType.pmcusec = pmcTypes.BotTypes3.pmcTypeNight.sptusec;
                 this.botConfPMC().pmcType.pmcbear = pmcTypes.BotTypes3.pmcTypeNight.sptbear;
             }
@@ -784,7 +784,7 @@ class BotLoader {
             this.scavBase.inventory.items = tier1Json.inventory.items;
             this.scavBase.generation = lootOdds.scav;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.weaponMods.mod_flashlight = 40;
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 100;
             this.botConf().equipment["assault"].laserIsActiveChancePercent = 100;
@@ -820,7 +820,7 @@ class BotLoader {
             this.scavBase.inventory.items = tier2Json.inventory.items;
             this.scavBase.generation = lootOdds.scav;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.weaponMods.mod_flashlight = 60;
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 90;
             this.botConf().equipment["assault"].laserIsActiveChancePercent = 90;
@@ -855,7 +855,7 @@ class BotLoader {
             this.scavBase.inventory.items = tier3Json.inventory.items;
             this.scavBase.generation = lootOdds.scav;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.scavBase.chances.weaponMods.mod_flashlight = 80;
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 60;
             this.botConf().equipment["assault"].laserIsActiveChancePercent = 60;
@@ -897,7 +897,7 @@ class BotLoader {
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier1_PMC_Keys };
         }
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 20;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 40;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
@@ -967,7 +967,7 @@ class BotLoader {
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier2_PMC_Keys };
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 50;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
             botJsonTemplate.chances.weaponMods.mod_mount = 100;
@@ -1045,7 +1045,7 @@ class BotLoader {
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier3_PMC_Keys };
         }
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 65;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
             botJsonTemplate.chances.weaponMods.mod_mount = 100;
@@ -1134,7 +1134,7 @@ class BotLoader {
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier4_PMC_Keys };
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 100;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
             botJsonTemplate.chances.weaponMods.mod_mount = 100;
@@ -1240,7 +1240,7 @@ class BotLoader {
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier1_PMC_Keys };
         }
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 20;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 70;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
@@ -1308,7 +1308,7 @@ class BotLoader {
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier2_PMC_Keys };
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 50;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 80;
             botJsonTemplate.chances.weaponMods.mod_mount = 100;
@@ -1384,7 +1384,7 @@ class BotLoader {
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier3_PMC_Keys };
         }
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 65;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
             botJsonTemplate.chances.weaponMods.mod_mount = 100;
@@ -1465,7 +1465,7 @@ class BotLoader {
         if (this.modConfig.add_keys === true) {
             botJsonTemplate.inventory.items.Backpack = { ...botJsonTemplate.inventory.items.Backpack, ...keys.tier4_PMC_Keys };
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 100;
             botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
             botJsonTemplate.chances.weaponMods.mod_mount = 100;
@@ -1558,7 +1558,7 @@ class BotLoader {
         botJsonTemplate.inventory.mods = tier5Json.inventory.mods;
         botJsonTemplate.inventory.Ammo = this.modConfig.realistic_ballistics == true ? { ...realismAmmo.Tier5 } : { ...vanillaAmmo.Tier5 };
         botJsonTemplate.inventory.equipment = tier5Json.inventory.equipment;
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 100;
             botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
@@ -1619,7 +1619,7 @@ class BotLoader {
             this.raiderBase.generation = lootOdds.tier4;
         }
         this.botConf().equipment["pmcbot"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             this.raiderBase.chances.equipmentMods.mod_nvg = 70;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 *= 0.5;
             this.raiderBase.chances.equipmentMods.mod_equipment *= 0.5;
@@ -1692,7 +1692,7 @@ class BotLoader {
             this.raiderBase.generation = lootOdds.tier5;
         }
         this.botConf().equipment["pmcbot"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             this.raiderBase.chances.equipmentMods.mod_nvg = 80;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 *= 0.5;
             this.raiderBase.chances.equipmentMods.mod_equipment *= 0.5;
@@ -1769,7 +1769,7 @@ class BotLoader {
             this.raiderBase.generation = lootOdds.tier5;
         }
         this.botConf().equipment["pmcbot"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             this.raiderBase.chances.equipmentMods.mod_nvg = 100;
             this.raiderBase.chances.equipmentMods.mod_equipment_000 *= 0.5;
             this.raiderBase.chances.equipmentMods.mod_equipment *= 0.5;
@@ -1847,17 +1847,17 @@ class BotLoader {
             this.rogueBase.generation = lootOdds.tier4;
         }
         this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.rogueBase.chances.equipmentMods.mod_nvg = 60;
             this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 100;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" && utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "lighthouse") {
+        if (utils_1.RaidInfoTracker.isNight && utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "lighthouse") {
             this.rogueBase.chances.equipmentMods.mod_nvg = 60;
             this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "day") {
+        if (!utils_1.RaidInfoTracker.isNight) {
             this.rogueBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 0;
             if (utils_1.RaidInfoTracker.mapType === "urban" || utils_1.RaidInfoTracker.mapType === "cqb") {
@@ -1889,17 +1889,17 @@ class BotLoader {
             this.rogueBase.generation = lootOdds.tier5;
         }
         this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.rogueBase.chances.equipmentMods.mod_nvg = 80;
             this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 100;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" && utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "lighthouse") {
+        if (utils_1.RaidInfoTracker.isNight && utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "lighthouse") {
             this.rogueBase.chances.equipmentMods.mod_nvg = 80;
             this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "day") {
+        if (!utils_1.RaidInfoTracker.isNight) {
             this.rogueBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 0;
             if (utils_1.RaidInfoTracker.mapType === "urban" || utils_1.RaidInfoTracker.mapType === "cqb") {
@@ -1932,17 +1932,17 @@ class BotLoader {
             this.rogueBase.generation = lootOdds.tier5;
         }
         this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 100;
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.rogueBase.chances.equipmentMods.mod_nvg = 100;
             this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 100;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" && utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "lighthouse") {
+        if (utils_1.RaidInfoTracker.isNight && utils_1.RaidInfoTracker.mapName === "Lighthouse" || utils_1.RaidInfoTracker.mapName === "lighthouse") {
             this.rogueBase.chances.equipmentMods.mod_nvg = 100;
             this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "day") {
+        if (!utils_1.RaidInfoTracker.isNight) {
             this.rogueBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 0;
             if (utils_1.RaidInfoTracker.mapType === "urban" || utils_1.RaidInfoTracker.mapType === "cqb") {
@@ -1987,7 +1987,7 @@ class BotLoader {
             this.bigpipeBase.generation = lootOdds.boss;
             this.birdeyeBase.generation = lootOdds.boss;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             if (randNum >= 6) {
                 this.knightBase.chances.equipment.Headwear = 100;
                 this.knightBase.chances.equipment.FaceCover = 0;
@@ -2047,7 +2047,7 @@ class BotLoader {
             this.botConf().equipment["followerbirdeye"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["followerbirdeye"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "day") {
+        if (!utils_1.RaidInfoTracker.isNight) {
             this.knightBase.chances.equipmentMods.mod_nvg = 0;
             this.bigpipeBase.chances.equipmentMods.mod_nvg = 0;
             this.birdeyeBase.chances.equipmentMods.mod_nvg = 0;
@@ -2151,7 +2151,7 @@ class BotLoader {
             this.bigpipeBase.generation = lootOdds.boss;
             this.birdeyeBase.generation = lootOdds.boss;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             if (randNum >= 4) {
                 this.knightBase.chances.equipment.Headwear = 100;
                 this.knightBase.chances.equipment.FaceCover = 0;
@@ -2211,7 +2211,7 @@ class BotLoader {
             this.botConf().equipment["followerbirdeye"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["followerbirdeye"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "day") {
+        if (!utils_1.RaidInfoTracker.isNight) {
             this.knightBase.chances.equipmentMods.mod_nvg = 0;
             this.bigpipeBase.chances.equipmentMods.mod_nvg = 0;
             this.birdeyeBase.chances.equipmentMods.mod_nvg = 0;
@@ -2315,7 +2315,7 @@ class BotLoader {
             this.bigpipeBase.generation = lootOdds.boss;
             this.birdeyeBase.generation = lootOdds.boss;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night") {
+        if (utils_1.RaidInfoTracker.isNight) {
             if (randNum >= 3) {
                 this.knightBase.chances.equipment.Headwear = 100;
                 this.knightBase.chances.equipment.FaceCover = 0;
@@ -2375,7 +2375,7 @@ class BotLoader {
             this.botConf().equipment["followerbirdeye"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["followerbirdeye"].nvgIsActiveChanceDayPercent = 100;
         }
-        if (utils_1.RaidInfoTracker.TOD === "day") {
+        if (!utils_1.RaidInfoTracker.isNight) {
             this.knightBase.chances.equipmentMods.mod_nvg = 0;
             this.bigpipeBase.chances.equipmentMods.mod_nvg = 0;
             this.birdeyeBase.chances.equipmentMods.mod_nvg = 0;
@@ -2720,7 +2720,7 @@ class BotLoader {
             this.saniBase.generation = lootOdds.boss;
             this.saniFollowerBase.generation = lootOdds.tier4;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf().equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 0;
             this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 0;
@@ -2780,7 +2780,7 @@ class BotLoader {
             this.saniBase.generation = lootOdds.boss;
             this.saniFollowerBase.generation = lootOdds.tier4;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf().equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 0;
             this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 0;
@@ -2840,7 +2840,7 @@ class BotLoader {
             this.saniBase.generation = lootOdds.boss;
             this.saniFollowerBase.generation = lootOdds.tier5;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf().equipment["bosssanitar"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 0;
             this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 0;
@@ -2900,7 +2900,7 @@ class BotLoader {
             this.reshBase.generation = lootOdds.boss;
             this.reshFollowerBase.generation = lootOdds.tier3;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf().equipment["bossbully"].lightIsActiveDayChancePercent = 25;
             this.botConf().equipment["bossbully"].laserIsActiveChancePercent = 25;
             this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 50;
@@ -2941,7 +2941,7 @@ class BotLoader {
             this.reshBase.generation = lootOdds.boss;
             this.reshFollowerBase.generation = lootOdds.tier4;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf().equipment["bossbully"].lightIsActiveDayChancePercent = 12;
             this.botConf().equipment["bossbully"].laserIsActiveChancePercent = 12;
             this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 25;
@@ -2981,7 +2981,7 @@ class BotLoader {
             this.reshBase.generation = lootOdds.boss;
             this.reshFollowerBase.generation = lootOdds.tier5;
         }
-        if (utils_1.RaidInfoTracker.TOD === "night" || utils_1.RaidInfoTracker.mapName === "factory4_night") {
+        if (utils_1.RaidInfoTracker.isNight || utils_1.RaidInfoTracker.mapName === "factory4_night") {
             this.botConf().equipment["bossbully"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["bossbully"].laserIsActiveChancePercent = 0;
             this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 5;

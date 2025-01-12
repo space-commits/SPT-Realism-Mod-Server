@@ -166,7 +166,7 @@ export class BotGen extends BotGenerator {
         else if (rndNum <= 30 && highTier.includes(RaidInfoTracker.mapName)) {
             tier = Math.min(tier + 1, 5);
         }
-        else if (rndNum <= 15 && (midTier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.TOD === "night")) {
+        else if (rndNum <= 15 && (midTier.includes(RaidInfoTracker.mapName) || RaidInfoTracker.isNight)) {
             tier = Math.min(tier + 1, 5);
         }
         else if (rndNum <= 5 && lowTier.includes(RaidInfoTracker.mapName)) {

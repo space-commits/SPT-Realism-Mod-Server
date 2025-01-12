@@ -131,6 +131,27 @@ class Utils {
         shasum.update(time.toString());
         return shasum.digest("hex").substring(0, 24);
     }
+    getTime(time, hourDiff) {
+        const [h, m] = time.split(":");
+        if (hourDiff == 12 && parseInt(h) >= 12) {
+            return `${Math.abs(parseInt(h) - hourDiff)}:${m}`;
+        }
+        if (hourDiff == 12 && parseInt(h) < 12) {
+            return `${Math.abs(parseInt(h) + hourDiff)}:${m}`;
+        }
+        return `${h}:${m}`;
+    }
+    isNight(time, map) {
+        const [hours, minutes] = time.split(":");
+        const isNightByHours = parseInt(hours) < 5 && parseInt(hours) >= 21;
+        const isNightByMap = map == "factory4_night";
+        if (isNightByHours || isNightByMap) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 exports.Utils = Utils;
 class ModTracker {
@@ -153,7 +174,7 @@ class ConfigChecker {
 }
 exports.ConfigChecker = ConfigChecker;
 class RaidInfoTracker {
-    static TOD = "";
+    static isNight = false;
     static mapType = "";
     static mapName = "";
 }

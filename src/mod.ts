@@ -113,6 +113,7 @@ import { ILooseLoot } from "@spt/models/eft/common/ILooseLoot";
 import { ILootConfig } from "@spt/models/spt/config/ILootConfig";
 import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
 import { PlayerRaidEndState } from "@spt/models/enums/PlayerRaidEndState";
+import { WeatherGenerator } from "@spt/generators/WeatherGenerator";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -484,7 +485,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const postLoadTables = postLoadDBService.getTables();
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-                            const weatherController = container.resolve<WeatherController>("WeatherController");
+                            const weatherGenerator = container.resolve<WeatherGenerator>("WeatherGenerator");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new BotArrays(postLoadTables);
@@ -497,9 +498,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                             // myGetLootCache.myClearCache();
 
-                            const time = weatherController.generate().time; //apparently regenerates weather?
-                            // const time = weatherController.getCurrentInRaidTime; //better way?
-                            // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
+                            const baseTime = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "", weather: undefined, season: 1 }).time; //apparently regenerates weather?
                             RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                             let realTime = "";
                             let mapType = "";
@@ -508,32 +507,12 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
 
                             if (matchInfo.timeVariant === "PAST") {
-                                realTime = getTime(time, 12);
+                                realTime = utils.getTime(baseTime, 12);
                             }
                             if (matchInfo.timeVariant === "CURR") {
-                                realTime = time;
+                                realTime = utils.getTime(baseTime, 0);
                             }
-
-                            function getTime(time, hourDiff) {
-                                let [h, m] = time.split(':');
-                                if (parseInt(h) == 0) {
-                                    return `${h}:${m}`
-                                }
-                                h = Math.abs(parseInt(h) - hourDiff);
-                                return `${h}:${m}`
-                            }
-
-                            function getTOD(time) {
-                                let TOD = "";
-                                let [h, m] = time.split(':');
-                                if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 21) || (RaidInfoTracker.mapName === "factory4_day" || RaidInfoTracker.mapName === "laboratory")) {
-                                    TOD = "day";
-                                }
-                                else {
-                                    TOD = "night";
-                                }
-                                return TOD;
-                            }
+                            RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
 
                             if (StaticArrays.cqbMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = "cqb";
@@ -544,8 +523,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             if (StaticArrays.urbanMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = "urban";
                             }
-
-                            RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
                             if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
@@ -562,8 +539,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             logger.warning("Avg. Player Level = " + ProfileTracker.averagePlayerLevel);
                             logger.warning("Map Name = " + matchInfo.location);
                             logger.warning("Map Type  = " + mapType);
-                            logger.warning("Time " + time);
-                            logger.warning("Time of Day = " + getTOD(realTime));
+                            logger.warning("Base Time: " + baseTime + " Real Time: " + realTime);
+                            logger.warning("Is Day = " +  RaidInfoTracker.isNight);
 
                             return HttpResponse.nullResponse();
                         }
@@ -902,7 +879,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     }
 
     private setModInfo(logger: ILogger) {
-        realismInfo.IsNightTime = RaidInfoTracker.TOD == "night";
+        realismInfo.IsNightTime = RaidInfoTracker.isNight;
         realismInfo.IsHalloween = EventTracker.isHalloween;
         realismInfo.isChristmas = EventTracker.isChristmas;
         realismInfo.DoGasEvent = EventTracker.doGasEvent;

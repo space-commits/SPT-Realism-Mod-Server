@@ -3590,7 +3590,7 @@ class Ammo {
             }
             // M855A1 
             if (serverItem._id === "54527ac44bdc2d36668b4567") {
-                serverItem._props.PenetrationPower = 74;
+                serverItem._props.PenetrationPower = 75;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 79;
                 serverItem._props.InitialSpeed = 942;

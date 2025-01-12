@@ -351,7 +351,7 @@ class Main {
                         const postLoadTables = postLoadDBService.getTables();
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
-                        const weatherController = container.resolve("WeatherController");
+                        const weatherGenerator = container.resolve("WeatherGenerator");
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.BotArrays(postLoadTables);
@@ -362,39 +362,19 @@ class Main {
                         //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                         // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                         // myGetLootCache.myClearCache();
-                        const time = weatherController.generate().time; //apparently regenerates weather?
-                        // const time = weatherController.getCurrentInRaidTime; //better way?
-                        // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
+                        const baseTime = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "", weather: undefined, season: 1 }).time; //apparently regenerates weather?
                         utils_1.RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                         let realTime = "";
                         let mapType = "";
                         //update global player level
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                         if (matchInfo.timeVariant === "PAST") {
-                            realTime = getTime(time, 12);
+                            realTime = utils.getTime(baseTime, 12);
                         }
                         if (matchInfo.timeVariant === "CURR") {
-                            realTime = time;
+                            realTime = utils.getTime(baseTime, 0);
                         }
-                        function getTime(time, hourDiff) {
-                            let [h, m] = time.split(':');
-                            if (parseInt(h) == 0) {
-                                return `${h}:${m}`;
-                            }
-                            h = Math.abs(parseInt(h) - hourDiff);
-                            return `${h}:${m}`;
-                        }
-                        function getTOD(time) {
-                            let TOD = "";
-                            let [h, m] = time.split(':');
-                            if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 21) || (utils_1.RaidInfoTracker.mapName === "factory4_day" || utils_1.RaidInfoTracker.mapName === "laboratory")) {
-                                TOD = "day";
-                            }
-                            else {
-                                TOD = "night";
-                            }
-                            return TOD;
-                        }
+                        utils_1.RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
                         if (arrays_1.StaticArrays.cqbMaps.includes(utils_1.RaidInfoTracker.mapName)) {
                             mapType = "cqb";
                         }
@@ -404,7 +384,6 @@ class Main {
                         if (arrays_1.StaticArrays.urbanMaps.includes(utils_1.RaidInfoTracker.mapName)) {
                             mapType = "urban";
                         }
-                        utils_1.RaidInfoTracker.TOD = getTOD(realTime);
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
                             bots.updateBots(pmcData, logger, modConfig, bots, utils);
@@ -418,8 +397,8 @@ class Main {
                         logger.warning("Avg. Player Level = " + utils_1.ProfileTracker.averagePlayerLevel);
                         logger.warning("Map Name = " + matchInfo.location);
                         logger.warning("Map Type  = " + mapType);
-                        logger.warning("Time " + time);
-                        logger.warning("Time of Day = " + getTOD(realTime));
+                        logger.warning("Base Time: " + baseTime + " Real Time: " + realTime);
+                        logger.warning("Is Day = " + utils_1.RaidInfoTracker.isNight);
                         return HttpResponse.nullResponse();
                     }
                     catch (e) {
@@ -689,7 +668,7 @@ class Main {
         this.modLoader = container.resolve("PreSptModLoader");
     }
     setModInfo(logger) {
-        realismInfo.IsNightTime = utils_1.RaidInfoTracker.TOD == "night";
+        realismInfo.IsNightTime = utils_1.RaidInfoTracker.isNight;
         realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
         realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
         realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;

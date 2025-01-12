@@ -124,6 +124,30 @@ export class Utils {
         shasum.update(time.toString());
         return shasum.digest("hex").substring(0, 24);
     }
+
+    public getTime(time, hourDiff): string {
+        const [h, m] = time.split(":");
+        if (hourDiff == 12 && parseInt(h) >= 12) {
+            return `${Math.abs(parseInt(h) - hourDiff)}:${m}`
+        }
+        if (hourDiff == 12 && parseInt(h) < 12) {
+            return `${Math.abs(parseInt(h) + hourDiff)}:${m}`
+        }
+        return `${h}:${m}`
+    }
+
+    public isNight(time: string, map: string): boolean {
+        const [hours, minutes] = time.split(":");
+        const isNightByHours = parseInt(hours) < 5 && parseInt(hours) >= 21;
+        const isNightByMap = map == "factory4_night";
+        if (isNightByHours || isNightByMap) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }
 
 export class ModTracker {
@@ -146,7 +170,7 @@ export class ConfigChecker {
 }
 
 export class RaidInfoTracker {
-    static TOD: string = "";
+    static isNight: boolean = false;
     static mapType: string = "";
     static mapName: string = "";
     // static activeRaids: RaidInfo[] = [];

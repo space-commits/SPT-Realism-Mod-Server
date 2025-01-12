@@ -39,10 +39,10 @@ exports.Airdrops = Airdrops;
 //         const arrays = new Arrays(tables);
 //         const utils = new Utils(tables, arrays);
 //         let weights = [];
-//         if (RaidInfoTracker.TOD === "day") {
+//         if (!RaidInfoTracker.isNight) {
 //             weights = [65, 65, 40, 40, 40, 20, 15, 15, 1];
 //         }
-//         if (RaidInfoTracker.TOD === "night") {
+//         if (RaidInfoTracker.isNight) {
 //             weights = [10, 10, 15, 15, 20, 85, 75, 70, 1];
 //         }
 //         const airdropLoot = this.updateAirdropsLootPools(modConfig, utils, weights);
