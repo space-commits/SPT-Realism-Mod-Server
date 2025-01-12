@@ -101,9 +101,9 @@
             "z": 0.03
         }
     },
-    "mechOPSKSv1": {
-        "ItemID": "mechOPSKSv1",
-        "Name": "weapon_molot_op_sks_762x39",
+    "6783adfafb90a12e7033616a": {
+        "ItemID": "6783adfafb90a12e7033616a",
+        "Name": "mech_weapon_molot_op_sks_762x39",
         "WeapType": "",
         "OperationType": "",
         "WeapAccuracy": 50,
@@ -152,9 +152,9 @@
             "z": 0
         }
     },
-    "mechSKSv1": {
-        "ItemID": "mechSKSv1",
-        "Name": "weapon_toz_sks_762x39",
+    "6783ade075bc42ef5d2bfcf9": {
+        "ItemID": "6783ade075bc42ef5d2bfcf9",
+        "Name": "mec_weapon_toz_sks_762x39",
         "WeapType": "",
         "OperationType": "",
         "WeapAccuracy": 25,
@@ -534,8 +534,8 @@
         "OffsetRotation": 0.009,
         "RecoilIntensity": 0.2
     },
-    "Skier209": {
-        "ItemID": "Skier209",
+    "6783ae6a4973f4b13b9418a7": {
+        "ItemID": "6783ae6a4973f4b13b9418a7",
         "Name": "weapon_molot_akm_vpo_209_366_TKM",
         "WeapType": "",
         "OperationType": "",

@@ -536,8 +536,8 @@
         "OffsetRotation": 0.012,
         "RecoilIntensity": 0.2875
     },
-    "mechM3v1": {
-        "ItemID": "mechM3v1",
+    "6783ae5bb52da6ed912e3d01": {
+        "ItemID": "6783ae5bb52da6ed912e3d01",
         "Name": "weapon_benelli_m3_s90_12g",
         "WeapType": "",
         "OperationType": "tubefed",
@@ -628,9 +628,9 @@
         "OffsetRotation": 0.013,
         "RecoilIntensity": 0.23
     },
-    "mechSaiga12v1": {
-        "ItemID": "mechSaiga12v1",
-        "Name": "weapon_izhmash_saiga12k_10_12g",
+    "6783ae2805a0c56e8da43e4d": {
+        "ItemID": "6783ae2805a0c56e8da43e4d",
+        "Name": "mech_weapon_izhmash_saiga12k_10_12g",
         "WeapType": "",
         "OperationType": "",
         "WeapAccuracy": 0,

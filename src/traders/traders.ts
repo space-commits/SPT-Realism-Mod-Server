@@ -4,7 +4,7 @@ import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { IBarterScheme, ITrader, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { container } from "tsyringe";
 import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
-import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { Utils, ProfileTracker } from "../utils/utils";
 import { Calibers, ParentClasses } from "../utils/enums";
@@ -372,14 +372,17 @@ export class Traders {
 
         if (this.modConf.med_changes == true) {
             //Skier//
-            this.assortItemPusher(this.utils.genId(), skierId, "SJ0", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
+            this.assortItemPusher(this.utils.genId(), skierId, "6783aca07b1449bd298b10f8", 2, "5449016a4bdc2d6f028b456f", 1, false, 25000);
         }
 
         if (this.modConf.recoil_attachment_overhaul == true) {
             //jaeger
-            this.assortItemPusher(this.utils.genId(), jaegId, "mosin_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 5000);
-            this.assortItemPusher(this.utils.genId(), jaegId, "6kh4_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 4000);
-            this.assortItemPusher(this.utils.genId(), jaegId, "m9_bayonet", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
+            //mosin bayonet
+            this.assortItemPusher(this.utils.genId(), jaegId, "6783afddef9d6f5d579c43f1", 5, "5449016a4bdc2d6f028b456f", 1, false, 5000);
+            //6kh4 bayonet
+            this.assortItemPusher(this.utils.genId(), jaegId, "6783b079e4585dfb0fec3c73", 5, "5449016a4bdc2d6f028b456f", 1, false, 4000);
+            //m9 bayonet
+            this.assortItemPusher(this.utils.genId(), jaegId, "6783b041281387d669fd3722", 5, "5449016a4bdc2d6f028b456f", 1, false, 7000);
         }
 
         if (this.modConf.enable_hazard_zones == true) {
@@ -431,37 +434,37 @@ export class Traders {
 
         //ragman//
         if (this.modConf.realistic_ballistics == true) {
-            this.assortItemPusher(this.utils.genId(), ragmId, "xsapi_chest", 1, "5449016a4bdc2d6f028b456f", 4, false, 70000);
-            this.assortItemPusher(this.utils.genId(), ragmId, "mk4a_plate", 1, "5449016a4bdc2d6f028b456f", 4, false, 30000);
+            this.assortItemPusher(this.utils.genId(), ragmId, "6783ae9ee00fdb2053bf6848", 1, "5449016a4bdc2d6f028b456f", 4, false, 70000);
+            this.assortItemPusher(this.utils.genId(), ragmId, "6783aec223d48324c0b278f5", 1, "5449016a4bdc2d6f028b456f", 4, false, 30000);
         }
 
         if (this.modConf.recoil_attachment_overhaul == true) {
             //mechanic//
             //guns
-            this.assortItemPusher(this.utils.genId(), mechId, "mechOPSKSv1", 1, "5449016a4bdc2d6f028b456f", 2, false, 12500);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechSKSv1", 1, "5449016a4bdc2d6f028b456f", 1, false, 10000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechSTM9v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 15000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechSaiga12v1", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechM3v1", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783adfafb90a12e7033616a", 1, "5449016a4bdc2d6f028b456f", 2, false, 12500);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783ade075bc42ef5d2bfcf9", 1, "5449016a4bdc2d6f028b456f", 1, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783ae0d0410dd9ffe6f732c", 1, "5449016a4bdc2d6f028b456f", 3, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783ae2805a0c56e8da43e4d", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783ae5bb52da6ed912e3d01", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
 
             //attachments            
-            this.assortItemPusher(this.utils.genId(), mechId, "mechRatWorx", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechSKS_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechVPO_23", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechAUG_417", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechMDR_406", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechSpear_330mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechMCX_171mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechMCX_229mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechAR15_260mm", 1, "5449016a4bdc2d6f028b456f", 2, false, 15000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechSlant_366", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechSpikes_366", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechDTK_366", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
-            this.assortItemPusher(this.utils.genId(), mechId, "mechJMAC_366", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af1a6a4c63d3f0b0c2e0", 1, "5449016a4bdc2d6f028b456f", 2, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783aeeb56a0b663fc25f97d", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af0b3999424f691f5432", 1, "5449016a4bdc2d6f028b456f", 1, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af2816da8f04134317a5", 1, "5449016a4bdc2d6f028b456f", 2, false, 20000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af21bc7d60d8f050eddb", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af3c10208e7f0c64a02c", 1, "5449016a4bdc2d6f028b456f", 2, false, 35000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af2e6b6b13935074bbb5", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af363a06237d1afd123d", 1, "5449016a4bdc2d6f028b456f", 2, false, 30000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af433f159a5ae961078a", 1, "5449016a4bdc2d6f028b456f", 2, false, 15000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af4a205ba84b88b7372b", 1, "5449016a4bdc2d6f028b456f", 1, false, 2000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af53a4a479af0614186c", 1, "5449016a4bdc2d6f028b456f", 2, false, 5000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af5a827b39b7e3604b22", 1, "5449016a4bdc2d6f028b456f", 3, false, 10000);
+            this.assortItemPusher(this.utils.genId(), mechId, "6783af60ff68ec5c54f53ed6", 1, "5449016a4bdc2d6f028b456f", 4, false, 20000);
 
             //skier//
             //guns
-            this.assortItemPusher(this.utils.genId(), skierId, "Skier209", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
+            this.assortItemPusher(this.utils.genId(), skierId, "6783ae6a4973f4b13b9418a7", 1, "5449016a4bdc2d6f028b456f", 1, false, 12500);
         }
         //scopes
         this.assortNestedItemPusher(mechId, "616584766ef05c2ce828ef57", { "5c7d560b2e22160bc12c6139": "mod_scope", "5c7d55de2e221644f31bff68": "mod_scope" }, 1, "5449016a4bdc2d6f028b456f", 2, true, undefined, 1.25);
@@ -739,7 +742,7 @@ export class RandomizeTraderAssort {
         return 0;
     }
 
-    public randomizeStockHelper(item: Item, averageLL: number) {
+    public randomizeStockHelper(item: IItem, averageLL: number) {
         let itemParent = this.itemDB[item._tpl]?._parent;
 
         if (!itemParent) {
@@ -828,7 +831,7 @@ export class RandomizeTraderAssort {
         this.randomizeStock(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
     }
 
-    private randomizeAmmoStock(assortItemParent: string, item: Item, llStackableFactor: number, llStockFactor: number) {
+    private randomizeAmmoStock(assortItemParent: string, item: IItem, llStackableFactor: number, llStockFactor: number) {
 
         if (assortItemParent === ParentClasses.AMMO && item.slotId !== "cartridges") {
             let llOutOfStockFactor = llStockFactor * 10;
@@ -862,7 +865,7 @@ export class RandomizeTraderAssort {
         }
     }
 
-    private randomizeAmmoStockHelper(item: Item, caliber: string, min: number, max: number, outOfStockChance: number, penThreshold: number = 0, damageThreshold: number = 0, dontCheckCaliber: boolean = false): boolean {
+    private randomizeAmmoStockHelper(item: IItem, caliber: string, min: number, max: number, outOfStockChance: number, penThreshold: number = 0, damageThreshold: number = 0, dontCheckCaliber: boolean = false): boolean {
         if (dontCheckCaliber == true || this.itemDB[item._tpl]._props.Caliber === caliber) {
             let oddsModifier = 1;
             let stockModifier = 1;
@@ -909,7 +912,7 @@ export class RandomizeTraderAssort {
         }
     }
 
-    private randomizeStock(assortItemParent: string, catParent: string, item: Item, min: number, max: number, llFactor: number) {
+    private randomizeStock(assortItemParent: string, catParent: string, item: IItem, min: number, max: number, llFactor: number) {
         if (assortItemParent === catParent) {
 
             //items aren't out of stock often enough, this artifically increases the chance of being out of stock
@@ -1036,7 +1039,7 @@ export class TraderRefresh extends TraderAssortHelper {
 
     }
 
-    private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): Item[] {
+    private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): IItem[] {
         const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const utils = new Utils(tables);

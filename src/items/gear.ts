@@ -50,7 +50,7 @@ export class Gear {
                     for (let c in serverItem._props.ConflictingItems) {
                         let confItem = serverItem._props.ConflictingItems[c];
                         if (this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === ParentClasses.HEADSET) {
-                            serverItem._props.ConflictingItems[c] = "";
+                            serverItem._props.ConflictingItems[c] = "6783e75078238c95771864ea"; //needs to be a valid mongoid, so use random placeholder id
                         }
                     }
                 }

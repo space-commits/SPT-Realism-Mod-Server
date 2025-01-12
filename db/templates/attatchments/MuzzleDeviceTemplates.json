@@ -1,6 +1,6 @@
 {
-    "mosin_bayonet": {
-        "ItemID": "mosin_bayonet",
+    "6783afddef9d6f5d579c43f1": {
+        "ItemID": "6783afddef9d6f5d579c43f1",
         "Name": "mosin_bayonet",
         "ModType": "bayonet",
         "VerticalRecoil": 0,
@@ -27,8 +27,8 @@
         "MeleePen": 22,
         "Price": 0
     },
-    "m9_bayonet": {
-        "ItemID": "m9_bayonet",
+    "6783b041281387d669fd3722": {
+        "ItemID": "6783b041281387d669fd3722",
         "Name": "m9_bayonet",
         "ModType": "bayonet",
         "VerticalRecoil": 0,
@@ -55,8 +55,8 @@
         "MeleePen": 17,
         "Price": 0
     },
-    "6kh4_bayonet": {
-        "ItemID": "6kh4_bayonet",
+    "6783b079e4585dfb0fec3c73": {
+        "ItemID": "6783b079e4585dfb0fec3c73",
         "Name": "6kh4_bayonet",
         "ModType": "bayonet",
         "VerticalRecoil": 0,
@@ -326,8 +326,8 @@
         "LoyaltyLevel": 3,
         "Price": 0
     },
-    "mechRatWorx": {
-        "ItemID": "mechRatWorx",
+    "6783af1a6a4c63d3f0b0c2e0": {
+        "ItemID": "6783af1a6a4c63d3f0b0c2e0",
         "Name": "muzzle_aug_ratworx_suppressor_adapter_300BLK",
         "ModType": "",
         "VerticalRecoil": 0,
@@ -2888,8 +2888,8 @@
         "Price": 0,
         "Flash": 10
     },
-    "mechSpikes_366": {
-        "ItemID": "mechSpikes_366",
+    "6783af53a4a479af0614186c": {
+        "ItemID": "6783af53a4a479af0614186c",
         "Name": ".366 TKM Dynacomp",
         "ModType": "",
         "VerticalRecoil": 0,
@@ -3027,8 +3027,8 @@
         "Price": 0,
         "Flash": 30
     },
-    "mechDTK_366": {
-        "ItemID": "mechDTK_366",
+    "6783af5a827b39b7e3604b22": {
+        "ItemID": "6783af5a827b39b7e3604b22",
         "Name": ".366 TKM DTK-1",
         "ModType": "",
         "VerticalRecoil": 0,
@@ -3548,8 +3548,8 @@
         "Price": 0,
         "Flash": 0
     },
-    "mechSlant_366": {
-        "ItemID": "mechSlant_366",
+    "6783af4a205ba84b88b7372b": {
+        "ItemID": "6783af4a205ba84b88b7372b",
         "Name": ".366 TKM Brake",
         "ModType": "",
         "VerticalRecoil": 0,
@@ -3927,8 +3927,8 @@
         "Price": 0,
         "Flash": 40
     },
-    "mechJMAC_366": {
-        "ItemID": "mechJMAC_366",
+    "6783af60ff68ec5c54f53ed6": {
+        "ItemID": "6783af60ff68ec5c54f53ed6",
         "Name": ".366 TKM RRD-4C",
         "ModType": "",
         "VerticalRecoil": 0,

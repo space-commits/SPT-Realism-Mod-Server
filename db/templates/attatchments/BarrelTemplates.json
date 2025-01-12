@@ -307,8 +307,8 @@
         "LoyaltyLevel": 1,
         "Price": 0
     },
-    "mechVPO_23": {
-        "ItemID": "mechVPO_23",
+    "6783af0b3999424f691f5432": {
+        "ItemID": "6783af0b3999424f691f5432",
         "Name": "barrel_vpo215_600mm_762x39",
         "ModType": "762x39",
         "VerticalRecoil": 10,
@@ -659,8 +659,8 @@
         "LoyaltyLevel": 1,
         "Price": 0
     },
-    "mechAR15_260mm": {
-        "ItemID": "mechAR15_260mm",
+    "6783af433f159a5ae961078a": {
+        "ItemID": "6783af433f159a5ae961078a",
         "Name": "mechanic_barrel_ar15_260mm",
         "ModType": "short_barrel",
         "VerticalRecoil": 0,
@@ -925,9 +925,9 @@
         "LoyaltyLevel": 3,
         "Price": 0
     },
-    "mechMCX_229mm": {
-        "ItemID": "mechMCX_229mm",
-        "Name": "mechMCX_229mm",
+    "6783af363a06237d1afd123d": {
+        "ItemID": "6783af363a06237d1afd123d",
+        "Name": "6783af363a06237d1afd123d",
         "ModType": "556x45NATO",
         "VerticalRecoil": 5,
         "HorizontalRecoil": -5,
@@ -951,9 +951,9 @@
         "LoyaltyLevel": 3,
         "Price": 0
     },
-    "mechMCX_171mm": {
-        "ItemID": "mechMCX_171mm",
-        "Name": "mechMCX_171mm",
+    "6783af2e6b6b13935074bbb5": {
+        "ItemID": "6783af2e6b6b13935074bbb5",
+        "Name": "6783af2e6b6b13935074bbb5",
         "ModType": "556x45NATO",
         "VerticalRecoil": 5,
         "HorizontalRecoil": -4,
@@ -2133,8 +2133,8 @@
         "LoyaltyLevel": 2,
         "Price": 0
     },
-    "mechAUG_417": {
-        "ItemID": "mechAUG_417",
+    "6783af2816da8f04134317a5": {
+        "ItemID": "6783af2816da8f04134317a5",
         "Name": "barrel_aug_steyr_a3_417mm_300blk",
         "ModType": "762x35",
         "VerticalRecoil": 0,
@@ -2159,8 +2159,8 @@
         "LoyaltyLevel": 2,
         "Price": 0
     },
-    "mechMDR_406": {
-        "ItemID": "mechMDR_406",
+    "6783af21bc7d60d8f050eddb": {
+        "ItemID": "6783af21bc7d60d8f050eddb",
         "Name": "barrel_mdr_dt_406mm_300blk",
         "ModType": "762x35",
         "VerticalRecoil": 0,
@@ -4175,8 +4175,8 @@
         "LoyaltyLevel": 1,
         "Price": 0
     },
-    "mechSKS_366": {
-        "ItemID": "mechSKS_366",
+    "6783aeeb56a0b663fc25f97d": {
+        "ItemID": "6783aeeb56a0b663fc25f97d",
         "Name": "barrel_sks_molot_520mm_762x39",
         "ModType": "366TKM",
         "VerticalRecoil": 0,
@@ -4353,8 +4353,8 @@
         "LoyaltyLevel": 3,
         "Price": 0
     },
-    "mechSpear_330mm": {
-        "ItemID": "mechSpear_330mm",
+    "6783af3c10208e7f0c64a02c": {
+        "ItemID": "6783af3c10208e7f0c64a02c",
         "Name": "barrel_mcx_sig_spear_330mm_762x51",
         "ModType": "762x51",
         "VerticalRecoil": 0,

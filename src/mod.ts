@@ -42,7 +42,7 @@ import { RagfairServer } from "@spt/servers/RagfairServer";;
 import { BotHelper } from "@spt/helpers/BotHelper";
 import { IBotBase } from "@spt/models/eft/common/tables/IBotBase";
 import { BotLevelGenerator } from "@spt/generators/BotLevelGenerator";
-import { BotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
+import { IBotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt/services/SeasonalEventService";
 import { ISearchRequestData } from "@spt/models/eft/ragfair/ISearchRequestData";
 import { RagfairCallbacks } from "@spt/callbacks/RagfairCallbacks";
@@ -60,6 +60,30 @@ import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { LogBackgroundColor } from "@spt/models/spt/logging/LogBackgroundColor";
 import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
 import { IBotType } from "@spt/models/eft/common/tables/IBotType";
+import { ItemHelper } from "@spt/helpers/ItemHelper";
+import { RagfairPriceService } from "@spt/services/RagfairPriceService";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { DatabaseService } from "@spt/services/DatabaseService";
+import { ICloner } from "@spt/utils/cloners/ICloner";
+import { ItemFilterService } from "@spt/services/ItemFilterService";
+import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
+import { InsuranceController } from "@spt/controllers/InsuranceController";
+import { PaymentService } from "@spt/services/PaymentService";
+import { DialogueHelper } from "@spt/helpers/DialogueHelper";
+import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
+import { SaveServer } from "@spt/servers/SaveServer";
+import { MailSendService } from "@spt/services/MailSendService";
+import { InsuranceService } from "@spt/services/InsuranceService";
+import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
+import { ILocation } from "@spt/models/eft/common/ILocation";
+import { ILooseLoot } from "@spt/models/eft/common/ILooseLoot";
+import { ILootConfig } from "@spt/models/spt/config/ILootConfig";
+import { ILocationConfig, ILootMultiplier } from "@spt/models/spt/config/ILocationConfig";
+import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
+import { IConfig, IGlobals } from "@spt/models/eft/common/IGlobals";
+//import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
+import { PlayerRaidEndState } from "@spt/models/enums/PlayerRaidEndState";
+import { WeatherGenerator } from "@spt/generators/WeatherGenerator";
 
 import * as path from 'path';
 import * as fs from 'fs';
@@ -71,14 +95,14 @@ import { BotArrays, StaticArrays } from "./utils/arrays"
 import { Consumables } from "./items/meds";
 import { Player } from "./player/player"
 import { WeaponsGlobals } from "./weapons/weapons_globals"
-import { BotLoader } from "./bots/bots";
-import { BotGen } from "./bots/bot_gen";
+// import { BotLoader } from "./bots/bots";
+// import { BotGen } from "./bots/bot_gen";
 import { ItemsClass } from "./items/items";
 import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
-import { Airdrops } from "./misc/airdrops";
-import { Spawns } from "./bots/spawns";
+// import { Airdrops } from "./misc/airdrops";
+// import { Spawns } from "./bots/spawns";
 import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
@@ -86,24 +110,6 @@ import { DescriptionGen } from "./json/description_gen";
 import { ItemStatHandler } from "./json/json-handler";
 import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
-import { MyLootCacheService } from "./bots/bot_loot_serv";
-import { PMCLootGenerator } from "@spt/generators/PMCLootGenerator";
-import { ItemHelper } from "@spt/helpers/ItemHelper";
-import { RagfairPriceService } from "@spt/services/RagfairPriceService";
-import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { DatabaseService } from "@spt/services/DatabaseService";
-import { ICloner } from "@spt/utils/cloners/ICloner";
-import { ItemFilterService } from "@spt/services/ItemFilterService";
-import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
-import { InsuranceController } from "@spt/controllers/InsuranceController";
-import { InsuranceOverride } from "./traders/insurance";
-import { PaymentService } from "@spt/services/PaymentService";
-import { DialogueHelper } from "@spt/helpers/DialogueHelper";
-import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
-import { SaveServer } from "@spt/servers/SaveServer";
-import { MailSendService } from "@spt/services/MailSendService";
-import { InsuranceService } from "@spt/services/InsuranceService";
-import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
 import { info } from "console";
 import { ILocationConfig, LootMultiplier } from "@spt/models/spt/config/ILocationConfig";
 import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
@@ -113,7 +119,6 @@ import { ILooseLoot } from "@spt/models/eft/common/ILooseLoot";
 import { ILootConfig } from "@spt/models/spt/config/ILootConfig";
 import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
 import { PlayerRaidEndState } from "@spt/models/enums/PlayerRaidEndState";
-import { WeatherGenerator } from "@spt/generators/WeatherGenerator";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -227,30 +232,30 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         );
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-            const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
-            const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
-            const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
-            const botHelper = container.resolve<BotHelper>("BotHelper");
-            const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
-            const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
-            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService"); const botGen = new BotGen(
-                logger, hashUtil, randomUtil, timeUtil,
-                profileHelper, databaseService, botInventoryGenerator,
-                botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
-                botHelper, botDifficultyHelper, seasonalEventService,
-                localisationService, itemFilterService, configServer, cloner);
+            // const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
+            // const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
+            // const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
+            // const botHelper = container.resolve<BotHelper>("BotHelper");
+            // const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
+            // const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
+            // const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService"); const botGen = new BotGen(
+            //     logger, hashUtil, randomUtil, timeUtil,
+            //     profileHelper, databaseService, botInventoryGenerator,
+            //     botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
+            //     botHelper, botDifficultyHelper, seasonalEventService,
+            //     localisationService, itemFilterService, configServer, cloner);
 
-            container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
-                result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase => {
-                    return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
-                }
-            }, { frequency: "Always" });
+            // container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
+            //     result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase => {
+            //         return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
+            //     }
+            // }, { frequency: "Always" });
 
-            container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
-                result.generatePlayerScav = (sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase => {
-                    return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
-                }
-            }, { frequency: "Always" });
+            // container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
+            //     result.generatePlayerScav = (sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase => {
+            //         return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
+            //     }
+            // }, { frequency: "Always" });
         }
 
         container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
@@ -274,25 +279,25 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
 
         if (modConfig.insurance_changes == true) {
-            const eventOutputHolder = container.resolve<EventOutputHolder>("HttpResponseUtil");
-            const saveServer = container.resolve<SaveServer>("SaveServer");
-            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-            const insruanceService = container.resolve<InsuranceService>("InsuranceService");
-            const mailSendService = container.resolve<MailSendService>("MailSendService");
-            const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
-            const localizationService = container.resolve<LocalisationService>("LocalisationService");
-            const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
-            const paymentService = container.resolve<PaymentService>("PaymentService");
+            // const eventOutputHolder = container.resolve<EventOutputHolder>("HttpResponseUtil");
+            // const saveServer = container.resolve<SaveServer>("SaveServer");
+            // const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+            // const insruanceService = container.resolve<InsuranceService>("InsuranceService");
+            // const mailSendService = container.resolve<MailSendService>("MailSendService");
+            // const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+            // const localizationService = container.resolve<LocalisationService>("LocalisationService");
+            // const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
+            // const paymentService = container.resolve<PaymentService>("PaymentService");
 
-            const insuranceOverride = new InsuranceOverride(
-                logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper,
-                dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
+            // const insuranceOverride = new InsuranceOverride(
+            //     logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper,
+            //     dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
 
-            container.afterResolution("InsuranceController", (_t, result: InsuranceController) => {
-                result.processReturnByProfile = (sessionID: string): void => {
-                    return insuranceOverride.myProcessReturnByProfile(sessionID);
-                }
-            }, { frequency: "Always" });
+            // container.afterResolution("InsuranceController", (_t, result: InsuranceController) => {
+            //     result.processReturnByProfile = (sessionID: string): void => {
+            //         return insuranceOverride.myProcessReturnByProfile(sessionID);
+            //     }
+            // }, { frequency: "Always" });
         }
 
         // if (modConfig.airdrop_changes == true) {
@@ -330,7 +335,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const utils = new Utils(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
-                        const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
+                        //const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
                         const quests = new Quests(logger, postLoadTables, modConfig);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -389,7 +394,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
                             }
                             if (modConfig.boss_spawns == true) {
-                                maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
+                                //maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
                             }
 
                             if (modConfig.logEverything == true) {
@@ -490,7 +495,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new BotArrays(postLoadTables);
                             const utils = new Utils(postLoadTables);
-                            const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
+                            //const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
 
@@ -526,14 +531,23 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             RaidInfoTracker.mapType = mapType;
 
                             if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-                                bots.updateBots(pmcData, logger, modConfig, bots, utils);
+                                //bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
 
-                            if (!ModTracker.swagPresent && RaidInfoTracker.mapName === "laboratory") { //!ModTracker.qtbPresent && 
-                                pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
-                                pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
-                                pmcConf.convertIntoPmcChance["assault"].min = 100;
-                                pmcConf.convertIntoPmcChance["assault"].max = 100;
+                            if (!ModTracker.swagPresent) { //!ModTracker.qtbPresent && 
+                                pmcConf.convertIntoPmcChance.laboratory = {
+                                    "assault": 
+                                    {
+                                        "min": 100,
+                                        "max": 100
+                                    },
+                                    "pmcbot": 
+                                    {
+                                        "min": 0,
+                                        "max": 0
+                                    }
+
+                                };
                             }
 
                             logger.warning("Avg. Player Level = " + ProfileTracker.averagePlayerLevel);
@@ -595,7 +609,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 quests.resetRepeatableQuests(profileData);
                             }
 
-                            this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, sessionID, utils, logger);
+                            //this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, sessionID, utils, logger);
 
                             this.checkEventQuests(pmcData);
 
@@ -709,7 +723,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, modConfig, utils);
-        const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
+        // const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf);
         const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new Player(logger, tables, modConfig, medItems, utils);
@@ -719,8 +733,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const fleaChangesPreDB = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, utils);
-        const airdrop = new Airdrops(logger, modConfig, airConf);
-        const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
+        // const airdrop = new Airdrops(logger, modConfig, airConf);
+        // const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
@@ -754,42 +768,42 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            bots.setBotHealth();
+            //bots.setBotHealth();
         }
 
         if (modConfig.open_zones_fix == true && !ModTracker.swagPresent) {
-            maps.openZonesFix();
+            //maps.openZonesFix();
         }
 
-        maps.loadSpawnChanges(locationConfig);
+        //maps.loadSpawnChanges(locationConfig);
 
-        airdrop.loadAirdropChanges();
+        //airdrop.loadAirdropChanges();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-            bots.loadBots();
+            //bots.loadBots();
         }
 
         if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
-            bots.testBotCap();
+            //bots.testBotCap();
         }
         else if (modConfig.increased_bot_cap == true && ModTracker.swagPresent == false) { //&& ModTracker.qtbPresent == false
-            bots.increaseBotCap();
+            //bots.increaseBotCap();
         }
         else if (modConfig.spawn_waves == true && ModTracker.swagPresent == false) { //  && ModTracker.qtbPresent == false
-            bots.increasePerformance();
+            //bots.increasePerformance();
         }
 
         if (modConfig.bot_names == true) {
-            bots.botNames();
+            //bots.botNames();
         }
 
         if (modConfig.guarantee_boss_spawn == true) {
-            bots.forceBossSpawns();
+            //bots.forceBossSpawns();
         }
 
         if (modConfig.boss_difficulty == true) {
-            bots.bossDifficulty();
+            //bots.bossDifficulty();
         }
 
         if (modConfig.med_changes == true) {
@@ -806,7 +820,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             consumables.loadStims();
         }
 
-        bots.botHpMulti();
+        //bots.botHpMulti();
 
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
@@ -814,7 +828,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         traders.loadTraderRepairs();
 
         if (modConfig.headset_changes) {
-            gear.loadHeadsetTweaks();
+           // gear.loadHeadsetTweaks();
         }
 
         if (modConfig.remove_quest_fir_req == true) {
@@ -930,102 +944,102 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
     }
 
-    private modifyMapLoot(locationConfig: ILocationConfig, map: string, raidData: ISaveProgressRequestData, profileId: string, utils: Utils, logger: ILogger) {
+    // private modifyMapLoot(locationConfig: ILocationConfig, map: string, raidData: ISaveProgressRequestData, profileId: string, utils: Utils, logger: ILogger) {
 
-        let lootXp = 0;
+    //     let lootXp = 0;
 
-        if (raidData.exit !== PlayerRaidEndState.KILLED && raidData.exit !== PlayerRaidEndState.MISSING_IN_ACTION) {
-            const counters = raidData.profile.Stats.Eft.OverallCounters.Items;
-            for (const i in counters) {
-                const counter = counters[i];
-                if (counter.Key.includes("ExpLooting")) {
-                    logger.warning("Looting XP " + counter.Value);
-                    lootXp += counter.Value;
-                }
-            }
-        }
+    //     if (raidData.exit !== PlayerRaidEndState.KILLED && raidData.exit !== PlayerRaidEndState.MISSING_IN_ACTION) {
+    //         const counters = raidData.profile.Stats.Eft.OverallCounters.Items;
+    //         for (const i in counters) {
+    //             const counter = counters[i];
+    //             if (counter.Key.includes("ExpLooting")) {
+    //                 logger.warning("Looting XP " + counter.Value);
+    //                 lootXp += counter.Value;
+    //             }
+    //         }
+    //     }
 
-        const looseModifier = lootXp * 0.00004;
-        const staticModifier = lootXp * 0.00002;
-        const minLooseLoot = 0.3;
-        const minstaticLoot = 0.4;
-        const looseLootRegenRate = 0.1;
-        const staticLootRegenRate = 0.05;
-        const baseLooseLoot: LootMultiplier = baseMapLoot.looseLootMultiplier;
-        const baseStaticLoot: LootMultiplier = baseMapLoot.staticLootMultiplier;
-        const originalLooseMapModi = baseLooseLoot[map];
-        const originalStaticMapModi = baseStaticLoot[map];
-        const mapAliases: { [key: string]: string[] } = {
-            "factory4_day": ["factory4_day", "factory4_night"],
-            "factory4_night": ["factory4_day", "factory4_night"]
-        };
-        const mapsToUpdate: string[] = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
+    //     const looseModifier = lootXp * 0.00004;
+    //     const staticModifier = lootXp * 0.00002;
+    //     const minLooseLoot = 0.3;
+    //     const minstaticLoot = 0.4;
+    //     const looseLootRegenRate = 0.1;
+    //     const staticLootRegenRate = 0.05;
+    //     const baseLooseLoot: ILootMultiplier = baseMapLoot.looseLootMultiplier;
+    //     const baseStaticLoot: ILootMultiplier = baseMapLoot.staticLootMultiplier;
+    //     const originalLooseMapModi = baseLooseLoot[map];
+    //     const originalStaticMapModi = baseStaticLoot[map];
+    //     const mapAliases: { [key: string]: string[] } = {
+    //         "factory4_day": ["factory4_day", "factory4_night"],
+    //         "factory4_night": ["factory4_day", "factory4_night"]
+    //     };
+    //     const mapsToUpdate: string[] = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
 
-        logger.warning("==============" + map + "==============");
-        logger.warning("==loose loot modi: " + looseModifier);
-        logger.warning("==static loot modi: " + staticModifier);
+    //     logger.warning("==============" + map + "==============");
+    //     logger.warning("==loose loot modi: " + looseModifier);
+    //     logger.warning("==static loot modi: " + staticModifier);
 
-        if (!playerMapLoot[profileId]) {
-            logger.warning("no profile found, creating new entry");
-            playerMapLoot[profileId] =
-            {
-                looseLootMultiplier: { ...baseLooseLoot },
-                staticLootMultiplier: { ...baseStaticLoot }
-            }
-        }
+    //     if (!playerMapLoot[profileId]) {
+    //         logger.warning("no profile found, creating new entry");
+    //         playerMapLoot[profileId] =
+    //         {
+    //             looseLootMultiplier: { ...baseLooseLoot },
+    //             staticLootMultiplier: { ...baseStaticLoot }
+    //         }
+    //     }
 
-        logger.warning("Found profile entry ");
-        let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
-        let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
+    //     logger.warning("Found profile entry ");
+    //     let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
+    //     let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
 
-        mapsToUpdate.forEach((currentMap) => {
-            logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
-            logger.warning("current static loot modi: " + staticLootModis[currentMap]);
+    //     mapsToUpdate.forEach((currentMap) => {
+    //         logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
+    //         logger.warning("current static loot modi: " + staticLootModis[currentMap]);
 
-            looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
-            staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
+    //         looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
+    //         staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
 
-            logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
-            logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
-        });
+    //         logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
+    //         logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
+    //     });
 
-        logger.warning("==Regenerating other map loot");
+    //     logger.warning("==Regenerating other map loot");
 
-        for (const i in playerMapLoot[profileId].staticLootMultiplier) {
-            logger.warning("==");
-            logger.warning("map " + i);
-            if (!mapsToUpdate.includes(i)) {
-                let looseMapLootModis = playerMapLoot[profileId].looseLootMultiplier;
-                let staticMapLootModis = playerMapLoot[profileId].staticLootMultiplier;
+    //     for (const i in playerMapLoot[profileId].staticLootMultiplier) {
+    //         logger.warning("==");
+    //         logger.warning("map " + i);
+    //         if (!mapsToUpdate.includes(i)) {
+    //             let looseMapLootModis = playerMapLoot[profileId].looseLootMultiplier;
+    //             let staticMapLootModis = playerMapLoot[profileId].staticLootMultiplier;
 
-                logger.warning("current loose loot modi: " + looseMapLootModis[i]);
-                logger.warning("current static loot modi: " + staticMapLootModis[i]);
+    //             logger.warning("current loose loot modi: " + looseMapLootModis[i]);
+    //             logger.warning("current static loot modi: " + staticMapLootModis[i]);
 
-                looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
-                staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
+    //             looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
+    //             staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
 
-                logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
-                logger.warning("modified static loot modi: " + staticMapLootModis[i]);
-            }
-        }
+    //             logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
+    //             logger.warning("modified static loot modi: " + staticMapLootModis[i]);
+    //         }
+    //     }
 
-        utils.writeConfigJSON(playerMapLoot, 'data/player_lootModifiers.json');
+    //     utils.writeConfigJSON(playerMapLoot, 'data/player_lootModifiers.json');
 
-        logger.warning("==Saved to file");
+    //     logger.warning("==Saved to file");
 
-        locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
-        locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
+    //     locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
+    //     locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
 
-        logger.warning("==Updated SPT configs");
+    //     logger.warning("==Updated SPT configs");
 
-        //derive map specific modifier based on player looting XP. This will be done on raid end. Get last played map on raid end.
-        //have a json file with profile specific loot modifiers.
-        //reduce the loot modifiers by X% based on looting XP for that specific map.
-        //for all maps that aren't the map that was just reduced, increased loot modifiers by a fixed %, comparing against the base values to make sure it does not exceed them
-        //get prolile id, create new object if none existing, upate if existing.
-        //update SPT config with new data
+    //     //derive map specific modifier based on player looting XP. This will be done on raid end. Get last played map on raid end.
+    //     //have a json file with profile specific loot modifiers.
+    //     //reduce the loot modifiers by X% based on looting XP for that specific map.
+    //     //for all maps that aren't the map that was just reduced, increased loot modifiers by a fixed %, comparing against the base values to make sure it does not exceed them
+    //     //get prolile id, create new object if none existing, upate if existing.
+    //     //update SPT config with new data
 
-    }
+    // }
 
     private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, seasonalConfig: ISeasonalEventConfig, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
         if (modConfig.enable_hazard_zones) {

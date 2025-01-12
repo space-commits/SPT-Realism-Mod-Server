@@ -38,14 +38,14 @@ const arrays_1 = require("./utils/arrays");
 const meds_1 = require("./items/meds");
 const player_1 = require("./player/player");
 const weapons_globals_1 = require("./weapons/weapons_globals");
-const bots_1 = require("./bots/bots");
-const bot_gen_1 = require("./bots/bot_gen");
+// import { BotLoader } from "./bots/bots";
+// import { BotGen } from "./bots/bot_gen";
 const items_1 = require("./items/items");
 const json_gen_1 = require("./json/json_gen");
 const quests_1 = require("./traders/quests");
 const traders_1 = require("./traders/traders");
-const airdrops_1 = require("./misc/airdrops");
-const spawns_1 = require("./bots/spawns");
+// import { Airdrops } from "./misc/airdrops";
+// import { Spawns } from "./bots/spawns";
 const gear_1 = require("./items/gear");
 const seasonalevents_1 = require("./misc/seasonalevents");
 const item_cloning_1 = require("./items/item_cloning");
@@ -53,8 +53,8 @@ const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
 const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
-const insurance_1 = require("./traders/insurance");
-const PlayerRaidEndState_1 = require("C:/snapshot/project/obj/models/enums/PlayerRaidEndState");
+// import { MyLootCacheService } from "./bots/bot_loot_serv";
+// import { InsuranceOverride } from "./traders/insurance";
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -146,24 +146,28 @@ class Main {
             }
         ], "RealismMod");
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-            const botLevelGenerator = container.resolve("BotLevelGenerator");
-            const botDifficultyHelper = container.resolve("BotDifficultyHelper");
-            const botInventoryGenerator = container.resolve("BotInventoryGenerator");
-            const botHelper = container.resolve("BotHelper");
-            const botEquipmentFilterService = container.resolve("BotEquipmentFilterService");
-            const seasonalEventService = container.resolve("SeasonalEventService");
-            const itemFilterService = container.resolve("ItemFilterService");
-            const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, profileHelper, databaseService, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, itemFilterService, configServer, cloner);
-            container.afterResolution("BotGenerator", (_t, result) => {
-                result.prepareAndGenerateBot = (sessionId, botGenerationDetails) => {
-                    return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
-                };
-            }, { frequency: "Always" });
-            container.afterResolution("BotGenerator", (_t, result) => {
-                result.generatePlayerScav = (sessionId, role, difficulty, botTemplate) => {
-                    return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
-                };
-            }, { frequency: "Always" });
+            // const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
+            // const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
+            // const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
+            // const botHelper = container.resolve<BotHelper>("BotHelper");
+            // const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
+            // const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
+            // const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService"); const botGen = new BotGen(
+            //     logger, hashUtil, randomUtil, timeUtil,
+            //     profileHelper, databaseService, botInventoryGenerator,
+            //     botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
+            //     botHelper, botDifficultyHelper, seasonalEventService,
+            //     localisationService, itemFilterService, configServer, cloner);
+            // container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
+            //     result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase => {
+            //         return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
+            //     }
+            // }, { frequency: "Always" });
+            // container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
+            //     result.generatePlayerScav = (sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase => {
+            //         return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
+            //     }
+            // }, { frequency: "Always" });
         }
         container.afterResolution("TraderAssortHelper", (_t, result) => {
             result.resetExpiredTrader = (trader) => {
@@ -183,21 +187,23 @@ class Main {
             }, { frequency: "Always" });
         }
         if (modConfig.insurance_changes == true) {
-            const eventOutputHolder = container.resolve("HttpResponseUtil");
-            const saveServer = container.resolve("SaveServer");
-            const itemHelper = container.resolve("ItemHelper");
-            const insruanceService = container.resolve("InsuranceService");
-            const mailSendService = container.resolve("MailSendService");
-            const ragfairPriceService = container.resolve("RagfairPriceService");
-            const localizationService = container.resolve("LocalisationService");
-            const dialogueHelper = container.resolve("DialogueHelper");
-            const paymentService = container.resolve("PaymentService");
-            const insuranceOverride = new insurance_1.InsuranceOverride(logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper, dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
-            container.afterResolution("InsuranceController", (_t, result) => {
-                result.processReturnByProfile = (sessionID) => {
-                    return insuranceOverride.myProcessReturnByProfile(sessionID);
-                };
-            }, { frequency: "Always" });
+            // const eventOutputHolder = container.resolve<EventOutputHolder>("HttpResponseUtil");
+            // const saveServer = container.resolve<SaveServer>("SaveServer");
+            // const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+            // const insruanceService = container.resolve<InsuranceService>("InsuranceService");
+            // const mailSendService = container.resolve<MailSendService>("MailSendService");
+            // const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+            // const localizationService = container.resolve<LocalisationService>("LocalisationService");
+            // const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
+            // const paymentService = container.resolve<PaymentService>("PaymentService");
+            // const insuranceOverride = new InsuranceOverride(
+            //     logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper,
+            //     dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
+            // container.afterResolution("InsuranceController", (_t, result: InsuranceController) => {
+            //     result.processReturnByProfile = (sessionID: string): void => {
+            //         return insuranceOverride.myProcessReturnByProfile(sessionID);
+            //     }
+            // }, { frequency: "Always" });
         }
         // if (modConfig.airdrop_changes == true) {
         //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
@@ -229,7 +235,7 @@ class Main {
                     const utils = new utils_1.Utils(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
-                    const maps = new spawns_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
+                    //const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
                     const quests = new quests_1.Quests(logger, postLoadTables, modConfig);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -279,7 +285,7 @@ class Main {
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         if (modConfig.boss_spawns == true) {
-                            maps.setBossSpawnChance(utils_1.ProfileTracker.averagePlayerLevel);
+                            //maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
                         }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
@@ -356,7 +362,7 @@ class Main {
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.BotArrays(postLoadTables);
                         const utils = new utils_1.Utils(postLoadTables);
-                        const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
+                        //const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
                         //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
@@ -386,13 +392,19 @@ class Main {
                         }
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-                            bots.updateBots(pmcData, logger, modConfig, bots, utils);
+                            //bots.updateBots(pmcData, logger, modConfig, bots, utils);
                         }
-                        if (!utils_1.ModTracker.swagPresent && utils_1.RaidInfoTracker.mapName === "laboratory") { //!ModTracker.qtbPresent && 
-                            pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
-                            pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
-                            pmcConf.convertIntoPmcChance["assault"].min = 100;
-                            pmcConf.convertIntoPmcChance["assault"].max = 100;
+                        if (!utils_1.ModTracker.swagPresent) { //!ModTracker.qtbPresent && 
+                            pmcConf.convertIntoPmcChance.laboratory = {
+                                "assault": {
+                                    "min": 100,
+                                    "max": 100
+                                },
+                                "pmcbot": {
+                                    "min": 0,
+                                    "max": 0
+                                }
+                            };
                         }
                         logger.warning("Avg. Player Level = " + utils_1.ProfileTracker.averagePlayerLevel);
                         logger.warning("Map Name = " + matchInfo.location);
@@ -441,7 +453,7 @@ class Main {
                         if (modConfig.enable_hazard_zones) {
                             quests.resetRepeatableQuests(profileData);
                         }
-                        this.modifyMapLoot(locationConfig, utils_1.RaidInfoTracker.mapName, info, sessionID, utils, logger);
+                        //this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, sessionID, utils, logger);
                         this.checkEventQuests(pmcData);
                         player.correctNegativeHP(pmcData);
                         if (modConfig.realistic_player_health == true) {
@@ -533,7 +545,7 @@ class Main {
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, modConfig, utils);
-        const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
+        // const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf);
         const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
@@ -543,8 +555,8 @@ class Main {
         const fleaChangesPreDB = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, utils);
-        const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
-        const maps = new spawns_1.Spawns(logger, tables, modConfig, tables.locations, utils);
+        // const airdrop = new Airdrops(logger, modConfig, airConf);
+        // const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
@@ -572,34 +584,34 @@ class Main {
         }
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            bots.setBotHealth();
+            //bots.setBotHealth();
         }
         if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
-            maps.openZonesFix();
+            //maps.openZonesFix();
         }
-        maps.loadSpawnChanges(locationConfig);
-        airdrop.loadAirdropChanges();
+        //maps.loadSpawnChanges(locationConfig);
+        //airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-            bots.loadBots();
+            //bots.loadBots();
         }
         if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
-            bots.testBotCap();
+            //bots.testBotCap();
         }
         else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) { //&& ModTracker.qtbPresent == false
-            bots.increaseBotCap();
+            //bots.increaseBotCap();
         }
         else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) { //  && ModTracker.qtbPresent == false
-            bots.increasePerformance();
+            //bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {
-            bots.botNames();
+            //bots.botNames();
         }
         if (modConfig.guarantee_boss_spawn == true) {
-            bots.forceBossSpawns();
+            //bots.forceBossSpawns();
         }
         if (modConfig.boss_difficulty == true) {
-            bots.bossDifficulty();
+            //bots.bossDifficulty();
         }
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
@@ -612,12 +624,12 @@ class Main {
         if (modConfig.stim_changes == true) {
             consumables.loadStims();
         }
-        bots.botHpMulti();
+        //bots.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
         traders.loadTraderRepairs();
         if (modConfig.headset_changes) {
-            gear.loadHeadsetTweaks();
+            // gear.loadHeadsetTweaks();
         }
         if (modConfig.remove_quest_fir_req == true) {
             quests.removeFIRQuestRequire();
@@ -712,82 +724,82 @@ class Main {
         locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
         locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
     }
-    modifyMapLoot(locationConfig, map, raidData, profileId, utils, logger) {
-        let lootXp = 0;
-        if (raidData.exit !== PlayerRaidEndState_1.PlayerRaidEndState.KILLED && raidData.exit !== PlayerRaidEndState_1.PlayerRaidEndState.MISSING_IN_ACTION) {
-            const counters = raidData.profile.Stats.Eft.OverallCounters.Items;
-            for (const i in counters) {
-                const counter = counters[i];
-                if (counter.Key.includes("ExpLooting")) {
-                    logger.warning("Looting XP " + counter.Value);
-                    lootXp += counter.Value;
-                }
-            }
-        }
-        const looseModifier = lootXp * 0.00004;
-        const staticModifier = lootXp * 0.00002;
-        const minLooseLoot = 0.3;
-        const minstaticLoot = 0.4;
-        const looseLootRegenRate = 0.1;
-        const staticLootRegenRate = 0.05;
-        const baseLooseLoot = baseMapLoot.looseLootMultiplier;
-        const baseStaticLoot = baseMapLoot.staticLootMultiplier;
-        const originalLooseMapModi = baseLooseLoot[map];
-        const originalStaticMapModi = baseStaticLoot[map];
-        const mapAliases = {
-            "factory4_day": ["factory4_day", "factory4_night"],
-            "factory4_night": ["factory4_day", "factory4_night"]
-        };
-        const mapsToUpdate = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
-        logger.warning("==============" + map + "==============");
-        logger.warning("==loose loot modi: " + looseModifier);
-        logger.warning("==static loot modi: " + staticModifier);
-        if (!playerMapLoot[profileId]) {
-            logger.warning("no profile found, creating new entry");
-            playerMapLoot[profileId] =
-                {
-                    looseLootMultiplier: { ...baseLooseLoot },
-                    staticLootMultiplier: { ...baseStaticLoot }
-                };
-        }
-        logger.warning("Found profile entry ");
-        let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
-        let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
-        mapsToUpdate.forEach((currentMap) => {
-            logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
-            logger.warning("current static loot modi: " + staticLootModis[currentMap]);
-            looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
-            staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
-            logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
-            logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
-        });
-        logger.warning("==Regenerating other map loot");
-        for (const i in playerMapLoot[profileId].staticLootMultiplier) {
-            logger.warning("==");
-            logger.warning("map " + i);
-            if (!mapsToUpdate.includes(i)) {
-                let looseMapLootModis = playerMapLoot[profileId].looseLootMultiplier;
-                let staticMapLootModis = playerMapLoot[profileId].staticLootMultiplier;
-                logger.warning("current loose loot modi: " + looseMapLootModis[i]);
-                logger.warning("current static loot modi: " + staticMapLootModis[i]);
-                looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
-                staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
-                logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
-                logger.warning("modified static loot modi: " + staticMapLootModis[i]);
-            }
-        }
-        utils.writeConfigJSON(playerMapLoot, 'data/player_lootModifiers.json');
-        logger.warning("==Saved to file");
-        locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
-        locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
-        logger.warning("==Updated SPT configs");
-        //derive map specific modifier based on player looting XP. This will be done on raid end. Get last played map on raid end.
-        //have a json file with profile specific loot modifiers.
-        //reduce the loot modifiers by X% based on looting XP for that specific map.
-        //for all maps that aren't the map that was just reduced, increased loot modifiers by a fixed %, comparing against the base values to make sure it does not exceed them
-        //get prolile id, create new object if none existing, upate if existing.
-        //update SPT config with new data
-    }
+    // private modifyMapLoot(locationConfig: ILocationConfig, map: string, raidData: ISaveProgressRequestData, profileId: string, utils: Utils, logger: ILogger) {
+    //     let lootXp = 0;
+    //     if (raidData.exit !== PlayerRaidEndState.KILLED && raidData.exit !== PlayerRaidEndState.MISSING_IN_ACTION) {
+    //         const counters = raidData.profile.Stats.Eft.OverallCounters.Items;
+    //         for (const i in counters) {
+    //             const counter = counters[i];
+    //             if (counter.Key.includes("ExpLooting")) {
+    //                 logger.warning("Looting XP " + counter.Value);
+    //                 lootXp += counter.Value;
+    //             }
+    //         }
+    //     }
+    //     const looseModifier = lootXp * 0.00004;
+    //     const staticModifier = lootXp * 0.00002;
+    //     const minLooseLoot = 0.3;
+    //     const minstaticLoot = 0.4;
+    //     const looseLootRegenRate = 0.1;
+    //     const staticLootRegenRate = 0.05;
+    //     const baseLooseLoot: ILootMultiplier = baseMapLoot.looseLootMultiplier;
+    //     const baseStaticLoot: ILootMultiplier = baseMapLoot.staticLootMultiplier;
+    //     const originalLooseMapModi = baseLooseLoot[map];
+    //     const originalStaticMapModi = baseStaticLoot[map];
+    //     const mapAliases: { [key: string]: string[] } = {
+    //         "factory4_day": ["factory4_day", "factory4_night"],
+    //         "factory4_night": ["factory4_day", "factory4_night"]
+    //     };
+    //     const mapsToUpdate: string[] = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
+    //     logger.warning("==============" + map + "==============");
+    //     logger.warning("==loose loot modi: " + looseModifier);
+    //     logger.warning("==static loot modi: " + staticModifier);
+    //     if (!playerMapLoot[profileId]) {
+    //         logger.warning("no profile found, creating new entry");
+    //         playerMapLoot[profileId] =
+    //         {
+    //             looseLootMultiplier: { ...baseLooseLoot },
+    //             staticLootMultiplier: { ...baseStaticLoot }
+    //         }
+    //     }
+    //     logger.warning("Found profile entry ");
+    //     let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
+    //     let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
+    //     mapsToUpdate.forEach((currentMap) => {
+    //         logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
+    //         logger.warning("current static loot modi: " + staticLootModis[currentMap]);
+    //         looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
+    //         staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
+    //         logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
+    //         logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
+    //     });
+    //     logger.warning("==Regenerating other map loot");
+    //     for (const i in playerMapLoot[profileId].staticLootMultiplier) {
+    //         logger.warning("==");
+    //         logger.warning("map " + i);
+    //         if (!mapsToUpdate.includes(i)) {
+    //             let looseMapLootModis = playerMapLoot[profileId].looseLootMultiplier;
+    //             let staticMapLootModis = playerMapLoot[profileId].staticLootMultiplier;
+    //             logger.warning("current loose loot modi: " + looseMapLootModis[i]);
+    //             logger.warning("current static loot modi: " + staticMapLootModis[i]);
+    //             looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
+    //             staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
+    //             logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
+    //             logger.warning("modified static loot modi: " + staticMapLootModis[i]);
+    //         }
+    //     }
+    //     utils.writeConfigJSON(playerMapLoot, 'data/player_lootModifiers.json');
+    //     logger.warning("==Saved to file");
+    //     locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
+    //     locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
+    //     logger.warning("==Updated SPT configs");
+    //     //derive map specific modifier based on player looting XP. This will be done on raid end. Get last played map on raid end.
+    //     //have a json file with profile specific loot modifiers.
+    //     //reduce the loot modifiers by X% based on looting XP for that specific map.
+    //     //for all maps that aren't the map that was just reduced, increased loot modifiers by a fixed %, comparing against the base values to make sure it does not exceed them
+    //     //get prolile id, create new object if none existing, upate if existing.
+    //     //update SPT config with new data
+    // }
     checkForSeasonalEvents(logger, seasonalEventsService, seasonalConfig, weatherConfig, logGreetings = false) {
         if (modConfig.enable_hazard_zones) {
             const currentDate = new Date();

@@ -17,7 +17,8 @@ export class Ammo {
 
     public loadAmmoStats() {
         this.globalDB().Ballistic.GlobalDamageDegradationCoefficient = 0.7;
- let serverItem = this.itemDB()[i];
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
             //// AMMO ////
             //// 12ga ////
             //Piranha
@@ -1108,6 +1109,7 @@ export class Ammo {
                 serverItem._props.LightBleedingDelta = 0.45;
                 serverItem._props.ammoAccr = 5;
                 serverItem._props.ammoHear = 0;
+                serverItem._props.ammoRec = -2.5;
                 serverItem._props.ammoRec = -2.5;
 
                 if (this.modConf.malf_changes == true) {
@@ -3934,7 +3936,7 @@ export class Ammo {
                 serverItem._props.Damage = 100;
                 serverItem._props.PenetrationPower = 30;
             }
-
+        }
         if (this.modConf.logEverything == true) {
             this.logger.info("Ammo Stats Loaded");
         }

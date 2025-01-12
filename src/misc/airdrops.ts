@@ -1,48 +1,49 @@
 
-import { IAirdropConfig } from "@spt/models/spt/config/IAirdropConfig";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
-import { LootItem } from "@spt/models/spt/services/LootItem";
-import { MinMax } from "@spt/models/common/MinMax";
-import { ParentClasses } from "../utils/enums";
-import { IPreset } from "@spt/models/eft/common/IGlobals";
-import { LocationController } from "@spt/controllers/LocationController";
-import { Utils, RaidInfoTracker } from "../utils/utils";
-import { IAirdropLootResult } from "@spt/models/eft/location/IAirdropLootResult";
-import { AirdropTypeEnum } from "@spt/models/enums/AirdropType";
-import { RandomUtil } from "@spt/utils/RandomUtil";
-import { container } from "tsyringe";
-import { EventTracker } from "./seasonalevents";
+// import { IAirdropChancePercent, IAirdropConfig } from "@spt/models/spt/config/IAirdropConfig";
+// import { ILogger } from "../../types/models/spt/utils/ILogger";
+// import { EventTracker } from "./seasonalevents";
+// import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+// import { ILootItem } from "@spt/models/spt/services/LootItem";
+// import { MinMax } from "@spt/models/common/MinMax";
+// import { ParentClasses } from "../utils/enums";
+// import { IPreset } from "@spt/models/eft/common/IGlobals";
+// import { LocationController } from "@spt/controllers/LocationController";
+// import { Utils, RaidInfoTracker } from "../utils/utils";
+// import { IAirdropLootResult } from "@spt/models/eft/location/IAirdropLootResult";
+// import { AirdropTypeEnum } from "@spt/models/enums/AirdropType";
+// import { RandomUtil } from "@spt/utils/RandomUtil";
+// import { container } from "tsyringe";
 
 
 
-export class Airdrops {
-    constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
 
-    public loadAirdropChanges() {
+// export class Airdrops {
+//     constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
 
-        //fucks up the story
-        if (EventTracker.isHalloween && this.modConfig.enable_hazard_zones) {
-            this.airConf.airdropChancePercent.bigmap = 0;
-            this.airConf.airdropChancePercent.woods = 0;
-            this.airConf.airdropChancePercent.lighthouse = 0;
-            this.airConf.airdropChancePercent.shoreline = 0;
-            this.airConf.airdropChancePercent.interchange = 0;
-            this.airConf.airdropChancePercent.reserve = 0;
-            this.airConf.airdropChancePercent.sandbox = 0;
+//     public loadAirdropChanges() {
 
-        }
+//         //fucks up the story
+//         if (EventTracker.isHalloween && this.modConfig.enable_hazard_zones) {
+//             this.airConf.airdropChancePercent.bigmap = 0;
+//             this.airConf.airdropChancePercent.woods = 0;
+//             this.airConf.airdropChancePercent.lighthouse = 0;
+//             this.airConf.airdropChancePercent.shoreline = 0;
+//             this.airConf.airdropChancePercent.interchange = 0;
+//             this.airConf.airdropChancePercent.reserve = 0;
+//             this.airConf.airdropChancePercent.sandbox = 0;
 
-        this.airConf.planeVolume = 0.2;
+//         }
 
-        this.airConf.airdropMinStartTimeSeconds = 300;
-        this.airConf.airdropMaxStartTimeSeconds = 2400;
+//         this.airConf.planeVolume = 0.2;
 
-        if (this.modConfig.logEverything == true) {
-            this.logger.info("Airdrops Loaded");
-        }
-    }
-}
+//         this.airConf.airdropMinStartTimeSeconds = 300;
+//         this.airConf.airdropMaxStartTimeSeconds = 2400;
+
+//         if (this.modConfig.logEverything == true) {
+//             this.logger.info("Airdrops Loaded");
+//         }
+//     }
+// }
 
 // export class AirdropLootgen extends LocationController {
 

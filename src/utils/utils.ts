@@ -1,5 +1,5 @@
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import * as path from 'path';
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
@@ -58,7 +58,7 @@ export class Utils {
         }
     }
 
-    private correctProvisionRes(profileItem: Item, playerXP: number, logger: ILogger) {
+    private correctProvisionRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
         if (templateItem !== null && templateItem !== undefined && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
             profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
@@ -66,14 +66,14 @@ export class Utils {
     }
 
 
-    private correctMedicalRes(profileItem: Item, playerXP: number, logger: ILogger) {
+    private correctMedicalRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
         if (templateItem !== null && templateItem !== undefined && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
             profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
         }
     }
 
-    private correctDuraHelper(profileItem: Item, playerXP: number) {
+    private correctDuraHelper(profileItem: IItem, playerXP: number) {
         let templateItem = this.itemDB()[profileItem._tpl]
         if (templateItem !== null && templateItem !== undefined && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
             profileItem.upd.Repairable.Durability = templateItem._props.Durability;

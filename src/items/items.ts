@@ -5,7 +5,7 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { IInventoryConfig } from "@spt/models/spt/config/IInventoryConfig";
 import { IInRaidConfig } from "@spt/models/spt/config/IInRaidConfig";
 import { IConfig } from "@spt/models/eft/common/IGlobals";
-import { HandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
+import { IHandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
@@ -27,10 +27,11 @@ export class ItemsClass {
     locales(): Record<string, Record<string, string>> {
         return this.tables.locales.global;
     }
-    handbook(): HandbookItem[] {
+    handbook(): IHandbookItem[] {
         return this.tables.templates.handbook.Items;
     }
 
+    //6kh4
     private createGTFilter(slotName: string, parentID: string) {
         return {
             "_id": slotName,
@@ -41,8 +42,7 @@ export class ItemsClass {
                 "filters": [
                     {
                         "Filter": [
-                            "6kh4_bayonet",
-                            "6kh5_bayonet"
+                            "6783b079e4585dfb0fec3c73",
                         ],
                         "Shift": 0
                     }
@@ -71,8 +71,9 @@ export class ItemsClass {
             }
         }
 
-        this.itemDB()["5ae09bff5acfc4001562219d"]._props.Slots[2]._props.filters[0].Filter.push("mosin_bayonet");
-        this.itemDB()["5bfd4cbe0db834001b73449f"]._props.Slots[2]._props.filters[0].Filter.push("mosin_bayonet");
+        //mosin bayonet to mosin barrels
+        this.itemDB()["5ae09bff5acfc4001562219d"]._props.Slots[2]._props.filters[0].Filter.push("6783afddef9d6f5d579c43f1");
+        this.itemDB()["5bfd4cbe0db834001b73449f"]._props.Slots[2]._props.filters[0].Filter.push("6783afddef9d6f5d579c43f1");
 
         // this.itemDB()["649ec107961514b22506b10c"]._props.Prefab.path = "ak12_gt.bundle"
         // this.itemDB()["649ec107961514b22506b10c"]._props.Slots.push({
@@ -101,6 +102,7 @@ export class ItemsClass {
         this.itemDB()["59e649f986f77411d949b246"]._props.Prefab.path = "vepr_136_gt.bundle"
         this.itemDB()["59e649f986f77411d949b246"]._props.Slots.push(this.createGTFilter("vepr_slot0", "59e649f986f77411d949b246"));
 
+        //m9 bayonet
         this.itemDB()["5ae30e795acfc408fb139a0b"]._props.Prefab.path = "m4_gas_block.bundle"
         this.itemDB()["5ae30e795acfc408fb139a0b"]._props.Slots[0] = {
             "_id": "m4_slot0",
@@ -111,7 +113,7 @@ export class ItemsClass {
                 "filters": [
                     {
                         "Filter": [
-                            "m9_bayonet"
+                            "6783b041281387d669fd3722"
                         ],
                         "Shift": 0
                     }
@@ -120,29 +122,30 @@ export class ItemsClass {
             "_proto": "55d30c4c4bdc2db4468b457e",
             "_required": false
         }
-
-        this.itemDB()["m9_bayonet"]._props.ConflictingItems =
+        //m9 bayonet
+        this.itemDB()["6783b041281387d669fd3722"]._props.ConflictingItems =
             [
                 "5c0e2f94d174af029f650d56",
                 "5d440b9fa4b93601354d480c",
                 "5d440b93a4b9364276578d4b",
-                "mechAR15_260mm",
+                "6783af433f159a5ae961078a",
                 "55d35ee94bdc2d61338b4568",
                 "6357c98711fb55120211f7e1",
                 "638612b607dfed1ccb7206ba",
                 "57dbb57e2459774673234890",
                 "57da93632459771cb65bf83f"
             ];
+        //m9    
         for (let i in this.itemDB()["55d3632e4bdc2d972f8b4569"]._props.Slots[0]._props.filters[0].Filter) {
             let item = this.itemDB()["55d3632e4bdc2d972f8b4569"]._props.Slots[0]._props.filters[0].Filter[i];
             if (item !== "544a38634bdc2d58388b4568" && item !== "5c0fafb6d174af02a96260ba" && item !== "56ea8180d2720bf2698b456a") {
-                this.itemDB()["m9_bayonet"]._props.ConflictingItems.push(item);
+                this.itemDB()["6783b041281387d669fd3722"]._props.ConflictingItems.push(item);
             }
         }
 
         let allowedAKMuzzles =
             [
-                "mechSlant_366",
+                "6783af4a205ba84b88b7372b",
                 "59d64fc686f774171b243fe2",
                 "5ac7655e5acfc40016339a19",
                 "5ac72e7d5acfc40016339a02",
@@ -158,13 +161,13 @@ export class ItemsClass {
                 "5ac66d9b5acfc4001633997a"
             ];
 
-        this.itemDB()["6kh4_bayonet"]._props.ConflictingItems = incompatibleWeapons;
+        this.itemDB()["6783b079e4585dfb0fec3c73"]._props.ConflictingItems = incompatibleWeapons;
         // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems = incompatibleWeapons;
 
         for (let i in this.itemDB()["5bf3e03b0db834001d2c4a9c"]._props.Slots[2]._props.filters[0].Filter) {
             let item = this.itemDB()["5bf3e03b0db834001d2c4a9c"]._props.Slots[2]._props.filters[0].Filter[i];
             if (!allowedAKMuzzles.includes(item)) {
-                this.itemDB()["6kh4_bayonet"]._props.ConflictingItems.push(item);
+                this.itemDB()["6783b079e4585dfb0fec3c73"]._props.ConflictingItems.push(item);
                 // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
         }
@@ -172,7 +175,7 @@ export class ItemsClass {
         for (let i in this.itemDB()["59d6088586f774275f37482f"]._props.Slots[2]._props.filters[0].Filter) {
             let item = this.itemDB()["59d6088586f774275f37482f"]._props.Slots[2]._props.filters[0].Filter[i];
             if (!allowedAKMuzzles.includes(item)) {
-                this.itemDB()["6kh4_bayonet"]._props.ConflictingItems.push(item);
+                this.itemDB()["6783b079e4585dfb0fec3c73"]._props.ConflictingItems.push(item);
                 // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
         }
@@ -180,7 +183,7 @@ export class ItemsClass {
         for (let i in this.itemDB()["5ac66d2e5acfc43b321d4b53"]._props.Slots[2]._props.filters[0].Filter) {
             let item = this.itemDB()["5ac66d2e5acfc43b321d4b53"]._props.Slots[2]._props.filters[0].Filter[i];
             if (!allowedAKMuzzles.includes(item)) {
-                this.itemDB()["6kh4_bayonet"]._props.ConflictingItems.push(item);
+                this.itemDB()["6783b079e4585dfb0fec3c73"]._props.ConflictingItems.push(item);
                 // this.itemDB()["6kh5_bayonet"]._props.ConflictingItems.push(item);
             }
         }

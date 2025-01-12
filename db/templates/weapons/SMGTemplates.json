@@ -183,9 +183,9 @@
         "OffsetRotation": 0.01,
         "RecoilIntensity": 0.2185
     },
-    "mechSTM9v1": {
-        "ItemID": "mechSTM9v1",
-        "Name": "weapon_stmarms_stm_9_9x19",
+    "6783ae0d0410dd9ffe6f732c": {
+        "ItemID": "6783ae0d0410dd9ffe6f732c",
+        "Name": "mech_weapon_stmarms_stm_9_9x19",
         "WeapType": "",
         "OperationType": "buffer",
         "WeapAccuracy": 0,

@@ -1,5 +1,5 @@
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { JsonUtil } from "@spt/utils/JsonUtil";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
@@ -336,7 +336,7 @@ export class Player {
         }
     }
 
-    private setArmorDuabaility(invItem: Item) {
+    private setArmorDuabaility(invItem: IItem) {
         for (let i in this.tables.templates.items) {
             let serverItem = this.tables.templates.items[i];
             if (invItem._tpl === this.tables.templates.items[i]._id

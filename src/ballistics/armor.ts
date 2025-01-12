@@ -308,9 +308,9 @@ export class Armor {
         //IOTV
         if (serverItem._id === "5b44cf1486f77431723e3d05" || serverItem._id === "5b44d0de86f774503d30cba8" || serverItem._id === "5b44cd8b86f774503d30cba2") {
             this.modifyAramid(serverItem, 5, 110, 0.28);
-            this.changeDefaultPlate(serverItem, "5b44cf1486f77431723e3d05", "xsapi_chest");
-            this.changeDefaultPlate(serverItem, "5b44d0de86f774503d30cba8", "xsapi_chest");
-            this.changeDefaultPlate(serverItem, "5b44cd8b86f774503d30cba2", "xsapi_chest");
+            this.changeDefaultPlate(serverItem, "5b44cf1486f77431723e3d05", "6783ae9ee00fdb2053bf6848");
+            this.changeDefaultPlate(serverItem, "5b44d0de86f774503d30cba8", "6783ae9ee00fdb2053bf6848");
+            this.changeDefaultPlate(serverItem, "5b44cd8b86f774503d30cba2", "6783ae9ee00fdb2053bf6848");
         }
         //OTV
         if (serverItem._id === "64abd93857958b4249003418") {
@@ -320,8 +320,8 @@ export class Armor {
         //Osprey
         if (serverItem._id === "60a3c70cde5f453f634816a3" || serverItem._id === "60a3c68c37ea821725773ef5") {
             this.modifyAramid(serverItem, 5, 90, 0.25);
-            this.changeDefaultPlate(serverItem, "60a3c70cde5f453f634816a3", "mk4a_plate");
-            this.changeDefaultPlate(serverItem, "60a3c68c37ea821725773ef5", "mk4a_plate");
+            this.changeDefaultPlate(serverItem, "60a3c70cde5f453f634816a3", "6783aec223d48324c0b278f5");
+            this.changeDefaultPlate(serverItem, "60a3c68c37ea821725773ef5", "6783aec223d48324c0b278f5");
         }
         //RBAV
         if (serverItem._id === "628dc750b910320f4c27a732") {
@@ -642,7 +642,7 @@ export class Armor {
             serverItem._props.weaponErgonomicPenalty = 0;
         }
         //XSAPI
-        if (serverItem._id === "xsapi_chest") {
+        if (serverItem._id === "6783ae9ee00fdb2053bf6848") {
             serverItem._props.Durability = 160;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 10;
@@ -654,7 +654,7 @@ export class Armor {
         }
 
         //Osprey MK4A Plate
-        if (serverItem._id === "mk4a_plate") {
+        if (serverItem._id === "6783aec223d48324c0b278f5") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 9;

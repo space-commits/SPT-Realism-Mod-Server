@@ -1,8 +1,8 @@
 {
-  "mosin_bayonet": {
-    "_id": "mosin_bayonet",
+  "6783afddef9d6f5d579c43f1": {
+    "_id": "6783afddef9d6f5d579c43f1",
     "_name": "mosin_bayonet",
-    "_tpl": "mosin_bayonet",
+    "_tpl": "6783afddef9d6f5d579c43f1",
     "_parent": "550aa4bf4bdc2dd6348b456b",
     "_type": "Item",
     "_props": {
@@ -81,10 +81,10 @@
       "CoolFactor": 1
     }
   },
-  "m9_bayonet": {
-    "_id": "m9_bayonet",
+  "6783b041281387d669fd3722": {
+    "_id": "6783b041281387d669fd3722",
     "_name": "m9_bayonet",
-    "_tpl": "m9_bayonet",
+    "_tpl": "6783b041281387d669fd3722",
     "_parent": "550aa4bf4bdc2dd6348b456b",
     "_type": "Item",
     "_props": {
@@ -163,10 +163,10 @@
       "CoolFactor": 1
     }
   },
-  "6kh4_bayonet": {
-    "_id": "6kh4_bayonet",
+  "6783b079e4585dfb0fec3c73": {
+    "_id": "6783b079e4585dfb0fec3c73",
     "_name": "6kh4_bayonet",
-    "_tpl": "6kh4_bayonet",
+    "_tpl": "6783b079e4585dfb0fec3c73",
     "_parent": "550aa4bf4bdc2dd6348b456b",
     "_type": "Item",
     "_props": {

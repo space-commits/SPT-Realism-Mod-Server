@@ -2,7 +2,6 @@ import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
-import { ModTracker } from "../utils/utils";
 
 const fs = require('fs');
 const path = require('path');
@@ -172,9 +171,9 @@ export class ItemStatHandler {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
 
-            if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
-                return;
-            }
+            // if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
+            //     return;
+            // }
 
             if (fileItem.TemplateID != undefined) {
                 fileItem = this.modifiedItems[fileItem.TemplateID];
@@ -214,16 +213,16 @@ export class ItemStatHandler {
                 this.handleMasks(fileItem, serverItem);
             }
 
-            if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
-                return;
-            }
+            // if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
+            //     return;
+            // }
 
-            let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
-                fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.RadProtection?.toString() || "0",
-                fileItem?.MaskToUse?.toString() || "", fileItem?.GasProtection?.toString() || "0", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.IsGasMask?.toString() || "false"];
+            // let armorPropertyValues = ["SPTRM", fileItem?.AllowADS?.toString() || "true", fileItem?.ArmorClass?.toString() || "Unclassified", fileItem?.CanSpall?.toString() || "false", fileItem?.SpallReduction?.toString() || "1", fileItem?.ReloadSpeedMulti?.toString() || "1",
+            //     fileItem?.MinVelocity?.toString() || "500", fileItem?.MinKE?.toString() || "2000", fileItem?.MinPen?.toString() || "50", fileItem?.BlocksMouth?.toString() || "false", fileItem?.HasSideArmor?.toString() || "false", fileItem?.RadProtection?.toString() || "0",
+            //     fileItem?.MaskToUse?.toString() || "", fileItem?.GasProtection?.toString() || "0", fileItem?.dB?.toString() || "1", fileItem?.Comfort?.toString() || 1, fileItem?.IsGasMask?.toString() || "false"];
 
-            let combinedArr = armorPropertyValues.concat(serverConfItems)
-            serverItem._props.ConflictingItems = combinedArr;
+            // let combinedArr = armorPropertyValues.concat(serverConfItems)
+            // serverItem._props.ConflictingItems = combinedArr;
         }
     }
 
@@ -243,9 +242,9 @@ export class ItemStatHandler {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
 
-            if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
-                return;
-            }
+            // if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
+            //     return;
+            // }
 
             if (fileItem.TemplateID != undefined) {
                 fileItem = this.modifiedItems[fileItem.TemplateID];
@@ -279,13 +278,13 @@ export class ItemStatHandler {
                 serverItem._parent = "55818a594bdc2db9688b456a";
             }
 
-            let modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
-                fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
-                fileItem?.Convergence?.toString() || "0", fileItem?.CanCycleSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0",
-                fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0", fileItem?.Flash?.toString() || "0", fileItem?.AimStability?.toString() || "0", fileItem?.Handling?.toString() || "0"];
+            // let modPropertyValues = ["SPTRM", fileItem?.ModType?.toString() || "undefined", fileItem?.VerticalRecoil?.toString() || "0", fileItem?.HorizontalRecoil?.toString() || "0", fileItem?.Dispersion?.toString() || "0", fileItem?.CameraRecoil?.toString() || "0",
+            //     fileItem?.AutoROF?.toString() || "0", fileItem?.SemiROF?.toString() || "0", fileItem?.ModMalfunctionChance?.toString() || "0", fileItem?.ReloadSpeed?.toString() || "0", fileItem?.AimSpeed?.toString() || "0", fileItem?.ChamberSpeed?.toString() || "0",
+            //     fileItem?.Convergence?.toString() || "0", fileItem?.CanCycleSubs?.toString() || "false", fileItem?.RecoilAngle?.toString() || "0", fileItem?.StockAllowADS?.toString() || "false", fileItem?.FixSpeed?.toString() || "0", fileItem?.ModShotDispersion?.toString() || "0",
+            //     fileItem?.MeleeDamage?.toString() || "0", fileItem?.MeleePen?.toString() || "0", fileItem?.Flash?.toString() || "0", fileItem?.AimStability?.toString() || "0", fileItem?.Handling?.toString() || "0"];
 
-            let combinedArr = modPropertyValues.concat(serverConfItems)
-            serverItem._props.ConflictingItems = combinedArr;
+            // let combinedArr = modPropertyValues.concat(serverConfItems)
+            // serverItem._props.ConflictingItems = combinedArr;
         }
     }
 
@@ -294,9 +293,9 @@ export class ItemStatHandler {
             let serverItem = serverTemplates[fileItem.ItemID];
             let serverConfItems = serverItem._props.ConflictingItems;
 
-            if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
-                return;
-            }
+            // if (serverConfItems.length > 0 && serverConfItems[0] === "SPTRM") {
+            //     return;
+            // }
 
             if (fileItem.TemplateID != undefined) {
                 fileItem = this.modifiedItems[fileItem.TemplateID];
@@ -357,13 +356,13 @@ export class ItemStatHandler {
                     this.tables.globals.config.Mastering.find(m => m.Name === fileItem.MasteryCategory).Templates.push(fileItem.ItemID);
                 }
                 
-                let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
-                    fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.7", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
-                    fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1", fileItem?.VisualMulti?.toString() || "1"
-                ];
+                // let weapPropertyValues = ["SPTRM", fileItem?.WeapType?.toString() || "undefined", fileItem?.BaseTorque?.toString() || "0", fileItem?.HasShoulderContact?.toString() || "false", fileItem?.BaseReloadSpeedMulti?.toString() || "1", fileItem?.OperationType?.toString() || "undefined", fileItem?.WeapAccuracy?.toString() || "0",
+                //     fileItem?.RecoilDamping?.toString() || "0.7", fileItem?.RecoilHandDamping?.toString() || "0.7", fileItem?.WeaponAllowADS?.toString() || "false", fileItem?.BaseChamberSpeedMulti?.toString() || "1", fileItem?.MaxChamberSpeed?.toString() || "1.5", fileItem?.MinChamberSpeed?.toString() || "0.7", fileItem?.IsManuallyOperated?.toString() || "false",
+                //     fileItem?.MaxReloadSpeed?.toString() || "1.2", fileItem?.MinReloadSpeed?.toString() || "0.7", fileItem?.BaseChamberCheckSpeed?.toString() || "1", fileItem?.BaseFixSpeed?.toString() || "1", fileItem?.VisualMulti?.toString() || "1"
+                // ];
 
-                let combinedArr = weapPropertyValues.concat(serverConfItems)
-                serverItem._props.ConflictingItems = combinedArr;
+                // let combinedArr = weapPropertyValues.concat(serverConfItems)
+                // serverItem._props.ConflictingItems = combinedArr;
             }
         }
     }

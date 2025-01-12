@@ -115,8 +115,8 @@
         "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
-    "xsapi_chest": {
-        "ItemID": "xsapi_chest",
+    "6783ae9ee00fdb2053bf6848": {
+        "ItemID": "6783ae9ee00fdb2053bf6848",
         "Name": "xsapi_chest",
         "AllowADS": true,
         "LoyaltyLevel": 5,
@@ -130,8 +130,8 @@
         "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
-    "mk4a_plate": {
-        "ItemID": "mk4a_plate",
+    "6783aec223d48324c0b278f5": {
+        "ItemID": "6783aec223d48324c0b278f5",
         "Name": "mk4a_plate",
         "AllowADS": true,
         "LoyaltyLevel": 4,

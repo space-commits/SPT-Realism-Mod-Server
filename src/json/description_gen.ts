@@ -109,7 +109,7 @@ export class DescriptionGen {
                     locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, cerebral contusion or swelling of the brain, hand tremors, slowed metatbolism, increased levels of stress, weakened immune system, dyspnea, chronic inflammation, and overall reduced vitality.";
                 }
                 //regen
-                if (item._id === "5c0e534186f7747fa1419867" || item._id === "5c0e530286f7747fa1419862" || item._id === "SJ0") {
+                if (item._id === "5c0e534186f7747fa1419867" || item._id === "5c0e530286f7747fa1419862" || item._id === "6783aca07b1449bd298b10f8") {
                     locale[`${templateItem}` + " Description"] = `\n\n${locale[`${templateItem}` + " Description"]}` + "\n\nWARNING: Adverse effects may include persistent pain, hand tremors, and increased suspetibility to bruising, injury and tissue damage.";
                 }
                 //damage
