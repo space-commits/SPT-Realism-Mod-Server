@@ -1,5 +1,6 @@
 {
     "5df8a42886f77412640e2e75": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5df8a42886f77412640e2e75",
         "Name": "item_equipment_rig_multipurpose",
         "AllowADS": true,
@@ -15,6 +16,7 @@
         "TemplateType": "gear"
     },
     "5c0e6a1586f77404597b4965": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e6a1586f77404597b4965",
         "Name": "item_equipment_rig_beltab",
         "AllowADS": true,
@@ -30,6 +32,7 @@
         "TemplateType": "gear"
     },
     "603648ff5a45383c122086ac": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "603648ff5a45383c122086ac",
         "Name": "item_equipment_rig_azimut_black",
         "AllowADS": true,
@@ -45,6 +48,7 @@
         "TemplateType": "gear"
     },
     "5ca20abf86f77418567a43f2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ca20abf86f77418567a43f2",
         "Name": "item_equipment_rig_triton",
         "AllowADS": true,
@@ -60,6 +64,7 @@
         "TemplateType": "gear"
     },
     "5648a69d4bdc2ded0b8b457b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5648a69d4bdc2ded0b8b457b",
         "Name": "bearRig",
         "AllowADS": true,
@@ -75,6 +80,7 @@
         "TemplateType": "gear"
     },
     "572b7adb24597762ae139821": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "572b7adb24597762ae139821",
         "Name": "wild_vest",
         "AllowADS": true,
@@ -90,6 +96,7 @@
         "TemplateType": "gear"
     },
     "628baf0b967de16aab5a4f36": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "628baf0b967de16aab5a4f36",
         "Name": "item_equipment_rig_boss_birdeye",
         "AllowADS": true,
@@ -105,6 +112,7 @@
         "TemplateType": "gear"
     },
     "6034cf5fffd42c541047f72e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6034cf5fffd42c541047f72e",
         "Name": "item_equipment_rig_umka_m33",
         "AllowADS": true,
@@ -120,6 +128,7 @@
         "TemplateType": "gear"
     },
     "5e4abc1f86f774069619fbaa": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e4abc1f86f774069619fbaa",
         "Name": "item_equipment_rig_bankrobber",
         "AllowADS": true,
@@ -135,6 +144,7 @@
         "TemplateType": "gear"
     },
     "5ab8dab586f77441cd04f2a2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ab8dab586f77441cd04f2a2",
         "Name": "wartech_mk3",
         "AllowADS": true,
@@ -150,6 +160,7 @@
         "TemplateType": "gear"
     },
     "59e7643b86f7742cbf2c109a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "59e7643b86f7742cbf2c109a",
         "Name": "wartech_vest",
         "AllowADS": true,
@@ -165,6 +176,7 @@
         "TemplateType": "gear"
     },
     "5fd4c4fa16cac650092f6771": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5fd4c4fa16cac650092f6771",
         "Name": "item_equipment_rig_idea",
         "AllowADS": true,
@@ -180,6 +192,7 @@
         "TemplateType": "gear"
     },
     "5fd4c5477a8d854fa0105061": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5fd4c5477a8d854fa0105061",
         "Name": "item_equipment_rig_ctactical",
         "AllowADS": true,
@@ -195,6 +208,7 @@
         "TemplateType": "gear"
     },
     "592c2d1a86f7746dbe2af32a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "592c2d1a86f7746dbe2af32a",
         "Name": "ana_tactical",
         "AllowADS": true,
@@ -210,6 +224,7 @@
         "TemplateType": "gear"
     },
     "5b44c8ea86f7742d1627baf1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b44c8ea86f7742d1627baf1",
         "Name": "item_equipment_rig_commando",
         "AllowADS": true,
@@ -225,6 +240,7 @@
         "TemplateType": "gear"
     },
     "5e4abfed86f77406a2713cf7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e4abfed86f77406a2713cf7",
         "Name": "item_equipment_rig_tarzan",
         "AllowADS": true,
@@ -240,6 +256,7 @@
         "TemplateType": "gear"
     },
     "5fd4c60f875c30179f5d04c2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5fd4c60f875c30179f5d04c2",
         "Name": "item_equipment_rig_bssmk1",
         "AllowADS": true,
@@ -255,6 +272,7 @@
         "TemplateType": "gear"
     },
     "5f5f41f56760b4138443b352": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5f5f41f56760b4138443b352",
         "Name": "item_equipment_rig_thunderbolt",
         "AllowADS": true,
@@ -270,6 +288,7 @@
         "TemplateType": "gear"
     },
     "5929a2a086f7744f4b234d43": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5929a2a086f7744f4b234d43",
         "Name": "bear_rig_6h112",
         "AllowADS": true,
@@ -285,6 +304,7 @@
         "TemplateType": "gear"
     },
     "5e9db13186f7742f845ee9d3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e9db13186f7742f845ee9d3",
         "Name": "item_equipment_rig_bearing",
         "AllowADS": true,
@@ -300,6 +320,7 @@
         "TemplateType": "gear"
     },
     "5d5d85c586f774279a21cbdb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d5d85c586f774279a21cbdb",
         "Name": "item_equipment_rig_d3crx",
         "AllowADS": true,
@@ -315,6 +336,7 @@
         "TemplateType": "gear"
     },
     "5d5d8ca986f7742798716522": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d5d8ca986f7742798716522",
         "Name": "item_equipment_rig_micro",
         "AllowADS": true,
@@ -330,6 +352,7 @@
         "TemplateType": "gear"
     },
     "6034d0230ca681766b6a0fb5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6034d0230ca681766b6a0fb5",
         "Name": "item_equipment_rig_cs_assault",
         "AllowADS": true,
@@ -345,6 +368,7 @@
         "TemplateType": "gear"
     },
     "63611865ba5b90db0c0399d1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "63611865ba5b90db0c0399d1",
         "Name": "item_equipment_rig_boss_zryachi",
         "AllowADS": true,
@@ -360,6 +384,7 @@
         "TemplateType": "gear"
     },
     "6040dd4ddcf9592f401632d2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6040dd4ddcf9592f401632d2",
         "Name": "item_equipment_rig_azimut_surpat",
         "AllowADS": true,
@@ -375,6 +400,7 @@
         "TemplateType": "gear"
     },
     "5c0e9f2c86f77432297fe0a3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e9f2c86f77432297fe0a3",
         "Name": "item_equipment_rig_commando_black",
         "AllowADS": true,
@@ -390,6 +416,7 @@
         "TemplateType": "gear"
     },
     "60a6220e953894617404b00a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "60a6220e953894617404b00a",
         "Name": "item_equipment_rig_sprofi_recon",
         "AllowADS": true,
@@ -405,6 +432,7 @@
         "TemplateType": "gear"
     },
     "60a621c49c197e4e8c4455e6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "60a621c49c197e4e8c4455e6",
         "Name": "item_equipment_rig_sprofi_mk2_ak",
         "AllowADS": true,
@@ -420,6 +448,7 @@
         "TemplateType": "gear"
     },
     "64be7095047e826eae02b0c1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64be7095047e826eae02b0c1",
         "Name": "item_equipment_rig_rscr_zulu",
         "AllowADS": true,
@@ -435,6 +464,7 @@
         "TemplateType": "gear"
     },
     "64be7110bf597ba84a0a41ea": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64be7110bf597ba84a0a41ea",
         "Name": "item_equipment_rig_chicom",
         "AllowADS": true,

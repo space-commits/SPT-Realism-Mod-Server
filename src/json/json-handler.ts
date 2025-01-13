@@ -367,7 +367,7 @@ export class ItemStatHandler {
         }
     }
 
-    public async processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'put_new_stuff_here')) {
+    public async processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'templates', 'user_templates')) {
         try {
             const files = await readdir(folderPath);
             for (const file of files) {
@@ -381,16 +381,16 @@ export class ItemStatHandler {
                     const jsonData = JSON.parse(data);
 
                     for (let i in jsonData) {
-                        if (jsonData[i].WeapType !== undefined || jsonData[i].TemplateType == "gun") {
+                        if (jsonData[i].WeapType !== undefined || jsonData[i].$type.includes("gun")) {
                             this.weapPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].ModType !== undefined || jsonData[i].TemplateType == "mod") {
+                        if (jsonData[i].ModType !== undefined || jsonData[i].$type.includes("weaponmod")) {
                             this.modPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].TemplateType == "gear") {
+                        if (jsonData[i].$type.includes("gear")) {
                             this.gearPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].TemplateType == "ammo") {
+                        if (jsonData[i].$type.includes("ammo")) {
                             this.ammoPusherHelper(jsonData[i], this.itemDB());
                         }
                     }

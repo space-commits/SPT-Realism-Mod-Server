@@ -1,5 +1,6 @@
 {
     "644a3df63b0b6f03e101e065": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "644a3df63b0b6f03e101e065",
         "Name": "tactical_all_bemeyers_mawl_c1_plus",
         "ModType": "",
@@ -9,9 +10,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59d790f486f77403cb06aec6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d790f486f77403cb06aec6",
         "Name": "flashlight_armytek_predator_pro_v3_xhp35_hi",
         "ModType": "",
@@ -21,9 +24,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57d17c5e2459775a5c57d17d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57d17c5e2459775a5c57d17d",
         "Name": "flashlight_ultrafire_WF-501B",
         "ModType": "",
@@ -33,9 +38,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a800961159bd4315e3a1657": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a800961159bd4315e3a1657",
         "Name": "tactical_all_glock_gl_21_vis_lam",
         "ModType": "",
@@ -45,9 +52,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57fd23e32459772d0805bcf1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57fd23e32459772d0805bcf1",
         "Name": "tactical_all_holosun_ls321",
         "ModType": "",
@@ -57,9 +66,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "544909bb4bdc2d6f028b4577": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "544909bb4bdc2d6f028b4577",
         "Name": "tactical_all_insight_anpeq15",
         "ModType": "",
@@ -69,9 +80,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d10b49bd7ad1a1a560708b0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d10b49bd7ad1a1a560708b0",
         "Name": "tactical_all_insight_anpeq2",
         "ModType": "",
@@ -81,9 +94,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c06595c0db834001a66af6c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c06595c0db834001a66af6c",
         "Name": "tactical_all_insight_la5",
         "ModType": "",
@@ -93,9 +108,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "626becf9582c3e319310b837": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "626becf9582c3e319310b837",
         "Name": "tactical_all_insight_wmx200",
         "ModType": "",
@@ -105,9 +122,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cc9c20cd7f00c001336c65d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc9c20cd7f00c001336c65d",
         "Name": "tactical_all_ncstar_tactical_blue_laser",
         "ModType": "",
@@ -117,9 +136,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6272370ee4013c5d7e31f418": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6272370ee4013c5d7e31f418",
         "Name": "tactical_all_olight_baldr_pro",
         "ModType": "",
@@ -129,9 +150,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6272379924e29f06af4d5ecb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6272379924e29f06af4d5ecb",
         "Name": "tactical_all_olight_baldr_pro_tan",
         "ModType": "",
@@ -141,9 +164,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d2369418abbc306c62e0c80": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2369418abbc306c62e0c80",
         "Name": "tactical_all_steiner_9021_dbal_pl",
         "ModType": "",
@@ -153,9 +178,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b07dd285acfc4001754240d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b07dd285acfc4001754240d",
         "Name": "tactical_all_steiner_las_tac_2",
         "ModType": "",
@@ -165,9 +192,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "56def37dd2720bec348b456a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56def37dd2720bec348b456a",
         "Name": "tactical_all_surefire_x400_vis_laser",
         "ModType": "",
@@ -177,9 +206,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a7b483fe899ef0016170d15": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7b483fe899ef0016170d15",
         "Name": "tactical_all_surefire_xc1",
         "ModType": "",
@@ -189,9 +220,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61605d88ffa6e502ac5e7eeb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61605d88ffa6e502ac5e7eeb",
         "Name": "tactical_all_wilcox_raptar_es",
         "ModType": "",
@@ -201,9 +234,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a5f1ce64f39f90b401987bc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a5f1ce64f39f90b401987bc",
         "Name": "tactical_all_zenit_2irs_kleh_lam",
         "ModType": "",
@@ -213,9 +248,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560d657b4bdc2da74d8b4572": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560d657b4bdc2da74d8b4572",
         "Name": "tactical_all_zenit_2p_kleh_vis_laser",
         "ModType": "",
@@ -225,9 +262,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b3a337e5acfc4704b4a19a0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3a337e5acfc4704b4a19a0",
         "Name": "tactical_all_zenit_2u_kleh",
         "ModType": "",
@@ -237,9 +276,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5952732e2216398b5abda2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5952732e2216398b5abda2",
         "Name": "tactical_all_zenit_perst_3",
         "ModType": "",
@@ -249,9 +290,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c079ed60db834001a66b372": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c079ed60db834001a66b372",
         "Name": "tactical_tt_dlp_tactical_precision_laser_sight",
         "ModType": "",
@@ -261,9 +304,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "646f62fee779812413011ab7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "646f62fee779812413011ab7",
         "Name": "flashlight_base_zenit_2ds",
         "ModType": "",

@@ -1,5 +1,6 @@
 {
     "651450ce0e00edc794068371": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "651450ce0e00edc794068371",
         "Name": "weapon_tochmash_sr3m_9x39",
         "WeapType": "",
@@ -42,9 +43,11 @@
         "MinChamberSpeed": 0.7,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
-        "BaseFixSpeed": 1
+        "BaseFixSpeed": 1,
+        "TemplateType": "gun"
     },
     "644674a13d52156624001fbc": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "644674a13d52156624001fbc",
         "Name": "weapon_kbp_9a91_9x39",
         "WeapType": "",
@@ -87,9 +90,11 @@
         "MinChamberSpeed": 0.7,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
-        "BaseFixSpeed": 1
+        "BaseFixSpeed": 1,
+        "TemplateType": "gun"
     },
     "645e0c6b3b381ede770e1cc9": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "645e0c6b3b381ede770e1cc9",
         "Name": "weapon_kbp_vsk94_9x39",
         "WeapType": "",
@@ -132,9 +137,11 @@
         "MinChamberSpeed": 0.7,
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
-        "BaseFixSpeed": 1
+        "BaseFixSpeed": 1,
+        "TemplateType": "gun"
     },
     "57c44b372459772d2b39b8ce": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "57c44b372459772d2b39b8ce",
         "Name": "weapon_tochmash_val_9x39",
         "WeapType": "",
@@ -178,9 +185,11 @@
         "BaseChamberCheckSpeed": 0.85,
         "BaseFixSpeed": 0.9,
         "OffsetRotation": 0.005,
-        "RecoilIntensity": 0.145
+        "RecoilIntensity": 0.145,
+        "TemplateType": "gun"
     },
     "57838ad32459774a17445cd2": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "57838ad32459774a17445cd2",
         "Name": "weapon_tochmash_vss_9x39",
         "WeapType": "",
@@ -224,9 +233,11 @@
         "BaseChamberCheckSpeed": 0.85,
         "BaseFixSpeed": 0.9,
         "OffsetRotation": 0.0049,
-        "RecoilIntensity": 0.143
+        "RecoilIntensity": 0.143,
+        "TemplateType": "gun"
     },
     "5c46fbd72e2216398b5a8c9c": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5c46fbd72e2216398b5a8c9c",
         "Name": "weapon_izhmash_svd_s_762x54",
         "WeapType": "",
@@ -270,9 +281,11 @@
         "BaseChamberCheckSpeed": 1.7,
         "BaseFixSpeed": 1.7,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.23
+        "RecoilIntensity": 0.23,
+        "TemplateType": "gun"
     },
     "6176aca650224f204c1da3fb": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "6176aca650224f204c1da3fb",
         "Name": "weapon_hk_g28_762x51",
         "WeapType": "",
@@ -316,9 +329,11 @@
         "BaseChamberCheckSpeed": 0.9,
         "BaseFixSpeed": 0.85,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.23
+        "RecoilIntensity": 0.23,
+        "TemplateType": "gun"
     },
     "5df8ce05b11454561e39243b": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5df8ce05b11454561e39243b",
         "Name": "weapon_kac_sr25_762x51",
         "WeapType": "DI",
@@ -362,9 +377,11 @@
         "BaseChamberCheckSpeed": 0.9,
         "BaseFixSpeed": 0.9,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.23
+        "RecoilIntensity": 0.23,
+        "TemplateType": "gun"
     },
     "5a367e5dc4a282000e49738f": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5a367e5dc4a282000e49738f",
         "Name": "weapon_remington_r11_rsass_762x51",
         "WeapType": "DI",
@@ -408,9 +425,11 @@
         "BaseChamberCheckSpeed": 1.5,
         "BaseFixSpeed": 1.2,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.23
+        "RecoilIntensity": 0.23,
+        "TemplateType": "gun"
     },
     "5fc22d7c187fea44d52eda44": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5fc22d7c187fea44d52eda44",
         "Name": "weapon_sword_int_mk_18_mjolnir_86x70",
         "WeapType": "",
@@ -455,9 +474,11 @@
         "BaseChamberCheckSpeed": 3,
         "BaseFixSpeed": 3,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.23
+        "RecoilIntensity": 0.23,
+        "TemplateType": "gun"
     },
     "5f2a9575926fd9352339381f": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5f2a9575926fd9352339381f",
         "Name": "weapon_kel_tec_rfb_762x51",
         "WeapType": "",
@@ -501,9 +522,11 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 0.9,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.23
+        "RecoilIntensity": 0.23,
+        "TemplateType": "gun"
     },
     "5aafa857e5b5b00018480968": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5aafa857e5b5b00018480968",
         "Name": "weapon_springfield_m1a_762x51",
         "WeapType": "",

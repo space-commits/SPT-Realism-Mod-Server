@@ -1067,6 +1067,7 @@ class Ammo {
                 serverItem._props.ammoAccr = 5;
                 serverItem._props.ammoHear = 0;
                 serverItem._props.ammoRec = -2.5;
+                serverItem._props.ammoRec = -2.5;
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.1;
                     serverItem._props.MisfireChance = 0;

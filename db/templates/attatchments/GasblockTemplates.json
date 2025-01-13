@@ -1,5 +1,6 @@
 {
     "5bb20dcad4351e3bac1212da": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20dcad4351e3bac1212da",
         "Name": "gas_block_416_hk_416a5_std",
         "ModType": "",
@@ -19,9 +20,11 @@
         "Weight": 0.141,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -18
+        "Flash": -18,
+        "TemplateType": "weaponmod"
     },
     "61702f1b67085e45ef140b26": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61702f1b67085e45ef140b26",
         "Name": "gas_block_417_hk_adjustable_5_position_gas_block",
         "ModType": "",
@@ -41,9 +44,11 @@
         "Weight": 0.17,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -20
+        "Flash": -20,
+        "TemplateType": "weaponmod"
     },
     "5a01ad4786f77450561fda02": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a01ad4786f77450561fda02",
         "Name": "gas_block_ak_custom_ak_cut",
         "ModType": "",
@@ -63,9 +68,11 @@
         "Weight": 0.12,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -10
+        "Flash": -10,
+        "TemplateType": "weaponmod"
     },
     "649ec107961514b22506b10c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "649ec107961514b22506b10c",
         "Name": "gas_block_ak12_izhmash_ak12_std",
         "ModType": "",
@@ -84,9 +91,11 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59c6633186f7740cf0493bb9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59c6633186f7740cf0493bb9",
         "Name": "gas_block_ak_izhmash_ak74_std",
         "ModType": "",
@@ -105,9 +114,11 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59d64ec286f774171d1e0a42": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d64ec286f774171d1e0a42",
         "Name": "gas_block_ak_izhmash_akm_std",
         "ModType": "",
@@ -126,9 +137,11 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59ccd11386f77428f24a488f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59ccd11386f77428f24a488f",
         "Name": "gas_block_ak_izhmash_pp-19-01_std",
         "ModType": "",
@@ -147,9 +160,11 @@
         "Ergonomics": 0,
         "Weight": 0.11,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59e649f986f77411d949b246": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e649f986f77411d949b246",
         "Name": "gas_block_ak_molot_vepr_km_vpo_136",
         "ModType": "",
@@ -168,9 +183,11 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628b8d83717774443b15e248": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628b8d83717774443b15e248",
         "Name": "gas_block_ak_sag_mk_21",
         "ModType": "",
@@ -190,9 +207,11 @@
         "Weight": 0.1,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -20
+        "Flash": -20,
+        "TemplateType": "weaponmod"
     },
     "59ccfdba86f7747f2109a587": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59ccfdba86f7747f2109a587",
         "Name": "gas_block_ak_ultimak_m1b",
         "ModType": "",
@@ -211,9 +230,11 @@
         "Ergonomics": 5,
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b237e425acfc4771e1be0b6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b237e425acfc4771e1be0b6",
         "Name": "gas_block_ak_troy_top_bottom_vent_hole_combo",
         "ModType": "",
@@ -233,9 +254,11 @@
         "Weight": 0.55,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -17
+        "Flash": -17,
+        "TemplateType": "weaponmod"
     },
     "5cf656f2d7f00c06585fb6eb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf656f2d7f00c06585fb6eb",
         "Name": "gas_block_ak_vs_vs_33c",
         "ModType": "",
@@ -255,9 +278,11 @@
         "Weight": 0.385,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -15
+        "Flash": -15,
+        "TemplateType": "weaponmod"
     },
     "5d4aab30a4b9365435358c55": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d4aab30a4b9365435358c55",
         "Name": "gas_block_ak_vs_vs_33c_wht",
         "ModType": "",
@@ -277,9 +302,11 @@
         "Weight": 0.385,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -15
+        "Flash": -15,
+        "TemplateType": "weaponmod"
     },
     "628a83c29179c324ed269508": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628a83c29179c324ed269508",
         "Name": "gas_block_akp_slr_ak_railed_gas_tube",
         "ModType": "",
@@ -299,9 +326,11 @@
         "Weight": 0.48,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -18
+        "Flash": -18,
+        "TemplateType": "weaponmod"
     },
     "59d36a0086f7747e673f3946": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d36a0086f7747e673f3946",
         "Name": "gas_block_aksu_izhmash_aksu_std",
         "ModType": "",
@@ -320,9 +349,11 @@
         "Ergonomics": 0,
         "Weight": 0.03,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6065dc8a132d4d12c81fd8e3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6065dc8a132d4d12c81fd8e3",
         "Name": "gas_block_ar10_cmmg_low_profile",
         "ModType": "",
@@ -344,9 +375,11 @@
         "Weight": 0.095,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 5
+        "Flash": 5,
+        "TemplateType": "weaponmod"
     },
     "5dfa3d45dfc58d14537c20b0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfa3d45dfc58d14537c20b0",
         "Name": "gas_block_ar10_kac_low_profile",
         "ModType": "",
@@ -368,9 +401,11 @@
         "Weight": 0.049,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -5
+        "Flash": -5,
+        "TemplateType": "weaponmod"
     },
     "5a34fbadc4a28200741e230a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a34fbadc4a28200741e230a",
         "Name": "gas_block_ar10_jp_jpgs6",
         "ModType": "",
@@ -396,9 +431,11 @@
         "Weight": 0.218,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -25
+        "Flash": -25,
+        "TemplateType": "weaponmod"
     },
     "5ae30e795acfc408fb139a0b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae30e795acfc408fb139a0b",
         "Name": "gas_block_ar15_colt_m4_front_sight_gas_block_std",
         "ModType": "",
@@ -423,9 +460,11 @@
         "Ergonomics": 0,
         "Weight": 0.136,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "56eabcd4d2720b66698b4574": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56eabcd4d2720b66698b4574",
         "Name": "gas_block_ar15_dd_mk12_low_profile",
         "ModType": "",
@@ -447,9 +486,11 @@
         "Weight": 0.053,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "63d3ce281fe77d0f2801859e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63d3ce281fe77d0f2801859e",
         "Name": "gas_block_ar15_ba_lo_pro",
         "ModType": "",
@@ -471,9 +512,11 @@
         "Weight": 0.05,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -10
+        "Flash": -10,
+        "TemplateType": "weaponmod"
     },
     "5d00ec68d7ad1a04a067e5be": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d00ec68d7ad1a04a067e5be",
         "Name": "gas_block_ar15_jp_jpgs5b",
         "ModType": "",
@@ -495,9 +538,11 @@
         "Convergence": -10,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -25
+        "Flash": -25,
+        "TemplateType": "weaponmod"
     },
     "56ea8d2fd2720b7c698b4570": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56ea8d2fd2720b7c698b4570",
         "Name": "gas_block_ar15_windham_weaponry_rail_gas_block",
         "ModType": "",
@@ -522,9 +567,11 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622b327b267a1b13a44abea3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622b327b267a1b13a44abea3",
         "Name": "gas_block_g36_hk_std",
         "ModType": "",
@@ -544,9 +591,11 @@
         "Weight": 0.06,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -15
+        "Flash": -15,
+        "TemplateType": "weaponmod"
     },
     "5fbc210bf24b94483f726481": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbc210bf24b94483f726481",
         "Name": "gas_block_mcx_sig_mcx_std",
         "ModType": "",
@@ -566,9 +615,11 @@
         "Weight": 0.049,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -20
+        "Flash": -20,
+        "TemplateType": "weaponmod"
     },
     "5fc2360f900b1d5091531e19": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc2360f900b1d5091531e19",
         "Name": "gas_block_mk18_sword_mjolnir_std",
         "ModType": "",
@@ -587,9 +638,11 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c471c842e221615214259b5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471c842e221615214259b5",
         "Name": "gas_block_svd_izhmash_svd_s_std",
         "ModType": "",
@@ -608,9 +661,11 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5039be2e221602b177c9ff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5039be2e221602b177c9ff",
         "Name": "gas_block_vepr_molot_vpo-101_std",
         "ModType": "",
@@ -629,9 +684,11 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "634f02d7517ccc8a960fc744": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f02d7517ccc8a960fc744",
         "Name": "gas_block_sks_toz_sks_std",
         "ModType": "",
@@ -651,9 +708,11 @@
         "Weight": 0.12,
         "MalfChance": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "634f036a517ccc8a960fc746": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f036a517ccc8a960fc746",
         "Name": "gas_block_sks_molot_op_sks_std",
         "ModType": "",
@@ -673,9 +732,11 @@
         "Weight": 0.12,
         "MalfChance": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "652910bc24cbe3c74a05e5b9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "652910bc24cbe3c74a05e5b9",
         "Name": "gas_block_mcx_sig_adjustable_gas_piston",
         "ModType": "",

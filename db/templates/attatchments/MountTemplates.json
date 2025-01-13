@@ -1,5 +1,6 @@
 {
     "668ea3f68117e4968b0cff4a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668ea3f68117e4968b0cff4a",
         "Name": "mount_uzi_pro_iwi_rail_adapter",
         "ModType": "",
@@ -8,9 +9,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "Price": 0,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "TemplateType": "weaponmod"
     },
     "6698c8f4710a4525fe0e9e57": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c8f4710a4525fe0e9e57",
         "Name": "mount_all_iwi_universal_rail",
         "ModType": "",
@@ -19,9 +22,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "Price": 0,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "TemplateType": "weaponmod"
     },
     "6698c90829e062525d0ad8ad": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c90829e062525d0ad8ad",
         "Name": "mount_uzi_stormwerkz_top_cover_rail",
         "ModType": "mount",
@@ -30,9 +35,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "Price": 0,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "TemplateType": "weaponmod"
     },
     "66992f7d9950f5f4cd0602a8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66992f7d9950f5f4cd0602a8",
         "Name": "mount_uzi_stormwerkz_lower_handguard_rail",
         "ModType": "",
@@ -41,9 +48,11 @@
         "ConflictingItems": [],
         "Weight": 0.025,
         "Price": 0,
-        "LoyaltyLevel": 2
+        "LoyaltyLevel": 2,
+        "TemplateType": "weaponmod"
     },
     "6492c6dd60fdb10a020621a2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6492c6dd60fdb10a020621a2",
         "Name": "mount_pk_zenit_b50_rack_16mm",
         "ModType": "mount",
@@ -52,9 +61,11 @@
         "ConflictingItems": [],
         "Weight": 0.125,
         "Price": 0,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "TemplateType": "weaponmod"
     },
     "6492c8bba6e68e06fb0bae87": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6492c8bba6e68e06fb0bae87",
         "Name": "mount_pk_zenit_b50_rack_66mm",
         "ModType": "mount",
@@ -63,10 +74,12 @@
         "ConflictingItems": [],
         "Weight": 0.135,
         "Price": 0,
-        "LoyaltyLevel": 3
+        "LoyaltyLevel": 3,
+        "TemplateType": "weaponmod"
     },
     "641dc35e19604f20c800be18": {
-        "ItemID": "mount_svt40_toz_tokarev_pu_base",
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "641dc35e19604f20c800be18",
         "Name": "mount_svt40_toz_tokarev_pu_base",
         "ModType": "mount",
         "Ergonomics": 0,
@@ -74,9 +87,11 @@
         "ConflictingItems": [],
         "Weight": 0.02,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "57c69dd424597774c03b7bbc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c69dd424597774c03b7bbc",
         "Name": "mount_all_lobaev_dvl_std",
         "ModType": "mount",
@@ -85,9 +100,11 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c86592b2e2216000e69e77c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c86592b2e2216000e69e77c",
         "Name": "mount_all_iea_kh_f_34mm",
         "ModType": "mount",
@@ -96,9 +113,11 @@
         "ConflictingItems": [],
         "Weight": 0.199,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "58a5c12e86f7745d585a2b9e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58a5c12e86f7745d585a2b9e",
         "Name": "mount_mpx_4_inch_rail",
         "ModType": "foregrip_adapter",
@@ -107,9 +126,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a33b652c4a28232996e407c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a33b652c4a28232996e407c",
         "Name": "mount_all_trijicon_ac32062",
         "ModType": "mount",
@@ -118,9 +139,11 @@
         "ConflictingItems": [],
         "Weight": 0.017,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61965d9058ef8c428c287e0d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61965d9058ef8c428c287e0d",
         "Name": "mount_mk16_pws_srx",
         "ModType": "",
@@ -139,9 +162,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 4,
-        "Handling": 4
+        "Handling": 4,
+        "TemplateType": "weaponmod"
     },
     "5eeb2ff5ea4f8b73c827350b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5eeb2ff5ea4f8b73c827350b",
         "Name": "mount_590_bat_rb7m",
         "ModType": "mount",
@@ -150,9 +175,11 @@
         "ConflictingItems": [],
         "Weight": 0.45,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "616584766ef05c2ce828ef57": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "616584766ef05c2ce828ef57",
         "Name": "mount_all_aimpoint_qrp2_mount",
         "ModType": "mount",
@@ -161,9 +188,11 @@
         "ConflictingItems": [],
         "Weight": 0.098,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5649a2464bdc2d91118b45a8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649a2464bdc2d91118b45a8",
         "Name": "mount_all_ncstar_mpr45",
         "ModType": "mount",
@@ -172,9 +201,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59db7eed86f77461f8380365": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59db7eed86f77461f8380365",
         "Name": "mount_all_trijicon_ta51",
         "ModType": "mount",
@@ -183,9 +214,11 @@
         "ConflictingItems": [],
         "Weight": 0.113,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a33bab6c4a28200741e22f8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a33bab6c4a28200741e22f8",
         "Name": "mount_acog_trijicon_rm35",
         "ModType": "mount",
@@ -194,9 +227,11 @@
         "ConflictingItems": [],
         "Weight": 0.02,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65f1b2a5c14a07890801fc70": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65f1b2a5c14a07890801fc70",
         "Name": "mount_base_rsr_akr_1913_top_railed_mount",
         "ModType": "mount",
@@ -205,9 +240,11 @@
         "ConflictingItems": [],
         "Weight": 0.067,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65f1b1176dbd6c5ba2082eed": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65f1b1176dbd6c5ba2082eed",
         "Name": "mount_dovetail_rsr_akr_1913_railed_mount",
         "ModType": "mount",
@@ -216,9 +253,11 @@
         "ConflictingItems": [],
         "Weight": 0.099,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57ffaea724597779f52b3a4d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57ffaea724597779f52b3a4d",
         "Name": "mount_all_zenit_b12",
         "ModType": "mount",
@@ -227,9 +266,11 @@
         "ConflictingItems": [],
         "Weight": 0.087,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59eb7ebe86f7740b373438ce": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59eb7ebe86f7740b373438ce",
         "Name": "mount_vss_toz_6p29m",
         "ModType": "foregrip_adapter",
@@ -243,9 +284,11 @@
         "HeatFactor": 0.98,
         "CoolFactor": 1.02,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5dfe14f30b92095fd441edaf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfe14f30b92095fd441edaf",
         "Name": "mount_7mm_etmi_019",
         "ModType": "mount",
@@ -254,9 +297,11 @@
         "ConflictingItems": [],
         "Weight": 0.053,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5926dad986f7741f82604363": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926dad986f7741f82604363",
         "Name": "mount_hk_mfi_universal",
         "ModType": "mount",
@@ -265,9 +310,11 @@
         "ConflictingItems": [],
         "Weight": 0.071,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c11046cd174af02a012e42b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c11046cd174af02a012e42b",
         "Name": "nvg_wilcox_pvs7_adapter",
         "ModType": "",
@@ -276,9 +323,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57ffb0062459777a045af529": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57ffb0062459777a045af529",
         "Name": "mount_all_zenit_b18",
         "ModType": "mount",
@@ -287,9 +336,11 @@
         "ConflictingItems": [],
         "Weight": 0.053,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57a3459f245977764a01f703": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57a3459f245977764a01f703",
         "Name": "mount_vss_zenit_b3",
         "ModType": "mount",
@@ -298,9 +349,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "616554fe50224f204c1da2aa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "616554fe50224f204c1da2aa",
         "Name": "mount_all_aimpoint_h2_weaver",
         "ModType": "mount",
@@ -309,9 +362,11 @@
         "ConflictingItems": [],
         "Weight": 0.015,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d48a634bdc2d8b2f8b456a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d48a634bdc2d8b2f8b456a",
         "Name": "mount_all_custom_top_rail_13",
         "ModType": "mount",
@@ -320,9 +375,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d0a29fed7ad1a002769ad08": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d0a29fed7ad1a002769ad08",
         "Name": "mount_all_kmz_1p69_mount",
         "ModType": "mount",
@@ -346,9 +403,11 @@
         ],
         "Weight": 0.5,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e569a132642e66b0b68015c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e569a132642e66b0b68015c",
         "Name": "mount_svd_caa_drg_l_1",
         "ModType": "",
@@ -357,9 +416,11 @@
         "ConflictingItems": [],
         "Weight": 0.075,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622b3c081b89c677a33bcda6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622b3c081b89c677a33bcda6",
         "Name": "mount_g36_hk_std",
         "ModType": "mount",
@@ -368,9 +429,11 @@
         "ConflictingItems": [],
         "Weight": 0.312,
         "LoyaltyLevel": 0,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c7d55f52e221644f31bff6a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7d55f52e221644f31bff6a",
         "Name": "mount_all_aimpoint_lrp_mount",
         "ModType": "mount",
@@ -379,9 +442,11 @@
         "ConflictingItems": [],
         "Weight": 0.075,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a37ca54c4a282000d72296a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a37ca54c4a282000d72296a",
         "Name": "mount_all_jp_enterprises_ftsm_30mm",
         "ModType": "mount",
@@ -390,9 +455,11 @@
         "ConflictingItems": [],
         "Weight": 0.194,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "58a56f8d86f774651579314c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58a56f8d86f774651579314c",
         "Name": "mount_mpx_2_inch_rail",
         "ModType": "",
@@ -401,9 +468,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57d17e212459775a1179a0f5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57d17e212459775a1179a0f5",
         "Name": "mount_all_noname_25mm_ring",
         "ModType": "",
@@ -412,9 +481,11 @@
         "ConflictingItems": [],
         "Weight": 0.085,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "58d39d3d86f77445bb794ae7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58d39d3d86f77445bb794ae7",
         "Name": "mount_all_aimpoint_h1_t1_weaver",
         "ModType": "mount",
@@ -423,9 +494,11 @@
         "ConflictingItems": [],
         "Weight": 0.015,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a1ead28fcdbcb001912fa9f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a1ead28fcdbcb001912fa9f",
         "Name": "mount_all_unv_dloc_ird",
         "ModType": "mount",
@@ -434,9 +507,11 @@
         "ConflictingItems": [],
         "Weight": 0.113,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b800ed086f7747baf6e2f9e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b800ed086f7747baf6e2f9e",
         "Name": "mount_hex_hexagon_short",
         "ModType": "",
@@ -445,9 +520,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61f804acfcba9556ea304cb8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61f804acfcba9556ea304cb8",
         "Name": "mount_mp18_izhmash_ris",
         "ModType": "mount",
@@ -456,9 +533,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "576a7c512459771e796e0e17": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "576a7c512459771e796e0e17",
         "Name": "mount_mp443_zenit_b8",
         "ModType": "",
@@ -467,9 +546,11 @@
         "ConflictingItems": [],
         "Weight": 0.043,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a7893c1c585673f2b5c374d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7893c1c585673f2b5c374d",
         "Name": "mount_870_utg_mtu028sg",
         "ModType": "mount",
@@ -478,9 +559,11 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a33b2c9c4a282000c5a9511": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a33b2c9c4a282000c5a9511",
         "Name": "mount_all_trijicon_rm33",
         "ModType": "mount",
@@ -489,9 +572,11 @@
         "ConflictingItems": [],
         "Weight": 0.017,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5dff77c759400025ea5150cf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dff77c759400025ea5150cf",
         "Name": "mount_all_utg_rings_25_4mm",
         "ModType": "mount",
@@ -500,9 +585,11 @@
         "ConflictingItems": [],
         "Weight": 0.19,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b800ebc86f774394e230a90": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b800ebc86f774394e230a90",
         "Name": "mount_hex_hexagon_medium",
         "ModType": "foregrip_adapter",
@@ -511,9 +598,11 @@
         "ConflictingItems": [],
         "Weight": 0.075,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62444cb99f47004c781903eb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62444cb99f47004c781903eb",
         "Name": "mount_g36_hk_bottom_rail_std",
         "ModType": "foregrip_adapter",
@@ -522,9 +611,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a7ad4af51dfba0013379717": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7ad4af51dfba0013379717",
         "Name": "mount_glock_aimtech_base_glock",
         "ModType": "mount",
@@ -533,9 +624,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de8fc0b205ddc616a6bc51b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8fc0b205ddc616a6bc51b",
         "Name": "mount_mp9_bt_mp9_side_rail",
         "ModType": "",
@@ -544,9 +637,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de8fbf2b74cd90030650c79": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8fbf2b74cd90030650c79",
         "Name": "mount_mp9_bt_mp9_bottom_rail",
         "ModType": "foregrip_adapter",
@@ -555,9 +650,11 @@
         "ConflictingItems": [],
         "Weight": 0.09,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a27bad7c4a282000b15184b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a27bad7c4a282000b15184b",
         "Name": "mount_sr1mp_tochmash_std_4_rail",
         "ModType": "mount",
@@ -566,9 +663,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "593d1fa786f7746da62d61ac": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "593d1fa786f7746da62d61ac",
         "Name": "mount_sks_utg_socom_rail",
         "ModType": "mount",
@@ -577,9 +676,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622efdf8ec80d870d349b4e5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622efdf8ec80d870d349b4e5",
         "Name": "mount_base_hensoldt_top_rail",
         "ModType": "mount",
@@ -588,9 +689,11 @@
         "ConflictingItems": [],
         "Weight": 0.015,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d0a29ead7ad1a0026013f27": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d0a29ead7ad1a0026013f27",
         "Name": "mount_dovetail_kmz_1p59_mount",
         "ModType": "mount",
@@ -611,9 +714,11 @@
         ],
         "Weight": 0.41,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a9fc7e6a2750c0032157184": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9fc7e6a2750c0032157184",
         "Name": "mount_vss_zenit_b3_combo",
         "ModType": "mount",
@@ -622,9 +727,11 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "625ed7c64d9b6612df732146": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "625ed7c64d9b6612df732146",
         "Name": "mount_m3_benelli_sport_top_rail",
         "ModType": "mount",
@@ -633,9 +740,11 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a27b281c4a28200741e1e52": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a27b281c4a28200741e1e52",
         "Name": "mount_sr1mp_tochmash_std_1_rail",
         "ModType": "mount",
@@ -644,9 +753,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfe7fb30db8340018089fed": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfe7fb30db8340018089fed",
         "Name": "mount_mr133_tactica_tula_12003",
         "ModType": "",
@@ -655,9 +766,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fc53954f8b6a877a729eaeb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc53954f8b6a877a729eaeb",
         "Name": "mount_ump_hk_bottom_rail_std",
         "ModType": "foregrip_adapter",
@@ -666,9 +779,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "591ee00d86f774592f7b841e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "591ee00d86f774592f7b841e",
         "Name": "mount_dovetail_aksion_kobra",
         "ModType": "mount",
@@ -677,9 +792,11 @@
         "ConflictingItems": [],
         "Weight": 0.043,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bc5a372d4351e44f824d17f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bc5a372d4351e44f824d17f",
         "Name": "mount_mosin_aim_sports_mng",
         "ModType": "mount",
@@ -688,9 +805,11 @@
         "ConflictingItems": [],
         "Weight": 0.074,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bbdb811d4351e45020113c7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bbdb811d4351e45020113c7",
         "Name": "mount_mosin_aim_sports_tri_rail",
         "ModType": "mount",
@@ -702,9 +821,11 @@
         ],
         "Weight": 0.18,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d48ebc4bdc2d8c2f8b456c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d48ebc4bdc2d8c2f8b456c",
         "Name": "mount_mr133_deltatech_sprut",
         "ModType": "",
@@ -713,9 +834,11 @@
         "ConflictingItems": [],
         "Weight": 0.096,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b8403a086f7747ff856f4e2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b8403a086f7747ff856f4e2",
         "Name": "mount_hex_hexagon_medium_red",
         "ModType": "",
@@ -724,9 +847,11 @@
         "ConflictingItems": [],
         "Weight": 0.075,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b3f7c005acfc4704b4a1de8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3f7c005acfc4704b4a1de8",
         "Name": "mount_kochetov_progress_pu_base",
         "ModType": "mount",
@@ -735,9 +860,11 @@
         "ConflictingItems": [],
         "Weight": 0.02,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b3f7bf05acfc433000ecf6b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3f7bf05acfc433000ecf6b",
         "Name": "mount_mosin_kochetov_mount",
         "ModType": "mount",
@@ -746,9 +873,11 @@
         "ConflictingItems": [],
         "Weight": 0.02,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e569a2e56edd02abe09f280": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e569a2e56edd02abe09f280",
         "Name": "mount_dovetail_caa_xd_rgl",
         "ModType": "mount",
@@ -772,9 +901,11 @@
         ],
         "Weight": 0.225,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "609a4b4fe2ff132951242d04": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "609a4b4fe2ff132951242d04",
         "Name": "mount_dovetail_arbalet_vpo_102",
         "ModType": "mount",
@@ -783,9 +914,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59c63b4486f7747afb151c1c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59c63b4486f7747afb151c1c",
         "Name": "mount_mp5sd_bt_tri_rail_ring",
         "ModType": "",
@@ -794,9 +927,11 @@
         "ConflictingItems": [],
         "Weight": 0.082,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c90c3622e221601da359851": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c90c3622e221601da359851",
         "Name": "mount_dovetail_zenit_b13v",
         "ModType": "mount",
@@ -810,9 +945,11 @@
         ],
         "Weight": 0.158,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622f02437762f55aaa68ac85": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622f02437762f55aaa68ac85",
         "Name": "mount_g36_hk_magwell_std",
         "ModType": "",
@@ -840,9 +977,11 @@
         ],
         "Weight": 0.02,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addc00b5acfc4001669f144": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addc00b5acfc4001669f144",
         "Name": "mount_m14_vltor_casv_14_rail",
         "ModType": "mount",
@@ -851,9 +990,11 @@
         "ConflictingItems": [],
         "Weight": 0.096,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62444cd3674028188b052799": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62444cd3674028188b052799",
         "Name": "mount_g36_hk_side_rail_std",
         "ModType": "",
@@ -862,9 +1003,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57ee59b42459771c7b045da5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57ee59b42459771c7b045da5",
         "Name": "mount_pp-91_rotor_43_kedr_ris",
         "ModType": "mount",
@@ -873,9 +1016,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c61a40d2e2216001403158d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c61a40d2e2216001403158d",
         "Name": "mount_dovetail_zenit_b13",
         "ModType": "mount",
@@ -888,9 +1033,11 @@
         ],
         "Weight": 0.175,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b84038986f774774913b0c1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b84038986f774774913b0c1",
         "Name": "mount_hex_hexagon_short_red",
         "ModType": "",
@@ -899,9 +1046,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57acb6222459771ec34b5cb0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57acb6222459771ec34b5cb0",
         "Name": "mount_dovetail_pilad_043_02",
         "ModType": "mount",
@@ -910,9 +1059,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addbffe5acfc4001714dfac": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbffe5acfc4001714dfac",
         "Name": "mount_m14_sage_m14dcsb_mount",
         "ModType": "mount",
@@ -921,9 +1072,11 @@
         "ConflictingItems": [],
         "Weight": 0.22,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a16b8a9fcdbcb00165aa6ca": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a16b8a9fcdbcb00165aa6ca",
         "Name": "nvg_norotos_tatm_universal",
         "ModType": "",
@@ -932,9 +1085,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "587e08ee245977446b4410cf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "587e08ee245977446b4410cf",
         "Name": "mount_sks_molot_op_sks_std",
         "ModType": "mount",
@@ -943,9 +1098,11 @@
         "ConflictingItems": [],
         "Weight": 0.02,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addbfd15acfc40015621bde": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbfd15acfc40015621bde",
         "Name": "mount_m14_amega_mounts_mini_scout_mount",
         "ModType": "mount",
@@ -954,9 +1111,11 @@
         "ConflictingItems": [],
         "Weight": 0.18,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b2389515acfc4771e1be0c0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b2389515acfc4771e1be0c0",
         "Name": "mount_all_burris_ar_p_e_p_r_30mm",
         "ModType": "mount",
@@ -965,9 +1124,11 @@
         "ConflictingItems": [],
         "Weight": 0.246,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "577d128124597739d65d0e56": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "577d128124597739d65d0e56",
         "Name": "mount_all_burris_fast_fire_weaver",
         "ModType": "mount",
@@ -976,9 +1137,11 @@
         "ConflictingItems": [],
         "Weight": 0.017,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a16b93dfcdbcbcae6687261": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a16b93dfcdbcbcae6687261",
         "Name": "nvg_norotos_dual_dovetail_mount",
         "ModType": "",
@@ -987,9 +1150,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fce0f9b55375d18a253eff2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fce0f9b55375d18a253eff2",
         "Name": "mount_vector_kriss_side_rail",
         "ModType": "",
@@ -998,9 +1163,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622f039199f4ea1a4d6c9a17": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622f039199f4ea1a4d6c9a17",
         "Name": "mount_g36_hk_magwell_ar15_conversion",
         "ModType": "",
@@ -1011,9 +1178,11 @@
         ],
         "Weight": 0.02,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "615d8d878004cc50514c3233": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8d878004cc50514c3233",
         "Name": "mount_all_b&t_acro_nar_mount_39mm",
         "ModType": "mount",
@@ -1024,9 +1193,11 @@
         ],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cc7012ae4a949001252b43e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc7012ae4a949001252b43e",
         "Name": "mount_p90_fn_effen_90_side_rail",
         "ModType": "mount",
@@ -1035,9 +1206,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622b3d5cf9cfc87d675d2de9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622b3d5cf9cfc87d675d2de9",
         "Name": "mount_g36_hk_extendable_folding_sight",
         "ModType": "mount",
@@ -1046,9 +1219,11 @@
         "ConflictingItems": [],
         "Weight": 0.453,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618b9643526131765025ab35": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618b9643526131765025ab35",
         "Name": "mount_all_geissele_super_precision_30mm",
         "ModType": "mount",
@@ -1059,9 +1234,11 @@
         ],
         "Weight": 0.194,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "619624b26db0f2477964e6b0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619624b26db0f2477964e6b0",
         "Name": "mount_usp_hk_match_compensator",
         "ModType": "counterWeight",
@@ -1079,9 +1256,11 @@
         ],
         "Weight": 0.34,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "619621a4de3cdf1d2614a7a7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619621a4de3cdf1d2614a7a7",
         "Name": "mount_usp_hk_elite_compensator",
         "ModType": "counterWeight",
@@ -1099,9 +1278,11 @@
         ],
         "Weight": 0.31,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6196255558ef8c428c287d1c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6196255558ef8c428c287d1c",
         "Name": "mount_usp_hk_usp_rail_adapter",
         "ModType": "",
@@ -1110,9 +1291,11 @@
         "ConflictingItems": [],
         "Weight": 0.01,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fc5396e900b1d5091531e72": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc5396e900b1d5091531e72",
         "Name": "mount_ump_hk_side_rail_std",
         "ModType": "",
@@ -1121,9 +1304,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618a75c9a3884f56c957ca1b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618a75c9a3884f56c957ca1b",
         "Name": "mount_dovetail_npz_1p78_1_mount_std",
         "ModType": "mount",
@@ -1146,9 +1331,11 @@
         ],
         "Weight": 0.04,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fbb976df9986c4cff3fe5f2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbb976df9986c4cff3fe5f2",
         "Name": "mount_vector_kriss_bottom_rail",
         "ModType": "foregrip_adapter",
@@ -1157,9 +1344,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a32aa0cc4a28232996e405f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a32aa0cc4a28232996e405f",
         "Name": "mount_p226_trijicon_rm50",
         "ModType": "mount",
@@ -1168,9 +1357,11 @@
         "ConflictingItems": [],
         "Weight": 0.017,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d7b6bafa4b93652786f4c76": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d7b6bafa4b93652786f4c76",
         "Name": "mount_57_fn_mk2_rmr_dovetail_mount",
         "ModType": "mount",
@@ -1179,9 +1370,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6267c6396b642f77f56f5c1c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6267c6396b642f77f56f5c1c",
         "Name": "mount_all_dd_offset_flashlight_mount_25mm",
         "ModType": "",
@@ -1190,9 +1383,11 @@
         "ConflictingItems": [],
         "Weight": 0.06,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a789261c5856700186c65d3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a789261c5856700186c65d3",
         "Name": "mount_12g_mesa_tactical_magazine_clamp",
         "ModType": "",
@@ -1201,9 +1396,11 @@
         "ConflictingItems": [],
         "Weight": 0.087,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "60785ce5132d4d12c81fd918": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60785ce5132d4d12c81fd918",
         "Name": "mount_mp155_kalashnikov_ultima_top_rail",
         "ModType": "mount",
@@ -1214,9 +1411,11 @@
         "ConflictingItems": [],
         "Weight": 0.45,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a7ad55551dfba0015068f42": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7ad55551dfba0015068f42",
         "Name": "mount_glock_aimtech_tiger_shark_glock",
         "ModType": "mount",
@@ -1228,9 +1427,11 @@
         ],
         "Weight": 0.12,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "58d39b0386f77443380bf13c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58d39b0386f77443380bf13c",
         "Name": "mount_base_aimpoint_h1_t1_spacer",
         "ModType": "mount",
@@ -1239,9 +1440,11 @@
         "ConflictingItems": [],
         "Weight": 0.015,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b3b6dc75acfc47a8773fb1e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3b6dc75acfc47a8773fb1e",
         "Name": "mount_all_armasight_un_nv_ir_qd_mount",
         "ModType": "mount",
@@ -1250,9 +1453,11 @@
         "ConflictingItems": [],
         "Weight": 0.017,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "63fc449f5bd61c6cf3784a88": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63fc449f5bd61c6cf3784a88",
         "Name": "mount_all_armasight_zeus_pro_qd_mount",
         "ModType": "mount",
@@ -1261,9 +1466,11 @@
         "ConflictingItems": [],
         "Weight": 0.017,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a78948ec5856700177b1124": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a78948ec5856700177b1124",
         "Name": "mount_870_xs_shot_rail_ghost_ring",
         "ModType": "",
@@ -1272,9 +1479,11 @@
         "ConflictingItems": [],
         "Weight": 0.15,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7be4575acfc400161d0832": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be4575acfc400161d0832",
         "Name": "mount_casv_vltor_2_inch_picatinny_rail_section",
         "ModType": "",
@@ -1283,9 +1492,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b31163c5acfc400153b71cb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b31163c5acfc400153b71cb",
         "Name": "mount_all_sig_romeo_4_base_weaver",
         "ModType": "mount",
@@ -1294,9 +1505,11 @@
         "ConflictingItems": [],
         "Weight": 0.015,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "58d2664f86f7747fec5834f6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58d2664f86f7747fec5834f6",
         "Name": "mount_all_leupold_deltapoint_weaver",
         "ModType": "mount",
@@ -1305,9 +1518,11 @@
         "ConflictingItems": [],
         "Weight": 0.045,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d024f5cd7ad1a04a067e91a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d024f5cd7ad1a04a067e91a",
         "Name": "mount_kochetov_arbalet_patriot_k_w",
         "ModType": "mount",
@@ -1319,9 +1534,11 @@
         ],
         "Weight": 0.2,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cdeaca5d7f00c00b61c4b70": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cdeaca5d7f00c00b61c4b70",
         "Name": "mount_m700_magpul_pro_700_inline_mount",
         "ModType": "",
@@ -1337,9 +1554,11 @@
         ],
         "Weight": 0.28,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d133067d7ad1a33013f95b4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d133067d7ad1a33013f95b4",
         "Name": "mount_urx_kac_3_inch_rail_section",
         "ModType": "foregrip_adapter",
@@ -1348,9 +1567,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fbb978207e8a97d1f0902d3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbb978207e8a97d1f0902d3",
         "Name": "mount_vector_kriss_mk5_modular_rail",
         "ModType": "",
@@ -1366,9 +1587,11 @@
         ],
         "Weight": 0.147,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de6558e9f98ac2bc65950fc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de6558e9f98ac2bc65950fc",
         "Name": "mount_vpo215_molot_vpo_215_top_rail_std",
         "ModType": "mount",
@@ -1384,9 +1607,11 @@
         ],
         "Weight": 0.09,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5df35eb2b11454561e3923e2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df35eb2b11454561e3923e2",
         "Name": "mount_orsis_orsis_rail_section_med",
         "ModType": "",
@@ -1395,9 +1620,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c471c2d2e22164bef5d077f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471c2d2e22164bef5d077f",
         "Name": "mount_svd_izhmash_svd_s_lower_band_std",
         "ModType": "",
@@ -1406,9 +1633,11 @@
         "ConflictingItems": [],
         "Weight": 0.246,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61816dfa6ef05c2ce828f1ad": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61816dfa6ef05c2ce828f1ad",
         "Name": "mount_mk16_fn_scar_side_rail_std",
         "ModType": "",
@@ -1417,9 +1646,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b3a08b25acfc4001754880c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3a08b25acfc4001754880c",
         "Name": "mount_p226_sig_sauer_bridge_mount",
         "ModType": "mount",
@@ -1428,9 +1659,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cc70146e4a949000d73bf6b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc70146e4a949000d73bf6b",
         "Name": "mount_p90_fn_receiver_side_rail_std",
         "ModType": "",
@@ -1439,9 +1672,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "619666f4af1f5202c57a952d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619666f4af1f5202c57a952d",
         "Name": "mount_mk16_kinetic_mrex_6_5_m_lok",
         "ModType": "",
@@ -1461,9 +1696,11 @@
         "LoyaltyLevel": 5,
         "Price": 0,
         "AimStability": 8,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "5f2aa493cd375f14e15eea72": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f2aa493cd375f14e15eea72",
         "Name": "mount_rfb_kel_tec_bottom_rail_std",
         "ModType": "foregrip_adapter",
@@ -1472,9 +1709,11 @@
         "ConflictingItems": [],
         "Weight": 0.075,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a7b4900e899ef197b331a2a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7b4900e899ef197b331a2a",
         "Name": "mount_glock_um_tactical_um3_sight_mount",
         "ModType": "mount",
@@ -1483,9 +1722,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5df35e970b92095fd441e4d2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df35e970b92095fd441e4d2",
         "Name": "mount_t5000_orsis_scope_mount_rail_std",
         "ModType": "mount",
@@ -1501,9 +1742,11 @@
         ],
         "Weight": 0.08,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6162682e22160010261a2b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6162682e22160010261a2b",
         "Name": "mount_toz-106_noname_dovetail_mount",
         "ModType": "mount",
@@ -1512,9 +1755,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61816df1d3a39d50044c139e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61816df1d3a39d50044c139e",
         "Name": "mount_mk16_fn_scar_bottom_rail_std",
         "ModType": "foregrip_adapter",
@@ -1523,9 +1768,11 @@
         "ConflictingItems": [],
         "Weight": 0.075,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cc7015ae4a949001152b4c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc7015ae4a949001152b4c6",
         "Name": "mount_p90_fn_receiver_top_rail_std",
         "ModType": "mount",
@@ -1534,9 +1781,11 @@
         "ConflictingItems": [],
         "Weight": 0.27,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c7d560b2e22160bc12c6139": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7d560b2e22160bc12c6139",
         "Name": "mount_base_aimpoint_standart_spacer",
         "ModType": "mount",
@@ -1545,9 +1794,11 @@
         "ConflictingItems": [],
         "Weight": 0.025,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a27b3d0c4a282000d721ec1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a27b3d0c4a282000d721ec1",
         "Name": "mount_sr1mp_tochmash_silencer_base",
         "ModType": "",
@@ -1556,9 +1807,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5df35ea9c41b2312ea3334d8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df35ea9c41b2312ea3334d8",
         "Name": "mount_orsis_orsis_rail_section_long",
         "ModType": "",
@@ -1567,9 +1820,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "63d114019e35b334d82302f7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63d114019e35b334d82302f7",
         "Name": "mount_dovetail_sag_ak_sidemount",
         "ModType": "mount",
@@ -1598,9 +1853,11 @@
         ],
         "Weight": 0.165,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5dff8db859400025ea5150d4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dff8db859400025ea5150d4",
         "Name": "mount_dovetail_sag_svd_low_sidemount",
         "ModType": "mount",
@@ -1623,9 +1880,11 @@
         ],
         "Weight": 0.165,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6269545d0e57f218e4548ca2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6269545d0e57f218e4548ca2",
         "Name": "mount_m_lok_magpul_offset_light_optic_mount",
         "ModType": "",
@@ -1634,9 +1893,11 @@
         "ConflictingItems": [],
         "Weight": 0.037,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b4736a986f774040571e998": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b4736a986f774040571e998",
         "Name": "mount_qars_troy_qars_3,2_inch_rail_section",
         "ModType": "",
@@ -1645,9 +1906,11 @@
         "ConflictingItems": [],
         "Weight": 0.045,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ef369b08cef260c0642acaf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ef369b08cef260c0642acaf",
         "Name": "mount_m1911_ncstar_1911_trigger_guard_mount",
         "ModType": "",
@@ -1656,9 +1919,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61714b2467085e45ef140b2c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61714b2467085e45ef140b2c",
         "Name": "mount_all_recknagel_era_tac_aimpoint_t1_sunshade_mount",
         "ModType": "mount",
@@ -1669,9 +1934,11 @@
         ],
         "Weight": 0.015,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cde7b43d7f00c000d36b93e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cde7b43d7f00c000d36b93e",
         "Name": "mount_m700_abarms_mod_x_scope_mount_rail",
         "ModType": "mount",
@@ -1687,9 +1954,11 @@
         ],
         "Weight": 0.09,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addbfbb5acfc400194dbcf7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbfbb5acfc400194dbcf7",
         "Name": "mount_m14_ultimak_m8_forward_optic_mount",
         "ModType": "mount",
@@ -1698,9 +1967,11 @@
         "ConflictingItems": [],
         "Weight": 0.19,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfebc530db834001d23eb65": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfebc530db834001d23eb65",
         "Name": "mount_m700_weaver_extended_multi_slot_base",
         "ModType": "mount",
@@ -1716,9 +1987,11 @@
         ],
         "Weight": 0.09,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ab24ef9e5b5b00fe93c9209": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ab24ef9e5b5b00fe93c9209",
         "Name": "mount_m1a_springfield_armory_socom_16_upper",
         "ModType": "mount",
@@ -1727,9 +2000,11 @@
         "ConflictingItems": [],
         "Weight": 0.096,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a966ec8a2750c00171b3f36": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a966ec8a2750c00171b3f36",
         "Name": "mount_mp5_bt_mounting_rail_nar_low_profile_long",
         "ModType": "mount",
@@ -1740,9 +2015,11 @@
         ],
         "Weight": 0.223,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65f064eec4da400cbb0dc1fe": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65f064eec4da400cbb0dc1fe",
         "Name": "mount_m700_badger_ordnance_scope_rail",
         "ModType": "mount",
@@ -1751,9 +2028,11 @@
         "ConflictingItems": [],
         "Weight": 0.163,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfebc5e0db834001a6694e5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfebc5e0db834001a6694e5",
         "Name": "mount_m700_remington_integral_scope_mount",
         "ModType": "mount",
@@ -1762,9 +2041,11 @@
         "ConflictingItems": [],
         "Weight": 0.246,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "623c2f4242aee3103f1c44b7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "623c2f4242aee3103f1c44b7",
         "Name": "mount_keymod_cnc_guns_medium_rail_section",
         "ModType": "foregrip_adapter",
@@ -1773,9 +2054,11 @@
         "ConflictingItems": [],
         "Weight": 0.06,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "623c2f652febb22c2777d8d7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "623c2f652febb22c2777d8d7",
         "Name": "mount_keymod_cnc_guns_short_rail_section",
         "ModType": "",
@@ -1784,9 +2067,11 @@
         "ConflictingItems": [],
         "Weight": 0.03,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c61627a2e22160012542c55": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c61627a2e22160012542c55",
         "Name": "mount_dovetail_noname_toz106_angled_mount",
         "ModType": "mount",
@@ -1802,9 +2087,11 @@
         ],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c064c400db834001d23f468": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c064c400db834001d23f468",
         "Name": "mount_all_larue_picatinny_raiser_qd_lt101",
         "ModType": "mount",
@@ -1813,9 +2100,11 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6269220d70b6c02e665f2635": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6269220d70b6c02e665f2635",
         "Name": "mount_m_lok_magpul_cantilever_rail_light_mount",
         "ModType": "",
@@ -1824,9 +2113,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5beecbb80db834001d2c465e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beecbb80db834001d2c465e",
         "Name": "mount_rpk16_izhmash_rpk16_side_rail",
         "ModType": "",
@@ -1835,9 +2126,11 @@
         "ConflictingItems": [],
         "Weight": 0.045,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618ba92152ecee1505530bd3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618ba92152ecee1505530bd3",
         "Name": "mount_geissele_reptilia_rof_90_trijicon_30mm_ddc",
         "ModType": "mount",
@@ -1846,9 +2139,11 @@
         "ConflictingItems": [],
         "Weight": 0.02,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59e0bdb186f774156f04ce82": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e0bdb186f774156f04ce82",
         "Name": "mount_keymod_vltor_2_inch_casv_rail_section",
         "ModType": "",
@@ -1857,9 +2152,11 @@
         "ConflictingItems": [],
         "Weight": 0.045,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7be46e5acfc400170e2dcf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be46e5acfc400170e2dcf",
         "Name": "mount_casv_vltor_5_inch_picatinny_rail_section",
         "ModType": "foregrip_adapter",
@@ -1868,9 +2165,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618bab21526131765025ab3f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618bab21526131765025ab3f",
         "Name": "mount_all_geissele_super_precision_30mm_ddc",
         "ModType": "mount",
@@ -1881,9 +2180,11 @@
         ],
         "Weight": 0.194,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c1cdd302e221602b3137250": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1cdd302e221602b3137250",
         "Name": "mount_all_primary_arms_compact_scope_mount",
         "ModType": "mount",
@@ -1892,9 +2193,11 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "607ea812232e5a31c233d53c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "607ea812232e5a31c233d53c",
         "Name": "mount_mp155_kalashnikov_rail_section",
         "ModType": "",
@@ -1903,9 +2206,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c0695860db834001b735461": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0695860db834001b735461",
         "Name": "nvg_custom_pnv10t_dovetail_mount",
         "ModType": "",
@@ -1914,9 +2219,11 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f2aa49f9b44de6b1b4e68d4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f2aa49f9b44de6b1b4e68d4",
         "Name": "mount_rfb_ket_tec_rfb_scope_mount_std",
         "ModType": "mount",
@@ -1932,9 +2239,11 @@
         ],
         "Weight": 0.09,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59e0be5d86f7742d48765bd2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e0be5d86f7742d48765bd2",
         "Name": "mount_keymod_vltor_4_inch_casv_rail_section",
         "ModType": "foregrip_adapter",
@@ -1943,9 +2252,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6086b5392535c57a13424d70": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6086b5392535c57a13424d70",
         "Name": "mount_cust_custom_guns_short_rail_section",
         "ModType": "",
@@ -1954,9 +2265,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7be4645acfc400170e2dcc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be4645acfc400170e2dcc",
         "Name": "mount_casv_vltor_4_inch_picatinny_rail_section",
         "ModType": "foregrip_adapter",
@@ -1965,9 +2278,11 @@
         "ConflictingItems": [],
         "Weight": 0.06,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "615d8da4d3a39d50044c10e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8da4d3a39d50044c10e8",
         "Name": "mount_glock_tango_down_aam_01_acro_mount",
         "ModType": "mount",
@@ -1976,9 +2291,11 @@
         "ConflictingItems": [],
         "Weight": 0.007,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59e0bed186f774156f04ce84": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e0bed186f774156f04ce84",
         "Name": "mount_keymod_vltor_6_inch_casv_rail_section",
         "ModType": "foregrip_adapter",
@@ -1987,9 +2304,11 @@
         "ConflictingItems": [],
         "Weight": 0.075,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618b9682a3884f56c957ca78": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618b9682a3884f56c957ca78",
         "Name": "mount_geissele_reptilia_rof_90_trijicon_30mm",
         "ModType": "mount",
@@ -1998,9 +2317,11 @@
         "ConflictingItems": [],
         "Weight": 0.02,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addbfe15acfc4001a5fc58b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbfe15acfc4001a5fc58b",
         "Name": "mount_m14_arms_18_low_profile_scope_mount",
         "ModType": "mount",
@@ -2013,9 +2334,11 @@
         ],
         "Weight": 0.22,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618b9671d14d6d5ab879c5ea": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618b9671d14d6d5ab879c5ea",
         "Name": "mount_geissele_geissele_super_precision_top_ring_cap_30mm",
         "ModType": "mount",
@@ -2024,9 +2347,11 @@
         "ConflictingItems": [],
         "Weight": 0.02,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b3b99265acfc4704b4a1afb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3b99265acfc4704b4a1afb",
         "Name": "mount_all_nightforce_x_treme_duty_ultralite_30mm",
         "ModType": "mount",
@@ -2035,9 +2360,11 @@
         "ConflictingItems": [],
         "Weight": 0.19,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "669a6a4a525be1d2d004b8eb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669a6a4a525be1d2d004b8eb",
         "Name": "mount_m_lok_magpul_0,93_inch_picatinny_rail_section",
         "ModType": "",
@@ -2046,9 +2373,11 @@
         "ConflictingItems": [],
         "Weight": 0.035,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7be47f5acfc400170e2dd2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be47f5acfc400170e2dd2",
         "Name": "mount_m_lok_magpul_2,5_inch_picatinny_rail_section",
         "ModType": "",
@@ -2057,9 +2386,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62811f461d5df4475f46a332": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62811f461d5df4475f46a332",
         "Name": "mount_all_accuracy_international_ax50_scope_mount_34mm_pb",
         "ModType": "mount",
@@ -2068,9 +2399,11 @@
         "ConflictingItems": [],
         "Weight": 0.23,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6171407e50224f204c1da3c5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6171407e50224f204c1da3c5",
         "Name": "mount_all_recknagel_era_tac_one_piece_mount_30mm",
         "ModType": "mount",
@@ -2079,9 +2412,11 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61713cc4d8e3106d9806c109": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61713cc4d8e3106d9806c109",
         "Name": "mount_all_recknagel_era_tac_one_piece_mount_34mm",
         "ModType": "mount",
@@ -2090,9 +2425,11 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b30bc285acfc47a8608615d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b30bc285acfc47a8608615d",
         "Name": "mount_mk10_alexander_arms_10_inch_rail_section",
         "ModType": "foregrip_adapter",
@@ -2101,9 +2438,11 @@
         "ConflictingItems": [],
         "Weight": 0.09,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b30bc165acfc40016387293": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b30bc165acfc40016387293",
         "Name": "mount_mk10_alexander_arms_3_inch_rail_section",
         "ModType": "",
@@ -2112,9 +2451,11 @@
         "ConflictingItems": [],
         "Weight": 0.022,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5aa66a9be5b5b0214e506e89": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aa66a9be5b5b0214e506e89",
         "Name": "mount_all_nightforce_x_treme_duty_ultralite_one_piece_magmount_34mm",
         "ModType": "mount",
@@ -2123,9 +2464,11 @@
         "ConflictingItems": [],
         "Weight": 0.226,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5aa66c72e5b5b00016327c93": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aa66c72e5b5b00016327c93",
         "Name": "mount_all_nightforce_x_treme_duty_ultralite_one_piece_magmount_multimount_34mm",
         "ModType": "mount",
@@ -2134,9 +2477,11 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618ba91477b82356f91ae0e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618ba91477b82356f91ae0e8",
         "Name": "mount_geissele_geissele_super_precision_top_ring_cap_30mm_ddc",
         "ModType": "mount",
@@ -2147,9 +2492,11 @@
         ],
         "Weight": 0.02,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a9d6d00a2750c5c985b5305": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9d6d00a2750c5c985b5305",
         "Name": "mount_keymod_strike_industries_4_inch_rail_section",
         "ModType": "",
@@ -2158,9 +2505,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a9d6d13a2750c00164f6b03": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9d6d13a2750c00164f6b03",
         "Name": "mount_keymod_strike_industries_6_inch_rail_section",
         "ModType": "",
@@ -2169,9 +2518,11 @@
         "ConflictingItems": [],
         "Weight": 0.065,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a9d6d21a2750c00137fa649": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9d6d21a2750c00137fa649",
         "Name": "mount_keymod_strike_industries_bridge_rail_section",
         "ModType": "",
@@ -2182,9 +2533,11 @@
         ],
         "Weight": 0.075,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628120dd308cb521f87a8fa1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628120dd308cb521f87a8fa1",
         "Name": "mount_keyslot_accuracy_international_adapter_kit_medium_rail_pb",
         "ModType": "",
@@ -2193,9 +2546,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628120d309427b40ab14e76d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628120d309427b40ab14e76d",
         "Name": "mount_keyslot_accuracy_international_adapter_kit_short_rail_pb",
         "ModType": "",
@@ -2204,9 +2559,11 @@
         "ConflictingItems": [],
         "Weight": 0.065,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628120c21d5df4475f46a337": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628120c21d5df4475f46a337",
         "Name": "mount_keyslot_accuracy_international_at_x_forend_rail_pb",
         "ModType": "mount",
@@ -2215,9 +2572,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addbfef5acfc400185c2857": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbfef5acfc400185c2857",
         "Name": "mount_m14_leapers_utg_4_point_locking_deluxe_scope_mount",
         "ModType": "mount",
@@ -2231,9 +2590,11 @@
         ],
         "Weight": 0.25,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ef5d994dfbc9f3c660ded95": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ef5d994dfbc9f3c660ded95",
         "Name": "mount_m1911_weigand_weig_a_tinny_1911_scope_mount",
         "ModType": "mount",
@@ -2244,9 +2605,11 @@
         ],
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7be4895acfc400170e2dd5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be4895acfc400170e2dd5",
         "Name": "mount_m_lok_magpul_4,1_inch_picatinny_rail_section",
         "ModType": "foregrip_adapter",
@@ -2255,9 +2618,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b4736b986f77405cb415c10": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b4736b986f77405cb415c10",
         "Name": "mount_qars_troy_qars_4,2_inch_rail_section",
         "ModType": "foregrip_adapter",
@@ -2266,9 +2631,11 @@
         "ConflictingItems": [],
         "Weight": 0.065,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c0102aa0db834001b734ba1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0102aa0db834001b734ba1",
         "Name": "mount_rahg_remington_2_inch_rahg_rail_section",
         "ModType": "",
@@ -2277,9 +2644,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c0102b20db834001d23eebc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0102b20db834001d23eebc",
         "Name": "mount_rahg_remington_4_inch_rahg_rail_section",
         "ModType": "",
@@ -2288,9 +2657,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e569a0156edd02abe09f27d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e569a0156edd02abe09f27d",
         "Name": "mount_svd_izhmash_svd_modernized_kit_rail",
         "ModType": "mount",
@@ -2318,9 +2689,11 @@
         ],
         "Weight": 0.24,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62e281349ecd3f493f6df954": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e281349ecd3f493f6df954",
         "Name": "mount_sr2m_zenit_b17",
         "ModType": "mount",
@@ -2329,9 +2702,11 @@
         "ConflictingItems": [],
         "Weight": 0.04,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "638db77630c4240f9e06f8b6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "638db77630c4240f9e06f8b6",
         "Name": "mount_dovetail_sag_bit_bracket",
         "ModType": "mount",
@@ -2363,9 +2738,11 @@
         ],
         "Weight": 0.075,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62ed189fb3608410ef5a2bfc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62ed189fb3608410ef5a2bfc",
         "Name": "mount_sr2m_tochmash_short_rail",
         "ModType": "",
@@ -2374,9 +2751,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62ed1921b3608410ef5a2c04": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62ed1921b3608410ef5a2c04",
         "Name": "mount_sr2m_tochmash_med_rail",
         "ModType": "",
@@ -2385,9 +2764,11 @@
         "ConflictingItems": [],
         "Weight": 0.06,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62e7c8f91cd3fde4d503d690": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e7c8f91cd3fde4d503d690",
         "Name": "mount_aug_steyr_aug_a3_m1_long_rail",
         "ModType": "mount",
@@ -2396,9 +2777,11 @@
         "ConflictingItems": [],
         "Weight": 0.154,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62ebba1fb658e07ef9082b5a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62ebba1fb658e07ef9082b5a",
         "Name": "mount_aug_steyr_aug_a3_m1_short_rail",
         "ModType": "mount",
@@ -2407,9 +2790,11 @@
         "ConflictingItems": [],
         "Weight": 0.114,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6388c5d19c00405f4717c0f0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6388c5d19c00405f4717c0f0",
         "Name": "mount_pri_precision_reflex_long_rail_section_gen3",
         "ModType": "",
@@ -2418,9 +2803,11 @@
         "ConflictingItems": [],
         "Weight": 0.16,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6388c4ac8d895f557a0c6515": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6388c4ac8d895f557a0c6515",
         "Name": "mount_pri_precision_reflex_bottom_rail_section_gen3",
         "ModType": "foregrip_adapter",
@@ -2429,9 +2816,11 @@
         "ConflictingItems": [],
         "Weight": 0.075,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6388c4478d895f557a0c6512": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6388c4478d895f557a0c6512",
         "Name": "mount_pri_precision_reflex_short_rail_section_gen3",
         "ModType": "",
@@ -2440,9 +2829,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a398ab9c4a282000c5a9842": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a398ab9c4a282000c5a9842",
         "Name": "helmet_ops_core_single_clamp_rail_adapter",
         "ModType": "",
@@ -2453,9 +2844,11 @@
         ],
         "Weight": 0.02,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a398b75c4a282000a51a266": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a398b75c4a282000a51a266",
         "Name": "helmet_ops_core_picatinny_rail_adapter",
         "ModType": "",
@@ -2466,9 +2859,11 @@
         ],
         "Weight": 0.02,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "634f04d82e5def262d0b30c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f04d82e5def262d0b30c6",
         "Name": "mount_sks_toz_sks_rear_sight_block",
         "ModType": "",
@@ -2477,9 +2872,11 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "634f05a21f9f536910079b56": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f05a21f9f536910079b56",
         "Name": "mount_sks_molot_sks_rear_sight_block",
         "ModType": "mount",
@@ -2488,9 +2885,11 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6415d33eda439c6a97048b5b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6415d33eda439c6a97048b5b",
         "Name": "mount_sks_choate_sks_scope_mount",
         "ModType": "",
@@ -2515,9 +2914,11 @@
         ],
         "Weight": 0.175,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "646f6322f43d0c5d62063715": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "646f6322f43d0c5d62063715",
         "Name": "mount_all_zenit_kr2_gen_1",
         "ModType": "",
@@ -2526,9 +2927,11 @@
         "ConflictingItems": [],
         "Weight": 0.036,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65392f611406374f82152ba5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65392f611406374f82152ba5",
         "Name": "mount_all_gbrs_hydra_micro_kit",
         "ModType": "",
@@ -2540,9 +2943,11 @@
         ],
         "Weight": 0.141,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "653931da5db71d30ab1d6296": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "653931da5db71d30ab1d6296",
         "Name": "mount_all_gbrs_hydra_micro_kit_fde",
         "ModType": "",
@@ -2554,9 +2959,11 @@
         ],
         "Weight": 0.141,
         "LoyaltyLevel": 5,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "653ed19d22e1ef3d9002c328": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "653ed19d22e1ef3d9002c328",
         "Name": "mount_sks_tapco_intrafuse_sks_railed_bottom_rail",
         "ModType": "foregrip_adapter",
@@ -2565,9 +2972,11 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65434a4e4e3a01736a6c9706": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65434a4e4e3a01736a6c9706",
         "Name": "mount_lenok_hartman_lenok_weaver_70mm",
         "ModType": "",
@@ -2576,9 +2985,11 @@
         "ConflictingItems": [],
         "Weight": 0.019,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6567e751a715f85433025998": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6567e751a715f85433025998",
         "Name": "mount_all_sig_alpha4_ultralight_30mm",
         "ModType": "mount",

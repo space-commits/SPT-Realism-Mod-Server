@@ -29,8 +29,6 @@ const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVa
 ;
 const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
-const path = __importStar(require("path"));
-const fs = __importStar(require("fs"));
 const attatchment_base_1 = require("./weapons/attatchment_base");
 const fleamarket_1 = require("./traders/fleamarket");
 const utils_1 = require("./utils/utils");
@@ -53,8 +51,8 @@ const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
 const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
-// import { MyLootCacheService } from "./bots/bot_loot_serv";
-// import { InsuranceOverride } from "./traders/insurance";
+const path = __importStar(require("path"));
+const fs = __importStar(require("fs"));
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -106,7 +104,22 @@ class Main {
                         return jsonUtil.serialize(modConfig);
                     }
                     catch (e) {
-                        console.error("Failed to read config file", e);
+                        console.error("Realism: Failed to read config file", e);
+                    }
+                }
+            }
+        ], "RealismMod");
+        dynamicRouter.registerDynamicRouter("realismGetDirectory", [
+            {
+                url: "/RealismMod/GetDirectory",
+                action: async (url, info, sessionID, output) => {
+                    try {
+                        let directory = path.join(__dirname, '..');
+                        let dirObj = { "ServerBaseDirectory": directory };
+                        return jsonUtil.serialize(dirObj);
+                    }
+                    catch (e) {
+                        console.error("Realism: Failed to get server mod directory", e);
                     }
                 }
             }
@@ -126,7 +139,7 @@ class Main {
                         return jsonUtil.serialize(realismInfo);
                     }
                     catch (e) {
-                        console.error("Failed to read info file", e);
+                        console.error("Realism: Failed to read info file", e);
                     }
                 }
             }

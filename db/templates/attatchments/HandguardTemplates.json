@@ -1,5 +1,6 @@
 {
     "661fbe066751ee51930b01f2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "661fbe066751ee51930b01f2",
         "Name": "handguard_m60_usord_m60e4_mod1_fde",
         "ModType": "",
@@ -14,9 +15,11 @@
         "ConflictingItems": [],
         "Weight": 0.567,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "66012d64c752a02bbe05e69b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66012d64c752a02bbe05e69b",
         "Name": "handguard_m60_usord_m60e4_mod1",
         "ModType": "",
@@ -31,9 +34,11 @@
         "ConflictingItems": [],
         "Weight": 0.567,
         "LoyaltyLevel": 30,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "66012d003dff5074ed002e2c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66012d003dff5074ed002e2c",
         "Name": "handguard_m60_usord_m60e6_std",
         "ModType": "",
@@ -49,9 +54,11 @@
         "Weight": 0.479,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "6698c8c736ba38d29101770b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c8c736ba38d29101770b",
         "Name": "handguard_uzi_iwi_plastic_std",
         "ModType": "",
@@ -66,9 +73,11 @@
         "ConflictingItems": [],
         "Weight": 0.15,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6699313af74fef4dfd0b04f6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6699313af74fef4dfd0b04f6",
         "Name": "handguard_uzi_iwi_k_grip",
         "ModType": "",
@@ -84,9 +93,11 @@
         "Weight": 0.18,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 15
+        "Handling": 15,
+        "TemplateType": "weaponmod"
     },
     "66993149558c59581e03c028": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66993149558c59581e03c028",
         "Name": "handguard_uzi_iwi_vertical_grip_railed",
         "ModType": "",
@@ -102,9 +113,11 @@
         "Weight": 0.18,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "AimStability": 15
+        "AimStability": 15,
+        "TemplateType": "weaponmod"
     },
     "6565c3ab977bcc2dbb01c2e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6565c3ab977bcc2dbb01c2e7",
         "Name": "handguard_sr3m_tochmash_std_plum",
         "ModType": "",
@@ -119,9 +132,11 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6568a6bf2c5fb7afc70bc424": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6568a6bf2c5fb7afc70bc424",
         "Name": "handguard_sr3m_kiba_railed_handguard",
         "ModType": "",
@@ -136,9 +151,11 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65144f546ddb773afa0e35e1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65144f546ddb773afa0e35e1",
         "Name": "handguard_sr3m_tochmash_std",
         "ModType": "",
@@ -153,9 +170,11 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6491c6f6ef312a876705191b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6491c6f6ef312a876705191b",
         "Name": "handguard_pk_zenit_b50",
         "ModType": "",
@@ -170,9 +189,11 @@
         "ConflictingItems": [],
         "Weight": 0.36,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "607d5aa50494a626335e12ed": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "607d5aa50494a626335e12ed",
         "Name": "handguard_mp155_izhmeh_monte_carlo_walnut",
         "ModType": "",
@@ -189,9 +210,11 @@
         "Weight": 0.8,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "606ee5c81246154cad35d65e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606ee5c81246154cad35d65e",
         "Name": "handguard_mp155_kalashnikov_ultima_handguard",
         "ModType": "",
@@ -208,9 +231,11 @@
         "Weight": 0.31,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "6123649463849f3d843da7c4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6123649463849f3d843da7c4",
         "Name": "handguard_mc255_ckib_255_std_wood",
         "ModType": "",
@@ -228,9 +253,11 @@
         "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 5,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "6259c4347d6aab70bc23a190": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6259c4347d6aab70bc23a190",
         "Name": "handguard_m3_benelli_forend_std",
         "ModType": "",
@@ -247,9 +274,11 @@
         "Weight": 0.136,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "5e848d51e4dbc5266a4ec63b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e848d51e4dbc5266a4ec63b",
         "Name": "handguard_ks23_toz_ks23m_std",
         "ModType": "",
@@ -265,9 +294,11 @@
         "ConflictingItems": [],
         "Weight": 0.58,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "56deed6ed2720b4c698b4583": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56deed6ed2720b4c698b4583",
         "Name": "handguard_mr153_izhmeh_polymer",
         "ModType": "",
@@ -284,9 +315,11 @@
         "Weight": 0.31,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "61f7b85367ddd414173fdb36": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61f7b85367ddd414173fdb36",
         "Name": "handguard_mp18_izhmash_wood",
         "ModType": "",
@@ -303,9 +336,11 @@
         "Weight": 0.182,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "61f8024263dc1250e26eb029": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61f8024263dc1250e26eb029",
         "Name": "handguard_mp18_izhmash_plastic",
         "ModType": "",
@@ -322,9 +357,11 @@
         "Weight": 0.13,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 5
+        "Handling": 5,
+        "TemplateType": "weaponmod"
     },
     "55d45d3f4bdc2d972f8b456c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d45d3f4bdc2d972f8b456c",
         "Name": "handguard_mr133_izhmeh_std",
         "ModType": "",
@@ -340,9 +377,11 @@
         "ConflictingItems": [],
         "Weight": 0.8,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d45f484bdc2d972f8b456d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d45f484bdc2d972f8b456d",
         "Name": "handguard_mr133_custom_rail",
         "ModType": "shot_pump_grip_adapt",
@@ -359,9 +398,11 @@
         "Weight": 0.5,
         "ReloadSpeed": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e87076ce2db31558c75a11d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e87076ce2db31558c75a11d",
         "Name": "handguard_590_mossberg_590a1_std",
         "ModType": "",
@@ -378,9 +419,11 @@
         "Weight": 0.65,
         "ReloadSpeed": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5eea21647547d6330471b3c9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5eea21647547d6330471b3c9",
         "Name": "handguard_590_magpul_moe_590",
         "ModType": "shot_pump_grip_adapt",
@@ -398,9 +441,11 @@
         "ReloadSpeed": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "5a788089c5856700142fdd9c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a788089c5856700142fdd9c",
         "Name": "handguard_870_remington_12g_speedfeed_short",
         "ModType": "",
@@ -417,9 +462,11 @@
         "Weight": 0.5,
         "ReloadSpeed": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a788068c5856700137e4c8f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a788068c5856700137e4c8f",
         "Name": "handguard_870_magpul_moe_870",
         "ModType": "shot_pump_grip_adapt",
@@ -437,9 +484,11 @@
         "ReloadSpeed": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "5a788031c585673f2b5c1c79": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a788031c585673f2b5c1c79",
         "Name": "handguard_870_fab_defence_pr870",
         "ModType": "shot_pump_grip_adapt",
@@ -457,9 +506,11 @@
         "ReloadSpeed": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "5f2aa47a200e2c0ee46efa71": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f2aa47a200e2c0ee46efa71",
         "Name": "handguard_rfb_kel_tec_rfb_std",
         "ModType": "",
@@ -474,9 +525,11 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cdaa99dd7f00c002412d0b2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cdaa99dd7f00c002412d0b2",
         "Name": "handguard_ash12_ckib_ash12_std",
         "ModType": "",
@@ -491,9 +544,11 @@
         "ConflictingItems": [],
         "Weight": 0.27,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c48a14f2e2216152006edd7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c48a14f2e2216152006edd7",
         "Name": "handguard_mdr_dt_mdr_std",
         "ModType": "",
@@ -509,9 +564,11 @@
         "Weight": 0.269,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "5dcbd6b46ec07c0c4347a564": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dcbd6b46ec07c0c4347a564",
         "Name": "handguard_mdr_dt_mdr_std_blk",
         "ModType": "",
@@ -527,9 +584,11 @@
         "Weight": 0.269,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "62386b2adf47d66e835094b2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62386b2adf47d66e835094b2",
         "Name": "handguard_g36_hk_c",
         "ModType": "",
@@ -548,9 +607,11 @@
         "Weight": 0.23,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "62386b7153757417e93a4e9f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62386b7153757417e93a4e9f",
         "Name": "handguard_g36_hk_k",
         "ModType": "",
@@ -570,9 +631,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 3,
-        "Handling": 1
+        "Handling": 1,
+        "TemplateType": "weaponmod"
     },
     "6231654c71b5bc3baa1078e5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6231654c71b5bc3baa1078e5",
         "Name": "handguard_g36_hk_heatshield_a1",
         "ModType": "",
@@ -591,9 +654,11 @@
         "Weight": 0.38,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "61712eae6c780c1e710c9a1d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61712eae6c780c1e710c9a1d",
         "Name": "handguard_417_hk_417_patrol_rail",
         "ModType": "",
@@ -608,9 +673,11 @@
         "ConflictingItems": [],
         "Weight": 0.43,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bb20de5d4351e0035629e59": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20de5d4351e0035629e59",
         "Name": "handguard_416_hk_quad_rail",
         "ModType": "",
@@ -625,9 +692,11 @@
         "ConflictingItems": [],
         "Weight": 0.399,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bb20df1d4351e00347787d5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20df1d4351e00347787d5",
         "Name": "handguard_416_hk_quad_rail_w_sight",
         "ModType": "",
@@ -642,9 +711,11 @@
         "ConflictingItems": [],
         "Weight": 0.4,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6d10fa2e221600106f3f23": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d10fa2e221600106f3f23",
         "Name": "handguard_416_midwest_m_lok_9_inch",
         "ModType": "",
@@ -660,9 +731,11 @@
         "Weight": 0.28,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "5c6c2c9c2e2216000f2002e4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6c2c9c2e2216000f2002e4",
         "Name": "handguard_416_troy_m_lok_13_inch_carbon_fiber",
         "ModType": "",
@@ -678,9 +751,11 @@
         "Weight": 0.25,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "5c6d11072e2216000e69d2e4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d11072e2216000e69d2e4",
         "Name": "handguard_416_midwest_m_lok_13,5_inch",
         "ModType": "",
@@ -700,9 +775,11 @@
         "Weight": 0.37,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "5c6d10e82e221601da357b07": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d10e82e221601da357b07",
         "Name": "handguard_416_hk_mrs_keymod_14_inch",
         "ModType": "",
@@ -719,9 +796,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 2,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "5c6d11152e2216000f2003e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d11152e2216000f2003e7",
         "Name": "handguard_416_strike_industries_crux_m_lok_15_inch",
         "ModType": "",
@@ -737,9 +816,11 @@
         "Weight": 0.44,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 6
+        "AimStability": 6,
+        "TemplateType": "weaponmod"
     },
     "5bb20dfcd4351e00334c9e24": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20dfcd4351e00334c9e24",
         "Name": "handguard_416_hk_quad_rail_extended",
         "ModType": "",
@@ -759,9 +840,11 @@
         "Weight": 0.54,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "61703001d92c473c77021497": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61703001d92c473c77021497",
         "Name": "handguard_417_hk_417_extended_free_float",
         "ModType": "",
@@ -777,9 +860,11 @@
         "Weight": 0.55,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "6065880c132d4d12c81fd8da": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6065880c132d4d12c81fd8da",
         "Name": "handguard_ar10_cmmg_mk3_rml9_m_lok",
         "ModType": "",
@@ -799,9 +884,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 1,
-        "AimStability": 1
+        "AimStability": 1,
+        "TemplateType": "weaponmod"
     },
     "5d00ede1d7ad1a0940739a76": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d00ede1d7ad1a0940739a76",
         "Name": "handguard_ar10_noveske_sws_n6_quadrail_10,5_inch",
         "ModType": "",
@@ -822,9 +909,11 @@
         "Weight": 0.502,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 2.5
+        "Handling": 2.5,
+        "TemplateType": "weaponmod"
     },
     "5d00ef6dd7ad1a0940739b16": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d00ef6dd7ad1a0940739b16",
         "Name": "handguard_ar10_noveske_sws_n6_quadrail_split",
         "ModType": "",
@@ -846,9 +935,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 1.5
+        "AimStability": 1.5,
+        "TemplateType": "weaponmod"
     },
     "5f6336bbda967c74a42e9932": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f6336bbda967c74a42e9932",
         "Name": "handguard_ar10_lancer_lch7_12_5_inch_carbon",
         "ModType": "",
@@ -868,9 +959,11 @@
         "Weight": 0.326,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 6
+        "AimStability": 6,
+        "TemplateType": "weaponmod"
     },
     "5df916dfbb49d91fb446d6b9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df916dfbb49d91fb446d6b9",
         "Name": "handguard_ar10_kac_urx4_14_5_inch",
         "ModType": "",
@@ -894,9 +987,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "6065881d1246154cad35d637": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6065881d1246154cad35d637",
         "Name": "handguard_ar10_cmmg_mk3_rml15_m_lok",
         "ModType": "",
@@ -921,9 +1016,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 3,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "5c0e2f5cd174af02a012cfc9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0e2f5cd174af02a012cfc9",
         "Name": "handguard_ar15_adar_wood_v1",
         "ModType": "",
@@ -941,9 +1038,11 @@
         ],
         "Weight": 0.385,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ae30db85acfc408fb139a05": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae30db85acfc408fb139a05",
         "Name": "handguard_ar15_colt_m4_length_std",
         "ModType": "",
@@ -958,9 +1057,11 @@
         "ConflictingItems": [],
         "Weight": 0.168,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "637f57a68d137b27f70c4968": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637f57a68d137b27f70c4968",
         "Name": "handguard_ar15_colt_m4_length_std_lower",
         "ModType": "",
@@ -976,9 +1077,11 @@
         "Weight": 0.129,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "63f4ba71f31d4a33b87bd046": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63f4ba71f31d4a33b87bd046",
         "Name": "handguard_ar15_aeroknox_ax15_4_m_lok",
         "ModType": "",
@@ -1001,9 +1104,11 @@
         "Weight": 0.103,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "5d00e0cbd7ad1a6c6566a42d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d00e0cbd7ad1a6c6566a42d",
         "Name": "handguard_ar15_strike_industries_viper",
         "ModType": "",
@@ -1020,9 +1125,11 @@
         ],
         "Weight": 0.171,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d00f63bd7ad1a59283b1c1e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d00f63bd7ad1a59283b1c1e",
         "Name": "handguard_ar15_strike_industries_viper_fde",
         "ModType": "",
@@ -1039,9 +1146,11 @@
         ],
         "Weight": 0.171,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "637f589af5ef8c33840d36d3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637f589af5ef8c33840d36d3",
         "Name": "handguard_ar15_strike_industries_viper_lower",
         "ModType": "",
@@ -1059,9 +1168,11 @@
         "Weight": 0.094,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "63969c9019971040b005049b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63969c9019971040b005049b",
         "Name": "handguard_ar15_strike_industries_viper_lower_fde",
         "ModType": "",
@@ -1079,9 +1190,11 @@
         "Weight": 0.094,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "55d459824bdc2d892f8b4573": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d459824bdc2d892f8b4573",
         "Name": "handguard_ar15_kac_ris",
         "ModType": "",
@@ -1096,9 +1209,11 @@
         "ConflictingItems": [],
         "Weight": 0.252,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "637f57b78d137b27f70c496a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637f57b78d137b27f70c496a",
         "Name": "handguard_ar15_kac_ris_lower",
         "ModType": "",
@@ -1113,9 +1228,11 @@
         "ConflictingItems": [],
         "Weight": 0.097,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d123102d7ad1a004e475fe5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d123102d7ad1a004e475fe5",
         "Name": "handguard_ar15_kac_urx_3_8_inch",
         "ModType": "",
@@ -1134,9 +1251,11 @@
         ],
         "Weight": 0.24,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "637f57d2f5ef8c33840d36c4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637f57d2f5ef8c33840d36c4",
         "Name": "handguard_ar15_kac_urx_3_8_inch_lower",
         "ModType": "",
@@ -1157,9 +1276,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 1.5,
-        "AimStability": 2.5
+        "AimStability": 2.5,
+        "TemplateType": "weaponmod"
     },
     "5c78f2792e221600106f4683": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c78f2792e221600106f4683",
         "Name": "handguard_ar15_magpul_moe_sl_carabine_length",
         "ModType": "",
@@ -1177,9 +1298,11 @@
         "Weight": 0.19,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "6034e3cb0ddce744014cb870": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6034e3cb0ddce744014cb870",
         "Name": "handguard_ar15_stmarms_9_inch_m_lok",
         "ModType": "",
@@ -1200,9 +1323,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 1,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "5c9a26332e2216001219ea70": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c9a26332e2216001219ea70",
         "Name": "handguard_ar15_dd_ris_ii_fsp_9,5",
         "ModType": "",
@@ -1218,9 +1343,11 @@
         "Weight": 0.35,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 3.5
+        "Handling": 3.5,
+        "TemplateType": "weaponmod"
     },
     "55f84c3c4bdc2d5f408b4576": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55f84c3c4bdc2d5f408b4576",
         "Name": "handguard_ar15_dd_ris_ii_9,5",
         "ModType": "",
@@ -1235,9 +1362,11 @@
         "ConflictingItems": [],
         "Weight": 0.299,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "638f1ff84822287cad04be9d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "638f1ff84822287cad04be9d",
         "Name": "handguard_ar15_dd_ris_ii_9,5_lower",
         "ModType": "",
@@ -1253,9 +1382,11 @@
         "Weight": 0.099,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Handling": 3.5
+        "Handling": 3.5,
+        "TemplateType": "weaponmod"
     },
     "588b56d02459771481110ae2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "588b56d02459771481110ae2",
         "Name": "handguard_ar15_dd_ris_ii_9,5_blk",
         "ModType": "",
@@ -1270,9 +1401,11 @@
         "ConflictingItems": [],
         "Weight": 0.299,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6396aaa9a52ace83df0840ab": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6396aaa9a52ace83df0840ab",
         "Name": "handguard_ar15_dd_ris_ii_9,5_lower_blk",
         "ModType": "",
@@ -1288,9 +1421,11 @@
         "Weight": 0.099,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Handling": 3.5
+        "Handling": 3.5,
+        "TemplateType": "weaponmod"
     },
     "5ea16acdfadf1d18c87b0784": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea16acdfadf1d18c87b0784",
         "Name": "handguard_ar15_geissele_smr_mk16_95_inch",
         "ModType": "",
@@ -1310,9 +1445,11 @@
         "Weight": 0.332,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 4.5
+        "AimStability": 4.5,
+        "TemplateType": "weaponmod"
     },
     "595cf16b86f77427440c32e2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "595cf16b86f77427440c32e2",
         "Name": "handguard_ar15_war_sport_lvoa_s_blk",
         "ModType": "",
@@ -1329,9 +1466,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 3,
-        "AimStability": 1.5
+        "AimStability": 1.5,
+        "TemplateType": "weaponmod"
     },
     "5c6d5d8b2e221644fc630b39": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d5d8b2e221644fc630b39",
         "Name": "handguard_ar15_stngr_vypr_m_lok_10_inch",
         "ModType": "",
@@ -1351,9 +1490,11 @@
         "Weight": 0.209,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "AimStability": 3.5
+        "AimStability": 3.5,
+        "TemplateType": "weaponmod"
     },
     "619b5db699fb192e7430664f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619b5db699fb192e7430664f",
         "Name": "handguard_ar15_aeroknox_ax15_10,5_m_lok",
         "ModType": "",
@@ -1375,9 +1516,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 1,
-        "AimStability": 2.5
+        "AimStability": 2.5,
+        "TemplateType": "weaponmod"
     },
     "5c78f2612e221600114c9f0d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c78f2612e221600114c9f0d",
         "Name": "handguard_ar15_sai_qd_rail_short",
         "ModType": "",
@@ -1402,9 +1545,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 2.5
+        "AimStability": 2.5,
+        "TemplateType": "weaponmod"
     },
     "5d122e7bd7ad1a07102d6d7f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d122e7bd7ad1a07102d6d7f",
         "Name": "handguard_ar15_kac_urx_31_10,75_inch",
         "ModType": "",
@@ -1424,9 +1569,11 @@
         ],
         "Weight": 0.32,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "637f57c532b66e7e320a6676": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637f57c532b66e7e320a6676",
         "Name": "handguard_ar15_kac_urx_31_10,75_inch_lower",
         "ModType": "",
@@ -1448,9 +1595,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "6034e3e20ddce744014cb878": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6034e3e20ddce744014cb878",
         "Name": "handguard_ar15_stmarms_12_inch_m_lok",
         "ModType": "",
@@ -1473,9 +1622,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 1.5,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "6087e0336d0bd7580617bb7a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6087e0336d0bd7580617bb7a",
         "Name": "handguard_ar15_unique_ars_wing_and_skull_12_inch",
         "ModType": "",
@@ -1497,9 +1648,11 @@
         "Weight": 0.25,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "5c9a25172e2216000f20314e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c9a25172e2216000f20314e",
         "Name": "handguard_ar15_dd_ris_ii_12,25",
         "ModType": "",
@@ -1519,9 +1672,11 @@
         ],
         "Weight": 0.375,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "638f2003bbd47aeb9e0ff637": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "638f2003bbd47aeb9e0ff637",
         "Name": "handguard_ar15_dd_ris_ii_12,25_lower",
         "ModType": "",
@@ -1537,9 +1692,11 @@
         "Weight": 0.125,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Handling": 5.5
+        "Handling": 5.5,
+        "TemplateType": "weaponmod"
     },
     "5a329052c4a28200741e22d3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a329052c4a28200741e22d3",
         "Name": "handguard_ar15_jp_rsass_std_fde",
         "ModType": "",
@@ -1555,9 +1712,11 @@
         "Weight": 0.31,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 5.5
+        "AimStability": 5.5,
+        "TemplateType": "weaponmod"
     },
     "5ea16ada09aa976f2e7a51be": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea16ada09aa976f2e7a51be",
         "Name": "handguard_ar15_geissele_smr_mk16_135_inch",
         "ModType": "",
@@ -1579,9 +1738,11 @@
         "LoyaltyLevel": 5,
         "Price": 0,
         "AimStability": 4.5,
-        "Handling": 1.5
+        "Handling": 1.5,
+        "TemplateType": "weaponmod"
     },
     "5c78f26f2e221601da3581d1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c78f26f2e221601da3581d1",
         "Name": "handguard_ar15_magpul_moe_sl_mid_length",
         "ModType": "",
@@ -1601,9 +1762,11 @@
         "Weight": 0.23,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "5b2cfa535acfc432ff4db7a0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b2cfa535acfc432ff4db7a0",
         "Name": "handguard_ar15_alexander_arms_mk10_rifle_lenght",
         "ModType": "",
@@ -1622,9 +1785,11 @@
         "Weight": 0.38,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 10
+        "AimStability": 10,
+        "TemplateType": "weaponmod"
     },
     "63888bbd28e5cc32cc09d2b6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63888bbd28e5cc32cc09d2b6",
         "Name": "handguard_ar15_precision_reflex_carbon_fiber_delta_gen_3",
         "ModType": "",
@@ -1647,9 +1812,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 8,
-        "Handling": 1
+        "Handling": 1,
+        "TemplateType": "weaponmod"
     },
     "595cfa8b86f77427437e845b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "595cfa8b86f77427437e845b",
         "Name": "handguard_ar15_war_sport_lvoa_c_blk",
         "ModType": "",
@@ -1669,9 +1836,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 4.5,
-        "AimStability": 2.5
+        "AimStability": 2.5,
+        "TemplateType": "weaponmod"
     },
     "5c78f2492e221600114c9f04": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c78f2492e221600114c9f04",
         "Name": "handguard_ar15_sai_qd_rail_long",
         "ModType": "",
@@ -1693,9 +1862,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 2.5,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "6034e3d953a60014f970617b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6034e3d953a60014f970617b",
         "Name": "handguard_ar15_stmarms_15_inch_m_lok",
         "ModType": "",
@@ -1720,9 +1891,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "640b20359ab20e15ee445fa9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "640b20359ab20e15ee445fa9",
         "Name": "handguard_ar15_aeroknox_ax15_15,8_m_lok",
         "ModType": "",
@@ -1747,9 +1920,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 4,
-        "Handling": 1.5
+        "Handling": 1.5,
+        "TemplateType": "weaponmod"
     },
     "5d4405f0a4b9361e6a4e6bd9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d4405f0a4b9361e6a4e6bd9",
         "Name": "handguard_ar15_lone_star_ion_lite_m_lok_16_inch",
         "ModType": "",
@@ -1773,9 +1948,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 9,
-        "Handling": 2
+        "Handling": 2,
+        "TemplateType": "weaponmod"
     },
     "576169e62459773c69055191": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "576169e62459773c69055191",
         "Name": "handguard_saiga12_izhmash_saiga12k_10_std",
         "ModType": "",
@@ -1791,9 +1968,11 @@
         "Weight": 0.18,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 4
+        "Handling": 4,
+        "TemplateType": "weaponmod"
     },
     "58272b392459774b4c7b3ccd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58272b392459774b4c7b3ccd",
         "Name": "handguard_saiga12_utg_pro_mtu002_short_top",
         "ModType": "",
@@ -1810,9 +1989,11 @@
         ],
         "Weight": 0.408,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5827272a24597748c74bdeea": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5827272a24597748c74bdeea",
         "Name": "handguard_saiga12_utg_pro_mtu002_long_top",
         "ModType": "",
@@ -1833,9 +2014,11 @@
         ],
         "Weight": 0.428,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f63418ef5750b524b45f116": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f63418ef5750b524b45f116",
         "Name": "handguard_saiga12_bravo18_saiga_handguard",
         "ModType": "",
@@ -1857,9 +2040,11 @@
         ],
         "Weight": 0.37,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6086b5731246154cad35d6c7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6086b5731246154cad35d6c7",
         "Name": "handguard_saiga12_custom_guns_type_340",
         "ModType": "",
@@ -1876,9 +2061,11 @@
         "LoyaltyLevel": 5,
         "Price": 0,
         "Handling": 6,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "5c471c6c2e221602b66cd9ae": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471c6c2e221602b66cd9ae",
         "Name": "handguard_svd_izhmash_svd_s_std",
         "ModType": "",
@@ -1893,9 +2080,11 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e56991336989c75ab4f03f6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e56991336989c75ab4f03f6",
         "Name": "handguard_svd_izhmash_svd_modernized_kit",
         "ModType": "",
@@ -1912,9 +2101,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 6,
-        "Handling": 3
+        "Handling": 3,
+        "TemplateType": "weaponmod"
     },
     "5e5699df2161e06ac158df6f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e5699df2161e06ac158df6f",
         "Name": "handguard_svd_caa_xrs_drg",
         "ModType": "",
@@ -1929,9 +2120,11 @@
         "ConflictingItems": [],
         "Weight": 0.65,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5dfcd0e547101c39625f66f9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfcd0e547101c39625f66f9",
         "Name": "handguard_svd_sag_chassis_mk_1",
         "ModType": "",
@@ -1964,9 +2157,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 3,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "649ec127c93611967b034957": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "649ec127c93611967b034957",
         "Name": "handguard_ak12_izhmash_ak12_std",
         "ModType": "",
@@ -1981,9 +2176,11 @@
         "ConflictingItems": [],
         "Weight": 0.134,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5beec3e30db8340019619424": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec3e30db8340019619424",
         "Name": "handguard_rpk16_izhmash_rpk16_std",
         "ModType": "",
@@ -1998,9 +2195,11 @@
         "ConflictingItems": [],
         "Weight": 0.167,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628b916469015a4e1711ed8d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628b916469015a4e1711ed8d",
         "Name": "handguard_ak_sag_mk3_chassis_ak545_type",
         "ModType": "",
@@ -2015,9 +2214,11 @@
         "ConflictingItems": [],
         "Weight": 0.617,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57dc32dc245977596d4ef3d3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57dc32dc245977596d4ef3d3",
         "Name": "handguard_aks74u_izhmash_aks74u_std_wood",
         "ModType": "",
@@ -2033,9 +2234,11 @@
         "Weight": 0.116,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 1
+        "Handling": 1,
+        "TemplateType": "weaponmod"
     },
     "57ffa9f4245977728561e844": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57ffa9f4245977728561e844",
         "Name": "handguard_aks74u_zenit_b11",
         "ModType": "",
@@ -2050,9 +2253,11 @@
         "ConflictingItems": [],
         "Weight": 0.155,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "647db1eca8d3399c380d195c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "647db1eca8d3399c380d195c",
         "Name": "handguard_aks74u_alfa_arms_goliaf_m_lok",
         "ModType": "",
@@ -2073,9 +2278,11 @@
         "Weight": 0.15,
         "AimStability": 5,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d15ce51d7ad1a1eff619092": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d15ce51d7ad1a1eff619092",
         "Name": "handguard_aks74u_alfa_arms_goliaf",
         "ModType": "",
@@ -2095,9 +2302,11 @@
         "Weight": 0.25,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Handling": 5
+        "Handling": 5,
+        "TemplateType": "weaponmod"
     },
     "5a957c3fa2750c00137fa5f7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a957c3fa2750c00137fa5f7",
         "Name": "handguard_aks74u_caa_xrsu47su",
         "ModType": "",
@@ -2127,9 +2336,11 @@
         "Weight": 0.52,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 3
+        "Handling": 3,
+        "TemplateType": "weaponmod"
     },
     "5648b1504bdc2d9d488b4584": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5648b1504bdc2d9d488b4584",
         "Name": "handguard_ak_izhmash_ak74m_std_plastic",
         "ModType": "",
@@ -2145,9 +2356,11 @@
         "Weight": 0.25,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 1
+        "AimStability": 1,
+        "TemplateType": "weaponmod"
     },
     "59d64f2f86f77417193ef8b3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d64f2f86f77417193ef8b3",
         "Name": "handguard_ak_izhmash_akm_std_wood",
         "ModType": "",
@@ -2163,9 +2376,11 @@
         "Weight": 0.26,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 1
+        "Handling": 1,
+        "TemplateType": "weaponmod"
     },
     "59e6284f86f77440d569536f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e6284f86f77440d569536f",
         "Name": "handguard_ak_molot_vepr_km_vpo_136",
         "ModType": "",
@@ -2181,9 +2396,11 @@
         "Weight": 0.26,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 1
+        "Handling": 1,
+        "TemplateType": "weaponmod"
     },
     "59e898ee86f77427614bd225": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e898ee86f77427614bd225",
         "Name": "handguard_ak_molot_vepr_km_vpo_209",
         "ModType": "",
@@ -2199,9 +2416,11 @@
         "Weight": 0.26,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 1
+        "Handling": 1,
+        "TemplateType": "weaponmod"
     },
     "5cbda9f4ae9215000e5b9bfc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cbda9f4ae9215000e5b9bfc",
         "Name": "handguard_ak_izhmash_ak74_std_plum",
         "ModType": "",
@@ -2217,9 +2436,11 @@
         "Weight": 0.25,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 1
+        "AimStability": 1,
+        "TemplateType": "weaponmod"
     },
     "5648b0744bdc2d363b8b4578": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5648b0744bdc2d363b8b4578",
         "Name": "handguard_ak_izhmash_ak74_std_wood",
         "ModType": "",
@@ -2235,9 +2456,11 @@
         "Weight": 0.26,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 1
+        "Handling": 1,
+        "TemplateType": "weaponmod"
     },
     "5cbda392ae92155f3c17c39f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cbda392ae92155f3c17c39f",
         "Name": "handguard_ak_izhmash_ak100_rail_plastic",
         "ModType": "",
@@ -2252,9 +2475,11 @@
         "ConflictingItems": [],
         "Weight": 0.27,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57cffddc24597763133760c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cffddc24597763133760c6",
         "Name": "handguard_ak_magpul_moe_ak_od",
         "ModType": "",
@@ -2271,9 +2496,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "57cffe20245977632f391a9d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cffe20245977632f391a9d",
         "Name": "handguard_ak_magpul_moe_ak_sg",
         "ModType": "",
@@ -2290,9 +2517,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "57cff947245977638e6f2a19": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cff947245977638e6f2a19",
         "Name": "handguard_ak_magpul_moe_ak_blk",
         "ModType": "",
@@ -2309,9 +2538,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "57cffd8224597763b03fc609": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cffd8224597763b03fc609",
         "Name": "handguard_ak_magpul_moe_ak_fde",
         "ModType": "",
@@ -2328,9 +2559,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "57cffe0024597763b03fc60b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cffe0024597763b03fc60b",
         "Name": "handguard_ak_magpul_moe_ak_plm",
         "ModType": "",
@@ -2347,9 +2580,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "5d1b198cd7ad1a604869ad72": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d1b198cd7ad1a604869ad72",
         "Name": "handguard_ak_tdi_akm_l",
         "ModType": "",
@@ -2365,9 +2600,11 @@
         "Weight": 0.221,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "AimStability": 3.5
+        "AimStability": 3.5,
+        "TemplateType": "weaponmod"
     },
     "5d4aaa54a4b9365392071170": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d4aaa54a4b9365392071170",
         "Name": "handguard_ak_tdi_akm_l_red",
         "ModType": "",
@@ -2383,9 +2620,11 @@
         "Weight": 0.221,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 3.5
+        "AimStability": 3.5,
+        "TemplateType": "weaponmod"
     },
     "5d4aaa73a4b9365392071175": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d4aaa73a4b9365392071175",
         "Name": "handguard_ak_tdi_akm_l_gld",
         "ModType": "",
@@ -2401,9 +2640,11 @@
         "Weight": 0.221,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 3.5
+        "AimStability": 3.5,
+        "TemplateType": "weaponmod"
     },
     "5d2c829448f0353a5c7d6674": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2c829448f0353a5c7d6674",
         "Name": "handguard_ak_cugir_arms_factory_wasr_10_63_std",
         "ModType": "",
@@ -2420,9 +2661,11 @@
         "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 2,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "5c617a5f2e2216000f1e81b3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c617a5f2e2216000f1e81b3",
         "Name": "handguard_ak_zenit_b10",
         "ModType": "",
@@ -2439,9 +2682,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 3.5,
-        "AimStability": 1.5
+        "AimStability": 1.5,
+        "TemplateType": "weaponmod"
     },
     "5648b4534bdc2d3d1c8b4580": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5648b4534bdc2d3d1c8b4580",
         "Name": "handguard_ak_zenit_b10m_b19",
         "ModType": "",
@@ -2457,9 +2702,11 @@
         "Weight": 0.27,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Handling": 4
+        "Handling": 4,
+        "TemplateType": "weaponmod"
     },
     "5648ae314bdc2d3d1c8b457f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5648ae314bdc2d3d1c8b457f",
         "Name": "handguard_ak_caa_quad_rail_polymer",
         "ModType": "",
@@ -2474,9 +2721,11 @@
         "ConflictingItems": [],
         "Weight": 0.22,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a9d56c8a2750c0032157146": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9d56c8a2750c0032157146",
         "Name": "handguard_ak_strike_industries_trax_1",
         "ModType": "",
@@ -2493,9 +2742,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 1,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "5a9d6d34a2750c00141e07da": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9d6d34a2750c00141e07da",
         "Name": "handguard_ak_strike_industries_trax_2",
         "ModType": "",
@@ -2518,9 +2769,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 5,
-        "AimStability": 7
+        "AimStability": 7,
+        "TemplateType": "weaponmod"
     },
     "5f6331e097199b7db2128dc2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f6331e097199b7db2128dc2",
         "Name": "handguard_ak_tdi_x47",
         "ModType": "",
@@ -2554,9 +2807,11 @@
         "Weight": 0.42,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "6389f1dfc879ce63f72fc43e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6389f1dfc879ce63f72fc43e",
         "Name": "handguard_ak_cnc_guns_ov_gp",
         "ModType": "",
@@ -2601,9 +2856,11 @@
         "Weight": 0.536,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "5cf4e3f3d7f00c06595bc7f0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf4e3f3d7f00c06595bc7f0",
         "Name": "handguard_ak_545_design_red_heat_agressor",
         "ModType": "",
@@ -2619,9 +2876,11 @@
         "Weight": 0.26,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "5c9a1c422e221600106f69f0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c9a1c422e221600106f69f0",
         "Name": "handguard_ak_magpul_zhukov_u_plm",
         "ModType": "",
@@ -2640,9 +2899,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 4.5
+        "AimStability": 4.5,
+        "TemplateType": "weaponmod"
     },
     "5c9a1c3a2e2216000e69fb6a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c9a1c3a2e2216000e69fb6a",
         "Name": "handguard_ak_magpul_zhukov_u_fde",
         "ModType": "",
@@ -2661,9 +2922,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 4.5
+        "AimStability": 4.5,
+        "TemplateType": "weaponmod"
     },
     "5c9a07572e221644f31c4b32": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c9a07572e221644f31c4b32",
         "Name": "handguard_ak_magpul_zhukov_u_blk",
         "ModType": "",
@@ -2682,9 +2945,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 4.5
+        "AimStability": 4.5,
+        "TemplateType": "weaponmod"
     },
     "5efaf417aeb21837e749c7f2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5efaf417aeb21837e749c7f2",
         "Name": "handguard_ak_zenit_b30",
         "ModType": "",
@@ -2700,9 +2965,11 @@
         "Weight": 0.371,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Handling": 5.5
+        "Handling": 5.5,
+        "TemplateType": "weaponmod"
     },
     "59fb375986f7741b681b81a6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59fb375986f7741b681b81a6",
         "Name": "handguard_ak_krebs_ufm_akm_long",
         "ModType": "",
@@ -2719,9 +2986,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 8,
-        "Handling": 3
+        "Handling": 3,
+        "TemplateType": "weaponmod"
     },
     "5c17664f2e2216398b5a7e3c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c17664f2e2216398b5a7e3c",
         "Name": "handguard_ak_vltor_cmrd",
         "ModType": "",
@@ -2742,9 +3011,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 4,
-        "Handling": 5
+        "Handling": 5,
+        "TemplateType": "weaponmod"
     },
     "5b800e9286f7747a8b04f3ff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b800e9286f7747a8b04f3ff",
         "Name": "handguard_ak_hexagon_ak",
         "ModType": "",
@@ -2765,9 +3036,11 @@
         "Weight": 0.167,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 9
+        "AimStability": 9,
+        "TemplateType": "weaponmod"
     },
     "5b80242286f77429445e0b47": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b80242286f77429445e0b47",
         "Name": "handguard_ak_hexagon_ak_red",
         "ModType": "",
@@ -2788,9 +3061,11 @@
         "Weight": 0.167,
         "LoyaltyLevel": 5,
         "Price": 0,
-        "AimStability": 9
+        "AimStability": 9,
+        "TemplateType": "weaponmod"
     },
     "637ba19df7ca6372bf2613d7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637ba19df7ca6372bf2613d7",
         "Name": "handguard_sr2m_tochmash_std_blk",
         "ModType": "",
@@ -2806,9 +3081,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62e15547db1a5c41971c1b5e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e15547db1a5c41971c1b5e",
         "Name": "handguard_sr2m_tochmash_std",
         "ModType": "",
@@ -2824,9 +3101,11 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d2f259b48f0355a844acd74": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2f259b48f0355a844acd74",
         "Name": "handguard_mp5k_hk_kurtz_grip_std",
         "ModType": "",
@@ -2842,9 +3121,11 @@
         "Weight": 0.241,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "5926f34786f77469195bfe92": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926f34786f77469195bfe92",
         "Name": "handguard_mp5_hk_sd",
         "ModType": "",
@@ -2860,9 +3141,11 @@
         "Weight": 0.13,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 10
+        "AimStability": 10,
+        "TemplateType": "weaponmod"
     },
     "5926c36d86f77467a92a8629": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926c36d86f77467a92a8629",
         "Name": "handguard_mp5_hk_wide_tropical",
         "ModType": "",
@@ -2879,9 +3162,11 @@
         "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 6,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "5a9548c9159bd400133e97b3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9548c9159bd400133e97b3",
         "Name": "handguard_mp5_bt_tl_99_3x_nar",
         "ModType": "",
@@ -2896,9 +3181,11 @@
         "ConflictingItems": [],
         "Weight": 0.278,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d19cd96d7ad1a4a992c9f52": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d19cd96d7ad1a4a992c9f52",
         "Name": "handguard_mp5_ptr_tri_rail_forearm",
         "ModType": "",
@@ -2914,9 +3201,11 @@
         "Weight": 0.308,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Handling": 3
+        "Handling": 3,
+        "TemplateType": "weaponmod"
     },
     "5d010d1cd7ad1a59283b1ce7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d010d1cd7ad1a59283b1ce7",
         "Name": "handguard_mp5_caa_hx5",
         "ModType": "",
@@ -2931,9 +3220,11 @@
         "ConflictingItems": [],
         "Weight": 0.308,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b099a9d5acfc47a8607efe7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b099a9d5acfc47a8607efe7",
         "Name": "handguard_sa58_ds_arms_picatinny_quad_rail",
         "ModType": "",
@@ -2948,9 +3239,11 @@
         "ConflictingItems": [],
         "Weight": 0.48,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7bee755acfc400196d5383": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7bee755acfc400196d5383",
         "Name": "handguard_fal_vltor_casv_fas",
         "ModType": "",
@@ -2967,9 +3260,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 3
+        "AimStability": 3,
+        "TemplateType": "weaponmod"
     },
     "5b7be1ca5acfc400170e2d2f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be1ca5acfc400170e2d2f",
         "Name": "handguard_sa58_ds_arms_picatinny_full_lenght_quad_rail",
         "ModType": "",
@@ -2984,9 +3279,11 @@
         "ConflictingItems": [],
         "Weight": 0.61,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7bed205acfc400161d08cc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7bed205acfc400161d08cc",
         "Name": "handguard_fal_fn_original_stamped_steel",
         "ModType": "",
@@ -3003,9 +3300,11 @@
         "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 4,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "5b7d671b5acfc43d82528ddd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d671b5acfc43d82528ddd",
         "Name": "handguard_fal_ds_arms_belgian_style_full_lenght",
         "ModType": "",
@@ -3022,9 +3321,11 @@
         "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 8,
-        "Handling": 4
+        "Handling": 4,
+        "TemplateType": "weaponmod"
     },
     "5b7bebc85acfc43bca706666": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7bebc85acfc43bca706666",
         "Name": "handguard_fal_aim_sport_universal_m_lok",
         "ModType": "",
@@ -3041,9 +3342,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 3,
-        "AimStability": 8
+        "AimStability": 8,
+        "TemplateType": "weaponmod"
     },
     "5b7be2345acfc400196d524a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be2345acfc400196d524a",
         "Name": "handguard_fal_aim_sport_universal_keymod",
         "ModType": "",
@@ -3060,9 +3363,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 4,
-        "AimStability": 7
+        "AimStability": 7,
+        "TemplateType": "weaponmod"
     },
     "5b7bedd75acfc43d825283f9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7bedd75acfc43d825283f9",
         "Name": "handguard_fal_vltor_casv_fal",
         "ModType": "",
@@ -3079,9 +3384,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 5,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "5fbc226eca32ed67276c155d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbc226eca32ed67276c155d",
         "Name": "handguard_mcx_sig_gen1_8_inch_keymod",
         "ModType": "",
@@ -3098,9 +3405,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 3,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "5fbc227aa56d053a3543f79e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbc227aa56d053a3543f79e",
         "Name": "handguard_mcx_sig_gen1_12_inch_keymod",
         "ModType": "",
@@ -3130,9 +3439,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 3.5,
-        "AimStability": 5
+        "AimStability": 5,
+        "TemplateType": "weaponmod"
     },
     "5c5db5f22e2216000e5e47e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db5f22e2216000e5e47e8",
         "Name": "handguard_mpx_midwest_4,5_inch_m_lok",
         "ModType": "",
@@ -3148,9 +3459,11 @@
         "Weight": 0.08,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "AimStability": 2
+        "AimStability": 2,
+        "TemplateType": "weaponmod"
     },
     "5894a42086f77426d2590762": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5894a42086f77426d2590762",
         "Name": "handguard_mpx_sig_mpx_gen1_handguard",
         "ModType": "",
@@ -3165,9 +3478,11 @@
         "ConflictingItems": [],
         "Weight": 0.302,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5db5fc2e2216000f1b2842": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db5fc2e2216000f1b2842",
         "Name": "handguard_mpx_midwest_6,5_inch_m_lok",
         "ModType": "",
@@ -3184,9 +3499,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 2,
-        "AimStability": 4
+        "AimStability": 4,
+        "TemplateType": "weaponmod"
     },
     "5c5db6302e2216000e5e47f0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db6302e2216000e5e47f0",
         "Name": "handguard_mpx_midwest_10,5_inch_m_lok",
         "ModType": "",
@@ -3203,9 +3520,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 3,
-        "AimStability": 6
+        "AimStability": 6,
+        "TemplateType": "weaponmod"
     },
     "5c5db63a2e2216000f1b284a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db63a2e2216000f1b284a",
         "Name": "handguard_mpx_midwest_14_inch_m_lok",
         "ModType": "",
@@ -3222,9 +3541,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 3.5,
-        "AimStability": 8
+        "AimStability": 8,
+        "TemplateType": "weaponmod"
     },
     "5c59529a2e221602b177d160": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c59529a2e221602b177d160",
         "Name": "handguard_mpx_lancer_oem_14_inch",
         "ModType": "",
@@ -3241,9 +3562,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 3,
-        "AimStability": 10
+        "AimStability": 10,
+        "TemplateType": "weaponmod"
     },
     "5888976c24597754281f93f5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5888976c24597754281f93f5",
         "Name": "handguard_dvl-10_lobaev_dvl-10_m2_std",
         "ModType": "",
@@ -3259,9 +3582,11 @@
         "Weight": 0.323,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "AimStability": 11
+        "AimStability": 11,
+        "TemplateType": "weaponmod"
     },
     "5fc235db2770a0045c59c683": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc235db2770a0045c59c683",
         "Name": "handguard_mk18_sword_mjolnir_18_inch",
         "ModType": "",
@@ -3284,9 +3609,11 @@
         "Weight": 0.4,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 5
+        "Handling": 5,
+        "TemplateType": "weaponmod"
     },
     "6281209662cba23f6c4d7a19": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6281209662cba23f6c4d7a19",
         "Name": "handguard_ax_accuracy_international_axmc_handguard_16_inch_keyslot_pb",
         "ModType": "",
@@ -3304,9 +3631,11 @@
         "Price": 0,
         "Handling": 3,
         "AimStability": 8
-
+,
+        "TemplateType": "weaponmod"
     },
     "5df25d3bfd6b4e6e2276dc9a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df25d3bfd6b4e6e2276dc9a",
         "Name": "handguard_t5000_orsis_t5000m_std",
         "ModType": "",
@@ -3323,9 +3652,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 5,
-        "AimStability": 10
+        "AimStability": 10,
+        "TemplateType": "weaponmod"
     },
     "5cde7afdd7f00c000d36b89d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cde7afdd7f00c000d36b89d",
         "Name": "handguard_m700_abarms_mrs_mod_x_gen_3",
         "ModType": "",
@@ -3343,9 +3674,11 @@
         "Weight": 0.39,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 8
+        "AimStability": 8,
+        "TemplateType": "weaponmod"
     },
     "623c3c1f37b4b31470357737": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "623c3c1f37b4b31470357737",
         "Name": "handguard_sv-98_cnc_guns_ov_unif_keymod",
         "ModType": "",
@@ -3363,9 +3696,11 @@
         "Weight": 0.33,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 10
+        "AimStability": 10,
+        "TemplateType": "weaponmod"
     },
     "634f03d40384a3ba4f06f874": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f03d40384a3ba4f06f874",
         "Name": "handguard_sks_molot_op_sks_std",
         "ModType": "",
@@ -3381,9 +3716,11 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "634f08a21f9f536910079b5a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f08a21f9f536910079b5a",
         "Name": "handguard_sks_toz_sks_std_wood",
         "ModType": "",
@@ -3399,9 +3736,11 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "644675573d52156624001fc9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "644675573d52156624001fc9",
         "Name": "handguard_9a91_kbp_9a91_std",
         "ModType": "",
@@ -3417,9 +3756,11 @@
         "ConflictingItems": [],
         "Weight": 0.167,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6448f2f6d4928d46d30be3f6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6448f2f6d4928d46d30be3f6",
         "Name": "handguard_9a91_kbp_vsk94_std",
         "ModType": "",
@@ -3435,9 +3776,11 @@
         "ConflictingItems": [],
         "Weight": 0.167,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "647dba3142c479dde701b654": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "647dba3142c479dde701b654",
         "Name": "handguard_ak_akademia_dominator",
         "ModType": "",
@@ -3456,9 +3799,11 @@
         "Weight": 0.315,
         "Handling": 4,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "647dd2b8a12ebf96c3031655": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "647dd2b8a12ebf96c3031655",
         "Name": "handguard_ak_alfa_arms_aspid",
         "ModType": "",
@@ -3482,9 +3827,11 @@
         "Handling": 4,
         "AimStability": 3,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "647de824196bf69818044c93": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "647de824196bf69818044c93",
         "Name": "handguard_ar15_abarms_mod1_handguard",
         "ModType": "",
@@ -3505,9 +3852,11 @@
         ],
         "Weight": 0.094,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "647def638295ebcb5b02f05b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "647def638295ebcb5b02f05b",
         "Name": "handguard_ar15_abarms_mod1_handguard_lower",
         "ModType": "",
@@ -3526,9 +3875,11 @@
         "Weight": 0.033,
         "AimStability": 4,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6513f05a94c72326990a3866": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6513f05a94c72326990a3866",
         "Name": "handguard_rpd_zid_std_wood",
         "ModType": "",
@@ -3545,9 +3896,11 @@
         "Weight": 0.25,
         "Handling": 5,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "651bfe4d1065f87f082e7209": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "651bfe4d1065f87f082e7209",
         "Name": "handguard_pp-19-01_hartman_gurza",
         "ModType": "",
@@ -3571,9 +3924,11 @@
         "Weight": 0.27,
         "AimStability": 10,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "652910ef50dc782999054b97": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "652910ef50dc782999054b97",
         "Name": "handguard_mcx_sig_spear_m_lok",
         "ModType": "",
@@ -3590,9 +3945,11 @@
         "AimStability": 2,
         "Handling": 4,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "653ecc425a1690d9d90491e4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "653ecc425a1690d9d90491e4",
         "Name": "handguard_sks_ati_monte_carlo_cover",
         "ModType": "",
@@ -3608,9 +3965,11 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "653ecd065a1690d9d90491e6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "653ecd065a1690d9d90491e6",
         "Name": "handguard_sks_tapco_gas_cover",
         "ModType": "mount",
@@ -3626,9 +3985,11 @@
         "ConflictingItems": [],
         "Weight": 0.22,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "653ece125a1690d9d90491e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "653ece125a1690d9d90491e8",
         "Name": "handguard_sks_fab_defence_uas_gas_cover",
         "ModType": "mount",

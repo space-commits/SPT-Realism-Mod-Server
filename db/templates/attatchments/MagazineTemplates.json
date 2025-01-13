@@ -1,5 +1,6 @@
 {
     "66992713ae08c5c29e0c4f97": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66992713ae08c5c29e0c4f97",
         "Name": "mag_uzi_iwi_9x19_20",
         "ModType": "",
@@ -13,9 +14,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6699271b9950f5f4cd060299": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6699271b9950f5f4cd060299",
         "Name": "mag_uzi_iwi_9x19_25",
         "ModType": "",
@@ -29,9 +32,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "66866f4ec3d473265104f381": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66866f4ec3d473265104f381",
         "Name": "mag_uzi_pro_iwi_uzi_pro_9x19_25",
         "ModType": "",
@@ -45,9 +50,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "669927203c4fda6471005cbe": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669927203c4fda6471005cbe",
         "Name": "mag_uzi_iwi_9x19_32",
         "ModType": "",
@@ -61,9 +68,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "66866f622a2296a8d9099639": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66866f622a2296a8d9099639",
         "Name": "mag_uzi_pro_iwi_uzi_pro_9x19_32",
         "ModType": "",
@@ -77,9 +86,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "66992725ae08c5c29e0c4f9a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66992725ae08c5c29e0c4f9a",
         "Name": "mag_uzi_iwi_9x19_40",
         "ModType": "",
@@ -93,9 +104,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6699272a3c4fda6471005cc1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6699272a3c4fda6471005cc1",
         "Name": "mag_uzi_iwi_9x19_50",
         "ModType": "",
@@ -109,9 +122,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "669fa435803b94fb5d0e3a76": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa435803b94fb5d0e3a76",
         "Name": "mag_deagle_magnum_research_l5_std_9x33r_9",
         "ModType": "",
@@ -125,9 +140,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "668fe5c5f35310705d02b696": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668fe5c5f35310705d02b696",
         "Name": "mag_deagle_magnum_research_std_127x33_7",
         "ModType": "",
@@ -141,9 +158,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "660ea4453786cc0af808a1be": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "660ea4453786cc0af808a1be",
         "Name": "mag_m60_capco_m60e3_assault_box_762x51_100",
         "ModType": "",
@@ -157,9 +176,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "646372518610c40fc20204e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "646372518610c40fc20204e8",
         "Name": "mag_pkm_zid_pk_std_762x54r_100",
         "ModType": "",
@@ -173,9 +194,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6422e1ea3c0f06190302161a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6422e1ea3c0f06190302161a",
         "Name": "mag_svt40_toz_svt40_std_762x54r_10",
         "ModType": "",
@@ -189,9 +212,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "641074a07fd350b98c0b3f96": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "641074a07fd350b98c0b3f96",
         "Name": "mag_svt40_toz_svt40_std_762x54r_15",
         "ModType": "",
@@ -205,9 +230,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "627bce33f21bc425b06ab967": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "627bce33f21bc425b06ab967",
         "Name": "mag_msgl_milkor_cylinder_mag_std_40x46_6",
         "ModType": "",
@@ -221,9 +248,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "60dc519adf4c47305f6d410d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60dc519adf4c47305f6d410d",
         "Name": "mag_mc255_ckib_mc255_cylinder_std_12g_5",
         "ModType": "",
@@ -237,9 +266,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "624c3074dbbd335e8e6becf3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "624c3074dbbd335e8e6becf3",
         "Name": "mag_rhino_chiappa_rhino_cylinder_9x19",
         "ModType": "",
@@ -253,9 +284,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "619f54a1d25cbd424731fb99": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619f54a1d25cbd424731fb99",
         "Name": "mag_rhino_chiappa_rhino_cylinder_9x33r_6",
         "ModType": "",
@@ -269,9 +302,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61a4cda622af7f4f6a3ce617": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61a4cda622af7f4f6a3ce617",
         "Name": "mag_rhino_chiappa_rhino_speedloader_9x33R_6",
         "ModType": "",
@@ -285,9 +320,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a38ee51c4a282000c5a955c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a38ee51c4a282000c5a955c",
         "Name": "mag_toz-106_mc_20-01_sb3_20x70_2",
         "ModType": "",
@@ -301,9 +338,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a38ed75c4a28232996e40c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a38ed75c4a28232996e40c6",
         "Name": "mag_toz-106_mc_20-01_sb3_20x70_4",
         "ModType": "",
@@ -317,9 +356,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6161fb2e221600113fbde5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6161fb2e221600113fbde5",
         "Name": "mag_toz-106_mc_20-01_sb3_20x70_5",
         "ModType": "",
@@ -333,9 +374,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57616a9e2459773c7a400234": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57616a9e2459773c7a400234",
         "Name": "mag_saiga12_izhmash_Sb5_12x76_5",
         "ModType": "",
@@ -347,9 +390,11 @@
         "ConflictingItems": [],
         "Weight": 0.19,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a966f51a2750c00156aacf6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a966f51a2750c00156aacf6",
         "Name": "mag_saiga12_pro_mag_sai_02_12x76_10",
         "ModType": "long_mag",
@@ -363,9 +408,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cf8f3b0d7f00c00217872ef": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf8f3b0d7f00c00217872ef",
         "Name": "mag_saiga12_maxrounds_powermag_20_12x76_20",
         "ModType": "",
@@ -379,9 +426,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a7882dcc5856700177af662": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7882dcc5856700177af662",
         "Name": "mag_870_remington_magazie_cap_12g_4",
         "ModType": "shotTube",
@@ -395,9 +444,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "56deee15d2720bee328b4567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56deee15d2720bee328b4567",
         "Name": "mag_mr153_izhmeh_12g_4",
         "ModType": "shotTube",
@@ -411,9 +462,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5882163e24597758206fee8c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5882163e24597758206fee8c",
         "Name": "mag_mr153_izhmeh_12g_5",
         "ModType": "shotTube",
@@ -427,9 +480,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "625ff2ccb8c587128c1a01dd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "625ff2ccb8c587128c1a01dd",
         "Name": "mag_m3_benelli_magazine_cap_12g_5",
         "ModType": "shotTube",
@@ -443,9 +498,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6076c87f232e5a31c233d50e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6076c87f232e5a31c233d50e",
         "Name": "mag_mp155_kalashnikov_12g_6",
         "ModType": "shotTube",
@@ -459,9 +516,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d484b44bdc2d1d4e8b456d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d484b44bdc2d1d4e8b456d",
         "Name": "mag_mr133_izhmeh_12g_6",
         "ModType": "shotTube",
@@ -475,9 +534,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5882163824597757561aa922": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5882163824597757561aa922",
         "Name": "mag_mr153_izhmeh_12g_6",
         "ModType": "shotTube",
@@ -491,9 +552,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6259bdcabd28e4721447a2aa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6259bdcabd28e4721447a2aa",
         "Name": "mag_m3_benelli_std_12g_7",
         "ModType": "shotTube",
@@ -507,9 +570,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a78830bc5856700137e4c90": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a78830bc5856700137e4c90",
         "Name": "mag_870_remington_magazie_extension_12g_7",
         "ModType": "shotTube",
@@ -523,9 +588,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5882163224597757561aa920": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5882163224597757561aa920",
         "Name": "mag_mr153_izhmeh_12g_7",
         "ModType": "shotTube",
@@ -539,9 +606,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d485804bdc2d8c2f8b456b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d485804bdc2d8c2f8b456b",
         "Name": "mag_mr133_izhmeh_12g_8",
         "ModType": "shotTube",
@@ -555,9 +624,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "56deeefcd2720bc8328b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56deeefcd2720bc8328b4568",
         "Name": "mag_mr153_izhmeh_12g_8",
         "ModType": "shotTube",
@@ -571,9 +642,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e87080c81c4ed43e83cefda": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e87080c81c4ed43e83cefda",
         "Name": "mag_590_mossberg_magazie_cap_12g_8",
         "ModType": "shotTube",
@@ -587,9 +660,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "625ff2eb9f5537057932257d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "625ff2eb9f5537057932257d",
         "Name": "mag_m3_benelli_magazine_extension_12g_9",
         "ModType": "shotTube",
@@ -607,9 +682,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a78832ec5856700155a6ca3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a78832ec5856700155a6ca3",
         "Name": "mag_870_remington_magazie_extension_12g_10",
         "ModType": "shotTube",
@@ -623,9 +700,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "625ff3046d721f05d93bf2ee": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "625ff3046d721f05d93bf2ee",
         "Name": "mag_m3_benelli_magazine_extension_12g_11",
         "ModType": "shotTube",
@@ -643,9 +722,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "625ff31daaaa8c1130599f64": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "625ff31daaaa8c1130599f64",
         "Name": "mag_m3_benelli_magazine_extension_12g_13",
         "ModType": "shotTube",
@@ -663,9 +744,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 5,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f647d9f8499b57dc40ddb93": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f647d9f8499b57dc40ddb93",
         "Name": "mag_ks23_toz_ks23_std_23x75_3",
         "ModType": "shotTube",
@@ -679,9 +762,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5caf1109ae9215753c44119f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5caf1109ae9215753c44119f",
         "Name": "mag_ash12_ckib_ash12_std_127x55_20",
         "ModType": "long_mag",
@@ -695,9 +780,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5caf1041ae92157c28402e3f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5caf1041ae92157c28402e3f",
         "Name": "mag_ash12_ckib_ash12_std_127x55_10",
         "ModType": "",
@@ -711,9 +798,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fc23426900b1d5091531e15": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc23426900b1d5091531e15",
         "Name": "mag_mk18_sword_mjolnir_std_86x70_10",
         "ModType": "",
@@ -727,9 +816,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "559ba5b34bdc2d1f1a8b4582": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "559ba5b34bdc2d1f1a8b4582",
         "Name": "mag_sv98_izhmash_sv98_std_762x54r_10",
         "ModType": "",
@@ -743,9 +834,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c471c442e221602b542a6f8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471c442e221602b542a6f8",
         "Name": "mag_svd_izhmash_svd_std_762x54_10",
         "ModType": "",
@@ -759,9 +852,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c88f24b2e22160bc12c69a6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c88f24b2e22160bc12c69a6",
         "Name": "mag_svd_izhmash_svd_std_762x54_20",
         "ModType": "",
@@ -775,9 +870,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ae0973a5acfc4001562206c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae0973a5acfc4001562206c",
         "Name": "mag_mosin_izhmash_mosin_std_762x54_4",
         "ModType": "",
@@ -793,9 +890,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bae13ded4351e44f824bf38": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bae13ded4351e44f824bf38",
         "Name": "mag_mosin_promag_opfor_mag_762x54_10",
         "ModType": "",
@@ -817,9 +916,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5888988e24597752fe43a6fa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5888988e24597752fe43a6fa",
         "Name": "mag_dvl-10_lobaev_308_10",
         "ModType": "",
@@ -833,9 +934,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfea7ad0db834001c38f1ee": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfea7ad0db834001c38f1ee",
         "Name": "mag_m700_wyatt_762x51_5",
         "ModType": "",
@@ -849,9 +952,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ce69cbad7f00c00b61c5098": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ce69cbad7f00c00b61c5098",
         "Name": "mag_m700_magpul_pmag_762_ac_762x51_5",
         "ModType": "",
@@ -865,9 +970,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d25a4a98abbc30b917421a4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d25a4a98abbc30b917421a4",
         "Name": "mag_m700_ai_aics_762x51_5",
         "ModType": "",
@@ -881,9 +988,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfeaa0f0db834001b734927": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfeaa0f0db834001b734927",
         "Name": "mag_m700_wyatt_762x51_10",
         "ModType": "long_mag",
@@ -897,9 +1006,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d25af8f8abbc3055079fec5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d25af8f8abbc3055079fec5",
         "Name": "mag_m700_promag_aa70_762x51_10",
         "ModType": "",
@@ -913,9 +1024,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d25a7b88abbc3054f3e60bc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d25a7b88abbc3054f3e60bc",
         "Name": "mag_m700_magpul_pmag_762_ac_762x51_10",
         "ModType": "",
@@ -929,9 +1042,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d25a6538abbc306c62e630d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d25a6538abbc306c62e630d",
         "Name": "mag_m700_ai_aics_762x51_10",
         "ModType": "",
@@ -945,9 +1060,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d25a6a48abbc306c62e6310": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d25a6a48abbc306c62e6310",
         "Name": "mag_m700_mdt_aics_762x51_12",
         "ModType": "",
@@ -961,9 +1078,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cf12a15d7f00c05464b293f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf12a15d7f00c05464b293f",
         "Name": "mag_m700_promag_aa70_762x51_20",
         "ModType": "",
@@ -977,9 +1096,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5df8f535bb49d91fb446d6b0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df8f535bb49d91fb446d6b0",
         "Name": "mag_ar10_kac_steel_762x51_10",
         "ModType": "",
@@ -993,9 +1114,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5df8f541c41b2312ea3335e3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df8f541c41b2312ea3335e3",
         "Name": "mag_ar10_kac_steel_762x51_20",
         "ModType": "",
@@ -1009,9 +1132,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a3501acc4a282000d72293a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a3501acc4a282000d72293a",
         "Name": "mag_ar10_magpul_pmag_sr_gen_3_762x51_20",
         "ModType": "",
@@ -1025,9 +1150,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "617130016c780c1e710c9a24": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "617130016c780c1e710c9a24",
         "Name": "mag_417_hk_417_std_762x51_10",
         "ModType": "",
@@ -1041,9 +1168,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "617131a4568c120fdd29482d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "617131a4568c120fdd29482d",
         "Name": "mag_417_hk_417_std_762x51_20",
         "ModType": "",
@@ -1057,9 +1186,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c503ac82e221602b21d6e9a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c503ac82e221602b21d6e9a",
         "Name": "mag_vepr_molot_308_win_std_762x51_5",
         "ModType": "",
@@ -1073,9 +1204,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c503ad32e2216398b5aada2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c503ad32e2216398b5aada2",
         "Name": "mag_vepr_molot_308_win_std_762x51_10",
         "ModType": "",
@@ -1089,9 +1222,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "64b9e2037fdfb81df81e3c25": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64b9e2037fdfb81df81e3c25",
         "Name": "mag_m14_springfield_armory_762x51_10",
         "ModType": "",
@@ -1105,9 +1240,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5aaf8a0be5b5b00015693243": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aaf8a0be5b5b00015693243",
         "Name": "mag_m14_springfield_armory_762x51_20",
         "ModType": "",
@@ -1121,9 +1258,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addcce35acfc4001a5fc635": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addcce35acfc4001a5fc635",
         "Name": "mag_m14_triple_k_m14_magazine_762x51_30",
         "ModType": "long_mag",
@@ -1137,9 +1276,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addccf45acfc400185c2989": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addccf45acfc400185c2989",
         "Name": "mag_m14_x_products_drum_magazine_m14_762x51_50",
         "ModType": "",
@@ -1153,9 +1294,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628120f210e26c1f344e6558": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628120f210e26c1f344e6558",
         "Name": "mag_ax_accuracy_international_ax_762x51_10_pb",
         "ModType": "",
@@ -1176,9 +1319,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628120fd5631d45211793c9f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628120fd5631d45211793c9f",
         "Name": "mag_ax_accuracy_international_ax_86x70_10_pb",
         "ModType": "",
@@ -1204,9 +1349,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618168dc8004cc50514c34fc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618168dc8004cc50514c34fc",
         "Name": "mag_mk17_fn_mk17_std_762x51_20",
         "ModType": "",
@@ -1220,9 +1367,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6183d53f1cb55961fa0fdcda": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6183d53f1cb55961fa0fdcda",
         "Name": "mag_mk17_fn_mk17_std_762x51_20_fde",
         "ModType": "",
@@ -1236,9 +1385,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5df25b6c0b92095fd441e4cf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df25b6c0b92095fd441e4cf",
         "Name": "mag_t5000_orsis_t5000_std_5_762x51",
         "ModType": "",
@@ -1252,9 +1403,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7bef1e5acfc43d82528402": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7bef1e5acfc43d82528402",
         "Name": "mag_fal_ds_arms_fal_sa58_762x51_10",
         "ModType": "",
@@ -1268,9 +1421,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b099ac65acfc400186331e1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b099ac65acfc400186331e1",
         "Name": "mag_fal_ds_arms_fal_sa58_762x51_20",
         "ModType": "",
@@ -1284,9 +1439,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7c2d1d5acfc43d1028532a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7c2d1d5acfc43d1028532a",
         "Name": "mag_fal_mmw_fal_sa58_762x51_20",
         "ModType": "",
@@ -1300,9 +1457,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7bef5d5acfc43bca7067a3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7bef5d5acfc43bca7067a3",
         "Name": "mag_fal_ds_arms_fal_sa58_762x51_30",
         "ModType": "long_mag",
@@ -1316,9 +1475,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7d37845acfc400170e2f87": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d37845acfc400170e2f87",
         "Name": "mag_fal_sarco_fal_l1a1_orig_762x51_30",
         "ModType": "long_mag",
@@ -1332,9 +1493,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7bef9c5acfc43d102852ec": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7bef9c5acfc43d102852ec",
         "Name": "mag_fal_x_products_x_fal_762x51_50",
         "ModType": "",
@@ -1348,9 +1511,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 5,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "544a37c44bdc2d25388b4567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "544a37c44bdc2d25388b4567",
         "Name": "mag_stanag_surefire_mag5_556x45_60",
         "ModType": "",
@@ -1364,9 +1529,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6592372e221600133e47d7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6592372e221600133e47d7",
         "Name": "mag_stanag_surefire_mag5_556x45_100",
         "ModType": "long_mag",
@@ -1380,9 +1547,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 5,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c05413a0db834001c390617": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c05413a0db834001c390617",
         "Name": "mag_stanag_hk_416_steel_maritime_556x45_30",
         "ModType": "",
@@ -1396,9 +1565,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d1340b3d7ad1a0b52682ed7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d1340b3d7ad1a0b52682ed7",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_30_fde",
         "ModType": "",
@@ -1412,9 +1583,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d1340bdd7ad1a0e8d245aab": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d1340bdd7ad1a0e8d245aab",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_40_fde",
         "ModType": "long_mag",
@@ -1428,9 +1601,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55802d5f4bdc2dac148b458e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55802d5f4bdc2dac148b458e",
         "Name": "mag_stanag_magpul_pmag_gen_m3_window_556x45_30",
         "ModType": "",
@@ -1444,9 +1619,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d1340cad7ad1a0b0b249869": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d1340cad7ad1a0b0b249869",
         "Name": "mag_stanag_magpul_pmag_gen_m3_window_556x45_30_fde",
         "ModType": "",
@@ -1460,9 +1637,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6d46132e221601da357d56": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d46132e221601da357d56",
         "Name": "mag_stanag_troy_battlemag_556x45_30",
         "ModType": "",
@@ -1476,9 +1655,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "544a378f4bdc2d30388b4567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "544a378f4bdc2d30388b4567",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_40",
         "ModType": "long_mag",
@@ -1492,9 +1673,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59c1383d86f774290a37e0ca": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59c1383d86f774290a37e0ca",
         "Name": "mag_stanag_magpul_pmag_d-60_556x45_60",
         "ModType": "",
@@ -1508,9 +1691,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 5,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5aaa5e60e5b5b000140293d6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aaa5e60e5b5b000140293d6",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_10",
         "ModType": "",
@@ -1524,9 +1709,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5448c1d04bdc2dff2f8b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5448c1d04bdc2dff2f8b4569",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_20",
         "ModType": "",
@@ -1540,9 +1727,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5aaa5dfee5b5b000140293d3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aaa5dfee5b5b000140293d3",
         "Name": "mag_stanag_magpul_pmag_gen_m3_556x45_30",
         "ModType": "",
@@ -1556,9 +1745,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61840d85568c120fdd2962a5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61840d85568c120fdd2962a5",
         "Name": "mag_stanag_fn_mk16_std_556x45_30_fde",
         "ModType": "",
@@ -1572,9 +1763,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6d450c2e221600114c997d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d450c2e221600114c997d",
         "Name": "mag_stanag_hk_gen_2_pm_556x45_30",
         "ModType": "",
@@ -1588,9 +1781,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6d42cb2e2216000e69d7d1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d42cb2e2216000e69d7d1",
         "Name": "mag_stanag_hk_polymer_mag_556x45_30",
         "ModType": "",
@@ -1604,9 +1799,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61840bedd92c473c77021635": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61840bedd92c473c77021635",
         "Name": "mag_stanag_fn_mk16_std_556x45_30",
         "ModType": "",
@@ -1620,9 +1817,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62307b7b10d2321fa8741921": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62307b7b10d2321fa8741921",
         "Name": "mag_g36_hk_std_556x45_30",
         "ModType": "",
@@ -1636,9 +1835,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d4887d4bdc2d962f8b4570": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d4887d4bdc2d962f8b4570",
         "Name": "mag_stanag_colt_ar15_std_556x45_30",
         "ModType": "",
@@ -1652,9 +1853,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "587df3a12459772c28142567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "587df3a12459772c28142567",
         "Name": "mag_sks_toz_std_internal_762x39_10",
         "ModType": "",
@@ -1668,9 +1871,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61695095d92c473c7702147a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61695095d92c473c7702147a",
         "Name": "mag_sks_kci_drum_762x39_75",
         "ModType": "",
@@ -1684,9 +1889,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5970672e221602b21d7855": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5970672e221602b21d7855",
         "Name": "mag_sks_promag_aalvx35_762x39_35",
         "ModType": "long_mag",
@@ -1700,9 +1907,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "587df583245977373c4f1129": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "587df583245977373c4f1129",
         "Name": "mag_sks_tapco_mag6610_762x39_10",
         "ModType": "",
@@ -1716,9 +1925,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c0548ae0db834001966a3c2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0548ae0db834001966a3c2",
         "Name": "mag_ak_arsenal_cwp_mag_556x45_30",
         "ModType": "",
@@ -1732,9 +1943,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ac66c5d5acfc4001718d314": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac66c5d5acfc4001718d314",
         "Name": "mag_ak_izhmash_6L29_556x45_30",
         "ModType": "",
@@ -1748,9 +1961,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e21a3c67e40bd02257a008a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e21a3c67e40bd02257a008a",
         "Name": "mag_ak_magpul_pmag_30_ak_akm_gen_m3_762x39_30_banana",
         "ModType": "",
@@ -1764,9 +1979,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a0060fc86f7745793204432": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0060fc86f7745793204432",
         "Name": "mag_ak_izhmash_akms_aluminium_762x39_30",
         "ModType": "",
@@ -1780,9 +1997,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6272874a6c47bd74f92e2087": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6272874a6c47bd74f92e2087",
         "Name": "mag_ak_fab_defense_ultimag_ak_30r_762x39_30",
         "ModType": "",
@@ -1796,9 +2015,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b1fb3e15acfc4001637f068": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b1fb3e15acfc4001637f068",
         "Name": "mag_ak_izhmash_rpk_std_bakelite_762x39_40",
         "ModType": "long_mag",
@@ -1812,9 +2033,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59d6272486f77466146386ff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d6272486f77466146386ff",
         "Name": "mag_ak_magpul_pmag_30_ak_akm_gen_m3_762x39_30",
         "ModType": "",
@@ -1828,9 +2051,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59e5f5a486f7746c530b3ce2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e5f5a486f7746c530b3ce2",
         "Name": "mag_ak_izhmash_rpk_std_61_sector_762x39_40",
         "ModType": "long_mag",
@@ -1844,9 +2069,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6175362e221600133e3b94": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6175362e221600133e3b94",
         "Name": "mag_ak_promag_ak_a_16_drum_762x39_73",
         "ModType": "",
@@ -1860,9 +2087,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ac66bea5acfc43b321d4aec": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac66bea5acfc43b321d4aec",
         "Name": "mag_ak_izhmash_ak103_std_762x39_30",
         "ModType": "",
@@ -1876,9 +2105,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59d625f086f774661516605d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d625f086f774661516605d",
         "Name": "mag_ak_izhmash_ak_std_55_762x39_30",
         "ModType": "",
@@ -1892,9 +2123,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59e5d83b86f7745aed03d262": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e5d83b86f7745aed03d262",
         "Name": "mag_ak_custom_sawed_off_762x39_10",
         "ModType": "",
@@ -1908,9 +2141,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b1fd4e35acfc40018633c39": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b1fd4e35acfc40018633c39",
         "Name": "mag_ak_izhmash_akms_aluminium_762x39_10",
         "ModType": "",
@@ -1924,9 +2159,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cfe8010d7ad1a59283b14c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cfe8010d7ad1a59283b14c6",
         "Name": "mag_ak_x_products_x_47_drum_762x39_50",
         "ModType": "",
@@ -1940,9 +2177,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59fafc9386f774067d462453": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59fafc9386f774067d462453",
         "Name": "mag_ak_us_palm_ak30_762x39_fde",
         "ModType": "",
@@ -1956,9 +2195,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59fafc5086f7740dbe19f6c3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59fafc5086f7740dbe19f6c3",
         "Name": "mag_ak_us_palm_ak30_762x39_blk",
         "ModType": "",
@@ -1972,9 +2213,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a01c29586f77474660c694c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a01c29586f77474660c694c",
         "Name": "mag_ak_izhmash_6L10_762x39_30",
         "ModType": "",
@@ -1988,9 +2231,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cbdc23eae9215001136a407": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cbdc23eae9215001136a407",
         "Name": "mag_ak_molot_rpk_drum_762x39_75",
         "ModType": "",
@@ -2004,9 +2249,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d482194bdc2d1d4e8b456b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d482194bdc2d1d4e8b456b",
         "Name": "mag_ak74_izhmash_6L31_545x39_60",
         "ModType": "",
@@ -2020,9 +2267,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "564ca99c4bdc2d16268b4589": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "564ca99c4bdc2d16268b4589",
         "Name": "mag_ak74_izhmash_6L20_545x39_30",
         "ModType": "",
@@ -2036,9 +2285,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "564ca9df4bdc2d35148b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "564ca9df4bdc2d35148b4569",
         "Name": "mag_ak74_izhmash_6L18_545x39_45",
         "ModType": "long_mag",
@@ -2052,9 +2303,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d481904bdc2d8c2f8b456a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d481904bdc2d8c2f8b456a",
         "Name": "mag_ak74_izhmash_6L26_545x39_45",
         "ModType": "long_mag",
@@ -2068,9 +2321,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cbdaf89ae9215000e5b9c94": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cbdaf89ae9215000e5b9c94",
         "Name": "mag_ak74_izhmash_6L23_plum_545x39_30",
         "ModType": "",
@@ -2084,9 +2339,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "649ec30cb013f04a700e60fb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "649ec30cb013f04a700e60fb",
         "Name": "mag_ak_izhmash_ak12_early_type_545x39_30",
         "ModType": "",
@@ -2100,9 +2357,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bed61680db834001d2c45ab": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bed61680db834001d2c45ab",
         "Name": "mag_ak_izhmash_ak12_std_545x39_30",
         "ModType": "",
@@ -2116,9 +2375,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d480c04bdc2d1d4e8b456a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d480c04bdc2d1d4e8b456a",
         "Name": "mag_ak74_izhmash_6L23_545x39_30",
         "ModType": "",
@@ -2132,9 +2393,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d4837c4bdc2d1d4e8b456c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d4837c4bdc2d1d4e8b456c",
         "Name": "mag_ak74_izhmash_saiga_545_std_545x39_10",
         "ModType": "",
@@ -2148,9 +2411,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "64b9e265c94d0d15c5027e35": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64b9e265c94d0d15c5027e35",
         "Name": "mag_ak74_deltatech_saiga_mk_545_20_545x39_20",
         "ModType": "",
@@ -2164,9 +2429,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "64b9cf0ac12b9c38db26923a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64b9cf0ac12b9c38db26923a",
         "Name": "mag_ak_magpul_pmag_20_ak_akm_gen_m3_762x39_20",
         "ModType": "",
@@ -2180,9 +2447,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5aaa4194e5b5b055d06310a5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aaa4194e5b5b055d06310a5",
         "Name": "mag_ak74_magpul_pmag_30_ak74_gen_m3_545x39_30",
         "ModType": "",
@@ -2196,9 +2465,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bed625c0db834001c062946": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bed625c0db834001c062946",
         "Name": "mag_ak_izhmash_rpk16_drum_545x39_95",
         "ModType": "",
@@ -2212,9 +2483,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57838f0b2459774a256959b2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57838f0b2459774a256959b2",
         "Name": "mag_vss_tochmash_6L24_9x39_10",
         "ModType": "",
@@ -2228,9 +2501,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57838f9f2459774a150289a0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57838f9f2459774a150289a0",
         "Name": "mag_vss_tochmash_6L25_9x39_20",
         "ModType": "",
@@ -2244,9 +2519,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a9e81fba2750c00164f6b11": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9e81fba2750c00164f6b11",
         "Name": "mag_vss_tochmash_sr3m130_9x39_30",
         "ModType": "long_mag",
@@ -2260,9 +2537,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ba264f6d4351e0034777d52": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ba264f6d4351e0034777d52",
         "Name": "mag_mp7_hk_std_46x30_20",
         "ModType": "",
@@ -2276,9 +2555,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ba2657ed4351e0035628ff2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ba2657ed4351e0035628ff2",
         "Name": "mag_mp7_hk_std_46x30_30",
         "ModType": "",
@@ -2292,9 +2573,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ba26586d4351e44f824b340": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ba26586d4351e44f824b340",
         "Name": "mag_mp7_hk_std_46x30_40",
         "ModType": "",
@@ -2308,9 +2591,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a718b548dc32e000d46d262": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a718b548dc32e000d46d262",
         "Name": "mag_glock_glock_std_9x19_17",
         "ModType": "",
@@ -2324,9 +2609,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a718da68dc32e000d46d264": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a718da68dc32e000d46d264",
         "Name": "mag_glock_magpul_pmag_21_gl9_9x19_21",
         "ModType": "",
@@ -2340,9 +2627,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a7ad2e851dfba0016153692": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7ad2e851dfba0016153692",
         "Name": "mag_glock_glock_big_stick_9x19_33",
         "ModType": "",
@@ -2356,9 +2645,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a718f958dc32e00094b97e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a718f958dc32e00094b97e7",
         "Name": "mag_glock_sgmt_glock_drum_50_9x19_50",
         "ModType": "long_mag",
@@ -2372,9 +2663,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d2f213448f0355009199284": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2f213448f0355009199284",
         "Name": "mag_mp5_hk_kurtz_std_9x19_20",
         "ModType": "",
@@ -2388,9 +2681,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5926c3b286f774640d189b6b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926c3b286f774640d189b6b",
         "Name": "mag_mp5_hk_std_curved_9x19_30",
         "ModType": "",
@@ -2404,9 +2699,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a351711c4a282000b1521a4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a351711c4a282000b1521a4",
         "Name": "mag_mp5_x_products_x_5_9x19_50",
         "ModType": "",
@@ -2420,9 +2717,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de8e8dafd6b4e6e2276dc32": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8e8dafd6b4e6e2276dc32",
         "Name": "mag_mp9_bt_mp9_std_9x19_15",
         "ModType": "",
@@ -2436,9 +2735,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de8ea8ffd6b4e6e2276dc35": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8ea8ffd6b4e6e2276dc35",
         "Name": "mag_mp9_bt_mp9_std_9x19_20",
         "ModType": "",
@@ -2452,9 +2753,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de8eaadbbaf010b10528a6d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8eaadbbaf010b10528a6d",
         "Name": "mag_mp9_bt_mp9_std_9x19_25",
         "ModType": "",
@@ -2468,9 +2771,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de8eac42a78646d96665d91": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8eac42a78646d96665d91",
         "Name": "mag_mp9_bt_mp9_std_9x19_30",
         "ModType": "",
@@ -2484,9 +2789,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cadc2e0ae9215051e1c21e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cadc2e0ae9215051e1c21e7",
         "Name": "mag_m9_beretta_m9a3_std_9x19_17",
         "ModType": "",
@@ -2500,9 +2807,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "576a5ed62459771e9c2096cb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "576a5ed62459771e9c2096cb",
         "Name": "mag_mp443_izhmeh_std_9x19_18",
         "ModType": "",
@@ -2516,9 +2825,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5448c12b4bdc2d02308b456f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5448c12b4bdc2d02308b456f",
         "Name": "mag_pm_izhmeh_9x18pm_8",
         "ModType": "",
@@ -2532,9 +2843,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d485be4bdc2d962f8b456f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d485be4bdc2d962f8b456f",
         "Name": "mag_pm_custom_9x18pm_84",
         "ModType": "",
@@ -2548,9 +2861,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "571a29dc2459771fb2755a6a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "571a29dc2459771fb2755a6a",
         "Name": "mag_tt_toz_std_762x25tt_8",
         "ModType": "",
@@ -2564,9 +2879,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6193d338de3cdf1d2614a6fc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6193d338de3cdf1d2614a6fc",
         "Name": "mag_usp_hk_usp_1143x23_12",
         "ModType": "",
@@ -2580,9 +2897,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6193d3149fb0c665d5490e32": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6193d3149fb0c665d5490e32",
         "Name": "mag_usp_hk_usp_tactical_1143x23_12",
         "ModType": "",
@@ -2596,9 +2915,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cc70093e4a949033c734312": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc70093e4a949033c734312",
         "Name": "mag_p90_fn_p90_std_57x28_50",
         "ModType": "",
@@ -2612,9 +2933,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5db6552e2216001026119d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db6552e2216001026119d",
         "Name": "mag_mpx_sig_mag_std_9x19_20",
         "ModType": "",
@@ -2628,9 +2951,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5894a05586f774094708ef75": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5894a05586f774094708ef75",
         "Name": "mag_mpx_sig_mpx_std_9x19_30",
         "ModType": "",
@@ -2644,9 +2969,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5db6652e221600113fba51": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db6652e221600113fba51",
         "Name": "mag_mpx_tti_sig_mag_w_base_pad_9x19_41",
         "ModType": "long_mag",
@@ -2660,9 +2987,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5db6742e2216000f1b2852": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db6742e2216000f1b2852",
         "Name": "mag_mpx_f5_mpx_drum_9x19_50",
         "ModType": "",
@@ -2676,9 +3005,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ea034eb5aad6446a939737b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea034eb5aad6446a939737b",
         "Name": "mag_ppsh_zis_std_762x25_35",
         "ModType": "",
@@ -2692,9 +3023,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ea034f65aad6446a939737e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea034f65aad6446a939737e",
         "Name": "mag_ppsh_zis_std_762x25_71",
         "ModType": "",
@@ -2708,9 +3041,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59f99a7d86f7745b134aa97b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59f99a7d86f7745b134aa97b",
         "Name": "mag_sr1mp_tochmash_std_9x21_18",
         "ModType": "",
@@ -2724,9 +3059,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a17fb03fcdbcbcae668728f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a17fb03fcdbcbcae668728f",
         "Name": "mag_aps_molot_aps_apb_std_9x18pm_20",
         "ModType": "",
@@ -2740,9 +3077,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "56d59948d2720bb7418b4582": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56d59948d2720bb7418b4582",
         "Name": "mag_p226_sig_std_9x19_15",
         "ModType": "",
@@ -2756,9 +3095,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c920e902e221644f31c3c99": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c920e902e221644f31c3c99",
         "Name": "mag_p226_sig_extended_mag_9x19_20",
         "ModType": "",
@@ -2772,9 +3113,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fc3e466187fea44d52eda90": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc3e466187fea44d52eda90",
         "Name": "mag_ump_hk_ump_1143x23_25",
         "ModType": "",
@@ -2788,9 +3131,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fb651b52b1b027b1f50bcff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb651b52b1b027b1f50bcff",
         "Name": "mag_glock_glock_21_std_1143x23_13",
         "ModType": "",
@@ -2804,9 +3149,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fb651dc85f90547f674b6f4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb651dc85f90547f674b6f4",
         "Name": "mag_glock_kriss_magex_g30_1143x23_30",
         "ModType": "",
@@ -2820,9 +3167,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e81c4ca763d9f754677befa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e81c4ca763d9f754677befa",
         "Name": "mag_m1911_colt_m1911a1_std_1143x23_7",
         "ModType": "",
@@ -2836,9 +3185,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ef3448ab37dfd6af863525c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ef3448ab37dfd6af863525c",
         "Name": "mag_m1911_mec_gar_extended_1143x23_11",
         "ModType": "",
@@ -2852,9 +3203,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "599860ac86f77436b225ed1a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "599860ac86f77436b225ed1a",
         "Name": "mag_pp-19-01_izhmash_vityaz_std_9x19_30",
         "ModType": "",
@@ -2868,9 +3221,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d3eb5eca4b9363b1f22f8e4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d3eb5eca4b9363b1f22f8e4",
         "Name": "mag_57_fn_five_seven_std_57x28_20",
         "ModType": "",
@@ -2884,9 +3239,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57d14e1724597714010c3f4b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57d14e1724597714010c3f4b",
         "Name": "mag_pp-91_zmz_pp-91_std_9x18pm_20",
         "ModType": "",
@@ -2900,9 +3257,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57d1519e24597714373db79d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57d1519e24597714373db79d",
         "Name": "mag_pp-91_zmz_pp-91_std_9x18pm_30",
         "ModType": "",
@@ -2916,9 +3275,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "602286df23506e50807090c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602286df23506e50807090c6",
         "Name": "mag_pl15_izhmash_pl15_std_9x19_16",
         "ModType": "",
@@ -2932,9 +3293,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de653abf76fdc1ce94a5a2a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de653abf76fdc1ce94a5a2a",
         "Name": "mag_vpo215_molot_vpo_215_366tkm_4",
         "ModType": "",
@@ -2948,9 +3311,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f3e77b26cda304dcc634057": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f3e77b26cda304dcc634057",
         "Name": "mag_m1911_colt_m45a1_std_1143x23_7",
         "ModType": "",
@@ -2964,9 +3329,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5998529a86f774647f44f421": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5998529a86f774647f44f421",
         "Name": "mag_pp-19-01_izhmash_izh-9x19_sb7_9x19_10",
         "ModType": "",
@@ -2980,9 +3347,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c0673fb0db8340023300271": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0673fb0db8340023300271",
         "Name": "mag_pp-19-01_pufgun_mag_sg-919_20_9x19_20",
         "ModType": "",
@@ -2996,9 +3365,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c0672ed0db834001b7353f3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0672ed0db834001b7353f3",
         "Name": "mag_pp-19-01_pufgun_mag_sg-919_30_9x19_30",
         "ModType": "",
@@ -3012,9 +3383,11 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "633ec6ee025b096d320a3b15": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "633ec6ee025b096d320a3b15",
         "Name": "mag_rsh12_kbp_rsh12_cylinder_127x55_5",
         "ModType": "",
@@ -3026,9 +3399,11 @@
         "ConflictingItems": [],
         "Weight": 0.23,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62e153bcdb1a5c41971c1b5b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e153bcdb1a5c41971c1b5b",
         "Name": "mag_sr2m_tochmash_9x21_30",
         "ModType": "",
@@ -3040,9 +3415,11 @@
         "ConflictingItems": [],
         "Weight": 0.17,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "633a98eab8b0506e48497c1a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "633a98eab8b0506e48497c1a",
         "Name": "mag_sr2m_tochmash_9x21_20",
         "ModType": "",
@@ -3054,9 +3431,11 @@
         "ConflictingItems": [],
         "Weight": 0.13,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "630e1adbbd357927e4007c09": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630e1adbbd357927e4007c09",
         "Name": "mag_aug_steyr_std_556x45_10",
         "ModType": "",
@@ -3068,9 +3447,11 @@
         "ConflictingItems": [],
         "Weight": 0.1,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62e7c98b550c8218d602cbb4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e7c98b550c8218d602cbb4",
         "Name": "mag_aug_steyr_std_556x45_30",
         "ModType": "",
@@ -3082,9 +3463,11 @@
         "ConflictingItems": [],
         "Weight": 0.13,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "630e295c984633f1fb0e7c30": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630e295c984633f1fb0e7c30",
         "Name": "mag_aug_steyr_std_556x45_42",
         "ModType": "long_mag",
@@ -3096,9 +3479,11 @@
         "ConflictingItems": [],
         "Weight": 0.142,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "630769c4962d0247b029dc60": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630769c4962d0247b029dc60",
         "Name": "mag_glock_glock_big_stick_9x19_24_fde",
         "ModType": "",
@@ -3110,9 +3495,11 @@
         "ConflictingItems": [],
         "Weight": 0.112,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "630767c37d50ff5e8a1ea71a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630767c37d50ff5e8a1ea71a",
         "Name": "mag_glock_glock_big_stick_9x19_31_fde",
         "ModType": "",
@@ -3124,9 +3511,11 @@
         "ConflictingItems": [],
         "Weight": 0.14,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "63076701a987397c0816d21b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63076701a987397c0816d21b",
         "Name": "mag_glock_glock_w_pad_9x19_19_fde",
         "ModType": "",
@@ -3138,9 +3527,11 @@
         "ConflictingItems": [],
         "Weight": 0.106,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6241c2c2117ad530666a5108": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6241c2c2117ad530666a5108",
         "Name": "mag_stanag_maopul_pmag_airsoft_6_30_fde",
         "ModType": "",
@@ -3152,9 +3543,11 @@
         "ConflictingItems": [],
         "Weight": 0.05,
         "LoyaltyLevel": 5,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6450ec2e7da7133e5a09ca96": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6450ec2e7da7133e5a09ca96",
         "Name": "mag_9a91_kbp_9a91_std_9x39_20",
         "ModType": "",
@@ -3166,9 +3559,11 @@
         "ConflictingItems": [],
         "Weight": 0.3,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6513f0a194c72326990a3868": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6513f0a194c72326990a3868",
         "Name": "mag_rpd_zid_rpd_762x39_100",
         "ModType": "",
@@ -3180,9 +3575,11 @@
         "ConflictingItems": [],
         "Weight": 0.8,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65293c38fc460e50a509cb25": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65293c38fc460e50a509cb25",
         "Name": "mag_ar10_lancer_l7_awm_762x51_20",
         "ModType": "",
@@ -3194,9 +3591,11 @@
         "ConflictingItems": [],
         "Weight": 0.35,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65293c7a17e14363030ad308": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65293c7a17e14363030ad308",
         "Name": "mag_ar10_lancer_l7_awm_762x51_25",
         "ModType": "long_mag",
@@ -3208,9 +3607,11 @@
         "ConflictingItems": [],
         "Weight": 0.35,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65785979bec02a3fe82c181e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65785979bec02a3fe82c181e",
         "Name": "mag_pktm_zid_pk_std_762x54r_250",
         "ModType": "",

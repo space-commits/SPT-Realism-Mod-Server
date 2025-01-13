@@ -1,5 +1,6 @@
 {
     "64ad2d8d7e2fcecf0305533f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64ad2d8d7e2fcecf0305533f",
         "Name": "level3_soft_armor_back",
         "AllowADS": true,
@@ -14,6 +15,7 @@
         "TemplateType": "gear"
     },
     "64ad2dac6f9247c2f4012439": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64ad2dac6f9247c2f4012439",
         "Name": "level3_soft_armor_front",
         "AllowADS": true,
@@ -28,6 +30,7 @@
         "TemplateType": "gear"
     },
     "64ad2dba0b9840e4c80c2485": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64ad2dba0b9840e4c80c2485",
         "Name": "level3_soft_armor_left_side",
         "AllowADS": true,
@@ -42,6 +45,7 @@
         "TemplateType": "gear"
     },
     "64ad2dc66f9247c2f401243d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64ad2dc66f9247c2f401243d",
         "Name": "level3_soft_armor_right_side",
         "AllowADS": true,
@@ -56,6 +60,7 @@
         "TemplateType": "gear"
     },
     "64ad2dd30b9840e4c80c2489": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64ad2dd30b9840e4c80c2489",
         "Name": "level3_soft_armor_collar",
         "AllowADS": true,
@@ -70,6 +75,7 @@
         "TemplateType": "gear"
     },
     "64afc71497cf3a403c01ff38": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64afc71497cf3a403c01ff38",
         "Name": "item_equipment_plate_granitBr5_6 class_frontback",
         "AllowADS": true,
@@ -86,6 +92,7 @@
         "TemplateType": "gear"
     },
     "64afd81707e2cf40e903a316": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64afd81707e2cf40e903a316",
         "Name": "item_equipment_plate_granit_6class_side",
         "AllowADS": true,
@@ -101,6 +108,7 @@
         "TemplateType": "gear"
     },
     "64afdb577bb3bfe8fe03fd1d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64afdb577bb3bfe8fe03fd1d",
         "Name": "item_equipment_plate_SSAPI_ESBI_6_side",
         "AllowADS": true,
@@ -116,6 +124,7 @@
         "TemplateType": "gear"
     },
     "6783ae9ee00fdb2053bf6848": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6783ae9ee00fdb2053bf6848",
         "Name": "xsapi_chest",
         "AllowADS": true,
@@ -131,6 +140,7 @@
         "TemplateType": "gear"
     },
     "6783aec223d48324c0b278f5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6783aec223d48324c0b278f5",
         "Name": "mk4a_plate",
         "AllowADS": true,
@@ -146,6 +156,7 @@
         "TemplateType": "gear"
     },
     "64afdcb83efdfea28601d041": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64afdcb83efdfea28601d041",
         "Name": "item_equipment_plate_sapi_6_frontback",
         "AllowADS": true,
@@ -161,6 +172,7 @@
         "TemplateType": "gear"
     },
     "64afee8e9f589807e30dc68a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64afee8e9f589807e30dc68a",
         "Name": "level3_soft_armor_left_arm",
         "AllowADS": true,
@@ -175,6 +187,7 @@
         "TemplateType": "gear"
     },
     "64afeecb977493a0ee026213": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64afeecb977493a0ee026213",
         "Name": "level3_soft_armor_right_arm",
         "AllowADS": true,
@@ -189,6 +202,7 @@
         "TemplateType": "gear"
     },
     "64afef49977493a0ee026217": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64afef49977493a0ee026217",
         "Name": "level3_soft_armor_stomach",
         "AllowADS": true,
@@ -203,6 +217,7 @@
         "TemplateType": "gear"
     },
     "64b111fe1be308f1800688c1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64b111fe1be308f1800688c1",
         "Name": "slick_soft_armor_back",
         "AllowADS": true,
@@ -217,6 +232,7 @@
         "TemplateType": "gear"
     },
     "64b11c08506a73f6a10f9364": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64b11c08506a73f6a10f9364",
         "Name": "helmet_all_exeptNeck",
         "AllowADS": true,
@@ -231,6 +247,7 @@
         "TemplateType": "gear"
     },
     "654a4a964b446df1ad03f192": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a4a964b446df1ad03f192",
         "Name": "item_equipment_plate_granit4rs_6class_back",
         "AllowADS": true,
@@ -246,6 +263,7 @@
         "TemplateType": "gear"
     },
     "654a4dea7c17dec2f50cc86a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a4dea7c17dec2f50cc86a",
         "Name": "item_equipment_plate_korund_6b12_3class_front",
         "AllowADS": true,
@@ -261,6 +279,7 @@
         "TemplateType": "gear"
     },
     "654a4f8bc721968a4404ef18": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a4f8bc721968a4404ef18",
         "Name": "item_equipment_plate_korund_5class_side",
         "AllowADS": true,
@@ -276,6 +295,7 @@
         "TemplateType": "gear"
     },
     "654a8976f414fcea4004d78b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a8976f414fcea4004d78b",
         "Name": "6b13_level2_soft_armor_back",
         "AllowADS": true,
@@ -290,6 +310,7 @@
         "TemplateType": "gear"
     },
     "654a8ae00337d53f9102c2aa": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a8ae00337d53f9102c2aa",
         "Name": "6b13_level2_soft_armor_collar",
         "AllowADS": true,
@@ -304,6 +325,7 @@
         "TemplateType": "gear"
     },
     "654a8b0b0337d53f9102c2ae": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a8b0b0337d53f9102c2ae",
         "Name": "6b13_level2_soft_armor_front",
         "AllowADS": true,
@@ -318,6 +340,7 @@
         "TemplateType": "gear"
     },
     "654a8b3df414fcea4004d78f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a8b3df414fcea4004d78f",
         "Name": "6b13_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -332,6 +355,7 @@
         "TemplateType": "gear"
     },
     "654a8b60f414fcea4004d793": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a8b60f414fcea4004d793",
         "Name": "level2_soft_armor_left_arm",
         "AllowADS": true,
@@ -346,6 +370,7 @@
         "TemplateType": "gear"
     },
     "654a8b80f414fcea4004d797": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a8b80f414fcea4004d797",
         "Name": "6b13_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -360,6 +385,7 @@
         "TemplateType": "gear"
     },
     "654a8ba90337d53f9102c2b2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a8ba90337d53f9102c2b2",
         "Name": "level2_soft_armor_right_arm",
         "AllowADS": true,
@@ -374,6 +400,7 @@
         "TemplateType": "gear"
     },
     "654a8bc5f414fcea4004d79b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a8bc5f414fcea4004d79b",
         "Name": "6b13_level2_soft_armor_Groin",
         "AllowADS": true,
@@ -388,6 +415,7 @@
         "TemplateType": "gear"
     },
     "654a90aff4f81a421b0a7c86": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a90aff4f81a421b0a7c86",
         "Name": "Untar_level3_helmet_armor_top",
         "AllowADS": true,
@@ -402,6 +430,7 @@
         "TemplateType": "gear"
     },
     "654a91068e1ce698150fd1e2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a91068e1ce698150fd1e2",
         "Name": "Untar_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -416,6 +445,7 @@
         "TemplateType": "gear"
     },
     "654a9189bcc67a392b056c79": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "654a9189bcc67a392b056c79",
         "Name": "Untar_level3_helmet_armor_ears",
         "AllowADS": true,
@@ -430,6 +460,7 @@
         "TemplateType": "gear"
     },
     "6551fec55d0cf82e51014288": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6551fec55d0cf82e51014288",
         "Name": "exfil_level4_helmet_armor_top",
         "AllowADS": true,
@@ -444,6 +475,7 @@
         "TemplateType": "gear"
     },
     "655200ba0ef76cf7be09d528": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "655200ba0ef76cf7be09d528",
         "Name": "exfil_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -458,6 +490,7 @@
         "TemplateType": "gear"
     },
     "65573fa5655447403702a816": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65573fa5655447403702a816",
         "Name": "item_equipment_plate_granitBr4_5 class_frontback",
         "AllowADS": true,
@@ -473,6 +506,7 @@
         "TemplateType": "gear"
     },
     "6557458f83942d705f0c4962": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6557458f83942d705f0c4962",
         "Name": "item_equipment_plate_SSAPI_5_side",
         "AllowADS": true,
@@ -488,6 +522,7 @@
         "TemplateType": "gear"
     },
     "655746010177119f4a097ff7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "655746010177119f4a097ff7",
         "Name": "item_equipment_plate_sapi_5class_frontback",
         "AllowADS": true,
@@ -503,6 +538,7 @@
         "TemplateType": "gear"
     },
     "6557519ac9b1d9bdcb0777e1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6557519ac9b1d9bdcb0777e1",
         "Name": "level2_soft_armor_plate_front",
         "AllowADS": true,
@@ -517,6 +553,7 @@
         "TemplateType": "gear"
     },
     "655751db58aa1b6dbd0cc295": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "655751db58aa1b6dbd0cc295",
         "Name": "level2_soft_armor_plate_back",
         "AllowADS": true,
@@ -531,6 +568,7 @@
         "TemplateType": "gear"
     },
     "656efaf54772930db4031ff5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656efaf54772930db4031ff5",
         "Name": "item_equipment_plate_granit4_5class_back",
         "AllowADS": true,
@@ -546,6 +584,7 @@
         "TemplateType": "gear"
     },
     "656efd66034e8e01c407f35c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656efd66034e8e01c407f35c",
         "Name": "item_equipment_plate_granit4_4class_diy_back",
         "AllowADS": true,
@@ -561,6 +600,7 @@
         "TemplateType": "gear"
     },
     "656f57dc27aed95beb08f628": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f57dc27aed95beb08f628",
         "Name": "item_equipment_plate_granit4_zhukBr3_3class_front",
         "AllowADS": true,
@@ -576,6 +616,7 @@
         "TemplateType": "gear"
     },
     "656f603f94b480b8a500c0d6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f603f94b480b8a500c0d6",
         "Name": "item_equipment_plate_granit4_6b33_4class_front",
         "AllowADS": true,
@@ -591,6 +632,7 @@
         "TemplateType": "gear"
     },
     "656f611f94b480b8a500c0db": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f611f94b480b8a500c0db",
         "Name": "item_equipment_plate_granit4_5class_front",
         "AllowADS": true,
@@ -606,6 +648,7 @@
         "TemplateType": "gear"
     },
     "656f63c027aed95beb08f62c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f63c027aed95beb08f62c",
         "Name": "item_equipment_plate_granit4rs_6class_front",
         "AllowADS": true,
@@ -621,6 +664,7 @@
         "TemplateType": "gear"
     },
     "656f664200d62bcd2e024077": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f664200d62bcd2e024077",
         "Name": "item_equipment_plate_korund_5class_front",
         "AllowADS": true,
@@ -636,6 +680,7 @@
         "TemplateType": "gear"
     },
     "656f66b5c6baea13cd07e108": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f66b5c6baea13cd07e108",
         "Name": "item_equipment_plate_korund_vmk_6class_front",
         "AllowADS": true,
@@ -651,6 +696,7 @@
         "TemplateType": "gear"
     },
     "656f9d5900d62bcd2e02407c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f9d5900d62bcd2e02407c",
         "Name": "item_equipment_plate_SAPI_AR500_legacy_3class_frontback",
         "AllowADS": true,
@@ -666,6 +712,7 @@
         "TemplateType": "gear"
     },
     "656f9fa0498d1b7e3e071d98": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f9fa0498d1b7e3e071d98",
         "Name": "item_equipment_plate_SAPI_SPRTN_Omega_4class_frontback",
         "AllowADS": true,
@@ -681,6 +728,7 @@
         "TemplateType": "gear"
     },
     "656fa0fb498d1b7e3e071d9c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fa0fb498d1b7e3e071d9c",
         "Name": "item_equipment_plate_SAPI_GlobalArmors_Steel_4class_frontback",
         "AllowADS": true,
@@ -696,6 +744,7 @@
         "TemplateType": "gear"
     },
     "656fa25e94b480b8a500c0e0": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fa25e94b480b8a500c0e0",
         "Name": "item_equipment_plate_SAPI_KibaArms_Titan_4class_frontback",
         "AllowADS": true,
@@ -711,6 +760,7 @@
         "TemplateType": "gear"
     },
     "656fa53d94b480b8a500c0e4": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fa53d94b480b8a500c0e4",
         "Name": "item_equipment_plate_SAPI_TallCom_Guardian_5class_frontback",
         "AllowADS": true,
@@ -726,6 +776,7 @@
         "TemplateType": "gear"
     },
     "656fa61e94b480b8a500c0e8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fa61e94b480b8a500c0e8",
         "Name": "item_equipment_plate_SAPI_NESCO_4400_6class_frontback",
         "AllowADS": true,
@@ -741,6 +792,7 @@
         "TemplateType": "gear"
     },
     "656fa76500d62bcd2e024080": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fa76500d62bcd2e024080",
         "Name": "item_equipment_plate_SAPI_KibaArms_Steel_6class_frontback",
         "AllowADS": true,
@@ -756,6 +808,7 @@
         "TemplateType": "gear"
     },
     "656fa8d700d62bcd2e024084": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fa8d700d62bcd2e024084",
         "Name": "item_equipment_plate_SAPI_Cult_Locust_5class_frontback",
         "AllowADS": true,
@@ -771,6 +824,7 @@
         "TemplateType": "gear"
     },
     "656fa99800d62bcd2e024088": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fa99800d62bcd2e024088",
         "Name": "item_equipment_plate_SAPI_Cult_Termite_6class_frontback",
         "AllowADS": true,
@@ -786,6 +840,7 @@
         "TemplateType": "gear"
     },
     "656fac30c6baea13cd07e10c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fac30c6baea13cd07e10c",
         "Name": "item_equipment_plate_SAPI_PRTCTR_Lightweight_3class_frontback",
         "AllowADS": true,
@@ -801,6 +856,7 @@
         "TemplateType": "gear"
     },
     "656fad8c498d1b7e3e071da0": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fad8c498d1b7e3e071da0",
         "Name": "item_equipment_plate_SAPI_Monoclete_PE_4class_frontback",
         "AllowADS": true,
@@ -816,6 +872,7 @@
         "TemplateType": "gear"
     },
     "656fae5f7c2d57afe200c0d7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fae5f7c2d57afe200c0d7",
         "Name": "item_equipment_plate_SAPI_GAC_3s15m_5class_frontback",
         "AllowADS": true,
@@ -831,6 +888,7 @@
         "TemplateType": "gear"
     },
     "656faf0ca0dce000a2020f77": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656faf0ca0dce000a2020f77",
         "Name": "item_equipment_plate_SAPI_GAC_4sss2_6class_frontback",
         "AllowADS": true,
@@ -846,6 +904,7 @@
         "TemplateType": "gear"
     },
     "656fafe3498d1b7e3e071da4": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fafe3498d1b7e3e071da4",
         "Name": "item_equipment_plate_SAPI_KITECO_SCIVSA_6class_frontback",
         "AllowADS": true,
@@ -861,6 +920,7 @@
         "TemplateType": "gear"
     },
     "656fb0bd7c2d57afe200c0dc": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fb0bd7c2d57afe200c0dc",
         "Name": "item_equipment_plate_SAPI_SPRTN_Elaphros_4class_frontback",
         "AllowADS": true,
@@ -877,6 +937,7 @@
         "TemplateType": "gear"
     },
     "656fb21fa0dce000a2020f7c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fb21fa0dce000a2020f7c",
         "Name": "item_equipment_plate_SAPI_NewSphereTech_4class_frontback",
         "AllowADS": true,
@@ -892,6 +953,7 @@
         "TemplateType": "gear"
     },
     "656fd7c32668ef0402028fb9": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fd7c32668ef0402028fb9",
         "Name": "6b2_level2_soft_armor_front",
         "AllowADS": true,
@@ -906,6 +968,7 @@
         "TemplateType": "gear"
     },
     "656fd89bf5a9631d4e042575": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656fd89bf5a9631d4e042575",
         "Name": "6b2_level2_soft_armor_back",
         "AllowADS": true,
@@ -920,6 +983,7 @@
         "TemplateType": "gear"
     },
     "65702f87722744627e05cdb8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65702f87722744627e05cdb8",
         "Name": "module3m_level2_soft_armor_front",
         "AllowADS": true,
@@ -934,6 +998,7 @@
         "TemplateType": "gear"
     },
     "65702fe593b7ea9c330f4ce8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65702fe593b7ea9c330f4ce8",
         "Name": "module3m_level2_soft_armor_back",
         "AllowADS": true,
@@ -948,6 +1013,7 @@
         "TemplateType": "gear"
     },
     "6570305d93b7ea9c330f4ced": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570305d93b7ea9c330f4ced",
         "Name": "module3m_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -962,6 +1028,7 @@
         "TemplateType": "gear"
     },
     "65703472c9030b928a0a8a78": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65703472c9030b928a0a8a78",
         "Name": "module3m_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -976,6 +1043,7 @@
         "TemplateType": "gear"
     },
     "65703d866584602f7d057a8a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65703d866584602f7d057a8a",
         "Name": "paca_level2_soft_armor_front",
         "AllowADS": true,
@@ -990,6 +1058,7 @@
         "TemplateType": "gear"
     },
     "65703fa06584602f7d057a8e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65703fa06584602f7d057a8e",
         "Name": "paca_level2_soft_armor_back",
         "AllowADS": true,
@@ -1004,6 +1073,7 @@
         "TemplateType": "gear"
     },
     "65703fe46a912c8b5c03468b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65703fe46a912c8b5c03468b",
         "Name": "paca_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -1018,6 +1088,7 @@
         "TemplateType": "gear"
     },
     "657040374e67e8ec7a0d261c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657040374e67e8ec7a0d261c",
         "Name": "paca_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -1032,6 +1103,7 @@
         "TemplateType": "gear"
     },
     "657044e971369562b300ce9b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657044e971369562b300ce9b",
         "Name": "untar_level3_soft_armor_front",
         "AllowADS": true,
@@ -1046,6 +1118,7 @@
         "TemplateType": "gear"
     },
     "657045741bd9beedc40b7299": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657045741bd9beedc40b7299",
         "Name": "untar_level3_soft_armor_back",
         "AllowADS": true,
@@ -1060,6 +1133,7 @@
         "TemplateType": "gear"
     },
     "657045b97e80617cee095bda": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657045b97e80617cee095bda",
         "Name": "untar_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -1074,6 +1148,7 @@
         "TemplateType": "gear"
     },
     "6570460471369562b300ce9f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570460471369562b300ce9f",
         "Name": "untar_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -1088,6 +1163,7 @@
         "TemplateType": "gear"
     },
     "6570495b45d573133d0d6adb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570495b45d573133d0d6adb",
         "Name": "kora_kulon_level3_soft_armor_front",
         "AllowADS": true,
@@ -1102,6 +1178,7 @@
         "TemplateType": "gear"
     },
     "657049d23425b19bbc0502f0": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657049d23425b19bbc0502f0",
         "Name": "kora_kulon_level3_soft_armor_back",
         "AllowADS": true,
@@ -1116,6 +1193,7 @@
         "TemplateType": "gear"
     },
     "65704de13e7bba58ea0285c8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65704de13e7bba58ea0285c8",
         "Name": "kirasaN_level2_soft_armor_front",
         "AllowADS": true,
@@ -1130,6 +1208,7 @@
         "TemplateType": "gear"
     },
     "65705c3c14f2ed6d7d0b7738": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65705c3c14f2ed6d7d0b7738",
         "Name": "kirasaN_level2_soft_armor_back",
         "AllowADS": true,
@@ -1144,6 +1223,7 @@
         "TemplateType": "gear"
     },
     "65705c777260e1139e091408": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65705c777260e1139e091408",
         "Name": "kirasaN_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -1158,6 +1238,7 @@
         "TemplateType": "gear"
     },
     "65705cb314f2ed6d7d0b773c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65705cb314f2ed6d7d0b773c",
         "Name": "kirasaN_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -1172,6 +1253,7 @@
         "TemplateType": "gear"
     },
     "65705cea4916448ae1050897": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65705cea4916448ae1050897",
         "Name": "kirasaN_level2_soft_armor_collar",
         "AllowADS": true,
@@ -1186,6 +1268,7 @@
         "TemplateType": "gear"
     },
     "6570653e89fd4926380b733e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570653e89fd4926380b733e",
         "Name": "tv115_level2_soft_armor_front",
         "AllowADS": true,
@@ -1200,6 +1283,7 @@
         "TemplateType": "gear"
     },
     "6570658a89fd4926380b7346": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570658a89fd4926380b7346",
         "Name": "tv115_level2_soft_armor_back",
         "AllowADS": true,
@@ -1214,6 +1298,7 @@
         "TemplateType": "gear"
     },
     "65707fc348c7a887f2010432": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65707fc348c7a887f2010432",
         "Name": "6b23-2_level2_soft_armor_front",
         "AllowADS": true,
@@ -1228,6 +1313,7 @@
         "TemplateType": "gear"
     },
     "6570800612755ae0d907acf8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570800612755ae0d907acf8",
         "Name": "6b23-2_level2_soft_armor_back",
         "AllowADS": true,
@@ -1242,6 +1328,7 @@
         "TemplateType": "gear"
     },
     "65708070f65e2491bf00972c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65708070f65e2491bf00972c",
         "Name": "6b23-2_level2_soft_armor_left",
         "AllowADS": true,
@@ -1256,6 +1343,7 @@
         "TemplateType": "gear"
     },
     "657080a212755ae0d907ad04": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657080a212755ae0d907ad04",
         "Name": "6b23-2_level2_soft_armor_right",
         "AllowADS": true,
@@ -1270,6 +1358,7 @@
         "TemplateType": "gear"
     },
     "657080ca12755ae0d907ad5e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657080ca12755ae0d907ad5e",
         "Name": "6b23-2_level2_soft_armor_collar",
         "AllowADS": true,
@@ -1284,6 +1373,7 @@
         "TemplateType": "gear"
     },
     "65708122f65e2491bf009755": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65708122f65e2491bf009755",
         "Name": "6b23-2_level2_soft_armor_groin_front",
         "AllowADS": true,
@@ -1298,6 +1388,7 @@
         "TemplateType": "gear"
     },
     "65708165696fe382cf073255": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65708165696fe382cf073255",
         "Name": "6b23-2_level2_soft_armor_groin_back",
         "AllowADS": true,
@@ -1312,6 +1403,7 @@
         "TemplateType": "gear"
     },
     "657087577f6d4590ac0d2109": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657087577f6d4590ac0d2109",
         "Name": "6b5-15_level4_soft_armor_front",
         "AllowADS": true,
@@ -1326,6 +1418,7 @@
         "TemplateType": "gear"
     },
     "6570880f4a747dbb63005ee5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570880f4a747dbb63005ee5",
         "Name": "6b5-15_level4_soft_armor_back",
         "AllowADS": true,
@@ -1340,6 +1433,7 @@
         "TemplateType": "gear"
     },
     "65708afe4a747dbb63005eee": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65708afe4a747dbb63005eee",
         "Name": "6b5-15_level2_soft_armor_collar",
         "AllowADS": true,
@@ -1354,6 +1448,7 @@
         "TemplateType": "gear"
     },
     "65708b4c4a747dbb63005ef3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65708b4c4a747dbb63005ef3",
         "Name": "6b5-15_level4_soft_armor_groin",
         "AllowADS": true,
@@ -1368,6 +1463,7 @@
         "TemplateType": "gear"
     },
     "6570df294cc0d2ab1e05ed74": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570df294cc0d2ab1e05ed74",
         "Name": "tv110_level2_soft_armor_front",
         "AllowADS": true,
@@ -1382,6 +1478,7 @@
         "TemplateType": "gear"
     },
     "6570df9c615f54368b04fca9": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570df9c615f54368b04fca9",
         "Name": "tv110_level2_soft_armor_back",
         "AllowADS": true,
@@ -1396,6 +1493,7 @@
         "TemplateType": "gear"
     },
     "6570e025615f54368b04fcb0": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e025615f54368b04fcb0",
         "Name": "trooper_level2_soft_armor_front",
         "AllowADS": true,
@@ -1410,6 +1508,7 @@
         "TemplateType": "gear"
     },
     "6570e0610b57c03ec90b96ef": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e0610b57c03ec90b96ef",
         "Name": "trooper_level2_soft_armor_back",
         "AllowADS": true,
@@ -1424,6 +1523,7 @@
         "TemplateType": "gear"
     },
     "6570e479a6560e4ee50c2b02": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e479a6560e4ee50c2b02",
         "Name": "arsarma_a18_level2_soft_armor_back",
         "AllowADS": true,
@@ -1438,6 +1538,7 @@
         "TemplateType": "gear"
     },
     "6570e5100b57c03ec90b970a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e5100b57c03ec90b970a",
         "Name": "arsarma_a18_level2_soft_armor_front",
         "AllowADS": true,
@@ -1452,6 +1553,7 @@
         "TemplateType": "gear"
     },
     "6570e5674cc0d2ab1e05edbb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e5674cc0d2ab1e05edbb",
         "Name": "arsarma_a18_level2_soft_armor_left",
         "AllowADS": true,
@@ -1466,6 +1568,7 @@
         "TemplateType": "gear"
     },
     "6570e59b0b57c03ec90b970e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e59b0b57c03ec90b970e",
         "Name": "arsarma_a18_level2_soft_armor_right",
         "AllowADS": true,
@@ -1480,6 +1583,7 @@
         "TemplateType": "gear"
     },
     "6570e83223c1f638ef0b0ede": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e83223c1f638ef0b0ede",
         "Name": "crye_avs_level2_soft_armor_front",
         "AllowADS": true,
@@ -1494,6 +1598,7 @@
         "TemplateType": "gear"
     },
     "6570e87c23c1f638ef0b0ee2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e87c23c1f638ef0b0ee2",
         "Name": "crye_avs_level2_soft_armor_back",
         "AllowADS": true,
@@ -1508,6 +1613,7 @@
         "TemplateType": "gear"
     },
     "6570e8a623c1f638ef0b0ee6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e8a623c1f638ef0b0ee6",
         "Name": "crye_avs_level2_soft_armor_left",
         "AllowADS": true,
@@ -1522,6 +1628,7 @@
         "TemplateType": "gear"
     },
     "6570e8e7ab49e964120b4563": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e8e7ab49e964120b4563",
         "Name": "crye_avs_level2_soft_armor_right",
         "AllowADS": true,
@@ -1536,6 +1643,7 @@
         "TemplateType": "gear"
     },
     "6570e90b3a5689d85f08db97": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570e90b3a5689d85f08db97",
         "Name": "crye_avs_level2_soft_armor_groin",
         "AllowADS": true,
@@ -1550,6 +1658,7 @@
         "TemplateType": "gear"
     },
     "6570f30b0921c914bf07964c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570f30b0921c914bf07964c",
         "Name": "interceptor_level2_soft_armor_front",
         "AllowADS": true,
@@ -1564,6 +1673,7 @@
         "TemplateType": "gear"
     },
     "6570f35cd67d0309980a7acb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570f35cd67d0309980a7acb",
         "Name": "interceptor_level2_soft_armor_back",
         "AllowADS": true,
@@ -1578,6 +1688,7 @@
         "TemplateType": "gear"
     },
     "6570f3890b4ae5847f060dad": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570f3890b4ae5847f060dad",
         "Name": "interceptor_level2_soft_armor_left",
         "AllowADS": true,
@@ -1592,6 +1703,7 @@
         "TemplateType": "gear"
     },
     "6570f3bb0b4ae5847f060db2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570f3bb0b4ae5847f060db2",
         "Name": "interceptor_level2_soft_armor_right",
         "AllowADS": true,
@@ -1606,6 +1718,7 @@
         "TemplateType": "gear"
     },
     "6570f6e774d84423df065f21": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570f6e774d84423df065f21",
         "Name": "ana_tact_m2_level2_soft_armor_front",
         "AllowADS": true,
@@ -1620,6 +1733,7 @@
         "TemplateType": "gear"
     },
     "6570f71dd67d0309980a7af8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570f71dd67d0309980a7af8",
         "Name": "ana_tact_m2_level2_soft_armor_back",
         "AllowADS": true,
@@ -1634,6 +1748,7 @@
         "TemplateType": "gear"
     },
     "6570f74774d84423df065f25": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570f74774d84423df065f25",
         "Name": "ana_tact_m2_level2_soft_armor_left",
         "AllowADS": true,
@@ -1648,6 +1763,7 @@
         "TemplateType": "gear"
     },
     "6570f79c4c65ab77a6015121": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570f79c4c65ab77a6015121",
         "Name": "ana_tact_m2_level2_soft_armor_right",
         "AllowADS": true,
@@ -1662,6 +1778,7 @@
         "TemplateType": "gear"
     },
     "6570fa1f4c65ab77a601512f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570fa1f4c65ab77a601512f",
         "Name": "cqc_mk4a_level2_soft_armor_back",
         "AllowADS": true,
@@ -1676,6 +1793,7 @@
         "TemplateType": "gear"
     },
     "6570fae34c65ab77a6015146": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570fae34c65ab77a6015146",
         "Name": "cqc_mk4a_level2_soft_armor_front",
         "AllowADS": true,
@@ -1690,6 +1808,7 @@
         "TemplateType": "gear"
     },
     "6570fb22584a51c23e03251f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570fb22584a51c23e03251f",
         "Name": "cqc_mk4a_level2_soft_armor_left",
         "AllowADS": true,
@@ -1704,6 +1823,7 @@
         "TemplateType": "gear"
     },
     "6570fb6ad3eefd23430f8c7c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570fb6ad3eefd23430f8c7c",
         "Name": "cqc_mk4a_level2_soft_armor_right",
         "AllowADS": true,
@@ -1718,6 +1838,7 @@
         "TemplateType": "gear"
     },
     "6570fb8f4c65ab77a601514d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570fb8f4c65ab77a601514d",
         "Name": "cqc_mk4a_level2_soft_armor_collar",
         "AllowADS": true,
@@ -1732,6 +1853,7 @@
         "TemplateType": "gear"
     },
     "6570fbdd74d84423df065f60": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570fbdd74d84423df065f60",
         "Name": "cqc_mk4a_level2_soft_armor_left_arm",
         "AllowADS": true,
@@ -1746,6 +1868,7 @@
         "TemplateType": "gear"
     },
     "6570fc41d3eefd23430f8c83": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570fc41d3eefd23430f8c83",
         "Name": "cqc_mk4a_level2_soft_armor_right_arm",
         "AllowADS": true,
@@ -1760,6 +1883,7 @@
         "TemplateType": "gear"
     },
     "657112234269e9a568089eac": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657112234269e9a568089eac",
         "Name": "ulach_level4_helmet_armor_top",
         "AllowADS": true,
@@ -1774,6 +1898,7 @@
         "TemplateType": "gear"
     },
     "657112a4818110db4600aa66": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657112a4818110db4600aa66",
         "Name": "ulach_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -1788,6 +1913,7 @@
         "TemplateType": "gear"
     },
     "657112ce22996eaf110881fb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657112ce22996eaf110881fb",
         "Name": "ulach_level4_helmet_armor_ears",
         "AllowADS": true,
@@ -1802,6 +1928,7 @@
         "TemplateType": "gear"
     },
     "657112fa818110db4600aa6b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657112fa818110db4600aa6b",
         "Name": "maska1sha_level4_helmet_armor_ears",
         "AllowADS": true,
@@ -1816,6 +1943,7 @@
         "TemplateType": "gear"
     },
     "6571133d22996eaf11088200": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571133d22996eaf11088200",
         "Name": "maska1sha_level4_helmet_armor_top",
         "AllowADS": true,
@@ -1830,6 +1958,7 @@
         "TemplateType": "gear"
     },
     "6571138e818110db4600aa71": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571138e818110db4600aa71",
         "Name": "maska1sha_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -1844,6 +1973,7 @@
         "TemplateType": "gear"
     },
     "6571199565daf6aa960c9b10": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571199565daf6aa960c9b10",
         "Name": "ssh68_level3_helmet_armor_top",
         "AllowADS": true,
@@ -1858,6 +1988,7 @@
         "TemplateType": "gear"
     },
     "657119d49eb8c145180dbb95": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657119d49eb8c145180dbb95",
         "Name": "ssh68_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -1872,6 +2003,7 @@
         "TemplateType": "gear"
     },
     "657119fea330b8c9060f7afc": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657119fea330b8c9060f7afc",
         "Name": "ssh68_level3_helmet_armor_ears",
         "AllowADS": true,
@@ -1886,6 +2018,7 @@
         "TemplateType": "gear"
     },
     "65711b07a330b8c9060f7b01": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65711b07a330b8c9060f7b01",
         "Name": "ronin_level3_helmet_armor_top",
         "AllowADS": true,
@@ -1900,6 +2033,7 @@
         "TemplateType": "gear"
     },
     "65711b489eb8c145180dbb9d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65711b489eb8c145180dbb9d",
         "Name": "ronin_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -1914,6 +2048,7 @@
         "TemplateType": "gear"
     },
     "65711b706d197c216005b31c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65711b706d197c216005b31c",
         "Name": "ronin_level3_helmet_armor_ears",
         "AllowADS": true,
@@ -1928,6 +2063,7 @@
         "TemplateType": "gear"
     },
     "65711b9b65daf6aa960c9b1b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65711b9b65daf6aa960c9b1b",
         "Name": "ronin_level3_helmet_armor_eyes",
         "AllowADS": true,
@@ -1942,6 +2078,7 @@
         "TemplateType": "gear"
     },
     "65711bc79eb8c145180dbba1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65711bc79eb8c145180dbba1",
         "Name": "ronin_level3_helmet_armor_jaw",
         "AllowADS": true,
@@ -1956,6 +2093,7 @@
         "TemplateType": "gear"
     },
     "6571b27a6d84a2b8b6007f92": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571b27a6d84a2b8b6007f92",
         "Name": "6b23-1_level2_soft_armor_front",
         "AllowADS": true,
@@ -1970,6 +2108,7 @@
         "TemplateType": "gear"
     },
     "6571baa74cb80d995d0a1490": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571baa74cb80d995d0a1490",
         "Name": "6b23-1_level2_soft_armor_back",
         "AllowADS": true,
@@ -1984,6 +2123,7 @@
         "TemplateType": "gear"
     },
     "6571baac6d84a2b8b6007fa3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571baac6d84a2b8b6007fa3",
         "Name": "6b23-1_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -1998,6 +2138,7 @@
         "TemplateType": "gear"
     },
     "6571bab0f41985531a038091": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571bab0f41985531a038091",
         "Name": "6b23-1_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2012,6 +2153,7 @@
         "TemplateType": "gear"
     },
     "6571babb4076795e5e07383f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571babb4076795e5e07383f",
         "Name": "6b23-1_level2_soft_armor_collar",
         "AllowADS": true,
@@ -2026,6 +2168,7 @@
         "TemplateType": "gear"
     },
     "6571babf4cb80d995d0a1494": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571babf4cb80d995d0a1494",
         "Name": "6b23-1_level2_soft_armor_groin_back",
         "AllowADS": true,
@@ -2040,6 +2183,7 @@
         "TemplateType": "gear"
     },
     "6571bac34076795e5e073843": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571bac34076795e5e073843",
         "Name": "6b23-1_level2_soft_armor_groin_front",
         "AllowADS": true,
@@ -2054,6 +2198,7 @@
         "TemplateType": "gear"
     },
     "6571dbd388ead79fcf091d71": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571dbd388ead79fcf091d71",
         "Name": "zhuk3_level2_soft_armor_front",
         "AllowADS": true,
@@ -2068,6 +2213,7 @@
         "TemplateType": "gear"
     },
     "6571dbda88ead79fcf091d75": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571dbda88ead79fcf091d75",
         "Name": "zhuk3_level2_soft_armor_back",
         "AllowADS": true,
@@ -2082,6 +2228,7 @@
         "TemplateType": "gear"
     },
     "6571dbe07c02ae206002502e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571dbe07c02ae206002502e",
         "Name": "zhuk3_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -2096,6 +2243,7 @@
         "TemplateType": "gear"
     },
     "6571dbeaee8ec43d520cf89e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571dbeaee8ec43d520cf89e",
         "Name": "zhuk3_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2110,6 +2258,7 @@
         "TemplateType": "gear"
     },
     "6571dbef88ead79fcf091d79": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6571dbef88ead79fcf091d79",
         "Name": "zhuk3_level2_soft_armor_collar",
         "AllowADS": true,
@@ -2124,6 +2273,7 @@
         "TemplateType": "gear"
     },
     "6572e048371fccfbf909d5d8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572e048371fccfbf909d5d8",
         "Name": "drd_level3_soft_armor_front",
         "AllowADS": true,
@@ -2138,6 +2288,7 @@
         "TemplateType": "gear"
     },
     "6572e059371fccfbf909d5dc": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572e059371fccfbf909d5dc",
         "Name": "drd_level3_soft_armor_back",
         "AllowADS": true,
@@ -2152,6 +2303,7 @@
         "TemplateType": "gear"
     },
     "6572e06219b4b511af012f89": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572e06219b4b511af012f89",
         "Name": "drd_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -2166,6 +2318,7 @@
         "TemplateType": "gear"
     },
     "6572e06819b4b511af012f8d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572e06819b4b511af012f8d",
         "Name": "drd_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -2180,6 +2333,7 @@
         "TemplateType": "gear"
     },
     "6572e5221b5bc1185508c24f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572e5221b5bc1185508c24f",
         "Name": "thorcrv_level3_soft_armor_front",
         "AllowADS": true,
@@ -2194,6 +2348,7 @@
         "TemplateType": "gear"
     },
     "6572e52f73c0eabb700109a0": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572e52f73c0eabb700109a0",
         "Name": "thorcrv_level3_soft_armor_back",
         "AllowADS": true,
@@ -2208,6 +2363,7 @@
         "TemplateType": "gear"
     },
     "6572e53c73c0eabb700109a4": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572e53c73c0eabb700109a4",
         "Name": "thorcrv_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -2222,6 +2378,7 @@
         "TemplateType": "gear"
     },
     "6572e54873c0eabb700109a8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572e54873c0eabb700109a8",
         "Name": "thorcrv_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -2236,6 +2393,7 @@
         "TemplateType": "gear"
     },
     "6572eb0e55beba16bc04079f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572eb0e55beba16bc04079f",
         "Name": "strandhogg_level2_soft_armor_front",
         "AllowADS": true,
@@ -2250,6 +2408,7 @@
         "TemplateType": "gear"
     },
     "6572eb1b04ee6483ef039882": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572eb1b04ee6483ef039882",
         "Name": "strandhogg_level2_soft_armor_back",
         "AllowADS": true,
@@ -2264,6 +2423,7 @@
         "TemplateType": "gear"
     },
     "6572eb3004ee6483ef039886": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572eb3004ee6483ef039886",
         "Name": "strandhogg_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -2278,6 +2438,7 @@
         "TemplateType": "gear"
     },
     "6572eb3b04ee6483ef03988a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572eb3b04ee6483ef03988a",
         "Name": "strandhogg_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2292,6 +2453,7 @@
         "TemplateType": "gear"
     },
     "6572eb865b5eac12f10a03ee": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572eb865b5eac12f10a03ee",
         "Name": "strandhogg_level2_soft_armor_groin_front",
         "AllowADS": true,
@@ -2306,6 +2468,7 @@
         "TemplateType": "gear"
     },
     "6572f1ca4c8d903cc60c874e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572f1ca4c8d903cc60c874e",
         "Name": "rbav_af_level2_soft_armor_front",
         "AllowADS": true,
@@ -2320,6 +2483,7 @@
         "TemplateType": "gear"
     },
     "6572f1d60103b4a3270332db": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572f1d60103b4a3270332db",
         "Name": "rbav_af_level2_soft_armor_back",
         "AllowADS": true,
@@ -2334,6 +2498,7 @@
         "TemplateType": "gear"
     },
     "6572f1e10103b4a3270332df": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572f1e10103b4a3270332df",
         "Name": "rbav_af_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -2348,6 +2513,7 @@
         "TemplateType": "gear"
     },
     "6572f1edea457732140ce875": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572f1edea457732140ce875",
         "Name": "rbav_af_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2362,6 +2528,7 @@
         "TemplateType": "gear"
     },
     "6572f1f7ea457732140ce879": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572f1f7ea457732140ce879",
         "Name": "rbav_af_level2_soft_armor_groin_front",
         "AllowADS": true,
@@ -2376,6 +2543,7 @@
         "TemplateType": "gear"
     },
     "6572fc809a866b80ab07eb59": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572fc809a866b80ab07eb59",
         "Name": "mmac_level2_soft_armor_front",
         "AllowADS": true,
@@ -2390,6 +2558,7 @@
         "TemplateType": "gear"
     },
     "6572fc8c9a866b80ab07eb5d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572fc8c9a866b80ab07eb5d",
         "Name": "mmac_level2_soft_armor_back",
         "AllowADS": true,
@@ -2404,6 +2573,7 @@
         "TemplateType": "gear"
     },
     "6572fc989a866b80ab07eb61": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572fc989a866b80ab07eb61",
         "Name": "mmac_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -2418,6 +2588,7 @@
         "TemplateType": "gear"
     },
     "6572fca39a866b80ab07eb65": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6572fca39a866b80ab07eb65",
         "Name": "mmac_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2432,6 +2603,7 @@
         "TemplateType": "gear"
     },
     "65730c0e292ecadbfa09ad49": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65730c0e292ecadbfa09ad49",
         "Name": "ana_m1_level2_soft_armor_front",
         "AllowADS": true,
@@ -2446,6 +2618,7 @@
         "TemplateType": "gear"
     },
     "65730c2213a2f660f60bea96": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65730c2213a2f660f60bea96",
         "Name": "ana_m1_level2_soft_armor_back",
         "AllowADS": true,
@@ -2460,6 +2633,7 @@
         "TemplateType": "gear"
     },
     "65730c2b292ecadbfa09ad50": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65730c2b292ecadbfa09ad50",
         "Name": "ana_m1_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -2474,6 +2648,7 @@
         "TemplateType": "gear"
     },
     "65730c35292ecadbfa09ad54": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65730c35292ecadbfa09ad54",
         "Name": "ana_m1_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2488,6 +2663,7 @@
         "TemplateType": "gear"
     },
     "6573101e292ecadbfa09b389": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6573101e292ecadbfa09b389",
         "Name": "banshee_level2_soft_armor_front",
         "AllowADS": true,
@@ -2502,6 +2678,7 @@
         "TemplateType": "gear"
     },
     "6573102b292ecadbfa09b38d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6573102b292ecadbfa09b38d",
         "Name": "banshee_level2_soft_armor_back",
         "AllowADS": true,
@@ -2516,6 +2693,7 @@
         "TemplateType": "gear"
     },
     "65731038292ecadbfa09b391": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731038292ecadbfa09b391",
         "Name": "banshee_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -2530,6 +2708,7 @@
         "TemplateType": "gear"
     },
     "65731045f31d5be00e08a75a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731045f31d5be00e08a75a",
         "Name": "banshee_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2544,6 +2723,7 @@
         "TemplateType": "gear"
     },
     "65731b46cea9255e2102360a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731b46cea9255e2102360a",
         "Name": "korundvm_level2_soft_armor_front",
         "AllowADS": true,
@@ -2558,6 +2738,7 @@
         "TemplateType": "gear"
     },
     "65731b4fcea9255e2102360e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731b4fcea9255e2102360e",
         "Name": "korundvm_level2_soft_armor_back",
         "AllowADS": true,
@@ -2572,6 +2753,7 @@
         "TemplateType": "gear"
     },
     "65731b576e709cddd001ec3f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731b576e709cddd001ec3f",
         "Name": "korundvm_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -2586,6 +2768,7 @@
         "TemplateType": "gear"
     },
     "65731b60ff6dc44a7d068c4a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731b60ff6dc44a7d068c4a",
         "Name": "korundvm_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2600,6 +2783,7 @@
         "TemplateType": "gear"
     },
     "65731b666e709cddd001ec43": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731b666e709cddd001ec43",
         "Name": "korundvm_level2_soft_armor_collar",
         "AllowADS": true,
@@ -2614,6 +2798,7 @@
         "TemplateType": "gear"
     },
     "65731b6b6042b0f210020ef6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731b6b6042b0f210020ef6",
         "Name": "korundvm_level2_soft_armor_groin_back",
         "AllowADS": true,
@@ -2628,6 +2813,7 @@
         "TemplateType": "gear"
     },
     "65731b716e709cddd001ec47": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65731b716e709cddd001ec47",
         "Name": "korundvm_level2_soft_armor_groin_front",
         "AllowADS": true,
@@ -2642,6 +2828,7 @@
         "TemplateType": "gear"
     },
     "657322988c1cc6dcd9098b2d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657322988c1cc6dcd9098b2d",
         "Name": "bagarii_level2_soft_armor_front",
         "AllowADS": true,
@@ -2656,6 +2843,7 @@
         "TemplateType": "gear"
     },
     "657322a4cea9255e21023651": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657322a4cea9255e21023651",
         "Name": "bagarii_level2_soft_armor_back",
         "AllowADS": true,
@@ -2670,6 +2858,7 @@
         "TemplateType": "gear"
     },
     "657322acd9d89ff7ac0d961b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657322acd9d89ff7ac0d961b",
         "Name": "bagarii_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -2684,6 +2873,7 @@
         "TemplateType": "gear"
     },
     "657322b7d9d89ff7ac0d961f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657322b7d9d89ff7ac0d961f",
         "Name": "bagarii_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -2698,6 +2888,7 @@
         "TemplateType": "gear"
     },
     "65732688d9d89ff7ac0d9c4c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65732688d9d89ff7ac0d9c4c",
         "Name": "gjel_level3_soft_armor_front",
         "AllowADS": true,
@@ -2712,6 +2903,7 @@
         "TemplateType": "gear"
     },
     "657326978c1cc6dcd9098b56": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657326978c1cc6dcd9098b56",
         "Name": "gjel_level3_soft_armor_back",
         "AllowADS": true,
@@ -2726,6 +2918,7 @@
         "TemplateType": "gear"
     },
     "657326a28c1cc6dcd9098b5a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657326a28c1cc6dcd9098b5a",
         "Name": "gjel_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -2740,6 +2933,7 @@
         "TemplateType": "gear"
     },
     "657326b08c1cc6dcd9098b5e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657326b08c1cc6dcd9098b5e",
         "Name": "gjel_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -2754,6 +2948,7 @@
         "TemplateType": "gear"
     },
     "657326bc5d3a3129fb05f36b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657326bc5d3a3129fb05f36b",
         "Name": "gjel_level3_soft_armor_collar",
         "AllowADS": true,
@@ -2768,6 +2963,7 @@
         "TemplateType": "gear"
     },
     "65732de75d3a3129fb05f3dd": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65732de75d3a3129fb05f3dd",
         "Name": "defender2_level3_soft_armor_front",
         "AllowADS": true,
@@ -2782,6 +2978,7 @@
         "TemplateType": "gear"
     },
     "65732df4d0acf75aea06c87b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65732df4d0acf75aea06c87b",
         "Name": "defender2_level3_soft_armor_back",
         "AllowADS": true,
@@ -2796,6 +2993,7 @@
         "TemplateType": "gear"
     },
     "65732e05d0acf75aea06c87f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65732e05d0acf75aea06c87f",
         "Name": "defender2_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -2810,6 +3008,7 @@
         "TemplateType": "gear"
     },
     "65732e0f6784ca384b0167ad": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65732e0f6784ca384b0167ad",
         "Name": "defender2_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -2824,6 +3023,7 @@
         "TemplateType": "gear"
     },
     "65732e215d3a3129fb05f3e1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65732e215d3a3129fb05f3e1",
         "Name": "defender2_level3_soft_armor_collar",
         "AllowADS": true,
@@ -2838,6 +3038,7 @@
         "TemplateType": "gear"
     },
     "65732e30dd8739f6440ef383": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65732e30dd8739f6440ef383",
         "Name": "defender2_level3_soft_armor_groin_front",
         "AllowADS": true,
@@ -2852,6 +3053,7 @@
         "TemplateType": "gear"
     },
     "65733312ca0ca984940a2d53": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65733312ca0ca984940a2d53",
         "Name": "cqc_mk4a_p_level3_soft_armor_front",
         "AllowADS": true,
@@ -2866,6 +3068,7 @@
         "TemplateType": "gear"
     },
     "657333232cc8dfad2c0a3d97": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657333232cc8dfad2c0a3d97",
         "Name": "cqc_mk4a_p_level3_soft_armor_back",
         "AllowADS": true,
@@ -2880,6 +3083,7 @@
         "TemplateType": "gear"
     },
     "657333302cc8dfad2c0a3d9b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657333302cc8dfad2c0a3d9b",
         "Name": "cqc_mk4a_p_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -2894,6 +3098,7 @@
         "TemplateType": "gear"
     },
     "6573333eca0ca984940a2d57": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6573333eca0ca984940a2d57",
         "Name": "cqc_mk4a_p_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -2908,6 +3113,7 @@
         "TemplateType": "gear"
     },
     "6573334aca0ca984940a2d5b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6573334aca0ca984940a2d5b",
         "Name": "cqc_mk4a_p_level3_soft_armor_collar",
         "AllowADS": true,
@@ -2922,6 +3128,7 @@
         "TemplateType": "gear"
     },
     "65733375b7a8d286530e3dd7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65733375b7a8d286530e3dd7",
         "Name": "cqc_mk4a_p_level3_soft_armor_left_arm",
         "AllowADS": true,
@@ -2936,6 +3143,7 @@
         "TemplateType": "gear"
     },
     "6573337f2cc8dfad2c0a3da7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6573337f2cc8dfad2c0a3da7",
         "Name": "cqc_mk4a_p_level3_soft_armor_right_arm",
         "AllowADS": true,
@@ -2950,6 +3158,7 @@
         "TemplateType": "gear"
     },
     "6575bc88c6700bd6b40e8a57": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575bc88c6700bd6b40e8a57",
         "Name": "tactec_level2_soft_armor_front",
         "AllowADS": true,
@@ -2964,6 +3173,7 @@
         "TemplateType": "gear"
     },
     "6575bca0dc9932aed601c5d7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575bca0dc9932aed601c5d7",
         "Name": "tactec_level2_soft_armor_back",
         "AllowADS": true,
@@ -2978,6 +3188,7 @@
         "TemplateType": "gear"
     },
     "6575c2adefc786cd9101a5d9": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c2adefc786cd9101a5d9",
         "Name": "iotv_gen4_f_level3_soft_armor_front",
         "AllowADS": true,
@@ -2992,6 +3203,7 @@
         "TemplateType": "gear"
     },
     "6575c2be52b7f8c76a05ee25": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c2be52b7f8c76a05ee25",
         "Name": "iotv_gen4_f_level3_soft_armor_back",
         "AllowADS": true,
@@ -3006,6 +3218,7 @@
         "TemplateType": "gear"
     },
     "6575c2cd52b7f8c76a05ee29": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c2cd52b7f8c76a05ee29",
         "Name": "iotv_gen4_f_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -3020,6 +3233,7 @@
         "TemplateType": "gear"
     },
     "6575c2d852b7f8c76a05ee2d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c2d852b7f8c76a05ee2d",
         "Name": "iotv_gen4_f_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -3034,6 +3248,7 @@
         "TemplateType": "gear"
     },
     "6575c2e4efc786cd9101a5dd": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c2e4efc786cd9101a5dd",
         "Name": "iotv_gen4_f_level3_soft_armor_collar",
         "AllowADS": true,
@@ -3048,6 +3263,7 @@
         "TemplateType": "gear"
     },
     "6575c2f7efc786cd9101a5e1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c2f7efc786cd9101a5e1",
         "Name": "iotv_gen4_f_level3_soft_armor_left_arm",
         "AllowADS": true,
@@ -3062,6 +3278,7 @@
         "TemplateType": "gear"
     },
     "6575c30352b7f8c76a05ee31": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c30352b7f8c76a05ee31",
         "Name": "iotv_gen4_f_level3_soft_armor_right_arm",
         "AllowADS": true,
@@ -3076,6 +3293,7 @@
         "TemplateType": "gear"
     },
     "6575c31b52b7f8c76a05ee35": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c31b52b7f8c76a05ee35",
         "Name": "iotv_gen4_f_level3_soft_armor_groin_front",
         "AllowADS": true,
@@ -3090,6 +3308,7 @@
         "TemplateType": "gear"
     },
     "6575c326c6700bd6b40e8a80": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c326c6700bd6b40e8a80",
         "Name": "iotv_gen4_f_level3_soft_armor_groin_back",
         "AllowADS": true,
@@ -3104,6 +3323,7 @@
         "TemplateType": "gear"
     },
     "6575c342efc786cd9101a5e5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c342efc786cd9101a5e5",
         "Name": "iotv_gen4_m_level3_soft_armor_front",
         "AllowADS": true,
@@ -3118,6 +3338,7 @@
         "TemplateType": "gear"
     },
     "6575c34bc6700bd6b40e8a84": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c34bc6700bd6b40e8a84",
         "Name": "iotv_gen4_m_level3_soft_armor_back",
         "AllowADS": true,
@@ -3132,6 +3353,7 @@
         "TemplateType": "gear"
     },
     "6575c35bc6700bd6b40e8a88": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c35bc6700bd6b40e8a88",
         "Name": "iotv_gen4_m_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -3146,6 +3368,7 @@
         "TemplateType": "gear"
     },
     "6575c366c6700bd6b40e8a8c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c366c6700bd6b40e8a8c",
         "Name": "iotv_gen4_m_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -3160,6 +3383,7 @@
         "TemplateType": "gear"
     },
     "6575c373dc9932aed601c5ec": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c373dc9932aed601c5ec",
         "Name": "iotv_gen4_m_level3_soft_armor_collar",
         "AllowADS": true,
@@ -3174,6 +3398,7 @@
         "TemplateType": "gear"
     },
     "6575c385dc9932aed601c5f0": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c385dc9932aed601c5f0",
         "Name": "iotv_gen4_m_level3_soft_armor_groin_front",
         "AllowADS": true,
@@ -3188,6 +3413,7 @@
         "TemplateType": "gear"
     },
     "6575c390efc786cd9101a5e9": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c390efc786cd9101a5e9",
         "Name": "iotv_gen4_m_level3_soft_armor_groin_back",
         "AllowADS": true,
@@ -3202,6 +3428,7 @@
         "TemplateType": "gear"
     },
     "6575c3b3dc9932aed601c5f4": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c3b3dc9932aed601c5f4",
         "Name": "iotv_gen4_a_level3_soft_armor_front",
         "AllowADS": true,
@@ -3216,6 +3443,7 @@
         "TemplateType": "gear"
     },
     "6575c3beefc786cd9101a5ed": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c3beefc786cd9101a5ed",
         "Name": "iotv_gen4_a_level3_soft_armor_back",
         "AllowADS": true,
@@ -3230,6 +3458,7 @@
         "TemplateType": "gear"
     },
     "6575c3cdc6700bd6b40e8a90": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c3cdc6700bd6b40e8a90",
         "Name": "iotv_gen4_a_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -3244,6 +3473,7 @@
         "TemplateType": "gear"
     },
     "6575c3dfdc9932aed601c5f8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c3dfdc9932aed601c5f8",
         "Name": "iotv_gen4_a_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -3258,6 +3488,7 @@
         "TemplateType": "gear"
     },
     "6575c3ec52b7f8c76a05ee39": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c3ec52b7f8c76a05ee39",
         "Name": "iotv_gen4_a_level3_soft_armor_collar",
         "AllowADS": true,
@@ -3272,6 +3503,7 @@
         "TemplateType": "gear"
     },
     "6575c3fd52b7f8c76a05ee3d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c3fd52b7f8c76a05ee3d",
         "Name": "iotv_gen4_a_level3_soft_armor_left_arm",
         "AllowADS": true,
@@ -3286,6 +3518,7 @@
         "TemplateType": "gear"
     },
     "6575c40c52b7f8c76a05ee41": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575c40c52b7f8c76a05ee41",
         "Name": "iotv_gen4_a_level3_soft_armor_right_arm",
         "AllowADS": true,
@@ -3300,6 +3533,7 @@
         "TemplateType": "gear"
     },
     "6575ce3716c2762fba0057fd": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ce3716c2762fba0057fd",
         "Name": "6b43_6a_level3_soft_armor_front",
         "AllowADS": true,
@@ -3314,6 +3548,7 @@
         "TemplateType": "gear"
     },
     "6575ce45dc9932aed601c616": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ce45dc9932aed601c616",
         "Name": "6b43_6a_level3_soft_armor_back",
         "AllowADS": true,
@@ -3328,6 +3563,7 @@
         "TemplateType": "gear"
     },
     "6575ce5016c2762fba005802": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ce5016c2762fba005802",
         "Name": "6b43_6a_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -3342,6 +3578,7 @@
         "TemplateType": "gear"
     },
     "6575ce5befc786cd9101a671": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ce5befc786cd9101a671",
         "Name": "6b43_6a_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -3356,6 +3593,7 @@
         "TemplateType": "gear"
     },
     "6575ce6f16c2762fba005806": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ce6f16c2762fba005806",
         "Name": "6b43_6a_level3_soft_armor_collar",
         "AllowADS": true,
@@ -3370,6 +3608,7 @@
         "TemplateType": "gear"
     },
     "6575ce8bdc9932aed601c61e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ce8bdc9932aed601c61e",
         "Name": "6b43_6a_level3_soft_armor_groin_front",
         "AllowADS": true,
@@ -3384,6 +3623,7 @@
         "TemplateType": "gear"
     },
     "6575ce9db15fef3dd4051628": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ce9db15fef3dd4051628",
         "Name": "6b43_6a_level3_soft_armor_left_arm",
         "AllowADS": true,
@@ -3398,6 +3638,7 @@
         "TemplateType": "gear"
     },
     "6575cea8b15fef3dd405162c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575cea8b15fef3dd405162c",
         "Name": "6b43_6a_level3_soft_armor_right_arm",
         "AllowADS": true,
@@ -3412,6 +3653,7 @@
         "TemplateType": "gear"
     },
     "6575d561b15fef3dd4051670": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d561b15fef3dd4051670",
         "Name": "thorintcar_level3_soft_armor_front",
         "AllowADS": true,
@@ -3426,6 +3668,7 @@
         "TemplateType": "gear"
     },
     "6575d56b16c2762fba005818": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d56b16c2762fba005818",
         "Name": "thorintcar_level3_soft_armor_back",
         "AllowADS": true,
@@ -3440,6 +3683,7 @@
         "TemplateType": "gear"
     },
     "6575d57a16c2762fba00581c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d57a16c2762fba00581c",
         "Name": "thorintcar_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -3454,6 +3698,7 @@
         "TemplateType": "gear"
     },
     "6575d589b15fef3dd4051674": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d589b15fef3dd4051674",
         "Name": "thorintcar_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -3468,6 +3713,7 @@
         "TemplateType": "gear"
     },
     "6575d598b15fef3dd4051678": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d598b15fef3dd4051678",
         "Name": "thorintcar_level3_soft_armor_collar",
         "AllowADS": true,
@@ -3482,6 +3728,7 @@
         "TemplateType": "gear"
     },
     "6575d5a616c2762fba005820": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d5a616c2762fba005820",
         "Name": "thorintcar_level3_soft_armor_groin_front",
         "AllowADS": true,
@@ -3496,6 +3743,7 @@
         "TemplateType": "gear"
     },
     "6575d5b316c2762fba005824": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d5b316c2762fba005824",
         "Name": "thorintcar_level3_soft_armor_left_arm",
         "AllowADS": true,
@@ -3510,6 +3758,7 @@
         "TemplateType": "gear"
     },
     "6575d5bd16c2762fba005828": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d5bd16c2762fba005828",
         "Name": "thorintcar_level3_soft_armor_right_arm",
         "AllowADS": true,
@@ -3524,6 +3773,7 @@
         "TemplateType": "gear"
     },
     "6575d9a79e27f4a85e08112d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d9a79e27f4a85e08112d",
         "Name": "redut_t_level3_soft_armor_front",
         "AllowADS": true,
@@ -3538,6 +3788,7 @@
         "TemplateType": "gear"
     },
     "6575d9b8945bf78edd04c427": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d9b8945bf78edd04c427",
         "Name": "redut_t_level3_soft_armor_back",
         "AllowADS": true,
@@ -3552,6 +3803,7 @@
         "TemplateType": "gear"
     },
     "6575d9c40546f8b1de093dee": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d9c40546f8b1de093dee",
         "Name": "redut_t_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -3566,6 +3818,7 @@
         "TemplateType": "gear"
     },
     "6575d9cf0546f8b1de093df2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d9cf0546f8b1de093df2",
         "Name": "redut_t_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -3580,6 +3833,7 @@
         "TemplateType": "gear"
     },
     "6575d9d8945bf78edd04c42b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d9d8945bf78edd04c42b",
         "Name": "redut_t_level3_soft_armor_collar",
         "AllowADS": true,
@@ -3594,6 +3848,7 @@
         "TemplateType": "gear"
     },
     "6575d9e7945bf78edd04c42f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d9e7945bf78edd04c42f",
         "Name": "redut_t_level3_soft_armor_groin_front",
         "AllowADS": true,
@@ -3608,6 +3863,7 @@
         "TemplateType": "gear"
     },
     "6575d9f816c2762fba00588d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575d9f816c2762fba00588d",
         "Name": "redut_t_level3_soft_armor_groin_back",
         "AllowADS": true,
@@ -3622,6 +3878,7 @@
         "TemplateType": "gear"
     },
     "6575da07945bf78edd04c433": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575da07945bf78edd04c433",
         "Name": "redut_t_level3_soft_armor_left_arm",
         "AllowADS": true,
@@ -3636,6 +3893,7 @@
         "TemplateType": "gear"
     },
     "6575da159e27f4a85e081131": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575da159e27f4a85e081131",
         "Name": "redut_t_level3_soft_armor_right_arm",
         "AllowADS": true,
@@ -3650,6 +3908,7 @@
         "TemplateType": "gear"
     },
     "6575dd3e9e27f4a85e081142": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575dd3e9e27f4a85e081142",
         "Name": "redut_m_level3_soft_armor_front",
         "AllowADS": true,
@@ -3664,6 +3923,7 @@
         "TemplateType": "gear"
     },
     "6575dd519e27f4a85e081146": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575dd519e27f4a85e081146",
         "Name": "redut_m_level3_soft_armor_back",
         "AllowADS": true,
@@ -3678,6 +3938,7 @@
         "TemplateType": "gear"
     },
     "6575dd64945bf78edd04c438": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575dd64945bf78edd04c438",
         "Name": "redut_m_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -3692,6 +3953,7 @@
         "TemplateType": "gear"
     },
     "6575dd6e9d3a0ddf660b9047": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575dd6e9d3a0ddf660b9047",
         "Name": "redut_m_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -3706,6 +3968,7 @@
         "TemplateType": "gear"
     },
     "6575dd769d3a0ddf660b904b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575dd769d3a0ddf660b904b",
         "Name": "redut_m_level3_soft_armor_collar",
         "AllowADS": true,
@@ -3720,6 +3983,7 @@
         "TemplateType": "gear"
     },
     "6575dd800546f8b1de093df6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575dd800546f8b1de093df6",
         "Name": "redut_m_level3_soft_armor_groin_front",
         "AllowADS": true,
@@ -3734,6 +3998,7 @@
         "TemplateType": "gear"
     },
     "6575dd94945bf78edd04c43c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575dd94945bf78edd04c43c",
         "Name": "redut_m_level3_soft_armor_groin_back",
         "AllowADS": true,
@@ -3748,6 +4013,7 @@
         "TemplateType": "gear"
     },
     "6575e71760703324250610c3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575e71760703324250610c3",
         "Name": "slick_black_level3_soft_armor_front",
         "AllowADS": true,
@@ -3762,6 +4028,7 @@
         "TemplateType": "gear"
     },
     "6575e72660703324250610c7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575e72660703324250610c7",
         "Name": "slick_black_level3_soft_armor_back",
         "AllowADS": true,
@@ -3776,6 +4043,7 @@
         "TemplateType": "gear"
     },
     "6575ea3060703324250610da": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ea3060703324250610da",
         "Name": "6b13_killa_level3_soft_armor_front",
         "AllowADS": true,
@@ -3790,6 +4058,7 @@
         "TemplateType": "gear"
     },
     "6575ea4cf6a13a7b7100adc4": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ea4cf6a13a7b7100adc4",
         "Name": "6b13_killa_level3_soft_armor_back",
         "AllowADS": true,
@@ -3804,6 +4073,7 @@
         "TemplateType": "gear"
     },
     "6575ea5cf6a13a7b7100adc8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ea5cf6a13a7b7100adc8",
         "Name": "6b13_killa_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -3818,6 +4088,7 @@
         "TemplateType": "gear"
     },
     "6575ea6760703324250610de": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ea6760703324250610de",
         "Name": "6b13_killa_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -3832,6 +4103,7 @@
         "TemplateType": "gear"
     },
     "6575ea719c7cad336508e418": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ea719c7cad336508e418",
         "Name": "6b13_killa_level3_soft_armor_collar",
         "AllowADS": true,
@@ -3846,6 +4118,7 @@
         "TemplateType": "gear"
     },
     "6575ea7c60703324250610e2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ea7c60703324250610e2",
         "Name": "6b13_killa_level3_soft_armor_groin_front",
         "AllowADS": true,
@@ -3860,6 +4133,7 @@
         "TemplateType": "gear"
     },
     "6575ef599c7cad336508e453": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ef599c7cad336508e453",
         "Name": "ars_cpc_level2_soft_armor_front",
         "AllowADS": true,
@@ -3874,6 +4148,7 @@
         "TemplateType": "gear"
     },
     "6575ef6bf6a13a7b7100b093": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ef6bf6a13a7b7100b093",
         "Name": "ars_cpc_level2_soft_armor_back",
         "AllowADS": true,
@@ -3888,6 +4163,7 @@
         "TemplateType": "gear"
     },
     "6575ef78da698a4e980677eb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ef78da698a4e980677eb",
         "Name": "ars_cpc_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -3902,6 +4178,7 @@
         "TemplateType": "gear"
     },
     "6575ef7f9c7cad336508e457": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575ef7f9c7cad336508e457",
         "Name": "ars_cpc_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -3916,6 +4193,7 @@
         "TemplateType": "gear"
     },
     "6575f24ff6a13a7b7100b09e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575f24ff6a13a7b7100b09e",
         "Name": "crye_cpc_level2_soft_armor_front",
         "AllowADS": true,
@@ -3930,6 +4208,7 @@
         "TemplateType": "gear"
     },
     "6575f25ada698a4e98067836": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575f25ada698a4e98067836",
         "Name": "crye_cpc_level2_soft_armor_back",
         "AllowADS": true,
@@ -3944,6 +4223,7 @@
         "TemplateType": "gear"
     },
     "6575f2649cfdfe416f0399b8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575f2649cfdfe416f0399b8",
         "Name": "crye_cpc_level2_soft_armor_left_side",
         "AllowADS": true,
@@ -3958,6 +4238,7 @@
         "TemplateType": "gear"
     },
     "6575f26d9c7cad336508e480": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575f26d9c7cad336508e480",
         "Name": "crye_cpc_level2_soft_armor_right_side",
         "AllowADS": true,
@@ -3972,6 +4253,7 @@
         "TemplateType": "gear"
     },
     "6575f5cbf6a13a7b7100b0bf": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575f5cbf6a13a7b7100b0bf",
         "Name": "avs_mbav_level2_soft_armor_front",
         "AllowADS": true,
@@ -3986,6 +4268,7 @@
         "TemplateType": "gear"
     },
     "6575f5e1da698a4e98067869": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6575f5e1da698a4e98067869",
         "Name": "avs_mbav_level2_soft_armor_back",
         "AllowADS": true,
@@ -4000,6 +4283,7 @@
         "TemplateType": "gear"
     },
     "65764275d8537eb26a0355e9": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65764275d8537eb26a0355e9",
         "Name": "zhuk6_level3_soft_armor_front",
         "AllowADS": true,
@@ -4014,6 +4298,7 @@
         "TemplateType": "gear"
     },
     "657642b0e6d5dd75f40688a5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657642b0e6d5dd75f40688a5",
         "Name": "zhuk6_level3_soft_armor_back",
         "AllowADS": true,
@@ -4028,6 +4313,7 @@
         "TemplateType": "gear"
     },
     "6576434820cc24d17102b148": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6576434820cc24d17102b148",
         "Name": "zhuk6_level3_soft_armor_left_side",
         "AllowADS": true,
@@ -4042,6 +4328,7 @@
         "TemplateType": "gear"
     },
     "657643732bc38ef78e076477": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657643732bc38ef78e076477",
         "Name": "zhuk6_level3_soft_armor_right_side",
         "AllowADS": true,
@@ -4056,6 +4343,7 @@
         "TemplateType": "gear"
     },
     "657643a220cc24d17102b14c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657643a220cc24d17102b14c",
         "Name": "zhuk6_level3_soft_armor_collar",
         "AllowADS": true,
@@ -4070,6 +4358,7 @@
         "TemplateType": "gear"
     },
     "65764a4cd8537eb26a0355ee": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65764a4cd8537eb26a0355ee",
         "Name": "6b5-16_level3_soft_armor_front",
         "AllowADS": true,
@@ -4084,6 +4373,7 @@
         "TemplateType": "gear"
     },
     "65764bc22bc38ef78e076485": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65764bc22bc38ef78e076485",
         "Name": "6b5-16_level2_soft_armor_back",
         "AllowADS": true,
@@ -4098,6 +4388,7 @@
         "TemplateType": "gear"
     },
     "65764c39526e320fbe035777": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65764c39526e320fbe035777",
         "Name": "6b5-16_level2_soft_armor_collar",
         "AllowADS": true,
@@ -4112,6 +4403,7 @@
         "TemplateType": "gear"
     },
     "65764c6b526e320fbe03577b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65764c6b526e320fbe03577b",
         "Name": "6b5-16_level3_soft_armor_groin",
         "AllowADS": true,
@@ -4126,6 +4418,7 @@
         "TemplateType": "gear"
     },
     "65764e1e2bc38ef78e076489": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65764e1e2bc38ef78e076489",
         "Name": "6b3TM_level4_soft_armor_front",
         "AllowADS": true,
@@ -4140,6 +4433,7 @@
         "TemplateType": "gear"
     },
     "65764fae2bc38ef78e07648d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65764fae2bc38ef78e07648d",
         "Name": "6b3TM_level2_soft_armor_back",
         "AllowADS": true,
@@ -4154,6 +4448,7 @@
         "TemplateType": "gear"
     },
     "6576500f526e320fbe03577f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6576500f526e320fbe03577f",
         "Name": "6b3TM_level2_soft_armor_groin_back",
         "AllowADS": true,
@@ -4168,6 +4463,7 @@
         "TemplateType": "gear"
     },
     "6576504b526e320fbe035783": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6576504b526e320fbe035783",
         "Name": "6b3TM_level4_soft_armor_groin_front",
         "AllowADS": true,
@@ -4182,6 +4478,7 @@
         "TemplateType": "gear"
     },
     "657b22485f444d6dff0c6c2f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657b22485f444d6dff0c6c2f",
         "Name": "item_equipment_plate_korund_back_6b23_2_4class_back",
         "AllowADS": true,
@@ -4197,6 +4494,7 @@
         "TemplateType": "gear"
     },
     "657b2797c3dbcb01d60c35ea": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657b2797c3dbcb01d60c35ea",
         "Name": "item_equipment_plate_korund_vm_5class_back",
         "AllowADS": true,
@@ -4212,6 +4510,7 @@
         "TemplateType": "gear"
     },
     "657b28d25f444d6dff0c6c77": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657b28d25f444d6dff0c6c77",
         "Name": "item_equipment_plate_korund_vm_k_6class_back",
         "AllowADS": true,
@@ -4227,6 +4526,7 @@
         "TemplateType": "gear"
     },
     "657ba096e57570b7f80a17fb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba096e57570b7f80a17fb",
         "Name": "shlemofon_tsh_4ml_level1_helmet_armor_top",
         "AllowADS": true,
@@ -4241,6 +4541,7 @@
         "TemplateType": "gear"
     },
     "657ba145e57570b7f80a17ff": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba145e57570b7f80a17ff",
         "Name": "shlemofon_tsh_4ml_level1_helmet_armor_nape",
         "AllowADS": true,
@@ -4255,6 +4556,7 @@
         "TemplateType": "gear"
     },
     "657ba18923918923cb0df568": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba18923918923cb0df568",
         "Name": "shlemofon_tsh_4ml_level1_helmet_armor_ears",
         "AllowADS": true,
@@ -4269,6 +4571,7 @@
         "TemplateType": "gear"
     },
     "657ba2eef58ba5a625010798": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba2eef58ba5a625010798",
         "Name": "tac_kek_fast_mt_level1_helmet_armor_top",
         "AllowADS": true,
@@ -4283,6 +4586,7 @@
         "TemplateType": "gear"
     },
     "657ba34b9ba22f103e08139b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba34b9ba22f103e08139b",
         "Name": "tac_kek_fast_mt_level1_helmet_armor_nape",
         "AllowADS": true,
@@ -4297,6 +4601,7 @@
         "TemplateType": "gear"
     },
     "657ba50c23918923cb0df56c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba50c23918923cb0df56c",
         "Name": "kolpak_1s_4ml_level2_helmet_armor_top",
         "AllowADS": true,
@@ -4311,6 +4616,7 @@
         "TemplateType": "gear"
     },
     "657ba5439ba22f103e08139f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba5439ba22f103e08139f",
         "Name": "kolpak_1s_4ml_level2_helmet_armor_nape",
         "AllowADS": true,
@@ -4325,6 +4631,7 @@
         "TemplateType": "gear"
     },
     "657ba57af58ba5a62501079e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba57af58ba5a62501079e",
         "Name": "kolpak_1s_4ml_level2_helmet_armor_ears",
         "AllowADS": true,
@@ -4339,6 +4646,7 @@
         "TemplateType": "gear"
     },
     "657ba6c3c6f689d3a205b857": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba6c3c6f689d3a205b857",
         "Name": "djeta_psh97_level2_helmet_armor_top",
         "AllowADS": true,
@@ -4353,6 +4661,7 @@
         "TemplateType": "gear"
     },
     "657ba737b7e9ca9a02045bf6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba737b7e9ca9a02045bf6",
         "Name": "djeta_psh97_level2_helmet_armor_nape",
         "AllowADS": true,
@@ -4367,6 +4676,7 @@
         "TemplateType": "gear"
     },
     "657ba75e23918923cb0df573": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba75e23918923cb0df573",
         "Name": "djeta_psh97_level2_helmet_armor_ears",
         "AllowADS": true,
@@ -4381,6 +4691,7 @@
         "TemplateType": "gear"
     },
     "657ba85ecfcf63c951052da7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba85ecfcf63c951052da7",
         "Name": "firefighter_shpm_level2_helmet_armor_top",
         "AllowADS": true,
@@ -4395,6 +4706,7 @@
         "TemplateType": "gear"
     },
     "657ba8bccfcf63c951052dab": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba8bccfcf63c951052dab",
         "Name": "firefighter_shpm_level2_helmet_armor_nape",
         "AllowADS": true,
@@ -4409,6 +4721,7 @@
         "TemplateType": "gear"
     },
     "657ba8eab7e9ca9a02045bfd": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657ba8eab7e9ca9a02045bfd",
         "Name": "firefighter_shpm_level2_helmet_armor_ears",
         "AllowADS": true,
@@ -4423,6 +4736,7 @@
         "TemplateType": "gear"
     },
     "657baaf0b7e9ca9a02045c02": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657baaf0b7e9ca9a02045c02",
         "Name": "ratnik_6b47_level3_helmet_armor_top",
         "AllowADS": true,
@@ -4437,6 +4751,7 @@
         "TemplateType": "gear"
     },
     "657bab6ec6f689d3a205b85f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bab6ec6f689d3a205b85f",
         "Name": "ratnik_6b47_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -4451,6 +4766,7 @@
         "TemplateType": "gear"
     },
     "657babc6f58ba5a6250107a2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657babc6f58ba5a6250107a2",
         "Name": "ratnik_6b47_level3_helmet_armor_ears",
         "AllowADS": true,
@@ -4465,6 +4781,7 @@
         "TemplateType": "gear"
     },
     "657bae18b7e9ca9a02045c0a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bae18b7e9ca9a02045c0a",
         "Name": "fort_kiver_m_level3_helmet_armor_top",
         "AllowADS": true,
@@ -4479,6 +4796,7 @@
         "TemplateType": "gear"
     },
     "657baeaacfcf63c951052db3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657baeaacfcf63c951052db3",
         "Name": "fort_kiver_m_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -4493,6 +4811,7 @@
         "TemplateType": "gear"
     },
     "657baecbc6f689d3a205b863": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657baecbc6f689d3a205b863",
         "Name": "fort_kiver_m_level3_helmet_armor_ears",
         "AllowADS": true,
@@ -4507,6 +4826,7 @@
         "TemplateType": "gear"
     },
     "657bb70486c7f9ef7a009936": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bb70486c7f9ef7a009936",
         "Name": "sferaS_SSSh94_level3_helmet_armor_top",
         "AllowADS": true,
@@ -4521,6 +4841,7 @@
         "TemplateType": "gear"
     },
     "657bb79ba1c61ee0c303631a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bb79ba1c61ee0c303631a",
         "Name": "sferaS_SSSh94_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -4535,6 +4856,7 @@
         "TemplateType": "gear"
     },
     "657bb7d7b30eca9763051176": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bb7d7b30eca9763051176",
         "Name": "sferaS_SSSh94_level3_helmet_armor_ears",
         "AllowADS": true,
@@ -4549,6 +4871,7 @@
         "TemplateType": "gear"
     },
     "657bb92fa1c61ee0c303631f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bb92fa1c61ee0c303631f",
         "Name": "lshz_level3_helmet_armor_top",
         "AllowADS": true,
@@ -4563,6 +4886,7 @@
         "TemplateType": "gear"
     },
     "657bb99db30eca976305117f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bb99db30eca976305117f",
         "Name": "lshz_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -4577,6 +4901,7 @@
         "TemplateType": "gear"
     },
     "657bbad7a1c61ee0c3036323": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bbad7a1c61ee0c3036323",
         "Name": "galvion_caiman_level3_helmet_armor_top",
         "AllowADS": true,
@@ -4591,6 +4916,7 @@
         "TemplateType": "gear"
     },
     "657bbb31b30eca9763051183": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bbb31b30eca9763051183",
         "Name": "galvion_caiman_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -4605,6 +4931,7 @@
         "TemplateType": "gear"
     },
     "657bbcc9a1c61ee0c3036327": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bbcc9a1c61ee0c3036327",
         "Name": "nfm_hjelm_level3_helmet_armor_top",
         "AllowADS": true,
@@ -4619,6 +4946,7 @@
         "TemplateType": "gear"
     },
     "657bbcffbbd440df880b2dd5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bbcffbbd440df880b2dd5",
         "Name": "nfm_hjelm_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -4633,6 +4961,7 @@
         "TemplateType": "gear"
     },
     "657bbe73a1c61ee0c303632b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bbe73a1c61ee0c303632b",
         "Name": "lshz5_vulkan5_level6_helmet_armor_top",
         "AllowADS": true,
@@ -4647,6 +4976,7 @@
         "TemplateType": "gear"
     },
     "657bbed0aab96fccee08be96": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bbed0aab96fccee08be96",
         "Name": "lshz5_vulkan5_level6_helmet_armor_nape",
         "AllowADS": true,
@@ -4661,6 +4991,7 @@
         "TemplateType": "gear"
     },
     "657bbefeb30eca9763051189": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bbefeb30eca9763051189",
         "Name": "lshz5_vulkan5_level6_helmet_armor_ears",
         "AllowADS": true,
@@ -4675,6 +5006,7 @@
         "TemplateType": "gear"
     },
     "657bc06daab96fccee08be9b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bc06daab96fccee08be9b",
         "Name": "altin_level5_helmet_armor_top",
         "AllowADS": true,
@@ -4689,6 +5021,7 @@
         "TemplateType": "gear"
     },
     "657bc0d8a1c61ee0c303632f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bc0d8a1c61ee0c303632f",
         "Name": "altin_level5_helmet_armor_nape",
         "AllowADS": true,
@@ -4703,6 +5036,7 @@
         "TemplateType": "gear"
     },
     "657bc107aab96fccee08be9f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bc107aab96fccee08be9f",
         "Name": "altin_level5_helmet_armor_ears",
         "AllowADS": true,
@@ -4717,6 +5051,7 @@
         "TemplateType": "gear"
     },
     "657bc285aab96fccee08bea3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bc285aab96fccee08bea3",
         "Name": "Rys_T_level5_helmet_armor_top",
         "AllowADS": true,
@@ -4731,6 +5066,7 @@
         "TemplateType": "gear"
     },
     "657bc2c5a1c61ee0c3036333": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bc2c5a1c61ee0c3036333",
         "Name": "Rys_T_level5_helmet_armor_nape",
         "AllowADS": true,
@@ -4745,6 +5081,7 @@
         "TemplateType": "gear"
     },
     "657bc2e7b30eca976305118d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657bc2e7b30eca976305118d",
         "Name": "Rys_T_level5_helmet_armor_ears",
         "AllowADS": true,
@@ -4759,6 +5096,7 @@
         "TemplateType": "gear"
     },
     "657f8a8d7db258e5600fe33d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f8a8d7db258e5600fe33d",
         "Name": "msa_tc2001_level4_helmet_armor_top",
         "AllowADS": true,
@@ -4773,6 +5111,7 @@
         "TemplateType": "gear"
     },
     "657f8b05f4c82973640b2348": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f8b05f4c82973640b2348",
         "Name": "msa_tc2001_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -4787,6 +5126,7 @@
         "TemplateType": "gear"
     },
     "657f8b43f92cd718b70154fb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f8b43f92cd718b70154fb",
         "Name": "msa_tc2002_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -4801,6 +5141,7 @@
         "TemplateType": "gear"
     },
     "657f8b94f92cd718b70154ff": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f8b94f92cd718b70154ff",
         "Name": "msa_tc2002_level4_helmet_armor_top",
         "AllowADS": true,
@@ -4815,6 +5156,7 @@
         "TemplateType": "gear"
     },
     "657f8ec5f4c82973640b234c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f8ec5f4c82973640b234c",
         "Name": "ops_core_fastMT_level4_helmet_armor_top",
         "AllowADS": true,
@@ -4829,6 +5171,7 @@
         "TemplateType": "gear"
     },
     "657f8f10f4c82973640b2350": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f8f10f4c82973640b2350",
         "Name": "ops_core_fastMT_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -4843,6 +5186,7 @@
         "TemplateType": "gear"
     },
     "657f925dada5fadd1f07a57a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f925dada5fadd1f07a57a",
         "Name": "zsh_1_2m_level4_helmet_armor_top",
         "AllowADS": true,
@@ -4857,6 +5201,7 @@
         "TemplateType": "gear"
     },
     "657f92acada5fadd1f07a57e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f92acada5fadd1f07a57e",
         "Name": "zsh_1_2m_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -4871,6 +5216,7 @@
         "TemplateType": "gear"
     },
     "657f92e7f4c82973640b2354": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f92e7f4c82973640b2354",
         "Name": "zsh_1_2m_level4_helmet_armor_ears",
         "AllowADS": true,
@@ -4885,6 +5231,7 @@
         "TemplateType": "gear"
     },
     "657f95bff92cd718b701550c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f95bff92cd718b701550c",
         "Name": "highcom_striker_achhc_level4_helmet_armor_top",
         "AllowADS": true,
@@ -4899,6 +5246,7 @@
         "TemplateType": "gear"
     },
     "657f9605f4c82973640b2358": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f9605f4c82973640b2358",
         "Name": "highcom_striker_achhc_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -4913,6 +5261,7 @@
         "TemplateType": "gear"
     },
     "657f9897f4c82973640b235e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f9897f4c82973640b235e",
         "Name": "crye_precision_airframe_level4_helmet_armor_top",
         "AllowADS": true,
@@ -4927,6 +5276,7 @@
         "TemplateType": "gear"
     },
     "657f98fbada5fadd1f07a585": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f98fbada5fadd1f07a585",
         "Name": "crye_precision_airframe_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -4941,6 +5291,7 @@
         "TemplateType": "gear"
     },
     "657f9a55c6679fefb3051e19": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f9a55c6679fefb3051e19",
         "Name": "diamond_age_bastion_level4_helmet_armor_top",
         "AllowADS": true,
@@ -4955,6 +5306,7 @@
         "TemplateType": "gear"
     },
     "657f9a94ada5fadd1f07a589": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f9a94ada5fadd1f07a589",
         "Name": "diamond_age_bastion_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -4969,6 +5321,7 @@
         "TemplateType": "gear"
     },
     "657f9c78ada5fadd1f07a58d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f9c78ada5fadd1f07a58d",
         "Name": "msa_gallet_tc800_level4_helmet_armor_top",
         "AllowADS": true,
@@ -4983,6 +5336,7 @@
         "TemplateType": "gear"
     },
     "657f9cb587e11c61f70bfaca": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f9cb587e11c61f70bfaca",
         "Name": "msa_gallet_tc800_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -4997,6 +5351,7 @@
         "TemplateType": "gear"
     },
     "657f9eb7e9433140ad0baf86": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f9eb7e9433140ad0baf86",
         "Name": "adept_neosteel_level3_helmet_armor_top",
         "AllowADS": true,
@@ -5011,6 +5366,7 @@
         "TemplateType": "gear"
     },
     "657f9ef6c6679fefb3051e1f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657f9ef6c6679fefb3051e1f",
         "Name": "adept_neosteel_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -5025,6 +5381,7 @@
         "TemplateType": "gear"
     },
     "657fa009d4caf976440afe3a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657fa009d4caf976440afe3a",
         "Name": "bnti_lshz_2dtm_level4_helmet_armor_top",
         "AllowADS": true,
@@ -5039,6 +5396,7 @@
         "TemplateType": "gear"
     },
     "657fa04ac6679fefb3051e24": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657fa04ac6679fefb3051e24",
         "Name": "bnti_lshz_2dtm_level4_helmet_armor_nape",
         "AllowADS": true,
@@ -5053,6 +5411,7 @@
         "TemplateType": "gear"
     },
     "657fa07387e11c61f70bface": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657fa07387e11c61f70bface",
         "Name": "bnti_lshz_2dtm_level4_helmet_armor_ears",
         "AllowADS": true,
@@ -5067,6 +5426,7 @@
         "TemplateType": "gear"
     },
     "657fa0fcd4caf976440afe3e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657fa0fcd4caf976440afe3e",
         "Name": "class_tor2_level3_helmet_armor_top",
         "AllowADS": true,
@@ -5081,6 +5441,7 @@
         "TemplateType": "gear"
     },
     "657fa168e9433140ad0baf8e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657fa168e9433140ad0baf8e",
         "Name": "class_tor2_level3_helmet_armor_nape",
         "AllowADS": true,
@@ -5095,6 +5456,7 @@
         "TemplateType": "gear"
     },
     "657fa186d4caf976440afe42": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657fa186d4caf976440afe42",
         "Name": "class_tor2_level3_helmet_armor_ears",
         "AllowADS": true,
@@ -5109,6 +5471,7 @@
         "TemplateType": "gear"
     },
     "658188edf026a90c1708c827": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "658188edf026a90c1708c827",
         "Name": "djeta_psh97_level2_helmet_armor_shield",
         "AllowADS": true,
@@ -5123,6 +5486,7 @@
         "TemplateType": "gear"
     },
     "65818e4e566d2de69901b1b1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65818e4e566d2de69901b1b1",
         "Name": "firefighter_shpm_level2_helmet_armor_shield",
         "AllowADS": true,

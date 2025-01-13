@@ -85,9 +85,6 @@ import { IConfig, IGlobals } from "@spt/models/eft/common/IGlobals";
 import { PlayerRaidEndState } from "@spt/models/enums/PlayerRaidEndState";
 import { WeatherGenerator } from "@spt/generators/WeatherGenerator";
 
-import * as path from 'path';
-import * as fs from 'fs';
-
 import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
 import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
@@ -111,14 +108,9 @@ import { ItemStatHandler } from "./json/json-handler";
 import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
 import { info } from "console";
-import { ILocationConfig, LootMultiplier } from "@spt/models/spt/config/ILocationConfig";
-import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
-import { IConfig, IGlobals } from "@spt/models/eft/common/IGlobals";
-import { ILocation } from "@spt/models/eft/common/ILocation";
-import { ILooseLoot } from "@spt/models/eft/common/ILooseLoot";
-import { ILootConfig } from "@spt/models/spt/config/ILootConfig";
-import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
-import { PlayerRaidEndState } from "@spt/models/enums/PlayerRaidEndState";
+
+import * as path from 'path';
+import * as fs from 'fs';
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -180,7 +172,26 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
                             return jsonUtil.serialize(modConfig);
                         } catch (e) {
-                            console.error("Failed to read config file", e);
+                            console.error("Realism: Failed to read config file", e);
+                        }
+                    }
+                }
+            ],
+            "RealismMod"
+        );
+
+        dynamicRouter.registerDynamicRouter(
+            "realismGetDirectory",
+            [
+                {
+                    url: "/RealismMod/GetDirectory",
+                    action: async (url, info, sessionID, output) => {
+                        try {
+                            let directory = path.join(__dirname, '..');
+                            let dirObj = { "ServerBaseDirectory" : directory };
+                            return jsonUtil.serialize(dirObj);
+                        } catch (e) {
+                            console.error("Realism: Failed to get server mod directory", e);
                         }
                     }
                 }
@@ -205,7 +216,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
-                            console.error("Failed to read info file", e);
+                            console.error("Realism: Failed to read info file", e);
                         }
                     }
                 }

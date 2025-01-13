@@ -1,5 +1,6 @@
 {
     "6783afddef9d6f5d579c43f1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783afddef9d6f5d579c43f1",
         "Name": "mosin_bayonet",
         "ModType": "bayonet",
@@ -25,9 +26,11 @@
         "LoyaltyLevel": 1,
         "MeleeDamage": 112,
         "MeleePen": 22,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783b041281387d669fd3722": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783b041281387d669fd3722",
         "Name": "m9_bayonet",
         "ModType": "bayonet",
@@ -53,9 +56,11 @@
         "LoyaltyLevel": 1,
         "MeleeDamage": 65,
         "MeleePen": 17,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783b079e4585dfb0fec3c73": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783b079e4585dfb0fec3c73",
         "Name": "6kh4_bayonet",
         "ModType": "bayonet",
@@ -81,36 +86,11 @@
         "LoyaltyLevel": 1,
         "MeleeDamage": 70,
         "MeleePen": 15,
-        "Price": 0
-    },
-    "6kh5_bayonet": {
-        "ItemID": "6kh5_bayonet",
-        "Name": "6kh5_bayonet",
-        "ModType": "bayonet",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": 0,
-        "Dispersion": 0,
-        "CameraRecoil": 0,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "CanCycleSubs": false,
-        "Accuracy": -10,
-        "HeatFactor": 1,
-        "CoolFactor": 1,
-        "DurabilityBurnModificator": 1,
-        "Velocity": 0,
-        "RecoilAngle": 0,
-        "ConflictingItems": [],
-        "Ergonomics": 0,
-        "Weight": 0.225,
-        "Loudness": 0,
-        "Convergence": 0,
-        "LoyaltyLevel": 1,
-        "MeleeDamage": 60,
-        "MeleePen": 19
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6699370c57df3e2b4e0a0dab": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6699370c57df3e2b4e0a0dab",
         "Name": "muzzle_uzi_iwi_short_vented_barrel_shroud_9x19",
         "ModType": "",
@@ -135,9 +115,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "668670f52a2296a8d909963c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668670f52a2296a8d909963c",
         "Name": "muzzle_uzi_pro_iwi_masada_thread_protector_9x19",
         "ModType": "",
@@ -162,9 +144,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "668670e3fb75ee4a5e02eb16": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668670e3fb75ee4a5e02eb16",
         "Name": "muzzle_uzi_pro_iwi_retaining_nut_9x19",
         "ModType": "",
@@ -189,9 +173,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "6698c9ba29e062525d0ad8b1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c9ba29e062525d0ad8b1",
         "Name": "muzzle_uzi_iwi_3_lug_retaining_nut_9x19",
         "ModType": "",
@@ -216,9 +202,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "6698c9c636ba38d291017711": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c9c636ba38d291017711",
         "Name": "muzzle_uzi_iwi_3_lug_barrel_thread_protector_9x19",
         "ModType": "",
@@ -243,9 +231,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "64527a263d52156624001fd7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64527a263d52156624001fd7",
         "Name": "muzzle_9a91_kbp_hanguard_retainer",
         "ModType": "",
@@ -270,9 +260,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "62e2a754b6c0ee2f230cee0f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e2a754b6c0ee2f230cee0f",
         "Name": "muzzle_sr2m_tochmash_hand_stop_9x21",
         "ModType": "",
@@ -297,9 +289,11 @@
         "Loudness": -5,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "630f27f04f3f6281050b94d7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630f27f04f3f6281050b94d7",
         "Name": "muzzle_aug_ratworx_suppressor_adapter_556x45",
         "ModType": "",
@@ -324,9 +318,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af1a6a4c63d3f0b0c2e0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af1a6a4c63d3f0b0c2e0",
         "Name": "muzzle_aug_ratworx_suppressor_adapter_300BLK",
         "ModType": "",
@@ -351,9 +347,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "57f3c7e024597738ea4ba286": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57f3c7e024597738ea4ba286",
         "Name": "muzzle_pp-91-01_zmz_std_9x18pm",
         "ModType": "",
@@ -377,9 +375,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fbc22ccf24b94483f726483": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbc22ccf24b94483f726483",
         "Name": "muzzle_all_sig_qd_muzzle_base_762x51",
         "ModType": "",
@@ -403,9 +403,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "615d8e9867085e45ef1409c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8e9867085e45ef1409c6",
         "Name": "muzzle_ak_kiba_thread_adapter_762x51",
         "ModType": "",
@@ -429,9 +431,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c4eec9b2e2216398b5aaba2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c4eec9b2e2216398b5aaba2",
         "Name": "muzzle_sv98_izhmash_thread_muzzle_adapter_762x54",
         "ModType": "",
@@ -455,9 +459,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e01e9e273d8eb11426f5bc3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e01e9e273d8eb11426f5bc3",
         "Name": "muzzle_svd_rotor43_svd_s_dtk_adapter_762x54",
         "ModType": "",
@@ -481,9 +487,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cf67cadd7f00c065a5abab7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf67cadd7f00c065a5abab7",
         "Name": "muzzle_sks_weapon_tuning_wt0032_1_762x39",
         "ModType": "",
@@ -507,9 +515,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fc4b97bab884124df0cd5e3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc4b97bab884124df0cd5e3",
         "Name": "muzzle_all_silencerco_omega_45k_piston_adapter_1143x23",
         "ModType": "",
@@ -535,9 +545,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5926e16e86f7742f5a0f7ecb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926e16e86f7742f5a0f7ecb",
         "Name": "muzzle_mp5_hk_lug_adapter_9x19",
         "ModType": "",
@@ -561,9 +573,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a0abb6e1526d8000a025282": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0abb6e1526d8000a025282",
         "Name": "muzzle_ak_tactica_tula_ak_adapter_762x39",
         "ModType": "",
@@ -587,9 +601,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b363e1b5acfc4771e1c5e80": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b363e1b5acfc4771e1c5e80",
         "Name": "muzzle_saiga12_silencerco_salvo_adaper_12g",
         "ModType": "",
@@ -613,9 +629,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6513f0f5e63f29908d0ffab8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6513f0f5e63f29908d0ffab8",
         "Name": "muzzle_rpd_zid_thread_protector_762x39",
         "ModType": "",
@@ -640,9 +658,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "5b363dea5acfc4771e1c5e7e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b363dea5acfc4771e1c5e7e",
         "Name": "muzzle_12g_silencerco_salvo_adaper_12g",
         "ModType": "",
@@ -666,9 +686,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f2aa43ba9b91d26f20ae6d2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f2aa43ba9b91d26f20ae6d2",
         "Name": "muzzle_all_kel_tec_thread_spacer_762x51",
         "ModType": "",
@@ -692,9 +714,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cf67a1bd7f00c06585fb6f3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf67a1bd7f00c06585fb6f3",
         "Name": "muzzle_mosin_weapon_tuning_wt1052_multi",
         "ModType": "",
@@ -718,9 +742,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cf79389d7f00c10941a0c4d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf79389d7f00c10941a0c4d",
         "Name": "muzzle_mosin_noname_custom_thread_adapter_multi",
         "ModType": "",
@@ -744,9 +770,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cf79599d7f00c10875d9212": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf79599d7f00c10875d9212",
         "Name": "muzzle_mosin_tiger_rock_muzzle_brake_adapter_multi",
         "ModType": "",
@@ -770,9 +798,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de8f237bbaf010b10528a70": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8f237bbaf010b10528a70",
         "Name": "muzzle_mp9_bt_supressor_mount_9x19",
         "ModType": "",
@@ -796,9 +826,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c7954d52e221600106f4cc7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7954d52e221600106f4cc7",
         "Name": "muzzle_all_gemtech_direct_mount_multi",
         "ModType": "",
@@ -822,9 +854,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59bffc1f86f77435b128b872": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59bffc1f86f77435b128b872",
         "Name": "muzzle_all_silencerco_hybrid_46_direct_thread_multi",
         "ModType": "",
@@ -848,9 +882,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fc4b992187fea44d52edaa9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc4b992187fea44d52edaa9",
         "Name": "muzzle_all_silencerco_omega_45k_direct_thread_adapter_1143x23",
         "ModType": "",
@@ -874,9 +910,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e21ca18e4d47f0da15e77dd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e21ca18e4d47f0da15e77dd",
         "Name": "muzzle_ak_cnc_warrior_ar15_thread_adapter_556x45",
         "ModType": "",
@@ -900,9 +938,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c0000c00db834001a6697fc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0000c00db834001a6697fc",
         "Name": "muzzle_mp5_hk_navy_style_3_lug_supressor_adapter_9x19",
         "ModType": "",
@@ -926,9 +966,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fbbc34106bde7524f03cbe9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbbc34106bde7524f03cbe9",
         "Name": "muzzle_vector_kriss_thread_protector_std_9x19",
         "ModType": "",
@@ -952,9 +994,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fb6548dd1409e5ca04b54f9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb6548dd1409e5ca04b54f9",
         "Name": "muzzle_vector_kriss_thread_protector_std_1143x23",
         "ModType": "",
@@ -978,9 +1022,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de6556a205ddc616a6bc4f7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de6556a205ddc616a6bc4f7",
         "Name": "muzzle_vpo215_molot_vpo_215_thread_protector_std_366tkm",
         "ModType": "",
@@ -1004,9 +1050,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a6b592c8dc32e00094b97bf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6b592c8dc32e00094b97bf",
         "Name": "muzzle_glock_double_diamond_thread_protector_9x19",
         "ModType": "",
@@ -1030,9 +1078,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d270ca28abbc31ee25ee821": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d270ca28abbc31ee25ee821",
         "Name": "muzzle_m700_remington_stainless_thread_protector_762x51",
         "ModType": "",
@@ -1056,9 +1106,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cadc390ae921500126a77f1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cadc390ae921500126a77f1",
         "Name": "muzzle_m9_beretta_m9a3_protector_std_9x19",
         "ModType": "",
@@ -1082,9 +1134,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a6b59a08dc32e000b452fb7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6b59a08dc32e000b452fb7",
         "Name": "muzzle_glock_salient_arms_thread_protector_9x19",
         "ModType": "",
@@ -1108,9 +1162,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628120621d5df4475f46a335": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628120621d5df4475f46a335",
         "Name": "muzzle_ai_accuracy_international_thread_protector_86x70",
         "ModType": "",
@@ -1134,9 +1190,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d270b3c8abbc3105335cfb8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d270b3c8abbc3105335cfb8",
         "Name": "muzzle_m700_remington_thread_protector_762x51",
         "ModType": "",
@@ -1160,9 +1218,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ab3afb2d8ce87001660304d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ab3afb2d8ce87001660304d",
         "Name": "muzzle_m1a_smith_enterprise_socom_16_threaded_gas_lock_762x51",
         "ModType": "",
@@ -1186,9 +1246,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a6b585a8dc32e5a9c28b4f1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6b585a8dc32e5a9c28b4f1",
         "Name": "muzzle_glock_alpha_wolf_thread_protector_9x19",
         "ModType": "",
@@ -1212,9 +1274,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "576167ab2459773cad038c43": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "576167ab2459773cad038c43",
         "Name": "muzzle_saiga12_izhmash_saiga12_std_12g",
         "ModType": "",
@@ -1238,9 +1302,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "612e0e04568c120fdd294258": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "612e0e04568c120fdd294258",
         "Name": "muzzle_psr_awc_thread_protector_std_multi",
         "ModType": "",
@@ -1264,9 +1330,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6194f1f918a3974e5e7421e4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f1f918a3974e5e7421e4",
         "Name": "muzzle_usp_hk_usp_std_thread_protector_1143x23",
         "ModType": "",
@@ -1290,9 +1358,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "587de5ba2459771c0f1e8a58": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "587de5ba2459771c0f1e8a58",
         "Name": "muzzle_p226_sig_thread_protector_std_9x19",
         "ModType": "",
@@ -1316,9 +1386,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f2aa4464b50c14bcf07acdb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f2aa4464b50c14bcf07acdb",
         "Name": "muzzle_all_kel_tec_thread_protector_762x51",
         "ModType": "",
@@ -1342,9 +1414,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "59e8a00d86f7742ad93b569c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e8a00d86f7742ad93b569c",
         "Name": "muzzle_ak_molot_vpo_209_366TKM",
         "ModType": "",
@@ -1368,9 +1442,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cc82796e24e8d000f5859a8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc82796e24e8d000f5859a8",
         "Name": "muzzle_p90_fn_p90_std_57x28",
         "ModType": "muzzle_supp_adapter",
@@ -1395,9 +1471,11 @@
         "Convergence": 11,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "5c48a2a42e221602b66d1e07": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c48a2a42e221602b66d1e07",
         "Name": "muzzle_ar15_dt_mdr_std_556x45",
         "ModType": "",
@@ -1422,9 +1500,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -70
+        "Flash": -70,
+        "TemplateType": "weaponmod"
     },
     "5dcbe965e4ed22586443a79d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dcbe965e4ed22586443a79d",
         "Name": "muzzle_ar10_dt_mdr_std_762x51",
         "ModType": "",
@@ -1449,9 +1529,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -70
+        "Flash": -70,
+        "TemplateType": "weaponmod"
     },
     "5a0d716f1526d8000d26b1e2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0d716f1526d8000d26b1e2",
         "Name": "muzzle_ak_izhmash_akml_762x39",
         "ModType": "",
@@ -1476,9 +1558,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "5f2aa4559b44de6b1b4e68d1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f2aa4559b44de6b1b4e68d1",
         "Name": "muzzle_all_kel_tec_rfb_std_762x51",
         "ModType": "",
@@ -1503,9 +1587,11 @@
         "Convergence": 8.5,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "58949dea86f77409483e16a8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58949dea86f77409483e16a8",
         "Name": "muzzle_mpx_sig_mpx_a2_9x19",
         "ModType": "",
@@ -1530,9 +1616,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -45
+        "Flash": -45,
+        "TemplateType": "weaponmod"
     },
     "5c0fafb6d174af02a96260ba": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0fafb6d174af02a96260ba",
         "Name": "muzzle_ar15_adar_2_15_std_556x45",
         "ModType": "",
@@ -1557,9 +1645,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -45
+        "Flash": -45,
+        "TemplateType": "weaponmod"
     },
     "6601281fc752a02bbe05e696": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6601281fc752a02bbe05e696",
         "Name": "muzzle_m60_usord_e3_std_762x51",
         "ModType": "",
@@ -1584,9 +1674,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -45
+        "Flash": -45,
+        "TemplateType": "weaponmod"
     },
     "66012a1d3dff5074ed002e2a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66012a1d3dff5074ed002e2a",
         "Name": "muzzle_m60_usord_e6_std_762x51",
         "ModType": "",
@@ -1611,9 +1703,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -55
+        "Flash": -55,
+        "TemplateType": "weaponmod"
     },
     "544a38634bdc2d58388b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "544a38634bdc2d58388b4568",
         "Name": "muzzle_ar15_colt_usgi_a2_556x45",
         "ModType": "",
@@ -1638,9 +1732,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -45
+        "Flash": -45,
+        "TemplateType": "weaponmod"
     },
     "56ea8180d2720bf2698b456a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56ea8180d2720bf2698b456a",
         "Name": "muzzle_ar15_kac_qd_compensator_556x45",
         "ModType": "",
@@ -1665,9 +1761,11 @@
         "Convergence": 7.5,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -40
+        "Flash": -40,
+        "TemplateType": "weaponmod"
     },
     "5ba26acdd4351e003562908e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ba26acdd4351e003562908e",
         "Name": "muzzle_mp7_hk_a1_std_46x30",
         "ModType": "muzzle_supp_adapter",
@@ -1692,9 +1790,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -55
+        "Flash": -55,
+        "TemplateType": "weaponmod"
     },
     "5dfa3cd1b33c0951220c079b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfa3cd1b33c0951220c079b",
         "Name": "muzzle_ar10_kac_qdc_flash_supressor_kit_762x51",
         "ModType": "muzzle_supp_adapter",
@@ -1719,9 +1819,11 @@
         "Convergence": 5.5,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "61713308d92c473c770214a0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61713308d92c473c770214a0",
         "Name": "muzzle_all_hk_prolonged_flash_hider_762x51",
         "ModType": "",
@@ -1746,9 +1848,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -65
+        "Flash": -65,
+        "TemplateType": "weaponmod"
     },
     "560e620e4bdc2d724b8b456b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560e620e4bdc2d724b8b456b",
         "Name": "muzzle_sv-98_izhmash_std_762x54r",
         "ModType": "",
@@ -1773,9 +1877,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -65
+        "Flash": -65,
+        "TemplateType": "weaponmod"
     },
     "5c471bfc2e221602b21d4e17": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471bfc2e221602b21d4e17",
         "Name": "muzzle_svd_izhmash_svd_s_std_762x54",
         "ModType": "",
@@ -1800,9 +1906,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -30
+        "Flash": -30,
+        "TemplateType": "weaponmod"
     },
     "615d8df08004cc50514c3236": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8df08004cc50514c3236",
         "Name": "muzzle_mp5_b&t_mp5_qd_muzzle_brake_9x19",
         "ModType": "",
@@ -1827,9 +1935,11 @@
         "Convergence": 12.5,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -30
+        "Flash": -30,
+        "TemplateType": "weaponmod"
     },
     "5c07c5ed0db834001b73571c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c07c5ed0db834001b73571c",
         "Name": "muzzle_mp5_hk_noveske_style_3_lug_9x19",
         "ModType": "",
@@ -1854,9 +1964,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -85
+        "Flash": -85,
+        "TemplateType": "weaponmod"
     },
     "622f0ee47762f55aaa68ac87": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622f0ee47762f55aaa68ac87",
         "Name": "muzzle_g36_hk_complete_flash_hider_556x45",
         "ModType": "",
@@ -1881,9 +1993,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -40
+        "Flash": -40,
+        "TemplateType": "weaponmod"
     },
     "622f07cfae33bc505b2c4dd5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622f07cfae33bc505b2c4dd5",
         "Name": "muzzle_g36_hk_incomplete_flash_hider_556x45",
         "ModType": "",
@@ -1908,9 +2022,11 @@
         "Convergence": 1,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "622f128cec80d870d349b4e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622f128cec80d870d349b4e8",
         "Name": "muzzle_g36_hk_4_prong_flash_hider_556x45",
         "ModType": "",
@@ -1935,9 +2051,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "5fbbc3324e8a554c40648348": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbbc3324e8a554c40648348",
         "Name": "muzzle_vector_kriss_flash_hider_std_9x19",
         "ModType": "",
@@ -1962,9 +2080,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "5fb65424956329274326f316": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb65424956329274326f316",
         "Name": "muzzle_vector_kriss_flash_hider_std_1143x23",
         "ModType": "",
@@ -1989,9 +2109,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "5b7d68af5acfc400170e30c3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d68af5acfc400170e30c3",
         "Name": "muzzle_fal_ds_arms_austrian_style_muzzle_brake_long_762x51",
         "ModType": "",
@@ -2016,9 +2138,11 @@
         "Convergence": 7,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -30
+        "Flash": -30,
+        "TemplateType": "weaponmod"
     },
     "626a74340be03179a165e30c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "626a74340be03179a165e30c",
         "Name": "muzzle_ar15_yankee_hill_phantom_aggressive_end_flash_hider_556x45",
         "ModType": "",
@@ -2043,9 +2167,11 @@
         "Convergence": 8,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -38
+        "Flash": -38,
+        "TemplateType": "weaponmod"
     },
     "630f2872911356c17d06abc5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630f2872911356c17d06abc5",
         "Name": "muzzle_aug_steyr_a1_closed_flash_hider_556x45",
         "ModType": "barrel_2slot",
@@ -2071,9 +2197,11 @@
         "Convergence": 6,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "630f28f0cadb1fe05e06f004": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630f28f0cadb1fe05e06f004",
         "Name": "muzzle_aug_steyr_a3_closed_flash_hider_556x45",
         "ModType": "barrel_2slot",
@@ -2099,9 +2227,11 @@
         "Convergence": 6,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "630f291b9f66a28b37094bb8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630f291b9f66a28b37094bb8",
         "Name": "muzzle_aug_steyr_a3_muzzle_brake_556x45",
         "ModType": "barrel_2slot",
@@ -2127,9 +2257,11 @@
         "Convergence": 11,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "6386120cd6baa055ad1e201c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6386120cd6baa055ad1e201c",
         "Name": "muzzle_ar15_griffin_gatelok_hammer_comp_556x45",
         "ModType": "",
@@ -2155,9 +2287,11 @@
         "Convergence": 4,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -45
+        "Flash": -45,
+        "TemplateType": "weaponmod"
     },
     "618178aa1cb55961fa0fdc80": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618178aa1cb55961fa0fdc80",
         "Name": "muzzle_ar10_aac_scar_h_miter_51t_flash_hider_762x51",
         "ModType": "muzzle_supp_adapter",
@@ -2182,9 +2316,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -70
+        "Flash": -70,
+        "TemplateType": "weaponmod"
     },
     "5addbb6e5acfc408fb1393fd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbb6e5acfc408fb1393fd",
         "Name": "muzzle_m1a_springfield_armory_national_match_flash_suppressor_762x51",
         "ModType": "",
@@ -2209,9 +2345,11 @@
         "Convergence": 7,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -80
+        "Flash": -80,
+        "TemplateType": "weaponmod"
     },
     "5beec3420db834001b095429": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec3420db834001b095429",
         "Name": "muzzle_rpk16_izhmash_rpk16_std_545x39",
         "ModType": "",
@@ -2236,9 +2374,11 @@
         "Convergence": 13,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -55
+        "Flash": -55,
+        "TemplateType": "weaponmod"
     },
     "618407a850224f204c1da549": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618407a850224f204c1da549",
         "Name": "muzzle_ar15_fn_scar_l_3_prong_flash_hider_w_mount_556x45",
         "ModType": "",
@@ -2263,9 +2403,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -40
+        "Flash": -40,
+        "TemplateType": "weaponmod"
     },
     "615d8e2f1cb55961fa0fd9a4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8e2f1cb55961fa0fd9a4",
         "Name": "muzzle_ar15_hk_blitz_flash_hider_556x45",
         "ModType": "",
@@ -2290,9 +2432,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -20
+        "Flash": -20,
+        "TemplateType": "weaponmod"
     },
     "626667e87379c44d557b7550": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "626667e87379c44d557b7550",
         "Name": "muzzle_ar15_kac_qdc_3_prong_flash_eliminator_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -2317,9 +2461,11 @@
         "Convergence": 8,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -67
+        "Flash": -67,
+        "TemplateType": "weaponmod"
     },
     "5c6d710d2e22165df16b81e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d710d2e22165df16b81e7",
         "Name": "muzzle_ar15_surefire_warcomp_556_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -2344,9 +2490,11 @@
         "Convergence": 9,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "5c7fb51d2e2216001219ce11": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7fb51d2e2216001219ce11",
         "Name": "muzzle_ar15_surefire_sf3p_flash_hider_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -2371,9 +2519,11 @@
         "Convergence": 7,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -65
+        "Flash": -65,
+        "TemplateType": "weaponmod"
     },
     "5ea172e498dacb342978818e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea172e498dacb342978818e",
         "Name": "muzzle_ar15_surefire_sf4p_fh556rc_flash_hider_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -2398,9 +2548,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -65
+        "Flash": -65,
+        "TemplateType": "weaponmod"
     },
     "5c7e5f112e221600106f4ede": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7e5f112e221600106f4ede",
         "Name": "muzzle_ar15_aac_blackout_51t_flash_hider_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -2425,9 +2577,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -67
+        "Flash": -67,
+        "TemplateType": "weaponmod"
     },
     "5a34fd2bc4a282329a73b4c5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a34fd2bc4a282329a73b4c5",
         "Name": "muzzle_ar10_aac_blackout_51t_flash_hider_762x51",
         "ModType": "muzzle_supp_adapter",
@@ -2452,9 +2606,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -67
+        "Flash": -67,
+        "TemplateType": "weaponmod"
     },
     "609269c3b0e443224b421cc1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "609269c3b0e443224b421cc1",
         "Name": "muzzle_ar15_silencerco_asr_flash_hider_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -2479,9 +2635,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "6405ff6bd4578826ec3e377a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6405ff6bd4578826ec3e377a",
         "Name": "muzzle_ar15_aeroknox_butterfly_muzzle_brake_556x45",
         "ModType": "",
@@ -2506,9 +2664,11 @@
         "Convergence": 18,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 17
+        "Flash": 17,
+        "TemplateType": "weaponmod"
     },
     "5b7d693d5acfc43bca706a3d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d693d5acfc43bca706a3d",
         "Name": "muzzle_ar10_2a_x3_titanium_compensator_762x51",
         "ModType": "",
@@ -2533,9 +2693,11 @@
         "Convergence": 13,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -35
+        "Flash": -35,
+        "TemplateType": "weaponmod"
     },
     "5b3a16655acfc40016387a2a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3a16655acfc40016387a2a",
         "Name": "muzzle_all_yankee_hill_anihilator_flash_hider_multi",
         "ModType": "",
@@ -2562,9 +2724,11 @@
         "MeleeDamage": 10,
         "MeleePen": 8,
         "Price": 0,
-        "Flash": -30
+        "Flash": -30,
+        "TemplateType": "weaponmod"
     },
     "5b099b7d5acfc400186331e4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b099b7d5acfc400186331e4",
         "Name": "muzzle_sa58_ds_arms_3_prong_trident_flash_hider_762x51",
         "ModType": "",
@@ -2589,9 +2753,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -45
+        "Flash": -45,
+        "TemplateType": "weaponmod"
     },
     "5addbba15acfc400185c2854": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbba15acfc400185c2854",
         "Name": "muzzle_m14_smith_enterprise_vortex_dc_flash_eliminator_762x51",
         "ModType": "",
@@ -2616,9 +2782,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "5addbbb25acfc40015621bd9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbbb25acfc40015621bd9",
         "Name": "muzzle_m14_yankee_hill_phantom_qd_flash_hider_762x51",
         "ModType": "",
@@ -2643,9 +2811,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -65
+        "Flash": -65,
+        "TemplateType": "weaponmod"
     },
     "5fbcbcf593164a5b6278efb2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbcbcf593164a5b6278efb2",
         "Name": "muzzle_base_sig_flash_hider_762x51",
         "ModType": "sig_taper_brake",
@@ -2670,9 +2840,11 @@
         "Convergence": 5,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -35
+        "Flash": -35,
+        "TemplateType": "weaponmod"
     },
     "5fbcbd02900b1d5091531dd3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbcbd02900b1d5091531dd3",
         "Name": "muzzle_base_sig_micro_brake_762x51",
         "ModType": "sig_taper_brake",
@@ -2697,9 +2869,11 @@
         "Convergence": 5,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5fbcbd10ab884124df0cd563": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbcbd10ab884124df0cd563",
         "Name": "muzzle_base_sig_two_port_brake_762x51",
         "ModType": "sig_taper_brake",
@@ -2724,9 +2898,11 @@
         "Convergence": 9,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 18
+        "Flash": 18,
+        "TemplateType": "weaponmod"
     },
     "6130c43c67085e45ef1405a1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6130c43c67085e45ef1405a1",
         "Name": "muzzle_ar10_kac_qdc_muzzle_brake_kit_762x51",
         "ModType": "muzzle_supp_adapter",
@@ -2751,9 +2927,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -40
+        "Flash": -40,
+        "TemplateType": "weaponmod"
     },
     "5f633f791b231926f2329f13": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f633f791b231926f2329f13",
         "Name": "muzzle_ak74_jmac_rrd_4c_multi",
         "ModType": "",
@@ -2778,9 +2956,11 @@
         "Convergence": 40,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "664301213dd83ddae20dda18": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "664301213dd83ddae20dda18",
         "Name": "muzzle_ar15_deltatech_dtk_ar15_556x45",
         "ModType": "",
@@ -2805,9 +2985,11 @@
         "Convergence": 10,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "6642f63667f5cb56a00662eb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6642f63667f5cb56a00662eb",
         "Name": "muzzle_ar10_deltatech_dtk_ar10_762x51",
         "ModType": "",
@@ -2832,9 +3014,11 @@
         "Convergence": 10,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5d026791d7ad1a04a067ea63": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d026791d7ad1a04a067ea63",
         "Name": "muzzle_ar10_fortis_red_brake_762x51",
         "ModType": "",
@@ -2859,9 +3043,11 @@
         "Convergence": 7,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "5a9ea27ca2750c00137fa672": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9ea27ca2750c00137fa672",
         "Name": "muzzle_ak_spike_tactical_ak_dynacomp_762x39",
         "ModType": "",
@@ -2886,9 +3072,11 @@
         "Convergence": 5,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "6783af53a4a479af0614186c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af53a4a479af0614186c",
         "Name": ".366 TKM Dynacomp",
         "ModType": "",
@@ -2913,9 +3101,11 @@
         "Convergence": 5,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5c4ee3d62e2216152006f302": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c4ee3d62e2216152006f302",
         "Name": "muzzle_sv-98_srw_dtk_jet_mk2_762x54r",
         "ModType": "",
@@ -2940,9 +3130,11 @@
         "Convergence": 16,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "5998597786f77414ea6da093": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5998597786f77414ea6da093",
         "Name": "muzzle_pp-19-01_izhmash_vityaz_std_9x19",
         "ModType": "",
@@ -2967,9 +3159,11 @@
         "Convergence": 14,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 5
+        "Flash": 5,
+        "TemplateType": "weaponmod"
     },
     "6492ef63cfcf7c89e701abf1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6492ef63cfcf7c89e701abf1",
         "Name": "muzzle_pk_zenit_dtk_1p_762x54r",
         "ModType": "",
@@ -2996,9 +3190,11 @@
         "MeleeDamage": 8.5,
         "MeleePen": 7,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5649ab884bdc2ded0b8b457f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649ab884bdc2ded0b8b457f",
         "Name": "muzzle_ak_zenit_dtk1_762x39_545x39",
         "ModType": "",
@@ -3025,9 +3221,11 @@
         "MeleeDamage": 8.5,
         "MeleePen": 7,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "6783af5a827b39b7e3604b22": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af5a827b39b7e3604b22",
         "Name": ".366 TKM DTK-1",
         "ModType": "",
@@ -3054,9 +3252,11 @@
         "MeleeDamage": 8.5,
         "MeleePen": 7,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5cc9a96cd7f00c011c04e04a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc9a96cd7f00c011c04e04a",
         "Name": "muzzle_ak74_srvv_mbr_jet_545_545x39",
         "ModType": "",
@@ -3081,9 +3281,11 @@
         "Convergence": 16,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "612e0e55a112697a4b3a66e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "612e0e55a112697a4b3a66e7",
         "Name": "muzzle_ar15_taa_zk_23_muzzle_brake_556x45",
         "ModType": "",
@@ -3110,9 +3312,11 @@
         "MeleeDamage": 9,
         "MeleePen": 6,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "612e0e3c290d254f5e6b291d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "612e0e3c290d254f5e6b291d",
         "Name": "muzzle_ar10_taa_zk_38_muzzle_brake_762x51",
         "ModType": "",
@@ -3139,9 +3343,11 @@
         "MeleeDamage": 8,
         "MeleePen": 6,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5bbdb8bdd4351e4502011460": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bbdb8bdd4351e4502011460",
         "Name": "muzzle_ar10_odin_works_atlas_7_muzzle_brake_762x51",
         "ModType": "",
@@ -3166,9 +3372,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "5c7951452e221644f31bfd5c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7951452e221644f31bfd5c",
         "Name": "muzzle_ak_venom_antidote_muzzle_brake_multi",
         "ModType": "",
@@ -3193,9 +3401,11 @@
         "Convergence": 26,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5cff9e5ed7ad1a09407397d4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cff9e5ed7ad1a09407397d4",
         "Name": "muzzle_ar15_dd_wave_muzzle_brake_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -3220,9 +3430,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5d1f819086f7744b355c219b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d1f819086f7744b355c219b",
         "Name": "muzzle_ar10_dd_wave_muzzle_brake_762x51",
         "ModType": "muzzle_supp_adapter",
@@ -3247,9 +3459,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5c878ebb2e2216001219d48a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c878ebb2e2216001219d48a",
         "Name": "muzzle_ak_lantac_dgnak47b_muzzle_brake_762x39",
         "ModType": "",
@@ -3274,9 +3488,11 @@
         "Convergence": 15,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5c878e9d2e2216000f201903": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c878e9d2e2216000f201903",
         "Name": "muzzle_ar10_lantac_dgn762b_muzzle_brake_762x51",
         "ModType": "",
@@ -3301,9 +3517,11 @@
         "Convergence": 15,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "612e0cfc8004cc50514c2d9e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "612e0cfc8004cc50514c2d9e",
         "Name": "muzzle_ar15_awc_psr_muzzle_brake_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -3328,9 +3546,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "612e0d3767085e45ef14057f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "612e0d3767085e45ef14057f",
         "Name": "muzzle_all_awc_psr_muzzle_brake_762x51",
         "ModType": "muzzle_supp_adapter",
@@ -3355,9 +3575,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "612e0d81290d254f5e6b291a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "612e0d81290d254f5e6b291a",
         "Name": "muzzle_all_awc_psr_muzzle_brake_86x70",
         "ModType": "",
@@ -3382,9 +3604,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "5cf6935bd7f00c06585fb791": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf6935bd7f00c06585fb791",
         "Name": "muzzle_all_taccom_carbine_brake_multi",
         "ModType": "",
@@ -3409,9 +3633,11 @@
         "Convergence": 25,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "5888996c24597754281f9419": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5888996c24597754281f9419",
         "Name": "muzzle_dvl-10_lobaev_dvl-10_m2_std_308",
         "ModType": "",
@@ -3436,9 +3662,11 @@
         "Convergence": 10,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5cc9ad73d7f00c000e2579d4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc9ad73d7f00c000e2579d4",
         "Name": "muzzle_ak_srvv_mbrfhmb_762_762x39",
         "ModType": "",
@@ -3463,9 +3691,11 @@
         "Convergence": 10,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "64119d1f2c6d6f921a0929f8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64119d1f2c6d6f921a0929f8",
         "Name": "muzzle_svt40_toz_std_762x54r",
         "ModType": "",
@@ -3491,9 +3721,11 @@
         "Convergence": 12,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "5cdd7685d7f00c000f260ed2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cdd7685d7f00c000f260ed2",
         "Name": "muzzle_ar10_keeno_arms_shrewd_muzzle_brake_762x51",
         "ModType": "",
@@ -3519,9 +3751,11 @@
         "LoyaltyLevel": 2,
         "MeleeDamage": 3,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "59e61eb386f77440d64f5daf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e61eb386f77440d64f5daf",
         "Name": "muzzle_ak_molot_vepr_km_vpo_136_762x39",
         "ModType": "",
@@ -3546,9 +3780,11 @@
         "Convergence": 12,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af4a205ba84b88b7372b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af4a205ba84b88b7372b",
         "Name": ".366 TKM Brake",
         "ModType": "",
@@ -3573,9 +3809,11 @@
         "Convergence": 12,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "6492efb8cfcf7c89e701abf3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6492efb8cfcf7c89e701abf3",
         "Name": "muzzle_pk_zid_pkm_long_762x54r",
         "ModType": "",
@@ -3600,9 +3838,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -55
+        "Flash": -55,
+        "TemplateType": "weaponmod"
     },
     "6492efe46cc7e29a6f03b2a0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6492efe46cc7e29a6f03b2a0",
         "Name": "muzzle_pk_zid_pkm_std_762x54r",
         "ModType": "",
@@ -3627,9 +3867,11 @@
         "Convergence": 5,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -35
+        "Flash": -35,
+        "TemplateType": "weaponmod"
     },
     "59d64fc686f774171b243fe2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d64fc686f774171b243fe2",
         "Name": "muzzle_ak_izhmash_akm_std_762x39",
         "ModType": "",
@@ -3654,9 +3896,11 @@
         "Convergence": 12,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "5ac72e615acfc43f67248aa0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac72e615acfc43f67248aa0",
         "Name": "muzzle_ak74_izhmash_ak101_std_556x45",
         "ModType": "",
@@ -3681,9 +3925,11 @@
         "Convergence": 8,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "649ec2af961514b22506b10f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "649ec2af961514b22506b10f",
         "Name": "muzzle_ak12_izhmash_ak12_muzzle_brake_std_545x39",
         "ModType": "",
@@ -3709,9 +3955,11 @@
         "LoyaltyLevel": 2,
         "MeleeDamage": 7,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "5ac7655e5acfc40016339a19": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac7655e5acfc40016339a19",
         "Name": "muzzle_ak74_izhmash_ak74m_std_545x39",
         "ModType": "",
@@ -3736,9 +3984,11 @@
         "Convergence": 8,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5ac72e7d5acfc40016339a02": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac72e7d5acfc40016339a02",
         "Name": "muzzle_ak74_izhmash_ak103_std_762x39",
         "ModType": "",
@@ -3763,9 +4013,11 @@
         "Convergence": 8,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5649aa744bdc2ded0b8b457e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649aa744bdc2ded0b8b457e",
         "Name": "muzzle_ak74_izhmash_std_545x39",
         "ModType": "",
@@ -3790,9 +4042,11 @@
         "Convergence": 8,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "57dc324a24597759501edc20": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57dc324a24597759501edc20",
         "Name": "muzzle_aks74u_izhmash_std_545x39",
         "ModType": "booster",
@@ -3817,9 +4071,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -10
+        "Flash": -10,
+        "TemplateType": "weaponmod"
     },
     "5ac72e725acfc400180ae701": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac72e725acfc400180ae701",
         "Name": "muzzle_ak74_izhmash_ak102_std_556x45",
         "ModType": "booster",
@@ -3844,9 +4100,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -10
+        "Flash": -10,
+        "TemplateType": "weaponmod"
     },
     "5ac72e945acfc43f3b691116": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac72e945acfc43f3b691116",
         "Name": "muzzle_ak74_izhmash_ak105_std_545x39",
         "ModType": "booster",
@@ -3871,9 +4129,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -10
+        "Flash": -10,
+        "TemplateType": "weaponmod"
     },
     "5ac72e895acfc43b321d4bd5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac72e895acfc43b321d4bd5",
         "Name": "muzzle_ak74_izhmash_ak104_std_762x39",
         "ModType": "booster",
@@ -3898,9 +4158,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -15
+        "Flash": -15,
+        "TemplateType": "weaponmod"
     },
     "5f633f68f5750b524b45f112": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f633f68f5750b524b45f112",
         "Name": "muzzle_ak_jmac_rrd_4c_762x39",
         "ModType": "",
@@ -3925,9 +4187,11 @@
         "Convergence": 40,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "6783af60ff68ec5c54f53ed6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af60ff68ec5c54f53ed6",
         "Name": ".366 TKM RRD-4C",
         "ModType": "",
@@ -3952,9 +4216,11 @@
         "Convergence": 40,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "5f6372e2865db925d54f3869": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f6372e2865db925d54f3869",
         "Name": "muzzle_ar15_ferfrans_muzzle_brake_556x45",
         "ModType": "",
@@ -3979,9 +4245,11 @@
         "Convergence": 13,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5a7c147ce899ef00150bd8b8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7c147ce899ef00150bd8b8",
         "Name": "muzzle_ar15_vendetta_precision_vp_09_556x45",
         "ModType": "",
@@ -4008,9 +4276,11 @@
         "MeleeDamage": 4,
         "MeleePen": 5,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5caf17c9ae92150b30006be1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5caf17c9ae92150b30006be1",
         "Name": "muzzle_ash12_ckib_ash12_std_127x55",
         "ModType": "",
@@ -4035,9 +4305,11 @@
         "Convergence": 25,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5d02676dd7ad1a049e54f6dc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d02676dd7ad1a049e54f6dc",
         "Name": "muzzle_ar15_nordic_corvette_compensator_556x45",
         "ModType": "",
@@ -4062,9 +4334,11 @@
         "Convergence": 20,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 22
+        "Flash": 22,
+        "TemplateType": "weaponmod"
     },
     "5d02677ad7ad1a04a15c0f95": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d02677ad7ad1a04a15c0f95",
         "Name": "muzzle_ar10_nordic_corvette_compensator_762x51",
         "ModType": "",
@@ -4089,9 +4363,11 @@
         "Convergence": 20,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 22
+        "Flash": 22,
+        "TemplateType": "weaponmod"
     },
     "5998598e86f7740b3f498a86": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5998598e86f7740b3f498a86",
         "Name": "muzzle_saiga_9_izhmash_saiga_9_std_9x19",
         "ModType": "",
@@ -4116,9 +4392,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 4
+        "Flash": 4,
+        "TemplateType": "weaponmod"
     },
     "60337f5dce399e10262255d1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60337f5dce399e10262255d1",
         "Name": "muzzle_all_stmarms_stm9_muzzle_brake_9x19",
         "ModType": "",
@@ -4143,9 +4421,11 @@
         "Convergence": 38,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5cf6937cd7f00c056c53fb39": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf6937cd7f00c056c53fb39",
         "Name": "muzzle_ar15_bulletec_st_6012_muzzle_brake_556x45",
         "ModType": "",
@@ -4170,9 +4450,11 @@
         "Convergence": 12,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5df35e7f2a78646d96665dd4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df35e7f2a78646d96665dd4",
         "Name": "muzzle_t5000_orsis_t5000m_std_762x51",
         "ModType": "",
@@ -4197,9 +4479,11 @@
         "Convergence": 30,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "615d8f5dd92c473c770212ef": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8f5dd92c473c770212ef",
         "Name": "muzzle_ak_hexagon_reactor_muzzle_brake_545x39",
         "ModType": "",
@@ -4224,9 +4508,11 @@
         "Convergence": 12,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 26
+        "Flash": 26,
+        "TemplateType": "weaponmod"
     },
     "6065c6e7132d4d12c81fd8e1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6065c6e7132d4d12c81fd8e1",
         "Name": "muzzle_ar10_cmmg_sv_brake_compensator_762x51",
         "ModType": "",
@@ -4251,9 +4537,11 @@
         "Convergence": 12,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5d440625a4b9361eec4ae6c5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d440625a4b9361eec4ae6c5",
         "Name": "muzzle_ar15_thunder_beast_223cb_muzzle_brake_556x45",
         "ModType": "muzzle_supp_adapter",
@@ -4278,9 +4566,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "64942bfc6ee699f6890dff95": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64942bfc6ee699f6890dff95",
         "Name": "muzzle_ak_vector_vr_05t_762x39",
         "ModType": "",
@@ -4306,9 +4596,11 @@
         "Convergence": 15,
         "Price": 0,
         "LoyaltyLevel": 2,
-        "Flash": 32
+        "Flash": 32,
+        "TemplateType": "weaponmod"
     },
     "64943b74e9998d641b0412ed": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64943b74e9998d641b0412ed",
         "Name": "muzzle_ar15_walkerdr_nero_556_inconel_556x45",
         "ModType": "",
@@ -4336,9 +4628,11 @@
         "Convergence": 10,
         "Price": 0,
         "LoyaltyLevel": 3,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "6529113b5ae2ae97b80fdf39": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6529113b5ae2ae97b80fdf39",
         "Name": "muzzle_ar10_sig_clutch_lok_qd_flash_hider_68x51",
         "ModType": "muzzle_supp_adapter",
@@ -4364,9 +4658,11 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 2,
-        "Flash": -15
+        "Flash": -15,
+        "TemplateType": "weaponmod"
     },
     "5d443f8fa4b93678dd4a01aa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d443f8fa4b93678dd4a01aa",
         "Name": "muzzle_ar10_thunder_beast_30cb_muzzle_brake_762x51",
         "ModType": "muzzle_supp_adapter",
@@ -4391,9 +4687,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "5bc5a35cd4351e450201232f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bc5a35cd4351e450201232f",
         "Name": "muzzle_mosin_witt_machine_custom_clamp_on_muzzle_brake_762x54r",
         "ModType": "",
@@ -4418,9 +4716,11 @@
         "Convergence": 25,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "5bbdb83fd4351e44f824c44b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bbdb83fd4351e44f824c44b",
         "Name": "muzzle_mosin_tacfire_tanker_style_762x54r",
         "ModType": "",
@@ -4445,9 +4745,11 @@
         "Convergence": 19,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 35
+        "Flash": 35,
+        "TemplateType": "weaponmod"
     },
     "5bc5a351d4351e003477a414": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bc5a351d4351e003477a414",
         "Name": "muzzle_mosin_tpp_clamp_on_muzzle_brake_762x54r",
         "ModType": "",
@@ -4472,9 +4774,11 @@
         "Convergence": 38,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5c78f2882e22165df16b832e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c78f2882e22165df16b832e",
         "Name": "muzzle_ar15_sai_jail_break_556x45",
         "ModType": "",
@@ -4499,9 +4803,11 @@
         "Convergence": 4,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -20
+        "Flash": -20,
+        "TemplateType": "weaponmod"
     },
     "5aafa1c2e5b5b00015042a56": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aafa1c2e5b5b00015042a56",
         "Name": "muzzle_m1a_springfield_armory_socom_16_762x51",
         "ModType": "",
@@ -4526,9 +4832,11 @@
         "Convergence": 15,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "607ffb988900dc2d9a55b6e4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "607ffb988900dc2d9a55b6e4",
         "Name": "muzzle_ar10_surefire_procomp_762_muzzle_brake_762x51",
         "ModType": "",
@@ -4553,9 +4861,11 @@
         "Convergence": 10,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "628a66b41d5e41750e314f34": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628a66b41d5e41750e314f34",
         "Name": "muzzle_ar10_dead_air_silencers_keymount_muzzle_brake_762x51",
         "ModType": "",
@@ -4580,9 +4890,11 @@
         "Convergence": 15,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "62812081d23f207deb0ab216": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62812081d23f207deb0ab216",
         "Name": "muzzle_all_accuracy_international_tactical_muzzle_brake_86x70",
         "ModType": "muzzle_supp_adapter",
@@ -4607,9 +4919,11 @@
         "Convergence": 15,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 35
+        "Flash": 35,
+        "TemplateType": "weaponmod"
     },
     "5addbb825acfc408fb139400": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbb825acfc408fb139400",
         "Name": "muzzle_m14_jp_enterprises_tactical_compensator_762x51",
         "ModType": "",
@@ -4634,9 +4948,11 @@
         "Convergence": 27,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 35
+        "Flash": 35,
+        "TemplateType": "weaponmod"
     },
     "5fc23636016cce60e8341b05": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc23636016cce60e8341b05",
         "Name": "muzzle_all_silencerco_ac858_asr_muzzle_brake_86x70",
         "ModType": "",
@@ -4661,9 +4977,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 29
+        "Flash": 29,
+        "TemplateType": "weaponmod"
     },
     "5cdd7693d7f00c0010373aa5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cdd7693d7f00c0010373aa5",
         "Name": "muzzle_ar10_precision_armament_m11_severe_duty_muzzle_brake_762x51",
         "ModType": "",
@@ -4688,9 +5006,11 @@
         "Convergence": 26,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "5addbb945acfc4001a5fc44e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbb945acfc4001a5fc44e",
         "Name": "muzzle_m14_smith_enterprise_good_iron_muzzle_brake_762x51",
         "ModType": "",
@@ -4715,9 +5035,11 @@
         "Convergence": 27,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 38
+        "Flash": 38,
+        "TemplateType": "weaponmod"
     },
     "63ac5c9658d0485fc039f0b8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63ac5c9658d0485fc039f0b8",
         "Name": "muzzle_ar15_alientech_gubich_muzzle_brake_556x45",
         "ModType": "",
@@ -4743,9 +5065,11 @@
         "Convergence": 28,
         "LoyaltyLevel": 5,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "5f6339d53ada5942720e2dc3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f6339d53ada5942720e2dc3",
         "Name": "muzzle_ferfrans_ferfrans_crd_556x45",
         "ModType": "",
@@ -4770,9 +5094,11 @@
         "Convergence": 2,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "5cf78496d7f00c065703d6ca": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf78496d7f00c065703d6ca",
         "Name": "muzzle_ar10_lantac_bmd_adapter_a3_762x51",
         "ModType": "",
@@ -4796,9 +5122,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cf78720d7f00c06595bc93e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf78720d7f00c06595bc93e",
         "Name": "muzzle_base_lantac_blast_mitigation_device_762x51",
         "ModType": "",
@@ -4823,9 +5151,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "615d8eb350224f204c1da1cf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8eb350224f204c1da1cf",
         "Name": "muzzle_ar10_surefire_warden_direct_thread_blast_regulator_762x51",
         "ModType": "",
@@ -4850,9 +5180,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 5
+        "Flash": 5,
+        "TemplateType": "weaponmod"
     },
     "62669bccdb9ebb4daa44cd14": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62669bccdb9ebb4daa44cd14",
         "Name": "muzzle_ar15_surefire_warden_direct_thread_blast_regulator_556x45",
         "ModType": "",
@@ -4877,9 +5209,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 5
+        "Flash": 5,
+        "TemplateType": "weaponmod"
     },
     "6621455e3aceea9e2b0b01e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6621455e3aceea9e2b0b01e7",
         "Name": "muzzle_ar15_double_star_carlson_tac_comp_556x45",
         "ModType": "booster",
@@ -4904,9 +5238,11 @@
         "Convergence": 15,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "56ea6fafd2720b844b8b4593": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56ea6fafd2720b844b8b4593",
         "Name": "muzzle_ar15_noveske_kx3_556x45",
         "ModType": "booster",
@@ -4931,9 +5267,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -70
+        "Flash": -70,
+        "TemplateType": "weaponmod"
     },
     "5cc9b815d7f00c000e2579d6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc9b815d7f00c000e2579d6",
         "Name": "muzzle_ar15_troy_claymore_muzzle_brake_556_556x45",
         "ModType": "booster",
@@ -4958,9 +5296,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "5943eeeb86f77412d6384f6b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5943eeeb86f77412d6384f6b",
         "Name": "muzzle_ak74_pws_cqb74_545x39",
         "ModType": "booster",
@@ -4987,9 +5327,11 @@
         "MeleeDamage": 4,
         "MeleePen": 5,
         "Price": 0,
-        "Flash": -75
+        "Flash": -75,
+        "TemplateType": "weaponmod"
     },
     "5943ee5a86f77413872d25ec": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5943ee5a86f77413872d25ec",
         "Name": "muzzle_ar15_pws_cqb_556x45",
         "ModType": "booster",
@@ -5016,9 +5358,11 @@
         "MeleeDamage": 4,
         "MeleePen": 5,
         "Price": 0,
-        "Flash": -75
+        "Flash": -75,
+        "TemplateType": "weaponmod"
     },
     "5a7037338dc32e000d46d257": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7037338dc32e000d46d257",
         "Name": "muzzle_glock_carver_custom_decelerator_3_port_gen_3_9x19",
         "ModType": "",
@@ -5043,9 +5387,11 @@
         "Convergence": 30,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5a7ad0c451dfba0013379712": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7ad0c451dfba0013379712",
         "Name": "muzzle_glock_carver_custom_4_port_gen_3_9x19",
         "ModType": "",
@@ -5070,9 +5416,11 @@
         "Convergence": 40,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "5a7b32a2e899ef00135e345a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7b32a2e899ef00135e345a",
         "Name": "muzzle_glock_strike_industries_g4_slide_compensator_9x19",
         "ModType": "",
@@ -5111,9 +5459,11 @@
         "Convergence": 25,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5a7ad1fb51dfba0013379715": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7ad1fb51dfba0013379715",
         "Name": "muzzle_glock_lone_wolf_compensator_9_9x19",
         "ModType": "",
@@ -5138,9 +5488,11 @@
         "Convergence": 12.5,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 32
+        "Flash": 32,
+        "TemplateType": "weaponmod"
     },
     "5a705e128dc32e000d46d258": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a705e128dc32e000d46d258",
         "Name": "muzzle_glock_lone_wolf_alphawolf_bullnosed_9x19",
         "ModType": "",
@@ -5173,9 +5525,11 @@
         "Convergence": 9,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5a70366c8dc32e001207fb06": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a70366c8dc32e001207fb06",
         "Name": "muzzle_glock_double_diamond_9x19",
         "ModType": "",
@@ -5200,9 +5554,11 @@
         "Convergence": 20,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5bffd7ed0db834001d23ebf9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bffd7ed0db834001d23ebf9",
         "Name": "muzzle_tt_pm_laser_dtk_tt",
         "ModType": "",
@@ -5229,9 +5585,11 @@
         "Convergence": 25,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "5ef61964ec7f42238c31e0c1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ef61964ec7f42238c31e0c1",
         "Name": "muzzle_m1911_anarchy_outdoors_1911_muzzle_brake_1143x23",
         "ModType": "",
@@ -5258,9 +5616,11 @@
         "Convergence": 25,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 22
+        "Flash": 22,
+        "TemplateType": "weaponmod"
     },
     "5c6beec32e221601da3578f2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6beec32e221601da3578f2",
         "Name": "muzzle_p226_tj_compensator_9x19",
         "ModType": "",
@@ -5293,9 +5653,11 @@
         "Convergence": 15,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 17
+        "Flash": 17,
+        "TemplateType": "weaponmod"
     },
     "619d36da53b4d42ee724fae4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619d36da53b4d42ee724fae4",
         "Name": "muzzle_mc255_ckib_choke_12g",
         "ModType": "",
@@ -5320,9 +5682,11 @@
         "Convergence": 0,
         "ModShotDispersion": 35,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560838c94bdc2d77798b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560838c94bdc2d77798b4569",
         "Name": "muzzle_12g_remington_tactical_12",
         "ModType": "",
@@ -5348,9 +5712,11 @@
         "Convergence": 6.5,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "59fb137a86f7740adb646af1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59fb137a86f7740adb646af1",
         "Name": "muzzle_saiga12_css_monster_caw_large_12g",
         "ModType": "",
@@ -5378,9 +5744,11 @@
         "MeleeDamage": 12,
         "MeleePen": 8,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "58272d7f2459774f6311ddfd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58272d7f2459774f6311ddfd",
         "Name": "muzzle_12g_red_heat_gk-02_12g",
         "ModType": "",
@@ -5406,9 +5774,11 @@
         "Convergence": 20,
         "LoyaltyLevel": 5,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "5c0111ab0db834001966914d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0111ab0db834001966914d",
         "Name": "muzzle_12g_me_muzzle_adapter_cylinder_12g",
         "ModType": "",
@@ -5433,9 +5803,11 @@
         "Loudness": 0,
         "Convergence": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "58889c7324597754281f9439": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58889c7324597754281f9439",
         "Name": "muzzle_dvl-10_lobaev_dvl-10_std_308",
         "ModType": "",
@@ -5460,9 +5832,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -15
+        "Flash": -15,
+        "TemplateType": "weaponmod"
     },
     "5abcc328d8ce8700194394f3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5abcc328d8ce8700194394f3",
         "Name": "silencer_apb_toz_apb_std_9x18pm",
         "ModType": "",
@@ -5487,9 +5861,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "58aeac1b86f77457c419f475": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58aeac1b86f77457c419f475",
         "Name": "silencer_sig_mpx_sd_9x19",
         "ModType": "",
@@ -5514,9 +5890,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "5c7e8fab2e22165df16b889b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7e8fab2e22165df16b889b",
         "Name": "silencer_all_aac_illusion_9_9x19",
         "ModType": "",
@@ -5541,9 +5919,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "6171367e1cb55961fa0fdb36": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6171367e1cb55961fa0fdb36",
         "Name": "silencer_bt_b&t_g28_sd_762x51",
         "ModType": "",
@@ -5568,9 +5948,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -5
+        "Flash": -5,
+        "TemplateType": "weaponmod"
     },
     "5f63407e1b231926f2329f15": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f63407e1b231926f2329f15",
         "Name": "silencer_vepr_rotor43_762x51",
         "ModType": "",
@@ -5595,9 +5977,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 50
+        "Flash": 50,
+        "TemplateType": "weaponmod"
     },
     "5a9fbb84a2750c00137fa685": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9fbb84a2750c00137fa685",
         "Name": "silencer_all_rotor_43_v2_556x45",
         "ModType": "",
@@ -5622,9 +6006,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "5e01ea19e9dc277128008c0b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e01ea19e9dc277128008c0b",
         "Name": "silencer_base_rotor43_svd_dtk_762x54",
         "ModType": "",
@@ -5649,9 +6035,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 50
+        "Flash": 50,
+        "TemplateType": "weaponmod"
     },
     "5a9fbb74a2750c0032157181": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9fbb74a2750c0032157181",
         "Name": "silencer_all_rotor_43_v2_366TKM",
         "ModType": "",
@@ -5676,9 +6064,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 60
+        "Flash": 60,
+        "TemplateType": "weaponmod"
     },
     "5a9fb739a2750c003215717f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9fb739a2750c003215717f",
         "Name": "silencer_all_rotor_43_v1_9x19",
         "ModType": "",
@@ -5703,9 +6093,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 35
+        "Flash": 35,
+        "TemplateType": "weaponmod"
     },
     "5a9fbacda2750c00141e080f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9fbacda2750c00141e080f",
         "Name": "silencer_all_rotor_43_v2_762x39",
         "ModType": "",
@@ -5730,9 +6122,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 45
+        "Flash": 45,
+        "TemplateType": "weaponmod"
     },
     "66993733f74fef4dfd0b04ff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66993733f74fef4dfd0b04ff",
         "Name": "silencer_uzi_iwi_silencer_std_9x19",
         "ModType": "",
@@ -5757,9 +6151,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 40
+        "Flash": 40,
+        "TemplateType": "weaponmod"
     },
     "5a34fe59c4a282000b1521a2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a34fe59c4a282000b1521a2",
         "Name": "silencer_ar10_aac_762_sdn_6_762x51",
         "ModType": "",
@@ -5784,9 +6180,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -16
+        "Flash": -16,
+        "TemplateType": "weaponmod"
     },
     "5ba26ae8d4351e00367f9bdb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ba26ae8d4351e00367f9bdb",
         "Name": "silencer_mp7_bt_rotex_2_46x30",
         "ModType": "",
@@ -5811,9 +6209,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "65144ff50e00edc79406836f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65144ff50e00edc79406836f",
         "Name": "silencer_sr3m_tochmash_std_9x39",
         "ModType": "",
@@ -5838,9 +6238,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 35
+        "Flash": 35,
+        "TemplateType": "weaponmod"
     },
     "57c44dd02459772d2e0ae249": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c44dd02459772d2e0ae249",
         "Name": "silencer_val_tochmash_std_9x39",
         "ModType": "",
@@ -5865,9 +6267,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 50
+        "Flash": 50,
+        "TemplateType": "weaponmod"
     },
     "57838c962459774a1651ec63": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57838c962459774a1651ec63",
         "Name": "silencer_vss_tochmash_std_9x39",
         "ModType": "",
@@ -5892,9 +6296,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 45
+        "Flash": 45,
+        "TemplateType": "weaponmod"
     },
     "5cff9e84d7ad1a049e54ed55": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cff9e84d7ad1a049e54ed55",
         "Name": "silencer_wave_dd_wave_qd_supressor_multi",
         "ModType": "",
@@ -5919,9 +6325,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 3
+        "Flash": 3,
+        "TemplateType": "weaponmod"
     },
     "59fb257e86f7742981561852": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59fb257e86f7742981561852",
         "Name": "silencer_akm_zenit_dtk-4m_762x39",
         "ModType": "",
@@ -5946,9 +6354,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 18
+        "Flash": 18,
+        "TemplateType": "weaponmod"
     },
     "63877c99e785640d436458ea": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63877c99e785640d436458ea",
         "Name": "silencer_base_awc_thor_psr_xl_multi",
         "ModType": "",
@@ -5974,9 +6384,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -25
+        "Flash": -25,
+        "TemplateType": "weaponmod"
     },
     "5c7955c22e221644f31bfd5e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7955c22e221644f31bfd5e",
         "Name": "silencer_base_gemtech_one_multi",
         "ModType": "",
@@ -6001,9 +6413,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -15
+        "Flash": -15,
+        "TemplateType": "weaponmod"
     },
     "56e05b06d2720bb2668b4586": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56e05b06d2720bb2668b4586",
         "Name": "silencer_pb_tochmash_std_9x18pm",
         "ModType": "",
@@ -6028,9 +6442,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "57dbb57e2459774673234890": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57dbb57e2459774673234890",
         "Name": "silencer_kac_nt-4_556x45_fde",
         "ModType": "",
@@ -6055,9 +6471,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 4
+        "Flash": 4,
+        "TemplateType": "weaponmod"
     },
     "57da93632459771cb65bf83f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57da93632459771cb65bf83f",
         "Name": "silencer_kac_nt-4_556x45_blk",
         "ModType": "",
@@ -6082,9 +6500,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 4
+        "Flash": 4,
+        "TemplateType": "weaponmod"
     },
     "626673016f1edc06f30cf6d5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "626673016f1edc06f30cf6d5",
         "Name": "silencer_qdc_kac_qdc_suppressor_556x45",
         "ModType": "",
@@ -6111,9 +6531,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 12
+        "Flash": 12,
+        "TemplateType": "weaponmod"
     },
     "55d617094bdc2d89028b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d617094bdc2d89028b4568",
         "Name": "silencer_kac_qdc_65x35",
         "ModType": "",
@@ -6137,9 +6559,11 @@
         "Loudness": -35,
         "Price": 0,
         "LoyaltyLevel": 4,
-        "Flash": 12
+        "Flash": 12,
+        "TemplateType": "weaponmod"
     },
     "5c6165902e22160010261b28": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6165902e22160010261b28",
         "Name": "silencer_all_sig_srd_9_9x19",
         "ModType": "",
@@ -6164,9 +6588,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 12
+        "Flash": 12,
+        "TemplateType": "weaponmod"
     },
     "5e208b9842457a4a7a33d074": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e208b9842457a4a7a33d074",
         "Name": "silencer_ak_hexagon_dtkp_762x39",
         "ModType": "",
@@ -6191,9 +6617,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "615d8f8567085e45ef1409ca": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8f8567085e45ef1409ca",
         "Name": "silencer_hex_hexagon_wafflemaker_suppressor_545x39",
         "ModType": "",
@@ -6222,9 +6650,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 5,
         "Price": 0,
-        "Flash": 8
+        "Flash": 8,
+        "TemplateType": "weaponmod"
     },
     "593d489686f7745c6255d58a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "593d489686f7745c6255d58a",
         "Name": "silencer_akm_hexagon_akm_762x39",
         "ModType": "",
@@ -6249,9 +6679,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "593d493f86f7745e6b2ceb22": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "593d493f86f7745e6b2ceb22",
         "Name": "silencer_ak74_hexagon_ak74_545x39",
         "ModType": "",
@@ -6276,9 +6708,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "593d490386f7745ee97a1555": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "593d490386f7745ee97a1555",
         "Name": "silencer_sks_hexagon_sks_762x39",
         "ModType": "",
@@ -6303,9 +6737,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "64c196ad26a15b84aa07132f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64c196ad26a15b84aa07132f",
         "Name": "silencer_ak12_izhmash_ak12_supressor_std_545x39",
         "ModType": "",
@@ -6330,9 +6766,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "55d6190f4bdc2d87028b4567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d6190f4bdc2d87028b4567",
         "Name": "silencer_socom_surefire_socom556_mini_monster_556x45",
         "ModType": "",
@@ -6359,9 +6797,11 @@
         "MeleeDamage": 9,
         "MeleePen": 9,
         "Price": 0,
-        "Flash": 6
+        "Flash": 6,
+        "TemplateType": "weaponmod"
     },
     "55d614004bdc2d86028b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d614004bdc2d86028b4568",
         "Name": "silencer_socom_surefire_socom556_monster_556x45",
         "ModType": "",
@@ -6388,9 +6828,11 @@
         "MeleeDamage": 9,
         "MeleePen": 9,
         "Price": 0,
-        "Flash": 3
+        "Flash": 3,
+        "TemplateType": "weaponmod"
     },
     "59bffbb386f77435b379b9c2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59bffbb386f77435b379b9c2",
         "Name": "silencer_mount_silencerco_hybrid_46_multi",
         "ModType": "",
@@ -6415,9 +6857,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": -10
+        "Flash": -10,
+        "TemplateType": "weaponmod"
     },
     "5fbe760793164a5b6278efc8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbe760793164a5b6278efc8",
         "Name": "silencer_base_sig_srd_762_qd_762x51",
         "ModType": "",
@@ -6442,9 +6886,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 3
+        "Flash": 3,
+        "TemplateType": "weaponmod"
     },
     "5fbe7618d6fa9c00c571bb6c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbe7618d6fa9c00c571bb6c",
         "Name": "silencer_all_sig_srd_762_762x51",
         "ModType": "",
@@ -6471,9 +6917,11 @@
         "MeleeDamage": 8,
         "MeleePen": 7,
         "Price": 0,
-        "Flash": 2.25
+        "Flash": 2.25,
+        "TemplateType": "weaponmod"
     },
     "5ea17bbc09aa976f2e7a51cd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea17bbc09aa976f2e7a51cd",
         "Name": "silencer_socom_surefire_socom556_rc2_556x45",
         "ModType": "",
@@ -6498,9 +6946,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 3
+        "Flash": 3,
+        "TemplateType": "weaponmod"
     },
     "602a97060ddce744014caf6f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602a97060ddce744014caf6f",
         "Name": "silencer_all_izhmash_pl15_std_9x19",
         "ModType": "",
@@ -6525,9 +6975,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "5cebec00d7f00c065c53522a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cebec00d7f00c065c53522a",
         "Name": "silencer_p90_fn_p90_attenuator_57x28",
         "ModType": "",
@@ -6552,9 +7004,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "57f3c8cc2459773ec4480328": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57f3c8cc2459773ec4480328",
         "Name": "silencer_pp-91-01_zmz_kedr_b_std_9x18pm",
         "ModType": "",
@@ -6579,9 +7033,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5caf187cae92157c28402e43": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5caf187cae92157c28402e43",
         "Name": "silencer_ash12_ckib_ash12_std_127x55",
         "ModType": "",
@@ -6606,9 +7062,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "57ffb0e42459777d047111c5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57ffb0e42459777d047111c5",
         "Name": "silencer_aks74u_tochmash_pbs-4_545x39",
         "ModType": "",
@@ -6633,9 +7091,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5a0d63621526d8dba31fe3bf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0d63621526d8dba31fe3bf",
         "Name": "silencer_akm_tochmash_pbs-1_762x39",
         "ModType": "",
@@ -6660,9 +7120,11 @@
         "Convergence": 5,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5b86a0e586f7745b600ccb23": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b86a0e586f7745b600ccb23",
         "Name": "silencer_mosin_bramit_std_762x54r",
         "ModType": "",
@@ -6687,9 +7149,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "5c4eecc32e221602b412b440": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c4eecc32e221602b412b440",
         "Name": "silencer_sv98_izhmash_silencer_std_762x54",
         "ModType": "",
@@ -6714,9 +7178,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 6.25
+        "Flash": 6.25,
+        "TemplateType": "weaponmod"
     },
     "5a7ad74e51dfba0015068f45": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7ad74e51dfba0015068f45",
         "Name": "silencer_glock_fischer_development_fd917_9x19",
         "ModType": "",
@@ -6754,9 +7220,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5a32a064c4a28200741e22de": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a32a064c4a28200741e22de",
         "Name": "silencer_all_silencerco_osprey_9_9x19",
         "ModType": "",
@@ -6781,9 +7249,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 5,
         "Price": 0,
-        "Flash": 5
+        "Flash": 5,
+        "TemplateType": "weaponmod"
     },
     "571a28e524597720b4066567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "571a28e524597720b4066567",
         "Name": "silencer_tt_custom_noname_762x25tt",
         "ModType": "",
@@ -6808,9 +7278,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5d44064fa4b9361e4f6eb8b5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d44064fa4b9361e4f6eb8b5",
         "Name": "silencer_tbac_thunder_beast_ultra_5_762x51",
         "ModType": "",
@@ -6835,9 +7307,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 5,
         "Price": 0,
-        "Flash": 7
+        "Flash": 7,
+        "TemplateType": "weaponmod"
     },
     "5d3ef698a4b9361182109872": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d3ef698a4b9361182109872",
         "Name": "silencer_57_gemtech_sfn_57_57x28",
         "ModType": "",
@@ -6862,9 +7336,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "62811fa609427b40ab14e765": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62811fa609427b40ab14e765",
         "Name": "silencer_ai_accuracy_international_tactical_sound_moderator_86x70",
         "ModType": "",
@@ -6889,9 +7365,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "59bfc5c886f7743bf6794e62": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59bfc5c886f7743bf6794e62",
         "Name": "silencer_pp-19-01_izhmash_vityaz_std_9x19",
         "ModType": "",
@@ -6916,9 +7394,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5dfa3d2b0dee1b22f862eade": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfa3d2b0dee1b22f862eade",
         "Name": "silencer_qdc_kac_prs_qdc_762x51",
         "ModType": "",
@@ -6943,9 +7423,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 10
+        "Flash": 10,
+        "TemplateType": "weaponmod"
     },
     "5de8f2d5b74cd90030650c72": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8f2d5b74cd90030650c72",
         "Name": "silencer_mp9_bt_supressor_9x19",
         "ModType": "",
@@ -6970,9 +7452,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "5a33a8ebc4a282000c5a950d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a33a8ebc4a282000c5a950d",
         "Name": "silencer_all_alpha_dog_alpha_9_9x19",
         "ModType": "",
@@ -6997,9 +7481,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "6130c4d51cb55961fa0fd49f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6130c4d51cb55961fa0fd49f",
         "Name": "silencer_ump_b&t_ump_45_1143x23",
         "ModType": "",
@@ -7024,9 +7510,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "564caa3d4bdc2d17108b458e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "564caa3d4bdc2d17108b458e",
         "Name": "silencer_ak74_spectehnika_tgpa_545x39",
         "ModType": "",
@@ -7051,9 +7539,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "5fc4b9b17283c4046c5814d7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc4b9b17283c4046c5814d7",
         "Name": "silencer_base_silencerco_omega_45k_1143x23",
         "ModType": "",
@@ -7078,9 +7568,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "60926df0132d4d12c81fd9df": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60926df0132d4d12c81fd9df",
         "Name": "silencer_asr_silencerco_saker_556_556x45",
         "ModType": "",
@@ -7105,9 +7597,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 5.5
+        "Flash": 5.5,
+        "TemplateType": "weaponmod"
     },
     "5926d33d86f77410de68ebc0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926d33d86f77410de68ebc0",
         "Name": "silencer_hk_mp5_sd_std_9x19",
         "ModType": "",
@@ -7132,9 +7626,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -40
+        "Flash": -40,
+        "TemplateType": "weaponmod"
     },
     "5a27b6bec4a282000e496f78": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a27b6bec4a282000e496f78",
         "Name": "silencer_sr1mp_tochmash_sr1mp_std_9x21",
         "ModType": "",
@@ -7159,9 +7655,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 15
+        "Flash": 15,
+        "TemplateType": "weaponmod"
     },
     "59c0ec5b86f77435b128bfca": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59c0ec5b86f77435b128bfca",
         "Name": "silencer_12g_hexagon_12k",
         "ModType": "",
@@ -7187,9 +7685,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 20
+        "Flash": 20,
+        "TemplateType": "weaponmod"
     },
     "5b363dd25acfc4001a598fd2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b363dd25acfc4001a598fd2",
         "Name": "silencer_base_silencerco_salvo_12g",
         "ModType": "",
@@ -7219,9 +7719,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 25
+        "Flash": 25,
+        "TemplateType": "weaponmod"
     },
     "634eba08f69c710e0108d386": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634eba08f69c710e0108d386",
         "Name": "silencer_aug_aseutra_sl7i_556x45",
         "ModType": "",
@@ -7249,9 +7751,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 7.5
+        "Flash": 7.5,
+        "TemplateType": "weaponmod"
     },
     "630f2982cdb9e392db0cbcc7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630f2982cdb9e392db0cbcc7",
         "Name": "silencer_aug_reflex_suppressor_t4aug_ranger_556x45",
         "ModType": "",
@@ -7280,9 +7784,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 7
+        "Flash": 7,
+        "TemplateType": "weaponmod"
     },
     "638612b607dfed1ccb7206ba": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "638612b607dfed1ccb7206ba",
         "Name": "silencer_sdqd_griffin_m4sd_k_silencer_556x45",
         "ModType": "",
@@ -7310,9 +7816,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 5
+        "Flash": 5,
+        "TemplateType": "weaponmod"
     },
     "652911e650dc782999054b9d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "652911e650dc782999054b9d",
         "Name": "silencer_clutchlok_sig_slx68_mg_qd_suppressor_68x51",
         "ModType": "",
@@ -7338,9 +7846,11 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 4,
-        "Flash": 7.5
+        "Flash": 7.5,
+        "TemplateType": "weaponmod"
     },
     "62e2a7138e1ac9380579c122": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e2a7138e1ac9380579c122",
         "Name": "silencer_sr2m_tochmash_suppressor_9x21",
         "ModType": "",
@@ -7366,9 +7876,11 @@
         "Convergence": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "64527a3a7da7133e5a09ca99": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64527a3a7da7133e5a09ca99",
         "Name": "silencer_9a91_kbp_9a91_silencer_9x39",
         "ModType": "",
@@ -7394,9 +7906,11 @@
         "Convergence": 0,
         "Price": 0,
         "LoyaltyLevel": 2,
-        "Flash": 60
+        "Flash": 60,
+        "TemplateType": "weaponmod"
     },
     "54490a4d4bdc2dbc018b4573": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "54490a4d4bdc2dbc018b4573",
         "Name": "silencer_silencerco_sparrow_22lr",
         "ModType": "",
@@ -7419,9 +7933,11 @@
         "Weight": 0.184,
         "Loudness": -31,
         "Price": 0,
-        "LoyaltyLevel": 1
+        "LoyaltyLevel": 1,
+        "TemplateType": "weaponmod"
     },
     "5580239d4bdc2de7118b4583": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5580239d4bdc2de7118b4583",
         "Name": "muzzle_tkpd_izhmash_93x64",
         "ModType": "",

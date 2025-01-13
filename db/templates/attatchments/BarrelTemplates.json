@@ -1,5 +1,6 @@
 {
     "669fa4c61bd4416eaa09b3ca": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa4c61bd4416eaa09b3ca",
         "Name": "barrel_deagle_magnum_research_l5_std_127mm_9x33r",
         "ModType": "",
@@ -23,9 +24,11 @@
         "Loudness": 30,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "669fa4ba1bd4416eaa09b3c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa4ba1bd4416eaa09b3c6",
         "Name": "barrel_deagle_magnum_research_l5_std_127mm_127x33",
         "ModType": "",
@@ -49,9 +52,11 @@
         "Loudness": 30,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "669fa48fa0bab4e8510d952a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa48fa0bab4e8510d952a",
         "Name": "barrel_deagle_magnum_research_l6_tiger_152mm_127x33",
         "ModType": "",
@@ -75,9 +80,11 @@
         "Loudness": 30,
         "LoyaltyLevel": 5,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "669fa47da0bab4e8510d9526": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa47da0bab4e8510d9526",
         "Name": "barrel_deagle_magnum_research_l6_std_152mm_127x33",
         "ModType": "",
@@ -101,9 +108,11 @@
         "Loudness": 30,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 30
+        "Flash": 30,
+        "TemplateType": "weaponmod"
     },
     "668fe5f62a0f85eea407cc18": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668fe5f62a0f85eea407cc18",
         "Name": "barrel_deagle_magnum_research_mk19_std_152mm_127x33",
         "ModType": "",
@@ -127,9 +136,11 @@
         "Loudness": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "6601279cc752a02bbe05e692": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6601279cc752a02bbe05e692",
         "Name": "barrel_m60_usord_e3_long_584mm_762x51",
         "ModType": "",
@@ -153,9 +164,11 @@
         "Loudness": 0,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "66012788c752a02bbe05e68e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66012788c752a02bbe05e68e",
         "Name": "barrel_m60_usord_e4_heavy_fluted_475mm_762x51",
         "ModType": "",
@@ -179,9 +192,11 @@
         "Loudness": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "660126f7c752a02bbe05e688": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "660126f7c752a02bbe05e688",
         "Name": "barrel_m60_usord_e4_short_458mm_762x51",
         "ModType": "",
@@ -205,9 +220,11 @@
         "Loudness": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "66225d88a1c7e3b81600c76f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66225d88a1c7e3b81600c76f",
         "Name": "barrel_m60_usord_e6_short_458mm_762x51",
         "ModType": "",
@@ -231,9 +248,11 @@
         "Loudness": 0,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "Flash": 0
+        "Flash": 0,
+        "TemplateType": "weaponmod"
     },
     "64639a9aab86f8fd4300146c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64639a9aab86f8fd4300146c",
         "Name": "barrel_pkp_zid_std_658mm_762x54r",
         "ModType": "",
@@ -257,9 +276,11 @@
         "Loudness": 0,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Flash": -50
+        "Flash": -50,
+        "TemplateType": "weaponmod"
     },
     "646371faf2404ab67905c8e9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "646371faf2404ab67905c8e9",
         "Name": "barrel_pkm_zid_std_658mm_762x54r",
         "ModType": "",
@@ -281,9 +302,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6410758c857473525b08bb77": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6410758c857473525b08bb77",
         "Name": "barrel_svt40_toz_625mm_762x54r",
         "ModType": "",
@@ -305,9 +328,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af0b3999424f691f5432": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af0b3999424f691f5432",
         "Name": "barrel_vpo215_600mm_762x39",
         "ModType": "762x39",
@@ -332,9 +357,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5de65547883dde217541644b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de65547883dde217541644b",
         "Name": "barrel_vpo215_600mm_366tkm",
         "ModType": "366TKM",
@@ -356,9 +383,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560836fb4bdc2d773f8b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560836fb4bdc2d773f8b4569",
         "Name": "barrel_mr133_660mm",
         "ModType": "",
@@ -380,9 +409,11 @@
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622b3858034a3e17ad0b81f5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622b3858034a3e17ad0b81f5",
         "Name": "barrel_g36_hk_318mm_556x45",
         "ModType": "short_barrel",
@@ -404,9 +435,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560837824bdc2d57468b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560837824bdc2d57468b4568",
         "Name": "barrel_mr133_750mm",
         "ModType": "",
@@ -428,9 +461,11 @@
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cc701d7e4a94900100ac4e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc701d7e4a94900100ac4e7",
         "Name": "barrel_p90_407mm_57x28",
         "ModType": "",
@@ -459,9 +494,11 @@
         "Loudness": 0,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Flash": -60
+        "Flash": -60,
+        "TemplateType": "weaponmod"
     },
     "611a30addbdd8440277441dc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "611a30addbdd8440277441dc",
         "Name": "barrel_mr43e-1c_750mm",
         "ModType": "",
@@ -483,9 +520,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5894a2c386f77427140b8342": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5894a2c386f77427140b8342",
         "Name": "barrel_mpx_203mm",
         "ModType": "",
@@ -512,9 +551,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d447bb4bdc2d892f8b456f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d447bb4bdc2d892f8b456f",
         "Name": "barrel_mr43e-1c_725mm",
         "ModType": "",
@@ -536,9 +577,11 @@
         "ShotgunDispersion": 0.94,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e848d2eea0a7c419c2f9bfd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e848d2eea0a7c419c2f9bfd",
         "Name": "barrel_ks23_700mm_23x75",
         "ModType": "",
@@ -560,9 +603,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e848d1c264f7c180b5e35a9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e848d1c264f7c180b5e35a9",
         "Name": "barrel_ks23_510mm_23x75",
         "ModType": "",
@@ -584,9 +629,11 @@
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a34fae7c4a2826c6e06d760": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a34fae7c4a2826c6e06d760",
         "Name": "barrel_ar10_558mm",
         "ModType": "",
@@ -609,9 +656,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "64748d02d1c009260702b526": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64748d02d1c009260702b526",
         "Name": "barrel_mr43_sawed_off_310mm_12g",
         "ModType": "",
@@ -633,9 +682,11 @@
         "ShotgunDispersion": 0.85,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5580169d4bdc2d9d138b4585": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5580169d4bdc2d9d138b4585",
         "Name": "barrel_mr43e-1c_510mm",
         "ModType": "",
@@ -657,9 +708,11 @@
         "ShotgunDispersion": 0.8,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af433f159a5ae961078a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af433f159a5ae961078a",
         "Name": "mechanic_barrel_ar15_260mm",
         "ModType": "short_barrel",
@@ -682,9 +735,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d35ee94bdc2d61338b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d35ee94bdc2d61338b4568",
         "Name": "barrel_ar15_260mm",
         "ModType": "short_barrel",
@@ -707,9 +762,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "63d3ce0446bd475bcb50f55f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63d3ce0446bd475bcb50f55f",
         "Name": "barrel_ar15_ba_hanson_carbine_pro_348mm",
         "ModType": "",
@@ -732,9 +789,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d3632e4bdc2d972f8b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d3632e4bdc2d972f8b4569",
         "Name": "barrel_ar15_370mm",
         "ModType": "",
@@ -757,9 +816,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c0e2f94d174af029f650d56": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0e2f94d174af029f650d56",
         "Name": "barrel_ar15_adar_406mm",
         "ModType": "",
@@ -785,9 +846,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "63d3d44a2a49307baf09386d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63d3d44a2a49307baf09386d",
         "Name": "barrel_ar15_ba_hanson_carbine_pro_406mm",
         "ModType": "",
@@ -817,9 +880,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d440b93a4b9364276578d4b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d440b93a4b9364276578d4b",
         "Name": "barrel_ar15_457mm",
         "ModType": "",
@@ -850,9 +915,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d4491a4bdc2d882f8b456e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d4491a4bdc2d882f8b456e",
         "Name": "barrel_mr133_510mm",
         "ModType": "",
@@ -874,9 +941,11 @@
         "ShotgunDispersion": 1.22,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fbbfabed5cb881a7363194e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbbfabed5cb881a7363194e",
         "Name": "barrel_mcx_171mm_762x35",
         "ModType": "762x35",
@@ -899,9 +968,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fbbfacda56d053a3543f799": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbbfacda56d053a3543f799",
         "Name": "barrel_mcx_229mm_762x35",
         "ModType": "762x35",
@@ -923,9 +994,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af363a06237d1afd123d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af363a06237d1afd123d",
         "Name": "6783af363a06237d1afd123d",
         "ModType": "556x45NATO",
@@ -949,9 +1022,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af2e6b6b13935074bbb5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af2e6b6b13935074bbb5",
         "Name": "6783af2e6b6b13935074bbb5",
         "ModType": "556x45NATO",
@@ -975,9 +1050,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "588200af24597742fa221dfb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "588200af24597742fa221dfb",
         "Name": "barrel_mr153_610mm",
         "ModType": "",
@@ -999,9 +1076,11 @@
         "ShotgunDispersion": 1.2,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5db5962e2216000e5e46eb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db5962e2216000e5e46eb",
         "Name": "barrel_mpx_165mm_9x19",
         "ModType": "",
@@ -1028,9 +1107,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6076c1b9f2cb2e02a42acedc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6076c1b9f2cb2e02a42acedc",
         "Name": "barrel_mp155_510mm_12g",
         "ModType": "",
@@ -1052,9 +1133,11 @@
         "ShotgunDispersion": 0.95,
         "Loudness": 0,
         "LoyaltyLevel":20,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5888945a2459774bf43ba385": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5888945a2459774bf43ba385",
         "Name": "barrel_dvl-10_500mm",
         "ModType": "",
@@ -1077,9 +1160,11 @@
         "ShotgunDispersion": 1,
         "Loudness": -60,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5888956924597752983e182d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5888956924597752983e182d",
         "Name": "barrel_dvl-10_m2_660mm",
         "ModType": "",
@@ -1103,9 +1188,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "612368f58b401f4f51239b33": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "612368f58b401f4f51239b33",
         "Name": "barrel_mc255_755mm_12g",
         "ModType": "",
@@ -1127,9 +1214,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5db5b82e2216003a0fe71d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db5b82e2216003a0fe71d",
         "Name": "barrel_mpx_265mm_9x19",
         "ModType": "",
@@ -1154,9 +1243,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cc701aae4a949000e1ea45c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc701aae4a949000e1ea45c",
         "Name": "barrel_p90_264mm_57x28",
         "ModType": "",
@@ -1184,9 +1275,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d440b9fa4b93601354d480c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d440b9fa4b93601354d480c",
         "Name": "barrel_ar15_508mm",
         "ModType": "",
@@ -1217,9 +1310,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e87071478f43e51ca2de5e1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e87071478f43e51ca2de5e1",
         "Name": "barrel_590_590a1_std_508mm_12g",
         "ModType": "",
@@ -1241,9 +1336,11 @@
         "ShotgunDispersion": 0.88,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bb20d9cd4351e00334c9d8a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20d9cd4351e00334c9d8a",
         "Name": "barrel_416_hk_368mm_556x45",
         "ModType": "",
@@ -1271,9 +1368,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c6d85e02e22165df16b81f4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d85e02e22165df16b81f4",
         "Name": "barrel_416_hk_264mm_556x45",
         "ModType": "short_barrel",
@@ -1313,9 +1412,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bb20d92d4351e00853263eb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20d92d4351e00853263eb",
         "Name": "barrel_416_hk_279mm_556x45",
         "ModType": "short_barrel",
@@ -1344,9 +1445,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bb20da5d4351e0035629dbf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20da5d4351e0035629dbf",
         "Name": "barrel_416_hk_419mm_556x45",
         "ModType": "",
@@ -1375,9 +1478,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bb20dadd4351e00367faeff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20dadd4351e00367faeff",
         "Name": "barrel_416_hk_505mm_556x45",
         "ModType": "",
@@ -1400,9 +1505,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f2aa46b878ef416f538b567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f2aa46b878ef416f538b567",
         "Name": "barrel_rfb_457mm_762x51",
         "ModType": "",
@@ -1424,9 +1531,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d448594bdc2d8c2f8b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d448594bdc2d8c2f8b4569",
         "Name": "barrel_mr133_610mm",
         "ModType": "",
@@ -1448,9 +1557,11 @@
         "ShotgunDispersion": 1.12,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a34f7f1c4a2826c6e06d75d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a34f7f1c4a2826c6e06d75d",
         "Name": "barrel_ar10_457mm",
         "ModType": "",
@@ -1473,9 +1584,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5608373c4bdc2dc8488b4570": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5608373c4bdc2dc8488b4570",
         "Name": "barrel_mr133_710mm",
         "ModType": "",
@@ -1497,9 +1610,11 @@
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5db5c62e22160012542255": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db5c62e22160012542255",
         "Name": "barrel_mpx_355mm_9x19",
         "ModType": "",
@@ -1522,9 +1637,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fc23678ab884124df0cd590": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc23678ab884124df0cd590",
         "Name": "barrel_mk18_610mm_86x70",
         "ModType": "",
@@ -1554,9 +1671,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560836484bdc2d20478b456e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560836484bdc2d20478b456e",
         "Name": "barrel_mr133_540mm",
         "ModType": "",
@@ -1578,9 +1697,11 @@
         "ShotgunDispersion": 1.17,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "588200cf2459774414733d55": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "588200cf2459774414733d55",
         "Name": "barrel_mr153_710mm",
         "ModType": "",
@@ -1602,9 +1723,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c5db5852e2216003a0fe71a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db5852e2216003a0fe71a",
         "Name": "barrel_mpx_114mm_9x19",
         "ModType": "",
@@ -1633,9 +1756,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "56deec93d2720bec348b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56deec93d2720bec348b4568",
         "Name": "barrel_mr153_750mm",
         "ModType": "",
@@ -1657,9 +1782,11 @@
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "588200c224597743990da9ed": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "588200c224597743990da9ed",
         "Name": "barrel_mr153_660mm",
         "ModType": "",
@@ -1681,9 +1808,11 @@
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "58aeaaa886f7744fc1560f81": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58aeaaa886f7744fc1560f81",
         "Name": "barrel_mpx_165mm_ported",
         "ModType": "",
@@ -1709,9 +1838,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5cadc1c6ae9215000f2775a4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cadc1c6ae9215000f2775a4",
         "Name": "barrel_m9_127mm_m9a3_std_9x19",
         "ModType": "",
@@ -1733,9 +1864,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6194ef39de3cdf1d2614a768": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194ef39de3cdf1d2614a768",
         "Name": "barrel_hk_usp_112mm_1143x23_std",
         "ModType": "",
@@ -1757,9 +1890,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6183fd9e8004cc50514c358f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6183fd9e8004cc50514c358f",
         "Name": "barrel_mk16_fn_457mm_556x45",
         "ModType": "",
@@ -1782,9 +1917,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d3eb5b6a4b9361eab311902": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d3eb5b6a4b9361eab311902",
         "Name": "barrel_57_fn_120mm_57x28",
         "ModType": "",
@@ -1806,9 +1943,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6065878ac9cf8012264142fd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6065878ac9cf8012264142fd",
         "Name": "barrel_mk47_cmmg_409mm_762x39",
         "ModType": "",
@@ -1831,9 +1970,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "60658776f2cb2e02a42ace2b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60658776f2cb2e02a42ace2b",
         "Name": "barrel_mk47_cmmg_254mm_762x39",
         "ModType": "short_barrel",
@@ -1863,9 +2004,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6183b084a112697a4b3a6e6c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6183b084a112697a4b3a6e6c",
         "Name": "barrel_mk17_fn_508mm_762x51",
         "ModType": "",
@@ -1887,9 +2030,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560836b64bdc2d57468b4567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560836b64bdc2d57468b4567",
         "Name": "barrel_mr133_540mm_plank",
         "ModType": "",
@@ -1911,9 +2056,11 @@
         "ShotgunDispersion": 1.12,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6183fc15d3a39d50044c13e9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6183fc15d3a39d50044c13e9",
         "Name": "barrel_mk16_fn_254mm_556x45",
         "ModType": "short_barrel",
@@ -1936,9 +2083,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "618168b350224f204c1da4d8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618168b350224f204c1da4d8",
         "Name": "barrel_mk17_fn_330mm_762x51",
         "ModType": "short_barrel",
@@ -1961,9 +2110,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a787f25c5856700186c4ab9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a787f25c5856700186c4ab9",
         "Name": "barrel_870_extra_barrel_355mm",
         "ModType": "",
@@ -1985,9 +2136,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560835c74bdc2dc8488b456f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560835c74bdc2dc8488b456f",
         "Name": "barrel_mr133_510mm_plank",
         "ModType": "",
@@ -2009,9 +2162,11 @@
         "ShotgunDispersion": 1.18,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6183b0711cb55961fa0fdcad": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6183b0711cb55961fa0fdcad",
         "Name": "barrel_mk17_fn_406mm_762x51",
         "ModType": "",
@@ -2034,9 +2189,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6183fd911cb55961fa0fdce9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6183fd911cb55961fa0fdce9",
         "Name": "barrel_mk16_fn_355mm_556x45",
         "ModType": "",
@@ -2058,9 +2215,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5e81c519cb2b95385c177551": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e81c519cb2b95385c177551",
         "Name": "barrel_m1911a1_127mm_1143x23",
         "ModType": "",
@@ -2082,9 +2241,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622b379bf9cfc87d675d2de5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622b379bf9cfc87d675d2de5",
         "Name": "barrel_g36_hk_228mm_556x45",
         "ModType": "short_barrel",
@@ -2107,9 +2268,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61702be9faa1272e431522c3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61702be9faa1272e431522c3",
         "Name": "barrel_417_hk_421mm_762x51",
         "ModType": "",
@@ -2131,9 +2294,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af2816da8f04134317a5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af2816da8f04134317a5",
         "Name": "barrel_aug_steyr_a3_417mm_300blk",
         "ModType": "762x35",
@@ -2157,9 +2322,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af21bc7d60d8f050eddb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af21bc7d60d8f050eddb",
         "Name": "barrel_mdr_dt_406mm_300blk",
         "ModType": "762x35",
@@ -2183,9 +2350,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c48a2852e221602b21d5923": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c48a2852e221602b21d5923",
         "Name": "barrel_mdr_dt_406mm_556x45",
         "ModType": "",
@@ -2207,9 +2376,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5dcbe9431e1f4616d354987e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dcbe9431e1f4616d354987e",
         "Name": "barrel_mdr_dt_406mm_762x51",
         "ModType": "",
@@ -2231,9 +2402,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "622b38c56762c718e457e246": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622b38c56762c718e457e246",
         "Name": "barrel_g36_hk_480mm_556x45",
         "ModType": "",
@@ -2256,9 +2429,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5dfa397fb11454561e39246c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfa397fb11454561e39246c",
         "Name": "barrel_ar10_kac_508mm_762x51",
         "ModType": "",
@@ -2281,9 +2456,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6259c2c1d714855d182bad85": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6259c2c1d714855d182bad85",
         "Name": "barrel_m3_benelli_500mm_12g",
         "ModType": "",
@@ -2305,9 +2482,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5df917564a9f347bc92edca3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df917564a9f347bc92edca3",
         "Name": "barrel_ar10_kac_406mm_762x51",
         "ModType": "",
@@ -2330,9 +2509,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "61f4012adfc9f01a816adda1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61f4012adfc9f01a816adda1",
         "Name": "barrel_mp18_600mm_762x54r",
         "ModType": "",
@@ -2354,9 +2535,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "55d449444bdc2d962f8b456d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d449444bdc2d962f8b456d",
         "Name": "barrel_mr133_610mm_plank",
         "ModType": "",
@@ -2378,9 +2561,11 @@
         "ShotgunDispersion": 1.08,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "668670432b934a68630a7fe8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668670432b934a68630a7fe8",
         "Name": "barrel_uzi_pro_iwi_smg_240mm_9x19",
         "ModType": "",
@@ -2402,9 +2587,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "66867023c3d473265104f384": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66867023c3d473265104f384",
         "Name": "barrel_uzi_pro_iwi_smg_210mm_9x19",
         "ModType": "",
@@ -2426,9 +2613,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6686700a2b934a68630a7fe6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6686700a2b934a68630a7fe6",
         "Name": "barrel_uzi_pro_iwi_smg_170mm_9x19",
         "ModType": "",
@@ -2450,9 +2639,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "66866fe776d1a87cd80fd388": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66866fe776d1a87cd80fd388",
         "Name": "barrel_uzi_pro_iwi_semi_114mm_9x19",
         "ModType": "",
@@ -2474,9 +2665,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "668031705014e211b4078046": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668031705014e211b4078046",
         "Name": "barrel_uzi_pro_pike_threaded_114mm_9x19",
         "ModType": "",
@@ -2498,9 +2691,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6698c8b7710a4525fe0e9e55": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c8b7710a4525fe0e9e55",
         "Name": "barrel_uzi_iwi_409mm_9x19",
         "ModType": "",
@@ -2522,9 +2717,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6698c8ab29e062525d0ad8ab": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c8ab29e062525d0ad8ab",
         "Name": "barrel_uzi_iwi_259mm_9x19",
         "ModType": "",
@@ -2546,9 +2743,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6698c89bfbc8142e60024b0e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c89bfbc8142e60024b0e",
         "Name": "barrel_uzi_iwi_238mm_3_lug_threaded_9x19",
         "ModType": "",
@@ -2570,9 +2769,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "603372d154072b51b239f9e1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "603372d154072b51b239f9e1",
         "Name": "barrel_stm9_stmarms_304mm_9x19",
         "ModType": "",
@@ -2604,9 +2805,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fbbc366ca32ed67276c1557": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbbc366ca32ed67276c1557",
         "Name": "barrel_vector_140mm_9x19",
         "ModType": "",
@@ -2628,9 +2831,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "603373004e02ce1eaa358814": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "603373004e02ce1eaa358814",
         "Name": "barrel_stm9_stmarms_406mm_9x19",
         "ModType": "",
@@ -2654,9 +2859,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6194efe07c6c7b169525f11b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194efe07c6c7b169525f11b",
         "Name": "barrel_hk_usp_129mm_1143x23_tactical",
         "ModType": "",
@@ -2678,9 +2885,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a6b5f868dc32e000a311389": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6b5f868dc32e000a311389",
         "Name": "barrel_glock_glock_114mm_9x19_std",
         "ModType": "",
@@ -2702,9 +2911,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5c471cb32e221602b177afaa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471cb32e221602b177afaa",
         "Name": "barrel_svd_izhmash_565mm_762x54",
         "ModType": "",
@@ -2726,9 +2937,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "603372f153a60014f970616d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "603372f153a60014f970616d",
         "Name": "barrel_stm9_stmarms_355mm_9x19",
         "ModType": "",
@@ -2756,9 +2969,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ea02bb600685063ec28bfa1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea02bb600685063ec28bfa1",
         "Name": "barrel_ppsh_269mm_762x25",
         "ModType": "",
@@ -2780,9 +2995,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fc3e4a27283c4046c5814ab": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc3e4a27283c4046c5814ab",
         "Name": "barrel_ump_200mm_1143x23",
         "ModType": "",
@@ -2804,9 +3021,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5608379a4bdc2d26448b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5608379a4bdc2d26448b4569",
         "Name": "barrel_mr133_750mm_plank",
         "ModType": "",
@@ -2828,9 +3047,11 @@
         "ShotgunDispersion": 0.85,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "571a26d524597720680fbe8a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "571a26d524597720680fbe8a",
         "Name": "barrel_tt_116mm_762x25tt_std",
         "ModType": "",
@@ -2852,9 +3073,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628121434fa03b6b6c35dc6a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628121434fa03b6b6c35dc6a",
         "Name": "barrel_ax_accuracy_international_686mm_86x70_pb",
         "ModType": "",
@@ -2884,9 +3107,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fb653962b1b027b1f50bd03": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb653962b1b027b1f50bd03",
         "Name": "barrel_vector_170mm_1143x23",
         "ModType": "",
@@ -2908,9 +3133,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5beec1bd0db834001e6006f3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec1bd0db834001e6006f3",
         "Name": "barrel_rpk16_izhmash_370mm",
         "ModType": "",
@@ -2932,9 +3159,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fb65363d1409e5ca04b54f5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb65363d1409e5ca04b54f5",
         "Name": "barrel_vector_140mm_1143x23",
         "ModType": "",
@@ -2956,9 +3185,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5df256570dee1b22f862e9c4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df256570dee1b22f862e9c4",
         "Name": "barrel_t5000_660mm_762x51",
         "ModType": "",
@@ -2980,9 +3211,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6194eff92d2c397d6600348b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194eff92d2c397d6600348b",
         "Name": "barrel_hk_usp_132mm_1143x23_expert",
         "ModType": "",
@@ -3004,9 +3237,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a787fadc5856700155a6ca1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a787fadc5856700155a6ca1",
         "Name": "barrel_870_vent_rib_barrel_660mm",
         "ModType": "",
@@ -3028,9 +3263,11 @@
         "ShotgunDispersion": 0.8,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "628121651d5df4475f46a33c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628121651d5df4475f46a33c",
         "Name": "barrel_ax_accuracy_international_508mm_762x51_pb",
         "ModType": "",
@@ -3057,9 +3294,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a6b5ed88dc32e000c52ec86": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6b5ed88dc32e000c52ec86",
         "Name": "barrel_glock_salient_arms_114mm_threaded_9x19",
         "ModType": "",
@@ -3081,9 +3320,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d3eb59ea4b9361c284bb4b2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d3eb59ea4b9361c284bb4b2",
         "Name": "barrel_57_fn_120mm_threaded_57x28",
         "ModType": "",
@@ -3105,9 +3346,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b1fa9ea5acfc40018633c0a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b1fa9ea5acfc40018633c0a",
         "Name": "barrel_glock_glock_18c_114mm_9x19_std",
         "ModType": "",
@@ -3130,9 +3373,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "56d5a1f7d2720bb3418b456a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56d5a1f7d2720bb3418b456a",
         "Name": "barrel_p226_112mm_9x19_std",
         "ModType": "",
@@ -3154,9 +3399,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a787fdfc5856700142fdd9a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a787fdfc5856700142fdd9a",
         "Name": "barrel_870_vent_rib_barrel_cut_off_325mm",
         "ModType": "",
@@ -3178,9 +3425,11 @@
         "ShotgunDispersion": 1.25,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5beec2820db834001b095426": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec2820db834001b095426",
         "Name": "barrel_rpk16_izhmash_550mm",
         "ModType": "",
@@ -3203,9 +3452,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "602a95edda11d6478d5a06da": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602a95edda11d6478d5a06da",
         "Name": "barrel_pl15_izhmash_112mm_9x19",
         "ModType": "",
@@ -3227,9 +3478,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560837544bdc2de22e8b456e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560837544bdc2de22e8b456e",
         "Name": "barrel_mr133_710mm_plank",
         "ModType": "",
@@ -3251,9 +3504,11 @@
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "602a95fe4e02ce1eaa358729": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602a95fe4e02ce1eaa358729",
         "Name": "barrel_pl15_izhmash_112mm_threaded_9x19",
         "ModType": "",
@@ -3275,9 +3530,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "560837154bdc2da74d8b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "560837154bdc2da74d8b4568",
         "Name": "barrel_mr133_660mm_plank",
         "ModType": "",
@@ -3299,9 +3556,11 @@
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5fbbc383d5cb881a7363194a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbbc383d5cb881a7363194a",
         "Name": "barrel_vector_170mm_9x19",
         "ModType": "",
@@ -3323,9 +3582,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "603372b4da11d6478d5a07ff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "603372b4da11d6478d5a07ff",
         "Name": "barrel_stm9_stmarms_266mm_9x19",
         "ModType": "",
@@ -3359,9 +3620,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "587de4282459771bca0ec90b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "587de4282459771bca0ec90b",
         "Name": "barrel_p226_112mm_threaded_9x19",
         "ModType": "",
@@ -3383,9 +3646,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a787ebcc5856700142fdd98": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a787ebcc5856700142fdd98",
         "Name": "barrel_870_express_rifle_sights_fixed_improved_cylinder_508mm",
         "ModType": "",
@@ -3407,9 +3672,11 @@
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a787f7ac5856700177af660": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a787f7ac5856700177af660",
         "Name": "barrel_870_fixed_improved_cylinder_508mm",
         "ModType": "",
@@ -3431,9 +3698,11 @@
         "ShotgunDispersion": 0.95,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a6b5b8a8dc32e001207faf3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6b5b8a8dc32e001207faf3",
         "Name": "barrel_glock_alpha_wolf_114mm_threaded_9x19",
         "ModType": "",
@@ -3455,9 +3724,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6281214c1d5df4475f46a33a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6281214c1d5df4475f46a33a",
         "Name": "barrel_ax_accuracy_international_660mm_762x51_pb",
         "ModType": "",
@@ -3484,9 +3755,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a6b60158dc32e000a31138b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6b60158dc32e000a31138b",
         "Name": "barrel_glock_glock_114mm_9x19_compensated",
         "ModType": "",
@@ -3508,9 +3781,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6281215b4fa03b6b6c35dc6c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6281215b4fa03b6b6c35dc6c",
         "Name": "barrel_ax_accuracy_international_610mm_762x51_pb",
         "ModType": "",
@@ -3535,9 +3810,11 @@
         "Ergonomics": 0,
         "Weight": 1.45,
         "ShotgunDispersion": 2,
-        "Loudness": 0
+        "Loudness": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfd4cc90db834001d23e846": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd4cc90db834001d23e846",
         "Name": "barrel_mosin_izhmash_mosin_sawn_off_200mm",
         "ModType": "",
@@ -3566,9 +3843,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfd4cd60db834001c38f095": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd4cd60db834001c38f095",
         "Name": "barrel_mosin_izhmash_mosin_custom_threaded_sawn_off_220mm",
         "ModType": "",
@@ -3597,9 +3876,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfd4cbe0db834001b73449f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd4cbe0db834001b73449f",
         "Name": "barrel_mosin_izhmash_mosin_carabine_514mm",
         "ModType": "",
@@ -3621,9 +3902,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5ae09bff5acfc4001562219d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae09bff5acfc4001562219d",
         "Name": "barrel_mosin_izhmash_mosin_std_730mm",
         "ModType": "",
@@ -3648,9 +3931,11 @@
         "ShotgunDispersion": 1.9,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5a6b5e468dc32e001207faf5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6b5e468dc32e001207faf5",
         "Name": "barrel_glock_double_diamond_114mm_threaded_9x19",
         "ModType": "",
@@ -3672,9 +3957,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6194f017ed0429009f543eaa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f017ed0429009f543eaa",
         "Name": "barrel_hk_usp_153mm_1143x23_elite",
         "ModType": "",
@@ -3696,9 +3983,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6194f02d9bb3d20b0946d2f0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f02d9bb3d20b0946d2f0",
         "Name": "barrel_hk_usp_153mm_1143x23_match",
         "ModType": "",
@@ -3720,9 +4009,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f3e7801153b8571434a924c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f3e7801153b8571434a924c",
         "Name": "barrel_m1911a1_127mm_national_match_1143x23",
         "ModType": "",
@@ -3744,9 +4035,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5f3e77f59103d430b93f94c1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f3e77f59103d430b93f94c1",
         "Name": "barrel_m1911a1_141mm_threaded_1143x23",
         "ModType": "",
@@ -3768,9 +4061,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5aaf9d53e5b5b00015042a52": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aaf9d53e5b5b00015042a52",
         "Name": "barrel_m1a_springfield_armory_6_groove_carbon_410mm",
         "ModType": "",
@@ -3792,9 +4087,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5addbac75acfc400194dbc56": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbac75acfc400194dbc56",
         "Name": "barrel_m1a_springfield_armory_6_groove_national_match_558mm",
         "ModType": "",
@@ -3817,9 +4114,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfebc320db8340019668d79": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfebc320db8340019668d79",
         "Name": "barrel_m700_remington_heavy_threaded_508mm",
         "ModType": "",
@@ -3841,9 +4140,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d2703038abbc3105103d94c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2703038abbc3105103d94c",
         "Name": "barrel_m700_remington_heavy_5_r_stainless_threaded_508mm",
         "ModType": "",
@@ -3865,9 +4166,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5d2702e88abbc31ed91efc44": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2702e88abbc31ed91efc44",
         "Name": "barrel_m700_shilen_stainless_660mm",
         "ModType": "",
@@ -3889,9 +4192,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5bfebc250db834001a6694e1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfebc250db834001a6694e1",
         "Name": "barrel_m700_remington_heavy_660mm",
         "ModType": "",
@@ -3913,9 +4218,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b099a765acfc47a8607efe3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b099a765acfc47a8607efe3",
         "Name": "barrel_sa58_ds_arms_medium_contour_280mm",
         "ModType": "",
@@ -3945,9 +4252,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7be1125acfc4001876c0e5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be1125acfc4001876c0e5",
         "Name": "barrel_sa58_ds_arms_medium_contour_406mm",
         "ModType": "",
@@ -3976,9 +4285,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b7be1265acfc400161d0798": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7be1265acfc400161d0798",
         "Name": "barrel_sa58_ds_arms_medium_contour_533mm",
         "ModType": "",
@@ -4004,9 +4315,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "571a279b24597720b4066566": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "571a279b24597720b4066566",
         "Name": "barrel_tt_116mm_762x25tt_threaded",
         "ModType": "",
@@ -4028,9 +4341,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "5b3baf8f5acfc40dc5296692": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3baf8f5acfc40dc5296692",
         "Name": "barrel_tt_gold_116mm_762x25tt_std",
         "ModType": "",
@@ -4052,9 +4367,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6130c3dffaa1272e43151c7d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6130c3dffaa1272e43151c7d",
         "Name": "barrel_ump_203mm_threaded_1143x23",
         "ModType": "",
@@ -4076,9 +4393,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62e7c7f3c34ea971710c32fc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e7c7f3c34ea971710c32fc",
         "Name": "barrel_aug_steyr_a1_508mm_556x45",
         "ModType": "",
@@ -4101,9 +4420,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6333f05d1bc0e6217a0e9d34": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6333f05d1bc0e6217a0e9d34",
         "Name": "barrel_aug_steyr_a1_417mm_556x45",
         "ModType": "",
@@ -4125,9 +4446,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "630e39c3bd357927e4007c15": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630e39c3bd357927e4007c15",
         "Name": "barrel_aug_steyr_a3_417mm_556x45",
         "ModType": "",
@@ -4149,9 +4472,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "630764fea987397c0816d219": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630764fea987397c0816d219",
         "Name": "barrel_glock_glock_gmb_102mm_9x19_std",
         "ModType": "",
@@ -4173,9 +4498,11 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783aeeb56a0b663fc25f97d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783aeeb56a0b663fc25f97d",
         "Name": "barrel_sks_molot_520mm_762x39",
         "ModType": "366TKM",
@@ -4200,9 +4527,11 @@
         "Loudness": 10,
         "MalfChance": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "634eff66517ccc8a960fc735": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634eff66517ccc8a960fc735",
         "Name": "barrel_sks_molot_520mm_762x39",
         "ModType": "",
@@ -4225,9 +4554,11 @@
         "Loudness": 0,
         "MalfChance": 0,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "634f02331f9f536910079b51": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f02331f9f536910079b51",
         "Name": "barrel_sks_toz_520mm_762x39",
         "ModType": "",
@@ -4250,9 +4581,11 @@
         "Loudness": 0,
         "MalfChance": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "645122f6d4928d46d30be3ff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "645122f6d4928d46d30be3ff",
         "Name": "barrel_9a91_kbp_9a91_180mm_9x39",
         "ModType": "",
@@ -4275,9 +4608,11 @@
         "Loudness": 0,
         "MalfChance": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "645123013d52156624001fd1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "645123013d52156624001fd1",
         "Name": "barrel_9a91_kbp_vsk94_180mm_9x39",
         "ModType": "",
@@ -4300,9 +4635,11 @@
         "Loudness": 0,
         "MalfChance": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6513eff1e06849f06c0957d4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6513eff1e06849f06c0957d4",
         "Name": "barrel_rpd_zid_rpd_520mm_762x39",
         "ModType": "",
@@ -4325,9 +4662,11 @@
         "Loudness": 0,
         "MalfChance": 0,
         "LoyaltyLevel": 1,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65266fd43341ed9aa903dd56": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65266fd43341ed9aa903dd56",
         "Name": "barrel_rpd_kiba_sawed_off_350mm_762x39",
         "ModType": "",
@@ -4351,9 +4690,11 @@
         "Loudness": 0,
         "MalfChance": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "6783af3c10208e7f0c64a02c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6783af3c10208e7f0c64a02c",
         "Name": "barrel_mcx_sig_spear_330mm_762x51",
         "ModType": "762x51",
@@ -4378,9 +4719,11 @@
         "Loudness": 0,
         "MalfChance": 0,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "652910565ae2ae97b80fdf35": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "652910565ae2ae97b80fdf35",
         "Name": "barrel_mcx_sig_spear_330mm_68x51",
         "ModType": "277",

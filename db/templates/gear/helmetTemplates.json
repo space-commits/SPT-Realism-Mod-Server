@@ -1,5 +1,6 @@
 {
     "5b432d215acfc4771e1c6624": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b432d215acfc4771e1c6624",
         "Name": "item_equipment_helmet_LSHZ",
         "AllowADS": true,
@@ -16,6 +17,7 @@
         "TemplateType": "gear"
     },
     "5d5e7d28a4b936645d161203": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d5e7d28a4b936645d161203",
         "Name": "helmet_mich2001_od",
         "AllowADS": true,
@@ -32,6 +34,7 @@
         "TemplateType": "gear"
     },
     "5e4bfc1586f774264f7582d3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e4bfc1586f774264f7582d3",
         "Name": "item_equipment_helmet_tc800",
         "AllowADS": true,
@@ -48,6 +51,7 @@
         "TemplateType": "gear"
     },
     "5f60c74e3b85f6263c145586": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5f60c74e3b85f6263c145586",
         "Name": "item_equipment_helmet_rys_t",
         "AllowADS": true,
@@ -64,6 +68,7 @@
         "TemplateType": "gear"
     },
     "60bf74184a63fc79b60c57f6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "60bf74184a63fc79b60c57f6",
         "Name": "item_equipment_head_bomber",
         "AllowADS": true,
@@ -80,6 +85,7 @@
         "TemplateType": "gear"
     },
     "61bca7cda0eae612383adf57": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "61bca7cda0eae612383adf57",
         "Name": "item_equipment_helmet_nfm_hjelm",
         "AllowADS": true,
@@ -96,6 +102,7 @@
         "TemplateType": "gear"
     },
     "59ef13ca86f77445fd0e2483": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "59ef13ca86f77445fd0e2483",
         "Name": "jack_o_lantern",
         "AllowADS": true,
@@ -112,6 +119,7 @@
         "TemplateType": "gear"
     },
     "5d6d3716a4b9361bc8618872": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d6d3716a4b9361bc8618872",
         "Name": "item_equipment_helmet_lshz2dtm",
         "AllowADS": true,
@@ -128,6 +136,7 @@
         "TemplateType": "gear"
     },
     "5aa7d193e5b5b000171d063f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5aa7d193e5b5b000171d063f",
         "Name": "helmet_sphera-C",
         "AllowADS": true,
@@ -144,6 +153,7 @@
         "TemplateType": "gear"
     },
     "5d5e9c74a4b9364855191c40": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d5e9c74a4b9364855191c40",
         "Name": "helmet_mich2002_od",
         "AllowADS": true,
@@ -160,6 +170,7 @@
         "TemplateType": "gear"
     },
     "5df8a58286f77412631087ed": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5df8a58286f77412631087ed",
         "Name": "helmet_crew",
         "AllowADS": true,
@@ -176,6 +187,7 @@
         "TemplateType": "gear"
     },
     "5a154d5cfcdbcb001a3b00da": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5a154d5cfcdbcb001a3b00da",
         "Name": "helmet_ops_core_fast",
         "AllowADS": true,
@@ -192,6 +204,7 @@
         "TemplateType": "gear"
     },
     "5aa7e276e5b5b000171d0647": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5aa7e276e5b5b000171d0647",
         "Name": "helmet_altyn",
         "AllowADS": true,
@@ -208,6 +221,7 @@
         "TemplateType": "gear"
     },
     "5aa7e4a4e5b5b000137b76f2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5aa7e4a4e5b5b000137b76f2",
         "Name": "helmet_zsh_1-2m_v2",
         "AllowADS": true,
@@ -224,6 +238,7 @@
         "TemplateType": "gear"
     },
     "5aa7cfc0e5b5b00015693143": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5aa7cfc0e5b5b00015693143",
         "Name": "helmet_6B47_cover",
         "AllowADS": true,
@@ -240,6 +255,7 @@
         "TemplateType": "gear"
     },
     "66bdc28a0b603c26902b2011": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66bdc28a0b603c26902b2011",
         "Name": "item_equipment_facecover_devtac_old",
         "AllowADS": true,
@@ -257,6 +273,7 @@
         "TemplateType": "gear"
     },
     "5b4329f05acfc47a86086aa1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b4329f05acfc47a86086aa1",
         "Name": "item_equipment_facecover_devtac",
         "AllowADS": true,
@@ -274,6 +291,7 @@
         "TemplateType": "gear"
     },
     "5ac8d6885acfc400180ae7b0": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ac8d6885acfc400180ae7b0",
         "Name": "helmet_ops_core_fast_tan",
         "AllowADS": true,
@@ -290,6 +308,7 @@
         "TemplateType": "gear"
     },
     "5a7c4850e899ef00150be885": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5a7c4850e899ef00150be885",
         "Name": "helmet_ratnik_6B47",
         "AllowADS": true,
@@ -306,6 +325,7 @@
         "TemplateType": "gear"
     },
     "5c06c6a80db834001b735491": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c06c6a80db834001b735491",
         "Name": "item_equipment_helmet_ssh-68",
         "AllowADS": true,
@@ -322,6 +342,7 @@
         "TemplateType": "gear"
     },
     "5645bc214bdc2d363b8b4571": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5645bc214bdc2d363b8b4571",
         "Name": "helmet",
         "AllowADS": true,
@@ -338,6 +359,7 @@
         "TemplateType": "gear"
     },
     "5aa7d03ae5b5b00016327db5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5aa7d03ae5b5b00016327db5",
         "Name": "helmet_un",
         "AllowADS": true,
@@ -354,6 +376,7 @@
         "TemplateType": "gear"
     },
     "5aa7e454e5b5b0214e506fa2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5aa7e454e5b5b0214e506fa2",
         "Name": "helmet_zsh_1-2m_v1",
         "AllowADS": true,
@@ -370,6 +393,7 @@
         "TemplateType": "gear"
     },
     "5c091a4e0db834001d5addc8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c091a4e0db834001d5addc8",
         "Name": "item_equipment_helmet_maska_1sh",
         "AllowADS": true,
@@ -386,6 +410,7 @@
         "TemplateType": "gear"
     },
     "59e7711e86f7746cae05fbe1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "59e7711e86f7746cae05fbe1",
         "Name": "helmet_k1c",
         "AllowADS": true,
@@ -402,6 +427,7 @@
         "TemplateType": "gear"
     },
     "5ca20ee186f774799474abc2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ca20ee186f774799474abc2",
         "Name": "item_equipment_helmet_vulkan5",
         "AllowADS": true,
@@ -418,6 +444,7 @@
         "TemplateType": "gear"
     },
     "5b40e3f35acfc40016388218": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b40e3f35acfc40016388218",
         "Name": "item_equipment_helmet_ACHHC_black",
         "AllowADS": true,
@@ -434,6 +461,7 @@
         "TemplateType": "gear"
     },
     "5b40e4035acfc47a87740943": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b40e4035acfc47a87740943",
         "Name": "item_equipment_helmet_ACHHC_green",
         "AllowADS": true,
@@ -450,6 +478,7 @@
         "TemplateType": "gear"
     },
     "5b40e1525acfc4771e1c6611": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b40e1525acfc4771e1c6611",
         "Name": "item_equipment_helmet_ULACH_black",
         "AllowADS": true,
@@ -466,6 +495,7 @@
         "TemplateType": "gear"
     },
     "5b40e2bc5acfc40016388216": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b40e2bc5acfc40016388216",
         "Name": "item_equipment_helmet_ULACH_coyote",
         "AllowADS": true,
@@ -482,6 +512,7 @@
         "TemplateType": "gear"
     },
     "5c17a7ed2e2216152142459c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c17a7ed2e2216152142459c",
         "Name": "item_equipment_helmet_crye_airframe_tan",
         "AllowADS": true,
@@ -498,6 +529,7 @@
         "TemplateType": "gear"
     },
     "66b5f65ca7f72d197e70bcd6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66b5f65ca7f72d197e70bcd6",
         "Name": "item_equipment_helmet_ballisticarmorco_bastion_black",
         "AllowADS": true,
@@ -514,6 +546,7 @@
         "TemplateType": "gear"
     },
     "66b5f661af44ca0014063c05": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66b5f661af44ca0014063c05",
         "Name": "item_equipment_helmet_ballisticarmorco_bastion_olive",
         "AllowADS": true,
@@ -530,6 +563,7 @@
         "TemplateType": "gear"
     },
     "66b5f666cad6f002ab7214c2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66b5f666cad6f002ab7214c2",
         "Name": "item_equipment_helmet_ballisticarmorco_bastion_multicam",
         "AllowADS": true,
@@ -546,6 +580,7 @@
         "TemplateType": "gear"
     },
     "5ea17ca01412a1425304d1c0": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ea17ca01412a1425304d1c0",
         "Name": "item_equipment_helmet_diamond_age_bastion",
         "AllowADS": true,
@@ -562,6 +597,7 @@
         "TemplateType": "gear"
     },
     "5f60b34a41e30a4ab12a6947": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5f60b34a41e30a4ab12a6947",
         "Name": "item_equipment_helmet_galvion_caiman",
         "AllowADS": true,
@@ -578,6 +614,7 @@
         "TemplateType": "gear"
     },
     "5ea05cf85ad9772e6624305d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ea05cf85ad9772e6624305d",
         "Name": "item_equipment_helmet_hops_core_fast",
         "AllowADS": true,
@@ -594,6 +631,7 @@
         "TemplateType": "gear"
     },
     "5c0e874186f7745dc7616606": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e874186f7745dc7616606",
         "Name": "item_equipment_helmet_maska_1sh_killa",
         "AllowADS": true,
@@ -610,6 +648,7 @@
         "TemplateType": "gear"
     },
     "5e00c1ad86f774747333222c": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e00c1ad86f774747333222c",
         "Name": "item_equipment_helmet_team_wendy_exfil",
         "AllowADS": true,
@@ -626,6 +665,7 @@
         "TemplateType": "gear"
     },
     "5e01ef6886f77445f643baa4": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e01ef6886f77445f643baa4",
         "Name": "item_equipment_helmet_team_wendy_exfil_coyote",
         "AllowADS": true,
@@ -642,6 +682,7 @@
         "TemplateType": "gear"
     },
     "5c08f87c0db8340019124324": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c08f87c0db8340019124324",
         "Name": "item_equipment_helmet_shpm",
         "AllowADS": false,
@@ -658,6 +699,7 @@
         "TemplateType": "gear"
     },
     "5c0d2727d174af02a012cf58": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0d2727d174af02a012cf58",
         "Name": "item_equipment_helmet_psh97_jeta",
         "AllowADS": false,
@@ -674,6 +716,7 @@
         "TemplateType": "gear"
     },
     "65709d2d21b9f815e208ff95": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65709d2d21b9f815e208ff95",
         "Name": "item_equipment_helmet_neosteel",
         "AllowADS": true,
@@ -687,6 +730,7 @@
         "TemplateType": "gear"
     },
     "65719f0775149d62ce0a670b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65719f0775149d62ce0a670b",
         "Name": "item_equipment_helmet_tor_2",
         "AllowADS": true,

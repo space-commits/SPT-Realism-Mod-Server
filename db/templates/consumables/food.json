@@ -1,8 +1,9 @@
 {
     "5d1b376e86f774252519444e": {
+        "$type": "RealismMod.Consumable, RealismMod",
         "ItemID": "5d1b376e86f774252519444e",
         "Name": "moonshine",
-        "TemplateType": "food",
+        "TemplateType": "consumable",
         "LoyaltyLevel": 1,
         "BasePriceModifier": 1,
         "ConsumableType": "alcohol",
@@ -15,9 +16,10 @@
         "CanBeUsedInRaid": true
     },
     "5d403f9186f7743cac3f229b": {
+        "$type": "RealismMod.Consumable, RealismMod",
         "ItemID": "5d403f9186f7743cac3f229b",
         "Name": "jack",
-        "TemplateType": "food",
+        "TemplateType": "consumable",
         "LoyaltyLevel": 1,
         "BasePriceModifier": 1,
         "ConsumableType": "alcohol",
@@ -30,9 +32,10 @@
         "CanBeUsedInRaid": true
     },
     "614451b71e5874611e2c7ae5": {
+        "$type": "RealismMod.Consumable, RealismMod",
         "ItemID": "614451b71e5874611e2c7ae5",
         "Name": "bad_vodka",
-        "TemplateType": "food",
+        "TemplateType": "consumable",
         "LoyaltyLevel": 1,
         "BasePriceModifier": 1,
         "ConsumableType": "alcohol",
@@ -45,9 +48,10 @@
         "CanBeUsedInRaid": true
     },
     "5d40407c86f774318526545a": {
+        "$type": "RealismMod.Consumable, RealismMod",
         "ItemID": "5d40407c86f774318526545a",
         "Name": "vodka",
-        "TemplateType": "food",
+        "TemplateType": "consumable",
         "LoyaltyLevel": 1,
         "BasePriceModifier": 1,
         "ConsumableType": "alcohol",
@@ -60,9 +64,10 @@
         "CanBeUsedInRaid": true
     },
     "62a09f32621468534a797acb": {
+        "$type": "RealismMod.Consumable, RealismMod",
         "ItemID": "62a09f32621468534a797acb",
         "Name": "beer",
-        "TemplateType": "food",
+        "TemplateType": "consumable",
         "LoyaltyLevel": 1,
         "BasePriceModifier": 1,
         "ConsumableType": "alcohol",

@@ -1,5 +1,6 @@
 {
     "62a09e08de7ac81993580532": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "62a09e08de7ac81993580532",
         "Name": "item_equipment_facecover_glorious",
         "AllowADS": true,
@@ -13,6 +14,7 @@
         "TemplateType": "gear"
     },
     "6570aead4d84f81fd002a033": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570aead4d84f81fd002a033",
         "Name": "item_equipment_death_mask",
         "AllowADS": true,
@@ -29,6 +31,7 @@
         "TemplateType": "gear"
     },
     "657089638db3adca1009f4ca": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657089638db3adca1009f4ca",
         "Name": "item_equipment_atomic",
         "AllowADS": true,
@@ -45,6 +48,7 @@
         "TemplateType": "gear"
     },
     "5b432b2f5acfc4771e1c6622": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b432b2f5acfc4771e1c6622",
         "Name": "item_equipment_facecover_shatteredmask",
         "AllowADS": true,
@@ -61,6 +65,7 @@
         "TemplateType": "gear"
     },
     "603409c80ca681766b6a0fb2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "603409c80ca681766b6a0fb2",
         "Name": "item_equipment_glasses_npp",
         "AllowADS": true,
@@ -76,6 +81,7 @@
         "TemplateType": "gear"
     },
     "5b432be65acfc433000ed01f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b432be65acfc433000ed01f",
         "Name": "tactical_glass",
         "AllowADS": true,
@@ -91,6 +97,7 @@
         "TemplateType": "gear"
     },
     "59e770b986f7742cbd762754": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "59e770b986f7742cbd762754",
         "Name": "item_equipment_glasses_6B34",
         "AllowADS": true,
@@ -106,6 +113,7 @@
         "TemplateType": "gear"
     },
     "5c1a1cc52e221602b3136e3d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c1a1cc52e221602b3136e3d",
         "Name": "item_equipment_glasses_m_frame",
         "AllowADS": true,
@@ -121,6 +129,7 @@
         "TemplateType": "gear"
     },
     "62a61c988ec41a51b34758d5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "62a61c988ec41a51b34758d5",
         "Name": "Item_equipment_glasses_oakley",
         "AllowADS": true,
@@ -136,6 +145,7 @@
         "TemplateType": "gear"
     },
     "5c0d32fcd174af02a1659c75": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0d32fcd174af02a1659c75",
         "Name": "item_equipment_glasses_proximity",
         "AllowADS": true,
@@ -151,6 +161,7 @@
         "TemplateType": "gear"
     },
     "5d5fca1ea4b93635fd598c07": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d5fca1ea4b93635fd598c07",
         "Name": "item_equipment_glasses_ess",
         "AllowADS": true,

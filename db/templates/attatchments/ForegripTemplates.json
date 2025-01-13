@@ -1,5 +1,6 @@
 {
     "668031bde3e7eb26e8004cd7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668031bde3e7eb26e8004cd7",
         "Name": "handguard_uzi_pro_a3_tactical_angled_foregrip_guard_m_lok",
         "ModType": "",
@@ -13,9 +14,11 @@
         "Weight": 0.08,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "Handling": 7.5
+        "Handling": 7.5,
+        "TemplateType": "weaponmod"
     },
     "6565c0c2ff7eb7070409084c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6565c0c2ff7eb7070409084c",
         "Name": "foregrip_sr3m_tochmash_sr3m_std_plum",
         "ModType": "",
@@ -29,9 +32,11 @@
         "Weight": 0.08,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "65329ebcc0d50d0c9204ace1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65329ebcc0d50d0c9204ace1",
         "Name": "foregrip_sr3m_tochmash_sr3m_std",
         "ModType": "",
@@ -45,9 +50,11 @@
         "Weight": 0.08,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "5c7fc87d2e221644f31c0298": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c7fc87d2e221644f31c0298",
         "Name": "foregrip_all_bcm_mod_3",
         "ModType": "",
@@ -62,9 +69,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 7.5,
-        "Handling": 7.5
+        "Handling": 7.5,
+        "TemplateType": "weaponmod"
     },
     "5cda9bcfd7f00c0c0b53e900": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cda9bcfd7f00c0c0b53e900",
         "Name": "foregrip_all_ckib_ash12_std",
         "ModType": "",
@@ -79,9 +88,11 @@
         "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -4.5,
-        "Handling": 10
+        "Handling": 10,
+        "TemplateType": "weaponmod"
     },
     "59f8a37386f7747af3328f06": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59f8a37386f7747af3328f06",
         "Name": "foregrip_all_fortis_shift",
         "ModType": "",
@@ -96,9 +107,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 10.5,
-        "Handling": 4.5
+        "Handling": 4.5,
+        "TemplateType": "weaponmod"
     },
     "5a7dbfc1159bd40016548fde": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7dbfc1159bd40016548fde",
         "Name": "foregrip_all_hera_arms_cqr_grip",
         "ModType": "",
@@ -144,9 +157,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 15,
-        "AimStability": -5
+        "AimStability": -5,
+        "TemplateType": "weaponmod"
     },
     "619386379fb0c665d5490dbe": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619386379fb0c665d5490dbe",
         "Name": "foregrip_all_hk_sturmgriff_assault_grip",
         "ModType": "",
@@ -160,9 +175,11 @@
         "Weight": 0.068,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 10
+        "Handling": 10,
+        "TemplateType": "weaponmod"
     },
     "5c87ca002e221600114cb150": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c87ca002e221600114cb150",
         "Name": "foregrip_all_kac_vertical_grip",
         "ModType": "",
@@ -176,9 +193,11 @@
         "Weight": 0.072,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 5.25
+        "Handling": 5.25,
+        "TemplateType": "weaponmod"
     },
     "588226d124597767ad33f787": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "588226d124597767ad33f787",
         "Name": "foregrip_all_magpul_afg_blk",
         "ModType": "",
@@ -192,9 +211,11 @@
         "Weight": 0.082,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 15
+        "AimStability": 15,
+        "TemplateType": "weaponmod"
     },
     "588226dd24597767ad33f789": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "588226dd24597767ad33f789",
         "Name": "foregrip_all_magpul_afg_fde",
         "ModType": "",
@@ -208,9 +229,11 @@
         "Weight": 0.082,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 15
+        "AimStability": 15,
+        "TemplateType": "weaponmod"
     },
     "588226e62459776e3e094af7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "588226e62459776e3e094af7",
         "Name": "foregrip_all_magpul_afg_fg",
         "ModType": "",
@@ -224,9 +247,11 @@
         "Weight": 0.082,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 15
+        "AimStability": 15,
+        "TemplateType": "weaponmod"
     },
     "588226ef24597767af46e39c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "588226ef24597767af46e39c",
         "Name": "foregrip_all_magpul_afg_od",
         "ModType": "",
@@ -240,9 +265,11 @@
         "Weight": 0.082,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 15
+        "AimStability": 15,
+        "TemplateType": "weaponmod"
     },
     "59fc48e086f77463b1118392": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59fc48e086f77463b1118392",
         "Name": "foregrip_all_magpul_rvg_blk",
         "ModType": "",
@@ -257,9 +284,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 4.5,
-        "Handling": 9
+        "Handling": 9,
+        "TemplateType": "weaponmod"
     },
     "5fce0cf655375d18a253eff0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fce0cf655375d18a253eff0",
         "Name": "foregrip_all_magpul_rvg_fde",
         "ModType": "",
@@ -274,9 +303,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 4.5,
-        "Handling": 9
+        "Handling": 9,
+        "TemplateType": "weaponmod"
     },
     "5cf4fb76d7f00c065703d3ac": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf4fb76d7f00c065703d3ac",
         "Name": "foregrip_all_rtm_pillau",
         "ModType": "",
@@ -291,9 +322,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 3,
-        "Handling": 5
+        "Handling": 5,
+        "TemplateType": "weaponmod"
     },
     "5b057b4f5acfc4771e1bd3e9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b057b4f5acfc4771e1bd3e9",
         "Name": "foregrip_all_stark_se_5_express_grip",
         "ModType": "",
@@ -308,9 +341,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 10.5,
-        "Handling": 4.5
+        "Handling": 4.5,
+        "TemplateType": "weaponmod"
     },
     "5c791e872e2216001219c40a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c791e872e2216001219c40a",
         "Name": "foregrip_all_strike_industries_cobra_tactical",
         "ModType": "",
@@ -324,9 +359,11 @@
         "Weight": 0.08,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 10
+        "AimStability": 10,
+        "TemplateType": "weaponmod"
     },
     "661e53149c8b4dadef008579": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "661e53149c8b4dadef008579",
         "Name": "foregrip_all_tango_down_bgv_qditi_fde",
         "ModType": "",
@@ -341,9 +378,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 2.5,
-        "Handling": 6.5
+        "Handling": 6.5,
+        "TemplateType": "weaponmod"
     },
     "661e52e29c8b4dadef008577": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "661e52e29c8b4dadef008577",
         "Name": "foregrip_all_tango_down_bgv_qditi",
         "ModType": "",
@@ -358,9 +397,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 2.5,
-        "Handling": 6.5
+        "Handling": 6.5,
+        "TemplateType": "weaponmod"
     },
     "661e52b5b099f32c28003586": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "661e52b5b099f32c28003586",
         "Name": "foregrip_all_tango_down_stubby_bgv_qdk_fde",
         "ModType": "",
@@ -375,9 +416,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 4.5,
-        "Handling": 4.5
+        "Handling": 4.5,
+        "TemplateType": "weaponmod"
     },
     "661e52415be02310ed07a07a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "661e52415be02310ed07a07a",
         "Name": "foregrip_all_tango_down_stubby_bgv_qdk",
         "ModType": "",
@@ -392,9 +435,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 4.5,
-        "Handling": 4.5
+        "Handling": 4.5,
+        "TemplateType": "weaponmod"
     },
     "558032614bdc2de7118b4585": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "558032614bdc2de7118b4585",
         "Name": "foregrip_all_tango_down_stubby_bgv_mk46k_blk",
         "ModType": "",
@@ -409,9 +454,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 5,
-        "Handling": 4
+        "Handling": 4,
+        "TemplateType": "weaponmod"
     },
     "58c157be86f77403c74b2bb6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58c157be86f77403c74b2bb6",
         "Name": "foregrip_all_tango_down_stubby_bgv_mk46k_fde",
         "ModType": "",
@@ -426,9 +473,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 5,
-        "Handling": 4
+        "Handling": 4,
+        "TemplateType": "weaponmod"
     },
     "58c157c886f774032749fb06": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58c157c886f774032749fb06",
         "Name": "foregrip_all_tango_down_stubby_bgv_mk46k_fg",
         "ModType": "",
@@ -443,9 +492,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 5,
-        "Handling": 4
+        "Handling": 4,
+        "TemplateType": "weaponmod"
     },
     "5f6340d3ca442212f4047eb2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f6340d3ca442212f4047eb2",
         "Name": "foregrip_all_td_aluminum_skeletonized",
         "ModType": "",
@@ -460,9 +511,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 6,
-        "Handling": 3.5
+        "Handling": 3.5,
+        "TemplateType": "weaponmod"
     },
     "591af28e86f77414a27a9e1d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "591af28e86f77414a27a9e1d",
         "Name": "foregrip_all_vtac_uvg",
         "ModType": "",
@@ -477,9 +530,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 1.5,
-        "Handling": 4.5
+        "Handling": 4.5,
+        "TemplateType": "weaponmod"
     },
     "5c1bc7752e221602b1779b34": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1bc7752e221602b1779b34",
         "Name": "foregrip_all_zenit_rk_6",
         "ModType": "",
@@ -494,9 +549,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 5,
-        "Handling": 4.5
+        "Handling": 4.5,
+        "TemplateType": "weaponmod"
     },
     "5c1bc5fb2e221602b1779b32": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1bc5fb2e221602b1779b32",
         "Name": "foregrip_all_zenit_rk_4",
         "ModType": "",
@@ -511,9 +568,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 4,
-        "Handling": 5.5
+        "Handling": 5.5,
+        "TemplateType": "weaponmod"
     },
     "5c1bc4812e22164bef5cfde7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1bc4812e22164bef5cfde7",
         "Name": "foregrip_all_zenit_rk_0",
         "ModType": "",
@@ -528,9 +587,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 3.5,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "5c1bc7432e221602b412949d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1bc7432e221602b412949d",
         "Name": "foregrip_all_zenit_rk_5",
         "ModType": "",
@@ -545,9 +606,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 3,
-        "Handling": 6.5
+        "Handling": 6.5,
+        "TemplateType": "weaponmod"
     },
     "5c1bc5612e221602b5429350": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1bc5612e221602b5429350",
         "Name": "foregrip_all_zenit_rk_1",
         "ModType": "",
@@ -562,9 +625,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 2,
-        "Handling": 7
+        "Handling": 7,
+        "TemplateType": "weaponmod"
     },
     "5c1bc5af2e221602b412949b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1bc5af2e221602b412949b",
         "Name": "foregrip_all_zenit_rk_2",
         "ModType": "",
@@ -579,9 +644,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": -10,
-        "Handling": 14
+        "Handling": 14,
+        "TemplateType": "weaponmod"
     },
     "5c1cd46f2e22164bef5cfedb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1cd46f2e22164bef5cfedb",
         "Name": "foregrip_all_zenit_b25u_rk_1",
         "ModType": "",
@@ -596,9 +663,11 @@
         "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": -20,
-        "Handling": 25
+        "Handling": 25,
+        "TemplateType": "weaponmod"
     },
     "6281212a09427b40ab14e770": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6281212a09427b40ab14e770",
         "Name": "foregrip_ax_accuracy_international_ax_base_pad_pb",
         "ModType": "",
@@ -612,9 +681,11 @@
         "Weight": 0.09,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 15
+        "AimStability": 15,
+        "TemplateType": "weaponmod"
     },
     "615d8fd3290d254f5e6b2edc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8fd3290d254f5e6b2edc",
         "Name": "foregrip_keymod_monstrum_vertical_fore_grip",
         "ModType": "",
@@ -629,9 +700,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 10.5,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "5fc0f9b5d724d907e2077d82": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc0f9b5d724d907e2077d82",
         "Name": "foregrip_keymod_sig_modular_vertical_grip",
         "ModType": "",
@@ -646,9 +719,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 6.75,
-        "Handling": 9.75
+        "Handling": 9.75,
+        "TemplateType": "weaponmod"
     },
     "5fc0f9cbd6fa9c00c571bb90": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc0f9cbd6fa9c00c571bb90",
         "Name": "foregrip_keymod_sig_vertical_grip",
         "ModType": "",
@@ -663,9 +738,11 @@
         "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 10.5,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "57cffb66245977632f391a99": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cffb66245977632f391a99",
         "Name": "foregrip_m-lok_magpul_m-lok_afg_blk",
         "ModType": "",
@@ -679,9 +756,11 @@
         "Weight": 0.034,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 12
+        "AimStability": 12,
+        "TemplateType": "weaponmod"
     },
     "57cffcd624597763133760c5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cffcd624597763133760c5",
         "Name": "foregrip_m-lok_magpul_m-lok_afg_fde",
         "ModType": "",
@@ -695,9 +774,11 @@
         "Weight": 0.034,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 12
+        "AimStability": 12,
+        "TemplateType": "weaponmod"
     },
     "57cffcdd24597763f5110006": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cffcdd24597763f5110006",
         "Name": "foregrip_m-lok_magpul_m-lok_afg_od",
         "ModType": "",
@@ -711,9 +792,11 @@
         "Weight": 0.034,
         "LoyaltyLevel": 3,
         "Price": 0,
-        "AimStability": 12
+        "AimStability": 12,
+        "TemplateType": "weaponmod"
     },
     "57cffce524597763b31685d8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57cffce524597763b31685d8",
         "Name": "foregrip_m-lok_magpul_m-lok_afg_sg",
         "ModType": "",
@@ -727,9 +810,11 @@
         "Weight": 0.034,
         "LoyaltyLevel": 4,
         "Price": 0,
-        "AimStability": 12
+        "AimStability": 12,
+        "TemplateType": "weaponmod"
     },
     "5de8fbad2fbe23140d3ee9c4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8fbad2fbe23140d3ee9c4",
         "Name": "foregrip_mp9_bt_mp9_std",
         "ModType": "",
@@ -743,9 +828,11 @@
         "Weight": 0.08,
         "LoyaltyLevel": 2,
         "Price": 0,
-        "Handling": 9
+        "Handling": 9,
+        "TemplateType": "weaponmod"
     },
     "5df36948bb49d91fb446d5ad": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df36948bb49d91fb446d5ad",
         "Name": "foregrip_t5000_orsis_t5000m_pad_std",
         "ModType": "",
@@ -760,9 +847,11 @@
         "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 9,
-        "AimStability": 9
+        "AimStability": 9,
+        "TemplateType": "weaponmod"
     },
     "634e61b0767cb15c4601a877": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634e61b0767cb15c4601a877",
         "Name": "foregrip_aug_steyr_a1_foregrip",
         "ModType": "",
@@ -776,9 +865,11 @@
         "Weight": 0.08,
         "LoyaltyLevel": 1,
         "Price": 0,
-        "Handling": 6
+        "Handling": 6,
+        "TemplateType": "weaponmod"
     },
     "64806bdd26c80811d408d37a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64806bdd26c80811d408d37a",
         "Name": "foregrip_all_rtm_osovets_p2",
         "ModType": "",
@@ -794,9 +885,11 @@
         "Weight": 0.127,
         "Handling": 10.5,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "64807a29e5ffe165600abc97": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64807a29e5ffe165600abc97",
         "Name": "foregrip_all_rtm_osovets_p2_khk",
         "ModType": "",
@@ -812,9 +905,11 @@
         "Weight": 0.127,
         "Handling": 10.5,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "648067db042be0705c0b3009": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "648067db042be0705c0b3009",
         "Name": "foregrip_all_rtm_pillau_snd",
         "ModType": "",
@@ -831,9 +926,11 @@
         "AimStability": 3,
         "Handling": 5,
         "LoyaltyLevel": 2,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "65169d5b30425317755f8e25": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "65169d5b30425317755f8e25",
         "Name": "foregrip_all_rtm_pillau_p2_red",
         "ModType": "",
@@ -848,9 +945,11 @@
         "AimStability": 4,
         "Handling": 4,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "651a8bf3a8520e48047bf708": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "651a8bf3a8520e48047bf708",
         "Name": "foregrip_m-lok_dd_enhanced_vertical_foregrip",
         "ModType": "",
@@ -865,9 +964,11 @@
         "AimStability": 6.75,
         "Handling": 7.5,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "651a8e529829226ceb67c319": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "651a8e529829226ceb67c319",
         "Name": "foregrip_m-lok_dd_enhanced_vertical_foregrip_cb",
         "ModType": "",
@@ -882,9 +983,11 @@
         "AimStability": 6.75,
         "Handling": 7.5,
         "LoyaltyLevel": 4,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "655dccfdbdcc6b5df71382b6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "655dccfdbdcc6b5df71382b6",
         "Name": "foregrip_all_strike_industries_cobra_tactical_fde",
         "ModType": "",
@@ -898,9 +1001,11 @@
         "Weight": 0.08,
         "AimStability": 10,
         "LoyaltyLevel": 3,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "655df24fdf80b12750626d0a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "655df24fdf80b12750626d0a",
         "Name": "foregrip_all_stark_se_5_express_grip_fde",
         "ModType": "",

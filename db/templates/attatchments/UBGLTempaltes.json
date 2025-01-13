@@ -1,5 +1,6 @@
 {
     "6357c98711fb55120211f7e1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6357c98711fb55120211f7e1",
         "Name": "launcher_ar15_colt_m203_40x46",
         "ModType": "UBGL",
@@ -21,9 +22,11 @@
         "HeatFactor": 1,
         "CoolFactor": 1,
         "LoyaltyLevel": 5,
-        "Price": 0
+        "Price": 0,
+        "TemplateType": "weaponmod"
     },
     "62e7e7bbe6da9612f743f1e0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e7e7bbe6da9612f743f1e0",
         "Name": "launcher_ak_toz_gp25_40_vog",
         "ModType": "UBGL",
