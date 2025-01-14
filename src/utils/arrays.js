@@ -278,9 +278,9 @@ class StaticArrays {
         "5a16b8a9fcdbcb00165aa6ca"
     ];
     static gasMasks = [
-        "CCG_GAS_MASK_GP9",
-        "CCG_GAS_MASK_MCU2P",
-        "CCG_GAS_MASK_SGE400",
+        // "CCG_GAS_MASK_GP9",
+        // "CCG_GAS_MASK_MCU2P",
+        // "CCG_GAS_MASK_SGE400",
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5"
     ];
@@ -311,9 +311,9 @@ class StaticArrays {
     static confMaskOverlays = [
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",
-        "CCG_GAS_MASK_GP9",
-        "CCG_GAS_MASK_MCU2P",
-        "CCG_GAS_MASK_SGE400",
+        // "CCG_GAS_MASK_GP9",
+        // "CCG_GAS_MASK_MCU2P",
+        // "CCG_GAS_MASK_SGE400",
         "6570aead4d84f81fd002a033",
         "657089638db3adca1009f4ca",
         "62a09e08de7ac81993580532",

@@ -11,9 +11,9 @@ import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
 import { StaticArrays } from "../utils/arrays";
 
-const myTemplates = require("../../db/templates/new_items/items.json");
-const myLocales = require("../../db/templates/new_items/en.json");
-const myHandbook = require("../../db/templates/new_items/handbook.json");
+const myTemplates = require("../../db/new_items/items.json");
+const myLocales = require("../../db/new_items/en.json");
+const myHandbook = require("../../db/new_items/handbook.json");
 
 export class ItemsClass {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConfig, private inventoryConf: IInventoryConfig, private raidConf: IInRaidConfig, private fleaConf: IRagfairConfig, private itemConfig: IItemConfig) { }

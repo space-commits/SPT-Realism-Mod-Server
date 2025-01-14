@@ -195,8 +195,8 @@
 //         equipment.FaceCover = gasMaskTier == 3 ? StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? StaticArrays.gasEventMasksMed : StaticArrays.gasEventMasksLow;
 
 //         if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
-//             equipment.FaceCover["CCG_GAS_MASK_GP9"] = 2;
-//             equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 2;
+//             //equipment.FaceCover["CCG_GAS_MASK_GP9"] = 2;
+//             //equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 2;
 //         }
 
 //         chances.equipment.Eyewear = 0;

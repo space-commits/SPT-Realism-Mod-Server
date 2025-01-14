@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemsClass = void 0;
 const arrays_1 = require("../utils/arrays");
-const myTemplates = require("../../db/templates/new_items/items.json");
-const myLocales = require("../../db/templates/new_items/en.json");
-const myHandbook = require("../../db/templates/new_items/handbook.json");
+const myTemplates = require("../../db/new_items/items.json");
+const myLocales = require("../../db/new_items/en.json");
+const myHandbook = require("../../db/new_items/handbook.json");
 class ItemsClass {
     logger;
     tables;
