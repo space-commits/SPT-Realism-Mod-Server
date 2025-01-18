@@ -218,6 +218,7 @@ class ItemStatHandler {
                 fileItem = this.modifiedItems[fileItem.TemplateID];
             }
             this.modifiedItems[fileItem.ItemID] = fileItem;
+            this.logger.warning("did " + fileItem.ItemID);
             serverItem._props.Ergonomics = fileItem.Ergonomics != undefined ? fileItem.Ergonomics : 0;
             serverItem._props.Accuracy = fileItem.Accuracy != undefined ? fileItem.Accuracy : 0;
             serverItem._props.CenterOfImpact = fileItem.CenterOfImpact != undefined ? fileItem.CenterOfImpact : 0.05;
@@ -330,16 +331,17 @@ class ItemStatHandler {
                     const data = await readFile(filePath, 'utf8');
                     const jsonData = JSON.parse(data);
                     for (let i in jsonData) {
-                        if (jsonData[i].WeapType !== undefined || jsonData[i].$type.includes("gun")) {
+                        if (jsonData[i].$type.includes("Gun")) {
                             this.weapPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].ModType !== undefined || jsonData[i].$type.includes("weaponmod")) {
+                        if (jsonData[i].$type.includes("WeaponMod")) {
+                            this.logger.warning("found " + jsonData[i].ItemID);
                             this.modPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("gear")) {
+                        if (jsonData[i].$type.includes("Gear")) {
                             this.gearPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("ammo")) {
+                        if (jsonData[i].$type.includes("Ammo")) {
                             this.ammoPusherHelper(jsonData[i], this.itemDB());
                         }
                     }

@@ -699,18 +699,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         });
     }
 
-
-
-    // public async postSptLoadAsync(container: DependencyContainer): Promise<void> {
-    //     const logger = container.resolve<ILogger>("WinstonLogger");
-
-    //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-    //     const tables = databaseServer.getTables();
-    //     const jsonHand = new JsonHandler(tables, logger);
-    //     jsonHand.pushWeaponsToServer();
-    //     jsonHand.pushModsToServer();
-    // }
-
     public postDBLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");

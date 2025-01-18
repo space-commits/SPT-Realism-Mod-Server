@@ -1,4 +1,20 @@
 {
+    "5af0548586f7743a532b7e99": {
+        "$type": "RealismMod.Consumable, RealismMod",
+        "ItemID": "5af0548586f7743a532b7e99",
+        "Name": "ibuprofen",
+        "TemplateType": "consumable",
+        "LoyaltyLevel": 1,
+        "BasePriceModifier": 1,
+        "ConsumableType": "painpills",
+        "Duration": 300,
+        "Delay": 15,
+        "EffectPeriod": 60,
+        "WaitPeriod": 15,
+        "Strength": 5,
+        "TunnelVisionStrength": 0.05,
+        "CanBeUsedInRaid": true
+    },
     "544fb37f4bdc2dee738b4567": {
         "$type": "RealismMod.Consumable, RealismMod",
         "ItemID": "544fb37f4bdc2dee738b4567",

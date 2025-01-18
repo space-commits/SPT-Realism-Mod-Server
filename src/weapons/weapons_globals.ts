@@ -55,7 +55,7 @@ export class WeaponsGlobals {
                 serverItem._props.MinRepairKitDegradation = 0.0;
                 serverItem._props.MaxRepairKitDegradation = 0.1;
                 serverItem._props.RepairComplexity = 0;
-                if (serverItem._props.HeatFactorGun) serverItem._props.HeatFactorGun *= 2;
+                if (serverItem._props.HeatFactorGun) serverItem._props.HeatFactorGun *= 1.25;
                 if (serverItem._props.CoolFactorGun) serverItem._props.CoolFactorGun *= 2;
             }
             if (serverItem._parent === ParentClasses.REPAIRKITS) {

@@ -381,16 +381,16 @@ export class ItemStatHandler {
                     const jsonData = JSON.parse(data);
 
                     for (let i in jsonData) {
-                        if (jsonData[i].WeapType !== undefined || jsonData[i].$type.includes("gun")) {
+                        if (jsonData[i].$type.includes("Gun")) {
                             this.weapPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].ModType !== undefined || jsonData[i].$type.includes("weaponmod")) {
+                        if (jsonData[i].$type.includes("WeaponMod")) {
                             this.modPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("gear")) {
+                        if (jsonData[i].$type.includes("Gear")) {
                             this.gearPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("ammo")) {
+                        if (jsonData[i].$type.includes("Ammo")) {
                             this.ammoPusherHelper(jsonData[i], this.itemDB());
                         }
                     }

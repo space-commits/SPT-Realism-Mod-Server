@@ -528,14 +528,6 @@ class Main {
             }
         });
     }
-    // public async postSptLoadAsync(container: DependencyContainer): Promise<void> {
-    //     const logger = container.resolve<ILogger>("WinstonLogger");
-    //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-    //     const tables = databaseServer.getTables();
-    //     const jsonHand = new JsonHandler(tables, logger);
-    //     jsonHand.pushWeaponsToServer();
-    //     jsonHand.pushModsToServer();
-    // }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseService = container.resolve("DatabaseService");

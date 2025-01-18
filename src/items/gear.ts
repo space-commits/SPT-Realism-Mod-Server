@@ -81,148 +81,148 @@ export class Gear {
         }
     }
 
-    public loadHeadsetTweaks() {
-        for (let item in this.itemDB()) {
-            let serverItem = this.itemDB()[item];
+    // public loadHeadsetTweaks() {
+    //     for (let item in this.itemDB()) {
+    //         let serverItem = this.itemDB()[item];
 
-            //Sordin
-            if (serverItem._id === "5aa2ba71e5b5b000137b758f") {
-                serverItem._props.Distortion = 0.1;
-                serverItem._props.Resonance = 1.5;
-                serverItem._props.DryVolume = -45;
-                serverItem._props.AmbientVolume = -2.25;
-                serverItem._props.CompressorGain = 7;
-            }
+    //         //Sordin
+    //         if (serverItem._id === "5aa2ba71e5b5b000137b758f") {
+    //             serverItem._props.Distortion = 0.1;
+    //             serverItem._props.Resonance = 1.5;
+    //             serverItem._props.DryVolume = -45;
+    //             serverItem._props.AmbientVolume = -2.25;
+    //             serverItem._props.CompressorGain = 7;
+    //         }
 
-            //GSSH
-            if (serverItem._id === "5b432b965acfc47a8774094e") {
-                serverItem._props.Distortion = 0.31;
-                serverItem._props.Resonance = 3;
-                serverItem._props.DryVolume = -46;
-                serverItem._props.AmbientVolume = -2.35;
-                serverItem._props.CompressorGain = 6;
-                serverItem._props.CompressorVolume = -4;
-                serverItem._props.CompressorTreshold = -26;
-            }
+    //         //GSSH
+    //         if (serverItem._id === "5b432b965acfc47a8774094e") {
+    //             serverItem._props.Distortion = 0.31;
+    //             serverItem._props.Resonance = 3;
+    //             serverItem._props.DryVolume = -46;
+    //             serverItem._props.AmbientVolume = -2.35;
+    //             serverItem._props.CompressorGain = 6;
+    //             serverItem._props.CompressorVolume = -4;
+    //             serverItem._props.CompressorTreshold = -26;
+    //         }
 
-            //Peltor ComTac 2
-            if (serverItem._id === "5645bcc04bdc2d363b8b4572") {
-                serverItem._props.Distortion = 0.22;
-                serverItem._props.Resonance = 2;
-                serverItem._props.DryVolume = -48;
-                serverItem._props.AmbientVolume = -2.45;
-                serverItem._props.CompressorGain = 8;
-            }
+    //         //Peltor ComTac 2
+    //         if (serverItem._id === "5645bcc04bdc2d363b8b4572") {
+    //             serverItem._props.Distortion = 0.22;
+    //             serverItem._props.Resonance = 2;
+    //             serverItem._props.DryVolume = -48;
+    //             serverItem._props.AmbientVolume = -2.45;
+    //             serverItem._props.CompressorGain = 8;
+    //         }
 
-            //Peltor Sport
-            if (serverItem._id === "5c165d832e2216398b5a7e36") {
-                serverItem._props.Distortion = 0.28;
-                serverItem._props.Resonance = 2.5;
-                serverItem._props.DryVolume = -49;
-                serverItem._props.AmbientVolume = -2.5;
-                serverItem._props.CompressorGain = 8;
-            }
+    //         //Peltor Sport
+    //         if (serverItem._id === "5c165d832e2216398b5a7e36") {
+    //             serverItem._props.Distortion = 0.28;
+    //             serverItem._props.Resonance = 2.5;
+    //             serverItem._props.DryVolume = -49;
+    //             serverItem._props.AmbientVolume = -2.5;
+    //             serverItem._props.CompressorGain = 8;
+    //         }
 
-            //Peltor ComTac 4
-            if (serverItem._id === "628e4e576d783146b124c64d") {
-                serverItem._props.Distortion = 0.05;
-                serverItem._props.Resonance = 1;
-                serverItem._props.DryVolume = -51;
-                serverItem._props.AmbientVolume = -2.65;
-                serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -22;
-            }
+    //         //Peltor ComTac 4
+    //         if (serverItem._id === "628e4e576d783146b124c64d") {
+    //             serverItem._props.Distortion = 0.05;
+    //             serverItem._props.Resonance = 1;
+    //             serverItem._props.DryVolume = -51;
+    //             serverItem._props.AmbientVolume = -2.65;
+    //             serverItem._props.CompressorGain = 10;
+    //             serverItem._props.CompressorTreshold = -22;
+    //         }
 
-            //FAST RAC
-            if (serverItem._id === "5a16b9fffcdbcb0176308b34") {
-                serverItem._props.Distortion = 0.15;
-                serverItem._props.Resonance = 1.5;
-                serverItem._props.DryVolume = -52;
-                serverItem._props.AmbientVolume = -2.75;
-                serverItem._props.CompressorGain = 9;
-                serverItem._props.CompressorTreshold = -23;
-            }
+    //         //FAST RAC
+    //         if (serverItem._id === "5a16b9fffcdbcb0176308b34") {
+    //             serverItem._props.Distortion = 0.15;
+    //             serverItem._props.Resonance = 1.5;
+    //             serverItem._props.DryVolume = -52;
+    //             serverItem._props.AmbientVolume = -2.75;
+    //             serverItem._props.CompressorGain = 9;
+    //             serverItem._props.CompressorTreshold = -23;
+    //         }
 
-            //Opsmen Earmor M32
-            if (serverItem._id === "6033fa48ffd42c541047f728") {
-                serverItem._props.Distortion = 0.2;
-                serverItem._props.Resonance = 1.5;
-                serverItem._props.DryVolume = -55;
-                serverItem._props.AmbientVolume = -2.85;
-                serverItem._props.CompressorGain = 9;
-                serverItem._props.CompressorTreshold = -24;
-            }
+    //         //Opsmen Earmor M32
+    //         if (serverItem._id === "6033fa48ffd42c541047f728") {
+    //             serverItem._props.Distortion = 0.2;
+    //             serverItem._props.Resonance = 1.5;
+    //             serverItem._props.DryVolume = -55;
+    //             serverItem._props.AmbientVolume = -2.85;
+    //             serverItem._props.CompressorGain = 9;
+    //             serverItem._props.CompressorTreshold = -24;
+    //         }
 
-            //Safariland Liberator HP 2
-            if (serverItem._id === "66b5f68de98be930d701c00e") {
-                serverItem._props.Distortion = 0.15;
-                serverItem._props.Resonance = 2;
-                serverItem._props.DryVolume = -55; //according to refiews, it's official rating is too generous
-                serverItem._props.AmbientVolume = -2.8;
-                serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -23;
-            }
+    //         //Safariland Liberator HP 2
+    //         if (serverItem._id === "66b5f68de98be930d701c00e") {
+    //             serverItem._props.Distortion = 0.15;
+    //             serverItem._props.Resonance = 2;
+    //             serverItem._props.DryVolume = -55; //according to refiews, it's official rating is too generous
+    //             serverItem._props.AmbientVolume = -2.8;
+    //             serverItem._props.CompressorGain = 10;
+    //             serverItem._props.CompressorTreshold = -23;
+    //         }
 
-            //Comtac VI helmet
-            if (serverItem._id === "66b5f6a28ca68c6461709ed8") {
-                serverItem._props.Distortion = 0.18;
-                serverItem._props.Resonance = 1.6;
-                serverItem._props.DryVolume = -56;
-                serverItem._props.AmbientVolume = -2.95;
-                serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -25;
-            }
+    //         //Comtac VI helmet
+    //         if (serverItem._id === "66b5f6a28ca68c6461709ed8") {
+    //             serverItem._props.Distortion = 0.18;
+    //             serverItem._props.Resonance = 1.6;
+    //             serverItem._props.DryVolume = -56;
+    //             serverItem._props.AmbientVolume = -2.95;
+    //             serverItem._props.CompressorGain = 10;
+    //             serverItem._props.CompressorTreshold = -25;
+    //         }
 
-            //Comtac VI
-            if (serverItem._id === "66b5f6985891c84aab75ca76") {
-                serverItem._props.Distortion = 0.18;
-                serverItem._props.Resonance = 1.6;
-                serverItem._props.DryVolume = -56;
-                serverItem._props.AmbientVolume = -2.95;
-                serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -25;
-            }
+    //         //Comtac VI
+    //         if (serverItem._id === "66b5f6985891c84aab75ca76") {
+    //             serverItem._props.Distortion = 0.18;
+    //             serverItem._props.Resonance = 1.6;
+    //             serverItem._props.DryVolume = -56;
+    //             serverItem._props.AmbientVolume = -2.95;
+    //             serverItem._props.CompressorGain = 10;
+    //             serverItem._props.CompressorTreshold = -25;
+    //         }
 
-            //Comtac V helmet
-            if (serverItem._id === "66b5f69ea7f72d197e70bcdb") {
-                serverItem._props.Distortion = 0.2;
-                serverItem._props.Resonance = 1.7;
-                serverItem._props.DryVolume = -56;
-                serverItem._props.AmbientVolume = -2.9;
-                serverItem._props.CompressorGain = 9.5;
-                serverItem._props.CompressorTreshold = -25;
-            }
+    //         //Comtac V helmet
+    //         if (serverItem._id === "66b5f69ea7f72d197e70bcdb") {
+    //             serverItem._props.Distortion = 0.2;
+    //             serverItem._props.Resonance = 1.7;
+    //             serverItem._props.DryVolume = -56;
+    //             serverItem._props.AmbientVolume = -2.9;
+    //             serverItem._props.CompressorGain = 9.5;
+    //             serverItem._props.CompressorTreshold = -25;
+    //         }
 
-            //Comtac V 
-            if (serverItem._id === "66b5f693acff495a294927e3") {
-                serverItem._props.Distortion = 0.2;
-                serverItem._props.Resonance = 1.7;
-                serverItem._props.DryVolume = -56;
-                serverItem._props.AmbientVolume = -2.9;
-                serverItem._props.CompressorGain = 9.5;
-                serverItem._props.CompressorTreshold = -25;
-            }
+    //         //Comtac V 
+    //         if (serverItem._id === "66b5f693acff495a294927e3") {
+    //             serverItem._props.Distortion = 0.2;
+    //             serverItem._props.Resonance = 1.7;
+    //             serverItem._props.DryVolume = -56;
+    //             serverItem._props.AmbientVolume = -2.9;
+    //             serverItem._props.CompressorGain = 9.5;
+    //             serverItem._props.CompressorTreshold = -25;
+    //         }
 
-            //Walker Razor Digital Headset
-            if (serverItem._id === "5e4d34ca86f774264f758330") {
-                serverItem._props.Distortion = 0.12;
-                serverItem._props.Resonance = 1.5;
-                serverItem._props.DryVolume = -56;
-                serverItem._props.AmbientVolume = -2.9;
-                serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -24;
-            }
+    //         //Walker Razor Digital Headset
+    //         if (serverItem._id === "5e4d34ca86f774264f758330") {
+    //             serverItem._props.Distortion = 0.12;
+    //             serverItem._props.Resonance = 1.5;
+    //             serverItem._props.DryVolume = -56;
+    //             serverItem._props.AmbientVolume = -2.9;
+    //             serverItem._props.CompressorGain = 10;
+    //             serverItem._props.CompressorTreshold = -24;
+    //         }
 
-            //Walker XCEL 500BT
-            if (serverItem._id === "5f60cd6cf2bcbb675b00dac6") {
-                serverItem._props.Distortion = 0.1;
-                serverItem._props.Resonance = 1.5;
-                serverItem._props.DryVolume = -57;
-                serverItem._props.AmbientVolume = -3;
-                serverItem._props.CompressorGain = 10;
-                serverItem._props.CompressorTreshold = -25;
-            }
-        }
+    //         //Walker XCEL 500BT
+    //         if (serverItem._id === "5f60cd6cf2bcbb675b00dac6") {
+    //             serverItem._props.Distortion = 0.1;
+    //             serverItem._props.Resonance = 1.5;
+    //             serverItem._props.DryVolume = -57;
+    //             serverItem._props.AmbientVolume = -3;
+    //             serverItem._props.CompressorGain = 10;
+    //             serverItem._props.CompressorTreshold = -25;
+    //         }
+    //     }
 
-    }
+    // }
 }
