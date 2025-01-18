@@ -738,6 +738,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
         const jsonHand = new ItemStatHandler(tables, logger);
+
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
@@ -858,6 +859,12 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         //have to run this async to ensure correct load order
         (async () => {
+
+            if (modConfig.realistic_ballistics == true) {
+                ammo.loadAmmoStats();
+                armor.loadArmorStats();
+            }
+
             if (modConfig.recoil_attachment_overhaul) {
                 jsonHand.pushModsToServer();
                 jsonHand.pushWeaponsToServer();
@@ -867,11 +874,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             await jsonHand.processUserJsonFiles();
 
             descGen.descriptionGen();
-
-            if (modConfig.realistic_ballistics == true) {
-                ammo.loadAmmoStats();
-                armor.loadArmorStats();
-            }
 
             if (modConfig.malf_changes == true) {
                 weaponsGlobals.loadGlobalMalfChanges();
@@ -884,6 +886,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
 
             gear.loadGearConflicts();
+
+            jsonHand.modifiedItems = {}; //empty temp template object
         })();
     }
 

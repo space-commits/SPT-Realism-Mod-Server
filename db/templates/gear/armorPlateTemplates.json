@@ -9,9 +9,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64ad2dac6f9247c2f4012439": {
@@ -24,9 +21,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64ad2dba0b9840e4c80c2485": {
@@ -39,9 +33,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64ad2dc66f9247c2f401243d": {
@@ -54,9 +45,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64ad2dd30b9840e4c80c2489": {
@@ -69,9 +57,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64afc71497cf3a403c01ff38": {
@@ -86,9 +71,6 @@
         "CanSpall": true,
         "SpallReduction": 0.2,
         "ArmorClass": "Br5",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64afd81707e2cf40e903a316": {
@@ -102,9 +84,6 @@
         "CanSpall": true,
         "SpallReduction": 0.2,
         "ArmorClass": "Br5",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64afdb577bb3bfe8fe03fd1d": {
@@ -118,9 +97,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "ESBI",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6783ae9ee00fdb2053bf6848": {
@@ -134,9 +110,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "XSAPI",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6783aec223d48324c0b278f5": {
@@ -150,9 +123,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "Mk4A",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64afdcb83efdfea28601d041": {
@@ -166,9 +136,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "ESAPI",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64afee8e9f589807e30dc68a": {
@@ -181,9 +148,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64afeecb977493a0ee026213": {
@@ -196,9 +160,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64afef49977493a0ee026217": {
@@ -211,9 +172,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64b111fe1be308f1800688c1": {
@@ -226,9 +184,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "64b11c08506a73f6a10f9364": {
@@ -241,9 +196,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a4a964b446df1ad03f192": {
@@ -257,9 +209,6 @@
         "CanSpall": true,
         "SpallReduction": 0.25,
         "ArmorClass": "4RS",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a4dea7c17dec2f50cc86a": {
@@ -273,9 +222,6 @@
         "CanSpall": true,
         "SpallReduction": 0.4,
         "ArmorClass": "GOST 5",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a4f8bc721968a4404ef18": {
@@ -289,9 +235,6 @@
         "CanSpall": true,
         "SpallReduction": 0.42,
         "ArmorClass": "GOST 5",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a8976f414fcea4004d78b": {
@@ -304,9 +247,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a8ae00337d53f9102c2aa": {
@@ -319,9 +259,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a8b0b0337d53f9102c2ae": {
@@ -334,9 +271,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a8b3df414fcea4004d78f": {
@@ -349,9 +283,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a8b60f414fcea4004d793": {
@@ -364,9 +295,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a8b80f414fcea4004d797": {
@@ -379,9 +307,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a8ba90337d53f9102c2b2": {
@@ -394,9 +319,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a8bc5f414fcea4004d79b": {
@@ -409,9 +331,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a90aff4f81a421b0a7c86": {
@@ -424,9 +343,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a91068e1ce698150fd1e2": {
@@ -439,9 +355,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "654a9189bcc67a392b056c79": {
@@ -454,9 +367,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6551fec55d0cf82e51014288": {
@@ -469,9 +379,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "655200ba0ef76cf7be09d528": {
@@ -484,9 +391,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65573fa5655447403702a816": {
@@ -500,9 +404,6 @@
         "CanSpall": true,
         "SpallReduction": 0.15,
         "ArmorClass": "Br4",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6557458f83942d705f0c4962": {
@@ -516,9 +417,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "SSAPI",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "655746010177119f4a097ff7": {
@@ -532,9 +430,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "SAPI",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6557519ac9b1d9bdcb0777e1": {
@@ -547,9 +442,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "655751db58aa1b6dbd0cc295": {
@@ -562,9 +454,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656efaf54772930db4031ff5": {
@@ -578,9 +467,6 @@
         "CanSpall": true,
         "SpallReduction": 0.1,
         "ArmorClass": "GOST 4",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656efd66034e8e01c407f35c": {
@@ -594,9 +480,6 @@
         "CanSpall": true,
         "SpallReduction": 0.45,
         "ArmorClass": "GOST 5A",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656f57dc27aed95beb08f628": {
@@ -610,9 +493,6 @@
         "CanSpall": true,
         "SpallReduction": 0.5,
         "ArmorClass": "GOST 3",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656f603f94b480b8a500c0d6": {
@@ -626,9 +506,6 @@
         "CanSpall": true,
         "SpallReduction": 0.28,
         "ArmorClass": "GOST 5A",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656f611f94b480b8a500c0db": {
@@ -642,9 +519,6 @@
         "CanSpall": true,
         "SpallReduction": 0.1,
         "ArmorClass": "GOST 4",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656f63c027aed95beb08f62c": {
@@ -658,9 +532,6 @@
         "CanSpall": true,
         "SpallReduction": 0.25,
         "ArmorClass": "4RS",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656f664200d62bcd2e024077": {
@@ -674,9 +545,6 @@
         "CanSpall": true,
         "SpallReduction": 0.42,
         "ArmorClass": "GOST 5",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656f66b5c6baea13cd07e108": {
@@ -690,9 +558,6 @@
         "CanSpall": true,
         "SpallReduction": 0.26,
         "ArmorClass": "GOST 6A",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656f9d5900d62bcd2e02407c": {
@@ -706,9 +571,6 @@
         "CanSpall": true,
         "SpallReduction": 0.37,
         "ArmorClass": "NIJ III",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656f9fa0498d1b7e3e071d98": {
@@ -722,9 +584,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ III",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fa0fb498d1b7e3e071d9c": {
@@ -738,9 +597,6 @@
         "CanSpall": true,
         "SpallReduction": 0.5,
         "ArmorClass": "NIJ III+",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fa25e94b480b8a500c0e0": {
@@ -754,9 +610,6 @@
         "CanSpall": true,
         "SpallReduction": 0.25,
         "ArmorClass": "NIJ III",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fa53d94b480b8a500c0e4": {
@@ -770,9 +623,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ IV",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fa61e94b480b8a500c0e8": {
@@ -786,9 +636,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ III+",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fa76500d62bcd2e024080": {
@@ -802,9 +649,6 @@
         "CanSpall": true,
         "SpallReduction": 0.4,
         "ArmorClass": "NIJ III",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fa8d700d62bcd2e024084": {
@@ -818,9 +662,6 @@
         "CanSpall": true,
         "SpallReduction": 0.45,
         "ArmorClass": "NIJ III+",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fa99800d62bcd2e024088": {
@@ -834,9 +675,6 @@
         "CanSpall": true,
         "SpallReduction": 0.35,
         "ArmorClass": "NIJ III+",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fac30c6baea13cd07e10c": {
@@ -850,9 +688,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ III",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fad8c498d1b7e3e071da0": {
@@ -866,9 +701,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ III+",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fae5f7c2d57afe200c0d7": {
@@ -882,9 +714,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ III",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656faf0ca0dce000a2020f77": {
@@ -898,9 +727,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ III+",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fafe3498d1b7e3e071da4": {
@@ -914,9 +740,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ IV",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fb0bd7c2d57afe200c0dc": {
@@ -929,11 +752,7 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "ArmorClass": "NIJ III+"
-,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
+        "ArmorClass": "NIJ III+",
         "TemplateType": "gear"
     },
     "656fb21fa0dce000a2020f7c": {
@@ -947,9 +766,6 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ArmorClass": "NIJ III",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fd7c32668ef0402028fb9": {
@@ -962,9 +778,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.15,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "656fd89bf5a9631d4e042575": {
@@ -977,9 +790,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.15,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65702f87722744627e05cdb8": {
@@ -992,9 +802,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65702fe593b7ea9c330f4ce8": {
@@ -1007,9 +814,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570305d93b7ea9c330f4ced": {
@@ -1022,9 +826,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65703472c9030b928a0a8a78": {
@@ -1037,9 +838,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65703d866584602f7d057a8a": {
@@ -1052,9 +850,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65703fa06584602f7d057a8e": {
@@ -1067,9 +862,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65703fe46a912c8b5c03468b": {
@@ -1082,9 +874,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657040374e67e8ec7a0d261c": {
@@ -1097,9 +886,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657044e971369562b300ce9b": {
@@ -1112,9 +898,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657045741bd9beedc40b7299": {
@@ -1127,9 +910,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657045b97e80617cee095bda": {
@@ -1142,9 +922,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570460471369562b300ce9f": {
@@ -1157,9 +934,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570495b45d573133d0d6adb": {
@@ -1172,9 +946,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657049d23425b19bbc0502f0": {
@@ -1187,9 +958,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65704de13e7bba58ea0285c8": {
@@ -1202,9 +970,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65705c3c14f2ed6d7d0b7738": {
@@ -1217,9 +982,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65705c777260e1139e091408": {
@@ -1232,9 +994,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65705cb314f2ed6d7d0b773c": {
@@ -1247,9 +1006,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65705cea4916448ae1050897": {
@@ -1262,9 +1018,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570653e89fd4926380b733e": {
@@ -1277,9 +1030,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570658a89fd4926380b7346": {
@@ -1292,9 +1042,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65707fc348c7a887f2010432": {
@@ -1307,9 +1054,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570800612755ae0d907acf8": {
@@ -1322,9 +1066,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65708070f65e2491bf00972c": {
@@ -1337,9 +1078,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657080a212755ae0d907ad04": {
@@ -1352,9 +1090,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657080ca12755ae0d907ad5e": {
@@ -1367,9 +1102,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65708122f65e2491bf009755": {
@@ -1382,9 +1114,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65708165696fe382cf073255": {
@@ -1397,9 +1126,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657087577f6d4590ac0d2109": {
@@ -1412,9 +1138,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.22,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570880f4a747dbb63005ee5": {
@@ -1427,9 +1150,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.22,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65708afe4a747dbb63005eee": {
@@ -1442,9 +1162,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65708b4c4a747dbb63005ef3": {
@@ -1457,9 +1174,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570df294cc0d2ab1e05ed74": {
@@ -1472,9 +1186,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570df9c615f54368b04fca9": {
@@ -1487,9 +1198,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e025615f54368b04fcb0": {
@@ -1502,9 +1210,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e0610b57c03ec90b96ef": {
@@ -1517,9 +1222,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e479a6560e4ee50c2b02": {
@@ -1532,9 +1234,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e5100b57c03ec90b970a": {
@@ -1547,9 +1246,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e5674cc0d2ab1e05edbb": {
@@ -1562,9 +1258,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e59b0b57c03ec90b970e": {
@@ -1577,9 +1270,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e83223c1f638ef0b0ede": {
@@ -1592,9 +1282,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e87c23c1f638ef0b0ee2": {
@@ -1607,9 +1294,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e8a623c1f638ef0b0ee6": {
@@ -1622,9 +1306,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e8e7ab49e964120b4563": {
@@ -1637,9 +1318,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570e90b3a5689d85f08db97": {
@@ -1652,9 +1330,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570f30b0921c914bf07964c": {
@@ -1667,9 +1342,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570f35cd67d0309980a7acb": {
@@ -1682,9 +1354,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570f3890b4ae5847f060dad": {
@@ -1697,9 +1366,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570f3bb0b4ae5847f060db2": {
@@ -1712,9 +1378,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570f6e774d84423df065f21": {
@@ -1727,9 +1390,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570f71dd67d0309980a7af8": {
@@ -1742,9 +1402,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570f74774d84423df065f25": {
@@ -1757,9 +1414,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570f79c4c65ab77a6015121": {
@@ -1772,9 +1426,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570fa1f4c65ab77a601512f": {
@@ -1787,9 +1438,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570fae34c65ab77a6015146": {
@@ -1802,9 +1450,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570fb22584a51c23e03251f": {
@@ -1817,9 +1462,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570fb6ad3eefd23430f8c7c": {
@@ -1832,9 +1474,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570fb8f4c65ab77a601514d": {
@@ -1847,9 +1486,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570fbdd74d84423df065f60": {
@@ -1862,9 +1498,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570fc41d3eefd23430f8c83": {
@@ -1877,9 +1510,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657112234269e9a568089eac": {
@@ -1892,9 +1522,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657112a4818110db4600aa66": {
@@ -1907,9 +1534,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657112ce22996eaf110881fb": {
@@ -1922,9 +1546,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657112fa818110db4600aa6b": {
@@ -1937,9 +1558,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571133d22996eaf11088200": {
@@ -1952,9 +1570,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571138e818110db4600aa71": {
@@ -1967,9 +1582,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571199565daf6aa960c9b10": {
@@ -1982,9 +1594,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657119d49eb8c145180dbb95": {
@@ -1997,9 +1606,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657119fea330b8c9060f7afc": {
@@ -2012,9 +1618,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65711b07a330b8c9060f7b01": {
@@ -2027,9 +1630,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65711b489eb8c145180dbb9d": {
@@ -2042,9 +1642,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65711b706d197c216005b31c": {
@@ -2057,9 +1654,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65711b9b65daf6aa960c9b1b": {
@@ -2072,9 +1666,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65711bc79eb8c145180dbba1": {
@@ -2087,9 +1678,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571b27a6d84a2b8b6007f92": {
@@ -2102,9 +1690,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571baa74cb80d995d0a1490": {
@@ -2117,9 +1702,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571baac6d84a2b8b6007fa3": {
@@ -2132,9 +1714,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571bab0f41985531a038091": {
@@ -2147,9 +1726,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571babb4076795e5e07383f": {
@@ -2162,9 +1738,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571babf4cb80d995d0a1494": {
@@ -2177,9 +1750,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571bac34076795e5e073843": {
@@ -2192,9 +1762,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571dbd388ead79fcf091d71": {
@@ -2207,9 +1774,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571dbda88ead79fcf091d75": {
@@ -2222,9 +1786,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571dbe07c02ae206002502e": {
@@ -2237,9 +1798,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571dbeaee8ec43d520cf89e": {
@@ -2252,9 +1810,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6571dbef88ead79fcf091d79": {
@@ -2267,9 +1822,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572e048371fccfbf909d5d8": {
@@ -2282,9 +1834,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572e059371fccfbf909d5dc": {
@@ -2297,9 +1846,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572e06219b4b511af012f89": {
@@ -2312,9 +1858,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572e06819b4b511af012f8d": {
@@ -2327,9 +1870,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572e5221b5bc1185508c24f": {
@@ -2342,9 +1882,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572e52f73c0eabb700109a0": {
@@ -2357,9 +1894,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572e53c73c0eabb700109a4": {
@@ -2372,9 +1906,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572e54873c0eabb700109a8": {
@@ -2387,9 +1918,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572eb0e55beba16bc04079f": {
@@ -2402,9 +1930,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572eb1b04ee6483ef039882": {
@@ -2417,9 +1942,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572eb3004ee6483ef039886": {
@@ -2432,9 +1954,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572eb3b04ee6483ef03988a": {
@@ -2447,9 +1966,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572eb865b5eac12f10a03ee": {
@@ -2462,9 +1978,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572f1ca4c8d903cc60c874e": {
@@ -2477,9 +1990,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572f1d60103b4a3270332db": {
@@ -2492,9 +2002,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572f1e10103b4a3270332df": {
@@ -2507,9 +2014,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572f1edea457732140ce875": {
@@ -2522,9 +2026,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572f1f7ea457732140ce879": {
@@ -2537,9 +2038,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572fc809a866b80ab07eb59": {
@@ -2552,9 +2050,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572fc8c9a866b80ab07eb5d": {
@@ -2567,9 +2062,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572fc989a866b80ab07eb61": {
@@ -2582,9 +2074,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6572fca39a866b80ab07eb65": {
@@ -2597,9 +2086,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65730c0e292ecadbfa09ad49": {
@@ -2612,9 +2098,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65730c2213a2f660f60bea96": {
@@ -2627,9 +2110,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65730c2b292ecadbfa09ad50": {
@@ -2642,9 +2122,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65730c35292ecadbfa09ad54": {
@@ -2657,9 +2134,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6573101e292ecadbfa09b389": {
@@ -2672,9 +2146,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6573102b292ecadbfa09b38d": {
@@ -2687,9 +2158,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731038292ecadbfa09b391": {
@@ -2702,9 +2170,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731045f31d5be00e08a75a": {
@@ -2717,9 +2182,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731b46cea9255e2102360a": {
@@ -2732,9 +2194,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731b4fcea9255e2102360e": {
@@ -2747,9 +2206,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731b576e709cddd001ec3f": {
@@ -2762,9 +2218,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731b60ff6dc44a7d068c4a": {
@@ -2777,9 +2230,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731b666e709cddd001ec43": {
@@ -2792,9 +2242,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731b6b6042b0f210020ef6": {
@@ -2807,9 +2254,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65731b716e709cddd001ec47": {
@@ -2822,9 +2266,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657322988c1cc6dcd9098b2d": {
@@ -2837,9 +2278,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657322a4cea9255e21023651": {
@@ -2852,9 +2290,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657322acd9d89ff7ac0d961b": {
@@ -2867,9 +2302,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657322b7d9d89ff7ac0d961f": {
@@ -2882,9 +2314,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65732688d9d89ff7ac0d9c4c": {
@@ -2897,9 +2326,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657326978c1cc6dcd9098b56": {
@@ -2912,9 +2338,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657326a28c1cc6dcd9098b5a": {
@@ -2927,9 +2350,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657326b08c1cc6dcd9098b5e": {
@@ -2942,9 +2362,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657326bc5d3a3129fb05f36b": {
@@ -2957,9 +2374,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65732de75d3a3129fb05f3dd": {
@@ -2972,9 +2386,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65732df4d0acf75aea06c87b": {
@@ -2987,9 +2398,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65732e05d0acf75aea06c87f": {
@@ -3002,9 +2410,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65732e0f6784ca384b0167ad": {
@@ -3017,9 +2422,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65732e215d3a3129fb05f3e1": {
@@ -3032,9 +2434,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65732e30dd8739f6440ef383": {
@@ -3047,9 +2446,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65733312ca0ca984940a2d53": {
@@ -3062,9 +2458,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657333232cc8dfad2c0a3d97": {
@@ -3077,9 +2470,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657333302cc8dfad2c0a3d9b": {
@@ -3092,9 +2482,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6573333eca0ca984940a2d57": {
@@ -3107,9 +2494,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6573334aca0ca984940a2d5b": {
@@ -3122,9 +2506,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65733375b7a8d286530e3dd7": {
@@ -3137,9 +2518,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6573337f2cc8dfad2c0a3da7": {
@@ -3152,9 +2530,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575bc88c6700bd6b40e8a57": {
@@ -3167,9 +2542,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575bca0dc9932aed601c5d7": {
@@ -3182,9 +2554,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c2adefc786cd9101a5d9": {
@@ -3197,9 +2566,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c2be52b7f8c76a05ee25": {
@@ -3212,9 +2578,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c2cd52b7f8c76a05ee29": {
@@ -3227,9 +2590,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c2d852b7f8c76a05ee2d": {
@@ -3242,9 +2602,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c2e4efc786cd9101a5dd": {
@@ -3257,9 +2614,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c2f7efc786cd9101a5e1": {
@@ -3272,9 +2626,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c30352b7f8c76a05ee31": {
@@ -3287,9 +2638,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c31b52b7f8c76a05ee35": {
@@ -3302,9 +2650,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c326c6700bd6b40e8a80": {
@@ -3317,9 +2662,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c342efc786cd9101a5e5": {
@@ -3332,9 +2674,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c34bc6700bd6b40e8a84": {
@@ -3347,9 +2686,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c35bc6700bd6b40e8a88": {
@@ -3362,9 +2698,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c366c6700bd6b40e8a8c": {
@@ -3377,9 +2710,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c373dc9932aed601c5ec": {
@@ -3392,9 +2722,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c385dc9932aed601c5f0": {
@@ -3407,9 +2734,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c390efc786cd9101a5e9": {
@@ -3422,9 +2746,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c3b3dc9932aed601c5f4": {
@@ -3437,9 +2758,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c3beefc786cd9101a5ed": {
@@ -3452,9 +2770,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c3cdc6700bd6b40e8a90": {
@@ -3467,9 +2782,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c3dfdc9932aed601c5f8": {
@@ -3482,9 +2794,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c3ec52b7f8c76a05ee39": {
@@ -3497,9 +2806,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c3fd52b7f8c76a05ee3d": {
@@ -3512,9 +2818,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575c40c52b7f8c76a05ee41": {
@@ -3527,9 +2830,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ce3716c2762fba0057fd": {
@@ -3542,9 +2842,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ce45dc9932aed601c616": {
@@ -3557,9 +2854,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ce5016c2762fba005802": {
@@ -3572,9 +2866,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ce5befc786cd9101a671": {
@@ -3587,9 +2878,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ce6f16c2762fba005806": {
@@ -3602,9 +2890,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ce8bdc9932aed601c61e": {
@@ -3617,9 +2902,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ce9db15fef3dd4051628": {
@@ -3632,9 +2914,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575cea8b15fef3dd405162c": {
@@ -3647,9 +2926,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d561b15fef3dd4051670": {
@@ -3662,9 +2938,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d56b16c2762fba005818": {
@@ -3677,9 +2950,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d57a16c2762fba00581c": {
@@ -3692,9 +2962,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d589b15fef3dd4051674": {
@@ -3707,9 +2974,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d598b15fef3dd4051678": {
@@ -3722,9 +2986,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d5a616c2762fba005820": {
@@ -3737,9 +2998,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d5b316c2762fba005824": {
@@ -3752,9 +3010,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d5bd16c2762fba005828": {
@@ -3767,9 +3022,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d9a79e27f4a85e08112d": {
@@ -3782,9 +3034,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d9b8945bf78edd04c427": {
@@ -3797,9 +3046,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d9c40546f8b1de093dee": {
@@ -3812,9 +3058,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d9cf0546f8b1de093df2": {
@@ -3827,9 +3070,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d9d8945bf78edd04c42b": {
@@ -3842,9 +3082,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d9e7945bf78edd04c42f": {
@@ -3857,9 +3094,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575d9f816c2762fba00588d": {
@@ -3872,9 +3106,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575da07945bf78edd04c433": {
@@ -3887,9 +3118,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575da159e27f4a85e081131": {
@@ -3902,9 +3130,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575dd3e9e27f4a85e081142": {
@@ -3917,9 +3142,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575dd519e27f4a85e081146": {
@@ -3932,9 +3154,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575dd64945bf78edd04c438": {
@@ -3947,9 +3166,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575dd6e9d3a0ddf660b9047": {
@@ -3962,9 +3178,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575dd769d3a0ddf660b904b": {
@@ -3977,9 +3190,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575dd800546f8b1de093df6": {
@@ -3992,9 +3202,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575dd94945bf78edd04c43c": {
@@ -4007,9 +3214,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575e71760703324250610c3": {
@@ -4022,9 +3226,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575e72660703324250610c7": {
@@ -4037,9 +3238,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ea3060703324250610da": {
@@ -4052,9 +3250,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ea4cf6a13a7b7100adc4": {
@@ -4067,9 +3262,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ea5cf6a13a7b7100adc8": {
@@ -4082,9 +3274,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ea6760703324250610de": {
@@ -4097,9 +3286,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ea719c7cad336508e418": {
@@ -4112,9 +3298,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ea7c60703324250610e2": {
@@ -4127,9 +3310,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ef599c7cad336508e453": {
@@ -4142,9 +3322,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ef6bf6a13a7b7100b093": {
@@ -4157,9 +3334,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ef78da698a4e980677eb": {
@@ -4172,9 +3346,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575ef7f9c7cad336508e457": {
@@ -4187,9 +3358,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575f24ff6a13a7b7100b09e": {
@@ -4202,9 +3370,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575f25ada698a4e98067836": {
@@ -4217,9 +3382,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575f2649cfdfe416f0399b8": {
@@ -4232,9 +3394,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575f26d9c7cad336508e480": {
@@ -4247,9 +3406,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575f5cbf6a13a7b7100b0bf": {
@@ -4262,9 +3418,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6575f5e1da698a4e98067869": {
@@ -4277,9 +3430,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65764275d8537eb26a0355e9": {
@@ -4292,9 +3442,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657642b0e6d5dd75f40688a5": {
@@ -4307,9 +3454,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6576434820cc24d17102b148": {
@@ -4322,9 +3466,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657643732bc38ef78e076477": {
@@ -4337,9 +3478,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657643a220cc24d17102b14c": {
@@ -4352,9 +3490,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65764a4cd8537eb26a0355ee": {
@@ -4367,9 +3502,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.3,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65764bc22bc38ef78e076485": {
@@ -4382,9 +3514,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.3,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65764c39526e320fbe035777": {
@@ -4397,9 +3526,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65764c6b526e320fbe03577b": {
@@ -4412,9 +3538,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65764e1e2bc38ef78e076489": {
@@ -4427,9 +3550,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": true,
         "SpallReduction": 0.33,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65764fae2bc38ef78e07648d": {
@@ -4442,9 +3562,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6576500f526e320fbe03577f": {
@@ -4457,9 +3574,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6576504b526e320fbe035783": {
@@ -4472,9 +3586,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657b22485f444d6dff0c6c2f": {
@@ -4488,9 +3599,6 @@
         "CanSpall": true,
         "SpallReduction": 0.3,
         "ArmorClass": "GOST 5A",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657b2797c3dbcb01d60c35ea": {
@@ -4504,9 +3612,6 @@
         "CanSpall": true,
         "SpallReduction": 0.42,
         "ArmorClass": "GOST 5",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657b28d25f444d6dff0c6c77": {
@@ -4520,9 +3625,6 @@
         "CanSpall": false,
         "SpallReduction": 0.26,
         "ArmorClass": "GOST 6A",
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba096e57570b7f80a17fb": {
@@ -4535,9 +3637,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba145e57570b7f80a17ff": {
@@ -4550,9 +3649,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba18923918923cb0df568": {
@@ -4565,9 +3661,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba2eef58ba5a625010798": {
@@ -4580,9 +3673,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba34b9ba22f103e08139b": {
@@ -4595,9 +3685,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba50c23918923cb0df56c": {
@@ -4610,9 +3697,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba5439ba22f103e08139f": {
@@ -4625,9 +3709,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba57af58ba5a62501079e": {
@@ -4640,9 +3721,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba6c3c6f689d3a205b857": {
@@ -4655,9 +3733,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba737b7e9ca9a02045bf6": {
@@ -4670,9 +3745,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba75e23918923cb0df573": {
@@ -4685,9 +3757,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba85ecfcf63c951052da7": {
@@ -4700,9 +3769,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba8bccfcf63c951052dab": {
@@ -4715,9 +3781,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657ba8eab7e9ca9a02045bfd": {
@@ -4730,9 +3793,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657baaf0b7e9ca9a02045c02": {
@@ -4745,9 +3805,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bab6ec6f689d3a205b85f": {
@@ -4760,9 +3817,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657babc6f58ba5a6250107a2": {
@@ -4775,9 +3829,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bae18b7e9ca9a02045c0a": {
@@ -4790,9 +3841,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657baeaacfcf63c951052db3": {
@@ -4805,9 +3853,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657baecbc6f689d3a205b863": {
@@ -4820,9 +3865,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bb70486c7f9ef7a009936": {
@@ -4835,9 +3877,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bb79ba1c61ee0c303631a": {
@@ -4850,9 +3889,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bb7d7b30eca9763051176": {
@@ -4865,9 +3901,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bb92fa1c61ee0c303631f": {
@@ -4880,9 +3913,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bb99db30eca976305117f": {
@@ -4895,9 +3925,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bbad7a1c61ee0c3036323": {
@@ -4910,9 +3937,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bbb31b30eca9763051183": {
@@ -4925,9 +3949,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bbcc9a1c61ee0c3036327": {
@@ -4940,9 +3961,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bbcffbbd440df880b2dd5": {
@@ -4955,9 +3973,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bbe73a1c61ee0c303632b": {
@@ -4970,9 +3985,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bbed0aab96fccee08be96": {
@@ -4985,9 +3997,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bbefeb30eca9763051189": {
@@ -5000,9 +4009,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bc06daab96fccee08be9b": {
@@ -5015,9 +4021,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bc0d8a1c61ee0c303632f": {
@@ -5030,9 +4033,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bc107aab96fccee08be9f": {
@@ -5045,9 +4045,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bc285aab96fccee08bea3": {
@@ -5060,9 +4057,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bc2c5a1c61ee0c3036333": {
@@ -5075,9 +4069,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657bc2e7b30eca976305118d": {
@@ -5090,9 +4081,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f8a8d7db258e5600fe33d": {
@@ -5105,9 +4093,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f8b05f4c82973640b2348": {
@@ -5120,9 +4105,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f8b43f92cd718b70154fb": {
@@ -5135,9 +4117,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f8b94f92cd718b70154ff": {
@@ -5150,9 +4129,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f8ec5f4c82973640b234c": {
@@ -5165,9 +4141,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f8f10f4c82973640b2350": {
@@ -5180,9 +4153,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f925dada5fadd1f07a57a": {
@@ -5195,9 +4165,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f92acada5fadd1f07a57e": {
@@ -5210,9 +4177,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f92e7f4c82973640b2354": {
@@ -5225,9 +4189,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f95bff92cd718b701550c": {
@@ -5240,9 +4201,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f9605f4c82973640b2358": {
@@ -5255,9 +4213,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f9897f4c82973640b235e": {
@@ -5270,9 +4225,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f98fbada5fadd1f07a585": {
@@ -5285,9 +4237,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f9a55c6679fefb3051e19": {
@@ -5300,9 +4249,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f9a94ada5fadd1f07a589": {
@@ -5315,9 +4261,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f9c78ada5fadd1f07a58d": {
@@ -5330,9 +4273,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f9cb587e11c61f70bfaca": {
@@ -5345,9 +4285,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f9eb7e9433140ad0baf86": {
@@ -5360,9 +4297,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657f9ef6c6679fefb3051e1f": {
@@ -5375,9 +4309,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657fa009d4caf976440afe3a": {
@@ -5390,9 +4321,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657fa04ac6679fefb3051e24": {
@@ -5405,9 +4333,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657fa07387e11c61f70bface": {
@@ -5420,9 +4345,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657fa0fcd4caf976440afe3e": {
@@ -5435,9 +4357,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657fa168e9433140ad0baf8e": {
@@ -5450,9 +4369,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "657fa186d4caf976440afe42": {
@@ -5465,9 +4381,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "658188edf026a90c1708c827": {
@@ -5480,9 +4393,6 @@
         "ReloadSpeedMulti": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65818e4e566d2de69901b1b1": {
@@ -5496,9 +4406,6 @@
         "Comfort": 1,
         "CanSpall": false,
         "SpallReduction": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     }
 }

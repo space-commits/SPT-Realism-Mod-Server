@@ -174,8 +174,8 @@
 //         }
 //         equipment.FaceCover = gasMaskTier == 3 ? StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? StaticArrays.gasEventMasksMed : StaticArrays.gasEventMasksLow;
 //         if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
-//             //equipment.FaceCover["CCG_GAS_MASK_GP9"] = 2;
-//             //equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 2;
+//             //equipment.FaceCover["672e2e756803734b60f5ac1e"] = 2;
+//             //equipment.FaceCover["672e2e7517018293d11bbdc1"] = 2;
 //         }
 //         chances.equipment.Eyewear = 0;
 //         chances.equipment.FaceCover = 100;

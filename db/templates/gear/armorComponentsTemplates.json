@@ -10,9 +10,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5d6d3be5a4b9361bc73bc763": {
@@ -26,9 +23,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5a16badafcdbcb001865f72d": {
@@ -42,9 +36,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c1793902e221602b21d3de2": {
@@ -58,9 +49,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5e00cfa786f77469dc6e5685": {
@@ -74,9 +62,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5e01f31d86f77465cf261343": {
@@ -90,9 +75,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c0e66e2d174af02a96252f4": {
@@ -106,9 +88,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c178a942e22164bef5ceca3": {
@@ -122,9 +101,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5ea18c84ecf1982c7712d9a2": {
@@ -138,9 +114,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5e00cdd986f7747473332240": {
@@ -154,9 +127,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5ac4c50d5acfc40019262e87": {
@@ -170,9 +140,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5b46238386f7741a693bcf9c": {
@@ -186,9 +153,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5f60c85b58eff926626a60f7": {
@@ -202,9 +166,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5aa7e3abe5b5b000171d064d": {
@@ -218,9 +179,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5ca2113f86f7740b2547e1d2": {
@@ -234,9 +192,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5d6d3829a4b9361bc8618943": {
@@ -250,9 +205,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c0e842486f77443a74d2976": {
@@ -266,9 +218,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5aa7e373e5b5b000137b76f0": {
@@ -282,9 +231,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5a16b7e1fcdbcb00165aa6c9": {
@@ -298,9 +244,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5a16b672fcdbcb001912fa83": {
@@ -314,9 +257,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c0919b50db834001b7ce3b9": {
@@ -330,9 +270,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5e01f37686f774773c6f6c15": {
@@ -346,9 +283,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5ea058e01dbce517f324b3e2": {
@@ -362,9 +296,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5f60c076f2bcbb675b00dac2": {
@@ -378,9 +309,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5a16ba61fcdbcb098008728a": {
@@ -394,9 +322,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5f60bf4558eff926626a60f2": {
@@ -410,9 +335,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "60a7ad3a0c5cb24b0134664a": {
@@ -425,9 +347,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "60a7ad2a2198820d95707a2e": {
@@ -440,9 +359,6 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "6570a88c8f221f3b210353b7": {
@@ -456,9 +372,6 @@
         "ReloadSpeedMulti": 1,
         "Comfort": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65719f9ef392ad76c50a2ec8": {
@@ -472,9 +385,6 @@
         "ReloadSpeedMulti": 1,
         "Comfort": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     }
 }

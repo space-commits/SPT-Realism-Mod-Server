@@ -7,3 +7,6 @@ ProfileBackups/
 *.map
 *.js
 RealismModConfig.exe
+db/templates/user_templates/MoxoPixel-TacticalGearComponent.json
+db/templates/user_templates/MoxoPixel-Mag tape.json
+db/templates/user_templates/Artem.json

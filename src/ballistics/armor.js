@@ -44,6 +44,7 @@ class Armor {
         this.armMat().Aluminium.Destructibility = 0.2;
         this.armMat().Titan.Destructibility = 0.15;
         this.armMat().ArmoredSteel.Destructibility = 0.375; //steel no longer becomes more likely to pen with dura loss, so represents loss of anti-spall coating
+        //need to get rid of this redundant and wasteful loop
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
             this.loadBodyArmor(serverItem);
@@ -1715,19 +1716,19 @@ class Armor {
             serverItem._props.Weight = 1.6;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 80 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
-        //Ronin
+        //Ronin Respirator
         if (serverItem._id === "5b4329f05acfc47a86086aa1") {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -8.6;
+            serverItem._props.speedPenaltyPercent = -9.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -9;
-            serverItem._props.BluntThroughput = 0.24 * bluntModifier;
+            serverItem._props.weaponErgonomicPenalty = -11;
+            serverItem._props.BluntThroughput = 0.2 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 1.6;
-            this.modifySubArmor(serverItem, tables, validHelmetSlots, 80 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
+            serverItem._props.Weight = 1.9;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 82 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //BNTI LSHZ-2DTM
         if (serverItem._id === "5d6d3716a4b9361bc8618872") {

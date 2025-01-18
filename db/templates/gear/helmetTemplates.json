@@ -11,9 +11,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.95,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5d5e7d28a4b936645d161203": {
@@ -28,9 +25,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.9,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5e4bfc1586f774264f7582d3": {
@@ -45,9 +39,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.9,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5f60c74e3b85f6263c145586": {
@@ -62,9 +53,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "60bf74184a63fc79b60c57f6": {
@@ -79,9 +67,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.8,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "61bca7cda0eae612383adf57": {
@@ -96,9 +81,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.85,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "59ef13ca86f77445fd0e2483": {
@@ -113,9 +95,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.2,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5d6d3716a4b9361bc8618872": {
@@ -130,9 +109,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.06,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5aa7d193e5b5b000171d063f": {
@@ -147,9 +123,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.15,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5d5e9c74a4b9364855191c40": {
@@ -164,9 +137,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.92,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5df8a58286f77412631087ed": {
@@ -181,9 +151,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.05,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5a154d5cfcdbcb001a3b00da": {
@@ -198,9 +165,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.88,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5aa7e276e5b5b000171d0647": {
@@ -215,9 +179,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.12,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5aa7e4a4e5b5b000137b76f2": {
@@ -232,9 +193,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.09,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5aa7cfc0e5b5b00015693143": {
@@ -249,9 +207,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.02,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "66bdc28a0b603c26902b2011": {
@@ -266,9 +221,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.07,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "MaskToUse": "ronin",
         "TemplateType": "gear"
     },
@@ -284,9 +236,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.07,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "MaskToUse": "ronin",
         "TemplateType": "gear"
     },
@@ -302,9 +251,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.88,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5a7c4850e899ef00150be885": {
@@ -319,9 +265,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.025,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c06c6a80db834001b735491": {
@@ -336,9 +279,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.05,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5645bc214bdc2d363b8b4571": {
@@ -353,9 +293,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.095,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5aa7d03ae5b5b00016327db5": {
@@ -370,9 +307,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.035,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5aa7e454e5b5b0214e506fa2": {
@@ -387,9 +321,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c091a4e0db834001d5addc8": {
@@ -404,9 +335,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.12,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "59e7711e86f7746cae05fbe1": {
@@ -421,9 +349,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.12,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5ca20ee186f774799474abc2": {
@@ -438,9 +363,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.13,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5b40e3f35acfc40016388218": {
@@ -455,9 +377,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.92,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5b40e4035acfc47a87740943": {
@@ -472,9 +391,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.92,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5b40e1525acfc4771e1c6611": {
@@ -489,9 +405,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.95,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5b40e2bc5acfc40016388216": {
@@ -506,9 +419,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.95,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c17a7ed2e2216152142459c": {
@@ -523,9 +433,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.87,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "66b5f65ca7f72d197e70bcd6": {
@@ -540,9 +447,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.85,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "66b5f661af44ca0014063c05": {
@@ -557,9 +461,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.85,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "66b5f666cad6f002ab7214c2": {
@@ -574,9 +475,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.85,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5ea17ca01412a1425304d1c0": {
@@ -591,9 +489,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.89,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5f60b34a41e30a4ab12a6947": {
@@ -608,9 +503,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.86,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5ea05cf85ad9772e6624305d": {
@@ -625,9 +517,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.055,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c0e874186f7745dc7616606": {
@@ -642,9 +531,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.11,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5e00c1ad86f774747333222c": {
@@ -659,9 +545,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.85,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5e01ef6886f77445f643baa4": {
@@ -676,9 +559,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 0.85,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c08f87c0db8340019124324": {
@@ -693,9 +573,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.15,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "5c0d2727d174af02a012cf58": {
@@ -710,9 +587,6 @@
         "ReloadSpeedMulti": 1,
         "Price": 0,
         "Comfort": 1.13,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65709d2d21b9f815e208ff95": {
@@ -724,9 +598,6 @@
         "ArmorClass": "PM 3",
         "Price": 0,
         "Comfort": 1.02,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     },
     "65719f0775149d62ce0a670b": {
@@ -739,9 +610,6 @@
         "Price": 0,
         "Comfort": 1,
         "ReloadSpeedMulti": 1,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
     }
 }

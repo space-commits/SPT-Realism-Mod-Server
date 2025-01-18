@@ -19,6 +19,7 @@ class Ammo {
     }
     loadAmmoStats() {
         this.globalDB().Ballistic.GlobalDamageDegradationCoefficient = 0.7;
+        //need to get rid of this redundant and wasteful loop
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
             //// AMMO ////

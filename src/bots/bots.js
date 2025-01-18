@@ -1690,8 +1690,8 @@
 // //             this.raiderBase.inventory.equipment.Eyewear = {};
 // //         }
 // //         if (ModTracker.tgcPresent) {
-// //             //this.raiderBase.inventory.equipment.FaceCover["CCG_GAS_MASK_GP9"] = 1;
-// //             //this.raiderBase.inventory.equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 1;
+// //             //this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+// //             //this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
 // //         }
 // //         BotTierTracker.raiderTier = 2;
 // //         if (this.modConfig.logEverything == true) {
@@ -1765,8 +1765,8 @@
 // //             this.raiderBase.inventory.equipment.Eyewear = {};
 // //         }
 // //         if (ModTracker.tgcPresent) {
-// //             //this.raiderBase.inventory.equipment.FaceCover["CCG_GAS_MASK_GP9"] = 1;
-// //             //this.raiderBase.inventory.equipment.FaceCover["CCG_GAS_MASK_MCU2P"] = 1;
+// //             //this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+// //             //this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
 // //         }
 // //         BotTierTracker.raiderTier = 3;
 // //         if (this.modConfig.logEverything == true) {
